@@ -6,6 +6,7 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "corotated_model.h", "corotated__model_8h.html", null ],
     [ "corotated_model_data.h", "corotated__model__data_8h.html", null ],
     [ "damping_model.h", "damping__model_8h.html", "damping__model_8h" ],
+    [ "deformable_body_config.h", "deformable__body__config_8h.html", "deformable__body__config_8h" ],
     [ "deformation_gradient_data.h", "deformation__gradient__data_8h.html", null ],
     [ "dirichlet_boundary_condition.h", "dirichlet__boundary__condition_8h.html", "dirichlet__boundary__condition_8h" ],
     [ "discrete_time_integrator.h", "discrete__time__integrator_8h.html", null ],

@@ -238,15 +238,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa65f91d84b3f2f0a5354def05ddb51e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa65f91d84b3f2f0a5354def05ddb51e4">NewOddDegreeFreePolynomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &amp;<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#abaa1d35a078980665b4cabac09dd235b">indeterminates</a>, <a class="el" href="classint.html">int</a> degree, const std::string &amp;coeff_name=&quot;a&quot;)</td></tr>
 <tr class="memdesc:aa65f91d84b3f2f0a5354def05ddb51e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a free polynomial that only contains odd degree monomials.  <a href="#aa65f91d84b3f2f0a5354def05ddb51e4">More...</a><br /></td></tr>
 <tr class="separator:aa65f91d84b3f2f0a5354def05ddb51e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abac9dc35b894168d1b1600887bc27bcd"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>, <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#abac9dc35b894168d1b1600887bc27bcd">NewSosPolynomial</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>)</td></tr>
-<tr class="memdesc:abac9dc35b894168d1b1600887bc27bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pair of a SOS polynomial p = mᵀQm and the Gramian matrix Q, where m is the <code>monomial</code> basis.  <a href="#abac9dc35b894168d1b1600887bc27bcd">More...</a><br /></td></tr>
-<tr class="separator:abac9dc35b894168d1b1600887bc27bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119f70ac7514b2dab4bc4c39048fb7dc"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>, <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a119f70ac7514b2dab4bc4c39048fb7dc">NewSosPolynomial</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>, const std::string &amp;gram_name=&quot;S&quot;)</td></tr>
+<tr class="memdesc:a119f70ac7514b2dab4bc4c39048fb7dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pair of a SOS polynomial p = mᵀQm and the Gramian matrix Q, where m is the <code>monomial</code> basis.  <a href="#a119f70ac7514b2dab4bc4c39048fb7dc">More...</a><br /></td></tr>
+<tr class="separator:a119f70ac7514b2dab4bc4c39048fb7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9880f907227e7c09b7553f7581351a61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a9880f907227e7c09b7553f7581351a61">NewSosPolynomial</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;gramian, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>)</td></tr>
 <tr class="memdesc:a9880f907227e7c09b7553f7581351a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads NewSosPolynomial, except the Gramian matrix Q is an input instead of an output.  <a href="#a9880f907227e7c09b7553f7581351a61">More...</a><br /></td></tr>
 <tr class="separator:a9880f907227e7c09b7553f7581351a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17696eeb5ed72ea8a4ddcaa732324a3e"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>, <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a17696eeb5ed72ea8a4ddcaa732324a3e">NewSosPolynomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &amp;<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#abaa1d35a078980665b4cabac09dd235b">indeterminates</a>, <a class="el" href="classint.html">int</a> degree, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>)</td></tr>
-<tr class="memdesc:a17696eeb5ed72ea8a4ddcaa732324a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads NewSosPolynomial.  <a href="#a17696eeb5ed72ea8a4ddcaa732324a3e">More...</a><br /></td></tr>
-<tr class="separator:a17696eeb5ed72ea8a4ddcaa732324a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1597383d3ab6b48e19d89a5364d8d92"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>, <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa1597383d3ab6b48e19d89a5364d8d92">NewSosPolynomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &amp;<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#abaa1d35a078980665b4cabac09dd235b">indeterminates</a>, <a class="el" href="classint.html">int</a> degree, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>, const std::string &amp;gram_name=&quot;S&quot;)</td></tr>
+<tr class="memdesc:aa1597383d3ab6b48e19d89a5364d8d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads NewSosPolynomial.  <a href="#aa1597383d3ab6b48e19d89a5364d8d92">More...</a><br /></td></tr>
+<tr class="separator:aa1597383d3ab6b48e19d89a5364d8d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9757b022381ac5841cd389a7e212dfbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a9757b022381ac5841cd389a7e212dfbb">MakePolynomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e) const</td></tr>
 <tr class="memdesc:a9757b022381ac5841cd389a7e212dfbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a symbolic polynomial from the given expression <code>e</code>.  <a href="#a9757b022381ac5841cd389a7e212dfbb">More...</a><br /></td></tr>
 <tr class="separator:a9757b022381ac5841cd389a7e212dfbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -522,9 +522,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5a5ef4b6da552936dabb22caae98f4b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af5a5ef4b6da552936dabb22caae98f4b">AddRotatedLorentzConeConstraint</a> (const Eigen::MatrixBase&lt; <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">VectorDecisionVariable</a>&lt; rows &gt;&gt; &amp;vars)</td></tr>
 <tr class="memdesc:af5a5ef4b6da552936dabb22caae98f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impose that a vector \( x\in\mathbb{R}^m \) is in rotated Lorentz cone.  <a href="#af5a5ef4b6da552936dabb22caae98f4b">More...</a><br /></td></tr>
 <tr class="separator:af5a5ef4b6da552936dabb22caae98f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78407bc8ee2ca56e65a6d5faca4c5b72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a78407bc8ee2ca56e65a6d5faca4c5b72">AddQuadraticAsRotatedLorentzConeConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, double c, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;vars)</td></tr>
-<tr class="memdesc:a78407bc8ee2ca56e65a6d5faca4c5b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a rotated Lorentz cone constraint [rᵀx+s, 1, Px+q] is in the rotated Lorentz cone.  <a href="#a78407bc8ee2ca56e65a6d5faca4c5b72">More...</a><br /></td></tr>
-<tr class="separator:a78407bc8ee2ca56e65a6d5faca4c5b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b12192393b9a53b4fd484ede7d52381"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7b12192393b9a53b4fd484ede7d52381">AddQuadraticAsRotatedLorentzConeConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, double c, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;vars, double psd_tol=0.)</td></tr>
+<tr class="memdesc:a7b12192393b9a53b4fd484ede7d52381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a rotated Lorentz cone constraint [rᵀx+s, 1, Px+q] is in the rotated Lorentz cone.  <a href="#a7b12192393b9a53b4fd484ede7d52381">More...</a><br /></td></tr>
+<tr class="separator:a7b12192393b9a53b4fd484ede7d52381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ce06116cc0cd7c681258befa944240"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html">LinearComplementarityConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af4ce06116cc0cd7c681258befa944240">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html">LinearComplementarityConstraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:af4ce06116cc0cd7c681258befa944240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear complementarity constraints referencing a subset of the decision variables.  <a href="#af4ce06116cc0cd7c681258befa944240">More...</a><br /></td></tr>
 <tr class="separator:af4ce06116cc0cd7c681258befa944240"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -564,18 +564,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ef1689f39c06dc1a2520276fcd47c5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5ef1689f39c06dc1a2520276fcd47c5b">AddPositiveDiagonallyDominantMatrixConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
 <tr class="memdesc:a5ef1689f39c06dc1a2520276fcd47c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that a symmetric matrix is diagonally dominant with non-negative diagonal entries.  <a href="#a5ef1689f39c06dc1a2520276fcd47c5b">More...</a><br /></td></tr>
 <tr class="separator:a5ef1689f39c06dc1a2520276fcd47c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae27c69de208a984eac3ccba736b46b41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae27c69de208a984eac3ccba736b46b41">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>)</td></tr>
-<tr class="memdesc:ae27c69de208a984eac3ccba736b46b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given polynomial <code>p</code> is a sums-of-squares (SOS), that is, <code>p</code> can be decomposed into <code>mᵀQm</code>, where m is the <code>monomial_basis</code>.  <a href="#ae27c69de208a984eac3ccba736b46b41">More...</a><br /></td></tr>
-<tr class="separator:ae27c69de208a984eac3ccba736b46b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a861c38c659adf55d7ad0bffecee4bf13"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a861c38c659adf55d7ad0bffecee4bf13">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>)</td></tr>
-<tr class="memdesc:a861c38c659adf55d7ad0bffecee4bf13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given polynomial <code>p</code> is a sums-of-squares (SOS), that is, <code>p</code> can be decomposed into <code>mᵀQm</code>, where m is a monomial basis selected from the sparsity of <code>p</code>.  <a href="#a861c38c659adf55d7ad0bffecee4bf13">More...</a><br /></td></tr>
-<tr class="separator:a861c38c659adf55d7ad0bffecee4bf13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ef1ca7232b100f33773c7cc7151f485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a1ef1ca7232b100f33773c7cc7151f485">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>)</td></tr>
-<tr class="memdesc:a1ef1ca7232b100f33773c7cc7151f485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given symbolic expression <code>e</code> is a sums-of-squares (SOS), that is, <code>p</code> can be decomposed into <code>mᵀQm</code>, where m is the <code>monomial_basis</code>.  <a href="#a1ef1ca7232b100f33773c7cc7151f485">More...</a><br /></td></tr>
-<tr class="separator:a1ef1ca7232b100f33773c7cc7151f485"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbfeb9b0b6e49545dd732f7a3c95b152"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#afbfeb9b0b6e49545dd732f7a3c95b152">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>)</td></tr>
-<tr class="memdesc:afbfeb9b0b6e49545dd732f7a3c95b152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given symbolic expression <code>e</code> is a sums-of-squares (SOS), that is, <code>e</code> can be decomposed into <code>mᵀQm</code>.  <a href="#afbfeb9b0b6e49545dd732f7a3c95b152">More...</a><br /></td></tr>
-<tr class="separator:afbfeb9b0b6e49545dd732f7a3c95b152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab50996ab414fb26e392aefbe13654d10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ab50996ab414fb26e392aefbe13654d10">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>, const std::string &amp;gram_name=&quot;S&quot;)</td></tr>
+<tr class="memdesc:ab50996ab414fb26e392aefbe13654d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given polynomial <code>p</code> is a sums-of-squares (SOS), that is, <code>p</code> can be decomposed into <code>mᵀQm</code>, where m is the <code>monomial_basis</code>.  <a href="#ab50996ab414fb26e392aefbe13654d10">More...</a><br /></td></tr>
+<tr class="separator:ab50996ab414fb26e392aefbe13654d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3263780136f68e6b6eea84cd8ca4fe2"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af3263780136f68e6b6eea84cd8ca4fe2">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>, const std::string &amp;gram_name=&quot;S&quot;)</td></tr>
+<tr class="memdesc:af3263780136f68e6b6eea84cd8ca4fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given polynomial <code>p</code> is a sums-of-squares (SOS), that is, <code>p</code> can be decomposed into <code>mᵀQm</code>, where m is a monomial basis selected from the sparsity of <code>p</code>.  <a href="#af3263780136f68e6b6eea84cd8ca4fe2">More...</a><br /></td></tr>
+<tr class="separator:af3263780136f68e6b6eea84cd8ca4fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49169e5b2cad8f861ff19bde7c847602"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a49169e5b2cad8f861ff19bde7c847602">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>, const std::string &amp;gram_name=&quot;S&quot;)</td></tr>
+<tr class="memdesc:a49169e5b2cad8f861ff19bde7c847602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given symbolic expression <code>e</code> is a sums-of-squares (SOS), that is, <code>p</code> can be decomposed into <code>mᵀQm</code>, where m is the <code>monomial_basis</code>.  <a href="#a49169e5b2cad8f861ff19bde7c847602">More...</a><br /></td></tr>
+<tr class="separator:a49169e5b2cad8f861ff19bde7c847602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ae5d0bd11b05a19cba1123d2399739"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a94ae5d0bd11b05a19cba1123d2399739">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a> type=<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a>, const std::string &amp;gram_name=&quot;S&quot;)</td></tr>
+<tr class="memdesc:a94ae5d0bd11b05a19cba1123d2399739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given symbolic expression <code>e</code> is a sums-of-squares (SOS), that is, <code>e</code> can be decomposed into <code>mᵀQm</code>.  <a href="#a94ae5d0bd11b05a19cba1123d2399739">More...</a><br /></td></tr>
+<tr class="separator:a94ae5d0bd11b05a19cba1123d2399739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a046ca21e9764ac1ac1bb52801452b9b2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_equality_constraint.html">LinearEqualityConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a046ca21e9764ac1ac1bb52801452b9b2">AddEqualityConstraintBetweenPolynomials</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p1, const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p2)</td></tr>
 <tr class="memdesc:a046ca21e9764ac1ac1bb52801452b9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constraining that two polynomials are the same (i.e., they have the same coefficients for each monomial).  <a href="#a046ca21e9764ac1ac1bb52801452b9b2">More...</a><br /></td></tr>
 <tr class="separator:a046ca21e9764ac1ac1bb52801452b9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4015,8 +4015,8 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </pre><p> The user could call </p><div class="fragment"><div class="line">Matrix3&lt;symbolic::Expression&gt; e</div><div class="line">e &lt;&lt; x+1, 2*x+3, x+y,</div><div class="line">     2*x+3,   2,   0,</div><div class="line">     x+y,     0,   x;</div><div class="line">prog.AddPositiveSemidefiniteConstraint(e);</div></div><!-- fragment --> 
 </div>
 </div>
-<a id="a78407bc8ee2ca56e65a6d5faca4c5b72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78407bc8ee2ca56e65a6d5faca4c5b72">&#9670;&nbsp;</a></span>AddQuadraticAsRotatedLorentzConeConstraint()</h2>
+<a id="a7b12192393b9a53b4fd484ede7d52381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b12192393b9a53b4fd484ede7d52381">&#9670;&nbsp;</a></span>AddQuadraticAsRotatedLorentzConeConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4043,7 +4043,13 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>vars</em>&#160;</td>
+          <td class="paramname"><em>vars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>psd_tol</em> = <code>0.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4066,6 +4072,8 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
     <tr><td class="paramname">b</td><td>The linear coefficient of the quadratic constraint. </td></tr>
     <tr><td class="paramname">c</td><td>The constant term of the quadratic constraint. </td></tr>
     <tr><td class="paramname">vars</td><td>x in the documentation above. </td></tr>
+    <tr><td class="paramname">psd_tol</td><td>If the minimal eigenvalue of Q is smaller than -psd_tol, then throw an exception. <br />
+ <em>Default:</em> = 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4669,8 +4677,8 @@ x+y &gt;= 0
 
 </div>
 </div>
-<a id="ae27c69de208a984eac3ccba736b46b41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae27c69de208a984eac3ccba736b46b41">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[1/4]</span></h2>
+<a id="ab50996ab414fb26e392aefbe13654d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50996ab414fb26e392aefbe13654d10">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4691,7 +4699,13 @@ x+y &gt;= 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a>&#160;</td>
-          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gram_name</em> = <code>&quot;S&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4705,7 +4719,8 @@ x+y &gt;= 0
 <p>It returns the coefficients matrix Q, which is positive semidefinite. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>The type of the polynomial. <br />
- <em>Default:</em> is kSos, but the user can also use kSdsos and kDsos. Refer to NonnegativePolynomial for details on different types of sos polynomials.</td></tr>
+ <em>Default:</em> is kSos, but the user can also use kSdsos and kDsos. Refer to NonnegativePolynomial for details on different types of sos polynomials. </td></tr>
+    <tr><td class="paramname">gram_name</td><td>The name of the gram matrix for print out.</td></tr>
   </table>
   </dd>
 </dl>
@@ -4713,8 +4728,8 @@ x+y &gt;= 0
 
 </div>
 </div>
-<a id="a861c38c659adf55d7ad0bffecee4bf13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a861c38c659adf55d7ad0bffecee4bf13">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[2/4]</span></h2>
+<a id="af3263780136f68e6b6eea84cd8ca4fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3263780136f68e6b6eea84cd8ca4fe2">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4729,7 +4744,13 @@ x+y &gt;= 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a>&#160;</td>
-          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gram_name</em> = <code>&quot;S&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4745,7 +4766,8 @@ x+y &gt;= 0
 <li>The monomial basis m. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>The type of the polynomial. <br />
- <em>Default:</em> is kSos, but the user can also use kSdsos and kDsos. Refer to NonnegativePolynomial for the details on different type of sos polynomials.</td></tr>
+ <em>Default:</em> is kSos, but the user can also use kSdsos and kDsos. Refer to NonnegativePolynomial for the details on different type of sos polynomials. </td></tr>
+    <tr><td class="paramname">gram_name</td><td>The name of the gram matrix for print out.</td></tr>
   </table>
   </dd>
 </dl>
@@ -4755,8 +4777,8 @@ x+y &gt;= 0
 
 </div>
 </div>
-<a id="a1ef1ca7232b100f33773c7cc7151f485"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ef1ca7232b100f33773c7cc7151f485">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[3/4]</span></h2>
+<a id="a49169e5b2cad8f861ff19bde7c847602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49169e5b2cad8f861ff19bde7c847602">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4777,7 +4799,13 @@ x+y &gt;= 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a>&#160;</td>
-          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gram_name</em> = <code>&quot;S&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4791,14 +4819,15 @@ x+y &gt;= 0
 <p>Note that it decomposes <code>e</code> into a polynomial with respect to <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#abaa1d35a078980665b4cabac09dd235b" title="Getter for all indeterminates in the program.">indeterminates()</a></code> in this mathematical program. It returns the coefficients matrix Q, which is positive semidefinite. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>Refer to NonnegativePolynomial class documentation. </td></tr>
+    <tr><td class="paramname">gram_name</td><td>The name of the gram matrix for print out. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="afbfeb9b0b6e49545dd732f7a3c95b152"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbfeb9b0b6e49545dd732f7a3c95b152">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[4/4]</span></h2>
+<a id="a94ae5d0bd11b05a19cba1123d2399739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ae5d0bd11b05a19cba1123d2399739">&#9670;&nbsp;</a></span>AddSosConstraint() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4813,7 +4842,13 @@ x+y &gt;= 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a>&#160;</td>
-          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gram_name</em> = <code>&quot;S&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4829,6 +4864,7 @@ x+y &gt;= 0
 <li>The monomial basis m. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>Refer to NonnegativePolynomial class documentation. </td></tr>
+    <tr><td class="paramname">gram_name</td><td>The name of the gram matrix for print out. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6735,8 +6771,8 @@ x+y &gt;= 0
 
 </div>
 </div>
-<a id="abac9dc35b894168d1b1600887bc27bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abac9dc35b894168d1b1600887bc27bcd">&#9670;&nbsp;</a></span>NewSosPolynomial() <span class="overload">[1/3]</span></h2>
+<a id="a119f70ac7514b2dab4bc4c39048fb7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a119f70ac7514b2dab4bc4c39048fb7dc">&#9670;&nbsp;</a></span>NewSosPolynomial() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6751,7 +6787,13 @@ x+y &gt;= 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a>&#160;</td>
-          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gram_name</em> = <code>&quot;S&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6765,7 +6807,13 @@ x+y &gt;= 0
 <p>For example, <code>NewSosPolynomial(Vector2&lt;Monomial&gt;{x,y})</code> returns a polynomial p = Q₍₀,₀₎x² + 2Q₍₁,₀₎xy + Q₍₁,₁₎y² and Q. Depending on the type of the polynomial, we will impose different constraint on the polynomial.</p><ul>
 <li>if type = kSos, we impose the polynomial being SOS.</li>
 <li>if type = kSdsos, we impose the polynomial being SDSOS.</li>
-<li>if type = kDsos, we impose the polynomial being DSOS. <dl class="section note"><dt>Note</dt><dd>Q is a symmetric monomial_basis.rows() x monomial_basis.rows() matrix. </dd></dl>
+<li>if type = kDsos, we impose the polynomial being DSOS. <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gram_name</td><td>The name of the gram matrix for print out. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Q is a symmetric monomial_basis.rows() x monomial_basis.rows() matrix. </dd></dl>
 </li>
 </ul>
 
@@ -6807,8 +6855,8 @@ x+y &gt;= 0
 
 </div>
 </div>
-<a id="a17696eeb5ed72ea8a4ddcaa732324a3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17696eeb5ed72ea8a4ddcaa732324a3e">&#9670;&nbsp;</a></span>NewSosPolynomial() <span class="overload">[3/3]</span></h2>
+<a id="aa1597383d3ab6b48e19d89a5364d8d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1597383d3ab6b48e19d89a5364d8d92">&#9670;&nbsp;</a></span>NewSosPolynomial() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6829,7 +6877,13 @@ x+y &gt;= 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818">NonnegativePolynomial</a>&#160;</td>
-          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076">NonnegativePolynomial::kSos</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gram_name</em> = <code>&quot;S&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6845,9 +6899,10 @@ x+y &gt;= 0
     <tr><td class="paramname">type</td><td>Depending on the type of the polynomial, we will impose different constraint on the polynomial.<ul>
 <li>if type = kSos, we impose the polynomial being SOS.</li>
 <li>if type = kSdsos, we impose the polynomial being SDSOS.</li>
-<li>if type = kDsos, we impose the polynomial being DSOS.</li>
+<li>if type = kDsos, we impose the polynomial being DSOS. </li>
 </ul>
 </td></tr>
+    <tr><td class="paramname">gram_name</td><td>The name of the gram matrix for print out.</td></tr>
   </table>
   </dd>
 </dl>

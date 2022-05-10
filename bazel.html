@@ -165,11 +165,10 @@ target label (and optional configuration options if desired).  We give some
 typical examples below; for more reading about target patterns, see:
 <a href="https://docs.bazel.build/versions/main/user-manual.html#target-patterns">https://docs.bazel.build/versions/main/user-manual.html#target-patterns</a>.</p>
 
-<p>On Ubuntu, the default compiler is the first <code class="highlighter-rouge">gcc</code> compiler in the
-<code class="highlighter-rouge">PATH</code>, usually GCC 9.3 on Focal. On macOS, the default
-compiler is the Apple LLVM compiler. To use Clang 9 on Ubuntu, set the <code class="highlighter-rouge">CC</code>
-and <code class="highlighter-rouge">CXX</code> environment variables before running <strong>bazel build</strong>, <strong>bazel test</strong>
-or any other <strong>bazel</strong> commands.</p>
+<p>On Ubuntu, the default compiler is the first <code class="highlighter-rouge">gcc</code> compiler in the <code class="highlighter-rouge">PATH</code>.
+On macOS, the default compiler is the Apple LLVM compiler. To use Clang on
+Ubuntu, add <code class="highlighter-rouge">--config=clang</code> after any <strong>bazel build</strong>, <strong>bazel test</strong> or any
+other <strong>bazel</strong> commands.</p>
 
 <p>Cheat sheet for operating on the entire project:</p>
 

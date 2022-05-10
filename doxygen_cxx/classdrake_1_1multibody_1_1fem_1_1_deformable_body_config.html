@@ -1,0 +1,630 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: DeformableBodyConfig&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">DeformableBodyConfig&lt; T &gt; Class Template Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class drake::multibody::fem::DeformableBodyConfig&lt; T &gt;</h3>
+
+<p>DeformableBodyConfig stores the physical parameters for a deformable body. </p>
+<p>A default constructed configuration approximately represents a hard rubber material (density, elasticity, and poisson's ratio) without any damping. Damping coefficients are generally difficult to measure and we expect users will typically start with zero damping and tune the values to achieve reasonable dynamics. The config contains the following fields with their corresponding valid ranges:</p><ul>
+<li>Young's modulus: Measures the stiffness of the material, has unit N/m². Must be positive. Default to 1e8.</li>
+<li>Poisson's ratio: Measures the Poisson effect (how much the material expands or contracts in directions perpendicular to the direction of loading) of the material, unitless. Must be greater than -1 and less than 0.5. Default to 0.49.</li>
+<li>Mass damping coefficient: Controls the strength of mass damping, has unit 1/s. Must be non-negative. Default to 0. See <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_damping_model.html" title="A viscous Rayleigh damping model in which the damping matrix D is a linear combination of mass and st...">DampingModel</a>.</li>
+<li>Stiffness damping coefficient: Controls the strength of stiffness damping, has unit s. Must be non-negative. Default to 0. See <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_damping_model.html" title="A viscous Rayleigh damping model in which the damping matrix D is a linear combination of mass and st...">DampingModel</a>.</li>
+<li>Mass density: Has unit kg/m³. Must be positive. Default to 1.5e3.</li>
+<li>Material model: The constitutive model that describes the stress-strain relationship of the body, see MaterialModel. Default to <a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f" title="Corotational model.">MaterialModel::kCorotated</a>. <dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+</div>
+<p><code>#include &lt;drake/multibody/fem/deformable_body_config.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:adbccaccf885eb95aa54e7f4a1e73968e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#adbccaccf885eb95aa54e7f4a1e73968e">DeformableBodyConfig</a> ()=default</td></tr>
+<tr class="separator:adbccaccf885eb95aa54e7f4a1e73968e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8586af2d4349c2d76b821c64c9fd4fca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a8586af2d4349c2d76b821c64c9fd4fca">set_youngs_modulus</a> (T <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a220b34cff05e3d9969b48779570a938f">youngs_modulus</a>)</td></tr>
+<tr class="separator:a8586af2d4349c2d76b821c64c9fd4fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e314a85282d4f9fb5d43a585b824d66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a3e314a85282d4f9fb5d43a585b824d66">set_poissons_ratio</a> (T <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ac68efde8880e55b9ede28fa63f2022f0">poissons_ratio</a>)</td></tr>
+<tr class="separator:a3e314a85282d4f9fb5d43a585b824d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac813aeeaac795ab54e2e7fc1055f9984"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ac813aeeaac795ab54e2e7fc1055f9984">set_mass_damping_coefficient</a> (T <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#aaf167817c2cdccf76ffe05897f98fc50">mass_damping_coefficient</a>)</td></tr>
+<tr class="separator:ac813aeeaac795ab54e2e7fc1055f9984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ba6401d2c0f91e0bce3edcfd830f0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a97ba6401d2c0f91e0bce3edcfd830f0d">set_stiffness_damping_coefficient</a> (T <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#acfb3b6934ba38d10192872d95efabad8">stiffness_damping_coefficient</a>)</td></tr>
+<tr class="separator:a97ba6401d2c0f91e0bce3edcfd830f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb55ac94e3c7b3c3f518f3be65e6ed2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a5bb55ac94e3c7b3c3f518f3be65e6ed2">set_mass_density</a> (T <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a36f6f1956598f6943525242776e0e36d">mass_density</a>)</td></tr>
+<tr class="separator:a5bb55ac94e3c7b3c3f518f3be65e6ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead9de5caf02c6122cd3511037653b06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#aead9de5caf02c6122cd3511037653b06">set_material_model</a> (<a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">MaterialModel</a> <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ae1b8cf2db340d2008f928c0add1d0eed">material_model</a>)</td></tr>
+<tr class="separator:aead9de5caf02c6122cd3511037653b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220b34cff05e3d9969b48779570a938f"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a220b34cff05e3d9969b48779570a938f">youngs_modulus</a> () const</td></tr>
+<tr class="memdesc:a220b34cff05e3d9969b48779570a938f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Young's modulus, with unit of N/m².  <a href="#a220b34cff05e3d9969b48779570a938f">More...</a><br /></td></tr>
+<tr class="separator:a220b34cff05e3d9969b48779570a938f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68efde8880e55b9ede28fa63f2022f0"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ac68efde8880e55b9ede28fa63f2022f0">poissons_ratio</a> () const</td></tr>
+<tr class="memdesc:ac68efde8880e55b9ede28fa63f2022f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Poisson's ratio, unitless.  <a href="#ac68efde8880e55b9ede28fa63f2022f0">More...</a><br /></td></tr>
+<tr class="separator:ac68efde8880e55b9ede28fa63f2022f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf167817c2cdccf76ffe05897f98fc50"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#aaf167817c2cdccf76ffe05897f98fc50">mass_damping_coefficient</a> () const</td></tr>
+<tr class="memdesc:aaf167817c2cdccf76ffe05897f98fc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mass damping coefficient.  <a href="#aaf167817c2cdccf76ffe05897f98fc50">More...</a><br /></td></tr>
+<tr class="separator:aaf167817c2cdccf76ffe05897f98fc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb3b6934ba38d10192872d95efabad8"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#acfb3b6934ba38d10192872d95efabad8">stiffness_damping_coefficient</a> () const</td></tr>
+<tr class="memdesc:acfb3b6934ba38d10192872d95efabad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stiffness damping coefficient.  <a href="#acfb3b6934ba38d10192872d95efabad8">More...</a><br /></td></tr>
+<tr class="separator:acfb3b6934ba38d10192872d95efabad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f6f1956598f6943525242776e0e36d"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a36f6f1956598f6943525242776e0e36d">mass_density</a> () const</td></tr>
+<tr class="memdesc:a36f6f1956598f6943525242776e0e36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mass density, with unit of kg/m³.  <a href="#a36f6f1956598f6943525242776e0e36d">More...</a><br /></td></tr>
+<tr class="separator:a36f6f1956598f6943525242776e0e36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b8cf2db340d2008f928c0add1d0eed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">MaterialModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ae1b8cf2db340d2008f928c0add1d0eed">material_model</a> () const</td></tr>
+<tr class="memdesc:ae1b8cf2db340d2008f928c0add1d0eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constitutive model of the material.  <a href="#ae1b8cf2db340d2008f928c0add1d0eed">More...</a><br /></td></tr>
+<tr class="separator:ae1b8cf2db340d2008f928c0add1d0eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a79df2cc399d4fd01f3d8824c8f6d794b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a79df2cc399d4fd01f3d8824c8f6d794b">DeformableBodyConfig</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> &amp;)=default</td></tr>
+<tr class="separator:a79df2cc399d4fd01f3d8824c8f6d794b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bc5a0b2ae3302cdf987ad5d96bcc64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ac7bc5a0b2ae3302cdf987ad5d96bcc64">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> &amp;)=default</td></tr>
+<tr class="separator:ac7bc5a0b2ae3302cdf987ad5d96bcc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af2bd2f688d07855b278ac930c26bc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a6af2bd2f688d07855b278ac930c26bc0">DeformableBodyConfig</a> (<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a6af2bd2f688d07855b278ac930c26bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd13dd40f96fc299f8d9de60aefb1a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#aafd13dd40f96fc299f8d9de60aefb1a9">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aafd13dd40f96fc299f8d9de60aefb1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a79df2cc399d4fd01f3d8824c8f6d794b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79df2cc399d4fd01f3d8824c8f6d794b">&#9670;&nbsp;</a></span>DeformableBodyConfig() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6af2bd2f688d07855b278ac930c26bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af2bd2f688d07855b278ac930c26bc0">&#9670;&nbsp;</a></span>DeformableBodyConfig() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbccaccf885eb95aa54e7f4a1e73968e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbccaccf885eb95aa54e7f4a1e73968e">&#9670;&nbsp;</a></span>DeformableBodyConfig() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaf167817c2cdccf76ffe05897f98fc50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf167817c2cdccf76ffe05897f98fc50">&#9670;&nbsp;</a></span>mass_damping_coefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; mass_damping_coefficient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the mass damping coefficient. </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_damping_model.html" title="A viscous Rayleigh damping model in which the damping matrix D is a linear combination of mass and st...">DampingModel</a>. </p>
+
+</div>
+</div>
+<a id="a36f6f1956598f6943525242776e0e36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f6f1956598f6943525242776e0e36d">&#9670;&nbsp;</a></span>mass_density()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; mass_density </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the mass density, with unit of kg/m³. </p>
+
+</div>
+</div>
+<a id="ae1b8cf2db340d2008f928c0add1d0eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b8cf2db340d2008f928c0add1d0eed">&#9670;&nbsp;</a></span>material_model()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">MaterialModel</a> material_model </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the constitutive model of the material. </p>
+
+</div>
+</div>
+<a id="ac7bc5a0b2ae3302cdf987ad5d96bcc64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bc5a0b2ae3302cdf987ad5d96bcc64">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafd13dd40f96fc299f8d9de60aefb1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd13dd40f96fc299f8d9de60aefb1a9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac68efde8880e55b9ede28fa63f2022f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68efde8880e55b9ede28fa63f2022f0">&#9670;&nbsp;</a></span>poissons_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; poissons_ratio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the Poisson's ratio, unitless. </p>
+
+</div>
+</div>
+<a id="ac813aeeaac795ab54e2e7fc1055f9984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac813aeeaac795ab54e2e7fc1055f9984">&#9670;&nbsp;</a></span>set_mass_damping_coefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_mass_damping_coefficient </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>mass_damping_coefficient</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>mass_damping_coefficient &gt;= 0. </dd></dl>
+
+</div>
+</div>
+<a id="a5bb55ac94e3c7b3c3f518f3be65e6ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb55ac94e3c7b3c3f518f3be65e6ed2">&#9670;&nbsp;</a></span>set_mass_density()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_mass_density </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>mass_density</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>mass_density &gt; 0. </dd></dl>
+
+</div>
+</div>
+<a id="aead9de5caf02c6122cd3511037653b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead9de5caf02c6122cd3511037653b06">&#9670;&nbsp;</a></span>set_material_model()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_material_model </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">MaterialModel</a>&#160;</td>
+          <td class="paramname"><em>material_model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e314a85282d4f9fb5d43a585b824d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e314a85282d4f9fb5d43a585b824d66">&#9670;&nbsp;</a></span>set_poissons_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_poissons_ratio </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>poissons_ratio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>-1 &lt; poissons_ratio &lt; 0.5. </dd></dl>
+
+</div>
+</div>
+<a id="a97ba6401d2c0f91e0bce3edcfd830f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ba6401d2c0f91e0bce3edcfd830f0d">&#9670;&nbsp;</a></span>set_stiffness_damping_coefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_stiffness_damping_coefficient </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>stiffness_damping_coefficient</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>stiffness_damping_coefficient &gt;= 0. </dd></dl>
+
+</div>
+</div>
+<a id="a8586af2d4349c2d76b821c64c9fd4fca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8586af2d4349c2d76b821c64c9fd4fca">&#9670;&nbsp;</a></span>set_youngs_modulus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_youngs_modulus </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>youngs_modulus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>youngs_modulus &gt; 0. </dd></dl>
+
+</div>
+</div>
+<a id="acfb3b6934ba38d10192872d95efabad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb3b6934ba38d10192872d95efabad8">&#9670;&nbsp;</a></span>stiffness_damping_coefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; stiffness_damping_coefficient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the stiffness damping coefficient. </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_damping_model.html" title="A viscous Rayleigh damping model in which the damping matrix D is a linear combination of mass and st...">DampingModel</a>. </p>
+
+</div>
+</div>
+<a id="a220b34cff05e3d9969b48779570a938f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220b34cff05e3d9969b48779570a938f">&#9670;&nbsp;</a></span>youngs_modulus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; youngs_modulus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the Young's modulus, with unit of N/m². </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/fem/<a class="el" href="deformable__body__config_8h.html">deformable_body_config.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody_1_1fem.html">fem</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

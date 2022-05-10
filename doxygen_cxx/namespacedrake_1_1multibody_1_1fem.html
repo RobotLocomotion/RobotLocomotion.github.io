@@ -160,7 +160,8 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1multibody_1_1fem.htm
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">drake::multibody::fem Namespace Reference</div>  </div>
 </div><!--header-->
@@ -170,6 +171,9 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1multibody_1_1fem.htm
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_damping_model.html">DampingModel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A viscous Rayleigh damping model in which the damping matrix D is a linear combination of mass and stiffness matrices, as, D = αM + βK where α and β are nonnegative.  <a href="classdrake_1_1multibody_1_1fem_1_1_damping_model.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">DeformableBodyConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">DeformableBodyConfig stores the physical parameters for a deformable body.  <a href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity problems.  <a href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#details">More...</a><br /></td></tr>
@@ -186,6 +190,14 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aca896def1f326edb3127fce343d874e8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1fem.html#aca896def1f326edb3127fce343d874e8">FemModelId</a> = <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; class FemModelTag &gt;</td></tr>
 <tr class="memdesc:aca896def1f326edb3127fce343d874e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify FEM models.  <a href="#aca896def1f326edb3127fce343d874e8">More...</a><br /></td></tr>
 <tr class="separator:aca896def1f326edb3127fce343d874e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ad0fc09b4ba51af3abea545b9c6220b7a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">MaterialModel</a> { <a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f">kCorotated</a>, 
+<a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385">kLinear</a>
+ }</td></tr>
+<tr class="memdesc:ad0fc09b4ba51af3abea545b9c6220b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of material models for the deformable body.  <a href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">More...</a><br /></td></tr>
+<tr class="separator:ad0fc09b4ba51af3abea545b9c6220b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="aca896def1f326edb3127fce343d874e8"></a>
@@ -217,6 +229,39 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type used to index FEM nodes. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad0fc09b4ba51af3abea545b9c6220b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0fc09b4ba51af3abea545b9c6220b7a">&#9670;&nbsp;</a></span>MaterialModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">MaterialModel</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Types of material models for the deformable body. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f"></a>kCorotated&#160;</td><td class="fielddoc"><p>Corotational model. </p>
+<p>Recommended for modeling large deformations. More computationally expensive than the linear elasticity model. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385"></a>kLinear&#160;</td><td class="fielddoc"><p>Linear elasticity model. </p>
+<p>Recommended for modeling small deformations. Less computationally expensive than non-linear models but is inaccurate for large deformations. </p>
+</td></tr>
+</table>
 
 </div>
 </div>

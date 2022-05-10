@@ -108,6 +108,7 @@ var hierarchy =
     [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", null ],
     [ "DampingModel< T >", "classdrake_1_1multibody_1_1fem_1_1_damping_model.html", null ],
+    [ "DeformableBodyConfig< T >", "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html", null ],
     [ "DelegatingHasher", "structdrake_1_1_delegating_hasher.html", null ],
     [ "DenseData", "classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html", null ],
     [ "DenseFeasibility", "classdrake_1_1solvers_1_1fbstab_1_1_dense_feasibility.html", null ],

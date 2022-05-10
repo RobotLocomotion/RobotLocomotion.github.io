@@ -186,11 +186,7 @@ install Drake’s required version of <code class="highlighter-rouge">clang-form
 
 <p>To run <code class="highlighter-rouge">clang-format</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For development on macOS:
-/usr/local/opt/llvm@9/bin/clang-format -i -style=file [file name]
-
-# For development on Ubuntu:
-clang-format-9 -i -style=file [file name]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang-format-12 -i -style=file [file name]
 </code></pre></div></div>
 
 <p>Using <code class="highlighter-rouge">clang-format</code> will modify the entire file that is specified. As an
@@ -198,10 +194,10 @@ alternative, you can use <code class="highlighter-rouge">git clang-format</code>
 portions of a file that you have modified. To run <code class="highlighter-rouge">git clang-format</code>:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For development on Ubuntu: format a file that has been staged in git
-git clang-format-9 --binary=/usr/bin/clang-format-9 -- [file name]
+git clang-format-12 --binary=/usr/bin/clang-format-12 -- [file name]
 
 # For development on Ubuntu: format a file that has been modified but not staged
-git clang-format-9 --binary=/usr/bin/clang-format-9 -f -- [file name]
+git clang-format-12 --binary=/usr/bin/clang-format-12 -f -- [file name]
 </code></pre></div></div>
 
       </article>
