@@ -33,7 +33,7 @@ var group__acrobot__systems =
       [ "get_parameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a6bff3612980d7d9bde1dc7cdd6929c92", null ],
       [ "get_state", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a6e8eaf8b2ee5e1918fdc61cb249d16d1", null ],
       [ "get_state", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a2758bfaadb107b84584757307f3bee9c", null ],
-      [ "get_tau", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a232c0c6d9f188a4ddd993fc3039c7d82", null ],
+      [ "get_tau", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a8e53ef6ca8df61fb8c6d78f409dc49b9", null ],
       [ "MassMatrix", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a09afd13e64f4dfb7defbb727d34840cc", null ],
       [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#ababb21161606a2e553087b99a52bf394", null ],
       [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a01360a871ad3a44a5587256f5b4dcaae", null ],

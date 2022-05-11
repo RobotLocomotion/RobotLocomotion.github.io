@@ -1,5 +1,8 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,12,12,3],
+"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[3,0,0,12,21,0],
+"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c":[3,0,0,12,21,0,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0":[3,0,0,12,21,0,2],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a8f0c05ff392b24376b9094bb67a2228b":[3,0,0,12,21,0,4],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#aa7e5f2cbcbe7a77b0b0f1cd1a88dec2c":[3,0,0,12,21,0,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,14,7,11],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,14,7,14],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,14,7,14,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,14,7,15],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,14,7,15,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,14,7,15,0],
-"structdrake_1_1systems_1_1sensors_1_1_color.html":[3,0,0,14,8,3]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,14,7,15]
 };

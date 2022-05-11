@@ -418,7 +418,10 @@ mass set to a new value.</p>
 <p>A model of a simple pendulum</p>
 <div class="math notranslate nohighlight">
 \[ml^2 \ddot\theta + b\dot\theta + mgl\sin\theta = \tau\]</div>
-<p>name: PendulumPlant input_ports: - tau output_ports: - state</p>
+<p>name: PendulumPlant input_ports: - tau (optional) output_ports: -
+state</p>
+<p>Note: If the tau input port is not connected, then the torque is taken
+to be zero.</p>
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumPlant.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumPlant</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.pendulum.PendulumPlant.__init__" title="Permalink to this definition">¶</a></dt>
