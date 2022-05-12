@@ -52,7 +52,7 @@ var searchData=
   ['positionconstraint',['PositionConstraint',['../classdrake_1_1multibody_1_1_position_constraint.html',1,'drake::multibody']]],
   ['positivesemidefiniteconstraint',['PositiveSemidefiniteConstraint',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html',1,'drake::solvers']]],
   ['prismaticjoint',['PrismaticJoint',['../classdrake_1_1multibody_1_1_prismatic_joint.html',1,'drake::multibody']]],
-  ['product',['Product',['../structdrake_1_1_trig_poly_1_1_product.html',1,'TrigPoly&lt; T &gt;::Product&lt; Rhs, Lhs &gt;'],['../structdrake_1_1_polynomial_1_1_product.html',1,'Polynomial&lt; T &gt;::Product&lt; Rhs, Lhs &gt;']]],
+  ['product',['Product',['../structdrake_1_1_polynomial_1_1_product.html',1,'Polynomial&lt; T &gt;::Product&lt; Rhs, Lhs &gt;'],['../structdrake_1_1_trig_poly_1_1_product.html',1,'TrigPoly&lt; T &gt;::Product&lt; Rhs, Lhs &gt;']]],
   ['promoted_5fnumerical',['promoted_numerical',['../structdrake_1_1geometry_1_1promoted__numerical.html',1,'drake::geometry']]],
   ['propeller',['Propeller',['../classdrake_1_1multibody_1_1_propeller.html',1,'drake::multibody']]],
   ['propellerinfo',['PropellerInfo',['../structdrake_1_1multibody_1_1_propeller_info.html',1,'drake::multibody']]],
