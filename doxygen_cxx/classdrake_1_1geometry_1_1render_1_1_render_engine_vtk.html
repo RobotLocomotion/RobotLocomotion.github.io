@@ -169,9 +169,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1render_1_1_r
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>See documentation of <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a84f6890eb23c6cba8a7a342bc11fcba3" title="Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer.">MakeRenderEngineVtk()</a>. </p>
+<div class="textblock"><p>See documentation of <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a3fabc06eee43b133cabfa96a4f65c94d" title="(Deprecated.)">MakeRenderEngineVtk()</a>. </p>
 </div>
-<p><code>#include &lt;drake/geometry/render/render_engine_vtk.h&gt;</code></p>
+<p><code>#include &lt;drake/geometry/render_vtk/internal_render_engine_vtk.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -181,9 +181,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af70dd3ac8981ebabb0e508ee041ef2b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#af70dd3ac8981ebabb0e508ee041ef2b7">RenderEngineVtk</a> (const <a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a> &amp;parameters=<a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a>())</td></tr>
-<tr class="memdesc:af70dd3ac8981ebabb0e508ee041ef2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the render engine from the given <code>parameters</code>.  <a href="#af70dd3ac8981ebabb0e508ee041ef2b7">More...</a><br /></td></tr>
-<tr class="separator:af70dd3ac8981ebabb0e508ee041ef2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a784d5dc329159bc740afd2a01c2e9ab8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a784d5dc329159bc740afd2a01c2e9ab8">RenderEngineVtk</a> (const <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a> &amp;parameters=<a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a>())</td></tr>
+<tr class="memdesc:a784d5dc329159bc740afd2a01c2e9ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the render engine from the given <code>parameters</code>.  <a href="#a784d5dc329159bc740afd2a01c2e9ab8">More...</a><br /></td></tr>
+<tr class="separator:a784d5dc329159bc740afd2a01c2e9ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81e26b02c3a6d32b4187fc3f14261cbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a81e26b02c3a6d32b4187fc3f14261cbf">UpdateViewpoint</a> (const math::RigidTransformd &amp;X_WR) override</td></tr>
 <tr class="separator:a81e26b02c3a6d32b4187fc3f14261cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
@@ -377,24 +377,32 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af70dd3ac8981ebabb0e508ee041ef2b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af70dd3ac8981ebabb0e508ee041ef2b7">&#9670;&nbsp;</a></span>RenderEngineVtk() <span class="overload">[3/4]</span></h2>
+<a id="a784d5dc329159bc740afd2a01c2e9ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a784d5dc329159bc740afd2a01c2e9ab8">&#9670;&nbsp;</a></span>RenderEngineVtk() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html">RenderEngineVtk</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>parameters</em> = <code><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a>()</code></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameters</em> = <code><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a>()</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Constructs the render engine from the given <code>parameters</code>. </p>
-<p>When one of the optional parameters is omitted, the constructed value will be as documented elsewhere in <a class="el" href="namespacedrake_1_1geometry_1_1render.html#render_engine_vtk_properties">this class</a>. </p>
+<p>When one of the optional parameters is omitted, the constructed value will be as documented elsewhere in <a class="el" href="namespacedrake_1_1geometry.html#render_engine_vtk_properties">this class</a>. </p>
 
 </div>
 </div>
@@ -1020,7 +1028,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/geometry/render/<a class="el" href="render__engine__vtk_8h.html">render_engine_vtk.h</a></li>
+<li>drake/geometry/render_vtk/<a class="el" href="internal__render__engine__vtk_8h.html">internal_render_engine_vtk.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

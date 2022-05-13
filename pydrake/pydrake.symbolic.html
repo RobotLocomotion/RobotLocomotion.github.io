@@ -2184,6 +2184,14 @@ j) for all i.</td>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.symbolic.Polynomial.Expand">
+<code class="descname">Expand</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.Expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expands each coefficient expression and returns the expanded
+polynomial. If any coefficient is equal to 0 after expansion, then
+remove that term from the returned polynomial.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.symbolic.Polynomial.indeterminates">
 <code class="descname">indeterminates</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variables<a class="headerlink" href="#pydrake.symbolic.Polynomial.indeterminates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the indeterminates of this polynomial.</p>

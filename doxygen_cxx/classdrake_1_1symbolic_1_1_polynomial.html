@@ -249,6 +249,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55826a916b7c6f12060f7ff4e590813f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a55826a916b7c6f12060f7ff4e590813f">AddProduct</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;coeff, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
 <tr class="memdesc:a55826a916b7c6f12060f7ff4e590813f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code>coeff</code> * <code>m</code> to this polynomial.  <a href="#a55826a916b7c6f12060f7ff4e590813f">More...</a><br /></td></tr>
 <tr class="separator:a55826a916b7c6f12060f7ff4e590813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cdee394fc34d52f16a1b62681df409d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a9cdee394fc34d52f16a1b62681df409d">Expand</a> () const</td></tr>
+<tr class="memdesc:a9cdee394fc34d52f16a1b62681df409d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands each coefficient expression and returns the expanded polynomial.  <a href="#a9cdee394fc34d52f16a1b62681df409d">More...</a><br /></td></tr>
+<tr class="separator:a9cdee394fc34d52f16a1b62681df409d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a">RemoveTermsWithSmallCoefficients</a> (double coefficient_tol) const</td></tr>
 <tr class="memdesc:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the terms whose absolute value of the coefficients are smaller than or equal to <code>coefficient_tol</code> For example, if the polynomial is 2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling RemoveTermsWithSmallCoefficients(1e-3), the returned polynomial becomes 2x² + 3xy.  <a href="#a376ec1877fc3946abaeddcefa6bf9a0a">More...</a><br /></td></tr>
 <tr class="separator:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -852,6 +855,26 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9cdee394fc34d52f16a1b62681df409d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cdee394fc34d52f16a1b62681df409d">&#9670;&nbsp;</a></span>Expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> Expand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expands each coefficient expression and returns the expanded polynomial. </p>
+<p>If any coefficient is equal to 0 after expansion, then remove that term from the returned polynomial. </p>
 
 </div>
 </div>

@@ -161,7 +161,9 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1render.h
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry::render Namespace Reference</div>  </div>
 </div><!--header-->
@@ -201,14 +203,16 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction parameters for <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html" title="See documentation of MakeRenderEngineGl().">RenderEngineGl</a>.  <a href="structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html">RenderEngineVtk</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See documentation of <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a84f6890eb23c6cba8a7a342bc11fcba3" title="Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer.">MakeRenderEngineVtk()</a>.  <a href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction parameters for the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>.  <a href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See documentation of <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a3fabc06eee43b133cabfa96a4f65c94d" title="(Deprecated.)">MakeRenderEngineVtk()</a>.  <a href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class representing object "labels" for rendering.  <a href="classdrake_1_1geometry_1_1render_1_1_render_label.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a57f567939574cb0f42711f4b608632d2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a57f567939574cb0f42711f4b608632d2">RenderEngineVtkParams</a> = <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a></td></tr>
+<tr class="separator:a57f567939574cb0f42711f4b608632d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -227,10 +231,28 @@ Functions</h2></td></tr>
 <tr class="separator:a4e584cc1e211ddaf85d2e3be432085fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d2737524b6193ba17538d7fd5ba934c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a8d2737524b6193ba17538d7fd5ba934c">TransformToDrakeCylinder</a> (vtkTransform *transform, vtkTransformPolyDataFilter *transform_filter, vtkCylinderSource *vtk_cylinder)</td></tr>
 <tr class="separator:a8d2737524b6193ba17538d7fd5ba934c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f6890eb23c6cba8a7a342bc11fcba3"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a84f6890eb23c6cba8a7a342bc11fcba3">MakeRenderEngineVtk</a> (const <a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a> &amp;params)</td></tr>
-<tr class="memdesc:a84f6890eb23c6cba8a7a342bc11fcba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation which uses a VTK-based OpenGL renderer.  <a href="#a84f6890eb23c6cba8a7a342bc11fcba3">More...</a><br /></td></tr>
-<tr class="separator:a84f6890eb23c6cba8a7a342bc11fcba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3fabc06eee43b133cabfa96a4f65c94d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a3fabc06eee43b133cabfa96a4f65c94d">MakeRenderEngineVtk</a> = &amp;geometry::MakeRenderEngineVtk</td></tr>
+<tr class="memdesc:a3fabc06eee43b133cabfa96a4f65c94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a3fabc06eee43b133cabfa96a4f65c94d">More...</a><br /></td></tr>
+<tr class="separator:a3fabc06eee43b133cabfa96a4f65c94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a57f567939574cb0f42711f4b608632d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f567939574cb0f42711f4b608632d2">&#9670;&nbsp;</a></span>RenderEngineVtkParams</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a57f567939574cb0f42711f4b608632d2">RenderEngineVtkParams</a> =  <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a77576ec311ba594b4e3a3cf15f0b11f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77576ec311ba594b4e3a3cf15f0b11f1">&#9670;&nbsp;</a></span>CreateVtkBox()</h2>
@@ -316,57 +338,6 @@ Functions</h2></td></tr>
 <p>The engine only works under Ubuntu. If called on a Mac, it will produce a "dummy" implementation.</p>
 <dl class="section note"><dt>Note</dt><dd>RenderEngineGl behaves a bit differently from other <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations (e.g., <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>) with respect to displayed images. First, RenderEngineGl can only display a <em>single</em> image type at a time. So, if a shown window has been requested for both label and color images, the images will alternate in the same window. Second, the window display draws all images <em>flipped vertically</em>. The image produced will be compatible with the Drake ecosystem, only the visualization will be upside down. This has been documented in <a href="https://github.com/RobotLocomotion/drake/issues/14254">https://github.com/RobotLocomotion/drake/issues/14254</a>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>RenderEngineGl is not threadsafe. If a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> is instantiated with a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html" title="See documentation of MakeRenderEngineGl().">RenderEngineGl</a> and there are multiple Context instances for that <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>, rendering in multiple threads may exhibit issues. </dd></dl>
-
-</div>
-</div>
-<a id="a84f6890eb23c6cba8a7a342bc11fcba3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84f6890eb23c6cba8a7a342bc11fcba3">&#9670;&nbsp;</a></span>MakeRenderEngineVtk()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a>&gt; drake::geometry::render::MakeRenderEngineVtk </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation which uses a VTK-based OpenGL renderer. </p>
-<p><a class="anchor" id="render_engine_vtk_properties"></a> </p><h2>Geometry perception properties</h2>
-<p>This <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation looks for the following properties when registering visual geometry, categorized by rendered image type.</p>
-<h3>RGB images</h3>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">Group name  </th><th class="markdownTableHeadCenter">Property Name  </th><th class="markdownTableHeadCenter">Required  </th><th class="markdownTableHeadCenter">Property Type  </th><th class="markdownTableHeadLeft">Property Description   </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">phong  </td><td class="markdownTableBodyCenter">diffuse  </td><td class="markdownTableBodyCenter">no¹  </td><td class="markdownTableBodyCenter">Eigen::Vector4d  </td><td class="markdownTableBodyLeft">The rgba value of the object surface.   </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">phong  </td><td class="markdownTableBodyCenter">diffuse_map  </td><td class="markdownTableBodyCenter">no²  </td><td class="markdownTableBodyCenter">std::string  </td><td class="markdownTableBodyLeft">The path to a texture to apply to the geometry.³   </td></tr>
-</table>
-<p>¹ If no diffuse value is given, a default rgba value will be applied. The default color is a bright orange. This default value can be changed to a different value at construction. <br />
- ² If no path is specified, or the file cannot be read, the diffuse rgba value is used (or its default). <br />
- ³ RenderEngineVtk implements a legacy feature for associating textures with <em>meshes</em>. If <em>no</em> <code>(phong, diffuse_map)</code> property is provided (or it refers to a file that doesn't exist), for a mesh named <code>/path/to/mesh.obj</code>, RenderEngineVtk will search for a file <code>/path/to/mesh.png</code> (replacing "obj" with "png"). If that image exists, it will be used as a texture on the mesh object.</p>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a> does not support the OBJ format <code>usemtl</code> directive. Instead, it has two ways to associate a color texture with an obj file:<ul>
-<li>File name matching; see footnote 3 above.</li>
-<li>Explicit assignment of arbitrary texture files from within model files. In SDFormat, use the tag <a class="el" href="group__multibody__parsing.html#tag_drake_diffuse_map">drake:diffuse_map</a>. In URDF, use <code>//visual/material/texture</code>.</li>
-</ul>
-</dd></dl>
-<h3>Depth images</h3>
-<p>No specific properties required.</p>
-<h3>Label images</h3>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">Group name  </th><th class="markdownTableHeadCenter">Property Name  </th><th class="markdownTableHeadCenter">Required  </th><th class="markdownTableHeadCenter">Property Type  </th><th class="markdownTableHeadLeft">Property Description   </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">label  </td><td class="markdownTableBodyCenter">id  </td><td class="markdownTableBodyCenter">configurable⁵  </td><td class="markdownTableBodyCenter"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a>  </td><td class="markdownTableBodyLeft">The label to render into the image.   </td></tr>
-</table>
-<p>⁵ RenderEngineVtk has a default render label value that is applied to any geometry that doesn't have a (label, id) property at registration. If a value is not explicitly specified, RenderEngineVtk uses <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> as this default value. It can be explicitly set upon construction. The possible values for this default label and the ramifications of that choice are documented <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#render_engine_default_label">here</a>.</p>
-<h3>Geometries accepted by RenderEngineVtk</h3>
-<p>As documented in <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a850b373dc1690b399188c34205487876" title="Requests registration of the given shape with this render engine.">RenderEngine::RegisterVisual()</a>, a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation can use the properties found in the <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html" title="The set of properties for geometry used in a &quot;perception&quot; role.">PerceptionProperties</a> to determine whether it <em>accepts</em> a shape provided for registration. RenderEngineVtk makes use of defaults to accept <em>all</em> geometries (assuming the properties pass validation, e.g., render label validation). </p>
 
 </div>
 </div>
@@ -463,6 +434,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a3fabc06eee43b133cabfa96a4f65c94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fabc06eee43b133cabfa96a4f65c94d">&#9670;&nbsp;</a></span>MakeRenderEngineVtk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto MakeRenderEngineVtk = &amp;geometry::MakeRenderEngineVtk</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use the geometry namespace instead. <br />
+ This will be removed from Drake on or after 2022-09-01.</dd></dl>
 
 </div>
 </div>

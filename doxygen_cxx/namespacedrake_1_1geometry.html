@@ -291,6 +291,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The QueryObject serves as a mechanism to perform geometry queries on the world's geometry.  <a href="classdrake_1_1geometry_1_1_query_object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction parameters for the RenderEngineVtk.  <a href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines RGBA (red, green, blue, alpha) values on the range [0, 1].  <a href="classdrake_1_1geometry_1_1_rgba.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -436,6 +439,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a331f457a6ce0d146213faa844725dcda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a331f457a6ce0d146213faa844725dcda">AddCompliantHydroelasticPropertiesForHalfSpace</a> (double slab_thickness, double hydroelastic_modulus, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
 <tr class="memdesc:a331f457a6ce0d146213faa844725dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compliant half spaces are handled as a special case; they do not get tessellated.  <a href="#a331f457a6ce0d146213faa844725dcda">More...</a><br /></td></tr>
 <tr class="separator:a331f457a6ce0d146213faa844725dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b9a919046a97500f422a85a4a8ce30"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a18b9a919046a97500f422a85a4a8ce30">MakeRenderEngineVtk</a> (const <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a> &amp;params)</td></tr>
+<tr class="memdesc:a18b9a919046a97500f422a85a4a8ce30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer.  <a href="#a18b9a919046a97500f422a85a4a8ce30">More...</a><br /></td></tr>
+<tr class="separator:a18b9a919046a97500f422a85a4a8ce30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ae129ecc1484c1fab6e4d4b3e04d25198">CalcVolume</a> (const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape)</td></tr>
 <tr class="memdesc:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>.  <a href="#ae129ecc1484c1fab6e4d4b3e04d25198">More...</a><br /></td></tr>
 <tr class="separator:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1081,6 +1087,57 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs an <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role.">IllustrationProperties</a> instance compatible with a simple "phong" material using only the given <code>diffuse</code> color. </p>
+
+</div>
+</div>
+<a id="a18b9a919046a97500f422a85a4a8ce30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b9a919046a97500f422a85a4a8ce30">&#9670;&nbsp;</a></span>MakeRenderEngineVtk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a>&gt; drake::geometry::MakeRenderEngineVtk </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">RenderEngineVtkParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer. </p>
+<p><a class="anchor" id="render_engine_vtk_properties"></a> </p><h2>Geometry perception properties</h2>
+<p>This RenderEngine implementation looks for the following properties when registering visual geometry, categorized by rendered image type.</p>
+<h3>RGB images</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Group name  </th><th class="markdownTableHeadCenter">Property Name  </th><th class="markdownTableHeadCenter">Required  </th><th class="markdownTableHeadCenter">Property Type  </th><th class="markdownTableHeadLeft">Property Description   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">phong  </td><td class="markdownTableBodyCenter">diffuse  </td><td class="markdownTableBodyCenter">no¹  </td><td class="markdownTableBodyCenter">Eigen::Vector4d  </td><td class="markdownTableBodyLeft">The rgba value of the object surface.   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">phong  </td><td class="markdownTableBodyCenter">diffuse_map  </td><td class="markdownTableBodyCenter">no²  </td><td class="markdownTableBodyCenter">std::string  </td><td class="markdownTableBodyLeft">The path to a texture to apply to the geometry.³   </td></tr>
+</table>
+<p>¹ If no diffuse value is given, a default rgba value will be applied. The default color is a bright orange. This default value can be changed to a different value at construction. <br />
+ ² If no path is specified, or the file cannot be read, the diffuse rgba value is used (or its default). <br />
+ ³ RenderEngineVtk implements a legacy feature for associating textures with <em>meshes</em>. If <em>no</em> <code>(phong, diffuse_map)</code> property is provided (or it refers to a file that doesn't exist), for a mesh named <code>/path/to/mesh.obj</code>, RenderEngineVtk will search for a file <code>/path/to/mesh.png</code> (replacing "obj" with "png"). If that image exists, it will be used as a texture on the mesh object.</p>
+<dl class="section note"><dt>Note</dt><dd>RenderEngineVtk does not support the OBJ format <code>usemtl</code> directive. Instead, it has two ways to associate a color texture with an obj file:<ul>
+<li>File name matching; see footnote 3 above.</li>
+<li>Explicit assignment of arbitrary texture files from within model files. In SDFormat, use the tag <a class="el" href="group__multibody__parsing.html#tag_drake_diffuse_map">drake:diffuse_map</a>. In URDF, use <code>//visual/material/texture</code>.</li>
+</ul>
+</dd></dl>
+<h3>Depth images</h3>
+<p>No specific properties required.</p>
+<h3>Label images</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Group name  </th><th class="markdownTableHeadCenter">Property Name  </th><th class="markdownTableHeadCenter">Required  </th><th class="markdownTableHeadCenter">Property Type  </th><th class="markdownTableHeadLeft">Property Description   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">label  </td><td class="markdownTableBodyCenter">id  </td><td class="markdownTableBodyCenter">configurable⁵  </td><td class="markdownTableBodyCenter">RenderLabel  </td><td class="markdownTableBodyLeft">The label to render into the image.   </td></tr>
+</table>
+<p>⁵ RenderEngineVtk has a default render label value that is applied to any geometry that doesn't have a (label, id) property at registration. If a value is not explicitly specified, RenderEngineVtk uses RenderLabel::kUnspecified as this default value. It can be explicitly set upon construction. The possible values for this default label and the ramifications of that choice are documented <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#render_engine_default_label">here</a>.</p>
+<h3>Geometries accepted by RenderEngineVtk</h3>
+<p>As documented in RenderEngine::RegisterVisual(), a RenderEngine implementation can use the properties found in the <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html" title="The set of properties for geometry used in a &quot;perception&quot; role.">PerceptionProperties</a> to determine whether it <em>accepts</em> a shape provided for registration. RenderEngineVtk makes use of defaults to accept <em>all</em> geometries (assuming the properties pass validation, e.g., render label validation). </p>
 
 </div>
 </div>

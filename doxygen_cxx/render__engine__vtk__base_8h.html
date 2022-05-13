@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/geometry/render/render_engine_vtk_base.h File Reference</title>
+<title>Drake: drake/geometry/render/stub/render_engine_vtk_base.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -158,57 +158,23 @@ $(document).ready(function(){initNavTree('render__engine__vtk__base_8h.html','')
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">render_engine_vtk_base.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;vtkCylinderSource.h&gt;</code><br />
-<code>#include &lt;vtkSmartPointer.h&gt;</code><br />
-<code>#include &lt;vtkTexturedSphereSource.h&gt;</code><br />
-<code>#include &lt;vtkTransform.h&gt;</code><br />
-<code>#include &lt;vtkTransformPolyDataFilter.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="geometry__roles_8h.html">drake/geometry/geometry_roles.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="shape__specification_8h.html">drake/geometry/shape_specification.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="internal__render__engine__vtk__base_8h.html">drake/geometry/render_vtk/internal_render_engine_vtk_base.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for render_engine_vtk_base.h:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__engine__vtk__base_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1geometry"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1geometry_1_1render"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html">drake::geometry::render</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0ef9d8f77462f2ea81d463c3b119d18e"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPolyDataAlgorithm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a0ef9d8f77462f2ea81d463c3b119d18e">CreateVtkCapsule</a> (const Capsule &amp;capsule)</td></tr>
-<tr class="separator:a0ef9d8f77462f2ea81d463c3b119d18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77576ec311ba594b4e3a3cf15f0b11f1"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPolyDataAlgorithm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a77576ec311ba594b4e3a3cf15f0b11f1">CreateVtkBox</a> (const Box &amp;box, const PerceptionProperties &amp;properties)</td></tr>
-<tr class="separator:a77576ec311ba594b4e3a3cf15f0b11f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a137ec50cf7fb7c288f1d15ee415592a7"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPolyDataAlgorithm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a137ec50cf7fb7c288f1d15ee415592a7">CreateVtkEllipsoid</a> (const Ellipsoid &amp;ellipsoid)</td></tr>
-<tr class="separator:a137ec50cf7fb7c288f1d15ee415592a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c12b91e0fd027a4d4ea1e2b8bcef65a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a7c12b91e0fd027a4d4ea1e2b8bcef65a">SetSphereOptions</a> (vtkTexturedSphereSource *vtk_sphere, double radius)</td></tr>
-<tr class="separator:a7c12b91e0fd027a4d4ea1e2b8bcef65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e584cc1e211ddaf85d2e3be432085fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a4e584cc1e211ddaf85d2e3be432085fb">SetCylinderOptions</a> (vtkCylinderSource *vtk_cylinder, double height, double radius)</td></tr>
-<tr class="separator:a4e584cc1e211ddaf85d2e3be432085fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2737524b6193ba17538d7fd5ba934c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a8d2737524b6193ba17538d7fd5ba934c">TransformToDrakeCylinder</a> (vtkTransform *transform, vtkTransformPolyDataFilter *transform_filter, vtkCylinderSource *vtk_cylinder)</td></tr>
-<tr class="separator:a8d2737524b6193ba17538d7fd5ba934c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li><li class="navelem"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a></li><li class="navelem"><a class="el" href="render__engine__vtk__base_8h.html">render_engine_vtk_base.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li><li class="navelem"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a></li><li class="navelem"><a class="el" href="dir_d41ff1e58cfc03efa57fea81db26bc1e.html">stub</a></li><li class="navelem"><a class="el" href="render__engine__vtk__base_8h.html">render_engine_vtk_base.h</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

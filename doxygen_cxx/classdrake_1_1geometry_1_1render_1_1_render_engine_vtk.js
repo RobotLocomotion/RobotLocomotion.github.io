@@ -3,7 +3,7 @@ var classdrake_1_1geometry_1_1render_1_1_render_engine_vtk =
     [ "RenderingPipeline", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline" ],
     [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7cee58a6cd51d89cd3dfc5cbc0c0c88a", null ],
     [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a15297ff63dabeaf7f082962634bda8b2", null ],
-    [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#af70dd3ac8981ebabb0e508ee041ef2b7", null ],
+    [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a784d5dc329159bc740afd2a01c2e9ab8", null ],
     [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a04d4b5d7360702aa1a1e529c5d21981c", null ],
     [ "actors", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ae7e7742c1fc3324e9cd80e62fd65095f", null ],
     [ "default_diffuse", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a42d85756ac9f5c62314108e554591064", null ],

@@ -66,7 +66,7 @@ var searchData=
   ['makerecursive',['MakeRecursive',['../classdrake_1_1systems_1_1_basic_vector.html#aec21da26d184ce4b88c6182e1b4c66cf',1,'drake::systems::BasicVector::MakeRecursive(BasicVector&lt; T &gt; *data, int index, F constructor_arg, Fargs &amp;&amp;... recursive_args)'],['../classdrake_1_1systems_1_1_basic_vector.html#a80e395d80129f9b68a6b4aa76e962db4',1,'drake::systems::BasicVector::MakeRecursive(BasicVector&lt; T &gt; *data, int index, F constructor_arg)']]],
   ['makereferencepositions',['MakeReferencePositions',['../classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1255ca32db4bae2e53394d503b563c00',1,'drake::multibody::fem::FemModel']]],
   ['makerenderenginegl',['MakeRenderEngineGl',['../namespacedrake_1_1geometry_1_1render.html#aff58ede2e6498518901d8a297a3bd07b',1,'drake::geometry::render']]],
-  ['makerenderenginevtk',['MakeRenderEngineVtk',['../namespacedrake_1_1geometry_1_1render.html#a84f6890eb23c6cba8a7a342bc11fcba3',1,'drake::geometry::render']]],
+  ['makerenderenginevtk',['MakeRenderEngineVtk',['../namespacedrake_1_1geometry.html#a18b9a919046a97500f422a85a4a8ce30',1,'drake::geometry']]],
   ['makerulerewriter',['MakeRuleRewriter',['../namespacedrake_1_1symbolic.html#a697784ea0eafd05039e3a0c97b7c1415',1,'drake::symbolic']]],
   ['makesolver',['MakeSolver',['../namespacedrake_1_1solvers.html#ac0a32aadfdc1241e4e39f206479b6000',1,'drake::solvers']]],
   ['makesortedpair',['MakeSortedPair',['../namespacedrake.html#a87d5210878ec865ee82bb87786eb996d',1,'drake']]],

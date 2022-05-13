@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/geometry/render/render_engine_vtk.h File Reference</title>
+<title>Drake: drake/geometry/render/stub/render_engine_vtk.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -158,65 +158,24 @@ $(document).ready(function(){initNavTree('render__engine__vtk_8h.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">render_engine_vtk.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;array&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;unordered_map&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;vtkActor.h&gt;</code><br />
-<code>#include &lt;vtkAutoInit.h&gt;</code><br />
-<code>#include &lt;vtkCommand.h&gt;</code><br />
-<code>#include &lt;vtkImageExport.h&gt;</code><br />
-<code>#include &lt;vtkLight.h&gt;</code><br />
-<code>#include &lt;vtkNew.h&gt;</code><br />
-<code>#include &lt;vtkPolyDataAlgorithm.h&gt;</code><br />
-<code>#include &lt;vtkRenderWindow.h&gt;</code><br />
-<code>#include &lt;vtkRenderer.h&gt;</code><br />
-<code>#include &lt;vtkShaderProgram.h&gt;</code><br />
-<code>#include &lt;vtkSmartPointer.h&gt;</code><br />
-<code>#include &lt;vtkWindowToImageFilter.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="render__engine_8h.html">drake/geometry/render/render_engine.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="render__engine__vtk__factory_8h.html">drake/geometry/render/render_engine_vtk_factory.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="render__label_8h.html">drake/geometry/render/render_label.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="factory_8h.html">drake/geometry/render_vtk/factory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal__render__engine__vtk_8h.html">drake/geometry/render_vtk/internal_render_engine_vtk.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for render_engine_vtk.h:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__engine__vtk_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html">RenderEngineVtk</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See documentation of <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a84f6890eb23c6cba8a7a342bc11fcba3" title="Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer.">MakeRenderEngineVtk()</a>.  <a href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html">RenderEngineVtk::RenderingPipeline</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rendering pipeline for a single image type (color, depth, or label).  <a href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1geometry"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1geometry_1_1render"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html">drake::geometry::render</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li><li class="navelem"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a></li><li class="navelem"><a class="el" href="render__engine__vtk_8h.html">render_engine_vtk.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li><li class="navelem"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a></li><li class="navelem"><a class="el" href="dir_d41ff1e58cfc03efa57fea81db26bc1e.html">stub</a></li><li class="navelem"><a class="el" href="render__engine__vtk_8h.html">render_engine_vtk.h</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

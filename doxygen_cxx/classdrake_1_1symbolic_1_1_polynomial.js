@@ -20,6 +20,7 @@ var classdrake_1_1symbolic_1_1_polynomial =
     [ "EvaluateIndeterminates", "classdrake_1_1symbolic_1_1_polynomial.html#a854e025ef6b3a037dc0753004dce284a", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_polynomial.html#aae1961fc948aba3ce3816dcf712140ca", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_polynomial.html#adb6379c53bbbfcac28d757e0ef4d9bc3", null ],
+    [ "Expand", "classdrake_1_1symbolic_1_1_polynomial.html#a9cdee394fc34d52f16a1b62681df409d", null ],
     [ "indeterminates", "classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339", null ],
     [ "Integrate", "classdrake_1_1symbolic_1_1_polynomial.html#a6ad606c2af3cbfde8ce56a4fa1b93f8f", null ],
     [ "Integrate", "classdrake_1_1symbolic_1_1_polynomial.html#a9e30f757e2228393f0b85c6c772d537e", null ],
