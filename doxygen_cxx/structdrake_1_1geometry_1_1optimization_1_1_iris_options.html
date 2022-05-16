@@ -193,8 +193,8 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
 <tr class="memdesc:a033befdd75124d17abb45b56c75a71db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IRIS in configuration space, we retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary.  <a href="#a033befdd75124d17abb45b56c75a71db">More...</a><br /></td></tr>
 <tr class="separator:a033befdd75124d17abb45b56c75a71db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a177905e4b330d153a1ee016f913dc31b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b">enable_ibex</a> = true</td></tr>
-<tr class="memdesc:a177905e4b330d153a1ee016f913dc31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IRIS in configuration space, we use IbexSolver to rigorously confirm that regions are collision-free.  <a href="#a177905e4b330d153a1ee016f913dc31b">More...</a><br /></td></tr>
+<tr class="memitem:a177905e4b330d153a1ee016f913dc31b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b">enable_ibex</a> = false</td></tr>
+<tr class="memdesc:a177905e4b330d153a1ee016f913dc31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IRIS in configuration space, we can optionally use IbexSolver to rigorously confirm that regions are collision-free.  <a href="#a177905e4b330d153a1ee016f913dc31b">More...</a><br /></td></tr>
 <tr class="separator:a177905e4b330d153a1ee016f913dc31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -247,13 +247,13 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool enable_ibex = true</td>
+          <td class="memname">bool enable_ibex = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>For IRIS in configuration space, we use IbexSolver to rigorously confirm that regions are collision-free. </p>
-<p>This step may be computationally demanding, so we allow it to be disabled for a faster algorithm for obtaining regions without the rigorous guarantee. </p>
+<p>For IRIS in configuration space, we can optionally use IbexSolver to rigorously confirm that regions are collision-free. </p>
+<p>This step may be computationally demanding, so we disable it by default for a faster algorithm for obtaining regions without the rigorous guarantee. </p>
 
 </div>
 </div>

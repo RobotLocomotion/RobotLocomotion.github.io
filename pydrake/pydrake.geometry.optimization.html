@@ -1275,7 +1275,7 @@ the intersection.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.Iris">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=True)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
 algorithm, as described in</p>
 <p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of
@@ -1311,7 +1311,7 @@ positive integer).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.IrisInConfigurationSpace">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=True)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
 <dd><p>A variation of the Iris (Iterative Region Inflation by Semidefinite
 programming) algorithm which finds collision-free regions in the
 <em>configuration space</em> of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
@@ -1357,9 +1357,9 @@ infinite number of faces to approximate a curved boundary.</p>
 <dl class="attribute">
 <dt id="pydrake.geometry.optimization.IrisOptions.enable_ibex">
 <code class="descname">enable_ibex</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.enable_ibex" title="Permalink to this definition">¶</a></dt>
-<dd><p>For IRIS in configuration space, we use IbexSolver to rigorously
-confirm that regions are collision-free. This step may be
-computationally demanding, so we allow it to be disabled for a faster
+<dd><p>For IRIS in configuration space, we can optionally use IbexSolver to
+rigorously confirm that regions are collision-free. This step may be
+computationally demanding, so we disable it by default for a faster
 algorithm for obtaining regions without the rigorous guarantee.</p>
 </dd></dl>
 

@@ -2916,6 +2916,13 @@ initial guess.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.ClearVariableScaling">
+<code class="descname">ClearVariableScaling</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.ClearVariableScaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the scaling factors for decision variables.</p>
+<p>See variable_scaling “Variable scaling” for more information.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.Clone">
 <code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.Clone" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -3240,6 +3247,14 @@ inequality constraints).</p>
 <li>GetSolverOptions(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.solvers.mathematicalprogram.SolverId) -&gt; dict</li>
 <li>GetSolverOptions(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.solvers.mathematicalprogram.SolverType) -&gt; dict</li>
 </ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.GetVariableScaling">
+<code class="descname">GetVariableScaling</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; Dict[int, float]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetVariableScaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mapping from a decision variable index to its scaling
+factor.</p>
+<p>See variable_scaling “Variable scaling” for more information.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3913,6 +3928,19 @@ options.</p>
 <code class="descname">SetSolverOptions</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>arg0: pydrake.solvers.mathematicalprogram.SolverOptions</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.SetSolverOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overwrite the stored solver options inside MathematicalProgram with
 the provided solver options.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.SetVariableScaling">
+<code class="descname">SetVariableScaling</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>var: pydrake.symbolic.Variable</em>, <em>s: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.SetVariableScaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter for the scaling <code class="docutils literal notranslate"><span class="pre">s</span></code> of decision variable <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">var</span></code>:</dt>
+<dd>the decision variable to be scaled.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">s</span></code>:</dt>
+<dd>scaling factor (must be positive).</dd>
+</dl>
+<p>See variable_scaling “Variable scaling” for more information.</p>
 </dd></dl>
 
 </dd></dl>
