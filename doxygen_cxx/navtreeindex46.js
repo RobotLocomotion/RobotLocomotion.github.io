@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"namespacemembers_enum.html":[2,1,4],
+"namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,5],
 "namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func.html":[2,1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "pydrake__pybind_8h.html#a75d1338abedddf0c87cdcfb43ac0b7e8":[4,0,0,0,0,7,8],
 "pydrake__pybind_8h.html#abae292352a6ccb4d07b1aa13d4c7f143":[4,0,0,0,0,7,1],
 "pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4":[4,0,0,0,0,7,3],
-"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,7,6],
-"pydrake__pybind_8h.html#af804829ff8c00cbcacaff4b8ed1b83f1":[4,0,0,0,0,7,5],
-"quadratic__form_8h.html":[4,0,0,7,24]
+"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,7,6]
 };

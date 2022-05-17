@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"pydrake__pybind_8h.html#af804829ff8c00cbcacaff4b8ed1b83f1":[4,0,0,0,0,7,5],
+"quadratic__form_8h.html":[4,0,0,7,24],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,24,1],
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,24,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,24,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,10,52,5],
 "solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,10,52,4],
 "solver__interface_8h.html":[4,0,0,10,53],
-"solver__options_8h.html":[4,0,0,10,54],
-"solver__options_8h.html#a16445fc3b260d8c58ea9082a3594f85f":[4,0,0,10,54,2],
-"solver__options_8h.html#ad58cede9876421e050ac44deee7804ff":[4,0,0,10,54,1]
+"solver__options_8h.html":[4,0,0,10,54]
 };

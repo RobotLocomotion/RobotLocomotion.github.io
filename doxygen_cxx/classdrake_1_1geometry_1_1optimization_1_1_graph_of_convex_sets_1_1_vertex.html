@@ -315,6 +315,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the solution of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> in a MathematicalProgramResult. </p>
+<p>This solution is NaN if the vertex is not in the shortest path (or if we are solving the the convex relaxation and the total flow through this vertex at the solution is numerically close to zero). We prefer to return NaN than a value not contained in <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a53748c9b2b03e591925478e582e14bd7" title="Returns a const reference to the underlying ConvexSet.">set()</a>. </p>
 
 </div>
 </div>

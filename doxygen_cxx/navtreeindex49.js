@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1math_1_1_gray_codes_matrix.html":[3,0,0,7,6],
+"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[3,0,0,7,6,0],
 "structdrake_1_1math_1_1_mat_grad_mult.html":[3,0,0,7,8],
 "structdrake_1_1math_1_1_mat_grad_mult.html#aace3454f69205e3b95dfe4e1176647ac":[3,0,0,7,8,0],
 "structdrake_1_1math_1_1_mat_grad_mult_mat.html":[3,0,0,7,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a4ee1c36b5f116cb4dc51db62f0c7991f":[3,0,0,11,6,3,4],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a5a4b1a9b42c67f7c1adcc7630c6f6d2d":[3,0,0,11,6,3,2],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,11,6,3,5],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,11,6,3,3],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,11,6,3,1],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,12,1]
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,11,6,3,3]
 };

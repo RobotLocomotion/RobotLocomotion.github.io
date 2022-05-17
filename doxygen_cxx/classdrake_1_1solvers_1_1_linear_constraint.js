@@ -15,6 +15,7 @@ var classdrake_1_1solvers_1_1_linear_constraint =
     [ "GetSparseMatrix", "classdrake_1_1solvers_1_1_linear_constraint.html#ab7814fd66b140e44a21a1830bfd5dfbf", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#aa21495d4d797f18f8acd9dad11fdfdfc", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#ac5f497b0878226fd242af88c65f593ba", null ],
+    [ "RemoveTinyCoefficient", "classdrake_1_1solvers_1_1_linear_constraint.html#a3649cea4af9866fd5a7b83e10580fe5c", null ],
     [ "set_bounds", "classdrake_1_1solvers_1_1_linear_constraint.html#a2414f0b23b4a8d0df4d7beea22ab9111", null ],
     [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_linear_constraint.html#a37f85645baa2bea4381cab675169d8c8", null ],
     [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_linear_constraint.html#ab284845936766f5ea479b268697ca466", null ],

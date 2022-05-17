@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,11,6,3,1],
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,12,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,12,1,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[3,0,0,12,1,3],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[3,0,0,12,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,14,7,0,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,14,7,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,14,7,1,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,14,7,2],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,7,2,0]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,14,7,1,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__generic__polynomial_8h.html":[4,0,0,1,62],
+"symbolic__generic__polynomial_8h.html#a120ae90dfc24dd3f7b4f42aededbabfd":[4,0,0,1,62,31],
 "symbolic__generic__polynomial_8h.html#a1504176a6220b744ee8b07a0ed920f15":[4,0,0,1,62,33],
 "symbolic__generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e":[4,0,0,1,62,5],
 "symbolic__generic__polynomial_8h.html#a2176f7eb786ddec5cd9ea0683a019482":[4,0,0,1,62,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "trajectory__linear__system_8h.html":[4,0,0,11,6,23],
 "trajectory__source_8h.html":[4,0,0,11,6,24],
 "transform_8h.html":[4,0,0,1,1,2],
-"triangle__quadrature_8h.html":[4,0,0,8,14,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,48]
+"triangle__quadrature_8h.html":[4,0,0,8,14,1]
 };

@@ -902,7 +902,11 @@ std::string name.</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution">
 <code class="descname">GetSolution</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the solution of x() in a MathematicalProgramResult.</p>
+<dd><p>Returns the solution of x() in a MathematicalProgramResult. This
+solution is NaN if the vertex is not in the shortest path (or if we
+are solving the the convex relaxation and the total flow through this
+vertex at the solution is numerically close to zero). We prefer to
+return NaN than a value not contained in set().</p>
 </dd></dl>
 
 <dl class="method">

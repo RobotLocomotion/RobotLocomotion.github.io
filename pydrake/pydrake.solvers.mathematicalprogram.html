@@ -1202,6 +1202,24 @@ which returns a sparse matrix.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.RemoveTinyCoefficient">
+<code class="descname">RemoveTinyCoefficient</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint</em>, <em>tol: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.RemoveTinyCoefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets A(i, j) to zero if abs(A(i, j)) &lt;= tol. Oftentimes the
+coefficient A is computed numerically with round-off errors. Such
+small round-off errors can cause numerical issues for certain
+optimization solvers. Hence it is recommended to remove the tiny
+coefficients to achieve numerical robustness.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tol</span></code>:</dt>
+<dd>The entries in A with absolute value &lt;= tol will be set to 0.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">tol&gt;= 0.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.set_bounds">
 <code class="descname">set_bounds</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint, new_lb: numpy.ndarray[numpy.float64[m, 1]], new_ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.set_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the upper and lower bounds of the constraint.</p>
