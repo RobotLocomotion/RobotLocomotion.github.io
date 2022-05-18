@@ -221,8 +221,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a16c29c5b277b7b1aa84d111afca6c55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ec44660f5c2d722bfe401a5f5bac76b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a3ec44660f5c2d722bfe401a5f5bac76b">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a3ec44660f5c2d722bfe401a5f5bac76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Pose-dependent Introspection</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>These methods provide access to introspect geometry and frame quantities that directly depend on the poses of the frames.</p>
+<tr><td colspan="2"><div class="groupHeader">Configuration-dependent Introspection</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These methods provide access to introspect geometry and frame quantities that directly depend on the poses of the frames or configurations of deformable geometries.</p>
 <p>For geometry and frame quantities that do not depend on the poses of frames, such as X_FG, use <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a3bd120e4e5cad6f052fd4a17cce5c984" title="Provides an inspector for the topological structure of the underlying scene graph data (see SceneGrap...">inspector()</a> to access the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html" title="The SceneGraphInspector serves as a mechanism to query the topological structure of a SceneGraph inst...">SceneGraphInspector</a>. </p>
 </div></td></tr>
 <tr class="memitem:aca1821eb8273800276099f5690eb8b99"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99">GetPoseInWorld</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id) const</td></tr>
@@ -234,6 +234,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0472a3c5593e2f9b2c76863209e111e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa0472a3c5593e2f9b2c76863209e111e">GetPoseInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:aa0472a3c5593e2f9b2c76863209e111e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the position of the geometry indicated by <code>geometry_id</code> relative to the world frame.  <a href="#aa0472a3c5593e2f9b2c76863209e111e">More...</a><br /></td></tr>
 <tr class="separator:aa0472a3c5593e2f9b2c76863209e111e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef16ceab68157261224e26f51a96e76"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76">GetConfigurationsInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> deformable_geometry_id) const</td></tr>
+<tr class="memdesc:a7ef16ceab68157261224e26f51a96e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the configuration of the deformable geometry indicated by <code>geometry_id</code> relative to the world frame.  <a href="#a7ef16ceab68157261224e26f51a96e76">More...</a><br /></td></tr>
+<tr class="separator:a7ef16ceab68157261224e26f51a96e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Collision Queries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="collision_queries"></a></p>
 <p>These queries detect <em>collisions</em> between geometry. Two geometries collide if they overlap each other and are not explicitly excluded through <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filter_manager">collision filtering</a>. These algorithms find those colliding cases, characterize them, and report the essential characteristics of that collision.</p>
@@ -838,6 +841,33 @@ For a convex object, outside the object at positive distance from the boundary, 
 
 </div>
 </div>
+<a id="a7ef16ceab68157261224e26f51a96e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef16ceab68157261224e26f51a96e76">&#9670;&nbsp;</a></span>GetConfigurationsInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp; GetConfigurationsInWorld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>deformable_geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the configuration of the deformable geometry indicated by <code>geometry_id</code> relative to the world frame. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99" title="Reports the position of the frame indicated by frame_id relative to the world frame.">GetPoseInWorld()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the geometry <code>geometry_id</code> is not valid or is not a deformable geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a68254463fc7cb0837ab0eeab307c1195"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68254463fc7cb0837ab0eeab307c1195">&#9670;&nbsp;</a></span>GetPoseInParent()</h2>
 
@@ -908,9 +938,10 @@ For a convex object, outside the object at positive distance from the boundary, 
 </div><div class="memdoc">
 
 <p>Reports the position of the geometry indicated by <code>geometry_id</code> relative to the world frame. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76" title="Reports the configuration of the deformable geometry indicated by geometry_id relative to the world f...">GetConfigurationsInWorld()</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the geometry <code>geometry_id</code> is not valid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the geometry <code>geometry_id</code> is not valid or if it exists but is deformable. </td></tr>
   </table>
   </dd>
 </dl>

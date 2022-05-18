@@ -1,5 +1,12 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1multibody_1_1_joint.html#a2556aa7cb0dfde452bc41c8179ae9fe7":[3,0,0,8,38,16],
+"classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8":[3,0,0,8,38,35],
+"classdrake_1_1multibody_1_1_joint.html#a2d019d4421eedd35dfb908591266f6c1":[3,0,0,8,38,56],
+"classdrake_1_1multibody_1_1_joint.html#a31334d7081ca78d14f4681702b072a27":[3,0,0,8,38,8],
+"classdrake_1_1multibody_1_1_joint.html#a404e1937742b0f345d746f2b2043e9e3":[3,0,0,8,38,12],
+"classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a":[3,0,0,8,38,51],
+"classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e":[3,0,0,8,38,32],
 "classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f":[3,0,0,8,38,37],
 "classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e":[3,0,0,8,38,26],
 "classdrake_1_1multibody_1_1_joint.html#a55fbeff7bf8dcabddc072a224f42a8ac":[3,0,0,8,38,27],
@@ -242,12 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_multibody_plant.html#a59632f8b0fea85f03831920ef4bf7f58":[1,2,14,197],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a5aa037adf3002834caa1aedd305fa36d":[1,2,14,131],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a5b03afbfe072f83e3681cf9798121eb2":[1,2,14,71],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a5c7b2e7b0c09b6479d25250405ffd0c4":[1,2,14,146],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313":[1,2,14,28],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a602bd19cfdb283686f9051b674611baa":[1,2,14,172],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a60e9928aa7802359eaddab6ef5d92763":[1,2,14,204],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a61c7f48d324a3d5936d03e42398168d2":[1,2,14,92],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a62e48986f27ae208ab503a68fa1ba0be":[1,2,14,119],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a636804b6c40e538d83d5c2dfefb7929e":[1,2,14,157],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a65766d208b7d5aee43dd7bfac21c5fd9":[1,2,14,202]
+"classdrake_1_1multibody_1_1_multibody_plant.html#a5c7b2e7b0c09b6479d25250405ffd0c4":[1,2,14,146]
 };

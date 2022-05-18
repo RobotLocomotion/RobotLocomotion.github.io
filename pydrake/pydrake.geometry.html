@@ -3172,7 +3172,12 @@ they are defined). Nullptr otherwise.</p>
 <dl class="method">
 <dt id="pydrake.geometry.GeometryInstance.shape">
 <code class="descname">shape</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance</em><span class="sig-paren">)</span> &#x2192; drake::geometry::Shape<a class="headerlink" href="#pydrake.geometry.GeometryInstance.shape" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the underlying shape specification for this geometry instance.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>release_shape() has not been called.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -7453,11 +7458,19 @@ to the world frame.</p>
 </ol>
 <p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
 relative to the world frame.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetConfigurationsInWorld().</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
+<li>exists but is deformable.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -8200,11 +8213,19 @@ to the world frame.</p>
 </ol>
 <p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
 relative to the world frame.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetConfigurationsInWorld().</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
+<li>exists but is deformable.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -8830,11 +8851,19 @@ to the world frame.</p>
 </ol>
 <p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
 relative to the world frame.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetConfigurationsInWorld().</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
+<li>exists but is deformable.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -9575,11 +9604,19 @@ to the world frame.</p>
 </ol>
 <p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
 relative to the world frame.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetConfigurationsInWorld().</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
+<li>exists but is deformable.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -9862,9 +9899,10 @@ but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could
 also be some other block of code (e.g., adding a common ground plane
 with which all systems’ geometries interact). For dynamic geometry
 (geometry whose pose depends on a Context), the geometry source must
-also provide pose values for all of the geometries the source owns,
-via a port connection on SceneGraph. For N geometry sources, the
-SceneGraph instance will have N pose input ports.</p>
+also provide pose/configuration values for all of the geometries the
+source owns, via a port connection on SceneGraph. For N geometry
+sources, the SceneGraph instance will have N pose/configuration input
+ports.</p>
 <p>The basic workflow for interacting with SceneGraph is:</p>
 <ul class="simple">
 <li>Register as a geometry source, acquiring a unique SourceId.</li>
@@ -9931,24 +9969,33 @@ geometry “owns” the geometry; the source’s unique SourceId is required
 to perform any operations on the geometry registered with that
 SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
 <p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
-pose) depends on a system’s Context. Particularly, dynamic geometry is
-<em>fixed</em> to a <em>frame</em> whose kinematics values depend on a context. As
-the frame moves, the geometries fixed to it move with it. Therefore,
-to register dynamic geometry a frame must be registered first. These
-registered frames serve as the basis for repositioning geometry in the
-shared world. The geometry source is responsible for providing
-up-to-date kinematics values for those registered frames upon request
-(via an appropriate output port on the source LeafSystem connecting to
-the appropriate input port on SceneGraph). The work flow is as
-follows: 1. A LeafSystem registers itself as a geometry source,
-acquiring a SourceId (RegisterSource()). 2. The source registers a
-frame (GeometrySource::RegisterFrame()). - A frame always has a
-“parent” frame. It can implicitly be the world frame, <em>or</em> another
-frame registered by the source. 3. Register one or more geometries to
-a frame (GeometrySource::RegisterGeometry()). - The registered
-geometry is posed relative to the frame to which it is fixed. - The
-geometry can also be posed relative to another registered geometry. It
-will be affixed to <em>that</em> geometry’s frame.</p>
+pose) depends on a system’s Context. Particularly, a non-deformable
+dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values
+depend on a context. As the frame moves, the geometries fixed to it
+move with it. On the other hand, a deformable dynamic geometry has a
+mesh representation whose vertices’ positions can change and are
+expressed in the frame it is registered in. Therefore, to register
+dynamic geometry a frame must be registered first. These registered
+frames serve as the basis for repositioning geometry in the shared
+world. The geometry source is responsible for providing up-to-date
+kinematics values for those registered frames upon request (via an
+appropriate output port on the source LeafSystem connecting to the
+appropriate input port on SceneGraph). The geometry source that
+registers deformable geometry is also responsible to provide the
+positions of the mesh vertices of the deformable geometry in the
+registered-in frame. The work flow is as follows: 1. A LeafSystem
+registers itself as a geometry source, acquiring a SourceId
+(RegisterSource()). 2. The source registers a frame
+(GeometrySource::RegisterFrame()). - A frame always has a “parent”
+frame. It can implicitly be the world frame, <em>or</em> another frame
+registered by the source. 3. Register one or more non-deformable
+geometries to a frame (RegisterGeometry()), and/or one or more
+deformable geometries to a frame (RegisterDeformableGeometry()). - A
+non-deformable geometry’s pose is relative to the frame to which the
+geometry is fixed. For deformable geometries, the positions of their
+mesh vertices are expressed in the registered-in frame. - Rigid
+geometries can also be posed relative to another registered geometry.
+It will be affixed to <em>that</em> geometry’s frame.</p>
 <p>Anchored geometry is <em>independent</em> of the context (i.e., it doesn’t
 move). Anchored geometries are always affixed to the immobile world
 frame. As such, registering a frame is <em>not</em> required for registering
@@ -10322,9 +10369,9 @@ to be allocated.</p>
 <ol class="arabic simple">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The pose of
-the geometry is defined in a fixed pose relative to F (i.e.,
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The
+pose of the geometry is defined in a fixed pose relative to F (i.e.,
 <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>). Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
@@ -10361,12 +10408,12 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered geometry P (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The
-pose of the geometry is defined in a fixed pose relative to geometry P
-(i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry is effectively rigidly
-affixed to the frame that P is affixed to. Returns the corresponding
-unique geometry id.</p>
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered geometry P (indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
+relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
+is effectively rigidly affixed to the frame that P is affixed to.
+Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
 <p>This method modifies the underlying model and requires a new Context
@@ -10494,9 +10541,10 @@ but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could
 also be some other block of code (e.g., adding a common ground plane
 with which all systems’ geometries interact). For dynamic geometry
 (geometry whose pose depends on a Context), the geometry source must
-also provide pose values for all of the geometries the source owns,
-via a port connection on SceneGraph. For N geometry sources, the
-SceneGraph instance will have N pose input ports.</p>
+also provide pose/configuration values for all of the geometries the
+source owns, via a port connection on SceneGraph. For N geometry
+sources, the SceneGraph instance will have N pose/configuration input
+ports.</p>
 <p>The basic workflow for interacting with SceneGraph is:</p>
 <ul class="simple">
 <li>Register as a geometry source, acquiring a unique SourceId.</li>
@@ -10563,24 +10611,33 @@ geometry “owns” the geometry; the source’s unique SourceId is required
 to perform any operations on the geometry registered with that
 SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
 <p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
-pose) depends on a system’s Context. Particularly, dynamic geometry is
-<em>fixed</em> to a <em>frame</em> whose kinematics values depend on a context. As
-the frame moves, the geometries fixed to it move with it. Therefore,
-to register dynamic geometry a frame must be registered first. These
-registered frames serve as the basis for repositioning geometry in the
-shared world. The geometry source is responsible for providing
-up-to-date kinematics values for those registered frames upon request
-(via an appropriate output port on the source LeafSystem connecting to
-the appropriate input port on SceneGraph). The work flow is as
-follows: 1. A LeafSystem registers itself as a geometry source,
-acquiring a SourceId (RegisterSource()). 2. The source registers a
-frame (GeometrySource::RegisterFrame()). - A frame always has a
-“parent” frame. It can implicitly be the world frame, <em>or</em> another
-frame registered by the source. 3. Register one or more geometries to
-a frame (GeometrySource::RegisterGeometry()). - The registered
-geometry is posed relative to the frame to which it is fixed. - The
-geometry can also be posed relative to another registered geometry. It
-will be affixed to <em>that</em> geometry’s frame.</p>
+pose) depends on a system’s Context. Particularly, a non-deformable
+dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values
+depend on a context. As the frame moves, the geometries fixed to it
+move with it. On the other hand, a deformable dynamic geometry has a
+mesh representation whose vertices’ positions can change and are
+expressed in the frame it is registered in. Therefore, to register
+dynamic geometry a frame must be registered first. These registered
+frames serve as the basis for repositioning geometry in the shared
+world. The geometry source is responsible for providing up-to-date
+kinematics values for those registered frames upon request (via an
+appropriate output port on the source LeafSystem connecting to the
+appropriate input port on SceneGraph). The geometry source that
+registers deformable geometry is also responsible to provide the
+positions of the mesh vertices of the deformable geometry in the
+registered-in frame. The work flow is as follows: 1. A LeafSystem
+registers itself as a geometry source, acquiring a SourceId
+(RegisterSource()). 2. The source registers a frame
+(GeometrySource::RegisterFrame()). - A frame always has a “parent”
+frame. It can implicitly be the world frame, <em>or</em> another frame
+registered by the source. 3. Register one or more non-deformable
+geometries to a frame (RegisterGeometry()), and/or one or more
+deformable geometries to a frame (RegisterDeformableGeometry()). - A
+non-deformable geometry’s pose is relative to the frame to which the
+geometry is fixed. For deformable geometries, the positions of their
+mesh vertices are expressed in the registered-in frame. - Rigid
+geometries can also be posed relative to another registered geometry.
+It will be affixed to <em>that</em> geometry’s frame.</p>
 <p>Anchored geometry is <em>independent</em> of the context (i.e., it doesn’t
 move). Anchored geometries are always affixed to the immobile world
 frame. As such, registering a frame is <em>not</em> required for registering
@@ -10954,9 +11011,9 @@ to be allocated.</p>
 <ol class="arabic simple">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The pose of
-the geometry is defined in a fixed pose relative to F (i.e.,
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The
+pose of the geometry is defined in a fixed pose relative to F (i.e.,
 <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>). Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
@@ -10993,12 +11050,12 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered geometry P (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The
-pose of the geometry is defined in a fixed pose relative to geometry P
-(i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry is effectively rigidly
-affixed to the frame that P is affixed to. Returns the corresponding
-unique geometry id.</p>
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered geometry P (indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
+relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
+is effectively rigidly affixed to the frame that P is affixed to.
+Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
 <p>This method modifies the underlying model and requires a new Context
@@ -11124,9 +11181,10 @@ but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could
 also be some other block of code (e.g., adding a common ground plane
 with which all systems’ geometries interact). For dynamic geometry
 (geometry whose pose depends on a Context), the geometry source must
-also provide pose values for all of the geometries the source owns,
-via a port connection on SceneGraph. For N geometry sources, the
-SceneGraph instance will have N pose input ports.</p>
+also provide pose/configuration values for all of the geometries the
+source owns, via a port connection on SceneGraph. For N geometry
+sources, the SceneGraph instance will have N pose/configuration input
+ports.</p>
 <p>The basic workflow for interacting with SceneGraph is:</p>
 <ul class="simple">
 <li>Register as a geometry source, acquiring a unique SourceId.</li>
@@ -11193,24 +11251,33 @@ geometry “owns” the geometry; the source’s unique SourceId is required
 to perform any operations on the geometry registered with that
 SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
 <p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
-pose) depends on a system’s Context. Particularly, dynamic geometry is
-<em>fixed</em> to a <em>frame</em> whose kinematics values depend on a context. As
-the frame moves, the geometries fixed to it move with it. Therefore,
-to register dynamic geometry a frame must be registered first. These
-registered frames serve as the basis for repositioning geometry in the
-shared world. The geometry source is responsible for providing
-up-to-date kinematics values for those registered frames upon request
-(via an appropriate output port on the source LeafSystem connecting to
-the appropriate input port on SceneGraph). The work flow is as
-follows: 1. A LeafSystem registers itself as a geometry source,
-acquiring a SourceId (RegisterSource()). 2. The source registers a
-frame (GeometrySource::RegisterFrame()). - A frame always has a
-“parent” frame. It can implicitly be the world frame, <em>or</em> another
-frame registered by the source. 3. Register one or more geometries to
-a frame (GeometrySource::RegisterGeometry()). - The registered
-geometry is posed relative to the frame to which it is fixed. - The
-geometry can also be posed relative to another registered geometry. It
-will be affixed to <em>that</em> geometry’s frame.</p>
+pose) depends on a system’s Context. Particularly, a non-deformable
+dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values
+depend on a context. As the frame moves, the geometries fixed to it
+move with it. On the other hand, a deformable dynamic geometry has a
+mesh representation whose vertices’ positions can change and are
+expressed in the frame it is registered in. Therefore, to register
+dynamic geometry a frame must be registered first. These registered
+frames serve as the basis for repositioning geometry in the shared
+world. The geometry source is responsible for providing up-to-date
+kinematics values for those registered frames upon request (via an
+appropriate output port on the source LeafSystem connecting to the
+appropriate input port on SceneGraph). The geometry source that
+registers deformable geometry is also responsible to provide the
+positions of the mesh vertices of the deformable geometry in the
+registered-in frame. The work flow is as follows: 1. A LeafSystem
+registers itself as a geometry source, acquiring a SourceId
+(RegisterSource()). 2. The source registers a frame
+(GeometrySource::RegisterFrame()). - A frame always has a “parent”
+frame. It can implicitly be the world frame, <em>or</em> another frame
+registered by the source. 3. Register one or more non-deformable
+geometries to a frame (RegisterGeometry()), and/or one or more
+deformable geometries to a frame (RegisterDeformableGeometry()). - A
+non-deformable geometry’s pose is relative to the frame to which the
+geometry is fixed. For deformable geometries, the positions of their
+mesh vertices are expressed in the registered-in frame. - Rigid
+geometries can also be posed relative to another registered geometry.
+It will be affixed to <em>that</em> geometry’s frame.</p>
 <p>Anchored geometry is <em>independent</em> of the context (i.e., it doesn’t
 move). Anchored geometries are always affixed to the immobile world
 frame. As such, registering a frame is <em>not</em> required for registering
@@ -11584,9 +11651,9 @@ to be allocated.</p>
 <ol class="arabic simple">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The pose of
-the geometry is defined in a fixed pose relative to F (i.e.,
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The
+pose of the geometry is defined in a fixed pose relative to F (i.e.,
 <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>). Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
@@ -11623,12 +11690,12 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered geometry P (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The
-pose of the geometry is defined in a fixed pose relative to geometry P
-(i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry is effectively rigidly
-affixed to the frame that P is affixed to. Returns the corresponding
-unique geometry id.</p>
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered geometry P (indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
+relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
+is effectively rigidly affixed to the frame that P is affixed to.
+Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
 <p>This method modifies the underlying model and requires a new Context
@@ -11754,9 +11821,10 @@ but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could
 also be some other block of code (e.g., adding a common ground plane
 with which all systems’ geometries interact). For dynamic geometry
 (geometry whose pose depends on a Context), the geometry source must
-also provide pose values for all of the geometries the source owns,
-via a port connection on SceneGraph. For N geometry sources, the
-SceneGraph instance will have N pose input ports.</p>
+also provide pose/configuration values for all of the geometries the
+source owns, via a port connection on SceneGraph. For N geometry
+sources, the SceneGraph instance will have N pose/configuration input
+ports.</p>
 <p>The basic workflow for interacting with SceneGraph is:</p>
 <ul class="simple">
 <li>Register as a geometry source, acquiring a unique SourceId.</li>
@@ -11823,24 +11891,33 @@ geometry “owns” the geometry; the source’s unique SourceId is required
 to perform any operations on the geometry registered with that
 SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
 <p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
-pose) depends on a system’s Context. Particularly, dynamic geometry is
-<em>fixed</em> to a <em>frame</em> whose kinematics values depend on a context. As
-the frame moves, the geometries fixed to it move with it. Therefore,
-to register dynamic geometry a frame must be registered first. These
-registered frames serve as the basis for repositioning geometry in the
-shared world. The geometry source is responsible for providing
-up-to-date kinematics values for those registered frames upon request
-(via an appropriate output port on the source LeafSystem connecting to
-the appropriate input port on SceneGraph). The work flow is as
-follows: 1. A LeafSystem registers itself as a geometry source,
-acquiring a SourceId (RegisterSource()). 2. The source registers a
-frame (GeometrySource::RegisterFrame()). - A frame always has a
-“parent” frame. It can implicitly be the world frame, <em>or</em> another
-frame registered by the source. 3. Register one or more geometries to
-a frame (GeometrySource::RegisterGeometry()). - The registered
-geometry is posed relative to the frame to which it is fixed. - The
-geometry can also be posed relative to another registered geometry. It
-will be affixed to <em>that</em> geometry’s frame.</p>
+pose) depends on a system’s Context. Particularly, a non-deformable
+dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values
+depend on a context. As the frame moves, the geometries fixed to it
+move with it. On the other hand, a deformable dynamic geometry has a
+mesh representation whose vertices’ positions can change and are
+expressed in the frame it is registered in. Therefore, to register
+dynamic geometry a frame must be registered first. These registered
+frames serve as the basis for repositioning geometry in the shared
+world. The geometry source is responsible for providing up-to-date
+kinematics values for those registered frames upon request (via an
+appropriate output port on the source LeafSystem connecting to the
+appropriate input port on SceneGraph). The geometry source that
+registers deformable geometry is also responsible to provide the
+positions of the mesh vertices of the deformable geometry in the
+registered-in frame. The work flow is as follows: 1. A LeafSystem
+registers itself as a geometry source, acquiring a SourceId
+(RegisterSource()). 2. The source registers a frame
+(GeometrySource::RegisterFrame()). - A frame always has a “parent”
+frame. It can implicitly be the world frame, <em>or</em> another frame
+registered by the source. 3. Register one or more non-deformable
+geometries to a frame (RegisterGeometry()), and/or one or more
+deformable geometries to a frame (RegisterDeformableGeometry()). - A
+non-deformable geometry’s pose is relative to the frame to which the
+geometry is fixed. For deformable geometries, the positions of their
+mesh vertices are expressed in the registered-in frame. - Rigid
+geometries can also be posed relative to another registered geometry.
+It will be affixed to <em>that</em> geometry’s frame.</p>
 <p>Anchored geometry is <em>independent</em> of the context (i.e., it doesn’t
 move). Anchored geometries are always affixed to the immobile world
 frame. As such, registering a frame is <em>not</em> required for registering
@@ -12214,9 +12291,9 @@ to be allocated.</p>
 <ol class="arabic simple">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The pose of
-the geometry is defined in a fixed pose relative to F (i.e.,
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The
+pose of the geometry is defined in a fixed pose relative to F (i.e.,
 <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>). Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
@@ -12253,12 +12330,12 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new geometry G for this source. This hangs geometry G on a
-previously registered geometry P (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The
-pose of the geometry is defined in a fixed pose relative to geometry P
-(i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry is effectively rigidly
-affixed to the frame that P is affixed to. Returns the corresponding
-unique geometry id.</p>
+<p>Registers a new rigid geometry G for this source. This hangs geometry
+G on a previously registered geometry P (indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
+relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
+is effectively rigidly affixed to the frame that P is affixed to.
+Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding
 GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
 <p>This method modifies the underlying model and requires a new Context
@@ -12860,7 +12937,7 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>
@@ -12885,7 +12962,7 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>
@@ -13586,7 +13663,7 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>
@@ -13611,7 +13688,7 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>
@@ -14310,7 +14387,7 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>
@@ -14335,7 +14412,7 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>
@@ -15034,7 +15111,7 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>
@@ -15059,7 +15136,7 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
+<li>geometry or if it maps to a deformable geometry.</li>
 </ul>
 </td>
 </tr>

@@ -1,5 +1,12 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aa7a4d7c125954dfde3c15238c852eeed":[1,1,1,9,12],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aa7a4d7c125954dfde3c15238c852eeed":[1,5,4,9,12],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aac3d1f5aefb51ebcb0cc51ee3b475f38":[1,1,1,9,0],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aac3d1f5aefb51ebcb0cc51ee3b475f38":[1,5,4,9,0],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ab0523f84331ef73195b38a43b8d24519":[1,1,1,9,4],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ab0523f84331ef73195b38a43b8d24519":[1,5,4,9,4],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ad5d589780714066f1e6a1118a8e5a83e":[1,1,1,9,7],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ad5d589780714066f1e6a1118a8e5a83e":[1,5,4,9,7],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da":[1,1,1,9,5],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da":[1,5,4,9,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#aecb9cd883e712c45cf403032f9803600":[3,0,0,6,0,2,3],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html":[3,0,0,6,1,0],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a2cca2749bb8b02bbf518ffe096d08e11":[3,0,0,6,1,0,10],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a442806acaa593b8857567161930793c4":[3,0,0,6,1,0,1],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a6f5dc640af7e96f840ad9c806d065699":[3,0,0,6,1,0,3],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a822286cebb312f2f326be140f71c42aa":[3,0,0,6,1,0,5],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a8af7cf1d8a05ae8d29654e64830fc530":[3,0,0,6,1,0,7],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#aaa7827ac803fab661a42373ecaf7ef96":[3,0,0,6,1,0,4],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#ab2ec6a482d23f3a35abe49c967cdfbed":[3,0,0,6,1,0,2],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#ac692c2788bc230d2ecdfa0ea34ffcbed":[3,0,0,6,1,0,9],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#ad0c57d99c93d8b808ff1e2eebee4ca9c":[3,0,0,6,1,0,6]
+"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a442806acaa593b8857567161930793c4":[3,0,0,6,1,0,1]
 };

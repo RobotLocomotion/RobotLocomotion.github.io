@@ -1,5 +1,12 @@
 var NAVTREEINDEX47 =
 {
+"pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,7,9],
+"pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,7,4],
+"pydrake__pybind_8h.html#a6e587c4c8d044dd6eee74dad65c203ed":[4,0,0,0,0,7,2],
+"pydrake__pybind_8h.html#a75d1338abedddf0c87cdcfb43ac0b7e8":[4,0,0,0,0,7,8],
+"pydrake__pybind_8h.html#abae292352a6ccb4d07b1aa13d4c7f143":[4,0,0,0,0,7,1],
+"pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4":[4,0,0,0,0,7,3],
+"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,7,6],
 "pydrake__pybind_8h.html#af804829ff8c00cbcacaff4b8ed1b83f1":[4,0,0,0,0,7,5],
 "quadratic__form_8h.html":[4,0,0,7,24],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,24,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX47 =
 "solve_8h.html":[4,0,0,10,50],
 "solve_8h.html#a07bf1722e3e347d7878ae44be98b4b92":[4,0,0,10,50,0],
 "solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,10,50,2],
-"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,10,50,1],
-"solver__base_8h.html":[4,0,0,10,51],
-"solver__id_8h.html":[4,0,0,10,52],
-"solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9":[4,0,0,10,52,3],
-"solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,10,52,5],
-"solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,10,52,4],
-"solver__interface_8h.html":[4,0,0,10,53],
-"solver__options_8h.html":[4,0,0,10,54]
+"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,10,50,1]
 };

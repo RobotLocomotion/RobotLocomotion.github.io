@@ -187,7 +187,7 @@ class drake::geometry::SceneGraph&lt; T &gt;</h3>
 </td></tr>
 </table>
 <p>For each registered "geometry source", there is an input port whose name begins with <em style="color:gray">(source name)</em>.</p>
-<p>Only registered "geometry sources" can introduce geometry into SceneGraph. Geometry sources will typically be other leaf systems, but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could also be some other block of code (e.g., adding a common ground plane with which all systems' geometries interact). For dynamic geometry (geometry whose pose depends on a Context), the geometry source must also provide pose values for all of the geometries the source owns, via a port connection on SceneGraph. For N geometry sources, the SceneGraph instance will have N pose input ports.</p>
+<p>Only registered "geometry sources" can introduce geometry into SceneGraph. Geometry sources will typically be other leaf systems, but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could also be some other block of code (e.g., adding a common ground plane with which all systems' geometries interact). For dynamic geometry (geometry whose pose depends on a Context), the geometry source must also provide pose/configuration values for all of the geometries the source owns, via a port connection on SceneGraph. For N geometry sources, the SceneGraph instance will have N pose/configuration input ports.</p>
 <p>The basic workflow for interacting with SceneGraph is:</p>
 <ul>
 <li>Register as a geometry source, acquiring a unique SourceId.</li>
@@ -199,7 +199,7 @@ class drake::geometry::SceneGraph&lt; T &gt;</h3>
 </ul>
 <h1><a class="anchor" id="geom_sys_inputs"></a>
 Inputs</h1>
-<p>order of kinematics values (e.g., pose, velocity, and acceleration). If a source registers a frame, it must connect to these ports (although, in the current version, only pose is supported). Failure to connect to the port (or to provide valid kinematics values) will lead to runtime exceptions.</p>
+<p>For each registered geometry source, there is one input port for each order of kinematics values (e.g., pose, velocity, and acceleration). If a source registers a frame, it must connect to these ports (although, in the current version, only pose is supported). Failure to connect to the port (or to provide valid kinematics values) will lead to runtime exceptions.</p>
 <p><b>pose port</b>: An abstract-valued port providing an instance of FramePoseVector. For each registered frame, this "pose vector" maps the registered FrameId to a pose value. All registered frames must be accounted for and only frames registered by a source can be included in its output port. See the details in <a class="el" href="classdrake_1_1geometry_1_1_frame_kinematics_vector.html" title="A FrameKinematicsVector is used to report kinematics data for registered frames (identified by unique...">FrameKinematicsVector</a> for details on how to provide values for this port.</p>
 <h1><a class="anchor" id="geom_sys_outputs"></a>
 Outputs</h1>
@@ -221,15 +221,15 @@ Working with SceneGraph</h1>
 <p>All producers introduce geometry into the shared geometric world. This is called <em>registering</em> geometry. Depending on what exactly has been registered, a producer may also have to <em>update kinematics</em>. Producers themselves must be registered with SceneGraph as producers (a.k.a. <em>geometry sources</em>). They do this by acquiring a SourceId (via <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#abe999bc6ee30aa3397ce2204b0e765c6" title="Registers a new, named source to the geometry system.">SceneGraph::RegisterSource()</a>). The SourceId serves as a unique handle through which the producer's identity is validated and its ownership of its registered geometry is maintained.</p>
 <p><em>Registering Geometry</em></p>
 <p>SceneGraph cannot know what geometry <em>should</em> be part of the shared world. Other systems are responsible for introducing geometry into the world. This process (defining geometry and informing SceneGraph) is called <em>registering</em> the geometry. The source that registers the geometry "owns" the geometry; the source's unique SourceId is required to perform any operations on the geometry registered with that SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
-<p>Dynamic geometry can move; more specifically, its kinematics (e.g., pose) depends on a system's Context. Particularly, dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values depend on a context. As the frame moves, the geometries fixed to it move with it. Therefore, to register dynamic geometry a frame must be registered first. These registered frames serve as the basis for repositioning geometry in the shared world. The geometry source is responsible for providing up-to-date kinematics values for those registered frames upon request (via an appropriate output port on the source LeafSystem connecting to the appropriate input port on SceneGraph). The work flow is as follows:</p><ol type="1">
+<p>Dynamic geometry can move; more specifically, its kinematics (e.g., pose) depends on a system's Context. Particularly, a non-deformable dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values depend on a context. As the frame moves, the geometries fixed to it move with it. On the other hand, a deformable dynamic geometry has a mesh representation whose vertices' positions can change and are expressed in the frame it is registered in. Therefore, to register dynamic geometry a frame must be registered first. These registered frames serve as the basis for repositioning geometry in the shared world. The geometry source is responsible for providing up-to-date kinematics values for those registered frames upon request (via an appropriate output port on the source LeafSystem connecting to the appropriate input port on SceneGraph). The geometry source that registers deformable geometry is also responsible to provide the positions of the mesh vertices of the deformable geometry in the registered-in frame. The work flow is as follows:</p><ol type="1">
 <li>A LeafSystem registers itself as a geometry source, acquiring a SourceId (<a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#abe999bc6ee30aa3397ce2204b0e765c6" title="Registers a new, named source to the geometry system.">RegisterSource()</a>).</li>
 <li>The source registers a frame (GeometrySource::RegisterFrame()).<ul>
 <li>A frame always has a "parent" frame. It can implicitly be the world frame, <em>or</em> another frame registered by the source.</li>
 </ul>
 </li>
-<li>Register one or more geometries to a frame (GeometrySource::RegisterGeometry()).<ul>
-<li>The registered geometry is posed relative to the frame to which it is fixed.</li>
-<li>The geometry can also be posed relative to another registered geometry. It will be affixed to <em>that</em> geometry's frame.</li>
+<li>Register one or more non-deformable geometries to a frame (<a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new rigid geometry G for this source.">RegisterGeometry()</a>), and/or one or more deformable geometries to a frame (<a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab671140650fb6a01e915a200e9aaa3bf" title="Registers a new deformable geometry G for this source.">RegisterDeformableGeometry()</a>).<ul>
+<li>A non-deformable geometry's pose is relative to the frame to which the geometry is fixed. For deformable geometries, the positions of their mesh vertices are expressed in the registered-in frame.</li>
+<li>Rigid geometries can also be posed relative to another registered geometry. It will be affixed to <em>that</em> geometry's frame.</li>
 </ul>
 </li>
 </ol>
@@ -310,8 +310,9 @@ Public Member Functions</h2></td></tr>
 <ul>
 <li>A geometry source registers itself with SceneGraph (via <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#abe999bc6ee30aa3397ce2204b0e765c6" title="Registers a new, named source to the geometry system.">RegisterSource()</a>).</li>
 <li>The geometry source can then immediately register "anchored" geometry &ndash; geometry that is affixed to the world frame. These geometries will never move.</li>
-<li>For geometries that need to move based on the source's state, the geometry source must first register a <a class="el" href="classdrake_1_1geometry_1_1_geometry_frame.html" title="This simple class carries the definition of a frame used in the SceneGraph.">GeometryFrame</a>. In fact, geometries never move directly; it is the frames to which they are affixed that move. A geometry source can register a frame via the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acc0fbd7f67bb4341fa2b52b23b97c171" title="Registers a new frame F for this source.">RegisterFrame()</a> methods.</li>
-<li>Once a frame has been registered, the geometry source can register geometries that are rigidly affixed to that frame (or, figuratively speaking, "hung" on that frame). The geometry is immovably posed in that frame and assigned various properties. The geometry is registered via calls to the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new geometry G for this source.">RegisterGeometry()</a> methods.</li>
+<li>For non-deformable geometries that need to move based on the source's state, the geometry source must first register a <a class="el" href="classdrake_1_1geometry_1_1_geometry_frame.html" title="This simple class carries the definition of a frame used in the SceneGraph.">GeometryFrame</a>. In fact, non-deformable geometries never move directly; it is the frames to which they are affixed that move. A geometry source can register a frame via the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acc0fbd7f67bb4341fa2b52b23b97c171" title="Registers a new frame F for this source.">RegisterFrame()</a> methods.</li>
+<li>Once a frame has been registered, the geometry source can register geometries that are rigidly affixed to that frame (or, figuratively speaking, "hung" on that frame). The geometry is immovably posed in that frame and assigned various properties. The geometry is registered via calls to the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new rigid geometry G for this source.">RegisterGeometry()</a> methods.</li>
+<li>(Experimental): Deformable geometries differ from non-deformable geometries in that it must have a meshed representation, and the vertices of the mesh can be moved in the frame the geometry is registered-in. Deformable geometries can be registered via calls to the (experimental) <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab671140650fb6a01e915a200e9aaa3bf" title="Registers a new deformable geometry G for this source.">RegisterDeformableGeometry()</a> methods.</li>
 </ul>
 <p>SceneGraph has a concept of "ownership" that is separate from the C++ notion of ownership. In this case, SceneGraph protects geometry and frames registered by one source from being modified by another source. All methods that change the world are associated with the SourceId of the geometry source requesting the change. One source cannot "hang" geometry onto a frame (or geometry) that belongs to another source. However, all sources have read access to all geometries in the world. For example, queries will return <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> values that span all sources and the properties of the associated geometries can be queried by arbitrary sources.</p>
 <p>That said, if one source <em>chooses</em> to share its SourceId externally, then arbitrary code can use that SourceId to modify the geometry resources that are associated with that SourceId.</p>
@@ -324,20 +325,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8bcee9bf48496cd1da04d73d496f1fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new frame F for this source.  <a href="#a8bcee9bf48496cd1da04d73d496f1fe6">More...</a><br /></td></tr>
 <tr class="separator:a8bcee9bf48496cd1da04d73d496f1fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ab7ed8e4ca812f1f02d7dce715104c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4">RegisterGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry)</td></tr>
-<tr class="memdesc:a2ab7ed8e4ca812f1f02d7dce715104c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new geometry G for this source.  <a href="#a2ab7ed8e4ca812f1f02d7dce715104c4">More...</a><br /></td></tr>
+<tr class="memdesc:a2ab7ed8e4ca812f1f02d7dce715104c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new rigid geometry G for this source.  <a href="#a2ab7ed8e4ca812f1f02d7dce715104c4">More...</a><br /></td></tr>
 <tr class="separator:a2ab7ed8e4ca812f1f02d7dce715104c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1f84cd081da639a61cb106d74980f28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af1f84cd081da639a61cb106d74980f28">RegisterGeometry</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry) const</td></tr>
-<tr class="memdesc:af1f84cd081da639a61cb106d74980f28"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new geometry G for this source.">RegisterGeometry()</a>.  <a href="#af1f84cd081da639a61cb106d74980f28">More...</a><br /></td></tr>
+<tr class="memdesc:af1f84cd081da639a61cb106d74980f28"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new rigid geometry G for this source.">RegisterGeometry()</a>.  <a href="#af1f84cd081da639a61cb106d74980f28">More...</a><br /></td></tr>
 <tr class="separator:af1f84cd081da639a61cb106d74980f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df3f40eab6477f4a8bf544d73908e15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2df3f40eab6477f4a8bf544d73908e15">RegisterGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry)</td></tr>
-<tr class="memdesc:a2df3f40eab6477f4a8bf544d73908e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new geometry G for this source.  <a href="#a2df3f40eab6477f4a8bf544d73908e15">More...</a><br /></td></tr>
+<tr class="memdesc:a2df3f40eab6477f4a8bf544d73908e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new rigid geometry G for this source.  <a href="#a2df3f40eab6477f4a8bf544d73908e15">More...</a><br /></td></tr>
 <tr class="separator:a2df3f40eab6477f4a8bf544d73908e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af480c8384feee126c982074141ee1f96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af480c8384feee126c982074141ee1f96">RegisterGeometry</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry) const</td></tr>
-<tr class="memdesc:af480c8384feee126c982074141ee1f96"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new geometry G for this source.">RegisterGeometry()</a>.  <a href="#af480c8384feee126c982074141ee1f96">More...</a><br /></td></tr>
+<tr class="memdesc:af480c8384feee126c982074141ee1f96"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new rigid geometry G for this source.">RegisterGeometry()</a>.  <a href="#af480c8384feee126c982074141ee1f96">More...</a><br /></td></tr>
 <tr class="separator:af480c8384feee126c982074141ee1f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5ce10663016908c218c43f6da3c79a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a8d5ce10663016908c218c43f6da3c79a">RegisterAnchoredGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry)</td></tr>
 <tr class="memdesc:a8d5ce10663016908c218c43f6da3c79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new <em>anchored</em> geometry G for this source.  <a href="#a8d5ce10663016908c218c43f6da3c79a">More...</a><br /></td></tr>
 <tr class="separator:a8d5ce10663016908c218c43f6da3c79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab671140650fb6a01e915a200e9aaa3bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab671140650fb6a01e915a200e9aaa3bf">RegisterDeformableGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry, double resolution_hint)</td></tr>
+<tr class="memdesc:ab671140650fb6a01e915a200e9aaa3bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new deformable geometry G for this source.  <a href="#ab671140650fb6a01e915a200e9aaa3bf">More...</a><br /></td></tr>
+<tr class="separator:ab671140650fb6a01e915a200e9aaa3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2537f13bfc667186f077bc400165133"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae2537f13bfc667186f077bc400165133">RegisterDeformableGeometry</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry, double resolution_hint) const</td></tr>
+<tr class="memdesc:ae2537f13bfc667186f077bc400165133"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab671140650fb6a01e915a200e9aaa3bf" title="Registers a new deformable geometry G for this source.">RegisterDeformableGeometry()</a>.  <a href="#ae2537f13bfc667186f077bc400165133">More...</a><br /></td></tr>
+<tr class="separator:ae2537f13bfc667186f077bc400165133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd98b48bb76635a3f5055f418908912d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#afd98b48bb76635a3f5055f418908912d">RemoveGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id)</td></tr>
 <tr class="memdesc:afd98b48bb76635a3f5055f418908912d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the given geometry G (indicated by <code>geometry_id</code>) from the given source's registered geometries.  <a href="#afd98b48bb76635a3f5055f418908912d">More...</a><br /></td></tr>
 <tr class="separator:afd98b48bb76635a3f5055f418908912d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2043,8 +2050,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2055,7 +2062,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2069,8 +2076,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2081,7 +2088,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2139,6 +2146,118 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab671140650fb6a01e915a200e9aaa3bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab671140650fb6a01e915a200e9aaa3bf">&#9670;&nbsp;</a></span>RegisterDeformableGeometry() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> RegisterDeformableGeometry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a>&#160;</td>
+          <td class="paramname"><em>source_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt;&#160;</td>
+          <td class="paramname"><em>geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resolution_hint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers a new deformable geometry G for this source. </p>
+<p>This registers geometry G on a frame F (indicated by <code>frame_id</code>). The registered geometry has a meshed representation. The positions of the vertices of this mesh representation are defined in the frame F (i.e., <code>q_FG</code>). Returns the corresponding unique geometry id.</p>
+<p>Roles will be assigned to the registered geometry if the corresponding <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a> <code>geometry</code> has had properties assigned.</p>
+<p>This method modifies the underlying model and requires a new Context to be allocated. Potentially modifies proximity, perception, and illustration versions based on the roles assigned to the geometry (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_id</td><td>The id for the source registering the geometry. </td></tr>
+    <tr><td class="paramname">frame_id</td><td>The id for the frame F to put the geometry in. </td></tr>
+    <tr><td class="paramname">geometry</td><td>The geometry G to to be represented in frame F. </td></tr>
+    <tr><td class="paramname">resolution_hint</td><td>The parameter that guides the level of mesh refinement of the deformable geometry. It has length units (in meters) and roughly corresponds to a typical edge length in the resulting mesh for a primitive shape. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A unique identifier for the added geometry. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>resolution_hint &gt; 0. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, b) frame_id != <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#aa0500b30ca4a9ac7e7332b30792cbb9e" title="Reports the identifier for the world frame.">world_frame_id()</a>, c) the <code>geometry</code> is equal to <code>nullptr</code>, d) the geometry's name doesn't satisfy the requirements outlined in <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2537f13bfc667186f077bc400165133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2537f13bfc667186f077bc400165133">&#9670;&nbsp;</a></span>RegisterDeformableGeometry() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> RegisterDeformableGeometry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a>&#160;</td>
+          <td class="paramname"><em>source_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt;&#160;</td>
+          <td class="paramname"><em>geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resolution_hint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab671140650fb6a01e915a200e9aaa3bf" title="Registers a new deformable geometry G for this source.">RegisterDeformableGeometry()</a>. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p><dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
 
 </div>
 </div>
@@ -2292,7 +2411,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
       </table>
 </div><div class="memdoc">
 
-<p>Registers a new geometry G for this source. </p>
+<p>Registers a new rigid geometry G for this source. </p>
 <p>This hangs geometry G on a previously registered frame F (indicated by <code>frame_id</code>). The pose of the geometry is defined in a fixed pose relative to F (i.e., <code>X_FG</code>). Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a> <code>geometry</code> has had properties assigned.</p>
 <p>This method modifies the underlying model and requires a new Context to be allocated. Potentially modifies proximity, perception, and illustration versions based on the roles assigned to the geometry (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
@@ -2352,7 +2471,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new geometry G for this source.">RegisterGeometry()</a>. </p>
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new rigid geometry G for this source.">RegisterGeometry()</a>. </p>
 <p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
 
 </div>
@@ -2389,7 +2508,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
       </table>
 </div><div class="memdoc">
 
-<p>Registers a new geometry G for this source. </p>
+<p>Registers a new rigid geometry G for this source. </p>
 <p>This hangs geometry G on a previously registered geometry P (indicated by <code>geometry_id</code>). The pose of the geometry is defined in a fixed pose relative to geometry P (i.e., <code>X_PG</code>). By induction, this geometry is effectively rigidly affixed to the frame that P is affixed to. Returns the corresponding unique geometry id.</p>
 <p>Roles will be assigned to the registered geometry if the corresponding <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a> <code>geometry</code> has had properties assigned.</p>
 <p>This method modifies the underlying model and requires a new Context to be allocated. Potentially modifies proximity, perception, and illustration versions based on the roles assigned to the geometry (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
@@ -2449,7 +2568,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new geometry G for this source.">RegisterGeometry()</a>. </p>
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new rigid geometry G for this source.">RegisterGeometry()</a>. </p>
 <p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
 
 </div>

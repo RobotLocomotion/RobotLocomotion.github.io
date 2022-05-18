@@ -10,6 +10,7 @@ var classdrake_1_1geometry_1_1_query_object =
     [ "ComputeSignedDistancePairwiseClosestPoints", "classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52", null ],
     [ "ComputeSignedDistanceToPoint", "classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c", null ],
     [ "FindCollisionCandidates", "classdrake_1_1geometry_1_1_query_object.html#a48676624208ba13c78edbc098203f1ea", null ],
+    [ "GetConfigurationsInWorld", "classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76", null ],
     [ "GetPoseInParent", "classdrake_1_1geometry_1_1_query_object.html#a68254463fc7cb0837ab0eeab307c1195", null ],
     [ "GetPoseInWorld", "classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99", null ],
     [ "GetPoseInWorld", "classdrake_1_1geometry_1_1_query_object.html#aa0472a3c5593e2f9b2c76863209e111e", null ],

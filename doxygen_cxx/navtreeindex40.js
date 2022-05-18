@@ -1,5 +1,12 @@
 var NAVTREEINDEX40 =
 {
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee44966b6c6ff31b5e49a515bea53295":[3,0,1,3,4],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,27],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0ae5c6c04205be18238368d567627683":[3,0,1,27,4],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,1,27,0],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a225e2ed3f17775ce1451a71cc508510a":[3,0,1,27,14],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a22653ca7a051add2d056e116fffeb744":[3,0,1,27,3],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,1,27,10],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,1,27,8],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a4c7cb2cda263a8eaace8b17ec56f7f29":[3,0,1,27,15],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a654ad3ffbfa836060c9b33e158b825b9":[3,0,1,27,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX40 =
 "dir_3c3c25df5132fca4f15a988b4c2efab5.html":[4,0,0,5],
 "dir_3d70560bdc0f87a6aef8c45d30963b2c.html":[4,0,0,6,1],
 "dir_3d84dd5e420c33a089db2aba1794a356.html":[4,0,0,4,1],
-"dir_3dcc4f971d55774b1875fdd225f3ac02.html":[4,0,0,3,5],
-"dir_3e1bf9ce46085c0e3ff6de174f1555d7.html":[4,0,0,10,1],
-"dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html":[4,0,0,8,13],
-"dir_3ff34c62de56b2df4097a6c50ce2d7ff.html":[4,0,0,4,3],
-"dir_41feb80e12a36dca7cd3992ad22e20a8.html":[4,0,0,3,0],
-"dir_44483f0323bd602a0990582f52e44742.html":[4,0,0,4,4,0],
-"dir_474aa644b99dd5481f12728ecfc3f855.html":[4,0,0,3,10,1],
-"dir_47be7cb145c8f2c349a22ea5364e6acd.html":[4,0,0,3,4]
+"dir_3dcc4f971d55774b1875fdd225f3ac02.html":[4,0,0,3,5]
 };
