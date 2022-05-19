@@ -186,9 +186,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a551202a20cbfbac429580010b512f09d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#a551202a20cbfbac429580010b512f09d">SetEndEffector</a> (const std::string &amp;link_name)</td></tr>
 <tr class="memdesc:a551202a20cbfbac429580010b512f09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets end effector to <code>link_name</code>.  <a href="#a551202a20cbfbac429580010b512f09d">More...</a><br /></td></tr>
 <tr class="separator:a551202a20cbfbac429580010b512f09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0602d44fc5b3396c626f841d1df7abf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#aa0602d44fc5b3396c626f841d1df7abf">PlanSequentialTrajectory</a> (const std::vector&lt; <a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html">IkCartesianWaypoint</a> &gt; &amp;waypoints, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;q_current, std::vector&lt; Eigen::VectorXd &gt; *q_sol)</td></tr>
-<tr class="memdesc:aa0602d44fc5b3396c626f841d1df7abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates IK solutions for each waypoint sequentially.  <a href="#aa0602d44fc5b3396c626f841d1df7abf">More...</a><br /></td></tr>
-<tr class="separator:aa0602d44fc5b3396c626f841d1df7abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c39efd12001fcd97f505ef1f4df5421"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#a9c39efd12001fcd97f505ef1f4df5421">PlanSequentialTrajectory</a> (const std::vector&lt; <a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html">IkCartesianWaypoint</a> &gt; &amp;waypoints, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;q_current, std::vector&lt; Eigen::VectorXd &gt; *q_sol, const std::function&lt; bool(<a class="el" href="classint.html">int</a>)&gt; &amp;keep_going={})</td></tr>
+<tr class="memdesc:a9c39efd12001fcd97f505ef1f4df5421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates IK solutions for each waypoint sequentially.  <a href="#a9c39efd12001fcd97f505ef1f4df5421">More...</a><br /></td></tr>
+<tr class="separator:a9c39efd12001fcd97f505ef1f4df5421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ab9d39322cf14f89933ec5d2242954caf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#ab9d39322cf14f89933ec5d2242954caf">ConstraintRelaxingIk</a> (const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;)=delete</td></tr>
 <tr class="separator:ab9d39322cf14f89933ec5d2242954caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -342,8 +342,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0602d44fc5b3396c626f841d1df7abf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0602d44fc5b3396c626f841d1df7abf">&#9670;&nbsp;</a></span>PlanSequentialTrajectory()</h2>
+<a id="a9c39efd12001fcd97f505ef1f4df5421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c39efd12001fcd97f505ef1f4df5421">&#9670;&nbsp;</a></span>PlanSequentialTrajectory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +364,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; Eigen::VectorXd &gt; *&#160;</td>
-          <td class="paramname"><em>q_sol</em>&#160;</td>
+          <td class="paramname"><em>q_sol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; bool(<a class="el" href="classint.html">int</a>)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>keep_going</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -382,6 +388,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramdir"></td><td class="paramname">waypoints</td><td>A sequence of desired waypoints. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">q_current</td><td>The initial generalized position. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">q_sol</td><td>Results. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">keep_going</td><td>Optional callback to allow for cancellation. When given, this function will be called prior to every IK solve; if it returns false, the PlanSequentialTrajectory will stop and return false. The function is passed the index of the waypoint currently being solved. This can be used to enable timeouts for difficult plans. </td></tr>
   </table>
   </dd>
 </dl>
