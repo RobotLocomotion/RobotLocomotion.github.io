@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,14,2,6,1],
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,14,2,6,0],
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[1,2,2,3,0],
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,2,2,3,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,2,2,3,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "symbolic__expression_8h.html#a717f1ae4a1d038bc7870416276167f19":[4,0,0,1,56,77],
 "symbolic__expression_8h.html#a71a3b8e65cfeb6d57deb7fe9d70f1d4d":[4,0,0,1,56,81],
 "symbolic__expression_8h.html#a71c7e1bd2b1367487d36a6cd6871af0c":[4,0,0,1,56,74],
-"symbolic__expression_8h.html#a78354ef5dda9c52bbc103d57712c303e":[4,0,0,1,56,119],
-"symbolic__expression_8h.html#a79d98cdd1dd5802fe6c341ecfe9c6cce":[4,0,0,1,56,22],
-"symbolic__expression_8h.html#a7d45b86ae4b7872576bb3fac8b22ca94":[4,0,0,1,56,118]
+"symbolic__expression_8h.html#a78354ef5dda9c52bbc103d57712c303e":[4,0,0,1,56,119]
 };

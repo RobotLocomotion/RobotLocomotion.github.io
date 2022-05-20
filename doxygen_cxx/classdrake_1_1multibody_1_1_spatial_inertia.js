@@ -14,6 +14,7 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "IsNaN", "classdrake_1_1multibody_1_1_spatial_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220", null ],
     [ "IsPhysicallyValid", "classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084", null ],
     [ "MakeFromCentralInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3c36e3056b0d3fcc88d8c972df267a0e", null ],
+    [ "MakeTestCube", "classdrake_1_1multibody_1_1_spatial_inertia.html#ad387eacafa0a8d59811738e04958c463", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#ab0efcd599640dacc6ef37cf640143fdc", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#acc3f6e6102f427a8624f86758eb536fd", null ],
