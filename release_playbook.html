@@ -423,43 +423,46 @@ tweak the Dockerfile before Deepnote will allow you to re-run the
 Build.  For example, add <code class="highlighter-rouge">&amp;&amp; true</code> to the end of a RUN line.</li>
         </ol>
       </li>
-      <li>For reference (no action required), the initialization notebook at
-<a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Finit.ipynb">init.ipynb</a>
-has this cell added the bottom, as a Drake-specific cusomizatization:
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
-/opt/drake/share/drake/setup/deepnote/install_xvfb
-</code></pre></div>        </div>
-        <ol>
-          <li>In case the display server is not working later on, that might be a
-good place to double-check.</li>
-        </ol>
-      </li>
-      <li>Copy the updated tutorials from the pinned Dockerfile release
-(in <code class="highlighter-rouge">/opt/drake/share/drake/tutorials/...</code>) into the Deepnote project
-storage (<code class="highlighter-rouge">~/work/...</code>):
-        <ol>
-          <li>Open <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2F.for_maintainers.ipynb">.for_maintainers.ipynb</a>.</li>
-          <li>Run each cell one by one, checking for errors as you go.</li>
-        </ol>
-      </li>
-      <li>For <em>other all</em> notebooks (excluding the <code class="highlighter-rouge">.for_maintainers</code> notebook)
-one by one (probably in alphabetical order, for your sanity):
-        <ol>
-          <li>Open the notebook and click “Run notebook”.</li>
-          <li>For all markdown cells, quickly skim over the rendered output to check
-that no markup errors have snuck through (e.g., LaTeX syntax errors).</li>
-          <li>For all code cells, examine the output of each cell to check that no
-exceptions have snuck through (or any other unexpected error text).</li>
-          <li>Leave the notebook output intact (do not clear the outputs). We want
-users to be able to read the outputs on their own, without necessarily
-running the notebook themselves.</li>
-        </ol>
-      </li>
-      <li>On the right side, click “Environment” then “Stop Machine”, as a
-courtesy. (It will time out on its own within the hour, but we might as
-well save a few nanograms of CO2 where we can.)</li>
     </ol>
   </li>
+  <li>For reference (no action required), the
+<a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Frequirements.txt">requirements.txt</a>
+file should have the following content:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipywidgets==7.7.0
+</code></pre></div>    </div>
+  </li>
+  <li>For reference (no action required), the initialization notebook at
+<a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Finit.ipynb">init.ipynb</a>
+has this cell added the bottom, as a Drake-specific customization:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
+/opt/drake/share/drake/setup/deepnote/install_xvfb
+</code></pre></div>    </div>
+    <p>In case the display server is not working later on, this might be a good place to double-check.</p>
+  </li>
+  <li>Copy the updated tutorials from the pinned Dockerfile release
+(in <code class="highlighter-rouge">/opt/drake/share/drake/tutorials/...</code>) into the Deepnote project
+storage (<code class="highlighter-rouge">~/work/...</code>):
+    <ol>
+      <li>Open <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2F.for_maintainers.ipynb">.for_maintainers.ipynb</a>.</li>
+      <li>Run each cell one by one, checking for errors as you go.</li>
+    </ol>
+  </li>
+  <li>For <em>all other</em> notebooks (excluding the <code class="highlighter-rouge">.for_maintainers</code> notebook)
+one by one (probably in alphabetical order, for your sanity):
+    <ol>
+      <li>Open the notebook and click “Run notebook”.</li>
+      <li>For all markdown cells, quickly skim over the rendered output to check
+that no markup errors have snuck through (e.g., LaTeX syntax errors).</li>
+      <li>For all code cells, examine the output of each cell to check that no
+exceptions have snuck through (or any other unexpected error text).</li>
+      <li>Leave the notebook output intact (do not clear the outputs). We want
+users to be able to read the outputs on their own, without necessarily
+running the notebook themselves.</li>
+    </ol>
+  </li>
+  <li>On the right side, click “Environment” then “Stop Machine”, as a
+courtesy. (It will time out on its own within the hour, but we might as
+well save a few nanograms of CO2 where we can.)</li>
 </ol>
 
 <h2 id="post-release-wheel-builds">Post-release wheel builds</h2>

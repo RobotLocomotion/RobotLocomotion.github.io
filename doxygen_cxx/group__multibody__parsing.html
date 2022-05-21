@@ -171,6 +171,33 @@ SDFormat Support</h1>
 <p>Drake supports SDFormat files following the specification at <a href="http://sdformat.org/spec">http://sdformat.org/spec</a>. As of this writing, the supported spec version is 1.9, but check also the Drake release notes for current status.</p>
 <p>For Drake extensions to SDFormat files, see <a class="el" href="group__multibody__parsing.html#multibody_parsing_drake_extensions">Drake Extensions</a>.</p>
 <p>Drake's parser does not implement all of the features of SDFormat. In the future, we intend to update this documentation to itemize what isn't supported.</p>
+<h2><a class="anchor" id="model_composition"></a>
+SDFormat model composition</h2>
+<p>Drake's SDFormat parsing supports composing multiple models into a single model, via lexical nesting and file inclusion. The file inclusion feature supports both SDFormat files and URDF files. Note that included URDF files pass through the Drake URDF parser, with all of it's extensions and limitations.</p>
+<p>For full details, see the <a href="http://sdformat.org/tutorials?tut=composition_proposal#model-composition-proposed-behavior">SDFormat documentation of model composition.</a></p>
+<p>An important feature of SDFormat model composition is the ability to cross-reference features of other models. Cross-references are denoted by using scoped names.</p>
+<h3><a class="anchor" id="scoped_names"></a>
+Scoped names</h3>
+<p>Scoped names allow referring to an element of a model nested within the current model. They take the form of some number of nested model names, plus the element name, all joined by the delimiter <code>::</code>. Names not using the <code>::</code> delimeter are not considered scoped names; they are used to define or refer to elements of the current model. For example, suppose that model A contains model B, which in turn contains model C. Here are some valid scoped names:</p>
+<ul>
+<li>within A:<ul>
+<li><code>some_frame_in_A</code></li>
+<li><code>B::some_frame_in_B</code></li>
+<li><code>B::C::some_frame_in_C</code></li>
+</ul>
+</li>
+<li>within B:<ul>
+<li><code>some_frame_in_B</code></li>
+<li><code>C::some_frame_in_C</code></li>
+</ul>
+</li>
+<li>within C:<ul>
+<li><code>some_frame_in_C</code></li>
+</ul>
+</li>
+</ul>
+<p>Note that (deliberately) there is no way to refer to elements outward or upward from the current model; all names are relative to the current model and can only refer to the current or a nested model. In particular, names must not start with <code>::</code>; there is no way to denote any "outer" or "outermost" scope.</p>
+<p>For a detailed design discussion with examples, see the <a href="http://sdformat.org/tutorials?tut=composition_proposal#1-3-name-scoping-and-cross-referencing">SDFormat documentation of name scoping.</a></p>
 <h1><a class="anchor" id="multibody_parsing_urdf"></a>
 URDF Support</h1>
 <p>Drake supports URDF files as described here: <a href="http://wiki.ros.org/urdf/XML">http://wiki.ros.org/urdf/XML</a>.</p>
@@ -378,9 +405,10 @@ drake:collision_filter_group</h2>
 </ul>
 <h3><a class="anchor" id="tag_drake_collision_filter_group_semantics"></a>
 Semantics</h3>
-<p>This element names a group of bodies to participate in collision filtering rules. If the <code>ignore</code> attribute is present and true-valued, the entire element is ignored. The nested elements must included one or more <code>drake:member</code> elements, and zero or more <code>drake:ignored_collision_filter_group</code> elements.</p>
+<p>This element names a group of bodies to participate in collision filtering rules. If the <code>ignore</code> attribute is present and true-valued, the entire element is skipped during parsing. The nested elements must included one or more <code>drake:member</code> elements, and zero or more <code>drake:ignored_collision_filter_group</code> elements.</p>
+<p>This element defines a new group name that is only available during parsing. It must not be a scoped name.</p>
 <p>Collision filtering rules are only constructed with <b>pairs</b> of groups, where both sides of the pair may name the same group. The <code>drake:ignored_collision_filter_group</code> element establishes a pairing between the group it names and the group within which it is nested. A pair containing different collision groups excludes collisions between members of those groups (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html#af92e4fb2501d576d2e598196b7902167" title="Excludes geometry pairs from proximity evaluation by updating the candidate pair set C ← C - P,...">drake::geometry::CollisionFilterDeclaration::ExcludeBetween()</a>). A pair naming the same group twice excludes collisions within the group (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html#a850f7245a9d1c8227ed4e04a0e5018f1" title="Excludes geometry pairs from proximity evaluation by updating the candidate pair set C ← C - P,...">drake::geometry::CollisionFilterDeclaration::ExcludeWithin()</a>).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_ignored_collision_filter_group">drake:ignored_collision_filter_group</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_ignored_collision_filter_group">drake:ignored_collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_compliant_hydroelastic"></a>
 drake:compliant_hydroelastic</h2>
 <ul>
@@ -478,7 +506,8 @@ drake:ignored_collision_filter_group</h2>
 <h3><a class="anchor" id="tag_drake_ignored_collision_filter_group_semantics"></a>
 Semantics</h3>
 <p>The string names a collision filter group that will be paired with the parent group when constructing filtering rules. It may name the parent group.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a></dd></dl>
+<p>In SDFormat files only, the name may refer to a group within a nested model (either URDF or SDFormat) by using a scoped name.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_joint"></a>
 drake:joint</h2>
 <ul>
@@ -513,7 +542,8 @@ drake:member</h2>
 <h3><a class="anchor" id="tag_drake_member_semantics"></a>
 Semantics</h3>
 <p>This element names a link (defined elsewhere in the model) to be a member of the parent collision filter group.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a></dd></dl>
+<p>In SDFormat files only, the name may refer to a link within a nested model (either URDF or SDFormat) by using a scoped name.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_mesh_resolution_hint"></a>
 drake:mesh_resolution_hint</h2>
 <ul>

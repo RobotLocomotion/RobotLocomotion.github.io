@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"explicit__euler__integrator_8h.html":[4,0,0,11,0,4],
 "exponential__plus__piecewise__polynomial_8h.html":[4,0,0,1,3,2],
 "externally__applied__spatial__force_8h.html":[4,0,0,8,10,9],
 "extract__double_8h.html":[4,0,0,1,28],
@@ -138,8 +139,8 @@ var NAVTREEINDEX42 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6,0],
 "functions_rela.html":[3,3,6],
+"functions_rela.html":[3,3,6,0],
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "globals_func.html":[4,1,1],
 "gradient_8h.html":[4,0,0,7,15],
 "gradient__util_8h.html":[4,0,0,7,16],
-"gradient__util_8h.html#a20c21cde851510ab3ae5a7527ed62d22":[4,0,0,7,16,13],
-"gradient__util_8h.html#a259ed4f41a444e8eed6a2a30998af53f":[4,0,0,7,16,6]
+"gradient__util_8h.html#a20c21cde851510ab3ae5a7527ed62d22":[4,0,0,7,16,13]
 };
