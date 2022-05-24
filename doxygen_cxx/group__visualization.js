@@ -24,7 +24,8 @@ var group__visualization =
       [ "Delete", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21", null ],
       [ "operator=", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ae46167a57acc0c6fa6019e49e6e6f011", null ],
       [ "operator=", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7b72a389cedd87c311dfe0587de68211", null ],
-      [ "Run", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7efa8b3ad513010aefc21c33a2ff9b2f", null ]
+      [ "Run", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7efa8b3ad513010aefc21c33a2ff9b2f", null ],
+      [ "SetPositions", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939", null ]
     ] ],
     [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", [
       [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a112929f5c749cb92d963ef345ee24c16", null ],

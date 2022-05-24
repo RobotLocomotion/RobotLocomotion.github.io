@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"dir_3c3c25df5132fca4f15a988b4c2efab5.html":[4,0,0,5],
+"dir_3d70560bdc0f87a6aef8c45d30963b2c.html":[4,0,0,6,1],
 "dir_3d84dd5e420c33a089db2aba1794a356.html":[4,0,0,4,1],
 "dir_3dcc4f971d55774b1875fdd225f3ac02.html":[4,0,0,3,5],
 "dir_3e1bf9ce46085c0e3ff6de174f1555d7.html":[4,0,0,10,1],
@@ -88,7 +90,7 @@ var NAVTREEINDEX41 =
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,10],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,10,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,10,1],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,7],
+"discrete__contact__pair_8h.html":[4,0,0,8,10,8],
 "discrete__derivative_8h.html":[4,0,0,11,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
@@ -96,8 +98,8 @@ var NAVTREEINDEX41 =
 "discrete__time__delay_8h.html":[4,0,0,11,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,3,1],
-"discrete__update__manager_8h.html":[4,0,0,8,10,8],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,8,0],
+"discrete__update__manager_8h.html":[4,0,0,8,10,9],
+"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,9,0],
 "discrete__values_8h.html":[4,0,0,11,3,18],
 "distance__constraint_8h.html":[4,0,0,8,5,3],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "explicit__error__controlled__integrator__test_8h.html#ab05b56dc6914ab7be5ad3efb1c809998":[4,0,0,11,0,0,3,11],
 "explicit__error__controlled__integrator__test_8h.html#abc9bf596ada5903dcc737032b079fb82":[4,0,0,11,0,0,3,15],
 "explicit__error__controlled__integrator__test_8h.html#ac19343355834e44083438c4fe9eeeacc":[4,0,0,11,0,0,3,17],
-"explicit__error__controlled__integrator__test_8h.html#ac4153fde9da9c197ba8f8019d0e5698d":[4,0,0,11,0,0,3,4],
-"explicit__error__controlled__integrator__test_8h.html#ae954f985e4690afb38b9895d3a3cad05":[4,0,0,11,0,0,3,7],
-"explicit__error__controlled__integrator__test_8h.html#afad80830ebb314cc10d44158a26e0baf":[4,0,0,11,0,0,3,13]
+"explicit__error__controlled__integrator__test_8h.html#ac4153fde9da9c197ba8f8019d0e5698d":[4,0,0,11,0,0,3,4]
 };

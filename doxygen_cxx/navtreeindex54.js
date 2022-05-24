@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"text__logging__pybind_8h.html":[4,0,0,0,0,0,10],
+"texture__library_8h.html":[4,0,0,4,4,0,11],
 "toppra_8h.html":[4,0,0,8,8,10],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,8,10,1],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a":[4,0,0,8,8,10,1,0],
@@ -73,7 +75,7 @@ var NAVTREEINDEX54 =
 "vtk__util_8h.html":[4,0,0,4,4,2,3],
 "weld__joint_8h.html":[4,0,0,8,13,51],
 "weld__mobilizer_8h.html":[4,0,0,8,13,52],
-"wing_8h.html":[4,0,0,8,10,24],
+"wing_8h.html":[4,0,0,8,10,25],
 "witness__function_8h.html":[4,0,0,11,3,55],
 "witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3":[4,0,0,11,3,55,2],
 "witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3a35c3ace1970663a16e5c65baa5941b13":[4,0,0,11,3,55,2,0],

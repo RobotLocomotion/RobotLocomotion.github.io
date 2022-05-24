@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__formula__cell_8h.html#a9fe1f207a7dfa971bf80a1d44041368b":[4,0,0,1,60,21],
+"symbolic__formula__cell_8h.html#aaed4c523512b2ee45d906c0f9d0b1d13":[4,0,0,1,60,26],
 "symbolic__formula__cell_8h.html#ac014e89da18637b81f9c1fbe6306e689":[4,0,0,1,60,33],
 "symbolic__formula__cell_8h.html#ac5cfac124e8ae1c7450c4e0c91c2bc07":[4,0,0,1,60,29],
 "symbolic__formula__cell_8h.html#aceef2c41a1ce6c5f7eed83c1d2df9381":[4,0,0,1,60,45],
@@ -229,11 +231,11 @@ var NAVTREEINDEX53 =
 "system__type__tag_8h.html":[4,0,0,11,3,48],
 "system__visitor_8h.html":[4,0,0,11,3,49],
 "systems_8h.html":[4,0,0,11,12],
-"tamsi__solver_8h.html":[4,0,0,8,10,23],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2":[4,0,0,8,10,23,3],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727":[4,0,0,8,10,23,3,2],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a":[4,0,0,8,10,23,3,1],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,23,3,0],
+"tamsi__solver_8h.html":[4,0,0,8,10,24],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2":[4,0,0,8,10,24,3],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727":[4,0,0,8,10,24,3,2],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a":[4,0,0,8,10,24,3,1],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,24,3,0],
 "temp__directory_8h.html":[4,0,0,1,76],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,76,0],
 "tessellation__strategy_8h.html":[4,0,0,4,2,47],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,77,4],
 "text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,77,3],
 "text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,77,8],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,77,2],
-"text__logging__pybind_8h.html":[4,0,0,0,0,0,10],
-"texture__library_8h.html":[4,0,0,4,4,0,11]
+"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,77,2]
 };

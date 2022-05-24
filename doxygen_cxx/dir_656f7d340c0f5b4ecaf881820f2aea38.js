@@ -9,6 +9,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     ] ],
     [ "contact_results_to_lcm.h", "contact__results__to__lcm_8h.html", "contact__results__to__lcm_8h" ],
     [ "coulomb_friction.h", "coulomb__friction_8h.html", "coulomb__friction_8h" ],
+    [ "deformable_model.h", "deformable__model_8h.html", null ],
     [ "discrete_contact_pair.h", "discrete__contact__pair_8h.html", null ],
     [ "discrete_update_manager.h", "discrete__update__manager_8h.html", "discrete__update__manager_8h" ],
     [ "externally_applied_spatial_force.h", "externally__applied__spatial__force_8h.html", [
