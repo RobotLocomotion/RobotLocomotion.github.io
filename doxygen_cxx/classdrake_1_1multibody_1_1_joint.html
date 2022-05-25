@@ -238,6 +238,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aba2887f0ca1fbbdfb49cf6b0ee21e553">num_positions</a> () const</td></tr>
 <tr class="memdesc:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of generalized positions describing this joint.  <a href="#aba2887f0ca1fbbdfb49cf6b0ee21e553">More...</a><br /></td></tr>
 <tr class="separator:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8152c34c2684e7b492b2076f1c5762b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a8152c34c2684e7b492b2076f1c5762b4">can_rotate</a> () const</td></tr>
+<tr class="memdesc:a8152c34c2684e7b492b2076f1c5762b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this joint's mobilizers allow relative rotation of the two frames associated with this joint.  <a href="#a8152c34c2684e7b492b2076f1c5762b4">More...</a><br /></td></tr>
+<tr class="separator:a8152c34c2684e7b492b2076f1c5762b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506d612447dfb1899a6b03f54932978a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a506d612447dfb1899a6b03f54932978a">can_translate</a> () const</td></tr>
+<tr class="memdesc:a506d612447dfb1899a6b03f54932978a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this joint's mobilizers allow relative translation of the two frames associated with this joint.  <a href="#a506d612447dfb1899a6b03f54932978a">More...</a><br /></td></tr>
+<tr class="separator:a506d612447dfb1899a6b03f54932978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae284ad4d19074fb53228f2a8fce0001a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae284ad4d19074fb53228f2a8fce0001a">position_suffix</a> (<a class="el" href="classint.html">int</a> position_index_in_joint) const</td></tr>
 <tr class="memdesc:ae284ad4d19074fb53228f2a8fce0001a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#ae284ad4d19074fb53228f2a8fce0001a">More...</a><br /></td></tr>
 <tr class="separator:ae284ad4d19074fb53228f2a8fce0001a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -801,6 +807,48 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8152c34c2684e7b492b2076f1c5762b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8152c34c2684e7b492b2076f1c5762b4">&#9670;&nbsp;</a></span>can_rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool can_rotate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if this joint's mobilizers allow relative rotation of the two frames associated with this joint. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> must be finalized. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a506d612447dfb1899a6b03f54932978a" title="Returns true if this joint&#39;s mobilizers allow relative translation of the two frames associated with ...">can_translate()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a506d612447dfb1899a6b03f54932978a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506d612447dfb1899a6b03f54932978a">&#9670;&nbsp;</a></span>can_translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool can_translate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if this joint's mobilizers allow relative translation of the two frames associated with this joint. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> must be finalized. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a8152c34c2684e7b492b2076f1c5762b4" title="Returns true if this joint&#39;s mobilizers allow relative rotation of the two frames associated with thi...">can_rotate()</a> </dd></dl>
 
 </div>
 </div>
@@ -1630,8 +1678,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aeb1b5eb8c9bec9c16bb0b91a56b5e207"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb1b5eb8c9bec9c16bb0b91a56b5e207">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aef0c3fc03c4f63ba216cf67bb7d4ce51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0c3fc03c4f63ba216cf67bb7d4ce51">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1642,7 +1690,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1656,8 +1704,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aef0c3fc03c4f63ba216cf67bb7d4ce51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef0c3fc03c4f63ba216cf67bb7d4ce51">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aeb1b5eb8c9bec9c16bb0b91a56b5e207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1b5eb8c9bec9c16bb0b91a56b5e207">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1668,7 +1716,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__formula__cell_8h.html#a85772f75f073405ed82017151b4cb279":[4,0,0,1,60,49],
+"symbolic__formula__cell_8h.html#a9fb95d50cf0c445f6be7d3d1e5a356a9":[4,0,0,1,60,19],
 "symbolic__formula__cell_8h.html#a9fe1f207a7dfa971bf80a1d44041368b":[4,0,0,1,60,21],
 "symbolic__formula__cell_8h.html#aaed4c523512b2ee45d906c0f9d0b1d13":[4,0,0,1,60,26],
 "symbolic__formula__cell_8h.html#ac014e89da18637b81f9c1fbe6306e689":[4,0,0,1,60,33],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "text__logging_8h.html#a9cae370466ffb304c10aebea42eca26b":[4,0,0,1,77,1],
 "text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,77,7],
 "text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,77,4],
-"text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,77,3],
-"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,77,8],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,77,2]
+"text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,77,3]
 };

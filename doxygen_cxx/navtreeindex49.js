@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3":[1,4,2,0,0,3],
+"structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#ae01adb7e45a3f63fccccf9f06a9eea2f":[1,4,2,0,0,2],
 "structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26":[1,4,2,0,0,1],
 "structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html":[3,0,0,6,2,3],
 "structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aac0e5776ad59e265686244006b0be308":[3,0,0,6,2,3,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,11,6,1,5],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[3,0,0,11,6,1,1],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#af4fb026178fdf3ce0a371f9f21f7ab9c":[3,0,0,11,6,1,3],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,11,6,1,0],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,11,6,2],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,11,6,2,1]
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,11,6,1,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_weld_joint.html#aaad155ce9d89bbe3c6240c3e9e5da8f8":[3,0,0,8,85,3],
+"classdrake_1_1multibody_1_1_weld_joint.html#ab0954f79e22c39d0bd221aea65b0d625":[3,0,0,8,85,1],
 "classdrake_1_1multibody_1_1_weld_joint.html#aec0ff8efa446e5e97baa611baca985e7":[3,0,0,8,85,6],
 "classdrake_1_1multibody_1_1_wing.html":[1,2,7,1],
 "classdrake_1_1multibody_1_1_wing.html#a00bb1bf6b619e332e440549f5ae2bcb3":[1,2,7,1,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a241b69e04f308b378ebbadc57b745781":[3,0,0,8,5,0,3],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a4b145ded140538ae94fbe83a8c96a5a9":[3,0,0,8,5,0,2],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a54ef649a3a7676a4a374f537f2f9bbbe":[3,0,0,8,5,0,4],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a825f8af102f87f42e1d44c05c220d8a2":[3,0,0,8,5,0,10],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a8fdf0db233b9d58bea3d95d3518d4d72":[3,0,0,8,5,0,1],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#ad12368940a68f444f70d97c3e74d389b":[3,0,0,8,5,0,8]
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a825f8af102f87f42e1d44c05c220d8a2":[3,0,0,8,5,0,10]
 };
