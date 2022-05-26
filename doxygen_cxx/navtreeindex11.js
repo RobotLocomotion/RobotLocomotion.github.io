@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f":[3,0,0,8,12,4],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html":[1,1,0,9],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#a48049f4688cc7bbe9544cf8296d749c4":[1,1,0,9,3],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#aa267d16b53913084dba91f5ccce9d2e3":[1,1,0,9,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_joint.html#a154263b43696322ad958ee8565d960ff":[3,0,0,8,38,57],
 "classdrake_1_1multibody_1_1_joint.html#a17028bb61e70288045e0e78002c32ba8":[3,0,0,8,38,9],
 "classdrake_1_1multibody_1_1_joint.html#a173513e6bfdeb8698d4e8b75685d986f":[3,0,0,8,38,22],
-"classdrake_1_1multibody_1_1_joint.html#a1a9b8301235756e59d61585853764f89":[3,0,0,8,38,2],
-"classdrake_1_1multibody_1_1_joint.html#a1f44aa73e129b6182670288ecc436e2c":[3,0,0,8,38,30]
+"classdrake_1_1multibody_1_1_joint.html#a1a9b8301235756e59d61585853764f89":[3,0,0,8,38,2]
 };

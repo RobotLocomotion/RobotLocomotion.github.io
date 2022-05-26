@@ -1032,6 +1032,27 @@ exponential cone.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pydrake.solvers.mathematicalprogram.GetAvailableSolvers">
+<code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">GetAvailableSolvers</code><span class="sig-paren">(</span><em>prog_type: pydrake.solvers.mathematicalprogram.ProgramType</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.SolverId]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.GetAvailableSolvers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of available and enabled solvers that definitely
+accept all programs of the given program type. The order of the
+returned SolverIds reflects an approximate order of preference, from
+most preferred (front) to least preferred (back). Because we are
+analyzing only based on the program type rather than a specific
+program, it’s possible that solvers later in the list would perform
+better in certain situations. To obtain the truly best solver, using
+ChooseBestSolver() instead.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If a solver only accepts a subset of the program type, then that
+solver is not included in the returned results. For example
+EqualityConstrainedQPSolver doesn’t accept programs with
+inequality linear constraints, so it doesn’t show up in the return
+of GetAvailableSolvers(ProgramType::kQP).</p>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.solvers.mathematicalprogram.GetProgramType">
 <code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">GetProgramType</code><span class="sig-paren">(</span><em>arg0: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.ProgramType<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.GetProgramType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the type of the optimization program (LP, QP, etc), based on

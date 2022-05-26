@@ -2319,7 +2319,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 <dl class="section return"><dt>Returns</dt><dd>A unique identifier for the added frame. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, or b) <code>frame</code> has an id that has already been registered. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, b) <code>frame</code> has an id that has already been registered, or c) there is already a frame with the same name registered for the source. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2372,7 +2372,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 <dl class="section return"><dt>Returns</dt><dd>A unique identifier for the added frame. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, b) the <code>parent_id</code> does <em>not</em> map to a known frame or does not belong to the source, or c) <code>frame</code> has an id that has already been registered. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, b) the <code>parent_id</code> does <em>not</em> map to a known frame or does not belong to the source, c) <code>frame</code> has an id that has already been registered, or d) there is already a frame with the same name registered for the source. </td></tr>
   </table>
   </dd>
 </dl>

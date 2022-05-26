@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#afd55f7a07573cefee2dc72fdebf3b910":[3,0,0,2,2,0,13],
 "classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html":[3,0,0,2,3,0],
 "classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html#a4bb29a45a948e7ec5ad8cf341d45b70b":[3,0,0,2,3,0,4],
 "classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html#a8203a35ce67e56f5a1e1d68b546df0dd":[3,0,0,2,3,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#a60a2654cdcab10421aa1e16108592078":[3,0,0,2,13,1,2],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#a90384755e10483dbea11785e04234e2c":[3,0,0,2,13,1,0],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#abcb28da0deceb7458a992cbcdd6d1137":[3,0,0,2,13,1,5],
-"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#afca2b454193e9bb3dfa77520e989d571":[3,0,0,2,13,1,3],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html":[3,0,0,2,14,0]
+"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#afca2b454193e9bb3dfa77520e989d571":[3,0,0,2,13,1,3]
 };

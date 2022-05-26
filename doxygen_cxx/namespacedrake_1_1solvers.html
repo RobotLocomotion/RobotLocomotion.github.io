@@ -608,6 +608,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e">MakeFirstAvailableSolver</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt; &amp;solver_ids)</td></tr>
 <tr class="memdesc:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the first available and enabled solver.  <a href="#a99ce5167dfbdc1a1f84e2e7cc52cba4e">More...</a><br /></td></tr>
 <tr class="separator:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add46c9926ac1085abe828a7cc987cad1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#add46c9926ac1085abe828a7cc987cad1">GetAvailableSolvers</a> (<a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15">ProgramType</a> prog_type)</td></tr>
+<tr class="memdesc:add46c9926ac1085abe828a7cc987cad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of available and enabled solvers that definitely accept all programs of the given program type.  <a href="#add46c9926ac1085abe828a7cc987cad1">More...</a><br /></td></tr>
+<tr class="separator:add46c9926ac1085abe828a7cc987cad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed794af38e7da9270528fd2185861862"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aed794af38e7da9270528fd2185861862">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a> common_solver_option)</td></tr>
 <tr class="separator:aed794af38e7da9270528fd2185861862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5f972e77c40a9afab91907620c621e11"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">MakeQuadraticErrorCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_desired)</td></tr>
@@ -2686,6 +2689,27 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="add46c9926ac1085abe828a7cc987cad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add46c9926ac1085abe828a7cc987cad1">&#9670;&nbsp;</a></span>GetAvailableSolvers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a>&gt; drake::solvers::GetAvailableSolvers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15">ProgramType</a>&#160;</td>
+          <td class="paramname"><em>prog_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the list of available and enabled solvers that definitely accept all programs of the given program type. </p>
+<p>The order of the returned SolverIds reflects an approximate order of preference, from most preferred (front) to least preferred (back). Because we are analyzing only based on the program type rather than a specific program, it's possible that solvers later in the list would perform better in certain situations. To obtain the truly best solver, using <a class="el" href="namespacedrake_1_1solvers.html#af2e1d0462e0e3506873f993879d48898" title="Choose the best solver given the formulation in the optimization program and the availability of the ...">ChooseBestSolver()</a> instead. </p><dl class="section note"><dt>Note</dt><dd>If a solver only accepts a subset of the program type, then that solver is not included in the returned results. For example <a class="el" href="classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html" title="Solves a quadratic program with equality constraint.">EqualityConstrainedQPSolver</a> doesn't accept programs with inequality linear constraints, so it doesn't show up in the return of GetAvailableSolvers(ProgramType::kQP). </dd></dl>
 
 </div>
 </div>
