@@ -24,6 +24,9 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "port_switch.h", "port__switch_8h.html", null ],
     [ "random_source.h", "random__source_8h.html", "random__source_8h" ],
     [ "saturation.h", "saturation_8h.html", null ],
+    [ "shared_pointer_system.h", "shared__pointer__system_8h.html", [
+      [ "SharedPointerSystem", "classdrake_1_1systems_1_1_shared_pointer_system.html", "classdrake_1_1systems_1_1_shared_pointer_system" ]
+    ] ],
     [ "sine.h", "sine_8h.html", null ],
     [ "symbolic_vector_system.h", "symbolic__vector__system_8h.html", "symbolic__vector__system_8h" ],
     [ "trajectory_affine_system.h", "trajectory__affine__system_8h.html", [

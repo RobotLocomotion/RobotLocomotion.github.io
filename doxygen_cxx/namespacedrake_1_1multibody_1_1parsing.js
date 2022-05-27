@@ -1,5 +1,6 @@
 var namespacedrake_1_1multibody_1_1parsing =
 [
+    [ "AddCollisionFilterGroup", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group" ],
     [ "AddDirectives", "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html", "structdrake_1_1multibody_1_1parsing_1_1_add_directives" ],
     [ "AddFrame", "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html", "structdrake_1_1multibody_1_1parsing_1_1_add_frame" ],
     [ "AddModel", "structdrake_1_1multibody_1_1parsing_1_1_add_model.html", "structdrake_1_1multibody_1_1parsing_1_1_add_model" ],

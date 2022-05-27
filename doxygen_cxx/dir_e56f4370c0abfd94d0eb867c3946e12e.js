@@ -2,6 +2,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
 [
     [ "detail_collision_filter_group_resolver.h", "detail__collision__filter__group__resolver_8h.html", null ],
     [ "detail_common.h", "detail__common_8h.html", null ],
+    [ "detail_composite_parse.h", "detail__composite__parse_8h.html", null ],
     [ "detail_ignition.h", "detail__ignition_8h.html", null ],
     [ "detail_mujoco_parser.h", "detail__mujoco__parser_8h.html", null ],
     [ "detail_parsing_workspace.h", "detail__parsing__workspace_8h.html", null ],
@@ -18,6 +19,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
       [ "AddModel", "structdrake_1_1multibody_1_1parsing_1_1_add_model.html", "structdrake_1_1multibody_1_1parsing_1_1_add_model" ],
       [ "AddModelInstance", "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html", "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance" ],
       [ "AddFrame", "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html", "structdrake_1_1multibody_1_1parsing_1_1_add_frame" ],
+      [ "AddCollisionFilterGroup", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group" ],
       [ "AddDirectives", "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html", "structdrake_1_1multibody_1_1parsing_1_1_add_directives" ],
       [ "ModelDirective", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html", "structdrake_1_1multibody_1_1parsing_1_1_model_directive" ],
       [ "ModelDirectives", "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html", "structdrake_1_1multibody_1_1parsing_1_1_model_directives" ]

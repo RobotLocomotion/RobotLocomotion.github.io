@@ -6,6 +6,7 @@ var hierarchy =
     [ "AbstractValues", "classdrake_1_1systems_1_1_abstract_values.html", null ],
     [ "Acrobot< T >", "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html", null ],
     [ "AcrobotParameters", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html", null ],
+    [ "AddCollisionFilterGroup", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html", null ],
     [ "AddDirectives", "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html", null ],
     [ "AddFrame", "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html", null ],
     [ "AddModel", "structdrake_1_1multibody_1_1parsing_1_1_add_model.html", null ],
@@ -829,6 +830,7 @@ var hierarchy =
             [ "Accelerometer< T >", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html", null ],
             [ "BeamModel< T >", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", null ],
             [ "Gyroscope< T >", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html", null ],
+            [ "SharedPointerSystem< T >", "classdrake_1_1systems_1_1_shared_pointer_system.html", null ],
             [ "Sine< T >", "classdrake_1_1systems_1_1_sine.html", null ],
             [ "SingleOutputVectorSource< T >", "classdrake_1_1systems_1_1_single_output_vector_source.html", [
               [ "ConstantVectorSource< T >", "classdrake_1_1systems_1_1_constant_vector_source.html", null ],
