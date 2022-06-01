@@ -310,6 +310,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220">IsNaN</a> () const</td></tr>
 <tr class="memdesc:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if any moment/product in <code>this</code> rotational inertia is NaN.  <a href="#a1a73339c4b21bba9c3fa975f7a6c4220">More...</a><br /></td></tr>
 <tr class="separator:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55630ea16dd7fcd906f2c9d9db36bb66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66">IsZero</a> () const</td></tr>
+<tr class="memdesc:a55630ea16dd7fcd906f2c9d9db36bb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if all moments and products of inertia are exactly zero.  <a href="#a55630ea16dd7fcd906f2c9d9db36bb66">More...</a><br /></td></tr>
+<tr class="separator:a55630ea16dd7fcd906f2c9d9db36bb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa1e01c37486db2e78263fb70eaff550"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
 <tr class="memitem:afa1e01c37486db2e78263fb70eaff550"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#afa1e01c37486db2e78263fb70eaff550">cast</a> () const</td></tr>
 <tr class="memdesc:afa1e01c37486db2e78263fb70eaff550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new RotationalInertia object templated on <code>Scalar</code> initialized from the values of <code>this</code> rotational inertia's entries.  <a href="#afa1e01c37486db2e78263fb70eaff550">More...</a><br /></td></tr>
@@ -876,6 +879,25 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the absolute value of each moment/product of inertia in <code>this</code> is within <code>epsilon</code> of the corresponding moment/ product absolute value in <code>other</code>. Otherwise returns <code>false</code>. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>: This method only works if all moments of inertia with scalar type T in <code>this</code> and <code>other</code> can be converted to a double (discarding supplemental scalar data such as derivatives of an AutoDiffScalar). It fails at runtime if type T cannot be converted to <code>double</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a55630ea16dd7fcd906f2c9d9db36bb66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55630ea16dd7fcd906f2c9d9db36bb66">&#9670;&nbsp;</a></span>IsZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt;T&gt; IsZero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>true</code> if all moments and products of inertia are exactly zero. </p>
 
 </div>
 </div>

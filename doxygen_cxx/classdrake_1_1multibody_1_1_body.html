@@ -232,6 +232,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9539540983caa3c52d28faf7f2d4d33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">get_default_mass</a> () const</td></tr>
 <tr class="memdesc:af9539540983caa3c52d28faf7f2d4d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default mass (not Context dependent) for <code>this</code> body.  <a href="#af9539540983caa3c52d28faf7f2d4d33">More...</a><br /></td></tr>
 <tr class="separator:af9539540983caa3c52d28faf7f2d4d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ab7c1567a817bcac604694e0a2dcd5afd">default_rotational_inertia</a> () const =0</td></tr>
+<tr class="memdesc:ab7c1567a817bcac604694e0a2dcd5afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default rotational inertia (not Context dependent) for <code>this</code> body B's about Bo (B's origin), expressed in B (this body's frame).  <a href="#ab7c1567a817bcac604694e0a2dcd5afd">More...</a><br /></td></tr>
+<tr class="separator:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa46153851db12c78debe3460b545a6e1"><td class="memItemLeft" align="right" valign="top">virtual const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1">get_mass</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const =0</td></tr>
 <tr class="memdesc:aa46153851db12c78debe3460b545a6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the mass of this body stored in <code>context</code>.  <a href="#aa46153851db12c78debe3460b545a6e1">More...</a><br /></td></tr>
 <tr class="separator:aa46153851db12c78debe3460b545a6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -675,6 +678,41 @@ Friends</h2></td></tr>
 
 <p>NVI (Non-Virtual Interface) to <a class="el" href="classdrake_1_1multibody_1_1_body.html#a92f958ac0c25a9b239ba93ef5164ef3d" title="Clones this Body (templated on T) to a body templated on double.">DoCloneToScalar()</a> templated on the scalar type of the new clone to be created. </p>
 <p>This method is mostly intended to be called by MultibodyTree::CloneToScalar(). Most users should not call this clone method directly but rather clone the entire parent MultibodyTree if needed. </p><dl class="section see"><dt>See also</dt><dd>MultibodyTree::CloneToScalar() </dd></dl>
+
+</div>
+</div>
+<a id="ab7c1567a817bcac604694e0a2dcd5afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c1567a817bcac604694e0a2dcd5afd">&#9670;&nbsp;</a></span>default_rotational_inertia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;double&gt; default_rotational_inertia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the default rotational inertia (not Context dependent) for <code>this</code> body B's about Bo (B's origin), expressed in B (this body's frame). </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">I_BBo_B</td><td>body B's rotational inertia about Bo, expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#aa7301cfdcb7474b65765b656e2f1781f">RigidBody&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1265,8 +1303,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d29729c246c174fc4dcf96b7d2c5ade"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d29729c246c174fc4dcf96b7d2c5ade">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a20f1ef3c39eacf3b33b85fa8a5cef621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f1ef3c39eacf3b33b85fa8a5cef621">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1277,7 +1315,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1291,8 +1329,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a20f1ef3c39eacf3b33b85fa8a5cef621"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20f1ef3c39eacf3b33b85fa8a5cef621">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a2d29729c246c174fc4dcf96b7d2c5ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d29729c246c174fc4dcf96b7d2c5ade">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1303,7 +1341,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

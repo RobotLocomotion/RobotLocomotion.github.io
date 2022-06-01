@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a41adb3a46194a70e097f15c9848b2c97":[4,0,0,10,44,2,6],
+"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a7ae933ebedf558cd02d3d45f0a1236cf":[4,0,0,10,44,2,4],
+"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a7cd173b34793fe6598118c124401da00":[4,0,0,10,44,2,2],
+"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a85d8a1af1f3ab3fb37aaef44ee44a436":[4,0,0,10,44,2,5],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a914035c5bf9d877dbd17b8c476ab48a6":[4,0,0,10,44,2,10],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a9ac21b2be50204074e59ceb63526fae6":[4,0,0,10,44,2,1],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aa1029d46d3092d1662ee6baccbd926f8":[4,0,0,10,44,2,7],
@@ -11,7 +15,7 @@ var NAVTREEINDEX47 =
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,10,44,6],
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,10,44,7],
 "propeller_8h.html":[4,0,0,8,10,22],
-"proximity__doxygen_8h.html":[4,0,0,4,2,44],
+"proximity__doxygen_8h.html":[4,0,0,4,2,46],
 "proximity__engine_8h.html":[4,0,0,4,32],
 "proximity__properties_8h.html":[4,0,0,4,33],
 "proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,33,2],
@@ -19,7 +23,7 @@ var NAVTREEINDEX47 =
 "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,33,0],
 "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,33,4],
 "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,33,3],
-"proximity__utilities_8h.html":[4,0,0,4,2,45],
+"proximity__utilities_8h.html":[4,0,0,4,2,47],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,6],
 "pydrake__pybind_8h.html":[4,0,0,0,0,7],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,7,7],
@@ -230,8 +234,8 @@ var NAVTREEINDEX47 =
 "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,39,13],
 "shape__to__string_8h.html":[4,0,0,4,40],
 "shared__pointer__system_8h.html":[4,0,0,11,6,20],
-"signed__distance__pair_8h.html":[4,0,0,4,3,2],
-"signed__distance__to__point_8h.html":[4,0,0,4,3,3],
+"signed__distance__pair_8h.html":[4,0,0,4,3,3],
+"signed__distance__to__point_8h.html":[4,0,0,4,3,4],
 "simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,26],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
@@ -245,9 +249,5 @@ var NAVTREEINDEX47 =
 "simulator__gflags_8h.html#a0cc9deeb95a8594918a525db7ac445c2":[4,0,0,11,0,24,3],
 "simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177":[4,0,0,11,0,24,5],
 "simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,11,0,24,1],
-"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,11,0,24,0],
-"simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,11,0,24,4],
-"simulator__print__stats_8h.html":[4,0,0,11,0,25],
-"simulator__print__stats_8h.html#a14e4e6cd73fdedd3dde63af60b3572e4":[4,0,0,11,0,25,0],
-"simulator__status_8h.html":[4,0,0,11,0,26]
+"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,11,0,24,0]
 };

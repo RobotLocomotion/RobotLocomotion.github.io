@@ -210,9 +210,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2974f916c9cac2e4a8b6700829c86148"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2974f916c9cac2e4a8b6700829c86148">default_unit_inertia</a> () const</td></tr>
 <tr class="memdesc:a2974f916c9cac2e4a8b6700829c86148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default value of this body B's unit inertia about Bo (body B's origin), expressed in B (this body's frame).  <a href="#a2974f916c9cac2e4a8b6700829c86148">More...</a><br /></td></tr>
 <tr class="separator:a2974f916c9cac2e4a8b6700829c86148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1fd9af3ddbce7caf44da3ed880c29f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#adc1fd9af3ddbce7caf44da3ed880c29f">default_rotational_inertia</a> () const</td></tr>
-<tr class="memdesc:adc1fd9af3ddbce7caf44da3ed880c29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default value of this body B's rotational inertia about Bo (B's origin), expressed in B (this body's frame).  <a href="#adc1fd9af3ddbce7caf44da3ed880c29f">More...</a><br /></td></tr>
-<tr class="separator:adc1fd9af3ddbce7caf44da3ed880c29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7301cfdcb7474b65765b656e2f1781f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#aa7301cfdcb7474b65765b656e2f1781f">default_rotational_inertia</a> () const final</td></tr>
+<tr class="memdesc:aa7301cfdcb7474b65765b656e2f1781f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default value of this body B's rotational inertia about Bo (B's origin), expressed in B (this body's frame).  <a href="#aa7301cfdcb7474b65765b656e2f1781f">More...</a><br /></td></tr>
+<tr class="separator:aa7301cfdcb7474b65765b656e2f1781f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5899956a3322afd82ae792d6deeb8cb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ae5899956a3322afd82ae792d6deeb8cb">default_spatial_inertia</a> () const</td></tr>
 <tr class="memdesc:ae5899956a3322afd82ae792d6deeb8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default value of this body B's spatial inertia about Bo (B's origin) and expressed in B (this body's frame).  <a href="#ae5899956a3322afd82ae792d6deeb8cb">More...</a><br /></td></tr>
 <tr class="separator:ae5899956a3322afd82ae792d6deeb8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -753,11 +753,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adc1fd9af3ddbce7caf44da3ed880c29f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc1fd9af3ddbce7caf44da3ed880c29f">&#9670;&nbsp;</a></span>default_rotational_inertia()</h2>
+<a id="aa7301cfdcb7474b65765b656e2f1781f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7301cfdcb7474b65765b656e2f1781f">&#9670;&nbsp;</a></span>default_rotational_inertia()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;double&gt; default_rotational_inertia </td>
@@ -766,6 +769,11 @@ Protected Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Gets the default value of this body B's rotational inertia about Bo (B's origin), expressed in B (this body's frame). </p>
@@ -775,6 +783,8 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_body.html#ab7c1567a817bcac604694e0a2dcd5afd">Body&lt; T &gt;</a>.</p>
 
 </div>
 </div>

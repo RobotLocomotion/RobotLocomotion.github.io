@@ -5232,6 +5232,302 @@ constructor.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.systems.primitives.SharedPointerSystem">
+<code class="descclassname">pydrake.systems.primitives.</code><code class="descname">SharedPointerSystem</code><a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.primitives.SharedPointerSystem_[float]" title="pydrake.systems.primitives.SharedPointerSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.primitives.SharedPointerSystem_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">SharedPointerSystem_</code><a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.primitives.SharedPointerSystem_[float]" title="pydrake.systems.primitives.SharedPointerSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SharedPointerSystem_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd]" title="pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SharedPointerSystem_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.SharedPointerSystem_[Expression]" title="pydrake.systems.primitives.SharedPointerSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SharedPointerSystem_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float]">
+<em class="property">class </em><code class="descname">SharedPointerSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>SharedPointerSystem holds a single <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> that will be
+released at System deletion time (i.e., the end of a Diagram
+lifespan). It has no input, output, state, nor parameters. This is
+useful for storing objects that will be pointed-to by other systems
+outside of the usual input/output port connections.</p>
+<p>Scalar conversion is supported and will simply increment the reference
+count for the contained object. The contained object will not be
+scalar-converted, so should not depend on <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[float], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value. The value is allowed to be
+<code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float].AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value and adds it to the builder.
+The value is allowed to be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>. Returns an alias to the value
+(or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the
+<code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+<dt>Precondition:</dt>
+<dd>builder is non-null</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float].get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[float]</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_.SharedPointerSystem_[float].get" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Retrieves an alias to the stored value. Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>
+in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value, per our constructor.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Held doesn’t match the type used at construction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">SharedPointerSystem_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>SharedPointerSystem holds a single <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> that will be
+released at System deletion time (i.e., the end of a Diagram
+lifespan). It has no input, output, state, nor parameters. This is
+useful for storing objects that will be pointed-to by other systems
+outside of the usual input/output port connections.</p>
+<p>Scalar conversion is supported and will simply increment the reference
+count for the contained object. The contained object will not be
+scalar-converted, so should not depend on <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value. The value is allowed to be
+<code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd].AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value and adds it to the builder.
+The value is allowed to be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>. Returns an alias to the value
+(or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the
+<code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+<dt>Precondition:</dt>
+<dd>builder is non-null</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd].get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[AutoDiffXd].get" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Retrieves an alias to the stored value. Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>
+in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value, per our constructor.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Held doesn’t match the type used at construction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">SharedPointerSystem_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>SharedPointerSystem holds a single <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> that will be
+released at System deletion time (i.e., the end of a Diagram
+lifespan). It has no input, output, state, nor parameters. This is
+useful for storing objects that will be pointed-to by other systems
+outside of the usual input/output port connections.</p>
+<p>Scalar conversion is supported and will simply increment the reference
+count for the contained object. The contained object will not be
+scalar-converted, so should not depend on <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[Expression], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value. The value is allowed to be
+<code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[Expression].AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[Expression], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[Expression].AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value and adds it to the builder.
+The value is allowed to be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>. Returns an alias to the value
+(or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the
+<code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+<dt>Precondition:</dt>
+<dd>builder is non-null</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[Expression].get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[Expression]</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[Expression].get" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Retrieves an alias to the stored value. Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>
+in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value, per our constructor.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Held doesn’t match the type used at construction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">SharedPointerSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>SharedPointerSystem holds a single <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> that will be
+released at System deletion time (i.e., the end of a Diagram
+lifespan). It has no input, output, state, nor parameters. This is
+useful for storing objects that will be pointed-to by other systems
+outside of the usual input/output port connections.</p>
+<p>Scalar conversion is supported and will simply increment the reference
+count for the contained object. The contained object will not be
+scalar-converted, so should not depend on <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[float], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value. The value is allowed to be
+<code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[float].AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float], value_to_hold: object</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system holding the given value and adds it to the builder.
+The value is allowed to be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>. Returns an alias to the value
+(or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the
+<code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To immediately give up ownership at the call site, remember to use
+<code class="docutils literal notranslate"><span class="pre">std::move</span></code> on the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value. Calls to get&lt;&gt;() must
+provide the same type for retrieval.</dd>
+<dt>Precondition:</dt>
+<dd>builder is non-null</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.SharedPointerSystem_[float].get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SharedPointerSystem_[float]</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem_[float].get" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Retrieves an alias to the stored value. Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>
+in case <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> was passed in as the <code class="docutils literal notranslate"><span class="pre">value_to_hold</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Held</span></code>:</dt>
+<dd>The type used to store the given value, per our constructor.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Held doesn’t match the type used at construction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.systems.primitives.Sine">
 <code class="descclassname">pydrake.systems.primitives.</code><code class="descname">Sine</code><a class="headerlink" href="#pydrake.systems.primitives.Sine" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#pydrake.systems.primitives.Sine_[float]" title="pydrake.systems.primitives.Sine_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.primitives.Sine_[float]</span></code></a></p>

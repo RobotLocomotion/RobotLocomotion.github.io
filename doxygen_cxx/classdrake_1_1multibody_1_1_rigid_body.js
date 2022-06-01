@@ -10,7 +10,7 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "CalcSpatialInertiaInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#ad29bdedee3ec5b32d059216895168e8e", null ],
     [ "default_com", "classdrake_1_1multibody_1_1_rigid_body.html#ad23b378c3ceb3cef4d3a586f48710d92", null ],
     [ "default_mass", "classdrake_1_1multibody_1_1_rigid_body.html#a3bdd63fb5910bcde78fa33d67b5b873c", null ],
-    [ "default_rotational_inertia", "classdrake_1_1multibody_1_1_rigid_body.html#adc1fd9af3ddbce7caf44da3ed880c29f", null ],
+    [ "default_rotational_inertia", "classdrake_1_1multibody_1_1_rigid_body.html#aa7301cfdcb7474b65765b656e2f1781f", null ],
     [ "default_spatial_inertia", "classdrake_1_1multibody_1_1_rigid_body.html#ae5899956a3322afd82ae792d6deeb8cb", null ],
     [ "default_unit_inertia", "classdrake_1_1multibody_1_1_rigid_body.html#a2974f916c9cac2e4a8b6700829c86148", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_rigid_body.html#a0414c6bdcc5f19b63d3a91f327914b8b", null ],

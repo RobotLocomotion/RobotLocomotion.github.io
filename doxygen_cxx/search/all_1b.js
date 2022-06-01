@@ -44,6 +44,7 @@ var searchData=
   ['_7edistributionvector',['~DistributionVector',['../classdrake_1_1schema_1_1_distribution_vector.html#a631c0480a074fd9358d708348739fc9a',1,'drake::schema::DistributionVector']]],
   ['_7edrakelcm',['~DrakeLcm',['../classdrake_1_1lcm_1_1_drake_lcm.html#a7678d452d02b7abeed1fcc658e570497',1,'drake::lcm::DrakeLcm']]],
   ['_7edrakelcminterface',['~DrakeLcmInterface',['../classdrake_1_1lcm_1_1_drake_lcm_interface.html#a3aff1c5f0fed4b08a332e3edc46cd349',1,'drake::lcm::DrakeLcmInterface']]],
+  ['_7edrakelcmlog',['~DrakeLcmLog',['../classdrake_1_1lcm_1_1_drake_lcm_log.html#a1c881067d321c1678ec479ca0592f3e2',1,'drake::lcm::DrakeLcmLog']]],
   ['_7edrakesubscriptioninterface',['~DrakeSubscriptionInterface',['../classdrake_1_1lcm_1_1_drake_subscription_interface.html#a9368dfa28f2ac4a247bb742b47241a7c',1,'drake::lcm::DrakeSubscriptionInterface']]],
   ['_7edrealsolver',['~DrealSolver',['../classdrake_1_1solvers_1_1_dreal_solver.html#a39674f66d893c55d1539fe52fe4fd3cd',1,'drake::solvers::DrealSolver']]],
   ['_7eedge',['~Edge',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a6620f5394586ae49fffc5aec0d872b67',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],

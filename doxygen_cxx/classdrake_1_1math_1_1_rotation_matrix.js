@@ -18,7 +18,6 @@ var classdrake_1_1math_1_1_rotation_matrix =
     [ "InvertAndCompose", "classdrake_1_1math_1_1_rotation_matrix.html#a42527fefb7158a155c8b2e21c98b95e5", null ],
     [ "IsExactlyEqualTo", "classdrake_1_1math_1_1_rotation_matrix.html#a6e459fd356a7fcb1bc27257a8f9df1fa", null ],
     [ "IsExactlyIdentity", "classdrake_1_1math_1_1_rotation_matrix.html#ac804feef1db1925cdb41771475381a17", null ],
-    [ "IsIdentityToInternalTolerance", "classdrake_1_1math_1_1_rotation_matrix.html#a143570ba23e5a444790c7070a7447f09", null ],
     [ "IsNearlyEqualTo", "classdrake_1_1math_1_1_rotation_matrix.html#aa5d5438bbed70f2290a46a73e91cc78a", null ],
     [ "IsNearlyIdentity", "classdrake_1_1math_1_1_rotation_matrix.html#a4cc6cdc7e3174f2af399d7cc2a156b7b", null ],
     [ "IsOrthonormal", "classdrake_1_1math_1_1_rotation_matrix.html#a7a5e8235ea5f9bb34bfa71b745546864", null ],

@@ -3,6 +3,7 @@ var classdrake_1_1lcm_1_1_drake_lcm_log =
     [ "DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a101e1a0d1cad7440599a48f707c98562", null ],
     [ "DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html#aaabcfe7a8f67be159646fcb20d3d9ef4", null ],
     [ "DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html#aecca52377a3a88d3601b08d71cd7022a", null ],
+    [ "~DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a1c881067d321c1678ec479ca0592f3e2", null ],
     [ "DispatchMessageAndAdvanceLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a298fab59b3f5c969058710cf738003fc", null ],
     [ "get_lcm_url", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a58ffc29be696f46957f858506550bc75", null ],
     [ "GetNextMessageTime", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a66ed18c7aa63c58be2fef656d0e66da1", null ],

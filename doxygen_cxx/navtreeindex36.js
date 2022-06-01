@@ -1,5 +1,6 @@
 var NAVTREEINDEX36 =
 {
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#aea96b5c62e3f5963025ad1977a4d8bdd":[1,2,1,24,6],
 "classdrake_1_1systems_1_1_trajectory_source.html":[1,2,1,25],
 "classdrake_1_1systems_1_1_trajectory_source.html#a4d787aba3e821486a5cd259d6c07ebea":[1,2,1,25,4],
 "classdrake_1_1systems_1_1_trajectory_source.html#a4fd9f65bfeeff9e00a7a37209baa0505":[1,2,1,25,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX36 =
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#afcfc1c775b28165d63f420577b9a6fb9":[3,0,0,14,1,3,7],
 "classdrake_1_1systems_1_1analysis__test_1_1_linear_scalar_system.html":[3,0,0,14,1,4],
 "classdrake_1_1systems_1_1analysis__test_1_1_linear_scalar_system.html#a0adcdeaf102fa2474092927df0b991ed":[3,0,0,14,1,4,0],
-"classdrake_1_1systems_1_1analysis__test_1_1_linear_scalar_system.html#a5d10bc0c5eae442bf40d94e8200b3460":[3,0,0,14,1,4,1],
-"classdrake_1_1systems_1_1analysis__test_1_1_logistic_system.html":[3,0,0,14,1,5]
+"classdrake_1_1systems_1_1analysis__test_1_1_linear_scalar_system.html#a5d10bc0c5eae442bf40d94e8200b3460":[3,0,0,14,1,4,1]
 };
