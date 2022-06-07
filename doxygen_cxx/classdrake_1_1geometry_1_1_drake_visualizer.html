@@ -182,10 +182,11 @@ class drake::geometry::DrakeVisualizer&lt; T &gt;</h3>
 </table>
 </td></tr>
 </table>
-<p>The DrakeVisualizer system broadcasts two kinds of LCM messages:</p>
+<p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul>
-<li>a message that defines the geometry in the world on the lcm channel named "DRAKE_VIEWER_DRAW",</li>
-<li>a message that updates the poses of those geometries on the lcm channel named "DRAKE_VIEWER_LOAD_ROBOT"</li>
+<li>a message that defines the non-deformable geometries in the world on the lcm channel named "DRAKE_VIEWER_LOAD_ROBOT"</li>
+<li>a message that updates the poses of those non-deformable geometries on the lcm channel named "DRAKE_VIEWER_DRAW",</li>
+<li>a message that sets the world space vertex positions of the deformable geometries on the lcm channel named "DRAKE_VIEWER_DEFORMABLE"</li>
 </ul>
 <p>The system uses the versioning mechanism provided by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> to detect changes to the geometry so that a change in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s data will propagate to <code>drake_visualizer</code>.</p>
 <p><a class="anchor" id="drake_visualizer_role_consumer"></a></p><h3>Visualization by Role</h3>

@@ -312,10 +312,10 @@ Functions</h2></td></tr>
 <tr class="separator:aa957c0c1b13e62f96ae84dd8abe45dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41733a5b284046800224cd293e055ff7"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a41733a5b284046800224cd293e055ff7">RealDiscreteLyapunovEquation</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q)</td></tr>
 <tr class="separator:a41733a5b284046800224cd293e055ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a866d4d3082e830e8eb0c91cb5bf91ef1"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a866d4d3082e830e8eb0c91cb5bf91ef1"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Eigen::Triplet&lt; typename Derived::Scalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a866d4d3082e830e8eb0c91cb5bf91ef1">SparseMatrixToTriplets</a> (const Derived &amp;matrix)</td></tr>
-<tr class="memdesc:a866d4d3082e830e8eb0c91cb5bf91ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a sparse matrix, return a vector of triplets, such that we can reconstruct the matrix using setFromTriplet function.  <a href="#a866d4d3082e830e8eb0c91cb5bf91ef1">More...</a><br /></td></tr>
-<tr class="separator:a866d4d3082e830e8eb0c91cb5bf91ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731362436a359883cbac2c59abf95168"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , int Options, typename StorageIndex &gt; </td></tr>
+<tr class="memitem:a731362436a359883cbac2c59abf95168"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Eigen::Triplet&lt; Scalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a731362436a359883cbac2c59abf95168">SparseMatrixToTriplets</a> (const Eigen::SparseMatrix&lt; Scalar, Options, StorageIndex &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:a731362436a359883cbac2c59abf95168"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a sparse matrix, return a vector of triplets, such that we can reconstruct the matrix using setFromTriplet function.  <a href="#a731362436a359883cbac2c59abf95168">More...</a><br /></td></tr>
+<tr class="separator:a731362436a359883cbac2c59abf95168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9681555f84d48a48d09601d913246934"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a9681555f84d48a48d09601d913246934"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a9681555f84d48a48d09601d913246934">SparseMatrixToRowColumnValueVectors</a> (const Derived &amp;matrix, std::vector&lt; Eigen::Index &gt; &amp;row_indices, std::vector&lt; Eigen::Index &gt; &amp;col_indices, std::vector&lt; typename Derived::Scalar &gt; &amp;val)</td></tr>
 <tr class="memdesc:a9681555f84d48a48d09601d913246934"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a sparse matrix, return the row indices, the column indices, and value of the non-zero entries.  <a href="#a9681555f84d48a48d09601d913246934">More...</a><br /></td></tr>
@@ -3646,16 +3646,16 @@ else
 
 </div>
 </div>
-<a id="a866d4d3082e830e8eb0c91cb5bf91ef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a866d4d3082e830e8eb0c91cb5bf91ef1">&#9670;&nbsp;</a></span>SparseMatrixToTriplets()</h2>
+<a id="a731362436a359883cbac2c59abf95168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731362436a359883cbac2c59abf95168">&#9670;&nbsp;</a></span>SparseMatrixToTriplets()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;Eigen::Triplet&lt;typename Derived::Scalar&gt; &gt; drake::math::SparseMatrixToTriplets </td>
+          <td class="memname">std::vector&lt;Eigen::Triplet&lt;Scalar&gt; &gt; drake::math::SparseMatrixToTriplets </td>
           <td>(</td>
-          <td class="paramtype">const Derived &amp;&#160;</td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; Scalar, Options, StorageIndex &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
           <td></td>
         </tr>

@@ -231,10 +231,47 @@
 <dt id="pydrake.solvers.csdp.CsdpSolver">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.csdp.</code><code class="descname">CsdpSolver</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
+<p>Wrap CSDP solver such that it can solve a
+drake::solvers::MathematicalProgram.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">CSDP doesn’t accept free variables, while
+drake::solvers::MathematicalProgram does. In order to convert
+MathematicalProgram into CSDP format, we provide several
+approaches to remove free variables. You can set the approach
+through</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
+<span class="n">SolverOptions</span> <span class="n">solver_options</span><span class="p">;</span>
+<span class="n">solver_options</span><span class="o">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">CsdpSolver</span><span class="p">::</span><span class="nb">id</span><span class="p">(),</span>
+   <span class="s2">&quot;drake::RemoveFreeVariableMethod&quot;</span><span class="p">,</span>
+   <span class="n">static_cast</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">RemoveFreeVariableMethod</span><span class="p">::</span><span class="n">kNullspace</span><span class="p">));</span>
+<span class="n">CsdpSolver</span> <span class="n">solver</span><span class="p">;</span>
+<span class="n">auto</span> <span class="n">result</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">nullopt</span><span class="p">,</span> <span class="n">solver_options</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>For more details, check out RemoveFreeVariableMethod.</p>
 <dl class="method">
 <dt id="pydrake.solvers.csdp.CsdpSolver.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.csdp.CsdpSolver</em>, <em>method: pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod = &lt;RemoveFreeVariableMethod.kNullspace: 1&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolver.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.solvers.csdp.CsdpSolver) -&gt; None</li>
+</ol>
+<p>Default constructor</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.solvers.csdp.CsdpSolver, method: pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod) -&gt; None</li>
+</ol>
+<p>Constructs CsdpSolver with a specified method to remove free
+variables. / (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use the CsdpSolver() constructor without an input argument, and
+set the method through SetOption(CsdpSolver::id(),
+“drake::RemoveFreeVariableMethod”, METHOD) This will be removed
+from Drake on or after 2022-09-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.solvers.csdp.CsdpSolver.id">

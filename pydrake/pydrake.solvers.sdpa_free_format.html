@@ -229,7 +229,7 @@
 <p>SdpaFreeFormat bindings for MathematicalProgram</p>
 <dl class="function">
 <dt id="pydrake.solvers.sdpa_free_format.GenerateSDPA">
-<code class="descclassname">pydrake.solvers.sdpa_free_format.</code><code class="descname">GenerateSDPA</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>file_name: str</em>, <em>method: pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod = &lt;RemoveFreeVariableMethod.kNullspace: 1&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.solvers.sdpa_free_format.GenerateSDPA" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.solvers.sdpa_free_format.</code><code class="descname">GenerateSDPA</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>file_name: str</em>, <em>method: pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod = &lt;RemoveFreeVariableMethod.kNullspace: 2&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.solvers.sdpa_free_format.GenerateSDPA" title="Permalink to this definition">¶</a></dt>
 <dd><p>SDPA is a format to record an SDP problem</p>
 <p>max tr(C*X) s.t tr(Aᵢ*X) = gᵢ X ≽ 0</p>
 <p>or the dual of the problem</p>
@@ -299,17 +299,17 @@ constraint t ≥ sqrt(sᵀs).</p>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kLorentzConeSlack">
-<code class="descname">kLorentzConeSlack</code><em class="property"> = &lt;RemoveFreeVariableMethod.kLorentzConeSlack: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kLorentzConeSlack" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kLorentzConeSlack</code><em class="property"> = &lt;RemoveFreeVariableMethod.kLorentzConeSlack: 3&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kLorentzConeSlack" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kNullspace">
-<code class="descname">kNullspace</code><em class="property"> = &lt;RemoveFreeVariableMethod.kNullspace: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kNullspace" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kNullspace</code><em class="property"> = &lt;RemoveFreeVariableMethod.kNullspace: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kNullspace" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kTwoSlackVariables">
-<code class="descname">kTwoSlackVariables</code><em class="property"> = &lt;RemoveFreeVariableMethod.kTwoSlackVariables: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kTwoSlackVariables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kTwoSlackVariables</code><em class="property"> = &lt;RemoveFreeVariableMethod.kTwoSlackVariables: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kTwoSlackVariables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">

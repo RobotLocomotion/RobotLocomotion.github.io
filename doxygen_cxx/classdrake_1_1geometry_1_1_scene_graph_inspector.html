@@ -325,8 +325,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a50bbeaf688249f73750680af158ab444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the const perception properties of the geometry with the given <code>geometry_id</code>.  <a href="#a50bbeaf688249f73750680af158ab444">More...</a><br /></td></tr>
 <tr class="separator:a50bbeaf688249f73750680af158ab444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1323170e73b8758ec1f22bfa1fd9a4de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; double &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a1323170e73b8758ec1f22bfa1fd9a4de">GetReferenceMesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
-<tr class="memdesc:a1323170e73b8758ec1f22bfa1fd9a4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a the reference mesh of the geometry with the given <code>geometry_id</code>.  <a href="#a1323170e73b8758ec1f22bfa1fd9a4de">More...</a><br /></td></tr>
+<tr class="memdesc:a1323170e73b8758ec1f22bfa1fd9a4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference mesh of the geometry with the given <code>geometry_id</code>.  <a href="#a1323170e73b8758ec1f22bfa1fd9a4de">More...</a><br /></td></tr>
 <tr class="separator:a1323170e73b8758ec1f22bfa1fd9a4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8bed334a4066e25a0e1abcf556daea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8c8bed334a4066e25a0e1abcf556daea">IsDeformableGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:a8c8bed334a4066e25a0e1abcf556daea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the geometry with the given <code>geometry_id</code> is deformable.  <a href="#a8c8bed334a4066e25a0e1abcf556daea">More...</a><br /></td></tr>
+<tr class="separator:a8c8bed334a4066e25a0e1abcf556daea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c271209096449409598e1da69c1413"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a79c271209096449409598e1da69c1413">GetAllDeformableGeometryIds</a> () const</td></tr>
+<tr class="memdesc:a79c271209096449409598e1da69c1413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all geometry ids that correspond to deformable geometries.  <a href="#a79c271209096449409598e1da69c1413">More...</a><br /></td></tr>
+<tr class="separator:a79c271209096449409598e1da69c1413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a852fbed1b4f83ddf4c9b3913a772f4bd">CollisionFiltered</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id1, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id2) const</td></tr>
 <tr class="memdesc:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if the two geometries with given ids <code>geometry_id1</code> and <code>geometry_id2</code>, define a collision pair that has been filtered out.  <a href="#a852fbed1b4f83ddf4c9b3913a772f4bd">More...</a><br /></td></tr>
 <tr class="separator:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -594,6 +600,25 @@ Friends</h2></td></tr>
 
 <p>Returns the geometry version that can be used to detect changes to the geometry data associated with geometry roles. </p>
 <p>The reference returned should not be persisted. If it needs to be persisted, it should be copied. </p>
+
+</div>
+</div>
+<a id="a79c271209096449409598e1da69c1413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c271209096449409598e1da69c1413">&#9670;&nbsp;</a></span>GetAllDeformableGeometryIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt; GetAllDeformableGeometryIds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all geometry ids that correspond to deformable geometries. </p>
 
 </div>
 </div>
@@ -1214,7 +1239,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a the reference mesh of the geometry with the given <code>geometry_id</code>. </p>
+<p>Returns the reference mesh of the geometry with the given <code>geometry_id</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">geometry_id</td><td>The identifier for the queried geometry. </td></tr>
@@ -1249,6 +1274,38 @@ Friends</h2></td></tr>
 
 <p>Returns the shape specified for the geometry with the given <code>geometry_id</code>. </p>
 <p>In order to extract the details of the shape, it should be passed through an implementation of a <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html" title="The interface for converting shape descriptions to real shapes.">ShapeReifier</a>. </p>
+
+</div>
+</div>
+<a id="a8c8bed334a4066e25a0e1abcf556daea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8bed334a4066e25a0e1abcf556daea">&#9670;&nbsp;</a></span>IsDeformableGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsDeformableGeometry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the geometry with the given <code>geometry_id</code> is deformable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">geometry_id</td><td>The identifier for the queried geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1487,8 +1544,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a7b176f170af189d4f31f33371e7d732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1499,7 +1556,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1513,8 +1570,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b176f170af189d4f31f33371e7d732c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1525,7 +1582,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

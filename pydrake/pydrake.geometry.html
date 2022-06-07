@@ -1785,13 +1785,15 @@ the length of the cylinder parallel with the frame’s z-axis.</p>
 <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application representing the current state of a
 SceneGraph instance (whose QueryObject-valued output port is connected
 to this system’s input port).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts two kinds of LCM messages:</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul class="simple">
-<li>a message that defines the geometry in the world on the lcm channel named</li>
+<li>a message that defines the non-deformable geometries in the world on the</li>
 </ul>
-<p>“DRAKE_VIEWER_DRAW”,
-- a message that updates the poses of those geometries on the lcm channel
-named “DRAKE_VIEWER_LOAD_ROBOT”</p>
+<p>lcm channel named “DRAKE_VIEWER_LOAD_ROBOT”
+- a message that updates the poses of those non-deformable geometries on the
+lcm channel named “DRAKE_VIEWER_DRAW”,
+- a message that sets the world space vertex positions of the deformable
+geometries on the lcm channel named “DRAKE_VIEWER_DEFORMABLE”</p>
 <p>The system uses the versioning mechanism provided by SceneGraph to
 detect changes to the geometry so that a change in SceneGraph’s data
 will propagate to <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>.</p>
@@ -1928,13 +1930,15 @@ cause a runtime error when attempting to broadcast messages.</p>
 <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application representing the current state of a
 SceneGraph instance (whose QueryObject-valued output port is connected
 to this system’s input port).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts two kinds of LCM messages:</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul class="simple">
-<li>a message that defines the geometry in the world on the lcm channel named</li>
+<li>a message that defines the non-deformable geometries in the world on the</li>
 </ul>
-<p>“DRAKE_VIEWER_DRAW”,
-- a message that updates the poses of those geometries on the lcm channel
-named “DRAKE_VIEWER_LOAD_ROBOT”</p>
+<p>lcm channel named “DRAKE_VIEWER_LOAD_ROBOT”
+- a message that updates the poses of those non-deformable geometries on the
+lcm channel named “DRAKE_VIEWER_DRAW”,
+- a message that sets the world space vertex positions of the deformable
+geometries on the lcm channel named “DRAKE_VIEWER_DEFORMABLE”</p>
 <p>The system uses the versioning mechanism provided by SceneGraph to
 detect changes to the geometry so that a change in SceneGraph’s data
 will propagate to <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>.</p>
@@ -2069,13 +2073,15 @@ cause a runtime error when attempting to broadcast messages.</p>
 <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application representing the current state of a
 SceneGraph instance (whose QueryObject-valued output port is connected
 to this system’s input port).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts two kinds of LCM messages:</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul class="simple">
-<li>a message that defines the geometry in the world on the lcm channel named</li>
+<li>a message that defines the non-deformable geometries in the world on the</li>
 </ul>
-<p>“DRAKE_VIEWER_DRAW”,
-- a message that updates the poses of those geometries on the lcm channel
-named “DRAKE_VIEWER_LOAD_ROBOT”</p>
+<p>lcm channel named “DRAKE_VIEWER_LOAD_ROBOT”
+- a message that updates the poses of those non-deformable geometries on the
+lcm channel named “DRAKE_VIEWER_DRAW”,
+- a message that sets the world space vertex positions of the deformable
+geometries on the lcm channel named “DRAKE_VIEWER_DEFORMABLE”</p>
 <p>The system uses the versioning mechanism provided by SceneGraph to
 detect changes to the geometry so that a change in SceneGraph’s data
 will propagate to <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>.</p>
@@ -10478,6 +10484,49 @@ string) a default name will be defined by SceneGraph’s logic.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].RemoveGeometry">
+<code class="descname">RemoveGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].RemoveGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>Removes the given geometry G (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>) from the
+given source’s registered geometries. All registered geometries
+hanging from this geometry will also be removed.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
+<dd>The identifier for the owner geometry source.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
+<dd>The identifier of the geometry to remove (can be dynamic or
+anchored).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
+<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a valid</li>
+<li>geometry, or c) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> maps to a geometry that does</li>
+<li>not belong to the indicated source.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>systems::Context-modifying variant of RemoveGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].RemoveRole">
 <code class="descname">RemoveRole</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, role: pydrake.geometry.Role</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].RemoveRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes the indicated <code class="docutils literal notranslate"><span class="pre">role</span></code> from the geometry indicated by
@@ -11119,6 +11168,49 @@ string) a default name will be defined by SceneGraph’s logic.</dd>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].RemoveGeometry">
+<code class="descname">RemoveGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].RemoveGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>Removes the given geometry G (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>) from the
+given source’s registered geometries. All registered geometries
+hanging from this geometry will also be removed.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
+<dd>The identifier for the owner geometry source.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
+<dd>The identifier of the geometry to remove (can be dynamic or
+anchored).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
+<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a valid</li>
+<li>geometry, or c) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> maps to a geometry that does</li>
+<li>not belong to the indicated source.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>systems::Context-modifying variant of RemoveGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -11764,6 +11856,49 @@ string) a default name will be defined by SceneGraph’s logic.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[Expression].RemoveGeometry">
+<code class="descname">RemoveGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[Expression].RemoveGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>Removes the given geometry G (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>) from the
+given source’s registered geometries. All registered geometries
+hanging from this geometry will also be removed.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
+<dd>The identifier for the owner geometry source.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
+<dd>The identifier of the geometry to remove (can be dynamic or
+anchored).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
+<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a valid</li>
+<li>geometry, or c) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> maps to a geometry that does</li>
+<li>not belong to the indicated source.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>systems::Context-modifying variant of RemoveGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_[Expression].RemoveRole">
 <code class="descname">RemoveRole</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, role: pydrake.geometry.Role</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraph_[Expression].RemoveRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes the indicated <code class="docutils literal notranslate"><span class="pre">role</span></code> from the geometry indicated by
@@ -12403,6 +12538,49 @@ string) a default name will be defined by SceneGraph’s logic.</dd>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[float].RemoveGeometry">
+<code class="descname">RemoveGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].RemoveGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>Removes the given geometry G (indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>) from the
+given source’s registered geometries. All registered geometries
+hanging from this geometry will also be removed.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
+<dd>The identifier for the owner geometry source.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
+<dd>The identifier of the geometry to remove (can be dynamic or
+anchored).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
+<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a valid</li>
+<li>geometry, or c) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> maps to a geometry that does</li>
+<li>not belong to the indicated source.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>RemoveGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+</ol>
+<p>systems::Context-modifying variant of RemoveGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="method">

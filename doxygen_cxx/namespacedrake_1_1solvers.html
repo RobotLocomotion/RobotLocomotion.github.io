@@ -209,6 +209,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an abstract base for all costs.  <a href="classdrake_1_1solvers_1_1_cost.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_csdp_solver.html">CsdpSolver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap CSDP solver such that it can solve a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">drake::solvers::MathematicalProgram</a>.  <a href="classdrake_1_1solvers_1_1_csdp_solver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_csdp_solver_details.html">CsdpSolverDetails</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CSDP solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_csdp_solver_details.html#details">More...</a><br /></td></tr>
@@ -527,9 +528,9 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a1949f5edc628077e2d780c150de88d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a121673ddbdadd10b2e3ceab52a93f5d3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3">RemoveFreeVariableMethod</a> { <a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552">kTwoSlackVariables</a>, 
-<a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690">kNullspace</a>, 
-<a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec">kLorentzConeSlack</a>
+<tr class="memitem:a121673ddbdadd10b2e3ceab52a93f5d3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3">RemoveFreeVariableMethod</a> { <a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552">kTwoSlackVariables</a> = 1, 
+<a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690">kNullspace</a> = 2, 
+<a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec">kLorentzConeSlack</a> = 3
  }</td></tr>
 <tr class="memdesc:a121673ddbdadd10b2e3ceab52a93f5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDPA format doesn't accept free variables, namely the problem it solves is in this form P1.  <a href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3">More...</a><br /></td></tr>
 <tr class="separator:a121673ddbdadd10b2e3ceab52a93f5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1300,7 +1301,7 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 <p>In this case we cannot infer the status of the primal problem. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3"></a>kInfeasible_Or_Unbounded&#160;</td><td class="fielddoc"><p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use kInfeasibleOrUnbounded instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use kInfeasibleOrUnbounded instead. <br />
  This will be removed from Drake on or after 2022-07-01.</dd></dl>
 </td></tr>
 </table>
