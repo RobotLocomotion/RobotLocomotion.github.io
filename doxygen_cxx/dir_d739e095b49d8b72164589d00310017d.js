@@ -19,7 +19,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "drake_visualizer_params.h", "drake__visualizer__params_8h.html", [
       [ "DrakeVisualizerParams", "structdrake_1_1geometry_1_1_drake_visualizer_params.html", "structdrake_1_1geometry_1_1_drake_visualizer_params" ]
     ] ],
-    [ "frame_kinematics_vector.h", "frame__kinematics__vector_8h.html", "frame__kinematics__vector_8h" ],
+    [ "frame_kinematics_vector.h", "frame__kinematics__vector_8h.html", null ],
     [ "geometry_doxygen.h", "geometry__doxygen_8h.html", null ],
     [ "geometry_frame.h", "geometry__frame_8h.html", [
       [ "GeometryFrame", "classdrake_1_1geometry_1_1_geometry_frame.html", "classdrake_1_1geometry_1_1_geometry_frame" ]
@@ -43,6 +43,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     ] ],
     [ "internal_frame.h", "internal__frame_8h.html", null ],
     [ "internal_geometry.h", "internal__geometry_8h.html", null ],
+    [ "kinematics_vector.h", "kinematics__vector_8h.html", "kinematics__vector_8h" ],
     [ "make_mesh_for_deformable.h", "make__mesh__for__deformable_8h.html", null ],
     [ "meshcat.h", "meshcat_8h.html", [
       [ "MeshcatParams", "structdrake_1_1geometry_1_1_meshcat_params.html", "structdrake_1_1geometry_1_1_meshcat_params" ],

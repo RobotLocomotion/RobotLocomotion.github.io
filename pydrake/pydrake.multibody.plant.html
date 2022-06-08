@@ -3191,7 +3191,6 @@ scene_graph.collision_filter_manager().Apply(
 </div>
 <ol class="arabic simple">
 <li>Bodies and geometries must be added to the MultibodyPlant.</li>
-<li>The MultibodyPlant must be finalized (via Finalize()).</li>
 <li>Create GeometrySet instances from bodies (via this method).</li>
 <li>Invoke SceneGraph::ExcludeCollisions*() to filter collisions.</li>
 <li>Allocate context.</li>
@@ -3201,7 +3200,11 @@ scene_graph.collision_filter_manager().Apply(
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant was not registered with a</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">SceneGraph.</span></code></li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -7224,7 +7227,6 @@ scene_graph.collision_filter_manager().Apply(
 </div>
 <ol class="arabic simple">
 <li>Bodies and geometries must be added to the MultibodyPlant.</li>
-<li>The MultibodyPlant must be finalized (via Finalize()).</li>
 <li>Create GeometrySet instances from bodies (via this method).</li>
 <li>Invoke SceneGraph::ExcludeCollisions*() to filter collisions.</li>
 <li>Allocate context.</li>
@@ -7234,7 +7236,11 @@ scene_graph.collision_filter_manager().Apply(
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant was not registered with a</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">SceneGraph.</span></code></li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -11255,7 +11261,6 @@ scene_graph.collision_filter_manager().Apply(
 </div>
 <ol class="arabic simple">
 <li>Bodies and geometries must be added to the MultibodyPlant.</li>
-<li>The MultibodyPlant must be finalized (via Finalize()).</li>
 <li>Create GeometrySet instances from bodies (via this method).</li>
 <li>Invoke SceneGraph::ExcludeCollisions*() to filter collisions.</li>
 <li>Allocate context.</li>
@@ -11265,7 +11270,11 @@ scene_graph.collision_filter_manager().Apply(
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant was not registered with a</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">SceneGraph.</span></code></li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -15286,7 +15295,6 @@ scene_graph.collision_filter_manager().Apply(
 </div>
 <ol class="arabic simple">
 <li>Bodies and geometries must be added to the MultibodyPlant.</li>
-<li>The MultibodyPlant must be finalized (via Finalize()).</li>
 <li>Create GeometrySet instances from bodies (via this method).</li>
 <li>Invoke SceneGraph::ExcludeCollisions*() to filter collisions.</li>
 <li>Allocate context.</li>
@@ -15296,7 +15304,11 @@ scene_graph.collision_filter_manager().Apply(
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant was not registered with a</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">SceneGraph.</span></code></li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>

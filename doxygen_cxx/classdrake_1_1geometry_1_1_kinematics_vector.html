@@ -1,0 +1,611 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: KinematicsVector&lt; Id, KinematicsValue &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_kinematics_vector.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1geometry_1_1_kinematics_vector-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">KinematicsVector&lt; Id, KinematicsValue &gt; Class Template Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class Id, class KinematicsValue&gt;<br />
+class drake::geometry::KinematicsVector&lt; Id, KinematicsValue &gt;</h3>
+
+<p>A KinematicsVector is a container class used to report kinematics data for registered frames and geometries (keyed by unique FrameId/GeometryId values) to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> where the set of keys (FrameId/GeometryId) is usually constant and the values (kinematics data) are varying. </p>
+<p>It is an internal class and one should never interact with it directly. The template aliases FramePoseVector and GeometryConfigurationVector that instantiate KinematicsVector should be used instead.</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>MySystem : <span class="keyword">public</span> LeafSystem&lt;T&gt; {</div><div class="line"> <span class="keyword">public</span>:</div><div class="line">  MySystem() {</div><div class="line">    ...</div><div class="line">    this-&gt;DeclareAbstractOutputPort(</div><div class="line">        &amp;AllocInConstructorSystem::CalcFramePoseOutput);</div><div class="line">    ...</div><div class="line">  }</div><div class="line"></div><div class="line"> <span class="keyword">private</span>:</div><div class="line">  <span class="keywordtype">void</span> CalcFramePoseOutput(<span class="keyword">const</span> Context&lt;T&gt;&amp; context,</div><div class="line">                           geometry::FramePoseVector&lt;T&gt;* poses)<span class="keyword"> const </span>{</div><div class="line">    poses-&gt;clear();</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; static_cast&lt;int&gt;(frame_ids_.size()); ++i) {</div><div class="line">      poses-&gt;set_value(frame_ids_[i], poses_[i]);</div><div class="line">    }</div><div class="line">  }</div><div class="line"></div><div class="line">  std::vector&lt;FrameId&gt; frame_ids_;</div><div class="line">  std::vector&lt;RigidTransform&lt;T&gt;&gt; poses_;</div><div class="line">};</div></div><!-- fragment --><p>If a System only ever emits a single frame/geometry (or small-constant-number of frames/geometries), then there's a shorter alternative way to write a Calc method, using an initializer_list: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> CalcFramePoseOutput(<span class="keyword">const</span> Context&lt;T&gt;&amp; context,</div><div class="line">                         geometry::FramePoseVector&lt;T&gt;* poses)<span class="keyword"> const </span>{</div><div class="line">  <span class="keyword">const</span> RigidTransform&lt;T&gt;&amp; pose = ...;</div><div class="line">  *poses = {{frame_id_, pose}};</div><div class="line">}</div></div><!-- fragment --><p>N.B. When the systems framework calls the <code>Calc</code> method, the value pointed to by <code>poses</code> is in an unspecified state. The implementation of <code>Calc</code> must always ensure that <code>poses</code> contains the correct value upon return, no matter what value it started with. The easy ways to do this are to call either <code>poses-&gt;<a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#ac8bb3912a3ce86b15842e79d0b421204" title="Clears all values, resetting the size to zero.">clear()</a></code> or the assignment operator <code>*poses = ...</code>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Id</td><td>The key used to locate the kinematics data. Can be FrameId or <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a>. </td></tr>
+    <tr><td class="paramname">KinematicsValue</td><td>The underlying data type of the kinematics data (e.g., pose, configuration, or velocity).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The FramePoseVector and GeometryConfigurationVector classes are aliases of the KinematicsVector instantiated on specific data types (RigidTransform and VectorX respectively). Each of these data types are templated on Eigen scalars. All supported combinations of data type and scalar type are already available to link against in the containing library. No other values for KinematicsValue are supported.</p>
+<p>Currently, the following data types with the following scalar types are supported:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Alias  </th><th class="markdownTableHeadNone">Instantiation  </th><th class="markdownTableHeadNone">Scalar types   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">FramePoseVector&lt;Scalar&gt;  </td><td class="markdownTableBodyNone"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html" title="A KinematicsVector is a container class used to report kinematics data for registered frames and geom...">KinematicsVector</a>&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt;  </td><td class="markdownTableBodyNone">double/AutoDiffXd/Expression   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GeometryConfigurationVector&lt;Scalar&gt;  </td><td class="markdownTableBodyNone"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html" title="A KinematicsVector is a container class used to report kinematics data for registered frames and geom...">KinematicsVector</a>&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a>, VectorX&lt;Scalar&gt;&gt;  </td><td class="markdownTableBodyNone">double/AutoDiffXd/Expression   </td></tr>
+</table>
+</div>
+<p><code>#include &lt;drake/geometry/kinematics_vector.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab9e616f21e1bab6297b08ff638366f6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#ab9e616f21e1bab6297b08ff638366f6e">KinematicsVector</a> ()</td></tr>
+<tr class="memdesc:ab9e616f21e1bab6297b08ff638366f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the vector using an invalid SourceId with no data .  <a href="#ab9e616f21e1bab6297b08ff638366f6e">More...</a><br /></td></tr>
+<tr class="separator:ab9e616f21e1bab6297b08ff638366f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b59b2a7414e94d3e61bc961ecbe0286"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a2b59b2a7414e94d3e61bc961ecbe0286">KinematicsVector</a> (std::initializer_list&lt; std::pair&lt; const Id, KinematicsValue &gt;&gt; init)</td></tr>
+<tr class="memdesc:a2b59b2a7414e94d3e61bc961ecbe0286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the vector using an invalid SourceId and the given the keys and the corresponding kinematics values.  <a href="#a2b59b2a7414e94d3e61bc961ecbe0286">More...</a><br /></td></tr>
+<tr class="separator:a2b59b2a7414e94d3e61bc961ecbe0286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44487065c2257c5c1cb045a6c7dff805"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a44487065c2257c5c1cb045a6c7dff805">~KinematicsVector</a> ()</td></tr>
+<tr class="separator:a44487065c2257c5c1cb045a6c7dff805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ef84c267b8463d120e588ea9219f93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a42ef84c267b8463d120e588ea9219f93">operator=</a> (std::initializer_list&lt; std::pair&lt; const Id, KinematicsValue &gt;&gt; init)</td></tr>
+<tr class="memdesc:a42ef84c267b8463d120e588ea9219f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the vector to the given keys and kinematics values .  <a href="#a42ef84c267b8463d120e588ea9219f93">More...</a><br /></td></tr>
+<tr class="separator:a42ef84c267b8463d120e588ea9219f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all values, resetting the size to zero.  <a href="#ac8bb3912a3ce86b15842e79d0b421204">More...</a><br /></td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35d9fb8d47358f7b38c835449aa9167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#ab35d9fb8d47358f7b38c835449aa9167">set_value</a> (Id id, const KinematicsValue &amp;<a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#ab89340a49b64bb8f5d0b7c08d4508897">value</a>)</td></tr>
+<tr class="memdesc:ab35d9fb8d47358f7b38c835449aa9167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the kinematics <code>value</code> for the given <code>id</code>.  <a href="#ab35d9fb8d47358f7b38c835449aa9167">More...</a><br /></td></tr>
+<tr class="separator:ab35d9fb8d47358f7b38c835449aa9167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a> () const</td></tr>
+<tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns number of <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a5c87029705f9cdb6c64c5dc0d28a49ae" title="Provides a range object for all of the existing ids in the vector.">ids()</a>.  <a href="#af9593d4a5ff4274efaf429cb4f9e57cc">More...</a><br /></td></tr>
+<tr class="separator:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89340a49b64bb8f5d0b7c08d4508897"><td class="memItemLeft" align="right" valign="top">const KinematicsValue &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#ab89340a49b64bb8f5d0b7c08d4508897">value</a> (Id id) const</td></tr>
+<tr class="memdesc:ab89340a49b64bb8f5d0b7c08d4508897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value associated with the given <code>id</code>.  <a href="#ab89340a49b64bb8f5d0b7c08d4508897">More...</a><br /></td></tr>
+<tr class="separator:ab89340a49b64bb8f5d0b7c08d4508897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa31ec21de4026953a4add92ab0e025b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#afa31ec21de4026953a4add92ab0e025b">has_id</a> (Id id) const</td></tr>
+<tr class="memdesc:afa31ec21de4026953a4add92ab0e025b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if the given id is a member of this data.  <a href="#afa31ec21de4026953a4add92ab0e025b">More...</a><br /></td></tr>
+<tr class="separator:afa31ec21de4026953a4add92ab0e025b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b7222f9e3bcb67cf4b55ba3e03c771"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a92b7222f9e3bcb67cf4b55ba3e03c771">frame_ids</a> () const</td></tr>
+<tr class="memdesc:a92b7222f9e3bcb67cf4b55ba3e03c771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a range object for all of the existing ids in the vector.  <a href="#a92b7222f9e3bcb67cf4b55ba3e03c771">More...</a><br /></td></tr>
+<tr class="separator:a92b7222f9e3bcb67cf4b55ba3e03c771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a5c87029705f9cdb6c64c5dc0d28a49ae">ids</a> () const</td></tr>
+<tr class="memdesc:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a range object for all of the existing ids in the vector.  <a href="#a5c87029705f9cdb6c64c5dc0d28a49ae">More...</a><br /></td></tr>
+<tr class="separator:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a4c3f2090d3cd2db45de43802e7c9af60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a4c3f2090d3cd2db45de43802e7c9af60">KinematicsVector</a> (const <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;)=default</td></tr>
+<tr class="separator:a4c3f2090d3cd2db45de43802e7c9af60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db72b7c0b2cd6bc620552fb4697d9c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a9db72b7c0b2cd6bc620552fb4697d9c8">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;)=default</td></tr>
+<tr class="separator:a9db72b7c0b2cd6bc620552fb4697d9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d25e56f059ba59b411592a1e42be22b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a0d25e56f059ba59b411592a1e42be22b">KinematicsVector</a> (<a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a0d25e56f059ba59b411592a1e42be22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0b732826563f4d13c3411c56a0d54f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#adb0b732826563f4d13c3411c56a0d54f">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:adb0b732826563f4d13c3411c56a0d54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4c3f2090d3cd2db45de43802e7c9af60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3f2090d3cd2db45de43802e7c9af60">&#9670;&nbsp;</a></span>KinematicsVector() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt; Id, KinematicsValue &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d25e56f059ba59b411592a1e42be22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d25e56f059ba59b411592a1e42be22b">&#9670;&nbsp;</a></span>KinematicsVector() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt; Id, KinematicsValue &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9e616f21e1bab6297b08ff638366f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e616f21e1bab6297b08ff638366f6e">&#9670;&nbsp;</a></span>KinematicsVector() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the vector using an invalid SourceId with no data . </p>
+
+</div>
+</div>
+<a id="a2b59b2a7414e94d3e61bc961ecbe0286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b59b2a7414e94d3e61bc961ecbe0286">&#9670;&nbsp;</a></span>KinematicsVector() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; std::pair&lt; const Id, KinematicsValue &gt;&gt;&#160;</td>
+          <td class="paramname"><em>init</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the vector using an invalid SourceId and the given the keys and the corresponding kinematics values. </p>
+
+</div>
+</div>
+<a id="a44487065c2257c5c1cb045a6c7dff805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44487065c2257c5c1cb045a6c7dff805">&#9670;&nbsp;</a></span>~KinematicsVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all values, resetting the size to zero. </p>
+
+</div>
+</div>
+<a id="a92b7222f9e3bcb67cf4b55ba3e03c771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b7222f9e3bcb67cf4b55ba3e03c771">&#9670;&nbsp;</a></span>frame_ids()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Id&gt; frame_ids </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides a range object for all of the existing ids in the vector. </p>
+<p>This is intended to be used as: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (Id <span class="keywordtype">id</span> : this_vector.frame_ids()) {</div><div class="line"> ...</div><div class="line"> <span class="comment">// Obtain the KinematicsValue of an id by `this_vector.value(id)`</span></div><div class="line"> ...</div><div class="line">}</div></div><!-- fragment --><p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use ids() instead. <br />
+ This will be removed from Drake on or after 2022-10-01.</dd></dl>
+
+</div>
+</div>
+<a id="afa31ec21de4026953a4add92ab0e025b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa31ec21de4026953a4add92ab0e025b">&#9670;&nbsp;</a></span>has_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_id </td>
+          <td>(</td>
+          <td class="paramtype">Id&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports true if the given id is a member of this data. </p>
+
+</div>
+</div>
+<a id="a5c87029705f9cdb6c64c5dc0d28a49ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c87029705f9cdb6c64c5dc0d28a49ae">&#9670;&nbsp;</a></span>ids()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Id&gt; ids </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides a range object for all of the existing ids in the vector. </p>
+<p>This is intended to be used as: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (Id <span class="keywordtype">id</span> : this_vector.ids()) {</div><div class="line"> ...</div><div class="line"> <span class="comment">// Obtain the KinematicsValue of an id by `this_vector.value(id)`</span></div><div class="line"> ...</div><div class="line">}</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="adb0b732826563f4d13c3411c56a0d54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0b732826563f4d13c3411c56a0d54f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt; Id, KinematicsValue &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9db72b7c0b2cd6bc620552fb4697d9c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db72b7c0b2cd6bc620552fb4697d9c8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt; Id, KinematicsValue &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42ef84c267b8463d120e588ea9219f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ef84c267b8463d120e588ea9219f93">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; std::pair&lt; const Id, KinematicsValue &gt;&gt;&#160;</td>
+          <td class="paramname"><em>init</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets the vector to the given keys and kinematics values . </p>
+
+</div>
+</div>
+<a id="ab35d9fb8d47358f7b38c835449aa9167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35d9fb8d47358f7b38c835449aa9167">&#9670;&nbsp;</a></span>set_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_value </td>
+          <td>(</td>
+          <td class="paramtype">Id&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const KinematicsValue &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the kinematics <code>value</code> for the given <code>id</code>. </p>
+
+</div>
+</div>
+<a id="af9593d4a5ff4274efaf429cb4f9e57cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9593d4a5ff4274efaf429cb4f9e57cc">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns number of <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a5c87029705f9cdb6c64c5dc0d28a49ae" title="Provides a range object for all of the existing ids in the vector.">ids()</a>. </p>
+
+</div>
+</div>
+<a id="ab89340a49b64bb8f5d0b7c08d4508897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89340a49b64bb8f5d0b7c08d4508897">&#9670;&nbsp;</a></span>value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const KinematicsValue&amp; value </td>
+          <td>(</td>
+          <td class="paramtype">Id&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the value associated with the given <code>id</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>id</code> is not in the specified set of ids. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/<a class="el" href="kinematics__vector_8h.html">kinematics_vector.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

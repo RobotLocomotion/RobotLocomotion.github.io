@@ -214,9 +214,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of an ellipsoid.  <a href="classdrake_1_1geometry_1_1_ellipsoid.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_frame_kinematics_vector.html">FrameKinematicsVector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A FrameKinematicsVector is used to report kinematics data for registered frames (identified by unique FrameId values) to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>.  <a href="classdrake_1_1geometry_1_1_frame_kinematics_vector.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_frame.html">GeometryFrame</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This simple class carries the definition of a frame used in the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>.  <a href="classdrake_1_1geometry_1_1_geometry_frame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,6 +242,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of properties for geometry used in an "illustration" role.  <a href="classdrake_1_1geometry_1_1_illustration_properties.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A KinematicsVector is a container class used to report kinematics data for registered frames and geometries (keyed by unique FrameId/GeometryId values) to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> where the set of keys (FrameId/GeometryId) is usually constant and the values (kinematics data) are varying.  <a href="classdrake_1_1geometry_1_1_kinematics_vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a general (possibly non-convex) triangular surface mesh.  <a href="classdrake_1_1geometry_1_1_mesh.html#details">More...</a><br /></td></tr>
@@ -349,10 +349,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:acbab8995daa433cebfc335ffe8ae8fd0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#acbab8995daa433cebfc335ffe8ae8fd0">DrakeVisualizerd</a> = <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html">DrakeVisualizer</a>&lt; double &gt;</td></tr>
 <tr class="memdesc:acbab8995daa433cebfc335ffe8ae8fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for the <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html" title="A system that publishes LCM messages compatible with the drake_visualizer application representing th...">DrakeVisualizer</a> class when using the <code>double</code> scalar type.  <a href="#acbab8995daa433cebfc335ffe8ae8fd0">More...</a><br /></td></tr>
 <tr class="separator:acbab8995daa433cebfc335ffe8ae8fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ace159b1ce98627d4af8aeb8c681087"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4ace159b1ce98627d4af8aeb8c681087"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a4ace159b1ce98627d4af8aeb8c681087">FramePoseVector</a> = <a class="el" href="classdrake_1_1geometry_1_1_frame_kinematics_vector.html">FrameKinematicsVector</a>&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &gt;</td></tr>
-<tr class="memdesc:a4ace159b1ce98627d4af8aeb8c681087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for communicating <em>pose</em> information to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> for registered frames.  <a href="#a4ace159b1ce98627d4af8aeb8c681087">More...</a><br /></td></tr>
-<tr class="separator:a4ace159b1ce98627d4af8aeb8c681087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92efe958866f76d7391035159c554a56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a> = <a class="el" href="classdrake_1_1_identifier.html">drake::Identifier</a>&lt; class FilterTag &gt;</td></tr>
 <tr class="memdesc:a92efe958866f76d7391035159c554a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify transient collision filter declarations in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>.  <a href="#a92efe958866f76d7391035159c554a56">More...</a><br /></td></tr>
 <tr class="separator:a92efe958866f76d7391035159c554a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -362,6 +358,14 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a43b41363b37fadf8cce0977d500e13cb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> = <a class="el" href="classdrake_1_1_identifier.html">drake::Identifier</a>&lt; class FrameTag &gt;</td></tr>
 <tr class="memdesc:a43b41363b37fadf8cce0977d500e13cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify geometry frames in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>.  <a href="#a43b41363b37fadf8cce0977d500e13cb">More...</a><br /></td></tr>
 <tr class="separator:a43b41363b37fadf8cce0977d500e13cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d02909b70fea4c7cb0d0e62fa220a4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa4d02909b70fea4c7cb0d0e62fa220a4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#aa4d02909b70fea4c7cb0d0e62fa220a4">FramePoseVector</a> = <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &gt;</td></tr>
+<tr class="memdesc:aa4d02909b70fea4c7cb0d0e62fa220a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for communicating <em>pose</em> information to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> for registered frames.  <a href="#aa4d02909b70fea4c7cb0d0e62fa220a4">More...</a><br /></td></tr>
+<tr class="separator:aa4d02909b70fea4c7cb0d0e62fa220a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94262ef74be53331dd7db2d6ffb246a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae94262ef74be53331dd7db2d6ffb246a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ae94262ef74be53331dd7db2d6ffb246a">GeometryConfigurationVector</a> = <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td></tr>
+<tr class="memdesc:ae94262ef74be53331dd7db2d6ffb246a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for communicating <em>configuration</em> information to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> for registered deformable geometries.  <a href="#ae94262ef74be53331dd7db2d6ffb246a">More...</a><br /></td></tr>
+<tr class="separator:ae94262ef74be53331dd7db2d6ffb246a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13b4d36d0491327603af75e4f6d0c52a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a13b4d36d0491327603af75e4f6d0c52a">MeshcatPointCloudVisualizerd</a> = <a class="el" href="classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html">MeshcatPointCloudVisualizer</a>&lt; double &gt;</td></tr>
 <tr class="memdesc:a13b4d36d0491327603af75e4f6d0c52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html" title="MeshcatPointCloudVisualizer is a systems::LeafSystem that publishes a perception::PointCloud from its...">MeshcatPointCloudVisualizer</a> class when using the <code>double</code> scalar type.  <a href="#a13b4d36d0491327603af75e4f6d0c52a">More...</a><br /></td></tr>
 <tr class="separator:a13b4d36d0491327603af75e4f6d0c52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -527,19 +531,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ace159b1ce98627d4af8aeb8c681087"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ace159b1ce98627d4af8aeb8c681087">&#9670;&nbsp;</a></span>FramePoseVector</h2>
+<a id="aa4d02909b70fea4c7cb0d0e62fa220a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d02909b70fea4c7cb0d0e62fa220a4">&#9670;&nbsp;</a></span>FramePoseVector</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#a4ace159b1ce98627d4af8aeb8c681087">FramePoseVector</a> =  <a class="el" href="classdrake_1_1geometry_1_1_frame_kinematics_vector.html">FrameKinematicsVector</a>&lt;<a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#aa4d02909b70fea4c7cb0d0e62fa220a4">FramePoseVector</a> =  <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt;<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Class for communicating <em>pose</em> information to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> for registered frames. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae94262ef74be53331dd7db2d6ffb246a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae94262ef74be53331dd7db2d6ffb246a">&#9670;&nbsp;</a></span>GeometryConfigurationVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#ae94262ef74be53331dd7db2d6ffb246a">GeometryConfigurationVector</a> =  <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a>&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class for communicating <em>configuration</em> information to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> for registered deformable geometries. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>

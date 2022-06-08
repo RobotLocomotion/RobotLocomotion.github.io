@@ -2384,10 +2384,14 @@ builds.</p>
 <dl class="class">
 <dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float]">
 <em class="property">class </em><code class="descname">FramePoseVector_[float]</code><a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>A FrameKinematicsVector is used to report kinematics data for
-registered frames (identified by unique FrameId values) to SceneGraph.
-It serves as the basis of FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector.</p>
+<dd><p>A KinematicsVector is a container class used to report kinematics data
+for registered frames and geometries (keyed by unique
+FrameId/GeometryId values) to SceneGraph where the set of keys
+(FrameId/GeometryId) is usually constant and the values (kinematics
+data) are varying. It is an internal class and one should never
+interact with it directly. The template aliases FramePoseVector and
+GeometryConfigurationVector that instantiate KinematicsVector should
+be used instead.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="k">class</span> <span class="nc">MySystem</span> <span class="p">:</span> <span class="n">public</span> <span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
 <span class="n">public</span><span class="p">:</span>
@@ -2412,9 +2416,9 @@ FrameAccelerationVector.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>If a System only ever emits a single frame (or small-constant-number
-of frames), then there’s a shorter alternative way to write a Calc
-method, using an initializer_list:</p>
+<p>If a System only ever emits a single frame/geometry (or
+small-constant-number of frames/geometries), then there’s a shorter
+alternative way to write a Calc method, using an initializer_list:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
 <span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
 <span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">pose</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
@@ -2429,31 +2433,32 @@ value upon return, no matter what value it started with. The easy ways
 to do this are to call either <code class="docutils literal notranslate"><span class="pre">poses-&gt;clear()</span></code> or the assignment
 operator <code class="docutils literal notranslate"><span class="pre">*poses</span> <span class="pre">=</span> <span class="pre">...</span></code>.</p>
 <dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Id</span></code>:</dt>
+<dd>The key used to locate the kinematics data. Can be FrameId or
+GeometryId.</dd>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">KinematicsValue</span></code>:</dt>
-<dd>The underlying data type of for the order of kinematics data
-(e.g., pose, velocity, or acceleration).</dd>
+<dd>The underlying data type of the kinematics data (e.g., pose,
+configuration, or velocity).</dd>
 </dl>
-<p>One should never interact with the FrameKinematicsVector class
-directly. Instead, the FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector classes are aliases of the
-FrameKinematicsVector instantiated on specific data types
-(RigidTransform, SpatialVector, and SpatialAcceleration,
-respectively). Each of these data types are templated on Eigen
-scalars. All supported combinations of data type and scalar type are
-already available to link against in the containing library. No other
-values for KinematicsValue are supported.</p>
+<p>The FramePoseVector and GeometryConfigurationVector classes are
+aliases of the KinematicsVector instantiated on specific data types
+(RigidTransform and VectorX respectively). Each of these data types
+are templated on Eigen scalars. All supported combinations of data
+type and scalar type are already available to link against in the
+containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id11"><span class="problematic" id="id12">|-----------------------------------------------|</span></a>————-
-FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
-double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
-| AutoDiffXd FramePoseVector |
-FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
+————————————-<a href="#id11"><span class="problematic" id="id12">|--------------------------------------------------|</span></a>————-
+FramePoseVector&lt;Scalar&gt; |
+KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
+KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes the vector using an invalid SourceId with no frames .</p>
+<dd><p>Initializes the vector using an invalid SourceId with no data .</p>
 </dd></dl>
 
 <dl class="method">
@@ -2465,15 +2470,21 @@ FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].frame_ids">
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].frame_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the frame ids in the vector. This
-is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (FrameId id : this_vector.frame_ids()) {
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
 }
 </pre></div>
 </div>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -2483,16 +2494,29 @@ is intended to be used as:</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].set_value">
 <code class="descname">set_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float], id: pydrake.geometry.FrameId, value: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].set_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the frame indicated by the given
-<code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of frame_ids().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
@@ -2516,10 +2540,14 @@ is intended to be used as:</p>
 <dl class="class">
 <dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd]">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">FramePoseVector_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd><p>A FrameKinematicsVector is used to report kinematics data for
-registered frames (identified by unique FrameId values) to SceneGraph.
-It serves as the basis of FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector.</p>
+<dd><p>A KinematicsVector is a container class used to report kinematics data
+for registered frames and geometries (keyed by unique
+FrameId/GeometryId values) to SceneGraph where the set of keys
+(FrameId/GeometryId) is usually constant and the values (kinematics
+data) are varying. It is an internal class and one should never
+interact with it directly. The template aliases FramePoseVector and
+GeometryConfigurationVector that instantiate KinematicsVector should
+be used instead.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="k">class</span> <span class="nc">MySystem</span> <span class="p">:</span> <span class="n">public</span> <span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
 <span class="n">public</span><span class="p">:</span>
@@ -2544,9 +2572,9 @@ FrameAccelerationVector.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>If a System only ever emits a single frame (or small-constant-number
-of frames), then there’s a shorter alternative way to write a Calc
-method, using an initializer_list:</p>
+<p>If a System only ever emits a single frame/geometry (or
+small-constant-number of frames/geometries), then there’s a shorter
+alternative way to write a Calc method, using an initializer_list:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
 <span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
 <span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">pose</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
@@ -2561,31 +2589,32 @@ value upon return, no matter what value it started with. The easy ways
 to do this are to call either <code class="docutils literal notranslate"><span class="pre">poses-&gt;clear()</span></code> or the assignment
 operator <code class="docutils literal notranslate"><span class="pre">*poses</span> <span class="pre">=</span> <span class="pre">...</span></code>.</p>
 <dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Id</span></code>:</dt>
+<dd>The key used to locate the kinematics data. Can be FrameId or
+GeometryId.</dd>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">KinematicsValue</span></code>:</dt>
-<dd>The underlying data type of for the order of kinematics data
-(e.g., pose, velocity, or acceleration).</dd>
+<dd>The underlying data type of the kinematics data (e.g., pose,
+configuration, or velocity).</dd>
 </dl>
-<p>One should never interact with the FrameKinematicsVector class
-directly. Instead, the FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector classes are aliases of the
-FrameKinematicsVector instantiated on specific data types
-(RigidTransform, SpatialVector, and SpatialAcceleration,
-respectively). Each of these data types are templated on Eigen
-scalars. All supported combinations of data type and scalar type are
-already available to link against in the containing library. No other
-values for KinematicsValue are supported.</p>
+<p>The FramePoseVector and GeometryConfigurationVector classes are
+aliases of the KinematicsVector instantiated on specific data types
+(RigidTransform and VectorX respectively). Each of these data types
+are templated on Eigen scalars. All supported combinations of data
+type and scalar type are already available to link against in the
+containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id13"><span class="problematic" id="id14">|-----------------------------------------------|</span></a>————-
-FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
-double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
-| AutoDiffXd FramePoseVector |
-FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
+————————————-<a href="#id13"><span class="problematic" id="id14">|--------------------------------------------------|</span></a>————-
+FramePoseVector&lt;Scalar&gt; |
+KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
+KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes the vector using an invalid SourceId with no frames .</p>
+<dd><p>Initializes the vector using an invalid SourceId with no data .</p>
 </dd></dl>
 
 <dl class="method">
@@ -2597,15 +2626,21 @@ FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].frame_ids">
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].frame_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the frame ids in the vector. This
-is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (FrameId id : this_vector.frame_ids()) {
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
 }
 </pre></div>
 </div>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -2615,16 +2650,29 @@ is intended to be used as:</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].set_value">
 <code class="descname">set_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd], id: pydrake.geometry.FrameId, value: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].set_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the frame indicated by the given
-<code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of frame_ids().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
@@ -2646,10 +2694,14 @@ is intended to be used as:</p>
 <dl class="class">
 <dt id="pydrake.geometry.FramePoseVector_[Expression]">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">FramePoseVector_[Expression]</code><a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression]" title="Permalink to this definition">¶</a></dt>
-<dd><p>A FrameKinematicsVector is used to report kinematics data for
-registered frames (identified by unique FrameId values) to SceneGraph.
-It serves as the basis of FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector.</p>
+<dd><p>A KinematicsVector is a container class used to report kinematics data
+for registered frames and geometries (keyed by unique
+FrameId/GeometryId values) to SceneGraph where the set of keys
+(FrameId/GeometryId) is usually constant and the values (kinematics
+data) are varying. It is an internal class and one should never
+interact with it directly. The template aliases FramePoseVector and
+GeometryConfigurationVector that instantiate KinematicsVector should
+be used instead.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="k">class</span> <span class="nc">MySystem</span> <span class="p">:</span> <span class="n">public</span> <span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
 <span class="n">public</span><span class="p">:</span>
@@ -2674,9 +2726,9 @@ FrameAccelerationVector.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>If a System only ever emits a single frame (or small-constant-number
-of frames), then there’s a shorter alternative way to write a Calc
-method, using an initializer_list:</p>
+<p>If a System only ever emits a single frame/geometry (or
+small-constant-number of frames/geometries), then there’s a shorter
+alternative way to write a Calc method, using an initializer_list:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
 <span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
 <span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">pose</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
@@ -2691,31 +2743,32 @@ value upon return, no matter what value it started with. The easy ways
 to do this are to call either <code class="docutils literal notranslate"><span class="pre">poses-&gt;clear()</span></code> or the assignment
 operator <code class="docutils literal notranslate"><span class="pre">*poses</span> <span class="pre">=</span> <span class="pre">...</span></code>.</p>
 <dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Id</span></code>:</dt>
+<dd>The key used to locate the kinematics data. Can be FrameId or
+GeometryId.</dd>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">KinematicsValue</span></code>:</dt>
-<dd>The underlying data type of for the order of kinematics data
-(e.g., pose, velocity, or acceleration).</dd>
+<dd>The underlying data type of the kinematics data (e.g., pose,
+configuration, or velocity).</dd>
 </dl>
-<p>One should never interact with the FrameKinematicsVector class
-directly. Instead, the FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector classes are aliases of the
-FrameKinematicsVector instantiated on specific data types
-(RigidTransform, SpatialVector, and SpatialAcceleration,
-respectively). Each of these data types are templated on Eigen
-scalars. All supported combinations of data type and scalar type are
-already available to link against in the containing library. No other
-values for KinematicsValue are supported.</p>
+<p>The FramePoseVector and GeometryConfigurationVector classes are
+aliases of the KinematicsVector instantiated on specific data types
+(RigidTransform and VectorX respectively). Each of these data types
+are templated on Eigen scalars. All supported combinations of data
+type and scalar type are already available to link against in the
+containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id15"><span class="problematic" id="id16">|-----------------------------------------------|</span></a>————-
-FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
-double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
-| AutoDiffXd FramePoseVector |
-FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
+————————————-<a href="#id15"><span class="problematic" id="id16">|--------------------------------------------------|</span></a>————-
+FramePoseVector&lt;Scalar&gt; |
+KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
+KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes the vector using an invalid SourceId with no frames .</p>
+<dd><p>Initializes the vector using an invalid SourceId with no data .</p>
 </dd></dl>
 
 <dl class="method">
@@ -2727,15 +2780,21 @@ FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[Expression].frame_ids">
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].frame_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the frame ids in the vector. This
-is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (FrameId id : this_vector.frame_ids()) {
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
 }
 </pre></div>
 </div>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -2745,16 +2804,29 @@ is intended to be used as:</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_[Expression].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[Expression].set_value">
 <code class="descname">set_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression], id: pydrake.geometry.FrameId, value: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].set_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the frame indicated by the given
-<code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[Expression].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of frame_ids().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
@@ -2776,10 +2848,14 @@ is intended to be used as:</p>
 <dl class="class">
 <dt id="pydrake.geometry.FramePoseVector_[float]">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">FramePoseVector_[float]</code><a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>A FrameKinematicsVector is used to report kinematics data for
-registered frames (identified by unique FrameId values) to SceneGraph.
-It serves as the basis of FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector.</p>
+<dd><p>A KinematicsVector is a container class used to report kinematics data
+for registered frames and geometries (keyed by unique
+FrameId/GeometryId values) to SceneGraph where the set of keys
+(FrameId/GeometryId) is usually constant and the values (kinematics
+data) are varying. It is an internal class and one should never
+interact with it directly. The template aliases FramePoseVector and
+GeometryConfigurationVector that instantiate KinematicsVector should
+be used instead.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="k">class</span> <span class="nc">MySystem</span> <span class="p">:</span> <span class="n">public</span> <span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
 <span class="n">public</span><span class="p">:</span>
@@ -2804,9 +2880,9 @@ FrameAccelerationVector.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>If a System only ever emits a single frame (or small-constant-number
-of frames), then there’s a shorter alternative way to write a Calc
-method, using an initializer_list:</p>
+<p>If a System only ever emits a single frame/geometry (or
+small-constant-number of frames/geometries), then there’s a shorter
+alternative way to write a Calc method, using an initializer_list:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
 <span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
 <span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">pose</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
@@ -2821,31 +2897,32 @@ value upon return, no matter what value it started with. The easy ways
 to do this are to call either <code class="docutils literal notranslate"><span class="pre">poses-&gt;clear()</span></code> or the assignment
 operator <code class="docutils literal notranslate"><span class="pre">*poses</span> <span class="pre">=</span> <span class="pre">...</span></code>.</p>
 <dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Id</span></code>:</dt>
+<dd>The key used to locate the kinematics data. Can be FrameId or
+GeometryId.</dd>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">KinematicsValue</span></code>:</dt>
-<dd>The underlying data type of for the order of kinematics data
-(e.g., pose, velocity, or acceleration).</dd>
+<dd>The underlying data type of the kinematics data (e.g., pose,
+configuration, or velocity).</dd>
 </dl>
-<p>One should never interact with the FrameKinematicsVector class
-directly. Instead, the FramePoseVector, FrameVelocityVector, and
-FrameAccelerationVector classes are aliases of the
-FrameKinematicsVector instantiated on specific data types
-(RigidTransform, SpatialVector, and SpatialAcceleration,
-respectively). Each of these data types are templated on Eigen
-scalars. All supported combinations of data type and scalar type are
-already available to link against in the containing library. No other
-values for KinematicsValue are supported.</p>
+<p>The FramePoseVector and GeometryConfigurationVector classes are
+aliases of the KinematicsVector instantiated on specific data types
+(RigidTransform and VectorX respectively). Each of these data types
+are templated on Eigen scalars. All supported combinations of data
+type and scalar type are already available to link against in the
+containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id17"><span class="problematic" id="id18">|-----------------------------------------------|</span></a>————-
-FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
-double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
-| AutoDiffXd FramePoseVector |
-FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
+————————————-<a href="#id17"><span class="problematic" id="id18">|--------------------------------------------------|</span></a>————-
+FramePoseVector&lt;Scalar&gt; |
+KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
+KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
+double/AutoDiffXd/Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes the vector using an invalid SourceId with no frames .</p>
+<dd><p>Initializes the vector using an invalid SourceId with no data .</p>
 </dd></dl>
 
 <dl class="method">
@@ -2857,15 +2934,21 @@ FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; | Expression</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[float].frame_ids">
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].frame_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the frame ids in the vector. This
-is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (FrameId id : this_vector.frame_ids()) {
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
 }
 </pre></div>
 </div>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -2875,16 +2958,29 @@ is intended to be used as:</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_[float].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[float].set_value">
 <code class="descname">set_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float], id: pydrake.geometry.FrameId, value: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].set_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the frame indicated by the given
-<code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dd><p>Sets the kinematics <code class="docutils literal notranslate"><span class="pre">value</span></code> for the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[float].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of frame_ids().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
@@ -9928,8 +10024,8 @@ to runtime exceptions.</p>
 FramePoseVector. For each registered frame, this “pose vector” maps
 the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
-in its output port. See the details in FrameKinematicsVector for
-details on how to provide values for this port.</p>
+in its output port. See the details in KinematicsVector for details on
+how to provide values for this port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -10454,6 +10550,18 @@ scene_graph_versioning).</p>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="3">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+<ol class="arabic simple" start="4">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -10615,8 +10723,8 @@ to runtime exceptions.</p>
 FramePoseVector. For each registered frame, this “pose vector” maps
 the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
-in its output port. See the details in FrameKinematicsVector for
-details on how to provide values for this port.</p>
+in its output port. See the details in KinematicsVector for details on
+how to provide values for this port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -11141,6 +11249,18 @@ scene_graph_versioning).</p>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="3">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+<ol class="arabic simple" start="4">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -11300,8 +11420,8 @@ to runtime exceptions.</p>
 FramePoseVector. For each registered frame, this “pose vector” maps
 the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
-in its output port. See the details in FrameKinematicsVector for
-details on how to provide values for this port.</p>
+in its output port. See the details in KinematicsVector for details on
+how to provide values for this port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -11826,6 +11946,18 @@ scene_graph_versioning).</p>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="3">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+<ol class="arabic simple" start="4">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -11985,8 +12117,8 @@ to runtime exceptions.</p>
 FramePoseVector. For each registered frame, this “pose vector” maps
 the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
-in its output port. See the details in FrameKinematicsVector for
-details on how to provide values for this port.</p>
+in its output port. See the details in KinematicsVector for details on
+how to provide values for this port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -12511,6 +12643,18 @@ scene_graph_versioning).</p>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="3">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+<ol class="arabic simple" start="4">
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+</ol>
+<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="method">

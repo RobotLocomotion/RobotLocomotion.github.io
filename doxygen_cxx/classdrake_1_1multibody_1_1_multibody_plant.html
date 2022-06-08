@@ -3084,7 +3084,6 @@ Contact modeling</h2></td></tr>
 <p>For example: </p><div class="fragment"><div class="line"><span class="comment">// Don&#39;t report on collisions between geometries affixed to `body1`,</span></div><div class="line"><span class="comment">// `body2`, or `body3`.</span></div><div class="line">std::vector&lt;const RigidBody&lt;T&gt;*&gt; bodies{&amp;body1, &amp;body2, &amp;body3};</div><div class="line">geometry::GeometrySet set = plant.CollectRegisteredGeometries(bodies);</div><div class="line">scene_graph.collision_filter_manager().Apply(</div><div class="line">    CollisionFilterDeclaration().ExcludeWithin(set));</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>There is a <em>very</em> specific order of operations:</dd></dl>
 <ol type="1">
 <li>Bodies and geometries must be added to the MultibodyPlant.</li>
-<li>The MultibodyPlant must be finalized (via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>).</li>
 <li>Create GeometrySet instances from bodies (via this method).</li>
 <li>Invoke SceneGraph::ExcludeCollisions*() to filter collisions.</li>
 <li>Allocate context.</li>
@@ -3092,7 +3091,7 @@ Contact modeling</h2></td></tr>
 <p>Changing the order will cause exceptions to be thrown.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant was not registered with a SceneGraph. </td></tr>
   </table>
   </dd>
 </dl>

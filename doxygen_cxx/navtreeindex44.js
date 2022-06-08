@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"image_8h.html":[4,0,0,11,8,5],
 "image_8h.html#a0558960d25000bd7cc8607cef2fd223b":[4,0,0,11,8,5,5],
 "image_8h.html#a12ae113c6f13e4c9c37430a988afeef8":[4,0,0,11,8,5,4],
 "image_8h.html#a1d38997213d63bf974b9ea19fc5abf0d":[4,0,0,11,8,5,7],
@@ -129,6 +130,9 @@ var NAVTREEINDEX44 =
 "kalman__filter_8h.html#ga483f8a39c210ad058dfc19ae26d93e16":[4,0,0,11,2,0,0],
 "kalman__filter_8h.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,11,2,0,2],
 "kinematic__constraint__utilities_8h.html":[4,0,0,8,5,8],
+"kinematics__vector_8h.html":[4,0,0,4,25],
+"kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,25,1],
+"kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,25,2],
 "knot__vector__type_8h.html":[4,0,0,7,20],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2":[4,0,0,7,20,0],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,20,0,0],
@@ -208,7 +212,7 @@ var NAVTREEINDEX44 =
 "make__ellipsoid__mesh_8h.html":[4,0,0,4,2,27],
 "make__kuka__iiwa__model_8h.html":[4,0,0,8,0,3,1],
 "make__kuka__iiwa__model_8h.html#a66fad1fe086f2c9719c25a140d257f59":[4,0,0,8,0,3,1,0],
-"make__mesh__for__deformable_8h.html":[4,0,0,4,25],
+"make__mesh__for__deformable_8h.html":[4,0,0,4,26],
 "make__pendulum__plant_8h.html":[4,0,0,8,0,5,0],
 "make__pendulum__plant_8h.html#a30233325115a0476081c9049714ce476":[4,0,0,8,0,5,0,1],
 "make__rolling__sphere__plant_8h.html":[4,0,0,3,10,1,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX44 =
 "mathematical__program__result_8h.html":[4,0,0,10,34],
 "mathematical__program__result_8h.html#a014d2838aa5fae12520da4ebf46005ca":[4,0,0,10,34,1],
 "mathematical__program__result_8h.html#a287ba31e94ce0e4152f9214c68d7a78f":[4,0,0,10,34,2],
-"matrix__gain_8h.html":[4,0,0,11,6,13],
-"matrix__util_8h.html":[4,0,0,7,22],
-"matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b":[4,0,0,7,22,2],
-"matrix__util_8h.html#a5390bb2dadbe96cd6dfbe26c6891f100":[4,0,0,7,22,3],
-"matrix__util_8h.html#a6d81fb8e0b28f46bad7838ed39bffbce":[4,0,0,7,22,4]
+"matrix__gain_8h.html":[4,0,0,11,6,13]
 };

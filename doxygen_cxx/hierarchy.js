@@ -333,7 +333,6 @@ var hierarchy =
         [ "FormulaNeq", "classdrake_1_1symbolic_1_1_formula_neq.html", null ]
       ] ]
     ] ],
-    [ "FrameKinematicsVector< KinematicsValue >", "classdrake_1_1geometry_1_1_frame_kinematics_vector.html", null ],
     [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html", null ],
     [ "FromDoubleTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html", null ],
     [ "GenericPolynomial< BasisElement >", "classdrake_1_1symbolic_1_1_generic_polynomial.html", null ],
@@ -417,6 +416,7 @@ var hierarchy =
     ] ],
     [ "ImplicitIntegrator< T >::IterationMatrix", "classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html", null ],
     [ "Joint< T >::JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", null ],
+    [ "KinematicsVector< Id, KinematicsValue >", "classdrake_1_1geometry_1_1_kinematics_vector.html", null ],
     [ "KukaRobotJointReactionForces< T >", "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html", null ],
     [ "LcmImageTraits< PixelType >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html", null ],
     [ "LcmImageTraits< PixelType::kBgr8U >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html", null ],
