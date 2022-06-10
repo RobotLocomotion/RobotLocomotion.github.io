@@ -231,7 +231,7 @@ tag <code class="highlighter-rouge">release notes: breaking change</code> to any
 to a <a href="/stable.html">Stable API</a> without a deprecation period.</p>
 
 <p><strong>release notes: newly deprecated</strong><br />
- and<br />
+ or<br />
 <strong>release notes: removal of deprecated</strong></p>
 
 <p>Commits that change deprecations receive special attention in the release notes.
@@ -241,10 +241,25 @@ To aid the human editor in making that determination, you must add the tag
 code whose date has passed.  Removing deprecated code is not considered to be a
 breaking change, so do not add <code class="highlighter-rouge">release notes: breaking change</code>.</p>
 
-<p><strong>release notes: yes</strong></p>
+<p><strong>release notes: feature</strong><br />
+ or<br />
+<strong>release notes: fix</strong></p>
 
-<p>For commits that do not meet any of the above criteria, you must add the tag
-<code class="highlighter-rouge">release notes: yes</code> to indicate that you’ve considered the question.</p>
+<p>Commits that implement a feature or a fix must be labeled with the
+corresponding tag, either <code class="highlighter-rouge">release notes: feature</code> or <code class="highlighter-rouge">release notes: fix</code>
+but never both at once; choose whichever one is the best match.</p>
+
+<p><strong>When combining release notes labels:</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">none</code> must not be combined with any other label.</li>
+  <li><code class="highlighter-rouge">breaking change</code> must be combined with either <code class="highlighter-rouge">feature</code> or <code class="highlighter-rouge">fix</code>.
+If there were changes to deprecations, those labels should also be added.</li>
+  <li><code class="highlighter-rouge">newly deprecated</code> will usually be combined with <code class="highlighter-rouge">feature</code> or <code class="highlighter-rouge">fix</code>,
+because usually the deprecation is concurrent with the addition of its
+replacement or due to some other new change. Only if the deprecation is the
+<em>sole</em> content of the commit will <code class="highlighter-rouge">newly deprecated</code> be the only label.</li>
+</ul>
 
 <h1 id="joint-feature-and-platform-review">Joint Feature and Platform review</h1>
 

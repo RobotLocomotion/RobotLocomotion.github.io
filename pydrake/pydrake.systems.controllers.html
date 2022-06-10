@@ -852,14 +852,16 @@ cost-to-go function.</td>
 <code class="descclassname">pydrake.systems.controllers.</code><code class="descname">LinearQuadraticRegulator</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.LinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>LinearQuadraticRegulator(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], N: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, n]]]</li>
+<li>LinearQuadraticRegulator(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], N: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64), F: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, n]]]</li>
 </ol>
 <p>Computes the optimal feedback controller, u=-Kx, and the optimal
 cost-to-go J = x’Sx for the problem:</p>
 <div class="math notranslate nohighlight">
+\[\min_u \int_0^\infty x'Qx + u'Ru + 2x'Nu dt\]</div>
+<div class="math notranslate nohighlight">
 \[\dot{x} = Ax + Bu\]</div>
 <div class="math notranslate nohighlight">
-\[\min_u \int_0^\infty x'Qx + u'Ru + 2x'Nu dt\]</div>
+\[Fx = 0\]</div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt>
 <dd>The state-space dynamics matrix of size num_states x num_states.</dd>
@@ -872,9 +874,12 @@ x num_states.</dd>
 <dd>A symmetric positive definite cost matrix of size num_inputs x
 num_inputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">N</span></code>:</dt>
-<dd>A cost matrix of size num_states x num_inputs. If the matrix is
-zero-sized, N will be treated as a num_states x num_inputs zero
-matrix.</dd>
+<dd>A cost matrix of size num_states x num_inputs. If N.rows() == 0, N
+will be treated as a num_states x num_inputs zero matrix.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">F</span></code>:</dt>
+<dd>A constraint matrix of size num_constraints x num_states. rank(F)
+must be &lt; num_states. If F.rows() == 0, F will be treated as a 0 x
+num_states zero matrix.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
