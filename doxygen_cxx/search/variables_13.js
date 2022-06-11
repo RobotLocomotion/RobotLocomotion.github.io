@@ -11,5 +11,5 @@ var searchData=
   ['top',['top',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573',1,'drake::geometry::Meshcat::OrthographicCamera']]],
   ['traction_5faq_5fw',['traction_Aq_W',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#ac40878d3fef16be760e6104ad9c13666',1,'drake::multibody::HydroelasticQuadraturePointData']]],
   ['translation',['translation',['../classdrake_1_1schema_1_1_transform.html#a8aa32d1a678a8151398c7f904d522877',1,'drake::schema::Transform']]],
-  ['type',['type',['../structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29',1,'drake::Polynomial::Product::type()'],['../structdrake_1_1_trig_poly_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29',1,'drake::TrigPoly::Product::type()']]]
+  ['type',['type',['../structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29',1,'drake::Polynomial::Product::type()'],['../structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f',1,'drake::symbolic::SinCos::type()'],['../structdrake_1_1_trig_poly_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29',1,'drake::TrigPoly::Product::type()']]]
 ];

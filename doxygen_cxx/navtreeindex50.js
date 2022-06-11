@@ -177,11 +177,12 @@ var NAVTREEINDEX50 =
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[3,0,0,13,55],
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,13,55,0],
 "structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,13,64],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,13,64,7],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,13,64,5],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a146ddad7c7cfd8f6b187cc72cec49025":[3,0,0,13,64,2],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a1c36ee4d69b2b1e95ea82cc4fff7fad6":[3,0,0,13,64,6],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a1c615a950f134b68ee764a6b9d765e73":[3,0,0,13,64,3],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360":[3,0,0,13,64,0],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a919d5819ace24054ded2f7899e67ff54":[3,0,0,13,64,2],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a998dc5eab25095b0f2c481bdc575a430":[3,0,0,13,64,4],
 "structdrake_1_1symbolic_1_1_sin_cos.html#acc45493e97e5176d748160a80140ecb2":[3,0,0,13,64,1],
 "structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html":[3,0,0,14,13,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a758aa200c389c79a6726265a8a3ec559":[3,0,0,14,1,1,7],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#ae1eeea98f1866116ac3f5765a855daef":[3,0,0,14,1,1,5],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#ae5b6c59565e02e83dbb2fc7bcfce9234":[3,0,0,14,1,1,3],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#affa193ce61ecf0e83c9b547014a4675b":[3,0,0,14,1,1,0],
-"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html":[3,0,0,14,1,2]
+"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#affa193ce61ecf0e83c9b547014a4675b":[3,0,0,14,1,1,0]
 };

@@ -173,8 +173,8 @@ $(document).ready(function(){initNavTree('structdrake_1_1symbolic_1_1_sin_cos.ht
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a146ddad7c7cfd8f6b187cc72cec49025"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html#a146ddad7c7cfd8f6b187cc72cec49025">SinCos</a> (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> s_var, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> c_var)</td></tr>
-<tr class="separator:a146ddad7c7cfd8f6b187cc72cec49025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919d5819ace24054ded2f7899e67ff54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html#a919d5819ace24054ded2f7899e67ff54">SinCos</a> (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> _s, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> _c, <a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44">SinCosSubstitutionType</a> _type=<a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb">SinCosSubstitutionType::kAngle</a>)</td></tr>
+<tr class="separator:a919d5819ace24054ded2f7899e67ff54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a2c92f605c1db3ad56e29d2fdcb656360"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360">SinCos</a> (const <a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html">SinCos</a> &amp;)=default</td></tr>
 <tr class="separator:a2c92f605c1db3ad56e29d2fdcb656360"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +193,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0bee03f130c602c5c1fd0521c716ebbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd">c</a> {}</td></tr>
 <tr class="memdesc:a0bee03f130c602c5c1fd0521c716ebbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">cos variable.  <a href="#a0bee03f130c602c5c1fd0521c716ebbd">More...</a><br /></td></tr>
 <tr class="separator:a0bee03f130c602c5c1fd0521c716ebbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a14e4a94aab4befcf2506ef07dc38f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44">SinCosSubstitutionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f">type</a> {}</td></tr>
+<tr class="memdesc:a06a14e4a94aab4befcf2506ef07dc38f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows a user to specify non-default substitutions, such as using half-angle formulas.  <a href="#a06a14e4a94aab4befcf2506ef07dc38f">More...</a><br /></td></tr>
+<tr class="separator:a06a14e4a94aab4befcf2506ef07dc38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2c92f605c1db3ad56e29d2fdcb656360"></a>
@@ -247,8 +250,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a146ddad7c7cfd8f6b187cc72cec49025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a146ddad7c7cfd8f6b187cc72cec49025">&#9670;&nbsp;</a></span>SinCos() <span class="overload">[3/3]</span></h2>
+<a id="a919d5819ace24054ded2f7899e67ff54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919d5819ace24054ded2f7899e67ff54">&#9670;&nbsp;</a></span>SinCos() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -257,13 +260,19 @@ Public Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html">SinCos</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&#160;</td>
-          <td class="paramname"><em>s_var</em>, </td>
+          <td class="paramname"><em>_s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&#160;</td>
-          <td class="paramname"><em>c_var</em>&#160;</td>
+          <td class="paramname"><em>_c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44">SinCosSubstitutionType</a>&#160;</td>
+          <td class="paramname"><em>_type</em> = <code><a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb">SinCosSubstitutionType::kAngle</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -358,6 +367,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>sin variable. </p>
+
+</div>
+</div>
+<a id="a06a14e4a94aab4befcf2506ef07dc38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a14e4a94aab4befcf2506ef07dc38f">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44">SinCosSubstitutionType</a> type {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows a user to specify non-default substitutions, such as using half-angle formulas. </p>
 
 </div>
 </div>

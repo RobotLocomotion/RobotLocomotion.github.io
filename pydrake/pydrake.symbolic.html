@@ -2359,7 +2359,7 @@ instead of <code class="docutils literal notranslate"><span class="pre">positive
 <dd><p>Represents a pair of Variables corresponding to sin(q) and cos(q).</p>
 <dl class="method">
 <dt id="pydrake.symbolic.SinCos.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.SinCos</em>, <em>s: pydrake.symbolic.Variable</em>, <em>c: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.SinCos.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.SinCos</em>, <em>s: pydrake.symbolic.Variable</em>, <em>c: pydrake.symbolic.Variable</em>, <em>type: pydrake.symbolic.SinCosSubstitutionType = &lt;SinCosSubstitutionType.kAngle: 0&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.SinCos.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2373,6 +2373,57 @@ instead of <code class="docutils literal notranslate"><span class="pre">positive
 <code class="descname">s</code><a class="headerlink" href="#pydrake.symbolic.SinCos.s" title="Permalink to this definition">¶</a></dt>
 <dd><p>sin variable.</p>
 </dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.SinCos.type">
+<code class="descname">type</code><a class="headerlink" href="#pydrake.symbolic.SinCos.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows a user to specify non-default substitutions, such as using
+half-angle formulas.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.symbolic.SinCosSubstitutionType">
+<em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">SinCosSubstitutionType</code><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kAngle : Substitutes s &lt;=&gt; sin(q), c &lt;=&gt; cos(q).</p>
+<p>kHalfAnglePreferSin : Substitutes s &lt;=&gt; sin(q/2), c &lt;=&gt; cos(q/2), and prefers sin when the</p>
+</div></blockquote>
+<p>choice is ambiguous; e.g. cos(q) =&gt; 1 - 2s².</p>
+<blockquote>
+<div>kHalfAnglePreferCos : Subsitutes s &lt;=&gt; sin(q/2), c &lt;=&gt; cos(q/2), and prefers cos when the</div></blockquote>
+<p>choice is ambiguous; e.g. cos(q) =&gt; 2c² - 1.</p>
+<dl class="method">
+<dt id="pydrake.symbolic.SinCosSubstitutionType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.SinCosSubstitutionType</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.SinCosSubstitutionType.kAngle">
+<code class="descname">kAngle</code><em class="property"> = &lt;SinCosSubstitutionType.kAngle: 0&gt;</em><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.kAngle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.SinCosSubstitutionType.kHalfAnglePreferCos">
+<code class="descname">kHalfAnglePreferCos</code><em class="property"> = &lt;SinCosSubstitutionType.kHalfAnglePreferCos: 2&gt;</em><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.kHalfAnglePreferCos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.SinCosSubstitutionType.kHalfAnglePreferSin">
+<code class="descname">kHalfAnglePreferSin</code><em class="property"> = &lt;SinCosSubstitutionType.kHalfAnglePreferSin: 1&gt;</em><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.kHalfAnglePreferSin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.SinCosSubstitutionType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.SinCosSubstitutionType.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -2434,6 +2485,15 @@ trigonometric expansions. For instance,</p>
 </pre></div>
 </div>
 <p>will result in the expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">(sx*cy</span> <span class="pre">+</span> <span class="pre">cx*sy)</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">half_angle</span></code>:</dt>
+<dd>If true, then the same workflow replaces instances of sin(q/2) and
+cos(q/2) in <code class="docutils literal notranslate"><span class="pre">e</span></code> will be replaced with <code class="docutils literal notranslate"><span class="pre">s</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>.</dd>
+<dt><em>Default:</em> false.</dt>
+<dd>The half-angle representation is more natural in many analysis
+computations for robots, for instance:
+<a class="reference external" href="https://underactuated.csail.mit.edu/lyapunov.html#trig_quadratic">https://underactuated.csail.mit.edu/lyapunov.html#trig_quadratic</a></dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

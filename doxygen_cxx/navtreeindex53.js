@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__formula_8h.html#ac4ac705adb39eafdc363379ce4ea950c":[4,0,0,1,59,63],
 "symbolic__formula_8h.html#ac5c1c4bfd4434de52e240126b78853c0":[4,0,0,1,59,44],
 "symbolic__formula_8h.html#ac66d112b9b6d693ee82d08c7a01f7a14":[4,0,0,1,59,35],
 "symbolic__formula_8h.html#ac9f34a1136227779b18433cd0a2f4dde":[4,0,0,1,59,43],
@@ -202,9 +203,13 @@ var NAVTREEINDEX53 =
 "symbolic__test__util_8h.html#af936eee6e6ccab95c3d4597af366c73e":[4,0,0,1,2,8,25],
 "symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6":[4,0,0,1,2,8,23],
 "symbolic__trigonometric__polynomial_8h.html":[4,0,0,1,73],
+"symbolic__trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,73,2],
+"symbolic__trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,73,2,2],
+"symbolic__trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44aea1eea0840dd2bfd79a5cbfdf49ea143":[4,0,0,1,73,2,1],
+"symbolic__trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb":[4,0,0,1,73,2,0],
 "symbolic__trigonometric__polynomial_8h.html#a13c5d9eccfc9643fdd5764d6e72b8faf":[4,0,0,1,73,1],
-"symbolic__trigonometric__polynomial_8h.html#a19a8d5ebbbc294ffa607973b2385f0f6":[4,0,0,1,73,3],
-"symbolic__trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,73,2],
+"symbolic__trigonometric__polynomial_8h.html#a19a8d5ebbbc294ffa607973b2385f0f6":[4,0,0,1,73,4],
+"symbolic__trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,73,3],
 "symbolic__types__pybind_8h.html":[4,0,0,0,0,9],
 "symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605":[4,0,0,0,0,9,4],
 "symbolic__types__pybind_8h.html#a368506c847873cc7fae62074bdebf337":[4,0,0,0,0,9,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX53 =
 "symbolic__variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,75,2],
 "symbolic__variables_8h.html#aae117a884f72a1a73cc2863ec026c011":[4,0,0,1,75,5],
 "symbolic__variables_8h.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a":[4,0,0,1,75,3],
-"symbolic__variables_8h.html#ac861cf2992e3fa03746df6ca291c5020":[4,0,0,1,75,6],
-"symbolic__vector__system_8h.html":[4,0,0,11,6,22],
-"symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f":[4,0,0,11,6,22,1],
-"system_8h.html":[4,0,0,11,3,39],
-"system__base_8h.html":[4,0,0,11,3,40],
-"system__compatibility__doxygen_8h.html":[4,0,0,11,3,41]
+"symbolic__variables_8h.html#ac861cf2992e3fa03746df6ca291c5020":[4,0,0,1,75,6]
 };

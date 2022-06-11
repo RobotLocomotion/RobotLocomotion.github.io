@@ -461,6 +461,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a6869e7044dd90be5d972ee7dd4e821b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kinds of symbolic formulas.  <a href="namespacedrake_1_1symbolic.html#a6869e7044dd90be5d972ee7dd4e821b6">More...</a><br /></td></tr>
 <tr class="separator:a6869e7044dd90be5d972ee7dd4e821b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7729e9ae50c2b5ca1d86021ad1ae44"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44">SinCosSubstitutionType</a> { <a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb">kAngle</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44aea1eea0840dd2bfd79a5cbfdf49ea143">kHalfAnglePreferSin</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0">kHalfAnglePreferCos</a>
+ }</td></tr>
+<tr class="separator:a0f7729e9ae50c2b5ca1d86021ad1ae44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -1846,6 +1851,38 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a6869e7044dd90be5d972ee7dd4e821b6afd116e3418522ffc34d7423bc601510d"></a>Isnan&#160;</td><td class="fielddoc"><p>NaN check predicate. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a6869e7044dd90be5d972ee7dd4e821b6a1fbc164d3e50b7fd20690a21f1b7b2f2"></a>PositiveSemidefinite&#160;</td><td class="fielddoc"><p>Positive semidefinite matrix. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a0f7729e9ae50c2b5ca1d86021ad1ae44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7729e9ae50c2b5ca1d86021ad1ae44">&#9670;&nbsp;</a></span>SinCosSubstitutionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44">SinCosSubstitutionType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb"></a>kAngle&#160;</td><td class="fielddoc"><p>Substitutes s &lt;=&gt; sin(q), c &lt;=&gt; cos(q). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0f7729e9ae50c2b5ca1d86021ad1ae44aea1eea0840dd2bfd79a5cbfdf49ea143"></a>kHalfAnglePreferSin&#160;</td><td class="fielddoc"><p>Substitutes s &lt;=&gt; sin(q/2), c &lt;=&gt; cos(q/2), and prefers sin when the choice is ambiguous; e.g. </p>
+<p>cos(q) =&gt; 1 - 2s². </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0"></a>kHalfAnglePreferCos&#160;</td><td class="fielddoc"><p>Subsitutes s &lt;=&gt; sin(q/2), c &lt;=&gt; cos(q/2), and prefers cos when the choice is ambiguous; e.g. </p>
+<p>cos(q) =&gt; 2c² - 1. </p>
 </td></tr>
 </table>
 
@@ -11931,6 +11968,14 @@ we do not provide operator*= function for this class, since operator*= would ret
   subs.emplace(y, SinCos(sy, cy));
   Expression e = Substitute(x * sin(x + y), subs);
 </pre><p> will result in the expression <code>x * (sx*cy + cx*sy)</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">half_angle</td><td>If true, then the same workflow replaces instances of sin(q/2) and cos(q/2) in <code>e</code> will be replaced with <code>s</code>, and <code>c</code>. <br />
+ <em>Default:</em> false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The half-angle representation is more natural in many analysis computations for robots, for instance: <a href="https://underactuated.csail.mit.edu/lyapunov.html#trig_quadratic">https://underactuated.csail.mit.edu/lyapunov.html#trig_quadratic</a></p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if a trigonometric function is not a trigonometric polynomial in <code>q</code> or if the <code>e</code> requires a trigonometric expansion that not supported yet. </td></tr>
