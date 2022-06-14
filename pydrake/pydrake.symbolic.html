@@ -2147,11 +2147,16 @@ indeterminates.rows().</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">polynomial_values polynomial_values(j) is obtained by substituting
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">polynomial_values polynomial_values(j) is obtained by substituting
 indeterminates(i) in this polynomial with indeterminates_values(i,
-j) for all i.</td>
+j) for all i.</p>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">error if any coefficient in this polynomial is not a constant.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any coefficient in this polynomial is not a</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">constant.</span></code></li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -2183,6 +2188,51 @@ j) for all i.</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if NaN is detected at any point during evaluation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.Polynomial.EvaluateWithAffineCoefficients">
+<code class="descname">EvaluateWithAffineCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, indeterminates: numpy.ndarray[object[m, 1]], indeterminates_values: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[object[m, 1]], numpy.ndarray[numpy.float64[m, 1]]]<a class="headerlink" href="#pydrake.symbolic.Polynomial.EvaluateWithAffineCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the polynomial at a batch of indeterminate values. For a
+polynomial whose coefficients are affine expressions of decision
+variables, we evaluate this polynomial on a batch of indeterminate
+values, and return the matrix representation of the evaluated affine
+expressions. For example if p(x) = (a+1)x² + b*x where a, b are
+decision variables, if we evaluate this polynomial on x = 1 and x = 2,
+then p(x) = a+b+1 and 4a+2b+4 respectively. We return the evaluation
+result as A * decision_variables + b, where A.row(i) *
+decision_variables + b(i) is the evaluation of the polynomial on
+indeterminates_values.col(i).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>:</dt>
+<dd>Must include all this-&gt;indeterminates()</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code>:</dt>
+<dd>A matrix representing a batch of values. Each column of
+<code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code> stores one specific value of
+<code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>, where indeterminates_values.rows() ==
+indeterminates.rows().</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt>
+<dd>The coefficient of the evaluation results.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">decision_variables</span></code>:</dt>
+<dd>The decision variables in the evaluation results.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
+<dd>The constant terms in the evaluation results.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the coefficients of this polynomial is not an</li>
+<li>affine expression of its decision variables. For example, the</li>
+<li>polynomial (2+sin(a)) * x² + 1 (where <code class="docutils literal notranslate"><span class="pre">a</span></code> is a decision variable</li>
+<li>and <code class="docutils literal notranslate"><span class="pre">x</span></code> is a indeterminate) doesn’t have affine expression as</li>
+<li>its coefficient 2+sin(a).</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>

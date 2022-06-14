@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"iiwa__status__sender_8h.html":[4,0,0,6,1,4],
 "image_8h.html":[4,0,0,11,8,5],
 "image_8h.html#a0558960d25000bd7cc8607cef2fd223b":[4,0,0,11,8,5,5],
 "image_8h.html#a12ae113c6f13e4c9c37430a988afeef8":[4,0,0,11,8,5,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "mathematical__program__doxygen_8h.html":[4,0,0,10,33],
 "mathematical__program__result_8h.html":[4,0,0,10,34],
 "mathematical__program__result_8h.html#a014d2838aa5fae12520da4ebf46005ca":[4,0,0,10,34,1],
-"mathematical__program__result_8h.html#a287ba31e94ce0e4152f9214c68d7a78f":[4,0,0,10,34,2],
-"matrix__gain_8h.html":[4,0,0,11,6,13]
+"mathematical__program__result_8h.html#a287ba31e94ce0e4152f9214c68d7a78f":[4,0,0,10,34,2]
 };

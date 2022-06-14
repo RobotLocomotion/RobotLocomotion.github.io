@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"differentiable__norm_8h.html#ae918eb0a5749b337a92058e92bd039c9":[4,0,0,7,9,0],
 "differential__inverse__kinematics_8h.html":[4,0,0,6,2,1],
 "differential__inverse__kinematics_8h.html#a0f13a0a8a0d6f3e8e800b27c50f6f7b8":[4,0,0,6,2,1,7],
 "differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdc":[4,0,0,6,2,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390":[4,0,0,11,3,19,15,0],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a4ee52a6184757eae288c6bfaca2b3cc8":[4,0,0,11,3,19,15,3],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a74e1dac7f98f52df26d510f93c36ae34":[4,0,0,11,3,19,15,6],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9aa4dadcf41a1fb6841557aad7688dc1a4":[4,0,0,11,3,19,15,4],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9af8ece195be5dd5e820bdeee7ad21a4bf":[4,0,0,11,3,19,15,2]
+"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9aa4dadcf41a1fb6841557aad7688dc1a4":[4,0,0,11,3,19,15,4]
 };

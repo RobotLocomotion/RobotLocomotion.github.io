@@ -161,6 +161,7 @@ $(document).ready(function(){initNavTree('stochastic_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -227,6 +228,11 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake_1_1schema"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html">drake::schema</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0611532f6e53d2b3eb39986468ad1399"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399">DRAKE_DECLARE_TEMPLATE_INSTANTIATIONS_ON_ALL_SIZES</a>(Func)</td></tr>
+<tr class="separator:a0611532f6e53d2b3eb39986468ad1399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ab732700b0814fc1fba1b7b8cd80f9e53"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> = std::variant&lt; double, Deterministic, Gaussian, Uniform, UniformDiscrete &gt;</td></tr>
@@ -282,6 +288,26 @@ Functions</h2></td></tr>
 <tr class="memdesc:a4891bbf6ba4372801a10dacfcbbd6172"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code>vec</code> is deterministic, retrieves its value.  <a href="namespacedrake_1_1schema.html#a4891bbf6ba4372801a10dacfcbbd6172">More...</a><br /></td></tr>
 <tr class="separator:a4891bbf6ba4372801a10dacfcbbd6172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a0611532f6e53d2b3eb39986468ad1399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0611532f6e53d2b3eb39986468ad1399">&#9670;&nbsp;</a></span>DRAKE_DECLARE_TEMPLATE_INSTANTIATIONS_ON_ALL_SIZES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_DECLARE_TEMPLATE_INSTANTIATIONS_ON_ALL_SIZES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Func</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">extern</span> <span class="keyword">template</span> Func(<span class="keyword">const</span> <a class="code" href="namespacedrake_1_1schema.html#a57f6c7970d805c54498388c6e47113fa">DistributionVectorVariantX</a>&amp;); \</div><div class="line">  extern <span class="keyword">template</span> Func(<span class="keyword">const</span> DistributionVectorVariant&lt;1&gt;&amp;); \</div><div class="line">  extern <span class="keyword">template</span> Func(<span class="keyword">const</span> DistributionVectorVariant&lt;2&gt;&amp;); \</div><div class="line">  extern <span class="keyword">template</span> Func(<span class="keyword">const</span> DistributionVectorVariant&lt;3&gt;&amp;); \</div><div class="line">  extern <span class="keyword">template</span> Func(<span class="keyword">const</span> DistributionVectorVariant&lt;4&gt;&amp;); \</div><div class="line">  extern <span class="keyword">template</span> Func(<span class="keyword">const</span> DistributionVectorVariant&lt;5&gt;&amp;); \</div><div class="line">  extern <span class="keyword">template</span> Func(<span class="keyword">const</span> DistributionVectorVariant&lt;6&gt;&amp;);</div><div class="ttc" id="namespacedrake_1_1schema_html_a57f6c7970d805c54498388c6e47113fa"><div class="ttname"><a href="namespacedrake_1_1schema.html#a57f6c7970d805c54498388c6e47113fa">drake::schema::DistributionVectorVariantX</a></div><div class="ttdeci">DistributionVectorVariant&lt; Eigen::Dynamic &gt; DistributionVectorVariantX</div><div class="ttdoc">DistributionVectorVariant that permits any vector size dynamically.</div><div class="ttdef"><b>Definition:</b> stochastic.h:483</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

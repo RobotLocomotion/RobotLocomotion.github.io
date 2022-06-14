@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"symbolic__variables_8h.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a":[4,0,0,1,75,3],
+"symbolic__variables_8h.html#ac861cf2992e3fa03746df6ca291c5020":[4,0,0,1,75,6],
 "symbolic__vector__system_8h.html":[4,0,0,11,6,22],
 "symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f":[4,0,0,11,6,22,1],
 "system_8h.html":[4,0,0,11,3,39],

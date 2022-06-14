@@ -246,6 +246,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a854e025ef6b3a037dc0753004dce284a"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a854e025ef6b3a037dc0753004dce284a">EvaluateIndeterminates</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339">indeterminates</a>, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;indeterminates_values) const</td></tr>
 <tr class="memdesc:a854e025ef6b3a037dc0753004dce284a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the polynomial at a batch of indeterminates values.  <a href="#a854e025ef6b3a037dc0753004dce284a">More...</a><br /></td></tr>
 <tr class="separator:a854e025ef6b3a037dc0753004dce284a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e13f6a66d9ab27fcaee2be6b0832c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a50e13f6a66d9ab27fcaee2be6b0832c8">EvaluateWithAffineCoefficients</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339">indeterminates</a>, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;indeterminates_values, Eigen::MatrixXd *A, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a26f55e6d78730b68a8d404a772d4c8a1">decision_variables</a>, Eigen::VectorXd *b) const</td></tr>
+<tr class="memdesc:a50e13f6a66d9ab27fcaee2be6b0832c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the polynomial at a batch of indeterminate values.  <a href="#a50e13f6a66d9ab27fcaee2be6b0832c8">More...</a><br /></td></tr>
+<tr class="separator:a50e13f6a66d9ab27fcaee2be6b0832c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55826a916b7c6f12060f7ff4e590813f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a55826a916b7c6f12060f7ff4e590813f">AddProduct</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;coeff, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
 <tr class="memdesc:a55826a916b7c6f12060f7ff4e590813f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code>coeff</code> * <code>m</code> to this polynomial.  <a href="#a55826a916b7c6f12060f7ff4e590813f">More...</a><br /></td></tr>
 <tr class="separator:a55826a916b7c6f12060f7ff4e590813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -791,7 +794,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>polynomial_values polynomial_values(j) is obtained by substituting indeterminates(i) in this polynomial with indeterminates_values(i, j) for all i. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">error</td><td>if any coefficient in this polynomial is not a constant. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any coefficient in this polynomial is not a constant. </td></tr>
   </table>
   </dd>
 </dl>
@@ -854,6 +857,70 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if NaN is detected at any point during evaluation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50e13f6a66d9ab27fcaee2be6b0832c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e13f6a66d9ab27fcaee2be6b0832c8">&#9670;&nbsp;</a></span>EvaluateWithAffineCoefficients()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EvaluateWithAffineCoefficients </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>indeterminates</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indeterminates_values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixXd *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *&#160;</td>
+          <td class="paramname"><em>decision_variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::VectorXd *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the polynomial at a batch of indeterminate values. </p>
+<p>For a polynomial whose coefficients are affine expressions of decision variables, we evaluate this polynomial on a batch of indeterminate values, and return the matrix representation of the evaluated affine expressions. For example if p(x) = (a+1)x² + b*x where a, b are decision variables, if we evaluate this polynomial on x = 1 and x = 2, then p(x) = a+b+1 and 4a+2b+4 respectively. We return the evaluation result as A * decision_variables + b, where A.row(i) * decision_variables + b(i) is the evaluation of the polynomial on indeterminates_values.col(i). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates</td><td>Must include all this-&gt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates_values</td><td>A matrix representing a batch of values. Each column of <code>indeterminates_values</code> stores one specific value of <code>indeterminates</code>, where indeterminates_values.rows() == indeterminates.rows(). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">A</td><td>The coefficient of the evaluation results. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">decision_variables</td><td>The decision variables in the evaluation results. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>The constant terms in the evaluation results. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the coefficients of this polynomial is not an affine expression of its decision variables. For example, the polynomial (2+sin(a)) * x² + 1 (where <code>a</code> is a decision variable and <code>x</code> is a indeterminate) doesn't have affine expression as its coefficient 2+sin(a). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1283,8 +1350,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adeaa4f722744d397b42ff26f50f443bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeaa4f722744d397b42ff26f50f443bf">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ab168243ddedae6540dc7fe18e0fd6f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab168243ddedae6540dc7fe18e0fd6f53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1295,7 +1362,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1309,8 +1376,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab168243ddedae6540dc7fe18e0fd6f53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab168243ddedae6540dc7fe18e0fd6f53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="adeaa4f722744d397b42ff26f50f443bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeaa4f722744d397b42ff26f50f443bf">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1321,7 +1388,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"classdrake_1_1systems_1_1_publish_event.html#ae8817c2973f85c578ff7faa8b33a5a5c":[3,0,0,14,81,9],
 "classdrake_1_1systems_1_1_radau_integrator.html":[1,4,0,0,4],
 "classdrake_1_1systems_1_1_radau_integrator.html#a447328b1aaa3ed12450855b792983d24":[1,4,0,0,4,4],
 "classdrake_1_1systems_1_1_radau_integrator.html#a4e834929f0e6ecb3977e2d1b76ccf64a":[1,4,0,0,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "classdrake_1_1systems_1_1_spring_mass_system.html#ad427d817a0c728995b90a4176febcd56":[3,0,0,14,99,12],
 "classdrake_1_1systems_1_1_state.html":[3,0,0,14,100],
 "classdrake_1_1systems_1_1_state.html#a148d3864f35c71287e491482722a8c61":[3,0,0,14,100,21],
-"classdrake_1_1systems_1_1_state.html#a14e7b568c69d3e9a1978962ec008138c":[3,0,0,14,100,0],
-"classdrake_1_1systems_1_1_state.html#a1b3f9382208d13e11984a54afa711577":[3,0,0,14,100,14]
+"classdrake_1_1systems_1_1_state.html#a14e7b568c69d3e9a1978962ec008138c":[3,0,0,14,100,0]
 };

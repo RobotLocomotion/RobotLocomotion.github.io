@@ -9,6 +9,7 @@ var stochastic_8h =
     [ "DeterministicVector", "classdrake_1_1schema_1_1_deterministic_vector.html", "classdrake_1_1schema_1_1_deterministic_vector" ],
     [ "GaussianVector", "classdrake_1_1schema_1_1_gaussian_vector.html", "classdrake_1_1schema_1_1_gaussian_vector" ],
     [ "UniformVector", "classdrake_1_1schema_1_1_uniform_vector.html", "classdrake_1_1schema_1_1_uniform_vector" ],
+    [ "DRAKE_DECLARE_TEMPLATE_INSTANTIATIONS_ON_ALL_SIZES", "stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399", null ],
     [ "DistributionVariant", "stochastic_8h.html#ab732700b0814fc1fba1b7b8cd80f9e53", null ],
     [ "DistributionVectorVariant", "stochastic_8h.html#a8b9d55ffdd90faf10f12f1e79f3c13a1", null ],
     [ "DistributionVectorVariantX", "stochastic_8h.html#a57f6c7970d805c54498388c6e47113fa", null ],

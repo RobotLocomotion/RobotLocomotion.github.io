@@ -1,11 +1,13 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,1,1,6,2],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,5,4,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,5,4,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,6,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,4,6,4],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,1,1,6,3],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,5,4,6,0],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,1,1,6,0],
 "structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,3,36],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43":[3,0,0,8,4,6,5],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,4,6,0],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[3,0,0,8,4,7],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a21a8a03c07311e67bcc453bb4fb65f27":[3,0,0,8,4,7,2],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,4,7,1],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,4,7,0]
+"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a21a8a03c07311e67bcc453bb4fb65f27":[3,0,0,8,4,7,2]
 };

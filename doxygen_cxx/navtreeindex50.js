@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,4,7,1],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,4,7,0],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html":[3,0,0,8,4,8],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a0f773326ce535b58f3616669dcfa68c1":[3,0,0,8,4,8,1],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b":[3,0,0,8,4,8,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,14,1,1,1],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a6aa3dc95330ca350010af07f6fc6a3d9":[3,0,0,14,1,1,6],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a758aa200c389c79a6726265a8a3ec559":[3,0,0,14,1,1,7],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#ae1eeea98f1866116ac3f5765a855daef":[3,0,0,14,1,1,5],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#ae5b6c59565e02e83dbb2fc7bcfce9234":[3,0,0,14,1,1,3],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#affa193ce61ecf0e83c9b547014a4675b":[3,0,0,14,1,1,0]
+"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#ae1eeea98f1866116ac3f5765a855daef":[3,0,0,14,1,1,5]
 };
