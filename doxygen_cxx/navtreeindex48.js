@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"simulator_8h.html":[4,0,0,11,0,21],
+"simulator__config_8h.html":[4,0,0,11,0,22],
+"simulator__config__functions_8h.html":[4,0,0,11,0,23],
 "simulator__config__functions_8h.html#ga00b67f54aba155c982e8a1038278eed6":[4,0,0,11,0,23,1],
 "simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a":[4,0,0,11,0,23,2],
 "simulator__config__functions_8h.html#ga9aad0aa8b134eb63118bc3b38821977f":[4,0,0,11,0,23,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,3,48,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,4,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,6,1],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,6,1],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,6,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,4,6,6]
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,6,1]
 };

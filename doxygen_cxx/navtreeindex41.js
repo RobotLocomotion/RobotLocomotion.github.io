@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"diagram__state_8h.html":[4,0,0,11,3,17],
+"differentiable__norm_8h.html":[4,0,0,7,9],
 "differentiable__norm_8h.html#ae918eb0a5749b337a92058e92bd039c9":[4,0,0,7,9,0],
 "differential__inverse__kinematics_8h.html":[4,0,0,6,2,1],
 "differential__inverse__kinematics_8h.html#a0f13a0a8a0d6f3e8e800b27c50f6f7b8":[4,0,0,6,2,1,7],
@@ -167,6 +169,7 @@ var NAVTREEINDEX41 =
 "drake__lcm__interface_8h.html#a7f10e39fd5048940095d76f21bdf760d":[4,0,0,5,1,4],
 "drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,1,5],
 "drake__lcm__log_8h.html":[4,0,0,5,2],
+"drake__lcm__params_8h.html":[4,0,0,5,3],
 "drake__marker_8h.html":[4,0,0,1,22],
 "drake__path_8h.html":[4,0,0,1,23],
 "drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,23,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX41 =
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9":[4,0,0,11,3,19,15],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a04a6eca450c24af0269212fb90c57d9f":[4,0,0,11,3,19,15,5],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a1800fd44ac807b793ceba2dd9cef1e25":[4,0,0,11,3,19,15,1],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390":[4,0,0,11,3,19,15,0],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a4ee52a6184757eae288c6bfaca2b3cc8":[4,0,0,11,3,19,15,3],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a74e1dac7f98f52df26d510f93c36ae34":[4,0,0,11,3,19,15,6],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9aa4dadcf41a1fb6841557aad7688dc1a4":[4,0,0,11,3,19,15,4]
+"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390":[4,0,0,11,3,19,15,0]
 };

@@ -280,13 +280,13 @@ variable’s index in a linear combination.</p>
 1. <code class="docutils literal notranslate"><span class="pre">coeffs</span></code> is a row vector of double, whose length matches with the size of
 <code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code>.
 2. e.is_polynomial() is true.
-3. e is an affine expression.</p>
+3. e is an affine expression.
+4. all values in <code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code> should be in the range [0,
+map_var_to_index.size())</p>
 <blockquote>
-<div>$Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</div></blockquote>
-<p>An Eigen row vector type with Derived::Scalar == double.</p>
+<div>$Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</div></blockquote>
+<p>The symbolic affine expression</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
-<dd>The symbolic affine expression</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code>:</dt>
 <dd>A mapping from variable ID to variable index, such that
 map_var_to_index[vi.get_ID()] = i.</dd>

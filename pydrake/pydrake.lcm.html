@@ -225,19 +225,17 @@ or else LCM_DEFAULT_URL environment variable if it is set).</p>
 <p>Constructs using the given URL. If empty, it will use the default URL
 as per the no-argument constructor.</p>
 <ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.lcm.DrakeLcm, params: pydrake.lcm.DrakeLcmParams) -&gt; None</li>
+</ol>
+<p>Constructs using the given parameters.</p>
+<ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.lcm.DrakeLcm, lcm_url: str, defer_initialization: bool) -&gt; None</li>
 </ol>
-<p>(Advanced) Constructs using the given URL, but with the ability to
-defer launching the receive thread.</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">defer_initialization</span></code>:</dt>
-<dd>controls whether or not LCM’s background receive thread will be
-launched immediately during the constructor (when false) or
-deferred until the first time it’s needed (when true). This can be
-useful if the scheduling configuration for new threads varies
-between the construction time and first use. For other constructor
-overloads, this setting defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code> – the thread is
-launched immediately.</dd>
+<dt>Deprecated:</dt>
+<dd>Use DrakeLcmParams instead. This will be removed from Drake on or
+after 2022-10-01.</dd>
 </dl>
 </dd></dl>
 
@@ -313,6 +311,46 @@ publish.</dd>
 <dd>Time in seconds when the publish event occurred. If unknown, use
 nullopt or a default-constructed optional.</dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.lcm.DrakeLcmParams">
+<em class="property">class </em><code class="descclassname">pydrake.lcm.</code><code class="descname">DrakeLcmParams</code><a class="headerlink" href="#pydrake.lcm.DrakeLcmParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of parameters for configuring DrakeLcm.</p>
+<dl class="method">
+<dt id="pydrake.lcm.DrakeLcmParams.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcmParams</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeLcmParams.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.lcm.DrakeLcmParams.channel_suffix">
+<code class="descname">channel_suffix</code><a class="headerlink" href="#pydrake.lcm.DrakeLcmParams.channel_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>The custom LCM channel name suffix for this DrakeLcm instance
+(optional).</p>
+<p>When provided, calls to DrakeLcm::Publish() or DrakeLcm::Subscribe()
+will append this string to the <code class="docutils literal notranslate"><span class="pre">channel</span></code> name requested for publish
+or subscribe.</p>
+<p>This has no effect on DrakeLcm::SubscribeAllChannels(); the channel
+names reported there will remain unmodified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.lcm.DrakeLcmParams.defer_initialization">
+<code class="descname">defer_initialization</code><a class="headerlink" href="#pydrake.lcm.DrakeLcmParams.defer_initialization" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Controls whether or not LCM’s background receive thread
+will be launched immediately during the constructor (when false) or
+deferred until the first time it’s needed (when true). This can be
+useful if the scheduling configuration for new threads varies between
+the construction time and first use.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.lcm.DrakeLcmParams.lcm_url">
+<code class="descname">lcm_url</code><a class="headerlink" href="#pydrake.lcm.DrakeLcmParams.lcm_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL for DrakeLcm communication. If empty, DrakeLcm will use the
+default URL per the DrakeLcm::DrakeLcm() no-argument constructor.</p>
 </dd></dl>
 
 </dd></dl>

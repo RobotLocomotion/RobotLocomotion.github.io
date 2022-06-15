@@ -157,6 +157,7 @@ var hierarchy =
       [ "DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html", null ],
       [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html", null ]
     ] ],
+    [ "DrakeLcmParams", "structdrake_1_1lcm_1_1_drake_lcm_params.html", null ],
     [ "DrakeSubscriptionInterface", "classdrake_1_1lcm_1_1_drake_subscription_interface.html", null ],
     [ "DrakeVisualizerParams", "structdrake_1_1geometry_1_1_drake_visualizer_params.html", null ],
     [ "DrakeVisualizerTest< T >", "classdrake_1_1geometry_1_1_drake_visualizer_test.html", null ],

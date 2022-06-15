@@ -1,0 +1,460 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: DrakeLcmParams Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1lcm_1_1_drake_lcm_params.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1lcm_1_1_drake_lcm_params-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">DrakeLcmParams Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The set of parameters for configuring <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a>. </p>
+</div>
+<p><code>#include &lt;drake/lcm/drake_lcm_params.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a19eae985602c0395ed95a845a2a556b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#a19eae985602c0395ed95a845a2a556b7">DrakeLcmParams</a> ()=default</td></tr>
+<tr class="separator:a19eae985602c0395ed95a845a2a556b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0921806fe2d1179fbe09f1e89d202ec3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#a0921806fe2d1179fbe09f1e89d202ec3">~DrakeLcmParams</a> ()</td></tr>
+<tr class="separator:a0921806fe2d1179fbe09f1e89d202ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ab276558b821fb88938d2e4892cce7126"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#ab276558b821fb88938d2e4892cce7126">DrakeLcmParams</a> (const <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;)=default</td></tr>
+<tr class="separator:ab276558b821fb88938d2e4892cce7126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d2c5fedc30a5dee61a65943eb9da43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#aa9d2c5fedc30a5dee61a65943eb9da43">operator=</a> (const <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;)=default</td></tr>
+<tr class="separator:aa9d2c5fedc30a5dee61a65943eb9da43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b89776b00ec403700ec104cf028e2dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#a8b89776b00ec403700ec104cf028e2dd">DrakeLcmParams</a> (<a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a8b89776b00ec403700ec104cf028e2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52859b360288cd6114da03f78499c162"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#a52859b360288cd6114da03f78499c162">operator=</a> (<a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a52859b360288cd6114da03f78499c162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2afa576ab76689448a15ea95d2d5a531"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#a2afa576ab76689448a15ea95d2d5a531">lcm_url</a></td></tr>
+<tr class="memdesc:a2afa576ab76689448a15ea95d2d5a531"><td class="mdescLeft">&#160;</td><td class="mdescRight">The URL for <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a> communication.  <a href="#a2afa576ab76689448a15ea95d2d5a531">More...</a><br /></td></tr>
+<tr class="separator:a2afa576ab76689448a15ea95d2d5a531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3cd86f8dad96e5b855989cc6ae05da"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#aff3cd86f8dad96e5b855989cc6ae05da">channel_suffix</a></td></tr>
+<tr class="memdesc:aff3cd86f8dad96e5b855989cc6ae05da"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom LCM channel name suffix for this <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a> instance (optional).  <a href="#aff3cd86f8dad96e5b855989cc6ae05da">More...</a><br /></td></tr>
+<tr class="separator:aff3cd86f8dad96e5b855989cc6ae05da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3088c7d186c65efc9139b0d9d5772c4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html#a3088c7d186c65efc9139b0d9d5772c4a">defer_initialization</a> {false}</td></tr>
+<tr class="memdesc:a3088c7d186c65efc9139b0d9d5772c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Controls whether or not LCM's background receive thread will be launched immediately during the constructor (when false) or deferred until the first time it's needed (when true).  <a href="#a3088c7d186c65efc9139b0d9d5772c4a">More...</a><br /></td></tr>
+<tr class="separator:a3088c7d186c65efc9139b0d9d5772c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab276558b821fb88938d2e4892cce7126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab276558b821fb88938d2e4892cce7126">&#9670;&nbsp;</a></span>DrakeLcmParams() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b89776b00ec403700ec104cf028e2dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b89776b00ec403700ec104cf028e2dd">&#9670;&nbsp;</a></span>DrakeLcmParams() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19eae985602c0395ed95a845a2a556b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19eae985602c0395ed95a845a2a556b7">&#9670;&nbsp;</a></span>DrakeLcmParams() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0921806fe2d1179fbe09f1e89d202ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0921806fe2d1179fbe09f1e89d202ec3">&#9670;&nbsp;</a></span>~DrakeLcmParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa9d2c5fedc30a5dee61a65943eb9da43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d2c5fedc30a5dee61a65943eb9da43">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52859b360288cd6114da03f78499c162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52859b360288cd6114da03f78499c162">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aff3cd86f8dad96e5b855989cc6ae05da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff3cd86f8dad96e5b855989cc6ae05da">&#9670;&nbsp;</a></span>channel_suffix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string channel_suffix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The custom LCM channel name suffix for this <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a> instance (optional). </p>
+<p>When provided, calls to <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991" title="Most users should use the drake::lcm::Publish() free function, instead of this interface method.">DrakeLcm::Publish()</a> or <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a1d46824a3a1490cb7f43e75d01575003" title="Most users should use the drake::lcm::Subscribe() free function or the drake::lcm::Subscriber wrapper...">DrakeLcm::Subscribe()</a> will append this string to the <code>channel</code> name requested for publish or subscribe.</p>
+<p>This has no effect on <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a85767dac8b9304854190439c7dcdf7b3" title="Subscribe to all channels; this is useful for logging and redirecting LCM traffic without regard to i...">DrakeLcm::SubscribeAllChannels()</a>; the channel names reported there will remain unmodified. </p>
+
+</div>
+</div>
+<a id="a3088c7d186c65efc9139b0d9d5772c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3088c7d186c65efc9139b0d9d5772c4a">&#9670;&nbsp;</a></span>defer_initialization</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool defer_initialization {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Controls whether or not LCM's background receive thread will be launched immediately during the constructor (when false) or deferred until the first time it's needed (when true). </p>
+<p>This can be useful if the scheduling configuration for new threads varies between the construction time and first use. </p>
+
+</div>
+</div>
+<a id="a2afa576ab76689448a15ea95d2d5a531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2afa576ab76689448a15ea95d2d5a531">&#9670;&nbsp;</a></span>lcm_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lcm_url</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The URL for <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a> communication. </p>
+<p>If empty, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a> will use the default URL per the <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a715527eb52d67dfc6e8c7b740e3b9d61" title="Constructs using LCM&#39;s default URL (either the default hard-coded URL, or else LCM_DEFAULT_URL enviro...">DrakeLcm::DrakeLcm()</a> no-argument constructor. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/lcm/<a class="el" href="drake__lcm__params_8h.html">drake_lcm_params.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1lcm.html">lcm</a></li><li class="navelem"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

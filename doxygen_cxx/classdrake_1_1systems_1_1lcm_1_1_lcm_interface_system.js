@@ -3,6 +3,7 @@ var classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system =
     [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a3ff879f0c982a300345662b9f30f9f52", null ],
     [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#afbcead408e6a5f9fe64af4b8941b36f0", null ],
     [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a97e202906a6053532f14d82d9b584a2c", null ],
+    [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a0645179f3b5d8be97785b8405269f67c", null ],
     [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a1e5a9b125fa84f1c13cabed2e9e5d85f", null ],
     [ "~LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a57794be791f7bb9fae7ed4fd42453315", null ],
     [ "get_lcm_url", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a58ffc29be696f46957f858506550bc75", null ],

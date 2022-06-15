@@ -54,6 +54,7 @@ var searchData=
   ['drakelcm',['DrakeLcm',['../classdrake_1_1lcm_1_1_drake_lcm.html',1,'drake::lcm']]],
   ['drakelcminterface',['DrakeLcmInterface',['../classdrake_1_1lcm_1_1_drake_lcm_interface.html',1,'drake::lcm']]],
   ['drakelcmlog',['DrakeLcmLog',['../classdrake_1_1lcm_1_1_drake_lcm_log.html',1,'drake::lcm']]],
+  ['drakelcmparams',['DrakeLcmParams',['../structdrake_1_1lcm_1_1_drake_lcm_params.html',1,'drake::lcm']]],
   ['drakesubscriptioninterface',['DrakeSubscriptionInterface',['../classdrake_1_1lcm_1_1_drake_subscription_interface.html',1,'drake::lcm']]],
   ['drakevisualizer',['DrakeVisualizer',['../classdrake_1_1geometry_1_1_drake_visualizer.html',1,'drake::geometry']]],
   ['drakevisualizerparams',['DrakeVisualizerParams',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html',1,'drake::geometry']]],
