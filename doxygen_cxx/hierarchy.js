@@ -467,8 +467,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
+    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -630,7 +630,6 @@ var hierarchy =
     [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html", null ],
     [ "RiccatiLinearSolver", "classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html", null ],
     [ "RigidTransform< T >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
-    [ "RigidTransform< AutoDiffXd >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RigidTransform< double >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RlocationOrError", "structdrake_1_1_rlocation_or_error.html", null ],
     [ "RollPitchYaw< T >", "classdrake_1_1math_1_1_roll_pitch_yaw.html", null ],
@@ -642,7 +641,6 @@ var hierarchy =
       [ "UnitInertia< double >", "classdrake_1_1multibody_1_1_unit_inertia.html", null ]
     ] ],
     [ "RotationMatrix< T >", "classdrake_1_1math_1_1_rotation_matrix.html", null ],
-    [ "RotationMatrix< AutoDiffXd >", "classdrake_1_1math_1_1_rotation_matrix.html", null ],
     [ "RotationMatrix< double >", "classdrake_1_1math_1_1_rotation_matrix.html", null ],
     [ "Rotation::Rpy", "structdrake_1_1schema_1_1_rotation_1_1_rpy.html", null ],
     [ "scalar_predicate< T >", "structdrake_1_1scalar__predicate.html", null ],

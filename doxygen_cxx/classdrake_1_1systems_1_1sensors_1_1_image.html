@@ -176,7 +176,7 @@ class drake::systems::sensors::Image&lt; kPixelType &gt;</h3>
 <p>The origin of image coordinate system is on the left-upper corner.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">kPixelType</td><td>The pixel type enum that denotes the pixel format and the data type of a channel. </td></tr>
+    <tr><td class="paramname">kPixelType</td><td>The pixel type enum that denotes the pixel format and the data type of a channel. TODO(zachfang): move most of the function definitions in this class to the .cc file. </td></tr>
   </table>
   </dd>
 </dl>
@@ -224,6 +224,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae0d0fb11c38bb3141999d478ee1f814"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html#a8d35b0ffaf9e8758fd249ed726e4f7d8">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html#aae0d0fb11c38bb3141999d478ee1f814">at</a> (<a class="el" href="classint.html">int</a> x, <a class="el" href="classint.html">int</a> y) const</td></tr>
 <tr class="memdesc:aae0d0fb11c38bb3141999d478ee1f814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const version of <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html#a1950eac0081009de55c31671d31a876e" title="Access to the pixel located at (x, y) in image coordinate system where x is the variable for horizont...">at()</a> method.  <a href="#aae0d0fb11c38bb3141999d478ee1f814">More...</a><br /></td></tr>
 <tr class="separator:aae0d0fb11c38bb3141999d478ee1f814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16f69a51a4c8238d44ea1d3ee0683c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html#ac16f69a51a4c8238d44ea1d3ee0683c3">operator==</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a> &amp;other) const</td></tr>
+<tr class="memdesc:ac16f69a51a4c8238d44ea1d3ee0683c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares whether two images are exactly the same.  <a href="#ac16f69a51a4c8238d44ea1d3ee0683c3">More...</a><br /></td></tr>
+<tr class="separator:ac16f69a51a4c8238d44ea1d3ee0683c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a2338c4484ceb8bfeb5461f6b15827432"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html#a2338c4484ceb8bfeb5461f6b15827432">Image</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a> &amp;)=default</td></tr>
 <tr class="separator:a2338c4484ceb8bfeb5461f6b15827432"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -539,8 +542,34 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6fb996b03aacc705c967a2e759fca69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb996b03aacc705c967a2e759fca69d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aab0657a721c0c664d071c49c66c3281d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab0657a721c0c664d071c49c66c3281d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0657a721c0c664d071c49c66c3281d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -565,29 +594,23 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6fb996b03aacc705c967a2e759fca69d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fb996b03aacc705c967a2e759fca69d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ac16f69a51a4c8238d44ea1d3ee0683c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16f69a51a4c8238d44ea1d3ee0683c3">&#9670;&nbsp;</a></span>operator==()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&amp; operator= </td>
+          <td class="memname">bool operator== </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Compares whether two images are exactly the same. </p>
 
 </div>
 </div>

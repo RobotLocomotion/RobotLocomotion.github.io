@@ -29,6 +29,7 @@ var group__systems =
       [ "collision_filter_manager", "classdrake_1_1geometry_1_1_scene_graph.html#a76a5871dd4432de7e8225f334765729f", null ],
       [ "collision_filter_manager", "classdrake_1_1geometry_1_1_scene_graph.html#a3d5bf882337dfed524c1da91fb96f618", null ],
       [ "get_query_output_port", "classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4", null ],
+      [ "get_source_configuration_port", "classdrake_1_1geometry_1_1_scene_graph.html#a14fe2ae2ffcc6ef39c82b2ebf2561e9d", null ],
       [ "get_source_pose_port", "classdrake_1_1geometry_1_1_scene_graph.html#af6a9586065e37f08cc0dd316e9bdd480", null ],
       [ "HasRenderer", "classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db", null ],
       [ "model_inspector", "classdrake_1_1geometry_1_1_scene_graph.html#a503a5f4ba34cf182f67427e63ff48754", null ],

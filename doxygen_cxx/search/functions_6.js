@@ -457,6 +457,7 @@ var searchData=
   ['get_5fsolver_5fdetails',['get_solver_details',['../classdrake_1_1solvers_1_1_mathematical_program_result.html#a5b8dd00dcf89c4a841c058b6b4427c12',1,'drake::solvers::MathematicalProgramResult']]],
   ['get_5fsolver_5fid',['get_solver_id',['../classdrake_1_1solvers_1_1_mathematical_program_result.html#a08eae785a81fe46335b4ad6cb962eb74',1,'drake::solvers::MathematicalProgramResult']]],
   ['get_5fsolver_5fparameters',['get_solver_parameters',['../classdrake_1_1multibody_1_1_tamsi_solver.html#a2b0757e26068ec7a7431656263668124',1,'drake::multibody::TamsiSolver']]],
+  ['get_5fsource_5fconfiguration_5fport',['get_source_configuration_port',['../classdrake_1_1geometry_1_1_scene_graph.html#a14fe2ae2ffcc6ef39c82b2ebf2561e9d',1,'drake::geometry::SceneGraph']]],
   ['get_5fsource_5fid',['get_source_id',['../classdrake_1_1multibody_1_1_multibody_plant.html#a0e13ba788ae1f46c3a847b025a5f0347',1,'drake::multibody::MultibodyPlant']]],
   ['get_5fsource_5foutput_5fport',['get_source_output_port',['../classdrake_1_1systems_1_1_diagram_output_port.html#abc4ee41dd256ed981a387c36a21f666a',1,'drake::systems::DiagramOutputPort']]],
   ['get_5fsource_5fpose_5fport',['get_source_pose_port',['../classdrake_1_1geometry_1_1_scene_graph.html#af6a9586065e37f08cc0dd316e9bdd480',1,'drake::geometry::SceneGraph']]],

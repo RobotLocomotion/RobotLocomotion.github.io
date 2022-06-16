@@ -9993,7 +9993,7 @@ controlled by one LeafSystem can be observed by a different sensor
 system). SceneGraph provides the interface for registering the
 geometry, updating its position based on the current context, and
 performing geometric queries.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_configuration&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
 name begins with &lt;em style=”color:gray”&gt;(source name)&lt;/em&gt;.</p>
 <p>Only registered “geometry sources” can introduce geometry into
 SceneGraph. Geometry sources will typically be other leaf systems,
@@ -10013,12 +10013,12 @@ ports.</p>
 </ul>
 <p>input ports.
 - Implement appropriate <code class="docutils literal notranslate"><span class="pre">Calc*</span></code> methods on the geometry output ports to
-update geometry pose values.</p>
+update geometry pose/configuration values.</p>
 <p>For each registered geometry source, there is one input port for each
-order of kinematics values (e.g., pose, velocity, and acceleration).
-If a source registers a frame, it must connect to these ports
-(although, in the current version, only pose is supported). Failure to
-connect to the port (or to provide valid kinematics values) will lead
+order of kinematics values (e.g., pose, velocity, acceleration, and
+configuration). If a source registers a frame or a deformable
+geometry, it must connect to the corresponding ports. Failure to
+connect to the ports (or to provide valid kinematics values) will lead
 to runtime exceptions.</p>
 <p><strong>pose port</strong>: An abstract-valued port providing an instance of
 FramePoseVector. For each registered frame, this “pose vector” maps
@@ -10026,6 +10026,13 @@ the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
 in its output port. See the details in KinematicsVector for details on
 how to provide values for this port.</p>
+<p><strong>configuration port</strong>: An abstract-valued port providing an instance
+of GeometryConfigurationVector. For each registered deformable
+geometry, this “configuration vector” maps the registered GeometryId
+to its world space configuration (i.e. the vertex positions of its
+mesh representation in the world frame). All registered deformable
+geometries must be accounted for and only geometries registered by a
+source can be included in its output port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -10104,15 +10111,19 @@ frame. As such, registering a frame is <em>not</em> required for registering
 anchored geometry (see GeometrySource::RegisterAnchoredGeometry()).
 However, the source still “owns” the anchored geometry.</p>
 <p><em>Updating Kinematics</em></p>
-<p>Registering <em>dynamic</em> geometry implies a contract between the geometry
-source and SceneGraph. The geometry source must do the following: - It
-must provide, populate, and connect two output ports: the “id” port
-and the “pose” port. - The id port must contain <em>all</em> the frame ids
-returned as a result of frame registration. - The pose port must
-contain one pose per registered frame; the pose value is expressed
-relative to the registered frame’s <em>parent</em> frame. As mentioned above,
-the iᵗʰ pose value should describe the frame indicated by the iᵗʰ id
-in the id output port.</p>
+<p>Registering <em>dynamic</em> non-deformable geometry implies a contract
+between the geometry source and SceneGraph. The geometry source must
+do the following: - It must provide, populate, and connect two output
+ports: the “id” port and the “pose” port. - The id port must contain
+<em>all</em> the frame ids returned as a result of frame registration. - The
+pose port must contain one pose per registered frame; the pose value
+is expressed relative to the registered frame’s <em>parent</em> frame. As
+mentioned above, the iᵗʰ pose value should describe the frame
+indicated by the iᵗʰ id in the id output port.</p>
+<p>Similarly, if it registers deformable geometries, the geometry source
+must provide, populate, and connect the “configuration” port. The
+configuration port must contain a vector of vertex positions per
+registered deformable geometry.</p>
 <p>Failure to meet these requirements will lead to a run-time error.</p>
 <p>Many (and eventually all) methods that configure the population of
 SceneGraph have two variants that differ by whether they accept a
@@ -10571,9 +10582,13 @@ in the provided context.</p>
 save the returned SourceId; it is the token by which all other
 operations on the geometry world are conducted.</p>
 <p>This source id can be used to register arbitrary <em>anchored</em> geometry.
-But if dynamic geometry is registered (via
-RegisterGeometry/RegisterFrame), then the context-dependent pose
+But if dynamic non-deformable geometry is registered (via
+RegisterGeometry/RegisterFrame), then the Context-dependent pose
 values must be provided on an input port. See get_source_pose_port().</p>
+<p>Similarly, if deformable geometry (always dynamic) is registered (via
+RegisterDeformableGeometry), then the Context-dependent configuration
+values must be provided on an input port. See
+get_source_configuration_port().</p>
 <p>This method modifies the underlying model and requires a new Context
 to be allocated.</p>
 <dl class="docutils">
@@ -10692,7 +10707,7 @@ controlled by one LeafSystem can be observed by a different sensor
 system). SceneGraph provides the interface for registering the
 geometry, updating its position based on the current context, and
 performing geometric queries.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_configuration&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
 name begins with &lt;em style=”color:gray”&gt;(source name)&lt;/em&gt;.</p>
 <p>Only registered “geometry sources” can introduce geometry into
 SceneGraph. Geometry sources will typically be other leaf systems,
@@ -10712,12 +10727,12 @@ ports.</p>
 </ul>
 <p>input ports.
 - Implement appropriate <code class="docutils literal notranslate"><span class="pre">Calc*</span></code> methods on the geometry output ports to
-update geometry pose values.</p>
+update geometry pose/configuration values.</p>
 <p>For each registered geometry source, there is one input port for each
-order of kinematics values (e.g., pose, velocity, and acceleration).
-If a source registers a frame, it must connect to these ports
-(although, in the current version, only pose is supported). Failure to
-connect to the port (or to provide valid kinematics values) will lead
+order of kinematics values (e.g., pose, velocity, acceleration, and
+configuration). If a source registers a frame or a deformable
+geometry, it must connect to the corresponding ports. Failure to
+connect to the ports (or to provide valid kinematics values) will lead
 to runtime exceptions.</p>
 <p><strong>pose port</strong>: An abstract-valued port providing an instance of
 FramePoseVector. For each registered frame, this “pose vector” maps
@@ -10725,6 +10740,13 @@ the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
 in its output port. See the details in KinematicsVector for details on
 how to provide values for this port.</p>
+<p><strong>configuration port</strong>: An abstract-valued port providing an instance
+of GeometryConfigurationVector. For each registered deformable
+geometry, this “configuration vector” maps the registered GeometryId
+to its world space configuration (i.e. the vertex positions of its
+mesh representation in the world frame). All registered deformable
+geometries must be accounted for and only geometries registered by a
+source can be included in its output port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -10803,15 +10825,19 @@ frame. As such, registering a frame is <em>not</em> required for registering
 anchored geometry (see GeometrySource::RegisterAnchoredGeometry()).
 However, the source still “owns” the anchored geometry.</p>
 <p><em>Updating Kinematics</em></p>
-<p>Registering <em>dynamic</em> geometry implies a contract between the geometry
-source and SceneGraph. The geometry source must do the following: - It
-must provide, populate, and connect two output ports: the “id” port
-and the “pose” port. - The id port must contain <em>all</em> the frame ids
-returned as a result of frame registration. - The pose port must
-contain one pose per registered frame; the pose value is expressed
-relative to the registered frame’s <em>parent</em> frame. As mentioned above,
-the iᵗʰ pose value should describe the frame indicated by the iᵗʰ id
-in the id output port.</p>
+<p>Registering <em>dynamic</em> non-deformable geometry implies a contract
+between the geometry source and SceneGraph. The geometry source must
+do the following: - It must provide, populate, and connect two output
+ports: the “id” port and the “pose” port. - The id port must contain
+<em>all</em> the frame ids returned as a result of frame registration. - The
+pose port must contain one pose per registered frame; the pose value
+is expressed relative to the registered frame’s <em>parent</em> frame. As
+mentioned above, the iᵗʰ pose value should describe the frame
+indicated by the iᵗʰ id in the id output port.</p>
+<p>Similarly, if it registers deformable geometries, the geometry source
+must provide, populate, and connect the “configuration” port. The
+configuration port must contain a vector of vertex positions per
+registered deformable geometry.</p>
 <p>Failure to meet these requirements will lead to a run-time error.</p>
 <p>Many (and eventually all) methods that configure the population of
 SceneGraph have two variants that differ by whether they accept a
@@ -11270,9 +11296,13 @@ in the provided context.</p>
 save the returned SourceId; it is the token by which all other
 operations on the geometry world are conducted.</p>
 <p>This source id can be used to register arbitrary <em>anchored</em> geometry.
-But if dynamic geometry is registered (via
-RegisterGeometry/RegisterFrame), then the context-dependent pose
+But if dynamic non-deformable geometry is registered (via
+RegisterGeometry/RegisterFrame), then the Context-dependent pose
 values must be provided on an input port. See get_source_pose_port().</p>
+<p>Similarly, if deformable geometry (always dynamic) is registered (via
+RegisterDeformableGeometry), then the Context-dependent configuration
+values must be provided on an input port. See
+get_source_configuration_port().</p>
 <p>This method modifies the underlying model and requires a new Context
 to be allocated.</p>
 <dl class="docutils">
@@ -11389,7 +11419,7 @@ controlled by one LeafSystem can be observed by a different sensor
 system). SceneGraph provides the interface for registering the
 geometry, updating its position based on the current context, and
 performing geometric queries.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_configuration&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
 name begins with &lt;em style=”color:gray”&gt;(source name)&lt;/em&gt;.</p>
 <p>Only registered “geometry sources” can introduce geometry into
 SceneGraph. Geometry sources will typically be other leaf systems,
@@ -11409,12 +11439,12 @@ ports.</p>
 </ul>
 <p>input ports.
 - Implement appropriate <code class="docutils literal notranslate"><span class="pre">Calc*</span></code> methods on the geometry output ports to
-update geometry pose values.</p>
+update geometry pose/configuration values.</p>
 <p>For each registered geometry source, there is one input port for each
-order of kinematics values (e.g., pose, velocity, and acceleration).
-If a source registers a frame, it must connect to these ports
-(although, in the current version, only pose is supported). Failure to
-connect to the port (or to provide valid kinematics values) will lead
+order of kinematics values (e.g., pose, velocity, acceleration, and
+configuration). If a source registers a frame or a deformable
+geometry, it must connect to the corresponding ports. Failure to
+connect to the ports (or to provide valid kinematics values) will lead
 to runtime exceptions.</p>
 <p><strong>pose port</strong>: An abstract-valued port providing an instance of
 FramePoseVector. For each registered frame, this “pose vector” maps
@@ -11422,6 +11452,13 @@ the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
 in its output port. See the details in KinematicsVector for details on
 how to provide values for this port.</p>
+<p><strong>configuration port</strong>: An abstract-valued port providing an instance
+of GeometryConfigurationVector. For each registered deformable
+geometry, this “configuration vector” maps the registered GeometryId
+to its world space configuration (i.e. the vertex positions of its
+mesh representation in the world frame). All registered deformable
+geometries must be accounted for and only geometries registered by a
+source can be included in its output port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -11500,15 +11537,19 @@ frame. As such, registering a frame is <em>not</em> required for registering
 anchored geometry (see GeometrySource::RegisterAnchoredGeometry()).
 However, the source still “owns” the anchored geometry.</p>
 <p><em>Updating Kinematics</em></p>
-<p>Registering <em>dynamic</em> geometry implies a contract between the geometry
-source and SceneGraph. The geometry source must do the following: - It
-must provide, populate, and connect two output ports: the “id” port
-and the “pose” port. - The id port must contain <em>all</em> the frame ids
-returned as a result of frame registration. - The pose port must
-contain one pose per registered frame; the pose value is expressed
-relative to the registered frame’s <em>parent</em> frame. As mentioned above,
-the iᵗʰ pose value should describe the frame indicated by the iᵗʰ id
-in the id output port.</p>
+<p>Registering <em>dynamic</em> non-deformable geometry implies a contract
+between the geometry source and SceneGraph. The geometry source must
+do the following: - It must provide, populate, and connect two output
+ports: the “id” port and the “pose” port. - The id port must contain
+<em>all</em> the frame ids returned as a result of frame registration. - The
+pose port must contain one pose per registered frame; the pose value
+is expressed relative to the registered frame’s <em>parent</em> frame. As
+mentioned above, the iᵗʰ pose value should describe the frame
+indicated by the iᵗʰ id in the id output port.</p>
+<p>Similarly, if it registers deformable geometries, the geometry source
+must provide, populate, and connect the “configuration” port. The
+configuration port must contain a vector of vertex positions per
+registered deformable geometry.</p>
 <p>Failure to meet these requirements will lead to a run-time error.</p>
 <p>Many (and eventually all) methods that configure the population of
 SceneGraph have two variants that differ by whether they accept a
@@ -11967,9 +12008,13 @@ in the provided context.</p>
 save the returned SourceId; it is the token by which all other
 operations on the geometry world are conducted.</p>
 <p>This source id can be used to register arbitrary <em>anchored</em> geometry.
-But if dynamic geometry is registered (via
-RegisterGeometry/RegisterFrame), then the context-dependent pose
+But if dynamic non-deformable geometry is registered (via
+RegisterGeometry/RegisterFrame), then the Context-dependent pose
 values must be provided on an input port. See get_source_pose_port().</p>
+<p>Similarly, if deformable geometry (always dynamic) is registered (via
+RegisterDeformableGeometry), then the Context-dependent configuration
+values must be provided on an input port. See
+get_source_configuration_port().</p>
 <p>This method modifies the underlying model and requires a new Context
 to be allocated.</p>
 <dl class="docutils">
@@ -12086,7 +12131,7 @@ controlled by one LeafSystem can be observed by a different sensor
 system). SceneGraph provides the interface for registering the
 geometry, updating its position based on the current context, and
 performing geometric queries.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_configuration&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SceneGraph</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; query</td></tr></table></td></tr></table><p>For each registered “geometry source”, there is an input port whose
 name begins with &lt;em style=”color:gray”&gt;(source name)&lt;/em&gt;.</p>
 <p>Only registered “geometry sources” can introduce geometry into
 SceneGraph. Geometry sources will typically be other leaf systems,
@@ -12106,12 +12151,12 @@ ports.</p>
 </ul>
 <p>input ports.
 - Implement appropriate <code class="docutils literal notranslate"><span class="pre">Calc*</span></code> methods on the geometry output ports to
-update geometry pose values.</p>
+update geometry pose/configuration values.</p>
 <p>For each registered geometry source, there is one input port for each
-order of kinematics values (e.g., pose, velocity, and acceleration).
-If a source registers a frame, it must connect to these ports
-(although, in the current version, only pose is supported). Failure to
-connect to the port (or to provide valid kinematics values) will lead
+order of kinematics values (e.g., pose, velocity, acceleration, and
+configuration). If a source registers a frame or a deformable
+geometry, it must connect to the corresponding ports. Failure to
+connect to the ports (or to provide valid kinematics values) will lead
 to runtime exceptions.</p>
 <p><strong>pose port</strong>: An abstract-valued port providing an instance of
 FramePoseVector. For each registered frame, this “pose vector” maps
@@ -12119,6 +12164,13 @@ the registered FrameId to a pose value. All registered frames must be
 accounted for and only frames registered by a source can be included
 in its output port. See the details in KinematicsVector for details on
 how to provide values for this port.</p>
+<p><strong>configuration port</strong>: An abstract-valued port providing an instance
+of GeometryConfigurationVector. For each registered deformable
+geometry, this “configuration vector” maps the registered GeometryId
+to its world space configuration (i.e. the vertex positions of its
+mesh representation in the world frame). All registered deformable
+geometries must be accounted for and only geometries registered by a
+source can be included in its output port.</p>
 <p>SceneGraph has two output ports:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
 QueryObject. It provides a “ticket” for downstream LeafSystem
@@ -12197,15 +12249,19 @@ frame. As such, registering a frame is <em>not</em> required for registering
 anchored geometry (see GeometrySource::RegisterAnchoredGeometry()).
 However, the source still “owns” the anchored geometry.</p>
 <p><em>Updating Kinematics</em></p>
-<p>Registering <em>dynamic</em> geometry implies a contract between the geometry
-source and SceneGraph. The geometry source must do the following: - It
-must provide, populate, and connect two output ports: the “id” port
-and the “pose” port. - The id port must contain <em>all</em> the frame ids
-returned as a result of frame registration. - The pose port must
-contain one pose per registered frame; the pose value is expressed
-relative to the registered frame’s <em>parent</em> frame. As mentioned above,
-the iᵗʰ pose value should describe the frame indicated by the iᵗʰ id
-in the id output port.</p>
+<p>Registering <em>dynamic</em> non-deformable geometry implies a contract
+between the geometry source and SceneGraph. The geometry source must
+do the following: - It must provide, populate, and connect two output
+ports: the “id” port and the “pose” port. - The id port must contain
+<em>all</em> the frame ids returned as a result of frame registration. - The
+pose port must contain one pose per registered frame; the pose value
+is expressed relative to the registered frame’s <em>parent</em> frame. As
+mentioned above, the iᵗʰ pose value should describe the frame
+indicated by the iᵗʰ id in the id output port.</p>
+<p>Similarly, if it registers deformable geometries, the geometry source
+must provide, populate, and connect the “configuration” port. The
+configuration port must contain a vector of vertex positions per
+registered deformable geometry.</p>
 <p>Failure to meet these requirements will lead to a run-time error.</p>
 <p>Many (and eventually all) methods that configure the population of
 SceneGraph have two variants that differ by whether they accept a
@@ -12664,9 +12720,13 @@ in the provided context.</p>
 save the returned SourceId; it is the token by which all other
 operations on the geometry world are conducted.</p>
 <p>This source id can be used to register arbitrary <em>anchored</em> geometry.
-But if dynamic geometry is registered (via
-RegisterGeometry/RegisterFrame), then the context-dependent pose
+But if dynamic non-deformable geometry is registered (via
+RegisterGeometry/RegisterFrame), then the Context-dependent pose
 values must be provided on an input port. See get_source_pose_port().</p>
+<p>Similarly, if deformable geometry (always dynamic) is registered (via
+RegisterDeformableGeometry), then the Context-dependent configuration
+values must be provided on an input port. See
+get_source_configuration_port().</p>
 <p>This method modifies the underlying model and requires a new Context
 to be allocated.</p>
 <dl class="docutils">
@@ -13424,15 +13484,16 @@ the SceneGraph itself counts as a source.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].NumAnchoredGeometries">
 <code class="descname">NumAnchoredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].NumAnchoredGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>anchored</em> geometries. This should provide
-the same answer as calling NumGeometriesForFrame() with the world
-frame id.</p>
+<dd><p>Reports the total number of <em>anchored</em> non-deformable geometries. This
+should provide the same answer as calling NumGeometriesForFrame() with
+the world frame id.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].NumDynamicGeometries">
 <code class="descname">NumDynamicGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].NumDynamicGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.</p>
+<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.
+This include all deformable geometries.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14150,15 +14211,16 @@ the SceneGraph itself counts as a source.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].NumAnchoredGeometries">
 <code class="descname">NumAnchoredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[AutoDiffXd].NumAnchoredGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>anchored</em> geometries. This should provide
-the same answer as calling NumGeometriesForFrame() with the world
-frame id.</p>
+<dd><p>Reports the total number of <em>anchored</em> non-deformable geometries. This
+should provide the same answer as calling NumGeometriesForFrame() with
+the world frame id.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].NumDynamicGeometries">
 <code class="descname">NumDynamicGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[AutoDiffXd].NumDynamicGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.</p>
+<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.
+This include all deformable geometries.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14874,15 +14936,16 @@ the SceneGraph itself counts as a source.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[Expression].NumAnchoredGeometries">
 <code class="descname">NumAnchoredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[Expression].NumAnchoredGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>anchored</em> geometries. This should provide
-the same answer as calling NumGeometriesForFrame() with the world
-frame id.</p>
+<dd><p>Reports the total number of <em>anchored</em> non-deformable geometries. This
+should provide the same answer as calling NumGeometriesForFrame() with
+the world frame id.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[Expression].NumDynamicGeometries">
 <code class="descname">NumDynamicGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[Expression].NumDynamicGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.</p>
+<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.
+This include all deformable geometries.</p>
 </dd></dl>
 
 <dl class="method">
@@ -15598,15 +15661,16 @@ the SceneGraph itself counts as a source.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[float].NumAnchoredGeometries">
 <code class="descname">NumAnchoredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].NumAnchoredGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>anchored</em> geometries. This should provide
-the same answer as calling NumGeometriesForFrame() with the world
-frame id.</p>
+<dd><p>Reports the total number of <em>anchored</em> non-deformable geometries. This
+should provide the same answer as calling NumGeometriesForFrame() with
+the world frame id.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[float].NumDynamicGeometries">
 <code class="descname">NumDynamicGeometries</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].NumDynamicGeometries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.</p>
+<dd><p>Reports the total number of <em>dynamic</em> geometries in the scene graph.
+This include all deformable geometries.</p>
 </dd></dl>
 
 <dl class="method">

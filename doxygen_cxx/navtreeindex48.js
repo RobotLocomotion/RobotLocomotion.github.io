@@ -1,5 +1,10 @@
 var NAVTREEINDEX48 =
 {
+"shape__to__string_8h.html":[4,0,0,4,41],
+"shared__pointer__system_8h.html":[4,0,0,11,6,20],
+"signed__distance__pair_8h.html":[4,0,0,4,3,3],
+"signed__distance__to__point_8h.html":[4,0,0,4,3,4],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,26],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -244,10 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a7fa789c84df3efe720c9070acd56c1ce":[3,0,0,3,48,5],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,3,48,2],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,3,48,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,3,48,0],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,3,48,1],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,3,48,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,4,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,6,1]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,3,48,0]
 };

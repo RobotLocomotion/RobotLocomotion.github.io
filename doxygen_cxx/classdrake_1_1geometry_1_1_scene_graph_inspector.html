@@ -238,7 +238,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a92fed16317ea47894538967d2e340473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the total number of <em>dynamic</em> geometries in the scene graph.  <a href="#a92fed16317ea47894538967d2e340473">More...</a><br /></td></tr>
 <tr class="separator:a92fed16317ea47894538967d2e340473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7724ce761af3f670a4011d29505dce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7724ce761af3f670a4011d29505dce7">NumAnchoredGeometries</a> () const</td></tr>
-<tr class="memdesc:ab7724ce761af3f670a4011d29505dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the total number of <em>anchored</em> geometries.  <a href="#ab7724ce761af3f670a4011d29505dce7">More...</a><br /></td></tr>
+<tr class="memdesc:ab7724ce761af3f670a4011d29505dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the total number of <em>anchored</em> non-deformable geometries.  <a href="#ab7724ce761af3f670a4011d29505dce7">More...</a><br /></td></tr>
 <tr class="separator:ab7724ce761af3f670a4011d29505dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79b84ada25718e2a38fd2d13adb4d839"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::pair&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a79b84ada25718e2a38fd2d13adb4d839">GetCollisionCandidates</a> () const</td></tr>
 <tr class="memdesc:a79b84ada25718e2a38fd2d13adb4d839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all pairs of geometries that are candidates for collision (in no particular order).  <a href="#a79b84ada25718e2a38fd2d13adb4d839">More...</a><br /></td></tr>
@@ -1412,7 +1412,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reports the total number of <em>anchored</em> geometries. </p>
+<p>Reports the total number of <em>anchored</em> non-deformable geometries. </p>
 <p>This should provide the same answer as calling <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a606ba5b86da6b6306dd900187ac4fc6b" title="Reports the number of geometries affixed to the frame with the given frame_id.">NumGeometriesForFrame()</a> with the world frame id. </p>
 
 </div>
@@ -1433,6 +1433,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reports the total number of <em>dynamic</em> geometries in the scene graph. </p>
+<p>This include all deformable geometries. </p>
 
 </div>
 </div>
