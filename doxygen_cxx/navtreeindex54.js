@@ -1,5 +1,9 @@
 var NAVTREEINDEX54 =
 {
+"symbolic__variable_8h.html#a4a8fedc6cdc53869462f7aebaafa32c0":[4,0,0,1,74,7],
+"symbolic__variable_8h.html#a4d2f37fa21183f09e3544a4c6891494b":[4,0,0,1,74,18],
+"symbolic__variable_8h.html#a6779284f55bfadabde9c015ad694d093":[4,0,0,1,74,11],
+"symbolic__variable_8h.html#a698dcb5dd4fea36841d305e89f52dd97":[4,0,0,1,74,16],
 "symbolic__variable_8h.html#a6b71b38080ba3cd1d36172c4577ed445":[4,0,0,1,74,12],
 "symbolic__variable_8h.html#a7493090d0f80fbec7343113df05f6b90":[4,0,0,1,74,21],
 "symbolic__variable_8h.html#a803dbab92e520549b625dde70f05fe47":[4,0,0,1,74,6],

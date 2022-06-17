@@ -1,5 +1,9 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,16,5,1],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[3,0,0,16,5,6],
+"classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,16,6],
+"classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5":[3,0,0,16,6,16],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2":[3,0,0,16,6,12],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[3,0,0,16,6,3],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52":[3,0,0,16,6,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX40 =
 "detail__sdf__parser_8h.html":[4,0,0,8,9,9],
 "detail__tinyxml2__diagnostic_8h.html":[4,0,0,8,9,11],
 "detail__tinyxml_8h.html":[4,0,0,8,9,10],
-"detail__urdf__geometry_8h.html":[4,0,0,8,9,12],
-"detail__urdf__parser_8h.html":[4,0,0,8,9,13],
-"diagnostic__policy_8h.html":[4,0,0,1,14],
-"diagram_8h.html":[4,0,0,11,3,11],
-"diagram__builder_8h.html":[4,0,0,11,3,12]
+"detail__urdf__geometry_8h.html":[4,0,0,8,9,12]
 };

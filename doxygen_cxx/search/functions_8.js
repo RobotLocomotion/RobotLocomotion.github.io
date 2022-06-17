@@ -37,6 +37,7 @@ var searchData=
   ['indeterminates',['indeterminates',['../classdrake_1_1symbolic_1_1_generic_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339',1,'drake::symbolic::GenericPolynomial::indeterminates()'],['../classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339',1,'drake::symbolic::Polynomial::indeterminates()'],['../classdrake_1_1solvers_1_1_mathematical_program.html#abaa1d35a078980665b4cabac09dd235b',1,'drake::solvers::MathematicalProgram::indeterminates()']]],
   ['indeterminates_5findex',['indeterminates_index',['../classdrake_1_1solvers_1_1_mathematical_program.html#a0c27da874a5e06bccfb91ff25ec05fb9',1,'drake::solvers::MathematicalProgram']]],
   ['index',['index',['../classdrake_1_1multibody_1_1_multibody_element.html#aab10b1c612e1455976fc9e71c4ba7df6',1,'drake::multibody::MultibodyElement']]],
+  ['inertia',['inertia',['../classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#acb952713a1d9e6805791d0739c346915',1,'drake::examples::quadrotor::QuadrotorPlant']]],
   ['influence_5fdistance',['influence_distance',['../classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a8f7e944ec487debca7e690ac2496f3f9',1,'drake::multibody::MinimumDistanceConstraint']]],
   ['influence_5fvalue',['influence_value',['../classdrake_1_1solvers_1_1_minimum_value_constraint.html#af608569c22efc4a0c30ab19f3e58e2dc',1,'drake::solvers::MinimumValueConstraint']]],
   ['init_5fabstract_5fstate',['init_abstract_state',['../classdrake_1_1systems_1_1_context.html#a3080ffa1b4c412986990e9c64e87d90c',1,'drake::systems::Context']]],

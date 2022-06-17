@@ -1,5 +1,9 @@
 var NAVTREEINDEX51 =
 {
+"structdrake_1_1systems_1_1_system_type_tag.html":[3,0,0,14,115],
+"structdrake_1_1systems_1_1_system_type_tag.html#a379e6a18189f3ab144292c07cd2cd1d9":[3,0,0,14,115,0],
+"structdrake_1_1systems_1_1_use_default_name.html":[3,0,0,14,123],
+"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html":[3,0,0,14,0,1],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a338f8f52a23e583f8ec10aa553b1fdfc":[3,0,0,14,0,1,0],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317":[3,0,0,14,0,1,6],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a851bc403edb0b8b04e35246843c4524c":[3,0,0,14,0,1,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX51 =
 "symbolic_8h.html":[4,0,0,1,50],
 "symbolic_8h.html#a789c18b4944958dff3f102a1bd47c425":[4,0,0,1,50,0],
 "symbolic__chebyshev__basis__element_8h.html":[4,0,0,1,51],
-"symbolic__chebyshev__basis__element_8h.html#a76deccd3cd3f64d9b875dd5116792c07":[4,0,0,1,51,2],
-"symbolic__chebyshev__basis__element_8h.html#af975c2571c59b1d8b03b213a15096336":[4,0,0,1,51,3],
-"symbolic__chebyshev__polynomial_8h.html":[4,0,0,1,52],
-"symbolic__chebyshev__polynomial_8h.html#a31d454a069abf89b2a0b6c71222ec221":[4,0,0,1,52,3],
-"symbolic__chebyshev__polynomial_8h.html#abcc20898a64bbcee2ec07efd585e7c39":[4,0,0,1,52,2]
+"symbolic__chebyshev__basis__element_8h.html#a76deccd3cd3f64d9b875dd5116792c07":[4,0,0,1,51,2]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a27ac7192a38685b7263b3d5a225f7b9d":[1,1,1,9,10],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a27ac7192a38685b7263b3d5a225f7b9d":[1,5,4,9,10],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a35f094b504e82e46e049d81f5e39cc2f":[1,1,1,9,9],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a35f094b504e82e46e049d81f5e39cc2f":[1,5,4,9,9],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a3f9ab23e6550deb5b0aed63101cac134":[1,1,1,9,8],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a3f9ab23e6550deb5b0aed63101cac134":[1,5,4,9,8],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a76bd48df66d7ff6d91b9fa645da35d1f":[1,1,1,9,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a9db3275e9ca71d56c13029264009c088":[3,0,0,6,0,1,4],
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#aa5c2c658b684a2b460d283857e141c3d":[3,0,0,6,0,1,10],
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#ab3f03e00b717615f4f73e57033be0369":[3,0,0,6,0,1,2],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#aede38a253a15aa8d34d06a6dbfea0feb":[3,0,0,6,0,1,7],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#af31537279098f22f07b865e7dd1499dc":[3,0,0,6,0,1,6],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html":[3,0,0,6,0,2],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a0d27de795b6e27379ea83683f6245bc2":[3,0,0,6,0,2,10],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a5d81bd2af8271dd69785654f7dba7fc3":[3,0,0,6,0,2,6]
+"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#aede38a253a15aa8d34d06a6dbfea0feb":[3,0,0,6,0,1,7]
 };

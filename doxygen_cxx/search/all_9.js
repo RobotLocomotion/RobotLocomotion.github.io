@@ -97,6 +97,7 @@ var searchData=
   ['indeterminates_5findex',['indeterminates_index',['../classdrake_1_1solvers_1_1_mathematical_program.html#a0c27da874a5e06bccfb91ff25ec05fb9',1,'drake::solvers::MathematicalProgram']]],
   ['indeterminatesreflist',['IndeterminatesRefList',['../namespacedrake_1_1solvers.html#ac27bca68509bbb001ab8073089b48031',1,'drake::solvers']]],
   ['index',['index',['../classdrake_1_1multibody_1_1_multibody_element.html#aab10b1c612e1455976fc9e71c4ba7df6',1,'drake::multibody::MultibodyElement']]],
+  ['inertia',['inertia',['../classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#acb952713a1d9e6805791d0739c346915',1,'drake::examples::quadrotor::QuadrotorPlant']]],
   ['influence_5fdistance',['influence_distance',['../classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a8f7e944ec487debca7e690ac2496f3f9',1,'drake::multibody::MinimumDistanceConstraint']]],
   ['influence_5fvalue',['influence_value',['../classdrake_1_1solvers_1_1_minimum_value_constraint.html#af608569c22efc4a0c30ab19f3e58e2dc',1,'drake::solvers::MinimumValueConstraint']]],
   ['info',['info',['../structdrake_1_1solvers_1_1_snopt_solver_details.html#a29045c997670516117cd2d1cac1069ed',1,'drake::solvers::SnoptSolverDetails']]],
