@@ -452,7 +452,6 @@ var searchData=
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20autodiffxd_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; AutoDiffXd &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20double_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; double &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20t_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; T &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
-  ['copyable_5funique_5fptr_3c_20internal_3a_3ashaderprogram_20_3e',['copyable_unique_ptr&lt; internal::ShaderProgram &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyblock',['CopyBlock',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html#a34cedb829a75120bfb60c98f376c4c19',1,'drake::trajectories::BsplineTrajectory']]],
   ['copycontinuousstatevector',['CopyContinuousStateVector',['../classdrake_1_1systems_1_1_system.html#a24c711d92735642b2fa7fc975e9b5bf8',1,'drake::systems::System']]],
   ['copyhead',['CopyHead',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0acbf3fa1589153652739854f168b63e',1,'drake::trajectories::BsplineTrajectory']]],

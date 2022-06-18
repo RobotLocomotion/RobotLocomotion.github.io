@@ -467,8 +467,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
+    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -677,7 +677,6 @@ var hierarchy =
         [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
       ] ],
       [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", [
-        [ "RenderEngineGl", "classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html", null ],
         [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
       ] ],
       [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ]
@@ -1070,7 +1069,6 @@ var hierarchy =
       [ "copyable_unique_ptr< internal::ProximityEngine< AutoDiffXd > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< internal::ProximityEngine< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< internal::ProximityEngine< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
-      [ "copyable_unique_ptr< internal::ShaderProgram >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< T >", "classdrake_1_1copyable__unique__ptr.html", null ]
     ] ],
     [ "UnrevisedLemkeSolverId", "classdrake_1_1solvers_1_1_unrevised_lemke_solver_id.html", null ],

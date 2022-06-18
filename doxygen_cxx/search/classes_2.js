@@ -76,7 +76,6 @@ var searchData=
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20autodiffxd_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; AutoDiffXd &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20double_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; double &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20t_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; T &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
-  ['copyable_5funique_5fptr_3c_20internal_3a_3ashaderprogram_20_3e',['copyable_unique_ptr&lt; internal::ShaderProgram &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['cost',['Cost',['../classdrake_1_1solvers_1_1_cost.html',1,'drake::solvers']]],
   ['coulombfriction',['CoulombFriction',['../classdrake_1_1multibody_1_1_coulomb_friction.html',1,'drake::multibody']]],
   ['csdpsolver',['CsdpSolver',['../classdrake_1_1solvers_1_1_csdp_solver.html',1,'drake::solvers']]],

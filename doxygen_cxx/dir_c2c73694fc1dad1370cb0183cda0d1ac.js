@@ -1,6 +1,6 @@
 var dir_c2c73694fc1dad1370cb0183cda0d1ac =
 [
-    [ "factory.h", "factory_8h.html", "factory_8h" ],
+    [ "factory.h", "render__vtk_2factory_8h.html", "render__vtk_2factory_8h" ],
     [ "internal_render_engine_vtk.h", "internal__render__engine__vtk_8h.html", [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk" ],
       [ "RenderingPipeline", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline" ]

@@ -9,7 +9,6 @@ var searchData=
   ['relationalformulacell',['RelationalFormulaCell',['../classdrake_1_1symbolic_1_1_relational_formula_cell.html',1,'drake::symbolic']]],
   ['rendercameracore',['RenderCameraCore',['../classdrake_1_1geometry_1_1render_1_1_render_camera_core.html',1,'drake::geometry::render']]],
   ['renderengine',['RenderEngine',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html',1,'drake::geometry::render']]],
-  ['renderenginegl',['RenderEngineGl',['../classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html',1,'drake::geometry::render']]],
   ['renderengineglparams',['RenderEngineGlParams',['../structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html',1,'drake::geometry::render']]],
   ['renderenginevtk',['RenderEngineVtk',['../classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html',1,'drake::geometry::render']]],
   ['renderenginevtkparams',['RenderEngineVtkParams',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html',1,'drake::geometry']]],

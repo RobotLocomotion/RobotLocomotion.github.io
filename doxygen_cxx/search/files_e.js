@@ -2,9 +2,6 @@ var searchData=
 [
   ['obb_2eh',['obb.h',['../obb_8h.html',1,'']]],
   ['obj_5fto_5fsurface_5fmesh_2eh',['obj_to_surface_mesh.h',['../obj__to__surface__mesh_8h.html',1,'']]],
-  ['opengl_5fcontext_2eh',['opengl_context.h',['../opengl__context_8h.html',1,'']]],
-  ['opengl_5fgeometry_2eh',['opengl_geometry.h',['../opengl__geometry_8h.html',1,'']]],
-  ['opengl_5fincludes_2eh',['opengl_includes.h',['../opengl__includes_8h.html',1,'']]],
   ['optitrack_5freceiver_2eh',['optitrack_receiver.h',['../optitrack__receiver_8h.html',1,'']]],
   ['optitrack_5fsender_2eh',['optitrack_sender.h',['../optitrack__sender_8h.html',1,'']]],
   ['orientation_5fconstraint_2eh',['orientation_constraint.h',['../orientation__constraint_8h.html',1,'']]],

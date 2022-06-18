@@ -200,9 +200,9 @@ $(document).ready(function(){initNavTree('group__render__engine__benchmarks.html
 <li><b>VtkColor</b>: Renders the color image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>.</li>
 <li><b>VtkDepth</b>: Renders the depth image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>.</li>
 <li><b>VtkLabel</b>: Renders the label image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>.</li>
-<li><b>GlColor</b>: Renders the color image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html" title="See documentation of MakeRenderEngineGl().">RenderEngineGl</a>.</li>
-<li><b>GlDepth</b>: Renders the depth image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html" title="See documentation of MakeRenderEngineGl().">RenderEngineGl</a>.</li>
-<li><b>GlLabel</b>: Renders the label image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html" title="See documentation of MakeRenderEngineGl().">RenderEngineGl</a>.</li>
+<li><b>GlColor</b>: Renders the color image from RenderEngineGl.</li>
+<li><b>GlDepth</b>: Renders the depth image from RenderEngineGl.</li>
+<li><b>GlLabel</b>: Renders the label image from RenderEngineGl.</li>
 </ul>
 </li>
 <li><b>sphere_count</b>: The total number of spheres.</li>
@@ -216,7 +216,7 @@ $(document).ready(function(){initNavTree('group__render__engine__benchmarks.html
 <li>For <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a> a 10X increase in number of cameras leads to a 10X increase in time for both color and depth, but a (roughly) 20X increase for label.</li>
 </ul>
 </li>
-<li><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html" title="See documentation of MakeRenderEngineGl().">RenderEngineGl</a> scales better with respect to scene complexity than <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>. </li>
+<li>RenderEngineGl scales better with respect to scene complexity than <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>. </li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
