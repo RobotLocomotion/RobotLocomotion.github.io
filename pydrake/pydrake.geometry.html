@@ -2472,7 +2472,7 @@ double/AutoDiffXd/Expression</p>
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].frame_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a range object for all of the existing ids in the vector.
 This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : this_vector.frame_ids()) {
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
@@ -2482,29 +2482,29 @@ This is intended to be used as:</p>
 <p>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
-<dd>Use GetAllIds() instead. This will be removed from Drake on or
-after 2022-10-01.</dd>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
 </dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].GetAllIds">
-<code class="descname">GetAllIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].GetAllIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the existing ids in the vector.
-This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : GetAllIds()) {
-...
-// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
-...
-}
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].has_id">
 <code class="descname">has_id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float], id: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].has_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reports true if the given id is a member of this data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2516,7 +2516,7 @@ This is intended to be used as:</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_.FramePoseVector_[float].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_.FramePoseVector_[float].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of GetAllIds().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
@@ -2628,7 +2628,7 @@ double/AutoDiffXd/Expression</p>
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].frame_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a range object for all of the existing ids in the vector.
 This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : this_vector.frame_ids()) {
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
@@ -2638,29 +2638,29 @@ This is intended to be used as:</p>
 <p>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
-<dd>Use GetAllIds() instead. This will be removed from Drake on or
-after 2022-10-01.</dd>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
 </dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].GetAllIds">
-<code class="descname">GetAllIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].GetAllIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the existing ids in the vector.
-This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : GetAllIds()) {
-...
-// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
-...
-}
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].has_id">
 <code class="descname">has_id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd], id: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].has_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reports true if the given id is a member of this data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2672,7 +2672,7 @@ This is intended to be used as:</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[AutoDiffXd].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[AutoDiffXd].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of GetAllIds().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
@@ -2782,7 +2782,7 @@ double/AutoDiffXd/Expression</p>
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].frame_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a range object for all of the existing ids in the vector.
 This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : this_vector.frame_ids()) {
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
@@ -2792,29 +2792,29 @@ This is intended to be used as:</p>
 <p>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
-<dd>Use GetAllIds() instead. This will be removed from Drake on or
-after 2022-10-01.</dd>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
 </dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.geometry.FramePoseVector_[Expression].GetAllIds">
-<code class="descname">GetAllIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].GetAllIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the existing ids in the vector.
-This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : GetAllIds()) {
-...
-// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
-...
-}
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[Expression].has_id">
 <code class="descname">has_id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression], id: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].has_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reports true if the given id is a member of this data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_[Expression].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2826,7 +2826,7 @@ This is intended to be used as:</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[Expression].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[Expression].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of GetAllIds().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
@@ -2936,7 +2936,7 @@ double/AutoDiffXd/Expression</p>
 <code class="descname">frame_ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].frame_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a range object for all of the existing ids in the vector.
 This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : this_vector.frame_ids()) {
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.frame_ids()) {
 ...
 // Obtain the KinematicsValue of an id by ``this_vector.value(id)``
 ...
@@ -2946,29 +2946,29 @@ This is intended to be used as:</p>
 <p>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
-<dd>Use GetAllIds() instead. This will be removed from Drake on or
-after 2022-10-01.</dd>
+<dd>Use ids() instead. This will be removed from Drake on or after
+2022-10-01.</dd>
 </dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.geometry.FramePoseVector_[float].GetAllIds">
-<code class="descname">GetAllIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].GetAllIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a range object for all of the existing ids in the vector.
-This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (const Id&amp; id : GetAllIds()) {
-...
-// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
-...
-}
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[float].has_id">
 <code class="descname">has_id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float], id: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].has_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reports true if the given id is a member of this data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FramePoseVector_[float].ids">
+<code class="descname">ids</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a range object for all of the existing ids in the vector.
+This is intended to be used as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
+...
+// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
+...
+}
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2980,7 +2980,7 @@ This is intended to be used as:</p>
 <dl class="method">
 <dt id="pydrake.geometry.FramePoseVector_[float].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FramePoseVector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FramePoseVector_[float].size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns number of GetAllIds().</p>
+<dd><p>Returns number of ids().</p>
 </dd></dl>
 
 <dl class="method">
