@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#aad70470b810dee3ec34bbbd2bd26d6e4":[1,1,0,9,1],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#ab331046482d2d3ec842a3872c4844d7f":[1,1,0,9,5],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#acf42aa2fb9eca6792639ac8f6dbc614e":[1,1,0,9,0],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#af072288a5a5bfc6a933a9b10b108b4be":[1,1,0,9,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_joint.html#a1f44aa73e129b6182670288ecc436e2c":[3,0,0,8,38,30],
 "classdrake_1_1multibody_1_1_joint.html#a2556aa7cb0dfde452bc41c8179ae9fe7":[3,0,0,8,38,18],
 "classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8":[3,0,0,8,38,37],
-"classdrake_1_1multibody_1_1_joint.html#a2d019d4421eedd35dfb908591266f6c1":[3,0,0,8,38,58],
-"classdrake_1_1multibody_1_1_joint.html#a31334d7081ca78d14f4681702b072a27":[3,0,0,8,38,8]
+"classdrake_1_1multibody_1_1_joint.html#a2d019d4421eedd35dfb908591266f6c1":[3,0,0,8,38,58]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1analysis__test_1_1_logistic_system.html#a1cdbac937e4e0589409d8c12bcd8e128":[3,0,0,14,1,5,7],
 "classdrake_1_1systems_1_1analysis__test_1_1_logistic_system.html#a6648487e19ac4c23d63fd1b92b75cb0f":[3,0,0,14,1,5,1],
 "classdrake_1_1systems_1_1analysis__test_1_1_logistic_system.html#a66769b3d6594b5498218e3aefa03ca88":[3,0,0,14,1,5,8],
 "classdrake_1_1systems_1_1analysis__test_1_1_logistic_system.html#a8214041b2f4f6bffd6d499a7c901174d":[3,0,0,14,1,5,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ae4c8ea51d7cc6205ac01333ea7842d4c":[1,2,6,3,7],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#af2357d108e636ddbf871eb98f5021ac8":[1,2,6,3,0],
 "classdrake_1_1systems_1_1lcm_1_1_serializer.html":[3,0,0,14,5,5],
-"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a19a46c344566fb11866cbc35541e9495":[3,0,0,14,5,5,3],
-"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a4497ca6ec8ea51e6a64f26985d7e41c0":[3,0,0,14,5,5,4]
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a19a46c344566fb11866cbc35541e9495":[3,0,0,14,5,5,3]
 };

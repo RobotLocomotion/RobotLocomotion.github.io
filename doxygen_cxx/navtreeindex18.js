@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1schema_1_1_transform.html":[3,0,0,11,7],
 "classdrake_1_1schema_1_1_transform.html#a3d82e7e9e36ac80cd47fed9cdcf96642":[3,0,0,11,7,3],
 "classdrake_1_1schema_1_1_transform.html#a4034e07fad8c97f6d5466d48b8bbcdc3":[3,0,0,11,7,5],
 "classdrake_1_1schema_1_1_transform.html#a5b8885370a3224166feb6a2a14cfbf82":[3,0,0,11,7,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1solvers_1_1_evaluator_cost.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,36,4],
 "classdrake_1_1solvers_1_1_evaluator_cost.html#ac7fddb25ef7bf8524ca48cd0ac1e67b4":[1,1,0,36,8],
 "classdrake_1_1solvers_1_1_evaluator_cost.html#afa307d98e1820df39a22c1d59d41482a":[1,1,0,36,7],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html":[1,1,0,28],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#a1b04ab3f6b9aadea87e72c7ed3379324":[1,1,0,28,5]
+"classdrake_1_1solvers_1_1_exponential_cone_constraint.html":[1,1,0,28]
 };

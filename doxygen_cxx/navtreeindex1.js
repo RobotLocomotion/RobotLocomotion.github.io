@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classdrake_1_1_polynomial_1_1_monomial.html#a8d2a0b0dd246af6385d78567af484840":[3,0,0,40,0,1],
 "classdrake_1_1_polynomial_1_1_monomial.html#a8e7b10a07a1df37f95789d09cfe0e831":[3,0,0,40,0,5],
 "classdrake_1_1_polynomial_1_1_monomial.html#aa13862903d5f48177be04d2a293e2e17":[3,0,0,40,0,4],
 "classdrake_1_1_polynomial_1_1_monomial.html#ab8282237674bfa40903297054ee5a845":[3,0,0,40,0,0],
@@ -169,7 +170,6 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a01360a871ad3a44a5587256f5b4dcaae":[1,2,12,0,5,14],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a06262905a47222173e1551ef437b29fc":[1,2,12,0,5,3],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a09afd13e64f4dfb7defbb727d34840cc":[1,2,12,0,5,12],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a22938e77487c7e912030e8d731fc1231":[1,2,12,0,5,15],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a2758bfaadb107b84584757307f3bee9c":[1,2,12,0,5,10],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a2ddd0c881dbc38b6e3fe86dcea1db62e":[1,2,12,0,5,7],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a322f85e342d1736a49b76c4ca5de47ef":[1,2,12,0,5,1],
@@ -180,6 +180,7 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a81116c526cf1e5ec864235fbb19b3780":[1,2,12,0,5,0],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a8b1d92334bf606793a4fe3d1cb687bf1":[1,2,12,0,5,4],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a8e53ef6ca8df61fb8c6d78f409dc49b9":[1,2,12,0,5,11],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a902e29f51447261a05d400f845fd2086":[1,2,12,0,5,15],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#aa38177c6a6e64ff8daf64a2cc47137ea":[1,2,12,0,5,2],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#ababb21161606a2e553087b99a52bf394":[1,2,12,0,5,13],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html":[1,2,12,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663":[3,0,0,2,2,0,2],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663a9ff3e250bc19253cd24615673cc6c378":[3,0,0,2,2,0,2,0],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663aabbd617cceac411f1249b5e0b75dfff2":[3,0,0,2,2,0,2,1],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af800d3d935c271676f418d2821f7340f":[3,0,0,2,2,0,14],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#afd55f7a07573cefee2dc72fdebf3b910":[3,0,0,2,2,0,13]
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af800d3d935c271676f418d2821f7340f":[3,0,0,2,2,0,14]
 };

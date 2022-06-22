@@ -15,5 +15,5 @@ var classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant =
     [ "MassMatrix", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a09afd13e64f4dfb7defbb727d34840cc", null ],
     [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#ababb21161606a2e553087b99a52bf394", null ],
     [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a01360a871ad3a44a5587256f5b4dcaae", null ],
-    [ "SetMITAcrobotParameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a22938e77487c7e912030e8d731fc1231", null ]
+    [ "SetMitAcrobotParameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a902e29f51447261a05d400f845fd2086", null ]
 ];
