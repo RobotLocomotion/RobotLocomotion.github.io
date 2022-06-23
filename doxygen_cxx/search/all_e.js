@@ -37,6 +37,7 @@ var searchData=
   ['newsymmetricvariablenames',['NewSymmetricVariableNames',['../structdrake_1_1solvers_1_1_new_symmetric_variable_names.html',1,'drake::solvers']]],
   ['newton_5fiters',['newton_iters',['../structdrake_1_1solvers_1_1fbstab_1_1_solver_out.html#aa7f4579892c94207be5727c9175cbbf5',1,'drake::solvers::fbstab::SolverOut']]],
   ['newton_5fmeters_5fper_5fmeter',['newton_meters_per_meter',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a796122705bf6508783b49e113fb500b1',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
+  ['newton_5fwith_5fbisection_2eh',['newton_with_bisection.h',['../newton__with__bisection_8h.html',1,'']]],
   ['newtons_5fper_5fmeter',['newtons_per_meter',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
   ['newvariablenames',['NewVariableNames',['../structdrake_1_1solvers_1_1_new_variable_names.html',1,'drake::solvers']]],
   ['newvariablenames_3c_20multiplyeigensizes_3c_20rows_2c_20cols_20_3e_3a_3avalue_20_3e',['NewVariableNames&lt; MultiplyEigenSizes&lt; Rows, Cols &gt;::value &gt;',['../structdrake_1_1solvers_1_1_new_variable_names.html',1,'drake::solvers']]],
