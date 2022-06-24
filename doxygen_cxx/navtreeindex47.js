@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fad7bf05f9b17385b6e8aa383fc67fc83f":[4,0,0,10,44,1,1],
 "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fae8503f9b8b6fbe23f14ac068f665c9c0":[4,0,0,10,44,1,3],
 "program__attribute_8h.html#a1b1c2ddcf985a67cb331f1a797143081":[4,0,0,10,44,9],
 "program__attribute_8h.html#a3d9c2c72528e25a82932f03228d9c867":[4,0,0,10,44,5],
@@ -25,7 +26,7 @@ var NAVTREEINDEX47 =
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,10,44,6],
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,10,44,7],
 "propeller_8h.html":[4,0,0,8,10,22],
-"proximity__doxygen_8h.html":[4,0,0,4,2,46],
+"proximity__doxygen_8h.html":[4,0,0,4,2,47],
 "proximity__engine_8h.html":[4,0,0,4,34],
 "proximity__properties_8h.html":[4,0,0,4,35],
 "proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,35,2],
@@ -33,7 +34,7 @@ var NAVTREEINDEX47 =
 "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,35,0],
 "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,35,4],
 "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,35,3],
-"proximity__utilities_8h.html":[4,0,0,4,2,47],
+"proximity__utilities_8h.html":[4,0,0,4,2,48],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,6],
 "pydrake__pybind_8h.html":[4,0,0,0,0,7],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,7,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,26],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
-"simulator__config__functions_8h.html":[4,0,0,11,0,23],
-"simulator__config__functions_8h.html#ga00b67f54aba155c982e8a1038278eed6":[4,0,0,11,0,23,1]
+"simulator__config__functions_8h.html":[4,0,0,11,0,23]
 };

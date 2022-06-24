@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 520;
+var viewWidth = 526;
 var viewHeight = 184;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/geometry/proximity/hydroelastic_internal.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-180 516,-180 516,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-180 521.5,-180 521.5,4 -4,4"/>
 <!-- Node110 -->
 <g id="node1" class="node">
 <title>Node110</title>
@@ -97,19 +97,19 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M256,-135.11C256,-126.15 256,-116.32 256,-108.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="252.5,-135.4 256,-145.4 259.5,-135.4 252.5,-135.4"/>
 </g>
-<!-- Node115 -->
-<g id="node6" class="node">
-<title>Node115</title>
-<g id="a_node6"><a xlink:href="hydroelastic__callback_8h.html" target="_top" xlink:title=" ">
+<!-- Node116 -->
+<g id="node7" class="node">
+<title>Node116</title>
+<g id="a_node7"><a xlink:href="hydroelastic__callback_8h.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="368,-78.5 368,-108.5 512,-108.5 512,-78.5 368,-78.5"/>
 <text text-anchor="start" x="376" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
 <text text-anchor="middle" x="440" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hydroelastic_callback.h</text>
 </a>
 </g>
 </g>
-<!-- Node110&#45;&gt;Node115 -->
-<g id="edge5" class="edge">
-<title>Node110&#45;&gt;Node115</title>
+<!-- Node110&#45;&gt;Node116 -->
+<g id="edge6" class="edge">
+<title>Node110&#45;&gt;Node116</title>
 <path fill="none" stroke="midnightblue" d="M305.67,-141.96C335.3,-131.48 372.44,-118.37 400.15,-108.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="304.19,-138.76 295.93,-145.4 306.52,-145.37 304.19,-138.76"/>
 </g>
@@ -132,19 +132,35 @@ var sectionId = 'dynsection-1';
 <!-- Node114 -->
 <g id="node5" class="node">
 <title>Node114</title>
-<g id="a_node5"><a xlink:href="deformable__contact__data_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="178.5,-0.5 178.5,-41.5 333.5,-41.5 333.5,-0.5 178.5,-0.5"/>
-<text text-anchor="start" x="186.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/query</text>
-<text text-anchor="start" x="186.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">_results/deformable_contact</text>
-<text text-anchor="middle" x="256" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_data.h</text>
+<g id="a_node5"><a xlink:href="deformable__mesh__intersection_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="164,-6 164,-36 344,-36 344,-6 164,-6"/>
+<text text-anchor="start" x="172" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="254" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_mesh_intersection.h</text>
 </a>
 </g>
 </g>
 <!-- Node113&#45;&gt;Node114 -->
 <g id="edge4" class="edge">
 <title>Node113&#45;&gt;Node114</title>
-<path fill="none" stroke="midnightblue" d="M256,-67.98C256,-59.35 256,-49.76 256,-41.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="252.5,-68.23 256,-78.23 259.5,-68.23 252.5,-68.23"/>
+<path fill="none" stroke="midnightblue" d="M255.31,-68.23C255.01,-57.57 254.66,-45.41 254.4,-36.25"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="251.81,-68.34 255.6,-78.23 258.81,-68.14 251.81,-68.34"/>
+</g>
+<!-- Node115 -->
+<g id="node6" class="node">
+<title>Node115</title>
+<g id="a_node6"><a xlink:href="deformable__contact__data_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="362.5,-0.5 362.5,-41.5 517.5,-41.5 517.5,-0.5 362.5,-0.5"/>
+<text text-anchor="start" x="370.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/query</text>
+<text text-anchor="start" x="370.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">_results/deformable_contact</text>
+<text text-anchor="middle" x="440" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_data.h</text>
+</a>
+</g>
+</g>
+<!-- Node113&#45;&gt;Node115 -->
+<g id="edge5" class="edge">
+<title>Node113&#45;&gt;Node115</title>
+<path fill="none" stroke="midnightblue" d="M302.2,-74.8C328.62,-64.68 361.8,-51.96 388.99,-41.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="300.88,-71.56 292.79,-78.4 303.38,-78.09 300.88,-71.56"/>
 </g>
 </g>
 </svg>

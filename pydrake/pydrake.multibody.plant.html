@@ -5033,6 +5033,14 @@ vector of actuation values u has this size. See AddJointActuator().</p>
 <p>Returns the total number of actuated degrees of freedom for a specific
 model instance. That is, the vector of actuation values u has this
 size. See AddJointActuator().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -5112,6 +5120,13 @@ This means the minimum number of frames is one.</p>
 </ol>
 <p>Returns the size of the multibody system state vector x = [q v]. This
 will be <code class="docutils literal notranslate"><span class="pre">num_positions()</span></code> plus <code class="docutils literal notranslate"><span class="pre">num_velocities()</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_multibody_states(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
@@ -5119,6 +5134,14 @@ will be <code class="docutils literal notranslate"><span class="pre">num_positio
 model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code> plus
 <code class="docutils literal notranslate"><span class="pre">num_velocities(model_instance)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -5129,11 +5152,26 @@ model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[float]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector q for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector qᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -5144,11 +5182,26 @@ instance i.</p>
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[float]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector v for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector vᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -9069,6 +9122,14 @@ vector of actuation values u has this size. See AddJointActuator().</p>
 <p>Returns the total number of actuated degrees of freedom for a specific
 model instance. That is, the vector of actuation values u has this
 size. See AddJointActuator().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -9148,6 +9209,13 @@ This means the minimum number of frames is one.</p>
 </ol>
 <p>Returns the size of the multibody system state vector x = [q v]. This
 will be <code class="docutils literal notranslate"><span class="pre">num_positions()</span></code> plus <code class="docutils literal notranslate"><span class="pre">num_velocities()</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_multibody_states(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
@@ -9155,6 +9223,14 @@ will be <code class="docutils literal notranslate"><span class="pre">num_positio
 model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code> plus
 <code class="docutils literal notranslate"><span class="pre">num_velocities(model_instance)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -9165,11 +9241,26 @@ model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector q for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector qᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -9180,11 +9271,26 @@ instance i.</p>
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector v for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector vᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -13103,6 +13209,14 @@ vector of actuation values u has this size. See AddJointActuator().</p>
 <p>Returns the total number of actuated degrees of freedom for a specific
 model instance. That is, the vector of actuation values u has this
 size. See AddJointActuator().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -13182,6 +13296,13 @@ This means the minimum number of frames is one.</p>
 </ol>
 <p>Returns the size of the multibody system state vector x = [q v]. This
 will be <code class="docutils literal notranslate"><span class="pre">num_positions()</span></code> plus <code class="docutils literal notranslate"><span class="pre">num_velocities()</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_multibody_states(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
@@ -13189,6 +13310,14 @@ will be <code class="docutils literal notranslate"><span class="pre">num_positio
 model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code> plus
 <code class="docutils literal notranslate"><span class="pre">num_velocities(model_instance)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -13199,11 +13328,26 @@ model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector q for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector qᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -13214,11 +13358,26 @@ instance i.</p>
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector v for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector vᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -17137,6 +17296,14 @@ vector of actuation values u has this size. See AddJointActuator().</p>
 <p>Returns the total number of actuated degrees of freedom for a specific
 model instance. That is, the vector of actuation values u has this
 size. See AddJointActuator().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -17216,6 +17383,13 @@ This means the minimum number of frames is one.</p>
 </ol>
 <p>Returns the size of the multibody system state vector x = [q v]. This
 will be <code class="docutils literal notranslate"><span class="pre">num_positions()</span></code> plus <code class="docutils literal notranslate"><span class="pre">num_velocities()</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_multibody_states(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
@@ -17223,6 +17397,14 @@ will be <code class="docutils literal notranslate"><span class="pre">num_positio
 model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code> plus
 <code class="docutils literal notranslate"><span class="pre">num_velocities(model_instance)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -17233,11 +17415,26 @@ model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.) will be
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[float]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector q for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_positions(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized position vector qᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -17248,11 +17445,26 @@ instance i.</p>
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[float]) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector v for this model.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The intent of this function is only to be used after Finalize().
+Calling it prior to Finalize() will return inaccurate results. On
+or after 2022-10-01, calling this function before Finalize() will
+result in an exception.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li>num_velocities(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; int</li>
 </ol>
 <p>Returns the size of the generalized velocity vector vᵢ for model
 instance i.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
