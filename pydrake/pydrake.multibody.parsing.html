@@ -455,6 +455,10 @@ if <code class="docutils literal notranslate"><span class="pre">package_name</sp
 <dd><p>Parses SDF and URDF input files into a MultibodyPlant and (optionally)
 a SceneGraph. For documentation of Drake-specific extensions and
 limitations, see multibody_parsing.</p>
+<p>When parsing literal quantities, Parser assumes SI units and radians
+in the absence of units specified by the format itself. This includes
+the literals in the explicitly specified files as well as referenced
+files such as OBJ or other data file formats.</p>
 <dl class="method">
 <dt id="pydrake.multibody.parsing.Parser.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser, plant: pydrake.multibody.plant.MultibodyPlant_[float], scene_graph: pydrake.geometry.SceneGraph_[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.Parser.__init__" title="Permalink to this definition">¶</a></dt>
@@ -583,8 +587,19 @@ warnings will be treated as errors.</p>
 
 <dl class="function">
 <dt id="pydrake.multibody.parsing.ProcessModelDirectives">
-<code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">ProcessModelDirectives</code><span class="sig-paren">(</span><em>directives: pydrake.multibody.parsing.ModelDirectives, plant: pydrake.multibody.plant.MultibodyPlant_[float], parser: pydrake.multibody.parsing.Parser</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.parsing.ModelInstanceInfo]<a class="headerlink" href="#pydrake.multibody.parsing.ProcessModelDirectives" title="Permalink to this definition">¶</a></dt>
-<dd><p>Processes model directives for a given MultibodyPlant.</p>
+<code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">ProcessModelDirectives</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.ProcessModelDirectives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ProcessModelDirectives(directives: pydrake.multibody.parsing.ModelDirectives, parser: pydrake.multibody.parsing.Parser) -&gt; List[pydrake.multibody.parsing.ModelInstanceInfo]</li>
+</ol>
+<p>Parses the given model directives using the given parser. The
+MultibodyPlant (and optionally SceneGraph) being modified are
+implicitly associated with the Parser object. Returns the list of
+added models.</p>
+<ol class="arabic simple" start="2">
+<li>ProcessModelDirectives(directives: pydrake.multibody.parsing.ModelDirectives, plant: pydrake.multibody.plant.MultibodyPlant_[float], parser: pydrake.multibody.parsing.Parser = None) -&gt; List[pydrake.multibody.parsing.ModelInstanceInfo]</li>
+</ol>
+<p>Processes model directives for a given MultibodyPlant.</p>
 </dd></dl>
 
 </div>

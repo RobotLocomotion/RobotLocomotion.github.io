@@ -6,6 +6,8 @@ var searchData=
   ['value_5fpybind_2eh',['value_pybind.h',['../value__pybind_8h.html',1,'']]],
   ['value_5fto_5fabstract_5fvalue_2eh',['value_to_abstract_value.h',['../value__to__abstract__value_8h.html',1,'']]],
   ['van_5fder_5fpol_2eh',['van_der_pol.h',['../van__der__pol_8h.html',1,'']]],
+  ['variable_2eh',['variable.h',['../variable_8h.html',1,'']]],
+  ['variables_2eh',['variables.h',['../variables_8h.html',1,'']]],
   ['vector_5fbase_2eh',['vector_base.h',['../vector__base_8h.html',1,'']]],
   ['vector_5flog_2eh',['vector_log.h',['../vector__log_8h.html',1,'']]],
   ['vector_5flog_5fsink_2eh',['vector_log_sink.h',['../vector__log__sink_8h.html',1,'']]],

@@ -9,5 +9,7 @@ var symbolic__decompose_8h =
     [ "DecomposeQuadraticPolynomial", "symbolic__decompose_8h.html#a168045cc4df5fee36f317095c2a9f891", null ],
     [ "ExtractAndAppendVariablesFromExpression", "symbolic__decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b", null ],
     [ "ExtractVariablesFromExpression", "symbolic__decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934", null ],
-    [ "ExtractVariablesFromExpression", "symbolic__decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc", null ]
+    [ "ExtractVariablesFromExpression", "symbolic__decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc", null ],
+    [ "IsAffine", "symbolic__decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7", null ],
+    [ "IsAffine", "symbolic__decompose_8h.html#a9d8e94c7598bd59e6a5314ffbc3c7f59", null ]
 ];

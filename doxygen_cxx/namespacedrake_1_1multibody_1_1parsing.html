@@ -209,6 +209,9 @@ Functions</h2></td></tr>
 <tr class="memitem:abc86ac1c2971d0d3ca1e2e98d0aa986c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#abc86ac1c2971d0d3ca1e2e98d0aa986c">FlattenModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">drake::multibody::PackageMap</a> &amp;package_map, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> *out)</td></tr>
 <tr class="memdesc:abc86ac1c2971d0d3ca1e2e98d0aa986c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten model directives.  <a href="#abc86ac1c2971d0d3ca1e2e98d0aa986c">More...</a><br /></td></tr>
 <tr class="separator:abc86ac1c2971d0d3ca1e2e98d0aa986c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c0dda97446d100be2bc1c329c0ccb8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a04c0dda97446d100be2bc1c329c0ccb8">ProcessModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, <a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *parser)</td></tr>
+<tr class="memdesc:a04c0dda97446d100be2bc1c329c0ccb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the given model directives using the given parser.  <a href="#a04c0dda97446d100be2bc1c329c0ccb8">More...</a><br /></td></tr>
+<tr class="separator:a04c0dda97446d100be2bc1c329c0ccb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f308887c21af1be20293ef44af5425e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a0f308887c21af1be20293ef44af5425e">ProcessModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant, std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a> &gt; *added_models=nullptr, <a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *parser=nullptr)</td></tr>
 <tr class="memdesc:a0f308887c21af1be20293ef44af5425e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes model directives for a given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#a0f308887c21af1be20293ef44af5425e">More...</a><br /></td></tr>
 <tr class="separator:a0f308887c21af1be20293ef44af5425e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -461,8 +464,39 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a04c0dda97446d100be2bc1c329c0ccb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c0dda97446d100be2bc1c329c0ccb8">&#9670;&nbsp;</a></span>ProcessModelDirectives() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a>&gt; drake::multibody::parsing::ProcessModelDirectives </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;&#160;</td>
+          <td class="paramname"><em>directives</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *&#160;</td>
+          <td class="paramname"><em>parser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses the given model directives using the given parser. </p>
+<p>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (and optionally SceneGraph) being modified are implicitly associated with the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> object. Returns the list of added models. </p>
+
+</div>
+</div>
 <a id="a0f308887c21af1be20293ef44af5425e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f308887c21af1be20293ef44af5425e">&#9670;&nbsp;</a></span>ProcessModelDirectives()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f308887c21af1be20293ef44af5425e">&#9670;&nbsp;</a></span>ProcessModelDirectives() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

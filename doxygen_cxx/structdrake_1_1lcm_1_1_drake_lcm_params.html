@@ -383,7 +383,8 @@ Public Attributes</h2></td></tr>
 
 <p>The custom LCM channel name suffix for this <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a> instance (optional). </p>
 <p>When provided, calls to <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991" title="Most users should use the drake::lcm::Publish() free function, instead of this interface method.">DrakeLcm::Publish()</a> or <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a1d46824a3a1490cb7f43e75d01575003" title="Most users should use the drake::lcm::Subscribe() free function or the drake::lcm::Subscriber wrapper...">DrakeLcm::Subscribe()</a> will append this string to the <code>channel</code> name requested for publish or subscribe.</p>
-<p>This has no effect on <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a85767dac8b9304854190439c7dcdf7b3" title="Subscribe to all channels; this is useful for logging and redirecting LCM traffic without regard to i...">DrakeLcm::SubscribeAllChannels()</a>; the channel names reported there will remain unmodified. </p>
+<p>The callback of <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a85767dac8b9304854190439c7dcdf7b3" title="Subscribe to all channels; this is useful for logging and redirecting LCM traffic without regard to i...">DrakeLcm::SubscribeAllChannels()</a> will receive the "fully
+qualified" channel name including this suffix. </p>
 
 </div>
 </div>

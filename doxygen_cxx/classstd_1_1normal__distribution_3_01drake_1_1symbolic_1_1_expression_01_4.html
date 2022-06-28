@@ -179,7 +179,7 @@ class std::normal_distribution&lt; drake::symbolic::Expression &gt;</h3>
 <li>When an instance of this class is copied, the original and copied distributions share the vector of symbolic random variables. We want to make sure that the two generate identical sequences of elements. <div class="fragment"><div class="line">random_device rd;</div><div class="line">RandomGenerator g{rd()};</div><div class="line"></div><div class="line">std::normal_distribution&lt;Expression&gt; d1(0.0, 1.0);</div><div class="line">std::normal_distribution&lt;Expression&gt; d2(d1);</div><div class="line"><span class="keyword">const</span> Expression e1_1{d1(g)};</div><div class="line"><span class="keyword">const</span> Expression e1_2{d1(g)};</div><div class="line"></div><div class="line"><span class="keyword">const</span> Expression e2_1{d2(g)};</div><div class="line"><span class="keyword">const</span> Expression e2_2{d2(g)};</div><div class="line"></div><div class="line">EXPECT_TRUE(e1_1.EqualTo(e2_1));</div><div class="line">EXPECT_TRUE(e1_2.EqualTo(e2_2));</div></div><!-- fragment --> </li>
 </ul>
 </div>
-<p><code>#include &lt;drake/common/symbolic_expression.h&gt;</code></p>
+<p><code>#include &lt;drake/common/symbolic/expression/expression.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -605,7 +605,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/common/<a class="el" href="symbolic__expression_8h.html">symbolic_expression.h</a></li>
+<li>drake/common/symbolic/expression/<a class="el" href="expression_2expression_8h.html">expression.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -168,7 +168,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_parser.htm
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parses SDF and URDF input files into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and (optionally) a SceneGraph. </p>
-<p>For documentation of Drake-specific extensions and limitations, see <a class="el" href="group__multibody__parsing.html">Parsing Models for Multibody Dynamics</a>. </p>
+<p>For documentation of Drake-specific extensions and limitations, see <a class="el" href="group__multibody__parsing.html">Parsing Models for Multibody Dynamics</a>.</p>
+<p>When parsing literal quantities, Parser assumes SI units and radians in the absence of units specified by the format itself. This includes the literals in the explicitly specified files as well as referenced files such as OBJ or other data file formats. </p>
 </div>
 <p><code>#include &lt;drake/multibody/parsing/parser.h&gt;</code></p>
 <table class="memberdecls">

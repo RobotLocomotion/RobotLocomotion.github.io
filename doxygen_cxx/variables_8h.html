@@ -1,0 +1,271 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/symbolic/expression/variables.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('variables_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">variables.h File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;initializer_list&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for variables.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="variables_8h__incl.svg" width="100%" height="596"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="variables_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a set of variables.  <a href="classdrake_1_1symbolic_1_1_variables.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html">hash&lt; drake::symbolic::Variables &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1symbolic"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html">drake::symbolic</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac861cf2992e3fa03746df6ca291c5020"><td class="memItemLeft" align="right" valign="top">Variables &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac861cf2992e3fa03746df6ca291c5020">operator+=</a> (Variables &amp;vars1, const Variables &amp;vars2)</td></tr>
+<tr class="memdesc:ac861cf2992e3fa03746df6ca291c5020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates <code>var1</code> with the result of set-union(<code>var1</code>, <code>var2</code>).  <a href="namespacedrake_1_1symbolic.html#ac861cf2992e3fa03746df6ca291c5020">More...</a><br /></td></tr>
+<tr class="separator:ac861cf2992e3fa03746df6ca291c5020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee8a097ba9d2c5d5ee4643471c945ce"><td class="memItemLeft" align="right" valign="top">Variables &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3ee8a097ba9d2c5d5ee4643471c945ce">operator+=</a> (Variables &amp;vars, const Variable &amp;var)</td></tr>
+<tr class="memdesc:a3ee8a097ba9d2c5d5ee4643471c945ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates <code>vars</code> with the result of set-union(<code>vars</code>, { <code>var</code> }).  <a href="namespacedrake_1_1symbolic.html#a3ee8a097ba9d2c5d5ee4643471c945ce">More...</a><br /></td></tr>
+<tr class="separator:a3ee8a097ba9d2c5d5ee4643471c945ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2399f6ee5b4c18bc26dc3fd5b6c07a"><td class="memItemLeft" align="right" valign="top">Variables&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a">operator+</a> (Variables vars1, const Variables &amp;vars2)</td></tr>
+<tr class="memdesc:aba2399f6ee5b4c18bc26dc3fd5b6c07a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns set-union of <code>var1</code> and <code>var2</code>.  <a href="namespacedrake_1_1symbolic.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a">More...</a><br /></td></tr>
+<tr class="separator:aba2399f6ee5b4c18bc26dc3fd5b6c07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497331a32f5911a18cef34b07df6c04a"><td class="memItemLeft" align="right" valign="top">Variables&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a497331a32f5911a18cef34b07df6c04a">operator+</a> (Variables vars, const Variable &amp;var)</td></tr>
+<tr class="memdesc:a497331a32f5911a18cef34b07df6c04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns set-union of <code>vars</code> and {<code>var}</code>.  <a href="namespacedrake_1_1symbolic.html#a497331a32f5911a18cef34b07df6c04a">More...</a><br /></td></tr>
+<tr class="separator:a497331a32f5911a18cef34b07df6c04a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae117a884f72a1a73cc2863ec026c011"><td class="memItemLeft" align="right" valign="top">Variables&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aae117a884f72a1a73cc2863ec026c011">operator+</a> (const Variable &amp;var, Variables vars)</td></tr>
+<tr class="memdesc:aae117a884f72a1a73cc2863ec026c011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns set-union of {<code>var}</code> and <code>vars</code>.  <a href="namespacedrake_1_1symbolic.html#aae117a884f72a1a73cc2863ec026c011">More...</a><br /></td></tr>
+<tr class="separator:aae117a884f72a1a73cc2863ec026c011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668d0a0cca975453784c6cd77d638c56"><td class="memItemLeft" align="right" valign="top">Variables &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a668d0a0cca975453784c6cd77d638c56">operator-=</a> (Variables &amp;vars1, const Variables &amp;vars2)</td></tr>
+<tr class="memdesc:a668d0a0cca975453784c6cd77d638c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates <code>var1</code> with the result of set-minus(<code>var1</code>, <code>var2</code>).  <a href="namespacedrake_1_1symbolic.html#a668d0a0cca975453784c6cd77d638c56">More...</a><br /></td></tr>
+<tr class="separator:a668d0a0cca975453784c6cd77d638c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ee50ee4e70ef4393128598d143a2a6"><td class="memItemLeft" align="right" valign="top">Variables &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a50ee50ee4e70ef4393128598d143a2a6">operator-=</a> (Variables &amp;vars, const Variable &amp;var)</td></tr>
+<tr class="memdesc:a50ee50ee4e70ef4393128598d143a2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates <code>vars</code> with the result of set-minus(<code>vars</code>, {<code>var}</code>).  <a href="namespacedrake_1_1symbolic.html#a50ee50ee4e70ef4393128598d143a2a6">More...</a><br /></td></tr>
+<tr class="separator:a50ee50ee4e70ef4393128598d143a2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d93012a42e93f92eb3b7fab8bd60733"><td class="memItemLeft" align="right" valign="top">Variables&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3d93012a42e93f92eb3b7fab8bd60733">operator-</a> (Variables vars1, const Variables &amp;vars2)</td></tr>
+<tr class="memdesc:a3d93012a42e93f92eb3b7fab8bd60733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns set-minus(<code>var1</code>, <code>vars2</code>).  <a href="namespacedrake_1_1symbolic.html#a3d93012a42e93f92eb3b7fab8bd60733">More...</a><br /></td></tr>
+<tr class="separator:a3d93012a42e93f92eb3b7fab8bd60733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062f8182804bd14f76a6f2ac17718a80"><td class="memItemLeft" align="right" valign="top">Variables&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a062f8182804bd14f76a6f2ac17718a80">operator-</a> (Variables vars, const Variable &amp;var)</td></tr>
+<tr class="memdesc:a062f8182804bd14f76a6f2ac17718a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns set-minus(<code>vars</code>, { <code>var</code> }).  <a href="namespacedrake_1_1symbolic.html#a062f8182804bd14f76a6f2ac17718a80">More...</a><br /></td></tr>
+<tr class="separator:a062f8182804bd14f76a6f2ac17718a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc4e8320720218ee84dc1fdc7439d17"><td class="memItemLeft" align="right" valign="top">Variables&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a8dc4e8320720218ee84dc1fdc7439d17">intersect</a> (const Variables &amp;vars1, const Variables &amp;vars2)</td></tr>
+<tr class="memdesc:a8dc4e8320720218ee84dc1fdc7439d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection of <code>vars1</code> and <code>vars2</code>.  <a href="namespacedrake_1_1symbolic.html#a8dc4e8320720218ee84dc1fdc7439d17">More...</a><br /></td></tr>
+<tr class="separator:a8dc4e8320720218ee84dc1fdc7439d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="dir_66d630ac47407fe11bcb76d9e7e25510.html">symbolic</a></li><li class="navelem"><a class="el" href="dir_38bb68bb9a9977cf78f44d487961d9ec.html">expression</a></li><li class="navelem"><a class="el" href="variables_8h.html">variables.h</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

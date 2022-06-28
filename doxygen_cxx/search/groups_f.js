@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['working_20with_20contacts_20in_20drake',['Working with Contacts in Drake',['../group__contact__engineering.html',1,'']]]
+  ['variable_20definitions',['Variable definitions',['../group__constraint__variable__defs.html',1,'']]],
+  ['visualization',['Visualization',['../group__visualization.html',1,'']]]
 ];

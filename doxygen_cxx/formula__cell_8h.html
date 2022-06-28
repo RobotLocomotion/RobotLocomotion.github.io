@@ -1,0 +1,386 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/symbolic/expression/formula_cell.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('formula__cell_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">formula_cell.h File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Internal use only. </p>
+<p>Provides implementation-details of symbolic formulas. </p>
+</div><div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="random_8h.html">drake/common/random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="all_8h.html">drake/common/symbolic/expression/all.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for formula_cell.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="formula__cell_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html">FormulaCell</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an abstract class which is the base of concrete symbolic-formula classes (i.e.  <a href="classdrake_1_1symbolic_1_1_formula_cell.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_relational_formula_cell.html">RelationalFormulaCell</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the base class for relational operators (==, !=, &lt;, &lt;=, &gt;, &gt;=).  <a href="classdrake_1_1symbolic_1_1_relational_formula_cell.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_nary_formula_cell.html">NaryFormulaCell</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the base class for N-ary logic operators (∧ and ∨).  <a href="classdrake_1_1symbolic_1_1_nary_formula_cell.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_true.html">FormulaTrue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing true.  <a href="classdrake_1_1symbolic_1_1_formula_true.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_false.html">FormulaFalse</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing false.  <a href="classdrake_1_1symbolic_1_1_formula_false.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_var.html">FormulaVar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing a Boolean variable.  <a href="classdrake_1_1symbolic_1_1_formula_var.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_eq.html">FormulaEq</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing equality (e1 = e2).  <a href="classdrake_1_1symbolic_1_1_formula_eq.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_neq.html">FormulaNeq</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing disequality (e1 ≠ e2).  <a href="classdrake_1_1symbolic_1_1_formula_neq.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_gt.html">FormulaGt</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing 'greater-than' (e1 &gt; e2).  <a href="classdrake_1_1symbolic_1_1_formula_gt.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_geq.html">FormulaGeq</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing 'greater-than-or-equal-to' (e1 ≥ e2).  <a href="classdrake_1_1symbolic_1_1_formula_geq.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_lt.html">FormulaLt</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing 'less-than' (e1 &lt; e2).  <a href="classdrake_1_1symbolic_1_1_formula_lt.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_leq.html">FormulaLeq</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing 'less-than-or-equal-to' (e1 ≤ e2).  <a href="classdrake_1_1symbolic_1_1_formula_leq.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_and.html">FormulaAnd</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing conjunctions (f1 ∧ ...  <a href="classdrake_1_1symbolic_1_1_formula_and.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_or.html">FormulaOr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing disjunctions (f1 ∨ ...  <a href="classdrake_1_1symbolic_1_1_formula_or.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_not.html">FormulaNot</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing negations (¬f).  <a href="classdrake_1_1symbolic_1_1_formula_not.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_forall.html">FormulaForall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing universal quantifications (∀ x₁, ..., * xn.  <a href="classdrake_1_1symbolic_1_1_formula_forall.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_isnan.html">FormulaIsnan</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing isnan predicate.  <a href="classdrake_1_1symbolic_1_1_formula_isnan.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html">FormulaPositiveSemidefinite</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic formula representing positive-semidefinite (PSD) constraint.  <a href="classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1symbolic"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html">drake::symbolic</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9fe1f207a7dfa971bf80a1d44041368b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9fe1f207a7dfa971bf80a1d44041368b">is_false</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a9fe1f207a7dfa971bf80a1d44041368b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is structurally equal to False formula.  <a href="namespacedrake_1_1symbolic.html#a9fe1f207a7dfa971bf80a1d44041368b">More...</a><br /></td></tr>
+<tr class="separator:a9fe1f207a7dfa971bf80a1d44041368b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3654df643f4d7840fd8548eb81f4a9ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3654df643f4d7840fd8548eb81f4a9ae">is_true</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a3654df643f4d7840fd8548eb81f4a9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is structurally equal to True formula.  <a href="namespacedrake_1_1symbolic.html#a3654df643f4d7840fd8548eb81f4a9ae">More...</a><br /></td></tr>
+<tr class="separator:a3654df643f4d7840fd8548eb81f4a9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac014e89da18637b81f9c1fbe6306e689"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac014e89da18637b81f9c1fbe6306e689">is_variable</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:ac014e89da18637b81f9c1fbe6306e689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a variable formula.  <a href="namespacedrake_1_1symbolic.html#ac014e89da18637b81f9c1fbe6306e689">More...</a><br /></td></tr>
+<tr class="separator:ac014e89da18637b81f9c1fbe6306e689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ce3ca5629e2672f177ff3c0cc088ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a09ce3ca5629e2672f177ff3c0cc088ae">is_equal_to</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a09ce3ca5629e2672f177ff3c0cc088ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a formula representing equality (==).  <a href="namespacedrake_1_1symbolic.html#a09ce3ca5629e2672f177ff3c0cc088ae">More...</a><br /></td></tr>
+<tr class="separator:a09ce3ca5629e2672f177ff3c0cc088ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cfac124e8ae1c7450c4e0c91c2bc07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac5cfac124e8ae1c7450c4e0c91c2bc07">is_not_equal_to</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:ac5cfac124e8ae1c7450c4e0c91c2bc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a formula representing disequality (!=).  <a href="namespacedrake_1_1symbolic.html#ac5cfac124e8ae1c7450c4e0c91c2bc07">More...</a><br /></td></tr>
+<tr class="separator:ac5cfac124e8ae1c7450c4e0c91c2bc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aab22ba7b7baeb20a13b0aa90172fc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0aab22ba7b7baeb20a13b0aa90172fc1">is_greater_than</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a0aab22ba7b7baeb20a13b0aa90172fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a formula representing greater-than (&gt;).  <a href="namespacedrake_1_1symbolic.html#a0aab22ba7b7baeb20a13b0aa90172fc1">More...</a><br /></td></tr>
+<tr class="separator:a0aab22ba7b7baeb20a13b0aa90172fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788e2bbb344403337e7b77edf2bd92fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a788e2bbb344403337e7b77edf2bd92fa">is_greater_than_or_equal_to</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a788e2bbb344403337e7b77edf2bd92fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a formula representing greater-than-or-equal-to (&gt;=).  <a href="namespacedrake_1_1symbolic.html#a788e2bbb344403337e7b77edf2bd92fa">More...</a><br /></td></tr>
+<tr class="separator:a788e2bbb344403337e7b77edf2bd92fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed4c523512b2ee45d906c0f9d0b1d13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aaed4c523512b2ee45d906c0f9d0b1d13">is_less_than</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:aaed4c523512b2ee45d906c0f9d0b1d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a formula representing less-than (&lt;).  <a href="namespacedrake_1_1symbolic.html#aaed4c523512b2ee45d906c0f9d0b1d13">More...</a><br /></td></tr>
+<tr class="separator:aaed4c523512b2ee45d906c0f9d0b1d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfca6086d970d576d51fa5364416a297"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#adfca6086d970d576d51fa5364416a297">is_less_than_or_equal_to</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:adfca6086d970d576d51fa5364416a297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a formula representing less-than-or-equal-to (&lt;=).  <a href="namespacedrake_1_1symbolic.html#adfca6086d970d576d51fa5364416a297">More...</a><br /></td></tr>
+<tr class="separator:adfca6086d970d576d51fa5364416a297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500b46690e6bd8926394ccf7c8482a70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a500b46690e6bd8926394ccf7c8482a70">is_relational</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a500b46690e6bd8926394ccf7c8482a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a relational formula ({==, !=, &gt;, &gt;=, &lt;, &lt;=}).  <a href="namespacedrake_1_1symbolic.html#a500b46690e6bd8926394ccf7c8482a70">More...</a><br /></td></tr>
+<tr class="separator:a500b46690e6bd8926394ccf7c8482a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60a650ffd29c64c25be2dc84bfefccc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad60a650ffd29c64c25be2dc84bfefccc">is_conjunction</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:ad60a650ffd29c64c25be2dc84bfefccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a conjunction (∧).  <a href="namespacedrake_1_1symbolic.html#ad60a650ffd29c64c25be2dc84bfefccc">More...</a><br /></td></tr>
+<tr class="separator:ad60a650ffd29c64c25be2dc84bfefccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb95d50cf0c445f6be7d3d1e5a356a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9fb95d50cf0c445f6be7d3d1e5a356a9">is_disjunction</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a9fb95d50cf0c445f6be7d3d1e5a356a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a disjunction (∨).  <a href="namespacedrake_1_1symbolic.html#a9fb95d50cf0c445f6be7d3d1e5a356a9">More...</a><br /></td></tr>
+<tr class="separator:a9fb95d50cf0c445f6be7d3d1e5a356a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a463fed830ca5aa9b3ff7bdef8f67a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a18a463fed830ca5aa9b3ff7bdef8f67a">is_negation</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a18a463fed830ca5aa9b3ff7bdef8f67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a negation (¬).  <a href="namespacedrake_1_1symbolic.html#a18a463fed830ca5aa9b3ff7bdef8f67a">More...</a><br /></td></tr>
+<tr class="separator:a18a463fed830ca5aa9b3ff7bdef8f67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aeb30cdaf6f0d8f4d324afee241ae89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1aeb30cdaf6f0d8f4d324afee241ae89">is_forall</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a1aeb30cdaf6f0d8f4d324afee241ae89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a Forall formula (∀).  <a href="namespacedrake_1_1symbolic.html#a1aeb30cdaf6f0d8f4d324afee241ae89">More...</a><br /></td></tr>
+<tr class="separator:a1aeb30cdaf6f0d8f4d324afee241ae89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726023da52d6033c2565368b6def1e16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a726023da52d6033c2565368b6def1e16">is_isnan</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a726023da52d6033c2565368b6def1e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is an isnan formula.  <a href="namespacedrake_1_1symbolic.html#a726023da52d6033c2565368b6def1e16">More...</a><br /></td></tr>
+<tr class="separator:a726023da52d6033c2565368b6def1e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a59dcaebd746af03b1996daf8d8901"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a42a59dcaebd746af03b1996daf8d8901">is_positive_semidefinite</a> (const FormulaCell &amp;f)</td></tr>
+<tr class="memdesc:a42a59dcaebd746af03b1996daf8d8901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>f</code> is a positive semidefinite formula.  <a href="namespacedrake_1_1symbolic.html#a42a59dcaebd746af03b1996daf8d8901">More...</a><br /></td></tr>
+<tr class="separator:a42a59dcaebd746af03b1996daf8d8901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba2673fe37620dcc2a3b06ab7b72bec"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaFalse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1ba2673fe37620dcc2a3b06ab7b72bec">to_false</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a1ba2673fe37620dcc2a3b06ab7b72bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaFalse&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a1ba2673fe37620dcc2a3b06ab7b72bec">More...</a><br /></td></tr>
+<tr class="separator:a1ba2673fe37620dcc2a3b06ab7b72bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85772f75f073405ed82017151b4cb279"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaTrue &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a85772f75f073405ed82017151b4cb279">to_true</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a85772f75f073405ed82017151b4cb279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaTrue&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a85772f75f073405ed82017151b4cb279">More...</a><br /></td></tr>
+<tr class="separator:a85772f75f073405ed82017151b4cb279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b78dde9ca32fe1ee12cc232a9a4e85c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaVar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3b78dde9ca32fe1ee12cc232a9a4e85c">to_variable</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a3b78dde9ca32fe1ee12cc232a9a4e85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaVar&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a3b78dde9ca32fe1ee12cc232a9a4e85c">More...</a><br /></td></tr>
+<tr class="separator:a3b78dde9ca32fe1ee12cc232a9a4e85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259612bbd9405f24d4ac3b60d54575e6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const RelationalFormulaCell &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a259612bbd9405f24d4ac3b60d54575e6">to_relational</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a259612bbd9405f24d4ac3b60d54575e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const RelationalFormulaCell&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a259612bbd9405f24d4ac3b60d54575e6">More...</a><br /></td></tr>
+<tr class="separator:a259612bbd9405f24d4ac3b60d54575e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a6204418091c1fbf26c9d2ad03389f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaEq &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a10a6204418091c1fbf26c9d2ad03389f">to_equal_to</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a10a6204418091c1fbf26c9d2ad03389f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaEq&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a10a6204418091c1fbf26c9d2ad03389f">More...</a><br /></td></tr>
+<tr class="separator:a10a6204418091c1fbf26c9d2ad03389f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e880ce60c41c7e65085dbf911edded"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaNeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a70e880ce60c41c7e65085dbf911edded">to_not_equal_to</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a70e880ce60c41c7e65085dbf911edded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaNeq&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a70e880ce60c41c7e65085dbf911edded">More...</a><br /></td></tr>
+<tr class="separator:a70e880ce60c41c7e65085dbf911edded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352fe19778d77b7095580950d8e298b4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaGt &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a352fe19778d77b7095580950d8e298b4">to_greater_than</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a352fe19778d77b7095580950d8e298b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaGt&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a352fe19778d77b7095580950d8e298b4">More...</a><br /></td></tr>
+<tr class="separator:a352fe19778d77b7095580950d8e298b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8cbb802de92188843f8531d6b05827"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaGeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7f8cbb802de92188843f8531d6b05827">to_greater_than_or_equal_to</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a7f8cbb802de92188843f8531d6b05827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaGeq&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a7f8cbb802de92188843f8531d6b05827">More...</a><br /></td></tr>
+<tr class="separator:a7f8cbb802de92188843f8531d6b05827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7488de67ca4d6bc69cec3bb0f67ae4c3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaLt &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7488de67ca4d6bc69cec3bb0f67ae4c3">to_less_than</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a7488de67ca4d6bc69cec3bb0f67ae4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaLt&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a7488de67ca4d6bc69cec3bb0f67ae4c3">More...</a><br /></td></tr>
+<tr class="separator:a7488de67ca4d6bc69cec3bb0f67ae4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb39c33945b763922fe0fcacc6c369b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaLeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acfb39c33945b763922fe0fcacc6c369b">to_less_than_or_equal_to</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:acfb39c33945b763922fe0fcacc6c369b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaLeq&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#acfb39c33945b763922fe0fcacc6c369b">More...</a><br /></td></tr>
+<tr class="separator:acfb39c33945b763922fe0fcacc6c369b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180aa6c7637801b158099a87a59a4185"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaAnd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a180aa6c7637801b158099a87a59a4185">to_conjunction</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a180aa6c7637801b158099a87a59a4185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaAnd&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a180aa6c7637801b158099a87a59a4185">More...</a><br /></td></tr>
+<tr class="separator:a180aa6c7637801b158099a87a59a4185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0758b788047cb3d6b4737c6d54cee2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaOr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0b0758b788047cb3d6b4737c6d54cee2">to_disjunction</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a0b0758b788047cb3d6b4737c6d54cee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaOr&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a0b0758b788047cb3d6b4737c6d54cee2">More...</a><br /></td></tr>
+<tr class="separator:a0b0758b788047cb3d6b4737c6d54cee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f9249b5c150485c3c7cff61d5c0416"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const NaryFormulaCell &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad0f9249b5c150485c3c7cff61d5c0416">to_nary</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:ad0f9249b5c150485c3c7cff61d5c0416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const NaryFormulaCell&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#ad0f9249b5c150485c3c7cff61d5c0416">More...</a><br /></td></tr>
+<tr class="separator:ad0f9249b5c150485c3c7cff61d5c0416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceef2c41a1ce6c5f7eed83c1d2df9381"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaNot &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aceef2c41a1ce6c5f7eed83c1d2df9381">to_negation</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:aceef2c41a1ce6c5f7eed83c1d2df9381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaNot&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#aceef2c41a1ce6c5f7eed83c1d2df9381">More...</a><br /></td></tr>
+<tr class="separator:aceef2c41a1ce6c5f7eed83c1d2df9381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c587017789ff28f462e87ba0a44872d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaForall &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7c587017789ff28f462e87ba0a44872d">to_forall</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a7c587017789ff28f462e87ba0a44872d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaForall&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a7c587017789ff28f462e87ba0a44872d">More...</a><br /></td></tr>
+<tr class="separator:a7c587017789ff28f462e87ba0a44872d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f46f5ae1e9130eb9214a2ae0611f52"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaIsnan &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad4f46f5ae1e9130eb9214a2ae0611f52">to_isnan</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:ad4f46f5ae1e9130eb9214a2ae0611f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaIsnan&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#ad4f46f5ae1e9130eb9214a2ae0611f52">More...</a><br /></td></tr>
+<tr class="separator:ad4f46f5ae1e9130eb9214a2ae0611f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6854fa16fb68d99c3cbe16d2c9afc584"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const FormulaPositiveSemidefinite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6854fa16fb68d99c3cbe16d2c9afc584">to_positive_semidefinite</a> (const std::shared_ptr&lt; const FormulaCell &gt; &amp;f_ptr)</td></tr>
+<tr class="memdesc:a6854fa16fb68d99c3cbe16d2c9afc584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaPositiveSemidefinite&gt;</code>.  <a href="namespacedrake_1_1symbolic.html#a6854fa16fb68d99c3cbe16d2c9afc584">More...</a><br /></td></tr>
+<tr class="separator:a6854fa16fb68d99c3cbe16d2c9afc584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="dir_66d630ac47407fe11bcb76d9e7e25510.html">symbolic</a></li><li class="navelem"><a class="el" href="dir_38bb68bb9a9977cf78f44d487961d9ec.html">expression</a></li><li class="navelem"><a class="el" href="formula__cell_8h.html">formula_cell.h</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

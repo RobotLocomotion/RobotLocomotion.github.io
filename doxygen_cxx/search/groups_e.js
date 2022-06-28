@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['variable_20definitions',['Variable definitions',['../group__constraint__variable__defs.html',1,'']]],
-  ['visualization',['Visualization',['../group__visualization.html',1,'']]]
+  ['units_20of_20multibody_20quantities',['Units of Multibody Quantities',['../group__multibody__quantities__units.html',1,'']]]
 ];

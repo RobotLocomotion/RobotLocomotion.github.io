@@ -165,15 +165,11 @@ $(document).ready(function(){initNavTree('symbolic_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides public header files of Drake's symbolic library. </p>
-<p>A user of the symbolic library should only include this header file. Including other individual headers such as <a class="el" href="symbolic__expression_8h.html">symbolic_expression.h</a> will generate a compile-time error.</p>
-<p>Many symbolic types are not closed under the defined operations. For example, relational operations (i.e. &lt;) over symbolic::Expression produce symbolic::Formula. Another example is addition (+) over Monomial which gives Polynomial. If a user does not include the necessary set of header files, he/she will get either 1) incomprehensible c++ errors or 2) undefined runtime behaviors. The problem is trickier if we use symbolic objects via Eigen. </p>
-</div><div class="textblock"><code>#include &quot;<a class="el" href="symbolic__variable_8h.html">drake/common/symbolic_variable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="symbolic__variables_8h.html">drake/common/symbolic_variables.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="symbolic__environment_8h.html">drake/common/symbolic_environment.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="symbolic__expression_8h.html">drake/common/symbolic_expression.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="symbolic__expression__visitor_8h.html">drake/common/symbolic_expression_visitor.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="symbolic__ldlt_8h.html">drake/common/symbolic_ldlt.h</a>&quot;</code><br />
+<div class="textblock"><p>Provides public header files for the extended portion of Drake's symbolic library that goes beyond the basic algebra (e.g., when using polynomials, simplification, decomposition, etc.). </p>
+<p>Many users will only need to use the "drake/common/symbolic/expression.h" file instead of this one.</p>
+<p>A user of the extended symbolic library should only include this header file. Including other individual headers such as <a class="el" href="symbolic__polynomial_8h.html">symbolic_polynomial.h</a> will generate a compile-time error.</p>
+<p>Extended symbolic types are not closed under the defined operations. For example, addition (+) over Monomial gives a Polynomial. If a user does not include the necessary set of header files, he/she will get either 1) incomprehensible c++ errors or 2) undefined runtime behaviors. The problem is trickier if we use symbolic objects via Eigen. </p>
+</div><div class="textblock"><code>#include &quot;<a class="el" href="expression_8h.html">drake/common/symbolic/expression.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic__monomial_8h.html">drake/common/symbolic_monomial.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic__monomial__util_8h.html">drake/common/symbolic_monomial_util.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic__polynomial_8h.html">drake/common/symbolic_polynomial.h</a>&quot;</code><br />
@@ -184,10 +180,9 @@ $(document).ready(function(){initNavTree('symbolic_8h.html','');});
 <code>#include &quot;<a class="el" href="symbolic__polynomial__basis_8h.html">drake/common/symbolic_polynomial_basis.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic__generic__polynomial_8h.html">drake/common/symbolic_generic_polynomial.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic__rational__function_8h.html">drake/common/symbolic_rational_function.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="symbolic__formula_8h.html">drake/common/symbolic_formula.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="symbolic__formula__visitor_8h.html">drake/common/symbolic_formula_visitor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic__simplification_8h.html">drake/common/symbolic_simplification.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic__codegen_8h.html">drake/common/symbolic_codegen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="symbolic__decompose_8h.html">drake/common/symbolic_decompose.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for symbolic.h:</div>
 <div class="dyncontent">

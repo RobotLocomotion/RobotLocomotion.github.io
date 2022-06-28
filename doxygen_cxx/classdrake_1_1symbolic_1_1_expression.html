@@ -202,7 +202,7 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
     E(c1) / E(c2)  -&gt;  E(c1 / c2)
     f(E(c))        -&gt;  E(f(c))       // c is a constant, f is a math function
 </pre><p>For the math functions which are only defined over a restricted domain (namely, log, sqrt, pow, asin, acos), we check the domain of argument(s), and throw std::domain_error exception if a function is not well-defined for a given argument(s).</p>
-<p>Relational operators over expressions (==, !=, &lt;, &gt;, &lt;=, &gt;=) return <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">symbolic::Formula</a> instead of bool. Those operations are declared in <a class="el" href="symbolic__formula_8h.html">symbolic_formula.h</a> file. To check structural equality between two expressions a separate function, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#abb771e5bf5c37eb4753daf77f77adab0" title="Checks structural equality.">Expression::EqualTo</a>, is provided.</p>
+<p>Relational operators over expressions (==, !=, &lt;, &gt;, &lt;=, &gt;=) return <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">symbolic::Formula</a> instead of bool. Those operations are declared in symbolic_formula.h file. To check structural equality between two expressions a separate function, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#abb771e5bf5c37eb4753daf77f77adab0" title="Checks structural equality.">Expression::EqualTo</a>, is provided.</p>
 <p>Regarding NaN, we have the following rules:</p><ol type="1">
 <li>NaN values are extremely rare during typical computations. Because they are difficult to handle symbolically, we will round that up to "must never
     occur". We allow the user to form <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html" title="Symbolic expression representing NaN (not-a-number).">ExpressionNaN</a> cells in a symbolic tree. For example, the user can initialize an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> to NaN and then overwrite it later. However, evaluating a tree that has NaN in its evaluated sub-trees is an error (see rule (3) below).</li>
@@ -212,7 +212,7 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
 </ol>
 <p><a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> can be used as a scalar type of Eigen types. </p>
 </div>
-<p><code>#include &lt;drake/common/symbolic_expression.h&gt;</code></p>
+<p><code>#include &lt;drake/common/symbolic/expression/expression.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -4671,7 +4671,7 @@ More information about the C++'s conditional expression and ternary operator is 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/common/<a class="el" href="symbolic__expression_8h.html">symbolic_expression.h</a></li>
+<li>drake/common/symbolic/expression/<a class="el" href="expression_2expression_8h.html">expression.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

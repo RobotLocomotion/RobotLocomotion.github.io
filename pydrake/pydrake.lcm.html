@@ -332,8 +332,8 @@ nullopt or a default-constructed optional.</dd>
 <p>When provided, calls to DrakeLcm::Publish() or DrakeLcm::Subscribe()
 will append this string to the <code class="docutils literal notranslate"><span class="pre">channel</span></code> name requested for publish
 or subscribe.</p>
-<p>This has no effect on DrakeLcm::SubscribeAllChannels(); the channel
-names reported there will remain unmodified.</p>
+<p>The callback of DrakeLcm::SubscribeAllChannels() will receive the
+“fully qualified” channel name including this suffix.</p>
 </dd></dl>
 
 <dl class="attribute">

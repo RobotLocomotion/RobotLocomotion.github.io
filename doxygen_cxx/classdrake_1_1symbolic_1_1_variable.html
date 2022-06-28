@@ -171,7 +171,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1symbolic_1_1_variable.ht
 <div class="textblock"><p>Represents a symbolic variable. </p>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a16b0a52c17735f2c98ff7c89bb414978" title="Evaluates using a given environment (by default, an empty environment) and a random number generator.">Expression::Evaluate</a> and <a class="el" href="classdrake_1_1symbolic_1_1_formula.html#acd49712c0b5fa2c1b2013663e81e2721" title="Evaluates using a given environment (by default, an empty environment) and a random number generator.">Formula::Evaluate</a> methods take a symbolic environment (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> → double) and a random number generator. When an expression or a formula includes random variables, <code>Evaluate</code> methods use the random number generator to draw a number for a random variable from the given distribution. Then this numeric value is used to substitute all the occurrences of the corresponding random variable in an expression or a formula. </dd></dl>
 </div>
-<p><code>#include &lt;drake/common/symbolic_variable.h&gt;</code></p>
+<p><code>#include &lt;drake/common/symbolic/expression/variable.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -692,7 +692,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/common/<a class="el" href="symbolic__variable_8h.html">symbolic_variable.h</a></li>
+<li>drake/common/symbolic/expression/<a class="el" href="variable_8h.html">variable.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
