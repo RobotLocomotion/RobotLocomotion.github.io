@@ -15741,7 +15741,7 @@ two key properties:</p>
 <li>it is cloneable, and</li>
 <li>it can be “reified” (see ShapeReifier).</li>
 </ul>
-<p>When you add a new subclass of Shape, you must:</p>
+<p>When you add a new subclass of Shape to Drake, you must:</p>
 <p>1. add a virtual function ImplementGeometry() for the new shape in
 ShapeReifier that invokes the ThrowUnsupportedGeometry method, and add to
 the test for it in shape_specification_test.cc.
@@ -15752,6 +15752,9 @@ derivations of ShapeReifier with <code class="docutils literal notranslate"><spa
 this.</p>
 <p>Otherwise, you might get a runtime error. We do not have an automatic
 way to enforce them at compile time.</p>
+<p>Note that the Shape class hierarchy is closed to third-party
+extensions. All Shape classes must be defined within Drake directly
+(and in this h/cc file pair in particular).</p>
 <dl class="attribute">
 <dt id="pydrake.geometry.Shape.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.Shape.__init__" title="Permalink to this definition">¶</a></dt>

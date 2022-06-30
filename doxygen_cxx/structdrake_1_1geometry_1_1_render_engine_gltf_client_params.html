@@ -1,0 +1,360 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: RenderEngineGltfClientParams Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">RenderEngineGltfClientParams Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Construction parameters for the MakeRenderEngineGltfClient() to create a client as part of the <a class="el" href="group__render__engine__gltf__client__server__api.html">(Experimental) glTF Render Client-Server API</a>. </p>
+</div>
+<p><code>#include &lt;drake/geometry/render_gltf_client/render_engine_gltf_client_params.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a05029dd35522254658dee01b5025968d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d">GetUrl</a> () const</td></tr>
+<tr class="memdesc:a05029dd35522254658dee01b5025968d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the post-processed full url used for client-server communication.  <a href="#a05029dd35522254658dee01b5025968d">More...</a><br /></td></tr>
+<tr class="separator:a05029dd35522254658dee01b5025968d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6120129a500ee5f5fb32836c1ad5bbc0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0">base_url</a> {&quot;http://127.0.0.1:8000&quot;}</td></tr>
+<tr class="memdesc:a6120129a500ee5f5fb32836c1ad5bbc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base url of the server communicate with.  <a href="#a6120129a500ee5f5fb32836c1ad5bbc0">More...</a><br /></td></tr>
+<tr class="separator:a6120129a500ee5f5fb32836c1ad5bbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c89c04d1feae07ca35558055155ffb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a63c89c04d1feae07ca35558055155ffb">port</a> {0}</td></tr>
+<tr class="memdesc:a63c89c04d1feae07ca35558055155ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port to communicate on.  <a href="#a63c89c04d1feae07ca35558055155ffb">More...</a><br /></td></tr>
+<tr class="separator:a63c89c04d1feae07ca35558055155ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c8c4d09a9e537115c0b941b297e311"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311">render_endpoint</a> {&quot;render&quot;}</td></tr>
+<tr class="memdesc:a58c8c4d09a9e537115c0b941b297e311"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) The server endpoint to retrieve renderings from.  <a href="#a58c8c4d09a9e537115c0b941b297e311">More...</a><br /></td></tr>
+<tr class="separator:a58c8c4d09a9e537115c0b941b297e311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace5c9e02c229a4fcf4b3ca57a6dfe7d6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">render::RenderLabel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6">default_label</a> {}</td></tr>
+<tr class="memdesc:ace5c9e02c229a4fcf4b3ca57a6dfe7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The (optional) label to apply when none is otherwise specified.  <a href="#ace5c9e02c229a4fcf4b3ca57a6dfe7d6">More...</a><br /></td></tr>
+<tr class="separator:ace5c9e02c229a4fcf4b3ca57a6dfe7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f078684998b83967d507d0f453f454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454">verbose</a> = false</td></tr>
+<tr class="memdesc:ab3f078684998b83967d507d0f453f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the client should log information about which files are being generated, as well as any information about HTTP communications between the client and server such as HTTP header information, url and port, etc.  <a href="#ab3f078684998b83967d507d0f453f454">More...</a><br /></td></tr>
+<tr class="separator:ab3f078684998b83967d507d0f453f454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae696d36c70574da6c856ad2995f90ae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ae696d36c70574da6c856ad2995f90ae4">no_cleanup</a> = false</td></tr>
+<tr class="memdesc:ae696d36c70574da6c856ad2995f90ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the client should cleanup files generated / retrieved from the server.  <a href="#ae696d36c70574da6c856ad2995f90ae4">More...</a><br /></td></tr>
+<tr class="separator:ae696d36c70574da6c856ad2995f90ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a05029dd35522254658dee01b5025968d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05029dd35522254658dee01b5025968d">&#9670;&nbsp;</a></span>GetUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetUrl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the post-processed full url used for client-server communication. </p>
+<p>The full url is constructed as <code>{base_url}/{render_endpoint}</code> where all trailing slashes in <code>base_url</code> and all leading slashes in <code>render_endpoint</code> have been removed. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6120129a500ee5f5fb32836c1ad5bbc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6120129a500ee5f5fb32836c1ad5bbc0">&#9670;&nbsp;</a></span>base_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string base_url {&quot;http://127.0.0.1:8000&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The base url of the server communicate with. </p>
+<p>See <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d" title="Returns the post-processed full url used for client-server communication.">GetUrl()</a> for details. </p>
+
+</div>
+</div>
+<a id="ace5c9e02c229a4fcf4b3ca57a6dfe7d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5c9e02c229a4fcf4b3ca57a6dfe7d6">&#9670;&nbsp;</a></span>default_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">render::RenderLabel</a>&gt; default_label {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The (optional) label to apply when none is otherwise specified. </p>
+
+</div>
+</div>
+<a id="ae696d36c70574da6c856ad2995f90ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae696d36c70574da6c856ad2995f90ae4">&#9670;&nbsp;</a></span>no_cleanup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool no_cleanup = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether or not the client should cleanup files generated / retrieved from the server. </p>
+<p>By default (<code>no_cleanup=false</code>), as soon as a glTF scene file as well as server image response for a given frame are no longer needed they will be deleted. To inspect generated scene files or server response images set <code>no_cleanup=true</code> to prevent the files and their governing temporary directory from being deleted. During the construction process a number of copies and clones are created, when <code>no_cleanup=true</code> there will be more than one empty temporary directory created that will not be deleted. The path to the temporary directory can be observed by setting <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454" title="Whether or not the client should log information about which files are being generated,...">RenderEngineGltfClientParams::verbose</a> to <code>true</code>, or inspecting the parent directory described by <a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2" title="Returns a directory location suitable for temporary files.">drake::temp_directory()</a>. </p>
+
+</div>
+</div>
+<a id="a63c89c04d1feae07ca35558055155ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c89c04d1feae07ca35558055155ffb">&#9670;&nbsp;</a></span>port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> port {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The port to communicate on. </p>
+<p>A value less than or equal to <code>0</code> will let <code>base_url</code> to decide which port to use. If a different port is needed instead, specify <code>port</code> to override that. </p>
+
+</div>
+</div>
+<a id="a58c8c4d09a9e537115c0b941b297e311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c8c4d09a9e537115c0b941b297e311">&#9670;&nbsp;</a></span>render_endpoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string render_endpoint {&quot;render&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) The server endpoint to retrieve renderings from. </p>
+<p>See <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d" title="Returns the post-processed full url used for client-server communication.">GetUrl()</a> for details. </p>
+
+</div>
+</div>
+<a id="ab3f078684998b83967d507d0f453f454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f078684998b83967d507d0f453f454">&#9670;&nbsp;</a></span>verbose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verbose = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether or not the client should log information about which files are being generated, as well as any information about HTTP communications between the client and server such as HTTP header information, url and port, etc. </p>
+<p>Information is logged at the debug level, so your application will need to <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Sets the log threshold used by Drake&#39;s C++ code.">drake::set_log_level()</a> to <code>"debug"</code>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="text__logging_8h.html" title="This is the entry point for all text logging within Drake.">drake/common/text_logging.h</a> </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/geometry/render_gltf_client/<a class="el" href="render__engine__gltf__client__params_8h.html">render_engine_gltf_client_params.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html">RenderEngineGltfClientParams</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

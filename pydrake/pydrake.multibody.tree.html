@@ -1235,10 +1235,10 @@ identify the <cite>k`th velocity in the floating base.
 <dt id="pydrake.multibody.tree.Body_.Body_[float].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].get_default_mass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, the mass for a body can be a parameter of the model that can
-be retrieved with the method get_mass(). When the mass of a body is a
-parameter, the value returned by get_default_mass() is used to
-initialize the mass parameter in the context.</p>
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by get_default_mass() is used to initialize the
+mass parameter in the Context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1616,10 +1616,10 @@ identify the <cite>k`th velocity in the floating base.
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].get_default_mass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, the mass for a body can be a parameter of the model that can
-be retrieved with the method get_mass(). When the mass of a body is a
-parameter, the value returned by get_default_mass() is used to
-initialize the mass parameter in the context.</p>
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by get_default_mass() is used to initialize the
+mass parameter in the Context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1995,10 +1995,10 @@ identify the <cite>k`th velocity in the floating base.
 <dt id="pydrake.multibody.tree.Body_[Expression].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].get_default_mass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, the mass for a body can be a parameter of the model that can
-be retrieved with the method get_mass(). When the mass of a body is a
-parameter, the value returned by get_default_mass() is used to
-initialize the mass parameter in the context.</p>
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by get_default_mass() is used to initialize the
+mass parameter in the Context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2374,10 +2374,10 @@ identify the <cite>k`th velocity in the floating base.
 <dt id="pydrake.multibody.tree.Body_[float].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].get_default_mass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, the mass for a body can be a parameter of the model that can
-be retrieved with the method get_mass(). When the mass of a body is a
-parameter, the value returned by get_default_mass() is used to
-initialize the mass parameter in the context.</p>
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by get_default_mass() is used to initialize the
+mass parameter in the Context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -15345,16 +15345,15 @@ frame).</dd>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_.RigidBody_[float].default_mass">
 <code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_.RigidBody_[float].default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default value of this body’s mass. This value is initially
-supplied at construction when specifying this body’s SpatialInertia.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">This body’s default mass.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>Returns this rigid body’s default mass, which is initially supplied at
+construction when specifying this rigid body’s SpatialInertia.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In general, a rigid body’s mass can be a constant property stored
+in this rigid body’s SpatialInertia or a parameter that is stored
+in a Context. The default constant mass value is used to
+initialize the mass parameter in the Context.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -15554,16 +15553,15 @@ frame).</dd>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].default_mass">
 <code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[AutoDiffXd].default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default value of this body’s mass. This value is initially
-supplied at construction when specifying this body’s SpatialInertia.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">This body’s default mass.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>Returns this rigid body’s default mass, which is initially supplied at
+construction when specifying this rigid body’s SpatialInertia.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In general, a rigid body’s mass can be a constant property stored
+in this rigid body’s SpatialInertia or a parameter that is stored
+in a Context. The default constant mass value is used to
+initialize the mass parameter in the Context.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -15761,16 +15759,15 @@ frame).</dd>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[Expression].default_mass">
 <code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[Expression].default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default value of this body’s mass. This value is initially
-supplied at construction when specifying this body’s SpatialInertia.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">This body’s default mass.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>Returns this rigid body’s default mass, which is initially supplied at
+construction when specifying this rigid body’s SpatialInertia.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In general, a rigid body’s mass can be a constant property stored
+in this rigid body’s SpatialInertia or a parameter that is stored
+in a Context. The default constant mass value is used to
+initialize the mass parameter in the Context.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -15968,16 +15965,15 @@ frame).</dd>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[float].default_mass">
 <code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[float].default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default value of this body’s mass. This value is initially
-supplied at construction when specifying this body’s SpatialInertia.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">This body’s default mass.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>Returns this rigid body’s default mass, which is initially supplied at
+construction when specifying this rigid body’s SpatialInertia.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In general, a rigid body’s mass can be a constant property stored
+in this rigid body’s SpatialInertia or a parameter that is stored
+in a Context. The default constant mass value is used to
+initialize the mass parameter in the Context.</p>
+</div>
 </dd></dl>
 
 <dl class="method">

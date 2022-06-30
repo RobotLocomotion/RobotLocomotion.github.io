@@ -39,6 +39,7 @@ var namespacedrake_1_1geometry =
     [ "promoted_numerical", "structdrake_1_1geometry_1_1promoted__numerical.html", "structdrake_1_1geometry_1_1promoted__numerical" ],
     [ "ProximityProperties", "classdrake_1_1geometry_1_1_proximity_properties.html", "classdrake_1_1geometry_1_1_proximity_properties" ],
     [ "QueryObject", "classdrake_1_1geometry_1_1_query_object.html", "classdrake_1_1geometry_1_1_query_object" ],
+    [ "RenderEngineGltfClientParams", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params" ],
     [ "RenderEngineVtkParams", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html", "structdrake_1_1geometry_1_1_render_engine_vtk_params" ],
     [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html", "classdrake_1_1geometry_1_1_rgba" ],
     [ "SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html", "classdrake_1_1geometry_1_1_scene_graph" ],

@@ -2,7 +2,7 @@ var classdrake_1_1multibody_1_1_body =
 [
     [ "Body", "classdrake_1_1multibody_1_1_body.html#a621333fb4661e24ffc0a51891118b2e5", null ],
     [ "Body", "classdrake_1_1multibody_1_1_body.html#a4b949853e910c2c3e835137a2985c608", null ],
-    [ "Body", "classdrake_1_1multibody_1_1_body.html#ac492376d260219d3231f554c0875c5f0", null ],
+    [ "Body", "classdrake_1_1multibody_1_1_body.html#a815485876dc2105848e1ddc80eafcc98", null ],
     [ "AddInForce", "classdrake_1_1multibody_1_1_body.html#a325184199e87f0e800c11f57995dc6dc", null ],
     [ "AddInForceInWorld", "classdrake_1_1multibody_1_1_body.html#a64de0960e4ea0ac2144af8c2295a7871", null ],
     [ "body_frame", "classdrake_1_1multibody_1_1_body.html#ae594f732e1f00317aeb8c6cd83591db5", null ],
@@ -22,7 +22,7 @@ var classdrake_1_1multibody_1_1_body =
     [ "floating_positions_start", "classdrake_1_1multibody_1_1_body.html#a8e98e34e5da5ecfc7e03086b70cf5489", null ],
     [ "floating_velocities_start", "classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594", null ],
     [ "floating_velocity_suffix", "classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29", null ],
-    [ "get_default_mass", "classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33", null ],
+    [ "get_default_mass", "classdrake_1_1multibody_1_1_body.html#a6ac207727fa3530eb27356bd7e0715a0", null ],
     [ "get_mass", "classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1", null ],
     [ "get_num_flexible_positions", "classdrake_1_1multibody_1_1_body.html#a2333d75f20ed2f5d35a10119ef1ab5d5", null ],
     [ "get_num_flexible_velocities", "classdrake_1_1multibody_1_1_body.html#a686c86e06e668050d80c096e1200fe5a", null ],

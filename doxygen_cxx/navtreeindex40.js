@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba":[3,0,0,16,6,11],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac51b842ba9d2ee39e9398c86fdc38a75":[3,0,0,16,6,8],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae4c7cdf72ed60fd130e1985ecd8c3846":[3,0,0,16,6,6],
 "classdrake_1_1trajectories_1_1_trajectory.html#aec58a75947d06ba435adda6fd990678e":[3,0,0,16,6,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "differentiable__norm_8h.html#ae918eb0a5749b337a92058e92bd039c9":[4,0,0,7,9,0],
 "differential__inverse__kinematics_8h.html":[4,0,0,6,2,1],
 "differential__inverse__kinematics_8h.html#a0f13a0a8a0d6f3e8e800b27c50f6f7b8":[4,0,0,6,2,1,7],
-"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdc":[4,0,0,6,2,1,2],
-"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3":[4,0,0,6,2,1,2,2]
+"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdc":[4,0,0,6,2,1,2]
 };

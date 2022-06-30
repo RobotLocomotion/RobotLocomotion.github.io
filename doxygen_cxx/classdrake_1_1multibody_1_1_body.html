@@ -185,9 +185,6 @@ class drake::multibody::Body&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac492376d260219d3231f554c0875c5f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ac492376d260219d3231f554c0875c5f0">Body</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>, double default_mass)</td></tr>
-<tr class="memdesc:ac492376d260219d3231f554c0875c5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Body named <code>name</code> in model instance <code>model_instance</code> with a given <code>default_mass</code> and a <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html" title="A BodyFrame is a material Frame that serves as the unique reference frame for a Body.">BodyFrame</a> associated with it.  <a href="#ac492376d260219d3231f554c0875c5f0">More...</a><br /></td></tr>
-<tr class="separator:ac492376d260219d3231f554c0875c5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <code>name</code> associated with <code>this</code> body.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,9 +226,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29">floating_velocity_suffix</a> (<a class="el" href="classint.html">int</a> velocity_index_in_body) const</td></tr>
 <tr class="memdesc:a4bf67c08cb5fb34309c4c220d9872d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#a4bf67c08cb5fb34309c4c220d9872d29">More...</a><br /></td></tr>
 <tr class="separator:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9539540983caa3c52d28faf7f2d4d33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">get_default_mass</a> () const</td></tr>
-<tr class="memdesc:af9539540983caa3c52d28faf7f2d4d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default mass (not Context dependent) for <code>this</code> body.  <a href="#af9539540983caa3c52d28faf7f2d4d33">More...</a><br /></td></tr>
-<tr class="separator:af9539540983caa3c52d28faf7f2d4d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac207727fa3530eb27356bd7e0715a0"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a6ac207727fa3530eb27356bd7e0715a0">get_default_mass</a> () const =0</td></tr>
+<tr class="memdesc:a6ac207727fa3530eb27356bd7e0715a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default mass (not Context dependent) for <code>this</code> body.  <a href="#a6ac207727fa3530eb27356bd7e0715a0">More...</a><br /></td></tr>
+<tr class="separator:a6ac207727fa3530eb27356bd7e0715a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ab7c1567a817bcac604694e0a2dcd5afd">default_rotational_inertia</a> () const =0</td></tr>
 <tr class="memdesc:ab7c1567a817bcac604694e0a2dcd5afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default rotational inertia (not Context dependent) for <code>this</code> body B's about Bo (B's origin), expressed in B (this body's frame).  <a href="#ab7c1567a817bcac604694e0a2dcd5afd">More...</a><br /></td></tr>
 <tr class="separator:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +301,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a815485876dc2105848e1ddc80eafcc98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a815485876dc2105848e1ddc80eafcc98">Body</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
+<tr class="memdesc:a815485876dc2105848e1ddc80eafcc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Body named <code>name</code> in model instance <code>model_instance</code>.  <a href="#a815485876dc2105848e1ddc80eafcc98">More...</a><br /></td></tr>
+<tr class="separator:a815485876dc2105848e1ddc80eafcc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system) override</td></tr>
 <tr class="memdesc:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">More...</a><br /></td></tr>
 <tr class="separator:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -401,11 +401,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac492376d260219d3231f554c0875c5f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac492376d260219d3231f554c0875c5f0">&#9670;&nbsp;</a></span>Body() <span class="overload">[3/3]</span></h2>
+<a id="a815485876dc2105848e1ddc80eafcc98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815485876dc2105848e1ddc80eafcc98">&#9670;&nbsp;</a></span>Body() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a> </td>
@@ -417,13 +420,7 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
-          <td class="paramname"><em>model_instance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>default_mass</em>&#160;</td>
+          <td class="paramname"><em>model_instance</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -431,9 +428,14 @@ Friends</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Creates a Body named <code>name</code> in model instance <code>model_instance</code> with a given <code>default_mass</code> and a <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html" title="A BodyFrame is a material Frame that serves as the unique reference frame for a Body.">BodyFrame</a> associated with it. </p>
+<p>Creates a Body named <code>name</code> in model instance <code>model_instance</code>. </p>
 
 </div>
 </div>
@@ -1028,23 +1030,31 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af9539540983caa3c52d28faf7f2d4d33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9539540983caa3c52d28faf7f2d4d33">&#9670;&nbsp;</a></span>get_default_mass()</h2>
+<a id="a6ac207727fa3530eb27356bd7e0715a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac207727fa3530eb27356bd7e0715a0">&#9670;&nbsp;</a></span>get_default_mass()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double get_default_mass </td>
+          <td class="memname">virtual double get_default_mass </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the default mass (not Context dependent) for <code>this</code> body. </p>
-<p>In general, the mass for a body can be a parameter of the model that can be retrieved with the method <a class="el" href="classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1" title="(Advanced) Returns the mass of this body stored in context.">get_mass()</a>. When the mass of a body is a parameter, the value returned by <a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33" title="Returns the default mass (not Context dependent) for this body.">get_default_mass()</a> is used to initialize the mass parameter in the context. </p>
+<p>In general, a body's mass can be a Context-dependent parameter that is returned by the method <a class="el" href="classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1" title="(Advanced) Returns the mass of this body stored in context.">get_mass()</a>. When a body's mass is a parameter, the value returned by <a class="el" href="classdrake_1_1multibody_1_1_body.html#a6ac207727fa3530eb27356bd7e0715a0" title="Returns the default mass (not Context dependent) for this body.">get_default_mass()</a> is used to initialize the mass parameter in the Context. </p>
 
 </div>
 </div>

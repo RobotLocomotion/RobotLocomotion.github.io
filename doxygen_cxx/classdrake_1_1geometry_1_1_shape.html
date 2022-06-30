@@ -173,12 +173,13 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_shape.html'
 <li>it is cloneable, and</li>
 <li>it can be "reified" (see <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html" title="The interface for converting shape descriptions to real shapes.">ShapeReifier</a>).</li>
 </ul>
-<p>When you add a new subclass of <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>, you must:</p>
+<p>When you add a new subclass of <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> to Drake, you must:</p>
 <ol type="1">
 <li>add a virtual function ImplementGeometry() for the new shape in <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html" title="The interface for converting shape descriptions to real shapes.">ShapeReifier</a> that invokes the ThrowUnsupportedGeometry method, and add to the test for it in shape_specification_test.cc.</li>
 <li>implement ImplementGeometry in derived ShapeReifiers to continue support if desired, otherwise ensure unimplemented functions are not hidden in new derivations of <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html" title="The interface for converting shape descriptions to real shapes.">ShapeReifier</a> with <code>using</code>, for example, <code>using <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a01146cd97faae87f9a56d857f75d535f">ShapeReifier::ImplementGeometry</a></code>. Existing subclasses should already have this.</li>
 </ol>
-<p>Otherwise, you might get a runtime error. We do not have an automatic way to enforce them at compile time. </p>
+<p>Otherwise, you might get a runtime error. We do not have an automatic way to enforce them at compile time.</p>
+<p>Note that the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> class hierarchy is closed to third-party extensions. All <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> classes must be defined within Drake directly (and in this h/cc file pair in particular). </p>
 </div>
 <p><code>#include &lt;drake/geometry/shape_specification.h&gt;</code></p>
 <table class="memberdecls">
