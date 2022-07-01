@@ -1,6 +1,5 @@
 var NAVTREEINDEX53 =
 {
-"structdrake_1_1type__pack.html":[3,0,0,52],
 "structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,52,1],
 "structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,52,0],
 "structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,52,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX53 =
 "symbolic__types__pybind_8h.html#aeaf23055b93c04213228b573558f347b":[4,0,0,0,0,9,1],
 "symbolic__vector__system_8h.html":[4,0,0,11,6,22],
 "symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f":[4,0,0,11,6,22,1],
-"system_8h.html":[4,0,0,11,3,39]
+"system_8h.html":[4,0,0,11,3,39],
+"system__base_8h.html":[4,0,0,11,3,40]
 };

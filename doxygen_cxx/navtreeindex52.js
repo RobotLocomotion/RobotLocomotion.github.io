@@ -1,6 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html#a0a4dab7f19136a1c6da932a2f1b5268c":[3,0,0,12,0,7,1,1],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html#a81c75d82efc1b0586ace9eca3f454610":[3,0,0,12,0,7,1,3],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html#aba5fa3cbd1a94712a00891cd92728c34":[3,0,0,12,0,7,1,2],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html#ac7936c5ff57ef16032fcd1f0f89f200b":[3,0,0,12,0,7,1,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX52 =
 "structdrake_1_1type__at.html":[3,0,0,50],
 "structdrake_1_1type__at.html#ae186135b13d8acdaf385d1ff052f0d82":[3,0,0,50,0],
 "structdrake_1_1type__check__different__from.html":[3,0,0,51],
-"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,51,0]
+"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,51,0],
+"structdrake_1_1type__pack.html":[3,0,0,52]
 };

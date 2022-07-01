@@ -182,9 +182,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6120129a500ee5f5fb32836c1ad5bbc0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0">base_url</a> {&quot;http://127.0.0.1:8000&quot;}</td></tr>
 <tr class="memdesc:a6120129a500ee5f5fb32836c1ad5bbc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base url of the server communicate with.  <a href="#a6120129a500ee5f5fb32836c1ad5bbc0">More...</a><br /></td></tr>
 <tr class="separator:a6120129a500ee5f5fb32836c1ad5bbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c89c04d1feae07ca35558055155ffb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a63c89c04d1feae07ca35558055155ffb">port</a> {0}</td></tr>
-<tr class="memdesc:a63c89c04d1feae07ca35558055155ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port to communicate on.  <a href="#a63c89c04d1feae07ca35558055155ffb">More...</a><br /></td></tr>
-<tr class="separator:a63c89c04d1feae07ca35558055155ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58c8c4d09a9e537115c0b941b297e311"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311">render_endpoint</a> {&quot;render&quot;}</td></tr>
 <tr class="memdesc:a58c8c4d09a9e537115c0b941b297e311"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) The server endpoint to retrieve renderings from.  <a href="#a58c8c4d09a9e537115c0b941b297e311">More...</a><br /></td></tr>
 <tr class="separator:a58c8c4d09a9e537115c0b941b297e311"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,23 +264,6 @@ Public Attributes</h2></td></tr>
 
 <p>Whether or not the client should cleanup files generated / retrieved from the server. </p>
 <p>By default (<code>no_cleanup=false</code>), as soon as a glTF scene file as well as server image response for a given frame are no longer needed they will be deleted. To inspect generated scene files or server response images set <code>no_cleanup=true</code> to prevent the files and their governing temporary directory from being deleted. During the construction process a number of copies and clones are created, when <code>no_cleanup=true</code> there will be more than one empty temporary directory created that will not be deleted. The path to the temporary directory can be observed by setting <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454" title="Whether or not the client should log information about which files are being generated,...">RenderEngineGltfClientParams::verbose</a> to <code>true</code>, or inspecting the parent directory described by <a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2" title="Returns a directory location suitable for temporary files.">drake::temp_directory()</a>. </p>
-
-</div>
-</div>
-<a id="a63c89c04d1feae07ca35558055155ffb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63c89c04d1feae07ca35558055155ffb">&#9670;&nbsp;</a></span>port</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> port {0}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The port to communicate on. </p>
-<p>A value less than or equal to <code>0</code> will let <code>base_url</code> to decide which port to use. If a different port is needed instead, specify <code>port</code> to override that. </p>
 
 </div>
 </div>

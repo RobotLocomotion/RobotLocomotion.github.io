@@ -1,6 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ac3d38d1b83f93e18d5a4633beef4639f":[3,0,0,8,1,0,4],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#acedc23d500b8e04f9bf6b96cbb11bbeb":[3,0,0,8,1,0,11],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ad03bc5722287da0acf149346388fa1b0":[3,0,0,8,1,0,9],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ad7420fd6adfed409f3fc8551d0decb96":[3,0,0,8,1,0,17],
@@ -249,5 +248,6 @@ var NAVTREEINDEX51 =
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#ac80f466ba4de9666501bc983e0a3d893":[3,0,0,12,0,7,0,1],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#aee32e8e170503d8b19b2f5703619b0ad":[3,0,0,12,0,7,0,7],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#af02e44a9cbc4d0a9ea490704fbe74114":[3,0,0,12,0,7,0,9],
-"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html":[3,0,0,12,0,7,1]
+"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html":[3,0,0,12,0,7,1],
+"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html#a0a4dab7f19136a1c6da932a2f1b5268c":[3,0,0,12,0,7,1,1]
 };
