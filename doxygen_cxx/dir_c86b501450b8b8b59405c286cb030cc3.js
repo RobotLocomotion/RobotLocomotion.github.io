@@ -3,7 +3,10 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "fbstab", "dir_fb9a140248c02c8b3a74e805be9cb92d.html", "dir_fb9a140248c02c8b3a74e805be9cb92d" ],
     [ "test_utilities", "dir_3e1bf9ce46085c0e3ff6de174f1555d7.html", "dir_3e1bf9ce46085c0e3ff6de174f1555d7" ],
     [ "aggregate_costs_constraints.h", "aggregate__costs__constraints_8h.html", "aggregate__costs__constraints_8h" ],
-    [ "augmented_lagrangian.h", "augmented__lagrangian_8h.html", "augmented__lagrangian_8h" ],
+    [ "augmented_lagrangian.h", "augmented__lagrangian_8h.html", [
+      [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth" ],
+      [ "AugmentedLagrangianSmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html", "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth" ]
+    ] ],
     [ "bilinear_product_util.h", "bilinear__product__util_8h.html", "bilinear__product__util_8h" ],
     [ "binding.h", "binding_8h.html", "binding_8h" ],
     [ "branch_and_bound.h", "branch__and__bound_8h.html", [
@@ -108,10 +111,6 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     ] ],
     [ "sos_basis_generator.h", "sos__basis__generator_8h.html", "sos__basis__generator_8h" ],
     [ "sparse_and_dense_matrix.h", "sparse__and__dense__matrix_8h.html", null ],
-    [ "system_identification.h", "system__identification_8h.html", [
-      [ "SystemIdentification", "classdrake_1_1solvers_1_1_system_identification.html", "classdrake_1_1solvers_1_1_system_identification" ],
-      [ "SystemIdentificationResult", "structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html", "structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result" ]
-    ] ],
     [ "unrevised_lemke_solver.h", "unrevised__lemke__solver_8h.html", [
       [ "UnrevisedLemkeSolverId", "classdrake_1_1solvers_1_1_unrevised_lemke_solver_id.html", "classdrake_1_1solvers_1_1_unrevised_lemke_solver_id" ],
       [ "UnrevisedLemkeSolver", "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html", "classdrake_1_1solvers_1_1_unrevised_lemke_solver" ]

@@ -400,9 +400,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_type_converter.html">SolverTypeConverter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts between SolverType and <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a>.  <a href="classdrake_1_1solvers_1_1_solver_type_converter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_system_identification.html">SystemIdentification</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility functions for system identification.  <a href="classdrake_1_1solvers_1_1_system_identification.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html">UnrevisedLemkeSolver</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for the Unrevised Implementation of Lemke Algorithm's for solving Linear Complementarity Problems (LCPs).  <a href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -415,8 +412,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a4ae3860f84fa0c2eac8c21ee2e91c4cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a4ae3860f84fa0c2eac8c21ee2e91c4cd">NonsmoothAugmentedLagrangian</a> = <a class="el" href="classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html">AugmentedLagrangianNonsmooth</a></td></tr>
-<tr class="separator:a4ae3860f84fa0c2eac8c21ee2e91c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa708f80d971209e3d46c1e41f05c1393"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aa708f80d971209e3d46c1e41f05c1393">DecisionVariable</a> = <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a></td></tr>
 <tr class="separator:aa708f80d971209e3d46c1e41f05c1393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf84184cb10b49233b007295d1880e17"><td class="memTemplParams" colspan="2">template&lt;int rows, int cols&gt; </td></tr>
@@ -543,9 +538,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f">kUnknownError</a> = -4, 
 <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520">kInfeasibleOrUnbounded</a>, 
 <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef">kIterationLimit</a> = -6, 
-<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b">kDualInfeasible</a> = -7, 
-<br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3">kInfeasible_Or_Unbounded</a> = -5
+<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b">kDualInfeasible</a> = -7
 <br />
  }</td></tr>
 <tr class="separator:a331f41a3139a87d16e1422bc818c136f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -884,20 +877,6 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <li>dφ(x)/dx &lt; 0 ∀ x &lt; 0.</li>
 </ol>
 <p>If <code>dpenalty_dx</code> is nullptr, the function should only compute φ(x). </p>
-
-</div>
-</div>
-<a id="a4ae3860f84fa0c2eac8c21ee2e91c4cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ae3860f84fa0c2eac8c21ee2e91c4cd">&#9670;&nbsp;</a></span>NonsmoothAugmentedLagrangian</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1solvers.html#a4ae3860f84fa0c2eac8c21ee2e91c4cd">NonsmoothAugmentedLagrangian</a> =  <a class="el" href="classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html">AugmentedLagrangianNonsmooth</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1299,10 +1278,6 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 </td></tr>
 <tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b"></a>kDualInfeasible&#160;</td><td class="fielddoc"><p>Dual problem is infeasible. </p>
 <p>In this case we cannot infer the status of the primal problem. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3"></a>kInfeasible_Or_Unbounded&#160;</td><td class="fielddoc"><p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Use kInfeasibleOrUnbounded instead. <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
 </td></tr>
 </table>
 

@@ -159,7 +159,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_antiderivati
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1_antiderivative_function-members.html">List of all members</a>  </div>
@@ -188,12 +187,6 @@ class drake::systems::AntiderivativeFunction&lt; T &gt;</h3>
 </div>
 <p><code>#include &lt;drake/systems/analysis/antiderivative_function.h&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html">IntegrableFunctionContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of values that, along with the function being integrated, partially specify the definite integral i.e.  <a href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:aa77b1a0ffd8ec53e3327d467726e08ba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#aa77b1a0ffd8ec53e3327d467726e08ba">IntegrableFunction</a> = std::function&lt; T(const T &amp;x, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;k)&gt;</td></tr>
@@ -202,18 +195,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4221435658db4bbcdcb4a1a1312a76c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#a4221435658db4bbcdcb4a1a1312a76c8">AntiderivativeFunction</a> (const <a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#aa77b1a0ffd8ec53e3327d467726e08ba">IntegrableFunction</a> &amp;integrable_function, const <a class="el" href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html">IntegrableFunctionContext</a> &amp;default_values)</td></tr>
-<tr class="memdesc:a4221435658db4bbcdcb4a1a1312a76c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the antiderivative function of the given <code>integrable_function</code>, using <code>default_values.v</code> as lower integration bound if given (0 if not) and parameterized with <code>default_values.k</code> if given (an empty vector if not) by default.  <a href="#a4221435658db4bbcdcb4a1a1312a76c8">More...</a><br /></td></tr>
-<tr class="separator:a4221435658db4bbcdcb4a1a1312a76c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a297cc996796286bf9462670369c51bf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#a297cc996796286bf9462670369c51bf2">AntiderivativeFunction</a> (const <a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#aa77b1a0ffd8ec53e3327d467726e08ba">IntegrableFunction</a> &amp;integrable_function, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;k=<a class="el" href="namespacedrake.html#acda0b15d77e4c1701d160b17a2cb2ea8">Vector0</a>&lt; T &gt;{})</td></tr>
 <tr class="memdesc:a297cc996796286bf9462670369c51bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the antiderivative function of the given <code>integrable_function</code>, parameterized with <code>k</code>.  <a href="#a297cc996796286bf9462670369c51bf2">More...</a><br /></td></tr>
 <tr class="separator:a297cc996796286bf9462670369c51bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08c5a8f5ac05051bee1eee5b53db3b59"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#a08c5a8f5ac05051bee1eee5b53db3b59">Evaluate</a> (const T &amp;u, const <a class="el" href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html">IntegrableFunctionContext</a> &amp;values={}) const</td></tr>
-<tr class="memdesc:a08c5a8f5ac05051bee1eee5b53db3b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the definite integral F(u; 𝐤) = ∫ᵥᵘ f(x; 𝐤) dx from the lower integration bound v (see definition in class documentation) to <code>u</code> using the parameter vector 𝐤 (see definition in class documentation) if present in <code>values</code>, falling back to the ones given on construction if missing.  <a href="#a08c5a8f5ac05051bee1eee5b53db3b59">More...</a><br /></td></tr>
-<tr class="separator:a08c5a8f5ac05051bee1eee5b53db3b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a540031be4e8e7c18bd30b3a2f72a77e1"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_scalar_dense_output.html">ScalarDenseOutput</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#a540031be4e8e7c18bd30b3a2f72a77e1">MakeDenseEvalFunction</a> (const T &amp;w, const <a class="el" href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html">IntegrableFunctionContext</a> &amp;values={}) const</td></tr>
-<tr class="memdesc:a540031be4e8e7c18bd30b3a2f72a77e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates and yields an approximation of the definite integral F(u; 𝐤) = ∫ᵥᵘ f(x; 𝐤) dx for v ≤ u ≤ w, i.e.  <a href="#a540031be4e8e7c18bd30b3a2f72a77e1">More...</a><br /></td></tr>
-<tr class="separator:a540031be4e8e7c18bd30b3a2f72a77e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a083822dff26b307d8d4dd4d7854c1ea1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#a083822dff26b307d8d4dd4d7854c1ea1">Evaluate</a> (const T &amp;v, const T &amp;u) const</td></tr>
 <tr class="memdesc:a083822dff26b307d8d4dd4d7854c1ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the definite integral F(u; 𝐤) = ∫ᵥᵘ f(x; 𝐤) dx from the lower integration bound <code>v</code> to <code>u</code> using the parameter vector 𝐤 specified in the constructor (see definition in class documentation).  <a href="#a083822dff26b307d8d4dd4d7854c1ea1">More...</a><br /></td></tr>
 <tr class="separator:a083822dff26b307d8d4dd4d7854c1ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,7 +251,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adc6c208ef46d4561ac6d112afaa3e337"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc6c208ef46d4561ac6d112afaa3e337">&#9670;&nbsp;</a></span>AntiderivativeFunction() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6c208ef46d4561ac6d112afaa3e337">&#9670;&nbsp;</a></span>AntiderivativeFunction() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -293,7 +277,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a9dd04e4e29ff34ecdaebcad75923165c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dd04e4e29ff34ecdaebcad75923165c">&#9670;&nbsp;</a></span>AntiderivativeFunction() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd04e4e29ff34ecdaebcad75923165c">&#9670;&nbsp;</a></span>AntiderivativeFunction() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,47 +302,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4221435658db4bbcdcb4a1a1312a76c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4221435658db4bbcdcb4a1a1312a76c8">&#9670;&nbsp;</a></span>AntiderivativeFunction() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html">AntiderivativeFunction</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_antiderivative_function.html#aa77b1a0ffd8ec53e3327d467726e08ba">IntegrableFunction</a> &amp;&#160;</td>
-          <td class="paramname"><em>integrable_function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html">IntegrableFunctionContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>default_values</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs the antiderivative function of the given <code>integrable_function</code>, using <code>default_values.v</code> as lower integration bound if given (0 if not) and parameterized with <code>default_values.k</code> if given (an empty vector if not) by default. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">integrable_function</td><td>The function f(x; 𝐤) to be integrated. </td></tr>
-    <tr><td class="paramname">default_values</td><td>The values specified by default for this function, i.e. default lower integration bound v ∈ ℝ and default parameter vector 𝐤 ∈ ℝᵐ. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>IntegrableFunctionContext is deprecated. Use the  constructor that takes the parameters directly. <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
-
-</div>
-</div>
 <a id="a297cc996796286bf9462670369c51bf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a297cc996796286bf9462670369c51bf2">&#9670;&nbsp;</a></span>AntiderivativeFunction() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a297cc996796286bf9462670369c51bf2">&#9670;&nbsp;</a></span>AntiderivativeFunction() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,57 +340,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a08c5a8f5ac05051bee1eee5b53db3b59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08c5a8f5ac05051bee1eee5b53db3b59">&#9670;&nbsp;</a></span>Evaluate() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Evaluate </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>u</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html">IntegrableFunctionContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>values</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Evaluates the definite integral F(u; 𝐤) = ∫ᵥᵘ f(x; 𝐤) dx from the lower integration bound v (see definition in class documentation) to <code>u</code> using the parameter vector 𝐤 (see definition in class documentation) if present in <code>values</code>, falling back to the ones given on construction if missing. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">u</td><td>The upper integration bound. </td></tr>
-    <tr><td class="paramname">values</td><td>The specified values for the integration. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of the definite integral. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The given upper integration bound <code>u</code> must be larger than or equal to the lower integration bound v. </dd>
-<dd>
-If given, the dimension of the parameter vector <code>values.k</code> must match that of the parameter vector 𝐤 in the default specified values given on construction. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>IntegrableFunctionContext is deprecated. <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
-
-</div>
-</div>
 <a id="a083822dff26b307d8d4dd4d7854c1ea1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a083822dff26b307d8d4dd4d7854c1ea1">&#9670;&nbsp;</a></span>Evaluate() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a083822dff26b307d8d4dd4d7854c1ea1">&#9670;&nbsp;</a></span>Evaluate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,60 +422,8 @@ If given, the dimension of the parameter vector <code>values.k</code> must match
 
 </div>
 </div>
-<a id="a540031be4e8e7c18bd30b3a2f72a77e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a540031be4e8e7c18bd30b3a2f72a77e1">&#9670;&nbsp;</a></span>MakeDenseEvalFunction() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_scalar_dense_output.html">ScalarDenseOutput</a>&lt;T&gt; &gt; MakeDenseEvalFunction </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html">IntegrableFunctionContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>values</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Evaluates and yields an approximation of the definite integral F(u; 𝐤) = ∫ᵥᵘ f(x; 𝐤) dx for v ≤ u ≤ w, i.e. </p>
-<p>the closed interval that goes from the lower integration bound v (see definition in class documentation) to the uppermost integration bound <code>w</code>, using the parameter vector 𝐤 (see definition in class documentation) if present in <code>values</code>, falling back to the ones given on construction if missing.</p>
-<p>To this end, the wrapped <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> instance solves the integral from v to <code>w</code> (i.e. advances the state x of its differential form x'(t) = f(x; 𝐤) from v to <code>w</code>), creating a scalar dense output over that [v, <code>w</code>] interval along the way.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">w</td><td>The uppermost integration bound. Usually, v &lt; <code>w</code> as an empty dense output would result if v = <code>w</code>. </td></tr>
-    <tr><td class="paramname">values</td><td>The specified values for the integration. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A dense approximation to F(u; 𝐤) (that is, a function), defined for v ≤ u ≤ w. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The larger the given <code>w</code> value is, the larger the approximated interval will be. See documentation of the specific dense output technique in use for reference on performance impact as this interval grows. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The given uppermost integration bound <code>w</code> must be larger than or equal to the lower integration bound v. </dd>
-<dd>
-If given, the dimension of the parameter vector <code>values.k</code> must match that of the parameter vector 𝐤 in the default specified values given on construction. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>IntegrableFunctionContext is deprecated. <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
-
-</div>
-</div>
 <a id="a7ad782922312536d160ad1f0be6965e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ad782922312536d160ad1f0be6965e8">&#9670;&nbsp;</a></span>MakeDenseEvalFunction() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad782922312536d160ad1f0be6965e8">&#9670;&nbsp;</a></span>MakeDenseEvalFunction()</h2>
 
 <div class="memitem">
 <div class="memproto">

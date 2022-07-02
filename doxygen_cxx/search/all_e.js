@@ -64,7 +64,6 @@ var searchData=
   ['none',['none',['../namespacedrake.html#a01aa931c5cbfd4b09d847cc4d7b4c699',1,'drake']]],
   ['none_5fof',['none_of',['../namespacedrake.html#ab4011b0ee72e60112bfd3aee950765e8',1,'drake']]],
   ['nonnegativepolynomial',['NonnegativePolynomial',['../classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818',1,'drake::solvers::MathematicalProgram']]],
-  ['nonsmoothaugmentedlagrangian',['NonsmoothAugmentedLagrangian',['../namespacedrake_1_1solvers.html#a4ae3860f84fa0c2eac8c21ee2e91c4cd',1,'drake::solvers']]],
   ['nonsymbolicscalarpack',['NonSymbolicScalarPack',['../namespacedrake_1_1pydrake.html#aa69fa97ca5615e75170ca0274e32cba2',1,'drake::pydrake']]],
   ['nonsymbolictraits',['NonSymbolicTraits',['../structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html',1,'drake::systems::scalar_conversion']]],
   ['nontypetemplateparameter',['NonTypeTemplateParameter',['../classdrake_1_1systems_1_1sensors_1_1_image.html#ad33e26f692dbdcd6376ceb84b1fcd2c1',1,'drake::systems::sensors::Image']]],

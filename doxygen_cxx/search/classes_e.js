@@ -1,7 +1,6 @@
 var searchData=
 [
   ['object',['Object',['../classdrake_1_1pydrake_1_1_object.html',1,'drake::pydrake']]],
-  ['odecontext',['OdeContext',['../structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html',1,'drake::systems::InitialValueProblem']]],
   ['options',['Options',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html',1,'drake::multibody::GlobalInverseKinematics']]],
   ['optitracklcmframesender',['OptitrackLcmFrameSender',['../classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html',1,'drake::systems::sensors']]],
   ['optitrackreceiver',['OptitrackReceiver',['../classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html',1,'drake::systems::sensors']]],

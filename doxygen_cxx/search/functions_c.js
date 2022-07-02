@@ -23,7 +23,7 @@ var searchData=
   ['makecube',['MakeCube',['../classdrake_1_1geometry_1_1_box.html#aa80d8c904b883919032c448e7d31713b',1,'drake::geometry::Box']]],
   ['makecubiclinearwithendlinearvelocity',['MakeCubicLinearWithEndLinearVelocity',['../classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d',1,'drake::trajectories::PiecewisePose']]],
   ['makecylinderplant',['MakeCylinderPlant',['../namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html#a71833e144a8146fca220d2e32453098a',1,'drake::examples::multibody::cylinder_with_multicontact']]],
-  ['makedenseevalfunction',['MakeDenseEvalFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html#a540031be4e8e7c18bd30b3a2f72a77e1',1,'drake::systems::AntiderivativeFunction::MakeDenseEvalFunction(const T &amp;w, const IntegrableFunctionContext &amp;values={}) const'],['../classdrake_1_1systems_1_1_antiderivative_function.html#a7ad782922312536d160ad1f0be6965e8',1,'drake::systems::AntiderivativeFunction::MakeDenseEvalFunction(const T &amp;v, const T &amp;w) const']]],
+  ['makedenseevalfunction',['MakeDenseEvalFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html#a7ad782922312536d160ad1f0be6965e8',1,'drake::systems::AntiderivativeFunction']]],
   ['makederivative',['MakeDerivative',['../classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2',1,'drake::trajectories::Trajectory']]],
   ['makeempty',['MakeEmpty',['../classdrake_1_1multibody_1_1_package_map.html#a9b54d0bb91bc2d4f6a629ccd3868d4c1',1,'drake::multibody::PackageMap']]],
   ['makefemstate',['MakeFemState',['../classdrake_1_1multibody_1_1fem_1_1_fem_model.html#aef81f0727ef93e6f31d39e6521c30198',1,'drake::multibody::fem::FemModel']]],

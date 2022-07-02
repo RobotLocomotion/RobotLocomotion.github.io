@@ -690,8 +690,6 @@ var searchData=
   ['getknownuptodateabstract',['GetKnownUpToDateAbstract',['../classdrake_1_1systems_1_1_cache_entry.html#abf790ebeb7d49d7f9181d9a9dc8618a7',1,'drake::systems::CacheEntry']]],
   ['getlinearsolver',['GetLinearSolver',['../namespacedrake_1_1math.html#a145b102b8109265146ea4a0c63596873',1,'drake::math']]],
   ['getlog',['GetLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#ae63d08ab7e3c669eec276019e4f2dbcb',1,'drake::systems::VectorLogSink']]],
-  ['getlumpedparametersfrompolynomial',['GetLumpedParametersFromPolynomial',['../classdrake_1_1solvers_1_1_system_identification.html#ac773380ef71146a579c09a2b75d9bc87',1,'drake::solvers::SystemIdentification']]],
-  ['getlumpedparametersfrompolynomials',['GetLumpedParametersFromPolynomials',['../classdrake_1_1solvers_1_1_system_identification.html#ac94f79e52948e0d2fdc8669ef58118cd',1,'drake::solvers::SystemIdentification']]],
   ['getmaximumabsolutedifference',['GetMaximumAbsoluteDifference',['../classdrake_1_1math_1_1_rigid_transform.html#aa6d583e730b5dd2193c7ff9f1293fcde',1,'drake::math::RigidTransform::GetMaximumAbsoluteDifference()'],['../classdrake_1_1math_1_1_rotation_matrix.html#a94f554d89721df33e9d6fd2a2fb73ff9',1,'drake::math::RotationMatrix::GetMaximumAbsoluteDifference()']]],
   ['getmaximumabsolutedifferences',['GetMaximumAbsoluteDifferences',['../classdrake_1_1multibody_1_1_spatial_vector.html#a3ec0b46e26e4295575e966033fb79f4c',1,'drake::multibody::SpatialVector']]],
   ['getmaximumabsolutetranslationdifference',['GetMaximumAbsoluteTranslationDifference',['../classdrake_1_1math_1_1_rigid_transform.html#aa8b1205e300a07901a70079bbbd1e566',1,'drake::math::RigidTransform']]],

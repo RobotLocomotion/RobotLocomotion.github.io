@@ -5,7 +5,7 @@ var searchData=
   ['variablereflist',['VariableRefList',['../namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b',1,'drake::solvers']]],
   ['variableselectfun',['VariableSelectFun',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a726cca20e3cf59eed49574ee8abd61d3',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['variant',['Variant',['../classdrake_1_1schema_1_1_rotation.html#acab27a4275d2d3afd6700c892f3c5edb',1,'drake::schema::Rotation']]],
-  ['vartype',['VarType',['../classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a',1,'drake::Polynomial::VarType()'],['../classdrake_1_1_trig_poly.html#a6c566872610727dbc3cc51d069189697',1,'drake::TrigPoly::VarType()'],['../classdrake_1_1solvers_1_1_mathematical_program.html#aaed05d048d1ac7b1d4960e328c20d02f',1,'drake::solvers::MathematicalProgram::VarType()'],['../classdrake_1_1solvers_1_1_system_identification.html#a6c566872610727dbc3cc51d069189697',1,'drake::solvers::SystemIdentification::VarType()']]],
+  ['vartype',['VarType',['../classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a',1,'drake::Polynomial::VarType()'],['../classdrake_1_1_trig_poly.html#a6c566872610727dbc3cc51d069189697',1,'drake::TrigPoly::VarType()'],['../classdrake_1_1solvers_1_1_mathematical_program.html#aaed05d048d1ac7b1d4960e328c20d02f',1,'drake::solvers::MathematicalProgram::VarType()']]],
   ['vector',['Vector',['../namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8',1,'drake']]],
   ['vector0',['Vector0',['../namespacedrake.html#acda0b15d77e4c1701d160b17a2cb2ea8',1,'drake']]],
   ['vector1',['Vector1',['../namespacedrake.html#af359dfdb84d6c13b606bb3ed7b821e23',1,'drake']]],

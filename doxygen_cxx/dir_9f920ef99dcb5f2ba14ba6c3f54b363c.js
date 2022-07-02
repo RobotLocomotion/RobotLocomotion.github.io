@@ -2,8 +2,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
 [
     [ "test_utilities", "dir_d8973131f51b66669fc427ecaef4c4db.html", "dir_d8973131f51b66669fc427ecaef4c4db" ],
     [ "antiderivative_function.h", "antiderivative__function_8h.html", [
-      [ "AntiderivativeFunction", "classdrake_1_1systems_1_1_antiderivative_function.html", "classdrake_1_1systems_1_1_antiderivative_function" ],
-      [ "IntegrableFunctionContext", "structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html", "structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context" ]
+      [ "AntiderivativeFunction", "classdrake_1_1systems_1_1_antiderivative_function.html", "classdrake_1_1systems_1_1_antiderivative_function" ]
     ] ],
     [ "bogacki_shampine3_integrator.h", "bogacki__shampine3__integrator_8h.html", null ],
     [ "dense_output.h", "dense__output_8h.html", [
@@ -20,8 +19,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
       [ "IterationMatrix", "classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html", "classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix" ]
     ] ],
     [ "initial_value_problem.h", "initial__value__problem_8h.html", [
-      [ "InitialValueProblem", "classdrake_1_1systems_1_1_initial_value_problem.html", "classdrake_1_1systems_1_1_initial_value_problem" ],
-      [ "OdeContext", "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html", "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context" ]
+      [ "InitialValueProblem", "classdrake_1_1systems_1_1_initial_value_problem.html", "classdrake_1_1systems_1_1_initial_value_problem" ]
     ] ],
     [ "integrator_base.h", "integrator__base_8h.html", null ],
     [ "lyapunov.h", "lyapunov_8h.html", "lyapunov_8h" ],
@@ -35,8 +33,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
       [ "ScalarDenseOutput", "classdrake_1_1systems_1_1_scalar_dense_output.html", "classdrake_1_1systems_1_1_scalar_dense_output" ]
     ] ],
     [ "scalar_initial_value_problem.h", "scalar__initial__value__problem_8h.html", [
-      [ "ScalarInitialValueProblem", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", "classdrake_1_1systems_1_1_scalar_initial_value_problem" ],
-      [ "ScalarOdeContext", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context" ]
+      [ "ScalarInitialValueProblem", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", "classdrake_1_1systems_1_1_scalar_initial_value_problem" ]
     ] ],
     [ "scalar_view_dense_output.h", "scalar__view__dense__output_8h.html", [
       [ "ScalarViewDenseOutput", "classdrake_1_1systems_1_1_scalar_view_dense_output.html", "classdrake_1_1systems_1_1_scalar_view_dense_output" ]

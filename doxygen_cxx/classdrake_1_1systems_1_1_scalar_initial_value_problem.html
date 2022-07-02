@@ -159,7 +159,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_scalar_initi
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1_scalar_initial_value_problem-members.html">List of all members</a>  </div>
@@ -189,12 +188,6 @@ class drake::systems::ScalarInitialValueProblem&lt; T &gt;</h3>
 </div>
 <p><code>#include &lt;drake/systems/analysis/scalar_initial_value_problem.h&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html">ScalarOdeContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of values i.e.  <a href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a677a34d51ed872e958deb90ce676eec5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5">ScalarOdeFunction</a> = std::function&lt; T(const T &amp;t, const T &amp;x, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;k)&gt;</td></tr>
@@ -203,18 +196,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac7affee024d4f08300eda60f2a60f0d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#ac7affee024d4f08300eda60f2a60f0d2">ScalarInitialValueProblem</a> (const <a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5">ScalarOdeFunction</a> &amp;scalar_ode_function, const <a class="el" href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html">ScalarOdeContext</a> &amp;default_values)</td></tr>
-<tr class="memdesc:ac7affee024d4f08300eda60f2a60f0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a scalar IVP described by the given <code>scalar_ode_function</code>, using given <code>default_values.t0</code> and <code>default_values.x0</code> as initial conditions, and parameterized with <code>default_values.k</code> by default.  <a href="#ac7affee024d4f08300eda60f2a60f0d2">More...</a><br /></td></tr>
-<tr class="separator:ac7affee024d4f08300eda60f2a60f0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac91758ed577d1b8cb29a5d333a9027f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#ac91758ed577d1b8cb29a5d333a9027f1">ScalarInitialValueProblem</a> (const <a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5">ScalarOdeFunction</a> &amp;scalar_ode_function, const T &amp;x0, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;k=<a class="el" href="namespacedrake.html#acda0b15d77e4c1701d160b17a2cb2ea8">Vector0</a>&lt; T &gt;{})</td></tr>
 <tr class="memdesc:ac91758ed577d1b8cb29a5d333a9027f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a scalar IVP described by the given <code>scalar_ode_function</code>, using given <code>x0</code> as initial conditions, and parameterized with <code>k</code>.  <a href="#ac91758ed577d1b8cb29a5d333a9027f1">More...</a><br /></td></tr>
 <tr class="separator:ac91758ed577d1b8cb29a5d333a9027f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96bb7ace98119838841607ca5d803730"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a96bb7ace98119838841607ca5d803730">Solve</a> (const T &amp;tf, const <a class="el" href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html">ScalarOdeContext</a> &amp;values={}) const</td></tr>
-<tr class="memdesc:a96bb7ace98119838841607ca5d803730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the IVP for time <code>tf</code>, using the initial time t₀, initial state x₀ and parameter vector 𝐤 present in <code>values</code>, falling back to the ones given on construction if not given.  <a href="#a96bb7ace98119838841607ca5d803730">More...</a><br /></td></tr>
-<tr class="separator:a96bb7ace98119838841607ca5d803730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a072b01e07598a528f9ad9ec7d4daeebf"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_scalar_dense_output.html">ScalarDenseOutput</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a072b01e07598a528f9ad9ec7d4daeebf">DenseSolve</a> (const T &amp;tf, const <a class="el" href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html">ScalarOdeContext</a> &amp;values={}) const</td></tr>
-<tr class="memdesc:a072b01e07598a528f9ad9ec7d4daeebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves and yields an approximation of the IVP solution x(t; 𝐤) for the closed time interval between the initial time t₀ and the given final time <code>tf</code>, using initial state x₀ and parameter vector 𝐤 present in <code>values</code> (falling back to the ones given on construction if not given).  <a href="#a072b01e07598a528f9ad9ec7d4daeebf">More...</a><br /></td></tr>
-<tr class="separator:a072b01e07598a528f9ad9ec7d4daeebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeacb789e3f8f5b136caef88d063b76e9"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#aeacb789e3f8f5b136caef88d063b76e9">Solve</a> (const T &amp;t0, const T &amp;tf) const</td></tr>
 <tr class="memdesc:aeacb789e3f8f5b136caef88d063b76e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the IVP from time <code>t0</code> up to time <code>tf</code>, using the initial state 𝐱₀ and parameter vector 𝐤 provided in the constructor.  <a href="#aeacb789e3f8f5b136caef88d063b76e9">More...</a><br /></td></tr>
 <tr class="separator:aeacb789e3f8f5b136caef88d063b76e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,7 +253,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9e14d71a4415b5bbeb479c4b42712615"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e14d71a4415b5bbeb479c4b42712615">&#9670;&nbsp;</a></span>ScalarInitialValueProblem() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e14d71a4415b5bbeb479c4b42712615">&#9670;&nbsp;</a></span>ScalarInitialValueProblem() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +279,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3039082d5cf5d9b4884c666c2e0dd033"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3039082d5cf5d9b4884c666c2e0dd033">&#9670;&nbsp;</a></span>ScalarInitialValueProblem() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3039082d5cf5d9b4884c666c2e0dd033">&#9670;&nbsp;</a></span>ScalarInitialValueProblem() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,58 +304,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac7affee024d4f08300eda60f2a60f0d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7affee024d4f08300eda60f2a60f0d2">&#9670;&nbsp;</a></span>ScalarInitialValueProblem() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html">ScalarInitialValueProblem</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5">ScalarOdeFunction</a> &amp;&#160;</td>
-          <td class="paramname"><em>scalar_ode_function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html">ScalarOdeContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>default_values</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs a scalar IVP described by the given <code>scalar_ode_function</code>, using given <code>default_values.t0</code> and <code>default_values.x0</code> as initial conditions, and parameterized with <code>default_values.k</code> by default. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scalar_ode_function</td><td>The ODE function f(t, x; 𝐤) that describes the state evolution over time. </td></tr>
-    <tr><td class="paramname">default_values</td><td>The values specified by default for this IVP, i.e. default initial time t₀ ∈ ℝ and state x₀ ∈ ℝ, and default parameter vector 𝐤 ∈ ℝᵐ. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>An initial time <code>default_values.t0</code> is provided. </dd>
-<dd>
-An initial state <code>default_values.x0</code> is provided. </dd>
-<dd>
-An parameter vector <code>default_values.k</code> is provided. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if preconditions are not met. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>ScalarOdeContext is deprecated. Use the constructor that  takes x0, and k as arguments directly. <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
-
-</div>
-</div>
 <a id="ac91758ed577d1b8cb29a5d333a9027f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac91758ed577d1b8cb29a5d333a9027f1">&#9670;&nbsp;</a></span>ScalarInitialValueProblem() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91758ed577d1b8cb29a5d333a9027f1">&#9670;&nbsp;</a></span>ScalarInitialValueProblem() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,61 +349,8 @@ An parameter vector <code>default_values.k</code> is provided. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a072b01e07598a528f9ad9ec7d4daeebf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a072b01e07598a528f9ad9ec7d4daeebf">&#9670;&nbsp;</a></span>DenseSolve() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_scalar_dense_output.html">ScalarDenseOutput</a>&lt;T&gt; &gt; DenseSolve </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>tf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html">ScalarOdeContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>values</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Solves and yields an approximation of the IVP solution x(t; 𝐤) for the closed time interval between the initial time t₀ and the given final time <code>tf</code>, using initial state x₀ and parameter vector 𝐤 present in <code>values</code> (falling back to the ones given on construction if not given). </p>
-<p>To this end, the wrapped <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> instance solves this scalar IVP, advancing time and state from t₀ and x₀ = x(t₀) to <code>tf</code> and x(<code>tf</code>), creating a scalar dense output over that [t₀, <code>tf</code>] interval along the way.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tf</td><td>The IVP will be solved up to this time. Usually, t₀ &lt; <code>tf</code> as an empty dense output would result if t₀ = <code>tf</code>. </td></tr>
-    <tr><td class="paramname">values</td><td>IVP initial conditions and parameters. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A dense approximation to x(t; 𝐤) with x(t₀; 𝐤) = x₀, defined for t₀ ≤ t ≤ tf. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The larger the given <code>tf</code> value is, the larger the approximated interval will be. See documentation of the specific dense output technique in use for reference on performance impact as this interval grows. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Given <code>tf</code> must be larger than or equal to the specified initial time t₀ (either given or default). </dd>
-<dd>
-If given, the dimension of the initial state vector <code>values.x0</code> must match that of the default initial state vector in the default specified values given on construction. </dd>
-<dd>
-If given, the dimension of the parameter vector <code>values.k</code> must match that of the parameter vector in the default specified values given on construction. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>ScalarOdeContext is deprecated. Use DenseSolve(t0, tf). <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
-
-</div>
-</div>
 <a id="a5bd53ccea4f088d7f9ce1b1839847cf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bd53ccea4f088d7f9ce1b1839847cf7">&#9670;&nbsp;</a></span>DenseSolve() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd53ccea4f088d7f9ce1b1839847cf7">&#9670;&nbsp;</a></span>DenseSolve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -551,8 +432,8 @@ If given, the dimension of the parameter vector <code>values.k</code> must match
 
 </div>
 </div>
-<a id="af87db2601a897d3578d48ef507b455b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af87db2601a897d3578d48ef507b455b3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af271bb5896ff93bf00fb74143035279e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af271bb5896ff93bf00fb74143035279e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -563,7 +444,7 @@ If given, the dimension of the parameter vector <code>values.k</code> must match
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html">ScalarInitialValueProblem</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html">ScalarInitialValueProblem</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html">ScalarInitialValueProblem</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -577,8 +458,8 @@ If given, the dimension of the parameter vector <code>values.k</code> must match
 
 </div>
 </div>
-<a id="af271bb5896ff93bf00fb74143035279e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af271bb5896ff93bf00fb74143035279e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af87db2601a897d3578d48ef507b455b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87db2601a897d3578d48ef507b455b3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -589,7 +470,7 @@ If given, the dimension of the parameter vector <code>values.k</code> must match
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html">ScalarInitialValueProblem</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html">ScalarInitialValueProblem</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_scalar_initial_value_problem.html">ScalarInitialValueProblem</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -638,57 +519,8 @@ If given, the dimension of the parameter vector <code>values.k</code> must match
 
 </div>
 </div>
-<a id="a96bb7ace98119838841607ca5d803730"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96bb7ace98119838841607ca5d803730">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Solve </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>tf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html">ScalarOdeContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>values</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Solves the IVP for time <code>tf</code>, using the initial time t₀, initial state x₀ and parameter vector 𝐤 present in <code>values</code>, falling back to the ones given on construction if not given. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tf</td><td>The IVP will be solved for this time. </td></tr>
-    <tr><td class="paramname">values</td><td>IVP initial conditions and parameters. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The IVP solution x(<code>tf</code>; 𝐤) for x(t₀; 𝐤) = x₀. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Given <code>tf</code> must be larger than or equal to the specified initial time t₀ (either given or default). </dd>
-<dd>
-If given, the dimension of the parameter vector <code>values.k</code> must match that of the parameter vector in the default specified values given on construction. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>ScalarOdeContext is deprecated. Use Solve(t0, tf). <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
-
-</div>
-</div>
 <a id="aeacb789e3f8f5b136caef88d063b76e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeacb789e3f8f5b136caef88d063b76e9">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacb789e3f8f5b136caef88d063b76e9">&#9670;&nbsp;</a></span>Solve()</h2>
 
 <div class="memitem">
 <div class="memproto">

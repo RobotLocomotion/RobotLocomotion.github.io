@@ -388,7 +388,6 @@ var hierarchy =
     [ "ImageTraits< systems::sensors::PixelType::kLabel16I >", "structdrake_1_1systems_1_1sensors_1_1_image_traits.html", null ],
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
-    [ "AntiderivativeFunction< T >::IntegrableFunctionContext", "structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html", null ],
     [ "integral_constant", null, [
       [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ]
     ] ],
@@ -560,7 +559,6 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "InitialValueProblem< T >::OdeContext", "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
@@ -579,8 +577,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -646,7 +644,6 @@ var hierarchy =
     [ "Rotation::Rpy", "structdrake_1_1schema_1_1_rotation_1_1_rpy.html", null ],
     [ "scalar_predicate< T >", "structdrake_1_1scalar__predicate.html", null ],
     [ "ScalarInitialValueProblem< T >", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", null ],
-    [ "ScalarInitialValueProblem< T >::ScalarOdeContext", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html", null ],
     [ "SceneGraphInspector< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "SceneGraphInspector< AutoDiffXd >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "SceneGraphInspector< double >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
@@ -759,8 +756,6 @@ var hierarchy =
     [ "SystemConstraint< Element::T >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraintAdapter", "classdrake_1_1systems_1_1_system_constraint_adapter.html", null ],
     [ "SystemConstraintBounds", "classdrake_1_1systems_1_1_system_constraint_bounds.html", null ],
-    [ "SystemIdentification< T >", "classdrake_1_1solvers_1_1_system_identification.html", null ],
-    [ "SystemIdentification< T >::SystemIdentificationResult", "structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html", null ],
     [ "SystemMessageInterface", null, [
       [ "SystemBase", "classdrake_1_1systems_1_1_system_base.html", [
         [ "System< T >", "classdrake_1_1systems_1_1_system.html", [

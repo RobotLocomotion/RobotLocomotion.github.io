@@ -72,7 +72,6 @@ var namespacedrake_1_1solvers =
     [ "SolverInterface", "classdrake_1_1solvers_1_1_solver_interface.html", "classdrake_1_1solvers_1_1_solver_interface" ],
     [ "SolverOptions", "classdrake_1_1solvers_1_1_solver_options.html", "classdrake_1_1solvers_1_1_solver_options" ],
     [ "SolverTypeConverter", "classdrake_1_1solvers_1_1_solver_type_converter.html", "classdrake_1_1solvers_1_1_solver_type_converter" ],
-    [ "SystemIdentification", "classdrake_1_1solvers_1_1_system_identification.html", "classdrake_1_1solvers_1_1_system_identification" ],
     [ "UnrevisedLemkeSolver", "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html", "classdrake_1_1solvers_1_1_unrevised_lemke_solver" ],
     [ "UnrevisedLemkeSolverId", "classdrake_1_1solvers_1_1_unrevised_lemke_solver_id.html", "classdrake_1_1solvers_1_1_unrevised_lemke_solver_id" ],
     [ "VisualizationCallback", "classdrake_1_1solvers_1_1_visualization_callback.html", "classdrake_1_1solvers_1_1_visualization_callback" ]

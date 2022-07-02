@@ -8,8 +8,7 @@ var solution__result_8h =
       [ "kUnknownError", "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f", null ],
       [ "kInfeasibleOrUnbounded", "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520", null ],
       [ "kIterationLimit", "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef", null ],
-      [ "kDualInfeasible", "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b", null ],
-      [ "kInfeasible_Or_Unbounded", "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3", null ]
+      [ "kDualInfeasible", "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b", null ]
     ] ],
     [ "operator<<", "solution__result_8h.html#a269b7066a168f80390ed6c496829ffcd", null ],
     [ "to_string", "solution__result_8h.html#acb1201a087105dc635e2bd748486171c", null ]
