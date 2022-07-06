@@ -173,9 +173,11 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_wing.html'
 class drake::multibody::Wing&lt; T &gt;</h3>
 
 <p>A System that connects to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> in order to model the simplified dynamics of an airfoil (or hydrofoil). </p>
-<p>Currently it only supports a particular model of flat-plate aerodynamics with lift coefficient = 2 sinα cosα, drag coefficient = 2 sin²α, moment coefficient = 0, as documented in</p>
-<p>[Cory08] Rick Cory and Russ Tedrake, "Experiments in Fixed-Wing {UAV} Perching", Proceedings of the AIAA Guidance, Navigation, and Control Conference , pp. 1-12, 2008.</p>
-<p>This model was empirically validated for a bird-scale UAV with flat-plate wings, and may generalize well as a model for other wings in the post-stall regime, but it should only be viewed as a very simple / coarse approximation. We aim generalize this class to general lift/drag/moment coefficients soon.</p>
+<p>Currently it only supports a particular model of flat-plate aerodynamics with lift coefficient = 2 sinα cosα, drag coefficient = 2 sin²α, moment coefficient = 0, as documented for a number of NACA airfoils with Reynolds number ≤ 10^5 in:</p>
+<p>S. F. Hoerner and H. V. Borst, “Fluid-dynamic lift: practical information on aerodynamic and hydrodynamic lift,” 1985 (Ch. 4, Section 6).</p>
+<p>This model was also empirically validated for a bird-scale UAV with flat-plate wings (Reynolds number below 53000) in:</p>
+<p>Rick Cory and Russ Tedrake, "Experiments in Fixed-Wing UAV Perching", Proceedings of the AIAA Guidance, Navigation, and Control Conference , pp. 1-12, 2008.</p>
+<p>and may generalize well as a model for other wings in the post-stall regime, but it should only be viewed as a simple / coarse approximation. We aim to generalize this class to general lift/drag/moment coefficients soon.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
