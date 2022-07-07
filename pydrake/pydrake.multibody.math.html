@@ -300,12 +300,8 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration">
-<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[float]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>Given a frame B’s acceleration measured in a frame M and a frame C’s
+<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
 acceleration relative to frame B, returns frame C’s acceleration in M.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
@@ -424,10 +420,6 @@ of a_MCo can be reduced to one, possibly improving efficiency via</p>
   <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[float], p_PB_E: numpy.ndarray[numpy.float64[3, 1]], w_WP_E: numpy.ndarray[numpy.float64[3, 1]], V_PB_E: pydrake.multibody.math.SpatialVelocity_[float], A_PB_E: pydrake.multibody.math.SpatialAcceleration_[float]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from ComposeWithMovingFrameAcceleration(p_PB_E, w_WP_E, V_PB_E, A_PB_E) to ComposeWithMovingFrameAcceleration(position_of_moving_frame, angular_velocity_of_this_frame, velocity_of_moving_frame, acceleration_of_moving_frame) The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -464,16 +456,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[float], p_PoQ_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>Shift(p_PoQ_E) is deprecated, and will be removed on or around 2022-07-01. Please instead use ShiftWithZeroAngularVelocity(offset)</p>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[float], offset: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[float], offset: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
 and C are fixed to the same frame or rigid body.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -500,10 +484,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 Use ComposeWithMovingFrameAcceleration() if frame C is moving on
 frame B.</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[float], p_PoQ_E: numpy.ndarray[numpy.float64[3, 1]], w_WP_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from Shift(p_PoQ_E, w_WP_E) to Shift(offset, angular_velocity_of_this_frame). The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -624,12 +604,8 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].ComposeWithMovingFrameAcceleration">
-<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], position_of_moving_frame: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]) -&gt; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]</li>
-</ol>
-<p>Given a frame B’s acceleration measured in a frame M and a frame C’s
+<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], position_of_moving_frame: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
 acceleration relative to frame B, returns frame C’s acceleration in M.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
@@ -748,10 +724,6 @@ of a_MCo can be reduced to one, possibly improving efficiency via</p>
   <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], p_PB_E: numpy.ndarray[object[3, 1]], w_WP_E: numpy.ndarray[object[3, 1]], V_PB_E: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd], A_PB_E: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]) -&gt; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from ComposeWithMovingFrameAcceleration(p_PB_E, w_WP_E, V_PB_E, A_PB_E) to ComposeWithMovingFrameAcceleration(position_of_moving_frame, angular_velocity_of_this_frame, velocity_of_moving_frame, acceleration_of_moving_frame) The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -788,16 +760,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], p_PoQ_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]</li>
-</ol>
-<p>Shift(p_PoQ_E) is deprecated, and will be removed on or around 2022-07-01. Please instead use ShiftWithZeroAngularVelocity(offset)</p>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], offset: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]</li>
-</ol>
-<p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], offset: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
 and C are fixed to the same frame or rigid body.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -824,10 +788,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 Use ComposeWithMovingFrameAcceleration() if frame C is moving on
 frame B.</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], p_PoQ_E: numpy.ndarray[object[3, 1]], w_WP_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from Shift(p_PoQ_E, w_WP_E) to Shift(offset, angular_velocity_of_this_frame). The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -946,12 +906,8 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[Expression].ComposeWithMovingFrameAcceleration">
-<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[Expression].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[Expression], position_of_moving_frame: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[Expression], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[Expression]) -&gt; pydrake.multibody.math.SpatialAcceleration_[Expression]</li>
-</ol>
-<p>Given a frame B’s acceleration measured in a frame M and a frame C’s
+<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[Expression], position_of_moving_frame: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[Expression], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[Expression]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[Expression].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
 acceleration relative to frame B, returns frame C’s acceleration in M.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
@@ -1070,10 +1026,6 @@ of a_MCo can be reduced to one, possibly improving efficiency via</p>
   <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[Expression], p_PB_E: numpy.ndarray[object[3, 1]], w_WP_E: numpy.ndarray[object[3, 1]], V_PB_E: pydrake.multibody.math.SpatialVelocity_[Expression], A_PB_E: pydrake.multibody.math.SpatialAcceleration_[Expression]) -&gt; pydrake.multibody.math.SpatialAcceleration_[Expression]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from ComposeWithMovingFrameAcceleration(p_PB_E, w_WP_E, V_PB_E, A_PB_E) to ComposeWithMovingFrameAcceleration(position_of_moving_frame, angular_velocity_of_this_frame, velocity_of_moving_frame, acceleration_of_moving_frame) The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1110,16 +1062,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[Expression].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[Expression].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[Expression], p_PoQ_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[Expression]</li>
-</ol>
-<p>Shift(p_PoQ_E) is deprecated, and will be removed on or around 2022-07-01. Please instead use ShiftWithZeroAngularVelocity(offset)</p>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[Expression], offset: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[Expression]</li>
-</ol>
-<p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[Expression], offset: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[Expression]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[Expression].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
 and C are fixed to the same frame or rigid body.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -1146,10 +1090,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 Use ComposeWithMovingFrameAcceleration() if frame C is moving on
 frame B.</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[Expression], p_PoQ_E: numpy.ndarray[object[3, 1]], w_WP_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[Expression]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from Shift(p_PoQ_E, w_WP_E) to Shift(offset, angular_velocity_of_this_frame). The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1268,12 +1208,8 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration">
-<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[float]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>Given a frame B’s acceleration measured in a frame M and a frame C’s
+<code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
 acceleration relative to frame B, returns frame C’s acceleration in M.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
@@ -1392,10 +1328,6 @@ of a_MCo can be reduced to one, possibly improving efficiency via</p>
   <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li>ComposeWithMovingFrameAcceleration(self: pydrake.multibody.math.SpatialAcceleration_[float], p_PB_E: numpy.ndarray[numpy.float64[3, 1]], w_WP_E: numpy.ndarray[numpy.float64[3, 1]], V_PB_E: pydrake.multibody.math.SpatialVelocity_[float], A_PB_E: pydrake.multibody.math.SpatialAcceleration_[float]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from ComposeWithMovingFrameAcceleration(p_PB_E, w_WP_E, V_PB_E, A_PB_E) to ComposeWithMovingFrameAcceleration(position_of_moving_frame, angular_velocity_of_this_frame, velocity_of_moving_frame, acceleration_of_moving_frame) The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1432,16 +1364,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[float].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[float].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[float], p_PoQ_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>Shift(p_PoQ_E) is deprecated, and will be removed on or around 2022-07-01. Please instead use ShiftWithZeroAngularVelocity(offset)</p>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[float], offset: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[float], offset: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[float].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialAcceleration from a frame B to a frame C, where both B
 and C are fixed to the same frame or rigid body.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -1468,10 +1392,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 Use ComposeWithMovingFrameAcceleration() if frame C is moving on
 frame B.</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>Shift(self: pydrake.multibody.math.SpatialAcceleration_[float], p_PoQ_E: numpy.ndarray[numpy.float64[3, 1]], w_WP_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialAcceleration_[float]</li>
-</ol>
-<p>The keyword arguments (kwargs) have been renamed from Shift(p_PoQ_E, w_WP_E) to Shift(offset, angular_velocity_of_this_frame). The old kwargs are deprecated and unavailable after 2022-07-01.</p>
 </dd></dl>
 
 <dl class="method">

@@ -49,7 +49,6 @@ var namespacedrake =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", "classdrake_1_1_scope_exit" ],
     [ "SortedPair", "structdrake_1_1_sorted_pair.html", "structdrake_1_1_sorted_pair" ],
     [ "template_single_tag", "structdrake_1_1template__single__tag.html", "structdrake_1_1template__single__tag" ],
-    [ "TrigPoly", "classdrake_1_1_trig_poly.html", "classdrake_1_1_trig_poly" ],
     [ "type_at", "structdrake_1_1type__at.html", "structdrake_1_1type__at" ],
     [ "type_check_different_from", "structdrake_1_1type__check__different__from.html", "structdrake_1_1type__check__different__from" ],
     [ "type_pack", "structdrake_1_1type__pack.html", "structdrake_1_1type__pack" ],

@@ -181,7 +181,7 @@ struct drake::symbolic::GradedReverseLexOrder&lt; VariableOrder &gt;</h3>
 <p>First find all the monomials using the total degree. The monomials with degree 2 are {x^2, y^2, z^2, xy, xz, yz}. The monomials with degree 1 are {x, y, z}, and the monomials with degree 0 is {1}. To break the tie between monomials with the same total degree, first sort them in the reverse lexicographical order, namely x &lt; y &lt; z in the reverse lexicographical order. The lexicographical order compares two monomial by first comparing the exponent of the largest variable, if there is a tie then go forth to the second largest variable. Thus z^2 &gt; zy &gt;zx &gt; y^2 &gt; yx &gt; x^2. Finally reverse the order as x^2 &gt; xy &gt; y^2 &gt; xz &gt; yz &gt; z^2.</p>
 <p>There is an introduction to monomial order in <a href="https://en.wikipedia.org/wiki/Monomial_order,">https://en.wikipedia.org/wiki/Monomial_order,</a> and an introduction to graded reverse lexicographical order in <a href="https://en.wikipedia.org/wiki/Monomial_order#Graded_reverse_lexicographic_order">https://en.wikipedia.org/wiki/Monomial_order#Graded_reverse_lexicographic_order</a> </p>
 </div>
-<p><code>#include &lt;drake/common/symbolic_monomial_util.h&gt;</code></p>
+<p><code>#include &lt;drake/common/symbolic/monomial_util.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -221,7 +221,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>drake/common/<a class="el" href="symbolic__monomial__util_8h.html">symbolic_monomial_util.h</a></li>
+<li>drake/common/symbolic/<a class="el" href="monomial__util_8h.html">monomial_util.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

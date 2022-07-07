@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1symbolic_1_1_polynomial.
 <p>A polynomial <code>p</code> has to satisfy an invariant such that <code>p.decision_variables() ∩ p.indeterminates() = ∅</code>. We have CheckInvariant() method to check the invariant.</p>
 <p>Note that arithmetic operations (+,-,*) between a <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">Polynomial</a> and a <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> are not provided. The problem is that <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> class has no intrinsic information if a variable is a decision variable or an indeterminate while we need this information to perform arithmetic operations over Polynomials. </p>
 </div>
-<p><code>#include &lt;drake/common/symbolic_polynomial.h&gt;</code></p>
+<p><code>#include &lt;drake/common/symbolic/polynomial.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -726,7 +726,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use this-&gt;Expand().EqualTo(p.Expand()) instead of  EqualToAfterExpansion() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use this-&gt;Expand().EqualTo(p.Expand()) instead of  EqualToAfterExpansion() <br />
  This will be removed from Drake on or after 2022-09-01.</dd></dl>
 
 </div>
@@ -1591,7 +1591,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/common/<a class="el" href="symbolic__polynomial_8h.html">symbolic_polynomial.h</a></li>
+<li>drake/common/symbolic/<a class="el" href="symbolic_2polynomial_8h.html">polynomial.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

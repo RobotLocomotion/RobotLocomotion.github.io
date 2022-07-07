@@ -300,9 +300,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1template__single__tag.html">template_single_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a tag for single-parameter templates.  <a href="structdrake_1_1template__single__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_trig_poly.html">TrigPoly</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scalar multi-variate polynomial containing sines and cosines.  <a href="classdrake_1_1_trig_poly.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1type__at.html">type_at</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the Ith type from a sequence of types.  <a href="structdrake_1_1type__at.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -515,11 +512,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a00cbebcd97766579bb36e35abcf44acf"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Matrix&lt; <a class="el" href="namespacedrake.html#ab0a2621977171e1d2d5b64c55141b9b2">Polynomiald</a>, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a00cbebcd97766579bb36e35abcf44acf">VectorXPoly</a></td></tr>
 <tr class="memdesc:a00cbebcd97766579bb36e35abcf44acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A column vector of polynomials; used in several optimization classes.  <a href="#a00cbebcd97766579bb36e35abcf44acf">More...</a><br /></td></tr>
 <tr class="separator:a00cbebcd97766579bb36e35abcf44acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69f6fee91b95862e81e39506cae6dc22"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classdrake_1_1_trig_poly.html">TrigPoly</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a69f6fee91b95862e81e39506cae6dc22">TrigPolyd</a></td></tr>
-<tr class="separator:a69f6fee91b95862e81e39506cae6dc22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c35aa3bb5ef6f19e6316bb98cc2daf"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Matrix&lt; <a class="el" href="namespacedrake.html#a69f6fee91b95862e81e39506cae6dc22">TrigPolyd</a>, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a43c35aa3bb5ef6f19e6316bb98cc2daf">VectorXTrigPoly</a></td></tr>
-<tr class="memdesc:a43c35aa3bb5ef6f19e6316bb98cc2daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A column vector of <a class="el" href="classdrake_1_1_trig_poly.html" title="A scalar multi-variate polynomial containing sines and cosines.">TrigPoly</a>; used in several optimization classes.  <a href="#a43c35aa3bb5ef6f19e6316bb98cc2daf">More...</a><br /></td></tr>
-<tr class="separator:a43c35aa3bb5ef6f19e6316bb98cc2daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -572,8 +564,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3c86a37d7ac815e5d42ab9d67363c14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the derviatives of the recipient coherent with respect to those of the donor variable (see <a class="el" href="autodiffxd_8h.html">drake/common/autodiffxd.h</a>).  <a href="#a3c86a37d7ac815e5d42ab9d67363c14e">More...</a><br /></td></tr>
 <tr class="separator:a3c86a37d7ac815e5d42ab9d67363c14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d04dd581311ecdd2bbaaca3c1d1ff34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1d04dd581311ecdd2bbaaca3c1d1ff34">autodiffxd_make_coherent</a> (const double &amp;, double *)</td></tr>
+<tr class="memdesc:a1d04dd581311ecdd2bbaaca3c1d1ff34"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a1d04dd581311ecdd2bbaaca3c1d1ff34">More...</a><br /></td></tr>
 <tr class="separator:a1d04dd581311ecdd2bbaaca3c1d1ff34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a439ef8526114ad731981ac00415e6975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a439ef8526114ad731981ac00415e6975">autodiffxd_make_coherent</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> *)</td></tr>
+<tr class="memdesc:a439ef8526114ad731981ac00415e6975"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a439ef8526114ad731981ac00415e6975">More...</a><br /></td></tr>
 <tr class="separator:a439ef8526114ad731981ac00415e6975"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad14dd00683f82b89dc0f08f9adec904e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad14dd00683f82b89dc0f08f9adec904e">if_then_else</a> (bool f_cond, double v_then, double v_else)</td></tr>
 <tr class="memdesc:ad14dd00683f82b89dc0f08f9adec904e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides if-then-else expression for double.  <a href="#ad14dd00683f82b89dc0f08f9adec904e">More...</a><br /></td></tr>
@@ -771,9 +765,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1logging.html#a9cae370466ffb304c10aebea42eca26b">logging::logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae32fd151ebc2dab30d9546f1dbef0c79">log</a> ()</td></tr>
 <tr class="memdesc:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve an instance of a logger to use for logging; for example:  <a href="#ae32fd151ebc2dab30d9546f1dbef0c79">More...</a><br /></td></tr>
 <tr class="separator:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726304f0129c6db7864e4ff5cfe4cdd7"><td class="memTemplParams" colspan="2">template&lt;typename T , int Rows, int Cols&gt; </td></tr>
-<tr class="memitem:a726304f0129c6db7864e4ff5cfe4cdd7"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a726304f0129c6db7864e4ff5cfe4cdd7">operator&lt;&lt;</a> (std::ostream &amp;os, const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_trig_poly.html">TrigPoly</a>&lt; T &gt;, Rows, Cols &gt; &amp;tp_mat)</td></tr>
-<tr class="separator:a726304f0129c6db7864e4ff5cfe4cdd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc6fee0f84a9d283d208d778fcefe34"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
 <tr class="memitem:a1bc6fee0f84a9d283d208d778fcefe34"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1bc6fee0f84a9d283d208d778fcefe34">operator==</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
 <tr class="separator:a1bc6fee0f84a9d283d208d778fcefe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1343,20 +1334,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a69f6fee91b95862e81e39506cae6dc22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69f6fee91b95862e81e39506cae6dc22">&#9670;&nbsp;</a></span>TrigPolyd</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classdrake_1_1_trig_poly.html">TrigPoly</a>&lt;double&gt; <a class="el" href="namespacedrake.html#a69f6fee91b95862e81e39506cae6dc22">TrigPolyd</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af30fe85a821bd0e0ab46f2e165c8e480"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af30fe85a821bd0e0ab46f2e165c8e480">&#9670;&nbsp;</a></span>TwistMatrix</h2>
 
@@ -1613,22 +1590,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a43c35aa3bb5ef6f19e6316bb98cc2daf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43c35aa3bb5ef6f19e6316bb98cc2daf">&#9670;&nbsp;</a></span>VectorXTrigPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Eigen::Matrix&lt;<a class="el" href="namespacedrake.html#a69f6fee91b95862e81e39506cae6dc22">TrigPolyd</a>, Eigen::Dynamic, 1&gt; <a class="el" href="namespacedrake.html#a43c35aa3bb5ef6f19e6316bb98cc2daf">VectorXTrigPoly</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A column vector of <a class="el" href="classdrake_1_1_trig_poly.html" title="A scalar multi-variate polynomial containing sines and cosines.">TrigPoly</a>; used in several optimization classes. </p>
-
-</div>
-</div>
 <a id="af98fed5f98c376f4d45fff56bb96c8e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af98fed5f98c376f4d45fff56bb96c8e1">&#9670;&nbsp;</a></span>WrenchVector</h2>
 
@@ -1862,7 +1823,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes the derviatives of the recipient coherent with respect to those of the donor variable (see <a class="el" href="autodiffxd_8h.html">drake/common/autodiffxd.h</a>). </p>
-<p>If the recipient's derivatives are already populated with a vector of the same size as that of the donor, variables pass through unchanged. An exception is thrown when there are nonempty vectors of different sizes. </p>
+<p>If the recipient's derivatives are already populated with a vector of the same size as that of the donor, variables pass through unchanged. An exception is thrown when there are nonempty vectors of different sizes. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>This function is being removed;  if you still need it you may copy the code into your own project. <br />
+ This will be removed from Drake on or after 2022-11-01.</dd></dl>
 
 </div>
 </div>
@@ -1892,6 +1854,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>This function is being removed;  if you still need it you may copy the code into your own project. <br />
+ This will be removed from Drake on or after 2022-11-01.</dd></dl>
+
 </div>
 </div>
 <a id="a439ef8526114ad731981ac00415e6975"></a>
@@ -1919,6 +1885,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>This function is being removed;  if you still need it you may copy the code into your own project. <br />
+ This will be removed from Drake on or after 2022-11-01.</dd></dl>
 
 </div>
 </div>
@@ -3328,7 +3298,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="a9ab1dd8eeeb9910b3755b238fc8907e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ab1dd8eeeb9910b3755b238fc8907e9">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab1dd8eeeb9910b3755b238fc8907e9">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3357,36 +3327,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a726304f0129c6db7864e4ff5cfe4cdd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a726304f0129c6db7864e4ff5cfe4cdd7">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_trig_poly.html">TrigPoly</a>&lt; T &gt;, Rows, Cols &gt; &amp;&#160;</td>
-          <td class="paramname"><em>tp_mat</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad2b506cc6aeddf8e5f52b327382d0b13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2b506cc6aeddf8e5f52b327382d0b13">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b506cc6aeddf8e5f52b327382d0b13">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

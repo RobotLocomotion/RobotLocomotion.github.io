@@ -541,6 +541,348 @@ constraint.</dd>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">GlobalInverseKinematics</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves the inverse kinematics problem as a mixed integer convex
+optimization problem. We use a mixed-integer convex relaxation of the
+rotation matrix. So if this global inverse kinematics problem says the
+solution is infeasible, then it is guaranteed that the kinematics
+constraints are not satisfiable. If the global inverse kinematics
+returns a solution, the posture should approximately satisfy the
+kinematics constraints, with some error. The approach is described in
+Global Inverse Kinematics via Mixed-integer Convex Optimization by
+Hongkai Dai, Gregory Izatt and Russ Tedrake, International Journal of
+Robotics Research, 2019.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, plant: pydrake.multibody.plant.MultibodyPlant_[float], options: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options = GlobalInverseKinematics.Options(num_intervals_per_half_axis=2, approach=Approach.kBilinearMcCormick, interval_binning=IntervalBinning.kLogarithmic, linear_constraint_only=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the robot kinematics tree. The decision variables include the
+pose for each body (position/orientation). This constructor loops
+through each body inside the robot kinematics tree, adds the
+constraint on each body pose, so that the adjacent bodies are
+connected correctly by the joint in between the bodies.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The robot on which the inverse kinematics problem is solved. plant
+must be alive for as long as this object is around.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
+<dd>The options to relax SO(3) constraint as mixed-integer convex
+constraints. Refer to MixedIntegerRotationConstraintGenerator for
+more details on the parameters in options.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddPostureCost">
+<code class="descname">AddPostureCost</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, q_desired: numpy.ndarray[numpy.float64[m, 1]], body_position_cost: numpy.ndarray[numpy.float64[m, 1]], body_orientation_cost: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddPostureCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Penalizes the deviation to the desired posture. For each body (except
+the world) in the kinematic tree, we add the cost</p>
+<p>∑ᵢ body_position_cost(i) * body_position_error(i) +
+body_orientation_cost(i) * body_orientation_error(i) where
+<code class="docutils literal notranslate"><span class="pre">body_position_error(i)</span></code> is computed as the Euclidean distance error
+<a href="#id3"><span class="problematic" id="id4">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
+origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>. - p_WBo_desired(i): position
+of body i’th origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>, computed from the
+desired posture <code class="docutils literal notranslate"><span class="pre">q_desired</span></code>.</p>
+<p>body_orientation_error(i) is computed as (1 - cos(θ)), where θ is the
+angle between the orientation of body i’th frame and body i’th frame
+using the desired posture. Notice that 1 - cos(θ) = θ²/2 + O(θ⁴), so
+this cost is on the square of θ, when θ is small. Notice that since
+body 0 is the world, the cost on that body is always 0, no matter what
+value <code class="docutils literal notranslate"><span class="pre">body_position_cost(0)</span></code> and <code class="docutils literal notranslate"><span class="pre">body_orientation_cost(0)</span></code> take.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_desired</span></code>:</dt>
+<dd>The desired posture.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_position_cost</span></code>:</dt>
+<dd>The cost for each body’s position error. Unit is [1/m] (one over
+meters).</dd>
+</dl>
+<p>Precondition:
+1. body_position_cost.rows() == plant.num_bodies(), where <code class="docutils literal notranslate"><span class="pre">plant</span></code></p>
+<blockquote>
+<div>is the input argument in the constructor of the class.</div></blockquote>
+<ol class="arabic" start="2">
+<li><p class="first">body_position_cost(i) is non-negative.</p>
+<blockquote>
+<div><p>$Raises:</p>
+</div></blockquote>
+</li>
+</ol>
+<p>RuntimeError if the precondition is not satisfied.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_orientation_cost</span></code>:</dt>
+<dd>The cost for each body’s orientation error.</dd>
+</dl>
+<p>Precondition:
+1. body_orientation_cost.rows() == plant.num_bodies() , where</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">plant</span></code> is the input argument in the constructor of the class.</div></blockquote>
+<ol class="arabic" start="2">
+<li><p class="first">body_position_cost(i) is non-negative.</p>
+<blockquote>
+<div><p>$Raises:</p>
+</div></blockquote>
+</li>
+</ol>
+<p>RuntimeError if the precondition is not satisfied.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldOrientationConstraint">
+<code class="descname">AddWorldOrientationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, body_index: pydrake.multibody.tree.BodyIndex, desired_orientation: pydrake.common.eigen_geometry.Quaternion_[float], angle_tol: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldOrientationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a constraint that the angle between the body orientation and the
+desired orientation should not be larger than <code class="docutils literal notranslate"><span class="pre">angle_tol</span></code>. If we
+denote the angle between two rotation matrices <code class="docutils literal notranslate"><span class="pre">R1</span></code> and <code class="docutils literal notranslate"><span class="pre">R2</span></code> as
+<code class="docutils literal notranslate"><span class="pre">θ</span></code>, i.e. θ is the angle of the angle-axis representation of the
+rotation matrix <code class="docutils literal notranslate"><span class="pre">R1ᵀ</span> <span class="pre">*</span> <span class="pre">R2</span></code>, we then know</p>
+<p>trace(R1ᵀ * R2) = 2 * cos(θ) + 1 as in
+<a class="reference external" href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToAngle/">http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToAngle/</a>
+To constraint <code class="docutils literal notranslate"><span class="pre">θ</span> <span class="pre">&lt;</span> <span class="pre">angle_tol</span></code>, we can impose the following
+constraint</p>
+<p>2 * cos(angle_tol) + 1 &lt;= trace(R1ᵀ * R2) &lt;= 3</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index</span></code>:</dt>
+<dd>The index of the body whose orientation will be constrained.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">desired_orientation</span></code>:</dt>
+<dd>The desired orientation of the body.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angle_tol</span></code>:</dt>
+<dd>The tolerance on the angle between the body orientation and the
+desired orientation. Unit is radians.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">binding</span></code>:</dt>
+<dd>The newly added constraint, together with the bound variables.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldPositionConstraint">
+<code class="descname">AddWorldPositionConstraint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldPositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>AddWorldPositionConstraint(self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, body_index: pydrake.multibody.tree.BodyIndex, p_BQ: numpy.ndarray[numpy.float64[3, 1]], box_lb_F: numpy.ndarray[numpy.float64[3, 1]], box_ub_F: numpy.ndarray[numpy.float64[3, 1]], X_WF: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
+<dt>R=RotationMatrix([</dt>
+<dd>[1.0, 0.0, 0.0],
+[0.0, 1.0, 0.0],
+[0.0, 0.0, 1.0],</dd>
+</dl>
+<p class="last">]),
+p=[0.0, 0.0, 0.0],</p>
+</dd>
+</dl>
+<p>)) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</p>
+<p>Adds the constraint that the position of a point <code class="docutils literal notranslate"><span class="pre">Q</span></code> on a body <code class="docutils literal notranslate"><span class="pre">B</span></code>
+(whose index is <code class="docutils literal notranslate"><span class="pre">body_index</span></code>), is within a box in a specified frame
+<code class="docutils literal notranslate"><span class="pre">F</span></code>. The constraint is that the point <code class="docutils literal notranslate"><span class="pre">Q`'s</span> <span class="pre">position</span> <span class="pre">should</span> <span class="pre">lie</span>
+<span class="pre">within</span> <span class="pre">a</span> <span class="pre">bounding</span> <span class="pre">box</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">frame</span> <span class="pre">`F</span></code>. Namely</p>
+<p>box_lb_F &lt;= p_FQ &lt;= box_ub_F</p>
+<p>where p_FQ is the position of the point Q measured and expressed in
+the <code class="docutils literal notranslate"><span class="pre">F</span></code>, computed as</p>
+<p>p_FQ = X_FW * (p_WBo + R_WB * p_BQ)</p>
+<p>hence this is a linear constraint on the decision variables p_WBo and
+R_WB. The inequality is imposed elementwise.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">since the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_WB</span></code> does not lie exactly on the
+SO(3), due to the McCormick envelope relaxation, this constraint
+is subject to the accumulated error from the root of the
+kinematics tree.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index</span></code>:</dt>
+<dd>The index of the body on which the position of a point is
+constrained.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The position of the point Q measured and expressed in the body
+frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_lb_F</span></code>:</dt>
+<dd>The lower bound of the box in frame <code class="docutils literal notranslate"><span class="pre">F</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_ub_F</span></code>:</dt>
+<dd>The upper bound of the box in frame <code class="docutils literal notranslate"><span class="pre">F</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WF</span></code>:</dt>
+<dd>. The frame in which the box is specified. This frame is
+represented by a RigidTransform X_WF, the transform from the
+constraint frame F to the world frame W. Namely if the position of
+the point <code class="docutils literal notranslate"><span class="pre">Q</span></code> in the world frame is <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>, then the
+constraint is</dd>
+</dl>
+<p>box_lb_F &lt;= R_FW * (p_WQ-p_WFo) &lt;= box_ub_F where - R_FW is the
+rotation matrix of frame <code class="docutils literal notranslate"><span class="pre">W</span></code> expressed and measured in frame <code class="docutils literal notranslate"><span class="pre">F</span></code>.
+<cite>R_FW = X_WF.linear().transpose()`</cite>. - p_WFo is the position of frame
+<cite>F</cite>’s origin, expressed and measured in frame <cite>W`</cite>. <cite>p_WFo =
+X_WF.translation()</cite>.</p>
+<dl class="docutils">
+<dt><em>Default:</em> is the identity transform.</dt>
+<dd>$Returns <code class="docutils literal notranslate"><span class="pre">binding</span></code>:</dd>
+</dl>
+<p>The newly added constraint, together with the bound variables.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldRelativePositionConstraint">
+<code class="descname">AddWorldRelativePositionConstraint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldRelativePositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>AddWorldRelativePositionConstraint(self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, body_index_B: pydrake.multibody.tree.BodyIndex, p_BQ: numpy.ndarray[numpy.float64[3, 1]], body_index_A: pydrake.multibody.tree.BodyIndex, p_AP: numpy.ndarray[numpy.float64[3, 1]], box_lb_F: numpy.ndarray[numpy.float64[3, 1]], box_ub_F: numpy.ndarray[numpy.float64[3, 1]], X_WF: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
+<dt>R=RotationMatrix([</dt>
+<dd>[1.0, 0.0, 0.0],
+[0.0, 1.0, 0.0],
+[0.0, 0.0, 1.0],</dd>
+</dl>
+<p class="last">]),
+p=[0.0, 0.0, 0.0],</p>
+</dd>
+</dl>
+<p>)) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</p>
+<p>Adds the constraint that the position of a point <code class="docutils literal notranslate"><span class="pre">Q</span></code> on a body <code class="docutils literal notranslate"><span class="pre">B</span></code>
+relative to a point <code class="docutils literal notranslate"><span class="pre">P</span></code> on body <code class="docutils literal notranslate"><span class="pre">A</span></code>, is within a box in a
+specified frame <code class="docutils literal notranslate"><span class="pre">F</span></code>. Using monogram notation we have:</p>
+<p>box_lb_F &lt;= p_FQ - p_FP &lt;= box_ub_F</p>
+<p>where p_FQ and p_FP are the position of the points measured and
+expressed in <code class="docutils literal notranslate"><span class="pre">F</span></code>. The inequality is imposed elementwise. See
+AddWorldPositionConstraint for more details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index_B</span></code>:</dt>
+<dd>The index of the body B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The position of the point Q measured and expressed in the body
+frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index_A</span></code>:</dt>
+<dd>The index of the body A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt>
+<dd>The position of the point P measured and expressed in the body
+frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_lb_F</span></code>:</dt>
+<dd>The lower bound of the box in frame <code class="docutils literal notranslate"><span class="pre">F</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_ub_F</span></code>:</dt>
+<dd>The upper bound of the box in frame <code class="docutils literal notranslate"><span class="pre">F</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WF</span></code>:</dt>
+<dd>. Defines the frame in which the box is specified. $*Default:* is
+the identity transform.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">binding</span></code>:</dt>
+<dd>The newly added constraint, together with the bound variables.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.body_position">
+<code class="descname">body_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em>, <em>body_index: pydrake.multibody.tree.BodyIndex</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.body_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the decision variables on the position p_WBo of the body
+B’s origin measured and expressed in the world frame.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index</span></code>:</dt>
+<dd>The index of the queried body. Notice that body 0 is the world,
+and thus not a decision variable.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the index is smaller than 1, or greater than or</li>
+<li>equal to the total number of bodies in the robot.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.body_rotation_matrix">
+<code class="descname">body_rotation_matrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em>, <em>body_index: pydrake.multibody.tree.BodyIndex</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 3]]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.body_rotation_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the decision variables on the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_WB</span></code> for
+a body with the specified index. This is the orientation of body i’s
+frame measured and expressed in the world frame.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index</span></code>:</dt>
+<dd>The index of the queried body. Notice that body 0 is the world,
+and thus not a decision variable.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the index is smaller than 1, or greater than or</li>
+<li>equal to the total number of bodies in the robot.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.get_mutable_prog">
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options">
+<em class="property">class </em><code class="descname">Options</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.approach">
+<code class="descname">approach</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.approach" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.interval_binning">
+<code class="descname">interval_binning</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.interval_binning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.linear_constraint_only">
+<code class="descname">linear_constraint_only</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.linear_constraint_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, add only mixed-integer linear constraints in the constructor
+of GlobalInverseKinematics. The mixed-integer relaxation is tighter
+with nonlinear constraints (such as Lorentz cone constraint) than with
+linear constraints, but the optimization takes more time with
+nonlinear constraints.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.num_intervals_per_half_axis">
+<code class="descname">num_intervals_per_half_axis</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.num_intervals_per_half_axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.prog">
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.prog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.ReconstructGeneralizedPositionSolution">
+<code class="descname">ReconstructGeneralizedPositionSolution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.ReconstructGeneralizedPositionSolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>After solving the inverse kinematics problem and finding out the pose
+of each body, reconstruct the robot generalized position (joint
+angles, etc) that matches with the body poses. Notice that since the
+rotation matrix is approximated, that the solution of body_rotmat()
+might not be on SO(3) exactly, the reconstructed body posture might
+not match with the body poses exactly, and the kinematics constraint
+might not be satisfied exactly with this reconstructed posture.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not call this method if the problem is not solved successfully!
+The returned value can be NaN or meaningless number if the problem
+is not solved.</p>
+</div>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt>
+<dd>The reconstructed posture of the robot of the generalized
+coordinates, corresponding to the RigidBodyTree on which the
+inverse kinematics problem is solved.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">InverseKinematics</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Solves an inverse kinematics (IK) problem on a MultibodyPlant, to find

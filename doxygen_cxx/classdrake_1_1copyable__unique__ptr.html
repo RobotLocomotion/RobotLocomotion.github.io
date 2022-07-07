@@ -609,7 +609,7 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return a const reference to the contained object. </p>
-<p>Note that this is different from <code><a class="el" href="namespacedrake_1_1symbolic.html#a1dbec6a09664cb563d86071a7be38913">std::unique_ptr::operator*()</a></code> which would return a non-const reference (if <code>T</code> is non-const), even if the container itself is const. For a const copyable_unique_ptr will always return a const reference to its contained value.</p>
+<p>Note that this is different from <code><a class="el" href="namespacedrake_1_1symbolic.html#a76deccd3cd3f64d9b875dd5116792c07" title="Returns the product of two Chebyshev basis elements.">std::unique_ptr::operator*()</a></code> which would return a non-const reference (if <code>T</code> is non-const), even if the container itself is const. For a const copyable_unique_ptr will always return a const reference to its contained value.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Currently copyable_unique_ptr is a std::unique_ptr. As such, a const copyable_unique_ptr&lt;Foo&gt; can be upcast to a const unique_ptr&lt;Foo&gt; and the parent's behavior will provide a mutable reference. This is strongly discouraged and will break as the implementation of this class changes to shore up this gap in the const correctness protection.</dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><code>this != nullptr</code> reports <code>true</code>. </dd></dl>
 

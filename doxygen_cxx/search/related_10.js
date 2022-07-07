@@ -8,7 +8,7 @@ var searchData=
   ['scenegraphtester',['SceneGraphTester',['../classdrake_1_1geometry_1_1_scene_graph.html#abecd6179d212b5bacfd7ca6c44d17224',1,'drake::geometry::SceneGraph']]],
   ['screwjoint',['ScrewJoint',['../classdrake_1_1multibody_1_1_screw_joint.html#aa99d7a93fe68876b2b47b6c83fe51e1a',1,'drake::multibody::ScrewJoint']]],
   ['sharedpointersystem',['SharedPointerSystem',['../classdrake_1_1systems_1_1_shared_pointer_system.html#ad96eaae9841dafbb7e145a1b1eeb869a',1,'drake::systems::SharedPointerSystem']]],
-  ['sin',['sin',['../classdrake_1_1symbolic_1_1_expression.html#af3cd13d5472028f31c2e70f1b0e08b5d',1,'drake::symbolic::Expression::sin()'],['../classdrake_1_1_trig_poly.html#a0f939c21b49ed68025b71ebc7b37943d',1,'drake::TrigPoly::sin()']]],
+  ['sin',['sin',['../classdrake_1_1symbolic_1_1_expression.html#af3cd13d5472028f31c2e70f1b0e08b5d',1,'drake::symbolic::Expression']]],
   ['sinh',['sinh',['../classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0',1,'drake::symbolic::Expression']]],
   ['sqrt',['sqrt',['../classdrake_1_1symbolic_1_1_expression.html#a79e1b5d9aadd56991632f40804d4bf93',1,'drake::symbolic::Expression::sqrt()'],['../classdrake_1_1symbolic_1_1_expression_sqrt.html#a79e1b5d9aadd56991632f40804d4bf93',1,'drake::symbolic::ExpressionSqrt::sqrt()']]],
   ['statelesssystem',['StatelessSystem',['../classdrake_1_1systems_1_1analysis__test_1_1_stateless_system.html#a9fb5ca6b2f8041db90ab9d5ff9d580b5',1,'drake::systems::analysis_test::StatelessSystem']]],

@@ -16,7 +16,7 @@ var searchData=
   ['triangle_5fquadrature_5frule_2eh',['triangle_quadrature_rule.h',['../triangle__quadrature__rule_8h.html',1,'']]],
   ['triangle_5fsurface_5fmesh_2eh',['triangle_surface_mesh.h',['../triangle__surface__mesh_8h.html',1,'']]],
   ['triangle_5fsurface_5fmesh_5ffield_2eh',['triangle_surface_mesh_field.h',['../triangle__surface__mesh__field_8h.html',1,'']]],
-  ['trig_5fpoly_2eh',['trig_poly.h',['../trig__poly_8h.html',1,'']]],
+  ['trigonometric_5fpolynomial_2eh',['trigonometric_polynomial.h',['../trigonometric__polynomial_8h.html',1,'']]],
   ['type_5fpack_2eh',['type_pack.h',['../type__pack_8h.html',1,'']]],
   ['type_5fsafe_5findex_2eh',['type_safe_index.h',['../type__safe__index_8h.html',1,'']]],
   ['type_5fsafe_5findex_5fpybind_2eh',['type_safe_index_pybind.h',['../type__safe__index__pybind_8h.html',1,'']]]

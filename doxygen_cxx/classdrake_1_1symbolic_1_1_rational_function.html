@@ -171,7 +171,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1symbolic_1_1_rational_fu
 <p>A function f(x) is a rational function, if f(x) = p(x) / q(x), where both p(x) and q(x) are polynomials of x. Note that rational functions are closed under (+, -, x, /). One application of rational function is in polynomial optimization, where we represent (or approximate) functions using rational functions, and then convert the constraint f(x) = h(x) (where h(x) is a polynomial) to a polynomial constraint p(x) - q(x) * h(x) = 0, or convert the inequality constraint f(x) &gt;= h(x) as p(x) - q(x) * h(x) &gt;= 0 if we know q(x) &gt; 0.</p>
 <p>This class represents a special subset of the <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. While a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> can represent a rational function, extracting the numerator and denominator, generally, is quite difficult; for instance, from p1(x) / q1(x) + p2(x) / q2(x) + ... + pn(x) / qn(x). This class's explicit structure facilitates this decomposition. </p>
 </div>
-<p><code>#include &lt;drake/common/symbolic_rational_function.h&gt;</code></p>
+<p><code>#include &lt;drake/common/symbolic/rational_function.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -892,7 +892,7 @@ None of the indeterminates in the numerator can be decision variables in the den
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/common/<a class="el" href="symbolic__rational__function_8h.html">symbolic_rational_function.h</a></li>
+<li>drake/common/symbolic/<a class="el" href="rational__function_8h.html">rational_function.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

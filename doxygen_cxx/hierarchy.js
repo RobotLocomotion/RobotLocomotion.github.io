@@ -598,7 +598,6 @@ var hierarchy =
         [ "OutputPort< double >", "classdrake_1_1systems_1_1_output_port.html", null ]
       ] ]
     ] ],
-    [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
@@ -687,7 +686,6 @@ var hierarchy =
     [ "SimulatorConfig", "structdrake_1_1systems_1_1_simulator_config.html", null ],
     [ "SimulatorStatus", "classdrake_1_1systems_1_1_simulator_status.html", null ],
     [ "SinCos", "structdrake_1_1symbolic_1_1_sin_cos.html", null ],
-    [ "TrigPoly< T >::SinCosVars", "structdrake_1_1_trig_poly_1_1_sin_cos_vars.html", null ],
     [ "SnoptSolverDetails", "structdrake_1_1solvers_1_1_snopt_solver_details.html", null ],
     [ "SolverId", "classdrake_1_1solvers_1_1_solver_id.html", null ],
     [ "SolverInterface", "classdrake_1_1solvers_1_1_solver_interface.html", [
@@ -1005,7 +1003,6 @@ var hierarchy =
     ] ],
     [ "TriangleSurfaceMesh< T >", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", null ],
     [ "TriangleSurfaceMeshTester< T >", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
-    [ "TrigPoly< T >", "classdrake_1_1_trig_poly.html", null ],
     [ "tuple_element< Index, drake::SortedPair< T > >", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ],
     [ "type_at< I, Ts >", "structdrake_1_1type__at.html", null ],
     [ "type_check_different_from< T >", "structdrake_1_1type__check__different__from.html", null ],

@@ -204,9 +204,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adcb3b75410a7352ca292fc5ca2ab5b01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#adcb3b75410a7352ca292fc5ca2ab5b01">ShiftWithZeroAngularVelocity</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset) const</td></tr>
 <tr class="memdesc:adcb3b75410a7352ca292fc5ca2ab5b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Given <code>this</code> spatial acceleration A_MB of a frame B measured in a frame M, shifts SpatialAcceleration from frame B to a frame C (i.e., A_MB to A_MC), where both B and C are fixed to the same frame or rigid body and where ω_MB = 0 (frame B's angular velocity in frame M is zero).  <a href="#adcb3b75410a7352ca292fc5ca2ab5b01">More...</a><br /></td></tr>
 <tr class="separator:adcb3b75410a7352ca292fc5ca2ab5b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee62fde8bf4152c9ce65f0865ea44712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#aee62fde8bf4152c9ce65f0865ea44712">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PoQ_E) const</td></tr>
-<tr class="memdesc:aee62fde8bf4152c9ce65f0865ea44712"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aee62fde8bf4152c9ce65f0865ea44712">More...</a><br /></td></tr>
-<tr class="separator:aee62fde8bf4152c9ce65f0865ea44712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad148d7373c82a29ebf98499b07fbe3c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#ad148d7373c82a29ebf98499b07fbe3c1">ComposeWithMovingFrameAcceleration</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;position_of_moving_frame, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;angular_velocity_of_this_frame, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;velocity_of_moving_frame, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt; &amp;acceleration_of_moving_frame) const</td></tr>
 <tr class="memdesc:ad148d7373c82a29ebf98499b07fbe3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a frame B's acceleration measured in a frame M and a frame C's acceleration relative to frame B, returns frame C's acceleration in M.  <a href="#ad148d7373c82a29ebf98499b07fbe3c1">More...</a><br /></td></tr>
 <tr class="separator:ad148d7373c82a29ebf98499b07fbe3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -621,7 +618,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="ac8cf5e8a26c45a4a376af6484782c67e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8cf5e8a26c45a4a376af6484782c67e">&#9670;&nbsp;</a></span>Shift() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8cf5e8a26c45a4a376af6484782c67e">&#9670;&nbsp;</a></span>Shift()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,28 +659,6 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#ac8cf5e8a26c45a4a376af6484782c67e" title="Shifts a SpatialAcceleration from a frame B to a frame C, where both B and C are fixed to the same fr...">Shift()</a> differs from <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#a623a6ff496aa671b9c4784525ce6808c" title="In-place shift of a SpatialAcceleration from a frame B to a frame C, where both B and C are fixed to ...">ShiftInPlace()</a> in that <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#ac8cf5e8a26c45a4a376af6484782c67e" title="Shifts a SpatialAcceleration from a frame B to a frame C, where both B and C are fixed to the same fr...">Shift()</a> does not modify <code>this</code> whereas <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#a623a6ff496aa671b9c4784525ce6808c" title="In-place shift of a SpatialAcceleration from a frame B to a frame C, where both B and C are fixed to ...">ShiftInPlace()</a> does modify <code>this</code>. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#a623a6ff496aa671b9c4784525ce6808c" title="In-place shift of a SpatialAcceleration from a frame B to a frame C, where both B and C are fixed to ...">ShiftInPlace()</a> for more information and how A_MC_E is calculated. Use <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#ad148d7373c82a29ebf98499b07fbe3c1" title="Given a frame B&#39;s acceleration measured in a frame M and a frame C&#39;s acceleration relative to frame B...">ComposeWithMovingFrameAcceleration()</a> if frame C is moving on frame B. </dd></dl>
-
-</div>
-</div>
-<a id="aee62fde8bf4152c9ce65f0865ea44712"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee62fde8bf4152c9ce65f0865ea44712">&#9670;&nbsp;</a></span>Shift() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt;T&gt; Shift </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_PoQ_E</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use SpatialAcceleration::ShiftWithZeroAngularVelocity() <br />
- This will be removed from Drake on or after 2022-07-01.</dd></dl>
 
 </div>
 </div>

@@ -13,6 +13,6 @@ var searchData=
   ['contextbase',['ContextBase',['../classdrake_1_1systems_1_1_cache.html#a37e381833649e68b36c7c146d7984f8f',1,'drake::systems::Cache']]],
   ['copyable_5funique_5fptr_3c_20cacheentryvalue_20_3e',['copyable_unique_ptr&lt; CacheEntryValue &gt;',['../classdrake_1_1systems_1_1_cache_entry_value.html#a598ca03fb10c04b0cbe60b81fd9e0085',1,'drake::systems::CacheEntryValue']]],
   ['copyable_5funique_5fptr_3c_20fixedinputportvalue_20_3e',['copyable_unique_ptr&lt; FixedInputPortValue &gt;',['../classdrake_1_1systems_1_1_fixed_input_port_value.html#a9e24d4c4c6dcaa145e2421e0ba44007c',1,'drake::systems::FixedInputPortValue']]],
-  ['cos',['cos',['../classdrake_1_1symbolic_1_1_expression.html#a8d78919127ccba2ba24cdb1b0c57613d',1,'drake::symbolic::Expression::cos()'],['../classdrake_1_1_trig_poly.html#a6602da3cdf63645cdcb05fd7ef4a0b2c',1,'drake::TrigPoly::cos()']]],
+  ['cos',['cos',['../classdrake_1_1symbolic_1_1_expression.html#a8d78919127ccba2ba24cdb1b0c57613d',1,'drake::symbolic::Expression']]],
   ['cosh',['cosh',['../classdrake_1_1symbolic_1_1_expression.html#a27a345a84e6b273a71aa02ee312f9c51',1,'drake::symbolic::Expression']]]
 ];
