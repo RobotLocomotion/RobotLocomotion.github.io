@@ -20,6 +20,7 @@ var eigen__types_8h =
     [ "Matrix6", "eigen__types_8h.html#a11f9aa896d31437a219ed19fa944fe20", null ],
     [ "Matrix6X", "eigen__types_8h.html#a668e1152f8b876967b9093ae4d95298b", null ],
     [ "Matrix6xUpTo6", "eigen__types_8h.html#ae2b0be18a912f9cacfec6d0a0a6d873c", null ],
+    [ "MatrixLikewise", "eigen__types_8h.html#aaadcdc21cc0c381e5879b1b7f023d82d", null ],
     [ "MatrixUpTo6", "eigen__types_8h.html#abc0efed85a04025fda487f0d59b71d5d", null ],
     [ "MatrixX", "eigen__types_8h.html#a28c58d881c60e96f48a7a4e32a699b95", null ],
     [ "Quaternion", "eigen__types_8h.html#a4156bf453a5b323356d7cc784dfdf084", null ],

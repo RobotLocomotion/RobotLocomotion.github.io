@@ -138,7 +138,7 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "GetAllLinearConstraints", "classdrake_1_1solvers_1_1_mathematical_program.html#a17fe85b6ddbc665b74e8cf9c6bf02d3e", null ],
     [ "GetBindingVariableValues", "classdrake_1_1solvers_1_1_mathematical_program.html#adf1b28062ab095a5824cbf928e37e1ff", null ],
     [ "GetInitialGuess", "classdrake_1_1solvers_1_1_mathematical_program.html#aa44e07a559ca22d055de33fa1154c095", null ],
-    [ "GetInitialGuess", "classdrake_1_1solvers_1_1_mathematical_program.html#a390ecd2ae9e9cc6877af3c2202341b3e", null ],
+    [ "GetInitialGuess", "classdrake_1_1solvers_1_1_mathematical_program.html#ac8b0cea357d05b961ef11c82a2f4ab7e", null ],
     [ "GetSolverOptionsDouble", "classdrake_1_1solvers_1_1_mathematical_program.html#a7abf83f965123608bf855d5eef56806f", null ],
     [ "GetSolverOptionsInt", "classdrake_1_1solvers_1_1_mathematical_program.html#aa53e7b6bf2db39795a28138edda49638", null ],
     [ "GetSolverOptionsStr", "classdrake_1_1solvers_1_1_mathematical_program.html#ac296d646cdfb000b49df738e9da24159", null ],

@@ -173,6 +173,7 @@ $(document).ready(function(){initNavTree('trigonometric__polynomial_8h.html','')
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="expression_8h.html">drake/common/symbolic/expression.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rational__function_8h.html">drake/common/symbolic/rational_function.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for trigonometric_polynomial.h:</div>
 <div class="dyncontent">
@@ -211,10 +212,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a6639ded5e13e34eee457b3ceb92a1d62"><td class="memItemLeft" align="right" valign="top">Expression&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6639ded5e13e34eee457b3ceb92a1d62">Substitute</a> (const Expression &amp;e, const SinCosSubstitution &amp;subs)</td></tr>
 <tr class="memdesc:a6639ded5e13e34eee457b3ceb92a1d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a substitution map q =&gt; {s, c}, substitutes instances of sin(q) and cos(q) in <code>e</code> with <code>s</code> and <code>c</code>, with partial support for trigonometric expansions.  <a href="namespacedrake_1_1symbolic.html#a6639ded5e13e34eee457b3ceb92a1d62">More...</a><br /></td></tr>
 <tr class="separator:a6639ded5e13e34eee457b3ceb92a1d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; Expression, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a19a8d5ebbbc294ffa607973b2385f0f6">Substitute</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const SinCosSubstitution &amp;subs)</td></tr>
-<tr class="memdesc:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix version of sin/cos substitution.  <a href="namespacedrake_1_1symbolic.html#a19a8d5ebbbc294ffa607973b2385f0f6">More...</a><br /></td></tr>
-<tr class="separator:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db53e224c37b630f7ec9d1615215449"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a1db53e224c37b630f7ec9d1615215449"><td class="memTemplItemLeft" align="right" valign="top">MatrixLikewise&lt; Expression, Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1db53e224c37b630f7ec9d1615215449">Substitute</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const SinCosSubstitution &amp;subs)</td></tr>
+<tr class="memdesc:a1db53e224c37b630f7ec9d1615215449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix version of sin/cos substitution.  <a href="namespacedrake_1_1symbolic.html#a1db53e224c37b630f7ec9d1615215449">More...</a><br /></td></tr>
+<tr class="separator:a1db53e224c37b630f7ec9d1615215449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88f58019962d307b9da7ebc9d32ec87"><td class="memItemLeft" align="right" valign="top">symbolic::RationalFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad88f58019962d307b9da7ebc9d32ec87">SubstituteStereographicProjection</a> (const symbolic::Polynomial &amp;e, const std::vector&lt; SinCos &gt; &amp;sin_cos, const VectorX&lt; symbolic::Variable &gt; &amp;t)</td></tr>
+<tr class="memdesc:ad88f58019962d307b9da7ebc9d32ec87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the variables representing sine and cosine functions with their stereographic projection.  <a href="namespacedrake_1_1symbolic.html#ad88f58019962d307b9da7ebc9d32ec87">More...</a><br /></td></tr>
+<tr class="separator:ad88f58019962d307b9da7ebc9d32ec87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fae4346c33bfaf11326fcd6a85bd7e"><td class="memItemLeft" align="right" valign="top">symbolic::RationalFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a74fae4346c33bfaf11326fcd6a85bd7e">SubstituteStereographicProjection</a> (const symbolic::Expression &amp;e, const std::unordered_map&lt; symbolic::Variable, symbolic::Variable &gt; &amp;subs)</td></tr>
+<tr class="memdesc:a74fae4346c33bfaf11326fcd6a85bd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes sine and cosine function with their stereographic projection.  <a href="namespacedrake_1_1symbolic.html#a74fae4346c33bfaf11326fcd6a85bd7e">More...</a><br /></td></tr>
+<tr class="separator:a74fae4346c33bfaf11326fcd6a85bd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

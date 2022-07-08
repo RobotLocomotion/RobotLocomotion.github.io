@@ -1796,8 +1796,9 @@ expects the following properties for point contact modeling:</p>
 :—————-: | :——————- | | material |
 coulomb_friction | yes¹ | CoulombFriction&lt;T&gt; | Static and Dynamic
 friction. | | material | point_contact_stiffness | no² | T | Penalty
-method stiffness. | | material | hunt_crossley_dissipation | no² | T |
-Penalty method dissipation. |</p>
+method stiffness. | | material | hunt_crossley_dissipation | no²⁴ | T
+| Penalty method dissipation. | | material | dissipation_timescale |
+yes³⁴ | T | Linear dissipation parameter. |</p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -1805,6 +1806,21 @@ MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
 value as the default. Refer to the section mbp_penalty_method “Penalty
 method point contact” for further details.</p>
+<p>³ When using a linear model of dissipation (for instance when
+selecting the SAP solver), collision geometry is required to be
+registered with a geometry::ProximityProperties object that contains
+the (“material”, “dissipation_timescale”) property. If the property is
+missing, an exception will be thrown.</p>
+<p>⁴ We allow to specify both hunt_crossley_dissipation and
+dissipation_timescale for a given geometry. However only one of these
+will get used, depending on the configuration of the MultibodyPlant.
+As an example, if the SAP solver is specified (see
+set_discrete_contact_solver_type()) only the dissipation_timescale is
+used while hunt_crossley_dissipation is ignored. Conversely, if the
+TAMSI solver is used (see set_discrete_contact_solver_type()) only
+hunt_crossley_dissipation is used while dissipation_timescale is
+ignored. Currently, a continuous MultibodyPlant model will always use
+the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
 <p>Accessing and modifying contact properties requires interfacing with
 geometry::SceneGraph’s model inspector. Interfacing with a model
 inspector obtained from geometry::SceneGraph will provide the default
@@ -5885,8 +5901,9 @@ expects the following properties for point contact modeling:</p>
 :—————-: | :——————- | | material |
 coulomb_friction | yes¹ | CoulombFriction&lt;T&gt; | Static and Dynamic
 friction. | | material | point_contact_stiffness | no² | T | Penalty
-method stiffness. | | material | hunt_crossley_dissipation | no² | T |
-Penalty method dissipation. |</p>
+method stiffness. | | material | hunt_crossley_dissipation | no²⁴ | T
+| Penalty method dissipation. | | material | dissipation_timescale |
+yes³⁴ | T | Linear dissipation parameter. |</p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -5894,6 +5911,21 @@ MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
 value as the default. Refer to the section mbp_penalty_method “Penalty
 method point contact” for further details.</p>
+<p>³ When using a linear model of dissipation (for instance when
+selecting the SAP solver), collision geometry is required to be
+registered with a geometry::ProximityProperties object that contains
+the (“material”, “dissipation_timescale”) property. If the property is
+missing, an exception will be thrown.</p>
+<p>⁴ We allow to specify both hunt_crossley_dissipation and
+dissipation_timescale for a given geometry. However only one of these
+will get used, depending on the configuration of the MultibodyPlant.
+As an example, if the SAP solver is specified (see
+set_discrete_contact_solver_type()) only the dissipation_timescale is
+used while hunt_crossley_dissipation is ignored. Conversely, if the
+TAMSI solver is used (see set_discrete_contact_solver_type()) only
+hunt_crossley_dissipation is used while dissipation_timescale is
+ignored. Currently, a continuous MultibodyPlant model will always use
+the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
 <p>Accessing and modifying contact properties requires interfacing with
 geometry::SceneGraph’s model inspector. Interfacing with a model
 inspector obtained from geometry::SceneGraph will provide the default
@@ -9972,8 +10004,9 @@ expects the following properties for point contact modeling:</p>
 :—————-: | :——————- | | material |
 coulomb_friction | yes¹ | CoulombFriction&lt;T&gt; | Static and Dynamic
 friction. | | material | point_contact_stiffness | no² | T | Penalty
-method stiffness. | | material | hunt_crossley_dissipation | no² | T |
-Penalty method dissipation. |</p>
+method stiffness. | | material | hunt_crossley_dissipation | no²⁴ | T
+| Penalty method dissipation. | | material | dissipation_timescale |
+yes³⁴ | T | Linear dissipation parameter. |</p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -9981,6 +10014,21 @@ MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
 value as the default. Refer to the section mbp_penalty_method “Penalty
 method point contact” for further details.</p>
+<p>³ When using a linear model of dissipation (for instance when
+selecting the SAP solver), collision geometry is required to be
+registered with a geometry::ProximityProperties object that contains
+the (“material”, “dissipation_timescale”) property. If the property is
+missing, an exception will be thrown.</p>
+<p>⁴ We allow to specify both hunt_crossley_dissipation and
+dissipation_timescale for a given geometry. However only one of these
+will get used, depending on the configuration of the MultibodyPlant.
+As an example, if the SAP solver is specified (see
+set_discrete_contact_solver_type()) only the dissipation_timescale is
+used while hunt_crossley_dissipation is ignored. Conversely, if the
+TAMSI solver is used (see set_discrete_contact_solver_type()) only
+hunt_crossley_dissipation is used while dissipation_timescale is
+ignored. Currently, a continuous MultibodyPlant model will always use
+the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
 <p>Accessing and modifying contact properties requires interfacing with
 geometry::SceneGraph’s model inspector. Interfacing with a model
 inspector obtained from geometry::SceneGraph will provide the default
@@ -14059,8 +14107,9 @@ expects the following properties for point contact modeling:</p>
 :—————-: | :——————- | | material |
 coulomb_friction | yes¹ | CoulombFriction&lt;T&gt; | Static and Dynamic
 friction. | | material | point_contact_stiffness | no² | T | Penalty
-method stiffness. | | material | hunt_crossley_dissipation | no² | T |
-Penalty method dissipation. |</p>
+method stiffness. | | material | hunt_crossley_dissipation | no²⁴ | T
+| Penalty method dissipation. | | material | dissipation_timescale |
+yes³⁴ | T | Linear dissipation parameter. |</p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -14068,6 +14117,21 @@ MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
 value as the default. Refer to the section mbp_penalty_method “Penalty
 method point contact” for further details.</p>
+<p>³ When using a linear model of dissipation (for instance when
+selecting the SAP solver), collision geometry is required to be
+registered with a geometry::ProximityProperties object that contains
+the (“material”, “dissipation_timescale”) property. If the property is
+missing, an exception will be thrown.</p>
+<p>⁴ We allow to specify both hunt_crossley_dissipation and
+dissipation_timescale for a given geometry. However only one of these
+will get used, depending on the configuration of the MultibodyPlant.
+As an example, if the SAP solver is specified (see
+set_discrete_contact_solver_type()) only the dissipation_timescale is
+used while hunt_crossley_dissipation is ignored. Conversely, if the
+TAMSI solver is used (see set_discrete_contact_solver_type()) only
+hunt_crossley_dissipation is used while dissipation_timescale is
+ignored. Currently, a continuous MultibodyPlant model will always use
+the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
 <p>Accessing and modifying contact properties requires interfacing with
 geometry::SceneGraph’s model inspector. Interfacing with a model
 inspector obtained from geometry::SceneGraph will provide the default
@@ -17984,6 +18048,14 @@ details. Valid strings are: - “triangle” - “polygon”</p>
 <p>The default value used here is consistent with the default time_step
 chosen above; keep this consistent with
 MultibodyPlant::GetDefaultContactSurfaceRepresentation().</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver_type">
+<code class="descname">discrete_contact_solver_type</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the MultibodyPlant::set_discrete_contact_solver_type().
+Refer to drake::multibody::DiscreteContactSolverType for details.
+Valid strings are: - “tamsi” - “sap”</p>
 </dd></dl>
 
 <dl class="attribute">

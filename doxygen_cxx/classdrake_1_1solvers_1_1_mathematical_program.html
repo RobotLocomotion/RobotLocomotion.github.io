@@ -591,10 +591,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa44e07a559ca22d055de33fa1154c095"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa44e07a559ca22d055de33fa1154c095">GetInitialGuess</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7647680c7f56fdae6dc324db6aed1e45">decision_variable</a>) const</td></tr>
 <tr class="memdesc:aa44e07a559ca22d055de33fa1154c095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the initial guess for a single variable.  <a href="#aa44e07a559ca22d055de33fa1154c095">More...</a><br /></td></tr>
 <tr class="separator:aa44e07a559ca22d055de33fa1154c095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a390ecd2ae9e9cc6877af3c2202341b3e"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a390ecd2ae9e9cc6877af3c2202341b3e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a390ecd2ae9e9cc6877af3c2202341b3e">GetInitialGuess</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;decision_variable_mat) const</td></tr>
-<tr class="memdesc:a390ecd2ae9e9cc6877af3c2202341b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the initial guess for some variables.  <a href="#a390ecd2ae9e9cc6877af3c2202341b3e">More...</a><br /></td></tr>
-<tr class="separator:a390ecd2ae9e9cc6877af3c2202341b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8b0cea357d05b961ef11c82a2f4ab7e"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ac8b0cea357d05b961ef11c82a2f4ab7e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac8b0cea357d05b961ef11c82a2f4ab7e">GetInitialGuess</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;decision_variable_mat) const</td></tr>
+<tr class="memdesc:ac8b0cea357d05b961ef11c82a2f4ab7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the initial guess for some variables.  <a href="#ac8b0cea357d05b961ef11c82a2f4ab7e">More...</a><br /></td></tr>
+<tr class="separator:ac8b0cea357d05b961ef11c82a2f4ab7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48cb6d2263ccf09e38932dcd27f769f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae48cb6d2263ccf09e38932dcd27f769f">SetInitialGuess</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7647680c7f56fdae6dc324db6aed1e45">decision_variable</a>, double variable_guess_value)</td></tr>
 <tr class="memdesc:ae48cb6d2263ccf09e38932dcd27f769f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the initial guess for a single variable <code>decision_variable</code>.  <a href="#ae48cb6d2263ccf09e38932dcd27f769f">More...</a><br /></td></tr>
 <tr class="separator:ae48cb6d2263ccf09e38932dcd27f769f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5613,14 +5613,14 @@ x+y &gt;= 0
 
 </div>
 </div>
-<a id="a390ecd2ae9e9cc6877af3c2202341b3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a390ecd2ae9e9cc6877af3c2202341b3e">&#9670;&nbsp;</a></span>GetInitialGuess() <span class="overload">[2/2]</span></h2>
+<a id="ac8b0cea357d05b961ef11c82a2f4ab7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b0cea357d05b961ef11c82a2f4ab7e">&#9670;&nbsp;</a></span>GetInitialGuess() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, Eigen::Matrix&lt;double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; GetInitialGuess </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;double, Derived&gt; &gt; GetInitialGuess </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>decision_variable_mat</em></td><td>)</td>

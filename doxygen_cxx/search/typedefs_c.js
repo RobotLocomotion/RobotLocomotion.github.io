@@ -14,6 +14,7 @@ var searchData=
   ['matrix6xupto6',['Matrix6xUpTo6',['../namespacedrake.html#ae2b0be18a912f9cacfec6d0a0a6d873c',1,'drake']]],
   ['matrixdecisionvariable',['MatrixDecisionVariable',['../namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17',1,'drake::solvers']]],
   ['matrixindeterminate',['MatrixIndeterminate',['../namespacedrake_1_1solvers.html#a0f19da4730aeebddf6a1d14f51f0b7ec',1,'drake::solvers']]],
+  ['matrixlikewise',['MatrixLikewise',['../namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d',1,'drake']]],
   ['matrixupto6',['MatrixUpTo6',['../namespacedrake.html#abc0efed85a04025fda487f0d59b71d5d',1,'drake']]],
   ['matrixx',['MatrixX',['../namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95',1,'drake']]],
   ['matrixxdecisionvariable',['MatrixXDecisionVariable',['../namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061',1,'drake::solvers']]],

@@ -468,6 +468,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a6f6e054758d34b83e86bea87d65dfe4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for contact model options.  <a href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">More...</a><br /></td></tr>
 <tr class="separator:a6f6e054758d34b83e86bea87d65dfe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46057652dd36e7f740e87fd3f7f715d0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a46057652dd36e7f740e87fd3f7f715d0">DiscreteContactSolverType</a> { <a class="el" href="namespacedrake_1_1multibody.html#a46057652dd36e7f740e87fd3f7f715d0ad454de89727cb520148830aa54cb3a90">kTamsi</a>, 
+<a class="el" href="namespacedrake_1_1multibody.html#a46057652dd36e7f740e87fd3f7f715d0ad48dc7e3221aee2d9e1af665ebfbeeec">kSap</a>
+ }</td></tr>
+<tr class="memdesc:a46057652dd36e7f740e87fd3f7f715d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the contact solver used for a discrete MultibodyPlant model.  <a href="namespacedrake_1_1multibody.html#a46057652dd36e7f740e87fd3f7f715d0">More...</a><br /></td></tr>
+<tr class="separator:a46057652dd36e7f740e87fd3f7f715d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6144c2c8d4494bcb283f3f9e5841bfd2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2">TamsiSolverResult</a> { <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782">kSuccess</a> = 0, 
 <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a">kMaxIterationsReached</a> = 1, 
 <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727">kLinearSolverFailed</a> = 2
@@ -710,6 +715,41 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a6f6e054758d34b83e86bea87d65dfe4ea0f9136530df40294d8404d10cc150423"></a>kHydroelasticsOnly&#160;</td><td class="fielddoc"><p>Legacy alias. TODO(jwnimmer-tri) Deprecate this constant. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a6f6e054758d34b83e86bea87d65dfe4ea24d742e384e4b818c113620a6aebe0e5"></a>kPointContactOnly&#160;</td><td class="fielddoc"><p>Legacy alias. TODO(jwnimmer-tri) Deprecate this constant. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a46057652dd36e7f740e87fd3f7f715d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46057652dd36e7f740e87fd3f7f715d0">&#9670;&nbsp;</a></span>DiscreteContactSolverType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1multibody.html#a46057652dd36e7f740e87fd3f7f715d0">DiscreteContactSolverType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The type of the contact solver used for a discrete <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
+<h2>References</h2>
+<ul>
+<li>[Castro et al., 2019] Castro, A.M, Qu, A., Kuppuswamy, N., Alspach, A., Sherman, M.A., 2019. A Transition-Aware Method for the Simulation of Compliant Contact with Regularized Friction. Available online at <a href="https://arxiv.org/abs/1909.05700">https://arxiv.org/abs/1909.05700</a>.</li>
+<li>[Castro et al., 2022] Castro A., Permenter F. and Han X., 2022. An Unconstrained Convex Formulation of Compliant Contact. Available online at <a href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>. </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a46057652dd36e7f740e87fd3f7f715d0ad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver, see [Castro et al., 2019]. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a46057652dd36e7f740e87fd3f7f715d0ad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver, see [Castro et al., 2022]. </p>
 </td></tr>
 </table>
 

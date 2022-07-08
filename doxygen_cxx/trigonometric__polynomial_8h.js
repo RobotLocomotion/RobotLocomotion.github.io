@@ -8,5 +8,7 @@ var trigonometric__polynomial_8h =
       [ "kHalfAnglePreferCos", "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0", null ]
     ] ],
     [ "Substitute", "trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62", null ],
-    [ "Substitute", "trigonometric__polynomial_8h.html#a19a8d5ebbbc294ffa607973b2385f0f6", null ]
+    [ "Substitute", "trigonometric__polynomial_8h.html#a1db53e224c37b630f7ec9d1615215449", null ],
+    [ "SubstituteStereographicProjection", "trigonometric__polynomial_8h.html#ad88f58019962d307b9da7ebc9d32ec87", null ],
+    [ "SubstituteStereographicProjection", "trigonometric__polynomial_8h.html#a74fae4346c33bfaf11326fcd6a85bd7e", null ]
 ];

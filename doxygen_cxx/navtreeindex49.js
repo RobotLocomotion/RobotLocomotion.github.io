@@ -1,5 +1,11 @@
 var NAVTREEINDEX49 =
 {
+"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,4,2,2],
+"rod2d_8h.html":[4,0,0,3,16,0],
+"rod2d__geometry_8h.html":[4,0,0,3,16,1],
+"roll__pitch__yaw_8h.html":[4,0,0,7,28],
+"rotary__encoders_8h.html":[4,0,0,11,8,14],
+"rotation_8h.html":[4,0,0,1,1,0],
 "rotation__constraint_8h.html":[4,0,0,10,45],
 "rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,10,45,2],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74":[4,0,0,10,45,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX49 =
 "string__view__map__key_8h.html":[4,0,0,8,13,45],
 "structdrake_1_1_delegating_hasher.html":[3,0,0,20],
 "structdrake_1_1_delegating_hasher.html#a2f06de017c348e04061971db98125a4e":[3,0,0,20,1],
-"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,20,0],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[3,0,0,20,2],
-"structdrake_1_1_eigen_size_min_prefer_dynamic.html":[3,0,0,25],
-"structdrake_1_1_eigen_size_min_prefer_dynamic.html#adfbd84e9619cf3366fb744d3f70c8c23":[3,0,0,25,0],
-"structdrake_1_1_eigen_size_min_prefer_fixed.html":[3,0,0,26],
-"structdrake_1_1_eigen_size_min_prefer_fixed.html#adfbd84e9619cf3366fb744d3f70c8c23":[3,0,0,26,0],
-"structdrake_1_1_multiply_eigen_sizes.html":[3,0,0,36]
+"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,20,0]
 };

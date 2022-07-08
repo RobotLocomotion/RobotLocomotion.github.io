@@ -466,6 +466,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ae2b0be18a912f9cacfec6d0a0a6d873c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae2b0be18a912f9cacfec6d0a0a6d873c">Matrix6xUpTo6</a> = Eigen::Matrix&lt; Scalar, 6, Eigen::Dynamic, 0, 6, 6 &gt;</td></tr>
 <tr class="memdesc:ae2b0be18a912f9cacfec6d0a0a6d873c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A matrix of 6 rows and dynamic column size up to a maximum of 6, templated on scalar type.  <a href="#ae2b0be18a912f9cacfec6d0a0a6d873c">More...</a><br /></td></tr>
 <tr class="separator:ae2b0be18a912f9cacfec6d0a0a6d873c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaadcdc21cc0c381e5879b1b7f023d82d"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Derived &gt; </td></tr>
+<tr class="memitem:aaadcdc21cc0c381e5879b1b7f023d82d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a> = Eigen::Matrix&lt; Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::IsRowMajor ? Eigen::RowMajor :Eigen::ColMajor, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt;</td></tr>
+<tr class="memdesc:aaadcdc21cc0c381e5879b1b7f023d82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A matrix with the same compile-time sizes and storage order as Derived, but with a different scalar type and its default alignment (Eigen::AutoAlign).  <a href="#aaadcdc21cc0c381e5879b1b7f023d82d">More...</a><br /></td></tr>
+<tr class="separator:aaadcdc21cc0c381e5879b1b7f023d82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4156bf453a5b323356d7cc784dfdf084"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
 <tr class="memitem:a4156bf453a5b323356d7cc784dfdf084"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a> = Eigen::Quaternion&lt; Scalar &gt;</td></tr>
 <tr class="memdesc:a4156bf453a5b323356d7cc784dfdf084"><td class="mdescLeft">&#160;</td><td class="mdescRight">A quaternion templated on scalar type.  <a href="#a4156bf453a5b323356d7cc784dfdf084">More...</a><br /></td></tr>
@@ -606,10 +610,10 @@ Functions</h2></td></tr>
 <tr class="memitem:acffe42a683dd67544fb4d499d082b16d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acffe42a683dd67544fb4d499d082b16d">ExtractDoubleOrThrow</a> (double scalar)</td></tr>
 <tr class="memdesc:acffe42a683dd67544fb4d499d082b16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>scalar</code> as a double. Never throws.  <a href="#acffe42a683dd67544fb4d499d082b16d">More...</a><br /></td></tr>
 <tr class="separator:acffe42a683dd67544fb4d499d082b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e788a402c70aad068fe90501312a701"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a1e788a402c70aad068fe90501312a701"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1e788a402c70aad068fe90501312a701">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
-<tr class="memdesc:a1e788a402c70aad068fe90501312a701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#a1e788a402c70aad068fe90501312a701">More...</a><br /></td></tr>
-<tr class="separator:a1e788a402c70aad068fe90501312a701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1654cfab96e47e92ccc1bcb0f4506da"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ae1654cfab96e47e92ccc1bcb0f4506da"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae1654cfab96e47e92ccc1bcb0f4506da">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:ae1654cfab96e47e92ccc1bcb0f4506da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#ae1654cfab96e47e92ccc1bcb0f4506da">More...</a><br /></td></tr>
+<tr class="separator:ae1654cfab96e47e92ccc1bcb0f4506da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba0205c520f270cd638f7fb39fb5576"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#adba0205c520f270cd638f7fb39fb5576">LoadedLibraryPath</a> (const std::string &amp;library_name)</td></tr>
 <tr class="memdesc:adba0205c520f270cd638f7fb39fb5576"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the absolute path of the library with the name <code>library_name</code> if that library was loaded in the current running process.  <a href="#adba0205c520f270cd638f7fb39fb5576">More...</a><br /></td></tr>
 <tr class="separator:adba0205c520f270cd638f7fb39fb5576"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -739,10 +743,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a979582c00c744ebe1c719e57c6f738b8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a979582c00c744ebe1c719e57c6f738b8">ExtractDoubleOrThrow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a979582c00c744ebe1c719e57c6f738b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic expression's value() as a double.  <a href="#a979582c00c744ebe1c719e57c6f738b8">More...</a><br /></td></tr>
 <tr class="separator:a979582c00c744ebe1c719e57c6f738b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b70866fb9b52404035926454e2ce88b"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a6b70866fb9b52404035926454e2ce88b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6b70866fb9b52404035926454e2ce88b">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
-<tr class="memdesc:a6b70866fb9b52404035926454e2ce88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#a6b70866fb9b52404035926454e2ce88b">More...</a><br /></td></tr>
-<tr class="separator:a6b70866fb9b52404035926454e2ce88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77fe95853a296631fd2de0dda5ebb9c"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ae77fe95853a296631fd2de0dda5ebb9c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae77fe95853a296631fd2de0dda5ebb9c">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:ae77fe95853a296631fd2de0dda5ebb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#ae77fe95853a296631fd2de0dda5ebb9c">More...</a><br /></td></tr>
+<tr class="separator:ae77fe95853a296631fd2de0dda5ebb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2">temp_directory</a> ()</td></tr>
 <tr class="memdesc:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a directory location suitable for temporary files.  <a href="#a107ff2f218f356d05f8cdc3b7d254eb2">More...</a><br /></td></tr>
 <tr class="separator:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1140,6 +1144,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A matrix of 6 rows and dynamic column size up to a maximum of 6, templated on scalar type. </p>
+
+</div>
+</div>
+<a id="aaadcdc21cc0c381e5879b1b7f023d82d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaadcdc21cc0c381e5879b1b7f023d82d">&#9670;&nbsp;</a></span>MatrixLikewise</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a> =  Eigen::Matrix&lt;Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::IsRowMajor ? Eigen::RowMajor : Eigen::ColMajor, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A matrix with the same compile-time sizes and storage order as Derived, but with a different scalar type and its default alignment (Eigen::AutoAlign). </p>
 
 </div>
 </div>
@@ -2193,14 +2213,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1e788a402c70aad068fe90501312a701"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e788a402c70aad068fe90501312a701">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/6]</span></h2>
+<a id="ae1654cfab96e47e92ccc1bcb0f4506da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1654cfab96e47e92ccc1bcb0f4506da">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, double&gt;, Eigen::Matrix&lt;double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt; drake::ExtractDoubleOrThrow </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, double&gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;double, Derived&gt; &gt; drake::ExtractDoubleOrThrow </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
@@ -2282,14 +2302,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6b70866fb9b52404035926454e2ce88b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b70866fb9b52404035926454e2ce88b">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[6/6]</span></h2>
+<a id="ae77fe95853a296631fd2de0dda5ebb9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae77fe95853a296631fd2de0dda5ebb9c">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;, Eigen::Matrix&lt;double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt; drake::ExtractDoubleOrThrow </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;double, Derived&gt; &gt; drake::ExtractDoubleOrThrow </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
