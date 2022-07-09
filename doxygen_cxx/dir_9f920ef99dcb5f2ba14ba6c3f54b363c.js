@@ -21,6 +21,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
     [ "initial_value_problem.h", "initial__value__problem_8h.html", [
       [ "InitialValueProblem", "classdrake_1_1systems_1_1_initial_value_problem.html", "classdrake_1_1systems_1_1_initial_value_problem" ]
     ] ],
+    [ "instantaneous_realtime_rate_calculator.h", "instantaneous__realtime__rate__calculator_8h.html", null ],
     [ "integrator_base.h", "integrator__base_8h.html", null ],
     [ "lyapunov.h", "lyapunov_8h.html", "lyapunov_8h" ],
     [ "monte_carlo.h", "monte__carlo_8h.html", "monte__carlo_8h" ],

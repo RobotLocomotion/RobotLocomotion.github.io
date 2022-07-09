@@ -70,6 +70,10 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "symbolic_latex.h", "symbolic__latex_8h.html", null ],
     [ "temp_directory.h", "temp__directory_8h.html", "temp__directory_8h" ],
     [ "text_logging.h", "text__logging_8h.html", "text__logging_8h" ],
+    [ "timer.h", "timer_8h.html", [
+      [ "Timer", "classdrake_1_1_timer.html", "classdrake_1_1_timer" ],
+      [ "SteadyTimer", "classdrake_1_1_steady_timer.html", "classdrake_1_1_steady_timer" ]
+    ] ],
     [ "type_safe_index.h", "type__safe__index_8h.html", "type__safe__index_8h" ],
     [ "unused.h", "unused_8h.html", "unused_8h" ],
     [ "value.h", "value_8h.html", [

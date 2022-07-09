@@ -269,6 +269,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8">Delete</a> (std::string_view path=&quot;&quot;)</td></tr>
 <tr class="memdesc:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the object at the given <code>path</code> as well as all of its children.  <a href="#af4681ade5efb8da0d67f86ecae9b9ac8">More...</a><br /></td></tr>
 <tr class="separator:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b">SetRealtimeRate</a> (double rate)</td></tr>
+<tr class="memdesc:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.  <a href="#a85a13960e9b5cbf4becb62e66e6f3a8b">More...</a><br /></td></tr>
+<tr class="separator:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af890c2ad444b8dcdaeee6453e436b8d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3">SetProperty</a> (std::string_view path, std::string property, bool value)</td></tr>
 <tr class="memdesc:af890c2ad444b8dcdaeee6453e436b8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#af890c2ad444b8dcdaeee6453e436b8d3">More...</a><br /></td></tr>
 <tr class="separator:af890c2ad444b8dcdaeee6453e436b8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1437,6 +1440,33 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
     <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
     <tr><td class="paramname">value</td><td>the new value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a85a13960e9b5cbf4becb62e66e6f3a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a13960e9b5cbf4becb62e66e6f3a8b">&#9670;&nbsp;</a></span>SetRealtimeRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetRealtimeRate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart. </p>
+<p>This rate is the ratio between sim time and real world time. 1 indicates the simulator is the same speed as real time. 2 indicates running twice as fast as real time, 0.5 is half speed, etc. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_simulator.html#abda3671ab5939691e7e39fcba568174b" title="Slow the simulation down to approximately synchronize with real time when it would otherwise run too ...">drake::systems::Simulator::set_target_realtime_rate()</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rate</td><td>the realtime rate value to be displayed, will be converted to a percentage (multiplied by 100) </td></tr>
   </table>
   </dd>
 </dl>

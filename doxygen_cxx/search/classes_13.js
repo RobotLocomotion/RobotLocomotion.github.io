@@ -5,6 +5,7 @@ var searchData=
   ['tamsisolverparameters',['TamsiSolverParameters',['../structdrake_1_1multibody_1_1_tamsi_solver_parameters.html',1,'drake::multibody']]],
   ['template_5fsingle_5ftag',['template_single_tag',['../structdrake_1_1template__single__tag.html',1,'drake']]],
   ['term',['Term',['../classdrake_1_1_polynomial_1_1_term.html',1,'drake::Polynomial']]],
+  ['timer',['Timer',['../classdrake_1_1_timer.html',1,'drake']]],
   ['timestep',['TimeStep',['../structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html',1,'drake::systems::trajectory_optimization']]],
   ['timevaryingaffinesystem',['TimeVaryingAffineSystem',['../classdrake_1_1systems_1_1_time_varying_affine_system.html',1,'drake::systems']]],
   ['timevaryingaffinesystem_3c_20double_20_3e',['TimeVaryingAffineSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_time_varying_affine_system.html',1,'drake::systems']]],

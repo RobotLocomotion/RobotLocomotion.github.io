@@ -4531,6 +4531,25 @@ meshcat_path for the semantics.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetRealtimeRate">
+<code class="descname">SetRealtimeRate</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>rate: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetRealtimeRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the realtime rate that is displayed in the meshcat visualizer
+stats strip chart. This rate is the ratio between sim time and real
+world time. 1 indicates the simulator is the same speed as real time.
+2 indicates running twice as fast as real time, 0.5 is half speed,
+etc.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::systems::Simulator::set_target_realtime_rate()</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rate</span></code>:</dt>
+<dd>the realtime rate value to be displayed, will be converted to a
+percentage (multiplied by 100)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.Meshcat.SetSliderValue">
 <code class="descname">SetSliderValue</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>name: str</em>, <em>value: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetSliderValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the current <code class="docutils literal notranslate"><span class="pre">value</span></code> of the slider <code class="docutils literal notranslate"><span class="pre">name</span></code>. <cite>value</cite> will be
@@ -4991,6 +5010,14 @@ specified, then it will listen on the first available port starting at
 <dt>Precondition:</dt>
 <dd>We require <code class="docutils literal notranslate"><span class="pre">port</span></code> &gt;= 1024.</dd>
 </dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatParams.show_stats_plot">
+<code class="descname">show_stats_plot</code><a class="headerlink" href="#pydrake.geometry.MeshcatParams.show_stats_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether or not to display the stats plot widget in the
+Meshcat user interface. This plot including realtime rate and WebGL
+render statistics.</p>
 </dd></dl>
 
 <dl class="attribute">

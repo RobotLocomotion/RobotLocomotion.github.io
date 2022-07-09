@@ -181,6 +181,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a13d2ccebff386877ee5fa1fbe2351a0f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a13d2ccebff386877ee5fa1fbe2351a0f">web_url_pattern</a> {&quot;http://{<a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a696b1086704b0858059129b61eaa4a9f">host</a>}:{<a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a37117f2a3803b9cfd665be53b850fee7">port</a>}&quot;}</td></tr>
 <tr class="memdesc:a13d2ccebff386877ee5fa1fbe2351a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <code>web_url_pattern</code> may be used to change the web_url() (and therefore the ws_url()) reported by <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>.  <a href="#a13d2ccebff386877ee5fa1fbe2351a0f">More...</a><br /></td></tr>
 <tr class="separator:a13d2ccebff386877ee5fa1fbe2351a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def">show_stats_plot</a> {true}</td></tr>
+<tr class="memdesc:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether or not to display the stats plot widget in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> user interface.  <a href="#a89a7b03f2e5b34b3ca7fa0b92d282def">More...</a><br /></td></tr>
+<tr class="separator:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a696b1086704b0858059129b61eaa4a9f"></a>
@@ -214,6 +217,23 @@ Public Attributes</h2></td></tr>
 
 <p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> will listen on the given http <code>port</code>. </p>
 <p>If no port is specified, then it will listen on the first available port starting at 7000 (up to 7099). </p><dl class="section pre"><dt>Precondition</dt><dd>We require <code>port</code> &gt;= 1024. </dd></dl>
+
+</div>
+</div>
+<a id="a89a7b03f2e5b34b3ca7fa0b92d282def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a7b03f2e5b34b3ca7fa0b92d282def">&#9670;&nbsp;</a></span>show_stats_plot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool show_stats_plot {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether or not to display the stats plot widget in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> user interface. </p>
+<p>This plot including realtime rate and WebGL render statistics. </p>
 
 </div>
 </div>

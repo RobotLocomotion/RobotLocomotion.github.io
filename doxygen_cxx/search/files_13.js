@@ -6,6 +6,7 @@ var searchData=
   ['test_5futilities_2eh',['test_utilities.h',['../test__utilities_8h.html',1,'']]],
   ['text_5flogging_2eh',['text_logging.h',['../text__logging_8h.html',1,'']]],
   ['text_5flogging_5fpybind_2eh',['text_logging_pybind.h',['../text__logging__pybind_8h.html',1,'']]],
+  ['timer_2eh',['timer.h',['../timer_8h.html',1,'']]],
   ['toppra_2eh',['toppra.h',['../toppra_8h.html',1,'']]],
   ['trajectory_2eh',['trajectory.h',['../trajectory_8h.html',1,'']]],
   ['trajectory_5faffine_5fsystem_2eh',['trajectory_affine_system.h',['../trajectory__affine__system_8h.html',1,'']]],

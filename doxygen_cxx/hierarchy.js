@@ -973,6 +973,9 @@ var hierarchy =
       [ "ImplicitIntegratorTest< IntegratorType >", "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html", null ],
       [ "PleidesTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html", null ]
     ] ],
+    [ "Timer", "classdrake_1_1_timer.html", [
+      [ "SteadyTimer", "classdrake_1_1_steady_timer.html", null ]
+    ] ],
     [ "TimeStep", "structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],

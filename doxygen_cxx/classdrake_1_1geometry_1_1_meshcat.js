@@ -37,6 +37,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3", null ],
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#af9eb77512050207a9b91e2da278568a4", null ],
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027", null ],
+    [ "SetRealtimeRate", "classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b", null ],
     [ "SetSliderValue", "classdrake_1_1geometry_1_1_meshcat.html#ad933314f09b40dd5758387e29c952c8b", null ],
     [ "SetTransform", "classdrake_1_1geometry_1_1_meshcat.html#a1e1b021d8e7be408a7d17d39ce459b39", null ],
     [ "SetTransform", "classdrake_1_1geometry_1_1_meshcat.html#a48d1b2e65ac43693b86ca290ff84d38a", null ],

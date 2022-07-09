@@ -22,6 +22,7 @@ var searchData=
   ['initial_5fvalue_5fproblem_2eh',['initial_value_problem.h',['../initial__value__problem_8h.html',1,'']]],
   ['input_5fport_2eh',['input_port.h',['../input__port_8h.html',1,'']]],
   ['input_5fport_5fbase_2eh',['input_port_base.h',['../input__port__base_8h.html',1,'']]],
+  ['instantaneous_5frealtime_5frate_5fcalculator_2eh',['instantaneous_realtime_rate_calculator.h',['../instantaneous__realtime__rate__calculator_8h.html',1,'']]],
   ['integer_5finequality_5fsolver_2eh',['integer_inequality_solver.h',['../integer__inequality__solver_8h.html',1,'']]],
   ['integer_5foptimization_5futil_2eh',['integer_optimization_util.h',['../integer__optimization__util_8h.html',1,'']]],
   ['integration_5fconstraint_2eh',['integration_constraint.h',['../integration__constraint_8h.html',1,'']]],

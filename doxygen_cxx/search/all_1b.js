@@ -198,6 +198,7 @@ var searchData=
   ['_7esystemoutput',['~SystemOutput',['../classdrake_1_1systems_1_1_system_output.html#a432f2051132ba80bf6467b702927ffbe',1,'drake::systems::SystemOutput']]],
   ['_7esystemsymbolicinspector',['~SystemSymbolicInspector',['../classdrake_1_1systems_1_1_system_symbolic_inspector.html#a55d95438004e676be094c39d427d7818',1,'drake::systems::SystemSymbolicInspector']]],
   ['_7esystemvisitor',['~SystemVisitor',['../classdrake_1_1systems_1_1_system_visitor.html#ad4a0eb26e075adddd704eda8e4b08c4e',1,'drake::systems::SystemVisitor']]],
+  ['_7etimer',['~Timer',['../classdrake_1_1_timer.html#abfa2bf6fff884eb5905981c59bc1329f',1,'drake::Timer']]],
   ['_7etoppra',['~Toppra',['../classdrake_1_1multibody_1_1_toppra.html#a9024708d5314cf3655e2b72c5c138a39',1,'drake::multibody::Toppra']]],
   ['_7etrajectory',['~Trajectory',['../classdrake_1_1trajectories_1_1_trajectory.html#aec58a75947d06ba435adda6fd990678e',1,'drake::trajectories::Trajectory']]],
   ['_7etrajectorysource',['~TrajectorySource',['../classdrake_1_1systems_1_1_trajectory_source.html#afcab3d9212b96a4542cfc263963fc06c',1,'drake::systems::TrajectorySource']]],
