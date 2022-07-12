@@ -1,5 +1,8 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html":[3,0,0,14,8,22],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,14,8,22,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,14,8,23],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,14,8,23,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[3,0,0,14,8,24],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,14,8,24,0],
@@ -138,7 +141,7 @@ var NAVTREEINDEX53 =
 "symbolic_2polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0":[4,0,0,1,2,11,15],
 "symbolic_8h.html":[4,0,0,1,51],
 "symbolic__latex_8h.html":[4,0,0,1,52],
-"symbolic__py__unapply_8h.html":[4,0,0,0,0,8],
+"symbolic__py__unapply_8h.html":[4,0,0,0,0,9],
 "symbolic__test__util_8h.html":[4,0,0,1,3,8],
 "symbolic__test__util_8h.html#a0cf1a8bf6f0beb0e968750926ccc188e":[4,0,0,1,3,8,18],
 "symbolic__test__util_8h.html#a467aeee6e03396202196949a99d091b3":[4,0,0,1,3,8,11],
@@ -166,12 +169,12 @@ var NAVTREEINDEX53 =
 "symbolic__test__util_8h.html#af842ed89ccb0acfd93b9704b6daa7d16":[4,0,0,1,3,8,4],
 "symbolic__test__util_8h.html#af936eee6e6ccab95c3d4597af366c73e":[4,0,0,1,3,8,25],
 "symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6":[4,0,0,1,3,8,23],
-"symbolic__types__pybind_8h.html":[4,0,0,0,0,9],
-"symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605":[4,0,0,0,0,9,4],
-"symbolic__types__pybind_8h.html#a368506c847873cc7fae62074bdebf337":[4,0,0,0,0,9,2],
-"symbolic__types__pybind_8h.html#a694fa2ee2cdef72bcfcffdb381053dbe":[4,0,0,0,0,9,3],
-"symbolic__types__pybind_8h.html#aa93f2aa731d1ec9b8e8474d8aecc28b6":[4,0,0,0,0,9,0],
-"symbolic__types__pybind_8h.html#aeaf23055b93c04213228b573558f347b":[4,0,0,0,0,9,1],
+"symbolic__types__pybind_8h.html":[4,0,0,0,0,10],
+"symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605":[4,0,0,0,0,10,4],
+"symbolic__types__pybind_8h.html#a368506c847873cc7fae62074bdebf337":[4,0,0,0,0,10,2],
+"symbolic__types__pybind_8h.html#a694fa2ee2cdef72bcfcffdb381053dbe":[4,0,0,0,0,10,3],
+"symbolic__types__pybind_8h.html#aa93f2aa731d1ec9b8e8474d8aecc28b6":[4,0,0,0,0,10,0],
+"symbolic__types__pybind_8h.html#aeaf23055b93c04213228b573558f347b":[4,0,0,0,0,10,1],
 "symbolic__vector__system_8h.html":[4,0,0,11,6,22],
 "symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f":[4,0,0,11,6,22,1],
 "system_8h.html":[4,0,0,11,3,39],
@@ -246,8 +249,5 @@ var NAVTREEINDEX53 =
 "type__pack_8h.html#a23e81e154cbda13ce43322ccfcedb7ed":[4,0,0,0,0,0,11,11],
 "type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,0,11,10],
 "type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e":[4,0,0,0,0,0,11,12],
-"type__pack_8h.html#aca2ad496fcfd4aab65f4f9eaf50759cb":[4,0,0,0,0,0,11,8],
-"type__safe__index_8h.html":[4,0,0,1,56],
-"type__safe__index_8h.html#a1bc6fee0f84a9d283d208d778fcefe34":[4,0,0,1,56,5],
-"type__safe__index_8h.html#a2400c6e4da6e035486720985558890cb":[4,0,0,1,56,6]
+"type__pack_8h.html#aca2ad496fcfd4aab65f4f9eaf50759cb":[4,0,0,0,0,0,11,8]
 };

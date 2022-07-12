@@ -143,6 +143,8 @@ analysis.
 officially supports. Supported configurations are tested in continuous
 integration. Any other configurations are provided on a best-effort basis.</p>
 
+<!-- The operating system requirements should match those listed in both the
+     root CMakeLists.txt and tools/workspace/os.bzl. -->
 <!-- The minimum compiler versions should match those listed in both the root
      CMakeLists.txt and tools/workspace/cc/repository.bzl. -->
 
@@ -166,6 +168,15 @@ integration. Any other configurations are provided on a best-effort basis.</p>
       <td>5.1</td>
       <td>3.16</td>
       <td>GCC 9.3 (default) or Clang 12</td>
+      <td>OpenJDK 11</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
+      <td>x86_64 ⁽¹⁾</td>
+      <td>3.10 ⁽³⁾</td>
+      <td>5.1</td>
+      <td>3.22</td>
+      <td>GCC 11.2 (default) or Clang 12</td>
       <td>OpenJDK 11</td>
     </tr>
     <tr>
@@ -194,7 +205,9 @@ introduced with the Haswell architecture in 2013 with substantial performance
 improvements in the Broadwell architecture in 2014. Drake is compiled with
 <code class="highlighter-rouge">-march=broadwell</code> to exploit these instructions (that also works for Haswell
 machines). Drake can be used on older machines if necessary by building from
-source with that flag removed.</p>
+source with that
+<a href="https://github.com/RobotLocomotion/drake/blob/77642cc9/math/BUILD.bazel#L288">flag</a>
+removed.</p>
 
 <p>⁽²⁾ For users running on Apple’s newer arm64 hardware, refer to
 <a href="/rosetta2.html">Running under Rosetta 2</a>

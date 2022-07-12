@@ -350,9 +350,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad82c192e2b875f6bd19163b69ba9075a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#ad82c192e2b875f6bd19163b69ba9075a">ParamInit</a> ()</td></tr>
 <tr class="memdesc:ad82c192e2b875f6bd19163b69ba9075a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constructor for creating an instance of Class and initializing parameters (bound using <code>def_readwrite</code>).  <a href="#ad82c192e2b875f6bd19163b69ba9075a">More...</a><br /></td></tr>
 <tr class="separator:ad82c192e2b875f6bd19163b69ba9075a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af804829ff8c00cbcacaff4b8ed1b83f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#af804829ff8c00cbcacaff4b8ed1b83f1">ExecuteExtraPythonCode</a> (py::module m)</td></tr>
-<tr class="memdesc:af804829ff8c00cbcacaff4b8ed1b83f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes Python code to introduce additional symbols for a given module.  <a href="#af804829ff8c00cbcacaff4b8ed1b83f1">More...</a><br /></td></tr>
-<tr class="separator:af804829ff8c00cbcacaff4b8ed1b83f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cec9d64f8d0017db630acd8740021e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#aa8cec9d64f8d0017db630acd8740021e">ExecuteExtraPythonCode</a> (py::module m, bool use_subdir=false)</td></tr>
+<tr class="memdesc:aa8cec9d64f8d0017db630acd8740021e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes Python code to introduce additional symbols for a given module.  <a href="#aa8cec9d64f8d0017db630acd8740021e">More...</a><br /></td></tr>
+<tr class="separator:aa8cec9d64f8d0017db630acd8740021e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4b3fef8297fa00d68181a77b7da0d40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#ae4b3fef8297fa00d68181a77b7da0d40">DefineFrameworkPySemantics</a> (py::module m)</td></tr>
 <tr class="separator:ae4b3fef8297fa00d68181a77b7da0d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54960a906da6ad2f3b2509a4fd266f5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a54960a906da6ad2f3b2509a4fd266f5b">DefineFrameworkPySystems</a> (py::module m)</td></tr>
@@ -1317,8 +1317,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af804829ff8c00cbcacaff4b8ed1b83f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af804829ff8c00cbcacaff4b8ed1b83f1">&#9670;&nbsp;</a></span>ExecuteExtraPythonCode()</h2>
+<a id="aa8cec9d64f8d0017db630acd8740021e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cec9d64f8d0017db630acd8740021e">&#9670;&nbsp;</a></span>ExecuteExtraPythonCode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1327,14 +1327,24 @@ Variables</h2></td></tr>
           <td class="memname">void drake::pydrake::ExecuteExtraPythonCode </td>
           <td>(</td>
           <td class="paramtype">py::module&#160;</td>
-          <td class="paramname"><em>m</em></td><td>)</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_subdir</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Executes Python code to introduce additional symbols for a given module. </p>
-<p>For a module with local name <code>{name}</code>, the code executed will be <code>_{name}_extra.py</code>. See #9599 for relevant background. </p>
+<p>For a module with local name <code>{name}</code> and use_subdir=False, the code executed will be <code>_{name}_extra.py</code>; with use_subdir=True, it will be <code>{name}/_{name}_extra.py</code>. See #9599 for relevant background. </p>
 
 </div>
 </div>

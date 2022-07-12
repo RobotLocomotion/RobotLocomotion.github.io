@@ -201,9 +201,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7df2a068b5e1e1a80728b7a8dd8a20a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df2a068b5e1e1a80728b7a8dd8a20a6">get_num_flexible_velocities</a> () const final</td></tr>
 <tr class="memdesc:a7df2a068b5e1e1a80728b7a8dd8a20a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">There are no flexible degrees of freedom associated with a rigid body and therefore this method returns zero.  <a href="#a7df2a068b5e1e1a80728b7a8dd8a20a6">More...</a><br /></td></tr>
 <tr class="separator:a7df2a068b5e1e1a80728b7a8dd8a20a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bdd63fb5910bcde78fa33d67b5b873c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a3bdd63fb5910bcde78fa33d67b5b873c">default_mass</a> () const</td></tr>
-<tr class="memdesc:a3bdd63fb5910bcde78fa33d67b5b873c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this rigid body's default mass, which is initially supplied at construction when specifying this rigid body's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>.  <a href="#a3bdd63fb5910bcde78fa33d67b5b873c">More...</a><br /></td></tr>
-<tr class="separator:a3bdd63fb5910bcde78fa33d67b5b873c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd42d90808ca815e0246da817663be1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a0dd42d90808ca815e0246da817663be1">default_mass</a> () const final</td></tr>
+<tr class="memdesc:a0dd42d90808ca815e0246da817663be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this rigid body's default mass, which is initially supplied at construction when specifying this rigid body's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>.  <a href="#a0dd42d90808ca815e0246da817663be1">More...</a><br /></td></tr>
+<tr class="separator:a0dd42d90808ca815e0246da817663be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad23b378c3ceb3cef4d3a586f48710d92"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad23b378c3ceb3cef4d3a586f48710d92">default_com</a> () const</td></tr>
 <tr class="memdesc:ad23b378c3ceb3cef4d3a586f48710d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default value of this rigid body's center of mass as measured and expressed in this body's frame.  <a href="#ad23b378c3ceb3cef4d3a586f48710d92">More...</a><br /></td></tr>
 <tr class="separator:ad23b378c3ceb3cef4d3a586f48710d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,6 +321,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bf67c08cb5fb34309c4c220d9872d29 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29">floating_velocity_suffix</a> (<a class="el" href="classint.html">int</a> velocity_index_in_body) const</td></tr>
 <tr class="memdesc:a4bf67c08cb5fb34309c4c220d9872d29 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29">More...</a><br /></td></tr>
 <tr class="separator:a4bf67c08cb5fb34309c4c220d9872d29 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9539540983caa3c52d28faf7f2d4d33 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">get_default_mass</a> () const</td></tr>
+<tr class="memdesc:af9539540983caa3c52d28faf7f2d4d33 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">More...</a><br /></td></tr>
+<tr class="separator:af9539540983caa3c52d28faf7f2d4d33 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb15f7a08a083af61068735632ada406 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#adb15f7a08a083af61068735632ada406">EvalPoseInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:adb15f7a08a083af61068735632ada406 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose <code>X_WB</code> of this body B in the world frame W as a function of the state of the model stored in <code>context</code>.  <a href="classdrake_1_1multibody_1_1_body.html#adb15f7a08a083af61068735632ada406">More...</a><br /></td></tr>
 <tr class="separator:adb15f7a08a083af61068735632ada406 inherit pub_methods_classdrake_1_1multibody_1_1_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -727,11 +730,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3bdd63fb5910bcde78fa33d67b5b873c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bdd63fb5910bcde78fa33d67b5b873c">&#9670;&nbsp;</a></span>default_mass()</h2>
+<a id="a0dd42d90808ca815e0246da817663be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd42d90808ca815e0246da817663be1">&#9670;&nbsp;</a></span>default_mass()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double default_mass </td>
@@ -740,10 +746,17 @@ Protected Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns this rigid body's default mass, which is initially supplied at construction when specifying this rigid body's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>In general, a rigid body's mass can be a constant property stored in this rigid body's SpatialInertia or a parameter that is stored in a Context. The default constant mass value is used to initialize the mass parameter in the Context. </dd></dl>
+
+<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_body.html#a6876fd491bb5bbb889916a0e19d3d154">Body&lt; T &gt;</a>.</p>
 
 </div>
 </div>

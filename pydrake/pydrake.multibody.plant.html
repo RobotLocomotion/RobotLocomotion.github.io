@@ -1815,9 +1815,9 @@ missing, an exception will be thrown.</p>
 dissipation_timescale for a given geometry. However only one of these
 will get used, depending on the configuration of the MultibodyPlant.
 As an example, if the SAP solver is specified (see
-set_discrete_contact_solver_type()) only the dissipation_timescale is
-used while hunt_crossley_dissipation is ignored. Conversely, if the
-TAMSI solver is used (see set_discrete_contact_solver_type()) only
+set_discrete_contact_solver()) only the dissipation_timescale is used
+while hunt_crossley_dissipation is ignored. Conversely, if the TAMSI
+solver is used (see set_discrete_contact_solver()) only
 hunt_crossley_dissipation is used while dissipation_timescale is
 ignored. Currently, a continuous MultibodyPlant model will always use
 the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
@@ -5920,9 +5920,9 @@ missing, an exception will be thrown.</p>
 dissipation_timescale for a given geometry. However only one of these
 will get used, depending on the configuration of the MultibodyPlant.
 As an example, if the SAP solver is specified (see
-set_discrete_contact_solver_type()) only the dissipation_timescale is
-used while hunt_crossley_dissipation is ignored. Conversely, if the
-TAMSI solver is used (see set_discrete_contact_solver_type()) only
+set_discrete_contact_solver()) only the dissipation_timescale is used
+while hunt_crossley_dissipation is ignored. Conversely, if the TAMSI
+solver is used (see set_discrete_contact_solver()) only
 hunt_crossley_dissipation is used while dissipation_timescale is
 ignored. Currently, a continuous MultibodyPlant model will always use
 the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
@@ -10023,9 +10023,9 @@ missing, an exception will be thrown.</p>
 dissipation_timescale for a given geometry. However only one of these
 will get used, depending on the configuration of the MultibodyPlant.
 As an example, if the SAP solver is specified (see
-set_discrete_contact_solver_type()) only the dissipation_timescale is
-used while hunt_crossley_dissipation is ignored. Conversely, if the
-TAMSI solver is used (see set_discrete_contact_solver_type()) only
+set_discrete_contact_solver()) only the dissipation_timescale is used
+while hunt_crossley_dissipation is ignored. Conversely, if the TAMSI
+solver is used (see set_discrete_contact_solver()) only
 hunt_crossley_dissipation is used while dissipation_timescale is
 ignored. Currently, a continuous MultibodyPlant model will always use
 the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
@@ -14126,9 +14126,9 @@ missing, an exception will be thrown.</p>
 dissipation_timescale for a given geometry. However only one of these
 will get used, depending on the configuration of the MultibodyPlant.
 As an example, if the SAP solver is specified (see
-set_discrete_contact_solver_type()) only the dissipation_timescale is
-used while hunt_crossley_dissipation is ignored. Conversely, if the
-TAMSI solver is used (see set_discrete_contact_solver_type()) only
+set_discrete_contact_solver()) only the dissipation_timescale is used
+while hunt_crossley_dissipation is ignored. Conversely, if the TAMSI
+solver is used (see set_discrete_contact_solver()) only
 hunt_crossley_dissipation is used while dissipation_timescale is
 ignored. Currently, a continuous MultibodyPlant model will always use
 the Hunt &amp; Crossley model and dissipation_timescale will be ignored.</p>
@@ -18051,11 +18051,11 @@ MultibodyPlant::GetDefaultContactSurfaceRepresentation().</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver_type">
-<code class="descname">discrete_contact_solver_type</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configures the MultibodyPlant::set_discrete_contact_solver_type().
-Refer to drake::multibody::DiscreteContactSolverType for details.
-Valid strings are: - “tamsi” - “sap”</p>
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver">
+<code class="descname">discrete_contact_solver</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the MultibodyPlant::set_discrete_contact_solver(). Refer to
+drake::multibody::DiscreteContactSolver for details. Valid strings
+are: - “tamsi” - “sap”</p>
 </dd></dl>
 
 <dl class="attribute">

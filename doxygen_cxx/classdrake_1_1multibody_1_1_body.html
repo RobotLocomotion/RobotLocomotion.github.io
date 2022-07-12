@@ -226,9 +226,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29">floating_velocity_suffix</a> (<a class="el" href="classint.html">int</a> velocity_index_in_body) const</td></tr>
 <tr class="memdesc:a4bf67c08cb5fb34309c4c220d9872d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#a4bf67c08cb5fb34309c4c220d9872d29">More...</a><br /></td></tr>
 <tr class="separator:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ac207727fa3530eb27356bd7e0715a0"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a6ac207727fa3530eb27356bd7e0715a0">get_default_mass</a> () const =0</td></tr>
-<tr class="memdesc:a6ac207727fa3530eb27356bd7e0715a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default mass (not Context dependent) for <code>this</code> body.  <a href="#a6ac207727fa3530eb27356bd7e0715a0">More...</a><br /></td></tr>
-<tr class="separator:a6ac207727fa3530eb27356bd7e0715a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9539540983caa3c52d28faf7f2d4d33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">get_default_mass</a> () const</td></tr>
+<tr class="memdesc:af9539540983caa3c52d28faf7f2d4d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af9539540983caa3c52d28faf7f2d4d33">More...</a><br /></td></tr>
+<tr class="separator:af9539540983caa3c52d28faf7f2d4d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6876fd491bb5bbb889916a0e19d3d154"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a6876fd491bb5bbb889916a0e19d3d154">default_mass</a> () const =0</td></tr>
+<tr class="memdesc:a6876fd491bb5bbb889916a0e19d3d154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default mass (not Context dependent) for <code>this</code> body.  <a href="#a6876fd491bb5bbb889916a0e19d3d154">More...</a><br /></td></tr>
+<tr class="separator:a6876fd491bb5bbb889916a0e19d3d154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ab7c1567a817bcac604694e0a2dcd5afd">default_rotational_inertia</a> () const =0</td></tr>
 <tr class="memdesc:ab7c1567a817bcac604694e0a2dcd5afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default rotational inertia (not Context dependent) for <code>this</code> body B's about Bo (B's origin), expressed in B (this body's frame).  <a href="#ab7c1567a817bcac604694e0a2dcd5afd">More...</a><br /></td></tr>
 <tr class="separator:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -683,6 +686,36 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a6876fd491bb5bbb889916a0e19d3d154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6876fd491bb5bbb889916a0e19d3d154">&#9670;&nbsp;</a></span>default_mass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double default_mass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the default mass (not Context dependent) for <code>this</code> body. </p>
+<p>In general, a body's mass can be a Context-dependent parameter that is returned by the method <a class="el" href="classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1" title="(Advanced) Returns the mass of this body stored in context.">get_mass()</a>. When a body's mass is a parameter, the value returned by <a class="el" href="classdrake_1_1multibody_1_1_body.html#a6876fd491bb5bbb889916a0e19d3d154" title="Returns the default mass (not Context dependent) for this body.">default_mass()</a> is used to initialize the mass parameter in the Context. </p>
+
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a0dd42d90808ca815e0246da817663be1">RigidBody&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a id="ab7c1567a817bcac604694e0a2dcd5afd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7c1567a817bcac604694e0a2dcd5afd">&#9670;&nbsp;</a></span>default_rotational_inertia()</h2>
 
@@ -1030,31 +1063,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a6ac207727fa3530eb27356bd7e0715a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ac207727fa3530eb27356bd7e0715a0">&#9670;&nbsp;</a></span>get_default_mass()</h2>
+<a id="af9539540983caa3c52d28faf7f2d4d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9539540983caa3c52d28faf7f2d4d33">&#9670;&nbsp;</a></span>get_default_mass()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double get_default_mass </td>
+          <td class="memname">double get_default_mass </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Returns the default mass (not Context dependent) for <code>this</code> body. </p>
-<p>In general, a body's mass can be a Context-dependent parameter that is returned by the method <a class="el" href="classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1" title="(Advanced) Returns the mass of this body stored in context.">get_mass()</a>. When a body's mass is a parameter, the value returned by <a class="el" href="classdrake_1_1multibody_1_1_body.html#a6ac207727fa3530eb27356bd7e0715a0" title="Returns the default mass (not Context dependent) for this body.">get_default_mass()</a> is used to initialize the mass parameter in the Context. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Use Body::default_mass(). <br />
+ This will be removed from Drake on or after 2022-11-01.</dd></dl>
 
 </div>
 </div>

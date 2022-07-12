@@ -1,0 +1,194 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/multibody -&gt; math Relation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dir_39b8b3c6654246a9c12332c930bc7d3f.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+<h3>multibody &rarr; math Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in drake/multibody</th><th class="dirtab">Includes file in drake/math</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_5d8dbe7a82c2c188fa06f6391bb290bd.html">benchmarks</a>&#160;/&#160;<a class="el" href="dir_1b53483452bb55d26e3cb66e1b6a096d.html">acrobot</a>&#160;/&#160;<a class="el" href="acrobot_8h.html">acrobot.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_5d8dbe7a82c2c188fa06f6391bb290bd.html">benchmarks</a>&#160;/&#160;<a class="el" href="dir_fa973aef359a666fa59c209acc8a7d72.html">kuka_iiwa_robot</a>&#160;/&#160;<a class="el" href="drake__kuka__iiwa__robot_8h.html">drake_kuka_iiwa_robot.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_5d8dbe7a82c2c188fa06f6391bb290bd.html">benchmarks</a>&#160;/&#160;<a class="el" href="dir_0767593f2fce2cf954de79364fec17e6.html">free_body</a>&#160;/&#160;<a class="el" href="free__body_8h.html">free_body.h</a></td><td class="dirtab"><a class="el" href="quaternion_8h.html">quaternion.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_5d8dbe7a82c2c188fa06f6391bb290bd.html">benchmarks</a>&#160;/&#160;<a class="el" href="dir_0767593f2fce2cf954de79364fec17e6.html">free_body</a>&#160;/&#160;<a class="el" href="free__body_8h.html">free_body.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_da11cd43e7bab310171e778f62212487.html">inverse_kinematics</a>&#160;/&#160;<a class="el" href="global__inverse__kinematics_8h.html">global_inverse_kinematics.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_da11cd43e7bab310171e778f62212487.html">inverse_kinematics</a>&#160;/&#160;<a class="el" href="inverse__kinematics_8h.html">inverse_kinematics.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_da11cd43e7bab310171e778f62212487.html">inverse_kinematics</a>&#160;/&#160;<a class="el" href="kinematic__constraint__utilities_8h.html">kinematic_constraint_utilities.h</a></td><td class="dirtab"><a class="el" href="autodiff__gradient_8h.html">autodiff_gradient.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_da11cd43e7bab310171e778f62212487.html">inverse_kinematics</a>&#160;/&#160;<a class="el" href="orientation__constraint_8h.html">orientation_constraint.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_7d55c3d5b8b0444a3d9934d2594c5211.html">math</a>&#160;/&#160;<a class="el" href="spatial__acceleration_8h.html">spatial_acceleration.h</a></td><td class="dirtab"><a class="el" href="convert__time__derivative_8h.html">convert_time_derivative.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_7d55c3d5b8b0444a3d9934d2594c5211.html">math</a>&#160;/&#160;<a class="el" href="spatial__vector_8h.html">spatial_vector.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_bd08a370beeb74038c8d9ad70b7a29c4.html">optimization</a>&#160;/&#160;<a class="el" href="quaternion__integration__constraint_8h.html">quaternion_integration_constraint.h</a></td><td class="dirtab"><a class="el" href="autodiff__gradient_8h.html">autodiff_gradient.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_e56f4370c0abfd94d0eb867c3946e12e.html">parsing</a>&#160;/&#160;<a class="el" href="detail__ignition_8h.html">detail_ignition.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_e56f4370c0abfd94d0eb867c3946e12e.html">parsing</a>&#160;/&#160;<a class="el" href="detail__sdf__geometry_8h.html">detail_sdf_geometry.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_e56f4370c0abfd94d0eb867c3946e12e.html">parsing</a>&#160;/&#160;<a class="el" href="detail__tinyxml_8h.html">detail_tinyxml.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_e56f4370c0abfd94d0eb867c3946e12e.html">parsing</a>&#160;/&#160;<a class="el" href="model__directives_8h.html">model_directives.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_e56f4370c0abfd94d0eb867c3946e12e.html">parsing</a>&#160;/&#160;<a class="el" href="model__directives_8h.html">model_directives.h</a></td><td class="dirtab"><a class="el" href="roll__pitch__yaw_8h.html">roll_pitch_yaw.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a>&#160;/&#160;<a class="el" href="compliant__contact__manager_8h.html">compliant_contact_manager.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a>&#160;/&#160;<a class="el" href="contact__jacobians_8h.html">contact_jacobians.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a>&#160;/&#160;<a class="el" href="hydroelastic__traction__calculator_8h.html">hydroelastic_traction_calculator.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a>&#160;/&#160;<a class="el" href="multibody__plant_8h.html">multibody_plant.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_4d6afa0018d27b03aafc768625d5f8d5.html">test_utilities</a>&#160;/&#160;<a class="el" href="add__fixed__objects__to__plant_8h.html">add_fixed_objects_to_plant.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_4d6afa0018d27b03aafc768625d5f8d5.html">test_utilities</a>&#160;/&#160;<a class="el" href="add__fixed__objects__to__plant_8h.html">add_fixed_objects_to_plant.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_4d6afa0018d27b03aafc768625d5f8d5.html">test_utilities</a>&#160;/&#160;<a class="el" href="floating__body__plant_8h.html">floating_body_plant.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_4d6afa0018d27b03aafc768625d5f8d5.html">test_utilities</a>&#160;/&#160;<a class="el" href="spatial__derivative_8h.html">spatial_derivative.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_4d6afa0018d27b03aafc768625d5f8d5.html">test_utilities</a>&#160;/&#160;<a class="el" href="spatial__kinematics_8h.html">spatial_kinematics.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="articulated__body__inertia_8h.html">articulated_body_inertia.h</a></td><td class="dirtab"><a class="el" href="cross__product_8h.html">cross_product.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="articulated__body__inertia__cache_8h.html">articulated_body_inertia_cache.h</a></td><td class="dirtab"><a class="el" href="linear__solve_8h.html">linear_solve.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="body__node_8h.html">body_node.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="body__node_8h.html">body_node.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="linear__bushing__roll__pitch__yaw_8h.html">linear_bushing_roll_pitch_yaw.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="linear__bushing__roll__pitch__yaw_8h.html">linear_bushing_roll_pitch_yaw.h</a></td><td class="dirtab"><a class="el" href="roll__pitch__yaw_8h.html">roll_pitch_yaw.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="multibody__tree_8h.html">multibody_tree.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="position__kinematics__cache_8h.html">position_kinematics_cache.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="position__kinematics__cache_8h.html">position_kinematics_cache.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="rotational__inertia_8h.html">rotational_inertia.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="spatial__inertia_8h.html">spatial_inertia.h</a></td><td class="dirtab"><a class="el" href="cross__product_8h.html">cross_product.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="spatial__inertia_8h.html">spatial_inertia.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a>&#160;/&#160;<a class="el" href="unit__inertia_8h.html">unit_inertia.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr></table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

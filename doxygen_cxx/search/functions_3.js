@@ -63,7 +63,7 @@ var searchData=
   ['default_5fdiffuse',['default_diffuse',['../classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a42d85756ac9f5c62314108e554591064',1,'drake::geometry::render::RenderEngineVtk']]],
   ['default_5fgear_5fratio',['default_gear_ratio',['../classdrake_1_1multibody_1_1_joint_actuator.html#a5434b36ff862492d2aed1ba6a5dbe503',1,'drake::multibody::JointActuator']]],
   ['default_5fgroup_5fname',['default_group_name',['../classdrake_1_1geometry_1_1_geometry_properties.html#aa9fbb361a1fc07d3f00cd10905d27e23',1,'drake::geometry::GeometryProperties']]],
-  ['default_5fmass',['default_mass',['../classdrake_1_1multibody_1_1_rigid_body.html#a3bdd63fb5910bcde78fa33d67b5b873c',1,'drake::multibody::RigidBody']]],
+  ['default_5fmass',['default_mass',['../classdrake_1_1multibody_1_1_body.html#a6876fd491bb5bbb889916a0e19d3d154',1,'drake::multibody::Body::default_mass()'],['../classdrake_1_1multibody_1_1_rigid_body.html#a0dd42d90808ca815e0246da817663be1',1,'drake::multibody::RigidBody::default_mass()']]],
   ['default_5fmodel_5finstance',['default_model_instance',['../namespacedrake_1_1multibody.html#a786cd667a624e8cbd915cf50b02c8792',1,'drake::multibody']]],
   ['default_5fpositions',['default_positions',['../classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2',1,'drake::multibody::Joint']]],
   ['default_5freflected_5finertia',['default_reflected_inertia',['../classdrake_1_1multibody_1_1_joint_actuator.html#a933d2740c848bc263cbf64089066b275',1,'drake::multibody::JointActuator']]],

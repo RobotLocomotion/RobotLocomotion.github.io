@@ -1098,6 +1098,16 @@ frame is constant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_.Body_[float].default_mass">
+<code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].default_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by default_mass() is used to initialize the mass
+parameter in the Context.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_.Body_[float].EvalPoseInWorld">
 <code class="descname">EvalPoseInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].EvalPoseInWorld" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of this body B in the world frame W as a
@@ -1234,11 +1244,12 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_.Body_[float].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].get_default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, a body’s mass can be a Context-dependent parameter that is
-returned by the method get_mass(). When a body’s mass is a parameter,
-the value returned by get_default_mass() is used to initialize the
-mass parameter in the Context.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use Body::default_mass(). This will be removed from Drake on or
+after 2022-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -1479,6 +1490,16 @@ frame is constant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_[AutoDiffXd].default_mass">
+<code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].default_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by default_mass() is used to initialize the mass
+parameter in the Context.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].EvalPoseInWorld">
 <code class="descname">EvalPoseInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].EvalPoseInWorld" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of this body B in the world frame W as a
@@ -1615,11 +1636,12 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].get_default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, a body’s mass can be a Context-dependent parameter that is
-returned by the method get_mass(). When a body’s mass is a parameter,
-the value returned by get_default_mass() is used to initialize the
-mass parameter in the Context.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use Body::default_mass(). This will be removed from Drake on or
+after 2022-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -1858,6 +1880,16 @@ frame is constant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_[Expression].default_mass">
+<code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].default_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by default_mass() is used to initialize the mass
+parameter in the Context.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_[Expression].EvalPoseInWorld">
 <code class="descname">EvalPoseInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].EvalPoseInWorld" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of this body B in the world frame W as a
@@ -1994,11 +2026,12 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[Expression].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].get_default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, a body’s mass can be a Context-dependent parameter that is
-returned by the method get_mass(). When a body’s mass is a parameter,
-the value returned by get_default_mass() is used to initialize the
-mass parameter in the Context.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use Body::default_mass(). This will be removed from Drake on or
+after 2022-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -2237,6 +2270,16 @@ frame is constant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_[float].default_mass">
+<code class="descname">default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].default_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
+general, a body’s mass can be a Context-dependent parameter that is
+returned by the method get_mass(). When a body’s mass is a parameter,
+the value returned by default_mass() is used to initialize the mass
+parameter in the Context.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_[float].EvalPoseInWorld">
 <code class="descname">EvalPoseInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].EvalPoseInWorld" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of this body B in the world frame W as a
@@ -2373,11 +2416,12 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[float].get_default_mass">
 <code class="descname">get_default_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].get_default_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the default mass (not Context dependent) for <code class="docutils literal notranslate"><span class="pre">this</span></code> body. In
-general, a body’s mass can be a Context-dependent parameter that is
-returned by the method get_mass(). When a body’s mass is a parameter,
-the value returned by get_default_mass() is used to initialize the
-mass parameter in the Context.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use Body::default_mass(). This will be removed from Drake on or
+after 2022-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

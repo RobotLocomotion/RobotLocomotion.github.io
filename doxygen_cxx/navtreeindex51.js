@@ -1,5 +1,8 @@
 var NAVTREEINDEX51 =
 {
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a01704b4700155ed98ed7358fd3e99ed6":[3,0,0,8,36,1],
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a17306652175cc5f61e86f203b86bd9e4":[3,0,0,8,36,0],
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aaf34c01d86da78bb1b48beb433506466":[3,0,0,8,36,3],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#ac40878d3fef16be760e6104ad9c13666":[3,0,0,8,36,2],
 "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html":[3,0,0,8,38,0],
 "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html#adf5a86be68f4bd906674590a39f2e98f":[3,0,0,8,38,0,0],
@@ -15,7 +18,7 @@ var NAVTREEINDEX51 =
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,47,0],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#aa0f273688f2f9252eca8098377a5ea10":[3,0,0,8,47,1],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8":[3,0,0,8,47,6],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#aaac9cfdc435c861028a7e49e16cb228b":[3,0,0,8,47,3],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326":[3,0,0,8,47,3],
 "structdrake_1_1multibody_1_1_propeller_info.html":[3,0,0,8,58],
 "structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[3,0,0,8,58,6],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[3,0,0,8,58,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX51 =
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,12,42,0,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,12,42,0,0],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,12,46],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,12,46,1],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,12,46,0],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,12,46,2],
-"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,12,47]
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,12,46,1]
 };

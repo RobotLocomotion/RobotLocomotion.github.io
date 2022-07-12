@@ -152,7 +152,7 @@ officially supports:</p>
 <table>
   <thead>
     <tr>
-      <th>Operating System ⁽⁴⁾</th>
+      <th>Operating System ⁽⁴⁾⁽⁵⁾</th>
       <th>Architecture</th>
       <th>Python</th>
     </tr>
@@ -162,6 +162,11 @@ officially supports:</p>
       <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
       <td>x86_64 ⁽¹⁾</td>
       <td>3.8 ⁽³⁾</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
+      <td>x86_64 ⁽¹⁾</td>
+      <td>3.10 ⁽³⁾</td>
     </tr>
     <tr>
       <td>macOS Big Sur (11)</td>
@@ -202,6 +207,10 @@ reported <code class="highlighter-rouge">which -a python python3</code> refer to
 require a working display server.  Most personal computers will have this
 already built in, but some cloud or docker environments may not.</p>
 
+<p>⁽⁵⁾ Ubuntu 22.04 (Jammy Jellyfish) builds are only supported from source or
+as nightly binaries. Drake does not yet publish stable binaries for this
+platform.</p>
+
 <p>Additionally, if you are compiling your own C++ code against Drake’s C++ code
 and are using Drake’s pre-compiled binaries, then you must use the same
 compiler as our releases:</p>
@@ -217,6 +226,10 @@ compiler as our releases:</p>
     <tr>
       <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
       <td>GCC 9.3</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
+      <td>GCC 11.2</td>
     </tr>
     <tr>
       <td>macOS Big Sur (11)</td>
