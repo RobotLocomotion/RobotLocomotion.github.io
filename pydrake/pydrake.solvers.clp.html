@@ -226,56 +226,10 @@
             
   <div class="section" id="module-pydrake.solvers.clp">
 <span id="pydrake-solvers-clp"></span><h1>pydrake.solvers.clp<a class="headerlink" href="#module-pydrake.solvers.clp" title="Permalink to this headline">¶</a></h1>
-<p>Clp solver bindings for MathematicalProgram</p>
-<dl class="class">
-<dt id="pydrake.solvers.clp.ClpSolver">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.clp.</code><code class="descname">ClpSolver</code><a class="headerlink" href="#pydrake.solvers.clp.ClpSolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
-<p>A wrapper to call CLP using Drake’s MathematicalProgram.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Currently our ClpSolver has a memory issue when solving a QP. The
-user should be aware of this risk.</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The authors can adjust the problem scaling option by setting
-“scaling” as mentioned in
-<a class="reference external" href="https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706">https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706</a>
-For example prog.SetSolverOption(ClpSolver::id(), “scaling”, 0);
-will do “no scaling”. The default is 1.</p>
-</div>
-<dl class="method">
-<dt id="pydrake.solvers.clp.ClpSolver.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.clp.ClpSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.clp.ClpSolver.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="staticmethod">
-<dt id="pydrake.solvers.clp.ClpSolver.id">
-<em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverId<a class="headerlink" href="#pydrake.solvers.clp.ClpSolver.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.solvers.clp.ClpSolverDetails">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.clp.</code><code class="descname">ClpSolverDetails</code><a class="headerlink" href="#pydrake.solvers.clp.ClpSolverDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CLP solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;ClpSolver&gt;() to
-obtain the details.</p>
-<dl class="attribute">
-<dt id="pydrake.solvers.clp.ClpSolverDetails.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.clp.ClpSolverDetails.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.clp.ClpSolverDetails.status">
-<code class="descname">status</code><a class="headerlink" href="#pydrake.solvers.clp.ClpSolverDetails.status" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<p>Shim module that provides vestigial names for pydrake.solvers.</p>
+<p>Prefer not to use this import path in new code; all of the code in
+this module can be imported from pydrake.solvers directly.</p>
+<p>This module will be deprecated at some point in the future.</p>
 </div>
 
 

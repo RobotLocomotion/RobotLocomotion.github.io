@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#ab882a795ac2ee341cce7a9d85981f155":[1,4,2,1,1,0],
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html":[3,0,0,8,36],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a01704b4700155ed98ed7358fd3e99ed6":[3,0,0,8,36,1],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a17306652175cc5f61e86f203b86bd9e4":[3,0,0,8,36,0],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aaf34c01d86da78bb1b48beb433506466":[3,0,0,8,36,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,12,35,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,12,42,0],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,12,42,0,1],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,12,42,0,0],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,12,46],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,12,46,1]
+"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,12,42,0,0]
 };

@@ -252,7 +252,7 @@
 <dl class="class">
 <dt id="pydrake.multibody.optimization.CentroidalMomentumConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">CentroidalMomentumConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Impose the constraint CentroidalMomentum(q, v) - h_WC = 0 with
 decision variables [q;v;h_WC] or CentroidalAngularMomentum(q, v) -
 k_WC = 0 with decision variables [q; v; k_WC] h_WC is the 6D spatial
@@ -333,7 +333,7 @@ in the world frame W.</p>
 <dl class="class">
 <dt id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">QuaternionEulerIntegrationConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>If we have a body with orientation quaternion z₁ at time t₁, and a
 quaternion z₂ at time t₂ = t₁ + h, with the angular velocity ω
 (expressed in the world frame), we impose the constraint that the body
@@ -422,12 +422,12 @@ wrench will be applied between these pairs.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog">
-<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution">
-<code class="descname">GetContactWrenchSolution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.optimization.ContactWrench]<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetContactWrenchSolution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em>, <em>result: pydrake.solvers.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.optimization.ContactWrench]<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the solution to all contact wrenches.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">result</span></code>:</dt>
@@ -437,7 +437,7 @@ wrench will be applied between these pairs.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.prog">
-<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.prog" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.prog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for the immutable optimization program.</p>
 </dd></dl>
 
@@ -507,7 +507,7 @@ bounded.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit">
-<code class="descname">AddFrameAccelerationLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint], pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddFrameAccelerationLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.Binding[LinearConstraint], pydrake.solvers.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a limit on the elements of the spatial acceleration of the given
 frame, measured and and expressed in the world frame. The limits
 should be given as [α_WF, a_WF], where α_WF is the frame’s angular
@@ -537,7 +537,7 @@ respectively.</td>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit">
-<code class="descname">AddFrameTranslationalSpeedLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], upper_limit: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddFrameTranslationalSpeedLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], upper_limit: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a limit on the magnitude of the translational velocity of the
 given frame, measured and expressed in the world frame.</p>
 <dl class="docutils">
@@ -559,7 +559,7 @@ translational speed limit during the backward pass.</td>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.AddFrameVelocityLimit">
-<code class="descname">AddFrameVelocityLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameVelocityLimit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddFrameVelocityLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameVelocityLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a limit on the elements of the spatial velocity of the given
 frame, measured and and expressed in the world frame. The limits
 should be given as [ω_WF, v_WF], where ω_WF is the frame’s angular
@@ -585,7 +585,7 @@ limit during the backward pass.</td>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.AddJointAccelerationLimit">
-<code class="descname">AddJointAccelerationLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint], pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointAccelerationLimit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddJointAccelerationLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.Binding[LinearConstraint], pydrake.solvers.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointAccelerationLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an acceleration limit to all the degrees of freedom in the plant.
 The limits must be arranged in the same order as the entries in the
 path.</p>
@@ -612,7 +612,7 @@ respectively.</td>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.AddJointTorqueLimit">
-<code class="descname">AddJointTorqueLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint], pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointTorqueLimit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddJointTorqueLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.Binding[LinearConstraint], pydrake.solvers.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointTorqueLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a torque limit to all the degrees of freedom in the plant. The
 limits must be arranged in the same order as the entries in the path.
 This constrains the generalized torques applied to the plant and does
@@ -639,7 +639,7 @@ torque limit on the backward pass and forward pass respectively.</td>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.AddJointVelocityLimit">
-<code class="descname">AddJointVelocityLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointVelocityLimit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddJointVelocityLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointVelocityLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a velocity limit to all the degrees of freedom in the plant. The
 limits must be arranged in the same order as the entries in the path.</p>
 <dl class="docutils">

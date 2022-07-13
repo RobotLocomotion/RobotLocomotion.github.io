@@ -162,12 +162,12 @@ them, as Drake is not a model repository.</p>
   <li>Clone <code class="highlighter-rouge">RobotLocomotion/models</code> locally</li>
   <li>Create a Git branch in your local checkouts of <em>both</em> <code class="highlighter-rouge">models</code> and
 <code class="highlighter-rouge">drake</code>.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models/repository.bzl</code> to point to your
+  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to point to your
 <code class="highlighter-rouge">models</code> checkout using
 <code class="highlighter-rouge">github_archive(..., local_repository_override = &lt;path&gt;)</code>.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models/files.bzl</code> to incorporate the models
+  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/files.bzl</code> to incorporate the models
 you want.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models/package.BUILD.bazel</code> to export the
+  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/package.BUILD.bazel</code> to export the
 models.</li>
   <li>Ensure that you use <code class="highlighter-rouge">forward_files</code> to make the files available inside
 the Drake bazel workspace. For an example, see
@@ -179,7 +179,7 @@ the Drake bazel workspace. For an example, see
 
 <ol>
   <li>Push your changes to your fork of <code class="highlighter-rouge">RobotLocomotion/models</code>. Make a PR.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models/models/repository.bzl</code> to use the
+  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to use the
 commit you pushed.</li>
   <li>Submit a PR to Drake, and add a self-blocking discussion thread, such as
 <code class="highlighter-rouge">"Working temporary SHA1 until the models PR &lt;LINK&gt; is merged."</code>,
@@ -189,7 +189,7 @@ request review for your <code class="highlighter-rouge">models</code> PR.</li>
   <li>Once both PRs are approved:
     <ol>
       <li>Merge your <code class="highlighter-rouge">models</code> PR.</li>
-      <li>Update <code class="highlighter-rouge">drake/tools/workspace/models/repository.bzl</code> to the latest
+      <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to the latest
 merge commit on <code class="highlighter-rouge">master</code> for <code class="highlighter-rouge">RobotLocomotion/models</code>.</li>
       <li>Merge your <code class="highlighter-rouge">drake</code> PR.</li>
     </ol>

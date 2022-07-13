@@ -418,7 +418,11 @@ path, a warning is logged and the original path is kept. This
 accomodates the expected behavior using ROS_PACKAGE_PATH, where a
 package path corresponds to the “highest” overlay in which that
 package is found. If a path does not exist or is unreadable, a warning
-is logged.</p>
+is logged. This function should not be used when populating manifests
+from the ROS_PACKAGE_PATH environment variable. To do so, the
+PopulateFromRosPackagePath function should be used instead, which
+follows standard ROS package discovery semantics described in the
+documentation for that function.</p>
 </dd></dl>
 
 <dl class="method">
@@ -433,6 +437,11 @@ PackageMap is found again with a conflicting path, a warning is logged
 and the original path is kept. If the path does not exist or is
 unreadable, a warning is logged.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.parsing.PackageMap.PopulateFromRosPackagePath">
+<code class="descname">PopulateFromRosPackagePath</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.PackageMap</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.PopulateFromRosPackagePath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.parsing.PackageMap.Remove">

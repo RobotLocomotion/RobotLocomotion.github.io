@@ -215,6 +215,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab17a29ee7c846aaca8f0d50248a42068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068">PopulateFromEnvironment</a> (const std::string &amp;environment_variable)</td></tr>
 <tr class="memdesc:ab17a29ee7c846aaca8f0d50248a42068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains one or more paths from environment variable <code>environment_variable</code>.  <a href="#ab17a29ee7c846aaca8f0d50248a42068">More...</a><br /></td></tr>
 <tr class="separator:ab17a29ee7c846aaca8f0d50248a42068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b086143ce943e2318a7b2added1313"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a82b086143ce943e2318a7b2added1313">PopulateFromRosPackagePath</a> ()</td></tr>
+<tr class="memdesc:a82b086143ce943e2318a7b2added1313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains one or more paths from the ROS_PACKAGE_PATH environment variable.  <a href="#a82b086143ce943e2318a7b2added1313">More...</a><br /></td></tr>
+<tr class="separator:a82b086143ce943e2318a7b2added1313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a3a95d2ab663afe987e79dc60edf926e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a3a95d2ab663afe987e79dc60edf926e8">PackageMap</a> (const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;)=default</td></tr>
 <tr class="separator:a3a95d2ab663afe987e79dc60edf926e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -576,7 +579,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Obtains one or more paths from environment variable <code>environment_variable</code>. </p>
-<p>Crawls downward through the directory tree(s) starting from the path(s) searching for <code>package.xml</code> files. For each of these files, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the value is the path to the <code>package.xml</code> file. Multiple paths can be specified by separating them using the ':' symbol. For example, the environment variable can contain [path 1]:[path 2]:[path 3] to search three different paths. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. This accomodates the expected behavior using ROS_PACKAGE_PATH, where a package path corresponds to the "highest" overlay in which that package is found. If a path does not exist or is unreadable, a warning is logged. </p>
+<p>Crawls downward through the directory tree(s) starting from the path(s) searching for <code>package.xml</code> files. For each of these files, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the value is the path to the <code>package.xml</code> file. Multiple paths can be specified by separating them using the ':' symbol. For example, the environment variable can contain [path 1]:[path 2]:[path 3] to search three different paths. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. This accomodates the expected behavior using ROS_PACKAGE_PATH, where a package path corresponds to the "highest" overlay in which that package is found. If a path does not exist or is unreadable, a warning is logged. This function should not be used when populating manifests from the ROS_PACKAGE_PATH environment variable. To do so, the PopulateFromRosPackagePath function should be used instead, which follows standard ROS package discovery semantics described in the documentation for that function. </p>
 
 </div>
 </div>
@@ -598,6 +601,30 @@ Friends</h2></td></tr>
 
 <p>Crawls down the directory tree starting at <code>path</code> searching for directories containing the file <code>package.xml</code>. </p>
 <p>For each of these directories, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the directory's path is the value. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. If the path does not exist or is unreadable, a warning is logged. </p>
+
+</div>
+</div>
+<a id="a82b086143ce943e2318a7b2added1313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82b086143ce943e2318a7b2added1313">&#9670;&nbsp;</a></span>PopulateFromRosPackagePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PopulateFromRosPackagePath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtains one or more paths from the ROS_PACKAGE_PATH environment variable. </p>
+<p>Semantics are similar to <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068" title="Obtains one or more paths from environment variable environment_variable.">PopulateFromEnvironment()</a>, except that ROS-style crawl termination semantics are enabled, which means that subdirectories of already-identified packages are not searched, and neither are directories which contain any of the following marker files:</p><ul>
+<li>AMENT_IGNORE</li>
+<li>CATKIN_IGNORE</li>
+<li>COLCON_IGNORE </li>
+</ul>
 
 </div>
 </div>

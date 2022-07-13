@@ -263,7 +263,6 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_damping">drake:damping</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_declare_convex">drake:declare_convex</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_diffuse_map">drake:diffuse_map</a></li>
-<li><a class="el" href="group__multibody__parsing.html#tag_drake_dissipation_timescale">drake:dissipation_timescale</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_ellipsoid">drake:ellipsoid</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_gear_ratio">drake:gear_ratio</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_hunt_crossley_dissipation">drake:hunt_crossley_dissipation</a></li>
@@ -278,6 +277,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_parent">drake:parent</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_point_contact_stiffness">drake:point_contact_stiffness</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_relaxation_time">drake:relaxation_time</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rigid_hydroelastic">drake:rigid_hydroelastic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rotor_inertia">drake:rotor_inertia</a></li>
 </ul>
@@ -486,17 +486,6 @@ drake:hunt_crossley_dissipation</h2>
 Semantics</h3>
 <p>If present, this element provides a value (units of inverse of velocity, i.e. s/m) for the Hunt-Crossley dissipation model. It is stored in a ProximityProperties object under <code>(material, hunt_crossley_dissipation)</code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_hydroelastic_materials_properties">Hydroelastic contact</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
-<h2><a class="anchor" id="tag_drake_dissipation_timescale"></a>
-drake:dissipation_timescale</h2>
-<ul>
-<li>SDFormat path: <code>//model/link/collision/drake:proximity_properies/drake:dissipation_timescale</code></li>
-<li>URDF path: <code>/robot/link/collision/drake:proximity_properties/drake:dissipation_timescale/@value</code></li>
-<li>Syntax: Non-negative floating point value.</li>
-</ul>
-<h3><a class="anchor" id="tag_drake_dissipation_timescale_semantics"></a>
-Semantics</h3>
-<p>If present, this element provides a value (units of time, i.e. seconds) for a linear model of dissipation. It is stored in a ProximityProperties object under <code>(material, dissipation_timescale)</code>.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_hydroelastic_modulus"></a>
 drake:hydroelastic_modulus</h2>
 <ul>
@@ -632,6 +621,17 @@ Semantics</h3>
 <li><code>drake:rigid_hydroelastic</code></li>
 </ul>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_compliant_hydroelastic">drake:compliant_hydroelastic</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_hunt_crossley_dissipation">drake:hunt_crossley_dissipation</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_hydroelastic_modulus">drake:hydroelastic_modulus</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_mesh_resolution_hint">drake:mesh_resolution_hint</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_mu_dynamic">drake:mu_dynamic</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_mu_static">drake:mu_static</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_point_contact_stiffness">drake:point_contact_stiffness</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_rigid_hydroelastic">drake:rigid_hydroelastic</a>, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_relaxation_time"></a>
+drake:relaxation_time</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/collision/drake:proximity_properies/drake:relaxation_time</code></li>
+<li>URDF path: <code>/robot/link/collision/drake:proximity_properties/drake:relaxation_time/@value</code></li>
+<li>Syntax: Non-negative floating point value.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_relaxation_time_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides a value (units of time, i.e. seconds) for a linear Kelvin-Voigt model of dissipation. It is stored in a ProximityProperties object under <code>(material, relaxation_time)</code>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_rigid_hydroelastic"></a>
 drake:rigid_hydroelastic</h2>
 <ul>

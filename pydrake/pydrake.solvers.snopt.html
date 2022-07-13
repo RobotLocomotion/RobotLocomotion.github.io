@@ -226,77 +226,10 @@
             
   <div class="section" id="module-pydrake.solvers.snopt">
 <span id="pydrake-solvers-snopt"></span><h1>pydrake.solvers.snopt<a class="headerlink" href="#module-pydrake.solvers.snopt" title="Permalink to this headline">¶</a></h1>
-<p>SNOPT solver bindings for MathematicalProgram</p>
-<dl class="class">
-<dt id="pydrake.solvers.snopt.SnoptSolver">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.snopt.</code><code class="descname">SnoptSolver</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
-<p>An implementation of SolverInterface for the commercially-licensed
-SNOPT solver (<a class="reference external" href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">https://ccom.ucsd.edu/~optimizers/solvers/snopt/</a>).</p>
-<p>Builds of Drake from source do not compile SNOPT by default, so
-therefore SolverInterface::available() will return false. You must
-opt-in to build SNOPT per the documentation at
-<a class="reference external" href="https://drake.mit.edu/bazel.html#snopt">https://drake.mit.edu/bazel.html#snopt</a>.</p>
-<p><a class="reference external" href="https://drake.mit.edu/installation.html">Drake’s pre-compiled binary releases</a> do incorporate SNOPT, so
-therefore SolverInterface::available() will return true. Thanks to
-Philip E. Gill and Elizabeth Wong for their kind support.</p>
-<p>There is no license configuration required to use SNOPT, so
-SolverInterface::enabled() will always return true.</p>
-<dl class="method">
-<dt id="pydrake.solvers.snopt.SnoptSolver.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.snopt.SnoptSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolver.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="staticmethod">
-<dt id="pydrake.solvers.snopt.SnoptSolver.id">
-<em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverId<a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolver.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.solvers.snopt.SnoptSolverDetails">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.snopt.</code><code class="descname">SnoptSolverDetails</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolverDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SNOPT solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;SnoptSolver&gt;() to
-obtain the details.</p>
-<dl class="attribute">
-<dt id="pydrake.solvers.snopt.SnoptSolverDetails.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolverDetails.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.snopt.SnoptSolverDetails.F">
-<code class="descname">F</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolverDetails.F" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final value of the vector of problem functions F(x).</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.snopt.SnoptSolverDetails.Fmul">
-<code class="descname">Fmul</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolverDetails.Fmul" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final value of the dual variables (Lagrange multipliers) for the
-general constraints F_lower &lt;= F(x) &lt;= F_upper.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.snopt.SnoptSolverDetails.info">
-<code class="descname">info</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolverDetails.info" title="Permalink to this definition">¶</a></dt>
-<dd><p>The snopt INFO field. Please refer to section 8.6 in “User’s Guide for
-SNOPT Version 7: Software for Large-Scale Nonlinear Programming”
-(<a class="reference external" href="https://web.stanford.edu/group/SOL/guides/sndoc7.pdf">https://web.stanford.edu/group/SOL/guides/sndoc7.pdf</a>) by Philip E.
-Gill to interpret the INFO field.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.snopt.SnoptSolverDetails.xmul">
-<code class="descname">xmul</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolverDetails.xmul" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final value of the dual variables for the bound constraint x_lower
-&lt;= x &lt;= x_upper.</p>
-</dd></dl>
-
-</dd></dl>
-
+<p>Shim module that provides vestigial names for pydrake.solvers.</p>
+<p>Prefer not to use this import path in new code; all of the code in
+this module can be imported from pydrake.solvers directly.</p>
+<p>This module will be deprecated at some point in the future.</p>
 </div>
 
 

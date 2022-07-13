@@ -226,77 +226,10 @@
             
   <div class="section" id="module-pydrake.solvers.ipopt">
 <span id="pydrake-solvers-ipopt"></span><h1>pydrake.solvers.ipopt<a class="headerlink" href="#module-pydrake.solvers.ipopt" title="Permalink to this headline">¶</a></h1>
-<p>Ipopt solver bindings for MathematicalProgram</p>
-<dl class="class">
-<dt id="pydrake.solvers.ipopt.IpoptSolver">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.ipopt.</code><code class="descname">IpoptSolver</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
-<dl class="method">
-<dt id="pydrake.solvers.ipopt.IpoptSolver.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.ipopt.IpoptSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolver.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="staticmethod">
-<dt id="pydrake.solvers.ipopt.IpoptSolver.id">
-<em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverId<a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolver.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.ipopt.</code><code class="descname">IpoptSolverDetails</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Ipopt solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;IpoptSolver&gt;() to
-obtain the details.</p>
-<dl class="attribute">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails.ConvertStatusToString">
-<code class="descname">ConvertStatusToString</code><span class="sig-paren">(</span><em>self: pydrake.solvers.ipopt.IpoptSolverDetails</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails.ConvertStatusToString" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert status field to string. This function is useful if you want to
-interpret the meaning of status.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails.g">
-<code class="descname">g</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails.g" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final value for the constraint function.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails.lambda_val">
-<code class="descname">lambda_val</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails.lambda_val" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final value for the constraint multiplier.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails.status">
-<code class="descname">status</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final status of the solver. Please refer to section 6 in
-Introduction to Ipopt: A tutorial for downloading, installing, and
-using Ipopt. You could also find the meaning of the status as
-Ipopt::SolverReturn defined in IpAlgTypes.hpp</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails.z_L">
-<code class="descname">z_L</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails.z_L" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final value for the lower bound multiplier.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.ipopt.IpoptSolverDetails.z_U">
-<code class="descname">z_U</code><a class="headerlink" href="#pydrake.solvers.ipopt.IpoptSolverDetails.z_U" title="Permalink to this definition">¶</a></dt>
-<dd><p>The final value for the upper bound multiplier.</p>
-</dd></dl>
-
-</dd></dl>
-
+<p>Shim module that provides vestigial names for pydrake.solvers.</p>
+<p>Prefer not to use this import path in new code; all of the code in
+this module can be imported from pydrake.solvers directly.</p>
+<p>This module will be deprecated at some point in the future.</p>
 </div>
 
 

@@ -224,7 +224,7 @@
 <code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">AddUnitQuaternionConstraintOnPlant</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AddUnitQuaternionConstraintOnPlant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[float], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram) -&gt; None</li>
+<li>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[float], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; None</li>
 </ol>
 <p>Add unit length constraints to all the variables representing
 quaternion in <code class="docutils literal notranslate"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base
@@ -238,7 +238,7 @@ joints in <code class="docutils literal notranslate"><span class="pre">plant</sp
 <dd>The unit quaternion constraints are added to this prog.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram) -&gt; None</li>
+<li>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; None</li>
 </ol>
 <p>Add unit length constraints to all the variables representing
 quaternion in <code class="docutils literal notranslate"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base
@@ -256,7 +256,7 @@ joints in <code class="docutils literal notranslate"><span class="pre">plant</sp
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">AngleBetweenVectorsConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains that the angle between a vector <code class="docutils literal notranslate"><span class="pre">a</span></code> and another vector
 <code class="docutils literal notranslate"><span class="pre">b</span></code> is between [θ_lower, θ_upper]. <code class="docutils literal notranslate"><span class="pre">a</span></code> is fixed to a frame A,
 while <code class="docutils literal notranslate"><span class="pre">b</span></code> is fixed to a frame B. Mathematically, if we denote
@@ -327,7 +327,7 @@ constraint.</dd>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">ComInPolyhedronConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains the center of mass to lie within a polyhedron lb &lt;= A *
 p_EC &lt;= ub where p_EC is the position of the center-of-mass (C)
 expressed in a frame E.</p>
@@ -378,7 +378,7 @@ constraint.</dd>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.ComPositionConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">ComPositionConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComPositionConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Impose the constraint p_EScm(q) - p_EC = 0, where p_EScm(q) is a
 function that computes the center-of-mass (COM) position from robot
 generalized position q, expressed in a frame E. p_EC ∈ ℝ³ is the
@@ -432,7 +432,7 @@ and Context&lt;AutoDiffXd&gt;, then use this constructor.</p>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.DistanceConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">DistanceConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DistanceConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains the distance between a pair of geometries to be within a
 range [distance_lower, distance_upper].</p>
 <dl class="method">
@@ -471,7 +471,7 @@ DistanceConstraint object.</dd>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.GazeTargetConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">GazeTargetConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GazeTargetConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains a target point T to be within a cone K. The point T (“T”
 stands for “target”) is fixed in a frame B, with position p_BT. The
 cone originates from a point S (“S” stands for “source”), fixed in
@@ -629,7 +629,7 @@ meters).</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldOrientationConstraint">
-<code class="descname">AddWorldOrientationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, body_index: pydrake.multibody.tree.BodyIndex, desired_orientation: pydrake.common.eigen_geometry.Quaternion_[float], angle_tol: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldOrientationConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddWorldOrientationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, body_index: pydrake.multibody.tree.BodyIndex, desired_orientation: pydrake.common.eigen_geometry.Quaternion_[float], angle_tol: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[LinearConstraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddWorldOrientationConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a constraint that the angle between the body orientation and the
 desired orientation should not be larger than <code class="docutils literal notranslate"><span class="pre">angle_tol</span></code>. If we
 denote the angle between two rotation matrices <code class="docutils literal notranslate"><span class="pre">R1</span></code> and <code class="docutils literal notranslate"><span class="pre">R2</span></code> as
@@ -668,7 +668,7 @@ desired orientation. Unit is radians.</dd>
 p=[0.0, 0.0, 0.0],</p>
 </dd>
 </dl>
-<p>)) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</p>
+<p>)) -&gt; pydrake.solvers.Binding[LinearConstraint]</p>
 <p>Adds the constraint that the position of a point <code class="docutils literal notranslate"><span class="pre">Q</span></code> on a body <code class="docutils literal notranslate"><span class="pre">B</span></code>
 (whose index is <code class="docutils literal notranslate"><span class="pre">body_index</span></code>), is within a box in a specified frame
 <code class="docutils literal notranslate"><span class="pre">F</span></code>. The constraint is that the point <code class="docutils literal notranslate"><span class="pre">Q`'s</span> <span class="pre">position</span> <span class="pre">should</span> <span class="pre">lie</span>
@@ -731,7 +731,7 @@ X_WF.translation()</cite>.</p>
 p=[0.0, 0.0, 0.0],</p>
 </dd>
 </dl>
-<p>)) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</p>
+<p>)) -&gt; pydrake.solvers.Binding[LinearConstraint]</p>
 <p>Adds the constraint that the position of a point <code class="docutils literal notranslate"><span class="pre">Q</span></code> on a body <code class="docutils literal notranslate"><span class="pre">B</span></code>
 relative to a point <code class="docutils literal notranslate"><span class="pre">P</span></code> on body <code class="docutils literal notranslate"><span class="pre">A</span></code>, is within a box in a
 specified frame <code class="docutils literal notranslate"><span class="pre">F</span></code>. Using monogram notation we have:</p>
@@ -813,7 +813,7 @@ and thus not a decision variable.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.get_mutable_prog">
-<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -853,12 +853,12 @@ nonlinear constraints.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.prog">
-<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.prog" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.prog" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.ReconstructGeneralizedPositionSolution">
-<code class="descname">ReconstructGeneralizedPositionSolution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.ReconstructGeneralizedPositionSolution" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ReconstructGeneralizedPositionSolution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics</em>, <em>result: pydrake.solvers.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.ReconstructGeneralizedPositionSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>After solving the inverse kinematics problem and finding out the pose
 of each body, reconstruct the robot generalized position (joint
 angles, etc) that matches with the body poses. Notice that since the
@@ -961,7 +961,7 @@ constructor.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsConstraint">
-<code class="descname">AddAngleBetweenVectorsConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], na_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], nb_B: numpy.ndarray[numpy.float64[3, 1]], angle_lower: float, angle_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddAngleBetweenVectorsConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], na_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], nb_B: numpy.ndarray[numpy.float64[3, 1]], angle_lower: float, angle_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constrains that the angle between a vector na and another vector nb is
 between [θ_lower, θ_upper]. na is fixed to a frame A, while nb is
 fixed to a frame B. Mathematically, if we denote na_unit_A as na
@@ -1036,7 +1036,7 @@ orientation of frame B expressed in frame A.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddDistanceConstraint">
-<code class="descname">AddDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, geometry_pair: Tuple[pydrake.geometry.GeometryId], distance_lower: float, distance_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, geometry_pair: Tuple[pydrake.geometry.GeometryId], distance_lower: float, distance_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddDistanceConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the constraint that the distance between a pair of geometries is
 within some bounds.</p>
 <dl class="docutils">
@@ -1055,7 +1055,7 @@ geometries.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddGazeTargetConstraint">
-<code class="descname">AddGazeTargetConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], p_AS: numpy.ndarray[numpy.float64[3, 1]], n_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BT: numpy.ndarray[numpy.float64[3, 1]], cone_half_angle: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddGazeTargetConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddGazeTargetConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], p_AS: numpy.ndarray[numpy.float64[3, 1]], n_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BT: numpy.ndarray[numpy.float64[3, 1]], cone_half_angle: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddGazeTargetConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constrains a target point T to be within a cone K. The point T (“T”
 stands for “target”) is fixed in a frame B, with position p_BT. The
 cone originates from a point S (“S” stands for “source”), fixed in
@@ -1107,7 +1107,7 @@ documentation. <code class="docutils literal notranslate"><span class="pre">cone
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceConstraint">
-<code class="descname">AddMinimumDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em>, <em>minimum_distance: float</em>, <em>threshold_distance: float = 1.0</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddMinimumDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em>, <em>minimum_distance: float</em>, <em>threshold_distance: float = 1.0</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the constraint that the pairwise distance between objects should
 be no smaller than <code class="docutils literal notranslate"><span class="pre">minimum_distance</span></code>. We consider the distance
 between pairs of 1. Anchored (static) object and a dynamic object. 2.
@@ -1141,7 +1141,7 @@ registered its geometry with a SceneGraph.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationConstraint">
-<code class="descname">AddOrientationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameAbar: pydrake.multibody.tree.Frame_[float], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[float], R_BbarB: pydrake.math.RotationMatrix_[float], theta_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddOrientationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameAbar: pydrake.multibody.tree.Frame_[float], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[float], R_BbarB: pydrake.math.RotationMatrix_[float], theta_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constrains that the angle difference θ between the orientation of
 frame A and the orientation of frame B to satisfy θ ≤ θ_bound. Frame A
 is fixed to frame A_bar, with orientation R_AbarA measured in frame
@@ -1178,7 +1178,7 @@ documentation. <code class="docutils literal notranslate"><span class="pre">thet
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint">
-<code class="descname">AddPointToPointDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frame1: pydrake.multibody.tree.Frame_[float], p_B1P1: numpy.ndarray[numpy.float64[3, 1]], frame2: pydrake.multibody.tree.Frame_[float], p_B2P2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddPointToPointDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frame1: pydrake.multibody.tree.Frame_[float], p_B1P1: numpy.ndarray[numpy.float64[3, 1]], frame2: pydrake.multibody.tree.Frame_[float], p_B2P2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a constraint that the distance between point P1 attached to frame
 1 and point P2 attached to frame 2 is within the range
 [distance_lower, distance_upper].</p>
@@ -1203,7 +1203,7 @@ documentation. <code class="docutils literal notranslate"><span class="pre">thet
 <code class="descname">AddPositionConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddPositionConstraint(self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameA: pydrake.multibody.tree.Frame_[float], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
+<li>AddPositionConstraint(self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameA: pydrake.multibody.tree.Frame_[float], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.solvers.Binding[Constraint]</li>
 </ol>
 <p>Adds the kinematic constraint that a point Q, fixed in frame B, should
 lie within a bounding box expressed in another frame A as p_AQ_lower
@@ -1226,7 +1226,7 @@ in frame A.</dd>
 in frame A.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>AddPositionConstraint(self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameAbar: pydrake.multibody.tree.Frame_[float], X_AbarA: Optional[pydrake.math.RigidTransform_[float]], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
+<li>AddPositionConstraint(self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameAbar: pydrake.multibody.tree.Frame_[float], X_AbarA: Optional[pydrake.math.RigidTransform_[float]], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.solvers.Binding[Constraint]</li>
 </ol>
 <p>Adds the kinematic constraint that a point Q, fixed in frame B, should
 lie within a bounding box expressed in another frame A as p_AQ_lower
@@ -1267,13 +1267,13 @@ in frame A.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_prog">
-<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for the optimization program constructed by InverseKinematics.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.prog">
-<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.prog" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.prog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for the optimization program constructed by InverseKinematics.</p>
 </dd></dl>
 
@@ -1289,7 +1289,7 @@ of the robot.</p>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">MinimumDistanceConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrain the signed distance between all candidate pairs of
 geometries (according to the logic of
 SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a
@@ -1362,7 +1362,7 @@ considered in each constraint evaluation. $*Default:* 1 meter</p>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.OrientationConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">OrientationConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains that the angle difference θ between the orientation of
 frame A and the orientation of frame B to satisfy θ ≤ θ_bound. The
 angle difference between frame A’s orientation R_WA and B’s
@@ -1444,7 +1444,7 @@ constraint.</dd>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">PointToPointDistanceConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrain that the distance between a point P1 on frame B1 and another
 point P2 on frame B2 is within a range [distance_lower,
 distance_upper].</p>
@@ -1496,7 +1496,7 @@ constraint.</dd>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.PositionConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">PositionConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains the position of a point Q, rigidly attached to a frame B,
 to be within a bounding box measured and expressed in frame A. Namely
 p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper.</p>
@@ -1646,7 +1646,7 @@ Constraint::UpdateUpperBound, as in LinearConstraint.</p>
 <dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">UnitQuaternionConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains the quaternion to have a unit length.</p>
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint.__init__">

@@ -62,6 +62,7 @@ var searchData=
   ['solver_5foptions_2eh',['solver_options.h',['../solver__options_8h.html',1,'']]],
   ['solver_5ftype_2eh',['solver_type.h',['../solver__type_8h.html',1,'']]],
   ['solver_5ftype_5fconverter_2eh',['solver_type_converter.h',['../solver__type__converter_8h.html',1,'']]],
+  ['solvers_5fpy_2eh',['solvers_py.h',['../solvers__py_8h.html',1,'']]],
   ['solvers_5fpybind_2eh',['solvers_pybind.h',['../solvers__pybind_8h.html',1,'']]],
   ['sorted_5fpair_2eh',['sorted_pair.h',['../sorted__pair_8h.html',1,'']]],
   ['sorted_5fpair_5fpybind_2eh',['sorted_pair_pybind.h',['../sorted__pair__pybind_8h.html',1,'']]],

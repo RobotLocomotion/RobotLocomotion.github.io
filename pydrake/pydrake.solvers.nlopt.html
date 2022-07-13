@@ -226,44 +226,10 @@
             
   <div class="section" id="module-pydrake.solvers.nlopt">
 <span id="pydrake-solvers-nlopt"></span><h1>pydrake.solvers.nlopt<a class="headerlink" href="#module-pydrake.solvers.nlopt" title="Permalink to this headline">¶</a></h1>
-<p>NLopt solver bindings for MathematicalProgram</p>
-<dl class="class">
-<dt id="pydrake.solvers.nlopt.NloptSolver">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.nlopt.</code><code class="descname">NloptSolver</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
-<dl class="method">
-<dt id="pydrake.solvers.nlopt.NloptSolver.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.nlopt.NloptSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolver.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="staticmethod">
-<dt id="pydrake.solvers.nlopt.NloptSolver.id">
-<em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverId<a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolver.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.solvers.nlopt.NloptSolverDetails">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.nlopt.</code><code class="descname">NloptSolverDetails</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolverDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>The NLopt solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;NloptSolver&gt;() to
-obtain the details.</p>
-<dl class="attribute">
-<dt id="pydrake.solvers.nlopt.NloptSolverDetails.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolverDetails.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.nlopt.NloptSolverDetails.status">
-<code class="descname">status</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolverDetails.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The return status of NLopt solver. Please refer to
-<a class="reference external" href="https://nlopt.readthedocs.io/en/latest/NLopt_Reference/#return-values">https://nlopt.readthedocs.io/en/latest/NLopt_Reference/#return-values</a>.</p>
-</dd></dl>
-
-</dd></dl>
-
+<p>Shim module that provides vestigial names for pydrake.solvers.</p>
+<p>Prefer not to use this import path in new code; all of the code in
+this module can be imported from pydrake.solvers directly.</p>
+<p>This module will be deprecated at some point in the future.</p>
 </div>
 
 

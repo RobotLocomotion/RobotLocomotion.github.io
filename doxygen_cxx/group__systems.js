@@ -239,7 +239,7 @@ var group__systems =
       [ "RegisterVisualGeometry", "classdrake_1_1multibody_1_1_multibody_plant.html#ad27da771f6b43d4944b33dc6d6338f8e", null ],
       [ "set_contact_model", "classdrake_1_1multibody_1_1_multibody_plant.html#ad253ab790ff8e142080cedd210e982da", null ],
       [ "set_contact_surface_representation", "classdrake_1_1multibody_1_1_multibody_plant.html#ad6df8a26aa42b59344e931ac9d6f5357", null ],
-      [ "set_discrete_contact_solver", "classdrake_1_1multibody_1_1_multibody_plant.html#a4b8453f8568dfa4c71da665c3dead213", null ],
+      [ "set_discrete_contact_solver", "classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be", null ],
       [ "set_penetration_allowance", "classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a", null ],
       [ "set_stiction_tolerance", "classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074", null ],
       [ "SetActuationInArray", "classdrake_1_1multibody_1_1_multibody_plant.html#aec851e17ae2c34da1b87a03ce85f460a", null ],
