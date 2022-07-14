@@ -13,7 +13,7 @@ var dir_da11cd43e7bab310171e778f62212487 =
       [ "Polytope3D", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d" ]
     ] ],
     [ "inverse_kinematics.h", "inverse__kinematics_8h.html", null ],
-    [ "kinematic_constraint_utilities.h", "kinematic__constraint__utilities_8h.html", null ],
+    [ "kinematic_evaluator_utilities.h", "kinematic__evaluator__utilities_8h.html", null ],
     [ "minimum_distance_constraint.h", "minimum__distance__constraint_8h.html", "minimum__distance__constraint_8h" ],
     [ "orientation_constraint.h", "orientation__constraint_8h.html", null ],
     [ "point_to_point_distance_constraint.h", "point__to__point__distance__constraint_8h.html", null ],

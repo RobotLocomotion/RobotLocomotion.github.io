@@ -319,7 +319,8 @@ constraint.</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], a_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], b_B: numpy.ndarray[numpy.float64[3, 1]], angle_lower: float, angle_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Use MultibodyPlant&lt;AutoDiffXd&gt; instead of
+MultibodyPlant&lt;double&gt;.</p>
 </dd></dl>
 
 </dd></dl>
@@ -370,7 +371,14 @@ constraint.</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instances: Optional[List[pydrake.multibody.tree.ModelInstanceIndex]], expressed_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], A: numpy.ndarray[numpy.float64[m, 3], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;. Except the
+gradient of the constraint is computed from autodiff.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>if model_instances is not std::nullopt, then all indices in
+<code class="docutils literal notranslate"><span class="pre">model_instances</span></code> refer to valid model instances in <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -463,7 +471,8 @@ DistanceConstraint object.</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.DistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], geometry_pair: Tuple[pydrake.geometry.GeometryId], plant_context: pydrake.systems.framework.Context_[AutoDiffXd], distance_lower: float, distance_upper: float) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Constructs the constraint with
+MultibodyPlant&lt;AutoDiffXd&gt;.</p>
 </dd></dl>
 
 </dd></dl>
@@ -535,7 +544,8 @@ constraint.</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.GazeTargetConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AS: numpy.ndarray[numpy.float64[3, 1]], n_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BT: numpy.ndarray[numpy.float64[3, 1]], cone_half_angle: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Construct from MultibodyPlant&lt;AutoDiffXd&gt;
+instead of MultibodyPlant&lt;double&gt;.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1354,7 +1364,8 @@ considered in each constraint evaluation. $*Default:* 1 meter</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], minimum_distance: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd], penalty_function: Callable[[float, float, float], None] = None, influence_distance_offset: float = 1) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Constructs the constraint using
+MultibodyPlant&lt;AutoDiffXd&gt;.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1436,7 +1447,8 @@ constraint.</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.OrientationConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameAbar: pydrake.multibody.tree.Frame_[AutoDiffXd], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[AutoDiffXd], R_BbarB: pydrake.math.RotationMatrix_[float], theta_bound: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Constructs the constraint using
+MultibodyPlant&lt;AutoDiffXd&gt;</p>
 </dd></dl>
 
 </dd></dl>
@@ -1488,7 +1500,9 @@ constraint.</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame1: pydrake.multibody.tree.Frame_[AutoDiffXd], p_B1P1: numpy.ndarray[numpy.float64[3, 1]], frame2: pydrake.multibody.tree.Frame_[AutoDiffXd], p_B2P2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;), except the
+gradient of the constraint is computed from autodiff.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1595,11 +1609,15 @@ constraint.</dd>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the
+gradient of the constraint is computed from autodiff.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameAbar: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AbarA: Optional[pydrake.math.RigidTransform_[float]], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the
+gradient of the constraint is computed from autodiff.</p>
 </dd></dl>
 
 <dl class="method">
