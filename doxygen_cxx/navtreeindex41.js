@@ -1,8 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"dir_2186f45272e5c29e3ac18ec762ab7501.html":[4,0,0,11,3],
-"dir_265f5a0dc516db63016326957882384b.html":[4,0,0,4,4,1],
-"dir_2801189a4b16f72066eac0bdd511a19c.html":[4,0,0,0,0,3],
 "dir_2cf971462d0dc9c1092ce69736cd713e.html":[4,0,0,8,3],
 "dir_2f3b38a11a8c8b47ab034de75b118c79.html":[4,0,0,11,1],
 "dir_30e7b54ca9ab48df25430eaeedb2e703.html":[4,0,0,8,2],
@@ -116,8 +113,8 @@ var NAVTREEINDEX41 =
 "discrete__values_8h.html":[4,0,0,11,3,18],
 "distance__constraint_8h.html":[4,0,0,8,5,3],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,4],
-"distance__to__point__callback_8h.html":[4,0,0,4,2,13],
-"distance__to__shape__callback_8h.html":[4,0,0,4,2,14],
+"distance__to__point__callback_8h.html":[4,0,0,4,2,11],
+"distance__to__shape__callback_8h.html":[4,0,0,4,2,12],
 "door__hinge_8h.html":[4,0,0,8,13,9],
 "double__overloads_8h.html":[4,0,0,1,16],
 "double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX41 =
 "expect__throws__message_8h.html":[4,0,0,1,3,2],
 "expect__throws__message_8h.html#a3032825862f840191f81ddc8ca53072e":[4,0,0,1,3,2,2],
 "expect__throws__message_8h.html#abe6fd77a193e735aab16e277f20ab7d1":[4,0,0,1,3,2,3],
-"expect__throws__message_8h.html#addaacd0e2cef16ba6d550d85f6e16463":[4,0,0,1,3,2,0]
+"expect__throws__message_8h.html#addaacd0e2cef16ba6d550d85f6e16463":[4,0,0,1,3,2,0],
+"expect__throws__message_8h.html#ae08ae1ac4462dded781ee93a493b0cca":[4,0,0,1,3,2,1],
+"explicit__error__controlled__integrator__test_8h.html":[4,0,0,11,0,0,3],
+"explicit__error__controlled__integrator__test_8h.html#a0dfdf43d87e860eb84d1b7287e634be5":[4,0,0,11,0,0,3,5]
 };

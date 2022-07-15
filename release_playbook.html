@@ -292,16 +292,22 @@ instructions are atop its source code:
 sure that the nightly build git sha from the prior step matches the
 <code class="highlighter-rouge">newest_commit</code> whose changes are enumerated in the notes.  Some dates
 are YYYYMMDD format, some are YYYY-MM-DD format; be sure to manually fix
-them all.</li>
-  <li>Update the github links within doc/_pages/from_binary.md to reflect the
+them all.
+    <ol>
+      <li>Update the github links within doc/_pages/from_binary.md to reflect the
 upcoming v1.N.0 and YYYYMMDD.</li>
+    </ol>
+  </li>
   <li>Re-enable CI by reverting the commit you added in step 3.</li>
-  <li>Merge the release notes PR</li>
-  <li>Take care when squashing not to accept github’s auto-generated commit message if it is not appropriate.</li>
-  <li>After merge, go to <a href="https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-focal-unprovisioned-gcc-bazel-nightly-documentation/">https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-focal-unprovisioned-gcc-bazel-nightly-documentation/</a> and push “Build now”.
-    <ul>
-      <li>If you don’t have “Build now” click “Log in” first in upper right.</li>
-    </ul>
+  <li>Merge the release notes PR
+    <ol>
+      <li>Take care when squashing not to accept github’s auto-generated commit message if it is not appropriate.</li>
+      <li>After merge, go to <a href="https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-focal-unprovisioned-gcc-bazel-nightly-documentation/">https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-focal-unprovisioned-gcc-bazel-nightly-documentation/</a> and push “Build now”.
+        <ul>
+          <li>If you don’t have “Build now” click “Log in” first in upper right.</li>
+        </ul>
+      </li>
+    </ol>
   </li>
   <li>Open <a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a> and choose “Draft
 a new release”.  Note that this page does has neither history nor undo.  Be
@@ -324,7 +330,7 @@ appropriate edits as follows:
       </li>
       <li>Into the box labeled “Attach binaries by dropping them here or selecting
 them.”, drag and drop the 6 release binary artifacts from above (the 2
-tarballs, and their 3 checksums).</li>
+tarballs, and their 4 checksums).</li>
       <li>Choose “Save draft” and take a deep breath.</li>
     </ol>
   </li>
@@ -394,9 +400,10 @@ four digit year, two digit month, two digit day).</li>
 
 <h2 id="post-release-tutorials-updates">Post-release tutorials updates</h2>
 
-<p>Upgrade our Deepnote-hosted tutorials to the latest release.  This requires that
-you have “Edit” permission in the Deepnote project.  If you don’t have that yet,
-then ask for help on slack in the <code class="highlighter-rouge">#releases</code> channel.</p>
+<p>Upgrade our Deepnote-hosted tutorials to the latest release.  This requires
+that you have “Edit” permission in the Deepnote project.  If you don’t have
+that yet, then ask for help on slack in the <code class="highlighter-rouge">#releases</code> channel.  Provide
+the email address associated with your github account.</p>
 
 <ol>
   <li>Open the tutorials <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2FDockerfile">Dockerfile</a>:
@@ -457,15 +464,22 @@ storage (<code class="highlighter-rouge">~/work/...</code>):
 one of the middle cells where it uses JointSliders. It is <em>not</em> hung,
 rather it is waiting for user input. Find the “Meshcat URL” link
 earlier in the notebook, click through to open Meshcat in a new tab,
-click “Open Controls”, then click “Stop JointSliders”.</li>
+click “Open Controls”, then click “Stop JointSliders” repeatedly until
+the option vanishes and the notebook completes.</li>
           <li>Do not try to run the <code class="highlighter-rouge">licensed_solvers_deepnote</code> notebook.
 (You do not have a suitable license key.)</li>
+          <li>If you get an error like “Synchronization of file … failed, your changes are not being saved. You might be running out of disk quota” you may ignore it.</li>
         </ol>
       </li>
       <li>For all markdown cells, quickly skim over the rendered output to check
 that no markup errors have snuck through (e.g., LaTeX syntax errors).</li>
       <li>For all code cells, examine the output of each cell to check that no
-exceptions have snuck through (or any other unexpected error text).</li>
+exceptions have snuck through (or any other unexpected error text).
+        <ul>
+          <li>The error “‘%matplotlib notebook’ is not supported in Deepnote” is
+expected and can be ignored.</li>
+        </ul>
+      </li>
       <li>Leave the notebook output intact (do not clear the outputs). We want
 users to be able to read the outputs on their own, without necessarily
 running the notebook themselves.</li>
@@ -510,7 +524,7 @@ instructions to obtain a username and password.</p>
   <li>Run <code class="highlighter-rouge">./setup/ubuntu/source_distribution/install_prereqs_user_environment.sh</code></li>
   <li>Run <code class="highlighter-rouge">bazel run //tools/wheel:builder -- --output-dir=${PWD} --test 1.N.0</code></li>
   <li>Wait a long time for it to finish (around 30 minutes on a beefy workstation). It will take over all of your computer’s resources, so don’t plan to do much else concurrently.</li>
-  <li>There should have been exactly two whl files created. Run <code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path to each of the wheels to be uploaded (e.g., <code class="highlighter-rouge">drake-0.35.0b1-cp36-cp36m-manylinux_2_27_x86_64</code>, etc.)
+  <li>There should have been exactly two whl files created. Run <code class="highlighter-rouge">twine upload &lt;...&gt; &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholders with the paths to the two wheels to be uploaded (e.g., <code class="highlighter-rouge">drake-0.35.0b1-cp36-cp36m-manylinux_2_27_x86_64.whl</code>, etc.)
     <ol>
       <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
     </ol>

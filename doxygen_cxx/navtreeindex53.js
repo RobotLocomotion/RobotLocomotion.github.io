@@ -1,9 +1,5 @@
 var NAVTREEINDEX53 =
 {
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html":[3,0,0,14,8,21],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,14,8,21,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html":[3,0,0,14,8,22],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,14,8,22,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,14,8,23],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,14,8,23,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[3,0,0,14,8,24],
@@ -208,7 +204,7 @@ var NAVTREEINDEX53 =
 "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,24,3,0],
 "temp__directory_8h.html":[4,0,0,1,53],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,53,0],
-"tessellation__strategy_8h.html":[4,0,0,4,2,50],
+"tessellation__strategy_8h.html":[4,0,0,4,2,48],
 "test__utilities_8h.html":[4,0,0,4,1,9],
 "text__logging_8h.html":[4,0,0,1,54],
 "text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,54,6],
@@ -233,9 +229,9 @@ var NAVTREEINDEX53 =
 "transform_8h.html":[4,0,0,1,1,2],
 "triangle__quadrature_8h.html":[4,0,0,8,14,1],
 "triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,51],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,52],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,52,0],
+"triangle__surface__mesh_8h.html":[4,0,0,4,2,49],
+"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,50],
+"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,50,0],
 "trigonometric__polynomial_8h.html":[4,0,0,1,2,16],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,2,16,2],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,2,16,2,2],
@@ -249,5 +245,9 @@ var NAVTREEINDEX53 =
 "type__pack_8h.html":[4,0,0,0,0,0,11],
 "type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76":[4,0,0,0,0,0,11,9],
 "type__pack_8h.html#a23e81e154cbda13ce43322ccfcedb7ed":[4,0,0,0,0,0,11,11],
-"type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,0,11,10]
+"type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,0,11,10],
+"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e":[4,0,0,0,0,0,11,12],
+"type__pack_8h.html#aca2ad496fcfd4aab65f4f9eaf50759cb":[4,0,0,0,0,0,11,8],
+"type__safe__index_8h.html":[4,0,0,1,56],
+"type__safe__index_8h.html#a1bc6fee0f84a9d283d208d778fcefe34":[4,0,0,1,56,5]
 };

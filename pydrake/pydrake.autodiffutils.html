@@ -362,7 +362,10 @@ derivatives, the sizes must match.</dd>
 <dd>An Eigen::Matrix with number of rows equal to the total size (rows
 x cols) of the input matrix and number of columns equal to the
 number of derivatives. Each output row corresponds to one entry of
-the input matrix, in input row order.</dd>
+the input matrix, using the input matrix storage order. For
+example, in the typical case of a ColMajor <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>,
+we have <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix(r,</span> <span class="pre">c).derivatives()</span> <span class="pre">==</span>
+<span class="pre">gradient_matrix.row(r</span> <span class="pre">+</span> <span class="pre">c</span> <span class="pre">*</span> <span class="pre">auto_diff_matrix.rows())</span></code>.</dd>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt>
 <dd>An Eigen type representing a matrix with AutoDiffScalar entries.
 The type will be inferred from the type of the
@@ -437,6 +440,10 @@ derivative of compile time size <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code>. Sets its values to be equal to <code class="docutils literal notranslate"><span class="pre">value</span></code>, and for
 each element i of <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>, sets derivative number
 <code class="docutils literal notranslate"><span class="pre">deriv_num_start</span></code> + i to one (all other derivatives set to zero).</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">value</span></code> is a matrix (rather than just a vector) note in
+particular that the return value will use the same storage order
+(ColMajor vs RowMajor) and that the derivative numbers count up using
+the <em>storage order</em> of <code class="docutils literal notranslate"><span class="pre">value(i)</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt>
 <dd>‘regular’ matrix of values</dd>
@@ -465,8 +472,8 @@ matrix.</p>
 (nrow x ncol) of the value matrix. Derivatives of value(j) should
 be stored in row j of the gradient matrix.</dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>:</dt>
-<dd>The matrix of AutoDiffScalars. Will have the same dimensions as
-the value matrix.</dd>
+<dd>The matrix of AutoDiffScalars. Will have the same dimensions and
+storage order as the value matrix.</dd>
 </dl>
 </dd></dl>
 

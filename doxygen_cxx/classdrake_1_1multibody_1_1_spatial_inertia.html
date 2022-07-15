@@ -280,9 +280,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c36e3056b0d3fcc88d8c972df267a0e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a3c36e3056b0d3fcc88d8c972df267a0e">MakeFromCentralInertia</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PScm_E, const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I_SScm_E)</td></tr>
 <tr class="memdesc:a3c36e3056b0d3fcc88d8c972df267a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a physical body or composite body S about a point P from a given mass, center of mass, and central rotational inertia.  <a href="#a3c36e3056b0d3fcc88d8c972df267a0e">More...</a><br /></td></tr>
 <tr class="separator:a3c36e3056b0d3fcc88d8c972df267a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad387eacafa0a8d59811738e04958c463"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ad387eacafa0a8d59811738e04958c463">MakeTestCube</a> (T mass=T(2), T length=T(3))</td></tr>
-<tr class="memdesc:ad387eacafa0a8d59811738e04958c463"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates a spatial inertia for a uniform-density cube B about Bo (B's origin point) with a given mass and length.  <a href="#ad387eacafa0a8d59811738e04958c463">More...</a><br /></td></tr>
-<tr class="separator:ad387eacafa0a8d59811738e04958c463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f022e7b3f0771715149a808b11343fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a1f022e7b3f0771715149a808b11343fd">MakeUnitary</a> ()</td></tr>
+<tr class="memdesc:a1f022e7b3f0771715149a808b11343fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates a spatial inertia whose mass is 1, position vector to center of mass is zero, and whose rotational inertia has moments of inertia of 1 and products of inertia of 0.  <a href="#a1f022e7b3f0771715149a808b11343fd">More...</a><br /></td></tr>
+<tr class="separator:a1f022e7b3f0771715149a808b11343fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -676,8 +676,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad387eacafa0a8d59811738e04958c463"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad387eacafa0a8d59811738e04958c463">&#9670;&nbsp;</a></span>MakeTestCube()</h2>
+<a id="a1f022e7b3f0771715149a808b11343fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f022e7b3f0771715149a808b11343fd">&#9670;&nbsp;</a></span>MakeUnitary()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,21 +686,10 @@ Related Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; MakeTestCube </td>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; MakeUnitary </td>
           <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>mass</em> = <code>T(2)</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>length</em> = <code>T(3)</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -710,27 +699,7 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>(Internal use only) Creates a spatial inertia for a uniform-density cube B about Bo (B's origin point) with a given mass and length. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>The mass of the cube. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>The length (or width or depth) of the cube. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">M_BBo_B</td><td>Cube B's spatial inertia about point Bo (B's origin), expressed in terms of unit vectors Bx, By, Bz, each of which are parallel to sides of the cube. Point Bo is the centroid of the face of the cube whose outward normal is -Bx. The position vector from Bo to Bcm (B's center of mass) is p_BoBcm_B = length/2 Bx. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the spatial inertia is invalid, which happens if mass is negative or length is negative. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>The default parameters mass = 2 and length = 3 correspond to a mass moment of inertia of 3 for any line that pass through Bcm. </dd></dl>
+<p>(Internal use only) Creates a spatial inertia whose mass is 1, position vector to center of mass is zero, and whose rotational inertia has moments of inertia of 1 and products of inertia of 0. </p>
 
 </div>
 </div>
