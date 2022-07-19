@@ -187,6 +187,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a40698b48da797019a237056d066f95da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a40698b48da797019a237056d066f95da">AddPositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const std::optional&lt; math::RigidTransformd &gt; &amp;X_AbarA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper)</td></tr>
 <tr class="memdesc:a40698b48da797019a237056d066f95da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the kinematic constraint that a point Q, fixed in frame B, should lie within a bounding box expressed in another frame A as p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper, where p_AQ is the position of point Q measured and expressed in frame A.  <a href="#a40698b48da797019a237056d066f95da">More...</a><br /></td></tr>
 <tr class="separator:a40698b48da797019a237056d066f95da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9acab6538a77ceaa44afa858fc1559ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a9acab6538a77ceaa44afa858fc1559ad">AddPositionCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AP, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, const Eigen::Ref&lt; const Eigen::Matrix3d &gt; &amp;C)</td></tr>
+<tr class="memdesc:a9acab6538a77ceaa44afa858fc1559ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost of the form (p_AP - p_AQ)ᵀ C (p_AP - p_AQ), where point P is specified relative to frame A and point Q is specified relative to frame B, and the cost is evaluated in frame A.  <a href="#a9acab6538a77ceaa44afa858fc1559ad">More...</a><br /></td></tr>
+<tr class="separator:a9acab6538a77ceaa44afa858fc1559ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a693b3a9627e08ae92d2978b4ca516b3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a693b3a9627e08ae92d2978b4ca516b3c">AddOrientationConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_AbarA, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameBbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_BbarB, double theta_bound)</td></tr>
 <tr class="memdesc:a693b3a9627e08ae92d2978b4ca516b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains that the angle difference θ between the orientation of frame A and the orientation of frame B to satisfy θ ≤ θ_bound.  <a href="#a693b3a9627e08ae92d2978b4ca516b3c">More...</a><br /></td></tr>
 <tr class="separator:a693b3a9627e08ae92d2978b4ca516b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -911,9 +914,67 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">frameB</td><td>The frame in which point Q is fixed. </td></tr>
     <tr><td class="paramname">p_BQ</td><td>The position of the point Q, rigidly attached to frame B, measured and expressed in frame B. </td></tr>
     <tr><td class="paramname">frameAbar</td><td>We will compute frame A from frame Abar. The bounding box p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper is expressed in frame A. </td></tr>
-    <tr><td class="paramname">X_AbarAThe</td><td>relative transform between frame Abar and A. If empty, then we use the identity transform. </td></tr>
+    <tr><td class="paramname">X_AbarA</td><td>The relative transform between frame Abar and A. If empty, then we use the identity transform. </td></tr>
     <tr><td class="paramname">p_AQ_lower</td><td>The lower bound on the position of point Q, measured and expressed in frame A. </td></tr>
     <tr><td class="paramname">p_AQ_upper</td><td>The upper bound on the position of point Q, measured and expressed in frame A. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9acab6538a77ceaa44afa858fc1559ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9acab6538a77ceaa44afa858fc1559ad">&#9670;&nbsp;</a></span>AddPositionCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; AddPositionCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_AP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_BQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a cost of the form (p_AP - p_AQ)ᵀ C (p_AP - p_AQ), where point P is specified relative to frame A and point Q is specified relative to frame B, and the cost is evaluated in frame A. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameA</td><td>The frame in which point P's position is measured. </td></tr>
+    <tr><td class="paramname">p_AP</td><td>The point P. </td></tr>
+    <tr><td class="paramname">frameB</td><td>The frame in which point Q's position is measured. </td></tr>
+    <tr><td class="paramname">p_BQ</td><td>The point Q. </td></tr>
+    <tr><td class="paramname">C</td><td>A 3x3 matrix representing the cost in quadratic form. </td></tr>
   </table>
   </dd>
 </dl>

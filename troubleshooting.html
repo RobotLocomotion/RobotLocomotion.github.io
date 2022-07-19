@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Troubleshooting common problems</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="ddg-search-form" action="https://duckduckgo.com/" method="get">
+              <input type="text" id="search-input" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="sites" value="drake.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Troubleshooting common problems</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This page contains a collection of tips and tricks for resolving common
+problems.</p>
+
+<h1 id="multibodyplant">MultibodyPlant</h1>
+
+<h2 id="exception-messages">Exception messages</h2>
+
+<h3 id="mbp-unconnected-query-object-port">Unconnected QueryObject port</h3>
+
+<p>The error message will include the message, “The provided context doesn’t show a
+connection for the plant’s query input port.”</p>
+
+<p><code class="highlighter-rouge">MultibodyPlant</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant">Python</a>)
+requires a connection to <code class="highlighter-rouge">SceneGraph</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1geometry_1_1_scene_graph.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.geometry.html#pydrake.geometry.SceneGraph_">Python</a>) in order to evaluate contact via its  <code class="highlighter-rouge">QueryObject</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1geometry_1_1_query_object.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.geometry.html#pydrake.geometry.QueryObject_">Python</a>). Attempts to evaluate output
+ports that expose or depend on contact results (the geometric data and/or forces
+that arise from the contact between bodies’ collision geometries) will fail.
+Evaluating the time derivatives (e.g., when running a continuous simulation)
+will likewise fail.</p>
+
+<p>The connection can be reported as missing for several reasons:</p>
+
+<ol>
+  <li>Was a <code class="highlighter-rouge">SceneGraph</code> instance created and connected?
+    <ul>
+      <li>The simplest solution is to use <code class="highlighter-rouge">AddMultibodyPlantSceneGraph()</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.AddMultibodyPlantSceneGraph">Python</a>). It will construct and connect
+the plant and scene graph together for you.</li>
+    </ul>
+  </li>
+  <li>Did you provide the right context?
+    <ul>
+      <li>You’ve created and connected the systems in a <code class="highlighter-rouge">Diagram</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_diagram.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Diagram">Python</a>) and allocated a <code class="highlighter-rouge">Context</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_context.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Context">Python</a>) for the <code class="highlighter-rouge">Diagram</code>.</li>
+      <li>Make sure you extract the <code class="highlighter-rouge">MultibodyPlant</code>’s context from the <code class="highlighter-rouge">Diagram</code>’s
+<code class="highlighter-rouge">Context</code>. Do not allocate a <code class="highlighter-rouge">Context</code> directly from the plant. Use
+<code class="highlighter-rouge">System::GetMyContextFromRoot()</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyContextFromRoot">Python</a>) to acquire the plant’s <code class="highlighter-rouge">Context</code> from the
+<code class="highlighter-rouge">Diagram</code>’s context; this will preserve all of the necessary connections.
+E.g.,</li>
+    </ul>
+
+    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
+   <span class="c1"># Build plant and scene graph and automatically connect them.
+</span>   <span class="n">plant</span><span class="p">,</span> <span class="n">scene_graph</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span>
+       <span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+   <span class="o">...</span>
+   <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">()</span>
+
+   <span class="c1"># WRONG.  This will create a Context for the plant only (no connected
+</span>   <span class="c1"># SceneGraph).
+</span>   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="o">.</span><span class="n">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant</span><span class="o">.</span><span class="n">CreateDefaultContext</span><span class="p">())</span>
+
+   <span class="n">context</span> <span class="o">=</span> <span class="n">diagram</span><span class="o">.</span><span class="n">CreateDefaultContext</span><span class="p">()</span>
+   <span class="c1"># Extract the plant's context from the diagram's to invoke plant methods.
+</span>   <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="o">.</span><span class="n">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<!-- Links to the various Drake doxygen pages.
+     Order determined by directory structure first and names second.
+-->
+
+<!-- drake/geometry -->
+
+<!-- drake/multibody/plant -->
+
+<!-- drake/systems/framework -->
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

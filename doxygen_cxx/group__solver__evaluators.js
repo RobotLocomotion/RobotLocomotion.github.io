@@ -77,6 +77,15 @@ var group__solver__evaluators =
       [ "operator=", "classdrake_1_1multibody_1_1_position_constraint.html#a98426350d6161bba3747119038010018", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_position_constraint.html#a8dce53e06df016444d9dd50d00a63154", null ]
     ] ],
+    [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html", [
+      [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html#a0967f464d703237ef413e50ac9a5afdd", null ],
+      [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html#a9cb57e16570fe6d556d5dfbf6239361c", null ],
+      [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html#a114f1c176f15cfb8bdf749310abe3599", null ],
+      [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html#a33b780f941b1246341f5fd44a27de894", null ],
+      [ "~PositionCost", "classdrake_1_1multibody_1_1_position_cost.html#aea30e32707f124096a67520f5a46f404", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_position_cost.html#aba06651e904e4d64d9f53ea5b2efda00", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_position_cost.html#ae9072d05126141177968d5cfbb70d7e4", null ]
+    ] ],
     [ "UnitQuaternionConstraint", "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html", [
       [ "UnitQuaternionConstraint", "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#adf7b053798973f21c613740bc869b28a", null ],
       [ "UnitQuaternionConstraint", "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#a5212ee2633a6454da65ab6d5bfd1faa1", null ],

@@ -585,8 +585,9 @@ more details on the parameters in options.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddPostureCost">
 <code class="descname">AddPostureCost</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, q_desired: numpy.ndarray[numpy.float64[m, 1]], body_position_cost: numpy.ndarray[numpy.float64[m, 1]], body_orientation_cost: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddPostureCost" title="Permalink to this definition">¶</a></dt>
-<dd><p>Penalizes the deviation to the desired posture. For each body (except
-the world) in the kinematic tree, we add the cost</p>
+<dd><p>Penalizes the deviation to the desired posture.</p>
+<p>For each body (except the world) in the kinematic tree, we add the
+cost</p>
 <p>∑ᵢ body_position_cost(i) * body_position_error(i) +
 body_orientation_cost(i) * body_orientation_error(i) where
 <code class="docutils literal notranslate"><span class="pre">body_position_error(i)</span></code> is computed as the Euclidean distance error
@@ -608,9 +609,9 @@ value <code class="docutils literal notranslate"><span class="pre">body_position
 meters).</dd>
 </dl>
 <p>Precondition:
-1. body_position_cost.rows() == plant.num_bodies(), where <code class="docutils literal notranslate"><span class="pre">plant</span></code></p>
+1. body_position_cost.rows() == plant.num_bodies(), where <code class="docutils literal notranslate"><span class="pre">plant</span></code> is the</p>
 <blockquote>
-<div>is the input argument in the constructor of the class.</div></blockquote>
+<div>input argument in the constructor of the class.</div></blockquote>
 <ol class="arabic" start="2">
 <li><p class="first">body_position_cost(i) is non-negative.</p>
 <blockquote>
@@ -624,9 +625,9 @@ meters).</dd>
 <dd>The cost for each body’s orientation error.</dd>
 </dl>
 <p>Precondition:
-1. body_orientation_cost.rows() == plant.num_bodies() , where</p>
+1. body_orientation_cost.rows() == plant.num_bodies() , where <code class="docutils literal notranslate"><span class="pre">plant</span></code> is</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">plant</span></code> is the input argument in the constructor of the class.</div></blockquote>
+<div>the input argument in the constructor of the class.</div></blockquote>
 <ol class="arabic" start="2">
 <li><p class="first">body_position_cost(i) is non-negative.</p>
 <blockquote>
@@ -1251,15 +1252,35 @@ and expressed in frame B.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameAbar</span></code>:</dt>
 <dd>We will compute frame A from frame Abar. The bounding box
 p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper is expressed in frame A.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AbarAThe</span></code>:</dt>
-<dd>relative transform between frame Abar and A. If empty, then we use
-the identity transform.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AbarA</span></code>:</dt>
+<dd>The relative transform between frame Abar and A. If empty, then we
+use the identity transform.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQ_lower</span></code>:</dt>
 <dd>The lower bound on the position of point Q, measured and expressed
 in frame A.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQ_upper</span></code>:</dt>
 <dd>The upper bound on the position of point Q, measured and expressed
 in frame A.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionCost">
+<code class="descname">AddPositionCost</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], p_AP: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], C: numpy.ndarray[numpy.float64[3, 3], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Cost]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a cost of the form (p_AP - p_AQ)ᵀ C (p_AP - p_AQ), where point P
+is specified relative to frame A and point Q is specified relative to
+frame B, and the cost is evaluated in frame A.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame in which point P’s position is measured.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt>
+<dd>The point P.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame in which point Q’s position is measured.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The point Q.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt>
+<dd>A 3x3 matrix representing the cost in quadratic form.</dd>
 </dl>
 </dd></dl>
 
@@ -1657,6 +1678,58 @@ Constraint::UpdateLowerBound, as in LinearConstraint.</p>
 <p class="last">if the users want to expose this method in a sub-class, do using
 Constraint::UpdateUpperBound, as in LinearConstraint.</p>
 </div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.PositionCost">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">PositionCost</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<p>Implements a cost of the form (p_AP - p_AQ)ᵀ C (p_AP - p_AQ), where
+point P is specified relative to frame A and point Q is specified
+relative to frame B, and the cost is evaluated in frame A.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.PositionCost.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionCost.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PositionCost, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameA: pydrake.multibody.tree.Frame_[float], p_AP: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], C: numpy.ndarray[numpy.float64[3, 3], flags.f_contiguous], plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructs PositionCost object.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the cost is implemented. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this cost.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame in which point P’s position is measured.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt>
+<dd>The point P.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame in which point Q’s position is measured.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The point Q.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt>
+<dd>A 3x3 matrix representing the cost in quadratic form.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt>
+<dd>A context for the <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PositionCost, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AP: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], C: numpy.ndarray[numpy.float64[3, 3], flags.f_contiguous], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the
+gradient of the cost is computed from autodiff.</p>
 </dd></dl>
 
 </dd></dl>

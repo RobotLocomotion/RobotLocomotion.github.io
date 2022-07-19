@@ -56,6 +56,7 @@ var namespacedrake_1_1multibody =
     [ "PointPairContactInfo", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", "classdrake_1_1multibody_1_1_point_pair_contact_info" ],
     [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint" ],
     [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html", "classdrake_1_1multibody_1_1_position_constraint" ],
+    [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html", "classdrake_1_1multibody_1_1_position_cost" ],
     [ "PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html", "classdrake_1_1multibody_1_1_prismatic_joint" ],
     [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html", "classdrake_1_1multibody_1_1_propeller" ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", "structdrake_1_1multibody_1_1_propeller_info" ],

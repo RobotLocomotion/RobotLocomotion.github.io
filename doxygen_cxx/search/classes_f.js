@@ -50,6 +50,7 @@ var searchData=
   ['portbase',['PortBase',['../classdrake_1_1systems_1_1_port_base.html',1,'drake::systems']]],
   ['portswitch',['PortSwitch',['../classdrake_1_1systems_1_1_port_switch.html',1,'drake::systems']]],
   ['positionconstraint',['PositionConstraint',['../classdrake_1_1multibody_1_1_position_constraint.html',1,'drake::multibody']]],
+  ['positioncost',['PositionCost',['../classdrake_1_1multibody_1_1_position_cost.html',1,'drake::multibody']]],
   ['positivesemidefiniteconstraint',['PositiveSemidefiniteConstraint',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html',1,'drake::solvers']]],
   ['prismaticjoint',['PrismaticJoint',['../classdrake_1_1multibody_1_1_prismatic_joint.html',1,'drake::multibody']]],
   ['product',['Product',['../structdrake_1_1_polynomial_1_1_product.html',1,'drake::Polynomial']]],

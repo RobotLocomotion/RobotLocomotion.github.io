@@ -146,6 +146,7 @@ var searchData=
   ['_7epolynomialconstraint',['~PolynomialConstraint',['../classdrake_1_1solvers_1_1_polynomial_constraint.html#a73f0868e6a43746c0d368f80b12ed428',1,'drake::solvers::PolynomialConstraint']]],
   ['_7eportbase',['~PortBase',['../classdrake_1_1systems_1_1_port_base.html#adbd7baa1fba1a5fac0582b5d56378237',1,'drake::systems::PortBase']]],
   ['_7epositionconstraint',['~PositionConstraint',['../classdrake_1_1multibody_1_1_position_constraint.html#a2ea90fb3e5889e774d8538071f1a1be9',1,'drake::multibody::PositionConstraint']]],
+  ['_7epositioncost',['~PositionCost',['../classdrake_1_1multibody_1_1_position_cost.html#aea30e32707f124096a67520f5a46f404',1,'drake::multibody::PositionCost']]],
   ['_7epositivesemidefiniteconstraint',['~PositiveSemidefiniteConstraint',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a606f4db084fea67dad1e32fd17d580e1',1,'drake::solvers::PositiveSemidefiniteConstraint']]],
   ['_7equadraticconstraint',['~QuadraticConstraint',['../classdrake_1_1solvers_1_1_quadratic_constraint.html#ac9c867fcd0ac956fbd69038ac7e9d3da',1,'drake::solvers::QuadraticConstraint']]],
   ['_7equadraticcost',['~QuadraticCost',['../classdrake_1_1solvers_1_1_quadratic_cost.html#ad7bdab17ed07c782e00ed7b5f9683071',1,'drake::solvers::QuadraticCost']]],
