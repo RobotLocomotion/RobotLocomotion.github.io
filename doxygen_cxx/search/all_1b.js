@@ -124,6 +124,7 @@ var searchData=
   ['_7enloptsolver',['~NloptSolver',['../classdrake_1_1solvers_1_1_nlopt_solver.html#a50f7ff079b9a17c786c55fd5c77e54e4',1,'drake::solvers::NloptSolver']]],
   ['_7eobject',['~Object',['../classdrake_1_1pydrake_1_1_object.html#ae2a5c95370a1d983c18c22e525f2a987',1,'drake::pydrake::Object']]],
   ['_7eorientationconstraint',['~OrientationConstraint',['../classdrake_1_1multibody_1_1_orientation_constraint.html#aced68d25b3b28edb4e1af6ac2f8fd541',1,'drake::multibody::OrientationConstraint']]],
+  ['_7eorientationcost',['~OrientationCost',['../classdrake_1_1multibody_1_1_orientation_cost.html#a93da0e85f63174877d0f84a2cdce405a',1,'drake::multibody::OrientationCost']]],
   ['_7eosqpsolver',['~OsqpSolver',['../classdrake_1_1solvers_1_1_osqp_solver.html#a8ed370bb9c586abb237c55a5f36a4815',1,'drake::solvers::OsqpSolver']]],
   ['_7eoutputport',['~OutputPort',['../classdrake_1_1systems_1_1_output_port.html#aed197f7c9bc394a53f78d5fe695a11d1',1,'drake::systems::OutputPort']]],
   ['_7eoutputportbase',['~OutputPortBase',['../classdrake_1_1systems_1_1_output_port_base.html#a09599f7fee6b9453fc44d31a44a4b7f7',1,'drake::systems::OutputPortBase']]],

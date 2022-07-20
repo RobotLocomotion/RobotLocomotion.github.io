@@ -1,5 +1,16 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html":[3,0,0,14,8,14],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,14,1],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,14,8,14,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,14,2],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html":[3,0,0,14,8,15],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,15,1],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea":[3,0,0,14,8,15,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,15,2],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html":[3,0,0,14,8,16],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,16,1],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,14,8,16,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,16,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html":[3,0,0,14,8,17],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,17,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX53 =
 "trajectory__source_8h.html":[4,0,0,11,6,25],
 "transform_8h.html":[4,0,0,1,1,2],
 "triangle__quadrature_8h.html":[4,0,0,8,14,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,49],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,50],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,50,0],
-"trigonometric__polynomial_8h.html":[4,0,0,1,2,16],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,2,16,2],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,2,16,2,2],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44aea1eea0840dd2bfd79a5cbfdf49ea143":[4,0,0,1,2,16,2,1],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb":[4,0,0,1,2,16,2,0],
-"trigonometric__polynomial_8h.html#a13c5d9eccfc9643fdd5764d6e72b8faf":[4,0,0,1,2,16,1],
-"trigonometric__polynomial_8h.html#a1db53e224c37b630f7ec9d1615215449":[4,0,0,1,2,16,4],
-"trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,2,16,3]
+"triangle__quadrature__rule_8h.html":[4,0,0,8,14,2]
 };

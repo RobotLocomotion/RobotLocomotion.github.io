@@ -218,6 +218,7 @@ var hierarchy =
         ] ]
       ] ],
       [ "Cost", "classdrake_1_1solvers_1_1_cost.html", [
+        [ "OrientationCost", "classdrake_1_1multibody_1_1_orientation_cost.html", null ],
         [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html", null ],
         [ "EvaluatorCost< EvaluatorType >", "classdrake_1_1solvers_1_1_evaluator_cost.html", null ],
         [ "L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html", null ],
@@ -578,8 +579,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]

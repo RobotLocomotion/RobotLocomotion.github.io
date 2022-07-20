@@ -1,0 +1,569 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: OrientationCost Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_orientation_cost.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1_orientation_cost-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">OrientationCost Class Reference<div class="ingroups"><a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__solver__evaluators.html">Costs and Constraints</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implements a cost of the form <code>c * (1 - cos(θ))</code>, where θ is the angle between the orientation of frame A and the orientation of frame B, and <code>c</code> is a cost scaling. </p>
+</div>
+<p><code>#include &lt;drake/multibody/inverse_kinematics/orientation_cost.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af9be8815c3a56f599ebdf4fc374891f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html#af9be8815c3a56f599ebdf4fc374891f5">OrientationCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_AbarA, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameBbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_BbarB, double c, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *plant_context)</td></tr>
+<tr class="memdesc:af9be8815c3a56f599ebdf4fc374891f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html" title="Implements a cost of the form c * (1 - cos(θ)), where θ is the angle between the orientation of frame...">OrientationCost</a> object.  <a href="#af9be8815c3a56f599ebdf4fc374891f5">More...</a><br /></td></tr>
+<tr class="separator:af9be8815c3a56f599ebdf4fc374891f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4d56ba3ea404dc555e9b20b0eeb950"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html#a2f4d56ba3ea404dc555e9b20b0eeb950">OrientationCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;frameAbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_AbarA, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;frameBbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_BbarB, double c, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *plant_context)</td></tr>
+<tr class="memdesc:a2f4d56ba3ea404dc555e9b20b0eeb950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <a href="#a2f4d56ba3ea404dc555e9b20b0eeb950">More...</a><br /></td></tr>
+<tr class="separator:a2f4d56ba3ea404dc555e9b20b0eeb950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93da0e85f63174877d0f84a2cdce405a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html#a93da0e85f63174877d0f84a2cdce405a">~OrientationCost</a> () override</td></tr>
+<tr class="separator:a93da0e85f63174877d0f84a2cdce405a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a66f9f9415ab0c93ed97d3503c856d87e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html#a66f9f9415ab0c93ed97d3503c856d87e">OrientationCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;)=delete</td></tr>
+<tr class="separator:a66f9f9415ab0c93ed97d3503c856d87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea8ea2f07e6f0c96d1a60c3d75267dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html#a0ea8ea2f07e6f0c96d1a60c3d75267dd">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;)=delete</td></tr>
+<tr class="separator:a0ea8ea2f07e6f0c96d1a60c3d75267dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904d2e0768e7cb0546c213b6f035d2e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html#a904d2e0768e7cb0546c213b6f035d2e9">OrientationCost</a> (<a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a904d2e0768e7cb0546c213b6f035d2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826128003751513bc7513bc1d1cb9456"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html#a826128003751513bc7513bc1d1cb9456">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a826128003751513bc7513bc1d1cb9456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1solvers_1_1_cost"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1solvers_1_1_cost')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a></td></tr>
+<tr class="memitem:a7b9f49304c49f28ade4c1cc4b24b592a inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a">Cost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &amp;)=delete</td></tr>
+<tr class="separator:a7b9f49304c49f28ade4c1cc4b24b592a inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae1f4ee58168019976309648d785020 inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a7ae1f4ee58168019976309648d785020">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &amp;)=delete</td></tr>
+<tr class="separator:a7ae1f4ee58168019976309648d785020 inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9316f2ac6c7ee0f1f609573af3a8c503 inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a9316f2ac6c7ee0f1f609573af3a8c503">Cost</a> (<a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a9316f2ac6c7ee0f1f609573af3a8c503 inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58bbbd7e8c9313e02ddb36d5dd22865e inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a58bbbd7e8c9313e02ddb36d5dd22865e">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a58bbbd7e8c9313e02ddb36d5dd22865e inherit pub_methods_classdrake_1_1solvers_1_1_cost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1solvers_1_1_evaluator_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a></td></tr>
+<tr class="memitem:a6f67d60764689193d6eeb89600ef781e inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6f67d60764689193d6eeb89600ef781e">~EvaluatorBase</a> ()</td></tr>
+<tr class="separator:a6f67d60764689193d6eeb89600ef781e inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50219f96db07dfe231abad115aba84c2 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a50219f96db07dfe231abad115aba84c2">Eval</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, Eigen::VectorXd *y) const</td></tr>
+<tr class="memdesc:a50219f96db07dfe231abad115aba84c2 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the expression.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a50219f96db07dfe231abad115aba84c2">More...</a><br /></td></tr>
+<tr class="separator:a50219f96db07dfe231abad115aba84c2 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf337592a3f79f4797aa0856cf72865f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#adf337592a3f79f4797aa0856cf72865f">Eval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> &gt; &amp;x, <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> *y) const</td></tr>
+<tr class="memdesc:adf337592a3f79f4797aa0856cf72865f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the expression.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#adf337592a3f79f4797aa0856cf72865f">More...</a><br /></td></tr>
+<tr class="separator:adf337592a3f79f4797aa0856cf72865f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae573cc421e67ff0cfa10b9885ace7b93 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ae573cc421e67ff0cfa10b9885ace7b93">Eval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;x, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; *y) const</td></tr>
+<tr class="memdesc:ae573cc421e67ff0cfa10b9885ace7b93 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the expression.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#ae573cc421e67ff0cfa10b9885ace7b93">More...</a><br /></td></tr>
+<tr class="separator:ae573cc421e67ff0cfa10b9885ace7b93 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b582ca26190005482986c1ac7f8609f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9b582ca26190005482986c1ac7f8609f">set_description</a> (const std::string &amp;description)</td></tr>
+<tr class="memdesc:a9b582ca26190005482986c1ac7f8609f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a human-friendly description for the evaluator.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a9b582ca26190005482986c1ac7f8609f">More...</a><br /></td></tr>
+<tr class="separator:a9b582ca26190005482986c1ac7f8609f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d396aa41946b5200c405baa40542d1c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9d396aa41946b5200c405baa40542d1c">get_description</a> () const</td></tr>
+<tr class="memdesc:a9d396aa41946b5200c405baa40542d1c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for a human-friendly description for the evaluator.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a9d396aa41946b5200c405baa40542d1c">More...</a><br /></td></tr>
+<tr class="separator:a9d396aa41946b5200c405baa40542d1c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae258bf29427417f068a37f7e7d505c71 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ae258bf29427417f068a37f7e7d505c71">Display</a> (std::ostream &amp;os, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars) const</td></tr>
+<tr class="memdesc:ae258bf29427417f068a37f7e7d505c71 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats this evaluator into the given stream using <code>vars</code> for the bound decision variable names.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#ae258bf29427417f068a37f7e7d505c71">More...</a><br /></td></tr>
+<tr class="separator:ae258bf29427417f068a37f7e7d505c71 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6075120b53bfe7e4341d7e4a0c526cca inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6075120b53bfe7e4341d7e4a0c526cca">Display</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:a6075120b53bfe7e4341d7e4a0c526cca inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats this evaluator into the given stream, without displaying the decision variables it is bound to.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a6075120b53bfe7e4341d7e4a0c526cca">More...</a><br /></td></tr>
+<tr class="separator:a6075120b53bfe7e4341d7e4a0c526cca inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a> () const</td></tr>
+<tr class="memdesc:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the number of variables, namely the number of rows in x, as used in Eval(x, y).  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">More...</a><br /></td></tr>
+<tr class="separator:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e4d5af707e93ac3ee4f0b749da86a5 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a> () const</td></tr>
+<tr class="memdesc:a25e4d5af707e93ac3ee4f0b749da86a5 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the number of outputs, namely the number of rows in y, as used in Eval(x, y).  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">More...</a><br /></td></tr>
+<tr class="separator:a25e4d5af707e93ac3ee4f0b749da86a5 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604f98ac54b2b64e7dbe46efb31e9af1 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a604f98ac54b2b64e7dbe46efb31e9af1">SetGradientSparsityPattern</a> (const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a187ba29ac182f53fcfe0654e95fcb3af">gradient_sparsity_pattern</a>)</td></tr>
+<tr class="memdesc:a604f98ac54b2b64e7dbe46efb31e9af1 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sparsity pattern of the gradient matrix ∂y/∂x (the gradient of y value in Eval, w.r.t x in Eval) .  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a604f98ac54b2b64e7dbe46efb31e9af1">More...</a><br /></td></tr>
+<tr class="separator:a604f98ac54b2b64e7dbe46efb31e9af1 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187ba29ac182f53fcfe0654e95fcb3af inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a187ba29ac182f53fcfe0654e95fcb3af">gradient_sparsity_pattern</a> () const</td></tr>
+<tr class="memdesc:a187ba29ac182f53fcfe0654e95fcb3af inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector of (row_index, col_index) that contains all the entries in the gradient of Eval function (∂y/∂x) whose value could be non-zero, namely if ∂yᵢ/∂xⱼ could be non-zero, then the pair (i, j) is in gradient_sparsity_pattern.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a187ba29ac182f53fcfe0654e95fcb3af">More...</a><br /></td></tr>
+<tr class="separator:a187ba29ac182f53fcfe0654e95fcb3af inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab0b699b7b33fe163af28e437dd9e38 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9ab0b699b7b33fe163af28e437dd9e38">EvaluatorBase</a> (const <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;)=delete</td></tr>
+<tr class="separator:a9ab0b699b7b33fe163af28e437dd9e38 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72a0677c344c7bedf3691aabe24a8e9 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ab72a0677c344c7bedf3691aabe24a8e9">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;)=delete</td></tr>
+<tr class="separator:ab72a0677c344c7bedf3691aabe24a8e9 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab708ca2f145a64e8a8a30a36582414a9 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ab708ca2f145a64e8a8a30a36582414a9">EvaluatorBase</a> (<a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ab708ca2f145a64e8a8a30a36582414a9 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b5e198f89ef48086e1e2e8cc89292e8 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a5b5e198f89ef48086e1e2e8cc89292e8">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a5b5e198f89ef48086e1e2e8cc89292e8 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_cost"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1solvers_1_1_cost')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a></td></tr>
+<tr class="memitem:a4907fce6f06bde256c478ddad12dccb7 inherit pro_methods_classdrake_1_1solvers_1_1_cost"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a4907fce6f06bde256c478ddad12dccb7">Cost</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, const std::string &amp;description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a4907fce6f06bde256c478ddad12dccb7 inherit pro_methods_classdrake_1_1solvers_1_1_cost"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a cost evaluator.  <a href="classdrake_1_1solvers_1_1_cost.html#a4907fce6f06bde256c478ddad12dccb7">More...</a><br /></td></tr>
+<tr class="separator:a4907fce6f06bde256c478ddad12dccb7 inherit pro_methods_classdrake_1_1solvers_1_1_cost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1solvers_1_1_evaluator_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a></td></tr>
+<tr class="memitem:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a02a07120f7c6129f84805da698628514">EvaluatorBase</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, const std::string &amp;description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a evaluator.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a02a07120f7c6129f84805da698628514">More...</a><br /></td></tr>
+<tr class="separator:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3999c2d5247045f02ba7e732ca5b6a81 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a3999c2d5247045f02ba7e732ca5b6a81">DoDisplay</a> (std::ostream &amp;os, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars) const</td></tr>
+<tr class="memdesc:a3999c2d5247045f02ba7e732ca5b6a81 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI implementation of Display.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a3999c2d5247045f02ba7e732ca5b6a81">More...</a><br /></td></tr>
+<tr class="separator:a3999c2d5247045f02ba7e732ca5b6a81 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5844a758fb9db2cbf63e64cafe833a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6a5844a758fb9db2cbf63e64cafe833a">set_num_outputs</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>)</td></tr>
+<tr class="separator:a6a5844a758fb9db2cbf63e64cafe833a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a66f9f9415ab0c93ed97d3503c856d87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f9f9415ab0c93ed97d3503c856d87e">&#9670;&nbsp;</a></span>OrientationCost() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a904d2e0768e7cb0546c213b6f035d2e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904d2e0768e7cb0546c213b6f035d2e9">&#9670;&nbsp;</a></span>OrientationCost() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9be8815c3a56f599ebdf4fc374891f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9be8815c3a56f599ebdf4fc374891f5">&#9670;&nbsp;</a></span>OrientationCost() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameAbar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R_AbarA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameBbar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R_BbarB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>plant_context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html" title="Implements a cost of the form c * (1 - cos(θ)), where θ is the angle between the orientation of frame...">OrientationCost</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> on which the cost is implemented. <code>plant</code> should be alive during the lifetime of this cost. </td></tr>
+    <tr><td class="paramname">frameAbar</td><td>A frame on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+    <tr><td class="paramname">R_AbarA</td><td>The rotation matrix describing the orientation of frame A relative to Abar. </td></tr>
+    <tr><td class="paramname">frameBbar</td><td>A frame on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+    <tr><td class="paramname">R_BbarB</td><td>The rotation matrix describing the orientation of frame B relative to Bbar. </td></tr>
+    <tr><td class="paramname">c</td><td>A scalar cost weight. </td></tr>
+    <tr><td class="paramname">plant_context</td><td>A context for the <code>plant</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>plant</code> is nullptr. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>plant_context</code> is nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f4d56ba3ea404dc555e9b20b0eeb950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4d56ba3ea404dc555e9b20b0eeb950">&#9670;&nbsp;</a></span>OrientationCost() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameAbar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R_AbarA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameBbar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R_BbarB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant_context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded constructor. </p>
+<p>Same as the constructor with the double version (using <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt;double&gt;</a> and <a class="el" href="classdrake_1_1systems_1_1_context.html">Context&lt;double&gt;</a>). Except the gradient of the cost is computed from autodiff. </p>
+
+</div>
+</div>
+<a id="a93da0e85f63174877d0f84a2cdce405a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93da0e85f63174877d0f84a2cdce405a">&#9670;&nbsp;</a></span>~OrientationCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0ea8ea2f07e6f0c96d1a60c3d75267dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea8ea2f07e6f0c96d1a60c3d75267dd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a826128003751513bc7513bc1d1cb9456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826128003751513bc7513bc1d1cb9456">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/inverse_kinematics/<a class="el" href="orientation__cost_8h.html">orientation_cost.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_orientation_cost.html">OrientationCost</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

@@ -167,19 +167,19 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1examples_1_1multibod
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a71833e144a8146fca220d2e32453098a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html#a71833e144a8146fca220d2e32453098a">MakeCylinderPlant</a> (double radius, double length, double mass, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">drake::multibody::CoulombFriction</a>&lt; double &gt; &amp;surface_friction, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;gravity_W, double dt, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:a71833e144a8146fca220d2e32453098a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method makes a MultibodyPlant model of a cylinder free to fall onto the ground.  <a href="#a71833e144a8146fca220d2e32453098a">More...</a><br /></td></tr>
-<tr class="separator:a71833e144a8146fca220d2e32453098a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a816161acad2f3ad08d68e4507ee9de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html#a5a816161acad2f3ad08d68e4507ee9de">PopulateCylinderPlant</a> (double radius, double length, double mass, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">drake::multibody::CoulombFriction</a>&lt; double &gt; &amp;surface_friction, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;gravity_W, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant)</td></tr>
+<tr class="memdesc:a5a816161acad2f3ad08d68e4507ee9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function populates the given MultibodyPlant with a model of a cylinder free to fall onto the ground.  <a href="#a5a816161acad2f3ad08d68e4507ee9de">More...</a><br /></td></tr>
+<tr class="separator:a5a816161acad2f3ad08d68e4507ee9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a71833e144a8146fca220d2e32453098a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71833e144a8146fca220d2e32453098a">&#9670;&nbsp;</a></span>MakeCylinderPlant()</h2>
+<a id="a5a816161acad2f3ad08d68e4507ee9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a816161acad2f3ad08d68e4507ee9de">&#9670;&nbsp;</a></span>PopulateCylinderPlant()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt;double&gt; &gt; drake::examples::multibody::cylinder_with_multicontact::MakeCylinderPlant </td>
+          <td class="memname">void drake::examples::multibody::cylinder_with_multicontact::PopulateCylinderPlant </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>radius</em>, </td>
@@ -211,14 +211,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *&#160;</td>
-          <td class="paramname"><em>scene_graph</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -228,7 +222,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method makes a MultibodyPlant model of a cylinder free to fall onto the ground. </p>
+<p>This function populates the given MultibodyPlant with a model of a cylinder free to fall onto the ground. </p>
 <p>The model adds a fixed number of spheres (10) around each rim of the cylinder as a way of emulating multicontact so that we can evaluate MultibodyPlant's contact solver. MultibodyPlant models the contact of the ball with the ground as a perfectly inelastic collision (zero coefficient of restitution), i.e. energy is lost due to the collision.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -237,16 +231,12 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>The mass of the cylinder. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">surface_friction</td><td>The Coulomb's law coefficients of friction. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">gravity_W</td><td>The acceleration of gravity vector, expressed in the world frame W. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname"><a class="el" href="namespacedrake_1_1examples_1_1scene__graph.html">scene_graph</a></td><td>A valid pointer to a SceneGraph. This factory method will register the new multibody plant to be a source for that scene graph and it will also register geometry for contact modeling. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">plant</td><td>A valid pointer to a MultibodyPlant. This function will register geometry for contact modeling. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="namespacedrake_1_1examples_1_1scene__graph.html">scene_graph</a> is nullptr. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>plant</code> is not null, finalized, and is registered with a SceneGraph. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The given plant is not finalized. You must call Finalize() on the new model once you are done populating it. </dd></dl>
 
 </div>
 </div>

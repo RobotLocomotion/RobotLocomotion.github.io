@@ -50,6 +50,7 @@ var namespacedrake_1_1multibody =
     [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", "structdrake_1_1multibody_1_1_multibody_plant_config" ],
     [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", "classdrake_1_1multibody_1_1_multibody_plant_tester" ],
     [ "OrientationConstraint", "classdrake_1_1multibody_1_1_orientation_constraint.html", "classdrake_1_1multibody_1_1_orientation_constraint" ],
+    [ "OrientationCost", "classdrake_1_1multibody_1_1_orientation_cost.html", "classdrake_1_1multibody_1_1_orientation_cost" ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", "classdrake_1_1multibody_1_1_package_map" ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html", "classdrake_1_1multibody_1_1_parser" ],
     [ "PlanarJoint", "classdrake_1_1multibody_1_1_planar_joint.html", "classdrake_1_1multibody_1_1_planar_joint" ],

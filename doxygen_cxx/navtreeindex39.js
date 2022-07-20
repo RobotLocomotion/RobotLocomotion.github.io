@@ -1,5 +1,14 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a4d15df8e031ca4601c949f8c3a1afd3e":[1,4,2,8,45],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a520ff45c86c405ef666ce0e7fcdc3b05":[1,4,2,8,13],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a5373b0c818a73d7b1730a9a1bd91fb25":[1,4,2,8,16],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a5495e0b649d3c61e05c6d3e2082bbe46":[1,4,2,8,21],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a5c8cb57a551d53b568c0014149b05bcf":[1,4,2,8,7],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a5c9f601051a299b35d7c47d3e921ec5e":[1,4,2,8,33],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a60218cf6a183ddb4eb8b6e1f966113a3":[1,4,2,8,27],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a63b08c13c0f9c0398a7a37d6770110bb":[1,4,2,8,31],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a68d2e991f48fbbc0b1d64613033930fc":[1,4,2,8,18],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a6e1c492b070442dd36f394d9bf0b15a3":[1,4,2,8,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a7a85c23236d85e9f314e3c5287e54271":[1,4,2,8,46],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a7d2298dd22d4c03fea1f270e2136ad81":[1,4,2,8,14],
@@ -240,14 +249,5 @@ var NAVTREEINDEX39 =
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,1,3,8],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3af4f2d4069e14a1b6ff6d509f180e71":[3,0,1,3,6],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a46fa4205ca3491f551cd0936632104c5":[3,0,1,3,11],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a90e4c78138b3a7bb0bb23723daef33a8":[3,0,1,3,5],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,1,3,9],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab2a120b051838aa55cd3cf694a3c75d1":[3,0,1,3,3],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,1,3,1],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,1,3,7],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,1,3,13],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad909a0d6f40d56faad5e3f60fe0326c5":[3,0,1,3,14],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee44966b6c6ff31b5e49a515bea53295":[3,0,1,3,4],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,27],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0ae5c6c04205be18238368d567627683":[3,0,1,27,4]
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a90e4c78138b3a7bb0bb23723daef33a8":[3,0,1,3,5]
 };

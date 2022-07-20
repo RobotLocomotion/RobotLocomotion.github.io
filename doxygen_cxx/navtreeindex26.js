@@ -1,5 +1,14 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1symbolic_1_1_generic_polynomial.html":[3,0,0,13,54],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a022d7d3ca1bb3ed718db2900c4814c96":[3,0,0,13,54,32],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a07e43dd6afaaafb0291e1067a4479212":[3,0,0,13,54,41],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339":[3,0,0,13,54,20],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a26689036f54b123a4e4ee21534891be4":[3,0,0,13,54,10],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a26f55e6d78730b68a8d404a772d4c8a1":[3,0,0,13,54,12],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a30562eee151b6e3918fb96c62f3d96f6":[3,0,0,13,54,6],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a42c3c78a65609389fbb843659944ad0a":[3,0,0,13,54,1],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a452876f9d0558df7df98e8471dd1a038":[3,0,0,13,54,19],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a457a2287e3a85cef6f8ebe02402d4aec":[3,0,0,13,54,21],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a4721488263a12bc6480bf0d824691eb4":[3,0,0,13,54,27],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a48372074f4c79a2757398555cd99d4a5":[3,0,0,13,54,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7a06dc64955d502a26fe9dc48935c8344a":[3,0,0,13,66,1,6],
 "classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7a5d5cd46919fa987731fb2edefe0f2a0c":[3,0,0,13,66,1,1],
 "classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7a98ad0e8750ae10ad556ed7a62affb452":[3,0,0,13,66,1,2],
-"classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7ab1fa9dd3af034b3ef4291579aa673c07":[3,0,0,13,66,1,0],
-"classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7ac48d5da12d702e73d6966069f2687376":[3,0,0,13,66,1,3],
-"classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7acb3b2e38fa3bb5365b280e686953c5ad":[3,0,0,13,66,1,4],
-"classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7acf82fb3fea5e5deb7b1caccda3d2da16":[3,0,0,13,66,1,5],
-"classdrake_1_1symbolic_1_1_variable.html#a501b51eeedf7e93b817dc202b14a44a7":[3,0,0,13,66,17],
-"classdrake_1_1symbolic_1_1_variable.html#a82aa72996726ed1704227ac05cfcd5e8":[3,0,0,13,66,10],
-"classdrake_1_1symbolic_1_1_variable.html#aa30961d840b438f590bf2b29e7f1c502":[3,0,0,13,66,12],
-"classdrake_1_1symbolic_1_1_variable.html#aa36d7bf3b355c7fcea7ea5cbcf344a2d":[3,0,0,13,66,16],
-"classdrake_1_1symbolic_1_1_variable.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,13,66,15],
-"classdrake_1_1symbolic_1_1_variable.html#ab80a68408132bf57b854b0252aefb80a":[3,0,0,13,66,6]
+"classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7ab1fa9dd3af034b3ef4291579aa673c07":[3,0,0,13,66,1,0]
 };

@@ -93,6 +93,8 @@ var searchData=
   ['polynotequalafterexpansion',['PolyNotEqualAfterExpansion',['../namespacedrake_1_1symbolic_1_1test.html#a8bce1dea155cf606b8fd9c58718bd2b8',1,'drake::symbolic::test']]],
   ['polytope3d',['Polytope3D',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#ab882a795ac2ee341cce7a9d85981f155',1,'drake::multibody::GlobalInverseKinematics::Polytope3D']]],
   ['pontryagindifference',['PontryaginDifference',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289',1,'drake::geometry::optimization::HPolyhedron']]],
+  ['populateballplant',['PopulateBallPlant',['../namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html#a0edab67597b031dabfd19611d4f64b55',1,'drake::examples::multibody::bouncing_ball']]],
+  ['populatecylinderplant',['PopulateCylinderPlant',['../namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html#a5a816161acad2f3ad08d68e4507ee9de',1,'drake::examples::multibody::cylinder_with_multicontact']]],
   ['populatefromenvironment',['PopulateFromEnvironment',['../classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068',1,'drake::multibody::PackageMap']]],
   ['populatefromfolder',['PopulateFromFolder',['../classdrake_1_1multibody_1_1_package_map.html#a510d35f38c93d44fa6a70d727f55cb8c',1,'drake::multibody::PackageMap']]],
   ['populatefromrospackagepath',['PopulateFromRosPackagePath',['../classdrake_1_1multibody_1_1_package_map.html#a82b086143ce943e2318a7b2added1313',1,'drake::multibody::PackageMap']]],

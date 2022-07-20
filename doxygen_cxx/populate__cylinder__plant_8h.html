@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/examples/multibody/rolling_sphere/make_rolling_sphere_plant.h File Reference</title>
+<title>Drake: drake/examples/multibody/cylinder_with_multicontact/populate_cylinder_plant.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('make__rolling__sphere__plant_8h.html','');});
+$(document).ready(function(){initNavTree('populate__cylinder__plant_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -162,16 +162,16 @@ $(document).ready(function(){initNavTree('make__rolling__sphere__plant_8h.html',
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">make_rolling_sphere_plant.h File Reference</div>  </div>
+<div class="title">populate_cylinder_plant.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for make_rolling_sphere_plant.h:</div>
+Include dependency graph for populate_cylinder_plant.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="make__rolling__sphere__plant_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="populate__cylinder__plant_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -183,21 +183,21 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1examples_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody.html">drake::examples::multibody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html">drake::examples::multibody::bouncing_ball</a></td></tr>
+<tr class="memitem:namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html">drake::examples::multibody::cylinder_with_multicontact</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a71f0d16bece761c6642485c0b5b696e7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html#a71f0d16bece761c6642485c0b5b696e7">MakeBouncingBallPlant</a> (double mbp_dt, double radius, double mass, double hydroelastic_modulus, double dissipation, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">drake::multibody::CoulombFriction</a>&lt; double &gt; &amp;surface_friction, const Vector3&lt; double &gt; &amp;gravity_W, bool rigid_sphere, bool compliant_ground, geometry::SceneGraph&lt; double &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:a71f0d16bece761c6642485c0b5b696e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method makes a MultibodyPlant model of a ball falling into a plane.  <a href="namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html#a71f0d16bece761c6642485c0b5b696e7">More...</a><br /></td></tr>
-<tr class="separator:a71f0d16bece761c6642485c0b5b696e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a816161acad2f3ad08d68e4507ee9de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html#a5a816161acad2f3ad08d68e4507ee9de">PopulateCylinderPlant</a> (double radius, double length, double mass, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">drake::multibody::CoulombFriction</a>&lt; double &gt; &amp;surface_friction, const Vector3&lt; double &gt; &amp;gravity_W, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant)</td></tr>
+<tr class="memdesc:a5a816161acad2f3ad08d68e4507ee9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function populates the given MultibodyPlant with a model of a cylinder free to fall onto the ground.  <a href="namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html#a5a816161acad2f3ad08d68e4507ee9de">More...</a><br /></td></tr>
+<tr class="separator:a5a816161acad2f3ad08d68e4507ee9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_bf85a0c13984f214f436b2edc519c6dd.html">examples</a></li><li class="navelem"><a class="el" href="dir_9acdd6771460017440c69ee654743722.html">multibody</a></li><li class="navelem"><a class="el" href="dir_474aa644b99dd5481f12728ecfc3f855.html">rolling_sphere</a></li><li class="navelem"><a class="el" href="make__rolling__sphere__plant_8h.html">make_rolling_sphere_plant.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_bf85a0c13984f214f436b2edc519c6dd.html">examples</a></li><li class="navelem"><a class="el" href="dir_9acdd6771460017440c69ee654743722.html">multibody</a></li><li class="navelem"><a class="el" href="dir_bf625d68bd1475a25d499b8c243d6bcc.html">cylinder_with_multicontact</a></li><li class="navelem"><a class="el" href="populate__cylinder__plant_8h.html">populate_cylinder_plant.h</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

@@ -555,8 +555,8 @@ argument(s), and throw ValueError exception if a function is not
 well-defined for a given argument(s).</p>
 <p>Relational operators over expressions (==, !=, &lt;, &gt;, &lt;=, &gt;=) return
 symbolic::Formula instead of bool. Those operations are declared in
-symbolic_formula.h file. To check structural equality between two
-expressions a separate function, Expression::EqualTo, is provided.</p>
+formula.h file. To check structural equality between two expressions a
+separate function, Expression::EqualTo, is provided.</p>
 <p>Regarding NaN, we have the following rules: 1. NaN values are
 extremely rare during typical computations. Because they are difficult
 to handle symbolically, we will round that up to “must never occur”.

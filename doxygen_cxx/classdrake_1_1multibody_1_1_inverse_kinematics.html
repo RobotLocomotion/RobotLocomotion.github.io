@@ -193,6 +193,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a693b3a9627e08ae92d2978b4ca516b3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a693b3a9627e08ae92d2978b4ca516b3c">AddOrientationConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_AbarA, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameBbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_BbarB, double theta_bound)</td></tr>
 <tr class="memdesc:a693b3a9627e08ae92d2978b4ca516b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains that the angle difference θ between the orientation of frame A and the orientation of frame B to satisfy θ ≤ θ_bound.  <a href="#a693b3a9627e08ae92d2978b4ca516b3c">More...</a><br /></td></tr>
 <tr class="separator:a693b3a9627e08ae92d2978b4ca516b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303d8f5121c97abe13416887bab4a8a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a303d8f5121c97abe13416887bab4a8a8">AddOrientationCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_AbarA, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameBbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_BbarB, double c)</td></tr>
+<tr class="memdesc:a303d8f5121c97abe13416887bab4a8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost of the form <code>c * (1 - cos(θ))</code>, where θ is the angle between the orientation of frame A and the orientation of frame B, and <code>c</code> is a cost scaling.  <a href="#a303d8f5121c97abe13416887bab4a8a8">More...</a><br /></td></tr>
+<tr class="separator:a303d8f5121c97abe13416887bab4a8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb60b773199c651ab8c8802501d4391"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a0bb60b773199c651ab8c8802501d4391">AddGazeTargetConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AS, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;n_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BT, double cone_half_angle)</td></tr>
 <tr class="memdesc:a0bb60b773199c651ab8c8802501d4391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains a target point T to be within a cone K.  <a href="#a0bb60b773199c651ab8c8802501d4391">More...</a><br /></td></tr>
 <tr class="separator:a0bb60b773199c651ab8c8802501d4391"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -735,6 +738,64 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a303d8f5121c97abe13416887bab4a8a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303d8f5121c97abe13416887bab4a8a8">&#9670;&nbsp;</a></span>AddOrientationCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; AddOrientationCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameAbar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R_AbarA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameBbar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R_BbarB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a cost of the form <code>c * (1 - cos(θ))</code>, where θ is the angle between the orientation of frame A and the orientation of frame B, and <code>c</code> is a cost scaling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameAbar</td><td>A frame on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+    <tr><td class="paramname">R_AbarA</td><td>The rotation matrix describing the orientation of frame A relative to Abar. </td></tr>
+    <tr><td class="paramname">frameBbar</td><td>A frame on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+    <tr><td class="paramname">R_BbarB</td><td>The rotation matrix describing the orientation of frame B relative to Bbar. </td></tr>
+    <tr><td class="paramname">c</td><td>A scalar cost weight. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae52548b9b4f07c155cb5ecf46d1088ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae52548b9b4f07c155cb5ecf46d1088ae">&#9670;&nbsp;</a></span>AddPointToPointDistanceConstraint()</h2>
 
@@ -1038,8 +1099,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acb09a7496a0b0ed1c358fb31a21ab4c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb09a7496a0b0ed1c358fb31a21ab4c1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a069b08fb67eeeb99c807dfc823ea3154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069b08fb67eeeb99c807dfc823ea3154">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1050,7 +1111,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1064,8 +1125,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a069b08fb67eeeb99c807dfc823ea3154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a069b08fb67eeeb99c807dfc823ea3154">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="acb09a7496a0b0ed1c358fb31a21ab4c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb09a7496a0b0ed1c358fb31a21ab4c1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1076,7 +1137,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

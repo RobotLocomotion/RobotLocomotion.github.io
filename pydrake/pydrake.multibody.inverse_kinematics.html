@@ -1188,6 +1188,28 @@ documentation. <code class="docutils literal notranslate"><span class="pre">thet
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationCost">
+<code class="descname">AddOrientationCost</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameAbar: pydrake.multibody.tree.Frame_[float], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[float], R_BbarB: pydrake.math.RotationMatrix_[float], c: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Cost]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a cost of the form <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">cos(θ))</span></code>, where θ is the angle
+between the orientation of frame A and the orientation of frame B, and
+<code class="docutils literal notranslate"><span class="pre">c</span></code> is a cost scaling.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameAbar</span></code>:</dt>
+<dd>A frame on the MultibodyPlant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R_AbarA</span></code>:</dt>
+<dd>The rotation matrix describing the orientation of frame A relative
+to Abar.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameBbar</span></code>:</dt>
+<dd>A frame on the MultibodyPlant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R_BbarB</span></code>:</dt>
+<dd>The rotation matrix describing the orientation of frame B relative
+to Bbar.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt>
+<dd>A scalar cost weight.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint">
 <code class="descname">AddPointToPointDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frame1: pydrake.multibody.tree.Frame_[float], p_B1P1: numpy.ndarray[numpy.float64[3, 1]], frame2: pydrake.multibody.tree.Frame_[float], p_B2P2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a constraint that the distance between point P1 attached to frame
@@ -1470,6 +1492,60 @@ constraint.</dd>
 </ol>
 <p>Overloaded constructor. Constructs the constraint using
 MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.OrientationCost">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">OrientationCost</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<p>Implements a cost of the form <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">cos(θ))</span></code>, where θ is the
+angle between the orientation of frame A and the orientation of frame
+B, and <code class="docutils literal notranslate"><span class="pre">c</span></code> is a cost scaling.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.OrientationCost.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationCost.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.OrientationCost, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameAbar: pydrake.multibody.tree.Frame_[float], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[float], R_BbarB: pydrake.math.RotationMatrix_[float], c: float, plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructs OrientationCost object.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the cost is implemented. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this cost.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameAbar</span></code>:</dt>
+<dd>A frame on the MultibodyPlant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R_AbarA</span></code>:</dt>
+<dd>The rotation matrix describing the orientation of frame A relative
+to Abar.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameBbar</span></code>:</dt>
+<dd>A frame on the MultibodyPlant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R_BbarB</span></code>:</dt>
+<dd>The rotation matrix describing the orientation of frame B relative
+to Bbar.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt>
+<dd>A scalar cost weight.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt>
+<dd>A context for the <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.OrientationCost, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameAbar: pydrake.multibody.tree.Frame_[AutoDiffXd], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[AutoDiffXd], R_BbarB: pydrake.math.RotationMatrix_[float], c: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the
+gradient of the cost is computed from autodiff.</p>
 </dd></dl>
 
 </dd></dl>

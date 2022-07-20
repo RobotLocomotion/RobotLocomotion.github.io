@@ -132,6 +132,7 @@ var searchData=
   ['addnumericparameter',['AddNumericParameter',['../classdrake_1_1systems_1_1_system_base.html#a794ca537e26044e254cda9ccba0a6385',1,'drake::systems::SystemBase']]],
   ['addnumericparameterticket',['AddNumericParameterTicket',['../classdrake_1_1systems_1_1_context_base.html#ae4802537bd1a8bcfd6b235f38e7fcb13',1,'drake::systems::ContextBase']]],
   ['addorientationconstraint',['AddOrientationConstraint',['../classdrake_1_1multibody_1_1_inverse_kinematics.html#a693b3a9627e08ae92d2978b4ca516b3c',1,'drake::multibody::InverseKinematics']]],
+  ['addorientationcost',['AddOrientationCost',['../classdrake_1_1multibody_1_1_inverse_kinematics.html#a303d8f5121c97abe13416887bab4a8a8',1,'drake::multibody::InverseKinematics']]],
   ['addoutputport',['AddOutputPort',['../classdrake_1_1systems_1_1_context_base.html#ac1dc6301a310fa2e6220be9e4c578baa',1,'drake::systems::ContextBase::AddOutputPort()'],['../classdrake_1_1systems_1_1_system_base.html#a89be3ba9e76827e83fb1e139e5b750cc',1,'drake::systems::SystemBase::AddOutputPort()']]],
   ['addpackagexml',['AddPackageXml',['../classdrake_1_1multibody_1_1_package_map.html#ab5db13a6fe84a643a043c9347e1bc8d2',1,'drake::multibody::PackageMap']]],
   ['addphiconstraint',['AddPhiConstraint',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a4c70942e2ec05eaa8e728b58dc5b4149',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
