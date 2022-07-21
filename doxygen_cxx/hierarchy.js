@@ -579,8 +579,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -632,6 +632,7 @@ var hierarchy =
     [ "RigidTransform< T >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RigidTransform< double >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RlocationOrError", "structdrake_1_1_rlocation_or_error.html", null ],
+    [ "RobotDiagramBuilder< T >", "classdrake_1_1planning_1_1_robot_diagram_builder.html", null ],
     [ "RollPitchYaw< T >", "classdrake_1_1math_1_1_roll_pitch_yaw.html", null ],
     [ "Rotation", "classdrake_1_1schema_1_1_rotation.html", null ],
     [ "RotationalInertia< T >", "classdrake_1_1multibody_1_1_rotational_inertia.html", [
@@ -763,6 +764,7 @@ var hierarchy =
             [ "AcrobotWEncoder< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", null ],
             [ "KukaTorqueController< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html", null ],
             [ "ManipulationStation< T >", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html", null ],
+            [ "RobotDiagram< T >", "classdrake_1_1planning_1_1_robot_diagram.html", null ],
             [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", null ],
             [ "PidControlledSystem< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", null ],
             [ "PidControlledSpringMassSystem< T >", "classdrake_1_1systems_1_1_pid_controlled_spring_mass_system.html", null ],

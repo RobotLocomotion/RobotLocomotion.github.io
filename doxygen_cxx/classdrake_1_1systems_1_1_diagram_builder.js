@@ -12,6 +12,7 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "AddSystem", "classdrake_1_1systems_1_1_diagram_builder.html#aefdbf77412fa81b7e31861e53b25a5c3", null ],
     [ "AddSystem", "classdrake_1_1systems_1_1_diagram_builder.html#af30592f15d5a84b740aee7776465a1af", null ],
     [ "AddSystem", "classdrake_1_1systems_1_1_diagram_builder.html#a8ed05ca1f1221a69481364de26aa614a", null ],
+    [ "already_built", "classdrake_1_1systems_1_1_diagram_builder.html#a01a021249674e12dae740a05cd4a0b12", null ],
     [ "Build", "classdrake_1_1systems_1_1_diagram_builder.html#aa4aef2b1fed54592b99071ee8df81f76", null ],
     [ "BuildInto", "classdrake_1_1systems_1_1_diagram_builder.html#ab9083fea37e8137d3ef54c13bb51cdc4", null ],
     [ "Cascade", "classdrake_1_1systems_1_1_diagram_builder.html#a8cc03a096ebd9d7367f74ba70a38958a", null ],
@@ -27,6 +28,6 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "GetMutableSystems", "classdrake_1_1systems_1_1_diagram_builder.html#a7d78e9d85a3593c7656aeddbf90d4766", null ],
     [ "GetSystems", "classdrake_1_1systems_1_1_diagram_builder.html#a3ed5126a47b838a40adfce66bc85e841", null ],
     [ "IsConnectedOrExported", "classdrake_1_1systems_1_1_diagram_builder.html#acd8bf3d351848a5e2344865a6e4b932e", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a1c4553ec1b3caebff0d951e5795fd617", null ]
+    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a1c4553ec1b3caebff0d951e5795fd617", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ]
 ];

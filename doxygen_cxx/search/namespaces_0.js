@@ -47,6 +47,7 @@ var searchData=
   ['perception',['perception',['../namespacedrake_1_1perception.html',1,'drake']]],
   ['planar_5fgripper',['planar_gripper',['../namespacedrake_1_1examples_1_1planar__gripper.html',1,'drake::examples']]],
   ['planner',['planner',['../namespacedrake_1_1manipulation_1_1planner.html',1,'drake::manipulation']]],
+  ['planning',['planning',['../namespacedrake_1_1planning.html',1,'drake']]],
   ['proximity',['proximity',['../namespacedrake_1_1geometry_1_1proximity.html',1,'drake::geometry']]],
   ['pydrake',['pydrake',['../namespacedrake_1_1pydrake.html',1,'drake']]],
   ['pylcm',['pylcm',['../namespacedrake_1_1pydrake_1_1pysystems_1_1pylcm.html',1,'drake::pydrake::pysystems']]],

@@ -10,6 +10,7 @@ var namespacedrake =
     [ "math", "namespacedrake_1_1math.html", "namespacedrake_1_1math" ],
     [ "multibody", "namespacedrake_1_1multibody.html", "namespacedrake_1_1multibody" ],
     [ "perception", "namespacedrake_1_1perception.html", "namespacedrake_1_1perception" ],
+    [ "planning", "namespacedrake_1_1planning.html", "namespacedrake_1_1planning" ],
     [ "pydrake", "namespacedrake_1_1pydrake.html", "namespacedrake_1_1pydrake" ],
     [ "schema", "namespacedrake_1_1schema.html", "namespacedrake_1_1schema" ],
     [ "solvers", "namespacedrake_1_1solvers.html", "namespacedrake_1_1solvers" ],

@@ -228,6 +228,9 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 <li>Parser()
 : <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35">Parser</a>
 </li>
+<li>parser()
+: <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#af4780fc4af4fa63c1c93d9ab39aa0132">RobotDiagramBuilder&lt; T &gt;</a>
+</li>
 <li>Particle()
 : <a class="el" href="classdrake_1_1examples_1_1particles_1_1_particle.html#a1dab45f01e7757062c09406fc7b53398">Particle&lt; T &gt;</a>
 </li>
@@ -266,7 +269,7 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 : <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f">MultibodyPlantConfig</a>
 </li>
 <li>PenetrationAsPointPair()
-: <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html#aa799b74c35d3dd31972ee1c149f31840">PenetrationAsPointPair&lt; T &gt;</a>
+: <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a92fa07fb36248dc4fae768b807022448">PenetrationAsPointPair&lt; T &gt;</a>
 </li>
 <li>perception_properties()
 : <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#ab4bbbe4d3fc65060c71e0837bd09ecbe">GeometryInstance</a>
@@ -370,10 +373,15 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 , <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a208fb8b999d2a234339e911892f24369">ContactResults&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_contact_wrench_evaluator.html#a74d567fd8c628c258754e835e785dad2">ContactWrenchEvaluator</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">Parser</a>
+, <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html#aca25a244485799151f75d32f9b8ee324">RobotDiagram&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aca25a244485799151f75d32f9b8ee324">RobotDiagramBuilder&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436">PidControlledSystem&lt; T &gt;</a>
 </li>
 <li>plant_
 : <a class="el" href="structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7">GenericIntegratorTest&lt; T &gt;</a>
+</li>
+<li>plant_context()
+: <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html#acc4522226fa8219775737675c801dfd6">RobotDiagram&lt; T &gt;</a>
 </li>
 <li>pleides
 : <a class="el" href="structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831">PleidesTest&lt; T &gt;</a>
@@ -447,18 +455,18 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 , <a class="el" href="classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4cfabc8f2d2a53ee991b848f84516bb6">PolynomialEvaluator</a>
 </li>
 <li>PolygonSurfaceMesh()
-: <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html#aed01f43de73ada1fe1b687e113efe612">PolygonSurfaceMesh&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html#ae370de5092aa6686239bd0840d5acad5">PolygonSurfaceMesh&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1geometry_1_1_surface_polygon.html#afaa681c53b3d6f7f1b04b89c720b51de">SurfacePolygon</a>
 </li>
 <li>Polynomial()
 : <a class="el" href="classdrake_1_1_polynomial.html#afcb80fce8585dd54f26ea753fb3fa4ac">Polynomial&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a09e1a39fbe55c8dc2167b282aa952a40">Polynomial</a>
+, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a464c802c8b3157e578c64b7930859242">Polynomial</a>
 </li>
 <li>PolynomialBasisElement()
 : <a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aac941b4d3c5e0eab0832f9c94735bfe9">PolynomialBasisElement</a>
 </li>
 <li>PolynomialConstraint()
-: <a class="el" href="classdrake_1_1solvers_1_1_polynomial_constraint.html#ab3429d3e0cafa91ff2dab2bfde0de5d2">PolynomialConstraint</a>
+: <a class="el" href="classdrake_1_1solvers_1_1_polynomial_constraint.html#a4983fdabdbaa1977122fd25c7081127d">PolynomialConstraint</a>
 </li>
 <li>PolynomialCost()
 : <a class="el" href="classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3">PolynomialCost</a>
@@ -503,7 +511,7 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_port_base.html#a06cc3b285f945ec351eef2f7a34cc5fb">PortBase</a>
 </li>
 <li>PortSwitch()
-: <a class="el" href="classdrake_1_1systems_1_1_port_switch.html#aad40e5721a78d9074fcee16b44654609">PortSwitch&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_port_switch.html#a70bae3e32e13dfcb337769dab4bba993">PortSwitch&lt; T &gt;</a>
 </li>
 <li>pos_tol
 : <a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26">ConstraintRelaxingIk::IkCartesianWaypoint</a>
@@ -541,7 +549,7 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 : <a class="el" href="classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#abf1e3c89af40ff48fe33cbffe3f3c025">SpatialKinematicsPVA&lt; T &gt;</a>
 </li>
 <li>PositionConstraint()
-: <a class="el" href="classdrake_1_1multibody_1_1_position_constraint.html#a76241776b29289b62a4482460a47da9a">PositionConstraint</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_position_constraint.html#ae820aa73265bd730e3a6d9881fbc4a23">PositionConstraint</a>
 </li>
 <li>PositionCost()
 : <a class="el" href="classdrake_1_1multibody_1_1_position_cost.html#a9cb57e16570fe6d556d5dfbf6239361c">PositionCost</a>
@@ -585,8 +593,8 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 <li>primal_residue
 : <a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a7c384b6bd4cb9e20b46ebd99cf7bbce3">ScsSolverDetails</a>
 </li>
-<li>PrismaticJoint()
-: <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a0882afbed041f1a4823cb105abe80af4">PrismaticJoint&lt; T &gt;</a>
+<li>PrismaticJoint
+: <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a7960ec53eaed268e954d64f34f05255d">PrismaticJoint&lt; T &gt;</a>
 </li>
 <li>prog()
 : <a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#afcc8c6b2091ff4447ee2951bb7907de8">GlobalInverseKinematics</a>
@@ -637,10 +645,10 @@ $(document).ready(function(){initNavTree('functions_p.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_context.html#a33bf3ef573a5b9adaf40c18e4129b806">Context&lt; T &gt;</a>
 </li>
 <li>Propeller()
-: <a class="el" href="classdrake_1_1multibody_1_1_propeller.html#a7a1acac5cd79500cabe361e1203d1706">Propeller&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_propeller.html#a88266abb81081f12190360acabfec8aa">Propeller&lt; T &gt;</a>
 </li>
 <li>PropellerInfo()
-: <a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e">PropellerInfo</a>
+: <a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#a6c7969c7bd07717edfa11d012a9a0129">PropellerInfo</a>
 </li>
 <li>prox_iters
 : <a class="el" href="structdrake_1_1solvers_1_1fbstab_1_1_solver_out.html#a23a877c2541d4bc63ff845fb8a788055">SolverOut</a>

@@ -225,6 +225,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any Systems have been added yet.  <a href="#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a021249674e12dae740a05cd4a0b12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a01a021249674e12dae740a05cd4a0b12">already_built</a> () const</td></tr>
+<tr class="memdesc:a01a021249674e12dae740a05cd4a0b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa4aef2b1fed54592b99071ee8df81f76" title="Builds the Diagram that has been described by the calls to Connect, ExportInput, and ExportOutput.">Build()</a> or <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#ab9083fea37e8137d3ef54c13bb51cdc4" title="Configures target to have the topology that has been described by the calls to Connect,...">BuildInto()</a> has been called on this Builder, in which case it's an error to call any member function other than the the destructor.  <a href="#a01a021249674e12dae740a05cd4a0b12">More...</a><br /></td></tr>
+<tr class="separator:a01a021249674e12dae740a05cd4a0b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed5126a47b838a40adfce66bc85e841"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3ed5126a47b838a40adfce66bc85e841">GetSystems</a> () const</td></tr>
 <tr class="memdesc:a3ed5126a47b838a40adfce66bc85e841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of contained Systems.  <a href="#a3ed5126a47b838a40adfce66bc85e841">More...</a><br /></td></tr>
 <tr class="separator:a3ed5126a47b838a40adfce66bc85e841"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -607,6 +610,25 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a01a021249674e12dae740a05cd4a0b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a021249674e12dae740a05cd4a0b12">&#9670;&nbsp;</a></span>already_built()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool already_built </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa4aef2b1fed54592b99071ee8df81f76" title="Builds the Diagram that has been described by the calls to Connect, ExportInput, and ExportOutput.">Build()</a> or <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#ab9083fea37e8137d3ef54c13bb51cdc4" title="Configures target to have the topology that has been described by the calls to Connect,...">BuildInto()</a> has been called on this Builder, in which case it's an error to call any member function other than the the destructor. </p>
 
 </div>
 </div>
@@ -1030,8 +1052,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a9707232e37c28463f285aaab01f88c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1042,7 +1064,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1056,8 +1078,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9707232e37c28463f285aaab01f88c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1068,7 +1090,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
