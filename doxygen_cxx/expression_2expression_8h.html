@@ -162,7 +162,6 @@ $(document).ready(function(){initNavTree('expression_2expression_8h.html','');})
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">expression.h File Reference</div>  </div>
@@ -247,52 +246,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:acbfe43d34e6c71c503d4de11da53bbb7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> = std::unordered_map&lt; Variable, Expression &gt;</td></tr>
 <tr class="separator:acbfe43d34e6c71c503d4de11da53bbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:aebde9bdda9a428ef1bab6175954d30fa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">ExpressionKind</a> { <br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faacb17869fe51048b5a5c4c6106551a255">Constant</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa5a92344ee95acf10c31901b36418be77">Var</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faaec211f7c20af43e742bf2570c3cb84f9">Add</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa62b6d55816cf737bfc6f42e60df1a3f2">Mul</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa43d11850893d2fe84a1e618121c1cc0a">Div</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faace0be71e33226e4c1db2bcea5959f16b">Log</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa1e34af023adeb7d5f484f8eb4b9826b6">Abs</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faacad39a154bffb61175f674d6eefaf6d0">Exp</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faaae77f3ad25595e35b327334d89410054">Sqrt</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa8be6d3e955290ee50c00a4bc92aa7749">Pow</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa0986d137604183312e6d3599578bc6cd">Sin</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faaffca562be079b9e4e41ea9d6a86c582b">Cos</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa1266b4e6f81e60733ec6c717e0181f60">Tan</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa76cfc54de4e2b9cde17334c821217d11">Asin</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faaed4629033ecb516ed7d1536e162030bb">Acos</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faac9968ab1fa8103acbb3a4f22265f2def">Atan</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa5816dfcaf3b6dbb486ef9c8c006ff613">Atan2</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa98ed804abf4edd1f3be3fa894fa8cc3d">Sinh</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa4371c3565b771b40c187487cc0190392">Cosh</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faacc132a41cab5676334f353a22a0aa5c5">Tanh</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa78d811e98514cd165dda532286610fd2">Min</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa6a061313d22e51e0f25b7cd4dc065233">Max</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faab95a01ffffa8fcdd2a9af961937c097c">Ceil</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faaf3f6d0343d56ce88ce7958170ed05cb3">Floor</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faaaff6933d8331eca27edc911467980c9c">IfThenElse</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa7ecfb3bf076a6a9635f975fe96ac97fd">NaN</a>, 
-<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30faa2e59a51ac43bc3415c1b8ce7b3f98579">UninterpretedFunction</a>
-<br />
- }</td></tr>
-<tr class="memdesc:aebde9bdda9a428ef1bab6175954d30fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kinds of symbolic expressions.  <a href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">More...</a><br /></td></tr>
-<tr class="separator:aebde9bdda9a428ef1bab6175954d30fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a70b5e99a86a85837124c6a006f7ec60a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a70b5e99a86a85837124c6a006f7ec60a">operator&lt;</a> (ExpressionKind k1, ExpressionKind k2)</td></tr>
-<tr class="memdesc:a70b5e99a86a85837124c6a006f7ec60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total ordering between ExpressionKinds.  <a href="namespacedrake_1_1symbolic.html#a70b5e99a86a85837124c6a006f7ec60a">More...</a><br /></td></tr>
-<tr class="separator:a70b5e99a86a85837124c6a006f7ec60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3293ffe3812fbfa2dbd63263fcf6c4c"><td class="memItemLeft" align="right" valign="top">Expression&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af3293ffe3812fbfa2dbd63263fcf6c4c">operator+</a> (Expression lhs, const Expression &amp;rhs)</td></tr>
 <tr class="separator:af3293ffe3812fbfa2dbd63263fcf6c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1519bc7275ec68c904b395067f8ff775"><td class="memItemLeft" align="right" valign="top">Expression &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1519bc7275ec68c904b395067f8ff775">operator+=</a> (Expression &amp;lhs, const Expression &amp;rhs)</td></tr>

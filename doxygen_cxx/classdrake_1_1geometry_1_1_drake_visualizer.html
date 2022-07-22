@@ -188,6 +188,12 @@ class drake::geometry::DrakeVisualizer&lt; T &gt;</h3>
 <li>a message that updates the poses of those non-deformable geometries on the lcm channel named "DRAKE_VIEWER_DRAW",</li>
 <li>a message that sets the world space vertex positions of the deformable geometries on the lcm channel named "DRAKE_VIEWER_DEFORMABLE"</li>
 </ul>
+<p>If requested in <a class="el" href="structdrake_1_1geometry_1_1_drake_visualizer_params.html" title="The set of parameters for configuring DrakeVisualizer.">DrakeVisualizerParams</a>, the above channel names are modified according to the role specified. This allows simultaneous availability of geometry from multiple roles, by using multiple <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html" title="A system that publishes LCM messages compatible with the drake_visualizer application representing th...">DrakeVisualizer</a> instances.</p>
+<ul>
+<li>kIllustration: channel names gain a "_ILLUSTRATION" suffix.</li>
+<li>kProximity: channel names gain a "_PROXIMITY" suffix.</li>
+<li>kPerception: channel names gain a "_PERCEPTION" suffix.</li>
+</ul>
 <p>The system uses the versioning mechanism provided by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> to detect changes to the geometry so that a change in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s data will propagate to <code>drake_visualizer</code>.</p>
 <p><a class="anchor" id="drake_visualizer_role_consumer"></a></p><h3>Visualization by Role</h3>
 <p>By default, DrakeVisualizer visualizes geometries with the illustration role (see <a class="el" href="group__geometry__roles.html">Geometry Queries and Roles</a> for more details). It can be configured to visualize geometries with other roles (see <a class="el" href="structdrake_1_1geometry_1_1_drake_visualizer_params.html" title="The set of parameters for configuring DrakeVisualizer.">DrakeVisualizerParams</a>). Only one role can be specified.</p>

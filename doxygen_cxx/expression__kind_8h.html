@@ -1,0 +1,270 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/symbolic/expression/expression_kind.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('expression__kind_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">expression_kind.h File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for expression_kind.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="expression__kind_8h__incl.svg" width="194" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expression__kind_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1symbolic"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html">drake::symbolic</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a245f75ee96839b12e22fea09c6f3ec91"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91">ExpressionKind</a> : std::uint16_t { <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91acb17869fe51048b5a5c4c6106551a255">Constant</a> = 0, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a5a92344ee95acf10c31901b36418be77">Var</a> = 0x7FF1u, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91aec211f7c20af43e742bf2570c3cb84f9">Add</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a62b6d55816cf737bfc6f42e60df1a3f2">Mul</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a43d11850893d2fe84a1e618121c1cc0a">Div</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91ace0be71e33226e4c1db2bcea5959f16b">Log</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a1e34af023adeb7d5f484f8eb4b9826b6">Abs</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91acad39a154bffb61175f674d6eefaf6d0">Exp</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91aae77f3ad25595e35b327334d89410054">Sqrt</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a8be6d3e955290ee50c00a4bc92aa7749">Pow</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a0986d137604183312e6d3599578bc6cd">Sin</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91affca562be079b9e4e41ea9d6a86c582b">Cos</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a1266b4e6f81e60733ec6c717e0181f60">Tan</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a76cfc54de4e2b9cde17334c821217d11">Asin</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91aed4629033ecb516ed7d1536e162030bb">Acos</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91ac9968ab1fa8103acbb3a4f22265f2def">Atan</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a5816dfcaf3b6dbb486ef9c8c006ff613">Atan2</a> = 0xFFF1u, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a98ed804abf4edd1f3be3fa894fa8cc3d">Sinh</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a4371c3565b771b40c187487cc0190392">Cosh</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91acc132a41cab5676334f353a22a0aa5c5">Tanh</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a78d811e98514cd165dda532286610fd2">Min</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a6a061313d22e51e0f25b7cd4dc065233">Max</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91ab95a01ffffa8fcdd2a9af961937c097c">Ceil</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91af3f6d0343d56ce88ce7958170ed05cb3">Floor</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91aaff6933d8331eca27edc911467980c9c">IfThenElse</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a7ecfb3bf076a6a9635f975fe96ac97fd">NaN</a>, 
+<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91a2e59a51ac43bc3415c1b8ce7b3f98579">UninterpretedFunction</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a245f75ee96839b12e22fea09c6f3ec91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kinds of symbolic expressions.  <a href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91">More...</a><br /></td></tr>
+<tr class="separator:a245f75ee96839b12e22fea09c6f3ec91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a70b5e99a86a85837124c6a006f7ec60a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a70b5e99a86a85837124c6a006f7ec60a">operator&lt;</a> (ExpressionKind k1, ExpressionKind k2)</td></tr>
+<tr class="memdesc:a70b5e99a86a85837124c6a006f7ec60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total ordering between ExpressionKinds.  <a href="namespacedrake_1_1symbolic.html#a70b5e99a86a85837124c6a006f7ec60a">More...</a><br /></td></tr>
+<tr class="separator:a70b5e99a86a85837124c6a006f7ec60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="dir_66d630ac47407fe11bcb76d9e7e25510.html">symbolic</a></li><li class="navelem"><a class="el" href="dir_38bb68bb9a9977cf78f44d487961d9ec.html">expression</a></li><li class="navelem"><a class="el" href="expression__kind_8h.html">expression_kind.h</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

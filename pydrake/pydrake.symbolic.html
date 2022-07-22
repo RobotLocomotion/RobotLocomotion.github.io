@@ -921,7 +921,11 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 <dl class="class">
 <dt id="pydrake.symbolic.ExpressionKind">
 <em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">ExpressionKind</code><a class="headerlink" href="#pydrake.symbolic.ExpressionKind" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kinds of symbolic expressions.</p>
+<dd><p>Kinds of symbolic expressions. The constants here are carefully chosen
+to support nanboxing. For all elements except Constant, the bit
+pattern must have have 0x7FF0 bits set but must not be exactly 0x7FF0
+nor 0xFFF0 (reserved for ±infinity). Refer to the details in
+boxed_cell.h for more information.</p>
 <p>Members:</p>
 <blockquote>
 <div><p>Constant : constant (double)</p>
@@ -959,37 +963,37 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Abs">
-<code class="descname">Abs</code><em class="property"> = &lt;ExpressionKind.Abs: 6&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Abs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Abs</code><em class="property"> = &lt;ExpressionKind.Abs: 32758&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Abs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Acos">
-<code class="descname">Acos</code><em class="property"> = &lt;ExpressionKind.Acos: 14&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Acos" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Acos</code><em class="property"> = &lt;ExpressionKind.Acos: 32766&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Acos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Add">
-<code class="descname">Add</code><em class="property"> = &lt;ExpressionKind.Add: 2&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Add" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Add</code><em class="property"> = &lt;ExpressionKind.Add: 32754&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Asin">
-<code class="descname">Asin</code><em class="property"> = &lt;ExpressionKind.Asin: 13&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Asin" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Asin</code><em class="property"> = &lt;ExpressionKind.Asin: 32765&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Asin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Atan">
-<code class="descname">Atan</code><em class="property"> = &lt;ExpressionKind.Atan: 15&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Atan" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Atan</code><em class="property"> = &lt;ExpressionKind.Atan: 32767&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Atan" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Atan2">
-<code class="descname">Atan2</code><em class="property"> = &lt;ExpressionKind.Atan2: 16&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Atan2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Atan2</code><em class="property"> = &lt;ExpressionKind.Atan2: 65521&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Atan2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Ceil">
-<code class="descname">Ceil</code><em class="property"> = &lt;ExpressionKind.Ceil: 22&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Ceil" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Ceil</code><em class="property"> = &lt;ExpressionKind.Ceil: 65527&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Ceil" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -999,52 +1003,52 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Cos">
-<code class="descname">Cos</code><em class="property"> = &lt;ExpressionKind.Cos: 11&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Cos" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Cos</code><em class="property"> = &lt;ExpressionKind.Cos: 32763&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Cos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Cosh">
-<code class="descname">Cosh</code><em class="property"> = &lt;ExpressionKind.Cosh: 18&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Cosh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Cosh</code><em class="property"> = &lt;ExpressionKind.Cosh: 65523&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Cosh" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Div">
-<code class="descname">Div</code><em class="property"> = &lt;ExpressionKind.Div: 4&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Div" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Div</code><em class="property"> = &lt;ExpressionKind.Div: 32756&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Div" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Exp">
-<code class="descname">Exp</code><em class="property"> = &lt;ExpressionKind.Exp: 7&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Exp" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Exp</code><em class="property"> = &lt;ExpressionKind.Exp: 32759&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Exp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Floor">
-<code class="descname">Floor</code><em class="property"> = &lt;ExpressionKind.Floor: 23&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Floor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Floor</code><em class="property"> = &lt;ExpressionKind.Floor: 65528&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Floor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.IfThenElse">
-<code class="descname">IfThenElse</code><em class="property"> = &lt;ExpressionKind.IfThenElse: 24&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.IfThenElse" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IfThenElse</code><em class="property"> = &lt;ExpressionKind.IfThenElse: 65529&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.IfThenElse" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Log">
-<code class="descname">Log</code><em class="property"> = &lt;ExpressionKind.Log: 5&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Log" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Log</code><em class="property"> = &lt;ExpressionKind.Log: 32757&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Log" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Max">
-<code class="descname">Max</code><em class="property"> = &lt;ExpressionKind.Max: 21&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Max" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Max</code><em class="property"> = &lt;ExpressionKind.Max: 65526&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Max" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Min">
-<code class="descname">Min</code><em class="property"> = &lt;ExpressionKind.Min: 20&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Min" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Min</code><em class="property"> = &lt;ExpressionKind.Min: 65525&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Min" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Mul">
-<code class="descname">Mul</code><em class="property"> = &lt;ExpressionKind.Mul: 3&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Mul" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Mul</code><em class="property"> = &lt;ExpressionKind.Mul: 32755&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Mul" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1054,42 +1058,42 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.NaN">
-<code class="descname">NaN</code><em class="property"> = &lt;ExpressionKind.NaN: 25&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.NaN" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NaN</code><em class="property"> = &lt;ExpressionKind.NaN: 65530&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.NaN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Pow">
-<code class="descname">Pow</code><em class="property"> = &lt;ExpressionKind.Pow: 9&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Pow" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Pow</code><em class="property"> = &lt;ExpressionKind.Pow: 32761&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Pow" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Sin">
-<code class="descname">Sin</code><em class="property"> = &lt;ExpressionKind.Sin: 10&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sin" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Sin</code><em class="property"> = &lt;ExpressionKind.Sin: 32762&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Sinh">
-<code class="descname">Sinh</code><em class="property"> = &lt;ExpressionKind.Sinh: 17&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sinh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Sinh</code><em class="property"> = &lt;ExpressionKind.Sinh: 65522&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sinh" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Sqrt">
-<code class="descname">Sqrt</code><em class="property"> = &lt;ExpressionKind.Sqrt: 8&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sqrt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Sqrt</code><em class="property"> = &lt;ExpressionKind.Sqrt: 32760&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sqrt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Tan">
-<code class="descname">Tan</code><em class="property"> = &lt;ExpressionKind.Tan: 12&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Tan" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Tan</code><em class="property"> = &lt;ExpressionKind.Tan: 32764&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Tan" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Tanh">
-<code class="descname">Tanh</code><em class="property"> = &lt;ExpressionKind.Tanh: 19&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Tanh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Tanh</code><em class="property"> = &lt;ExpressionKind.Tanh: 65524&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Tanh" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.UninterpretedFunction">
-<code class="descname">UninterpretedFunction</code><em class="property"> = &lt;ExpressionKind.UninterpretedFunction: 26&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.UninterpretedFunction" title="Permalink to this definition">¶</a></dt>
+<code class="descname">UninterpretedFunction</code><em class="property"> = &lt;ExpressionKind.UninterpretedFunction: 65531&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.UninterpretedFunction" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1099,7 +1103,7 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 
 <dl class="attribute">
 <dt id="pydrake.symbolic.ExpressionKind.Var">
-<code class="descname">Var</code><em class="property"> = &lt;ExpressionKind.Var: 1&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Var" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Var</code><em class="property"> = &lt;ExpressionKind.Var: 32753&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Var" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2316,7 +2320,9 @@ being an odd number.</p>
 <dt id="pydrake.symbolic.Polynomial.monomial_to_coefficient_map">
 <code class="descname">monomial_to_coefficient_map</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em><span class="sig-paren">)</span> &#x2192; Dict[pydrake.symbolic.Monomial, pydrake.symbolic.Expression]<a class="headerlink" href="#pydrake.symbolic.Polynomial.monomial_to_coefficient_map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the mapping from a Monomial to its corresponding coefficient
-of this polynomial.</p>
+of this polynomial. We maintain the invariance that for ancy
+[monomial, coeff] pair in monomial_to_coefficient_map(),
+symbolic:is_zero(coeff) is false.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2397,6 +2403,131 @@ instead of <code class="docutils literal notranslate"><span class="pre">positive
 <dt id="pydrake.symbolic.pow">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">pow</code><span class="sig-paren">(</span><em>arg0: pydrake.symbolic.Expression</em>, <em>arg1: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.pow" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="class">
+<dt id="pydrake.symbolic.RationalFunction">
+<em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">RationalFunction</code><a class="headerlink" href="#pydrake.symbolic.RationalFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents symbolic rational function. A function f(x) is a rational
+function, if f(x) = p(x) / q(x), where both p(x) and q(x) are
+polynomials of x. Note that rational functions are closed under (+, -,
+x, /). One application of rational function is in polynomial
+optimization, where we represent (or approximate) functions using
+rational functions, and then convert the constraint f(x) = h(x) (where
+h(x) is a polynomial) to a polynomial constraint p(x) - q(x) * h(x) =
+0, or convert the inequality constraint f(x) &gt;= h(x) as p(x) - q(x) *
+h(x) &gt;= 0 if we know q(x) &gt; 0.</p>
+<p>This class represents a special subset of the symbolic::Expression.
+While a symbolic::Expression can represent a rational function,
+extracting the numerator and denominator, generally, is quite
+difficult; for instance, from p1(x) / q1(x) + p2(x) / q2(x) + … +
+pn(x) / qn(x). This class’s explicit structure facilitates this
+decomposition.</p>
+<dl class="method">
+<dt id="pydrake.symbolic.RationalFunction.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.RationalFunction.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.symbolic.RationalFunction) -&gt; None</li>
+</ol>
+<p>Constructs a zero rational function 0 / 1.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.symbolic.RationalFunction, numerator: pydrake.symbolic.Polynomial, denominator: pydrake.symbolic.Polynomial) -&gt; None</li>
+</ol>
+<p>Constructs the rational function: numerator / denominator.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">numerator</span></code>:</dt>
+<dd>The numerator of the fraction.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">denominator</span></code>:</dt>
+<dd>The denominator of the fraction.</dd>
+<dt>Precondition:</dt>
+<dd>denominator is not equal to zero.</dd>
+<dt>Precondition:</dt>
+<dd>None of the indeterminates in the numerator can be decision
+variables in the denominator; similarly none of the indeterminates
+in the denominator can be decision variables in the numerator.</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.symbolic.RationalFunction, p: pydrake.symbolic.Polynomial) -&gt; None</li>
+</ol>
+<p>Constructs the rational function: p / 1. Note that we use 1 as the
+denominator.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p</span></code>:</dt>
+<dd>The numerator of the rational function.</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.symbolic.RationalFunction, m: pydrake.symbolic.Monomial) -&gt; None</li>
+</ol>
+<p>Constructs the rational function: m / 1 for any type which can be cast
+to a monomial</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">m</span></code>:</dt>
+<dd>The numerator of the rational function.</dd>
+</dl>
+<ol class="arabic simple" start="5">
+<li>__init__(self: pydrake.symbolic.RationalFunction, c: float) -&gt; None</li>
+</ol>
+<p>Constructs the rational function: c / 1. Note that we use 1 as the
+denominator.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt>
+<dd>The numerator of the rational function.</dd>
+</dl>
+<ol class="arabic simple" start="6">
+<li>__init__(self: pydrake.symbolic.RationalFunction) -&gt; None</li>
+</ol>
+<p>Constructs a zero rational function 0 / 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.RationalFunction.denominator">
+<code class="descname">denominator</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.RationalFunction</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.RationalFunction.denominator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the denominator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.RationalFunction.EqualTo">
+<code class="descname">EqualTo</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.RationalFunction</em>, <em>f: pydrake.symbolic.RationalFunction</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.RationalFunction.EqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this rational function and f are structurally equal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.RationalFunction.Evaluate">
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.RationalFunction, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.RationalFunction.Evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates this rational function under a given environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if there is a variable in this rational function</li>
+<li>whose assignment is not provided by <code class="docutils literal notranslate"><span class="pre">env</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.RationalFunction.numerator">
+<code class="descname">numerator</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.RationalFunction</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.RationalFunction.numerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the numerator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.RationalFunction.SetIndeterminates">
+<code class="descname">SetIndeterminates</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.RationalFunction</em>, <em>new_indeterminates: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.RationalFunction.SetIndeterminates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the indeterminates of the numerator and denominator polynomials</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.RationalFunction.ToExpression">
+<code class="descname">ToExpression</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.RationalFunction</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.RationalFunction.ToExpression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an equivalent symbolic expression of this rational function.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="function">
 <dt id="pydrake.symbolic.sin">
@@ -2561,6 +2692,108 @@ computations for robots, for instance:
 <li>Substitute(m: numpy.ndarray[object[m, n]], subs: Dict[pydrake.symbolic.Variable, pydrake.symbolic.SinCos]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Matrix version of sin/cos substitution.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.symbolic.SubstituteStereographicProjection">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">SubstituteStereographicProjection</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.SubstituteStereographicProjection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SubstituteStereographicProjection(e: drake::symbolic::Polynomial, sin_cos: List[pydrake.symbolic.SinCos], t: numpy.ndarray[object[m, 1]]) -&gt; drake::symbolic::RationalFunction</li>
+</ol>
+<p>Substitutes the variables representing sine and cosine functions with
+their stereographic projection. If e is a multilinear polynomial of
+cosθ and sinθ, and no cosθᵢ and sinθᵢ appear in the same monomial,
+then we replace cosθᵢ with (1-tᵢ²)/(1+tᵢ²), and sinθᵢ with
+2tᵢ/(1+tᵢ²), and get a rational polynomial of t. If the input
+expression doesn’t contain the sine and cosine functions, then the
+returned rational has denominator being 1.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The symbolic polynomial to be substituted. Note that e has to be a
+multilinear polynomial of variables in <code class="docutils literal notranslate"><span class="pre">sin_cos</span></code>, namely
+e.indeterminates() is a subset of all the variables in
+<code class="docutils literal notranslate"><span class="pre">sin_cos</span></code>, and no sin_cos[i].s and sin_cos[i].c appear in the
+same monomial. Namely that e can be sin_cos[0].s * sin_cos[1].c +
+1 or t[0]*sin_cos[0].s * sin_cos[1].c + 1 (note t can also appear
+in e), but cannot be sin_cos[0].s * sin_cos[0].c (where
+sin_cos[0].s and sin_cos[0].c appear in the same monomial) or
+pow(sin_cos[0].s, 2) (where the degree or sin_cos[0].s is larger
+than 1).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">sin_cos</span></code>:</dt>
+<dd>sin_cos(i) is the pair of variables (sᵢ, cᵢ), (where sᵢ=sinθᵢ,
+cᵢ=cosθᵢ) as documented above.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt>
+<dd>New variables to express cos and sin as rationals of t. tᵢ =
+tan(θᵢ/2).</dd>
+<dt>Precondition:</dt>
+<dd>t.rows() == sin_cos.size()</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">e_rational The rational polynomial of e after replacement. The
+indeterminates of the polynomials are <code class="docutils literal notranslate"><span class="pre">t</span></code>. Example</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SinCos</span><span class="o">&gt;</span> <span class="n">sin_cos</span><span class="p">;</span>
+<span class="n">sin_cos</span><span class="o">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;s0&quot;</span><span class="p">),</span> <span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;c0&quot;</span><span class="p">));</span>
+<span class="n">sin_cos</span><span class="o">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;s1&quot;</span><span class="p">),</span> <span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;c1&quot;</span><span class="p">));</span>
+<span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="o">&gt;</span> <span class="n">t</span><span class="p">(</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;t0&quot;</span><span class="p">),</span>
+                              <span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;t1&quot;</span><span class="p">));</span>
+<span class="n">const</span> <span class="n">auto</span> <span class="n">e_rational</span> <span class="o">=</span>
+<span class="n">SubstituteStereographicProjection</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">sin_cos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">s</span><span class="o">*</span><span class="n">sin_cos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                                  <span class="n">sin_cos</span><span class="p">,</span> <span class="n">t</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">e_rational</span> <span class="n">should</span> <span class="n">be</span>
+<span class="o">//</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t0</span><span class="o">*</span><span class="n">t0</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">t1</span><span class="o">*</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">t0</span><span class="o">*</span><span class="n">t0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">t1</span><span class="o">*</span><span class="n">t1</span><span class="p">))</span>
+<span class="o">//</span> <span class="o">--------------------------------------------</span>
+<span class="o">//</span>        <span class="p">((</span><span class="mi">1</span><span class="o">+</span><span class="n">t0</span><span class="o">*</span><span class="n">t0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">t1</span><span class="o">*</span><span class="n">t1</span><span class="p">))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>SubstituteStereographicProjection(e: pydrake.symbolic.Expression, subs: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Variable]) -&gt; drake::symbolic::RationalFunction</li>
+</ol>
+<p>Substitutes sine and cosine function with their stereographic
+projection. If e is a multilinear polynomial of cosθ and sinθ, and no
+cosθᵢ and sinθᵢ appear in the same monomial, then we replace cosθᵢ
+with (1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²), and get a rational
+polynomial of t. If the input expression doesn’t contain the sine and
+cosine functions, then the returned rational has denominator being 1.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The symbolic expression to be substituted. Note that e has to be a
+multilinear polynomial of cosθ and sinθ, and no cosθᵢ and sinθᵢ
+appear in the same monomial. Namely that e can be cosθ₁sinθ₂ +
+sinθ₂ or t₁cosθ₁sinθ₂ + sinθ₂ (note that t can also appear in e),
+but cannot be sinθ₁cosθ₁ (where sinθ₁ and cosθ₁ appear in the same
+monomial) or sin²θ₁ (where the degree or sinθ₁ is larger than 1).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">subs</span></code>:</dt>
+<dd>Correspond each θᵢ to tᵢ, we will replace cosθᵢ with
+(1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²)</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">e_rational The rational polynomial after replacing cosθᵢ with
+(1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²). The indeterminates of
+the rational polynomials are t.</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>const symbolic::Variable theta1(&quot;theta1&quot;);
+const symbolic::Variable theta2(&quot;theta1&quot;);
+const symbolic::Variable t1{&quot;t1&quot;);
+const symbolic::Variable t2{&quot;t2&quot;);
+const auto e_rational = SubstituteStereographicProjection(t1 *
+    sin(theta1)*cos(theta2) + 1, {{theta1, t1}, {theta2, t2}});
+// The result of e_rational is
+// (2t₁²(1−t₂²) + (1+t₁²)(1+t₂²)) / ((1+t₁²)(1+t₂²))
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">

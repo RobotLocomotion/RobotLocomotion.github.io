@@ -17,8 +17,9 @@ var classdrake_1_1multibody_1_1_global_inverse_kinematics =
     [ "BodyPointInOneOfRegions", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#af61d225a96cfb8b79c98acf9a94730e9", null ],
     [ "BodySphereInOneOfPolytopes", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#ab530c40754d107a67748e49b4ae14551", null ],
     [ "get_mutable_prog", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#aeafaa0272a0f44b29697141d2d6f7c50", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a67674d47fd29a7fb8d4c36d435158a7e", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#ab2d739ded3e2abec7e0f2443f5459818", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a67674d47fd29a7fb8d4c36d435158a7e", null ],
     [ "prog", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#afcc8c6b2091ff4447ee2951bb7907de8", null ],
-    [ "ReconstructGeneralizedPositionSolution", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a255f7b346af8cf803c9d48f0258f99ec", null ]
+    [ "ReconstructGeneralizedPositionSolution", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a255f7b346af8cf803c9d48f0258f99ec", null ],
+    [ "SetInitialGuess", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#aef16a1115d8c0f412e04808eb27d3d34", null ]
 ];

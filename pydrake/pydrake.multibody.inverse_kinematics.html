@@ -891,6 +891,25 @@ inverse kinematics problem is solved.</dd>
 </dl>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.SetInitialGuess">
+<code class="descname">SetInitialGuess</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.GlobalInverseKinematics, q: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.SetInitialGuess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets an initial guess for all variables (including the binary
+variables) by evaluating the kinematics of the plant at <code class="docutils literal notranslate"><span class="pre">q</span></code>.
+Currently, this is accomplished by solving the global IK problem
+subject to constraints that the positions and rotation matrices match
+the kinematics, which is dramatically faster than solving the original
+problem.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if solving results in an infeasible program.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -1228,6 +1247,28 @@ to Bbar.</dd>
 <dd>The lower bound on the distance.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance_upper</span></code>:</dt>
 <dd>The upper bound on the distance.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPolyhedronConstraint">
+<code class="descname">AddPolyhedronConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameF: pydrake.multibody.tree.Frame_[float], frameG: pydrake.multibody.tree.Frame_[float], p_GP: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPolyhedronConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the constraint that the position of P1, …, Pn satisfy A *
+[p_FP1; p_FP2; …; p_FPn] &lt;= b.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameF</span></code>:</dt>
+<dd>The frame in which the position P is measured and expressed</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameG</span></code>:</dt>
+<dd>The frame in which the point P is rigidly attached.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_GP</span></code>:</dt>
+<dd>p_GP.col(i) is the position of the i’th point Pi measured and
+expressed in frame G.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt>
+<dd>We impose the constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b.</dd>
+<dt>Precondition:</dt>
+<dd>A.cols() = 3 * p_GP.cols();</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
+<dd>We impose the constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b</dd>
 </dl>
 </dd></dl>
 
@@ -1599,6 +1640,57 @@ constraint.</dd>
 </ol>
 <p>Overloaded constructor. Same as the constructor with the double
 version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;), except the
+gradient of the constraint is computed from autodiff.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.PolyhedronConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">PolyhedronConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PolyhedronConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>Constrain the position of points P1, P2, …, Pn to satisfy the
+constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b, where p_FPi is the
+position of point Pi measured and expressed in frame F. Notice the
+constraint is imposed on the stacked column vector [p_FP1; p_FP2; …;
+p_FPn], not on each individual point.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.PolyhedronConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PolyhedronConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PolyhedronConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameF: pydrake.multibody.tree.Frame_[float], frameG: pydrake.multibody.tree.Frame_[float], p_GP: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Construct the constraint that the position of P1, …, Pn satisfy A *
+[p_FP1; p_FP2; …; p_FPn] &lt;= b.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameF</span></code>:</dt>
+<dd>The frame in which the position P is measured and expressed</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameG</span></code>:</dt>
+<dd>The frame in which the point P is rigidly attached.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_GP</span></code>:</dt>
+<dd>p_GP.col(i) is the position of the i’th point Pi measured and
+expressed in frame G.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt>
+<dd>We impose the constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b.</dd>
+<dt>Precondition:</dt>
+<dd>A.cols() = 3 * p_GP.cols();</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
+<dd>We impose the constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PolyhedronConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameF: pydrake.multibody.tree.Frame_[AutoDiffXd], frameG: pydrake.multibody.tree.Frame_[AutoDiffXd], p_GP: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the
 gradient of the constraint is computed from autodiff.</p>
 </dd></dl>
 

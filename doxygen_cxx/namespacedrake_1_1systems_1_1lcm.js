@@ -1,5 +1,6 @@
 var namespacedrake_1_1systems_1_1lcm =
 [
+    [ "LcmBuses", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses" ],
     [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system" ],
     [ "LcmLogPlaybackSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system" ],
     [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system" ],

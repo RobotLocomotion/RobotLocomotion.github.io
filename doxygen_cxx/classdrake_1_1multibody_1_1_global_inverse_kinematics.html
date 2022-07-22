@@ -224,6 +224,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a854976ce4b88d7f58d7f1606f1acf263"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a854976ce4b88d7f58d7f1606f1acf263">AddJointLimitConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> body_index, double joint_lower_bound, double joint_upper_bound, bool linear_constraint_approximation=false)</td></tr>
 <tr class="memdesc:a854976ce4b88d7f58d7f1606f1acf263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds joint limits on a specified joint.  <a href="#a854976ce4b88d7f58d7f1606f1acf263">More...</a><br /></td></tr>
 <tr class="separator:a854976ce4b88d7f58d7f1606f1acf263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef16a1115d8c0f412e04808eb27d3d34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#aef16a1115d8c0f412e04808eb27d3d34">SetInitialGuess</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q)</td></tr>
+<tr class="memdesc:aef16a1115d8c0f412e04808eb27d3d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an initial guess for all variables (including the binary variables) by evaluating the kinematics of the plant at <code>q</code>.  <a href="#aef16a1115d8c0f412e04808eb27d3d34">More...</a><br /></td></tr>
+<tr class="separator:aef16a1115d8c0f412e04808eb27d3d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ad324a07c10e5dd4bf42e5c06c99a14ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a> &amp;)=delete</td></tr>
 <tr class="separator:ad324a07c10e5dd4bf42e5c06c99a14ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -389,6 +392,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds joint limits on a specified joint. </p>
+<dl class="section note"><dt>Note</dt><dd>This method is called from the constructor. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">body_index</td><td>The joint connecting the parent link to this body will be constrained. </td></tr>
@@ -936,8 +940,8 @@ zᵢ ∈ {0, 1}
 
 </div>
 </div>
-<a id="a67674d47fd29a7fb8d4c36d435158a7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67674d47fd29a7fb8d4c36d435158a7e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ab2d739ded3e2abec7e0f2443f5459818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d739ded3e2abec7e0f2443f5459818">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -948,7 +952,7 @@ zᵢ ∈ {0, 1}
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -962,8 +966,8 @@ zᵢ ∈ {0, 1}
 
 </div>
 </div>
-<a id="ab2d739ded3e2abec7e0f2443f5459818"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d739ded3e2abec7e0f2443f5459818">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a67674d47fd29a7fb8d4c36d435158a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67674d47fd29a7fb8d4c36d435158a7e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -974,7 +978,7 @@ zᵢ ∈ {0, 1}
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1026,6 +1030,32 @@ zᵢ ∈ {0, 1}
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">q</td><td>The reconstructed posture of the robot of the generalized coordinates, corresponding to the RigidBodyTree on which the inverse kinematics problem is solved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef16a1115d8c0f412e04808eb27d3d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef16a1115d8c0f412e04808eb27d3d34">&#9670;&nbsp;</a></span>SetInitialGuess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetInitialGuess </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets an initial guess for all variables (including the binary variables) by evaluating the kinematics of the plant at <code>q</code>. </p>
+<p>Currently, this is accomplished by solving the global IK problem subject to constraints that the positions and rotation matrices match the kinematics, which is dramatically faster than solving the original problem. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if solving results in an infeasible program. </td></tr>
   </table>
   </dd>
 </dl>

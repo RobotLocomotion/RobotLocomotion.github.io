@@ -211,6 +211,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae52548b9b4f07c155cb5ecf46d1088ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#ae52548b9b4f07c155cb5ecf46d1088ae">AddPointToPointDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame1, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_B1P1, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame2, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_B2P2, double distance_lower, double distance_upper)</td></tr>
 <tr class="memdesc:ae52548b9b4f07c155cb5ecf46d1088ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a constraint that the distance between point P1 attached to frame 1 and point P2 attached to frame 2 is within the range [distance_lower, distance_upper].  <a href="#ae52548b9b4f07c155cb5ecf46d1088ae">More...</a><br /></td></tr>
 <tr class="separator:ae52548b9b4f07c155cb5ecf46d1088ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345a33c8ee0634d6823501f9495cec66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a345a33c8ee0634d6823501f9495cec66">AddPolyhedronConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameF, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameG, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;p_GP, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
+<tr class="memdesc:a345a33c8ee0634d6823501f9495cec66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the position of P1, ..., Pn satisfy A * [p_FP1; p_FP2; ...; p_FPn] &lt;= b.  <a href="#a345a33c8ee0634d6823501f9495cec66">More...</a><br /></td></tr>
+<tr class="separator:a345a33c8ee0634d6823501f9495cec66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0d4dcb28c6cfb63f69b03e0d3e98571"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#af0d4dcb28c6cfb63f69b03e0d3e98571">q</a> () const</td></tr>
 <tr class="memdesc:af0d4dcb28c6cfb63f69b03e0d3e98571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for q.  <a href="#af0d4dcb28c6cfb63f69b03e0d3e98571">More...</a><br /></td></tr>
 <tr class="separator:af0d4dcb28c6cfb63f69b03e0d3e98571"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -855,6 +858,70 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">p_B2P2</td><td>The position of P2 measured and expressed in frame 2. </td></tr>
     <tr><td class="paramname">distance_lower</td><td>The lower bound on the distance. </td></tr>
     <tr><td class="paramname">distance_upper</td><td>The upper bound on the distance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a345a33c8ee0634d6823501f9495cec66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345a33c8ee0634d6823501f9495cec66">&#9670;&nbsp;</a></span>AddPolyhedronConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; AddPolyhedronConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameG</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_GP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the constraint that the position of P1, ..., Pn satisfy A * [p_FP1; p_FP2; ...; p_FPn] &lt;= b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameF</td><td>The frame in which the position P is measured and expressed </td></tr>
+    <tr><td class="paramname">frameG</td><td>The frame in which the point P is rigidly attached. </td></tr>
+    <tr><td class="paramname">p_GP</td><td>p_GP.col(i) is the position of the i'th point Pi measured and expressed in frame G. </td></tr>
+    <tr><td class="paramname">A</td><td>We impose the constraint A * [p_FP1; p_FP2; ...; p_FPn] &lt;= b. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>A.cols() = 3 * p_GP.cols(); </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>We impose the constraint A * [p_FP1; p_FP2; ...; p_FPn] &lt;= b </td></tr>
   </table>
   </dd>
 </dl>

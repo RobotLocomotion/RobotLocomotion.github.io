@@ -174,7 +174,12 @@ $(document).ready(function(){initNavTree('classdrake_1_1symbolic_1_1_expression_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9294eeb528bb3beaa480bf17ac5e971d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">ExpressionKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a9294eeb528bb3beaa480bf17ac5e971d">get_kind</a> () const</td></tr>
+<tr class="memitem:aee78b8e3dad05e70db6b6150eaca8d52"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#aee78b8e3dad05e70db6b6150eaca8d52">~ExpressionCell</a> ()</td></tr>
+<tr class="separator:aee78b8e3dad05e70db6b6150eaca8d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38567449e3de9cdb297e425726a3e478"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a38567449e3de9cdb297e425726a3e478">use_count</a> () const</td></tr>
+<tr class="memdesc:a38567449e3de9cdb297e425726a3e478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intrusive use count (ala boost::intrusive_ptr).  <a href="#a38567449e3de9cdb297e425726a3e478">More...</a><br /></td></tr>
+<tr class="separator:a38567449e3de9cdb297e425726a3e478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9294eeb528bb3beaa480bf17ac5e971d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91">ExpressionKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a9294eeb528bb3beaa480bf17ac5e971d">get_kind</a> () const</td></tr>
 <tr class="memdesc:a9294eeb528bb3beaa480bf17ac5e971d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns expression kind.  <a href="#a9294eeb528bb3beaa480bf17ac5e971d">More...</a><br /></td></tr>
 <tr class="separator:a9294eeb528bb3beaa480bf17ac5e971d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a277754f15697553a1007dbd3180a30b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a277754f15697553a1007dbd3180a30b3">HashAppendDetail</a> (<a class="el" href="structdrake_1_1_delegating_hasher.html">DelegatingHasher</a> *) const =0</td></tr>
@@ -225,12 +230,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0d6daf9c55dc7d28c7e881455da37198"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a0d6daf9c55dc7d28c7e881455da37198">ExpressionCell</a> (<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">ExpressionKind</a> k, bool is_poly, bool <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a7807c6d0df8070169a8c81d281a93c12">is_expanded</a>)</td></tr>
-<tr class="memdesc:a0d6daf9c55dc7d28c7e881455da37198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> of kind <code>k</code> with <code>is_poly</code> and <code>is_expanded</code>.  <a href="#a0d6daf9c55dc7d28c7e881455da37198">More...</a><br /></td></tr>
+<tr class="memitem:a0d6daf9c55dc7d28c7e881455da37198"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a0d6daf9c55dc7d28c7e881455da37198">ExpressionCell</a> (<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91">ExpressionKind</a> k, bool is_poly, bool <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a7807c6d0df8070169a8c81d281a93c12">is_expanded</a>)</td></tr>
+<tr class="memdesc:a0d6daf9c55dc7d28c7e881455da37198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> of kind <code>k</code> with <code>is_poly</code> and <code>is_expanded</code>, with a <code>use_count</code> of zero.  <a href="#a0d6daf9c55dc7d28c7e881455da37198">More...</a><br /></td></tr>
 <tr class="separator:a0d6daf9c55dc7d28c7e881455da37198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8a2acaa1ac63d51b4e474157e572193"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#aa8a2acaa1ac63d51b4e474157e572193">~ExpressionCell</a> ()=default</td></tr>
-<tr class="memdesc:aa8a2acaa1ac63d51b4e474157e572193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="#aa8a2acaa1ac63d51b4e474157e572193">More...</a><br /></td></tr>
-<tr class="separator:aa8a2acaa1ac63d51b4e474157e572193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a59bfb9396ee4de4e4d0c462a331a9496"></a>
@@ -285,6 +287,31 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aee78b8e3dad05e70db6b6150eaca8d52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee78b8e3dad05e70db6b6150eaca8d52">&#9670;&nbsp;</a></span>~ExpressionCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0d6daf9c55dc7d28c7e881455da37198"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d6daf9c55dc7d28c7e881455da37198">&#9670;&nbsp;</a></span>ExpressionCell() <span class="overload">[3/3]</span></h2>
 
@@ -297,7 +324,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">ExpressionKind</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91">ExpressionKind</a>&#160;</td>
           <td class="paramname"><em>k</em>, </td>
         </tr>
         <tr>
@@ -325,34 +352,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> of kind <code>k</code> with <code>is_poly</code> and <code>is_expanded</code>. </p>
-
-</div>
-</div>
-<a id="aa8a2acaa1ac63d51b4e474157e572193"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8a2acaa1ac63d51b4e474157e572193">&#9670;&nbsp;</a></span>~ExpressionCell()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default destructor. </p>
+<p>Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> of kind <code>k</code> with <code>is_poly</code> and <code>is_expanded</code>, with a <code>use_count</code> of zero. </p>
 
 </div>
 </div>
@@ -531,7 +531,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">ExpressionKind</a> get_kind </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91">ExpressionKind</a> get_kind </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -774,6 +774,26 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionUninterpretedFunction</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionIfThenElse</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionFloor</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionCeiling</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionMax</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionMin</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionTanh</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionCosh</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionSinh</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionAtan2</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionAtan</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionAcos</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionAsin</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionTan</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionCos</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionSin</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionPow</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionSqrt</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionExp</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionAbs</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionLog</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionDiv</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionMul</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionAdd</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionNaN</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionConstant</a>, and <a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html#a174e88ea34010c2773c177a2cd3a7371">ExpressionVar</a>.</p>
+
+</div>
+</div>
+<a id="a38567449e3de9cdb297e425726a3e478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38567449e3de9cdb297e425726a3e478">&#9670;&nbsp;</a></span>use_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;<a class="el" href="classint.html">int</a>&gt;&amp; use_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the intrusive use count (ala boost::intrusive_ptr). </p>
+<dl class="section warning"><dt>Warning</dt><dd>This value is currently UNUSED except in unit tests; ignore it. </dd></dl>
 
 </div>
 </div>

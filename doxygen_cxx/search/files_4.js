@@ -21,6 +21,7 @@ var searchData=
   ['exponential_5fplus_5fpiecewise_5fpolynomial_2eh',['exponential_plus_piecewise_polynomial.h',['../exponential__plus__piecewise__polynomial_8h.html',1,'']]],
   ['expression_2eh',['expression.h',['../expression_2expression_8h.html',1,'(Global Namespace)'],['../expression_8h.html',1,'(Global Namespace)']]],
   ['expression_5fcell_2eh',['expression_cell.h',['../expression__cell_8h.html',1,'']]],
+  ['expression_5fkind_2eh',['expression_kind.h',['../expression__kind_8h.html',1,'']]],
   ['expression_5fvisitor_2eh',['expression_visitor.h',['../expression__visitor_8h.html',1,'']]],
   ['externally_5fapplied_5fspatial_5fforce_2eh',['externally_applied_spatial_force.h',['../externally__applied__spatial__force_8h.html',1,'']]],
   ['extract_5fdouble_2eh',['extract_double.h',['../extract__double_8h.html',1,'']]]

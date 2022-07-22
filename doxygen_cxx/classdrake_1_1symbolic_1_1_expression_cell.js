@@ -2,8 +2,8 @@ var classdrake_1_1symbolic_1_1_expression_cell =
 [
     [ "ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html#a59bfb9396ee4de4e4d0c462a331a9496", null ],
     [ "ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html#a8a2f3a4a0d7afb9dde486feabe5496f6", null ],
+    [ "~ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html#aee78b8e3dad05e70db6b6150eaca8d52", null ],
     [ "ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html#a0d6daf9c55dc7d28c7e881455da37198", null ],
-    [ "~ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html#aa8a2acaa1ac63d51b4e474157e572193", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_cell.html#acfe571be7b13c6d58f953d1a4e291c32", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_cell.html#a6ef02f8cbabb5160af0016b6b714fb00", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_expression_cell.html#a5b23903b7b630562c51e759cee215043", null ],
@@ -18,5 +18,6 @@ var classdrake_1_1symbolic_1_1_expression_cell =
     [ "operator=", "classdrake_1_1symbolic_1_1_expression_cell.html#ac2980a4d590724b66b061028457dfbcc", null ],
     [ "operator=", "classdrake_1_1symbolic_1_1_expression_cell.html#a15f8e41006efcde346bf1f2700d4db4c", null ],
     [ "set_expanded", "classdrake_1_1symbolic_1_1_expression_cell.html#ad76fe496c2c9f877e204b979d4011ed1", null ],
-    [ "Substitute", "classdrake_1_1symbolic_1_1_expression_cell.html#afa22e82ea9b3e5faab9bb301886f9b4e", null ]
+    [ "Substitute", "classdrake_1_1symbolic_1_1_expression_cell.html#afa22e82ea9b3e5faab9bb301886f9b4e", null ],
+    [ "use_count", "classdrake_1_1symbolic_1_1_expression_cell.html#a38567449e3de9cdb297e425726a3e478", null ]
 ];

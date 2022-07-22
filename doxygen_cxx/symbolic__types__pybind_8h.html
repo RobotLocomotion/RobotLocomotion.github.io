@@ -171,6 +171,7 @@ $(document).ready(function(){initNavTree('symbolic__types__pybind_8h.html','');}
 <code>#include &quot;<a class="el" href="pydrake__pybind_8h.html">drake/bindings/pydrake/pydrake_pybind.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="expression_8h.html">drake/common/symbolic/expression.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic_2polynomial_8h.html">drake/common/symbolic/polynomial.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rational__function_8h.html">drake/common/symbolic/rational_function.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for symbolic_types_pybind.h:</div>
 <div class="dyncontent">
@@ -202,12 +203,14 @@ Functions</h2></td></tr>
 <tr class="separator:a368506c847873cc7fae62074bdebf337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a694fa2ee2cdef72bcfcffdb381053dbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbolic__types__pybind_8h.html#a694fa2ee2cdef72bcfcffdb381053dbe">PYBIND11_NUMPY_OBJECT_DTYPE</a> (<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">drake::symbolic::Polynomial</a>)</td></tr>
 <tr class="separator:a694fa2ee2cdef72bcfcffdb381053dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ff387ff34c96a8c9e1189252b05b59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbolic__types__pybind_8h.html#a56ff387ff34c96a8c9e1189252b05b59">PYBIND11_NUMPY_OBJECT_DTYPE</a> (<a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">drake::symbolic::RationalFunction</a>)</td></tr>
+<tr class="separator:a56ff387ff34c96a8c9e1189252b05b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a286c3ee0103856c04c2efe05db710605"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605">PYBIND11_NUMPY_OBJECT_DTYPE</a> (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a>)</td></tr>
 <tr class="separator:a286c3ee0103856c04c2efe05db710605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aa93f2aa731d1ec9b8e8474d8aecc28b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa93f2aa731d1ec9b8e8474d8aecc28b6">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93f2aa731d1ec9b8e8474d8aecc28b6">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,7 +228,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="aeaf23055b93c04213228b573558f347b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeaf23055b93c04213228b573558f347b">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf23055b93c04213228b573558f347b">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +246,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a368506c847873cc7fae62074bdebf337"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a368506c847873cc7fae62074bdebf337">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a368506c847873cc7fae62074bdebf337">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,7 +264,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a694fa2ee2cdef72bcfcffdb381053dbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a694fa2ee2cdef72bcfcffdb381053dbe">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a694fa2ee2cdef72bcfcffdb381053dbe">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,8 +281,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a56ff387ff34c96a8c9e1189252b05b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ff387ff34c96a8c9e1189252b05b59">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PYBIND11_NUMPY_OBJECT_DTYPE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">drake::symbolic::RationalFunction</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a286c3ee0103856c04c2efe05db710605"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a286c3ee0103856c04c2efe05db710605">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a286c3ee0103856c04c2efe05db710605">&#9670;&nbsp;</a></span>PYBIND11_NUMPY_OBJECT_DTYPE() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

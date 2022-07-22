@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 471;
+var viewWidth = 658;
 var viewHeight = 474;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/multibody/contact_solvers/sap/partial_permutation.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-470 466.76,-470 466.76,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-470 653.73,-470 653.73,4 -4,4"/>
 <!-- Node6 -->
 <g id="node1" class="node">
 <title>Node6</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="226,-435.5 226,-465.5 412,-465.5 412,-435.5 226,-435.5"/>
-<text text-anchor="start" x="234" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
-<text text-anchor="middle" x="319" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/partial_permutation.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="415,-435.5 415,-465.5 601,-465.5 601,-435.5 415,-435.5"/>
+<text text-anchor="start" x="423" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="middle" x="508" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/partial_permutation.h</text>
 </a>
 </g>
 </g>
@@ -69,157 +69,173 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node7</title>
 <g id="a_node2"><a xlink:href="deformable__rigid__contact_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="23.5,-357.5 23.5,-398.5 164.5,-398.5 164.5,-357.5 23.5,-357.5"/>
-<text text-anchor="start" x="31.5" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/query</text>
-<text text-anchor="start" x="31.5" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">_results/deformable_rigid</text>
-<text text-anchor="middle" x="94" y="-364.5" font-family="Helvetica,sans-Serif" font-size="10.00">_contact.h</text>
+<polygon fill="white" stroke="black" points="212.5,-357.5 212.5,-398.5 353.5,-398.5 353.5,-357.5 212.5,-357.5"/>
+<text text-anchor="start" x="220.5" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/query</text>
+<text text-anchor="start" x="220.5" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">_results/deformable_rigid</text>
+<text text-anchor="middle" x="283" y="-364.5" font-family="Helvetica,sans-Serif" font-size="10.00">_contact.h</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge1" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M264.48,-432.42C231.91,-422.21 190.42,-409.21 156.53,-398.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="263.69,-435.84 274.28,-435.49 265.78,-429.16 263.69,-435.84"/>
+<path fill="none" stroke="midnightblue" d="M453.48,-432.42C420.91,-422.21 379.42,-409.21 345.53,-398.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="452.69,-435.84 463.28,-435.49 454.78,-429.16 452.69,-435.84"/>
 </g>
-<!-- Node9 -->
-<g id="node4" class="node">
-<title>Node9</title>
-<g id="a_node4"><a xlink:href="contact__problem__graph_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="184,-357.5 184,-398.5 346,-398.5 346,-357.5 184,-357.5"/>
-<text text-anchor="start" x="192" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
-<text text-anchor="start" x="192" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/contact_problem</text>
-<text text-anchor="middle" x="265" y="-364.5" font-family="Helvetica,sans-Serif" font-size="10.00">_graph.h</text>
+<!-- Node10 -->
+<g id="node5" class="node">
+<title>Node10</title>
+<g id="a_node5"><a xlink:href="contact__problem__graph_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="373,-357.5 373,-398.5 535,-398.5 535,-357.5 373,-357.5"/>
+<text text-anchor="start" x="381" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="start" x="381" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/contact_problem</text>
+<text text-anchor="middle" x="454" y="-364.5" font-family="Helvetica,sans-Serif" font-size="10.00">_graph.h</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node9 -->
-<g id="edge3" class="edge">
-<title>Node6&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M301.97,-427.26C294.92,-418.06 286.82,-407.49 280,-398.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="299.21,-429.42 308.07,-435.23 304.77,-425.17 299.21,-429.42"/>
-</g>
-<!-- Node11 -->
-<g id="node6" class="node">
-<title>Node11</title>
-<g id="a_node6"><a xlink:href="sap__constraint__bundle_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="296,-201.5 296,-242.5 448,-242.5 448,-201.5 296,-201.5"/>
-<text text-anchor="start" x="304" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
-<text text-anchor="start" x="304" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_constraint</text>
-<text text-anchor="middle" x="372" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">_bundle.h</text>
-</a>
-</g>
-</g>
-<!-- Node6&#45;&gt;Node11 -->
-<g id="edge11" class="edge">
-<title>Node6&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M338.71,-427.2C344.98,-418.89 351.25,-409.03 355,-399 375.1,-345.23 374.91,-276.1 373.34,-242.75"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="335.8,-425.23 332.29,-435.23 341.27,-429.6 335.8,-425.23"/>
+<!-- Node6&#45;&gt;Node10 -->
+<g id="edge4" class="edge">
+<title>Node6&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M490.97,-427.26C483.92,-418.06 475.82,-407.49 469,-398.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="488.21,-429.42 497.07,-435.23 493.77,-425.17 488.21,-429.42"/>
 </g>
 <!-- Node12 -->
 <g id="node7" class="node">
 <title>Node12</title>
-<g id="a_node7"><a xlink:href="sap__model_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="279.5,-134.5 279.5,-164.5 422.5,-164.5 422.5,-134.5 279.5,-134.5"/>
-<text text-anchor="start" x="287.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
-<text text-anchor="middle" x="351" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_model.h</text>
+<g id="a_node7"><a xlink:href="sap__constraint__bundle_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="483,-201.5 483,-242.5 635,-242.5 635,-201.5 483,-201.5"/>
+<text text-anchor="start" x="491" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="start" x="491" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_constraint</text>
+<text text-anchor="middle" x="559" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">_bundle.h</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node6&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M345.45,-429.03C355.48,-420.45 366.51,-409.93 375,-399 423.05,-337.14 438.23,-319.05 457,-243 461.47,-224.88 466.96,-216.78 457,-201 446.06,-183.68 427.38,-172.17 408.71,-164.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="343.16,-426.38 337.7,-435.46 347.63,-431.77 343.16,-426.38"/>
+<path fill="none" stroke="midnightblue" d="M527.78,-427.22C534.05,-418.91 540.31,-409.05 544,-399 563.78,-345.17 562.67,-276.07 560.63,-242.73"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="524.86,-425.26 521.34,-435.25 530.33,-429.63 524.86,-425.26"/>
+</g>
+<!-- Node13 -->
+<g id="node8" class="node">
+<title>Node13</title>
+<g id="a_node8"><a xlink:href="sap__model_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="466.5,-134.5 466.5,-164.5 609.5,-164.5 609.5,-134.5 466.5,-134.5"/>
+<text text-anchor="start" x="474.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="middle" x="538" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_model.h</text>
+</a>
+</g>
+</g>
+<!-- Node6&#45;&gt;Node13 -->
+<g id="edge13" class="edge">
+<title>Node6&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M534.51,-429.07C544.54,-420.5 555.56,-409.97 564,-399 611.49,-337.23 625.71,-318.74 644,-243 648.38,-224.85 653.96,-216.78 644,-201 633.06,-183.68 614.38,-172.17 595.71,-164.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="532.22,-426.43 526.75,-435.5 536.68,-431.82 532.22,-426.43"/>
 </g>
 <!-- Node8 -->
 <g id="node3" class="node">
 <title>Node8</title>
-<g id="a_node3"><a xlink:href="deformable__mesh__intersection_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-285 0,-315 180,-315 180,-285 0,-285"/>
-<text text-anchor="start" x="8" y="-303" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="90" y="-292" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_mesh_intersection.h</text>
+<g id="a_node3"><a xlink:href="deformable__contact__internal_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="198.5,-285 198.5,-315 367.5,-315 367.5,-285 198.5,-285"/>
+<text text-anchor="start" x="206.5" y="-303" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="283" y="-292" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_contact_internal.h</text>
 </a>
 </g>
 </g>
 <!-- Node7&#45;&gt;Node8 -->
 <g id="edge2" class="edge">
 <title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M92.44,-347.28C91.86,-336.25 91.22,-324.25 90.75,-315.23"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="88.95,-347.63 92.97,-357.43 95.94,-347.26 88.95,-347.63"/>
+<path fill="none" stroke="midnightblue" d="M283,-347.28C283,-336.25 283,-324.25 283,-315.23"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="279.5,-347.43 283,-357.43 286.5,-347.43 279.5,-347.43"/>
 </g>
-<!-- Node10 -->
-<g id="node5" class="node">
-<title>Node10</title>
-<g id="a_node5"><a xlink:href="sap__contact__problem_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="198.5,-279.5 198.5,-320.5 337.5,-320.5 337.5,-279.5 198.5,-279.5"/>
-<text text-anchor="start" x="206.5" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
-<text text-anchor="start" x="206.5" y="-297.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_contact</text>
-<text text-anchor="middle" x="268" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">_problem.h</text>
+<!-- Node9 -->
+<g id="node4" class="node">
+<title>Node9</title>
+<g id="a_node4"><a xlink:href="deformable__mesh__intersection_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-285 0,-315 180,-315 180,-285 0,-285"/>
+<text text-anchor="start" x="8" y="-303" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="90" y="-292" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_mesh_intersection.h</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node10 -->
-<g id="edge4" class="edge">
-<title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M266.17,-347.3C266.53,-338.3 266.91,-328.65 267.23,-320.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="262.67,-347.3 265.77,-357.43 269.66,-347.57 262.67,-347.3"/>
+<!-- Node7&#45;&gt;Node9 -->
+<g id="edge3" class="edge">
+<title>Node7&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M223.6,-353.61C191.62,-341.02 153.23,-325.9 125.82,-315.11"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="222.71,-357.02 233.3,-357.43 225.28,-350.51 222.71,-357.02"/>
+</g>
+<!-- Node11 -->
+<g id="node6" class="node">
+<title>Node11</title>
+<g id="a_node6"><a xlink:href="sap__contact__problem_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="385.5,-279.5 385.5,-320.5 524.5,-320.5 524.5,-279.5 385.5,-279.5"/>
+<text text-anchor="start" x="393.5" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="start" x="393.5" y="-297.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_contact</text>
+<text text-anchor="middle" x="455" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">_problem.h</text>
+</a>
+</g>
 </g>
 <!-- Node10&#45;&gt;Node11 -->
 <g id="edge5" class="edge">
 <title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M303.1,-273.35C316.89,-263.27 332.46,-251.89 345.31,-242.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="300.79,-270.7 294.78,-279.43 304.92,-276.35 300.79,-270.7"/>
-</g>
-<!-- Node10&#45;&gt;Node12 -->
-<g id="edge9" class="edge">
-<title>Node10&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M268.43,-269.11C269.96,-248.62 274.49,-221.54 287,-201 296.28,-185.77 311.93,-173.3 325.43,-164.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="264.93,-268.97 267.88,-279.15 271.92,-269.35 264.93,-268.97"/>
-</g>
-<!-- Node14 -->
-<g id="node9" class="node">
-<title>Node14</title>
-<g id="a_node9"><a xlink:href="compliant__contact__manager_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="195.5,-0.5 195.5,-30.5 362.5,-30.5 362.5,-0.5 195.5,-0.5"/>
-<text text-anchor="start" x="203.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/plant</text>
-<text text-anchor="middle" x="279" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/compliant_contact_manager.h</text>
-</a>
-</g>
-</g>
-<!-- Node10&#45;&gt;Node14 -->
-<g id="edge10" class="edge">
-<title>Node10&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M259.16,-269.43C247.24,-224.74 229.58,-137.71 249,-67 252.67,-53.63 260.91,-40.21 267.83,-30.57"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="255.86,-270.62 261.9,-279.33 262.61,-268.76 255.86,-270.62"/>
+<path fill="none" stroke="midnightblue" d="M454.39,-347.3C454.51,-338.3 454.64,-328.65 454.74,-320.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="450.89,-347.38 454.26,-357.43 457.89,-347.48 450.89,-347.38"/>
 </g>
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge6" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M363.26,-191.67C360.51,-182.42 357.59,-172.61 355.29,-164.89"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="359.94,-192.78 366.15,-201.36 366.65,-190.78 359.94,-192.78"/>
+<path fill="none" stroke="midnightblue" d="M490.1,-273.35C503.89,-263.27 519.46,-251.89 532.31,-242.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="487.79,-270.7 481.78,-279.43 491.92,-276.35 487.79,-270.7"/>
 </g>
-<!-- Node13 -->
-<g id="node8" class="node">
-<title>Node13</title>
-<g id="a_node8"><a xlink:href="sap__solver_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="258,-67.5 258,-97.5 400,-97.5 400,-67.5 258,-67.5"/>
-<text text-anchor="start" x="266" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
-<text text-anchor="middle" x="329" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_solver.h</text>
+<!-- Node11&#45;&gt;Node13 -->
+<g id="edge10" class="edge">
+<title>Node11&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M455.43,-269.11C456.96,-248.62 461.49,-221.54 474,-201 483.28,-185.77 498.93,-173.3 512.43,-164.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="451.93,-268.97 454.88,-279.15 458.92,-269.35 451.93,-268.97"/>
+</g>
+<!-- Node15 -->
+<g id="node10" class="node">
+<title>Node15</title>
+<g id="a_node10"><a xlink:href="compliant__contact__manager_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="382.5,-0.5 382.5,-30.5 549.5,-30.5 549.5,-0.5 382.5,-0.5"/>
+<text text-anchor="start" x="390.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/plant</text>
+<text text-anchor="middle" x="466" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/compliant_contact_manager.h</text>
 </a>
 </g>
+</g>
+<!-- Node11&#45;&gt;Node15 -->
+<g id="edge11" class="edge">
+<title>Node11&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M446.16,-269.43C434.24,-224.74 416.58,-137.71 436,-67 439.67,-53.63 447.91,-40.21 454.83,-30.57"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="442.86,-270.62 448.9,-279.33 449.61,-268.76 442.86,-270.62"/>
 </g>
 <!-- Node12&#45;&gt;Node13 -->
 <g id="edge7" class="edge">
 <title>Node12&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M342.94,-124.7C339.86,-115.59 336.44,-105.49 333.76,-97.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="339.71,-126.05 346.23,-134.4 346.34,-123.8 339.71,-126.05"/>
+<path fill="none" stroke="midnightblue" d="M550.26,-191.67C547.51,-182.42 544.59,-172.61 542.29,-164.89"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="546.94,-192.78 553.15,-201.36 553.65,-190.78 546.94,-192.78"/>
+</g>
+<!-- Node14 -->
+<g id="node9" class="node">
+<title>Node14</title>
+<g id="a_node9"><a xlink:href="sap__solver_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="445,-67.5 445,-97.5 587,-97.5 587,-67.5 445,-67.5"/>
+<text text-anchor="start" x="453" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="middle" x="516" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_solver.h</text>
+</a>
+</g>
 </g>
 <!-- Node13&#45;&gt;Node14 -->
 <g id="edge8" class="edge">
 <title>Node13&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M312.04,-59.45C304.69,-49.9 296.31,-39 289.83,-30.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="309.28,-61.6 318.15,-67.4 314.83,-57.34 309.28,-61.6"/>
+<path fill="none" stroke="midnightblue" d="M529.94,-124.7C526.86,-115.59 523.44,-105.49 520.76,-97.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="526.71,-126.05 533.23,-134.4 533.34,-123.8 526.71,-126.05"/>
+</g>
+<!-- Node14&#45;&gt;Node15 -->
+<g id="edge9" class="edge">
+<title>Node14&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M499.04,-59.45C491.69,-49.9 483.31,-39 476.83,-30.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="496.28,-61.6 505.15,-67.4 501.83,-57.34 496.28,-61.6"/>
 </g>
 </g>
 </svg>

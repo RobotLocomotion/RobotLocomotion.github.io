@@ -18,6 +18,7 @@ var dir_da11cd43e7bab310171e778f62212487 =
     [ "orientation_constraint.h", "orientation__constraint_8h.html", null ],
     [ "orientation_cost.h", "orientation__cost_8h.html", null ],
     [ "point_to_point_distance_constraint.h", "point__to__point__distance__constraint_8h.html", null ],
+    [ "polyhedron_constraint.h", "polyhedron__constraint_8h.html", null ],
     [ "position_constraint.h", "position__constraint_8h.html", null ],
     [ "position_cost.h", "position__cost_8h.html", null ],
     [ "unit_quaternion_constraint.h", "unit__quaternion__constraint_8h.html", "unit__quaternion__constraint_8h" ]
