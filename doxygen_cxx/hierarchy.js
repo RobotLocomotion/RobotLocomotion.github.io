@@ -277,7 +277,6 @@ var hierarchy =
         [ "ExpressionPow", "classdrake_1_1symbolic_1_1_expression_pow.html", null ]
       ] ],
       [ "ExpressionAdd", "classdrake_1_1symbolic_1_1_expression_add.html", null ],
-      [ "ExpressionConstant", "classdrake_1_1symbolic_1_1_expression_constant.html", null ],
       [ "ExpressionIfThenElse", "classdrake_1_1symbolic_1_1_expression_if_then_else.html", null ],
       [ "ExpressionMul", "classdrake_1_1symbolic_1_1_expression_mul.html", null ],
       [ "ExpressionNaN", "classdrake_1_1symbolic_1_1_expression_na_n.html", null ],

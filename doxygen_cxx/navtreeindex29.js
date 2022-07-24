@@ -1,16 +1,5 @@
 var NAVTREEINDEX29 =
 {
-"classdrake_1_1systems_1_1_continuous_state.html#aac8a3aad57388d77300bbebad3de1ff6":[3,0,0,15,25,18],
-"classdrake_1_1systems_1_1_continuous_state.html#ac06d214ff02e0d9f5ed636e55743bcc7":[3,0,0,15,25,1],
-"classdrake_1_1systems_1_1_continuous_state.html#ac39b3348257262124904dfe95fff8221":[3,0,0,15,25,3],
-"classdrake_1_1systems_1_1_continuous_state.html#ac9268f6e13f208019d9131cbe98dde0d":[3,0,0,15,25,8],
-"classdrake_1_1systems_1_1_continuous_state.html#acf42544d45810d7c74083ba2b00bb9d0":[3,0,0,15,25,28],
-"classdrake_1_1systems_1_1_continuous_state.html#adbd6c1818e0783a3a173a6e1d81e5f3e":[3,0,0,15,25,14],
-"classdrake_1_1systems_1_1_continuous_state.html#ae17b6a0871936b2904a4c2f215047f32":[3,0,0,15,25,5],
-"classdrake_1_1systems_1_1_continuous_state.html#ae1dc3f5874a81728cd62f03b0c7c7c26":[3,0,0,15,25,9],
-"classdrake_1_1systems_1_1_continuous_state.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,15,25,29],
-"classdrake_1_1systems_1_1_continuous_state.html#afada8502efc681e7f62ff5d47fee1724":[3,0,0,15,25,27],
-"classdrake_1_1systems_1_1_demultiplexer.html":[1,2,1,5],
 "classdrake_1_1systems_1_1_demultiplexer.html#a12f80a32502008138b77ad790d0be9cc":[1,2,1,5,5],
 "classdrake_1_1systems_1_1_demultiplexer.html#a2dfcdc26002e3b7e4d3d6c1bcec42b66":[1,2,1,5,7],
 "classdrake_1_1systems_1_1_demultiplexer.html#a32f49fa511b864f9b167b98a94a08e92":[1,2,1,5,2],
@@ -249,5 +238,16 @@ var NAVTREEINDEX29 =
 "classdrake_1_1systems_1_1_diagram_state.html#a7711d50aebaea53aaf670404411840ce":[3,0,0,15,38,6],
 "classdrake_1_1systems_1_1_diagram_state.html#a8fee61d7a783cade1a3d07fe86284d27":[3,0,0,15,38,3],
 "classdrake_1_1systems_1_1_diagram_state.html#a95871b5bcfbbabaed2bb4be4520d3c22":[3,0,0,15,38,7],
-"classdrake_1_1systems_1_1_diagram_state.html#aa36956c63d3c0533b862fd51d33a8646":[3,0,0,15,38,9]
+"classdrake_1_1systems_1_1_diagram_state.html#aa36956c63d3c0533b862fd51d33a8646":[3,0,0,15,38,9],
+"classdrake_1_1systems_1_1_diagram_state.html#ad7d04574cf162f4b6e2ed84e42069809":[3,0,0,15,38,1],
+"classdrake_1_1systems_1_1_diagram_state.html#ae79cf6c7c9e09b57a7dcddf6352e6f0a":[3,0,0,15,38,5],
+"classdrake_1_1systems_1_1_discrete_derivative.html":[1,2,1,6],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a061840a96c15813ea3d49efa57d074f6":[1,2,1,6,7],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a0af346932bf913c979543659c4140abe":[1,2,1,6,4],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b":[1,2,1,6,3],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a744e16c81b5d48f99c670520907a7ead":[1,2,1,6,2],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a8daceb7a3c384d6ad9f305e42b5fc1c6":[1,2,1,6,10],
+"classdrake_1_1systems_1_1_discrete_derivative.html#aa6b4308bca3ce0b1a016d0eff6f91d5c":[1,2,1,6,1],
+"classdrake_1_1systems_1_1_discrete_derivative.html#aacb738d28aede718f8d1b86689e831d4":[1,2,1,6,0],
+"classdrake_1_1systems_1_1_discrete_derivative.html#ab49326ecc136341f4277e409a757d03d":[1,2,1,6,6]
 };

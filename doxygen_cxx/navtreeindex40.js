@@ -1,16 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,17,4,15],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,17,4,3],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,17,4,2],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,17,4,7],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,4,13],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,17,4,12],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,17,4,0],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,4,20],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,17,4,1],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,17,4,19],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,17,4,14],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#add41849231c25a154e54d762f55c488c":[3,0,0,17,4,5],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#af2a0658eb97b715c3c7066f1b24dd00b":[3,0,0,17,4,8],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html":[3,0,0,17,5],
@@ -249,5 +238,16 @@ var NAVTREEINDEX40 =
 "decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b":[4,0,0,1,2,4,7],
 "decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,2,4,3],
 "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,2,4,5],
-"decompose_8h.html#aec138ad5b7eb6d6db3533272fbf36cba":[4,0,0,1,2,4,1]
+"decompose_8h.html#aec138ad5b7eb6d6db3533272fbf36cba":[4,0,0,1,2,4,1],
+"default__scalars_8h.html":[4,0,0,1,14],
+"default__scalars__pybind_8h.html":[4,0,0,0,0,0,2],
+"default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,0,2,0],
+"default__scalars__pybind_8h.html#a6294e82ee237c93a7e6cbc2fb4d924b2":[4,0,0,0,0,0,2,3],
+"default__scalars__pybind_8h.html#a8a3b7387557e1dd66533247e34770031":[4,0,0,0,0,0,2,2],
+"default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1],
+"default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,0,2,4],
+"deformable__body__config_8h.html":[4,0,0,8,3,6],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,3,6,1],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[4,0,0,8,3,6,1,0],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385":[4,0,0,8,3,6,1,1]
 };

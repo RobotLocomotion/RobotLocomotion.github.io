@@ -175,10 +175,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1symbolic_1_1_expression.
        | asin(E) | acos(E) | atan(E) | atan2(E, E) | sinh(E) | cosh(E) | tanh(E)
        | min(E, E) | max(E, E) | ceil(E) | floor(E) | if_then_else(F, E, E)
        | NaN | uninterpreted_function(name, {v_1, ..., v_n})
-</pre><p>In the implementation, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> is a simple wrapper including a shared pointer to <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> class which is a super-class of different kinds of symbolic expressions (i.e. <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html" title="Symbolic expression representing an addition which is a sum of products.">ExpressionAdd</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html" title="Symbolic expression representing logarithms.">ExpressionLog</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html" title="Symbolic expression representing sine function.">ExpressionSin</a>). Note that it includes a shared pointer, not a unique pointer, to allow sharing sub-expressions.</p>
-<dl class="section note"><dt>Note</dt><dd>The sharing of sub-expressions is not yet implemented.</dd>
-<dd>
--E is represented as -1 * E internally.</dd>
+</pre><p>In the implementation, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> directly stores Constant values inline, but in all other cases stores a shared pointer to a const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> class that is a super-class of different kinds of symbolic expressions (i.e., <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html" title="Symbolic expression representing an addition which is a sum of products.">ExpressionAdd</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html" title="Symbolic expression representing logarithms.">ExpressionLog</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html" title="Symbolic expression representing sine function.">ExpressionSin</a>), which makes it efficient to copy, move, and assign to an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>-E is represented as -1 * E internally.</dd>
 <dd>
 A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
 <p>The following simple simplifications are implemented: </p><pre class="fragment">    E + 0             -&gt;  E
@@ -203,14 +201,13 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
     f(E(c))        -&gt;  E(f(c))       // c is a constant, f is a math function
 </pre><p>For the math functions which are only defined over a restricted domain (namely, log, sqrt, pow, asin, acos), we check the domain of argument(s), and throw std::domain_error exception if a function is not well-defined for a given argument(s).</p>
 <p>Relational operators over expressions (==, !=, &lt;, &gt;, &lt;=, &gt;=) return <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">symbolic::Formula</a> instead of bool. Those operations are declared in <a class="el" href="formula_8h.html">formula.h</a> file. To check structural equality between two expressions a separate function, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#abb771e5bf5c37eb4753daf77f77adab0" title="Checks structural equality.">Expression::EqualTo</a>, is provided.</p>
-<p>Regarding NaN, we have the following rules:</p><ol type="1">
+<p>Regarding the arithmetic of an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> when operating on NaNs, we have the following rules:</p><ol type="1">
 <li>NaN values are extremely rare during typical computations. Because they are difficult to handle symbolically, we will round that up to "must never
     occur". We allow the user to form <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html" title="Symbolic expression representing NaN (not-a-number).">ExpressionNaN</a> cells in a symbolic tree. For example, the user can initialize an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> to NaN and then overwrite it later. However, evaluating a tree that has NaN in its evaluated sub-trees is an error (see rule (3) below).</li>
 <li>It's still valid for code to check <code>isnan</code> in order to fail-fast. So we provide <a class="el" href="namespacedrake_1_1symbolic.html#ac66d112b9b6d693ee82d08c7a01f7a14" title="Returns a Formula for the predicate isnan(e) to the given expression.">isnan(const Expression&amp;)</a> for the common case of non-NaN value returning False. This way, code can fail-fast with double yet still compile with <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>.</li>
 <li>If there are expressions that embed separate cases (<code>if_then_else</code>), some of the sub-expressions may be not used in evaluation when they are in the not-taken case (for NaN reasons or any other reason). Bad values within those not-taken branches does not cause exceptions.</li>
-<li>The isnan check is different than if_then_else. In the latter, the <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html" title="Symbolic expression representing NaN (not-a-number).">ExpressionNaN</a> is within a dead sub-expression branch. In the former, it appears in an evaluated trunk. That goes against rule (1) where a NaN anywhere in a computation (other than dead code) is an error.</li>
+<li>The isnan check is different than if_then_else. In the latter, the <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html" title="Symbolic expression representing NaN (not-a-number).">ExpressionNaN</a> is within a dead sub-expression branch. In the former, it appears in an evaluated trunk. That goes against rule (1) where a NaN anywhere in a computation (other than dead code) is an error. </li>
 </ol>
-<p><a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> can be used as a scalar type of Eigen types. </p>
 </div>
 <p><code>#include &lt;drake/common/symbolic/expression/expression.h&gt;</code></p>
 <table class="memberdecls">
@@ -218,9 +215,9 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acb931e73212b416bd9b88b92b2ae5c2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#acb931e73212b416bd9b88b92b2ae5c2f">~Expression</a> ()=default</td></tr>
 <tr class="separator:acb931e73212b416bd9b88b92b2ae5c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74c998ba3dfcfd099f0416f3f711127c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a74c998ba3dfcfd099f0416f3f711127c">Expression</a> ()</td></tr>
-<tr class="memdesc:a74c998ba3dfcfd099f0416f3f711127c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a74c998ba3dfcfd099f0416f3f711127c">More...</a><br /></td></tr>
-<tr class="separator:a74c998ba3dfcfd099f0416f3f711127c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9fa8e5f1b7bf363ca8dbf240bbfb0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a5f9fa8e5f1b7bf363ca8dbf240bbfb0d">Expression</a> ()=default</td></tr>
+<tr class="memdesc:a5f9fa8e5f1b7bf363ca8dbf240bbfb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a5f9fa8e5f1b7bf363ca8dbf240bbfb0d">More...</a><br /></td></tr>
+<tr class="separator:a5f9fa8e5f1b7bf363ca8dbf240bbfb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3613dc76e3436365128993b8d75990ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a3613dc76e3436365128993b8d75990ab">Expression</a> (double constant)</td></tr>
 <tr class="memdesc:a3613dc76e3436365128993b8d75990ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a constant.  <a href="#a3613dc76e3436365128993b8d75990ab">More...</a><br /></td></tr>
 <tr class="separator:a3613dc76e3436365128993b8d75990ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -395,6 +392,12 @@ Friends</h2></td></tr>
 <tr class="memitem:acef926e653145a96fc31416c85e20c14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#acef926e653145a96fc31416c85e20c14">is_constant</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:acef926e653145a96fc31416c85e20c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>e</code> is a constant expression.  <a href="#acef926e653145a96fc31416c85e20c14">More...</a><br /></td></tr>
 <tr class="separator:acef926e653145a96fc31416c85e20c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5163fc7e849f52cdd5de24fdf40791a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#ab5163fc7e849f52cdd5de24fdf40791a">is_constant</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e, double value)</td></tr>
+<tr class="memdesc:ab5163fc7e849f52cdd5de24fdf40791a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>e</code> is a constant expression representing <code>v</code>.  <a href="#ab5163fc7e849f52cdd5de24fdf40791a">More...</a><br /></td></tr>
+<tr class="separator:ab5163fc7e849f52cdd5de24fdf40791a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56597943e81b4b1cb898816104662a16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a56597943e81b4b1cb898816104662a16">is_nan</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a56597943e81b4b1cb898816104662a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>e</code> is NaN.  <a href="#a56597943e81b4b1cb898816104662a16">More...</a><br /></td></tr>
+<tr class="separator:a56597943e81b4b1cb898816104662a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3313ad6342effa904bba98f1ef811902"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a3313ad6342effa904bba98f1ef811902">is_variable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a3313ad6342effa904bba98f1ef811902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>e</code> is a variable expression.  <a href="#a3313ad6342effa904bba98f1ef811902">More...</a><br /></td></tr>
 <tr class="separator:a3313ad6342effa904bba98f1ef811902"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -470,8 +473,9 @@ Friends</h2></td></tr>
 <tr class="memitem:aa19665aa37ff4c0aff7aa1ca142eff46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#aa19665aa37ff4c0aff7aa1ca142eff46">is_uninterpreted_function</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:aa19665aa37ff4c0aff7aa1ca142eff46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>e</code> is an uninterpreted-function expression.  <a href="#aa19665aa37ff4c0aff7aa1ca142eff46">More...</a><br /></td></tr>
 <tr class="separator:aa19665aa37ff4c0aff7aa1ca142eff46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d2c500f3efc345164a57117326dbcff"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html">ExpressionConstant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a9d2c500f3efc345164a57117326dbcff">to_constant</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
-<tr class="separator:a9d2c500f3efc345164a57117326dbcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a5165b4cdadcd273d3faad9dffd2bcc7e">get_constant_value</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant value of the constant expression <code>e</code>.  <a href="#a5165b4cdadcd273d3faad9dffd2bcc7e">More...</a><br /></td></tr>
+<tr class="separator:a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7675408d0322a3c6b5aa1a448c2b93fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a7675408d0322a3c6b5aa1a448c2b93fc">to_variable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="separator:a7675408d0322a3c6b5aa1a448c2b93fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac65f0b722c3a893aaab8abfd880f8918"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#ac65f0b722c3a893aaab8abfd880f8918">to_unary</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
@@ -526,8 +530,6 @@ Friends</h2></td></tr>
 <tr class="separator:a079efc843b190d0657c0f7826dd4d185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84c1d0947fc45bf73df3f95e8bf311d7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html">ExpressionUninterpretedFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a84c1d0947fc45bf73df3f95e8bf311d7">to_uninterpreted_function</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="separator:a84c1d0947fc45bf73df3f95e8bf311d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81a740ffa75b132c33e8378a2f0fe5dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html">ExpressionConstant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a81a740ffa75b132c33e8378a2f0fe5dc">to_constant</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> *e)</td></tr>
-<tr class="separator:a81a740ffa75b132c33e8378a2f0fe5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91edb2cdf86af1087b2e99bf71c81e55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a91edb2cdf86af1087b2e99bf71c81e55">to_variable</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> *e)</td></tr>
 <tr class="separator:a91edb2cdf86af1087b2e99bf71c81e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac248cade4f194a1d9c5311c7ccc2b656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html#ac248cade4f194a1d9c5311c7ccc2b656">to_unary</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> *e)</td></tr>
@@ -661,11 +663,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a74c998ba3dfcfd099f0416f3f711127c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74c998ba3dfcfd099f0416f3f711127c">&#9670;&nbsp;</a></span>Expression() <span class="overload">[3/5]</span></h2>
+<a id="a5f9fa8e5f1b7bf363ca8dbf240bbfb0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9fa8e5f1b7bf363ca8dbf240bbfb0d">&#9670;&nbsp;</a></span>Expression() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> </td>
@@ -674,6 +679,11 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
@@ -1673,6 +1683,35 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a5165b4cdadcd273d3faad9dffd2bcc7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5165b4cdadcd273d3faad9dffd2bcc7e">&#9670;&nbsp;</a></span>get_constant_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double get_constant_value </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the constant value of the constant expression <code>e</code>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>{<code>e</code> is a constant expression.} </dd></dl>
+
+</div>
+</div>
 <a id="a30f9401137684ac91426224f76629336"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f9401137684ac91426224f76629336">&#9670;&nbsp;</a></span>hash_append</h2>
 
@@ -1964,7 +2003,7 @@ More information about the C++'s conditional expression and ternary operator is 
 </div>
 </div>
 <a id="acef926e653145a96fc31416c85e20c14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acef926e653145a96fc31416c85e20c14">&#9670;&nbsp;</a></span>is_constant</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acef926e653145a96fc31416c85e20c14">&#9670;&nbsp;</a></span>is_constant <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1988,6 +2027,44 @@ More information about the C++'s conditional expression and ternary operator is 
 </div><div class="memdoc">
 
 <p>Checks if <code>e</code> is a constant expression. </p>
+
+</div>
+</div>
+<a id="ab5163fc7e849f52cdd5de24fdf40791a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5163fc7e849f52cdd5de24fdf40791a">&#9670;&nbsp;</a></span>is_constant <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_constant </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if <code>e</code> is a constant expression representing <code>v</code>. </p>
 
 </div>
 </div>
@@ -2268,6 +2345,34 @@ More information about the C++'s conditional expression and ternary operator is 
 </div><div class="memdoc">
 
 <p>Checks if <code>e</code> is a multiplication expression. </p>
+
+</div>
+</div>
+<a id="a56597943e81b4b1cb898816104662a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56597943e81b4b1cb898816104662a16">&#9670;&nbsp;</a></span>is_nan</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_nan </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if <code>e</code> is NaN. </p>
 
 </div>
 </div>
@@ -3576,58 +3681,6 @@ More information about the C++'s conditional expression and ternary operator is 
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html">ExpressionCeiling</a>&amp; to_ceil </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> *&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9d2c500f3efc345164a57117326dbcff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d2c500f3efc345164a57117326dbcff">&#9670;&nbsp;</a></span>to_constant <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html">ExpressionConstant</a>&amp; to_constant </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a81a740ffa75b132c33e8378a2f0fe5dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81a740ffa75b132c33e8378a2f0fe5dc">&#9670;&nbsp;</a></span>to_constant <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html">ExpressionConstant</a>&amp; to_constant </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> *&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>

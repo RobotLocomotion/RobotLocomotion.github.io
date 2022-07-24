@@ -52,7 +52,6 @@ var searchData=
   ['expressionatan2',['ExpressionAtan2',['../classdrake_1_1symbolic_1_1_expression_atan2.html',1,'drake::symbolic']]],
   ['expressionceiling',['ExpressionCeiling',['../classdrake_1_1symbolic_1_1_expression_ceiling.html',1,'drake::symbolic']]],
   ['expressioncell',['ExpressionCell',['../classdrake_1_1symbolic_1_1_expression_cell.html',1,'drake::symbolic']]],
-  ['expressionconstant',['ExpressionConstant',['../classdrake_1_1symbolic_1_1_expression_constant.html',1,'drake::symbolic']]],
   ['expressionconstraint',['ExpressionConstraint',['../classdrake_1_1solvers_1_1_expression_constraint.html',1,'drake::solvers']]],
   ['expressioncos',['ExpressionCos',['../classdrake_1_1symbolic_1_1_expression_cos.html',1,'drake::symbolic']]],
   ['expressioncosh',['ExpressionCosh',['../classdrake_1_1symbolic_1_1_expression_cosh.html',1,'drake::symbolic']]],

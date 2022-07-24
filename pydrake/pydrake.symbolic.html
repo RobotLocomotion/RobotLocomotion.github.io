@@ -505,16 +505,12 @@ variable’s unique ID. For example, for a given variable ordering x &gt; y
 <span class="o">|</span> <span class="n">NaN</span> <span class="o">|</span> <span class="n">uninterpreted_function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{</span><span class="n">v_1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">v_n</span><span class="p">})</span>
 </pre></div>
 </div>
-<p>In the implementation, Expression is a simple wrapper including a
-shared pointer to ExpressionCell class which is a super-class of
-different kinds of symbolic expressions (i.e. ExpressionAdd,
-ExpressionMul, ExpressionLog, ExpressionSin). Note that it includes a
-shared pointer, not a unique pointer, to allow sharing
-sub-expressions.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The sharing of sub-expressions is not yet implemented.</p>
-</div>
+<p>In the implementation, Expression directly stores Constant values
+inline, but in all other cases stores a shared pointer to a const
+ExpressionCell class that is a super-class of different kinds of
+symbolic expressions (i.e., ExpressionAdd, ExpressionMul,
+ExpressionLog, ExpressionSin), which makes it efficient to copy, move,
+and assign to an Expression.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">-E is represented as -1 * E internally.</p>
@@ -557,14 +553,15 @@ well-defined for a given argument(s).</p>
 symbolic::Formula instead of bool. Those operations are declared in
 formula.h file. To check structural equality between two expressions a
 separate function, Expression::EqualTo, is provided.</p>
-<p>Regarding NaN, we have the following rules: 1. NaN values are
-extremely rare during typical computations. Because they are difficult
-to handle symbolically, we will round that up to “must never occur”.
-We allow the user to form ExpressionNaN cells in a symbolic tree. For
-example, the user can initialize an Expression to NaN and then
-overwrite it later. However, evaluating a tree that has NaN in its
-evaluated sub-trees is an error (see rule (3) below). 2. It’s still
-valid for code to check <code class="docutils literal notranslate"><span class="pre">isnan</span></code> in order to fail-fast. So we provide
+<p>Regarding the arithmetic of an Expression when operating on NaNs, we
+have the following rules: 1. NaN values are extremely rare during
+typical computations. Because they are difficult to handle
+symbolically, we will round that up to “must never occur”. We allow
+the user to form ExpressionNaN cells in a symbolic tree. For example,
+the user can initialize an Expression to NaN and then overwrite it
+later. However, evaluating a tree that has NaN in its evaluated
+sub-trees is an error (see rule (3) below). 2. It’s still valid for
+code to check <code class="docutils literal notranslate"><span class="pre">isnan</span></code> in order to fail-fast. So we provide
 isnan(const Expression&amp;) for the common case of non-NaN value
 returning False. This way, code can fail-fast with double yet still
 compile with Expression. 3. If there are expressions that embed
@@ -576,6 +573,10 @@ than if_then_else. In the latter, the ExpressionNaN is within a dead
 sub-expression branch. In the former, it appears in an evaluated
 trunk. That goes against rule (1) where a NaN anywhere in a
 computation (other than dead code) is an error.</p>
+<p>note for Drake developers: under the hood of Expression, we have an
+internal::BoxedCell helper class that uses NaN for pointer tagging;
+that’s a distinct concept from the Expression::NaN() rules enumerated
+just above.</p>
 <p>symbolic::Expression can be used as a scalar type of Eigen types.</p>
 <dl class="method">
 <dt id="pydrake.symbolic.Expression.__init__">

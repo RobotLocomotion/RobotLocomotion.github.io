@@ -16,7 +16,6 @@ var namespacedrake_1_1symbolic =
     [ "ExpressionAtan2", "classdrake_1_1symbolic_1_1_expression_atan2.html", "classdrake_1_1symbolic_1_1_expression_atan2" ],
     [ "ExpressionCeiling", "classdrake_1_1symbolic_1_1_expression_ceiling.html", "classdrake_1_1symbolic_1_1_expression_ceiling" ],
     [ "ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html", "classdrake_1_1symbolic_1_1_expression_cell" ],
-    [ "ExpressionConstant", "classdrake_1_1symbolic_1_1_expression_constant.html", "classdrake_1_1symbolic_1_1_expression_constant" ],
     [ "ExpressionCos", "classdrake_1_1symbolic_1_1_expression_cos.html", "classdrake_1_1symbolic_1_1_expression_cos" ],
     [ "ExpressionCosh", "classdrake_1_1symbolic_1_1_expression_cosh.html", "classdrake_1_1symbolic_1_1_expression_cosh" ],
     [ "ExpressionDiv", "classdrake_1_1symbolic_1_1_expression_div.html", "classdrake_1_1symbolic_1_1_expression_div" ],
