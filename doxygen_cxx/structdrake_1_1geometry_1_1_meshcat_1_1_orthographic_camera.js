@@ -1,5 +1,6 @@
 var structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera =
 [
+    [ "Serialize", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "bottom", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20", null ],
     [ "far", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#add1a608db25e8e3befb6775a16867611", null ],
     [ "left", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921", null ],

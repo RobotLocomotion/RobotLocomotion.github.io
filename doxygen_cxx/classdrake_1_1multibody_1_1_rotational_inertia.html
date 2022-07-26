@@ -666,7 +666,7 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This method takes <code>this</code> rotational inertia about-point P, expressed-in frame E, and computes its principal moments of inertia about-point P, but expressed-in a frame aligned with the principal axes. </p>
-<dl class="section note"><dt>Note</dt><dd>: This method only works for a rotational inertia with scalar type T that can be converted to a double (discarding any supplemental scalar data such as derivatives of an AutoDiffScalar).</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>: This method only works for a rotational inertia with scalar type T that can be converted to a double (discarding any supplemental scalar data such as derivatives of an AutoDiffXd).</dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">principal_moments</td><td>The vector of principal moments of inertia <code>[Ixx Iyy Izz]</code> sorted in ascending order. </td></tr>
@@ -878,7 +878,7 @@ Related Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the absolute value of each moment/product of inertia in <code>this</code> is within <code>epsilon</code> of the corresponding moment/ product absolute value in <code>other</code>. Otherwise returns <code>false</code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>: This method only works if all moments of inertia with scalar type T in <code>this</code> and <code>other</code> can be converted to a double (discarding supplemental scalar data such as derivatives of an AutoDiffScalar). It fails at runtime if type T cannot be converted to <code>double</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>: This method only works if all moments of inertia with scalar type T in <code>this</code> and <code>other</code> can be converted to a double (discarding supplemental scalar data such as derivatives of an AutoDiffXd). It fails at runtime if type T cannot be converted to <code>double</code>. </dd></dl>
 
 </div>
 </div>

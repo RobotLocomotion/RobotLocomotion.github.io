@@ -498,6 +498,30 @@ well save a few nanograms of CO2 where we can.)</li>
 <a href="https://docs.google.com/document/d/17D0yzyr0kGH44eWpiNY7E33A8hW1aiJRmADaoAlVISE/edit#">account setup</a>
 instructions to obtain a username and password.</p>
 
+<h3 id="mac-wheel-builds">Mac wheel builds</h3>
+
+<ol>
+  <li>Open the <a href="https://drake-jenkins.csail.mit.edu/view/Wheel/job/mac-big-sur-unprovisioned-clang-wheel-staging-snopt-mosek-release/">Jenkins Wheel Staging</a> page.</li>
+  <li>In the upper right, click “log in” (unless you’re already logged in). This
+will use your GitHub credentials.</li>
+  <li>Click “Build with Parameters”.</li>
+  <li>Change “sha1” to the full <strong>git sha</strong> corresponding to <code class="highlighter-rouge">v1.N.0</code> and
+“release_version” to <code class="highlighter-rouge">1.N.0</code>.</li>
+  <li>Click “Build”; the build will finish after approximately 75 minutes.</li>
+  <li>After it’s finished, open the “Console Output” and scroll to the bottom to
+find the URL of the built wheel, which will be something like
+<code class="highlighter-rouge">https://drake-packages.csail.mit.edu/drake/staging/drake-1.N.0-cp39-cp39-macosx_11_0_x86_64.whl</code>.</li>
+  <li>Download that wheel.</li>
+  <li>Run <code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path
+to the file you downloaded.
+    <ol>
+      <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="linux-wheel-builds">Linux wheel builds</h3>
+
 <ol>
   <li>Use your Ubuntu 20.04 workstation for these steps.  (Do not use any other OS.)</li>
   <li>Create some empty scratch folder to use for these steps, and then <code class="highlighter-rouge">cd</code> into it.</li>

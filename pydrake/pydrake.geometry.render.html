@@ -422,7 +422,7 @@ getter methods for documentation of parameters.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.render.MakeRenderEngineGl">
-<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = &lt;pydrake.geometry.render.RenderEngineGlParams object at 0x7f524a210830&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = RenderEngineGlParams(default_label=&lt;pydrake.geometry.render.RenderLabel object at 0x7fae0a880670&gt;</em>, <em>default_diffuse=Rgba(r=0.9</em>, <em>g=0.7</em>, <em>b=0.2</em>, <em>a=1.0)</em>, <em>default_clear_color=Rgba(r=0.8</em>, <em>g=0.8980392156862745</em>, <em>b=1.0</em>, <em>a=1.0))</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a purely OpenGL
 renderer. The engine only works under Ubuntu. If called on a Mac, it
 will produce a “dummy” implementation.</p>
@@ -865,6 +865,14 @@ specified.</p>
 <dt id="pydrake.geometry.render.RenderEngineVtkParams.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.render.RenderEngineVtkParams</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.render.RenderEngineVtkParams.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.render.RenderEngineVtkParams.default_clear_color">
+<code class="descname">default_clear_color</code><a class="headerlink" href="#pydrake.geometry.render.RenderEngineVtkParams.default_clear_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>The rgb color to which the color buffer is cleared (each channel in
+the range [0, 1]). The default value (in byte values) would be [204,
+229, 255].</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.geometry.render.RenderEngineVtkParams.default_diffuse">

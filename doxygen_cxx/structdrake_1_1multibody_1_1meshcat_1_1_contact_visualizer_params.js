@@ -1,5 +1,6 @@
 var structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params =
 [
+    [ "Serialize", "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "color", "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a99fd5bfdf69925c53ed14a93a238065f", null ],
     [ "delete_on_initialization_event", "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f", null ],
     [ "force_threshold", "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328", null ],

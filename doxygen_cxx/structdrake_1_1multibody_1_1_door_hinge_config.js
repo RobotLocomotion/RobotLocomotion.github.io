@@ -1,6 +1,7 @@
 var structdrake_1_1multibody_1_1_door_hinge_config =
 [
     [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062", null ],
+    [ "Serialize", "structdrake_1_1multibody_1_1_door_hinge_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "catch_torque", "structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77", null ],
     [ "catch_width", "structdrake_1_1multibody_1_1_door_hinge_config.html#aacf351ea5aed0b77d57004ad6f67c5f1", null ],
     [ "dynamic_friction_torque", "structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7", null ],

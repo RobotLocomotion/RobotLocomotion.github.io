@@ -114,11 +114,11 @@ var NAVTREEINDEX =
 "monte__carlo_8h.html#ga9f3c726f3a915c5188fbcd8bff683cb5",
 "namespacemembers_func_q.html",
 "quaternion_8h.html#a056f9de21690e59551e2904bde9ac928",
-"snopt__solver_8h.html",
-"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html",
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b",
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134",
-"symbolic__test__util_8h.html#ab8b985282beb0cb444b7e03d9fc1bf30"
+"sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1",
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac",
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a6255b4003c79e2d88d1c5b233a75a732",
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741",
+"symbolic__test__util_8h.html#a5749b30e655142139a5f1969af8e8cb9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

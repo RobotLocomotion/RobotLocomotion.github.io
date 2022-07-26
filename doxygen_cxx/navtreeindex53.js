@@ -1,5 +1,17 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,15,2,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,15,2,0,3],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,15,2,0,6],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,15,2,0,4],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,15,2,0,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,15,2,0,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,15,2,0,0,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,15,2,0,0,2],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,15,2,0,0,3],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,15,2,1],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,15,2,1,1],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,15,2,1,3],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,15,2,1,5],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,15,2,1,7],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a29017aee3204b230b5884faaf2fac289":[3,0,0,15,2,1,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX53 =
 "symbolic__py__unapply_8h.html":[4,0,0,0,0,9],
 "symbolic__test__util_8h.html":[4,0,0,1,3,8],
 "symbolic__test__util_8h.html#a0cf1a8bf6f0beb0e968750926ccc188e":[4,0,0,1,3,8,18],
-"symbolic__test__util_8h.html#a467aeee6e03396202196949a99d091b3":[4,0,0,1,3,8,11],
-"symbolic__test__util_8h.html#a5749b30e655142139a5f1969af8e8cb9":[4,0,0,1,3,8,0],
-"symbolic__test__util_8h.html#a5c95fc4c9ee4b5116c480d70d14c9441":[4,0,0,1,3,8,12],
-"symbolic__test__util_8h.html#a5f68813c021d723596cf0e927df40b30":[4,0,0,1,3,8,8],
-"symbolic__test__util_8h.html#a663e73fe69ce1b37a442113b1bc1d09d":[4,0,0,1,3,8,17],
-"symbolic__test__util_8h.html#a6c0d2e30262fcb6f7900d590480b4b93":[4,0,0,1,3,8,14],
-"symbolic__test__util_8h.html#a76d302c21a7cd37bdbb3ccd309db9847":[4,0,0,1,3,8,13],
-"symbolic__test__util_8h.html#a7c25d0add2e7a5b5ac520fde29a095ac":[4,0,0,1,3,8,16],
-"symbolic__test__util_8h.html#a7d32380c1bed6f6406814604a31d4486":[4,0,0,1,3,8,2],
-"symbolic__test__util_8h.html#a8709d7c6c2135beaf013d99f406cd183":[4,0,0,1,3,8,1],
-"symbolic__test__util_8h.html#a8bce1dea155cf606b8fd9c58718bd2b8":[4,0,0,1,3,8,19],
-"symbolic__test__util_8h.html#a97bec4ad79d4ed1a5017738221a61a7e":[4,0,0,1,3,8,20],
-"symbolic__test__util_8h.html#a9f9f40ffa7e74c90169e1269d087ff7f":[4,0,0,1,3,8,22]
+"symbolic__test__util_8h.html#a467aeee6e03396202196949a99d091b3":[4,0,0,1,3,8,11]
 };
