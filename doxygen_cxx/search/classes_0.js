@@ -33,5 +33,6 @@ var searchData=
   ['articulatedbodyinertia',['ArticulatedBodyInertia',['../classdrake_1_1multibody_1_1_articulated_body_inertia.html',1,'drake::multibody']]],
   ['augmentedlagrangiannonsmooth',['AugmentedLagrangianNonsmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html',1,'drake::solvers']]],
   ['augmentedlagrangiansmooth',['AugmentedLagrangianSmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html',1,'drake::solvers']]],
+  ['autodiff',['AutoDiff',['../classdrake_1_1ad_1_1_auto_diff.html',1,'drake::ad']]],
   ['axiallysymmetricfreebodyplant',['AxiallySymmetricFreeBodyPlant',['../classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html',1,'drake::multibody::test']]]
 ];

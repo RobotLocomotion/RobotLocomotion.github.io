@@ -54,6 +54,7 @@ var searchData=
   ['moby_5flcp_5fsolver_2eh',['moby_lcp_solver.h',['../moby__lcp__solver_8h.html',1,'']]],
   ['model_5fdirectives_2eh',['model_directives.h',['../model__directives_8h.html',1,'']]],
   ['model_5finstance_2eh',['model_instance.h',['../model__instance_8h.html',1,'']]],
+  ['model_5finstance_5finfo_2eh',['model_instance_info.h',['../model__instance__info_8h.html',1,'']]],
   ['model_5fvalues_2eh',['model_values.h',['../model__values_8h.html',1,'']]],
   ['monomial_2eh',['monomial.h',['../monomial_8h.html',1,'']]],
   ['monomial_5fbasis_5felement_2eh',['monomial_basis_element.h',['../monomial__basis__element_8h.html',1,'']]],

@@ -24,6 +24,9 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
       [ "ModelDirective", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html", "structdrake_1_1multibody_1_1parsing_1_1_model_directive" ],
       [ "ModelDirectives", "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html", "structdrake_1_1multibody_1_1parsing_1_1_model_directives" ]
     ] ],
+    [ "model_instance_info.h", "model__instance__info_8h.html", [
+      [ "ModelInstanceInfo", "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html", "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info" ]
+    ] ],
     [ "package_map.h", "package__map_8h.html", [
       [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", "classdrake_1_1multibody_1_1_package_map" ]
     ] ],

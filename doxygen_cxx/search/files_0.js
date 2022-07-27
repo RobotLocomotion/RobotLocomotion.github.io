@@ -23,6 +23,7 @@ var searchData=
   ['articulated_5fbody_5finertia_2eh',['articulated_body_inertia.h',['../articulated__body__inertia_8h.html',1,'']]],
   ['articulated_5fbody_5finertia_5fcache_2eh',['articulated_body_inertia_cache.h',['../articulated__body__inertia__cache_8h.html',1,'']]],
   ['augmented_5flagrangian_2eh',['augmented_lagrangian.h',['../augmented__lagrangian_8h.html',1,'']]],
+  ['auto_5fdiff_2eh',['auto_diff.h',['../auto__diff_8h.html',1,'']]],
   ['autodiff_2eh',['autodiff.h',['../common_2autodiff_8h.html',1,'(Global Namespace)'],['../math_2autodiff_8h.html',1,'(Global Namespace)']]],
   ['autodiff_5fgradient_2eh',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]],
   ['autodiff_5foverloads_2eh',['autodiff_overloads.h',['../autodiff__overloads_8h.html',1,'']]],

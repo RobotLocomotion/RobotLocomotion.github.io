@@ -222,6 +222,70 @@
             
   <div class="section" id="module-pydrake.systems.lcm">
 <span id="pydrake-systems-lcm"></span><h1>pydrake.systems.lcm<a class="headerlink" href="#module-pydrake.systems.lcm" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.systems.lcm.ApplyLcmBusConfig">
+<code class="descclassname">pydrake.systems.lcm.</code><code class="descname">ApplyLcmBusConfig</code><span class="sig-paren">(</span><em>lcm_buses: Dict[str, pydrake.lcm.DrakeLcmParams], builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.lcm.LcmBuses<a class="headerlink" href="#pydrake.systems.lcm.ApplyLcmBusConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given LCM bus names and parameters, adds an LcmInterfaceSystem for
+each bus within the given diagram builder, and returns an LcmBuses
+object that provides access to the DrakeLcmInterface objects that were
+created.</p>
+<p>Because the interfaces live within the builder (and so eventually, the
+diagram), the diagram will pump the interfaces when it’s used with a
+simulator. Refer to the LcmInterfaceSystem documentation for details.</p>
+<p>The interface pointers remain owned by the builder; the LcmBuses
+object merely aliases into the builder (and then eventually, the
+diagram).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt>
+<dd>A map of {bus_name: params} for LCM transceivers, to be used used
+by drivers, sensors, etc.</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.lcm.LcmBuses">
+<em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">LcmBuses</code><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.lcm.LcmBuses.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmBuses</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs an empty mapping.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmBuses.Add">
+<code class="descname">Add</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmBuses</em>, <em>bus_name: str</em>, <em>bus: pydrake.lcm.DrakeLcmInterface</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.Add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a bus. Throws if the bus is nullptr, or if there was already a
+bus of the same name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmBuses.Find">
+<code class="descname">Find</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmBuses</em>, <em>description_of_caller: str</em>, <em>bus_name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.lcm.DrakeLcmInterface<a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.Find" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the bus of the given name, or throws if there is no such bus.
+The return value is an alias into memory owned by the DiagramBuilder,
+and is never nullptr.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">description_of_caller</span></code>:</dt>
+<dd>is a noun phrase that will be used when creating an error message.
+A typical value would be something like “Camera 5”, “Robot
+controller”, “The default visualizer”, or etc.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmBuses.GetAllBusNames">
+<code class="descname">GetAllBusNames</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmBuses</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.GetAllBusNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all known bus_name keys.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmBuses.size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmBuses</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total number of buses.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.systems.lcm.LcmInterfaceSystem">
 <em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">LcmInterfaceSystem</code><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="Permalink to this definition">¶</a></dt>

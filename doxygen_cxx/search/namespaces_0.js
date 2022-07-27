@@ -1,6 +1,7 @@
 var searchData=
 [
   ['acrobot',['acrobot',['../namespacedrake_1_1examples_1_1acrobot.html',1,'drake::examples::acrobot'],['../namespacedrake_1_1multibody_1_1benchmarks_1_1acrobot.html',1,'drake::multibody::benchmarks::acrobot']]],
+  ['ad',['ad',['../namespacedrake_1_1ad.html',1,'drake']]],
   ['allegro_5fhand',['allegro_hand',['../namespacedrake_1_1examples_1_1allegro__hand.html',1,'drake::examples']]],
   ['analysis',['analysis',['../namespacedrake_1_1systems_1_1analysis.html',1,'drake::systems']]],
   ['analysis_5ftest',['analysis_test',['../namespacedrake_1_1systems_1_1analysis__test.html',1,'drake::systems']]],
