@@ -1379,7 +1379,8 @@ supported for continuous-mode systems.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_.Body_[float].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body.</p>
+<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body. The name will never
+be empty.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1771,7 +1772,8 @@ supported for continuous-mode systems.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body.</p>
+<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body. The name will never
+be empty.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2161,7 +2163,8 @@ supported for continuous-mode systems.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[Expression].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body.</p>
+<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body. The name will never
+be empty.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2551,7 +2554,8 @@ supported for continuous-mode systems.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[float].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body.</p>
+<dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body. The name will never
+be empty.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3316,7 +3320,7 @@ parent material Frame P. The pose is given by a spatial transform
 <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>; see class documentation for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">P</span></code>:</dt>
 <dd>The frame to which this frame is attached with a fixed pose.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
@@ -3329,8 +3333,12 @@ will use P.body().model_instance().</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], P: pydrake.multibody.tree.Frame_[float], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>The name parameter to the FixedOffsetFrame constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], name: str, bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
@@ -3340,7 +3348,7 @@ pose is given by a spatial transform <code class="docutils literal notranslate">
 for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bodyB</span></code>:</dt>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
@@ -3349,8 +3357,12 @@ for more information.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>FixedOffsetFrame must always have name This will be removed from
+Drake on or after 2022-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -3388,7 +3400,7 @@ parent material Frame P. The pose is given by a spatial transform
 <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>; see class documentation for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">P</span></code>:</dt>
 <dd>The frame to which this frame is attached with a fixed pose.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
@@ -3401,8 +3413,12 @@ will use P.body().model_instance().</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], P: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>The name parameter to the FixedOffsetFrame constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], name: str, bodyB: drake::multibody::Body&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
@@ -3412,7 +3428,7 @@ pose is given by a spatial transform <code class="docutils literal notranslate">
 for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bodyB</span></code>:</dt>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
@@ -3421,8 +3437,12 @@ for more information.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], bodyB: drake::multibody::Body&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>FixedOffsetFrame must always have name This will be removed from
+Drake on or after 2022-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -3458,7 +3478,7 @@ parent material Frame P. The pose is given by a spatial transform
 <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>; see class documentation for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">P</span></code>:</dt>
 <dd>The frame to which this frame is attached with a fixed pose.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
@@ -3471,8 +3491,12 @@ will use P.body().model_instance().</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], P: pydrake.multibody.tree.Frame_[Expression], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>The name parameter to the FixedOffsetFrame constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], name: str, bodyB: drake::multibody::Body&lt;drake::symbolic::Expression&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
@@ -3482,7 +3506,7 @@ pose is given by a spatial transform <code class="docutils literal notranslate">
 for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bodyB</span></code>:</dt>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
@@ -3491,8 +3515,12 @@ for more information.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], bodyB: drake::multibody::Body&lt;drake::symbolic::Expression&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>FixedOffsetFrame must always have name This will be removed from
+Drake on or after 2022-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -3528,7 +3556,7 @@ parent material Frame P. The pose is given by a spatial transform
 <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>; see class documentation for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">P</span></code>:</dt>
 <dd>The frame to which this frame is attached with a fixed pose.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
@@ -3541,8 +3569,12 @@ will use P.body().model_instance().</dd>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], P: pydrake.multibody.tree.Frame_[float], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>The name parameter to the FixedOffsetFrame constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], name: str, bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
@@ -3552,7 +3584,7 @@ pose is given by a spatial transform <code class="docutils literal notranslate">
 for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
-<dd>The name of this frame.</dd>
+<dd>The name of this frame. Cannot be empty.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bodyB</span></code>:</dt>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
@@ -3561,8 +3593,12 @@ for more information.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
-<p>Creates an unnamed material Frame F. See overload with name for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>FixedOffsetFrame must always have name This will be removed from
+Drake on or after 2022-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -4450,7 +4486,7 @@ attached).</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Frame_.Frame_[float].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the name of this frame. It may be empty if unnamed.</p>
+<dd><p>Returns the name of this frame. The name will never be empty.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5124,7 +5160,7 @@ attached).</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the name of this frame. It may be empty if unnamed.</p>
+<dd><p>Returns the name of this frame. The name will never be empty.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5796,7 +5832,7 @@ attached).</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[Expression].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the name of this frame. It may be empty if unnamed.</p>
+<dd><p>Returns the name of this frame. The name will never be empty.</p>
 </dd></dl>
 
 </dd></dl>
@@ -6468,7 +6504,7 @@ attached).</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[float].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the name of this frame. It may be empty if unnamed.</p>
+<dd><p>Returns the name of this frame. The name will never be empty.</p>
 </dd></dl>
 
 </dd></dl>
@@ -15323,17 +15359,12 @@ more degrees of freedom.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>
-<p>Constructs a RigidBody with the given default SpatialInertia.</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt>
-<dd>Spatial inertia of <code class="docutils literal notranslate"><span class="pre">this</span></code> body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code>
-and expressed in the body frame B.</dd>
+<dt>Deprecated:</dt>
+<dd>The body_name parameter to the RigidBody constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
 </dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">See multibody_spatial_inertia for details on the monogram notation
-used for spatial inertia quantities.</p>
-</div>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], body_name: str, M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>
@@ -15531,17 +15562,12 @@ more degrees of freedom.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
-<p>Constructs a RigidBody with the given default SpatialInertia.</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt>
-<dd>Spatial inertia of <code class="docutils literal notranslate"><span class="pre">this</span></code> body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code>
-and expressed in the body frame B.</dd>
+<dt>Deprecated:</dt>
+<dd>The body_name parameter to the RigidBody constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
 </dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">See multibody_spatial_inertia for details on the monogram notation
-used for spatial inertia quantities.</p>
-</div>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
@@ -15737,17 +15763,12 @@ more degrees of freedom.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
-<p>Constructs a RigidBody with the given default SpatialInertia.</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt>
-<dd>Spatial inertia of <code class="docutils literal notranslate"><span class="pre">this</span></code> body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code>
-and expressed in the body frame B.</dd>
+<dt>Deprecated:</dt>
+<dd>The body_name parameter to the RigidBody constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
 </dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">See multibody_spatial_inertia for details on the monogram notation
-used for spatial inertia quantities.</p>
-</div>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
@@ -15943,17 +15964,12 @@ more degrees of freedom.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>
-<p>Constructs a RigidBody with the given default SpatialInertia.</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt>
-<dd>Spatial inertia of <code class="docutils literal notranslate"><span class="pre">this</span></code> body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code>
-and expressed in the body frame B.</dd>
+<dt>Deprecated:</dt>
+<dd>The body_name parameter to the RigidBody constructor is now
+required. This will be removed from Drake on or after 2022-12-01.</dd>
 </dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">See multibody_spatial_inertia for details on the monogram notation
-used for spatial inertia quantities.</p>
-</div>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], body_name: str, M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>

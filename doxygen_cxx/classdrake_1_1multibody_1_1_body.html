@@ -186,7 +186,7 @@ class drake::multibody::Body&lt; T &gt;</h3>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
-<tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <code>name</code> associated with <code>this</code> body.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
+<tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <code>name</code> associated with <code>this</code> body. The name will never be empty.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2333d75f20ed2f5d35a10119ef1ab5d5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a2333d75f20ed2f5d35a10119ef1ab5d5">get_num_flexible_positions</a> () const =0</td></tr>
 <tr class="memdesc:a2333d75f20ed2f5d35a10119ef1ab5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of generalized positions q describing flexible deformations for this body.  <a href="#a2333d75f20ed2f5d35a10119ef1ab5d5">More...</a><br /></td></tr>
@@ -439,6 +439,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a Body named <code>name</code> in model instance <code>model_instance</code>. </p>
+<p>The <code>name</code> must not be empty. </p>
 
 </div>
 </div>
@@ -976,7 +977,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a string suffix (e.g. </p>
-<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body.">name()</a>) to identify the <code>k</code>th position in the floating base. <code>position_index_in_body</code> must be in [0, 7) if <code><a class="el" href="classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body is a floating body modeled with a quaternion floating mobilizer.">has_quaternion_dofs()</a></code> is true, otherwise in [0, 6). </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body. The name will never be empty.">name()</a>) to identify the <code>k</code>th position in the floating base. <code>position_index_in_body</code> must be in [0, 7) if <code><a class="el" href="classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body is a floating body modeled with a quaternion floating mobilizer.">has_quaternion_dofs()</a></code> is true, otherwise in [0, 6). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a> is false. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
@@ -1053,7 +1054,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a string suffix (e.g. </p>
-<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body.">name()</a>) to identify the <code>k</code>th velocity in the floating base. <code>velocity_index_in_body</code> must be in [0,6). </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body. The name will never be empty.">name()</a>) to identify the <code>k</code>th velocity in the floating base. <code>velocity_index_in_body</code> must be in [0,6). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a> is false. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
@@ -1316,7 +1317,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the <code>name</code> associated with <code>this</code> body. </p>
+<p>Gets the <code>name</code> associated with <code>this</code> body. The name will never be empty. </p>
 
 </div>
 </div>

@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6681a8def9431af1311063721c46fe14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <code>this</code> is the body frame.  <a href="#a6681a8def9431af1311063721c46fe14">More...</a><br /></td></tr>
 <tr class="separator:a6681a8def9431af1311063721c46fe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
-<tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this frame. It may be empty if unnamed.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
+<tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this frame. The name will never be empty.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823f61b343f8646b35b8035a6a1ee4a9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a823f61b343f8646b35b8035a6a1ee4a9">CalcPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const =0</td></tr>
 <tr class="memdesc:a823f61b343f8646b35b8035a6a1ee4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame.  <a href="#a823f61b343f8646b35b8035a6a1ee4a9">More...</a><br /></td></tr>
@@ -306,7 +306,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a8a0a86b14a720059603e2529def64353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only derived classes can use this constructor.  <a href="#a8a0a86b14a720059603e2529def64353">More...</a><br /></td></tr>
 <tr class="separator:a8a0a86b14a720059603e2529def64353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a930d3e9d3ee5044dde9f4aaaec16b78a">Frame</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766">body</a>)</td></tr>
-<tr class="memdesc:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload to permit constructing an unnamed frame.  <a href="#a930d3e9d3ee5044dde9f4aaaec16b78a">More...</a><br /></td></tr>
+<tr class="memdesc:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a930d3e9d3ee5044dde9f4aaaec16b78a">More...</a><br /></td></tr>
 <tr class="separator:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods are meant to be called by MultibodyTree::CloneToScalar() when making a clone of the entire tree or a new instance templated on a different scalar type.</p>
@@ -471,7 +471,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Overload to permit constructing an unnamed frame. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>The name parameter to the Frame constructor is now required. <br />
+ This will be removed from Drake on or after 2022-12-01.</dd></dl>
 
 </div>
 </div>
@@ -1485,7 +1487,7 @@ When cached values are out of sync with the state stored in context, this method
       </table>
 </div><div class="memdoc">
 
-<p>Returns the name of this frame. It may be empty if unnamed. </p>
+<p>Returns the name of this frame. The name will never be empty. </p>
 
 </div>
 </div>
