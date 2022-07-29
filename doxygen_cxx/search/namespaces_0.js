@@ -76,6 +76,7 @@ var searchData=
   ['trajectory_5foptimization',['trajectory_optimization',['../namespacedrake_1_1systems_1_1trajectory__optimization.html',1,'drake::systems']]],
   ['util',['util',['../namespacedrake_1_1manipulation_1_1util.html',1,'drake::manipulation']]],
   ['van_5fder_5fpol',['van_der_pol',['../namespacedrake_1_1examples_1_1van__der__pol.html',1,'drake::examples']]],
+  ['visualization',['visualization',['../namespacedrake_1_1visualization.html',1,'drake']]],
   ['vtk_5futil',['vtk_util',['../namespacedrake_1_1geometry_1_1render_1_1vtk__util.html',1,'drake::geometry::render']]],
   ['yaml',['yaml',['../namespacedrake_1_1yaml.html',1,'drake']]]
 ];

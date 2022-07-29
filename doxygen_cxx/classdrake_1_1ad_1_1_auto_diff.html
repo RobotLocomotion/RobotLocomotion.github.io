@@ -222,6 +222,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a032b5ee45f3dc02437c4ae1f24a696ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c51258a40a3cf9b985eb7a50be03ba0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html#a4c51258a40a3cf9b985eb7a50be03ba0">operator=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a4c51258a40a3cf9b985eb7a50be03ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Internal use only</div></td></tr>
+<tr class="memitem:a05d3a45d0ce6c5f3328e34de27b930d5"><td class="memItemLeft" align="right" valign="top">const internal::Partials &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html#a05d3a45d0ce6c5f3328e34de27b930d5">partials</a> () const</td></tr>
+<tr class="memdesc:a05d3a45d0ce6c5f3328e34de27b930d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Users should call <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html#ac534393b95a4b009e9e4a9bbfcf7bd48" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead.  <a href="#a05d3a45d0ce6c5f3328e34de27b930d5">More...</a><br /></td></tr>
+<tr class="separator:a05d3a45d0ce6c5f3328e34de27b930d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326f45011a12fd356c82d5c969a3f949"><td class="memItemLeft" align="right" valign="top">internal::Partials &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html#a326f45011a12fd356c82d5c969a3f949">partials</a> ()</td></tr>
+<tr class="memdesc:a326f45011a12fd356c82d5c969a3f949"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Users should call <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html#ac534393b95a4b009e9e4a9bbfcf7bd48" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead.  <a href="#a326f45011a12fd356c82d5c969a3f949">More...</a><br /></td></tr>
+<tr class="separator:a326f45011a12fd356c82d5c969a3f949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7244535f6c2038f9d8f5f71cd47eec2d"></a>
@@ -558,6 +565,44 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Assigns a value and clears the derivatives. </p>
+
+</div>
+</div>
+<a id="a05d3a45d0ce6c5f3328e34de27b930d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d3a45d0ce6c5f3328e34de27b930d5">&#9670;&nbsp;</a></span>partials() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::Partials&amp; partials </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Users should call <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html#ac534393b95a4b009e9e4a9bbfcf7bd48" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead. </p>
+
+</div>
+</div>
+<a id="a326f45011a12fd356c82d5c969a3f949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326f45011a12fd356c82d5c969a3f949">&#9670;&nbsp;</a></span>partials() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::Partials&amp; partials </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Users should call <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html#ac534393b95a4b009e9e4a9bbfcf7bd48" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead. </p>
 
 </div>
 </div>

@@ -19,6 +19,7 @@ var namespacedrake =
     [ "systems", "namespacedrake_1_1systems.html", "namespacedrake_1_1systems" ],
     [ "test", "namespacedrake_1_1test.html", "namespacedrake_1_1test" ],
     [ "trajectories", "namespacedrake_1_1trajectories.html", "namespacedrake_1_1trajectories" ],
+    [ "visualization", "namespacedrake_1_1visualization.html", "namespacedrake_1_1visualization" ],
     [ "yaml", "namespacedrake_1_1yaml.html", "namespacedrake_1_1yaml" ],
     [ "AbstractValue", "classdrake_1_1_abstract_value.html", "classdrake_1_1_abstract_value" ],
     [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html", "classdrake_1_1copyable__unique__ptr" ],

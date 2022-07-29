@@ -6,5 +6,6 @@ var structdrake_1_1_scenario =
     [ "plant_config", "structdrake_1_1_scenario.html#ac4fb417cbdc9ec037dd7a251452e1330", null ],
     [ "random_seed", "structdrake_1_1_scenario.html#adc4766c2ee521047140e3639684cf387", null ],
     [ "simulation_duration", "structdrake_1_1_scenario.html#a1b143200dd4bc17b6897b02962b05fa1", null ],
-    [ "simulator_config", "structdrake_1_1_scenario.html#aa87d65ac7de670abe9fe86b9a9c19a9d", null ]
+    [ "simulator_config", "structdrake_1_1_scenario.html#aa87d65ac7de670abe9fe86b9a9c19a9d", null ],
+    [ "visualizer", "structdrake_1_1_scenario.html#a27f5570f32920ce55c96f0026f3b517e", null ]
 ];

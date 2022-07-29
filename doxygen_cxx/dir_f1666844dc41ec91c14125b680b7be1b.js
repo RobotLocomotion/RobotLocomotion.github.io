@@ -12,5 +12,6 @@ var dir_f1666844dc41ec91c14125b680b7be1b =
     [ "perception", "dir_0897ed8fd6dd400fbb3f13ca4cf30fd4.html", "dir_0897ed8fd6dd400fbb3f13ca4cf30fd4" ],
     [ "planning", "dir_c1924aea86cc02fece93f366eec781e1.html", "dir_c1924aea86cc02fece93f366eec781e1" ],
     [ "solvers", "dir_c86b501450b8b8b59405c286cb030cc3.html", "dir_c86b501450b8b8b59405c286cb030cc3" ],
-    [ "systems", "dir_b7a0e33b407baa23d8a077e33033c988.html", "dir_b7a0e33b407baa23d8a077e33033c988" ]
+    [ "systems", "dir_b7a0e33b407baa23d8a077e33033c988.html", "dir_b7a0e33b407baa23d8a077e33033c988" ],
+    [ "visualization", "dir_646ca0e8f46938429d8373c5298698fa.html", "dir_646ca0e8f46938429d8373c5298698fa" ]
 ];

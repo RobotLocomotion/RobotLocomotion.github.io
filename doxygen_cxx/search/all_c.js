@@ -24,6 +24,7 @@ var searchData=
   ['lc1',['lc1',['../classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aed49e32ba918929bcf6c92c6eca4c721',1,'drake::multibody::benchmarks::acrobot::AcrobotParameters']]],
   ['lc2',['lc2',['../classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a57e0ebdf6efdd5554cc03afb076f1e62',1,'drake::multibody::benchmarks::acrobot::AcrobotParameters']]],
   ['lcm',['lcm',['../classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#af7527be0e4177959b67a5b28e1d550f2',1,'drake::systems::lcm::LcmPublisherSystem']]],
+  ['lcm_5fbus',['lcm_bus',['../structdrake_1_1visualization_1_1_visualizer_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf',1,'drake::visualization::VisualizerConfig']]],
   ['lcm_5fbuses',['lcm_buses',['../structdrake_1_1_scenario.html#a65bf2d5e1e3915ba78f5e08f4b7438e5',1,'drake::Scenario']]],
   ['lcm_5fbuses_2eh',['lcm_buses.h',['../lcm__buses_8h.html',1,'']]],
   ['lcm_5fconfig_5ffunctions_2eh',['lcm_config_functions.h',['../lcm__config__functions_8h.html',1,'']]],

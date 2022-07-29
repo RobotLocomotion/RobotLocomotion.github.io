@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1multibody_1_1_body_frame.html#acd3092c461ef2339ba51209fcf41bdbe":[3,0,0,9,12,7],
+"classdrake_1_1multibody_1_1_body_frame.html#ad0fe08fa46f1c029e9b860946bc13340":[3,0,0,9,12,0],
 "classdrake_1_1multibody_1_1_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa":[3,0,0,9,12,8],
 "classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f":[3,0,0,9,12,4],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html":[1,1,0,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#ae5d998f612ea10349d08164d55d20ed8":[1,4,2,2,6],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#af0d4dcb28c6cfb63f69b03e0d3e98571":[1,4,2,2,22],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,2,21],
-"classdrake_1_1multibody_1_1_joint.html":[3,0,0,9,38],
-"classdrake_1_1multibody_1_1_joint.html#a016d32cb724a4dbc9a9aff7b2c75855b":[3,0,0,9,38,26],
-"classdrake_1_1multibody_1_1_joint.html#a03980282fa5be97bfe6bd86f2d6c186a":[3,0,0,9,38,51]
+"classdrake_1_1multibody_1_1_joint.html":[3,0,0,9,38]
 };

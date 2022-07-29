@@ -1033,6 +1033,16 @@ triangle. Equivalent to:</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].poly_e_MN">
+<code class="descname">poly_e_MN</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].poly_e_MN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the scalar field eₘₙ for the <em>polygonal</em> mesh.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].poly_mesh_W">
 <code class="descname">poly_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].poly_mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex
@@ -1055,6 +1065,16 @@ exercised are related to this methods return value. See below.</p>
 <dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].total_area">
 <code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].total_area" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].tri_e_MN">
+<code class="descname">tri_e_MN</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].tri_e_MN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the scalar field eₘₙ for the <em>triangle</em> mesh.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].tri_mesh_W">
@@ -1306,6 +1326,16 @@ triangle. Equivalent to:</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].poly_e_MN">
+<code class="descname">poly_e_MN</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].poly_e_MN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the scalar field eₘₙ for the <em>polygonal</em> mesh.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].poly_mesh_W">
 <code class="descname">poly_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].poly_mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex
@@ -1328,6 +1358,16 @@ exercised are related to this methods return value. See below.</p>
 <dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].total_area">
 <code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].total_area" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].tri_e_MN">
+<code class="descname">tri_e_MN</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].tri_e_MN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the scalar field eₘₙ for the <em>triangle</em> mesh.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].tri_mesh_W">
@@ -1577,6 +1617,16 @@ triangle. Equivalent to:</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].poly_e_MN">
+<code class="descname">poly_e_MN</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].poly_e_MN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the scalar field eₘₙ for the <em>polygonal</em> mesh.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[float].poly_mesh_W">
 <code class="descname">poly_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].poly_mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex
@@ -1599,6 +1649,16 @@ exercised are related to this methods return value. See below.</p>
 <dt id="pydrake.geometry.ContactSurface_[float].total_area">
 <code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].total_area" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].tri_e_MN">
+<code class="descname">tri_e_MN</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].tri_e_MN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the scalar field eₘₙ for the <em>triangle</em> mesh.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[float].tri_mesh_W">
@@ -6918,6 +6978,444 @@ new frame N.</p>
 <dt>Precondition:</dt>
 <dd>v ∈ {0, 1, 2, …, num_vertices()-1}.</dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMeshFieldLinear</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]" title="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float,</span> <span class="pre">float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_">
+<em class="property">template </em><code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMeshFieldLinear_</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]" title="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonSurfaceMeshFieldLinear_[float,</span> <span class="pre">float]</span></code></a>, <a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]" title="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonSurfaceMeshFieldLinear_[AutoDiffXd,</span> <span class="pre">AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float]">
+<em class="property">class </em><code class="descname">PolygonSurfaceMeshFieldLinear_[float, float]</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>MeshFieldLinear represents a continuous piecewise-linear scalar field
+<code class="docutils literal notranslate"><span class="pre">f</span></code> defined on a (triangular or tetrahedral) mesh; the field value
+changes linearly within each element E (triangle or tetrahedron), and
+the gradient ∇f is constant within each element. The field is
+continuous across adjacent elements, but its gradient is discontinuous
+from one element to the other.</p>
+<p>To represent a piecewise linear field f, we store one field value per
+vertex of the mesh. Each element E (triangle or tetrahedron) has (d+1)
+vertices, where d is the dimension of the element. For triangle, d =
+2, and for tetrahedron, d = 3.</p>
+<p>On each element E, we define a linear function fᵉ:ℝ³→ℝ using the field
+values at vertices of E. The gradient ∇fᵉ:ℝ³→ℝ³ is a constant map, so
+we write ∇fᵉ for the constant gradient vector on E as well. For a
+point Q in element E, we have:</p>
+<p>f(Q) = fᵉ(Q) for Q ∈ E, ∇f(Q) = ∇fᵉ for Q ∈ E.</p>
+<p>Notice that the domain of fᵉ is the entire space of ℝ³, while the
+domain of f is the underlying space of the mesh.</p>
+<p>The following sections are details for interested readers.</p>
+<p>** Barycentric coordinate **</p>
+<p>For a linear triangle or tetrahedron element E in 3-D, we use
+barycentric coordinate:</p>
+<p>(b₀, b₁, b₂) for triangle, (b₀, b₁, b₂, b₃) for tetrahedron, ∑bᵢ = 1,
+bᵢ ≥ 0,</p>
+<p>to identify a point Q that lies in the simplicial element E. The
+coefficient bᵢ is the weight of vertex Vᵉᵢ of the element E, where the
+index i is a local index within the element E, not the global index of
+the entire mesh. In other words, vertex Vᵉᵢ is the iᵗʰ vertex of E,
+not the iᵗʰ vertex among all vertices in the mesh. The point Q in E
+can be expressed as:</p>
+<p>Q = ∑bᵉᵢ(Q)Vᵉᵢ,</p>
+<p>where we indicate the barycentric coordinate of a point Q on an
+element E as bᵉᵢ(Q).</p>
+<p>** Field value from barycentric coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = fᵉ(Q) = ∑bᵉᵢ(Q)Fᵉᵢ</p>
+<p>where Fᵉᵢ is the field value at the iᵗʰ vertex of element E.</p>
+<p>** Frame dependency **</p>
+<p>A MeshFieldLinear is a frame-dependent quantity. Instances of a field
+should be named, as with any other frame-dependent quantity, with a
+trailing _F indicating the field’s frame F. The field’s frame is
+implicitly defined to be the same as the mesh’s frame on which the
+field is instantiated. The field’s frame affects two APIs:</p>
+<ul class="simple">
+<li>The gradients reported by EvaluateGradient() are expressed in the field’s</li>
+</ul>
+<p>frame.
+- The cartesian point passed to EvaluateCartesian() must be measured and
+expressed in the field’s frame.</p>
+<p>The field (along with its corresponding mesh) can be transformed into
+a new frame by invoking the TransformVertices() method on the mesh and
+Transform() on the field, passing the same math::RigidTransform to
+both.</p>
+<p>** Gradient **</p>
+<p>Consider each bᵉᵢ:ℝ³→ℝ as a linear function, its gradient ∇bᵉᵢ:ℝ³→ℝ³
+is a constant map, and we write ∇bᵉᵢ for the constant gradient vector.
+The gradient of the piecewise linear field f at a point Q in an
+element E is:</p>
+<p>∇f(Q) = ∇fᵉ = ∑Fᵉᵢ∇bᵉᵢ.</p>
+<p>** Field value from Cartesian coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = ∇fᵉ⋅Q + fᵉ(0,0,0).</p>
+<p>Notice that (0,0,0) may or may not lie in element E.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
+<dd>a valid Eigen scalar for field values.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">MeshType</span></code>:</dt>
+<dd>the type of the meshes: TriangleSurfaceMesh or VolumeMesh.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex">
+<code class="descname">EvaluateAtVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float], v: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a vertex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ [0, this-&gt;mesh().num_vertices()).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateCartesian">
+<code class="descname">EvaluateCartesian</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float], e: int, p_MQ: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateCartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field at a point Qp on an element. If the element is a
+tetrahedron, Qp is the input point Q. If the element is a triangle, Qp
+is the projection of Q on the triangle’s plane.</p>
+<p>If gradients have been calculated, it evaluates the field value
+directly. Otherwise, it converts Cartesian coordinates to barycentric
+coordinates for barycentric interpolation.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q expressed in frame M, in Cartesian
+coordinates. M is the frame of the mesh.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the field does not have gradients defined <em>and</em></li>
+<li>the MeshType doesn’t support Barycentric coordinates.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateGradient">
+<code class="descname">EvaluateGradient</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the gradient in the domain of the element indicated by
+<code class="docutils literal notranslate"><span class="pre">e</span></code>. The gradient is a vector in R³ expressed in frame M. For
+surface meshes, it will particularly lie parallel to the plane of the
+corresponding triangle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the gradient vector was not calculated.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>MeshFieldLinear represents a continuous piecewise-linear scalar field
+<code class="docutils literal notranslate"><span class="pre">f</span></code> defined on a (triangular or tetrahedral) mesh; the field value
+changes linearly within each element E (triangle or tetrahedron), and
+the gradient ∇f is constant within each element. The field is
+continuous across adjacent elements, but its gradient is discontinuous
+from one element to the other.</p>
+<p>To represent a piecewise linear field f, we store one field value per
+vertex of the mesh. Each element E (triangle or tetrahedron) has (d+1)
+vertices, where d is the dimension of the element. For triangle, d =
+2, and for tetrahedron, d = 3.</p>
+<p>On each element E, we define a linear function fᵉ:ℝ³→ℝ using the field
+values at vertices of E. The gradient ∇fᵉ:ℝ³→ℝ³ is a constant map, so
+we write ∇fᵉ for the constant gradient vector on E as well. For a
+point Q in element E, we have:</p>
+<p>f(Q) = fᵉ(Q) for Q ∈ E, ∇f(Q) = ∇fᵉ for Q ∈ E.</p>
+<p>Notice that the domain of fᵉ is the entire space of ℝ³, while the
+domain of f is the underlying space of the mesh.</p>
+<p>The following sections are details for interested readers.</p>
+<p>** Barycentric coordinate **</p>
+<p>For a linear triangle or tetrahedron element E in 3-D, we use
+barycentric coordinate:</p>
+<p>(b₀, b₁, b₂) for triangle, (b₀, b₁, b₂, b₃) for tetrahedron, ∑bᵢ = 1,
+bᵢ ≥ 0,</p>
+<p>to identify a point Q that lies in the simplicial element E. The
+coefficient bᵢ is the weight of vertex Vᵉᵢ of the element E, where the
+index i is a local index within the element E, not the global index of
+the entire mesh. In other words, vertex Vᵉᵢ is the iᵗʰ vertex of E,
+not the iᵗʰ vertex among all vertices in the mesh. The point Q in E
+can be expressed as:</p>
+<p>Q = ∑bᵉᵢ(Q)Vᵉᵢ,</p>
+<p>where we indicate the barycentric coordinate of a point Q on an
+element E as bᵉᵢ(Q).</p>
+<p>** Field value from barycentric coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = fᵉ(Q) = ∑bᵉᵢ(Q)Fᵉᵢ</p>
+<p>where Fᵉᵢ is the field value at the iᵗʰ vertex of element E.</p>
+<p>** Frame dependency **</p>
+<p>A MeshFieldLinear is a frame-dependent quantity. Instances of a field
+should be named, as with any other frame-dependent quantity, with a
+trailing _F indicating the field’s frame F. The field’s frame is
+implicitly defined to be the same as the mesh’s frame on which the
+field is instantiated. The field’s frame affects two APIs:</p>
+<ul class="simple">
+<li>The gradients reported by EvaluateGradient() are expressed in the field’s</li>
+</ul>
+<p>frame.
+- The cartesian point passed to EvaluateCartesian() must be measured and
+expressed in the field’s frame.</p>
+<p>The field (along with its corresponding mesh) can be transformed into
+a new frame by invoking the TransformVertices() method on the mesh and
+Transform() on the field, passing the same math::RigidTransform to
+both.</p>
+<p>** Gradient **</p>
+<p>Consider each bᵉᵢ:ℝ³→ℝ as a linear function, its gradient ∇bᵉᵢ:ℝ³→ℝ³
+is a constant map, and we write ∇bᵉᵢ for the constant gradient vector.
+The gradient of the piecewise linear field f at a point Q in an
+element E is:</p>
+<p>∇f(Q) = ∇fᵉ = ∑Fᵉᵢ∇bᵉᵢ.</p>
+<p>** Field value from Cartesian coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = ∇fᵉ⋅Q + fᵉ(0,0,0).</p>
+<p>Notice that (0,0,0) may or may not lie in element E.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
+<dd>a valid Eigen scalar for field values.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">MeshType</span></code>:</dt>
+<dd>the type of the meshes: TriangleSurfaceMesh or VolumeMesh.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateAtVertex">
+<code class="descname">EvaluateAtVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd], v: int</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateAtVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a vertex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ [0, this-&gt;mesh().num_vertices()).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateCartesian">
+<code class="descname">EvaluateCartesian</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd], e: int, p_MQ: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateCartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field at a point Qp on an element. If the element is a
+tetrahedron, Qp is the input point Q. If the element is a triangle, Qp
+is the projection of Q on the triangle’s plane.</p>
+<p>If gradients have been calculated, it evaluates the field value
+directly. Otherwise, it converts Cartesian coordinates to barycentric
+coordinates for barycentric interpolation.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q expressed in frame M, in Cartesian
+coordinates. M is the frame of the mesh.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the field does not have gradients defined <em>and</em></li>
+<li>the MeshType doesn’t support Barycentric coordinates.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateGradient">
+<code class="descname">EvaluateGradient</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the gradient in the domain of the element indicated by
+<code class="docutils literal notranslate"><span class="pre">e</span></code>. The gradient is a vector in R³ expressed in frame M. For
+surface meshes, it will particularly lie parallel to the plane of the
+corresponding triangle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the gradient vector was not calculated.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMeshFieldLinear_[float, float]</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>MeshFieldLinear represents a continuous piecewise-linear scalar field
+<code class="docutils literal notranslate"><span class="pre">f</span></code> defined on a (triangular or tetrahedral) mesh; the field value
+changes linearly within each element E (triangle or tetrahedron), and
+the gradient ∇f is constant within each element. The field is
+continuous across adjacent elements, but its gradient is discontinuous
+from one element to the other.</p>
+<p>To represent a piecewise linear field f, we store one field value per
+vertex of the mesh. Each element E (triangle or tetrahedron) has (d+1)
+vertices, where d is the dimension of the element. For triangle, d =
+2, and for tetrahedron, d = 3.</p>
+<p>On each element E, we define a linear function fᵉ:ℝ³→ℝ using the field
+values at vertices of E. The gradient ∇fᵉ:ℝ³→ℝ³ is a constant map, so
+we write ∇fᵉ for the constant gradient vector on E as well. For a
+point Q in element E, we have:</p>
+<p>f(Q) = fᵉ(Q) for Q ∈ E, ∇f(Q) = ∇fᵉ for Q ∈ E.</p>
+<p>Notice that the domain of fᵉ is the entire space of ℝ³, while the
+domain of f is the underlying space of the mesh.</p>
+<p>The following sections are details for interested readers.</p>
+<p>** Barycentric coordinate **</p>
+<p>For a linear triangle or tetrahedron element E in 3-D, we use
+barycentric coordinate:</p>
+<p>(b₀, b₁, b₂) for triangle, (b₀, b₁, b₂, b₃) for tetrahedron, ∑bᵢ = 1,
+bᵢ ≥ 0,</p>
+<p>to identify a point Q that lies in the simplicial element E. The
+coefficient bᵢ is the weight of vertex Vᵉᵢ of the element E, where the
+index i is a local index within the element E, not the global index of
+the entire mesh. In other words, vertex Vᵉᵢ is the iᵗʰ vertex of E,
+not the iᵗʰ vertex among all vertices in the mesh. The point Q in E
+can be expressed as:</p>
+<p>Q = ∑bᵉᵢ(Q)Vᵉᵢ,</p>
+<p>where we indicate the barycentric coordinate of a point Q on an
+element E as bᵉᵢ(Q).</p>
+<p>** Field value from barycentric coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = fᵉ(Q) = ∑bᵉᵢ(Q)Fᵉᵢ</p>
+<p>where Fᵉᵢ is the field value at the iᵗʰ vertex of element E.</p>
+<p>** Frame dependency **</p>
+<p>A MeshFieldLinear is a frame-dependent quantity. Instances of a field
+should be named, as with any other frame-dependent quantity, with a
+trailing _F indicating the field’s frame F. The field’s frame is
+implicitly defined to be the same as the mesh’s frame on which the
+field is instantiated. The field’s frame affects two APIs:</p>
+<ul class="simple">
+<li>The gradients reported by EvaluateGradient() are expressed in the field’s</li>
+</ul>
+<p>frame.
+- The cartesian point passed to EvaluateCartesian() must be measured and
+expressed in the field’s frame.</p>
+<p>The field (along with its corresponding mesh) can be transformed into
+a new frame by invoking the TransformVertices() method on the mesh and
+Transform() on the field, passing the same math::RigidTransform to
+both.</p>
+<p>** Gradient **</p>
+<p>Consider each bᵉᵢ:ℝ³→ℝ as a linear function, its gradient ∇bᵉᵢ:ℝ³→ℝ³
+is a constant map, and we write ∇bᵉᵢ for the constant gradient vector.
+The gradient of the piecewise linear field f at a point Q in an
+element E is:</p>
+<p>∇f(Q) = ∇fᵉ = ∑Fᵉᵢ∇bᵉᵢ.</p>
+<p>** Field value from Cartesian coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = ∇fᵉ⋅Q + fᵉ(0,0,0).</p>
+<p>Notice that (0,0,0) may or may not lie in element E.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
+<dd>a valid Eigen scalar for field values.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">MeshType</span></code>:</dt>
+<dd>the type of the meshes: TriangleSurfaceMesh or VolumeMesh.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex">
+<code class="descname">EvaluateAtVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float], v: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a vertex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ [0, this-&gt;mesh().num_vertices()).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateCartesian">
+<code class="descname">EvaluateCartesian</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float], e: int, p_MQ: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateCartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field at a point Qp on an element. If the element is a
+tetrahedron, Qp is the input point Q. If the element is a triangle, Qp
+is the projection of Q on the triangle’s plane.</p>
+<p>If gradients have been calculated, it evaluates the field value
+directly. Otherwise, it converts Cartesian coordinates to barycentric
+coordinates for barycentric interpolation.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q expressed in frame M, in Cartesian
+coordinates. M is the frame of the mesh.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the field does not have gradients defined <em>and</em></li>
+<li>the MeshType doesn’t support Barycentric coordinates.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateGradient">
+<code class="descname">EvaluateGradient</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMeshFieldLinear_[float, float].EvaluateGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the gradient in the domain of the element indicated by
+<code class="docutils literal notranslate"><span class="pre">e</span></code>. The gradient is a vector in R³ expressed in frame M. For
+surface meshes, it will particularly lie parallel to the plane of the
+corresponding triangle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the gradient vector was not calculated.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -16853,6 +17351,495 @@ mesh’s frame.</p>
 <dt id="pydrake.geometry.TriangleSurfaceMesh_[float].vertices">
 <code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the vertices.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMeshFieldLinear</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]" title="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float,</span> <span class="pre">float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_">
+<em class="property">template </em><code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMeshFieldLinear_</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]" title="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">TriangleSurfaceMeshFieldLinear_[float,</span> <span class="pre">float]</span></code></a>, <a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]" title="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">TriangleSurfaceMeshFieldLinear_[AutoDiffXd,</span> <span class="pre">AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float]">
+<em class="property">class </em><code class="descname">TriangleSurfaceMeshFieldLinear_[float, float]</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>MeshFieldLinear represents a continuous piecewise-linear scalar field
+<code class="docutils literal notranslate"><span class="pre">f</span></code> defined on a (triangular or tetrahedral) mesh; the field value
+changes linearly within each element E (triangle or tetrahedron), and
+the gradient ∇f is constant within each element. The field is
+continuous across adjacent elements, but its gradient is discontinuous
+from one element to the other.</p>
+<p>To represent a piecewise linear field f, we store one field value per
+vertex of the mesh. Each element E (triangle or tetrahedron) has (d+1)
+vertices, where d is the dimension of the element. For triangle, d =
+2, and for tetrahedron, d = 3.</p>
+<p>On each element E, we define a linear function fᵉ:ℝ³→ℝ using the field
+values at vertices of E. The gradient ∇fᵉ:ℝ³→ℝ³ is a constant map, so
+we write ∇fᵉ for the constant gradient vector on E as well. For a
+point Q in element E, we have:</p>
+<p>f(Q) = fᵉ(Q) for Q ∈ E, ∇f(Q) = ∇fᵉ for Q ∈ E.</p>
+<p>Notice that the domain of fᵉ is the entire space of ℝ³, while the
+domain of f is the underlying space of the mesh.</p>
+<p>The following sections are details for interested readers.</p>
+<p>** Barycentric coordinate **</p>
+<p>For a linear triangle or tetrahedron element E in 3-D, we use
+barycentric coordinate:</p>
+<p>(b₀, b₁, b₂) for triangle, (b₀, b₁, b₂, b₃) for tetrahedron, ∑bᵢ = 1,
+bᵢ ≥ 0,</p>
+<p>to identify a point Q that lies in the simplicial element E. The
+coefficient bᵢ is the weight of vertex Vᵉᵢ of the element E, where the
+index i is a local index within the element E, not the global index of
+the entire mesh. In other words, vertex Vᵉᵢ is the iᵗʰ vertex of E,
+not the iᵗʰ vertex among all vertices in the mesh. The point Q in E
+can be expressed as:</p>
+<p>Q = ∑bᵉᵢ(Q)Vᵉᵢ,</p>
+<p>where we indicate the barycentric coordinate of a point Q on an
+element E as bᵉᵢ(Q).</p>
+<p>** Field value from barycentric coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = fᵉ(Q) = ∑bᵉᵢ(Q)Fᵉᵢ</p>
+<p>where Fᵉᵢ is the field value at the iᵗʰ vertex of element E.</p>
+<p>** Frame dependency **</p>
+<p>A MeshFieldLinear is a frame-dependent quantity. Instances of a field
+should be named, as with any other frame-dependent quantity, with a
+trailing _F indicating the field’s frame F. The field’s frame is
+implicitly defined to be the same as the mesh’s frame on which the
+field is instantiated. The field’s frame affects two APIs:</p>
+<ul class="simple">
+<li>The gradients reported by EvaluateGradient() are expressed in the field’s</li>
+</ul>
+<p>frame.
+- The cartesian point passed to EvaluateCartesian() must be measured and
+expressed in the field’s frame.</p>
+<p>The field (along with its corresponding mesh) can be transformed into
+a new frame by invoking the TransformVertices() method on the mesh and
+Transform() on the field, passing the same math::RigidTransform to
+both.</p>
+<p>** Gradient **</p>
+<p>Consider each bᵉᵢ:ℝ³→ℝ as a linear function, its gradient ∇bᵉᵢ:ℝ³→ℝ³
+is a constant map, and we write ∇bᵉᵢ for the constant gradient vector.
+The gradient of the piecewise linear field f at a point Q in an
+element E is:</p>
+<p>∇f(Q) = ∇fᵉ = ∑Fᵉᵢ∇bᵉᵢ.</p>
+<p>** Field value from Cartesian coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = ∇fᵉ⋅Q + fᵉ(0,0,0).</p>
+<p>Notice that (0,0,0) may or may not lie in element E.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
+<dd>a valid Eigen scalar for field values.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">MeshType</span></code>:</dt>
+<dd>the type of the meshes: TriangleSurfaceMesh or VolumeMesh.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].Evaluate">
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float], e: int, b: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].Evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a location on an element.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Barycentric coordinate type <code class="docutils literal notranslate"><span class="pre">B</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This can only be evaluated if the underlying MeshType itself
+supports barycentric evaluation (e.g., compare TriangleSurfaceMesh
+with PolygonSurfaceMesh).</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
+<dd>The barycentric coordinates.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if MeshType doesn’t support Barycentric coordinates.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">B</span></code>:</dt>
+<dd>The scalar type for the barycentric coordinate.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex">
+<code class="descname">EvaluateAtVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float], v: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a vertex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ [0, this-&gt;mesh().num_vertices()).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateCartesian">
+<code class="descname">EvaluateCartesian</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float], e: int, p_MQ: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateCartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field at a point Qp on an element. If the element is a
+tetrahedron, Qp is the input point Q. If the element is a triangle, Qp
+is the projection of Q on the triangle’s plane.</p>
+<p>If gradients have been calculated, it evaluates the field value
+directly. Otherwise, it converts Cartesian coordinates to barycentric
+coordinates for barycentric interpolation.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q expressed in frame M, in Cartesian
+coordinates. M is the frame of the mesh.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the field does not have gradients defined <em>and</em></li>
+<li>the MeshType doesn’t support Barycentric coordinates.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>MeshFieldLinear represents a continuous piecewise-linear scalar field
+<code class="docutils literal notranslate"><span class="pre">f</span></code> defined on a (triangular or tetrahedral) mesh; the field value
+changes linearly within each element E (triangle or tetrahedron), and
+the gradient ∇f is constant within each element. The field is
+continuous across adjacent elements, but its gradient is discontinuous
+from one element to the other.</p>
+<p>To represent a piecewise linear field f, we store one field value per
+vertex of the mesh. Each element E (triangle or tetrahedron) has (d+1)
+vertices, where d is the dimension of the element. For triangle, d =
+2, and for tetrahedron, d = 3.</p>
+<p>On each element E, we define a linear function fᵉ:ℝ³→ℝ using the field
+values at vertices of E. The gradient ∇fᵉ:ℝ³→ℝ³ is a constant map, so
+we write ∇fᵉ for the constant gradient vector on E as well. For a
+point Q in element E, we have:</p>
+<p>f(Q) = fᵉ(Q) for Q ∈ E, ∇f(Q) = ∇fᵉ for Q ∈ E.</p>
+<p>Notice that the domain of fᵉ is the entire space of ℝ³, while the
+domain of f is the underlying space of the mesh.</p>
+<p>The following sections are details for interested readers.</p>
+<p>** Barycentric coordinate **</p>
+<p>For a linear triangle or tetrahedron element E in 3-D, we use
+barycentric coordinate:</p>
+<p>(b₀, b₁, b₂) for triangle, (b₀, b₁, b₂, b₃) for tetrahedron, ∑bᵢ = 1,
+bᵢ ≥ 0,</p>
+<p>to identify a point Q that lies in the simplicial element E. The
+coefficient bᵢ is the weight of vertex Vᵉᵢ of the element E, where the
+index i is a local index within the element E, not the global index of
+the entire mesh. In other words, vertex Vᵉᵢ is the iᵗʰ vertex of E,
+not the iᵗʰ vertex among all vertices in the mesh. The point Q in E
+can be expressed as:</p>
+<p>Q = ∑bᵉᵢ(Q)Vᵉᵢ,</p>
+<p>where we indicate the barycentric coordinate of a point Q on an
+element E as bᵉᵢ(Q).</p>
+<p>** Field value from barycentric coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = fᵉ(Q) = ∑bᵉᵢ(Q)Fᵉᵢ</p>
+<p>where Fᵉᵢ is the field value at the iᵗʰ vertex of element E.</p>
+<p>** Frame dependency **</p>
+<p>A MeshFieldLinear is a frame-dependent quantity. Instances of a field
+should be named, as with any other frame-dependent quantity, with a
+trailing _F indicating the field’s frame F. The field’s frame is
+implicitly defined to be the same as the mesh’s frame on which the
+field is instantiated. The field’s frame affects two APIs:</p>
+<ul class="simple">
+<li>The gradients reported by EvaluateGradient() are expressed in the field’s</li>
+</ul>
+<p>frame.
+- The cartesian point passed to EvaluateCartesian() must be measured and
+expressed in the field’s frame.</p>
+<p>The field (along with its corresponding mesh) can be transformed into
+a new frame by invoking the TransformVertices() method on the mesh and
+Transform() on the field, passing the same math::RigidTransform to
+both.</p>
+<p>** Gradient **</p>
+<p>Consider each bᵉᵢ:ℝ³→ℝ as a linear function, its gradient ∇bᵉᵢ:ℝ³→ℝ³
+is a constant map, and we write ∇bᵉᵢ for the constant gradient vector.
+The gradient of the piecewise linear field f at a point Q in an
+element E is:</p>
+<p>∇f(Q) = ∇fᵉ = ∑Fᵉᵢ∇bᵉᵢ.</p>
+<p>** Field value from Cartesian coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = ∇fᵉ⋅Q + fᵉ(0,0,0).</p>
+<p>Notice that (0,0,0) may or may not lie in element E.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
+<dd>a valid Eigen scalar for field values.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">MeshType</span></code>:</dt>
+<dd>the type of the meshes: TriangleSurfaceMesh or VolumeMesh.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].Evaluate">
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd], e: int, b: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].Evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a location on an element.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Barycentric coordinate type <code class="docutils literal notranslate"><span class="pre">B</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This can only be evaluated if the underlying MeshType itself
+supports barycentric evaluation (e.g., compare TriangleSurfaceMesh
+with PolygonSurfaceMesh).</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
+<dd>The barycentric coordinates.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if MeshType doesn’t support Barycentric coordinates.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">B</span></code>:</dt>
+<dd>The scalar type for the barycentric coordinate.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateAtVertex">
+<code class="descname">EvaluateAtVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd], v: int</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateAtVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a vertex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ [0, this-&gt;mesh().num_vertices()).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateCartesian">
+<code class="descname">EvaluateCartesian</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd], e: int, p_MQ: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[AutoDiffXd, AutoDiffXd].EvaluateCartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field at a point Qp on an element. If the element is a
+tetrahedron, Qp is the input point Q. If the element is a triangle, Qp
+is the projection of Q on the triangle’s plane.</p>
+<p>If gradients have been calculated, it evaluates the field value
+directly. Otherwise, it converts Cartesian coordinates to barycentric
+coordinates for barycentric interpolation.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q expressed in frame M, in Cartesian
+coordinates. M is the frame of the mesh.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the field does not have gradients defined <em>and</em></li>
+<li>the MeshType doesn’t support Barycentric coordinates.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMeshFieldLinear_[float, float]</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>MeshFieldLinear represents a continuous piecewise-linear scalar field
+<code class="docutils literal notranslate"><span class="pre">f</span></code> defined on a (triangular or tetrahedral) mesh; the field value
+changes linearly within each element E (triangle or tetrahedron), and
+the gradient ∇f is constant within each element. The field is
+continuous across adjacent elements, but its gradient is discontinuous
+from one element to the other.</p>
+<p>To represent a piecewise linear field f, we store one field value per
+vertex of the mesh. Each element E (triangle or tetrahedron) has (d+1)
+vertices, where d is the dimension of the element. For triangle, d =
+2, and for tetrahedron, d = 3.</p>
+<p>On each element E, we define a linear function fᵉ:ℝ³→ℝ using the field
+values at vertices of E. The gradient ∇fᵉ:ℝ³→ℝ³ is a constant map, so
+we write ∇fᵉ for the constant gradient vector on E as well. For a
+point Q in element E, we have:</p>
+<p>f(Q) = fᵉ(Q) for Q ∈ E, ∇f(Q) = ∇fᵉ for Q ∈ E.</p>
+<p>Notice that the domain of fᵉ is the entire space of ℝ³, while the
+domain of f is the underlying space of the mesh.</p>
+<p>The following sections are details for interested readers.</p>
+<p>** Barycentric coordinate **</p>
+<p>For a linear triangle or tetrahedron element E in 3-D, we use
+barycentric coordinate:</p>
+<p>(b₀, b₁, b₂) for triangle, (b₀, b₁, b₂, b₃) for tetrahedron, ∑bᵢ = 1,
+bᵢ ≥ 0,</p>
+<p>to identify a point Q that lies in the simplicial element E. The
+coefficient bᵢ is the weight of vertex Vᵉᵢ of the element E, where the
+index i is a local index within the element E, not the global index of
+the entire mesh. In other words, vertex Vᵉᵢ is the iᵗʰ vertex of E,
+not the iᵗʰ vertex among all vertices in the mesh. The point Q in E
+can be expressed as:</p>
+<p>Q = ∑bᵉᵢ(Q)Vᵉᵢ,</p>
+<p>where we indicate the barycentric coordinate of a point Q on an
+element E as bᵉᵢ(Q).</p>
+<p>** Field value from barycentric coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = fᵉ(Q) = ∑bᵉᵢ(Q)Fᵉᵢ</p>
+<p>where Fᵉᵢ is the field value at the iᵗʰ vertex of element E.</p>
+<p>** Frame dependency **</p>
+<p>A MeshFieldLinear is a frame-dependent quantity. Instances of a field
+should be named, as with any other frame-dependent quantity, with a
+trailing _F indicating the field’s frame F. The field’s frame is
+implicitly defined to be the same as the mesh’s frame on which the
+field is instantiated. The field’s frame affects two APIs:</p>
+<ul class="simple">
+<li>The gradients reported by EvaluateGradient() are expressed in the field’s</li>
+</ul>
+<p>frame.
+- The cartesian point passed to EvaluateCartesian() must be measured and
+expressed in the field’s frame.</p>
+<p>The field (along with its corresponding mesh) can be transformed into
+a new frame by invoking the TransformVertices() method on the mesh and
+Transform() on the field, passing the same math::RigidTransform to
+both.</p>
+<p>** Gradient **</p>
+<p>Consider each bᵉᵢ:ℝ³→ℝ as a linear function, its gradient ∇bᵉᵢ:ℝ³→ℝ³
+is a constant map, and we write ∇bᵉᵢ for the constant gradient vector.
+The gradient of the piecewise linear field f at a point Q in an
+element E is:</p>
+<p>∇f(Q) = ∇fᵉ = ∑Fᵉᵢ∇bᵉᵢ.</p>
+<p>** Field value from Cartesian coordinates **</p>
+<p>At a point Q in element E, the piecewise linear field f has value:</p>
+<p>f(Q) = ∇fᵉ⋅Q + fᵉ(0,0,0).</p>
+<p>Notice that (0,0,0) may or may not lie in element E.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
+<dd>a valid Eigen scalar for field values.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">MeshType</span></code>:</dt>
+<dd>the type of the meshes: TriangleSurfaceMesh or VolumeMesh.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].Evaluate">
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float], e: int, b: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].Evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a location on an element.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Barycentric coordinate type <code class="docutils literal notranslate"><span class="pre">B</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This can only be evaluated if the underlying MeshType itself
+supports barycentric evaluation (e.g., compare TriangleSurfaceMesh
+with PolygonSurfaceMesh).</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
+<dd>The barycentric coordinates.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if MeshType doesn’t support Barycentric coordinates.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">B</span></code>:</dt>
+<dd>The scalar type for the barycentric coordinate.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex">
+<code class="descname">EvaluateAtVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float], v: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateAtVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field value at a vertex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ [0, this-&gt;mesh().num_vertices()).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateCartesian">
+<code class="descname">EvaluateCartesian</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float], e: int, p_MQ: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMeshFieldLinear_[float, float].EvaluateCartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the field at a point Qp on an element. If the element is a
+tetrahedron, Qp is the input point Q. If the element is a triangle, Qp
+is the projection of Q on the triangle’s plane.</p>
+<p>If gradients have been calculated, it evaluates the field value
+directly. Otherwise, it converts Cartesian coordinates to barycentric
+coordinates for barycentric interpolation.</p>
+<p>The return type depends on both the field’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q expressed in frame M, in Cartesian
+coordinates. M is the frame of the mesh.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the field does not have gradients defined <em>and</em></li>
+<li>the MeshType doesn’t support Barycentric coordinates.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>

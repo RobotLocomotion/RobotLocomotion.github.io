@@ -1103,6 +1103,7 @@ var hierarchy =
     ] ],
     [ "VectorLog< T >", "classdrake_1_1systems_1_1_vector_log.html", null ],
     [ "GraphOfConvexSets::Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", null ],
+    [ "VisualizerConfig", "structdrake_1_1visualization_1_1_visualizer_config.html", null ],
     [ "VolumeElement", "classdrake_1_1geometry_1_1_volume_element.html", null ],
     [ "VolumeMesh< T >", "classdrake_1_1geometry_1_1_volume_mesh.html", null ],
     [ "VolumeMeshTester< T >", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],

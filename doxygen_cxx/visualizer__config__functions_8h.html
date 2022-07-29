@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/examples/van_der_pol -&gt; systems Relation</title>
+<title>Drake: drake/visualization/visualizer_config_functions.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('dir_8f847be5c0c53e92edc6178d5e17891e.html','');});
+$(document).ready(function(){initNavTree('visualizer__config__functions_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -157,13 +157,47 @@ $(document).ready(function(){initNavTree('dir_8f847be5c0c53e92edc6178d5e17891e.h
 </iframe>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">visualizer_config_functions.h File Reference</div>  </div>
+</div><!--header-->
 <div class="contents">
-<h3>van_der_pol &rarr; systems Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in drake/examples/van_der_pol</th><th class="dirtab">Includes file in drake/systems</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="van__der__pol_8h.html">van_der_pol.h</a></td><td class="dirtab"><a class="el" href="dir_2186f45272e5c29e3ac18ec762ab7501.html">framework</a>&#160;/&#160;<a class="el" href="leaf__system_8h.html">leaf_system.h</a></td></tr></table></div><!-- contents -->
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__visualizer_8h.html">drake/geometry/drake_visualizer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcm__buses_8h.html">drake/systems/lcm/lcm_buses.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="visualizer__config_8h.html">drake/visualization/visualizer_config.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for visualizer_config_functions.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="visualizer__config__functions_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1visualization"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html">drake::visualization</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a25ccbb59ba92702d8b4720e9c7209bc4">ApplyVisualizerConfig</a> (const VisualizerConfig &amp;config, const multibody::MultibodyPlant&lt; double &gt; &amp;plant, const geometry::SceneGraph&lt; double &gt; &amp;scene_graph, const systems::lcm::LcmBuses &amp;lcm_buses, systems::DiagramBuilder&lt; double &gt; *builder)</td></tr>
+<tr class="memdesc:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake-visualizer.  <a href="namespacedrake_1_1visualization.html#a25ccbb59ba92702d8b4720e9c7209bc4">More...</a><br /></td></tr>
+<tr class="separator:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_bf85a0c13984f214f436b2edc519c6dd.html">examples</a></li><li class="navelem"><a class="el" href="dir_8f847be5c0c53e92edc6178d5e17891e.html">van_der_pol</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_646ca0e8f46938429d8373c5298698fa.html">visualization</a></li><li class="navelem"><a class="el" href="visualizer__config__functions_8h.html">visualizer_config_functions.h</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

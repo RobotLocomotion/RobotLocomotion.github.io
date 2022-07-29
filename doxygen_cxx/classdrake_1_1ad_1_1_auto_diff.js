@@ -14,6 +14,8 @@ var classdrake_1_1ad_1_1_auto_diff =
     [ "operator=", "classdrake_1_1ad_1_1_auto_diff.html#a4c51258a40a3cf9b985eb7a50be03ba0", null ],
     [ "operator=", "classdrake_1_1ad_1_1_auto_diff.html#ad9a5daf124f25c9c15c2ce32d0d2bfc5", null ],
     [ "operator=", "classdrake_1_1ad_1_1_auto_diff.html#a8f5715299d0ccfb9a6c81e7f4d916a14", null ],
+    [ "partials", "classdrake_1_1ad_1_1_auto_diff.html#a05d3a45d0ce6c5f3328e34de27b930d5", null ],
+    [ "partials", "classdrake_1_1ad_1_1_auto_diff.html#a326f45011a12fd356c82d5c969a3f949", null ],
     [ "value", "classdrake_1_1ad_1_1_auto_diff.html#a374f9f0250d7e270cc4bf301edb46523", null ],
     [ "value", "classdrake_1_1ad_1_1_auto_diff.html#aa28d3b28e445391764ee80bc33f6e5c5", null ]
 ];

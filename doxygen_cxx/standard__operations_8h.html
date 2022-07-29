@@ -164,7 +164,8 @@ $(document).ready(function(){initNavTree('standard__operations_8h.html','');});
 <div class="title">standard_operations.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iosfwd&gt;</code><br />
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;iosfwd&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for standard_operations.h:</div>
 <div class="dyncontent">
@@ -187,6 +188,90 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Increment and decrement</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/language/operators#Increment_and_decrement">https://en.cppreference.com/w/cpp/language/operators#Increment_and_decrement</a> </p>
+</div></td></tr>
+<tr class="memitem:ad85e0f93db2905804390e8b40f01046e"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ad85e0f93db2905804390e8b40f01046e">operator++</a> (AutoDiff &amp;x)</td></tr>
+<tr class="memdesc:ad85e0f93db2905804390e8b40f01046e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard prefix increment operator (i.e., <code>++x</code>).  <a href="namespacedrake_1_1ad.html#ad85e0f93db2905804390e8b40f01046e">More...</a><br /></td></tr>
+<tr class="separator:ad85e0f93db2905804390e8b40f01046e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ad9a819f04c405db5c46af865bc922"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a72ad9a819f04c405db5c46af865bc922">operator++</a> (AutoDiff &amp;x, <a class="el" href="classint.html">int</a>)</td></tr>
+<tr class="memdesc:a72ad9a819f04c405db5c46af865bc922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard postfix increment operator (i.e., <code>x++</code>).  <a href="namespacedrake_1_1ad.html#a72ad9a819f04c405db5c46af865bc922">More...</a><br /></td></tr>
+<tr class="separator:a72ad9a819f04c405db5c46af865bc922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23655b2da4e6919cc81511326f3c1235"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a23655b2da4e6919cc81511326f3c1235">operator--</a> (AutoDiff &amp;x)</td></tr>
+<tr class="memdesc:a23655b2da4e6919cc81511326f3c1235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard prefix decrement operator (i.e., <code>--x</code>).  <a href="namespacedrake_1_1ad.html#a23655b2da4e6919cc81511326f3c1235">More...</a><br /></td></tr>
+<tr class="separator:a23655b2da4e6919cc81511326f3c1235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d5e3ed0dae87a3a9a3ab7671a99021"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ab2d5e3ed0dae87a3a9a3ab7671a99021">operator--</a> (AutoDiff &amp;x, <a class="el" href="classint.html">int</a>)</td></tr>
+<tr class="memdesc:ab2d5e3ed0dae87a3a9a3ab7671a99021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard postfix decrement operator (i.e., <code>x--</code>).  <a href="namespacedrake_1_1ad.html#ab2d5e3ed0dae87a3a9a3ab7671a99021">More...</a><br /></td></tr>
+<tr class="separator:ab2d5e3ed0dae87a3a9a3ab7671a99021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Arithmetic operators</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/language/operators#Binary_arithmetic_operators">https://en.cppreference.com/w/cpp/language/operators#Binary_arithmetic_operators</a> </p>
+</div></td></tr>
+<tr class="memitem:a9258dbf61d5505f2cffd61e6bb75443b"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a9258dbf61d5505f2cffd61e6bb75443b">operator+=</a> (AutoDiff &amp;a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:a9258dbf61d5505f2cffd61e6bb75443b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound addition and assignment operator.  <a href="namespacedrake_1_1ad.html#a9258dbf61d5505f2cffd61e6bb75443b">More...</a><br /></td></tr>
+<tr class="separator:a9258dbf61d5505f2cffd61e6bb75443b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2646ff62a13c4b182f4523ade302cddb"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a2646ff62a13c4b182f4523ade302cddb">operator+=</a> (AutoDiff &amp;a, double b)</td></tr>
+<tr class="memdesc:a2646ff62a13c4b182f4523ade302cddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound addition and assignment operator.  <a href="namespacedrake_1_1ad.html#a2646ff62a13c4b182f4523ade302cddb">More...</a><br /></td></tr>
+<tr class="separator:a2646ff62a13c4b182f4523ade302cddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44e54592a38f223146ee6362a44320e"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ae44e54592a38f223146ee6362a44320e">operator-=</a> (AutoDiff &amp;a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:ae44e54592a38f223146ee6362a44320e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound subtraction and assignment operator.  <a href="namespacedrake_1_1ad.html#ae44e54592a38f223146ee6362a44320e">More...</a><br /></td></tr>
+<tr class="separator:ae44e54592a38f223146ee6362a44320e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb32ad0c5b67af845de755dce6767dc8"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#afb32ad0c5b67af845de755dce6767dc8">operator-=</a> (AutoDiff &amp;a, double b)</td></tr>
+<tr class="memdesc:afb32ad0c5b67af845de755dce6767dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound subtraction and assignment operator.  <a href="namespacedrake_1_1ad.html#afb32ad0c5b67af845de755dce6767dc8">More...</a><br /></td></tr>
+<tr class="separator:afb32ad0c5b67af845de755dce6767dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a8945131bf53367de9a13dc7112db3"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a62a8945131bf53367de9a13dc7112db3">operator *=</a> (AutoDiff &amp;a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:a62a8945131bf53367de9a13dc7112db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound multiplication and assignment operator.  <a href="namespacedrake_1_1ad.html#a62a8945131bf53367de9a13dc7112db3">More...</a><br /></td></tr>
+<tr class="separator:a62a8945131bf53367de9a13dc7112db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff620cf691faad6e5f0d1848e037587"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a5ff620cf691faad6e5f0d1848e037587">operator *=</a> (AutoDiff &amp;a, double b)</td></tr>
+<tr class="memdesc:a5ff620cf691faad6e5f0d1848e037587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound multiplication and assignment operator.  <a href="namespacedrake_1_1ad.html#a5ff620cf691faad6e5f0d1848e037587">More...</a><br /></td></tr>
+<tr class="separator:a5ff620cf691faad6e5f0d1848e037587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2505be9197ae5fe3dc22623d663e44"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aeb2505be9197ae5fe3dc22623d663e44">operator/=</a> (AutoDiff &amp;a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:aeb2505be9197ae5fe3dc22623d663e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound division and assignment operator.  <a href="namespacedrake_1_1ad.html#aeb2505be9197ae5fe3dc22623d663e44">More...</a><br /></td></tr>
+<tr class="separator:aeb2505be9197ae5fe3dc22623d663e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e70d47e31742653879a0a6895e5a0b7"><td class="memItemLeft" align="right" valign="top">AutoDiff &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a7e70d47e31742653879a0a6895e5a0b7">operator/=</a> (AutoDiff &amp;a, double b)</td></tr>
+<tr class="memdesc:a7e70d47e31742653879a0a6895e5a0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound division and assignment operator.  <a href="namespacedrake_1_1ad.html#a7e70d47e31742653879a0a6895e5a0b7">More...</a><br /></td></tr>
+<tr class="separator:a7e70d47e31742653879a0a6895e5a0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792771a6da56e0b5531b542430883d34"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a792771a6da56e0b5531b542430883d34">operator+</a> (AutoDiff a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:a792771a6da56e0b5531b542430883d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard addition operator.  <a href="namespacedrake_1_1ad.html#a792771a6da56e0b5531b542430883d34">More...</a><br /></td></tr>
+<tr class="separator:a792771a6da56e0b5531b542430883d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617b27d372626a4b99b3afbb4203e0ba"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a617b27d372626a4b99b3afbb4203e0ba">operator+</a> (AutoDiff a, double b)</td></tr>
+<tr class="memdesc:a617b27d372626a4b99b3afbb4203e0ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard addition operator.  <a href="namespacedrake_1_1ad.html#a617b27d372626a4b99b3afbb4203e0ba">More...</a><br /></td></tr>
+<tr class="separator:a617b27d372626a4b99b3afbb4203e0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4a6b846b5ab34ddd934132ba0f3d0f"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a7c4a6b846b5ab34ddd934132ba0f3d0f">operator+</a> (double a, AutoDiff b)</td></tr>
+<tr class="memdesc:a7c4a6b846b5ab34ddd934132ba0f3d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard addition operator.  <a href="namespacedrake_1_1ad.html#a7c4a6b846b5ab34ddd934132ba0f3d0f">More...</a><br /></td></tr>
+<tr class="separator:a7c4a6b846b5ab34ddd934132ba0f3d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253ea74fad9476e4de67b656b97ef1cb"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a253ea74fad9476e4de67b656b97ef1cb">operator+</a> (AutoDiff x)</td></tr>
+<tr class="memdesc:a253ea74fad9476e4de67b656b97ef1cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard unary plus operator.  <a href="namespacedrake_1_1ad.html#a253ea74fad9476e4de67b656b97ef1cb">More...</a><br /></td></tr>
+<tr class="separator:a253ea74fad9476e4de67b656b97ef1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c0dd77c635dceb7612cfeea18f258b"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ae9c0dd77c635dceb7612cfeea18f258b">operator-</a> (AutoDiff a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:ae9c0dd77c635dceb7612cfeea18f258b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard subtraction operator.  <a href="namespacedrake_1_1ad.html#ae9c0dd77c635dceb7612cfeea18f258b">More...</a><br /></td></tr>
+<tr class="separator:ae9c0dd77c635dceb7612cfeea18f258b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb482ba19c98dc61ad2ba12ae9671be"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#abcb482ba19c98dc61ad2ba12ae9671be">operator-</a> (AutoDiff a, double b)</td></tr>
+<tr class="memdesc:abcb482ba19c98dc61ad2ba12ae9671be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard subtraction operator.  <a href="namespacedrake_1_1ad.html#abcb482ba19c98dc61ad2ba12ae9671be">More...</a><br /></td></tr>
+<tr class="separator:abcb482ba19c98dc61ad2ba12ae9671be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f56ac39870bd9e54f8476d84b22fbe"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ac0f56ac39870bd9e54f8476d84b22fbe">operator-</a> (double a, AutoDiff b)</td></tr>
+<tr class="memdesc:ac0f56ac39870bd9e54f8476d84b22fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard subtraction operator.  <a href="namespacedrake_1_1ad.html#ac0f56ac39870bd9e54f8476d84b22fbe">More...</a><br /></td></tr>
+<tr class="separator:ac0f56ac39870bd9e54f8476d84b22fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae015da9f4e757c85f102509932ce501a"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ae015da9f4e757c85f102509932ce501a">operator-</a> (AutoDiff x)</td></tr>
+<tr class="memdesc:ae015da9f4e757c85f102509932ce501a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard unary minus operator.  <a href="namespacedrake_1_1ad.html#ae015da9f4e757c85f102509932ce501a">More...</a><br /></td></tr>
+<tr class="separator:ae015da9f4e757c85f102509932ce501a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae521245b6aec25f233036d952061fb5b"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ae521245b6aec25f233036d952061fb5b">operator *</a> (AutoDiff a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:ae521245b6aec25f233036d952061fb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard multiplication operator.  <a href="namespacedrake_1_1ad.html#ae521245b6aec25f233036d952061fb5b">More...</a><br /></td></tr>
+<tr class="separator:ae521245b6aec25f233036d952061fb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084075faa823e678b6c30ae1f26659fe"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a084075faa823e678b6c30ae1f26659fe">operator *</a> (AutoDiff a, double b)</td></tr>
+<tr class="memdesc:a084075faa823e678b6c30ae1f26659fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard multiplication operator.  <a href="namespacedrake_1_1ad.html#a084075faa823e678b6c30ae1f26659fe">More...</a><br /></td></tr>
+<tr class="separator:a084075faa823e678b6c30ae1f26659fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fac4d6f819713b6657e192c769ed1e8"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a4fac4d6f819713b6657e192c769ed1e8">operator *</a> (double a, AutoDiff b)</td></tr>
+<tr class="memdesc:a4fac4d6f819713b6657e192c769ed1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard multiplication operator.  <a href="namespacedrake_1_1ad.html#a4fac4d6f819713b6657e192c769ed1e8">More...</a><br /></td></tr>
+<tr class="separator:a4fac4d6f819713b6657e192c769ed1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada179add840ec8de0a6e702f247137a"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aada179add840ec8de0a6e702f247137a">operator/</a> (AutoDiff a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:aada179add840ec8de0a6e702f247137a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard division operator.  <a href="namespacedrake_1_1ad.html#aada179add840ec8de0a6e702f247137a">More...</a><br /></td></tr>
+<tr class="separator:aada179add840ec8de0a6e702f247137a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38a6976614caa65cffe15d1b80a7dfa"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ad38a6976614caa65cffe15d1b80a7dfa">operator/</a> (AutoDiff a, double b)</td></tr>
+<tr class="memdesc:ad38a6976614caa65cffe15d1b80a7dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard division operator.  <a href="namespacedrake_1_1ad.html#ad38a6976614caa65cffe15d1b80a7dfa">More...</a><br /></td></tr>
+<tr class="separator:ad38a6976614caa65cffe15d1b80a7dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacbd555db2d620085ff5f044cd0f2e90"><td class="memItemLeft" align="right" valign="top">AutoDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aacbd555db2d620085ff5f044cd0f2e90">operator/</a> (double a, const AutoDiff &amp;b)</td></tr>
+<tr class="memdesc:aacbd555db2d620085ff5f044cd0f2e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard division operator.  <a href="namespacedrake_1_1ad.html#aacbd555db2d620085ff5f044cd0f2e90">More...</a><br /></td></tr>
+<tr class="separator:aacbd555db2d620085ff5f044cd0f2e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Miscellaneous functions</div></td></tr>
 <tr class="memitem:a552384f558ae479545e941ea5615c4bc"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a552384f558ae479545e941ea5615c4bc">operator&lt;&lt;</a> (std::ostream &amp;s, const AutoDiff &amp;x)</td></tr>
 <tr class="memdesc:a552384f558ae479545e941ea5615c4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the <code>value()</code> part of x to the stream.  <a href="namespacedrake_1_1ad.html#a552384f558ae479545e941ea5615c4bc">More...</a><br /></td></tr>

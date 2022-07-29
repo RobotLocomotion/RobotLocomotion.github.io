@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a0737945305cf88496fc289776515e0d9":[3,0,0,18,4,16],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,18,4,21],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a22881c8c97b471c7c9a56d437df6e542":[3,0,0,18,4,18],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a24948d1f75d0b7f6118b535e655ada09":[3,0,0,18,4,6],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a3093825d2725664b6304ae2f31217759":[3,0,0,18,4,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "decompose_8h.html":[4,0,0,1,3,4],
 "decompose_8h.html#a0c152941a4e06624bac5926fac2d4e32":[4,0,0,1,3,4,2],
 "decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7":[4,0,0,1,3,4,10],
-"decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,6],
-"decompose_8h.html#a47d95a6b1bc2f740b30a4735cc6dcd3c":[4,0,0,1,3,4,0],
-"decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934":[4,0,0,1,3,4,8]
+"decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,6]
 };

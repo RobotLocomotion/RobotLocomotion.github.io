@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_unit_inertia.html#af90ef8ef37ca899a26ab2963124f85e9":[3,0,0,9,85,2],
+"classdrake_1_1multibody_1_1_unit_quaternion_constraint.html":[1,1,0,11],
 "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#a38dfa2545053873d5d50c18d2d9e0fb6":[1,1,0,11,5],
 "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#a4f0b523a01b91658082439d591ab3240":[1,1,0,11,2],
 "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#a5212ee2633a6454da65ab6d5bfd1faa1":[1,1,0,11,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a63e93a9f6e91d3fdf899d863f2aac055":[3,0,0,9,2,3,10],
 "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a7ccc196f482ed8a8fa7cf7e64dc68534":[3,0,0,9,2,3,3],
 "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a991317764cf3fe3521c05d031eabe9cd":[3,0,0,9,2,3,14],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#aa50d66383609bee3d30063751ee6f879":[3,0,0,9,2,3,7],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ab8b3914bdaf13625c45535e14a684e0e":[3,0,0,9,2,3,2],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ac3718f30fa970d62edce3c8ea33d6ee6":[3,0,0,9,2,3,5]
+"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#aa50d66383609bee3d30063751ee6f879":[3,0,0,9,2,3,7]
 };

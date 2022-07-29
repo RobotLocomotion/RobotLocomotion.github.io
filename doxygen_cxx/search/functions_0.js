@@ -251,6 +251,7 @@ var searchData=
   ['applysimulatorconfig',['ApplySimulatorConfig',['../group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f',1,'drake::systems']]],
   ['applytransient',['ApplyTransient',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a0685b9bd25f37bd2cf50694b5c909e69',1,'drake::geometry::CollisionFilterManager']]],
   ['applyunrestrictedupdate',['ApplyUnrestrictedUpdate',['../classdrake_1_1systems_1_1_system.html#a1bc3701622107a616b3e45f9f0735233',1,'drake::systems::System']]],
+  ['applyvisualizerconfig',['ApplyVisualizerConfig',['../namespacedrake_1_1visualization.html#a25ccbb59ba92702d8b4720e9c7209bc4',1,'drake::visualization']]],
   ['approach',['approach',['../classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#ad48cd766fd69e534747352670b320229',1,'drake::solvers::MixedIntegerRotationConstraintGenerator']]],
   ['area',['area',['../classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a563798979d1f16337b662d90ccede642',1,'drake::geometry::PolygonSurfaceMesh::area()'],['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a9e0df4b7bc0bed489d11f3d79ab31cbf',1,'drake::geometry::TriangleSurfaceMesh::area()'],['../classdrake_1_1geometry_1_1_contact_surface.html#a9531fa7a3036a381a925e5fa35d7a6cb',1,'drake::geometry::ContactSurface::area()']]],
   ['areconnected',['AreConnected',['../classdrake_1_1systems_1_1_diagram.html#a7da097f3199cf623a099953ac11bc025',1,'drake::systems::Diagram']]],

@@ -217,7 +217,94 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.plotting.html">pydrake.visualization.plotting</a></li>
 </ul>
 </div>
-<span class="target" id="module-pydrake.visualization"></span></div>
+<span class="target" id="module-pydrake.visualization"></span><p>Bindings for Visualization.</p>
+<dl class="function">
+<dt id="pydrake.visualization.ApplyVisualizerConfig">
+<code class="descclassname">pydrake.visualization.</code><code class="descname">ApplyVisualizerConfig</code><span class="sig-paren">(</span><em>config: pydrake.visualization.VisualizerConfig, plant: pydrake.multibody.plant.MultibodyPlant_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm_buses: pydrake.systems.lcm.LcmBuses, builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.visualization.ApplyVisualizerConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds LCM visualization publishers to communicate to drake-visualizer.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<p>The exact function signature is subject to change as we polish this
+new feature.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>plant.is_finalized()</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.visualization.VisualizerConfig">
+<em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">VisualizerConfig</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings for what MultibodyPlant and SceneGraph should send to meldis
+and/or drake_visualizer.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<p>The exact configuration details (names and types) are subject to
+change as we polish this new feature.</p>
+<p>See ApplyVisualizerConfig() for how to enact this configuration.</p>
+<dl class="method">
+<dt id="pydrake.visualization.VisualizerConfig.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.visualization.VisualizerConfig</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.visualization.VisualizerConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizerConfig.default_illustration_color_rgba">
+<code class="descname">default_illustration_color_rgba</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig.default_illustration_color_rgba" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color to apply to any illustration geometry that hasn’t defined
+one. The vector must be of size three (rgb) or four (rgba).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizerConfig.default_proximity_color_rgba">
+<code class="descname">default_proximity_color_rgba</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig.default_proximity_color_rgba" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color to apply to any proximity geometry that hasn’t defined one.
+The vector must be of size three (rgb) or four (rgba).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizerConfig.lcm_bus">
+<code class="descname">lcm_bus</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig.lcm_bus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which LCM URL to use.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizerConfig.publish_contacts">
+<code class="descname">publish_contacts</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig.publish_contacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to show contact forces.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizerConfig.publish_illustration">
+<code class="descname">publish_illustration</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig.publish_illustration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to show illustration geometry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizerConfig.publish_period">
+<code class="descname">publish_period</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig.publish_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>The duration (in seconds) between published LCM messages that update
+visualization. (To help avoid small simulation timesteps, we use a
+default period that has an exact representation in binary floating
+point; see drake#15021 for details.)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizerConfig.publish_proximity">
+<code class="descname">publish_proximity</code><a class="headerlink" href="#pydrake.visualization.VisualizerConfig.publish_proximity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to show proximity geometry.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 
 
            </div>
