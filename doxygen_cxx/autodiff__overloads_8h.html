@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('autodiff__overloads_8h.html','');});
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Overloads for STL mathematical operations on AutoDiffScalar. </p>
 <p>Used via argument-dependent lookup (ADL). These functions appear in the Eigen namespace so that ADL can automatically choose between the STL version and the overloaded version to match the type of the arguments. The proper use would be e.g.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> mymethod() {</div><div class="line">   <span class="keyword">using</span> std::isinf;</div><div class="line">   isinf(myval);</div><div class="line">}</div></div><!-- fragment --><p>{}</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> mymethod() {</div><div class="line">   <span class="keyword">using</span> <a class="code" href="namespacedrake_1_1ad.html#a9070ca332f97ab90594e2d815bdc85fa">std::isinf</a>;</div><div class="line">   <a class="code" href="namespacedrake_1_1ad.html#a9070ca332f97ab90594e2d815bdc85fa">isinf</a>(myval);</div><div class="line">}</div></div><!-- fragment --><p>{}</p>
 <dl class="section note"><dt>Note</dt><dd>The if_then_else and cond functions for AutoDiffScalar are in namespace drake because cond is defined in namespace drake in "drake/common/cond.h" file. </dd></dl>
 </div><div class="textblock"><code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />

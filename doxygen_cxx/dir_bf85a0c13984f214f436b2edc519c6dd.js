@@ -12,7 +12,6 @@ var dir_bf85a0c13984f214f436b2edc519c6dd =
     [ "manipulation_station", "dir_970ffa4dc1494551190363316edbd789.html", "dir_970ffa4dc1494551190363316edbd789" ],
     [ "mass_spring_cloth", "dir_1cfb1308721b0b1c7dbbf4fcf7c61022.html", "dir_1cfb1308721b0b1c7dbbf4fcf7c61022" ],
     [ "multibody", "dir_9acdd6771460017440c69ee654743722.html", "dir_9acdd6771460017440c69ee654743722" ],
-    [ "particles", "dir_7f529e11694ce2aa9c93efef3543018b.html", "dir_7f529e11694ce2aa9c93efef3543018b" ],
     [ "pendulum", "dir_dc85ca307a056e878fb7cdf32e7a9a8e.html", "dir_dc85ca307a056e878fb7cdf32e7a9a8e" ],
     [ "planar_gripper", "dir_822d9f570b71bc4a1ad9b6c92e4a528b.html", "dir_822d9f570b71bc4a1ad9b6c92e4a528b" ],
     [ "quadrotor", "dir_64eb7e16d7e9848cfd92d3316c4eb5e4.html", "dir_64eb7e16d7e9848cfd92d3316c4eb5e4" ],

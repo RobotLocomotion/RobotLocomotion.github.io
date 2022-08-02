@@ -42,7 +42,6 @@ var searchData=
   ['multibody',['multibody',['../namespacedrake_1_1examples_1_1multibody.html',1,'drake::examples::multibody'],['../namespacedrake_1_1multibody.html',1,'drake::multibody']]],
   ['optimization',['optimization',['../namespacedrake_1_1geometry_1_1optimization.html',1,'drake::geometry']]],
   ['parsing',['parsing',['../namespacedrake_1_1multibody_1_1parsing.html',1,'drake::multibody']]],
-  ['particles',['particles',['../namespacedrake_1_1examples_1_1particles.html',1,'drake::examples']]],
   ['pc_5fflags',['pc_flags',['../namespacedrake_1_1perception_1_1pc__flags.html',1,'drake::perception']]],
   ['pendulum',['pendulum',['../namespacedrake_1_1examples_1_1pendulum.html',1,'drake::examples::pendulum'],['../namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html',1,'drake::multibody::benchmarks::pendulum']]],
   ['perception',['perception',['../namespacedrake_1_1perception.html',1,'drake']]],
