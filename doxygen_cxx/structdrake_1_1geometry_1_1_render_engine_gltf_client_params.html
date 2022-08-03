@@ -191,9 +191,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab3f078684998b83967d507d0f453f454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454">verbose</a> = false</td></tr>
 <tr class="memdesc:ab3f078684998b83967d507d0f453f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the client should log information about which files are being generated, as well as any information about HTTP communications between the client and server such as HTTP header information, url and port, etc.  <a href="#ab3f078684998b83967d507d0f453f454">More...</a><br /></td></tr>
 <tr class="separator:ab3f078684998b83967d507d0f453f454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae696d36c70574da6c856ad2995f90ae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ae696d36c70574da6c856ad2995f90ae4">no_cleanup</a> = false</td></tr>
-<tr class="memdesc:ae696d36c70574da6c856ad2995f90ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the client should cleanup files generated / retrieved from the server.  <a href="#ae696d36c70574da6c856ad2995f90ae4">More...</a><br /></td></tr>
-<tr class="separator:ae696d36c70574da6c856ad2995f90ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9b7b7aeb7996e8469a93c3dd4ee5ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6d9b7b7aeb7996e8469a93c3dd4ee5ef">cleanup</a> = true</td></tr>
+<tr class="memdesc:a6d9b7b7aeb7996e8469a93c3dd4ee5ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the client should cleanup files generated / retrieved from the server.  <a href="#a6d9b7b7aeb7996e8469a93c3dd4ee5ef">More...</a><br /></td></tr>
+<tr class="separator:a6d9b7b7aeb7996e8469a93c3dd4ee5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a05029dd35522254658dee01b5025968d"></a>
@@ -234,6 +234,23 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6d9b7b7aeb7996e8469a93c3dd4ee5ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9b7b7aeb7996e8469a93c3dd4ee5ef">&#9670;&nbsp;</a></span>cleanup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cleanup = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether or not the client should cleanup files generated / retrieved from the server. </p>
+<p>By default (<code>cleanup=true</code>), after a server image response has been loaded into the client's memory, the glTF scene file and images will be deleted. To keep the generated scene files or server response images for inspection purposes, set <code>cleanup=false</code> instead. During the construction process a number of copies and clones are created, when <code>cleanup=false</code> there will be more than one empty temporary directory created that will not be deleted. The path to the temporary directory can be observed by setting <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454" title="Whether or not the client should log information about which files are being generated,...">RenderEngineGltfClientParams::verbose</a> to <code>true</code>, or inspecting the parent directory described by <a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2" title="Returns a directory location suitable for temporary files.">drake::temp_directory()</a>. </p>
+
+</div>
+</div>
 <a id="ace5c9e02c229a4fcf4b3ca57a6dfe7d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace5c9e02c229a4fcf4b3ca57a6dfe7d6">&#9670;&nbsp;</a></span>default_label</h2>
 
@@ -247,23 +264,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The (optional) label to apply when none is otherwise specified. </p>
-
-</div>
-</div>
-<a id="ae696d36c70574da6c856ad2995f90ae4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae696d36c70574da6c856ad2995f90ae4">&#9670;&nbsp;</a></span>no_cleanup</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool no_cleanup = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Whether or not the client should cleanup files generated / retrieved from the server. </p>
-<p>By default (<code>no_cleanup=false</code>), as soon as a glTF scene file as well as server image response for a given frame are no longer needed they will be deleted. To inspect generated scene files or server response images set <code>no_cleanup=true</code> to prevent the files and their governing temporary directory from being deleted. During the construction process a number of copies and clones are created, when <code>no_cleanup=true</code> there will be more than one empty temporary directory created that will not be deleted. The path to the temporary directory can be observed by setting <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454" title="Whether or not the client should log information about which files are being generated,...">RenderEngineGltfClientParams::verbose</a> to <code>true</code>, or inspecting the parent directory described by <a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2" title="Returns a directory location suitable for temporary files.">drake::temp_directory()</a>. </p>
 
 </div>
 </div>

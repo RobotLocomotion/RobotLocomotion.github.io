@@ -222,6 +222,7 @@ $(document).ready(function(){initNavTree('group__render__engine__gltf__client__s
 <tr>
 <td><b>center_y</b> </td><td>The principal point's y coordinate in pixels as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c" title="Returns the principal point&#39;s y coordinate in pixels.">systems::sensors::CameraInfo::center_y()</a> value. Sent as form data <code>&lt;input type="number" name="center_y"&gt;</code>. Decimal value.   </td></tr>
 </table>
+<p>Note: {focal_x, focal_y} contains duplicated information as {fov_x, fov_y} given an image size. Nonetheless, both pieces of information are sent to the server so that the server can choose its preferred representation. The server can expect them to be consistent.</p>
 <h3 id="allowed-image-response-types">Allowed Image Response Types</h3>
 <hr/>
 <p>The client accepts the following image types from a server render:</p>

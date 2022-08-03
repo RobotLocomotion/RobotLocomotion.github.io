@@ -716,7 +716,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Evaluates <code>vector_func</code> at all input mesh points and extracts the mesh value matrix that should be used to approximate the function with this barycentric interpolation. </p>
-<div class="fragment"><div class="line">MatrixXd mesh_values = bary.MeshValuesFrom(</div><div class="line">  [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; x) { <span class="keywordflow">return</span> <a class="code" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(<a class="code" href="namespacedrake_1_1symbolic.html#a90efdc7cf4be8bddc1fa365fb78b8e4a">std::sin</a>(x[0])); });</div></div><!-- fragment --> 
+<div class="fragment"><div class="line">MatrixXd mesh_values = bary.MeshValuesFrom(</div><div class="line">  [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; x) { <span class="keywordflow">return</span> <a class="code" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">std::sin</a>(x[0])); });</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a04d3eead2c004b19dd5d4555b7675c31"></a>

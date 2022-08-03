@@ -2,7 +2,15 @@ var standard__operations_8h =
 [
     [ "abs", "standard__operations_8h.html#acb7ba0716b6d1d6ee2ee41e0bcf1a134", null ],
     [ "abs2", "standard__operations_8h.html#a7632df8e55319e7b981090fb426dcbed", null ],
+    [ "acos", "standard__operations_8h.html#ae062b9210a5e3013e5582db753e9566b", null ],
+    [ "asin", "standard__operations_8h.html#a3b2e82538ea517c32aaafb58eccafba2", null ],
+    [ "atan", "standard__operations_8h.html#af2afb4760e5c5ef40db8af9479db1cee", null ],
+    [ "atan2", "standard__operations_8h.html#ae1e2fa6fbabe331a19c0e8614705ab92", null ],
+    [ "atan2", "standard__operations_8h.html#ad0df9d4928bfd02e8395e3ed934e20b5", null ],
+    [ "atan2", "standard__operations_8h.html#a6162387fd41f2668fe684c43d4a3dd36", null ],
     [ "ceil", "standard__operations_8h.html#a5ebd6e97a3fc4a17025ca2ebbc0905dc", null ],
+    [ "cos", "standard__operations_8h.html#a816394bf5c538b6334bb74b6888bdd75", null ],
+    [ "cosh", "standard__operations_8h.html#acb94920527dcd90d09d374b4c2a21ca0", null ],
     [ "floor", "standard__operations_8h.html#a6fe3629863ab0bd4025541189d15e809", null ],
     [ "isfinite", "standard__operations_8h.html#a94d92388334b86a8ebe384f4a862d81e", null ],
     [ "isinf", "standard__operations_8h.html#a9070ca332f97ab90594e2d815bdc85fa", null ],
@@ -59,5 +67,9 @@ var standard__operations_8h =
     [ "operator>=", "standard__operations_8h.html#a9c9a390f52aafa89a9fce031952423b5", null ],
     [ "operator>=", "standard__operations_8h.html#a7272b7754954f906fa0dd83e8b4cc5a5", null ],
     [ "operator>=", "standard__operations_8h.html#a24b8ca4f2a850dfa8eea7f408cf6a9de", null ],
-    [ "round", "standard__operations_8h.html#aeb6bf33add06bc05bd046c803bf6da00", null ]
+    [ "round", "standard__operations_8h.html#aeb6bf33add06bc05bd046c803bf6da00", null ],
+    [ "sin", "standard__operations_8h.html#ac023124b011f56f04b412886e348e809", null ],
+    [ "sinh", "standard__operations_8h.html#a890cc31617539b3f7af96f76a45c8ab1", null ],
+    [ "tan", "standard__operations_8h.html#a45d35259b01712e9c24f6f04c1f00408", null ],
+    [ "tanh", "standard__operations_8h.html#a31d584bed99ab67ec074687a94eb7c00", null ]
 ];

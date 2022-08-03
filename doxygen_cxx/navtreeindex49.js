@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"pydrake__pybind_8h.html#aa8cec9d64f8d0017db630acd8740021e":[4,0,0,0,0,9,5],
 "pydrake__pybind_8h.html#abae292352a6ccb4d07b1aa13d4c7f143":[4,0,0,0,0,9,1],
 "pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4":[4,0,0,0,0,9,3],
 "pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,9,6],
@@ -90,7 +91,7 @@ var NAVTREEINDEX49 =
 "render__doxygen_8h.html":[4,0,0,4,4,4],
 "render__engine_8h.html":[4,0,0,4,4,5],
 "render__engine__gl__factory_8h.html":[4,0,0,4,4,0,0],
-"render__engine__gltf__client__params_8h.html":[4,0,0,4,6,3],
+"render__engine__gltf__client__params_8h.html":[4,0,0,4,6,4],
 "render__engine__vtk_8h.html":[4,0,0,4,4,2,0],
 "render__engine__vtk__base_8h.html":[4,0,0,4,4,2,1],
 "render__engine__vtk__factory_8h.html":[4,0,0,4,4,2,2],
@@ -98,7 +99,7 @@ var NAVTREEINDEX49 =
 "render__engine__vtk__params_8h.html#a57f567939574cb0f42711f4b608632d2":[4,0,0,4,7,4,1],
 "render__gl_2factory_8h.html":[4,0,0,4,5,0],
 "render__gl_2factory_8h.html#aff58ede2e6498518901d8a297a3bd07b":[4,0,0,4,5,0,0],
-"render__gltf__client__doxygen_8h.html":[4,0,0,4,6,4],
+"render__gltf__client__doxygen_8h.html":[4,0,0,4,6,5],
 "render__label_8h.html":[4,0,0,4,4,6],
 "render__vtk_2factory_8h.html":[4,0,0,4,7,0],
 "render__vtk_2factory_8h.html#a18b9a919046a97500f422a85a4a8ce30":[4,0,0,4,7,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,15,3],
 "simplification_8h.html#aeb27ddf30420e620beb8e6725d83208f":[4,0,0,1,3,15,1],
 "simulator_8h.html":[4,0,0,12,0,22],
-"simulator__config_8h.html":[4,0,0,12,0,23],
-"simulator__config__functions_8h.html":[4,0,0,12,0,24]
+"simulator__config_8h.html":[4,0,0,12,0,23]
 };
