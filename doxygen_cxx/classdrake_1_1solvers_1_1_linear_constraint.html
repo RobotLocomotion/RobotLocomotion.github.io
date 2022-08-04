@@ -174,25 +174,19 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_linear_const
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a62f856e69dc977f8302dc2e735690205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a62f856e69dc977f8302dc2e735690205">LinearConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a49caacdd74dd193972c7aab01caf4a15">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memitem:a62f856e69dc977f8302dc2e735690205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a62f856e69dc977f8302dc2e735690205">LinearConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
 <tr class="memdesc:a62f856e69dc977f8302dc2e735690205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the linear constraint lb &lt;= A*x &lt;= ub.  <a href="#a62f856e69dc977f8302dc2e735690205">More...</a><br /></td></tr>
 <tr class="separator:a62f856e69dc977f8302dc2e735690205"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d516afa270ccf7776d5832f82c25007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1d516afa270ccf7776d5832f82c25007">LinearConstraint</a> (const Eigen::SparseMatrix&lt; double &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a49caacdd74dd193972c7aab01caf4a15">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memitem:a1d516afa270ccf7776d5832f82c25007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1d516afa270ccf7776d5832f82c25007">LinearConstraint</a> (const Eigen::SparseMatrix&lt; double &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
 <tr class="memdesc:a1d516afa270ccf7776d5832f82c25007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads constructor with a sparse A matrix.  <a href="#a1d516afa270ccf7776d5832f82c25007">More...</a><br /></td></tr>
 <tr class="separator:a1d516afa270ccf7776d5832f82c25007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec4535d41aed8500779acbaec5095f9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#aec4535d41aed8500779acbaec5095f9e">~LinearConstraint</a> () override</td></tr>
 <tr class="separator:aec4535d41aed8500779acbaec5095f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7814fd66b140e44a21a1830bfd5dfbf"><td class="memItemLeft" align="right" valign="top">virtual Eigen::SparseMatrix&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#ab7814fd66b140e44a21a1830bfd5dfbf">GetSparseMatrix</a> () const</td></tr>
-<tr class="memdesc:ab7814fd66b140e44a21a1830bfd5dfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab7814fd66b140e44a21a1830bfd5dfbf">More...</a><br /></td></tr>
-<tr class="separator:ab7814fd66b140e44a21a1830bfd5dfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c266571ce951e63d66d582a62854908"><td class="memItemLeft" align="right" valign="top">const Eigen::SparseMatrix&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908">get_sparse_A</a> () const</td></tr>
 <tr class="separator:a1c266571ce951e63d66d582a62854908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e25e75fd44159789b93a0c7f180c39"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a38e25e75fd44159789b93a0c7f180c39">GetDenseA</a> () const</td></tr>
 <tr class="memdesc:a38e25e75fd44159789b93a0c7f180c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the matrix A as a dense matrix.  <a href="#a38e25e75fd44159789b93a0c7f180c39">More...</a><br /></td></tr>
 <tr class="separator:a38e25e75fd44159789b93a0c7f180c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49caacdd74dd193972c7aab01caf4a15"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a49caacdd74dd193972c7aab01caf4a15">A</a> () const</td></tr>
-<tr class="memdesc:a49caacdd74dd193972c7aab01caf4a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the coefficient matrix A as a dense matrix.  <a href="#a49caacdd74dd193972c7aab01caf4a15">More...</a><br /></td></tr>
-<tr class="separator:a49caacdd74dd193972c7aab01caf4a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37f85645baa2bea4381cab675169d8c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a37f85645baa2bea4381cab675169d8c8">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_ub)</td></tr>
 <tr class="memdesc:a37f85645baa2bea4381cab675169d8c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the linear term, upper and lower bounds in the linear constraint.  <a href="#a37f85645baa2bea4381cab675169d8c8">More...</a><br /></td></tr>
 <tr class="separator:a37f85645baa2bea4381cab675169d8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -488,36 +482,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a49caacdd74dd193972c7aab01caf4a15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49caacdd74dd193972c7aab01caf4a15">&#9670;&nbsp;</a></span>A()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const Eigen::MatrixXd&amp; A </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the coefficient matrix A as a dense matrix. </p>
-<dl class="section note"><dt>Note</dt><dd>This function will allocate new memory on the heap. For better performance you should call <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908">get_sparse_A()</a> which returns a sparse matrix.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use GetDenseA() instead of A() <br />
- This will be removed from Drake on or after 2022-08-01.</dd></dl>
-
-</div>
-</div>
 <a id="afd5ade712b02fa2e71e8c26811c9494a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd5ade712b02fa2e71e8c26811c9494a">&#9670;&nbsp;</a></span>DoDisplay()</h2>
 
@@ -740,35 +704,6 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the matrix A as a dense matrix. </p>
 <dl class="section note"><dt>Note</dt><dd>this might involve memory allocation to convert a sparse matrix to a dense one, for better performance you should call <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908">get_sparse_A()</a> which returns a sparse matrix. </dd></dl>
-
-</div>
-</div>
-<a id="ab7814fd66b140e44a21a1830bfd5dfbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7814fd66b140e44a21a1830bfd5dfbf">&#9670;&nbsp;</a></span>GetSparseMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual Eigen::SparseMatrix&lt;double&gt; GetSparseMatrix </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>Use get_sparse_A() instead of GetSparseMatrix() <br />
- This will be removed from Drake on or after 2022-08-01.</dd></dl>
 
 </div>
 </div>

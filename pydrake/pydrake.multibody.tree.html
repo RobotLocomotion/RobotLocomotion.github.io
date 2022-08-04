@@ -2779,6 +2779,26 @@ that doesn’t throw an exception in Debug builds.</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.multibody.tree.ConstraintIndex">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">ConstraintIndex</code><a class="headerlink" href="#pydrake.multibody.tree.ConstraintIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type used to identify constraints by index within a multibody system.</p>
+<dl class="method">
+<dt id="pydrake.multibody.tree.ConstraintIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ConstraintIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ConstraintIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+exists to serve applications which require a default constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.ConstraintIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ConstraintIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.ConstraintIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pydrake.multibody.tree.default_model_instance">
 <code class="descclassname">pydrake.multibody.tree.</code><code class="descname">default_model_instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ModelInstanceIndex<a class="headerlink" href="#pydrake.multibody.tree.default_model_instance" title="Permalink to this definition">¶</a></dt>

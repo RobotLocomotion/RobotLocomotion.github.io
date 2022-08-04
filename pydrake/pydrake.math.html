@@ -1184,6 +1184,58 @@ class description).</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pydrake.math.ComputeNumericalGradient">
+<code class="descclassname">pydrake.math.</code><code class="descname">ComputeNumericalGradient</code><span class="sig-paren">(</span><em>calc_func: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], x: numpy.ndarray[numpy.float64[m, 1]], option: pydrake.math.NumericalGradientOption = &lt;pydrake.math.NumericalGradientOption object at 0x7f8b4da45ef0&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ComputeNumericalGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the gradient of a function f(x) through numerical difference.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">calc_func</span></code>:</dt>
+<dd>calc_func(x, &amp;y) computes the value of f(x), and stores the value
+in y. <code class="docutils literal notranslate"><span class="pre">calc_func</span></code> is responsible for properly resizing the
+output <code class="docutils literal notranslate"><span class="pre">y</span></code> when it consists of an Eigen vector of Eigen::Dynamic
+size.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt>
+<dd>The point at which the numerical gradient is computed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">option</span></code>:</dt>
+<dd>The options for computing numerical gradient.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">DerivedX</span></code>:</dt>
+<dd>an Eigen column vector.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">DerivedY</span></code>:</dt>
+<dd>an Eigen column vector.</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">DerivedCalcX</span></code>:</dt>
+<dd>The type of x in the calc_func. Must be an Eigen column vector. It
+is possible to have DerivedCalcX being different from DerivedX,
+for example, <code class="docutils literal notranslate"><span class="pre">calc_func</span></code> could be solvers::EvaluatorBase(const
+Eigen::Ref&lt;const Eigen::VectorXd&gt;&amp;, Eigen::VectorXd*), but <code class="docutils literal notranslate"><span class="pre">x</span></code>
+could be of type Eigen::VectorXd. TODO(hongkai.dai): understand
+why the default template DerivedCalcX = DerivedX doesn’t compile
+when I instantiate ComputeNumericalGradient&lt;DerivedX,
+DerivedY&gt;(calc_func, x);</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">gradient</span></code>:</dt>
+<dd>a matrix of size x.rows() x y.rows(). gradient(i, j) is ∂f(i) /
+∂x(j)</dd>
+</dl>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
+<span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">std</span><span class="p">::</span><span class="n">function</span> <span class="kn">from</span> <span class="nn">a</span> <span class="k">lambda</span> <span class="n">expression</span><span class="o">.</span>
+<span class="n">std</span><span class="p">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n">void</span> <span class="p">(</span><span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">Vector3d</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="p">[](</span><span class="n">const</span>
+<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">Vector3d</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">std</span><span class="p">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">));};</span>
+<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">x_eval</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="n">auto</span> <span class="n">J</span> <span class="o">=</span> <span class="n">ComputeNumericalGradient</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">x_eval</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">Note</span> <span class="n">that</span> <span class="k">if</span> <span class="n">we</span> <span class="k">pass</span> <span class="ow">in</span> <span class="n">a</span> <span class="k">lambda</span> <span class="n">to</span> <span class="n">ComputeNumericalGradient</span><span class="p">,</span> <span class="n">then</span>
+<span class="o">//</span> <span class="n">ComputeNumericalGradient</span> <span class="n">has</span> <span class="n">to</span> <span class="n">instantiate</span> <span class="n">the</span> <span class="n">template</span> <span class="n">types</span> <span class="n">explicitly</span><span class="p">,</span>
+<span class="o">//</span> <span class="k">as</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">example</span><span class="o">.</span> <span class="n">The</span> <span class="n">issue</span> <span class="n">of</span> <span class="n">template</span> <span class="n">deduction</span> <span class="k">with</span> <span class="n">std</span><span class="p">::</span><span class="n">function</span> <span class="ow">is</span>
+<span class="o">//</span> <span class="n">explained</span> <span class="ow">in</span>
+<span class="o">//</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stackoverflow</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">questions</span><span class="o">/</span><span class="mi">48529410</span><span class="o">/</span><span class="n">template</span><span class="o">-</span><span class="n">arguments</span><span class="o">-</span><span class="n">deduction</span><span class="o">-</span><span class="n">failed</span><span class="o">-</span><span class="n">passing</span><span class="o">-</span><span class="n">func</span><span class="o">-</span><span class="n">pointer</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">stdfunction</span>
+<span class="n">auto</span> <span class="n">bar</span> <span class="o">=</span> <span class="p">[](</span><span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span><span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="p">};</span>
+<span class="n">auto</span> <span class="n">J2</span> <span class="o">=</span> <span class="n">ComputeNumericalGradient</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="p">,</span>
+<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.math.ContinuousAlgebraicRiccatiEquation">
 <code class="descclassname">pydrake.math.</code><code class="descname">ContinuousAlgebraicRiccatiEquation</code><span class="sig-paren">(</span><em>A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ContinuousAlgebraicRiccatiEquation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the unique stabilizing solution S to the continuous-time
@@ -1540,6 +1592,73 @@ knots have multiplicity equal to the order of the spline.</p>
 <li>min(arg0: pydrake.autodiffutils.AutoDiffXd, arg1: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
 <li>min(arg0: pydrake.symbolic.Expression, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
 </ol>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.math.NumericalGradientMethod">
+<em class="property">class </em><code class="descclassname">pydrake.math.</code><code class="descname">NumericalGradientMethod</code><a class="headerlink" href="#pydrake.math.NumericalGradientMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kForward : Compute the gradient as (f(x + Δx) - f(x)) / Δx, with Δx &gt; 0</p>
+<p>kBackward : Compute the gradient as (f(x) - f(x - Δx)) / Δx, with Δx &gt; 0</p>
+<p>kCentral : Compute the gradient as (f(x + Δx) - f(x - Δx)) / (2Δx), with Δx &gt; 0</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.math.NumericalGradientMethod.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.math.NumericalGradientMethod</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.math.NumericalGradientMethod.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.math.NumericalGradientMethod.kBackward">
+<code class="descname">kBackward</code><em class="property"> = &lt;NumericalGradientMethod.kBackward: 1&gt;</em><a class="headerlink" href="#pydrake.math.NumericalGradientMethod.kBackward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.math.NumericalGradientMethod.kCentral">
+<code class="descname">kCentral</code><em class="property"> = &lt;NumericalGradientMethod.kCentral: 2&gt;</em><a class="headerlink" href="#pydrake.math.NumericalGradientMethod.kCentral" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.math.NumericalGradientMethod.kForward">
+<code class="descname">kForward</code><em class="property"> = &lt;NumericalGradientMethod.kForward: 0&gt;</em><a class="headerlink" href="#pydrake.math.NumericalGradientMethod.kForward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.math.NumericalGradientMethod.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.math.NumericalGradientMethod.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.math.NumericalGradientMethod.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.math.NumericalGradientMethod.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.math.NumericalGradientOption">
+<em class="property">class </em><code class="descclassname">pydrake.math.</code><code class="descname">NumericalGradientOption</code><a class="headerlink" href="#pydrake.math.NumericalGradientOption" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.math.NumericalGradientOption.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.math.NumericalGradientOption</em>, <em>method: pydrake.math.NumericalGradientMethod</em>, <em>function_accuracy: float = 1e-15</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.math.NumericalGradientOption.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">function_accuracy</span></code>:</dt>
+<dd>The accuracy of evaluating function f(x). For double-valued
+functions (with magnitude around 1), the accuracy is usually about
+1E-15.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.NumericalGradientOption.NumericalGradientMethod">
+<code class="descname">NumericalGradientMethod</code><span class="sig-paren">(</span><em>self: pydrake.math.NumericalGradientOption</em><span class="sig-paren">)</span> &#x2192; pydrake.math.NumericalGradientMethod<a class="headerlink" href="#pydrake.math.NumericalGradientOption.NumericalGradientMethod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.NumericalGradientOption.perturbation_size">
+<code class="descname">perturbation_size</code><span class="sig-paren">(</span><em>self: pydrake.math.NumericalGradientOption</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.NumericalGradientOption.perturbation_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="function">

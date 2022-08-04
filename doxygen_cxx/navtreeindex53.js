@@ -1,6 +1,5 @@
 var NAVTREEINDEX53 =
 {
-"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html#a0a4dab7f19136a1c6da932a2f1b5268c":[3,0,0,14,0,6,1,0],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html#a81c75d82efc1b0586ace9eca3f454610":[3,0,0,14,0,6,1,2],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html#aba5fa3cbd1a94712a00891cd92728c34":[3,0,0,14,0,6,1,1],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html":[3,0,0,14,0,7,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX53 =
 "structdrake_1_1type__at.html#ae186135b13d8acdaf385d1ff052f0d82":[3,0,0,55,0],
 "structdrake_1_1type__check__different__from.html":[3,0,0,56],
 "structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,56,0],
-"structdrake_1_1type__pack.html":[3,0,0,57]
+"structdrake_1_1type__pack.html":[3,0,0,57],
+"structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,57,1]
 };

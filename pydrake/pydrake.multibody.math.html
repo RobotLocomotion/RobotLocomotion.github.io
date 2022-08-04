@@ -1577,12 +1577,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialForce_.SpatialForce_[float].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_.SpatialForce_[float].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[float], offset: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[float]</li>
-</ol>
-<p>Shifts a SpatialForce from one point fixed on frame B to another point
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialForce_[float], offset: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialForce_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialForce_.SpatialForce_[float].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialForce from one point fixed on frame B to another point
 fixed on frame B.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -1601,10 +1597,6 @@ expressed in frame E).</dd>
 Shift() to shift multiple spatial forces (with or without
 modifying the input parameter spatial_forces).</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[float], p_BpBq_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[float]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BqBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1752,12 +1744,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialForce_[AutoDiffXd].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_[AutoDiffXd].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[AutoDiffXd], offset: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[AutoDiffXd]</li>
-</ol>
-<p>Shifts a SpatialForce from one point fixed on frame B to another point
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialForce_[AutoDiffXd], offset: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialForce_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.math.SpatialForce_[AutoDiffXd].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialForce from one point fixed on frame B to another point
 fixed on frame B.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -1776,10 +1764,6 @@ expressed in frame E).</dd>
 Shift() to shift multiple spatial forces (with or without
 modifying the input parameter spatial_forces).</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[AutoDiffXd], p_BpBq_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[AutoDiffXd]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BqBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1925,12 +1909,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialForce_[Expression].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_[Expression].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[Expression], offset: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[Expression]</li>
-</ol>
-<p>Shifts a SpatialForce from one point fixed on frame B to another point
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialForce_[Expression], offset: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialForce_[Expression]<a class="headerlink" href="#pydrake.multibody.math.SpatialForce_[Expression].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialForce from one point fixed on frame B to another point
 fixed on frame B.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -1949,10 +1929,6 @@ expressed in frame E).</dd>
 Shift() to shift multiple spatial forces (with or without
 modifying the input parameter spatial_forces).</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[Expression], p_BpBq_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[Expression]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BqBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2098,12 +2074,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialForce_[float].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_[float].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[float], offset: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[float]</li>
-</ol>
-<p>Shifts a SpatialForce from one point fixed on frame B to another point
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialForce_[float], offset: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialForce_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialForce_[float].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialForce from one point fixed on frame B to another point
 fixed on frame B.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
@@ -2122,10 +2094,6 @@ expressed in frame E).</dd>
 Shift() to shift multiple spatial forces (with or without
 modifying the input parameter spatial_forces).</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialForce_[float], p_BpBq_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialForce_[float]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BqBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2313,12 +2281,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialMomentum_.SpatialMomentum_[float].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_.SpatialMomentum_[float].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[float], offset: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[float]</li>
-</ol>
-<p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialMomentum_[float], offset: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialMomentum_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_.SpatialMomentum_[float].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
 <dd>which is the position vector p_PQ_E from point P to point Q,
@@ -2339,10 +2303,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 <p class="first admonition-title">See also</p>
 <p class="last">ShiftInPlace() for more information and how L_MSQ_E is calculated.</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[float], p_BpBq_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[float]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BpBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2522,12 +2482,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialMomentum_[AutoDiffXd].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_[AutoDiffXd].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[AutoDiffXd], offset: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[AutoDiffXd]</li>
-</ol>
-<p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialMomentum_[AutoDiffXd], offset: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialMomentum_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_[AutoDiffXd].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
 <dd>which is the position vector p_PQ_E from point P to point Q,
@@ -2548,10 +2504,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 <p class="first admonition-title">See also</p>
 <p class="last">ShiftInPlace() for more information and how L_MSQ_E is calculated.</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[AutoDiffXd], p_BpBq_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[AutoDiffXd]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BpBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2729,12 +2681,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialMomentum_[Expression].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_[Expression].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[Expression], offset: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[Expression]</li>
-</ol>
-<p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialMomentum_[Expression], offset: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialMomentum_[Expression]<a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_[Expression].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
 <dd>which is the position vector p_PQ_E from point P to point Q,
@@ -2755,10 +2703,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 <p class="first admonition-title">See also</p>
 <p class="last">ShiftInPlace() for more information and how L_MSQ_E is calculated.</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[Expression], p_BpBq_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[Expression]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BpBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2936,12 +2880,8 @@ SpatialVector to zero.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialMomentum_[float].Shift">
-<code class="descname">Shift</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_[float].Shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[float], offset: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[float]</li>
-</ol>
-<p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
+<code class="descname">Shift</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialMomentum_[float], offset: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialMomentum_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_[float].Shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts a SpatialMomentum from an about-point P to an about-point Q.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt>
 <dd>which is the position vector p_PQ_E from point P to point Q,
@@ -2962,10 +2902,6 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 <p class="first admonition-title">See also</p>
 <p class="last">ShiftInPlace() for more information and how L_MSQ_E is calculated.</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>Shift(self: pydrake.multibody.math.SpatialMomentum_[float], p_BpBq_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.math.SpatialMomentum_[float]</li>
-</ol>
-<p>The keyword argument (kwarg) has been renamed from Shift(p_BpBq_E) to Shift(offset). Deprecated kwarg will be unavailable after 2022-08-01.</p>
 </dd></dl>
 
 <dl class="method">

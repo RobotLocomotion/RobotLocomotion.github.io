@@ -2003,6 +2003,40 @@ must use a discrete MultibodyPlant model.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].AddCouplerConstraint">
+<code class="descname">AddCouplerConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], joint0: pydrake.multibody.tree.Joint_[float], joint1: pydrake.multibody.tree.Joint_[float], gear_ratio: float, offset: float = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ConstraintIndex<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].AddCouplerConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a holonomic constraint between two single-dof joints
+<code class="docutils literal notranslate"><span class="pre">joint0</span></code> and <code class="docutils literal notranslate"><span class="pre">joint1</span></code> with positions q₀ and q₁, respectively, such
+that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed
+offset. The gear ratio can have units if the units of q₀ and q₁ are
+different. For instance, between a prismatic and a revolute joint the
+gear ratio will specify the “pitch” of the resulting mechanism. As
+defined, <code class="docutils literal notranslate"><span class="pre">offset</span></code> has units of <code class="docutils literal notranslate"><span class="pre">q₀</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">joint0 and/or joint1 can still be actuated, regardless of whether
+we have coupler constraint among them. That is, one or both of
+these joints can have external actuation applied to them.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Generally, to couple (q0, q1, q2), the user would define a coupler
+between (q0, q1) and a second coupler between (q1, q2), or any
+combination therein.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">if joint0 and joint1 are not both single-dof joints.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyPlant has already been finalized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].AddForceElement">
 <code class="descname">AddForceElement</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], force_element: pydrake.multibody.tree.ForceElement_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].AddForceElement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
@@ -5092,6 +5126,12 @@ calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].num_constraints">
+<code class="descname">num_constraints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].num_constraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total number of constraints specified by the user.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].num_force_elements">
 <code class="descname">num_force_elements</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].num_force_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of ForceElement objects.</p>
@@ -6104,6 +6144,40 @@ must use a discrete MultibodyPlant model.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">time_step</span></code> is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddCouplerConstraint">
+<code class="descname">AddCouplerConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], joint0: pydrake.multibody.tree.Joint_[AutoDiffXd], joint1: pydrake.multibody.tree.Joint_[AutoDiffXd], gear_ratio: pydrake.autodiffutils.AutoDiffXd, offset: pydrake.autodiffutils.AutoDiffXd = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ConstraintIndex<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddCouplerConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a holonomic constraint between two single-dof joints
+<code class="docutils literal notranslate"><span class="pre">joint0</span></code> and <code class="docutils literal notranslate"><span class="pre">joint1</span></code> with positions q₀ and q₁, respectively, such
+that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed
+offset. The gear ratio can have units if the units of q₀ and q₁ are
+different. For instance, between a prismatic and a revolute joint the
+gear ratio will specify the “pitch” of the resulting mechanism. As
+defined, <code class="docutils literal notranslate"><span class="pre">offset</span></code> has units of <code class="docutils literal notranslate"><span class="pre">q₀</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">joint0 and/or joint1 can still be actuated, regardless of whether
+we have coupler constraint among them. That is, one or both of
+these joints can have external actuation applied to them.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Generally, to couple (q0, q1, q2), the user would define a coupler
+between (q0, q1) and a second coupler between (q1, q2), or any
+combination therein.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">if joint0 and joint1 are not both single-dof joints.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyPlant has already been finalized.</td>
 </tr>
 </tbody>
 </table>
@@ -9199,6 +9273,12 @@ calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].num_constraints">
+<code class="descname">num_constraints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].num_constraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total number of constraints specified by the user.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].num_force_elements">
 <code class="descname">num_force_elements</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].num_force_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of ForceElement objects.</p>
@@ -10209,6 +10289,40 @@ must use a discrete MultibodyPlant model.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">time_step</span></code> is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddCouplerConstraint">
+<code class="descname">AddCouplerConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], joint0: pydrake.multibody.tree.Joint_[Expression], joint1: pydrake.multibody.tree.Joint_[Expression], gear_ratio: pydrake.symbolic.Expression, offset: pydrake.symbolic.Expression = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ConstraintIndex<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].AddCouplerConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a holonomic constraint between two single-dof joints
+<code class="docutils literal notranslate"><span class="pre">joint0</span></code> and <code class="docutils literal notranslate"><span class="pre">joint1</span></code> with positions q₀ and q₁, respectively, such
+that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed
+offset. The gear ratio can have units if the units of q₀ and q₁ are
+different. For instance, between a prismatic and a revolute joint the
+gear ratio will specify the “pitch” of the resulting mechanism. As
+defined, <code class="docutils literal notranslate"><span class="pre">offset</span></code> has units of <code class="docutils literal notranslate"><span class="pre">q₀</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">joint0 and/or joint1 can still be actuated, regardless of whether
+we have coupler constraint among them. That is, one or both of
+these joints can have external actuation applied to them.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Generally, to couple (q0, q1, q2), the user would define a coupler
+between (q0, q1) and a second coupler between (q1, q2), or any
+combination therein.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">if joint0 and joint1 are not both single-dof joints.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyPlant has already been finalized.</td>
 </tr>
 </tbody>
 </table>
@@ -13304,6 +13418,12 @@ calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].num_constraints">
+<code class="descname">num_constraints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].num_constraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total number of constraints specified by the user.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].num_force_elements">
 <code class="descname">num_force_elements</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].num_force_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of ForceElement objects.</p>
@@ -14314,6 +14434,40 @@ must use a discrete MultibodyPlant model.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">time_step</span></code> is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].AddCouplerConstraint">
+<code class="descname">AddCouplerConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], joint0: pydrake.multibody.tree.Joint_[float], joint1: pydrake.multibody.tree.Joint_[float], gear_ratio: float, offset: float = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ConstraintIndex<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].AddCouplerConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a holonomic constraint between two single-dof joints
+<code class="docutils literal notranslate"><span class="pre">joint0</span></code> and <code class="docutils literal notranslate"><span class="pre">joint1</span></code> with positions q₀ and q₁, respectively, such
+that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed
+offset. The gear ratio can have units if the units of q₀ and q₁ are
+different. For instance, between a prismatic and a revolute joint the
+gear ratio will specify the “pitch” of the resulting mechanism. As
+defined, <code class="docutils literal notranslate"><span class="pre">offset</span></code> has units of <code class="docutils literal notranslate"><span class="pre">q₀</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">joint0 and/or joint1 can still be actuated, regardless of whether
+we have coupler constraint among them. That is, one or both of
+these joints can have external actuation applied to them.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Generally, to couple (q0, q1, q2), the user would define a coupler
+between (q0, q1) and a second coupler between (q1, q2), or any
+combination therein.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">if joint0 and joint1 are not both single-dof joints.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyPlant has already been finalized.</td>
 </tr>
 </tbody>
 </table>
@@ -17406,6 +17560,12 @@ which is always part of the model.</p>
 method can be called at any time during the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code>
 plant, either pre- or post-finalize, see Finalize(). Post-finalize
 calls will always return the same value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].num_constraints">
+<code class="descname">num_constraints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].num_constraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total number of constraints specified by the user.</p>
 </dd></dl>
 
 <dl class="method">

@@ -1,8 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#aeacb1fa25543250388c32676072fb0e8":[1,2,6,0,7],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#afbcead408e6a5f9fe64af4b8941b36f0":[1,2,6,0,1],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html":[3,0,0,16,5,2],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#a019504319572625c773bcc58967db1d8":[3,0,0,16,5,2,3],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#a155d1cd8ac2a70d190242af304b5bd73":[3,0,0,16,5,2,1],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#a1a2a5382104c57890055712a40ffd8dc":[3,0,0,16,5,2,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afaf00d756e556d58e224c3cb82bd9987":[3,0,0,16,8,40,12],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afd0368849f35be23e914079d5373ee2c":[3,0,0,16,8,40,9],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aff74e4980084b28c29f132bd18606031":[3,0,0,16,8,40,3],
-"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html":[1,2,4,4]
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html":[1,2,4,4],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a0d1b2dbe47a753e6935a63f02e5cc586":[1,2,4,4,6],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a4d897b58fab20fca728b82f9101cb7d3":[1,2,4,4,3],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a51a52e381e9b808c5dca3613dc01270f":[1,2,4,4,5]
 };

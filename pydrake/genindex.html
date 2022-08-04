@@ -1075,6 +1075,10 @@
 </li>
         <li><a href="pydrake.math.html#pydrake.math.KnotVectorType.__init__">(pydrake.math.KnotVectorType method)</a>
 </li>
+        <li><a href="pydrake.math.html#pydrake.math.NumericalGradientMethod.__init__">(pydrake.math.NumericalGradientMethod method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.NumericalGradientOption.__init__">(pydrake.math.NumericalGradientOption method)</a>
+</li>
         <li><a href="pydrake.math.html#pydrake.math.RigidTransform_.RigidTransform_[float].__init__">(pydrake.math.RigidTransform_.RigidTransform_[float] method)</a>
 </li>
         <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[AutoDiffXd].__init__">(pydrake.math.RigidTransform_[AutoDiffXd] method)</a>
@@ -1268,6 +1272,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.BallRpyJoint_[float].__init__">(pydrake.multibody.tree.BallRpyJoint_[float] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex.__init__">(pydrake.multibody.tree.BodyIndex method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex.__init__">(pydrake.multibody.tree.ConstraintIndex method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHingeConfig.__init__">(pydrake.multibody.tree.DoorHingeConfig method)</a>
 </li>
@@ -2107,8 +2113,6 @@
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.L2NormCost.A">(pydrake.solvers.L2NormCost method)</a>
 </li>
-        <li><a href="pydrake.solvers.html#pydrake.solvers.LinearConstraint.A">(pydrake.solvers.LinearConstraint method)</a>
-</li>
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.LinearCost.a">a() (pydrake.solvers.LinearCost method)</a>
 </li>
@@ -2328,6 +2332,16 @@
 
       <ul>
         <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddCost">(pydrake.solvers.MathematicalProgram method)</a>
+</li>
+      </ul></li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].AddCouplerConstraint">AddCouplerConstraint() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddCouplerConstraint">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[Expression].AddCouplerConstraint">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].AddCouplerConstraint">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.VectorLog_.VectorLog_[float].AddData">AddData() (pydrake.systems.primitives.VectorLog_.VectorLog_[float] method)</a>
@@ -2556,10 +2570,10 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionCost">AddPositionCost() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
-      <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint">AddPositiveDiagonallyDominantMatrixConstraint() (pydrake.solvers.MathematicalProgram method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint">AddPositiveDiagonallyDominantMatrixConstraint() (pydrake.solvers.MathematicalProgram method)</a>
+</li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddPositiveSemidefiniteConstraint">AddPositiveSemidefiniteConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddPostureCost">AddPostureCost() (pydrake.multibody.inverse_kinematics.GlobalInverseKinematics method)</a>
@@ -4650,6 +4664,8 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject_[float].ComputeContactSurfacesWithFallback">(pydrake.geometry.QueryObject_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.math.html#pydrake.math.ComputeNumericalGradient">ComputeNumericalGradient() (in module pydrake.math)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject_.QueryObject_[float].ComputePointPairPenetration">ComputePointPairPenetration() (pydrake.geometry.QueryObject_.QueryObject_[float] method)</a>
 
       <ul>
@@ -4847,6 +4863,8 @@
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.ConstantVectorSource_[float]">ConstantVectorSource_[float] (class in pydrake.systems.primitives)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Constraint">Constraint (class in pydrake.solvers)</a>
+</li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex">ConstraintIndex (class in pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.PointPairContactInfo_.PointPairContactInfo_[float].contact_force">contact_force() (pydrake.multibody.plant.PointPairContactInfo_.PointPairContactInfo_[float] method)</a>
 
@@ -11589,6 +11607,8 @@
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex.is_valid">(pydrake.multibody.tree.BodyIndex method)</a>
 </li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex.is_valid">(pydrake.multibody.tree.ConstraintIndex method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElementIndex.is_valid">(pydrake.multibody.tree.ForceElementIndex method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FrameIndex.is_valid">(pydrake.multibody.tree.FrameIndex method)</a>
@@ -11948,6 +11968,8 @@
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.SinCosSubstitutionType.kAngle">kAngle (pydrake.symbolic.SinCosSubstitutionType attribute)</a>
 </li>
+      <li><a href="pydrake.math.html#pydrake.math.NumericalGradientMethod.kBackward">kBackward (pydrake.math.NumericalGradientMethod attribute)</a>
+</li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach.kBilinearMcCormick">kBilinearMcCormick (pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach.kBoth">kBoth (pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach attribute)</a>
@@ -11959,6 +11981,8 @@
       <li><a href="pydrake.examples.html#pydrake.examples.SchunkCollisionModel.kBoxPlusFingertipSpheres">kBoxPlusFingertipSpheres (pydrake.examples.SchunkCollisionModel attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach.kBoxSphereIntersection">kBoxSphereIntersection (pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach attribute)</a>
+</li>
+      <li><a href="pydrake.math.html#pydrake.math.NumericalGradientMethod.kCentral">kCentral (pydrake.math.NumericalGradientMethod attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kCGP">kCGP (pydrake.solvers.ProgramType attribute)</a>
 </li>
@@ -12038,6 +12062,8 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.TriggerType.kForced">kForced (pydrake.systems.framework.TriggerType attribute)</a>
 </li>
+      <li><a href="pydrake.math.html#pydrake.math.NumericalGradientMethod.kForward">kForward (pydrake.math.NumericalGradientMethod attribute)</a>
+</li>
       <li><a href="pydrake.common.html#pydrake.common.RandomDistribution.kGaussian">kGaussian (pydrake.common.RandomDistribution attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kGP">kGP (pydrake.solvers.ProgramType attribute)</a>
@@ -12112,12 +12138,12 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kLP">kLP (pydrake.solvers.ProgramType attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.kMaxUnreserved">kMaxUnreserved (pydrake.geometry.render.RenderLabel attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kMILP">kMILP (pydrake.solvers.ProgramType attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kMIQP">kMIQP (pydrake.solvers.ProgramType attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kMISDP">kMISDP (pydrake.solvers.ProgramType attribute)</a>
@@ -13239,6 +13265,8 @@
 </li>
         <li><a href="pydrake.math.html#pydrake.math.KnotVectorType.name">(pydrake.math.KnotVectorType attribute)</a>
 </li>
+        <li><a href="pydrake.math.html#pydrake.math.NumericalGradientMethod.name">(pydrake.math.NumericalGradientMethod attribute)</a>
+</li>
         <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.ToppraDiscretization.name">(pydrake.multibody.optimization.ToppraDiscretization attribute)</a>
 </li>
         <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.AddFrame.name">(pydrake.multibody.parsing.AddFrame attribute)</a>
@@ -13522,8 +13550,18 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].num_collision_geometries">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.solvers.html#pydrake.solvers.Constraint.num_constraints">num_constraints() (pydrake.solvers.Constraint method)</a>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].num_constraints">num_constraints() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].num_constraints">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
 </li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[Expression].num_constraints">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].num_constraints">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Constraint.num_constraints">(pydrake.solvers.Constraint method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_.Context_[float].num_continuous_states">num_continuous_states() (pydrake.systems.framework.Context_.Context_[float] method)</a>
 
       <ul>
@@ -13926,6 +13964,12 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.numeric_parameter_ticket">numeric_parameter_ticket() (pydrake.systems.framework.SystemBase method)</a>
 </li>
+      <li><a href="pydrake.math.html#pydrake.math.NumericalGradientMethod">NumericalGradientMethod (class in pydrake.math)</a>
+</li>
+      <li><a href="pydrake.math.html#pydrake.math.NumericalGradientOption.NumericalGradientMethod">NumericalGradientMethod() (pydrake.math.NumericalGradientOption method)</a>
+</li>
+      <li><a href="pydrake.math.html#pydrake.math.NumericalGradientOption">NumericalGradientOption (class in pydrake.math)</a>
+</li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.NumericParameterIndex">NumericParameterIndex (class in pydrake.systems.framework)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].NumFramesForSource">NumFramesForSource() (pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float] method)</a>
@@ -14211,6 +14255,8 @@
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.PeriodicEventData">PeriodicEventData (class in pydrake.systems.framework)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.PerspectiveQuadraticCost">PerspectiveQuadraticCost (class in pydrake.solvers)</a>
+</li>
+      <li><a href="pydrake.math.html#pydrake.math.NumericalGradientOption.perturbation_size">perturbation_size() (pydrake.math.NumericalGradientOption method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Edge.phi">phi() (pydrake.geometry.optimization.GraphOfConvexSets.Edge method)</a>
 
@@ -18910,6 +18956,8 @@
         <li><a href="pydrake.manipulation.planner.html#pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.value">(pydrake.manipulation.planner.DifferentialInverseKinematicsStatus attribute)</a>
 </li>
         <li><a href="pydrake.math.html#pydrake.math.KnotVectorType.value">(pydrake.math.KnotVectorType attribute)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.NumericalGradientMethod.value">(pydrake.math.NumericalGradientMethod attribute)</a>
 </li>
         <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.ToppraDiscretization.value">(pydrake.multibody.optimization.ToppraDiscretization attribute)</a>
 </li>

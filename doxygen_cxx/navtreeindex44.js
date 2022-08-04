@@ -1,7 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"functions_e.html":[3,3,0,4],
-"functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
 "functions_func.html":[3,3,1],
@@ -72,8 +70,8 @@ var NAVTREEINDEX44 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2,0],
 "functions_vars.html":[3,3,2],
+"functions_vars.html":[3,3,2,0],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX44 =
 "group__contact__surface__constraints.html":[1,3,0,4],
 "group__control.html":[1,4,3],
 "group__control.html#ga58307d2135757a498c434e96d7b99853":[1,4,3,1],
-"group__control.html#ga6506532189adf1c7a42662b597135f70":[1,4,3,3]
+"group__control.html#ga6506532189adf1c7a42662b597135f70":[1,4,3,3],
+"group__control.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[1,4,3,2],
+"group__control.html#gae7d3c5debca2daa6de88dbc014263f5c":[1,4,3,0]
 };

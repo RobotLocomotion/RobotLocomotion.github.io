@@ -1,7 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"default__scalars__pybind_8h.html#a8a3b7387557e1dd66533247e34770031":[4,0,0,0,0,0,2,2],
-"default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1],
 "default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,0,2,4],
 "deformable__body__config_8h.html":[4,0,0,8,3,6],
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,3,6,1],
@@ -10,7 +8,7 @@ var NAVTREEINDEX41 =
 "deformable__contact__geometries_8h.html":[4,0,0,4,2,9],
 "deformable__contact__internal_8h.html":[4,0,0,4,2,10],
 "deformable__mesh__intersection_8h.html":[4,0,0,4,2,11],
-"deformable__model_8h.html":[4,0,0,8,10,7],
+"deformable__model_8h.html":[4,0,0,8,10,8],
 "deformable__rigid__contact_8h.html":[4,0,0,4,3,1],
 "deformable__volume__mesh_8h.html":[4,0,0,4,2,12],
 "deformation__gradient__data_8h.html":[4,0,0,8,3,7],
@@ -186,7 +184,7 @@ var NAVTREEINDEX41 =
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,10],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,10,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,10,1],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,8],
+"discrete__contact__pair_8h.html":[4,0,0,8,10,9],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
@@ -194,8 +192,8 @@ var NAVTREEINDEX41 =
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,1],
-"discrete__update__manager_8h.html":[4,0,0,8,10,9],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,9,0],
+"discrete__update__manager_8h.html":[4,0,0,8,10,10],
+"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,10,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
 "distance__constraint_8h.html":[4,0,0,8,5,3],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX41 =
 "dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,12,1,1,2],
 "dynamic__programming_8h.html#gae068476fdb8f21578acb538f70ec3e14":[4,0,0,12,1,1,3],
 "eigen__autodiff__types_8h.html":[4,0,0,1,28],
-"eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[4,0,0,1,28,3]
+"eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[4,0,0,1,28,3],
+"eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,28,0],
+"eigen__autodiff__types_8h.html#a790a072a62129732864a20e7a4743298":[4,0,0,1,28,1]
 };

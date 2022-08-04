@@ -197,12 +197,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kinova__
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3f03e00b717615f4f73e57033be0369"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#ab3f03e00b717615f4f73e57033be0369">JacoStatusReceiver</a> (<a class="el" href="classint.html">int</a> num_joints=<a class="el" href="namespacedrake_1_1manipulation_1_1kinova__jaco.html#a688a61fff7d08168bac255b9573991c1">kJacoDefaultArmNumJoints</a>, <a class="el" href="classint.html">int</a> num_fingers=<a class="el" href="namespacedrake_1_1manipulation_1_1kinova__jaco.html#adea794626896ab94d6dc0a2b81590681">kJacoDefaultArmNumFingers</a>)</td></tr>
 <tr class="separator:ab3f03e00b717615f4f73e57033be0369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73f2e11fb9478740a01361a4a2277465"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a73f2e11fb9478740a01361a4a2277465">get_state_output_port</a> () const</td></tr>
-<tr class="memdesc:a73f2e11fb9478740a01361a4a2277465"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a73f2e11fb9478740a01361a4a2277465">More...</a><br /></td></tr>
-<tr class="separator:a73f2e11fb9478740a01361a4a2277465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95adfa53b1a01fb57b03ea061a8c8357"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a95adfa53b1a01fb57b03ea061a8c8357">get_torque_output_port</a> () const</td></tr>
-<tr class="memdesc:a95adfa53b1a01fb57b03ea061a8c8357"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a95adfa53b1a01fb57b03ea061a8c8357">More...</a><br /></td></tr>
-<tr class="separator:a95adfa53b1a01fb57b03ea061a8c8357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a6e5b8a20129aa9531dd46bbbcec20432"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a6e5b8a20129aa9531dd46bbbcec20432">JacoStatusReceiver</a> (const <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html">JacoStatusReceiver</a> &amp;)=delete</td></tr>
 <tr class="separator:a6e5b8a20129aa9531dd46bbbcec20432"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1326,27 +1320,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a73f2e11fb9478740a01361a4a2277465"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73f2e11fb9478740a01361a4a2277465">&#9670;&nbsp;</a></span>get_state_output_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;double&gt;&amp; get_state_output_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use position/velocity output ports instead. <br />
- This will be removed from Drake on or after 2022-08-01.</dd></dl>
-
-</div>
-</div>
 <a id="af31537279098f22f07b865e7dd1499dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af31537279098f22f07b865e7dd1499dc">&#9670;&nbsp;</a></span>get_torque_external_output_port()</h2>
 
@@ -1378,27 +1351,6 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a95adfa53b1a01fb57b03ea061a8c8357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95adfa53b1a01fb57b03ea061a8c8357">&#9670;&nbsp;</a></span>get_torque_output_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;double&gt;&amp; get_torque_output_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use torque_measured output port instead. <br />
- This will be removed from Drake on or after 2022-08-01.</dd></dl>
 
 </div>
 </div>
