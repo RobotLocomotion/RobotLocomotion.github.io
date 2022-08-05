@@ -10,6 +10,7 @@ var searchData=
   ['make_5fconvex_5fmesh_2eh',['make_convex_mesh.h',['../make__convex__mesh_8h.html',1,'']]],
   ['make_5fcylinder_5ffield_2eh',['make_cylinder_field.h',['../make__cylinder__field_8h.html',1,'']]],
   ['make_5fcylinder_5fmesh_2eh',['make_cylinder_mesh.h',['../make__cylinder__mesh_8h.html',1,'']]],
+  ['make_5fdiscrete_5fupdate_5fmanager_2eh',['make_discrete_update_manager.h',['../make__discrete__update__manager_8h.html',1,'']]],
   ['make_5fellipsoid_5ffield_2eh',['make_ellipsoid_field.h',['../make__ellipsoid__field_8h.html',1,'']]],
   ['make_5fellipsoid_5fmesh_2eh',['make_ellipsoid_mesh.h',['../make__ellipsoid__mesh_8h.html',1,'']]],
   ['make_5fkuka_5fiiwa_5fmodel_2eh',['make_kuka_iiwa_model.h',['../make__kuka__iiwa__model_8h.html',1,'']]],

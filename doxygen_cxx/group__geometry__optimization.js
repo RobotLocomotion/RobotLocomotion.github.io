@@ -121,7 +121,9 @@ var group__geometry__optimization =
       [ "MaximumVolumeInscribedEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a74afcf0235bb70d4d936c093fbb85a5d", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a51cda62fc83874a9e1c021873e9e9a64", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a33511869af259d5a743e9cb70f0f711d", null ],
-      [ "PontryaginDifference", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289", null ]
+      [ "PontryaginDifference", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289", null ],
+      [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2407530f5ce361dc71745b019e5db10f", null ],
+      [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad53e47e943684bee743276ad5027e5a2", null ]
     ] ],
     [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", [
       [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#ab2d820db43b35a0fc84379b6a4aa0242", null ],

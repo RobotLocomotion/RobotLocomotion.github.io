@@ -1,5 +1,11 @@
 var NAVTREEINDEX50 =
 {
+"simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,15,2],
+"simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,15,3],
+"simplification_8h.html#aeb27ddf30420e620beb8e6725d83208f":[4,0,0,1,3,15,1],
+"simulator_8h.html":[4,0,0,12,0,22],
+"simulator__config_8h.html":[4,0,0,12,0,23],
+"simulator__config__functions_8h.html":[4,0,0,12,0,24],
 "simulator__config__functions_8h.html#ga00b67f54aba155c982e8a1038278eed6":[4,0,0,12,0,24,2],
 "simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a":[4,0,0,12,0,24,3],
 "simulator__config__functions_8h.html#ga6875fa2f1e9eb22cee800a29b0ca61b9":[4,0,0,12,0,24,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html":[3,0,0,1,0],
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#a21baa24a4589f8f8576826791116a32f":[3,0,0,1,0,0],
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#ac40e2f6b16673621ee11f794813446bf":[3,0,0,1,0,1],
-"structdrake_1_1dummy__value.html":[3,0,0,24],
-"structdrake_1_1dummy__value.html#a72a5372833437d5493b91087dd74c903":[3,0,0,24,0],
-"structdrake_1_1dummy__value_3_01int_01_4.html":[3,0,0,25],
-"structdrake_1_1dummy__value_3_01int_01_4.html#a88985a0444cc6e887f3c57b56eda792d":[3,0,0,25,0],
-"structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html":[3,0,0,26],
-"structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html#a0bc222e26c2e949909b7f7845e9cff18":[3,0,0,26,0],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,10]
+"structdrake_1_1dummy__value.html":[3,0,0,24]
 };

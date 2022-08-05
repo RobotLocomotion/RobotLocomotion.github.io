@@ -1130,6 +1130,37 @@ dimension. This method may throw a runtime error if <code class="docutils litera
 <code class="docutils literal notranslate"><span class="pre">other</span></code> are ill-conditioned.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.UniformSample">
+<code class="descname">UniformSample</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.UniformSample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common._module_py.RandomGenerator, previous_sample: numpy.ndarray[numpy.float64[m, 1], flags.writeable]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+</ol>
+<p>Draw an (approximately) uniform sample from the set using the hit and
+run Markov-chain Monte-Carlo strategy described at
+<a class="reference external" href="https://mathoverflow.net/a/162327">https://mathoverflow.net/a/162327</a> and the cited paper.</p>
+<p>To generate many samples, pass the output of one iteration in as the
+<code class="docutils literal notranslate"><span class="pre">previous_sample</span></code> to the next; in this case the distribution of
+samples will converge to the true uniform distribution in total
+variation at a geometric rate. If <code class="docutils literal notranslate"><span class="pre">previous_sample</span></code> is not set, then
+the ChebyshevCenter() will be used to seed the algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if previous_sample is not in the set.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common._module_py.RandomGenerator) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+</ol>
+<p>Variant of UniformSample that uses the ChebyshevCenter() as the
+previous_sample as a feasible point to start the Markov chain
+sampling.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">

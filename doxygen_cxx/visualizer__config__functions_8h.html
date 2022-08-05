@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('visualizer__config__functions_8h.html'
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__visualizer_8h.html">drake/geometry/drake_visualizer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__visualizer__params_8h.html">drake/geometry/drake_visualizer_params.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
@@ -188,9 +188,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a25ccbb59ba92702d8b4720e9c7209bc4">ApplyVisualizerConfig</a> (const VisualizerConfig &amp;config, const multibody::MultibodyPlant&lt; double &gt; &amp;plant, const geometry::SceneGraph&lt; double &gt; &amp;scene_graph, const systems::lcm::LcmBuses &amp;lcm_buses, systems::DiagramBuilder&lt; double &gt; *builder)</td></tr>
-<tr class="memdesc:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake-visualizer.  <a href="namespacedrake_1_1visualization.html#a25ccbb59ba92702d8b4720e9c7209bc4">More...</a><br /></td></tr>
-<tr class="separator:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f31a9a9e2e9d8980215b49a72bba46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#ad8f31a9a9e2e9d8980215b49a72bba46">ApplyVisualizerConfig</a> (const VisualizerConfig &amp;config, systems::DiagramBuilder&lt; double &gt; *builder, const systems::lcm::LcmBuses *lcm_buses=nullptr, const multibody::MultibodyPlant&lt; double &gt; *plant=nullptr, const geometry::SceneGraph&lt; double &gt; *scene_graph=nullptr, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
+<tr class="memdesc:ad8f31a9a9e2e9d8980215b49a72bba46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.  <a href="namespacedrake_1_1visualization.html#ad8f31a9a9e2e9d8980215b49a72bba46">More...</a><br /></td></tr>
+<tr class="separator:ad8f31a9a9e2e9d8980215b49a72bba46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08feab0170487367b601b6fd4211ddba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a08feab0170487367b601b6fd4211ddba">AddDefaultVisualizer</a> (systems::DiagramBuilder&lt; double &gt; *builder)</td></tr>
+<tr class="memdesc:a08feab0170487367b601b6fd4211ddba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis, using all of the default configuration settings.  <a href="namespacedrake_1_1visualization.html#a08feab0170487367b601b6fd4211ddba">More...</a><br /></td></tr>
+<tr class="separator:a08feab0170487367b601b6fd4211ddba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

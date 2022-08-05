@@ -219,9 +219,52 @@
 </div>
 <span class="target" id="module-pydrake.visualization"></span><p>Bindings for Visualization.</p>
 <dl class="function">
+<dt id="pydrake.visualization.AddDefaultVisualizer">
+<code class="descclassname">pydrake.visualization.</code><code class="descname">AddDefaultVisualizer</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.visualization.AddDefaultVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds LCM visualization publishers to communicate to drake_visualizer
+and/or meldis, using all of the default configuration settings.</p>
+<p>&lt;dl&gt;&lt;dt&gt;Example&lt;/dt&gt;&lt;dd&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">builder</span><span class="o">.</span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">MultibodyPlant</span> <span class="ow">and</span> <span class="n">SceneGraph</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">MultibodyPlantConfig</span> <span class="n">plant_config</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
+<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;&amp;</span> <span class="n">plant</span> <span class="o">=</span> <span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+<span class="o">//</span> <span class="o">...</span> <span class="n">populate</span> <span class="n">the</span> <span class="n">plant</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="k">with</span> <span class="n">a</span> <span class="n">Parser</span><span class="p">,</span> <span class="o">...</span>
+<span class="n">plant</span><span class="o">.</span><span class="n">Finalize</span><span class="p">();</span>
+
+<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">visualization</span><span class="o">.</span>
+<span class="n">AddDefaultVisualizer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">Simulate</span><span class="o">.</span>
+<span class="n">Simulator</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">());</span>
+<span class="o">//</span> <span class="o">...</span> <span class="n">etc</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>&lt;/dd&gt;&lt;/dl&gt;</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>AddMultibodyPlant() or AddMultibodyPlantSceneGraph() has already
+been called on the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>The MultibodyPlant in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code> is already finalized,
+as in <code class="docutils literal notranslate"><span class="pre">plant.Finalize()</span></code>.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::visualization::ApplyVisualizerConfig()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::multibody::AddMultibodyPlant()</p>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.visualization.ApplyVisualizerConfig">
-<code class="descclassname">pydrake.visualization.</code><code class="descname">ApplyVisualizerConfig</code><span class="sig-paren">(</span><em>config: pydrake.visualization.VisualizerConfig, plant: pydrake.multibody.plant.MultibodyPlant_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm_buses: pydrake.systems.lcm.LcmBuses, builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.visualization.ApplyVisualizerConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds LCM visualization publishers to communicate to drake-visualizer.</p>
+<code class="descclassname">pydrake.visualization.</code><code class="descname">ApplyVisualizerConfig</code><span class="sig-paren">(</span><em>config: pydrake.visualization.VisualizerConfig, builder: pydrake.systems.framework.DiagramBuilder_[float], lcm_buses: pydrake.systems.lcm.LcmBuses = None, plant: pydrake.multibody.plant.MultibodyPlant_[float] = None, scene_graph: pydrake.geometry.SceneGraph_[float] = None, lcm: pydrake.lcm.DrakeLcmInterface = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.visualization.ApplyVisualizerConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds LCM visualization publishers to communicate to drake_visualizer
+and/or meldis.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This feature is considered to be <strong>experimental</strong> and may change
@@ -230,10 +273,85 @@ time.</p>
 </div>
 <p>The exact function signature is subject to change as we polish this
 new feature.</p>
+<p>&lt;dl&gt;&lt;dt&gt;Example&lt;/dt&gt;&lt;dd&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">builder</span><span class="o">.</span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">MultibodyPlant</span> <span class="ow">and</span> <span class="n">SceneGraph</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">MultibodyPlantConfig</span> <span class="n">plant_config</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
+<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;&amp;</span> <span class="n">plant</span> <span class="o">=</span> <span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+<span class="o">//</span> <span class="o">...</span> <span class="n">populate</span> <span class="n">the</span> <span class="n">plant</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="k">with</span> <span class="n">a</span> <span class="n">Parser</span><span class="p">,</span> <span class="o">...</span>
+<span class="n">plant</span><span class="o">.</span><span class="n">Finalize</span><span class="p">();</span>
+
+<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">visualization</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">VisualizerConfig</span> <span class="n">vis_config</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
+<span class="n">ApplyVisualizerConfig</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">Simulate</span><span class="o">.</span>
+<span class="n">Simulator</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">());</span>
+<span class="o">//</span> <span class="o">...</span> <span class="n">etc</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>&lt;/dd&gt;&lt;/dl&gt;</p>
 <dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt>
+<dd>The visualization configuration.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">builder</span></code>:</dt>
+<dd>The diagram to add visualization systems into.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt>
+<dd>(Optional) The available LCM buses to use for visualization
+message publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">lcm</span></code> interface
+if provided, or else the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> must be set to
+“default” in which case an appropriate drake::lcm::DrakeLcm object
+is constructed and used internally.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>(Optional) The MultibodyPlant to visualize. In the common case
+where a MultibodyPlant has already been added to <code class="docutils literal notranslate"><span class="pre">builder</span></code> using
+either AddMultibodyPlant() or AddMultibodyPlantSceneGraph(), the
+default value (nullptr) here is suitable and generally should be
+preferred. When provided, it must be a System that’s been added to
+the the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, visualizes the
+system named “plant” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt>
+<dd>(Optional) The SceneGraph to visualize. In the common case where a
+SceneGraph has already been added to <code class="docutils literal notranslate"><span class="pre">builder</span></code> using either
+AddMultibodyPlant() or AddMultibodyPlantSceneGraph(), the default
+value (nullptr) here is suitable and generally should be
+preferred. When provided, it must be a System that’s been added to
+the the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, visualizes the
+system named “scene_graph” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt>
+<dd>(Optional) The LCM interface used for visualization message
+publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> value
+to look up the appropriate interface from <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>.</dd>
 <dt>Precondition:</dt>
-<dd>plant.is_finalized()</dd>
+<dd>The <code class="docutils literal notranslate"><span class="pre">builder</span></code> is non-null.</dd>
+<dt>Precondition:</dt>
+<dd>Either the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> is set to “default”, or else
+<code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code> is non-null and contains a bus named
+<code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code>, or else <code class="docutils literal notranslate"><span class="pre">lcm</span></code> is non-null.</dd>
+<dt>Precondition:</dt>
+<dd>Either the given <code class="docutils literal notranslate"><span class="pre">builder</span></code> contains a MultibodyPlant system
+named “plant” or else the provided <code class="docutils literal notranslate"><span class="pre">plant</span></code> is non-null.</dd>
+<dt>Precondition:</dt>
+<dd>Either the given <code class="docutils literal notranslate"><span class="pre">builder</span></code> contains a SceneGraph system named
+“scene_graph” or else the provided <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> is non-null.</dd>
+<dt>Precondition:</dt>
+<dd>The MultibodyPlant is already finalized, as in
+<code class="docutils literal notranslate"><span class="pre">plant.Finalize()</span></code>.</dd>
 </dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::visualization::AddDefaultVisualizer()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::multibody::AddMultibodyPlant()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::systems::lcm::ApplyLcmBusConfig()</p>
+</div>
 </dd></dl>
 
 <dl class="class">

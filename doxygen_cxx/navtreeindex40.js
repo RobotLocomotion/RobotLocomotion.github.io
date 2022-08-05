@@ -1,5 +1,8 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,18,4,13],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,18,4,12],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,18,4,0],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,18,4,20],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,18,4,1],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,18,4,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX40 =
 "decompose_8h.html#aec138ad5b7eb6d6db3533272fbf36cba":[4,0,0,1,3,4,1],
 "default__scalars_8h.html":[4,0,0,1,15],
 "default__scalars__pybind_8h.html":[4,0,0,0,0,0,2],
-"default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,0,2,0],
-"default__scalars__pybind_8h.html#a6294e82ee237c93a7e6cbc2fb4d924b2":[4,0,0,0,0,0,2,3],
-"default__scalars__pybind_8h.html#a8a3b7387557e1dd66533247e34770031":[4,0,0,0,0,0,2,2],
-"default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1]
+"default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,0,2,0]
 };

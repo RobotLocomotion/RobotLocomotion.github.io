@@ -174,13 +174,46 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a25ccbb59ba92702d8b4720e9c7209bc4">ApplyVisualizerConfig</a> (const <a class="el" href="structdrake_1_1visualization_1_1_visualizer_config.html">VisualizerConfig</a> &amp;config, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; &amp;scene_graph, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
-<tr class="memdesc:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake-visualizer.  <a href="#a25ccbb59ba92702d8b4720e9c7209bc4">More...</a><br /></td></tr>
-<tr class="separator:a25ccbb59ba92702d8b4720e9c7209bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f31a9a9e2e9d8980215b49a72bba46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#ad8f31a9a9e2e9d8980215b49a72bba46">ApplyVisualizerConfig</a> (const <a class="el" href="structdrake_1_1visualization_1_1_visualizer_config.html">VisualizerConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses=nullptr, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; *plant=nullptr, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *scene_graph=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
+<tr class="memdesc:ad8f31a9a9e2e9d8980215b49a72bba46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.  <a href="#ad8f31a9a9e2e9d8980215b49a72bba46">More...</a><br /></td></tr>
+<tr class="separator:ad8f31a9a9e2e9d8980215b49a72bba46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08feab0170487367b601b6fd4211ddba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a08feab0170487367b601b6fd4211ddba">AddDefaultVisualizer</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
+<tr class="memdesc:a08feab0170487367b601b6fd4211ddba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis, using all of the default configuration settings.  <a href="#a08feab0170487367b601b6fd4211ddba">More...</a><br /></td></tr>
+<tr class="separator:a08feab0170487367b601b6fd4211ddba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a25ccbb59ba92702d8b4720e9c7209bc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25ccbb59ba92702d8b4720e9c7209bc4">&#9670;&nbsp;</a></span>ApplyVisualizerConfig()</h2>
+<a id="a08feab0170487367b601b6fd4211ddba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08feab0170487367b601b6fd4211ddba">&#9670;&nbsp;</a></span>AddDefaultVisualizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::visualization::AddDefaultVisualizer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis, using all of the default configuration settings. </p>
+<dl>
+<dt>Example</dt>
+<dd><div class="fragment"><div class="line"><span class="comment">// Create a builder.</span></div><div class="line">DiagramBuilder&lt;double&gt; builder;</div><div class="line"></div><div class="line"><span class="comment">// Add the MultibodyPlant and SceneGraph.</span></div><div class="line"><span class="keyword">const</span> MultibodyPlantConfig plant_config = ...;</div><div class="line">MultibodyPlant&lt;double&gt;&amp; plant = <a class="code" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c">AddMultibodyPlant</a>(plant_config, &amp;builder);</div><div class="line"><span class="comment">// ... populate the plant, e.g., with a Parser, ...</span></div><div class="line">plant.Finalize();</div><div class="line"></div><div class="line"><span class="comment">// Add the visualization.</span></div><div class="line"><a class="code" href="namespacedrake_1_1visualization.html#a08feab0170487367b601b6fd4211ddba">AddDefaultVisualizer</a>(&amp;builder);</div><div class="line"></div><div class="line"><span class="comment">// Simulate.</span></div><div class="line">Simulator&lt;double&gt; simulator(builder.Build());</div><div class="line"><span class="comment">// ... etc ...</span></div></div><!-- fragment --> </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">AddMultibodyPlant()</a> or <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827" title="Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...">AddMultibodyPlantSceneGraph()</a> has already been called on the given <code>builder</code>.</dd>
+<dd>
+The MultibodyPlant in the given <code>builder</code> is already finalized, as in <code>plant.Finalize()</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1visualization.html#ad8f31a9a9e2e9d8980215b49a72bba46" title="Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.">drake::visualization::ApplyVisualizerConfig()</a> </dd>
+<dd>
+<a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">drake::multibody::AddMultibodyPlant()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad8f31a9a9e2e9d8980215b49a72bba46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f31a9a9e2e9d8980215b49a72bba46">&#9670;&nbsp;</a></span>ApplyVisualizerConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,26 +227,32 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>scene_graph</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;&#160;</td>
-          <td class="paramname"><em>lcm_buses</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *&#160;</td>
-          <td class="paramname"><em>builder</em>&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *&#160;</td>
+          <td class="paramname"><em>lcm_buses</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>scene_graph</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *&#160;</td>
+          <td class="paramname"><em>lcm</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -223,9 +262,37 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds LCM visualization publishers to communicate to drake-visualizer. </p>
+<p>Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. The exact function signature is subject to change as we polish this new feature.</dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>plant.is_finalized() </dd></dl>
+<dl>
+<dt>Example</dt>
+<dd><div class="fragment"><div class="line"><span class="comment">// Create a builder.</span></div><div class="line">DiagramBuilder&lt;double&gt; builder;</div><div class="line"></div><div class="line"><span class="comment">// Add the MultibodyPlant and SceneGraph.</span></div><div class="line"><span class="keyword">const</span> MultibodyPlantConfig plant_config = ...;</div><div class="line">MultibodyPlant&lt;double&gt;&amp; plant = <a class="code" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c">AddMultibodyPlant</a>(plant_config, &amp;builder);</div><div class="line"><span class="comment">// ... populate the plant, e.g., with a Parser, ...</span></div><div class="line">plant.Finalize();</div><div class="line"></div><div class="line"><span class="comment">// Add the visualization.</span></div><div class="line"><span class="keyword">const</span> VisualizerConfig vis_config = ...;</div><div class="line"><a class="code" href="namespacedrake_1_1visualization.html#ad8f31a9a9e2e9d8980215b49a72bba46">ApplyVisualizerConfig</a>(config, &amp;builder);</div><div class="line"></div><div class="line"><span class="comment">// Simulate.</span></div><div class="line">Simulator&lt;double&gt; simulator(builder.Build());</div><div class="line"><span class="comment">// ... etc ...</span></div></div><!-- fragment --> </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>The visualization configuration.</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">builder</td><td>The diagram to add visualization systems into.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lcm_buses</td><td>(Optional) The available LCM buses to use for visualization message publication. When not provided, uses the <code>lcm</code> interface if provided, or else the <code>config.lcm_bus</code> must be set to "default" in which case an appropriate <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">drake::lcm::DrakeLcm</a> object is constructed and used internally.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plant</td><td>(Optional) The MultibodyPlant to visualize. In the common case where a MultibodyPlant has already been added to <code>builder</code> using either <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">AddMultibodyPlant()</a> or <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827" title="Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...">AddMultibodyPlantSceneGraph()</a>, the default value (nullptr) here is suitable and generally should be preferred. When provided, it must be a System that's been added to the the given <code>builder</code>. When not provided, visualizes the system named "plant" in the given <code>builder</code>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene_graph</td><td>(Optional) The SceneGraph to visualize. In the common case where a SceneGraph has already been added to <code>builder</code> using either <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">AddMultibodyPlant()</a> or <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827" title="Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...">AddMultibodyPlantSceneGraph()</a>, the default value (nullptr) here is suitable and generally should be preferred. When provided, it must be a System that's been added to the the given <code>builder</code>. When not provided, visualizes the system named "scene_graph" in the given <code>builder</code>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lcm</td><td>(Optional) The LCM interface used for visualization message publication. When not provided, uses the <code>config.lcm_bus</code> value to look up the appropriate interface from <code>lcm_buses</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The <code>builder</code> is non-null.</dd>
+<dd>
+Either the <code>config.lcm_bus</code> is set to "default", or else <code>lcm_buses</code> is non-null and contains a bus named <code>config.lcm_bus</code>, or else <code>lcm</code> is non-null.</dd>
+<dd>
+Either the given <code>builder</code> contains a MultibodyPlant system named "plant" or else the provided <code>plant</code> is non-null.</dd>
+<dd>
+Either the given <code>builder</code> contains a SceneGraph system named "scene_graph" or else the provided <code>scene_graph</code> is non-null.</dd>
+<dd>
+The MultibodyPlant is already finalized, as in <code>plant.Finalize()</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1visualization.html#a08feab0170487367b601b6fd4211ddba" title="Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis,...">drake::visualization::AddDefaultVisualizer()</a> </dd>
+<dd>
+<a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">drake::multibody::AddMultibodyPlant()</a> </dd>
+<dd>
+<a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a727199867bdc2433a7269c76dd7f3973" title="Given LCM bus names and parameters, adds an LcmInterfaceSystem for each bus within the given diagram ...">drake::systems::lcm::ApplyLcmBusConfig()</a> </dd></dl>
 
 </div>
 </div>

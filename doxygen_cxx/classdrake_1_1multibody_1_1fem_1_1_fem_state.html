@@ -197,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb9c89577c5a36ce4e7de3aa5a2a4e70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#afb9c89577c5a36ce4e7de3aa5a2a4e70">is_created_from_system</a> (const internal::FemStateSystem&lt; T &gt; &amp;system) const</td></tr>
 <tr class="memdesc:afb9c89577c5a36ce4e7de3aa5a2a4e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a> is constructed from the given system.  <a href="#afb9c89577c5a36ce4e7de3aa5a2a4e70">More...</a><br /></td></tr>
 <tr class="separator:afb9c89577c5a36ce4e7de3aa5a2a4e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44de568403b27335f2ea6c695c0544b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ab44de568403b27335f2ea6c695c0544b">Clone</a> () const</td></tr>
+<tr class="memdesc:ab44de568403b27335f2ea6c695c0544b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an identical copy of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a>.  <a href="#ab44de568403b27335f2ea6c695c0544b">More...</a><br /></td></tr>
+<tr class="separator:ab44de568403b27335f2ea6c695c0544b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a2e5c843c6be284fe291e9a2f424dcde6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a2e5c843c6be284fe291e9a2f424dcde6">FemState</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a> &amp;)=delete</td></tr>
 <tr class="separator:a2e5c843c6be284fe291e9a2f424dcde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,6 +343,25 @@ system and context are compatible. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab44de568403b27335f2ea6c695c0544b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab44de568403b27335f2ea6c695c0544b">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt;T&gt; &gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an identical copy of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a>. </p>
+
+</div>
+</div>
 <a id="a5a971dd32d59c1f10be6e792f066953b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a971dd32d59c1f10be6e792f066953b">&#9670;&nbsp;</a></span>EvalElementData()</h2>
 

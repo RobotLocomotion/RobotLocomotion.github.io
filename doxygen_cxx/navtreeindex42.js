@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[4,0,0,1,28,3],
+"eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,28,0],
+"eigen__autodiff__types_8h.html#a790a072a62129732864a20e7a4743298":[4,0,0,1,28,1],
 "eigen__autodiff__types_8h.html#a7b13142534d668d5d490b829b917fa16":[4,0,0,1,28,2],
 "eigen__geometry__pybind_8h.html":[4,0,0,0,0,0,4],
 "eigen__matrix__compare_8h.html":[4,0,0,1,4,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "expression__cell_8h.html#aee17d0564b198d4c784811945707ddbf":[4,0,0,1,3,0,4,46],
 "expression__cell_8h.html#af9473fec0f5aba36ac7c89281bf4d524":[4,0,0,1,3,0,4,44],
 "expression__kind_8h.html":[4,0,0,1,3,0,5],
-"expression__kind_8h.html#a245f75ee96839b12e22fea09c6f3ec91":[4,0,0,1,3,0,5,0],
-"expression__kind_8h.html#a245f75ee96839b12e22fea09c6f3ec91a0986d137604183312e6d3599578bc6cd":[4,0,0,1,3,0,5,0,10],
-"expression__kind_8h.html#a245f75ee96839b12e22fea09c6f3ec91a1266b4e6f81e60733ec6c717e0181f60":[4,0,0,1,3,0,5,0,12],
-"expression__kind_8h.html#a245f75ee96839b12e22fea09c6f3ec91a1e34af023adeb7d5f484f8eb4b9826b6":[4,0,0,1,3,0,5,0,6]
+"expression__kind_8h.html#a245f75ee96839b12e22fea09c6f3ec91":[4,0,0,1,3,0,5,0]
 };
