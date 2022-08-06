@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,0,2,0],
 "default__scalars__pybind_8h.html#a6294e82ee237c93a7e6cbc2fb4d924b2":[4,0,0,0,0,0,2,3],
 "default__scalars__pybind_8h.html#a8a3b7387557e1dd66533247e34770031":[4,0,0,0,0,0,2,2],
 "default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "dummy__value_8h.html":[4,0,0,1,27],
 "dynamic__programming_8h.html":[4,0,0,12,1,1],
 "dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,12,1,1,2],
-"dynamic__programming_8h.html#gae068476fdb8f21578acb538f70ec3e14":[4,0,0,12,1,1,3],
-"eigen__autodiff__types_8h.html":[4,0,0,1,28]
+"dynamic__programming_8h.html#gae068476fdb8f21578acb538f70ec3e14":[4,0,0,12,1,1,3]
 };

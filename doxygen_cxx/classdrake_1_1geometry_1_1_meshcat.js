@@ -41,6 +41,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "SetSliderValue", "classdrake_1_1geometry_1_1_meshcat.html#ad933314f09b40dd5758387e29c952c8b", null ],
     [ "SetTransform", "classdrake_1_1geometry_1_1_meshcat.html#a1e1b021d8e7be408a7d17d39ce459b39", null ],
     [ "SetTransform", "classdrake_1_1geometry_1_1_meshcat.html#a48d1b2e65ac43693b86ca290ff84d38a", null ],
+    [ "SetTriangleColorMesh", "classdrake_1_1geometry_1_1_meshcat.html#afef114ac7e9603068a91b8f0533a4ecc", null ],
     [ "SetTriangleMesh", "classdrake_1_1geometry_1_1_meshcat.html#af8087e1809c019639dbec27ab0b505e0", null ],
     [ "StaticHtml", "classdrake_1_1geometry_1_1_meshcat.html#a8597aabcf1a98187a23fa1db634c9308", null ],
     [ "web_url", "classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5", null ],
