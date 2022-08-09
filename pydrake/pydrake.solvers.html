@@ -2062,6 +2062,32 @@ Gurobi not available in your build, this will return a null
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.solvers.GurobiSolver.AddMipNodeCallback">
+<code class="descname">AddMipNodeCallback</code><span class="sig-paren">(</span><em>self: pydrake.solvers.GurobiSolver, callback: Callable[[pydrake.solvers.MathematicalProgram, pydrake.solvers.GurobiSolver.SolveStatusInfo, numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[object[m, 1]]], None]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.GurobiSolver.AddMipNodeCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a callback to be called at intermediate solutions during the
+solve.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">callback</span></code>:</dt>
+<dd>User callback function.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">user_data</span></code>:</dt>
+<dd>Arbitrary data that will be passed to the user callback function.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.GurobiSolver.AddMipSolCallback">
+<code class="descname">AddMipSolCallback</code><span class="sig-paren">(</span><em>self: pydrake.solvers.GurobiSolver, callback: Callable[[pydrake.solvers.MathematicalProgram, pydrake.solvers.GurobiSolver.SolveStatusInfo], None]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.GurobiSolver.AddMipSolCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a callback to be called at feasible solutions during the
+solve.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">callback</span></code>:</dt>
+<dd>User callback function.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">usrdata</span></code>:</dt>
+<dd>Arbitrary data that will be passed to the user callback function.</dd>
+</dl>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.solvers.GurobiSolver.id">
 <em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.SolverId<a class="headerlink" href="#pydrake.solvers.GurobiSolver.id" title="Permalink to this definition">¶</a></dt>
@@ -2081,6 +2107,63 @@ Gurobi not available in your build, this will return a null
 <dt id="pydrake.solvers.GurobiSolver.License.is_valid">
 <code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.solvers.GurobiSolver.License</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.solvers.GurobiSolver.License.is_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that this has a valid license that has not been released.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo">
+<em class="property">class </em><code class="descname">SolveStatusInfo</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains info returned to a user function that handles a Node or
+Solution callback.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MipNodeCallbackFunction</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MipSolCallbackFunction</p>
+</div>
+<dl class="attribute">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo.best_bound">
+<code class="descname">best_bound</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo.best_bound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Best known objective lower bound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo.best_objective">
+<code class="descname">best_objective</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo.best_objective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Objective of best solution yet.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo.current_objective">
+<code class="descname">current_objective</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo.current_objective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Objective of current solution.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo.explored_node_count">
+<code class="descname">explored_node_count</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo.explored_node_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of nodes explored so far.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo.feasible_solutions_count">
+<code class="descname">feasible_solutions_count</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo.feasible_solutions_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of feasible sols found so far.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.GurobiSolver.SolveStatusInfo.reported_runtime">
+<code class="descname">reported_runtime</code><a class="headerlink" href="#pydrake.solvers.GurobiSolver.SolveStatusInfo.reported_runtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runtime as of this callback.</p>
 </dd></dl>
 
 </dd></dl>

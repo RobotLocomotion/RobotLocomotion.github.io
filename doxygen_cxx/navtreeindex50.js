@@ -228,7 +228,7 @@ var NAVTREEINDEX50 =
 "structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,47,1],
 "structdrake_1_1_scenario.html":[3,0,0,49],
 "structdrake_1_1_scenario.html#a1b143200dd4bc17b6897b02962b05fa1":[3,0,0,49,5],
-"structdrake_1_1_scenario.html#a27f5570f32920ce55c96f0026f3b517e":[3,0,0,49,7],
+"structdrake_1_1_scenario.html#a651bd241ae5b87318eb788a7445c25ab":[3,0,0,49,7],
 "structdrake_1_1_scenario.html#a65bf2d5e1e3915ba78f5e08f4b7438e5":[3,0,0,49,2],
 "structdrake_1_1_scenario.html#a8d99918d98b1f3ead44d76481f6db7be":[3,0,0,49,1],
 "structdrake_1_1_scenario.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,49,0],

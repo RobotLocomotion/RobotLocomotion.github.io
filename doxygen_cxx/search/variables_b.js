@@ -6,7 +6,7 @@ var searchData=
   ['lambda',['lambda',['../structdrake_1_1solvers_1_1_ipopt_solver_details.html#a1377097022dfdec89312e47c9ae9dfc8',1,'drake::solvers::IpoptSolverDetails']]],
   ['lambda_5f',['lambda_',['../structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58',1,'drake::solvers::MixedIntegerRotationConstraintGenerator::ReturnType']]],
   ['lambda_5findices_5fin_5fall_5flambda',['lambda_indices_in_all_lambda',['../structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#ad7bdb8b88983c9548bd9b85ad7b8e8da',1,'drake::multibody::GeometryPairContactWrenchEvaluatorBinding']]],
-  ['lcm_5fbus',['lcm_bus',['../structdrake_1_1visualization_1_1_visualizer_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf',1,'drake::visualization::VisualizerConfig']]],
+  ['lcm_5fbus',['lcm_bus',['../structdrake_1_1visualization_1_1_visualization_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf',1,'drake::visualization::VisualizationConfig']]],
   ['lcm_5fbuses',['lcm_buses',['../structdrake_1_1_scenario.html#a65bf2d5e1e3915ba78f5e08f4b7438e5',1,'drake::Scenario']]],
   ['lcm_5furl',['lcm_url',['../structdrake_1_1lcm_1_1_drake_lcm_params.html#a2afa576ab76689448a15ea95d2d5a531',1,'drake::lcm::DrakeLcmParams']]],
   ['left',['left',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921',1,'drake::geometry::Meshcat::OrthographicCamera']]],

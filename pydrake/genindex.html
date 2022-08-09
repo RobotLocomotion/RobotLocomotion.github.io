@@ -385,6 +385,8 @@
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.License.__init__">(pydrake.solvers.GurobiSolver.License attribute)</a>
 </li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.__init__">(pydrake.solvers.GurobiSolver.SolveStatusInfo attribute)</a>
+</li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolverDetails.__init__">(pydrake.solvers.GurobiSolverDetails attribute)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.IpoptSolverDetails.__init__">(pydrake.solvers.IpoptSolverDetails attribute)</a>
@@ -2081,7 +2083,7 @@
 </li>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.Trajectory_[float].__init__">(pydrake.trajectories.Trajectory_[float] method)</a>
 </li>
-        <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.__init__">(pydrake.visualization.VisualizerConfig method)</a>
+        <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.__init__">(pydrake.visualization.VisualizationConfig method)</a>
 </li>
         <li><a href="pydrake.visualization.meldis.html#pydrake.visualization.meldis.Meldis.__init__">(pydrake.visualization.meldis.Meldis method)</a>
 </li>
@@ -2356,7 +2358,7 @@
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddDecisionVariables">AddDecisionVariables() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.AddDefaultVisualizer">AddDefaultVisualizer() (in module pydrake.visualization)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.AddDefaultVisualization">AddDefaultVisualization() (in module pydrake.visualization)</a>
 </li>
       <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint">AddDirectCollocationConstraint() (in module pydrake.systems.trajectory_optimization)</a>
 </li>
@@ -2524,6 +2526,10 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceConstraint">AddMinimumDistanceConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.AddMipNodeCallback">AddMipNodeCallback() (pydrake.solvers.GurobiSolver method)</a>
+</li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.AddMipSolCallback">AddMipSolCallback() (pydrake.solvers.GurobiSolver method)</a>
+</li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser.AddModelFromFile">AddModelFromFile() (pydrake.multibody.parsing.Parser method)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser.AddModelFromString">AddModelFromString() (pydrake.multibody.parsing.Parser method)</a>
@@ -2568,10 +2574,10 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPolyhedronConstraint">AddPolyhedronConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
-      <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">AddPositionConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">AddPositionConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
+</li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionCost">AddPositionCost() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint">AddPositiveDiagonallyDominantMatrixConstraint() (pydrake.solvers.MathematicalProgram method)</a>
@@ -2894,7 +2900,7 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterManager.ApplyTransient">ApplyTransient() (pydrake.geometry.CollisionFilterManager method)</a>
 </li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.ApplyVisualizerConfig">ApplyVisualizerConfig() (in module pydrake.visualization)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.ApplyVisualizationConfig">ApplyVisualizationConfig() (in module pydrake.visualization)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.approach">approach (pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options attribute)</a>
 </li>
@@ -3204,6 +3210,10 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_[float].BelongsToSource">(pydrake.geometry.SceneGraphInspector_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.best_bound">best_bound (pydrake.solvers.GurobiSolver.SolveStatusInfo attribute)</a>
+</li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.best_objective">best_objective (pydrake.solvers.GurobiSolver.SolveStatusInfo attribute)</a>
+</li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.Type.BINARY">BINARY (pydrake.symbolic.Variable.Type attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding.Binding[EvaluatorBase]">Binding.Binding[EvaluatorBase] (class in pydrake.solvers)</a>
@@ -3232,10 +3242,10 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding[LinearMatrixInequalityConstraint]">Binding[LinearMatrixInequalityConstraint] (class in pydrake.solvers)</a>
 </li>
-      <li><a href="pydrake.solvers.html#pydrake.solvers.Binding[LInfNormCost]">Binding[LInfNormCost] (class in pydrake.solvers)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.Binding[LInfNormCost]">Binding[LInfNormCost] (class in pydrake.solvers)</a>
+</li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding[LorentzConeConstraint]">Binding[LorentzConeConstraint] (class in pydrake.solvers)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding[PerspectiveQuadraticCost]">Binding[PerspectiveQuadraticCost] (class in pydrake.solvers)</a>
@@ -5170,6 +5180,8 @@
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial_[float].CubicWithContinuousSecondDerivatives">(pydrake.trajectories.PiecewisePolynomial_[float] static method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.current_objective">current_objective (pydrake.solvers.GurobiSolver.SolveStatusInfo attribute)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Cylinder">Cylinder (class in pydrake.geometry)</a>
 </li>
   </ul></td>
@@ -5612,7 +5624,7 @@
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryProperties.default_group_name">default_group_name() (pydrake.geometry.GeometryProperties static method)</a>
 </li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.default_illustration_color_rgba">default_illustration_color_rgba (pydrake.visualization.VisualizerConfig attribute)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.default_illustration_color_rgba">default_illustration_color_rgba (pydrake.visualization.VisualizationConfig attribute)</a>
 </li>
       <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGlParams.default_label">default_label (pydrake.geometry.render.RenderEngineGlParams attribute)</a>
 
@@ -5650,7 +5662,7 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[float].default_positions">(pydrake.multibody.tree.Joint_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.default_proximity_color_rgba">default_proximity_color_rgba (pydrake.visualization.VisualizerConfig attribute)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.default_proximity_color_rgba">default_proximity_color_rgba (pydrake.visualization.VisualizationConfig attribute)</a>
 </li>
       <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.default_render_label">default_render_label() (pydrake.geometry.render.RenderEngine method)</a>
 </li>
@@ -6658,6 +6670,8 @@
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.SolverInterface.ExplainUnsatisfiedProgramAttributes">ExplainUnsatisfiedProgramAttributes() (pydrake.solvers.SolverInterface method)</a>
 </li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.explored_node_count">explored_node_count (pydrake.solvers.GurobiSolver.SolveStatusInfo attribute)</a>
+</li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.exponential_cone_constraints">exponential_cone_constraints() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ExponentialConeConstraint">ExponentialConeConstraint (class in pydrake.solvers)</a>
@@ -6791,6 +6805,8 @@
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange.far">far() (pydrake.geometry.render.ClippingRange method)</a>
+</li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.feasible_solutions_count">feasible_solutions_count (pydrake.solvers.GurobiSolver.SolveStatusInfo attribute)</a>
 </li>
       <li><a href="pydrake.perception.html#pydrake.perception.Fields">Fields (class in pydrake.perception)</a>
 </li>
@@ -6948,6 +6964,8 @@
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[float]">FixedOffsetFrame_[float] (class in pydrake.multibody.tree)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].FixInputPortsFrom">FixInputPortsFrom() (pydrake.systems.framework.System_.System_[float] method)</a>
 
       <ul>
@@ -6958,8 +6976,6 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].FixInputPortsFrom">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_.InputPort_[float].FixValue">FixValue() (pydrake.systems.framework.InputPort_.InputPort_[float] method)</a>
 
       <ul>
@@ -10710,6 +10726,8 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.License">GurobiSolver.License (class in pydrake.solvers)</a>
 </li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo">GurobiSolver.SolveStatusInfo (class in pydrake.solvers)</a>
+</li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolverDetails">GurobiSolverDetails (class in pydrake.solvers)</a>
 </li>
   </ul></td>
@@ -12396,7 +12414,7 @@
 </li>
       <li><a href="pydrake.examples.html#pydrake.examples.AcrobotParams.lc2">lc2() (pydrake.examples.AcrobotParams method)</a>
 </li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.lcm_bus">lcm_bus (pydrake.visualization.VisualizerConfig attribute)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.lcm_bus">lcm_bus (pydrake.visualization.VisualizationConfig attribute)</a>
 </li>
       <li><a href="pydrake.lcm.html#pydrake.lcm.DrakeLcmParams.lcm_url">lcm_url (pydrake.lcm.DrakeLcmParams attribute)</a>
 </li>
@@ -14690,11 +14708,11 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].Publish">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.publish_contacts">publish_contacts (pydrake.visualization.VisualizerConfig attribute)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.publish_contacts">publish_contacts (pydrake.visualization.VisualizationConfig attribute)</a>
 </li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.SimulatorConfig.publish_every_time_step">publish_every_time_step (pydrake.systems.analysis.SimulatorConfig attribute)</a>
 </li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.publish_illustration">publish_illustration (pydrake.visualization.VisualizerConfig attribute)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.publish_illustration">publish_illustration (pydrake.visualization.VisualizationConfig attribute)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.DrakeVisualizerParams.publish_period">publish_period (pydrake.geometry.DrakeVisualizerParams attribute)</a>
 
@@ -14703,10 +14721,10 @@
 </li>
         <li><a href="pydrake.multibody.meshcat.html#pydrake.multibody.meshcat.ContactVisualizerParams.publish_period">(pydrake.multibody.meshcat.ContactVisualizerParams attribute)</a>
 </li>
-        <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.publish_period">(pydrake.visualization.VisualizerConfig attribute)</a>
+        <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.publish_period">(pydrake.visualization.VisualizationConfig attribute)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig.publish_proximity">publish_proximity (pydrake.visualization.VisualizerConfig attribute)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.publish_proximity">publish_proximity (pydrake.visualization.VisualizationConfig attribute)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.PublishEvent">PublishEvent (in module pydrake.systems.framework)</a>
 </li>
@@ -15271,6 +15289,8 @@
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.Reparse">Reparse() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatAnimation.repetitions">repetitions() (pydrake.geometry.MeshcatAnimation method)</a>
+</li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.reported_runtime">reported_runtime (pydrake.solvers.GurobiSolver.SolveStatusInfo attribute)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.ContactSurface_.ContactSurface_[float].representation">representation() (pydrake.geometry.ContactSurface_.ContactSurface_[float] method)</a>
 
@@ -19486,7 +19506,7 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.VisualizationCallback">VisualizationCallback (class in pydrake.solvers)</a>
 </li>
-      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizerConfig">VisualizerConfig (class in pydrake.visualization)</a>
+      <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig">VisualizationConfig (class in pydrake.visualization)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid.Volume">Volume() (pydrake.geometry.optimization.Hyperellipsoid method)</a>
 </li>

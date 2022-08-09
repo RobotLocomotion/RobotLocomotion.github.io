@@ -18,7 +18,7 @@ var searchData=
   ['velocityimpliciteulerintegrator',['VelocityImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html',1,'drake::systems']]],
   ['vertex',['Vertex',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html',1,'drake::geometry::optimization::GraphOfConvexSets']]],
   ['visualizationcallback',['VisualizationCallback',['../classdrake_1_1solvers_1_1_visualization_callback.html',1,'drake::solvers']]],
-  ['visualizerconfig',['VisualizerConfig',['../structdrake_1_1visualization_1_1_visualizer_config.html',1,'drake::visualization']]],
+  ['visualizationconfig',['VisualizationConfig',['../structdrake_1_1visualization_1_1_visualization_config.html',1,'drake::visualization']]],
   ['volumeelement',['VolumeElement',['../classdrake_1_1geometry_1_1_volume_element.html',1,'drake::geometry']]],
   ['volumemesh',['VolumeMesh',['../classdrake_1_1geometry_1_1_volume_mesh.html',1,'drake::geometry']]],
   ['volumemeshtester',['VolumeMeshTester',['../classdrake_1_1geometry_1_1_volume_mesh_tester.html',1,'drake::geometry']]],
