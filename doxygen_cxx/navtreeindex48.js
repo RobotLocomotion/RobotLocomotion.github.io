@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"namespacemembers_e.html":[2,1,0,4],
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,35,3],
 "proximity__utilities_8h.html":[4,0,0,4,2,48],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,8],
-"pydrake__pybind_8h.html":[4,0,0,0,0,9],
-"pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,9,7]
+"pydrake__pybind_8h.html":[4,0,0,0,0,9]
 };

@@ -416,9 +416,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a578a71ed3566fd2589958f5ed05f9c2e"><td class="memTemplItemLeft" align="right" valign="top">const JointType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a578a71ed3566fd2589958f5ed05f9c2e">AddJoint</a> (const std::string &amp;name, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;parent, const std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt;&gt; &amp;X_PF, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;child, const std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt;&gt; &amp;X_BM, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a578a71ed3566fd2589958f5ed05f9c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method adds a <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> of type <code>JointType</code> between two bodies.  <a href="#a578a71ed3566fd2589958f5ed05f9c2e">More...</a><br /></td></tr>
 <tr class="separator:a578a71ed3566fd2589958f5ed05f9c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51239c495a32c1f156964cd2c8410c53"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html">WeldJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a51239c495a32c1f156964cd2c8410c53">WeldFrames</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_parent_P, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_child_C, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_PC=<a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt;::Identity())</td></tr>
-<tr class="memdesc:a51239c495a32c1f156964cd2c8410c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Welds <code>frame_on_parent_P</code> and <code>frame_on_child_C</code> with relative pose <code>X_PC</code>.  <a href="#a51239c495a32c1f156964cd2c8410c53">More...</a><br /></td></tr>
-<tr class="separator:a51239c495a32c1f156964cd2c8410c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6636bf1e0900fb58b6a2e465c404fa8d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html">WeldJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6636bf1e0900fb58b6a2e465c404fa8d">WeldFrames</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_parent_F, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_child_M, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_FM=<a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt;::Identity())</td></tr>
+<tr class="memdesc:a6636bf1e0900fb58b6a2e465c404fa8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Welds <code>frame_on_parent_F</code> and <code>frame_on_child_M</code> with relative pose <code>X_FM</code>.  <a href="#a6636bf1e0900fb58b6a2e465c404fa8d">More...</a><br /></td></tr>
+<tr class="separator:a6636bf1e0900fb58b6a2e465c404fa8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48009c793b01c5a6dd079d33265435a3"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename Scalar &gt; class ForceElementType, typename... Args&gt; </td></tr>
 <tr class="memitem:a48009c793b01c5a6dd079d33265435a3"><td class="memTemplItemLeft" align="right" valign="top">const ForceElementType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a48009c793b01c5a6dd079d33265435a3">AddForceElement</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a48009c793b01c5a6dd079d33265435a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new force element model of type <code>ForceElementType</code> to <code>this</code> MultibodyPlant.  <a href="#a48009c793b01c5a6dd079d33265435a3">More...</a><br /></td></tr>
@@ -8264,8 +8264,8 @@ manager != nullptr. </dd></dl>
 
 </div>
 </div>
-<a id="a51239c495a32c1f156964cd2c8410c53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51239c495a32c1f156964cd2c8410c53">&#9670;&nbsp;</a></span>WeldFrames()</h2>
+<a id="a6636bf1e0900fb58b6a2e465c404fa8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6636bf1e0900fb58b6a2e465c404fa8d">&#9670;&nbsp;</a></span>WeldFrames()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8274,19 +8274,19 @@ manager != nullptr. </dd></dl>
           <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html">WeldJoint</a>&lt;T&gt;&amp; WeldFrames </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame_on_parent_P</em>, </td>
+          <td class="paramname"><em>frame_on_parent_F</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame_on_child_C</em>, </td>
+          <td class="paramname"><em>frame_on_child_M</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_PC</em> = <code><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;&#160;double&#160;&gt;::Identity()</code>&#160;</td>
+          <td class="paramname"><em>X_FM</em> = <code><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;&#160;double&#160;&gt;::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8296,8 +8296,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Welds <code>frame_on_parent_P</code> and <code>frame_on_child_C</code> with relative pose <code>X_PC</code>. </p>
-<p>That is, the pose of frame C in frame P is fixed, with value <code>X_PC</code>. If <code>X_PC</code> is omitted, the identity transform will be used. The call to this method creates and adds a new <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html" title="This Joint fixes the relative pose between two frames as if &quot;welding&quot; them together.">WeldJoint</a> to the model. The new <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html" title="This Joint fixes the relative pose between two frames as if &quot;welding&quot; them together.">WeldJoint</a> is named as: P.name() + "_welds_to_" + C.name(). </p><dl class="section return"><dt>Returns</dt><dd>a constant reference to the <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html" title="This Joint fixes the relative pose between two frames as if &quot;welding&quot; them together.">WeldJoint</a> welding frames P and C. </dd></dl>
+<p>Welds <code>frame_on_parent_F</code> and <code>frame_on_child_M</code> with relative pose <code>X_FM</code>. </p>
+<p>That is, the pose of frame M in frame F is fixed, with value <code>X_FM</code>. If <code>X_FM</code> is omitted, the identity transform will be used. The call to this method creates and adds a new <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html" title="This Joint fixes the relative pose between two frames as if &quot;welding&quot; them together.">WeldJoint</a> to the model. The new <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html" title="This Joint fixes the relative pose between two frames as if &quot;welding&quot; them together.">WeldJoint</a> is named as: frame_on_parent_F.name() + "_welds_to_" + frame_on_child_M.name(). </p><dl class="section return"><dt>Returns</dt><dd>a constant reference to the <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html" title="This Joint fixes the relative pose between two frames as if &quot;welding&quot; them together.">WeldJoint</a> welding frames F and M. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the weld produces a duplicate joint name. </td></tr>

@@ -210,7 +210,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "SetVelocities", "classdrake_1_1multibody_1_1_multibody_plant.html#ae6b46b7aff60e342f7a9df1f1cb8d5dd", null ],
     [ "SetVelocitiesInArray", "classdrake_1_1multibody_1_1_multibody_plant.html#a60e9928aa7802359eaddab6ef5d92763", null ],
     [ "time_step", "classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6", null ],
-    [ "WeldFrames", "classdrake_1_1multibody_1_1_multibody_plant.html#a51239c495a32c1f156964cd2c8410c53", null ],
+    [ "WeldFrames", "classdrake_1_1multibody_1_1_multibody_plant.html#a6636bf1e0900fb58b6a2e465c404fa8d", null ],
     [ "world_body", "classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864", null ],
     [ "world_frame", "classdrake_1_1multibody_1_1_multibody_plant.html#ac95da38020c32452f62a8cf973057c7a", null ],
     [ "AddMultibodyPlantSceneGraph", "classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827", null ],

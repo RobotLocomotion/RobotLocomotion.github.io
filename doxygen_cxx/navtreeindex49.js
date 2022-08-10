@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,9,7],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,9,9],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,9,4],
 "pydrake__pybind_8h.html#a6e587c4c8d044dd6eee74dad65c203ed":[4,0,0,0,0,9,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "shape__to__string_8h.html":[4,0,0,4,42],
 "shared__pointer__system_8h.html":[4,0,0,12,6,20],
 "signed__distance__pair_8h.html":[4,0,0,4,3,3],
-"signed__distance__to__point_8h.html":[4,0,0,4,3,4],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,26]
+"signed__distance__to__point_8h.html":[4,0,0,4,3,4]
 };
