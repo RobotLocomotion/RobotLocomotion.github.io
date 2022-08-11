@@ -581,8 +581,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -1108,6 +1108,7 @@ var hierarchy =
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", null ],
     [ "WitnessFunction< T >", "classdrake_1_1systems_1_1_witness_function.html", null ],
     [ "wrap_arg_default< T >", "structdrake_1_1pydrake_1_1wrap__arg__default.html", null ],
+    [ "ZeroForceDriver", "structdrake_1_1manipulation_1_1_zero_force_driver.html", null ],
     [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html", null ],
     [ "const ContextConstraintCalc< double >", "classconst_01_context_constraint_calc_3_01double_01_4.html", null ],
     [ "const ContextConstraintCalc< Element::T >", "classconst_01_context_constraint_calc_3_01_element_1_1_t_01_4.html", null ],

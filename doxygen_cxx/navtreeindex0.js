@@ -34,6 +34,8 @@ var NAVTREEINDEX0 =
 "angle__between__vectors__constraint_8h.html":[4,0,0,8,5,0],
 "annotated.html":[3,0],
 "antiderivative__function_8h.html":[4,0,0,12,0,1],
+"apply__driver__configs_8h.html":[4,0,0,6,4,0],
+"apply__driver__configs_8h.html#adb8ec6471d1a13e6fcea69aebb9ee7ab":[4,0,0,6,4,0,0],
 "articulated__body__force__cache_8h.html":[4,0,0,8,13,1],
 "articulated__body__inertia_8h.html":[4,0,0,8,13,2],
 "articulated__body__inertia__cache_8h.html":[4,0,0,8,13,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#acf2f5dc8759b0683d649a356e1c23bc8":[3,0,0,43,58],
 "classdrake_1_1_polynomial.html#ad4fc8f2e6a67575f78cb74e9163fd5e3":[3,0,0,43,8],
 "classdrake_1_1_polynomial.html#ad69112ea5f074512671136b4aa3748ee":[3,0,0,43,52],
-"classdrake_1_1_polynomial.html#ada60946d276f79e555d32badc0d8a91f":[3,0,0,43,33],
-"classdrake_1_1_polynomial.html#adadeb111fed29f32b77bc86e66356b7c":[3,0,0,43,17],
-"classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a":[3,0,0,43,7]
+"classdrake_1_1_polynomial.html#ada60946d276f79e555d32badc0d8a91f":[3,0,0,43,33]
 };

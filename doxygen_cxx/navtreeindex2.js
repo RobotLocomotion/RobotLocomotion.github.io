@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ac775b4b38fca6202a84dd9be58442b71":[3,0,0,3,2,0,3],
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ae73edc00d493b3f15ba7679cc14830a0":[3,0,0,3,2,0,20],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663":[3,0,0,3,2,0,2],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663a9ff3e250bc19253cd24615673cc6c378":[3,0,0,3,2,0,2,0],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663aabbd617cceac411f1249b5e0b75dfff2":[3,0,0,3,2,0,2,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#afca2b454193e9bb3dfa77520e989d571":[3,0,0,3,12,1,3],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html":[3,0,0,3,13,0],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a00287f815944de661ca1f8a625a5bbce":[3,0,0,3,13,0,7],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a082fdc4165711cce68625ac924dfec0c":[3,0,0,3,13,0,3],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a086fa167c6e9f5e3ffc8c8d3d11ee6ab":[3,0,0,3,13,0,8],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a1f10a2b1baf36686c44e02b801a85ec4":[3,0,0,3,13,0,16]
+"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a082fdc4165711cce68625ac924dfec0c":[3,0,0,3,13,0,3]
 };

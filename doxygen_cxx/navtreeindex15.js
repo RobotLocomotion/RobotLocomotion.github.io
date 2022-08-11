@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_spatial_force.html#a64b5dc902072c535393a8f018caffb12":[3,0,0,9,70,4],
+"classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766":[3,0,0,9,70,8],
 "classdrake_1_1multibody_1_1_spatial_force.html#a8602c8746b6a12c4c66c628df61b2619":[3,0,0,9,70,2],
 "classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87":[3,0,0,9,70,10],
 "classdrake_1_1multibody_1_1_spatial_force.html#a8cb331ee8374547a5016a580556119f0":[3,0,0,9,70,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#ad33bb245340a979074fce4aa6cb60102":[1,1,0,11,4],
 "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#adf7b053798973f21c613740bc869b28a":[1,1,0,11,0],
 "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#adf975a10a8694ea50eeb490e6f0caf6c":[1,1,0,11,3],
-"classdrake_1_1multibody_1_1_universal_joint.html":[3,0,0,9,87],
-"classdrake_1_1multibody_1_1_universal_joint.html#a320e136a1460c2d5c74a7cdf42637da4":[3,0,0,9,87,15],
-"classdrake_1_1multibody_1_1_universal_joint.html#a32b3165a92b6b04a9412bfcea8e8eb5e":[3,0,0,9,87,2]
+"classdrake_1_1multibody_1_1_universal_joint.html":[3,0,0,9,87]
 };

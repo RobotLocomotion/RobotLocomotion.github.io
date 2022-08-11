@@ -497,6 +497,7 @@ var searchData=
   ['drakevisualizertester',['DrakeVisualizerTester',['../classdrake_1_1geometry_1_1_drake_visualizer.html#ad3c15e2053dcf9e7d5b1dc0ed4fda467',1,'drake::geometry::DrakeVisualizer']]],
   ['dreal_5fsolver_2eh',['dreal_solver.h',['../dreal__solver_8h.html',1,'']]],
   ['drealsolver',['DrealSolver',['../classdrake_1_1solvers_1_1_dreal_solver.html',1,'DrealSolver'],['../classdrake_1_1solvers_1_1_dreal_solver.html#a8653e2003cf2a2975c985577b6c44bf9',1,'drake::solvers::DrealSolver::DrealSolver(const DrealSolver &amp;)=delete'],['../classdrake_1_1solvers_1_1_dreal_solver.html#ab06c20e8e6e414b53e41673eda6cad2b',1,'drake::solvers::DrealSolver::DrealSolver(DrealSolver &amp;&amp;)=delete'],['../classdrake_1_1solvers_1_1_dreal_solver.html#aa9cbd2b0e109a2525109c4e534d37281',1,'drake::solvers::DrealSolver::DrealSolver()']]],
+  ['drivervariant',['DriverVariant',['../structdrake_1_1_scenario.html#a37bff63e5831673839c480f90819beb8',1,'drake::Scenario']]],
   ['drotmat2quat',['drotmat2quat',['../namespacedrake_1_1math.html#aa02d13e3a0cbc27e905be533959b8d2a',1,'drake::math']]],
   ['drotmat2rpy',['drotmat2rpy',['../namespacedrake_1_1math.html#adee0d3618f370d3b31682a8ca479376e',1,'drake::math']]],
   ['dspring_5fcontext_5f',['dspring_context_',['../classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#abc22a9be7a584db72a293f42b7888fac',1,'drake::systems::analysis_test::ImplicitIntegratorTest']]],

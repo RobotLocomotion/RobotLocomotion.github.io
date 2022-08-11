@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classdrake_1_1_polynomial.html#adadeb111fed29f32b77bc86e66356b7c":[3,0,0,43,17],
+"classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a":[3,0,0,43,7],
 "classdrake_1_1_polynomial.html#adeaa4f722744d397b42ff26f50f443bf":[3,0,0,43,47],
 "classdrake_1_1_polynomial.html#ae1c8fa5ca0a531f3bfc388ba5b13f6c8":[3,0,0,43,19],
 "classdrake_1_1_polynomial.html#aeaeacfff3d087ad400147e605269ad3c":[3,0,0,43,53],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a9fb006217719c657a3852d15f276a813":[3,0,0,3,2,0,17],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#aab3f2e5138e97881d288cc285020d88a":[3,0,0,3,2,0,10],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ab30cce870c84dde2c5f08cd4996301c1":[3,0,0,3,2,0,18],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#abbac5b4ffed5d7d2b51598a91d90d097":[3,0,0,3,2,0,1],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ac775b4b38fca6202a84dd9be58442b71":[3,0,0,3,2,0,3],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ae73edc00d493b3f15ba7679cc14830a0":[3,0,0,3,2,0,20]
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#abbac5b4ffed5d7d2b51598a91d90d097":[3,0,0,3,2,0,1]
 };

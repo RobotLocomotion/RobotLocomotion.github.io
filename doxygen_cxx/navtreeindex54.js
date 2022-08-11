@@ -1,5 +1,16 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html":[3,0,0,16,8,35],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,35,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html":[3,0,0,16,8,36],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,36,0],
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,16,9,5],
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,16,9,5,0],
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,16,9,5,1],
+"structdrake_1_1template__single__tag.html":[3,0,0,53],
+"structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,53,0],
+"structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,17,1],
+"structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,17,1,1],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2":[3,0,0,17,1,0],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a7febc78e5aba3a9f8f0b9a89f4537b25":[3,0,0,17,1,2],
 "structdrake_1_1type__at.html":[3,0,0,55],
@@ -238,16 +249,5 @@ var NAVTREEINDEX54 =
 "unit__quaternion__constraint_8h.html":[4,0,0,8,5,16],
 "unit__quaternion__constraint_8h.html#a4a29f222bbff1590d2fa6ecb35f87492":[4,0,0,8,5,16,0],
 "universal__joint_8h.html":[4,0,0,8,13,48],
-"universal__mobilizer_8h.html":[4,0,0,8,13,49],
-"unrevised__lemke__solver_8h.html":[4,0,0,11,59],
-"unused_8h.html":[4,0,0,1,58],
-"unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,58,0],
-"utilities_8h.html":[4,0,0,4,43],
-"value_8h.html":[4,0,0,1,59],
-"value__checker_8h.html":[4,0,0,12,3,50],
-"value__producer_8h.html":[4,0,0,12,3,51],
-"value__pybind_8h.html":[4,0,0,0,0,0,13],
-"value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,0,13,0],
-"value__to__abstract__value_8h.html":[4,0,0,12,3,52],
-"van__der__pol_8h.html":[4,0,0,3,18,0]
+"universal__mobilizer_8h.html":[4,0,0,8,13,49]
 };

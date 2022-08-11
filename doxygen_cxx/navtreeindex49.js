@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"pydrake__doxygen_8h.html":[4,0,0,0,0,8],
+"pydrake__pybind_8h.html":[4,0,0,0,0,9],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,9,7],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,9,9],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,9,4],
@@ -132,10 +134,10 @@ var NAVTREEINDEX49 =
 "robot__plan__interpolator_8h.html#ab43604da4098c31437718f710e587e4fa97b119ae7959071f7cc25b5ce4332c1e":[4,0,0,6,2,3,0,2],
 "robot__plan__interpolator_8h.html#ab43604da4098c31437718f710e587e4faec6b5414eb175379ff9efc9b3eef5814":[4,0,0,6,2,3,0,3],
 "robot__plan__interpolator_8h.html#ab43604da4098c31437718f710e587e4faf7818672b5e4fdec82007e1c24eac71b":[4,0,0,6,2,3,0,1],
-"robot__plan__utils_8h.html":[4,0,0,6,4,2],
-"robot__plan__utils_8h.html#a03defeaacd8e6e4a43260eb910c1913c":[4,0,0,6,4,2,0],
-"robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda":[4,0,0,6,4,2,1],
-"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,4,2,2],
+"robot__plan__utils_8h.html":[4,0,0,6,4,3],
+"robot__plan__utils_8h.html#a03defeaacd8e6e4a43260eb910c1913c":[4,0,0,6,4,3,0],
+"robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda":[4,0,0,6,4,3,1],
+"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,4,3,2],
 "rod2d_8h.html":[4,0,0,3,16,0],
 "rod2d__geometry_8h.html":[4,0,0,3,16,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,28],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "shape__specification_8h.html":[4,0,0,4,41],
 "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,41,13],
 "shape__to__string_8h.html":[4,0,0,4,42],
-"shared__pointer__system_8h.html":[4,0,0,12,6,20],
-"signed__distance__pair_8h.html":[4,0,0,4,3,3],
-"signed__distance__to__point_8h.html":[4,0,0,4,3,4]
+"shared__pointer__system_8h.html":[4,0,0,12,6,20]
 };

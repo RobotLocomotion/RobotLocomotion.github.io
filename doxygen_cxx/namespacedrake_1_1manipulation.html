@@ -159,7 +159,9 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1manipulation.html','
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::manipulation Namespace Reference</div>  </div>
 </div><!--header-->
@@ -177,7 +179,130 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1manipulation_1_1util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1util.html">util</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A driver that applies zero actuation to every joint of a model.  <a href="structdrake_1_1manipulation_1_1_zero_force_driver.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="memTemplParams" colspan="2">template&lt;typename... Types&gt; </td></tr>
+<tr class="memitem:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation.html#adb8ec6471d1a13e6fcea69aebb9ee7ab">ApplyDriverConfigs</a> (const std::map&lt; std::string, std::variant&lt; Types... &gt;&gt; &amp;driver_configs, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;sim_plant, const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
+<tr class="memdesc:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply many driver configurations to a model.  <a href="#adb8ec6471d1a13e6fcea69aebb9ee7ab">More...</a><br /></td></tr>
+<tr class="separator:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af69facd0dee8f748962b3dbd5e251a60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation.html#af69facd0dee8f748962b3dbd5e251a60">ApplyDriverConfig</a> (const <a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a> &amp;driver_config, const std::string &amp;model_instance_name, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;sim_plant, const std::map&lt; std::string, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcms, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
+<tr class="memdesc:af69facd0dee8f748962b3dbd5e251a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies zero actuation to every joint of a model mainly for debugging and testing purposes.  <a href="#af69facd0dee8f748962b3dbd5e251a60">More...</a><br /></td></tr>
+<tr class="separator:af69facd0dee8f748962b3dbd5e251a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af69facd0dee8f748962b3dbd5e251a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af69facd0dee8f748962b3dbd5e251a60">&#9670;&nbsp;</a></span>ApplyDriverConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::manipulation::ApplyDriverConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a> &amp;&#160;</td>
+          <td class="paramname"><em>driver_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>model_instance_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sim_plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>models_from_directives</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;&#160;</td>
+          <td class="paramname"><em>lcms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies zero actuation to every joint of a model mainly for debugging and testing purposes. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The sim_plant.is_finalized() is true. </dd></dl>
+
+</div>
+</div>
+<a id="adb8ec6471d1a13e6fcea69aebb9ee7ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8ec6471d1a13e6fcea69aebb9ee7ab">&#9670;&nbsp;</a></span>ApplyDriverConfigs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::manipulation::ApplyDriverConfigs </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; std::string, std::variant&lt; Types... &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>driver_configs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sim_plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>models_from_directives</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;&#160;</td>
+          <td class="paramname"><em>lcm_buses</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply many driver configurations to a model. </p>
+<p>A "driver configuration" helps stack Drake systems between an LCM interface subscriber system and the actuation input ports of a MultibodyPlant (to enact the driver command), as well as the output ports of a MultibodyPlant back to an LCM interface publisher system (to provide the driver status).</p>
+<p>These conceptually simulate "drivers" &ndash; they take the role that driver software and control cabinets would take in real life &ndash; but may also model some physical properties of the robot that are not easily reflected in MultibodyPlant (e.g., the WSG belt drive).</p>
+<p><code>driver_configs</code> The configurations to apply. <code>sim_plant</code> The plant containing the model. <code>models_from_directives</code> All of the <code>ModelInstanceInfo</code>s from previously- loaded directives. <code>lcm_buses</code> The available LCM buses to drive and/or sense from this driver. <code>builder</code> The <code>DiagramBuilder</code> into which to install this driver. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
