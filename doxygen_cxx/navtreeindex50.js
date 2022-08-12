@@ -1,12 +1,15 @@
 var NAVTREEINDEX50 =
 {
+"shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,41,13],
+"shape__to__string_8h.html":[4,0,0,4,42],
+"shared__pointer__system_8h.html":[4,0,0,12,6,20],
 "signed__distance__pair_8h.html":[4,0,0,4,3,3],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,4],
 "simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,26],
-"simplification_8h.html":[4,0,0,1,3,15],
-"simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,15,2],
-"simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,15,3],
-"simplification_8h.html#aeb27ddf30420e620beb8e6725d83208f":[4,0,0,1,3,15,1],
+"simplification_8h.html":[4,0,0,1,3,16],
+"simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,16,2],
+"simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,16,3],
+"simplification_8h.html#aeb27ddf30420e620beb8e6725d83208f":[4,0,0,1,3,16,1],
 "simulator_8h.html":[4,0,0,12,0,22],
 "simulator__config_8h.html":[4,0,0,12,0,23],
 "simulator__config__functions_8h.html":[4,0,0,12,0,24],
@@ -246,8 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1":[3,0,0,51,7],
 "structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,51,1],
 "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,51,2],
-"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,51,8],
-"structdrake_1_1_sorted_pair.html#a5512d85d8c2189c36c306753d89b5d00":[3,0,0,51,6],
-"structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731":[3,0,0,51,9],
-"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,51,10]
+"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,51,8]
 };

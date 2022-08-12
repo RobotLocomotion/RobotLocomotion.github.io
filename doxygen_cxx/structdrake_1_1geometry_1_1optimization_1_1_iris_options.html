@@ -196,6 +196,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a177905e4b330d153a1ee016f913dc31b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b">enable_ibex</a> = false</td></tr>
 <tr class="memdesc:a177905e4b330d153a1ee016f913dc31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IRIS in configuration space, we can optionally use IbexSolver to rigorously confirm that regions are collision-free.  <a href="#a177905e4b330d153a1ee016f913dc31b">More...</a><br /></td></tr>
 <tr class="separator:a177905e4b330d153a1ee016f913dc31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafcf4ea1cbea01d087cc559402acddf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2">prog_with_additional_constraints</a> {}</td></tr>
+<tr class="memdesc:aafcf4ea1cbea01d087cc559402acddf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, IRIS in configuration space certifies regions for collision avoidance constraints and joint limits.  <a href="#aafcf4ea1cbea01d087cc559402acddf2">More...</a><br /></td></tr>
+<tr class="separator:aafcf4ea1cbea01d087cc559402acddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985034493b538c4431e48f45ba012e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75">num_additional_constraint_infeasible_samples</a> {10}</td></tr>
+<tr class="memdesc:a985034493b538c4431e48f45ba012e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each constraint in <code>prog_with_additional_constraints</code>, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem.  <a href="#a985034493b538c4431e48f45ba012e75">More...</a><br /></td></tr>
+<tr class="separator:a985034493b538c4431e48f45ba012e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9059bc845096b2f05414a66c836b4ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee">random_seed</a> {1234}</td></tr>
+<tr class="memdesc:ad9059bc845096b2f05414a66c836b4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The only randomization in IRIS is the random sampling done to find counter-examples for the additional constraints using in IrisInConfigurationSpace.  <a href="#ad9059bc845096b2f05414a66c836b4ee">More...</a><br /></td></tr>
+<tr class="separator:ad9059bc845096b2f05414a66c836b4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acb0bda48ae293b2b8a06f159001280ac"></a>
@@ -270,6 +279,61 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Maximum number of iterations. </p>
+
+</div>
+</div>
+<a id="a985034493b538c4431e48f45ba012e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985034493b538c4431e48f45ba012e75">&#9670;&nbsp;</a></span>num_additional_constraint_infeasible_samples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_additional_constraint_infeasible_samples {10}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For each constraint in <code>prog_with_additional_constraints</code>, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem. </p>
+<p>The initial guess for this optimization is taken by sampling uniformly inside the current IRIS region. This option controls the termination condition for that counter-example search, defining the number of consecutive failures to find a counter-example requested before moving on to the next constraint. </p>
+
+</div>
+</div>
+<a id="aafcf4ea1cbea01d087cc559402acddf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafcf4ea1cbea01d087cc559402acddf2">&#9670;&nbsp;</a></span>prog_with_additional_constraints</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a>* prog_with_additional_constraints {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>By default, IRIS in configuration space certifies regions for collision avoidance constraints and joint limits. </p>
+<p>This option can be used to pass additional constraints that should be satisfied by the IRIS region. We accept these in the form of a MathematicalProgram:</p>
+<p>find q subject to g(q) ≤ 0.</p>
+<p>The decision_variables() for the program are taken to define <code>q</code>. IRIS will silently ignore any costs in <code>prog_with_additional_constraints</code>, and will throw std::runtime_error if it contains any unsupported constraints.</p>
+<p>For example, one could create an InverseKinematics problem with rich kinematic constraints, and then pass <code>InverseKinematics::prog()</code> into this option.</p>
+<dl class="section note"><dt>Note</dt><dd>Currently, when prog_with_additional_constraints is set, the enable_ibex option must be <code>false</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ad9059bc845096b2f05414a66c836b4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9059bc845096b2f05414a66c836b4ee">&#9670;&nbsp;</a></span>random_seed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> random_seed {1234}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The only randomization in IRIS is the random sampling done to find counter-examples for the additional constraints using in IrisInConfigurationSpace. </p>
+<p>Use this option to set the initial seed. </p>
 
 </div>
 </div>

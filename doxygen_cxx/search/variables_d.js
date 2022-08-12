@@ -14,6 +14,7 @@ var searchData=
   ['non_5fsliding_5fcontacts',['non_sliding_contacts',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#afd507a76abfe6745b786bbe0da7f5f89',1,'drake::multibody::constraint::ConstraintAccelProblemData']]],
   ['num_5fabstract_5fparameters',['num_abstract_parameters',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ad15f084d2247e61bc20310ab56e457a6',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fabstract_5fstates',['num_abstract_states',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a42c9026094f42ad0640cb345ffbe6a34',1,'drake::systems::SystemBase::ContextSizes']]],
+  ['num_5fadditional_5fconstraint_5finfeasible_5fsamples',['num_additional_constraint_infeasible_samples',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75',1,'drake::geometry::optimization::IrisOptions']]],
   ['num_5fdiscrete_5fstate_5fgroups',['num_discrete_state_groups',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a4e54a5084a278fc7698e97ac552ded29',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fgeneralized_5fpositions',['num_generalized_positions',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a8266cf4ca7f9a99bcdd4f5b9a63d7588',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fgeneralized_5fvelocities',['num_generalized_velocities',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ac6bfe164b01efe1da5cb9104bd8ce708',1,'drake::systems::SystemBase::ContextSizes']]],

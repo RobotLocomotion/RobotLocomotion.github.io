@@ -417,10 +417,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt; T1 &gt;::is_bool, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a9c5e3da8410ee9aa2ae555912d9c98e6">ComputeContactSurfacesWithFallback</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt;&gt; *surfaces, std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a>&lt; T &gt;&gt; *point_pairs) const</td></tr>
 <tr class="memdesc:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a9c5e3da8410ee9aa2ae555912d9c98e6" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface wher...">QueryObject::ComputeContactSurfacesWithFallback()</a>.  <a href="#a9c5e3da8410ee9aa2ae555912d9c98e6">More...</a><br /></td></tr>
 <tr class="separator:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c71aa836bd2407bcb2a0141e1e4b3bb"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
-<tr class="memitem:a8c71aa836bd2407bcb2a0141e1e4b3bb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt; T1 &gt;::is_bool, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a8c71aa836bd2407bcb2a0141e1e4b3bb">ComputeDeformableRigidContact</a> (std::vector&lt; internal::DeformableRigidContact&lt; T &gt;&gt; *deformable_rigid_contact) const</td></tr>
-<tr class="memdesc:a8c71aa836bd2407bcb2a0141e1e4b3bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of QueryObject::ComputeDeformableRigidContact().  <a href="#a8c71aa836bd2407bcb2a0141e1e4b3bb">More...</a><br /></td></tr>
-<tr class="separator:a8c71aa836bd2407bcb2a0141e1e4b3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f762f8d67225aba49d1673272716b2e"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
+<tr class="memitem:a7f762f8d67225aba49d1673272716b2e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; T1, double &gt;, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a7f762f8d67225aba49d1673272716b2e">ComputeDeformableRigidContact</a> (std::vector&lt; internal::DeformableRigidContact&lt; T &gt;&gt; *deformable_rigid_contact) const</td></tr>
+<tr class="memdesc:a7f762f8d67225aba49d1673272716b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7f762f8d67225aba49d1673272716b2e" title="Reports contact information between all deformable geometries against all rigid (non-deformable) geom...">QueryObject::ComputeDeformableRigidContact()</a>.  <a href="#a7f762f8d67225aba49d1673272716b2e">More...</a><br /></td></tr>
+<tr class="separator:a7f762f8d67225aba49d1673272716b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48676624208ba13c78edbc098203f1ea"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a48676624208ba13c78edbc098203f1ea">FindCollisionCandidates</a> () const</td></tr>
 <tr class="memdesc:a48676624208ba13c78edbc098203f1ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a48676624208ba13c78edbc098203f1ea" title="Applies a conservative culling mechanism to create a subset of all possible geometry pairs based on n...">QueryObject::FindCollisionCandidates()</a>.  <a href="#a48676624208ba13c78edbc098203f1ea">More...</a><br /></td></tr>
 <tr class="separator:a48676624208ba13c78edbc098203f1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -899,14 +899,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a8c71aa836bd2407bcb2a0141e1e4b3bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c71aa836bd2407bcb2a0141e1e4b3bb">&#9670;&nbsp;</a></span>ComputeDeformableRigidContact()</h2>
+<a id="a7f762f8d67225aba49d1673272716b2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f762f8d67225aba49d1673272716b2e">&#9670;&nbsp;</a></span>ComputeDeformableRigidContact()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;<a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt;T1&gt;::is_bool, void&gt; ComputeDeformableRigidContact </td>
+          <td class="memname">std::enable_if_t&lt;std::is_same_v&lt;T1, double&gt;, void&gt; ComputeDeformableRigidContact </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; internal::DeformableRigidContact&lt; T &gt;&gt; *&#160;</td>
           <td class="paramname"><em>deformable_rigid_contact</em></td><td>)</td>
@@ -915,7 +915,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of QueryObject::ComputeDeformableRigidContact(). </p>
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7f762f8d67225aba49d1673272716b2e" title="Reports contact information between all deformable geometries against all rigid (non-deformable) geom...">QueryObject::ComputeDeformableRigidContact()</a>. </p>
 
 </div>
 </div>

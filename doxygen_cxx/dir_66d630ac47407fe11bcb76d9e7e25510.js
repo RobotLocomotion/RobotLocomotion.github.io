@@ -18,6 +18,7 @@ var dir_66d630ac47407fe11bcb76d9e7e25510 =
       [ "BasisElementGradedReverseLexOrder", "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html", "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order" ]
     ] ],
     [ "rational_function.h", "rational__function_8h.html", "rational__function_8h" ],
+    [ "replace_bilinear_terms.h", "replace__bilinear__terms_8h.html", "replace__bilinear__terms_8h" ],
     [ "simplification.h", "simplification_8h.html", "simplification_8h" ],
     [ "trigonometric_polynomial.h", "trigonometric__polynomial_8h.html", "trigonometric__polynomial_8h" ]
 ];

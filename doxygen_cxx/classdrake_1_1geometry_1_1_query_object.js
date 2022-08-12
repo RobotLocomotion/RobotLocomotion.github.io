@@ -5,6 +5,7 @@ var classdrake_1_1geometry_1_1_query_object =
     [ "QueryObject", "classdrake_1_1geometry_1_1_query_object.html#a16c29c5b277b7b1aa84d111afca6c55c", null ],
     [ "ComputeContactSurfaces", "classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035", null ],
     [ "ComputeContactSurfacesWithFallback", "classdrake_1_1geometry_1_1_query_object.html#a9c5e3da8410ee9aa2ae555912d9c98e6", null ],
+    [ "ComputeDeformableRigidContact", "classdrake_1_1geometry_1_1_query_object.html#a7f762f8d67225aba49d1673272716b2e", null ],
     [ "ComputePointPairPenetration", "classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f", null ],
     [ "ComputeSignedDistancePairClosestPoints", "classdrake_1_1geometry_1_1_query_object.html#a7a66a8b3fc43f34d11a9cd475fb77ee1", null ],
     [ "ComputeSignedDistancePairwiseClosestPoints", "classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52", null ],

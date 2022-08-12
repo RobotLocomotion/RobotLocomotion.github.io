@@ -1310,7 +1310,7 @@ the intersection.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.Iris">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False, prog_with_additional_constraints is not set, num_additional_constraint_infeasible_samples=10, random_seed=1234)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
 algorithm, as described in</p>
 <p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of
@@ -1346,10 +1346,10 @@ positive integer).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.IrisInConfigurationSpace">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False, prog_with_additional_constraints is not set, num_additional_constraint_infeasible_samples=10, random_seed=1234)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
 <dd><p>A variation of the Iris (Iterative Region Inflation by Semidefinite
 programming) algorithm which finds collision-free regions in the
-<em>configuration space</em> of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+configuration space* of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">Iris for details on the original algorithm. The possibility of
@@ -1402,6 +1402,48 @@ algorithm for obtaining regions without the rigorous guarantee.</p>
 <dt id="pydrake.geometry.optimization.IrisOptions.iteration_limit">
 <code class="descname">iteration_limit</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.iteration_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum number of iterations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.num_additional_constraint_infeasible_samples">
+<code class="descname">num_additional_constraint_infeasible_samples</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.num_additional_constraint_infeasible_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each constraint in <code class="docutils literal notranslate"><span class="pre">prog_with_additional_constraints</span></code>, IRIS will
+search for a counter-example by formulating a (likely nonconvex)
+optimization problem. The initial guess for this optimization is taken
+by sampling uniformly inside the current IRIS region. This option
+controls the termination condition for that counter-example search,
+defining the number of consecutive failures to find a counter-example
+requested before moving on to the next constraint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.prog_with_additional_constraints">
+<code class="descname">prog_with_additional_constraints</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.prog_with_additional_constraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default, IRIS in configuration space certifies regions for
+collision avoidance constraints and joint limits. This option can be
+used to pass additional constraints that should be satisfied by the
+IRIS region. We accept these in the form of a MathematicalProgram:</p>
+<p>find q subject to g(q) ≤ 0.</p>
+<p>The decision_variables() for the program are taken to define <code class="docutils literal notranslate"><span class="pre">q</span></code>.
+IRIS will silently ignore any costs in
+<code class="docutils literal notranslate"><span class="pre">prog_with_additional_constraints</span></code>, and will throw RuntimeError if
+it contains any unsupported constraints.</p>
+<p>For example, one could create an InverseKinematics problem with rich
+kinematic constraints, and then pass <code class="docutils literal notranslate"><span class="pre">InverseKinematics::prog()</span></code>
+into this option.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, when prog_with_additional_constraints is set, the
+enable_ibex option must be <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.random_seed">
+<code class="descname">random_seed</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.random_seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>The only randomization in IRIS is the random sampling done to find
+counter-examples for the additional constraints using in
+IrisInConfigurationSpace. Use this option to set the initial seed.</p>
 </dd></dl>
 
 <dl class="attribute">

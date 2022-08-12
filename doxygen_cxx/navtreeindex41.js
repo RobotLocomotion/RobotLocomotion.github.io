@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,5],
 "decompose_8h.html#aec138ad5b7eb6d6db3533272fbf36cba":[4,0,0,1,3,4,1],
 "default__scalars_8h.html":[4,0,0,1,15],
 "default__scalars__pybind_8h.html":[4,0,0,0,0,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,11,3],
 "drake__visualizer__params_8h.html":[4,0,0,4,12],
 "dreal__solver_8h.html":[4,0,0,11,19],
-"dummy__render__engine_8h.html":[4,0,0,4,8,0],
-"dummy__value_8h.html":[4,0,0,1,27]
+"dummy__render__engine_8h.html":[4,0,0,4,8,0]
 };
