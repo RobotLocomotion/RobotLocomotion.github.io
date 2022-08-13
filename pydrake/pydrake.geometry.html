@@ -17176,6 +17176,12 @@ TriangleSurfaceMesh.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.SurfaceTriangle.num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceTriangle</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SurfaceTriangle.num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in this face.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.SurfaceTriangle.vertex">
 <code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceTriangle</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SurfaceTriangle.vertex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the vertex index in TriangleSurfaceMesh of the i-th vertex of
@@ -17218,6 +17224,79 @@ not necessarily continuous.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], t: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns area of triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].CalcBarycentric">
+<code class="descname">CalcBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], p_MQ: numpy.ndarray[numpy.float64[3, 1]], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].CalcBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate barycentric coordinates with respect to the triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>
+of the point Q’. Q’ is the projection of the provided point Q on the
+plane of triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>. If Q lies on the plane, Q = Q’. This
+operation is expensive compared with going from barycentric to
+Cartesian.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code> of the query point. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q measured and expressed in the mesh’s frame
+M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt>
+<dd>The index of a triangle.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">b_Q</span></code>:</dt>
+<dd>‘ The barycentric coordinates of Q’ (projection of Q onto <cite>t</cite>’s
+plane) relative to triangle t.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If Q’ is outside the triangle, the barycentric coordinates (b₀,
+b₁, b₂) still satisfy b₀ + b₁ + b₂ = 1; however, some bᵢ will be
+negative.</p>
+</div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].CalcBoundingBox">
+<code class="descname">CalcBoundingBox</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[3, 1]], numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].CalcBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the axis-aligned bounding box of this surface mesh M.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the center and the size vector of the box expressed in M’s frame.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].CalcCartesianFromBarycentric">
+<code class="descname">CalcCartesianFromBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], element_index: int, b_Q: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].CalcCartesianFromBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps the barycentric coordinates <code class="docutils literal notranslate"><span class="pre">Q_barycentric</span></code> of a point Q in
+<code class="docutils literal notranslate"><span class="pre">element_index</span></code> to its position vector p_MQ.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Barycentric coordinate type <code class="docutils literal notranslate"><span class="pre">B</span></code> of the query point.
+See drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">element_index</span></code> ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].centroid">
 <code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the area-weighted geometric centroid of this surface mesh. The
@@ -17231,6 +17310,18 @@ insensitive to whether vertices are shared by triangles.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfaceTriangle<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the triangular element identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the triangular element.</dd>
+<dt>Precondition:</dt>
+<dd>e ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].element_centroid">
 <code class="descname">element_centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].element_centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the centroid of a triangle measured and expressed in the
@@ -17238,9 +17329,79 @@ mesh’s frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], mesh: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given TriangleSurfaceMesh object is equal
+via deep exact comparison. NaNs are treated as not equal as per the
+IEEE standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit face normal vector of a triangle. It respects the
+right-handed normal rule. A near-zero-area triangle may get an
+unreliable normal vector. A zero-area triangle will get a zero vector.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of triangles in the mesh. For TriangleSurfaceMesh,
+an element is a triangle. Returns the same number as num_triangles()
+and enables mesh consumers to be templated on mesh type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].num_triangles">
+<code class="descname">num_triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].num_triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of triangles in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].total_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total area of all the triangles of this surface mesh.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].triangles">
 <code class="descname">triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceTriangle]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].triangles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the triangles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2,…,num_vertices()-1}.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -17271,6 +17432,79 @@ not necessarily continuous.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], t: int</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns area of triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].CalcBarycentric">
+<code class="descname">CalcBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], p_MQ: numpy.ndarray[object[3, 1]], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].CalcBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate barycentric coordinates with respect to the triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>
+of the point Q’. Q’ is the projection of the provided point Q on the
+plane of triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>. If Q lies on the plane, Q = Q’. This
+operation is expensive compared with going from barycentric to
+Cartesian.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code> of the query point. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q measured and expressed in the mesh’s frame
+M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt>
+<dd>The index of a triangle.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">b_Q</span></code>:</dt>
+<dd>‘ The barycentric coordinates of Q’ (projection of Q onto <cite>t</cite>’s
+plane) relative to triangle t.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If Q’ is outside the triangle, the barycentric coordinates (b₀,
+b₁, b₂) still satisfy b₀ + b₁ + b₂ = 1; however, some bᵢ will be
+negative.</p>
+</div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].CalcBoundingBox">
+<code class="descname">CalcBoundingBox</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[object[3, 1]], numpy.ndarray[object[3, 1]]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].CalcBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the axis-aligned bounding box of this surface mesh M.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the center and the size vector of the box expressed in M’s frame.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].CalcCartesianFromBarycentric">
+<code class="descname">CalcCartesianFromBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], element_index: int, b_Q: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].CalcCartesianFromBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps the barycentric coordinates <code class="docutils literal notranslate"><span class="pre">Q_barycentric</span></code> of a point Q in
+<code class="docutils literal notranslate"><span class="pre">element_index</span></code> to its position vector p_MQ.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Barycentric coordinate type <code class="docutils literal notranslate"><span class="pre">B</span></code> of the query point.
+See drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">element_index</span></code> ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].centroid">
 <code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the area-weighted geometric centroid of this surface mesh. The
@@ -17284,6 +17518,18 @@ insensitive to whether vertices are shared by triangles.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfaceTriangle<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the triangular element identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the triangular element.</dd>
+<dt>Precondition:</dt>
+<dd>e ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].element_centroid">
 <code class="descname">element_centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].element_centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the centroid of a triangle measured and expressed in the
@@ -17291,9 +17537,79 @@ mesh’s frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], mesh: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given TriangleSurfaceMesh object is equal
+via deep exact comparison. NaNs are treated as not equal as per the
+IEEE standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit face normal vector of a triangle. It respects the
+right-handed normal rule. A near-zero-area triangle may get an
+unreliable normal vector. A zero-area triangle will get a zero vector.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of triangles in the mesh. For TriangleSurfaceMesh,
+an element is a triangle. Returns the same number as num_triangles()
+and enables mesh consumers to be templated on mesh type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].num_triangles">
+<code class="descname">num_triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].num_triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of triangles in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].total_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total area of all the triangles of this surface mesh.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].triangles">
 <code class="descname">triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceTriangle]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].triangles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the triangles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2,…,num_vertices()-1}.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -17322,6 +17638,79 @@ not necessarily continuous.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], t: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns area of triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].CalcBarycentric">
+<code class="descname">CalcBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], p_MQ: numpy.ndarray[numpy.float64[3, 1]], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].CalcBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate barycentric coordinates with respect to the triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>
+of the point Q’. Q’ is the projection of the provided point Q on the
+plane of triangle <code class="docutils literal notranslate"><span class="pre">t</span></code>. If Q lies on the plane, Q = Q’. This
+operation is expensive compared with going from barycentric to
+Cartesian.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code> of the query point. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>The position of point Q measured and expressed in the mesh’s frame
+M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt>
+<dd>The index of a triangle.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">b_Q</span></code>:</dt>
+<dd>‘ The barycentric coordinates of Q’ (projection of Q onto <cite>t</cite>’s
+plane) relative to triangle t.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If Q’ is outside the triangle, the barycentric coordinates (b₀,
+b₁, b₂) still satisfy b₀ + b₁ + b₂ = 1; however, some bᵢ will be
+negative.</p>
+</div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].CalcBoundingBox">
+<code class="descname">CalcBoundingBox</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[3, 1]], numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].CalcBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the axis-aligned bounding box of this surface mesh M.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the center and the size vector of the box expressed in M’s frame.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].CalcCartesianFromBarycentric">
+<code class="descname">CalcCartesianFromBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], element_index: int, b_Q: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].CalcCartesianFromBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps the barycentric coordinates <code class="docutils literal notranslate"><span class="pre">Q_barycentric</span></code> of a point Q in
+<code class="docutils literal notranslate"><span class="pre">element_index</span></code> to its position vector p_MQ.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Barycentric coordinate type <code class="docutils literal notranslate"><span class="pre">B</span></code> of the query point.
+See drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">element_index</span></code> ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_[float].centroid">
 <code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the area-weighted geometric centroid of this surface mesh. The
@@ -17335,6 +17724,18 @@ insensitive to whether vertices are shared by triangles.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfaceTriangle<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the triangular element identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of the triangular element.</dd>
+<dt>Precondition:</dt>
+<dd>e ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_[float].element_centroid">
 <code class="descname">element_centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].element_centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the centroid of a triangle measured and expressed in the
@@ -17342,9 +17743,79 @@ mesh’s frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], mesh: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given TriangleSurfaceMesh object is equal
+via deep exact comparison. NaNs are treated as not equal as per the
+IEEE standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], t: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit face normal vector of a triangle. It respects the
+right-handed normal rule. A near-zero-area triangle may get an
+unreliable normal vector. A zero-area triangle will get a zero vector.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>t ∈ {0, 1, 2,…, num_triangles()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of triangles in the mesh. For TriangleSurfaceMesh,
+an element is a triangle. Returns the same number as num_triangles()
+and enables mesh consumers to be templated on mesh type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].num_triangles">
+<code class="descname">num_triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].num_triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of triangles in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].total_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total area of all the triangles of this surface mesh.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.TriangleSurfaceMesh_[float].triangles">
 <code class="descname">triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceTriangle]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].triangles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the triangles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2,…,num_vertices()-1}.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
