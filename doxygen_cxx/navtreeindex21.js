@@ -1,5 +1,11 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#af8888193e1130288e45be9edd3f47a7e":[1,1,2,96],
+"classdrake_1_1solvers_1_1_mathematical_program.html#af9a84a217cea56358191de7d25c142c0":[1,1,2,177],
+"classdrake_1_1solvers_1_1_mathematical_program.html#af9d07051ef1c3778a15b117060f65ac5":[1,1,2,119],
+"classdrake_1_1solvers_1_1_mathematical_program.html#afee45efd038cc24341094591bf1cbdbc":[1,1,2,129],
+"classdrake_1_1solvers_1_1_mathematical_program.html#afff086e342ead2410215c884dfd4e82d":[1,1,2,190],
+"classdrake_1_1solvers_1_1_mathematical_program_result.html":[3,0,0,14,38],
 "classdrake_1_1solvers_1_1_mathematical_program_result.html#a08eae785a81fe46335b4ad6cb962eb74":[3,0,0,14,38,9],
 "classdrake_1_1solvers_1_1_mathematical_program_result.html#a0f1b5841ee288eef56aab11d80344e64":[3,0,0,14,38,22],
 "classdrake_1_1solvers_1_1_mathematical_program_result.html#a0f8ef3892870d92bd4d3b0b5cd2e155f":[3,0,0,14,38,15],
@@ -243,11 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2789d79ee441d9c90e1234b5f08f801":[1,1,0,28,2],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95":[1,1,0,28,7],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f":[1,1,0,28,9],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html":[1,1,0,19],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a0a6cbf2b2482a80c78e51a04f29aefe5":[1,1,0,19,4],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a342bf500f07e30d92a924b308ae7c5ec":[1,1,0,19,6],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a4461b576454d2193c040fa0c8b78e889":[1,1,0,19,2],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a5ea82da15f279a870368529182673e35":[1,1,0,19,5],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a7599514b4cdbd54f4ffc25c652a2d711":[1,1,0,19,1],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a7893e0ee787698c8d17dfeb4c89c879c":[1,1,0,19,9]
+"classdrake_1_1solvers_1_1_quadratic_constraint.html":[1,1,0,19]
 };

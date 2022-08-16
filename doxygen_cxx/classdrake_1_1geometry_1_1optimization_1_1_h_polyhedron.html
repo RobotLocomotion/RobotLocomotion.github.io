@@ -188,6 +188,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae45694d3595659922653fd027d15cb6"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aae45694d3595659922653fd027d15cb6">b</a> () const</td></tr>
 <tr class="memdesc:aae45694d3595659922653fd027d15cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the half-space representation vector b.  <a href="#aae45694d3595659922653fd027d15cb6">More...</a><br /></td></tr>
 <tr class="separator:aae45694d3595659922653fd027d15cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda6d70559f302c683bb79b79079d942"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#abda6d70559f302c683bb79b79079d942">ContainedIn</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
+<tr class="memdesc:abda6d70559f302c683bb79b79079d942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> is entirely contained in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> other.  <a href="#abda6d70559f302c683bb79b79079d942">More...</a><br /></td></tr>
+<tr class="separator:abda6d70559f302c683bb79b79079d942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af761f8f8f2a423c9f911004e1c5b8a20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#af761f8f8f2a423c9f911004e1c5b8a20">Intersection</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other, bool check_for_redundancy=false) const</td></tr>
+<tr class="memdesc:af761f8f8f2a423c9f911004e1c5b8a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the intersection of two <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> by adding the rows of inequalities from <code>other</code>.  <a href="#af761f8f8f2a423c9f911004e1c5b8a20">More...</a><br /></td></tr>
+<tr class="separator:af761f8f8f2a423c9f911004e1c5b8a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a221fc0a9862d45d9901db5c5a072746c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a221fc0a9862d45d9901db5c5a072746c">ReduceInequalities</a> () const</td></tr>
+<tr class="memdesc:a221fc0a9862d45d9901db5c5a072746c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces some (not necessarily all) redundant inequalities in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>.  <a href="#a221fc0a9862d45d9901db5c5a072746c">More...</a><br /></td></tr>
+<tr class="separator:a221fc0a9862d45d9901db5c5a072746c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74afcf0235bb70d4d936c093fbb85a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a74afcf0235bb70d4d936c093fbb85a5d">MaximumVolumeInscribedEllipsoid</a> () const</td></tr>
 <tr class="memdesc:a74afcf0235bb70d4d936c093fbb85a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the inscribed ellipsoid.  <a href="#a74afcf0235bb70d4d936c093fbb85a5d">More...</a><br /></td></tr>
 <tr class="separator:a74afcf0235bb70d4d936c093fbb85a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,9 +209,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9fe5996b5d76685d63e077a95f7a8a94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a9fe5996b5d76685d63e077a95f7a8a94">CartesianPower</a> (<a class="el" href="classint.html">int</a> n) const</td></tr>
 <tr class="memdesc:a9fe5996b5d76685d63e077a95f7a8a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <code>n</code>-ary Cartesian power of <code>this</code>.  <a href="#a9fe5996b5d76685d63e077a95f7a8a94">More...</a><br /></td></tr>
 <tr class="separator:a9fe5996b5d76685d63e077a95f7a8a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e43911f06f9c31a7ad6b9d87b11430c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a1e43911f06f9c31a7ad6b9d87b11430c">Intersection</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
-<tr class="memdesc:a1e43911f06f9c31a7ad6b9d87b11430c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection of <code>this</code> and <code>other</code>.  <a href="#a1e43911f06f9c31a7ad6b9d87b11430c">More...</a><br /></td></tr>
-<tr class="separator:a1e43911f06f9c31a7ad6b9d87b11430c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba50cc657a0a2c943a9657cb820e8289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289">PontryaginDifference</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
 <tr class="memdesc:aba50cc657a0a2c943a9657cb820e8289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Pontryagin (Minkowski) Difference of <code>this</code> and <code>other</code>.  <a href="#aba50cc657a0a2c943a9657cb820e8289">More...</a><br /></td></tr>
 <tr class="separator:aba50cc657a0a2c943a9657cb820e8289"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,6 +286,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad362319489a2c5507a34d9b5c0a6e696"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696">MakeUnitBox</a> (<a class="el" href="classint.html">int</a> dim)</td></tr>
 <tr class="memdesc:ad362319489a2c5507a34d9b5c0a6e696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the L∞-norm unit box in <code>dim</code> dimensions, {x | |x|∞ &lt;= 1 }.  <a href="#ad362319489a2c5507a34d9b5c0a6e696">More...</a><br /></td></tr>
 <tr class="separator:ad362319489a2c5507a34d9b5c0a6e696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20de73193ff05f0d332edba9e48a4aee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a20de73193ff05f0d332edba9e48a4aee">MakeL1Ball</a> (<a class="el" href="classint.html">int</a> dim)</td></tr>
+<tr class="memdesc:a20de73193ff05f0d332edba9e48a4aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the L1-norm unit ball in <code>dim</code> dimensions, {x | |x|₁ &lt;= 1 }.  <a href="#a20de73193ff05f0d332edba9e48a4aee">More...</a><br /></td></tr>
+<tr class="separator:a20de73193ff05f0d332edba9e48a4aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -579,14 +588,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1e43911f06f9c31a7ad6b9d87b11430c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e43911f06f9c31a7ad6b9d87b11430c">&#9670;&nbsp;</a></span>Intersection()</h2>
+<a id="abda6d70559f302c683bb79b79079d942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda6d70559f302c683bb79b79079d942">&#9670;&nbsp;</a></span>ContainedIn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_intersection.html">Intersection</a> </td>
+          <td class="memname">bool ContainedIn </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
@@ -595,7 +604,39 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the intersection of <code>this</code> and <code>other</code>. </p>
+<p>Returns true iff this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> is entirely contained in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> other. </p>
+<p>This is done by checking whether every inequality in <code>other</code> is redundant when added to this. </p>
+
+</div>
+</div>
+<a id="af761f8f8f2a423c9f911004e1c5b8a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af761f8f8f2a423c9f911004e1c5b8a20">&#9670;&nbsp;</a></span>Intersection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_intersection.html">Intersection</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>check_for_redundancy</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the intersection of two <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> by adding the rows of inequalities from <code>other</code>. </p>
+<p>If <code>check_for_redundancy</code> is true then only adds the rows of <code>other</code> to this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> if the inequality is not implied by the inequalities from this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>. </p>
 
 </div>
 </div>
@@ -651,6 +692,35 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a polyhedron as an axis-aligned box from the lower and upper corners. </p>
+
+</div>
+</div>
+<a id="a20de73193ff05f0d332edba9e48a4aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20de73193ff05f0d332edba9e48a4aee">&#9670;&nbsp;</a></span>MakeL1Ball()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> MakeL1Ball </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the L1-norm unit ball in <code>dim</code> dimensions, {x | |x|₁ &lt;= 1 }. </p>
+<p>This set is also known as the crosspolytope and is described by the 2ᵈⁱᵐ signed unit vectors. </p>
 
 </div>
 </div>
@@ -783,6 +853,26 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the Pontryagin (Minkowski) Difference of <code>this</code> and <code>other</code>. </p>
 <p>This is the set A ⊖ B = { a|a+ B ⊆ A }. The result is an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> with the same number of inequalities as A. Requires that <code>this</code> and <code>other</code> both be bounded and have the same ambient dimension. This method may throw a runtime error if <code>this</code> or <code>other</code> are ill-conditioned. </p>
+
+</div>
+</div>
+<a id="a221fc0a9862d45d9901db5c5a072746c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a221fc0a9862d45d9901db5c5a072746c">&#9670;&nbsp;</a></span>ReduceInequalities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> ReduceInequalities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reduces some (not necessarily all) redundant inequalities in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>. </p>
+<p>This is not guaranteed to give the minimal representation of the polyhedron but is a relatively fast way to reduce the number of inequalities. </p>
 
 </div>
 </div>

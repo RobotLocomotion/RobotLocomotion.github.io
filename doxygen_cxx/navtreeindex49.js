@@ -1,5 +1,11 @@
 var NAVTREEINDEX49 =
 {
+"proximity__doxygen_8h.html":[4,0,0,4,2,47],
+"proximity__engine_8h.html":[4,0,0,4,34],
+"proximity__properties_8h.html":[4,0,0,4,35],
+"proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,35,2],
+"proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,35,1],
+"proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,35,0],
 "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,35,4],
 "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,35,3],
 "proximity__utilities_8h.html":[4,0,0,4,2,48],
@@ -243,11 +249,5 @@ var NAVTREEINDEX49 =
 "scs__solver_8h.html":[4,0,0,11,46],
 "sdpa__free__format_8h.html":[4,0,0,11,47],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,11,47,0],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552":[4,0,0,11,47,0,0],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec":[4,0,0,11,47,0,2],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,11,47,0,1],
-"sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,47,1],
-"semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,21],
-"sequential__expression__manager_8h.html":[4,0,0,12,9,4],
-"serialize__pybind_8h.html":[4,0,0,0,0,0,8]
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552":[4,0,0,11,47,0,0]
 };

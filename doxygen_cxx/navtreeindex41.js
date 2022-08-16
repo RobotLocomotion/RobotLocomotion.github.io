@@ -1,5 +1,11 @@
 var NAVTREEINDEX41 =
 {
+"decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,6],
+"decompose_8h.html#a47d95a6b1bc2f740b30a4735cc6dcd3c":[4,0,0,1,3,4,0],
+"decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934":[4,0,0,1,3,4,8],
+"decompose_8h.html#a9d8e94c7598bd59e6a5314ffbc3c7f59":[4,0,0,1,3,4,11],
+"decompose_8h.html#aa6c01361f464b3eae396f7d1a0e92c85":[4,0,0,1,3,4,4],
+"decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc":[4,0,0,1,3,4,9],
 "decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b":[4,0,0,1,3,4,7],
 "decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,3,4,3],
 "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX41 =
 "drake__lcm__log_8h.html":[4,0,0,5,2],
 "drake__lcm__params_8h.html":[4,0,0,5,3],
 "drake__marker_8h.html":[4,0,0,1,24],
-"drake__path_8h.html":[4,0,0,1,25],
-"drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,25,0],
-"drake__throw_8h.html":[4,0,0,1,26],
-"drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca":[4,0,0,1,26,0],
-"drake__visualizer_8h.html":[4,0,0,4,11],
-"drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,11,3],
-"drake__visualizer__params_8h.html":[4,0,0,4,12]
+"drake__path_8h.html":[4,0,0,1,25]
 };

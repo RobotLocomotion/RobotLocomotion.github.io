@@ -1073,9 +1073,20 @@ of the returned Hyperellipsoid.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.ContainedIn">
+<code class="descname">ContainedIn</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ContainedIn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff this HPolyhedron is entirely contained in the
+HPolyhedron other. This is done by checking whether every inequality
+in <code class="docutils literal notranslate"><span class="pre">other</span></code> is redundant when added to this.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.Intersection">
-<code class="descname">Intersection</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.Intersection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the intersection of <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<code class="descname">Intersection</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em>, <em>check_for_redundancy: bool = False</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.Intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the intersection of two HPolyhedron by adding the rows of
+inequalities from <code class="docutils literal notranslate"><span class="pre">other</span></code>. If <code class="docutils literal notranslate"><span class="pre">check_for_redundancy</span></code> is true then
+only adds the rows of <code class="docutils literal notranslate"><span class="pre">other</span></code> to this HPolyhedron if the inequality
+is not implied by the inequalities from this HPolyhedron.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -1086,9 +1097,17 @@ upper corners.</p>
 </dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.HPolyhedron.MakeL1Ball">
+<em class="property">static </em><code class="descname">MakeL1Ball</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeL1Ball" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the L1-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id1"><span class="problematic" id="id2">|</span></a>x|₁ &lt;= 1
+}. This set is also known as the crosspolytope and is described by the
+2ᵈⁱᵐ signed unit vectors.</p>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.HPolyhedron.MakeUnitBox">
 <em class="property">static </em><code class="descname">MakeUnitBox</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeUnitBox" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id1"><span class="problematic" id="id2">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id3"><span class="problematic" id="id4">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>
@@ -1104,7 +1123,7 @@ C ≽ 0
 </pre></div>
 </div>
 <p>where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = {
-Cx + d | <a href="#id3"><span class="problematic" id="id4">|</span></a>x|₂ ≤ 1}.</p>
+Cx + d | <a href="#id5"><span class="problematic" id="id6">|</span></a>x|₂ ≤ 1}.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>the HPolyhedron is bounded.</dd>
@@ -1128,6 +1147,15 @@ HPolyhedron with the same number of inequalities as A. Requires that
 <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> both be bounded and have the same ambient
 dimension. This method may throw a runtime error if <code class="docutils literal notranslate"><span class="pre">this</span></code> or
 <code class="docutils literal notranslate"><span class="pre">other</span></code> are ill-conditioned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.ReduceInequalities">
+<code class="descname">ReduceInequalities</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ReduceInequalities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduces some (not necessarily all) redundant inequalities in the
+HPolyhedron. This is not guaranteed to give the minimal representation
+of the polyhedron but is a relatively fast way to reduce the number of
+inequalities.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1240,7 +1268,7 @@ shorthand for <code class="docutils literal notranslate"><span class="pre">cente
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall">
 <em class="property">static </em><code class="descname">MakeUnitBall</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id5"><span class="problematic" id="id6">|</span></a>x|₂ &lt;= 1
+<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id7"><span class="problematic" id="id8">|</span></a>x|₂ &lt;= 1
 }.</p>
 </dd></dl>
 
@@ -1676,7 +1704,7 @@ upper corners.</p>
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.VPolytope.MakeUnitBox">
 <em class="property">static </em><code class="descname">MakeUnitBox</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.VPolytope<a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.MakeUnitBox" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id7"><span class="problematic" id="id8">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id9"><span class="problematic" id="id10">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>

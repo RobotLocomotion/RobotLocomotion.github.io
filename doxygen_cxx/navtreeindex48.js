@@ -1,5 +1,11 @@
 var NAVTREEINDEX48 =
 {
+"namespacedrake_1_1trajectories.html":[2,0,0,18],
+"namespacedrake_1_1trajectories.html":[3,0,0,18],
+"namespacedrake_1_1visualization.html":[3,0,0,19],
+"namespacedrake_1_1visualization.html":[2,0,0,19],
+"namespacedrake_1_1yaml.html":[3,0,0,20],
+"namespacedrake_1_1yaml.html":[2,0,0,20],
 "namespacemembers.html":[2,1,0],
 "namespacemembers.html":[2,1,0,0],
 "namespacemembers_b.html":[2,1,0,1],
@@ -9,8 +15,8 @@ var NAVTREEINDEX48 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,5],
-"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func.html":[2,1,1],
+"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func_b.html":[2,1,1,1],
 "namespacemembers_func_c.html":[2,1,1,2],
 "namespacemembers_func_d.html":[2,1,1,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX48 =
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[4,0,0,11,44,2,8],
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,11,44,6],
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,44,7],
-"propeller_8h.html":[4,0,0,8,10,24],
-"proximity__doxygen_8h.html":[4,0,0,4,2,47],
-"proximity__engine_8h.html":[4,0,0,4,34],
-"proximity__properties_8h.html":[4,0,0,4,35],
-"proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,35,2],
-"proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,35,1],
-"proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,35,0]
+"propeller_8h.html":[4,0,0,8,10,24]
 };

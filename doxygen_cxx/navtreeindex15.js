@@ -1,5 +1,11 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ab91461e103923f530ba5f1f9147ee29d":[3,0,0,9,69,12],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ac8cf5e8a26c45a4a376af6484782c67e":[3,0,0,9,69,8],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ad148d7373c82a29ebf98499b07fbe3c1":[3,0,0,9,69,5],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ad7f507917333adceb2c6542f4d2df38c":[3,0,0,9,69,2],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#adcb3b75410a7352ca292fc5ca2ab5b01":[3,0,0,9,69,10],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#af1304fa4eec81102161931379fe4b55c":[3,0,0,9,69,6],
 "classdrake_1_1multibody_1_1_spatial_force.html":[3,0,0,9,70],
 "classdrake_1_1multibody_1_1_spatial_force.html#a23d1353c23201a3614ae5f555fef38e4":[3,0,0,9,70,3],
 "classdrake_1_1multibody_1_1_spatial_force.html#a4a986da49bae72b84a406084126741e6":[3,0,0,9,70,7],
@@ -243,11 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_unit_inertia.html#ae6f93bf07bd55dd7ab860b0c321713c0":[3,0,0,9,85,15],
 "classdrake_1_1multibody_1_1_unit_inertia.html#aed68ed5145171fc5505a5c7c848bfae5":[3,0,0,9,85,24],
 "classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62":[3,0,0,9,85,27],
-"classdrake_1_1multibody_1_1_unit_inertia.html#af82325138e40aa8b7ecb26c7d8ef3aa6":[3,0,0,9,85,12],
-"classdrake_1_1multibody_1_1_unit_inertia.html#af90ef8ef37ca899a26ab2963124f85e9":[3,0,0,9,85,2],
-"classdrake_1_1multibody_1_1_unit_quaternion_constraint.html":[1,1,0,11],
-"classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#a38dfa2545053873d5d50c18d2d9e0fb6":[1,1,0,11,5],
-"classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#a4f0b523a01b91658082439d591ab3240":[1,1,0,11,2],
-"classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#a5212ee2633a6454da65ab6d5bfd1faa1":[1,1,0,11,1],
-"classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#ad33bb245340a979074fce4aa6cb60102":[1,1,0,11,4]
+"classdrake_1_1multibody_1_1_unit_inertia.html#af82325138e40aa8b7ecb26c7d8ef3aa6":[3,0,0,9,85,12]
 };

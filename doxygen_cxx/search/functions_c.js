@@ -43,6 +43,7 @@ var searchData=
   ['makeimplementationblueprint',['MakeImplementationBlueprint',['../classdrake_1_1multibody_1_1_joint.html#adb7bb56e3111b8b13991cc780df2a12e',1,'drake::multibody::Joint']]],
   ['makeirisobstacles',['MakeIrisObstacles',['../group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af',1,'drake::geometry::optimization']]],
   ['makekukaiiwamodel',['MakeKukaIiwaModel',['../namespacedrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot.html#a66fad1fe086f2c9719c25a140d257f59',1,'drake::multibody::benchmarks::kuka_iiwa_robot']]],
+  ['makel1ball',['MakeL1Ball',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a20de73193ff05f0d332edba9e48a4aee',1,'drake::geometry::optimization::HPolyhedron']]],
   ['makelinear',['MakeLinear',['../classdrake_1_1trajectories_1_1_piecewise_pose.html#a5200b41e6c52f4bc8cbc0c0e75cb4d79',1,'drake::trajectories::PiecewisePose']]],
   ['makelinearsystem',['MakeLinearSystem',['../classdrake_1_1systems_1_1_linear_system.html#a340e9c3c5540caf1dbee4571c0c69935',1,'drake::systems::LinearSystem']]],
   ['makematrixbinaryvariable',['MakeMatrixBinaryVariable',['../namespacedrake_1_1symbolic.html#ab61ece2fbaa79f8aad11313fa4b36150',1,'drake::symbolic::MakeMatrixBinaryVariable(int rows, int cols, const std::string &amp;name)'],['../namespacedrake_1_1symbolic.html#a803dbab92e520549b625dde70f05fe47',1,'drake::symbolic::MakeMatrixBinaryVariable(const std::string &amp;name)']]],
