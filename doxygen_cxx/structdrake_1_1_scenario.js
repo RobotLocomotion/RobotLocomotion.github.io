@@ -1,6 +1,6 @@
 var structdrake_1_1_scenario =
 [
-    [ "DriverVariant", "structdrake_1_1_scenario.html#a37bff63e5831673839c480f90819beb8", null ],
+    [ "DriverVariant", "structdrake_1_1_scenario.html#a1fb06c03786dc23296261dcdb187a38b", null ],
     [ "Serialize", "structdrake_1_1_scenario.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "directives", "structdrake_1_1_scenario.html#a8d99918d98b1f3ead44d76481f6db7be", null ],
     [ "lcm_buses", "structdrake_1_1_scenario.html#a65bf2d5e1e3915ba78f5e08f4b7438e5", null ],

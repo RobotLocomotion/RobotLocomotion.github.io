@@ -1,5 +1,7 @@
 var NAVTREEINDEX42 =
 {
+"dreal__solver_8h.html":[4,0,0,11,19],
+"dummy__render__engine_8h.html":[4,0,0,4,8,0],
 "dummy__value_8h.html":[4,0,0,1,27],
 "dynamic__programming_8h.html":[4,0,0,12,1,1],
 "dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,12,1,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX42 =
 "expression__cell_8h.html#ac06c87629b60cbdc34b8e2a9f715cd41":[4,0,0,1,3,0,4,57],
 "expression__cell_8h.html#ac1eddc430d6a33fc13db8d53a51bdfd3":[4,0,0,1,3,0,4,41],
 "expression__cell_8h.html#ac919050a36dacd7f943da0813c91f400":[4,0,0,1,3,0,4,58],
-"expression__cell_8h.html#acb998316cfc15506d72b2f2843b4fa62":[4,0,0,1,3,0,4,36],
-"expression__cell_8h.html#ad0aaf128d1ed75cbab9c4ca238e0ae6c":[4,0,0,1,3,0,4,45],
-"expression__cell_8h.html#ae4927daffb66b9bd137c174d41d94444":[4,0,0,1,3,0,4,35]
+"expression__cell_8h.html#acb998316cfc15506d72b2f2843b4fa62":[4,0,0,1,3,0,4,36]
 };

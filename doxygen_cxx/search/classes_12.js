@@ -15,6 +15,7 @@ var searchData=
   ['schunkwsgcommandreceiver',['SchunkWsgCommandReceiver',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html',1,'drake::manipulation::schunk_wsg']]],
   ['schunkwsgcommandsender',['SchunkWsgCommandSender',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html',1,'drake::manipulation::schunk_wsg']]],
   ['schunkwsgcontroller',['SchunkWsgController',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html',1,'drake::manipulation::schunk_wsg']]],
+  ['schunkwsgdriver',['SchunkWsgDriver',['../structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html',1,'drake::manipulation::schunk_wsg']]],
   ['schunkwsgpdcontroller',['SchunkWsgPdController',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_pd_controller.html',1,'drake::manipulation::schunk_wsg']]],
   ['schunkwsgplaincontroller',['SchunkWsgPlainController',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html',1,'drake::manipulation::schunk_wsg']]],
   ['schunkwsgpositioncontroller',['SchunkWsgPositionController',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html',1,'drake::manipulation::schunk_wsg']]],

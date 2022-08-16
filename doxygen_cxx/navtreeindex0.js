@@ -86,6 +86,8 @@ var NAVTREEINDEX0 =
 "brick__static__equilibrium__constraint_8h.html#a0e17e8c15421b3bf195f9ef1b724fc14":[4,0,0,3,13,0,1],
 "bspline__basis_8h.html":[4,0,0,7,3],
 "bspline__trajectory_8h.html":[4,0,0,1,5,0],
+"build__schunk__wsg__control_8h.html":[4,0,0,6,3,0],
+"build__schunk__wsg__control_8h.html#a14a60a2f02484fb53b2d71953545c202":[4,0,0,6,3,0,0],
 "bvh_8h.html":[4,0,0,4,2,2],
 "bvh__updater_8h.html":[4,0,0,4,2,3],
 "cache_8h.html":[4,0,0,12,3,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4":[3,0,0,43,29],
 "classdrake_1_1_polynomial.html#ac91ac7cbc8938ee546f9db5317b4a479":[3,0,0,43,36],
 "classdrake_1_1_polynomial.html#acf2f5dc8759b0683d649a356e1c23bc8":[3,0,0,43,58],
-"classdrake_1_1_polynomial.html#ad4fc8f2e6a67575f78cb74e9163fd5e3":[3,0,0,43,8],
-"classdrake_1_1_polynomial.html#ad69112ea5f074512671136b4aa3748ee":[3,0,0,43,52],
-"classdrake_1_1_polynomial.html#ada60946d276f79e555d32badc0d8a91f":[3,0,0,43,33]
+"classdrake_1_1_polynomial.html#ad4fc8f2e6a67575f78cb74e9163fd5e3":[3,0,0,43,8]
 };

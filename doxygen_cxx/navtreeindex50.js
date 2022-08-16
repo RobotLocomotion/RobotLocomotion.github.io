@@ -1,5 +1,10 @@
 var NAVTREEINDEX50 =
 {
+"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,0,8,0],
+"serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,0,8,1],
+"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,0,8,2],
+"serializer_8h.html":[4,0,0,12,4,7],
+"shape__specification_8h.html":[4,0,0,4,41],
 "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,41,13],
 "shape__to__string_8h.html":[4,0,0,4,42],
 "shared__pointer__system_8h.html":[4,0,0,12,6,20],
@@ -234,7 +239,7 @@ var NAVTREEINDEX50 =
 "structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,47,1],
 "structdrake_1_1_scenario.html":[3,0,0,49],
 "structdrake_1_1_scenario.html#a1b143200dd4bc17b6897b02962b05fa1":[3,0,0,49,7],
-"structdrake_1_1_scenario.html#a37bff63e5831673839c480f90819beb8":[3,0,0,49,0],
+"structdrake_1_1_scenario.html#a1fb06c03786dc23296261dcdb187a38b":[3,0,0,49,0],
 "structdrake_1_1_scenario.html#a651bd241ae5b87318eb788a7445c25ab":[3,0,0,49,9],
 "structdrake_1_1_scenario.html#a65bf2d5e1e3915ba78f5e08f4b7438e5":[3,0,0,49,3],
 "structdrake_1_1_scenario.html#a8d99918d98b1f3ead44d76481f6db7be":[3,0,0,49,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1_scenario.html#adc4766c2ee521047140e3639684cf387":[3,0,0,49,6],
 "structdrake_1_1_scenario.html#ae2aab7e4dd8ad63d6ebd1a82c9b92a85":[3,0,0,49,4],
 "structdrake_1_1_sorted_pair.html":[3,0,0,51],
-"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,51,4],
-"structdrake_1_1_sorted_pair.html#a081f9d487f4f53fbcad839740d361f30":[3,0,0,51,5],
-"structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1":[3,0,0,51,7],
-"structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,51,1],
-"structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,51,2],
-"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,51,8]
+"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,51,4]
 };

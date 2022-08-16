@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html":[1,2,11,0],
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a02a874939f6aa43e29fc929d223dfb76":[1,2,11,0,9],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a0f88790be4048256c7114ea749bc001f":[1,2,11,0,7],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a466314c408fa5362f2f1cedcb81365eb":[1,2,11,0,4],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a4dff073e68a37c49c5a9ca802b2a9eb4":[1,2,11,0,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1schema_1_1_deterministic_vector.html#a1d969737bf8d1e959fd7c19c4c57bf46":[3,0,0,13,1,5],
 "classdrake_1_1schema_1_1_deterministic_vector.html#a47368fe9dde1da5c10f132422f6d03f0":[3,0,0,13,1,3],
 "classdrake_1_1schema_1_1_deterministic_vector.html#a63d94ab9a00029414ee4c5fe4d760b28":[3,0,0,13,1,7],
-"classdrake_1_1schema_1_1_deterministic_vector.html#a68fa0e72552fbe9c3be3df5b1de58fa7":[3,0,0,13,1,1],
-"classdrake_1_1schema_1_1_deterministic_vector.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,1,9],
-"classdrake_1_1schema_1_1_deterministic_vector.html#aad4b968e35b277b170084310566c8b8b":[3,0,0,13,1,8]
+"classdrake_1_1schema_1_1_deterministic_vector.html#a68fa0e72552fbe9c3be3df5b1de58fa7":[3,0,0,13,1,1]
 };

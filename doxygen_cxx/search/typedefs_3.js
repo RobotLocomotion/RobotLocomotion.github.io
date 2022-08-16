@@ -13,5 +13,5 @@ var searchData=
   ['distributionvectorvariant',['DistributionVectorVariant',['../namespacedrake_1_1schema.html#a8b9d55ffdd90faf10f12f1e79f3c13a1',1,'drake::schema']]],
   ['distributionvectorvariantx',['DistributionVectorVariantX',['../namespacedrake_1_1schema.html#a57f6c7970d805c54498388c6e47113fa',1,'drake::schema']]],
   ['drakevisualizerd',['DrakeVisualizerd',['../namespacedrake_1_1geometry.html#acbab8995daa433cebfc335ffe8ae8fd0',1,'drake::geometry']]],
-  ['drivervariant',['DriverVariant',['../structdrake_1_1_scenario.html#a37bff63e5831673839c480f90819beb8',1,'drake::Scenario']]]
+  ['drivervariant',['DriverVariant',['../structdrake_1_1_scenario.html#a1fb06c03786dc23296261dcdb187a38b',1,'drake::Scenario']]]
 ];

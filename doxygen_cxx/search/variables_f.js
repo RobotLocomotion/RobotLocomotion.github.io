@@ -12,6 +12,7 @@ var searchData=
   ['parent_5fframe_5fname',['parent_frame_name',['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4a688dfea2f967b460be1a7c89f4412e',1,'drake::multibody::parsing::ModelInstanceInfo']]],
   ['penetration_5fallowance',['penetration_allowance',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f',1,'drake::multibody::MultibodyPlantConfig']]],
   ['periodic_5fboundary_5fconditions',['periodic_boundary_conditions',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
+  ['pid_5fgains',['pid_gains',['../structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad2d9c7d6abd602591381050367ed506e',1,'drake::manipulation::schunk_wsg::SchunkWsgDriver']]],
   ['plant',['plant',['../structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a22edde1cca11d8d8bfb16621d27aecc4',1,'drake::multibody::AddMultibodyPlantSceneGraphResult']]],
   ['plant_5f',['plant_',['../structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7',1,'drake::systems::analysis_test::GenericIntegratorTest']]],
   ['plant_5fconfig',['plant_config',['../structdrake_1_1_scenario.html#ac4fb417cbdc9ec037dd7a251452e1330',1,'drake::Scenario']]],

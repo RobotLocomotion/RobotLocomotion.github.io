@@ -299,6 +299,7 @@ Functions</h2></td></tr>
 <p>Apply many driver configurations to a model. </p>
 <p>A "driver configuration" helps stack Drake systems between an LCM interface subscriber system and the actuation input ports of a MultibodyPlant (to enact the driver command), as well as the output ports of a MultibodyPlant back to an LCM interface publisher system (to provide the driver status).</p>
 <p>These conceptually simulate "drivers" &ndash; they take the role that driver software and control cabinets would take in real life &ndash; but may also model some physical properties of the robot that are not easily reflected in MultibodyPlant (e.g., the WSG belt drive).</p>
+<p>The caller of this function is responsible for including the variant members' apply function, such as <a class="el" href="schunk__wsg__driver__functions_8h.html">schunk_wsg_driver_functions.h</a>.</p>
 <p><code>driver_configs</code> The configurations to apply. <code>sim_plant</code> The plant containing the model. <code>models_from_directives</code> All of the <code>ModelInstanceInfo</code>s from previously- loaded directives. <code>lcm_buses</code> The available LCM buses to drive and/or sense from this driver. <code>builder</code> The <code>DiagramBuilder</code> into which to install this driver. </p>
 
 </div>
