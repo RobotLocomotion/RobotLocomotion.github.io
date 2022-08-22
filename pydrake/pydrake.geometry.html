@@ -18392,6 +18392,30 @@ responsibility of the user.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].CalcBarycentric">
+<code class="descname">CalcBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], p_MQ: numpy.ndarray[numpy.float64[3, 1]], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[4, 1]]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].CalcBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate barycentric coordinates with respect to the tetrahedron
+<code class="docutils literal notranslate"><span class="pre">e</span></code> of the point Q. This operation is expensive compared with going
+from barycentric to Cartesian.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code> of the query point. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>A position expressed in the frame M of the mesh.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of a tetrahedral element.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If p_MQ is outside the tetrahedral element, the barycentric
+coordinates (b₀, b₁, b₂, b₃) still satisfy b₀ + b₁ + b₂ + b₃ = 1;
+however, some bᵢ will be negative.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].CalcTetrahedronVolume">
 <code class="descname">CalcTetrahedronVolume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].CalcTetrahedronVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates volume of a tetrahedral element.</p>
@@ -18409,9 +18433,63 @@ of each tetrahedral element.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.VolumeElement<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].element" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], mesh: pydrake.geometry.VolumeMesh_[float], vertex_tolerance: float = 0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given VolumeMesh object is equal via deep
+comparison (up to a tolerance). NaNs are treated as not equal as per
+the IEEE standard. The tolerance is applied to corresponding vertex
+positions; the ith vertex in each mesh can have a distance of no more
+than <code class="docutils literal notranslate"><span class="pre">vertex_tolerance</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vertex_tolerance</span></code>:</dt>
+<dd>The maximum distance allowed between two vertices to be considered
+equal.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of tetrahedral elements in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].tetrahedra">
 <code class="descname">tetrahedra</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.VolumeElement]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].tetrahedra" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2,…,num_vertices()-1}.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].vertices">
@@ -18442,6 +18520,30 @@ responsibility of the user.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].CalcBarycentric">
+<code class="descname">CalcBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd], p_MQ: numpy.ndarray[object[3, 1]], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[4, 1]]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].CalcBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate barycentric coordinates with respect to the tetrahedron
+<code class="docutils literal notranslate"><span class="pre">e</span></code> of the point Q. This operation is expensive compared with going
+from barycentric to Cartesian.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code> of the query point. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>A position expressed in the frame M of the mesh.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of a tetrahedral element.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If p_MQ is outside the tetrahedral element, the barycentric
+coordinates (b₀, b₁, b₂, b₃) still satisfy b₀ + b₁ + b₂ + b₃ = 1;
+however, some bᵢ will be negative.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].CalcTetrahedronVolume">
 <code class="descname">CalcTetrahedronVolume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].CalcTetrahedronVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates volume of a tetrahedral element.</p>
@@ -18459,9 +18561,63 @@ of each tetrahedral element.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.VolumeElement<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].element" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd], mesh: pydrake.geometry.VolumeMesh_[AutoDiffXd], vertex_tolerance: float = 0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given VolumeMesh object is equal via deep
+comparison (up to a tolerance). NaNs are treated as not equal as per
+the IEEE standard. The tolerance is applied to corresponding vertex
+positions; the ith vertex in each mesh can have a distance of no more
+than <code class="docutils literal notranslate"><span class="pre">vertex_tolerance</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vertex_tolerance</span></code>:</dt>
+<dd>The maximum distance allowed between two vertices to be considered
+equal.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of tetrahedral elements in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].tetrahedra">
 <code class="descname">tetrahedra</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.VolumeElement]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].tetrahedra" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2,…,num_vertices()-1}.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].vertices">
@@ -18490,6 +18646,30 @@ responsibility of the user.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[float].CalcBarycentric">
+<code class="descname">CalcBarycentric</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], p_MQ: numpy.ndarray[numpy.float64[3, 1]], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[4, 1]]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].CalcBarycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate barycentric coordinates with respect to the tetrahedron
+<code class="docutils literal notranslate"><span class="pre">e</span></code> of the point Q. This operation is expensive compared with going
+from barycentric to Cartesian.</p>
+<p>The return type depends on both the mesh’s vertex position scalar type
+<code class="docutils literal notranslate"><span class="pre">T</span></code> and the Cartesian coordinate type <code class="docutils literal notranslate"><span class="pre">C</span></code> of the query point. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_MQ</span></code>:</dt>
+<dd>A position expressed in the frame M of the mesh.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
+<dd>The index of a tetrahedral element.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If p_MQ is outside the tetrahedral element, the barycentric
+coordinates (b₀, b₁, b₂, b₃) still satisfy b₀ + b₁ + b₂ + b₃ = 1;
+however, some bᵢ will be negative.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[float].CalcTetrahedronVolume">
 <code class="descname">CalcTetrahedronVolume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].CalcTetrahedronVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates volume of a tetrahedral element.</p>
@@ -18507,9 +18687,63 @@ of each tetrahedral element.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[float].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.VolumeElement<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].element" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], mesh: pydrake.geometry.VolumeMesh_[float], vertex_tolerance: float = 0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given VolumeMesh object is equal via deep
+comparison (up to a tolerance). NaNs are treated as not equal as per
+the IEEE standard. The tolerance is applied to corresponding vertex
+positions; the ith vertex in each mesh can have a distance of no more
+than <code class="docutils literal notranslate"><span class="pre">vertex_tolerance</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vertex_tolerance</span></code>:</dt>
+<dd>The maximum distance allowed between two vertices to be considered
+equal.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[float].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of tetrahedral elements in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[float].tetrahedra">
 <code class="descname">tetrahedra</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.VolumeElement]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].tetrahedra" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.VolumeMesh_[float].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by a given index.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
+<dd>The index of the vertex.</dd>
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2,…,num_vertices()-1}.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[float].vertices">

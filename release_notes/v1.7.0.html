@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Installation via Direct Download</title>
+    <title>Drake: Drake v1.7.0</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -129,115 +129,155 @@ analysis.
     <div class="page">
       <div class="content">
         <div class="drake-page">
+
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Installation via Direct Download</h1>
+      <h1>Drake v1.7.0</h1>
     </div>
   </header>
+
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <h1 id="binary-packages">Binary Packages</h1>
-
-<p>Drake publishes pre-compiled binaries as binary downloads (<code class="highlighter-rouge">*.tar.gz</code>)
-for all supported operating systems.  Refer to
-<a href="/installation.html#supported-configurations">Supported Configurations</a>
-for compatibility details.</p>
-
-<p>To learn about other installation methods, refer to
-<a href="/installation.html">Installation and Quickstart</a>.</p>
-
-<p>If you experience any problems or questions with Drake, please
-<a href="/getting_help.html">ask for help on Stack Overflow</a>.</p>
-
-<p>Drake binary releases incorporate a pre-compiled version of
-<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
-<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
-Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
-
-<p>Drake’s binary releases do not support the Gurobi solver. To use
-Gurobi, you will need to <a href="/from_source.html">build Drake from source</a>.</p>
-
-<h2 id="stable-releases">Stable Releases</h2>
-
-<p>Binary packages of Drake for Ubuntu 20.04 (Focal), Ubuntu 22.04 (Jammy), and
-Mac are available to download as attachments from Drake’s GitHub
-<a href="https://github.com/RobotLocomotion/drake/releases">releases</a> page.</p>
-
-<p>The most recent release is
-<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.7.0">v1.7.0</a>:</p>
+        <a href="/release_notes/release_notes.html">Back to Release Notes</a>
+        <hr/>
+        <h1 id="announcements">Announcements</h1>
 
 <ul>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.7.0/drake-20220822-focal.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.7.0/drake-20220822-focal.tar.gz</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.7.0/drake-20220822-jammy.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.7.0/drake-20220822-jammy.tar.gz</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.7.0/drake-20220822-mac.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.7.0/drake-20220822-mac.tar.gz</a></li>
+  <li>This release repairs support fmt v9 on macOS homebrew.</li>
+  <li>As a reminder, as of v1.6.0 Drake now supports Ubuntu 22.04 (“Jammy
+Jellyfish”) for stable releases via the tar.gz binaries and Docker Hub.
+    <ul>
+      <li>We anticipate adding pip and apt support in a future release.</li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="use-as-a-c-library">Use as a C++ library</h3>
-
-<p>For an example of using a Drake <code class="highlighter-rouge">*.tar.gz</code> image from a CMake project, refer
-to the
-<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed">drake_cmake_installed</a>
-example.</p>
-
-<h3 id="use-as-a-python-library">Use as a Python library</h3>
-
-<p>In most cases, we suggest using our <a href="/pip.html">pip releases</a>, because that
-will be more convenient than manually downloading.  However, if you need both
-C++ and Python API support, then pip will not work.  This section shows
-how to incorporate a manual download into a
-<a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">virtual environment</a>
-directory.  In the example below, we will name that directory <code class="highlighter-rouge">env</code>, but you
-can choose any name.</p>
-
-<p>Download the binary release <code class="highlighter-rouge">*.tar.gz</code> file, using one of the links above.
-In the example below, we’ll use <code class="highlighter-rouge">drake.tar.gz</code> to refer to it, but your
-download will have a more version-specific filename.</p>
-
-<p>Create and activate the envionment:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="nb">env
-tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> <span class="nb">env</span> <span class="nt">--strip-components</span><span class="o">=</span>1
-python3 <span class="nt">-m</span> venv <span class="nb">env</span> <span class="nt">--system-site-packages</span>
-<span class="nb">source env</span>/bin/activate
-</code></pre></div></div>
-
-<p>Install dependencies within the environment:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">env</span>/share/drake/setup/install_prereqs
-</code></pre></div></div>
-
-<p>(On Ubuntu, the script might ask to be run under <code class="highlighter-rouge">sudo</code>.)</p>
-
-<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
-
-<h2 id="nightly-releases">Nightly Releases</h2>
-
-<p>Binary packages of Drake for Ubuntu 20.04 (Focal), Ubuntu 22.04 (Jammy), and
-Mac are generated nightly and are available to download at:</p>
+<h1 id="breaking-changes-since-v160">Breaking changes since v1.6.0</h1>
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-focal.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-jammy.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz</a></li>
+  <li>None</li>
 </ul>
 
-<p>Older packages for specific dates are available by replacing <code class="highlighter-rouge">latest</code> with an
-8-digit date, e.g., <code class="highlighter-rouge">20220721</code> for July 21st, 2022.</p>
+<p>Refer to our <a href="/stable.html">Drake Stability Guidelines</a> for our policy
+on API changes.</p>
+
+<h1 id="changes-since-v160">Changes since v1.6.0</h1>
+
+<h2 id="dynamical-systems">Dynamical Systems</h2>
+
+<!-- <relnotes for systems go here> -->
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-focal.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-jammy.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-mac.tar.gz</a></li>
+  <li>None</li>
 </ul>
 
-<p>Nightly archives are retained for 56 days from their date of creation.</p>
+<h2 id="mathematical-program">Mathematical Program</h2>
 
-<p>The installation instructions are identical to stable releases as shown above.</p>
+<!-- <relnotes for solvers go here> -->
+
+<p>New features</p>
+
+<ul>
+  <li>Add some HPolyhedron utility methods (<a href="https://github.com/RobotLocomotion/drake/pull/17066">#17066</a>)</li>
+</ul>
+
+<p>Fixes</p>
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="multibody-dynamics-and-geometry">Multibody Dynamics and Geometry</h2>
+
+<!-- <relnotes for geometry,multibody go here> -->
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="planning">Planning</h2>
+
+<!-- <relnotes for planning go here> -->
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="tutorials-and-examples">Tutorials and examples</h2>
+
+<!-- <relnotes for examples,tutorials go here> -->
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="miscellaneous-features-and-fixes">Miscellaneous features and fixes</h2>
+
+<!-- <relnotes for common,math,lcm,lcmtypes,manipulation,perception,visualization go here> -->
+
+<ul>
+  <li>Rename model directives files to <code class="highlighter-rouge">.dmd.yaml</code> extension (<a href="https://github.com/RobotLocomotion/drake/pull/17733">#17733</a>)</li>
+</ul>
+
+<h2 id="pydrake-bindings">pydrake bindings</h2>
+
+<!-- <relnotes for bindings go here> -->
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="build-system">Build system</h2>
+
+<!-- <relnotes for cmake,doc,setup,third_party,tools go here> -->
+
+<ul>
+  <li>Support fmt v9 on macOS (<a href="https://github.com/RobotLocomotion/drake/pull/17739">#17739</a>, <a href="https://github.com/RobotLocomotion/drake/pull/17743">#17743</a>)</li>
+</ul>
+
+<h2 id="build-dependencies">Build dependencies</h2>
+
+<!-- Manually relocate any "Upgrade foo_external to latest" lines to here, -->
+<!-- and then sort them alphabetically. -->
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="removal-of-deprecated-items">Removal of deprecated items</h2>
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h1 id="notes">Notes</h1>
+
+<p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.7.0">pre-compiled binaries</a> named
+<code class="highlighter-rouge">drake-20220822-{focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+
+<p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
+<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to
+Philip E. Gill and Elizabeth Wong for their kind support.</p>
+
+<!-- <begin issue links> -->
+<!-- <end issue links> -->
+
+<!--
+  Current oldest_commit 4df89d6516b35aeb7804e38ba74039b1f162c420 (exclusive).
+  Current newest_commit 7abea0556ede980a5077fe1a8cfbae59b57c7c27 (inclusive).
+-->
 
       </article>
     </div>
   </section>
+
 </div>
 
         <footer class="site-footer padding">
