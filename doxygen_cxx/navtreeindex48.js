@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"namespacedrake_1_1test.html":[2,0,0,17],
 "namespacedrake_1_1trajectories.html":[2,0,0,18],
 "namespacedrake_1_1trajectories.html":[3,0,0,18],
 "namespacedrake_1_1visualization.html":[3,0,0,19],
@@ -71,8 +72,8 @@ var NAVTREEINDEX48 =
 "non__convex__optimization__util_8h.html":[4,0,0,11,42],
 "non__convex__optimization__util_8h.html#af6b2d302506a6a2fe144c79bd2598131":[4,0,0,11,42,1],
 "non__convex__optimization__util_8h.html#gaea88a3c59172c77e8537633348a057a9":[4,0,0,11,42,0],
-"normalize__vector_8h.html":[4,0,0,7,23],
-"normalize__vector_8h.html#a48484009086db12d881bea6bcaab2514":[4,0,0,7,23,0],
+"normalize__vector_8h.html":[4,0,0,7,24],
+"normalize__vector_8h.html#a48484009086db12d881bea6bcaab2514":[4,0,0,7,24,0],
 "obb_8h.html":[4,0,0,4,2,39],
 "obj__to__surface__mesh_8h.html":[4,0,0,4,2,40],
 "obj__to__surface__mesh_8h.html#a4192d45a6ef62766081175664984a770":[4,0,0,4,2,40,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aeb3825da90413e715ee32c3463428d84":[4,0,0,11,44,2,3],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[4,0,0,11,44,2,8],
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,11,44,6],
-"program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,44,7],
-"propeller_8h.html":[4,0,0,8,10,24]
+"program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,44,7]
 };

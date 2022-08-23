@@ -22,6 +22,10 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
       [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html", "classdrake_1_1math_1_1_rotation_matrix" ],
       [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html", "classdrake_1_1math_1_1_rigid_transform" ]
     ] ],
+    [ "fast_pose_composition_functions_avx2_fma.h", "fast__pose__composition__functions__avx2__fma_8h.html", [
+      [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html", "classdrake_1_1math_1_1_rotation_matrix" ],
+      [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html", "classdrake_1_1math_1_1_rigid_transform" ]
+    ] ],
     [ "gradient.h", "gradient_8h.html", [
       [ "Gradient", "structdrake_1_1math_1_1_gradient.html", "structdrake_1_1math_1_1_gradient" ],
       [ "Gradient< Derived, nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4" ]

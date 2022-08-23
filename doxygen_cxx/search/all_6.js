@@ -25,6 +25,7 @@ var searchData=
   ['far',['far',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611',1,'drake::geometry::Meshcat::PerspectiveCamera::far()'],['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#add1a608db25e8e3befb6775a16867611',1,'drake::geometry::Meshcat::OrthographicCamera::far()'],['../classdrake_1_1geometry_1_1render_1_1_clipping_range.html#adb90e4abb8e1501f1acc7e663d886948',1,'drake::geometry::render::ClippingRange::far()']]],
   ['fast_5fa_5fsolve',['fast_A_solve',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#a67c8aa38df978eece62132ee8ab7cf28',1,'drake::multibody::constraint::ConstraintSolver::MlcpToLcpData']]],
   ['fast_5fpose_5fcomposition_5ffunctions_2eh',['fast_pose_composition_functions.h',['../fast__pose__composition__functions_8h.html',1,'']]],
+  ['fast_5fpose_5fcomposition_5ffunctions_5favx2_5ffma_2eh',['fast_pose_composition_functions_avx2_fma.h',['../fast__pose__composition__functions__avx2__fma_8h.html',1,'']]],
   ['fbstab_5falgorithm_2eh',['fbstab_algorithm.h',['../fbstab__algorithm_8h.html',1,'']]],
   ['fbstab_5fdense_2eh',['fbstab_dense.h',['../fbstab__dense_8h.html',1,'']]],
   ['fbstab_5fmpc_2eh',['fbstab_mpc.h',['../fbstab__mpc_8h.html',1,'']]],

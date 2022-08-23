@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552":[4,0,0,11,47,0,0],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec":[4,0,0,11,47,0,2],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,11,47,0,1],
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,47,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,43,1,0],
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,47],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,47,0],
-"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,47,1],
-"structdrake_1_1_scenario.html":[3,0,0,49]
+"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,47,1]
 };

@@ -135,21 +135,44 @@ analysis.
     </div>
   </header>
   <section class="padding">
-    <div class="contain">
-      <article class="markdown-body">
-        <p>This page contains a collection of tips and tricks for resolving common
+    <div class="contain grid grid-1-2col-nav-and-body">
+      <!--
+      N.B. The page is responsible for including the front + end matter.
+      See "Caveats" in drake/doc/README.txt.
+      -->
+      <!--
+See "Caveats" in drake/doc/README.txt.
+-->
+<div class="sub-nav">
+<div class="sticky">
+    <h5>Table of Contents</h5>
+<ul id="markdown-toc">
+  <li><a href="#multibodyplant" id="markdown-toc-multibodyplant">MultibodyPlant</a>    <ul>
+      <li><a href="#mbp-unconnected-query-object-port" id="markdown-toc-mbp-unconnected-query-object-port">Unconnected QueryObject port</a></li>
+    </ul>
+  </li>
+  <li><a href="#system-framework" id="markdown-toc-system-framework">System Framework</a>    <ul>
+      <li><a href="#framework-context-system-mismatch" id="markdown-toc-framework-context-system-mismatch">Context-System mismatch</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+<article class="markdown-body">
+
+  <p>This page contains a collection of tips and tricks for resolving common
 problems.</p>
 
-<h1 id="multibodyplant">MultibodyPlant</h1>
+  <h1 id="multibodyplant">MultibodyPlant</h1>
 
-<h2 id="exception-messages">Exception messages</h2>
+  <h2 id="mbp-unconnected-query-object-port">Unconnected QueryObject port</h2>
 
-<h3 id="mbp-unconnected-query-object-port">Unconnected QueryObject port</h3>
-
-<p>The error message will include the message, “The provided context doesn’t show a
+  <p>The error message will include the message, “The provided context doesn’t show a
 connection for the plant’s query input port.”</p>
 
-<p><code class="highlighter-rouge">MultibodyPlant</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant">Python</a>)
+  <p><code class="highlighter-rouge">MultibodyPlant</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant">Python</a>)
 requires a connection to <code class="highlighter-rouge">SceneGraph</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1geometry_1_1_scene_graph.html">C++</a>,
 <a href="https://drake.mit.edu/pydrake/pydrake.geometry.html#pydrake.geometry.SceneGraph_">Python</a>) in order to evaluate contact via its  <code class="highlighter-rouge">QueryObject</code>
 (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1geometry_1_1_query_object.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.geometry.html#pydrake.geometry.QueryObject_">Python</a>). Attempts to evaluate output
@@ -158,31 +181,31 @@ that arise from the contact between bodies’ collision geometries) will fail.
 Evaluating the time derivatives (e.g., when running a continuous simulation)
 will likewise fail.</p>
 
-<p>The connection can be reported as missing for several reasons:</p>
+  <p>The connection can be reported as missing for several reasons:</p>
 
-<ol>
-  <li>Was a <code class="highlighter-rouge">SceneGraph</code> instance created and connected?
-    <ul>
-      <li>The simplest solution is to use <code class="highlighter-rouge">AddMultibodyPlantSceneGraph()</code>
+  <ol>
+    <li>Was a <code class="highlighter-rouge">SceneGraph</code> instance created and connected?
+      <ul>
+        <li>The simplest solution is to use <code class="highlighter-rouge">AddMultibodyPlantSceneGraph()</code>
 (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">C++</a>,
 <a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.AddMultibodyPlantSceneGraph">Python</a>). It will construct and connect
 the plant and scene graph together for you.</li>
-    </ul>
-  </li>
-  <li>Did you provide the right context?
-    <ul>
-      <li>You’ve created and connected the systems in a <code class="highlighter-rouge">Diagram</code>
+      </ul>
+    </li>
+    <li>Did you provide the right context?
+      <ul>
+        <li>You’ve created and connected the systems in a <code class="highlighter-rouge">Diagram</code>
 (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_diagram.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Diagram">Python</a>) and allocated a <code class="highlighter-rouge">Context</code>
 (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_context.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Context">Python</a>) for the <code class="highlighter-rouge">Diagram</code>.</li>
-      <li>Make sure you extract the <code class="highlighter-rouge">MultibodyPlant</code>’s context from the <code class="highlighter-rouge">Diagram</code>’s
+        <li>Make sure you extract the <code class="highlighter-rouge">MultibodyPlant</code>’s context from the <code class="highlighter-rouge">Diagram</code>’s
 <code class="highlighter-rouge">Context</code>. Do not allocate a <code class="highlighter-rouge">Context</code> directly from the plant. Use
 <code class="highlighter-rouge">System::GetMyContextFromRoot()</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>,
-<a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyContextFromRoot">Python</a>) to acquire the plant’s <code class="highlighter-rouge">Context</code> from the
+<a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyMutableContextFromRoot">Python</a>) to acquire the plant’s <code class="highlighter-rouge">Context</code> from the
 <code class="highlighter-rouge">Diagram</code>’s context; this will preserve all of the necessary connections.
 E.g.,</li>
-    </ul>
+      </ul>
 
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
+      <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
    <span class="c1"># Build plant and scene graph and automatically connect them.
 </span>   <span class="n">plant</span><span class="p">,</span> <span class="n">scene_graph</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span>
        <span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
@@ -197,21 +220,106 @@ E.g.,</li>
    <span class="c1"># Extract the plant's context from the diagram's to invoke plant methods.
 </span>   <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
    <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="o">.</span><span class="n">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">)</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
+</code></pre></div>      </div>
+    </li>
+  </ol>
 
-<!-- Links to the various Drake doxygen pages.
+  <h1 id="system-framework">System Framework</h1>
+
+  <h2 id="framework-context-system-mismatch">Context-System mismatch</h2>
+
+  <p>The error message will include one of the following:</p>
+
+  <ul>
+    <li><code class="highlighter-rouge">A function call on a FooSystem system named '::_::foo' was passed the root
+ Diagram's Context instead of the appropriate subsystem context.</code></li>
+    <li><code class="highlighter-rouge">A function call on the root Diagram was passed a subcontext associated with
+ its subsystem named '::_::foo' instead of the root context.</code></li>
+    <li><code class="highlighter-rouge">A function call on a BarSystem named '::_::bar' was passed the Context of
+ a system named '::_::foo' instead of the appropriate subsystem Context.</code></li>
+  </ul>
+
+  <!-- TODO(SeanCurtis-TRI): This overview of Systems and Contexts would be
+ better in a doxygen module and just referenced here. Ping Russ to see if his
+ textbook covers this material and if we can/should steal it. -->
+
+  <h4>Contexts and Systems: An Overview</h4>
+
+  <p>For every <code class="highlighter-rouge">System</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System">Python</a>) there is a
+corresponding <code class="highlighter-rouge">Context</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_context.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Context">Python</a>). The <code class="highlighter-rouge">System</code>
+and <code class="highlighter-rouge">Context</code> work together. The <code class="highlighter-rouge">Context</code> holds the data values and the
+<code class="highlighter-rouge">System</code> defines the operations on that data.</p>
+
+  <p>For example, a <code class="highlighter-rouge">MultibodyPlant</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant">Python</a>) is such a system. We can use an instance of a
+<code class="highlighter-rouge">MultibodyPlant</code> to create one or more <code class="highlighter-rouge">Context</code>s. Each <code class="highlighter-rouge">Context</code> contains the
+continuous and discrete state values for the plant’s model. These <code class="highlighter-rouge">Context</code>s
+can be configured to represent the model in different configurations. However,
+if we want to evaluate some mechanical property (e.g., composite inertia of a
+robotic arm), we invoke a method on the plant, passing one of the contexts.</p>
+
+  <p>We can combine multiple <code class="highlighter-rouge">System</code>s into a <code class="highlighter-rouge">Diagram</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_diagram.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Diagram">Python</a>). The <code class="highlighter-rouge">System</code>s within a <code class="highlighter-rouge">Diagram</code> will typically have their
+ports connected – this is how the <code class="highlighter-rouge">System</code>s work together.</p>
+
+  <p><code class="highlighter-rouge">Context</code>s similarly form a parallel hierarchical structure. The <code class="highlighter-rouge">Context</code>
+associated with a <code class="highlighter-rouge">Diagram</code> is the combination of all of the <code class="highlighter-rouge">Context</code>s
+associated with the <code class="highlighter-rouge">System</code>s inside that <code class="highlighter-rouge">Diagram</code>. The port connections
+between <code class="highlighter-rouge">System</code>s in the <code class="highlighter-rouge">Diagram</code> are mirrored in the <code class="highlighter-rouge">Diagram</code>’s <code class="highlighter-rouge">Context</code>.</p>
+
+  <h4>Why did I get this error and how do I get rid of it?</h4>
+
+  <p>Many <code class="highlighter-rouge">System</code> APIs require a <code class="highlighter-rouge">Context</code>. It is important to pass the <em>right</em>
+<code class="highlighter-rouge">Context</code> into the API. What’s the difference between a “right” and “wrong”
+<code class="highlighter-rouge">Context</code>?</p>
+
+  <ul>
+    <li>The right <code class="highlighter-rouge">Context</code> was allocated by the <code class="highlighter-rouge">System</code> being evaluated.</li>
+    <li>If the <code class="highlighter-rouge">System</code> is part of a <code class="highlighter-rouge">Diagram</code>, then the <code class="highlighter-rouge">Context</code> provided should
+be a reference pointing inside the <code class="highlighter-rouge">Diagram</code>s <code class="highlighter-rouge">Context</code> (see below for how
+to do this).</li>
+  </ul>
+
+  <p>The most common error is to pass the <code class="highlighter-rouge">Diagram</code>’s <code class="highlighter-rouge">Context</code> into a constituent
+<code class="highlighter-rouge">System</code>’s API. We’ll illustrate this using a <code class="highlighter-rouge">Diagram</code> with a <code class="highlighter-rouge">MultibodyPlant</code>.
+The solution is to use either <code class="highlighter-rouge">GetMyContextFromRoot()</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyMutableContextFromRoot">Python</a>) or
+<code class="highlighter-rouge">GetMyMutableContextFromRoot()</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyMutableContextFromRoot">Python</a>) as appropriate to extract a particular
+<code class="highlighter-rouge">System</code>’s <code class="highlighter-rouge">Context</code> from its <code class="highlighter-rouge">Diagram</code>’s <code class="highlighter-rouge">Context</code>.</p>
+
+  <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
+  <span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+  <span class="o">...</span>  <span class="c1"># Populate the plant with interesting stuff.
+</span>  <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">()</span>
+  <span class="c1"># Create a Context for diagram.
+</span>  <span class="n">root_context</span> <span class="o">=</span> <span class="n">diagram</span><span class="o">.</span><span class="n">CreateDefaultContext</span><span class="p">()</span>
+
+  <span class="n">my_body</span> <span class="o">=</span> <span class="n">plant</span><span class="o">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"my_body"</span><span class="p">)</span>
+  <span class="n">X_WB</span> <span class="o">=</span> <span class="n">RigidTransform</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># Define a pose for the body.
+</span>  <span class="c1"># Error! plant has been given diagram's context.
+</span>  <span class="n">plant</span><span class="o">.</span><span class="n">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">root_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
+
+  <span class="c1"># Get the Context for plant from diagram's context.
+</span>  <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">root_context</span><span class="p">)</span>
+  <span class="c1"># Successful operation; the provided context belongs to plant.
+</span>  <span class="n">plant</span><span class="o">.</span><span class="n">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>See the notes on <a href="https://drake.mit.edu/doxygen_cxx/group__system__compatibility.html">System Compatibility</a> for further discussion.</p>
+
+  <!-- Links to the various Drake doxygen pages.
      Order determined by directory structure first and names second.
 -->
 
-<!-- drake/geometry -->
+  <!-- modules -->
 
-<!-- drake/multibody/plant -->
+  <!-- drake/geometry -->
 
-<!-- drake/systems/framework -->
+  <!-- drake/multibody/plant -->
 
-      </article>
+  <!-- drake/systems/framework -->
+</article>
+
     </div>
   </section>
 </div>
