@@ -1,8 +1,8 @@
 var structdrake_1_1visualization_1_1_visualization_config =
 [
     [ "Serialize", "structdrake_1_1visualization_1_1_visualization_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
-    [ "default_illustration_color_rgba", "structdrake_1_1visualization_1_1_visualization_config.html#aa4e2c7078105fe54e7b51a92cfdc63f0", null ],
-    [ "default_proximity_color_rgba", "structdrake_1_1visualization_1_1_visualization_config.html#abf591d508c84e5c6410b93cd2f487f70", null ],
+    [ "default_illustration_color", "structdrake_1_1visualization_1_1_visualization_config.html#a7c5955d58750f444fbad0c39fb6f7672", null ],
+    [ "default_proximity_color", "structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7", null ],
     [ "lcm_bus", "structdrake_1_1visualization_1_1_visualization_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf", null ],
     [ "publish_contacts", "structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995", null ],
     [ "publish_illustration", "structdrake_1_1visualization_1_1_visualization_config.html#a8de496c6a641ed6fd4fa5d78bfcb73a9", null ],

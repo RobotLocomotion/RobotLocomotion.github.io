@@ -10389,8 +10389,16 @@ drake::log() will be used.</dd>
 <dd><p>Defines RGBA (red, green, blue, alpha) values on the range [0, 1].</p>
 <dl class="method">
 <dt id="pydrake.geometry.Rgba.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Rgba</em>, <em>r: float</em>, <em>g: float</em>, <em>b: float</em>, <em>a: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Rgba.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs with given (r, g, b, a) values.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Rgba.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Rgba) -&gt; None</li>
+</ol>
+<p>Default constructor produces fully opaque white.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Rgba, r: float, g: float, b: float, a: float = 1.0) -&gt; None</li>
+</ol>
+<p>Constructs with given (r, g, b, a) values.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>All values are within the range of [0, 1].</dd>
