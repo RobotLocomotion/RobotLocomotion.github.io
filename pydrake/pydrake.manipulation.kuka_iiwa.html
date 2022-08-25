@@ -316,8 +316,8 @@ lcmt_iiwa_command.</p>
 <em class="property">class </em><code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">IiwaStatusReceiver</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>&#64;system name: IiwaStatusReceiver input_ports: - lcmt_iiwa_status
-output_ports: - position_commanded - position_measured -
-velocity_estimated - torque_commanded - torque_measured -
+output_ports: - time_measured - position_commanded - position_measured
+- velocity_estimated - torque_commanded - torque_measured -
 torque_external &#64;endsystem</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -336,6 +336,11 @@ torque_external &#64;endsystem</p>
 <dl class="method">
 <dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_position_measured_output_port">
 <code class="descname">get_position_measured_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_position_measured_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_time_measured_output_port">
+<code class="descname">get_time_measured_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_time_measured_output_port" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

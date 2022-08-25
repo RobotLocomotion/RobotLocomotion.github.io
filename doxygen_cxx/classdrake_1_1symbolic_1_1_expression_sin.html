@@ -177,6 +177,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4fb457c881d49e1e698120eae9e4c52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html#ae4fb457c881d49e1e698120eae9e4c52">Expand</a> () const override</td></tr>
 <tr class="memdesc:ae4fb457c881d49e1e698120eae9e4c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands out products and positive integer powers in expression.  <a href="#ae4fb457c881d49e1e698120eae9e4c52">More...</a><br /></td></tr>
 <tr class="separator:ae4fb457c881d49e1e698120eae9e4c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d63adf08b5325e905027f6f2c14b433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html#a4d63adf08b5325e905027f6f2c14b433">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const override</td></tr>
+<tr class="memdesc:a4d63adf08b5325e905027f6f2c14b433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> obtained by replacing all occurrences of the variables in <code>env</code> in the current expression cell with the corresponding values in <code>env</code>.  <a href="#a4d63adf08b5325e905027f6f2c14b433">More...</a><br /></td></tr>
+<tr class="separator:a4d63adf08b5325e905027f6f2c14b433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a174e88ea34010c2773c177a2cd3a7371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html#a174e88ea34010c2773c177a2cd3a7371">Substitute</a> (const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;s) const override</td></tr>
 <tr class="memdesc:a174e88ea34010c2773c177a2cd3a7371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> obtained by replacing all occurrences of the variables in <code>s</code> in the current expression cell with the corresponding expressions in <code>s</code>.  <a href="#a174e88ea34010c2773c177a2cd3a7371">More...</a><br /></td></tr>
 <tr class="separator:a174e88ea34010c2773c177a2cd3a7371"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,6 +337,42 @@ Additional Inherited Members</h2></td></tr>
 <p>Outputs string representation of expression into output stream <code>os</code>. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a6ef02f8cbabb5160af0016b6b714fb00">ExpressionCell</a>.</p>
+
+</div>
+</div>
+<a id="a4d63adf08b5325e905027f6f2c14b433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d63adf08b5325e905027f6f2c14b433">&#9670;&nbsp;</a></span>EvaluatePartial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> EvaluatePartial </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;&#160;</td>
+          <td class="paramname"><em>env</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> obtained by replacing all occurrences of the variables in <code>env</code> in the current expression cell with the corresponding values in <code>env</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during substitution. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a2a96f924fcd2e63ea47f5eb4392cd3b8">ExpressionCell</a>.</p>
 
 </div>
 </div>

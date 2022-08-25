@@ -348,17 +348,40 @@ derived from field of view and image size as:</p>
 <p>focal_x = focal_y = height * 0.5 / tan(0.5 * fov_y)</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
-<dd>The image width in pixels, must be greater than zero.</dd>
+<dd>The image width in pixels, must be positive.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
-<dd>The image height in pixels, must be greater than zero.</dd>
+<dd>The image height in pixels, must be positive.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">fov_y</span></code>:</dt>
-<dd>The vertical field of view in radians.</dd>
+<dd>The vertical field of view in radians, must be positive and
+finite.</dd>
 </dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the provided values don’t satisfy the listed</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">requirements.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.sensors.CameraInfo, width: int, height: int, intrinsic_matrix: numpy.ndarray[numpy.float64[3, 3]]) -&gt; None</li>
 </ol>
 <p>Constructs this instance by extracting focal_x, focal_y, center_x, and
 center_y from the provided intrinsic_matrix.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
+<dd>The image width in pixels, must be positive.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
+<dd>The image height in pixels, must be positive.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">intrinsic_matrix</span></code>:</dt>
+<dd>The intrinsic matrix (K) as documented above. Where K is defined
+to be non-zero, the values must be finite and the focal length
+values must be positive.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -366,7 +389,8 @@ center_y from the provided intrinsic_matrix.</p>
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if intrinsic_matrix is not of the form indicated</li>
 <li>above for the pinhole camera model (representing an affine /</li>
-<li>homogeneous transform).</li>
+<li>homogeneous transform) or the non-zero values don’t meet the</li>
+<li>documented requirements.</li>
 </ul>
 </td>
 </tr>
@@ -379,20 +403,34 @@ center_y from the provided intrinsic_matrix.</p>
 focal lengths.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
-<dd>The image width in pixels, must be greater than zero.</dd>
+<dd>The image width in pixels, must be positive.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
-<dd>The image height in pixels, must be greater than zero.</dd>
+<dd>The image height in pixels, must be positive.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">focal_x</span></code>:</dt>
-<dd>The <em>model</em> “focal length” x in pixels (as documented above).</dd>
+<dd>The <em>model</em> “focal length” x in pixels (see above), must be
+positive and finite.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">focal_y</span></code>:</dt>
-<dd>The <em>model</em> “focal length” y in pixels (as documented above).</dd>
+<dd>The <em>model</em> “focal length” y in pixels (see above), must be
+positive and finite.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">center_x</span></code>:</dt>
-<dd>The x coordinate of the principal point in pixels (as documented
-above).</dd>
+<dd>The x coordinate of the principal point in pixels (see above),
+must lie in the range 0 &lt; center_x &lt; width.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">center_y</span></code>:</dt>
-<dd>The y coordinate of the principal point in pixels (as documented
-above).</dd>
+<dd>The y coordinate of the principal point in pixels (see above),
+must lie in the range 0 &lt; center_y &lt; height.</dd>
 </dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the provided values don’t satisfy the listed</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">requirements.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

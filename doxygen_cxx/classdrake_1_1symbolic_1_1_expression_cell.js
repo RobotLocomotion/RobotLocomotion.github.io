@@ -8,6 +8,7 @@ var classdrake_1_1symbolic_1_1_expression_cell =
     [ "Display", "classdrake_1_1symbolic_1_1_expression_cell.html#a6ef02f8cbabb5160af0016b6b714fb00", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_expression_cell.html#a5b23903b7b630562c51e759cee215043", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_expression_cell.html#a8ff0502f613a545b4378497942b887c9", null ],
+    [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_cell.html#a2a96f924fcd2e63ea47f5eb4392cd3b8", null ],
     [ "Expand", "classdrake_1_1symbolic_1_1_expression_cell.html#a6874586882518f26f8902de876c42f82", null ],
     [ "get_kind", "classdrake_1_1symbolic_1_1_expression_cell.html#a9294eeb528bb3beaa480bf17ac5e971d", null ],
     [ "GetVariables", "classdrake_1_1symbolic_1_1_expression_cell.html#ae5ab5cd42e601c78d5417eccd5414cde", null ],

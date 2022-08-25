@@ -280,8 +280,8 @@ the objects of the scene that you care about most.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if either value isn’t positive, or if <a href="#id1"><span class="problematic" id="id2">``</span></a>near &gt;=</li>
-<li>far``.</li>
+<li>RuntimeError if either value isn’t finite and positive, or if</li>
+<li><code class="docutils literal notranslate"><span class="pre">near</span> <span class="pre">&gt;=</span> <span class="pre">far</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -355,8 +355,8 @@ getter methods for documentation of parameters.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if either value isn’t positive, or if <a href="#id3"><span class="problematic" id="id4">``</span></a>min_in &gt;=</li>
-<li>max_in``.</li>
+<li>RuntimeError if either value isn’t finite and positive, or if</li>
+<li><code class="docutils literal notranslate"><span class="pre">min_in</span> <span class="pre">&gt;=</span> <span class="pre">max_in</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -422,7 +422,7 @@ getter methods for documentation of parameters.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.render.MakeRenderEngineGl">
-<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = RenderEngineGlParams(default_label=&lt;pydrake.geometry.render.RenderLabel object at 0x7f52d995c3b0&gt;</em>, <em>default_diffuse=Rgba(r=0.9</em>, <em>g=0.7</em>, <em>b=0.2</em>, <em>a=1.0)</em>, <em>default_clear_color=Rgba(r=0.8</em>, <em>g=0.8980392156862745</em>, <em>b=1.0</em>, <em>a=1.0))</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = RenderEngineGlParams(default_label=&lt;pydrake.geometry.render.RenderLabel object at 0x7f4ad8f9a930&gt;</em>, <em>default_diffuse=Rgba(r=0.9</em>, <em>g=0.7</em>, <em>b=0.2</em>, <em>a=1.0)</em>, <em>default_clear_color=Rgba(r=0.8</em>, <em>g=0.8980392156862745</em>, <em>b=1.0</em>, <em>a=1.0))</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a purely OpenGL
 renderer. The engine only works under Ubuntu. If called on a Mac, it
 will produce a “dummy” implementation.</p>

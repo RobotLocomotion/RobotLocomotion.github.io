@@ -374,12 +374,18 @@ Public Member Functions</h2></td></tr>
 <p>Constructor that directly sets the image size, principal point, and focal lengths. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">width</td><td>The image width in pixels, must be greater than zero. </td></tr>
-    <tr><td class="paramname">height</td><td>The image height in pixels, must be greater than zero. </td></tr>
-    <tr><td class="paramname">focal_x</td><td>The <em>model</em> "focal length" x in pixels (as documented above). </td></tr>
-    <tr><td class="paramname">focal_y</td><td>The <em>model</em> "focal length" y in pixels (as documented above). </td></tr>
-    <tr><td class="paramname">center_x</td><td>The x coordinate of the principal point in pixels (as documented above). </td></tr>
-    <tr><td class="paramname">center_y</td><td>The y coordinate of the principal point in pixels (as documented above). </td></tr>
+    <tr><td class="paramname">width</td><td>The image width in pixels, must be positive. </td></tr>
+    <tr><td class="paramname">height</td><td>The image height in pixels, must be positive. </td></tr>
+    <tr><td class="paramname">focal_x</td><td>The <em>model</em> "focal length" x in pixels (see above), must be positive and finite. </td></tr>
+    <tr><td class="paramname">focal_y</td><td>The <em>model</em> "focal length" y in pixels (see above), must be positive and finite. </td></tr>
+    <tr><td class="paramname">center_x</td><td>The x coordinate of the principal point in pixels (see above), must lie in the range 0 &lt; center_x &lt; width. </td></tr>
+    <tr><td class="paramname">center_y</td><td>The y coordinate of the principal point in pixels (see above), must lie in the range 0 &lt; center_y &lt; height.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the provided values don't satisfy the listed requirements. </td></tr>
   </table>
   </dd>
 </dl>
@@ -419,9 +425,17 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs this instance by extracting focal_x, focal_y, center_x, and center_y from the provided intrinsic_matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The image width in pixels, must be positive. </td></tr>
+    <tr><td class="paramname">height</td><td>The image height in pixels, must be positive. </td></tr>
+    <tr><td class="paramname">intrinsic_matrix</td><td>The intrinsic matrix (K) as documented above. Where K is defined to be non-zero, the values must be finite and the focal length values must be positive.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if intrinsic_matrix is not of the form indicated above for the pinhole camera model (representing an affine / homogeneous transform). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if intrinsic_matrix is not of the form indicated above for the pinhole camera model (representing an affine / homogeneous transform) or the non-zero values don't meet the documented requirements. </td></tr>
   </table>
   </dd>
 </dl>
@@ -464,9 +478,15 @@ Public Member Functions</h2></td></tr>
 <p>We assume the principal point is in the center of the image; <code>(center x, center_y)</code> is equal to <code>(width / 2.0 - 0.5, height / 2.0 - 0.5)</code>. We also assume the focal lengths <code>focal_x</code> and <code>focal_y</code> are identical (modeling a radially symmetric lens). The value is derived from field of view and image size as: </p><pre class="fragment"> focal_x = focal_y = height * 0.5 / tan(0.5 * fov_y)
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">width</td><td>The image width in pixels, must be greater than zero. </td></tr>
-    <tr><td class="paramname">height</td><td>The image height in pixels, must be greater than zero. </td></tr>
-    <tr><td class="paramname">fov_y</td><td>The vertical field of view in radians. </td></tr>
+    <tr><td class="paramname">width</td><td>The image width in pixels, must be positive. </td></tr>
+    <tr><td class="paramname">height</td><td>The image height in pixels, must be positive. </td></tr>
+    <tr><td class="paramname">fov_y</td><td>The vertical field of view in radians, must be positive and finite.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the provided values don't satisfy the listed requirements. </td></tr>
   </table>
   </dd>
 </dl>
