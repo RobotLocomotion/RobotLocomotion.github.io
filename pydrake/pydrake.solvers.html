@@ -4084,7 +4084,7 @@ M[i][j] contains dummy variables.</td>
 <code class="descname">AddSosConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddSosConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, p: pydrake.symbolic.Polynomial, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;, gram_name: str = ‘S’) -&gt; numpy.ndarray[object[m, n]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, p: pydrake.symbolic.Polynomial, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;, gram_name: str = ‘S’) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Adds constraints that a given polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> is a sums-of-squares
 (SOS), that is, <code class="docutils literal notranslate"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal notranslate"><span class="pre">mᵀQm</span></code>, where m is the
@@ -4104,7 +4104,7 @@ details on different types of sos polynomials.</dd>
 MathematicalProgram’s indeterminates if necessary.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, p: pydrake.symbolic.Polynomial, type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;, gram_name: str = ‘S’) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, p: pydrake.symbolic.Polynomial, type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;, gram_name: str = ‘S’) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
 </ol>
 <p>Adds constraints that a given polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> is a sums-of-squares
 (SOS), that is, <code class="docutils literal notranslate"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal notranslate"><span class="pre">mᵀQm</span></code>, where m is a
@@ -4125,7 +4125,7 @@ details on different type of sos polynomials.</dd>
 MathematicalProgram’s indeterminates if necessary.</p>
 </div>
 <ol class="arabic simple" start="3">
-<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;, gram_name: str = ‘S’) -&gt; numpy.ndarray[object[m, n]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;, gram_name: str = ‘S’) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Adds constraints that a given symbolic expression <code class="docutils literal notranslate"><span class="pre">e</span></code> is a
 sums-of-squares (SOS), that is, <code class="docutils literal notranslate"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal notranslate"><span class="pre">mᵀQm</span></code>,
@@ -4140,7 +4140,7 @@ semidefinite.</p>
 <dd>The name of the gram matrix for print out.</dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;, gram_name: str = ‘S’) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;, gram_name: str = ‘S’) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
 </ol>
 <p>Adds constraints that a given symbolic expression <code class="docutils literal notranslate"><span class="pre">e</span></code> is a
 sums-of-squares (SOS), that is, <code class="docutils literal notranslate"><span class="pre">e</span></code> can be decomposed into <code class="docutils literal notranslate"><span class="pre">mᵀQm</span></code>.
@@ -4932,7 +4932,7 @@ this name as a base. The variable name would be “a1”, “a2”, etc.</dd>
 <code class="descname">NewSosPolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.NewSosPolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>NewSosPolynomial(self: pydrake.solvers.MathematicalProgram, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;, gram_name: str = ‘S’) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
+<li>NewSosPolynomial(self: pydrake.solvers.MathematicalProgram, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;, gram_name: str = ‘S’) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
 <p>Returns a pair of a SOS polynomial p = mᵀQm and the Gramian matrix Q,
 where m is the <code class="docutils literal notranslate"><span class="pre">monomial</span></code> basis. For example,
@@ -4952,12 +4952,12 @@ impose the polynomial being DSOS.</p>
 matrix.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>NewSosPolynomial(self: pydrake.solvers.MathematicalProgram, gramian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; pydrake.symbolic.Polynomial</li>
+<li>NewSosPolynomial(self: pydrake.solvers.MathematicalProgram, gramian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
 <p>Overloads NewSosPolynomial, except the Gramian matrix Q is an input
 instead of an output.</p>
 <ol class="arabic simple" start="3">
-<li>NewSosPolynomial(self: pydrake.solvers.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;, gram_name: str = ‘S’) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
+<li>NewSosPolynomial(self: pydrake.solvers.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;, gram_name: str = ‘S’) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
 <p>Overloads NewSosPolynomial. Returns a pair of a SOS polynomial p =
 m(x)ᵀQm(x) of degree <code class="docutils literal notranslate"><span class="pre">degree</span></code> and the Gramian matrix Q that should
@@ -5044,17 +5044,17 @@ with arXiv link <a class="reference external" href="https://arxiv.org/abs/1706.0
 
 <dl class="attribute">
 <dt id="pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kDsos">
-<code class="descname">kDsos</code><em class="property"> = &lt;NonnegativePolynomial.kDsos: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kDsos" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kDsos</code><em class="property"> = &lt;NonnegativePolynomial.kDsos: 3&gt;</em><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kDsos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kSdsos">
-<code class="descname">kSdsos</code><em class="property"> = &lt;NonnegativePolynomial.kSdsos: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kSdsos" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kSdsos</code><em class="property"> = &lt;NonnegativePolynomial.kSdsos: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kSdsos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kSos">
-<code class="descname">kSos</code><em class="property"> = &lt;NonnegativePolynomial.kSos: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kSos" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kSos</code><em class="property"> = &lt;NonnegativePolynomial.kSos: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kSos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">

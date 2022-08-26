@@ -65,5 +65,6 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "triangle_surface_mesh_field.h", "triangle__surface__mesh__field_8h.html", "triangle__surface__mesh__field_8h" ],
     [ "volume_mesh.h", "volume__mesh_8h.html", "volume__mesh_8h" ],
     [ "volume_mesh_field.h", "volume__mesh__field_8h.html", "volume__mesh__field_8h" ],
-    [ "volume_to_surface_mesh.h", "volume__to__surface__mesh_8h.html", "volume__to__surface__mesh_8h" ]
+    [ "volume_to_surface_mesh.h", "volume__to__surface__mesh_8h.html", "volume__to__surface__mesh_8h" ],
+    [ "vtk_to_volume_mesh.h", "vtk__to__volume__mesh_8h.html", null ]
 ];
