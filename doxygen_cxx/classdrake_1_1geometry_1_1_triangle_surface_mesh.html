@@ -187,10 +187,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad7c9094c5a3e33edbdc61e5d72af8fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> from triangles and vertices.  <a href="#ad7c9094c5a3e33edbdc61e5d72af8fcf">More...</a><br /></td></tr>
 <tr class="separator:ad7c9094c5a3e33edbdc61e5d72af8fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a505ea28f0f6274285a379c870c44bb37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a505ea28f0f6274285a379c870c44bb37">TransformVertices</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_NM)</td></tr>
-<tr class="memdesc:a505ea28f0f6274285a379c870c44bb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the vertices of this mesh from its initial frame M to the new frame N.  <a href="#a505ea28f0f6274285a379c870c44bb37">More...</a><br /></td></tr>
+<tr class="memdesc:a505ea28f0f6274285a379c870c44bb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Transforms the vertices of this mesh from its initial frame M to the new frame N.  <a href="#a505ea28f0f6274285a379c870c44bb37">More...</a><br /></td></tr>
 <tr class="separator:a505ea28f0f6274285a379c870c44bb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c9e33a8f7704980ea0a0f3a4455eaf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a3c9e33a8f7704980ea0a0f3a4455eaf7">ReverseFaceWinding</a> ()</td></tr>
-<tr class="memdesc:a3c9e33a8f7704980ea0a0f3a4455eaf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the ordering of all the triangles' indices &ndash; see <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html#abbf26ae8eecf8c41273ed83dd213cbf1" title="Reverses the order of the vertex indices – this essentially flips the triangle normal based on the ri...">SurfaceTriangle::ReverseWinding()</a>.  <a href="#a3c9e33a8f7704980ea0a0f3a4455eaf7">More...</a><br /></td></tr>
+<tr class="memdesc:a3c9e33a8f7704980ea0a0f3a4455eaf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Reverses the ordering of all the triangles' indices &ndash; see <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html#abbf26ae8eecf8c41273ed83dd213cbf1" title="Reverses the order of the vertex indices – this essentially flips the triangle normal based on the ri...">SurfaceTriangle::ReverseWinding()</a>.  <a href="#a3c9e33a8f7704980ea0a0f3a4455eaf7">More...</a><br /></td></tr>
 <tr class="separator:a3c9e33a8f7704980ea0a0f3a4455eaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6766e91c9d53192a3ed51298a193827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ae6766e91c9d53192a3ed51298a193827">num_triangles</a> () const</td></tr>
 <tr class="memdesc:ae6766e91c9d53192a3ed51298a193827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of triangles in the mesh.  <a href="#ae6766e91c9d53192a3ed51298a193827">More...</a><br /></td></tr>
@@ -793,7 +793,7 @@ Mesh type traits</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reverses the ordering of all the triangles' indices &ndash; see <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html#abbf26ae8eecf8c41273ed83dd213cbf1" title="Reverses the order of the vertex indices – this essentially flips the triangle normal based on the ri...">SurfaceTriangle::ReverseWinding()</a>. </p>
+<p>(Internal use only) Reverses the ordering of all the triangles' indices &ndash; see <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html#abbf26ae8eecf8c41273ed83dd213cbf1" title="Reverses the order of the vertex indices – this essentially flips the triangle normal based on the ri...">SurfaceTriangle::ReverseWinding()</a>. </p>
 
 </div>
 </div>
@@ -832,7 +832,7 @@ Mesh type traits</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Transforms the vertices of this mesh from its initial frame M to the new frame N. </p>
+<p>(Internal use only) Transforms the vertices of this mesh from its initial frame M to the new frame N. </p>
 
 </div>
 </div>
