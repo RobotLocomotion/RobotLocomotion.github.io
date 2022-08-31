@@ -1,5 +1,10 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d":[3,0,0,18,2,29],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa77d19bf3de0a1c93d54679d0ba86bef":[3,0,0,18,2,16],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[3,0,0,18,2,42],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac5d300d23d5911b73ccdf36ef9168e5b":[3,0,0,18,2,27],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac93013774f250920857c17c083350b57":[3,0,0,18,2,8],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[3,0,0,18,2,2],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad838f10606e844eac52b6553ba5acfd0":[3,0,0,18,2,37],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,2,12],
@@ -157,10 +162,10 @@ var NAVTREEINDEX40 =
 "collision__filter__declaration_8h.html":[4,0,0,4,9],
 "collision__filter__manager_8h.html":[4,0,0,4,10],
 "collisions__exist__callback_8h.html":[4,0,0,4,2,6],
-"color__palette_8h.html":[4,0,0,12,8,3],
-"color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[4,0,0,12,8,3,5],
-"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[4,0,0,12,8,3,4],
-"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[4,0,0,12,8,3,3],
+"color__palette_8h.html":[4,0,0,12,8,4],
+"color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[4,0,0,12,8,4,5],
+"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[4,0,0,12,8,4,4],
+"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[4,0,0,12,8,4,3],
 "com__in__polyhedron__constraint_8h.html":[4,0,0,8,5,1],
 "com__position__constraint_8h.html":[4,0,0,8,5,2],
 "common_2autodiff_8h.html":[4,0,0,1,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX40 =
 "corotated__model_8h.html":[4,0,0,8,3,3],
 "corotated__model__data_8h.html":[4,0,0,8,3,4],
 "cost_8h.html":[4,0,0,11,11],
-"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,11,2],
-"cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,11,0],
-"cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,11,11,1],
-"coulomb__friction_8h.html":[4,0,0,8,10,7],
-"coulomb__friction_8h.html#aada1fb90629198ff0ee920969d517335":[4,0,0,8,10,7,1],
-"coulomb__friction_8h.html#ad1adacac02531fd546981067a851d1be":[4,0,0,8,10,7,2]
+"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,11,2]
 };

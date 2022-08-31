@@ -1,0 +1,802 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: CameraConfig Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1systems_1_1sensors_1_1_camera_config.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="structdrake_1_1systems_1_1sensors_1_1_camera_config-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CameraConfig Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Configuration of a camera. </p>
+<p>This covers all of the parameters for both color (see <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html" title="Collection of camera properties for cameras to be used with color/label images.">geometry::render::ColorRenderCamera</a>) and depth (see <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html" title="Collection of camera properties for cameras to be used with depth images.">geometry::render::DepthRenderCamera</a>) cameras.</p>
+<p>The various properties have restrictions on what they can be.</p>
+<ul>
+<li>Values must be finite.</li>
+<li>Some values must be positive (see notes on individual properties).</li>
+<li>Ranges must be specified such that the "minimum" value is less than or equal to the "maximum" value. This includes the clipping range [<code>clipping_near</code>, <code>clipping_far</code>] and depth range [<code>z_near</code>, <code>z_far</code>].</li>
+<li>The depth range must lie <em>entirely</em> within the clipping range.</li>
+</ul>
+<p>The values are only checked when the configuration is operated on: during serialization, after deserialization, and when applying the configuration (see ApplyCameraConfig().) </p>
+</div>
+<p><code>#include &lt;drake/systems/sensors/camera_config.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html">FocalLength</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specification of a camera's intrinsic focal properties as focal <em>length</em> (in pixels).  <a href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html">FovDegrees</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specification of focal length via fields of view (in degrees).  <a href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cea36e6bf523d90038d2757774e10e0"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a>, <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8cea36e6bf523d90038d2757774e10e0">MakeCameras</a> () const</td></tr>
+<tr class="memdesc:a8cea36e6bf523d90038d2757774e10e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates color and depth camera data from this configuration.  <a href="#a8cea36e6bf523d90038d2757774e10e0">More...</a><br /></td></tr>
+<tr class="separator:a8cea36e6bf523d90038d2757774e10e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e331dc922e5fcf0083aafe07e3ac0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ac5e331dc922e5fcf0083aafe07e3ac0c">ValidateOrThrow</a> () const</td></tr>
+<tr class="memdesc:ac5e331dc922e5fcf0083aafe07e3ac0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws if the values are inconsistent.  <a href="#ac5e331dc922e5fcf0083aafe07e3ac0c">More...</a><br /></td></tr>
+<tr class="separator:ac5e331dc922e5fcf0083aafe07e3ac0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Frustum-based camera properties</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="classdrake_1_1geometry_1_1render_1_1_clipping_range.html" title="Defines the near and far clipping planes for frustum-based (OpenGL) RenderEngine cameras.">geometry::render::ClippingRange</a>. </p>
+</div></td></tr>
+<tr class="memitem:a7d53e0f5780cb66697932deba3266df8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a7d53e0f5780cb66697932deba3266df8">clipping_near</a> {0.01}</td></tr>
+<tr class="memdesc:a7d53e0f5780cb66697932deba3266df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance (in meters) from sensor origin to near clipping plane.  <a href="#a7d53e0f5780cb66697932deba3266df8">More...</a><br /></td></tr>
+<tr class="separator:a7d53e0f5780cb66697932deba3266df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356749be16e1e3f6d437f215ff3c44e6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a356749be16e1e3f6d437f215ff3c44e6">clipping_far</a> {500.0}</td></tr>
+<tr class="memdesc:a356749be16e1e3f6d437f215ff3c44e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance (in meters) from sensor origin to far clipping plane.  <a href="#a356749be16e1e3f6d437f215ff3c44e6">More...</a><br /></td></tr>
+<tr class="separator:a356749be16e1e3f6d437f215ff3c44e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Depth camera range</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_range.html" title="Defines a depth sensor&#39;s functional range.">geometry::render::DepthRange</a>. </p>
+</div></td></tr>
+<tr class="memitem:a341dc613bcd25a969c8f8a285e3affcd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a341dc613bcd25a969c8f8a285e3affcd">z_near</a> {0.1}</td></tr>
+<tr class="memdesc:a341dc613bcd25a969c8f8a285e3affcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance (in meters) from sensor origin to closest measurable plane.  <a href="#a341dc613bcd25a969c8f8a285e3affcd">More...</a><br /></td></tr>
+<tr class="separator:a341dc613bcd25a969c8f8a285e3affcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae8fde9f81370fb4851c9e1de452a7f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#afae8fde9f81370fb4851c9e1de452a7f">z_far</a> {5.0}</td></tr>
+<tr class="memdesc:afae8fde9f81370fb4851c9e1de452a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance (in meters) from sensor origin to farthest measurable plane.  <a href="#afae8fde9f81370fb4851c9e1de452a7f">More...</a><br /></td></tr>
+<tr class="separator:afae8fde9f81370fb4851c9e1de452a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Camera extrinsics</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The pose of the camera.</p>
+<p>As documented in <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a>, the camera has four associated frames: P, B, C, D. The frames of the parent (to which the camera body is rigidly affixed), the camera body, color sensor, and depth sensor, respectively. Typically, the body is posed w.r.t. the parent (X_PB) and the sensors are posed w.r.t. the body (X_BC and X_BD).</p>
+<p>When unspecified, X_BD = X_BC = I by default. </p>
+</div></td></tr>
+<tr class="memitem:a8849fbc03b0aa02c8f3c81272c4694b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1schema_1_1_transform.html">schema::Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8849fbc03b0aa02c8f3c81272c4694b6">X_PB</a></td></tr>
+<tr class="memdesc:a8849fbc03b0aa02c8f3c81272c4694b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pose of the body camera relative to a parent frame P.  <a href="#a8849fbc03b0aa02c8f3c81272c4694b6">More...</a><br /></td></tr>
+<tr class="separator:a8849fbc03b0aa02c8f3c81272c4694b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b978041e97c1025818e7f4e79345fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1schema_1_1_transform.html">schema::Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ae3b978041e97c1025818e7f4e79345fa">X_BC</a></td></tr>
+<tr class="memdesc:ae3b978041e97c1025818e7f4e79345fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pose of the color sensor relative to the camera body frame.  <a href="#ae3b978041e97c1025818e7f4e79345fa">More...</a><br /></td></tr>
+<tr class="separator:ae3b978041e97c1025818e7f4e79345fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7ddcc8efc929f872d88097097e9953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1schema_1_1_transform.html">schema::Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a0d7ddcc8efc929f872d88097097e9953">X_BD</a></td></tr>
+<tr class="memdesc:a0d7ddcc8efc929f872d88097097e9953"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pose of the depth sensor relative to the camera body frame.  <a href="#a0d7ddcc8efc929f872d88097097e9953">More...</a><br /></td></tr>
+<tr class="separator:a0d7ddcc8efc929f872d88097097e9953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Renderer properties</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Every camera is supported by a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">geometry::render::RenderEngine</a> instance.</p>
+<p>These properties configure the render engine for this camera. </p>
+</div></td></tr>
+<tr class="memitem:a447b42f56ec0921186385e6863a6548d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d">renderer_name</a> {&quot;default&quot;}</td></tr>
+<tr class="memdesc:a447b42f56ec0921186385e6863a6548d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">geometry::render::RenderEngine</a> that this camera uses.  <a href="#a447b42f56ec0921186385e6863a6548d">More...</a><br /></td></tr>
+<tr class="separator:a447b42f56ec0921186385e6863a6548d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3">background</a> {204 / 255.0, 229 / 255.0, 255 / 255.0, 1.0}</td></tr>
+<tr class="memdesc:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "background" color.  <a href="#a01a2a4e8cf420c179bc1253ca3d3a1c3">More...</a><br /></td></tr>
+<tr class="separator:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Publishing properties</div></td></tr>
+<tr class="memitem:a9b45b3e13bd9167aab02e17e08916231"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9b45b3e13bd9167aab02e17e08916231">name</a> {&quot;preview_camera&quot;}</td></tr>
+<tr class="memdesc:a9b45b3e13bd9167aab02e17e08916231"><td class="mdescLeft">&#160;</td><td class="mdescRight">The camera name.  <a href="#a9b45b3e13bd9167aab02e17e08916231">More...</a><br /></td></tr>
+<tr class="separator:a9b45b3e13bd9167aab02e17e08916231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63da2a617b72a1630998a4d8b4d26cd3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a63da2a617b72a1630998a4d8b4d26cd3">fps</a> {10.0}</td></tr>
+<tr class="memdesc:a63da2a617b72a1630998a4d8b4d26cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishing rate (in Hz) for both RGB and depth cameras (as requested).  <a href="#a63da2a617b72a1630998a4d8b4d26cd3">More...</a><br /></td></tr>
+<tr class="separator:a63da2a617b72a1630998a4d8b4d26cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a5f94eea0e5ea757caaddb41c3eb79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a51a5f94eea0e5ea757caaddb41c3eb79">rgb</a> {true}</td></tr>
+<tr class="memdesc:a51a5f94eea0e5ea757caaddb41c3eb79"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, RGB images will be produced and published via LCM.  <a href="#a51a5f94eea0e5ea757caaddb41c3eb79">More...</a><br /></td></tr>
+<tr class="separator:a51a5f94eea0e5ea757caaddb41c3eb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3a47e93d564d08b506d18291d5772a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a3c3a47e93d564d08b506d18291d5772a">depth</a> {false}</td></tr>
+<tr class="memdesc:a3c3a47e93d564d08b506d18291d5772a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, depth images will be produced and published via LCM.  <a href="#a3c3a47e93d564d08b506d18291d5772a">More...</a><br /></td></tr>
+<tr class="separator:a3c3a47e93d564d08b506d18291d5772a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc0967f9d639aaf80a08151df0e96f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3">show_rgb</a> {false}</td></tr>
+<tr class="memdesc:a9dc0967f9d639aaf80a08151df0e96f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether the rendered RGB images are displayed (in a separate window controlled by the thread in which the camera images are rendered).  <a href="#a9dc0967f9d639aaf80a08151df0e96f3">More...</a><br /></td></tr>
+<tr class="separator:a9dc0967f9d639aaf80a08151df0e96f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4489c31400be9adcd1f625f99c48134"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4489c31400be9adcd1f625f99c48134">do_compress</a> {true}</td></tr>
+<tr class="memdesc:ad4489c31400be9adcd1f625f99c48134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether the images are broadcast in a compressed format.  <a href="#ad4489c31400be9adcd1f625f99c48134">More...</a><br /></td></tr>
+<tr class="separator:ad4489c31400be9adcd1f625f99c48134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Camera intrinsics</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrpa7f00688fc70c191094eb0312e29f7f4"></a>See <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html" title="Simple class for characterizing the Drake camera model.">CameraInfo</a>. </p>
+</td></tr>
+<tr class="memitem:a2474a5474cbff19523a51eb1de01cda4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a2474a5474cbff19523a51eb1de01cda4">width</a> {640}</td></tr>
+<tr class="memdesc:a2474a5474cbff19523a51eb1de01cda4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image width (in pixels).  <a href="#a2474a5474cbff19523a51eb1de01cda4">More...</a><br /></td></tr>
+<tr class="separator:a2474a5474cbff19523a51eb1de01cda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12fc34ce789bce6c8a05d8a17138534"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad12fc34ce789bce6c8a05d8a17138534">height</a> {480}</td></tr>
+<tr class="memdesc:ad12fc34ce789bce6c8a05d8a17138534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image height (in pixels).  <a href="#ad12fc34ce789bce6c8a05d8a17138534">More...</a><br /></td></tr>
+<tr class="separator:ad12fc34ce789bce6c8a05d8a17138534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868b65aa60ea2274975c87d28987eb29"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html">FocalLength</a>, <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html">FovDegrees</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a868b65aa60ea2274975c87d28987eb29">focal</a> {<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html">FovDegrees</a>{.y = 45}}</td></tr>
+<tr class="memdesc:a868b65aa60ea2274975c87d28987eb29"><td class="mdescLeft">&#160;</td><td class="mdescRight">The focal properties of the camera.  <a href="#a868b65aa60ea2274975c87d28987eb29">More...</a><br /></td></tr>
+<tr class="separator:a868b65aa60ea2274975c87d28987eb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43acbf71f174bb214744379ae39d6ec5"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a43acbf71f174bb214744379ae39d6ec5">center_x</a> {}</td></tr>
+<tr class="memdesc:a43acbf71f174bb214744379ae39d6ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The x-position of the principal point (in pixels).  <a href="#a43acbf71f174bb214744379ae39d6ec5">More...</a><br /></td></tr>
+<tr class="separator:a43acbf71f174bb214744379ae39d6ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e46bbec487979696012b53699ab3e17"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5e46bbec487979696012b53699ab3e17">center_y</a> {}</td></tr>
+<tr class="memdesc:a5e46bbec487979696012b53699ab3e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">The y-position of the principal point (in pixels).  <a href="#a5e46bbec487979696012b53699ab3e17">More...</a><br /></td></tr>
+<tr class="separator:a5e46bbec487979696012b53699ab3e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5260647c6d73b9af547424968d24da09"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5260647c6d73b9af547424968d24da09">focal_x</a> () const</td></tr>
+<tr class="memdesc:a5260647c6d73b9af547424968d24da09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the focal length (in pixels) in the x-direction.  <a href="#a5260647c6d73b9af547424968d24da09">More...</a><br /></td></tr>
+<tr class="separator:a5260647c6d73b9af547424968d24da09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d16b9fcf585fe75becb5357c74ba72"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#aa1d16b9fcf585fe75becb5357c74ba72">focal_y</a> () const</td></tr>
+<tr class="memdesc:aa1d16b9fcf585fe75becb5357c74ba72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the focal length (in pixels) in the y-direction.  <a href="#aa1d16b9fcf585fe75becb5357c74ba72">More...</a><br /></td></tr>
+<tr class="separator:aa1d16b9fcf585fe75becb5357c74ba72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338e8e961277d5a62829534f12bc69f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a338e8e961277d5a62829534f12bc69f2">principal_point</a> () const</td></tr>
+<tr class="memdesc:a338e8e961277d5a62829534f12bc69f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the principal point.  <a href="#a338e8e961277d5a62829534f12bc69f2">More...</a><br /></td></tr>
+<tr class="separator:a338e8e961277d5a62829534f12bc69f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5260647c6d73b9af547424968d24da09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5260647c6d73b9af547424968d24da09">&#9670;&nbsp;</a></span>focal_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double focal_x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the focal length (in pixels) in the x-direction. </p>
+
+</div>
+</div>
+<a id="aa1d16b9fcf585fe75becb5357c74ba72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d16b9fcf585fe75becb5357c74ba72">&#9670;&nbsp;</a></span>focal_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double focal_y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the focal length (in pixels) in the y-direction. </p>
+
+</div>
+</div>
+<a id="a8cea36e6bf523d90038d2757774e10e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cea36e6bf523d90038d2757774e10e0">&#9670;&nbsp;</a></span>MakeCameras()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a>, <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a>&gt; MakeCameras </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates color and depth camera data from this configuration. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if configuration values do not satisfy the documented prerequisites. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a338e8e961277d5a62829534f12bc69f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338e8e961277d5a62829534f12bc69f2">&#9670;&nbsp;</a></span>principal_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt;double&gt; principal_point </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the position of the principal point. </p>
+<p>This respects the semantics that undefined center_x and center_y place the principal point in the center of the image. </p>
+
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
+<a id="ac5e331dc922e5fcf0083aafe07e3ac0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e331dc922e5fcf0083aafe07e3ac0c">&#9670;&nbsp;</a></span>ValidateOrThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ValidateOrThrow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Throws if the values are inconsistent. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a01a2a4e8cf420c179bc1253ca3d3a1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a2a4e8cf420c179bc1253ca3d3a1c3">&#9670;&nbsp;</a></span>background</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a> background {204 / 255.0, 229 / 255.0, 255 / 255.0, 1.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The "background" color. </p>
+<p>This is the color drawn where there are no objects visible. Its default value matches the default value for render::RenderEngineGlParams::default_clear_color. See the documentation for <a class="el" href="classdrake_1_1geometry_1_1_rgba.html#a8e8824802dedfbc36776227f7482b6bc" title="Passes this object to an Archive.">geometry::Rgba::Serialize</a> for how to define this value in YAML.</p>
+<p>N.B. If two different cameras are configured to use the same renderer (having identical values for <code>renderer_name</code>) but <em>different</em> values for <code>background</code>, the render engine instance will be configured with one of the set of values. Which one is undefined. </p>
+
+</div>
+</div>
+<a id="a43acbf71f174bb214744379ae39d6ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43acbf71f174bb214744379ae39d6ec5">&#9670;&nbsp;</a></span>center_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; center_x {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The x-position of the principal point (in pixels). </p>
+<p>To query what the current value is, use <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a338e8e961277d5a62829534f12bc69f2" title="Returns the position of the principal point.">principal_point()</a>. </p><dl class="section pre"><dt>Precondition</dt><dd>0 &lt; center_x &lt; width or is std::nullopt. </dd></dl>
+
+</div>
+</div>
+<a id="a5e46bbec487979696012b53699ab3e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e46bbec487979696012b53699ab3e17">&#9670;&nbsp;</a></span>center_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; center_y {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The y-position of the principal point (in pixels). </p>
+<p>To query what the current value is, use <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a338e8e961277d5a62829534f12bc69f2" title="Returns the position of the principal point.">principal_point()</a>. </p><dl class="section pre"><dt>Precondition</dt><dd>0 &lt; center_y &lt; height or is std::nullopt. </dd></dl>
+
+</div>
+</div>
+<a id="a356749be16e1e3f6d437f215ff3c44e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356749be16e1e3f6d437f215ff3c44e6">&#9670;&nbsp;</a></span>clipping_far</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double clipping_far {500.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance (in meters) from sensor origin to far clipping plane. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>clipping_far is a positive, finite number. </dd></dl>
+
+</div>
+</div>
+<a id="a7d53e0f5780cb66697932deba3266df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d53e0f5780cb66697932deba3266df8">&#9670;&nbsp;</a></span>clipping_near</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double clipping_near {0.01}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance (in meters) from sensor origin to near clipping plane. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>clipping_near is a positive, finite number. </dd></dl>
+
+</div>
+</div>
+<a id="a3c3a47e93d564d08b506d18291d5772a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3a47e93d564d08b506d18291d5772a">&#9670;&nbsp;</a></span>depth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool depth {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, depth images will be produced and published via LCM. </p>
+
+</div>
+</div>
+<a id="ad4489c31400be9adcd1f625f99c48134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4489c31400be9adcd1f625f99c48134">&#9670;&nbsp;</a></span>do_compress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool do_compress {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controls whether the images are broadcast in a compressed format. </p>
+
+</div>
+</div>
+<a id="a868b65aa60ea2274975c87d28987eb29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868b65aa60ea2274975c87d28987eb29">&#9670;&nbsp;</a></span>focal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::variant&lt;<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html">FocalLength</a>, <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html">FovDegrees</a>&gt; focal {<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html">FovDegrees</a>{.y = 45}}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The focal properties of the camera. </p>
+<p>It can be specified in one of two ways:</p>
+<ul>
+<li>A <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html" title="Specification of a camera&#39;s intrinsic focal properties as focal length (in pixels).">FocalLength</a> which specifies the focal lengths (in pixels) in the x- and y-directions.</li>
+<li>An <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html" title="Specification of focal length via fields of view (in degrees).">FovDegrees</a> which defines focal length <em>implicitly</em> by deriving it from field of view measures (in degrees).</li>
+</ul>
+<p>For both specifications, if only one value is given (in either direction), the focal length (as reported by <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5260647c6d73b9af547424968d24da09" title="Returns the focal length (in pixels) in the x-direction.">focal_x()</a> and <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#aa1d16b9fcf585fe75becb5357c74ba72" title="Returns the focal length (in pixels) in the y-direction.">focal_y()</a>) is determined by that single value and is assumed to be symmetric for both directions. </p><dl class="section pre"><dt>Precondition</dt><dd>focal length(s) is a/are finite, positive number(s). </dd></dl>
+
+</div>
+</div>
+<a id="a63da2a617b72a1630998a4d8b4d26cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63da2a617b72a1630998a4d8b4d26cd3">&#9670;&nbsp;</a></span>fps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double fps {10.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Publishing rate (in Hz) for both RGB and depth cameras (as requested). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>fps is a positive, finite number. </dd></dl>
+
+</div>
+</div>
+<a id="ad12fc34ce789bce6c8a05d8a17138534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12fc34ce789bce6c8a05d8a17138534">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> height {480}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Image height (in pixels). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>height &gt; 0. </dd></dl>
+
+</div>
+</div>
+<a id="a9b45b3e13bd9167aab02e17e08916231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b45b3e13bd9167aab02e17e08916231">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string name {&quot;preview_camera&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The camera name. </p>
+<p>This <code>name</code> is used as part of the corresponding <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> system's name and serves as a suffix of the LCM channel name. </p><dl class="section pre"><dt>Precondition</dt><dd><code>name</code> is not empty. </dd></dl>
+
+</div>
+</div>
+<a id="a447b42f56ec0921186385e6863a6548d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447b42f56ec0921186385e6863a6548d">&#9670;&nbsp;</a></span>renderer_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string renderer_name {&quot;default&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The name of the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">geometry::render::RenderEngine</a> that this camera uses. </p>
+<p>Generally, it is more efficient for multiple cameras to share a single render engine instance; they should, therefore, share a common renderer_name value. </p><dl class="section pre"><dt>Precondition</dt><dd><code>renderer_name</code> is not empty. </dd></dl>
+
+</div>
+</div>
+<a id="a51a5f94eea0e5ea757caaddb41c3eb79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a5f94eea0e5ea757caaddb41c3eb79">&#9670;&nbsp;</a></span>rgb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rgb {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, RGB images will be produced and published via LCM. </p>
+
+</div>
+</div>
+<a id="a9dc0967f9d639aaf80a08151df0e96f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc0967f9d639aaf80a08151df0e96f3">&#9670;&nbsp;</a></span>show_rgb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool show_rgb {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controls whether the rendered RGB images are displayed (in a separate window controlled by the thread in which the camera images are rendered). </p>
+<p>Only applies to color images and depends on whether the RenderEngine instance supports it. </p>
+
+</div>
+</div>
+<a id="a2474a5474cbff19523a51eb1de01cda4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2474a5474cbff19523a51eb1de01cda4">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> width {640}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Image width (in pixels). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>width &gt; 0. </dd></dl>
+
+</div>
+</div>
+<a id="ae3b978041e97c1025818e7f4e79345fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b978041e97c1025818e7f4e79345fa">&#9670;&nbsp;</a></span>X_BC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1schema_1_1_transform.html">schema::Transform</a> X_BC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The pose of the color sensor relative to the camera body frame. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>X_BC.base_frame</code> is empty. </dd></dl>
+
+</div>
+</div>
+<a id="a0d7ddcc8efc929f872d88097097e9953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d7ddcc8efc929f872d88097097e9953">&#9670;&nbsp;</a></span>X_BD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1schema_1_1_transform.html">schema::Transform</a> X_BD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The pose of the depth sensor relative to the camera body frame. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>X_BD.base_frame</code> is empty. </dd></dl>
+
+</div>
+</div>
+<a id="a8849fbc03b0aa02c8f3c81272c4694b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8849fbc03b0aa02c8f3c81272c4694b6">&#9670;&nbsp;</a></span>X_PB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1schema_1_1_transform.html">schema::Transform</a> X_PB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The pose of the body camera relative to a parent frame P. </p>
+<p>If <code>X_PB.base_frame</code> is unspecified, then the world frame is assumed to be the parent frame. </p><dl class="section pre"><dt>Precondition</dt><dd><code>X_PB.base_frame</code> is empty <em>or</em> refers to a valid, unique frame. </dd></dl>
+
+</div>
+</div>
+<a id="afae8fde9f81370fb4851c9e1de452a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae8fde9f81370fb4851c9e1de452a7f">&#9670;&nbsp;</a></span>z_far</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double z_far {5.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance (in meters) from sensor origin to farthest measurable plane. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>z_near is a positive, finite number. </dd></dl>
+
+</div>
+</div>
+<a id="a341dc613bcd25a969c8f8a285e3affcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341dc613bcd25a969c8f8a285e3affcd">&#9670;&nbsp;</a></span>z_near</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double z_near {0.1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance (in meters) from sensor origin to closest measurable plane. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>z_near is a positive, finite number. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/systems/sensors/<a class="el" href="camera__config_8h.html">camera_config.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html">sensors</a></li><li class="navelem"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

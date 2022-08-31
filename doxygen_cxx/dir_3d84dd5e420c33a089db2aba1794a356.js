@@ -3,6 +3,7 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     [ "cartesian_product.h", "cartesian__product_8h.html", null ],
     [ "convex_set.h", "convex__set_8h.html", "convex__set_8h" ],
     [ "graph_of_convex_sets.h", "graph__of__convex__sets_8h.html", [
+      [ "GraphOfConvexSetsOptions", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options" ],
       [ "Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex" ],
       [ "Edge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge" ]
     ] ],

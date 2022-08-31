@@ -299,7 +299,7 @@ the product.</p>
 <code class="descname">AddPointInNonnegativeScalingConstraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInNonnegativeScalingConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddPointInNonnegativeScalingConstraints(self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, x: numpy.ndarray[object[m, 1]], t: pydrake.symbolic.Variable) -&gt; List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;]</li>
+<li>AddPointInNonnegativeScalingConstraints(self: pydrake.geometry.optimization.ConvexSet, prog: pydrake.solvers.MathematicalProgram, x: numpy.ndarray[object[m, 1]], t: pydrake.symbolic.Variable) -&gt; List[pydrake.solvers.Binding[Constraint]]</li>
 </ol>
 <p>Let S be this convex set. When S is bounded, this method adds the
 convex constraints to imply</p>
@@ -315,7 +315,7 @@ where rec(S) is the recession cone of S (the asymptotic directions in
 which S is not bounded) and ⊕ is the Minkowski sum. For t &gt; 0, this is
 equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S).</p>
 <ol class="arabic simple" start="2">
-<li>AddPointInNonnegativeScalingConstraints(self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: numpy.ndarray[numpy.float64[m, 1]], d: float, x: numpy.ndarray[object[m, 1]], t: numpy.ndarray[object[m, 1]]) -&gt; List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;]</li>
+<li>AddPointInNonnegativeScalingConstraints(self: pydrake.geometry.optimization.ConvexSet, prog: pydrake.solvers.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: numpy.ndarray[numpy.float64[m, 1]], d: float, x: numpy.ndarray[object[m, 1]], t: numpy.ndarray[object[m, 1]]) -&gt; List[pydrake.solvers.Binding[Constraint]]</li>
 </ol>
 <p>Let S be this convex set. When S is bounded, this method adds the
 convex constraints to imply</p>
@@ -325,19 +325,22 @@ c * t + d ≥ 0,
 </div>
 <p>where A is an n-by-m matrix (with n the ambient_dimension), b is a
 vector of size n, c is a vector of size p, x is a point in ℜᵐ, and t
-is a point in ℜ^p.</p>
+is a point in ℜᵖ.</p>
 <p>When S is unbounded, then the behavior is almost identical, except
-when c’ * t+d=0. In this case, the constraints imply c’ * t + d ≥ 0, A
-* x + b ∈ (c’ * t + d) S ⊕ rec(S), where rec(S) is the recession cone
-of S (the asymptotic directions in which S is not bounded) and ⊕ is
-the Minkowski sum. For c’ * t + d &gt; 0, this is equivalent to A * x + b
-∈ (c’ * t + d) S, but for c’ * t + d = 0, we have only A * x + b ∈
-rec(S).</p>
+when c’ * t+d=0. In this case, the constraints imply</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A * x + b ∈ (c&#39; * t + d) S ⊕ rec(S),
+c&#39; * t + d ≥ 0,
+</pre></div>
+</div>
+<p>where rec(S) is the recession cone of S (the asymptotic directions in
+which S is not bounded) and ⊕ is the Minkowski sum. For c’ * t + d &gt;
+0, this is equivalent to A * x + b ∈ (c’ * t + d) S, but for c’ * t +
+d = 0, we have only A * x + b ∈ rec(S).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints">
-<code class="descname">AddPointInSetConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddPointInSetConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: pydrake.solvers.MathematicalProgram, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a constraint to an existing MathematicalProgram enforcing that
 the point defined by vars is inside the set.</p>
 </dd></dl>
@@ -503,7 +506,7 @@ continuous variables.</p>
 <code class="descname">AddConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, f: pydrake.symbolic.Formula) -&gt; drake::solvers::Binding&lt;drake::solvers::Constraint&gt;</li>
+<li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.Binding[Constraint]</li>
 </ol>
 <p>Adds a cost to this edge, described by a symbolic::Formula <code class="docutils literal notranslate"><span class="pre">f</span></code>
 containing <em>only</em> elements of xu() and xv() as variables.</p>
@@ -520,7 +523,7 @@ containing <em>only</em> elements of xu() and xv() as variables.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: drake::solvers::Binding&lt;drake::solvers::Constraint&gt;) -&gt; drake::solvers::Binding&lt;drake::solvers::Constraint&gt;</li>
+<li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: pydrake.solvers.Binding[Constraint]) -&gt; pydrake.solvers.Binding[Constraint]</li>
 </ol>
 <p>Adds a cost to this edge. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements of
 xu() and xv() as variables. For technical reasons relating to being
@@ -557,7 +560,7 @@ does not contain negative costs.</p>
 <code class="descname">AddCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression) -&gt; Tuple[pydrake.symbolic.Variable, drake::solvers::Binding&lt;drake::solvers::Cost&gt;]</li>
+<li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression) -&gt; Tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</li>
 </ol>
 <p>Adds a cost to this edge, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of xu() and xv() as variables. For
@@ -584,7 +587,7 @@ does not contain negative costs.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: drake::solvers::Binding&lt;drake::solvers::Cost&gt;) -&gt; Tuple[pydrake.symbolic.Variable, drake::solvers::Binding&lt;drake::solvers::Cost&gt;]</li>
+<li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: pydrake.solvers.Binding[Cost]) -&gt; Tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</li>
 </ol>
 <p>Adds a cost to this edge. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements of
 xu() and xv() as variables. For technical reasons relating to being
@@ -636,33 +639,33 @@ modifications to its bounds (i.e. requiring phi == 0.5).</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetConstraints">
-<code class="descname">GetConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.Binding[Constraint]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all constraints on this edge.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts">
-<code class="descname">GetCosts</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; List[drake::solvers::Binding&lt;drake::solvers::Cost&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetCosts</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.Binding[Cost]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all costs on this edge.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost">
-<code class="descname">GetSolutionCost</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetSolutionCost</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: pydrake.solvers.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the sum of the costs associated with this edge in a
 solvers::MathematicalProgramResult.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu">
-<code class="descname">GetSolutionPhiXu</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetSolutionPhiXu</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: pydrake.solvers.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the vector value of the slack variables associated with ϕxᵤ in
 a solvers::MathematicalProgramResult.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv">
-<code class="descname">GetSolutionPhiXv</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetSolutionPhiXv</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: pydrake.solvers.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the vector value of the slack variables associated with ϕxᵥ in
 a solvers::MathematicalProgramResult.</p>
 </dd></dl>
@@ -762,7 +765,7 @@ builds.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString">
-<code class="descname">GetGraphvizString</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em>, <em>result: Optional[drake::solvers::MathematicalProgramResult] = None</em>, <em>show_slacks: bool = True</em>, <em>precision: int = 3</em>, <em>scientific: bool = False</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetGraphvizString</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em>, <em>result: Optional[pydrake.solvers.MathematicalProgramResult] = None</em>, <em>show_slacks: bool = True</em>, <em>precision: int = 3</em>, <em>scientific: bool = False</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Graphviz string describing the graph vertices and edges. If
 <code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
 solution values.</p>
@@ -832,7 +835,46 @@ graph.</p>
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, convex_relaxation: bool = False, solver: drake::solvers::SolverInterface = None, solver_options: Optional[drake::solvers::SolverOptions] = None) -&gt; drake::solvers::MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fe3fcc30530&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+</ol>
+<p>Formulates and solves the mixed-integer convex formulation of the
+shortest path problem on the graph, as discussed in detail in</p>
+<p>“Shortest Paths in Graphs of Convex Sets” by Tobia Marcucci, Jack
+Umenberger, Pablo A. Parrilo, Russ Tedrake.
+<a class="reference external" href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source</span></code>:</dt>
+<dd>specifies the source set. The solver will choose any point in that
+set; to start at a particular continuous state consider adding a
+Point set to the graph and using that as the source.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">target</span></code>:</dt>
+<dd>specifies the target set. The solver will choose any point in that
+set.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
+<dd>include all settings for solving the shortest path problem. See
+<code class="docutils literal notranslate"><span class="pre">GraphOfConvexSetsOptions</span></code> for further details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any of the costs or constraints in the graph are</li>
+<li>incompatible with the shortest path formulation or otherwise</li>
+<li>unsupported. All costs must be non-negative for all values of the</li>
+<li>continuous variables.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fe3fe7a2df0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+</ol>
+<p>Convenience overload that takes const reference arguments for source
+and target.</p>
+<ol class="arabic simple" start="3">
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, convex_relaxation: bool, solver: pydrake.solvers.SolverInterface = None, solver_options: Optional[pydrake.solvers.SolverOptions] = None) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -865,21 +907,39 @@ solver settings.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if any of the costs or constraints in the graph are</li>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><dl class="first docutils">
+<dt>RuntimeError if any of the costs or constraints in the graph are</dt>
+<dd><ul class="first last">
 <li>incompatible with the shortest path formulation or otherwise</li>
-<li>unsupported. All costs must be non-negative (for all values of the</li>
-<li>continuous variables).</li>
+<li>unsupported. All costs must be non-negative for all values of the</li>
+<li>continuous variables.</li>
 </ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p class="last">/ (Deprecated.)</p>
 </td>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, convex_relaxation: bool = False, solver: drake::solvers::SolverInterface = None, solver_options: Optional[drake::solvers::SolverOptions] = None) -&gt; drake::solvers::MathematicalProgramResult</li>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use version with GraphOfConvexSetsOptions This will be removed
+from Drake on or after 2022-12-01.</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, convex_relaxation: bool, solver: pydrake.solvers.SolverInterface = None, solver_options: Optional[pydrake.solvers.SolverOptions] = None) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
-and target.</p>
+and target.  /
+(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use version with GraphOfConvexSetsOptions This will be removed
+from Drake on or after 2022-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="class">
@@ -901,7 +961,7 @@ std::string name.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution">
-<code class="descname">GetSolution</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetSolution</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em>, <em>result: pydrake.solvers.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the solution of x() in a MathematicalProgramResult. This
 solution is NaN if the vertex is not in the shortest path (or if we
 are solving the the convex relaxation and the total flow through this
@@ -975,6 +1035,40 @@ builds.</p>
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertices">
 <code class="descname">Vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns mutable pointers to the vertices stored in the graph.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">GraphOfConvexSetsOptions</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSetsOptions</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.convex_relaxation">
+<code class="descname">convex_relaxation</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.convex_relaxation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to solve the relaxed version of the problem. As discussed in the
+paper, we know that this relaxation cannot solve the original NP-hard
+problem for all instances, but there are also many instances for which
+the convex relaxation is tight.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.solver">
+<code class="descname">solver</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimizer to be used to solve the shortest path optimization problem.
+If not set, the best solver for the given problem is selected. Note
+that if the solver cannot handle the type of optimization problem
+generated, the calling solve method will throw.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.solver_options">
+<code class="descname">solver_options</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.solver_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Options passed to the solver when solving the generated problem.</p>
 </dd></dl>
 
 </dd></dl>

@@ -3,6 +3,7 @@ var namespacedrake_1_1geometry_1_1optimization =
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product" ],
     [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", "classdrake_1_1geometry_1_1optimization_1_1_convex_set" ],
     [ "GraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets" ],
+    [ "GraphOfConvexSetsOptions", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options" ],
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron" ],
     [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid" ],
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html", "classdrake_1_1geometry_1_1optimization_1_1_intersection" ],

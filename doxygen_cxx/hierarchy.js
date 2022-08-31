@@ -56,6 +56,7 @@ var hierarchy =
     [ "CacheEntry", "classdrake_1_1systems_1_1_cache_entry.html", null ],
     [ "CacheEntryValue", "classdrake_1_1systems_1_1_cache_entry_value.html", null ],
     [ "CalcGridPointsOptions", "structdrake_1_1multibody_1_1_calc_grid_points_options.html", null ],
+    [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", null ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
     [ "ChebyshevPolynomial", "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html", null ],
     [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", null ],
@@ -315,6 +316,7 @@ var hierarchy =
     [ "FiniteHorizonLinearQuadraticRegulatorOptions", "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html", null ],
     [ "FiniteHorizonLinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html", null ],
     [ "FixedInputPortValue", "classdrake_1_1systems_1_1_fixed_input_port_value.html", null ],
+    [ "CameraConfig::FocalLength", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html", null ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html", [
       [ "FormulaFalse", "classdrake_1_1symbolic_1_1_formula_false.html", null ],
@@ -337,6 +339,7 @@ var hierarchy =
         [ "FormulaNeq", "classdrake_1_1symbolic_1_1_formula_neq.html", null ]
       ] ]
     ] ],
+    [ "CameraConfig::FovDegrees", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html", null ],
     [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html", null ],
     [ "FromDoubleTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html", null ],
     [ "GenericPolynomial< BasisElement >", "classdrake_1_1symbolic_1_1_generic_polynomial.html", null ],
@@ -361,6 +364,7 @@ var hierarchy =
     [ "Gradient< Derived, nq, derivative_order >", "structdrake_1_1math_1_1_gradient.html", null ],
     [ "Gradient< Derived, nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html", null ],
     [ "GraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html", null ],
+    [ "GraphOfConvexSetsOptions", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html", null ],
     [ "GrayCodesMatrix< NumDigits >", "structdrake_1_1math_1_1_gray_codes_matrix.html", null ],
     [ "GripperBrickHelper< T >", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html", null ],
     [ "GripperBrickHelper< double >", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html", null ],
@@ -581,8 +585,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
