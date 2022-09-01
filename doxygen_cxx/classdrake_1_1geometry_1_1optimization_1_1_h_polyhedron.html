@@ -174,6 +174,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a437b46a004ab322e1e2d23b90e8e9239"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a437b46a004ab322e1e2d23b90e8e9239">HPolyhedron</a> ()</td></tr>
+<tr class="memdesc:a437b46a004ab322e1e2d23b90e8e9239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a default (zero-dimensional) polyhedron.  <a href="#a437b46a004ab322e1e2d23b90e8e9239">More...</a><br /></td></tr>
+<tr class="separator:a437b46a004ab322e1e2d23b90e8e9239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addeb00deb2fcdb452b7c6f7c416fec36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#addeb00deb2fcdb452b7c6f7c416fec36">HPolyhedron</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ace583a472a3bdc1b67f05d6a6571a903">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aae45694d3595659922653fd027d15cb6">b</a>)</td></tr>
 <tr class="memdesc:addeb00deb2fcdb452b7c6f7c416fec36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the polyhedron.  <a href="#addeb00deb2fcdb452b7c6f7c416fec36">More...</a><br /></td></tr>
 <tr class="separator:addeb00deb2fcdb452b7c6f7c416fec36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +221,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad53e47e943684bee743276ad5027e5a2"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad53e47e943684bee743276ad5027e5a2">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const</td></tr>
 <tr class="memdesc:ad53e47e943684bee743276ad5027e5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of UniformSample that uses the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1" title="Solves a linear program to compute the center of the largest inscribed ball in the polyhedron.">ChebyshevCenter()</a> as the previous_sample as a feasible point to start the Markov chain sampling.  <a href="#ad53e47e943684bee743276ad5027e5a2">More...</a><br /></td></tr>
 <tr class="separator:ad53e47e943684bee743276ad5027e5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f010e733bd63adb8352995624362b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
 <tr class="memdesc:a2f010e733bd63adb8352995624362b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g.  <a href="#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
 <tr class="separator:a2f010e733bd63adb8352995624362b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,6 +303,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae6b2b9aaa889daabb279bbdb960f8f87 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae6b2b9aaa889daabb279bbdb960f8f87">ConvexSet</a> (std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;(const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)&gt; cloner, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a>)</td></tr>
 <tr class="memdesc:ae6b2b9aaa889daabb279bbdb960f8f87 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by derived classes to construct a ConvexSet.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae6b2b9aaa889daabb279bbdb960f8f87">More...</a><br /></td></tr>
 <tr class="separator:ae6b2b9aaa889daabb279bbdb960f8f87 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee74f49fab7ccaabd8661e516c7a8d9f inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)=default</td></tr>
 <tr class="separator:aee74f49fab7ccaabd8661e516c7a8d9f inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf56e31cd3546020503a8d7b3b359703 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaf56e31cd3546020503a8d7b3b359703">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)=default</td></tr>
@@ -326,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a849b5ec6e368282a2416294dc6f0863a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a849b5ec6e368282a2416294dc6f0863a">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a849b5ec6e368282a2416294dc6f0863a">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +362,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a49baca0390a3ae23b173c34429982fcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49baca0390a3ae23b173c34429982fcc">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49baca0390a3ae23b173c34429982fcc">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,8 +387,27 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a437b46a004ab322e1e2d23b90e8e9239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437b46a004ab322e1e2d23b90e8e9239">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a default (zero-dimensional) polyhedron. </p>
+
+</div>
+</div>
 <a id="addeb00deb2fcdb452b7c6f7c416fec36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addeb00deb2fcdb452b7c6f7c416fec36">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#addeb00deb2fcdb452b7c6f7c416fec36">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,7 +438,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a5008da472eebd4caf252f33f394bb131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5008da472eebd4caf252f33f394bb131">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5008da472eebd4caf252f33f394bb131">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -720,7 +749,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs the L1-norm unit ball in <code>dim</code> dimensions, {x | |x|₁ &lt;= 1 }. </p>
-<p>This set is also known as the crosspolytope and is described by the 2ᵈⁱᵐ signed unit vectors. </p>
+<p>This set is also known as the cross-polytope and is described by the 2ᵈⁱᵐ signed unit vectors. </p>
 
 </div>
 </div>
@@ -873,6 +902,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reduces some (not necessarily all) redundant inequalities in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>. </p>
 <p>This is not guaranteed to give the minimal representation of the polyhedron but is a relatively fast way to reduce the number of inequalities. </p>
+
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
 
 </div>
 </div>

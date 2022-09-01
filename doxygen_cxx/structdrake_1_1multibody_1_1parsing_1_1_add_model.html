@@ -187,6 +187,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a9b45b3e13bd9167aab02e17e08916231"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a9b45b3e13bd9167aab02e17e08916231">name</a></td></tr>
 <tr class="memdesc:a9b45b3e13bd9167aab02e17e08916231"><td class="mdescLeft">&#160;</td><td class="mdescRight">The model instance name.  <a href="#a9b45b3e13bd9167aab02e17e08916231">More...</a><br /></td></tr>
 <tr class="separator:a9b45b3e13bd9167aab02e17e08916231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283793cf640a9017701bfd9df8743922"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::map&lt; std::string, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a283793cf640a9017701bfd9df8743922">default_joint_positions</a></td></tr>
+<tr class="memdesc:a283793cf640a9017701bfd9df8743922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of joint_name =&gt; default position vector.  <a href="#a283793cf640a9017701bfd9df8743922">More...</a><br /></td></tr>
+<tr class="separator:a283793cf640a9017701bfd9df8743922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14aaa3c1c25ea7568ec8f9e4c2fdca6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::map&lt; std::string, <a class="el" href="classdrake_1_1schema_1_1_transform.html">drake::schema::Transform</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ad14aaa3c1c25ea7568ec8f9e4c2fdca6">default_free_body_pose</a></td></tr>
+<tr class="memdesc:ad14aaa3c1c25ea7568ec8f9e4c2fdca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of body_name =&gt; default free body pose.  <a href="#ad14aaa3c1c25ea7568ec8f9e4c2fdca6">More...</a><br /></td></tr>
+<tr class="separator:ad14aaa3c1c25ea7568ec8f9e4c2fdca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac532c4b500b1a85ea22217f2c65a70ed"></a>
@@ -225,6 +231,38 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad14aaa3c1c25ea7568ec8f9e4c2fdca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14aaa3c1c25ea7568ec8f9e4c2fdca6">&#9670;&nbsp;</a></span>default_free_body_pose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::map&lt;std::string, <a class="el" href="classdrake_1_1schema_1_1_transform.html">drake::schema::Transform</a>&gt; &gt; default_free_body_pose</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Map of body_name =&gt; default free body pose. </p>
+
+</div>
+</div>
+<a id="a283793cf640a9017701bfd9df8743922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a283793cf640a9017701bfd9df8743922">&#9670;&nbsp;</a></span>default_joint_positions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::map&lt;std::string, Eigen::VectorXd&gt; &gt; default_joint_positions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Map of joint_name =&gt; default position vector. </p>
+
+</div>
+</div>
 <a id="aefc35c7944eed319c89bc1b399f0eb67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefc35c7944eed319c89bc1b399f0eb67">&#9670;&nbsp;</a></span>file</h2>
 

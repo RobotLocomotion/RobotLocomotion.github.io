@@ -1,5 +1,11 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aaed8ebf240db4f3111b9853820024b1f":[3,0,0,16,131,11],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aef7c55391ae2a9db556ad98420557713":[3,0,0,16,131,13],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#afbe08f2e3275f85c38d7d8510e377aa3":[3,0,0,16,131,9],
+"classdrake_1_1systems_1_1_wrap_to_system.html":[1,2,1,27],
+"classdrake_1_1systems_1_1_wrap_to_system.html#a1e619ed14fa786ff7fc329b2f5c92625":[1,2,1,27,5],
+"classdrake_1_1systems_1_1_wrap_to_system.html#a1f97e1da44446079e68078d247231f91":[1,2,1,27,1],
 "classdrake_1_1systems_1_1_wrap_to_system.html#a2e3f67b0509721761ae52c5882482e86":[1,2,1,27,4],
 "classdrake_1_1systems_1_1_wrap_to_system.html#a4bced31ddbcc84104bed479e0ee246d9":[1,2,1,27,6],
 "classdrake_1_1systems_1_1_wrap_to_system.html#a65e0d4f46f5ba8ef6354028859a3283b":[1,2,1,27,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae41c5a002b84ba0ef89cb2c3022a2368":[1,4,2,5,12],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#aee66491db467d41bd5a9f765c106c15d":[1,4,2,5,2],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#af6a6dfd04b282d5703c7b6d357621085":[1,4,2,5,1],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html":[1,2,3,0],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a192f47dbd206ccbc9593332a30dbf4f7":[1,2,3,0,9],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a2d369537575baf5f2628190a821155ce":[1,2,3,0,8],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a4b2fdb835b8e4f54c55aba0bf765d57f":[1,2,3,0,10],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a75f619833e2c15feac6e8acba57fbd8b":[1,2,3,0,0],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a789215f20f4dd16718b9003d08daf99d":[1,2,3,0,5],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a93700584c5d48070d9704f4ad7f83f8a":[1,2,3,0,3]
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html":[1,2,3,0]
 };

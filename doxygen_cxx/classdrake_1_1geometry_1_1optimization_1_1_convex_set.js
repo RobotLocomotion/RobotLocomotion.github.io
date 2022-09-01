@@ -20,6 +20,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_convex_set =
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaf56e31cd3546020503a8d7b3b359703", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a35e9f9166891aeacbca14f74e73018f3", null ],
     [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed", null ],
+    [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "ToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87", null ],
     [ "ambient_dimension_", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a", null ],
     [ "cloner_", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0382c0146a79fe4657004654da0489cc", null ]
