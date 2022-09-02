@@ -6,7 +6,7 @@ var searchData=
   ['x_5fbd',['X_BD',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a0d7ddcc8efc929f872d88097097e9953',1,'drake::systems::sensors::CameraConfig']]],
   ['x_5fbp',['X_BP',['../structdrake_1_1multibody_1_1_propeller_info.html#ada4bf070125ac43cd7e0a086be12d049',1,'drake::multibody::PropellerInfo']]],
   ['x_5fpb',['X_PB',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8849fbc03b0aa02c8f3c81272c4694b6',1,'drake::systems::sensors::CameraConfig']]],
-  ['x_5fpc',['X_PC',['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b',1,'drake::multibody::parsing::ModelInstanceInfo']]],
+  ['x_5fpc',['X_PC',['../structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a6651775aae5fef2c3cc30dd91b7018ff',1,'drake::multibody::parsing::AddWeld::X_PC()'],['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b',1,'drake::multibody::parsing::ModelInstanceInfo::X_PC()']]],
   ['x_5fpf',['X_PF',['../structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a636ceb2573c5bf8b0d3a1e978717dc94',1,'drake::multibody::parsing::AddFrame']]],
   ['xd',['xd',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a6734a991d96eb572b943a06ce7f5188c',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorOptions']]],
   ['xmul',['xmul',['../structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab',1,'drake::solvers::SnoptSolverDetails']]]

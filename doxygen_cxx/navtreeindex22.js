@@ -1,5 +1,8 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4b9014ce5ea008d66f100e73f204fecb":[3,0,0,14,58,0],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4cfabc8f2d2a53ee991b848f84516bb6":[3,0,0,14,58,5],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8e630e27e9f83a8cfd4faa27125643e4":[3,0,0,14,58,2],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#ac6d99026f137504bc679b191d2d8fa61":[3,0,0,14,58,4],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,14,58,1],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html":[1,1,0,28],
@@ -246,8 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ad4b3490063b9e511b24da5dd1d8ae34d":[3,0,0,14,0,3,17],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ad90c540083b838f09cf8cc1e509aeb64":[3,0,0,14,0,3,5],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ad9c7ce8808aa0bab4ba7353af550217f":[3,0,0,14,0,3,12],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,14,0,3,13],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ae517e799de9ba659f1d4d2ad70564add":[3,0,0,14,0,3,19],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#aeb4aa933c3d6d3f27523a77ab2c7c3d1":[3,0,0,14,0,3,11],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#af6b3924448e9c96c54386025fddd2c5b":[3,0,0,14,0,3,7]
+"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,14,0,3,13]
 };

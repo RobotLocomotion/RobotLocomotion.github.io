@@ -1,5 +1,8 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa220cd3808a2ef7b27dcc1715589c77c":[3,0,0,16,131,14],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa45e15b9f1b6b2e2022ffff52eaeba05":[3,0,0,16,131,1],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa60c7abd51a6b294c7420cf887fe45d1":[3,0,0,16,131,4],
 "classdrake_1_1systems_1_1_witness_triggered_event_data.html#aaed8ebf240db4f3111b9853820024b1f":[3,0,0,16,131,11],
 "classdrake_1_1systems_1_1_witness_triggered_event_data.html#aef7c55391ae2a9db556ad98420557713":[3,0,0,16,131,13],
 "classdrake_1_1systems_1_1_witness_triggered_event_data.html#afbe08f2e3275f85c38d7d8510e377aa3":[3,0,0,16,131,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae044d1635713f78183db74d7f890f4ed":[1,4,2,5,20],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae24da0d2f02398a5736a6d30e7fc7816":[1,4,2,5,26],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae2ae07d986ada1331a7c587b18f35454":[1,4,2,5,19],
-"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae41c5a002b84ba0ef89cb2c3022a2368":[1,4,2,5,12],
-"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#aee66491db467d41bd5a9f765c106c15d":[1,4,2,5,2],
-"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#af6a6dfd04b282d5703c7b6d357621085":[1,4,2,5,1],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html":[1,2,3,0]
+"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae41c5a002b84ba0ef89cb2c3022a2368":[1,4,2,5,12]
 };

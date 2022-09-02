@@ -187,6 +187,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a79e9374608093db77a9d533b2af3f11a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a79e9374608093db77a9d533b2af3f11a">child</a></td></tr>
 <tr class="memdesc:a79e9374608093db77a9d533b2af3f11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child frame. Can (and should) specify scope.  <a href="#a79e9374608093db77a9d533b2af3f11a">More...</a><br /></td></tr>
 <tr class="separator:a79e9374608093db77a9d533b2af3f11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6651775aae5fef2c3cc30dd91b7018ff"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1schema_1_1_transform.html">drake::schema::Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a6651775aae5fef2c3cc30dd91b7018ff">X_PC</a> {}</td></tr>
+<tr class="memdesc:a6651775aae5fef2c3cc30dd91b7018ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative transform between the parent frame P and the child frame C.  <a href="#a6651775aae5fef2c3cc30dd91b7018ff">More...</a><br /></td></tr>
+<tr class="separator:a6651775aae5fef2c3cc30dd91b7018ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac532c4b500b1a85ea22217f2c65a70ed"></a>
@@ -254,6 +257,23 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Parent frame. Can specify scope. </p>
+
+</div>
+</div>
+<a id="a6651775aae5fef2c3cc30dd91b7018ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6651775aae5fef2c3cc30dd91b7018ff">&#9670;&nbsp;</a></span>X_PC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1schema_1_1_transform.html">drake::schema::Transform</a>&gt; X_PC {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Relative transform between the parent frame P and the child frame C. </p>
+<p>If unspecified, the Identity transform will be used. </p>
 
 </div>
 </div>

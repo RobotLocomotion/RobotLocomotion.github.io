@@ -542,6 +542,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad80034d8fb4f8b696ff866fb92e790a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad80034d8fb4f8b696ff866fb92e790a9">SetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q_instance) const</td></tr>
 <tr class="memdesc:ad80034d8fb4f8b696ff866fb92e790a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Sets the generalized positions q for a particular model instance in a given State from a given vector.  <a href="#ad80034d8fb4f8b696ff866fb92e790a9">More...</a><br /></td></tr>
 <tr class="separator:ad80034d8fb4f8b696ff866fb92e790a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa293696b845c071deb902d3ee6d3bcc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa293696b845c071deb902d3ee6d3bcc3">SetDefaultPositions</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q)</td></tr>
+<tr class="memdesc:aa293696b845c071deb902d3ee6d3bcc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default positions for the plant.  <a href="#aa293696b845c071deb902d3ee6d3bcc3">More...</a><br /></td></tr>
+<tr class="separator:aa293696b845c071deb902d3ee6d3bcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71998d3f5e8bc65b742c03235c805fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a71998d3f5e8bc65b742c03235c805fd9">SetDefaultPositions</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_instance)</td></tr>
+<tr class="memdesc:a71998d3f5e8bc65b742c03235c805fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default positions for the model instance.  <a href="#a71998d3f5e8bc65b742c03235c805fd9">More...</a><br /></td></tr>
+<tr class="separator:a71998d3f5e8bc65b742c03235c805fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800453060fc1f94455dff6c07dfde2d1"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a800453060fc1f94455dff6c07dfde2d1">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a800453060fc1f94455dff6c07dfde2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const vector reference to the generalized velocities v in a given Context.  <a href="#a800453060fc1f94455dff6c07dfde2d1">More...</a><br /></td></tr>
 <tr class="separator:a800453060fc1f94455dff6c07dfde2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -681,6 +687,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aade5cc0d11e90db2a1c08602fcc62365"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aade5cc0d11e90db2a1c08602fcc62365">CalcCenterOfMassPositionInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances) const</td></tr>
 <tr class="memdesc:aade5cc0d11e90db2a1c08602fcc62365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the position vector from the world origin Wo to the center of mass of all non-world bodies contained in model_instances, expressed in the world frame W.  <a href="#aade5cc0d11e90db2a1c08602fcc62365">More...</a><br /></td></tr>
 <tr class="separator:aade5cc0d11e90db2a1c08602fcc62365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fcea70d2b81506b1b1d769f2137bf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a55fcea70d2b81506b1b1d769f2137bf3">CalcSpatialInertia</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_F, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> &gt; &amp;body_indexes) const</td></tr>
+<tr class="memdesc:a55fcea70d2b81506b1b1d769f2137bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns M_SFo_F, the spatial inertia of a set S of bodies about point Fo (the origin of a frame F), expressed in frame F.  <a href="#a55fcea70d2b81506b1b1d769f2137bf3">More...</a><br /></td></tr>
+<tr class="separator:a55fcea70d2b81506b1b1d769f2137bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2026c5b7ca4f16add5577e474600be34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2026c5b7ca4f16add5577e474600be34">CalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a2026c5b7ca4f16add5577e474600be34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates system center of mass translational velocity in world frame W.  <a href="#a2026c5b7ca4f16add5577e474600be34">More...</a><br /></td></tr>
 <tr class="separator:a2026c5b7ca4f16add5577e474600be34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2937,6 +2946,57 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a55fcea70d2b81506b1b1d769f2137bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fcea70d2b81506b1b1d769f2137bf3">&#9670;&nbsp;</a></span>CalcSpatialInertia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; CalcSpatialInertia </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_F</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>body_indexes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns M_SFo_F, the spatial inertia of a set S of bodies about point Fo (the origin of a frame F), expressed in frame F. </p>
+<p>You may regard M_SFo_F as measuring spatial inertia as if the set S of bodies were welded into a single composite body at the configuration specified in the <code>context</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Contains the configuration of the set S of bodies. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_F</td><td>specifies the about-point Fo (frame_F's origin) and the expressed-in frame for the returned spatial inertia. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body_indexes</td><td>Array of selected bodies. This method does not distinguish between welded bodies, joint-connected bodies, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if body_indexes contains an invalid BodyIndex or if there is a repeated BodyIndex. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The mass and inertia of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> does not contribute to the the returned spatial inertia. </dd></dl>
 
 </div>
 </div>
@@ -7305,6 +7365,68 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td><a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> whose default pose will be set. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">X_WB</td><td>Default pose of the body. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa293696b845c071deb902d3ee6d3bcc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa293696b845c071deb902d3ee6d3bcc3">&#9670;&nbsp;</a></span>SetDefaultPositions() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDefaultPositions </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default positions for the plant. </p>
+<p>Calls to CreateDefaultContext or SetDefaultContext/SetDefaultState will return a Context populated with these position values. They have no other effects on the dynamics of the system. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized or if q is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a71998d3f5e8bc65b742c03235c805fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71998d3f5e8bc65b742c03235c805fd9">&#9670;&nbsp;</a></span>SetDefaultPositions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDefaultPositions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_instance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default positions for the model instance. </p>
+<p>Calls to CreateDefaultContext or SetDefaultContext/SetDefaultState will return a Context populated with these position values. They have no other effects on the dynamics of the system. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized, if the model_instance is invalid, or if the length of <code>q_instance</code> is not equal to <code>num_positions(model_instance)</code>. </td></tr>
   </table>
   </dd>
 </dl>

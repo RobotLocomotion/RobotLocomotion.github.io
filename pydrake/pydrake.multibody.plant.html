@@ -3095,6 +3095,43 @@ output, entries will be ordered by BodyIndex.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcSpatialInertia">
+<code class="descname">CalcSpatialInertia</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], frame_F: pydrake.multibody.tree.Frame_[float], body_indexes: List[pydrake.multibody.tree.BodyIndex]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.SpatialInertia_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcSpatialInertia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns M_SFo_F, the spatial inertia of a set S of bodies about point
+Fo (the origin of a frame F), expressed in frame F. You may regard
+M_SFo_F as measuring spatial inertia as if the set S of bodies were
+welded into a single composite body at the configuration specified in
+the <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Contains the configuration of the set S of bodies.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt>
+<dd>specifies the about-point Fo (frame_F’s origin) and the
+expressed-in frame for the returned spatial inertia.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt>
+<dd>Array of selected bodies. This method does not distinguish between
+welded bodies, joint-connected bodies, etc.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if body_indexes contains an invalid BodyIndex or if</li>
+<li>there is a repeated BodyIndex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The mass and inertia of the world_body() does not contribute to
+the the returned spatial inertia.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcSpatialMomentumInWorldAboutPoint">
 <code class="descname">CalcSpatialMomentumInWorldAboutPoint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcSpatialMomentumInWorldAboutPoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -5470,6 +5507,51 @@ this value is effectively ignored.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetDefaultPositions">
+<code class="descname">SetDefaultPositions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetDefaultPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[float], q: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the plant. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized or if q is not of size</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">num_positions().</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the model instance. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized, if the model_instance</li>
+<li>is invalid, or if the length of <code class="docutils literal notranslate"><span class="pre">q_instance</span></code> is not equal to</li>
+<li><code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetDefaultState">
 <code class="descname">SetDefaultState</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], state: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetDefaultState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">state</span></code> according to defaults set by the user for joints (e.g.
@@ -7259,6 +7341,43 @@ output, entries will be ordered by BodyIndex.</dd>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcSpatialInertia">
+<code class="descname">CalcSpatialInertia</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], frame_F: pydrake.multibody.tree.Frame_[AutoDiffXd], body_indexes: List[pydrake.multibody.tree.BodyIndex]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.SpatialInertia_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcSpatialInertia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns M_SFo_F, the spatial inertia of a set S of bodies about point
+Fo (the origin of a frame F), expressed in frame F. You may regard
+M_SFo_F as measuring spatial inertia as if the set S of bodies were
+welded into a single composite body at the configuration specified in
+the <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Contains the configuration of the set S of bodies.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt>
+<dd>specifies the about-point Fo (frame_F’s origin) and the
+expressed-in frame for the returned spatial inertia.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt>
+<dd>Array of selected bodies. This method does not distinguish between
+welded bodies, joint-connected bodies, etc.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if body_indexes contains an invalid BodyIndex or if</li>
+<li>there is a repeated BodyIndex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The mass and inertia of the world_body() does not contribute to
+the the returned spatial inertia.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -9637,6 +9756,51 @@ this value is effectively ignored.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetDefaultPositions">
+<code class="descname">SetDefaultPositions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetDefaultPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], q: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the plant. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized or if q is not of size</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">num_positions().</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the model instance. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized, if the model_instance</li>
+<li>is invalid, or if the length of <code class="docutils literal notranslate"><span class="pre">q_instance</span></code> is not equal to</li>
+<li><code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetDefaultState">
 <code class="descname">SetDefaultState</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], state: pydrake.systems.framework.State_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetDefaultState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">state</span></code> according to defaults set by the user for joints (e.g.
@@ -11424,6 +11588,43 @@ output, entries will be ordered by BodyIndex.</dd>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcSpatialInertia">
+<code class="descname">CalcSpatialInertia</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], frame_F: pydrake.multibody.tree.Frame_[Expression], body_indexes: List[pydrake.multibody.tree.BodyIndex]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.SpatialInertia_[Expression]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcSpatialInertia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns M_SFo_F, the spatial inertia of a set S of bodies about point
+Fo (the origin of a frame F), expressed in frame F. You may regard
+M_SFo_F as measuring spatial inertia as if the set S of bodies were
+welded into a single composite body at the configuration specified in
+the <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Contains the configuration of the set S of bodies.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt>
+<dd>specifies the about-point Fo (frame_F’s origin) and the
+expressed-in frame for the returned spatial inertia.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt>
+<dd>Array of selected bodies. This method does not distinguish between
+welded bodies, joint-connected bodies, etc.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if body_indexes contains an invalid BodyIndex or if</li>
+<li>there is a repeated BodyIndex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The mass and inertia of the world_body() does not contribute to
+the the returned spatial inertia.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -13802,6 +14003,51 @@ this value is effectively ignored.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetDefaultPositions">
+<code class="descname">SetDefaultPositions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetDefaultPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[Expression], q: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the plant. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized or if q is not of size</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">num_positions().</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the model instance. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized, if the model_instance</li>
+<li>is invalid, or if the length of <code class="docutils literal notranslate"><span class="pre">q_instance</span></code> is not equal to</li>
+<li><code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetDefaultState">
 <code class="descname">SetDefaultState</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], state: pydrake.systems.framework.State_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetDefaultState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">state</span></code> according to defaults set by the user for joints (e.g.
@@ -15589,6 +15835,43 @@ output, entries will be ordered by BodyIndex.</dd>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcSpatialInertia">
+<code class="descname">CalcSpatialInertia</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], frame_F: pydrake.multibody.tree.Frame_[float], body_indexes: List[pydrake.multibody.tree.BodyIndex]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.SpatialInertia_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcSpatialInertia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns M_SFo_F, the spatial inertia of a set S of bodies about point
+Fo (the origin of a frame F), expressed in frame F. You may regard
+M_SFo_F as measuring spatial inertia as if the set S of bodies were
+welded into a single composite body at the configuration specified in
+the <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Contains the configuration of the set S of bodies.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt>
+<dd>specifies the about-point Fo (frame_F’s origin) and the
+expressed-in frame for the returned spatial inertia.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt>
+<dd>Array of selected bodies. This method does not distinguish between
+welded bodies, joint-connected bodies, etc.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if body_indexes contains an invalid BodyIndex or if</li>
+<li>there is a repeated BodyIndex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The mass and inertia of the world_body() does not contribute to
+the the returned spatial inertia.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -17964,6 +18247,51 @@ this value is effectively ignored.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WB</span></code>:</dt>
 <dd>Default pose of the body.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].SetDefaultPositions">
+<code class="descname">SetDefaultPositions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetDefaultPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[float], q: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the plant. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized or if q is not of size</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">num_positions().</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the default positions for the model instance. Calls to
+CreateDefaultContext or SetDefaultContext/SetDefaultState will return
+a Context populated with these position values. They have no other
+effects on the dynamics of the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the plant is not finalized, if the model_instance</li>
+<li>is invalid, or if the length of <code class="docutils literal notranslate"><span class="pre">q_instance</span></code> is not equal to</li>
+<li><code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
