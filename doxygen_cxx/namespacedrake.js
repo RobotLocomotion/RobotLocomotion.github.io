@@ -49,7 +49,6 @@ var namespacedrake =
     [ "reset_on_copy", "classdrake_1_1reset__on__copy.html", "classdrake_1_1reset__on__copy" ],
     [ "RlocationOrError", "structdrake_1_1_rlocation_or_error.html", "structdrake_1_1_rlocation_or_error" ],
     [ "scalar_predicate", "structdrake_1_1scalar__predicate.html", "structdrake_1_1scalar__predicate" ],
-    [ "Scenario", "structdrake_1_1_scenario.html", "structdrake_1_1_scenario" ],
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", "classdrake_1_1_scope_exit" ],
     [ "SortedPair", "structdrake_1_1_sorted_pair.html", "structdrake_1_1_sorted_pair" ],
     [ "SteadyTimer", "classdrake_1_1_steady_timer.html", "classdrake_1_1_steady_timer" ],

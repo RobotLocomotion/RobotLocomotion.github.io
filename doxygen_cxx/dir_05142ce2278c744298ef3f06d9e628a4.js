@@ -1,8 +1,6 @@
 var dir_05142ce2278c744298ef3f06d9e628a4 =
 [
-    [ "gl_renderer", "dir_44483f0323bd602a0990582f52e44742.html", "dir_44483f0323bd602a0990582f52e44742" ],
     [ "shaders", "dir_265f5a0dc516db63016326957882384b.html", "dir_265f5a0dc516db63016326957882384b" ],
-    [ "stub", "dir_d41ff1e58cfc03efa57fea81db26bc1e.html", "dir_d41ff1e58cfc03efa57fea81db26bc1e" ],
     [ "render_camera.h", "render__camera_8h.html", [
       [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", "classdrake_1_1geometry_1_1render_1_1_clipping_range" ],
       [ "RenderCameraCore", "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html", "classdrake_1_1geometry_1_1render_1_1_render_camera_core" ],

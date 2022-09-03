@@ -10,8 +10,6 @@ var searchData=
   ['show_5fhydroelastic',['show_hydroelastic',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::DrakeVisualizerParams']]],
   ['show_5frgb',['show_rgb',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3',1,'drake::systems::sensors::CameraConfig']]],
   ['show_5fstats_5fplot',['show_stats_plot',['../structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def',1,'drake::geometry::MeshcatParams']]],
-  ['simulation_5fduration',['simulation_duration',['../structdrake_1_1_scenario.html#a1b143200dd4bc17b6897b02962b05fa1',1,'drake::Scenario']]],
-  ['simulator_5fconfig',['simulator_config',['../structdrake_1_1_scenario.html#aa87d65ac7de670abe9fe86b9a9c19a9d',1,'drake::Scenario']]],
   ['size',['size',['../structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172',1,'drake::type_pack']]],
   ['sliding_5fcontacts',['sliding_contacts',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ad7420fd6adfed409f3fc8551d0decb96',1,'drake::multibody::constraint::ConstraintAccelProblemData']]],
   ['solution_5fstatus',['solution_status',['../structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0',1,'drake::solvers::MosekSolverDetails']]],

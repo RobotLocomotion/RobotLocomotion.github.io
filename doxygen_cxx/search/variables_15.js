@@ -6,7 +6,6 @@ var searchData=
   ['var',['var',['../classdrake_1_1_polynomial_1_1_term.html#a3c0813942263106700a29e522a224006',1,'drake::Polynomial::Term']]],
   ['verbose',['verbose',['../structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454',1,'drake::geometry::RenderEngineGltfClientParams']]],
   ['viscous_5ffriction',['viscous_friction',['../structdrake_1_1multibody_1_1_door_hinge_config.html#a4ce3ff1bdfdd2c1e0789980e855281df',1,'drake::multibody::DoorHingeConfig']]],
-  ['visualization',['visualization',['../structdrake_1_1_scenario.html#a651bd241ae5b87318eb788a7445c25ab',1,'drake::Scenario']]],
   ['visualization_5fcallback',['visualization_callback',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
   ['vt_5fbqaq_5fw',['vt_BqAq_W',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aaf34c01d86da78bb1b48beb433506466',1,'drake::multibody::HydroelasticQuadraturePointData']]]
 ];

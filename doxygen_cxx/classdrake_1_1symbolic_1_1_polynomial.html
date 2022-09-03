@@ -295,9 +295,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7d9f98657cb3e7d81648c9b244806e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#aa7d9f98657cb3e7d81648c9b244806e6">EqualTo</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p) const</td></tr>
 <tr class="memdesc:aa7d9f98657cb3e7d81648c9b244806e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this polynomial and <code>p</code> are structurally equal.  <a href="#aa7d9f98657cb3e7d81648c9b244806e6">More...</a><br /></td></tr>
 <tr class="separator:aa7d9f98657cb3e7d81648c9b244806e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a858963d0b9173e25437e2f96fa902464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a858963d0b9173e25437e2f96fa902464">EqualToAfterExpansion</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p) const</td></tr>
-<tr class="memdesc:a858963d0b9173e25437e2f96fa902464"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a858963d0b9173e25437e2f96fa902464">More...</a><br /></td></tr>
-<tr class="separator:a858963d0b9173e25437e2f96fa902464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3511471a7ce9d6ea4bffe9536187f855"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a3511471a7ce9d6ea4bffe9536187f855">CoefficientsAlmostEqual</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p, double tolerance) const</td></tr>
 <tr class="memdesc:a3511471a7ce9d6ea4bffe9536187f855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this polynomial and <code>p</code> are almost equal (the difference in the corresponding coefficients are all less than <code>tolerance</code>), after expanding the coefficients.  <a href="#a3511471a7ce9d6ea4bffe9536187f855">More...</a><br /></td></tr>
 <tr class="separator:a3511471a7ce9d6ea4bffe9536187f855"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -710,28 +707,6 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if this polynomial and <code>p</code> are structurally equal. </p>
-
-</div>
-</div>
-<a id="a858963d0b9173e25437e2f96fa902464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a858963d0b9173e25437e2f96fa902464">&#9670;&nbsp;</a></span>EqualToAfterExpansion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool EqualToAfterExpansion </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use this-&gt;Expand().EqualTo(p.Expand()) instead of  EqualToAfterExpansion() <br />
- This will be removed from Drake on or after 2022-09-01.</dd></dl>
 
 </div>
 </div>

@@ -1,9 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"discrete__time__integrator_8h.html":[4,0,0,8,3,9],
-"discrete__time__trajectory_8h.html":[4,0,0,1,5,1],
-"discrete__update__manager_8h.html":[4,0,0,8,10,10],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,10,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
 "distance__constraint_8h.html":[4,0,0,8,5,3],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,4],
@@ -249,5 +245,9 @@ var NAVTREEINDEX42 =
 "expression_2expression_8h.html#ac7a0d0119defdfc00c90fe0996ad4b81":[4,0,0,1,3,0,3,108],
 "expression_2expression_8h.html#acbb3ea44b1cf2fd877d782b8486d5aeb":[4,0,0,1,3,0,3,117],
 "expression_2expression_8h.html#acbfe43d34e6c71c503d4de11da53bbb7":[4,0,0,1,3,0,3,11],
-"expression_2expression_8h.html#acdaf0abb22b9280fc9622bd2d488a3e1":[4,0,0,1,3,0,3,47]
+"expression_2expression_8h.html#acdaf0abb22b9280fc9622bd2d488a3e1":[4,0,0,1,3,0,3,47],
+"expression_2expression_8h.html#aceba5fef90cbd2790037fa685e3ffdce":[4,0,0,1,3,0,3,67],
+"expression_2expression_8h.html#acf922c7aec2a7797cc4c9c22dcdada1f":[4,0,0,1,3,0,3,113],
+"expression_2expression_8h.html#acfa5bc007d1b065d2afc30e2f6ced7a9":[4,0,0,1,3,0,3,48],
+"expression_2expression_8h.html#acfe3f1787c60c08adf6af1e1f29ff6cf":[4,0,0,1,3,0,3,70]
 };

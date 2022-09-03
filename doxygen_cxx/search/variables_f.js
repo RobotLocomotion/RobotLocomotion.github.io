@@ -15,7 +15,6 @@ var searchData=
   ['pid_5fgains',['pid_gains',['../structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad2d9c7d6abd602591381050367ed506e',1,'drake::manipulation::schunk_wsg::SchunkWsgDriver']]],
   ['plant',['plant',['../structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a22edde1cca11d8d8bfb16621d27aecc4',1,'drake::multibody::AddMultibodyPlantSceneGraphResult']]],
   ['plant_5f',['plant_',['../structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7',1,'drake::systems::analysis_test::GenericIntegratorTest']]],
-  ['plant_5fconfig',['plant_config',['../structdrake_1_1_scenario.html#ac4fb417cbdc9ec037dd7a251452e1330',1,'drake::Scenario']]],
   ['pleides',['pleides',['../structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831',1,'drake::systems::analysis_test::PleidesTest']]],
   ['polish_5ftime',['polish_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0',1,'drake::solvers::OsqpSolverDetails']]],
   ['port',['port',['../structdrake_1_1geometry_1_1_meshcat_params.html#a37117f2a3803b9cfd665be53b850fee7',1,'drake::geometry::MeshcatParams']]],

@@ -179,9 +179,6 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a87560bb985b95bc297fc17ea9c642a41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_csdp_solver.html#a87560bb985b95bc297fc17ea9c642a41">CsdpSolver</a> (<a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3">RemoveFreeVariableMethod</a> method)</td></tr>
-<tr class="memdesc:a87560bb985b95bc297fc17ea9c642a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1solvers_1_1_csdp_solver.html" title="Wrap CSDP solver such that it can solve a drake::solvers::MathematicalProgram.">CsdpSolver</a> with a specified method to remove free variables.  <a href="#a87560bb985b95bc297fc17ea9c642a41">More...</a><br /></td></tr>
-<tr class="separator:a87560bb985b95bc297fc17ea9c642a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7faaf7248160fecda908e1d8828126ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_csdp_solver.html#a7faaf7248160fecda908e1d8828126ee">CsdpSolver</a> ()</td></tr>
 <tr class="memdesc:a7faaf7248160fecda908e1d8828126ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a7faaf7248160fecda908e1d8828126ee">More...</a><br /></td></tr>
 <tr class="separator:a7faaf7248160fecda908e1d8828126ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,7 +281,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab4e0d8d9552154536e669d5621f8cc98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4e0d8d9552154536e669d5621f8cc98">&#9670;&nbsp;</a></span>CsdpSolver() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e0d8d9552154536e669d5621f8cc98">&#9670;&nbsp;</a></span>CsdpSolver() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +307,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a3c710e5fed7041dda0e3391dd5d3171b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c710e5fed7041dda0e3391dd5d3171b">&#9670;&nbsp;</a></span>CsdpSolver() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c710e5fed7041dda0e3391dd5d3171b">&#9670;&nbsp;</a></span>CsdpSolver() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,37 +332,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a87560bb985b95bc297fc17ea9c642a41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87560bb985b95bc297fc17ea9c642a41">&#9670;&nbsp;</a></span>CsdpSolver() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_csdp_solver.html">CsdpSolver</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3">RemoveFreeVariableMethod</a>&#160;</td>
-          <td class="paramname"><em>method</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs <a class="el" href="classdrake_1_1solvers_1_1_csdp_solver.html" title="Wrap CSDP solver such that it can solve a drake::solvers::MathematicalProgram.">CsdpSolver</a> with a specified method to remove free variables. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>"Use the CsdpSolver() constructor without an input argument, and set the " "method through SetOption(CsdpSolver::id(), " "\"drake::RemoveFreeVariableMethod", METHOD)"   &lt;br&gt; This will be removed from Drake on or after   "2022-09-01" .</dd></dl>
-
-</div>
-</div>
 <a id="a7faaf7248160fecda908e1d8828126ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7faaf7248160fecda908e1d8828126ee">&#9670;&nbsp;</a></span>CsdpSolver() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7faaf7248160fecda908e1d8828126ee">&#9670;&nbsp;</a></span>CsdpSolver() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

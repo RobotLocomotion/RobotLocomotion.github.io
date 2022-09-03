@@ -2765,9 +2765,19 @@ other multibody elements to it.</p>
 <dd><p>Type used to identify bodies by index in a multibody tree system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.BodyIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.BodyIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.BodyIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.BodyIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.BodyIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.BodyIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2785,9 +2795,19 @@ that doesn’t throw an exception in Debug builds.</p>
 <dd><p>Type used to identify constraints by index within a multibody system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.ConstraintIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ConstraintIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ConstraintIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ConstraintIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.ConstraintIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.ConstraintIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3815,9 +3835,19 @@ non-conservative forces.</li>
 system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.ForceElementIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ForceElementIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ForceElementIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ForceElementIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.ForceElementIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.ForceElementIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -6535,9 +6565,19 @@ attached).</p>
 <dd><p>Type used to identify frames by index in a multibody tree system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.FrameIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FrameIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FrameIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.FrameIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.FrameIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.FrameIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -8902,9 +8942,19 @@ MultibodyTree model to which <code class="docutils literal notranslate"><span cl
 system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.JointActuatorIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuatorIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.JointActuatorIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuatorIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.JointActuatorIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.JointActuatorIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -8922,9 +8972,19 @@ that doesn’t throw an exception in Debug builds.</p>
 <dd><p>Type used to identify joints by index within a multibody tree system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.JointIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.JointIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.JointIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.JointIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -11611,9 +11671,19 @@ body frame B.</p>
 system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.ModelInstanceIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ModelInstanceIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ModelInstanceIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ModelInstanceIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.ModelInstanceIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.ModelInstanceIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">

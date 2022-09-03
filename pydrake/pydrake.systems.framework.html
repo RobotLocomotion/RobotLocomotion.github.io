@@ -228,9 +228,19 @@
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">AbstractParameterIndex</code><a class="headerlink" href="#pydrake.systems.framework.AbstractParameterIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.AbstractParameterIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractParameterIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractParameterIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.AbstractParameterIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.AbstractParameterIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.AbstractParameterIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -247,9 +257,19 @@ that doesn’t throw an exception in Debug builds.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">AbstractStateIndex</code><a class="headerlink" href="#pydrake.systems.framework.AbstractStateIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.AbstractStateIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractStateIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.AbstractStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.AbstractStateIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.AbstractStateIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -761,9 +781,19 @@ GetMutableAbstractValueOrThrow() above for more information.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">CacheIndex</code><a class="headerlink" href="#pydrake.systems.framework.CacheIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.CacheIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.CacheIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.CacheIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.CacheIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.CacheIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4048,9 +4078,19 @@ necessarily <code class="docutils literal notranslate"><span class="pre">num_q</
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">ContinuousStateIndex</code><a class="headerlink" href="#pydrake.systems.framework.ContinuousStateIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.ContinuousStateIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContinuousStateIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContinuousStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.ContinuousStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.ContinuousStateIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.ContinuousStateIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4067,9 +4107,19 @@ that doesn’t throw an exception in Debug builds.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DependencyTicket</code><a class="headerlink" href="#pydrake.systems.framework.DependencyTicket" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.DependencyTicket.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DependencyTicket</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.DependencyTicket.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.DependencyTicket.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.DependencyTicket) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.DependencyTicket, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5422,9 +5472,19 @@ provided.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiscreteStateIndex</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteStateIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.DiscreteStateIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteStateIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.DiscreteStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.DiscreteStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.DiscreteStateIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.DiscreteStateIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -7197,9 +7257,19 @@ owning System.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">InputPortIndex</code><a class="headerlink" href="#pydrake.systems.framework.InputPortIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.InputPortIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPortIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.InputPortIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.InputPortIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.InputPortIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.InputPortIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -11141,9 +11211,19 @@ System::DoGetWitnessFunctions().</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">NumericParameterIndex</code><a class="headerlink" href="#pydrake.systems.framework.NumericParameterIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.NumericParameterIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.NumericParameterIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.NumericParameterIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.NumericParameterIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.NumericParameterIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.NumericParameterIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -11604,9 +11684,19 @@ meaningful for abstract-valued ports.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">OutputPortIndex</code><a class="headerlink" href="#pydrake.systems.framework.OutputPortIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.OutputPortIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.OutputPortIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.OutputPortIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.OutputPortIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.OutputPortIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.OutputPortIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -12652,9 +12742,19 @@ Asserts if <code class="docutils literal notranslate"><span class="pre">index</s
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">SubsystemIndex</code><a class="headerlink" href="#pydrake.systems.framework.SubsystemIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="pydrake.systems.framework.SubsystemIndex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SubsystemIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SubsystemIndex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.SubsystemIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.SubsystemIndex) -&gt; None</li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
 exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.SubsystemIndex, arg0: int) -&gt; None</li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
 </dd></dl>
 
 <dl class="method">

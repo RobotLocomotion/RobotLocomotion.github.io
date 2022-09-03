@@ -5,7 +5,6 @@ var searchData=
   ['scalardenseoutput',['ScalarDenseOutput',['../classdrake_1_1systems_1_1_scalar_dense_output.html',1,'drake::systems']]],
   ['scalarinitialvalueproblem',['ScalarInitialValueProblem',['../classdrake_1_1systems_1_1_scalar_initial_value_problem.html',1,'drake::systems']]],
   ['scalarviewdenseoutput',['ScalarViewDenseOutput',['../classdrake_1_1systems_1_1_scalar_view_dense_output.html',1,'drake::systems']]],
-  ['scenario',['Scenario',['../structdrake_1_1_scenario.html',1,'drake']]],
   ['scenegraph',['SceneGraph',['../classdrake_1_1geometry_1_1_scene_graph.html',1,'drake::geometry']]],
   ['scenegraph_3c_20autodiffxd_20_3e',['SceneGraph&lt; AutoDiffXd &gt;',['../classdrake_1_1geometry_1_1_scene_graph.html',1,'drake::geometry']]],
   ['scenegraph_3c_20double_20_3e',['SceneGraph&lt; double &gt;',['../classdrake_1_1geometry_1_1_scene_graph.html',1,'drake::geometry']]],

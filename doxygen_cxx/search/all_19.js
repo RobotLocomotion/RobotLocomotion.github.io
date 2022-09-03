@@ -10,8 +10,6 @@ var searchData=
   ['yaml_5fread_5farchive_2eh',['yaml_read_archive.h',['../yaml__read__archive_8h.html',1,'']]],
   ['yaml_20serialization',['YAML Serialization',['../group__yaml__serialization.html',1,'']]],
   ['yaml_5fwrite_5farchive_2eh',['yaml_write_archive.h',['../yaml__write__archive_8h.html',1,'']]],
-  ['yamlreadarchive',['YamlReadArchive',['../namespacedrake_1_1yaml.html#a5da9656ccd4aa91197d514c45740e39d',1,'drake::yaml']]],
-  ['yamlwritearchive',['YamlWriteArchive',['../namespacedrake_1_1yaml.html#ad0f61ec448c8b1e88a0d09d88e4d448e',1,'drake::yaml']]],
   ['yaw_5fangle',['yaw_angle',['../classdrake_1_1math_1_1_roll_pitch_yaw.html#ab6b31ddfad6ec326ba32788b05954daa',1,'drake::math::RollPitchYaw']]],
   ['youngs_5fmodulus',['youngs_modulus',['../classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a220b34cff05e3d9969b48779570a938f',1,'drake::multibody::fem::DeformableBodyConfig']]]
 ];

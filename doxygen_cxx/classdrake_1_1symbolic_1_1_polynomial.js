@@ -15,7 +15,6 @@ var classdrake_1_1symbolic_1_1_polynomial =
     [ "Degree", "classdrake_1_1symbolic_1_1_polynomial.html#a8ccb7c7bd130704b3a7927248cc27339", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_polynomial.html#a1f0720a278d44bc59ba1f85d03fdf604", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_polynomial.html#aa7d9f98657cb3e7d81648c9b244806e6", null ],
-    [ "EqualToAfterExpansion", "classdrake_1_1symbolic_1_1_polynomial.html#a858963d0b9173e25437e2f96fa902464", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_polynomial.html#acaa87c27bae38b0daed338c482de9a0e", null ],
     [ "EvaluateIndeterminates", "classdrake_1_1symbolic_1_1_polynomial.html#a854e025ef6b3a037dc0753004dce284a", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_polynomial.html#aae1961fc948aba3ce3816dcf712140ca", null ],

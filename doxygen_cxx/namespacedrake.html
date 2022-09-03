@@ -297,8 +297,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A traits struct that describes the return type of predicates over a scalar type (named <code>T</code>).  <a href="structdrake_1_1scalar__predicate.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_scenario.html">Scenario</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_scope_exit.html">ScopeExit</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to create a scope exit guard &ndash; an object that when destroyed runs <code>func</code>.  <a href="classdrake_1_1_scope_exit.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -805,10 +803,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ade20b7bf635eecb13adbaac4df980af0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ade20b7bf635eecb13adbaac4df980af0">unused</a> (const Args &amp;...)</td></tr>
 <tr class="memdesc:ade20b7bf635eecb13adbaac4df980af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Documents the argument(s) as unused, placating GCC's -Wunused-parameter warning.  <a href="#ade20b7bf635eecb13adbaac4df980af0">More...</a><br /></td></tr>
 <tr class="separator:ade20b7bf635eecb13adbaac4df980af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbac16788f6281ab7e0b18a070507f61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_scenario.html">Scenario</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acbac16788f6281ab7e0b18a070507f61">LoadScenario</a> (const std::string &amp;filename, const std::string &amp;scenario_name, const std::string &amp;scenario_text=&quot;{}&quot;)</td></tr>
-<tr class="separator:acbac16788f6281ab7e0b18a070507f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0949d36669227fb8e53274f88f23c62b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a0949d36669227fb8e53274f88f23c62b">SaveScenario</a> (const <a class="el" href="structdrake_1_1_scenario.html">Scenario</a> &amp;scenario, const std::string &amp;scenario_name, bool verbose=false)</td></tr>
-<tr class="separator:a0949d36669227fb8e53274f88f23c62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">cond</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Constructs conditional expression (similar to Lisp's cond).</p>
 <pre class="fragment">  cond(cond_1, expr_1,
@@ -3055,40 +3049,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acbac16788f6281ab7e0b18a070507f61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbac16788f6281ab7e0b18a070507f61">&#9670;&nbsp;</a></span>LoadScenario()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1_scenario.html">Scenario</a> drake::LoadScenario </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>scenario_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>scenario_text</em> = <code>&quot;{}&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae32fd151ebc2dab30d9546f1dbef0c79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae32fd151ebc2dab30d9546f1dbef0c79">&#9670;&nbsp;</a></span>log()</h2>
 
@@ -3686,40 +3646,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides power function for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>. </p>
-
-</div>
-</div>
-<a id="a0949d36669227fb8e53274f88f23c62b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0949d36669227fb8e53274f88f23c62b">&#9670;&nbsp;</a></span>SaveScenario()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string drake::SaveScenario </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1_scenario.html">Scenario</a> &amp;&#160;</td>
-          <td class="paramname"><em>scenario</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>scenario_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

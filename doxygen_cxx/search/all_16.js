@@ -29,7 +29,7 @@ var searchData=
   ['variable_2eh',['variable.h',['../variable_8h.html',1,'']]],
   ['variablenametoid',['VariableNameToId',['../classdrake_1_1_polynomial.html#aeaeacfff3d087ad400147e605269ad3c',1,'drake::Polynomial']]],
   ['variablereflist',['VariableRefList',['../namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b',1,'drake::solvers']]],
-  ['variables',['Variables',['../classdrake_1_1symbolic_1_1_variables.html',1,'Variables'],['../classdrake_1_1solvers_1_1_binding.html#a6f319f0d50c3403278af24eb88d8fb61',1,'drake::solvers::Binding::variables()'],['../classdrake_1_1symbolic_1_1_variables.html#a2a55cab2691178eef7cc62a407d991bf',1,'drake::symbolic::Variables::Variables(const Variables &amp;)=default'],['../classdrake_1_1symbolic_1_1_variables.html#a4f375bc23dee72c93ffeffcdc1ca5e6a',1,'drake::symbolic::Variables::Variables(Variables &amp;&amp;)=default'],['../classdrake_1_1symbolic_1_1_variables.html#a64ff4b8fcecd4010f7b951969169e52c',1,'drake::symbolic::Variables::Variables()=default'],['../classdrake_1_1symbolic_1_1_variables.html#a2f80ef2ee2e40042f3b89a2a66a9eef5',1,'drake::symbolic::Variables::Variables(std::initializer_list&lt; Variable &gt; init)'],['../classdrake_1_1symbolic_1_1_variables.html#ade320564b4b2ad763dfc12279fd97f79',1,'drake::symbolic::Variables::Variables(const Eigen::Ref&lt; const VectorX&lt; Variable &gt;&gt; &amp;vec)']]],
+  ['variables',['Variables',['../classdrake_1_1symbolic_1_1_variables.html',1,'Variables'],['../classdrake_1_1symbolic_1_1_variables.html#a2a55cab2691178eef7cc62a407d991bf',1,'drake::symbolic::Variables::Variables(const Variables &amp;)=default'],['../classdrake_1_1symbolic_1_1_variables.html#a4f375bc23dee72c93ffeffcdc1ca5e6a',1,'drake::symbolic::Variables::Variables(Variables &amp;&amp;)=default'],['../classdrake_1_1symbolic_1_1_variables.html#a64ff4b8fcecd4010f7b951969169e52c',1,'drake::symbolic::Variables::Variables()=default'],['../classdrake_1_1symbolic_1_1_variables.html#a2f80ef2ee2e40042f3b89a2a66a9eef5',1,'drake::symbolic::Variables::Variables(std::initializer_list&lt; Variable &gt; init)'],['../classdrake_1_1symbolic_1_1_variables.html#ade320564b4b2ad763dfc12279fd97f79',1,'drake::symbolic::Variables::Variables(const Eigen::Ref&lt; const VectorX&lt; Variable &gt;&gt; &amp;vec)'],['../classdrake_1_1solvers_1_1_binding.html#a6f319f0d50c3403278af24eb88d8fb61',1,'drake::solvers::Binding::variables()']]],
   ['variables_2eh',['variables.h',['../variables_8h.html',1,'']]],
   ['variableselectfun',['VariableSelectFun',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a726cca20e3cf59eed49574ee8abd61d3',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['variableselectionmethod',['VariableSelectionMethod',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afa218114576445568fafd96dce0f2916',1,'drake::solvers::MixedIntegerBranchAndBound']]],
@@ -90,7 +90,7 @@ var searchData=
   ['visitformula',['VisitFormula',['../namespacedrake_1_1symbolic.html#aa2748b5dc34bc17a6c6e98ac1d0cc1ad',1,'drake::symbolic']]],
   ['visitpolynomial',['VisitPolynomial',['../namespacedrake_1_1symbolic.html#a0a61c45c20176e91159639186b26e35e',1,'drake::symbolic']]],
   ['visitsystem',['VisitSystem',['../classdrake_1_1systems_1_1_system_visitor.html#a269301e7a7eaee8a0d421f59d14b7944',1,'drake::systems::SystemVisitor']]],
-  ['visualization',['visualization',['../structdrake_1_1_scenario.html#a651bd241ae5b87318eb788a7445c25ab',1,'drake::Scenario::visualization()'],['../group__visualization.html',1,'(Global Namespace)']]],
+  ['visualization',['Visualization',['../group__visualization.html',1,'']]],
   ['visualization_5fcallback',['visualization_callback',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
   ['visualization_5fcallbacks',['visualization_callbacks',['../classdrake_1_1solvers_1_1_mathematical_program.html#a744f8ed184bc9260b5970f7b8e12812a',1,'drake::solvers::MathematicalProgram']]],
   ['visualization_5fconfig_2eh',['visualization_config.h',['../visualization__config_8h.html',1,'']]],
@@ -114,6 +114,5 @@ var searchData=
   ['vt_5fbqaq_5fw',['vt_BqAq_W',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aaf34c01d86da78bb1b48beb433506466',1,'drake::multibody::HydroelasticQuadraturePointData']]],
   ['vt_5fresidual',['vt_residual',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acad1162320925e1bba6171c41831504e',1,'drake::multibody::TamsiSolverIterationStats']]],
   ['vtk_5fto_5fvolume_5fmesh_2eh',['vtk_to_volume_mesh.h',['../vtk__to__volume__mesh_8h.html',1,'']]],
-  ['vtk_5futil_2eh',['vtk_util.h',['../vtk__util_8h.html',1,'']]],
   ['vtkpointerarray',['vtkPointerArray',['../namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c',1,'drake::geometry::render::vtk_util']]]
 ];
