@@ -162,6 +162,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GraphOfConvexSets Class Reference<div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__geometry__optimization.html">Geometry Optimization</a></div></div>  </div>
@@ -232,6 +233,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a22d9ed4306dc8b33178c4ba7255fbeca"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a22d9ed4306dc8b33178c4ba7255fbeca">Edges</a> () const</td></tr>
 <tr class="memdesc:a22d9ed4306dc8b33178c4ba7255fbeca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointers to the edges stored in the graph.  <a href="#a22d9ed4306dc8b33178c4ba7255fbeca">More...</a><br /></td></tr>
 <tr class="separator:a22d9ed4306dc8b33178c4ba7255fbeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d4326967d3460e7a5fd585dbdde489"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#af3d4326967d3460e7a5fd585dbdde489">ClearAllPhiConstraints</a> ()</td></tr>
+<tr class="memdesc:af3d4326967d3460e7a5fd585dbdde489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all constraints added to any edge with AddPhiConstraint.  <a href="#af3d4326967d3460e7a5fd585dbdde489">More...</a><br /></td></tr>
+<tr class="separator:af3d4326967d3460e7a5fd585dbdde489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaa78142cb95f355d2dfcc0032738f07"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#abaa78142cb95f355d2dfcc0032738f07">GetGraphvizString</a> (const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;result=std::nullopt, bool show_slacks=true, <a class="el" href="classint.html">int</a> precision=3, bool scientific=false) const</td></tr>
 <tr class="memdesc:abaa78142cb95f355d2dfcc0032738f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <a href="#abaa78142cb95f355d2dfcc0032738f07">More...</a><br /></td></tr>
 <tr class="separator:abaa78142cb95f355d2dfcc0032738f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,6 +260,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad460ac287eca9cfa4d8fc3e8d8200300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a86ee0b1b2dea70ae192ecb3acb9ca7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5a86ee0b1b2dea70ae192ecb3acb9ca7">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a5a86ee0b1b2dea70ae192ecb3acb9ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aa29be4bfd3f94bc063b98bd605ea0893"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aa29be4bfd3f94bc063b98bd605ea0893">PreprocessShortestPathTest</a></td></tr>
+<tr class="separator:aa29be4bfd3f94bc063b98bd605ea0893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a4df1a3580f1ae7e96903c7b3f7b00974"></a>
@@ -494,6 +503,25 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds a vertex to the graph. </p>
 <p>A copy of <code>set</code> is cloned and stored inside the graph. If <code>name</code> is empty then a default name will be provided. </p>
+
+</div>
+</div>
+<a id="af3d4326967d3460e7a5fd585dbdde489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d4326967d3460e7a5fd585dbdde489">&#9670;&nbsp;</a></span>ClearAllPhiConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearAllPhiConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all constraints added to any edge with AddPhiConstraint. </p>
 
 </div>
 </div>
@@ -960,6 +988,29 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns pointers to the vertices stored in the graph. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="aa29be4bfd3f94bc063b98bd605ea0893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa29be4bfd3f94bc063b98bd605ea0893">&#9670;&nbsp;</a></span>PreprocessShortestPathTest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class PreprocessShortestPathTest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

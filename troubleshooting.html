@@ -155,6 +155,10 @@ See "Caveats" in drake/doc/README.txt.
       <li><a href="#framework-context-system-mismatch" id="markdown-toc-framework-context-system-mismatch">Context-System mismatch</a></li>
     </ul>
   </li>
+  <li><a href="#build-problems" id="markdown-toc-build-problems">Build problems</a>    <ul>
+      <li><a href="#build-oom" id="markdown-toc-build-oom">Out of memory</a></li>
+    </ul>
+  </li>
 </ul>
 
   </div>
@@ -306,6 +310,37 @@ The solution is to use either <code class="highlighter-rouge">GetMyContextFromRo
 </code></pre></div>  </div>
 
   <p>See the notes on <a href="https://drake.mit.edu/doxygen_cxx/group__system__compatibility.html">System Compatibility</a> for further discussion.</p>
+
+  <h1 id="build-problems">Build problems</h1>
+
+  <h2 id="build-oom">Out of memory</h2>
+
+  <p>When compiling Drake from source, the build might run out of memory. The error
+message will include the message, “cc: fatal error: Killed signal terminated
+program cc1plus”.</p>
+
+  <p>By default, the Drake build will try use all available CPU and RAM resources on
+the machine. Sometimes, when there is not enough RAM per CPU, the build might
+crash because it tried to run a compiler process on every vCPU and together
+those compilation jobs consumed more RAM than was available.</p>
+
+  <p>In this case, you’ll need to add a bazel configuration dotfile to your home
+directory. Create a text file at <code class="highlighter-rouge">$HOME/.bazelrc</code> with this content:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>build --jobs=HOST_CPUS*0.4
+</code></pre></div>  </div>
+
+  <p>This instructs the build system to use only 40% of the available vCPUs. You may
+tune the fraction up or down to balance build speed vs resource crashes. You may
+also specify an exact number like <code class="highlighter-rouge">build --jobs=2</code> instead of a fraction.</p>
+
+  <p>The dotfile will affect any Bazel builds that you run. If you prefer to change
+only the Drake build instead of all Bazel builds, you may place the dotfile in
+the Drake source tree at <code class="highlighter-rouge">drake/user.bazelrc</code> instead of your home directory.</p>
+
+  <p>Note that the concurrency level passed to <code class="highlighter-rouge">make</code> (e.g., <code class="highlighter-rouge">make -j 2</code>) does not
+propagate through to affect the concurrency of most of Drake’s build steps; you
+need to configure the dotfile in order to control the build concurrency.</p>
 
   <!-- Links to the various Drake doxygen pages.
      Order determined by directory structure first and names second.

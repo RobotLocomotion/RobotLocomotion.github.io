@@ -184,18 +184,27 @@ integration. Any other configurations are provided on a best-effort basis.</p>
       <td>x86_64 ⁽²⁾</td>
       <td>3.10 ⁽³⁾</td>
       <td>5.1</td>
-      <td>3.19</td>
-      <td>Apple LLVM 12.0.0 (Xcode 12.4)</td>
-      <td>AdoptOpenJDK 15 (HotSpot JVM)</td>
+      <td>3.24</td>
+      <td>Apple LLVM 12.0.5 (Xcode 12.5)</td>
+      <td>AdoptOpenJDK 16 (HotSpot JVM)</td>
     </tr>
     <tr>
       <td>macOS Monterey (12)</td>
       <td>x86_64 ⁽²⁾</td>
       <td>3.10 ⁽³⁾</td>
       <td>5.1</td>
-      <td>3.19</td>
-      <td>Apple LLVM 12.0.0 (Xcode 12.4)</td>
-      <td>AdoptOpenJDK 15 (HotSpot JVM)</td>
+      <td>3.24</td>
+      <td>Apple LLVM 13.0.0 (Xcode 13.1)</td>
+      <td>AdoptOpenJDK 16 (HotSpot JVM)</td>
+    </tr>
+    <tr>
+      <td>macOS Monterey (12)</td>
+      <td>arm64 ⁽²⁾</td>
+      <td>3.10 ⁽³⁾</td>
+      <td>5.1</td>
+      <td>3.24</td>
+      <td>Apple LLVM 13.1.6 (Xcode 13.4)</td>
+      <td>AdoptOpenJDK 16 (HotSpot JVM)</td>
     </tr>
   </tbody>
 </table>
@@ -289,6 +298,11 @@ As an example:</p>
 cmake ../drake
 make <span class="nt">-j</span>
 </code></pre></div></div>
+
+<p>Note that a concurrency limit passed to <code class="highlighter-rouge">make</code> (e.g., <code class="highlighter-rouge">make -j 2</code>) has almost no
+effect on the Drake build. You might need to add a bazel configuration dotfile
+to your home directory if your build is running out of memory. See the
+<a href="/troubleshooting.html#build-oom">troubleshooting</a> page for details.</p>
 
 <p>Please note the additional CMake options which affect the Python bindings:</p>
 

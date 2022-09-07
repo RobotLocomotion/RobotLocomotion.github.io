@@ -654,7 +654,7 @@ Friends</h2></td></tr>
 <p>This method merely exercises the same mechanisms as <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52" title="Computes the signed distance together with the nearest points across all pairs of geometries in the w...">ComputeSignedDistancePairwiseClosestPoints()</a> for evaluating signed distance. Refer to <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#query_object_compute_pairwise_distance_table">the table for ComputeSignedDistancePairwiseClosestPoints()</a> for details.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if either geometry id is invalid, the pair (A, B) has been marked as filtered, or according to the scalar support table. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if either geometry id is invalid (e.g., doesn't refer to an existing geometry, lacking proximity role, etc.), the pair (A, B) has been marked as filtered, or otherwise unsupported as indicated by the the scalar support table. </td></tr>
   </table>
   </dd>
 </dl>

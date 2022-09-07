@@ -1185,7 +1185,7 @@ class description).</p>
 
 <dl class="function">
 <dt id="pydrake.math.ComputeNumericalGradient">
-<code class="descclassname">pydrake.math.</code><code class="descname">ComputeNumericalGradient</code><span class="sig-paren">(</span><em>calc_func: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], x: numpy.ndarray[numpy.float64[m, 1]], option: pydrake.math.NumericalGradientOption = &lt;pydrake.math.NumericalGradientOption object at 0x7fca9fe03bf0&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ComputeNumericalGradient" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.math.</code><code class="descname">ComputeNumericalGradient</code><span class="sig-paren">(</span><em>calc_func: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], x: numpy.ndarray[numpy.float64[m, 1]], option: pydrake.math.NumericalGradientOption = &lt;pydrake.math.NumericalGradientOption object at 0x7f1dad240130&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ComputeNumericalGradient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the gradient of a function f(x) through numerical difference.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">calc_func</span></code>:</dt>
@@ -2367,6 +2367,32 @@ RigidTransform <code class="docutils literal notranslate"><span class="pre">X_BC
 <dd>position vector from Ao to Q, expressed in frame A.</dd>
 </dl>
 <ol class="arabic simple" start="3">
+<li>multiply(self: pydrake.math.RigidTransform_[float], vec_B: numpy.ndarray[numpy.float64[4, 1]]) -&gt; numpy.ndarray[numpy.float64[4, 1]]</li>
+</ol>
+<p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the 4-element vector
+<code class="docutils literal notranslate"><span class="pre">vec_B</span></code>, equivalent to <code class="docutils literal notranslate"><span class="pre">X_AB.GetAsMatrix4()</span> <span class="pre">*</span> <span class="pre">vec_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vec_B</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_BoQ_B from Bo (frame B’s origin) to an arbitrary point Q,
+expressed in frame B and whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3
+elements are a vector (maybe unrelated to Bo or Q) and whose 4ᵗʰ
+element is 0.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">vec_A</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_AoQ_A from Ao (frame A’s origin) to Q, expressed in frame A and
+whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3 elements are a vector
+(maybe unrelated to Bo and Q) and whose 4ᵗʰ element is 0.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the 4ᵗʰ element of vec_B is not 0 or 1.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
 <li>multiply(self: pydrake.math.RigidTransform_[float], p_BoQ_B: numpy.ndarray[numpy.float64[3, n]]) -&gt; numpy.ndarray[numpy.float64[3, n]]</li>
 </ol>
 <p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the n position vectors
@@ -3057,6 +3083,32 @@ RigidTransform <code class="docutils literal notranslate"><span class="pre">X_BC
 <dd>position vector from Ao to Q, expressed in frame A.</dd>
 </dl>
 <ol class="arabic simple" start="3">
+<li>multiply(self: pydrake.math.RigidTransform_[AutoDiffXd], vec_B: numpy.ndarray[object[4, 1]]) -&gt; numpy.ndarray[object[4, 1]]</li>
+</ol>
+<p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the 4-element vector
+<code class="docutils literal notranslate"><span class="pre">vec_B</span></code>, equivalent to <code class="docutils literal notranslate"><span class="pre">X_AB.GetAsMatrix4()</span> <span class="pre">*</span> <span class="pre">vec_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vec_B</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_BoQ_B from Bo (frame B’s origin) to an arbitrary point Q,
+expressed in frame B and whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3
+elements are a vector (maybe unrelated to Bo or Q) and whose 4ᵗʰ
+element is 0.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">vec_A</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_AoQ_A from Ao (frame A’s origin) to Q, expressed in frame A and
+whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3 elements are a vector
+(maybe unrelated to Bo and Q) and whose 4ᵗʰ element is 0.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the 4ᵗʰ element of vec_B is not 0 or 1.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
 <li>multiply(self: pydrake.math.RigidTransform_[AutoDiffXd], p_BoQ_B: numpy.ndarray[object[3, n]]) -&gt; numpy.ndarray[object[3, n]]</li>
 </ol>
 <p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the n position vectors
@@ -3745,6 +3797,32 @@ RigidTransform <code class="docutils literal notranslate"><span class="pre">X_BC
 <dd>position vector from Ao to Q, expressed in frame A.</dd>
 </dl>
 <ol class="arabic simple" start="3">
+<li>multiply(self: pydrake.math.RigidTransform_[Expression], vec_B: numpy.ndarray[object[4, 1]]) -&gt; numpy.ndarray[object[4, 1]]</li>
+</ol>
+<p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the 4-element vector
+<code class="docutils literal notranslate"><span class="pre">vec_B</span></code>, equivalent to <code class="docutils literal notranslate"><span class="pre">X_AB.GetAsMatrix4()</span> <span class="pre">*</span> <span class="pre">vec_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vec_B</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_BoQ_B from Bo (frame B’s origin) to an arbitrary point Q,
+expressed in frame B and whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3
+elements are a vector (maybe unrelated to Bo or Q) and whose 4ᵗʰ
+element is 0.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">vec_A</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_AoQ_A from Ao (frame A’s origin) to Q, expressed in frame A and
+whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3 elements are a vector
+(maybe unrelated to Bo and Q) and whose 4ᵗʰ element is 0.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the 4ᵗʰ element of vec_B is not 0 or 1.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
 <li>multiply(self: pydrake.math.RigidTransform_[Expression], p_BoQ_B: numpy.ndarray[object[3, n]]) -&gt; numpy.ndarray[object[3, n]]</li>
 </ol>
 <p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the n position vectors
@@ -4481,6 +4559,32 @@ RigidTransform <code class="docutils literal notranslate"><span class="pre">X_BC
 <dd>position vector from Ao to Q, expressed in frame A.</dd>
 </dl>
 <ol class="arabic simple" start="3">
+<li>multiply(self: pydrake.math.RigidTransform_[float], vec_B: numpy.ndarray[numpy.float64[4, 1]]) -&gt; numpy.ndarray[numpy.float64[4, 1]]</li>
+</ol>
+<p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the 4-element vector
+<code class="docutils literal notranslate"><span class="pre">vec_B</span></code>, equivalent to <code class="docutils literal notranslate"><span class="pre">X_AB.GetAsMatrix4()</span> <span class="pre">*</span> <span class="pre">vec_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vec_B</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_BoQ_B from Bo (frame B’s origin) to an arbitrary point Q,
+expressed in frame B and whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3
+elements are a vector (maybe unrelated to Bo or Q) and whose 4ᵗʰ
+element is 0.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">vec_A</span></code>:</dt>
+<dd>4-element vector whose first 3 elements are the position vector
+p_AoQ_A from Ao (frame A’s origin) to Q, expressed in frame A and
+whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3 elements are a vector
+(maybe unrelated to Bo and Q) and whose 4ᵗʰ element is 0.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the 4ᵗʰ element of vec_B is not 0 or 1.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
 <li>multiply(self: pydrake.math.RigidTransform_[float], p_BoQ_B: numpy.ndarray[numpy.float64[3, n]]) -&gt; numpy.ndarray[numpy.float64[3, n]]</li>
 </ol>
 <p>Multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> by the n position vectors

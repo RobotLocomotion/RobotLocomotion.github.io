@@ -1,5 +1,10 @@
 var NAVTREEINDEX41 =
 {
+"continuous__state_8h.html":[4,0,0,12,3,9],
+"controlled__spring__mass__system_8h.html":[4,0,0,12,0,0,0],
+"convert__time__derivative_8h.html":[4,0,0,7,7],
+"convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,7,0],
+"convex__set_8h.html":[4,0,0,4,1,1],
 "convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,1,0],
 "convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,1,1],
 "copyable__unique__ptr_8h.html":[4,0,0,1,14],
@@ -244,10 +249,5 @@ var NAVTREEINDEX41 =
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
-"discrete__systems_8h.html":[4,0,0,12,10],
-"discrete__time__delay_8h.html":[4,0,0,12,6,7],
-"discrete__time__integrator_8h.html":[4,0,0,8,3,9],
-"discrete__time__trajectory_8h.html":[4,0,0,1,5,1],
-"discrete__update__manager_8h.html":[4,0,0,8,10,10],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,10,0]
+"discrete__systems_8h.html":[4,0,0,12,10]
 };

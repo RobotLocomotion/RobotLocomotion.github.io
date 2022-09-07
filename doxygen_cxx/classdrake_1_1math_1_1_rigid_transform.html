@@ -307,6 +307,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9832cec727611df141fdd479838b3c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#aa9832cec727611df141fdd479838b3c7">operator *</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BoQ_B) const</td></tr>
 <tr class="memdesc:aa9832cec727611df141fdd479838b3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies <code>this</code> RigidTransform <code>X_AB</code> by the position vector <code>p_BoQ_B</code> which is from Bo (B's origin) to an arbitrary point Q.  <a href="#aa9832cec727611df141fdd479838b3c7">More...</a><br /></td></tr>
 <tr class="separator:aa9832cec727611df141fdd479838b3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d2b3d646ec3217fbeeddb1cceef7d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a76d2b3d646ec3217fbeeddb1cceef7d2">operator *</a> (const <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; &amp;vec_B) const</td></tr>
+<tr class="memdesc:a76d2b3d646ec3217fbeeddb1cceef7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies <code>this</code> RigidTransform <code>X_AB</code> by the 4-element vector <code>vec_B</code>, equivalent to <code>X_AB.GetAsMatrix4() * vec_B</code>.  <a href="#a76d2b3d646ec3217fbeeddb1cceef7d2">More...</a><br /></td></tr>
+<tr class="separator:a76d2b3d646ec3217fbeeddb1cceef7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af22020b0567a392bfc275031a868657f"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:af22020b0567a392bfc275031a868657f"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename Derived::Scalar, 3, Derived::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#af22020b0567a392bfc275031a868657f">operator *</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;p_BoQ_B) const</td></tr>
 <tr class="memdesc:af22020b0567a392bfc275031a868657f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies <code>this</code> RigidTransform <code>X_AB</code> by the n position vectors <code>p_BoQ1_B</code> ...  <a href="#af22020b0567a392bfc275031a868657f">More...</a><br /></td></tr>
@@ -1219,7 +1222,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 </div>
 </div>
 <a id="af5ba8ece1175e9cb229649a048096e79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ba8ece1175e9cb229649a048096e79">&#9670;&nbsp;</a></span>operator *() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ba8ece1175e9cb229649a048096e79">&#9670;&nbsp;</a></span>operator *() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1239,7 +1242,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 </div>
 </div>
 <a id="a7408076cfba12eda75c0c354d70c6a96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7408076cfba12eda75c0c354d70c6a96">&#9670;&nbsp;</a></span>operator *() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7408076cfba12eda75c0c354d70c6a96">&#9670;&nbsp;</a></span>operator *() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1260,7 +1263,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 </div>
 </div>
 <a id="aa9832cec727611df141fdd479838b3c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9832cec727611df141fdd479838b3c7">&#9670;&nbsp;</a></span>operator *() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9832cec727611df141fdd479838b3c7">&#9670;&nbsp;</a></span>operator *() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1291,8 +1294,46 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
+<a id="a76d2b3d646ec3217fbeeddb1cceef7d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d2b3d646ec3217fbeeddb1cceef7d2">&#9670;&nbsp;</a></span>operator *() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt;T&gt; operator * </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec_B</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies <code>this</code> RigidTransform <code>X_AB</code> by the 4-element vector <code>vec_B</code>, equivalent to <code>X_AB.GetAsMatrix4() * vec_B</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec_B</td><td>4-element vector whose first 3 elements are the position vector p_BoQ_B from Bo (frame B's origin) to an arbitrary point Q, expressed in frame B and whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3 elements are a vector (maybe unrelated to Bo or Q) and whose 4ᵗʰ element is 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">vec_A</td><td>4-element vector whose first 3 elements are the position vector p_AoQ_A from Ao (frame A's origin) to Q, expressed in frame A and whose 4ᵗʰ element is 1 𝐨𝐫 whose first 3 elements are a vector (maybe unrelated to Bo and Q) and whose 4ᵗʰ element is 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the 4ᵗʰ element of vec_B is not 0 or 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af22020b0567a392bfc275031a868657f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af22020b0567a392bfc275031a868657f">&#9670;&nbsp;</a></span>operator *() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af22020b0567a392bfc275031a868657f">&#9670;&nbsp;</a></span>operator *() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1351,8 +1392,8 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
-<a id="a257f755b0f58f8958f8827b0651e205c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a257f755b0f58f8958f8827b0651e205c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a814b6772b29ffd1c2bbc34befae3667d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814b6772b29ffd1c2bbc34befae3667d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1363,7 +1404,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1377,8 +1418,8 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
-<a id="a814b6772b29ffd1c2bbc34befae3667d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a814b6772b29ffd1c2bbc34befae3667d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a257f755b0f58f8958f8827b0651e205c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257f755b0f58f8958f8827b0651e205c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1389,7 +1430,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -179,6 +179,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a85c597db40ea9e365e85f617aec19a60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a85c597db40ea9e365e85f617aec19a60">convex_relaxation</a> {true}</td></tr>
 <tr class="memdesc:a85c597db40ea9e365e85f617aec19a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to solve the relaxed version of the problem.  <a href="#a85c597db40ea9e365e85f617aec19a60">More...</a><br /></td></tr>
 <tr class="separator:a85c597db40ea9e365e85f617aec19a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c59b29655e8164083e8704ac82979b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a4c59b29655e8164083e8704ac82979b2">preprocessing</a> {true}</td></tr>
+<tr class="memdesc:a4c59b29655e8164083e8704ac82979b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a preprocessing step to remove edges that cannot lie on the path from source to target.  <a href="#a4c59b29655e8164083e8704ac82979b2">More...</a><br /></td></tr>
+<tr class="separator:a4c59b29655e8164083e8704ac82979b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1717b842ef7560038a1ee8f5076d7721"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1717b842ef7560038a1ee8f5076d7721">solver</a> {nullptr}</td></tr>
 <tr class="memdesc:a1717b842ef7560038a1ee8f5076d7721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimizer to be used to solve the shortest path optimization problem.  <a href="#a1717b842ef7560038a1ee8f5076d7721">More...</a><br /></td></tr>
 <tr class="separator:a1717b842ef7560038a1ee8f5076d7721"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,6 +230,23 @@ Public Attributes</h2></td></tr>
 
 <p>Flag to solve the relaxed version of the problem. </p>
 <p>As discussed in the paper, we know that this relaxation cannot solve the original NP-hard problem for all instances, but there are also many instances for which the convex relaxation is tight. </p>
+
+</div>
+</div>
+<a id="a4c59b29655e8164083e8704ac82979b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c59b29655e8164083e8704ac82979b2">&#9670;&nbsp;</a></span>preprocessing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool preprocessing {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a preprocessing step to remove edges that cannot lie on the path from source to target. </p>
+<p>In most cases, preprocessing causes a net reduction in computation by reducing the size of the optimization solved. </p>
 
 </div>
 </div>
