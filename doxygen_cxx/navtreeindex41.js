@@ -1,5 +1,9 @@
 var NAVTREEINDEX41 =
 {
+"continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,5,1],
+"continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,5,0],
+"continuous__lyapunov__equation_8h.html":[4,0,0,7,6],
+"continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0],
 "continuous__state_8h.html":[4,0,0,12,3,9],
 "controlled__spring__mass__system_8h.html":[4,0,0,12,0,0,0],
 "convert__time__derivative_8h.html":[4,0,0,7,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX41 =
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,10],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,10,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,10,1],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,9],
-"discrete__derivative_8h.html":[4,0,0,12,6,6],
-"discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
-"discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
-"discrete__systems_8h.html":[4,0,0,12,10]
+"discrete__contact__pair_8h.html":[4,0,0,8,10,9]
 };

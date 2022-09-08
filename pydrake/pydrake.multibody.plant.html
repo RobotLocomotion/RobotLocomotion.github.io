@@ -3909,6 +3909,30 @@ unbounded or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetBodiesKinematicallyAffectedBy">
+<code class="descname">GetBodiesKinematicallyAffectedBy</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], joint_indexes: List[pydrake.multibody.tree.JointIndex]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.BodyIndex]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetBodiesKinematicallyAffectedBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all bodies whose kinematics are transitively affected by the
+given vector of joints. The affected bodies are returned in increasing
+order of body indexes. Note that this is a kinematic relationship
+rather than a dynamic one. For example, if one of the inboard joints
+is a free (6dof) joint, the kinematic influence is still felt even
+though dynamically there would be no influence on the outboard body.
+This function can be only be called post-finalize, see Finalize().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any of the given joint has an invalid index,</li>
+<li>doesn’t correspond to a mobilizer, or is welded.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetBodiesWeldedTo">
 <code class="descname">GetBodiesWeldedTo</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetBodiesWeldedTo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all bodies that are transitively welded, or rigidly affixed,
@@ -8155,6 +8179,30 @@ unbounded or unspecified limits will be +infinity.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">GetAccelerationLowerLimits() for more information.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetBodiesKinematicallyAffectedBy">
+<code class="descname">GetBodiesKinematicallyAffectedBy</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], joint_indexes: List[pydrake.multibody.tree.JointIndex]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.BodyIndex]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetBodiesKinematicallyAffectedBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all bodies whose kinematics are transitively affected by the
+given vector of joints. The affected bodies are returned in increasing
+order of body indexes. Note that this is a kinematic relationship
+rather than a dynamic one. For example, if one of the inboard joints
+is a free (6dof) joint, the kinematic influence is still felt even
+though dynamically there would be no influence on the outboard body.
+This function can be only be called post-finalize, see Finalize().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any of the given joint has an invalid index,</li>
+<li>doesn’t correspond to a mobilizer, or is welded.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -12405,6 +12453,30 @@ unbounded or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetBodiesKinematicallyAffectedBy">
+<code class="descname">GetBodiesKinematicallyAffectedBy</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], joint_indexes: List[pydrake.multibody.tree.JointIndex]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.BodyIndex]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetBodiesKinematicallyAffectedBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all bodies whose kinematics are transitively affected by the
+given vector of joints. The affected bodies are returned in increasing
+order of body indexes. Note that this is a kinematic relationship
+rather than a dynamic one. For example, if one of the inboard joints
+is a free (6dof) joint, the kinematic influence is still felt even
+though dynamically there would be no influence on the outboard body.
+This function can be only be called post-finalize, see Finalize().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any of the given joint has an invalid index,</li>
+<li>doesn’t correspond to a mobilizer, or is welded.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetBodiesWeldedTo">
 <code class="descname">GetBodiesWeldedTo</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.Body_[Expression]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetBodiesWeldedTo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all bodies that are transitively welded, or rigidly affixed,
@@ -16649,6 +16721,30 @@ unbounded or unspecified limits will be +infinity.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">GetAccelerationLowerLimits() for more information.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].GetBodiesKinematicallyAffectedBy">
+<code class="descname">GetBodiesKinematicallyAffectedBy</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], joint_indexes: List[pydrake.multibody.tree.JointIndex]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.BodyIndex]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].GetBodiesKinematicallyAffectedBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all bodies whose kinematics are transitively affected by the
+given vector of joints. The affected bodies are returned in increasing
+order of body indexes. Note that this is a kinematic relationship
+rather than a dynamic one. For example, if one of the inboard joints
+is a free (6dof) joint, the kinematic influence is still felt even
+though dynamically there would be no influence on the outboard body.
+This function can be only be called post-finalize, see Finalize().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any of the given joint has an invalid index,</li>
+<li>doesn’t correspond to a mobilizer, or is welded.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

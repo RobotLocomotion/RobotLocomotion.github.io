@@ -9,6 +9,7 @@ var dir_892460009e18f4b08a77d36884a88a01 =
       [ "FocalLength", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length" ],
       [ "FovDegrees", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees" ]
     ] ],
+    [ "camera_config_functions.h", "camera__config__functions_8h.html", "camera__config__functions_8h" ],
     [ "camera_info.h", "camera__info_8h.html", [
       [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", "classdrake_1_1systems_1_1sensors_1_1_camera_info" ]
     ] ],

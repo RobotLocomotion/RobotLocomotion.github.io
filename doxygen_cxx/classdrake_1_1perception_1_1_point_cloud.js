@@ -8,6 +8,7 @@ var classdrake_1_1perception_1_1_point_cloud =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html#a6385428711a056ba9df11635c0ccc5f7", null ],
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html#a086b048d8b89bb9fede5cea340c72f50", null ],
     [ "~PointCloud", "classdrake_1_1perception_1_1_point_cloud.html#a863ab09124e612352191ecc27f5f11be", null ],
+    [ "Crop", "classdrake_1_1perception_1_1_point_cloud.html#aa3e3e56ca9276b5caf4c6422154616ca", null ],
     [ "descriptor", "classdrake_1_1perception_1_1_point_cloud.html#a86edb2fabfc24b9a791070aa03d79e9b", null ],
     [ "descriptor_type", "classdrake_1_1perception_1_1_point_cloud.html#a41ef656657edeb72eff1b12fdd4480c4", null ],
     [ "descriptors", "classdrake_1_1perception_1_1_point_cloud.html#a9bba27b505a1ff06953ecdb5334ad9e5", null ],

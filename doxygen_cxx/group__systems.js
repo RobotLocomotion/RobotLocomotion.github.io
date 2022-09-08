@@ -141,6 +141,7 @@ var group__systems =
       [ "GetAccelerationLowerLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#abc751e3bc4dea699d3c1f9d3ff1f214e", null ],
       [ "GetAccelerationUpperLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#a99f96a969efb888b8528a43fdb19108b", null ],
       [ "GetActuationFromArray", "classdrake_1_1multibody_1_1_multibody_plant.html#a1fc148ddec26f8c109c233b8b2ec1e2d", null ],
+      [ "GetBodiesKinematicallyAffectedBy", "classdrake_1_1multibody_1_1_multibody_plant.html#a971b3076dadb2bb0808de3916c6ff75c", null ],
       [ "GetBodiesWeldedTo", "classdrake_1_1multibody_1_1_multibody_plant.html#a90383f3338a41a9de4db1eb9f5aba385", null ],
       [ "GetBodyByName", "classdrake_1_1multibody_1_1_multibody_plant.html#aa59cdd4b3b34c54f4108381cea608799", null ],
       [ "GetBodyByName", "classdrake_1_1multibody_1_1_multibody_plant.html#a37787233e043e6054d1212ea69ee289b", null ],

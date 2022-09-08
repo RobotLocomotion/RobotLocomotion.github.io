@@ -160,7 +160,8 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1perception.html','')
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::perception Namespace Reference</div>  </div>
 </div><!--header-->
@@ -183,7 +184,41 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud_to_lcm.html">PointCloudToLcm</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient,...">PointCloud</a> inputs to lcmt_point_cloud output messages.  <a href="classdrake_1_1perception_1_1_point_cloud_to_lcm.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac258a3ce2b4f47d9191b4de110f7b6d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1perception.html#ac258a3ce2b4f47d9191b4de110f7b6d4">Concatenate</a> (const std::vector&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> &gt; &amp;clouds)</td></tr>
+<tr class="memdesc:ac258a3ce2b4f47d9191b4de110f7b6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new point cloud that includes all of the points from the point clouds in <code>clouds</code>.  <a href="#ac258a3ce2b4f47d9191b4de110f7b6d4">More...</a><br /></td></tr>
+<tr class="separator:ac258a3ce2b4f47d9191b4de110f7b6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac258a3ce2b4f47d9191b4de110f7b6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac258a3ce2b4f47d9191b4de110f7b6d4">&#9670;&nbsp;</a></span>Concatenate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> drake::perception::Concatenate </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>clouds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new point cloud that includes all of the points from the point clouds in <code>clouds</code>. </p>
+<p>All of the <code>clouds</code> must have the same fields. </p><dl class="section pre"><dt>Precondition</dt><dd><code>clouds</code> contains at least one point cloud. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the clouds have different fields defined. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

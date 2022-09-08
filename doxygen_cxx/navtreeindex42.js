@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"discrete__derivative_8h.html":[4,0,0,12,6,6],
+"discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
+"discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
+"discrete__systems_8h.html":[4,0,0,12,10],
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "expression_2expression_8h.html#ac2290181dcc7f444dcd6d7fa5ad6a99e":[4,0,0,1,3,0,3,22],
 "expression_2expression_8h.html#ac2fcf1da78e47a4afb20e0a4e85ac7dd":[4,0,0,1,3,0,3,46],
 "expression_2expression_8h.html#ac306b9a9b7ace256330ae3ab8deaafef":[4,0,0,1,3,0,3,101],
-"expression_2expression_8h.html#ac3c13478861afcc48abcec64900b0c66":[4,0,0,1,3,0,3,18],
-"expression_2expression_8h.html#ac6229d493a956efd3da406645ebb6283":[4,0,0,1,3,0,3,88],
-"expression_2expression_8h.html#ac7a0d0119defdfc00c90fe0996ad4b81":[4,0,0,1,3,0,3,108],
-"expression_2expression_8h.html#acbb3ea44b1cf2fd877d782b8486d5aeb":[4,0,0,1,3,0,3,117],
-"expression_2expression_8h.html#acbfe43d34e6c71c503d4de11da53bbb7":[4,0,0,1,3,0,3,11]
+"expression_2expression_8h.html#ac3c13478861afcc48abcec64900b0c66":[4,0,0,1,3,0,3,18]
 };

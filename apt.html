@@ -201,8 +201,7 @@ container image, you may need to install the following packages:</p>
 <p>Most content installs to <code class="highlighter-rouge">/opt/drake</code>, so setting the following environment
 variables may be useful:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib</span><span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span>:+:<span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">}}</span><span class="s2">"</span>
-  <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
   <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="si">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="si">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
 </code></pre></div></div>
 

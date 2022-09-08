@@ -254,6 +254,26 @@
 
 </dd></dl>
 
+<dl class="function">
+<dt id="pydrake.perception.Concatenate">
+<code class="descclassname">pydrake.perception.</code><code class="descname">Concatenate</code><span class="sig-paren">(</span><em>clouds: List[pydrake.perception.PointCloud]</em><span class="sig-paren">)</span> &#x2192; pydrake.perception.PointCloud<a class="headerlink" href="#pydrake.perception.Concatenate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new point cloud that includes all of the points from the
+point clouds in <code class="docutils literal notranslate"><span class="pre">clouds</span></code>. All of the <code class="docutils literal notranslate"><span class="pre">clouds</span></code> must have the same
+fields.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">clouds</span></code> contains at least one point cloud.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the clouds have different fields defined.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.perception.DepthImageToPointCloud">
 <em class="property">class </em><code class="descclassname">pydrake.perception.</code><code class="descname">DepthImageToPointCloud</code><a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud" title="Permalink to this definition">¶</a></dt>
@@ -450,6 +470,26 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dt id="pydrake.perception.PointCloud.C">
 <code class="descname">C</code><a class="headerlink" href="#pydrake.perception.PointCloud.C" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.Crop">
+<code class="descname">Crop</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud, lower_xyz: numpy.ndarray[numpy.float32[3, 1]], upper_xyz: numpy.ndarray[numpy.float32[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.perception.PointCloud<a class="headerlink" href="#pydrake.perception.PointCloud.Crop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new point cloud containing only the points in <code class="docutils literal notranslate"><span class="pre">this</span></code> with
+xyz values within the axis-aligned bounding box defined by
+<code class="docutils literal notranslate"><span class="pre">lower_xyz</span></code> and <code class="docutils literal notranslate"><span class="pre">upper_xyz</span></code>. Requires that xyz values are defined.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>lower_xyz &lt;= upper_xyz (elementwise).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if has_xyzs() != true.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="attribute">

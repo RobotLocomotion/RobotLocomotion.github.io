@@ -345,6 +345,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a995afeb23f063180d03cac4de9bfbf16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16">ApplyCameraConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;config, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; *plant, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; double &gt; *builder, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *scene_graph, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm)</td></tr>
+<tr class="memdesc:a995afeb23f063180d03cac4de9bfbf16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a camera network (rgbd sensor and publishing systems) connected to <code>scene_graph</code>.  <a href="#a995afeb23f063180d03cac4de9bfbf16">More...</a><br /></td></tr>
+<tr class="separator:a995afeb23f063180d03cac4de9bfbf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a30f975f4523ec7683dd1e04a2291095b">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt; T &gt; &amp;color)</td></tr>
 <tr class="separator:a30f975f4523ec7683dd1e04a2291095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -634,6 +637,62 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a995afeb23f063180d03cac4de9bfbf16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a995afeb23f063180d03cac4de9bfbf16">&#9670;&nbsp;</a></span>ApplyCameraConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::systems::sensors::ApplyCameraConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>scene_graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *&#160;</td>
+          <td class="paramname"><em>lcm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a camera network (rgbd sensor and publishing systems) connected to <code>scene_graph</code>. </p>
+<p>As specified, the RGB and/or depth images from the camera are published via <code>lcm</code> on the channel <code>DRAKE_RGBD_CAMERA_IMAGES_{camera_config.name}</code>.</p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>plant</code> and <code>scene_graph</code> both belong to the <code>builder</code>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if camera_config contains invalid values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a30f975f4523ec7683dd1e04a2291095b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f975f4523ec7683dd1e04a2291095b">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 

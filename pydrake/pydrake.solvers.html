@@ -5392,7 +5392,7 @@ solver such as SCS, MOSEK<a href="/tm.html">™</a>, CSDP, etc, the dual solutio
 (rotated) Lorentz cone constraint doesn’t have the “shadow price”
 interpretation, but should lie in the dual cone, and satisfy the KKT
 condition. For more information, refer to
-https://docs.mosek.com/9.3/capi/prob-def-conic.html#duality-for-conic-optimization
+https://docs.mosek.com/10.0/capi/prob-def-conic.html#duality-for-conic-optimization
 as an explanation.</p>
 <p>The interpretation for the dual variable to conic constraint x ∈ K can
 be different. Here K is a convex cone, including exponential cone,
@@ -6027,17 +6027,17 @@ change the values of the integer/binary variables in the
 subsequent iterations.) If the specified integer solution is
 infeasible or incomplete, MOSEK<a href="/tm.html">™</a> will simply ignore it. For more
 details, check
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/tutorial-mio-shared.html?highlight=initial">https://docs.mosek.com/9.3/capi/tutorial-mio-shared.html?highlight=initial</a></p>
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/tutorial-mio-shared.html?highlight=initial">https://docs.mosek.com/10.0/capi/tutorial-mio-shared.html?highlight=initial</a></p>
 </div>
 <p>MOSEK<a href="/tm.html">™</a> supports many solver parameters. You can refer to the full list
 of parameters in
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/param-groups.html#doc-param-groups">https://docs.mosek.com/9.3/capi/param-groups.html#doc-param-groups</a>. On
-top of these parameters, we also provide the following additional
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/param-groups.html#doc-param-groups">https://docs.mosek.com/10.0/capi/param-groups.html#doc-param-groups</a>.
+On top of these parameters, we also provide the following additional
 parameters 1. “writedata”, set to a file name so that MOSEK<a href="/tm.html">™</a> solver
 will write the optimization model to this file. check
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/solver-io.html#saving-a-problem-to-a-file">https://docs.mosek.com/9.3/capi/solver-io.html#saving-a-problem-to-a-file</a>
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/solver-io.html#saving-a-problem-to-a-file">https://docs.mosek.com/10.0/capi/solver-io.html#saving-a-problem-to-a-file</a>
 for more details. The supported file extensions are listed in
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/supported-file-formats.html#doc-shared-file-formats">https://docs.mosek.com/9.3/capi/supported-file-formats.html#doc-shared-file-formats</a>.
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/supported-file-formats.html#doc-shared-file-formats">https://docs.mosek.com/10.0/capi/supported-file-formats.html#doc-shared-file-formats</a>.
 Set this parameter to “” if you don’t want to write to a file. Default
 is not to write to a file.</p>
 <dl class="method">
@@ -6116,23 +6116,23 @@ obtain the details.</p>
 <code class="descname">optimizer_time</code><a class="headerlink" href="#pydrake.solvers.MosekSolverDetails.optimizer_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MOSEK<a href="/tm.html">™</a> optimization time. Please refer to MSK_DINF_OPTIMIZER_TIME
 in
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/constants.html?highlight=msk_dinf_optimizer_time">https://docs.mosek.com/9.3/capi/constants.html?highlight=msk_dinf_optimizer_time</a></p>
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/constants.html?highlight=msk_dinf_optimizer_time">https://docs.mosek.com/10.0/capi/constants.html?highlight=msk_dinf_optimizer_time</a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.MosekSolverDetails.rescode">
 <code class="descname">rescode</code><a class="headerlink" href="#pydrake.solvers.MosekSolverDetails.rescode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response code returned from MOSEK<a href="/tm.html">™</a> solver. Check
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/response-codes.html">https://docs.mosek.com/9.3/capi/response-codes.html</a> for the meaning on
-the response code.</p>
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/response-codes.html">https://docs.mosek.com/10.0/capi/response-codes.html</a> for the meaning
+on the response code.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.MosekSolverDetails.solution_status">
 <code class="descname">solution_status</code><a class="headerlink" href="#pydrake.solvers.MosekSolverDetails.solution_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The solution status after solving the problem. Check
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/accessing-solution.html">https://docs.mosek.com/9.3/capi/accessing-solution.html</a> and
-<a class="reference external" href="https://docs.mosek.com/9.3/capi/constants.html#mosek.solsta">https://docs.mosek.com/9.3/capi/constants.html#mosek.solsta</a> for the
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/accessing-solution.html">https://docs.mosek.com/10.0/capi/accessing-solution.html</a> and
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/constants.html#mosek.solsta">https://docs.mosek.com/10.0/capi/constants.html#mosek.solsta</a> for the
 meaning on the solution status.</p>
 </dd></dl>
 

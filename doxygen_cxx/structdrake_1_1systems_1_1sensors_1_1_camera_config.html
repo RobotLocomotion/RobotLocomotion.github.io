@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1systems_1_1sensors_1_1_
 <li>Ranges must be specified such that the "minimum" value is less than or equal to the "maximum" value. This includes the clipping range [<code>clipping_near</code>, <code>clipping_far</code>] and depth range [<code>z_near</code>, <code>z_far</code>].</li>
 <li>The depth range must lie <em>entirely</em> within the clipping range.</li>
 </ul>
-<p>The values are only checked when the configuration is operated on: during serialization, after deserialization, and when applying the configuration (see ApplyCameraConfig().) </p>
+<p>The values are only checked when the configuration is operated on: during serialization, after deserialization, and when applying the configuration (see <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16" title="Constructs a camera network (rgbd sensor and publishing systems) connected to scene_graph.">ApplyCameraConfig()</a>.) </p>
 </div>
 <p><code>#include &lt;drake/systems/sensors/camera_config.h&gt;</code></p>
 <table class="memberdecls">
@@ -433,7 +433,7 @@ Camera intrinsics</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The "background" color. </p>
-<p>This is the color drawn where there are no objects visible. Its default value matches the default value for render::RenderEngineGlParams::default_clear_color. See the documentation for <a class="el" href="classdrake_1_1geometry_1_1_rgba.html#a8e8824802dedfbc36776227f7482b6bc" title="Passes this object to an Archive.">geometry::Rgba::Serialize</a> for how to define this value in YAML.</p>
+<p>This is the color drawn where there are no objects visible. Its default value matches the default value for render::RenderEngineVtkParams::default_clear_color. See the documentation for <a class="el" href="classdrake_1_1geometry_1_1_rgba.html#a8e8824802dedfbc36776227f7482b6bc" title="Passes this object to an Archive.">geometry::Rgba::Serialize</a> for how to define this value in YAML.</p>
 <p>N.B. If two different cameras are configured to use the same renderer (having identical values for <code>renderer_name</code>) but <em>different</em> values for <code>background</code>, the render engine instance will be configured with one of the set of values. Which one is undefined. </p>
 
 </div>

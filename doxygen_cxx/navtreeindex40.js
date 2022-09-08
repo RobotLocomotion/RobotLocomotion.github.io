@@ -1,5 +1,9 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2":[3,0,0,18,2,13],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a838cb1725eb9ba7896158fa9032ecdcc":[3,0,0,18,2,4],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,18,2,11],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a87952ec710e902557114a6d53d39734e":[3,0,0,18,2,38],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f":[3,0,0,18,2,48],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c09a6d35797ae0eed1de62a97433b9e":[3,0,0,18,2,21],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c9575eec7fd062e42ed17407a337abc":[3,0,0,18,2,3],
@@ -174,10 +178,10 @@ var NAVTREEINDEX40 =
 "collision__filter__declaration_8h.html":[4,0,0,4,9],
 "collision__filter__manager_8h.html":[4,0,0,4,10],
 "collisions__exist__callback_8h.html":[4,0,0,4,2,6],
-"color__palette_8h.html":[4,0,0,12,8,4],
-"color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[4,0,0,12,8,4,5],
-"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[4,0,0,12,8,4,4],
-"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[4,0,0,12,8,4,3],
+"color__palette_8h.html":[4,0,0,12,8,5],
+"color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[4,0,0,12,8,5,5],
+"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[4,0,0,12,8,5,4],
+"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[4,0,0,12,8,5,3],
 "com__in__polyhedron__constraint_8h.html":[4,0,0,8,5,1],
 "com__position__constraint_8h.html":[4,0,0,8,5,2],
 "common_2autodiff_8h.html":[4,0,0,1,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX40 =
 "context_8h.html":[4,0,0,12,3,7],
 "context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,12,3,7,1],
 "context__base_8h.html":[4,0,0,12,3,8],
-"continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,5],
-"continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,5,1],
-"continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,5,0],
-"continuous__lyapunov__equation_8h.html":[4,0,0,7,6],
-"continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0]
+"continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,5]
 };

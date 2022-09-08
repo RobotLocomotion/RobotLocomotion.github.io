@@ -103,7 +103,9 @@ var NAVTREEINDEX0 =
 "call__python_8h.html#acc2dfeb366241e44a9cfd8644d48a6de":[4,0,0,1,1,0,2],
 "call__python_8h.html#ae2e692a250b25ee6892bd538b071a88d":[4,0,0,1,1,0,1],
 "camera__config_8h.html":[4,0,0,12,8,2],
-"camera__info_8h.html":[4,0,0,12,8,3],
+"camera__config__functions_8h.html":[4,0,0,12,8,3],
+"camera__config__functions_8h.html#a995afeb23f063180d03cac4de9bfbf16":[4,0,0,12,8,3,0],
+"camera__info_8h.html":[4,0,0,12,8,4],
 "cartesian__product_8h.html":[4,0,0,4,1,0],
 "centroidal__momentum__constraint_8h.html":[4,0,0,8,8,0],
 "chebyshev__basis__element_8h.html":[4,0,0,1,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#abe5f08c6ad942153599928b9c7f9d0fa":[3,0,0,43,43],
 "classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5],
 "classdrake_1_1_polynomial.html#ac86fb56fd075f1c1442883c77f200792":[3,0,0,43,40],
-"classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4":[3,0,0,43,29],
-"classdrake_1_1_polynomial.html#ac91ac7cbc8938ee546f9db5317b4a479":[3,0,0,43,36],
-"classdrake_1_1_polynomial.html#acf2f5dc8759b0683d649a356e1c23bc8":[3,0,0,43,58]
+"classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4":[3,0,0,43,29]
 };

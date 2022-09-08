@@ -820,6 +820,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90383f3338a41a9de4db1eb9f5aba385"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a90383f3338a41a9de4db1eb9f5aba385">GetBodiesWeldedTo</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body) const</td></tr>
 <tr class="memdesc:a90383f3338a41a9de4db1eb9f5aba385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all bodies that are transitively welded, or rigidly affixed, to <code>body</code>, per these two definitions:  <a href="#a90383f3338a41a9de4db1eb9f5aba385">More...</a><br /></td></tr>
 <tr class="separator:a90383f3338a41a9de4db1eb9f5aba385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971b3076dadb2bb0808de3916c6ff75c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a971b3076dadb2bb0808de3916c6ff75c">GetBodiesKinematicallyAffectedBy</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;joint_indexes) const</td></tr>
+<tr class="memdesc:a971b3076dadb2bb0808de3916c6ff75c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all bodies whose kinematics are transitively affected by the given vector of joints.  <a href="#a971b3076dadb2bb0808de3916c6ff75c">More...</a><br /></td></tr>
+<tr class="separator:a971b3076dadb2bb0808de3916c6ff75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a636804b6c40e538d83d5c2dfefb7929e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a636804b6c40e538d83d5c2dfefb7929e">num_joints</a> () const</td></tr>
 <tr class="memdesc:a636804b6c40e538d83d5c2dfefb7929e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of joints in the model.  <a href="#a636804b6c40e538d83d5c2dfefb7929e">More...</a><br /></td></tr>
 <tr class="separator:a636804b6c40e538d83d5c2dfefb7929e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4248,6 +4251,32 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 <p>Returns a vector of actuation values for <code>model_instance</code> from a vector <code>u</code> of actuation values for the entire model. </p>
 <p>This method throws an exception if <code>u</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">MultibodyPlant::num_actuated_dofs()</a>. </p>
+
+</div>
+</div>
+<a id="a971b3076dadb2bb0808de3916c6ff75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971b3076dadb2bb0808de3916c6ff75c">&#9670;&nbsp;</a></span>GetBodiesKinematicallyAffectedBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&gt; GetBodiesKinematicallyAffectedBy </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>joint_indexes</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all bodies whose kinematics are transitively affected by the given vector of joints. </p>
+<p>The affected bodies are returned in increasing order of body indexes. Note that this is a kinematic relationship rather than a dynamic one. For example, if one of the inboard joints is a free (6dof) joint, the kinematic influence is still felt even though dynamically there would be no influence on the outboard body. This function can be only be called post-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the given joint has an invalid index, doesn't correspond to a mobilizer, or is welded. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

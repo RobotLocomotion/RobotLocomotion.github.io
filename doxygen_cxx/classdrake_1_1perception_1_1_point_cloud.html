@@ -324,6 +324,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f15414669a57de28333da1f2ec50435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a8f15414669a57de28333da1f2ec50435">RequireExactFields</a> (<a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">pc_flags::Fields</a> field_set) const</td></tr>
 <tr class="memdesc:a8f15414669a57de28333da1f2ec50435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requires the exact given set of fields.  <a href="#a8f15414669a57de28333da1f2ec50435">More...</a><br /></td></tr>
 <tr class="separator:a8f15414669a57de28333da1f2ec50435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Point Cloud Processing</div></td></tr>
+<tr class="memitem:aa3e3e56ca9276b5caf4c6422154616ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#aa3e3e56ca9276b5caf4c6422154616ca">Crop</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;lower_xyz, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;upper_xyz)</td></tr>
+<tr class="memdesc:aa3e3e56ca9276b5caf4c6422154616ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new point cloud containing only the points in <code>this</code> with xyz values within the axis-aligned bounding box defined by <code>lower_xyz</code> and <code>upper_xyz</code>.  <a href="#aa3e3e56ca9276b5caf4c6422154616ca">More...</a><br /></td></tr>
+<tr class="separator:aa3e3e56ca9276b5caf4c6422154616ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -536,6 +540,43 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa3e3e56ca9276b5caf4c6422154616ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e3e56ca9276b5caf4c6422154616ca">&#9670;&nbsp;</a></span>Crop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> Crop </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>lower_xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper_xyz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new point cloud containing only the points in <code>this</code> with xyz values within the axis-aligned bounding box defined by <code>lower_xyz</code> and <code>upper_xyz</code>. </p>
+<p>Requires that xyz values are defined. </p><dl class="section pre"><dt>Precondition</dt><dd>lower_xyz &lt;= upper_xyz (elementwise). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values.">has_xyzs()</a> != true. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a86edb2fabfc24b9a791070aa03d79e9b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86edb2fabfc24b9a791070aa03d79e9b">&#9670;&nbsp;</a></span>descriptor()</h2>
 

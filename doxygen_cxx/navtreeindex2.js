@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a9bf34dd6d6d8067afd1869444a9697f8":[3,0,0,3,2,0,15],
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a9fb006217719c657a3852d15f276a813":[3,0,0,3,2,0,17],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#aab3f2e5138e97881d288cc285020d88a":[3,0,0,3,2,0,10],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ab30cce870c84dde2c5f08cd4996301c1":[3,0,0,3,2,0,18],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#abbac5b4ffed5d7d2b51598a91d90d097":[3,0,0,3,2,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#a60a2654cdcab10421aa1e16108592078":[3,0,0,3,12,1,2],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#a80401d480f15e1418a3274a2b2b51649":[3,0,0,3,12,1,7],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#a90384755e10483dbea11785e04234e2c":[3,0,0,3,12,1,0],
-"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#abcb28da0deceb7458a992cbcdd6d1137":[3,0,0,3,12,1,8],
-"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#acb952713a1d9e6805791d0739c346915":[3,0,0,3,12,1,6],
-"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#afca2b454193e9bb3dfa77520e989d571":[3,0,0,3,12,1,3]
+"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#abcb28da0deceb7458a992cbcdd6d1137":[3,0,0,3,12,1,8]
 };

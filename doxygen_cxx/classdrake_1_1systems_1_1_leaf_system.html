@@ -2575,7 +2575,7 @@ Additional Inherited Members</h2></td></tr>
 <dd>
 <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ab4e7028e25a5d6e402a156a0115019a4" title="Declares that a DiscreteUpdate event should occur at initialization and that it should invoke the giv...">DeclareInitializationDiscreteUpdateEvent()</a> </dd>
 <dd>
-DeclareInitializationUnrestrictedUpdate()</dd></dl>
+<a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ae04f150e6036b0cbbf9808cc0f71a9a6" title="Declares that an UnrestrictedUpdate event should occur at initialization and that it should invoke th...">DeclareInitializationUnrestrictedUpdateEvent()</a></dd></dl>
 <p>See <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#declare_initialization_events">Declare initialization events</a> for more information.</p>
 <p>Depending on the type of <code>event</code>, on initialization it will be passed to the Publish, DiscreteUpdate, or UnrestrictedUpdate event dispatcher. If the <code>event</code> object contains a handler function, Drake's default dispatchers will invoke that handler. If not, then no further action is taken. Thus an <code>event</code> with no handler has no effect unless its dispatcher has been overridden. We strongly recommend that you <em>do not</em> override the dispatcher and instead <em>do</em> supply a handler.</p>
 <p>The given <code>event</code> object is deep-copied (cloned), and the copy is stored internally so you do not need to keep the object around after this call.</p>

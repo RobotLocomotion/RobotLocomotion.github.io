@@ -499,61 +499,41 @@ well save a few nanograms of CO2 where we can.)</li>
 <a href="https://docs.google.com/document/d/17D0yzyr0kGH44eWpiNY7E33A8hW1aiJRmADaoAlVISE/edit#">account setup</a>
 instructions to obtain a username and password.</p>
 
-<h3 id="mac-wheel-builds">Mac wheel builds</h3>
+<p>To build the wheel artifacts, use the staging job for each platform:</p>
+
+<ul>
+  <li><a href="https://drake-jenkins.csail.mit.edu/view/Wheel/job/mac-big-sur-unprovisioned-clang-wheel-staging-snopt-mosek-release/">macOS Jenkins Wheel Staging</a></li>
+  <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-focal-unprovisioned-gcc-wheel-staging-snopt-mosek-release/">linux Jenkins Wheel Staging</a></li>
+</ul>
+
+<p>For both macOS and linux launching the job is the same.  macOS will produce
+one <code class="highlighter-rouge">.whl</code>, whereas linux will produce multiple (in the same build).  For both
+macOS and linux:</p>
 
 <ol>
-  <li>Open the <a href="https://drake-jenkins.csail.mit.edu/view/Wheel/job/mac-big-sur-unprovisioned-clang-wheel-staging-snopt-mosek-release/">Jenkins Wheel Staging</a> page.</li>
+  <li>Open the jenkins build page from the above list.</li>
   <li>In the upper right, click “log in” (unless you’re already logged in). This
 will use your GitHub credentials.</li>
   <li>Click “Build with Parameters”.</li>
   <li>Change “sha1” to the full <strong>git sha</strong> corresponding to <code class="highlighter-rouge">v1.N.0</code> and
 “release_version” to <code class="highlighter-rouge">1.N.0</code>.</li>
-  <li>Click “Build”; the build will finish after approximately 75 minutes.</li>
+  <li>Click “Build”; the build will finish after approximately 45 minutes for linux
+and 75 minutes for macOS.</li>
   <li>After it’s finished, open the “Console Output” and scroll to the bottom to
 find the URL of the built wheel, which will be something like
 <code class="highlighter-rouge">https://drake-packages.csail.mit.edu/drake/staging/drake-1.N.0-cp39-cp39-macosx_11_0_x86_64.whl</code>.</li>
-  <li>Download that wheel.</li>
-  <li>Run <code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path
-to the file you downloaded.
-    <ol>
-      <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
-    </ol>
-  </li>
+  <li>Download the wheel(s) built on Jenkins.  A <code class="highlighter-rouge">.sha512</code> file is also uploaded
+which should be used to confirm the downloaded <code class="highlighter-rouge">.whl</code> file, once an
+artifact is uploaded to PyPI it cannot be overwritten.</li>
 </ol>
 
-<h3 id="linux-wheel-builds">Linux wheel builds</h3>
+<p>Finally, after you have all of the <code class="highlighter-rouge">.whl</code> files downloaded and verified, run
+<code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path to the
+files you downloaded.</p>
 
 <ol>
-  <li>Use your Ubuntu 20.04 workstation for these steps.  (Do not use any other OS.)</li>
-  <li>Create some empty scratch folder to use for these steps, and then <code class="highlighter-rouge">cd</code> into it.</li>
-  <li>Run <code class="highlighter-rouge">sudo apt install docker.io twine</code>
-    <ol>
-      <li>If you get an “docker.sock connect” error, you might need to give yourself Docker permissions:
-        <ol>
-          <li>Run <code class="highlighter-rouge">sudo usermod -aG docker $USER</code></li>
-          <li>Run <code class="highlighter-rouge">newgrp docker</code></li>
-        </ol>
-      </li>
-      <li>If Docker still doesn’t work, you might need to logout and/or reboot first.</li>
-    </ol>
-  </li>
-  <li>Run <code class="highlighter-rouge">git clone --filter=blob:none https://github.com/RobotLocomotion/drake.git</code></li>
-  <li>Run <code class="highlighter-rouge">cd drake</code></li>
-  <li>Run <code class="highlighter-rouge">git checkout v1.N.0</code></li>
-  <li>To remove any cached images:
-    <ol>
-      <li>Run <code class="highlighter-rouge">docker rmi $(docker image ls --filter=reference='pip-drake:*' -q)</code></li>
-      <li>Run <code class="highlighter-rouge">docker builder prune -f</code></li>
-    </ol>
-  </li>
-  <li>Run <code class="highlighter-rouge">./setup/ubuntu/source_distribution/install_prereqs_user_environment.sh</code></li>
-  <li>Run <code class="highlighter-rouge">bazel run //tools/wheel:builder -- --output-dir=${PWD} --test 1.N.0</code></li>
-  <li>Wait a long time for it to finish (around 30 minutes on a beefy workstation). It will take over all of your computer’s resources, so don’t plan to do much else concurrently.</li>
-  <li>There should have been exactly two whl files created. Run <code class="highlighter-rouge">twine upload &lt;...&gt; &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholders with the paths to the two wheels to be uploaded (e.g., <code class="highlighter-rouge">drake-0.35.0b1-cp36-cp36m-manylinux_2_27_x86_64.whl</code>, etc.)
-    <ol>
-      <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
-    </ol>
-  </li>
+  <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
+  <li>You may upload each individually, or do <code class="highlighter-rouge">twine upload a.whl b.whl c.whl</code>.</li>
 </ol>
 
       </article>
