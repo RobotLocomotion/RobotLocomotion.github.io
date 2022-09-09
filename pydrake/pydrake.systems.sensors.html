@@ -223,6 +223,338 @@
   <div class="section" id="module-pydrake.systems.sensors">
 <span id="pydrake-systems-sensors"></span><h1>pydrake.systems.sensors<a class="headerlink" href="#module-pydrake.systems.sensors" title="Permalink to this headline">¶</a></h1>
 <p>Bindings for the sensors portion of the Systems framework.</p>
+<dl class="function">
+<dt id="pydrake.systems.sensors.ApplyCameraConfig">
+<code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ApplyCameraConfig</code><span class="sig-paren">(</span><em>config: pydrake.systems.sensors.CameraConfig, plant: drake::multibody::MultibodyPlant&lt;double&gt;, builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.ApplyCameraConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a camera network (rgbd sensor and publishing systems)
+connected to <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>. As specified, the RGB and/or depth
+images from the camera are published via <code class="docutils literal notranslate"><span class="pre">lcm</span></code> on the channel
+<code class="docutils literal notranslate"><span class="pre">DRAKE_RGBD_CAMERA_IMAGES_{camera_config.name}</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">plant</span></code> and <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> both belong to the <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if camera_config contains invalid values.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.CameraConfig">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">CameraConfig</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration of a camera. This covers all of the parameters for both
+color (see geometry::render::ColorRenderCamera) and depth (see
+geometry::render::DepthRenderCamera) cameras.</p>
+<p>The various properties have restrictions on what they can be.</p>
+<ul class="simple">
+<li>Values must be finite.</li>
+<li>Some values must be positive (see notes on individual properties).</li>
+<li>Ranges must be specified such that the “minimum” value is less than or</li>
+</ul>
+<p>equal to the “maximum” value. This includes the clipping range
+[<cite>clipping_near</cite>, <code class="docutils literal notranslate"><span class="pre">clipping_far`]</span> <span class="pre">and</span> <span class="pre">depth</span> <span class="pre">range</span> <span class="pre">[`z_near</span></code>, <cite>z_far</cite>].
+- The depth range must lie <em>entirely</em> within the clipping range.</p>
+<p>The values are only checked when the configuration is operated on:
+during serialization, after deserialization, and when applying the
+configuration (see ApplyCameraConfig().)</p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraConfig.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraConfig</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.background">
+<code class="descname">background</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.background" title="Permalink to this definition">¶</a></dt>
+<dd><p>The “background” color. This is the color drawn where there are no
+objects visible. Its default value matches the default value for
+render::RenderEngineVtkParams::default_clear_color. See the
+documentation for geometry::Rgba::Serialize for how to define this
+value in YAML.</p>
+<p>N.B. If two different cameras are configured to use the same renderer
+(having identical values for <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>) but <em>different</em> values
+for <code class="docutils literal notranslate"><span class="pre">background</span></code>, the render engine instance will be configured with
+one of the set of values. Which one is undefined.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.center_x">
+<code class="descname">center_x</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.center_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x-position of the principal point (in pixels). To query what the
+current value is, use principal_point().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>0 &lt; center_x &lt; width or is std::nullopt.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.center_y">
+<code class="descname">center_y</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.center_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y-position of the principal point (in pixels). To query what the
+current value is, use principal_point().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>0 &lt; center_y &lt; height or is std::nullopt.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.clipping_far">
+<code class="descname">clipping_far</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.clipping_far" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance (in meters) from sensor origin to far clipping plane.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>clipping_far is a positive, finite number.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.clipping_near">
+<code class="descname">clipping_near</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.clipping_near" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance (in meters) from sensor origin to near clipping plane.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>clipping_near is a positive, finite number.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.depth">
+<code class="descname">depth</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, depth images will be produced and published via LCM.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.do_compress">
+<code class="descname">do_compress</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.do_compress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether the images are broadcast in a compressed format.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.focal">
+<code class="descname">focal</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.focal" title="Permalink to this definition">¶</a></dt>
+<dd><p>The focal properties of the camera. It can be specified in one of two
+ways:</p>
+<ul class="simple">
+<li>A FocalLength which specifies the focal lengths (in pixels) in the x-</li>
+</ul>
+<p>and y-directions.
+- An FovDegrees which defines focal length <em>implicitly</em> by deriving it from
+field of view measures (in degrees).</p>
+<p>For both specifications, if only one value is given (in either
+direction), the focal length (as reported by focal_x() and focal_y())
+is determined by that single value and is assumed to be symmetric for
+both directions.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>focal length(s) is a/are finite, positive number(s).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraConfig.focal_x">
+<code class="descname">focal_x</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraConfig</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.focal_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the focal length (in pixels) in the x-direction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraConfig.focal_y">
+<code class="descname">focal_y</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraConfig</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.focal_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the focal length (in pixels) in the y-direction.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.CameraConfig.FocalLength">
+<em class="property">class </em><code class="descname">FocalLength</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specification of a camera’s intrinsic focal properties as focal
+<em>length</em> (in pixels). One or both values can be given. When only one
+value is given, the other is assumed to match. At least one value must
+be provided.</p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraConfig.FocalLength.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraConfig.FocalLength</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.FocalLength.x">
+<code class="descname">x</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, the focal length along this axis; otherwise, use focal
+length in the y-direction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.FocalLength.y">
+<code class="descname">y</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, the focal length along this axis; otherwise, use focal
+length in the x-direction.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.CameraConfig.FovDegrees">
+<em class="property">class </em><code class="descname">FovDegrees</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FovDegrees" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specification of focal length via fields of view (in degrees).</p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraConfig.FovDegrees.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraConfig.FovDegrees</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FovDegrees.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.FovDegrees.x">
+<code class="descname">x</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FovDegrees.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, compute focal length along this axis; otherwise, use
+focal length given computation for <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.FovDegrees.y">
+<code class="descname">y</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FovDegrees.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, compute focal length along this axis; otherwise, use
+focal length given computation for <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.fps">
+<code class="descname">fps</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publishing rate (in Hz) for both RGB and depth cameras (as requested).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>fps is a positive, finite number.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.height">
+<code class="descname">height</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>%Image height (in pixels).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>height &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The camera name. This <code class="docutils literal notranslate"><span class="pre">name</span></code> is used as part of the corresponding
+RgbdSensor system’s name and serves as a suffix of the LCM channel
+name.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">name</span></code> is not empty.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraConfig.principal_point">
+<code class="descname">principal_point</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraConfig</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[2, 1]]<a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.principal_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the principal point. This respects the
+semantics that undefined center_x and center_y place the principal
+point in the center of the image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.renderer_name">
+<code class="descname">renderer_name</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.renderer_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the geometry::render::RenderEngine that this camera uses.
+Generally, it is more efficient for multiple cameras to share a single
+render engine instance; they should, therefore, share a common
+renderer_name value.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> is not empty.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.rgb">
+<code class="descname">rgb</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, RGB images will be produced and published via LCM.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.show_rgb">
+<code class="descname">show_rgb</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.show_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether the rendered RGB images are displayed (in a separate
+window controlled by the thread in which the camera images are
+rendered). Only applies to color images and depends on whether the
+RenderEngine instance supports it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.width">
+<code class="descname">width</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>%Image width (in pixels).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>width &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.X_BC">
+<code class="descname">X_BC</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.X_BC" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pose of the color sensor relative to the camera body frame.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">X_BC.base_frame</span></code> is empty.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.X_BD">
+<code class="descname">X_BD</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.X_BD" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pose of the depth sensor relative to the camera body frame.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">X_BD.base_frame</span></code> is empty.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.X_PB">
+<code class="descname">X_PB</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.X_PB" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pose of the body camera relative to a parent frame P. If
+<code class="docutils literal notranslate"><span class="pre">X_PB.base_frame</span></code> is unspecified, then the world frame is assumed to
+be the parent frame.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">X_PB.base_frame</span></code> is empty <em>or</em> refers to a valid, unique frame.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.z_far">
+<code class="descname">z_far</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.z_far" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance (in meters) from sensor origin to farthest measurable
+plane.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>z_near is a positive, finite number.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.z_near">
+<code class="descname">z_near</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.z_near" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance (in meters) from sensor origin to closest measurable
+plane.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>z_near is a positive, finite number.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.systems.sensors.CameraInfo">
 <em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">CameraInfo</code><a class="headerlink" href="#pydrake.systems.sensors.CameraInfo" title="Permalink to this definition">¶</a></dt>

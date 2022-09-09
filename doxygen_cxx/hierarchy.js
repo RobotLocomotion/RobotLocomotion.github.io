@@ -990,6 +990,7 @@ var hierarchy =
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BsplineTrajectory< T >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ],
+      [ "PathParameterizedTrajectory< T >", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html", null ],
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
         [ "PiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html", null ],
@@ -1070,6 +1071,7 @@ var hierarchy =
       [ "copyable_unique_ptr< drake::systems::Parameters< drake::symbolic::Expression > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::trajectories::Trajectory< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
+      [ "copyable_unique_ptr< drake::trajectories::Trajectory< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< Engine >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< internal::ProximityEngine< AutoDiffXd > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< internal::ProximityEngine< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],

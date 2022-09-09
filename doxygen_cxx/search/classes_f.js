@@ -7,6 +7,7 @@ var searchData=
   ['parameters_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['Parameters&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_parameters.html',1,'drake::systems']]],
   ['parser',['Parser',['../classdrake_1_1multibody_1_1_parser.html',1,'drake::multibody']]],
   ['passthrough',['PassThrough',['../classdrake_1_1systems_1_1_pass_through.html',1,'drake::systems']]],
+  ['pathparameterizedtrajectory',['PathParameterizedTrajectory',['../classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html',1,'drake::trajectories']]],
   ['pendulumgeometry',['PendulumGeometry',['../classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html',1,'drake::examples::pendulum']]],
   ['pendulumparameters',['PendulumParameters',['../classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html',1,'drake::multibody::benchmarks::pendulum']]],
   ['pendulumplant',['PendulumPlant',['../classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html',1,'drake::examples::pendulum']]],

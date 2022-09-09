@@ -131,6 +131,7 @@ var searchData=
   ['_7eoutputportbase',['~OutputPortBase',['../classdrake_1_1systems_1_1_output_port_base.html#a09599f7fee6b9453fc44d31a44a4b7f7',1,'drake::systems::OutputPortBase']]],
   ['_7eparameters',['~Parameters',['../classdrake_1_1systems_1_1_parameters.html#af9a0e10c79d830769cf1231999f59df0',1,'drake::systems::Parameters']]],
   ['_7epassthrough',['~PassThrough',['../classdrake_1_1systems_1_1_pass_through.html#ab7d7af9bd0ebe1ba8eaa568f48f31d9b',1,'drake::systems::PassThrough']]],
+  ['_7epathparameterizedtrajectory',['~PathParameterizedTrajectory',['../classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a6fbaa53b8b33b541654542c8e60c393e',1,'drake::trajectories::PathParameterizedTrajectory']]],
   ['_7ependulumgeometry',['~PendulumGeometry',['../classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html#ac0da79a61df2f45ca2cc7c0aed5978ec',1,'drake::examples::pendulum::PendulumGeometry']]],
   ['_7ependulumplant',['~PendulumPlant',['../classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#af0d40b13b2ae42e721ca8859357038c7',1,'drake::examples::pendulum::PendulumPlant']]],
   ['_7eperspectivequadraticcost',['~PerspectiveQuadraticCost',['../classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a0aa38833bde962effcfb1899c772d40b',1,'drake::solvers::PerspectiveQuadraticCost']]],

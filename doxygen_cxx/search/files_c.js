@@ -1,6 +1,7 @@
 var searchData=
 [
   ['make_5facrobot_5fplant_2eh',['make_acrobot_plant.h',['../make__acrobot__plant_8h.html',1,'']]],
+  ['make_5farm_5fcontroller_5fmodel_2eh',['make_arm_controller_model.h',['../make__arm__controller__model_8h.html',1,'']]],
   ['make_5fball_5fplate_5fplant_2eh',['make_ball_plate_plant.h',['../make__ball__plate__plant_8h.html',1,'']]],
   ['make_5fbox_5ffield_2eh',['make_box_field.h',['../make__box__field_8h.html',1,'']]],
   ['make_5fbox_5fmesh_2eh',['make_box_mesh.h',['../make__box__mesh_8h.html',1,'']]],
