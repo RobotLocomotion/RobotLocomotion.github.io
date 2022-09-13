@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"rotation__conversion__gradient_8h.html#adee0d3618f370d3b31682a8ca479376e":[4,0,0,7,30,2],
 "rotation__matrix_8h.html":[4,0,0,7,31],
 "rotation__matrix_8h.html#ab095ea87a1517bb9bae78d221f5d34da":[4,0,0,7,31,1],
 "rotational__inertia_8h.html":[4,0,0,8,13,39],
@@ -176,7 +177,7 @@ var NAVTREEINDEX50 =
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,51,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,51,9],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,0,9],
-"sorted__triplet_8h.html":[4,0,0,4,2,49],
+"sorted__triplet_8h.html":[4,0,0,4,2,50],
 "sos__basis__generator_8h.html":[4,0,0,11,57],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,57,0],
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,13,42],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "standard__operations_8h.html#aacbd555db2d620085ff5f044cd0f2e90":[4,0,0,1,0,0,1,50],
 "standard__operations_8h.html#aada179add840ec8de0a6e702f247137a":[4,0,0,1,0,0,1,48],
 "standard__operations_8h.html#ab2d5e3ed0dae87a3a9a3ab7671a99021":[4,0,0,1,0,0,1,45],
-"standard__operations_8h.html#ab65f189066e79d8823e1c199ea5f3bf5":[4,0,0,1,0,0,1,29],
-"standard__operations_8h.html#abcb482ba19c98dc61ad2ba12ae9671be":[4,0,0,1,0,0,1,41]
+"standard__operations_8h.html#ab65f189066e79d8823e1c199ea5f3bf5":[4,0,0,1,0,0,1,29]
 };

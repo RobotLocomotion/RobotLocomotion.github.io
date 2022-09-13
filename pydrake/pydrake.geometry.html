@@ -18449,7 +18449,9 @@ however, some bᵢ will be negative.</p>
 <dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_.VolumeMesh_[float].CalcTetrahedronVolume">
 <code class="descname">CalcTetrahedronVolume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].CalcTetrahedronVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates volume of a tetrahedral element.</p>
+<dd><p>Calculates volume of a tetrahedral element. It is a signed volume,
+i.e., it can be negative depending on the order of the four vertices
+of the tetrahedron.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">num_elements())</span></code>.</dd>
@@ -18577,7 +18579,9 @@ however, some bᵢ will be negative.</p>
 <dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[AutoDiffXd].CalcTetrahedronVolume">
 <code class="descname">CalcTetrahedronVolume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[AutoDiffXd], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[AutoDiffXd].CalcTetrahedronVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates volume of a tetrahedral element.</p>
+<dd><p>Calculates volume of a tetrahedral element. It is a signed volume,
+i.e., it can be negative depending on the order of the four vertices
+of the tetrahedron.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">num_elements())</span></code>.</dd>
@@ -18703,7 +18707,9 @@ however, some bᵢ will be negative.</p>
 <dl class="method">
 <dt id="pydrake.geometry.VolumeMesh_[float].CalcTetrahedronVolume">
 <code class="descname">CalcTetrahedronVolume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.VolumeMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.VolumeMesh_[float].CalcTetrahedronVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates volume of a tetrahedral element.</p>
+<dd><p>Calculates volume of a tetrahedral element. It is a signed volume,
+i.e., it can be negative depending on the order of the four vertices
+of the tetrahedron.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">num_elements())</span></code>.</dd>

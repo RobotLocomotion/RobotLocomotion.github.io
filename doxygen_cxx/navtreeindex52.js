@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html":[3,0,0,7,3,4],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#a4f39b23907779584a741d9fdb229dd8c":[3,0,0,7,3,4,2],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#a5a13a000fdab960391d09ab31b5a0b90":[3,0,0,7,3,4,1],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,7,3,4,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1pydrake_1_1wrap__arg__default.html#ac0d8dfca95588efef734b244410fa031":[3,0,0,12,3,1],
 "structdrake_1_1pydrake_1_1wrap__arg__default.html#af86f89529a81600b291217b3f9b1a067":[3,0,0,12,3,0],
 "structdrake_1_1scalar__predicate.html":[3,0,0,48],
-"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,48,0],
-"structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,48,1]
+"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,48,0]
 };
