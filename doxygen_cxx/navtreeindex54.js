@@ -1,5 +1,15 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html":[3,0,0,16,2,2],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea":[3,0,0,16,2,2,0],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a30edcf82b08e03225696e43415e04c41":[3,0,0,16,2,2,3],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a96666d29f27b318e44d0f2fc3e5382cd":[3,0,0,16,2,2,4],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ab7bf6c65890d77655bd4fa2b6f07ddea":[3,0,0,16,2,2,6],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ad4b8dfe12a35db518214e3cb4d76ae8a":[3,0,0,16,2,2,5],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a":[3,0,0,16,2,2,1],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#afac4934484438e44b34be1f0cc79d995":[3,0,0,16,2,2,2],
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html":[3,0,0,16,2,6],
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,16,2,6,1],
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,16,2,6,0],
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[1,2,2,3,0],
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,2,2,3,0,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX54 =
 "symbolic_2polynomial_8h.html#a369ea32ea396cc86951892020d5c4a4b":[4,0,0,1,3,11,31],
 "symbolic_2polynomial_8h.html#a42522d07a4a9c32a89e8b4eea9a00a60":[4,0,0,1,3,11,23],
 "symbolic_2polynomial_8h.html#a448e985024e32143f3ca12d8596211d4":[4,0,0,1,3,11,33],
-"symbolic_2polynomial_8h.html#a46fe276a728b54ce277fcc972fd28d78":[4,0,0,1,3,11,10],
-"symbolic_2polynomial_8h.html#a48f8b6bfe08648f4a0dac518e1abb0bd":[4,0,0,1,3,11,28],
-"symbolic_2polynomial_8h.html#a4e02326d779ba8c55ad9d9f6eb54f3d8":[4,0,0,1,3,11,19],
-"symbolic_2polynomial_8h.html#a52a4be02d87d5a6d31efbbcb5d3ba934":[4,0,0,1,3,11,16],
-"symbolic_2polynomial_8h.html#a5e355d7c9eb6bff11199a94c16ed5c8a":[4,0,0,1,3,11,4],
-"symbolic_2polynomial_8h.html#a5ee4b0876c4a92c7bd3030b193ce0dbd":[4,0,0,1,3,11,22],
-"symbolic_2polynomial_8h.html#a812892dbfc6443dc1eed055e1915f5e4":[4,0,0,1,3,11,9],
-"symbolic_2polynomial_8h.html#a8dd958cf7990638bdd2576c2ab62ad43":[4,0,0,1,3,11,20],
-"symbolic_2polynomial_8h.html#a8fa3b0259a14e44faf2d959f540e9446":[4,0,0,1,3,11,38],
-"symbolic_2polynomial_8h.html#a96b091bab8bb06edd276c6b4a420903c":[4,0,0,1,3,11,17],
-"symbolic_2polynomial_8h.html#a9e804fc81cb6d40414b816f559f81a7d":[4,0,0,1,3,11,6]
+"symbolic_2polynomial_8h.html#a46fe276a728b54ce277fcc972fd28d78":[4,0,0,1,3,11,10]
 };

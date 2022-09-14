@@ -18,6 +18,7 @@ var searchData=
   ['allegro_5fcommon_2eh',['allegro_common.h',['../allegro__common_8h.html',1,'']]],
   ['allegro_5flcm_2eh',['allegro_lcm.h',['../allegro__lcm_8h.html',1,'']]],
   ['angle_5fbetween_5fvectors_5fconstraint_2eh',['angle_between_vectors_constraint.h',['../angle__between__vectors__constraint_8h.html',1,'']]],
+  ['angle_5fbetween_5fvectors_5fcost_2eh',['angle_between_vectors_cost.h',['../angle__between__vectors__cost_8h.html',1,'']]],
   ['antiderivative_5ffunction_2eh',['antiderivative_function.h',['../antiderivative__function_8h.html',1,'']]],
   ['apply_5fdriver_5fconfigs_2eh',['apply_driver_configs.h',['../apply__driver__configs_8h.html',1,'']]],
   ['articulated_5fbody_5fforce_5fcache_2eh',['articulated_body_force_cache.h',['../articulated__body__force__cache_8h.html',1,'']]],

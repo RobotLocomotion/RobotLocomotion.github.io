@@ -4,6 +4,7 @@ var searchData=
   ['_7eabstractvalues',['~AbstractValues',['../classdrake_1_1systems_1_1_abstract_values.html#a8d304b437e28d63ffbe7ffae38de0eed',1,'drake::systems::AbstractValues']]],
   ['_7eacrobotgeometry',['~AcrobotGeometry',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#af52fa9ef3f3263d46ea4f329b83d5ab2',1,'drake::examples::acrobot::AcrobotGeometry']]],
   ['_7eanglebetweenvectorsconstraint',['~AngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a2cf9c73e6f4c40795e1a8bd64ea29e62',1,'drake::multibody::AngleBetweenVectorsConstraint']]],
+  ['_7eanglebetweenvectorscost',['~AngleBetweenVectorsCost',['../classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#a2ff1efb8836b6b3be852de75a5e5a920',1,'drake::multibody::AngleBetweenVectorsCost']]],
   ['_7eautodiff',['~AutoDiff',['../classdrake_1_1ad_1_1_auto_diff.html#a701541ece873a57b52e3d7f520094311',1,'drake::ad::AutoDiff']]],
   ['_7ebogackishampine3integrator',['~BogackiShampine3Integrator',['../classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#a53d32d848b25991c62dc715bf096eceb',1,'drake::systems::BogackiShampine3Integrator']]],
   ['_7ebouncingballplant',['~BouncingBallPlant',['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#ae440c44140877d03b5f80f6da7b3ee85',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant']]],

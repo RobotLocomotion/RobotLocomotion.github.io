@@ -7722,7 +7722,7 @@ signature that accepts a <code class="docutils literal notranslate"><span class=
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent">
-<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
 Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
@@ -7748,7 +7748,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedPublishEvent">
-<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
 will cause multiple handlers to be called upon a call to Publish();
@@ -7772,7 +7772,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent">
-<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
 DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
@@ -7798,7 +7798,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent">
-<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -7871,7 +7871,7 @@ already set to TriggerType::kInitialization.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationPublishEvent">
-<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and that
 it should invoke the given event handler method. The handler should be
 a class member function (method) with this signature:</p>
@@ -7904,7 +7904,7 @@ more information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent">
-<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at
 initialization and that it should invoke the given event handler
 method. The handler should be a class member function (method) with
@@ -7961,7 +7961,7 @@ DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent">
-<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
 that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -8044,7 +8044,7 @@ has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicPublishEvent">
-<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur periodically and that it
 should invoke the given event handler method. The handler should be a
 class member function (method) with this signature:</p>
@@ -8077,7 +8077,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent">
-<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -8110,7 +8110,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent">
-<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
@@ -8186,7 +8186,7 @@ already set to TriggerType::kPerStep.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepPublishEvent">
-<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and at
 the end of every trajectory-advancing step and that it should invoke
 the given event handler method. The handler should be a class member
@@ -8235,7 +8235,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent">
-<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
@@ -8640,7 +8640,7 @@ signature that accepts a <code class="docutils literal notranslate"><span class=
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedDiscreteUpdateEvent">
-<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
 Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
@@ -8666,7 +8666,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedPublishEvent">
-<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
 will cause multiple handlers to be called upon a call to Publish();
@@ -8690,7 +8690,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedUnrestrictedUpdateEvent">
-<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
 DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
@@ -8716,7 +8716,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationDiscreteUpdateEvent">
-<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -8789,7 +8789,7 @@ already set to TriggerType::kInitialization.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationPublishEvent">
-<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and that
 it should invoke the given event handler method. The handler should be
 a class member function (method) with this signature:</p>
@@ -8822,7 +8822,7 @@ more information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationUnrestrictedUpdateEvent">
-<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at
 initialization and that it should invoke the given event handler
 method. The handler should be a class member function (method) with
@@ -8879,7 +8879,7 @@ DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdateEvent">
-<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
 that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -8962,7 +8962,7 @@ has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicPublishEvent">
-<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur periodically and that it
 should invoke the given event handler method. The handler should be a
 class member function (method) with this signature:</p>
@@ -8995,7 +8995,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicUnrestrictedUpdateEvent">
-<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -9028,7 +9028,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepDiscreteUpdateEvent">
-<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
@@ -9104,7 +9104,7 @@ already set to TriggerType::kPerStep.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepPublishEvent">
-<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and at
 the end of every trajectory-advancing step and that it should invoke
 the given event handler method. The handler should be a class member
@@ -9153,7 +9153,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepUnrestrictedUpdateEvent">
-<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
@@ -9556,7 +9556,7 @@ signature that accepts a <code class="docutils literal notranslate"><span class=
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedDiscreteUpdateEvent">
-<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
 Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
@@ -9582,7 +9582,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedPublishEvent">
-<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
 will cause multiple handlers to be called upon a call to Publish();
@@ -9606,7 +9606,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedUnrestrictedUpdateEvent">
-<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
 DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
@@ -9632,7 +9632,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationDiscreteUpdateEvent">
-<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -9705,7 +9705,7 @@ already set to TriggerType::kInitialization.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationPublishEvent">
-<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and that
 it should invoke the given event handler method. The handler should be
 a class member function (method) with this signature:</p>
@@ -9738,7 +9738,7 @@ more information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationUnrestrictedUpdateEvent">
-<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at
 initialization and that it should invoke the given event handler
 method. The handler should be a class member function (method) with
@@ -9795,7 +9795,7 @@ DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdateEvent">
-<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
 that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -9878,7 +9878,7 @@ has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicPublishEvent">
-<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur periodically and that it
 should invoke the given event handler method. The handler should be a
 class member function (method) with this signature:</p>
@@ -9911,7 +9911,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicUnrestrictedUpdateEvent">
-<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -9944,7 +9944,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepDiscreteUpdateEvent">
-<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
@@ -10020,7 +10020,7 @@ already set to TriggerType::kPerStep.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepPublishEvent">
-<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and at
 the end of every trajectory-advancing step and that it should invoke
 the given event handler method. The handler should be a class member
@@ -10069,7 +10069,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepUnrestrictedUpdateEvent">
-<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
@@ -10472,7 +10472,7 @@ signature that accepts a <code class="docutils literal notranslate"><span class=
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent">
-<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
 Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
@@ -10498,7 +10498,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareForcedPublishEvent">
-<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
 will cause multiple handlers to be called upon a call to Publish();
@@ -10522,7 +10522,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent">
-<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a function that is called whenever a user directly calls
 CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
 DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
@@ -10548,7 +10548,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent">
-<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -10621,7 +10621,7 @@ already set to TriggerType::kInitialization.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareInitializationPublishEvent">
-<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and that
 it should invoke the given event handler method. The handler should be
 a class member function (method) with this signature:</p>
@@ -10654,7 +10654,7 @@ more information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent">
-<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at
 initialization and that it should invoke the given event handler
 method. The handler should be a class member function (method) with
@@ -10711,7 +10711,7 @@ DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent">
-<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
 that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -10794,7 +10794,7 @@ has been overloaded (not recommended).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicPublishEvent">
-<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur periodically and that it
 should invoke the given event handler method. The handler should be a
 class member function (method) with this signature:</p>
@@ -10827,7 +10827,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent">
-<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
@@ -10860,7 +10860,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent">
-<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
@@ -10936,7 +10936,7 @@ already set to TriggerType::kPerStep.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePerStepPublishEvent">
-<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a Publish event should occur at initialization and at
 the end of every trajectory-advancing step and that it should invoke
 the given event handler method. The handler should be a class member
@@ -10985,7 +10985,7 @@ information.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent">
-<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], Optional[pydrake.systems.framework.EventStatus]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function

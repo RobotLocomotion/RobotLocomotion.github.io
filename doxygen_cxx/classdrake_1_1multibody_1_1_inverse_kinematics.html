@@ -202,6 +202,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ada2be002de90894ce104c602cf7273da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#ada2be002de90894ce104c602cf7273da">AddAngleBetweenVectorsConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;na_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;nb_B, double angle_lower, double angle_upper)</td></tr>
 <tr class="memdesc:ada2be002de90894ce104c602cf7273da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains that the angle between a vector na and another vector nb is between [θ_lower, θ_upper].  <a href="#ada2be002de90894ce104c602cf7273da">More...</a><br /></td></tr>
 <tr class="separator:ada2be002de90894ce104c602cf7273da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f807d94ba2f45f3e53d6cb80f5de97e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a3f807d94ba2f45f3e53d6cb80f5de97e">AddAngleBetweenVectorsCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;na_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;nb_B, double c)</td></tr>
+<tr class="memdesc:a3f807d94ba2f45f3e53d6cb80f5de97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a cost c * (1-cosθ) where θ is the angle between the vector <code>na</code> and <code>nb</code>.  <a href="#a3f807d94ba2f45f3e53d6cb80f5de97e">More...</a><br /></td></tr>
+<tr class="separator:a3f807d94ba2f45f3e53d6cb80f5de97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d7e39fc0e8059b4894a60982bec5ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a7d7e39fc0e8059b4894a60982bec5ee6">AddMinimumDistanceConstraint</a> (double minimum_distance, double influence_distance_offset=1)</td></tr>
 <tr class="memdesc:a7d7e39fc0e8059b4894a60982bec5ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the pairwise distance between objects should be no smaller than <code>minimum_distance</code>.  <a href="#a7d7e39fc0e8059b4894a60982bec5ee6">More...</a><br /></td></tr>
 <tr class="separator:a7d7e39fc0e8059b4894a60982bec5ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -503,6 +506,88 @@ Public Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if angle_upper is outside the bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f807d94ba2f45f3e53d6cb80f5de97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f807d94ba2f45f3e53d6cb80f5de97e">&#9670;&nbsp;</a></span>AddAngleBetweenVectorsCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; AddAngleBetweenVectorsCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>na_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frameB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nb_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a cost c * (1-cosθ) where θ is the angle between the vector <code>na</code> and <code>nb</code>. </p>
+<p>na is fixed to a frame A, while nb is fixed to a frame B. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameA</td><td>The frame to which na is fixed. </td></tr>
+    <tr><td class="paramname">na_A</td><td>The vector na fixed to frame A, expressed in frame A. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>na_A should be a non-zero vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if na_A is close to zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameB</td><td>The frame to which nb is fixed. </td></tr>
+    <tr><td class="paramname">nb_B</td><td>The vector nb fixed to frame B, expressed in frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>nb_B should be a non-zero vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if nb_B is close to zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The cost is c * (1-cosθ). </td></tr>
   </table>
   </dd>
 </dl>

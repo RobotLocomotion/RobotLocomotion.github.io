@@ -1,5 +1,15 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#ab953e201d71c0ce608e7c95607a4f256":[1,1,2,203],
+"classdrake_1_1solvers_1_1_mathematical_program.html#abaa1d35a078980665b4cabac09dd235b":[1,1,2,140],
+"classdrake_1_1solvers_1_1_mathematical_program.html#abdcdb1ab2b9211c869331a8b0af3e22c":[1,1,2,90],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ac2079c8eee90c77853f4a9a96c14715a":[1,1,2,114],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ac296d646cdfb000b49df738e9da24159":[1,1,2,137],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ac381d539927a444992b0945068cd8a8e":[1,1,2,31],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ac577d0f44c9c07256230cf2642ec6822":[1,1,2,4],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ac57dac7a44fa56077931a7998f7069e2":[1,1,2,46],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ac623a8e305d300afa1d9f63bf3f266b8":[1,1,2,63],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ac8b0cea357d05b961ef11c82a2f4ab7e":[1,1,2,134],
 "classdrake_1_1solvers_1_1_mathematical_program.html#acb1b59ceeeec9235267e4a8b6d440c9f":[1,1,2,184],
 "classdrake_1_1solvers_1_1_mathematical_program.html#acbe6687c1f407124c9bd88777ed71144":[1,1,2,113],
 "classdrake_1_1solvers_1_1_mathematical_program.html#acdac15e414036a05505aa356c8011c74":[1,1,2,12],
@@ -238,16 +248,6 @@ var NAVTREEINDEX21 =
 "classdrake_1_1solvers_1_1_osqp_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,53,12],
 "classdrake_1_1solvers_1_1_osqp_solver.html#afa135bc8b8d84cf608c982037e707e09":[3,0,0,14,53,8],
 "classdrake_1_1solvers_1_1_osqp_solver.html#afdbc2d66c43c508fe956c4a18e531c76":[3,0,0,14,53,0],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html":[1,1,0,38],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a05f12ff63f9849accf2405af287cf808":[1,1,0,38,2],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a0aa38833bde962effcfb1899c772d40b":[1,1,0,38,3],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc":[1,1,0,38,12],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,38,9],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a7753f51736cfaf47d79cccf47af3e6b7":[1,1,0,38,0],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,38,7],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a9f514d254d676ff4db7124730f8b0e37":[1,1,0,38,1],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,38,8],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aae45694d3595659922653fd027d15cb6":[1,1,0,38,5],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#acd63f52880d3aad51f3d675636b4832c":[1,1,0,38,11],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#ace583a472a3bdc1b67f05d6a6571a903":[1,1,0,38,4]
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html":[1,1,0,39],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a05f12ff63f9849accf2405af287cf808":[1,1,0,39,2]
 };

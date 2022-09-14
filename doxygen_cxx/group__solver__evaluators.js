@@ -9,6 +9,15 @@ var group__solver__evaluators =
       [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a98fb2abd442bf1476402c2bc628828af", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#ae0935336292ab087cb230d04dbf329e5", null ]
     ] ],
+    [ "AngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html", [
+      [ "AngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ab7520597163a12d24979ac8926bb1ac8", null ],
+      [ "AngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#a621cd91b0b1662fc5724422257010fb4", null ],
+      [ "AngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#a5d96ba454ffcf731c0d885e7bc0b4a0d", null ],
+      [ "AngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#aee65c9787c0060ee07bd31b9e1200d16", null ],
+      [ "~AngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#a2ff1efb8836b6b3be852de75a5e5a920", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ae3852336466ee945d4185ebeb8180d7b", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#adba084715ab226cf720bf91c93cb7664", null ]
+    ] ],
     [ "ComPositionConstraint", "classdrake_1_1multibody_1_1_com_position_constraint.html", [
       [ "ComPositionConstraint", "classdrake_1_1multibody_1_1_com_position_constraint.html#af8a97228768f2e20432861c219125a17", null ],
       [ "ComPositionConstraint", "classdrake_1_1multibody_1_1_com_position_constraint.html#aa2f6665e992356cb5539318fa52229eb", null ],

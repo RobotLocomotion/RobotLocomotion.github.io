@@ -1,6 +1,7 @@
 var dir_da11cd43e7bab310171e778f62212487 =
 [
     [ "angle_between_vectors_constraint.h", "angle__between__vectors__constraint_8h.html", null ],
+    [ "angle_between_vectors_cost.h", "angle__between__vectors__cost_8h.html", null ],
     [ "com_in_polyhedron_constraint.h", "com__in__polyhedron__constraint_8h.html", [
       [ "ComInPolyhedronConstraint", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint" ]
     ] ],

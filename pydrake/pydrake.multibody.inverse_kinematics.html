@@ -326,6 +326,65 @@ MultibodyPlant&lt;double&gt;.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">AngleBetweenVectorsCost</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<p>Implements a cost of the form c*(1-cosθ), where θ is the angle between
+two vectors <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. <cite>c</cite> is a constant scalar.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameA: pydrake.multibody.tree.Frame_[float], a_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], b_B: numpy.ndarray[numpy.float64[3, 1]], c: float, plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructs an AngleBetweenVectorsCost.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the cost is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code> should
+be alive during the lifetime of this cost.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt>
+<dd>The Frame object for frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a_A</span></code>:</dt>
+<dd>The vector <code class="docutils literal notranslate"><span class="pre">a</span></code> fixed to frame A, expressed in frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The Frame object for frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b_B</span></code>:</dt>
+<dd>The vector <code class="docutils literal notranslate"><span class="pre">b</span></code> fixed to frame B, expressed in frameB.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt>
+<dd>The cost is c*(1-cosθ).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+cost.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">frameA</span></code> and <code class="docutils literal notranslate"><span class="pre">frameB</span></code> must belong to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">a_A</span></code> is close to zero.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">b_B</span></code> is close to zero.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], a_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], b_B: numpy.ndarray[numpy.float64[3, 1]], c: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Use MultibodyPlant&lt;AutoDiffXd&gt; instead of
+MultibodyPlant&lt;double&gt;.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">ComInPolyhedronConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
@@ -1062,6 +1121,49 @@ orientation of frame B expressed in frame A.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsCost">
+<code class="descname">AddAngleBetweenVectorsCost</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], na_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], nb_B: numpy.ndarray[numpy.float64[3, 1]], c: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.Binding[Cost]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a cost c * (1-cosθ) where θ is the angle between the vector <code class="docutils literal notranslate"><span class="pre">na</span></code>
+and <code class="docutils literal notranslate"><span class="pre">nb</span></code>. na is fixed to a frame A, while nb is fixed to a frame B.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame to which na is fixed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">na_A</span></code>:</dt>
+<dd>The vector na fixed to frame A, expressed in frame A.</dd>
+<dt>Precondition:</dt>
+<dd>na_A should be a non-zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if na_A is close to zero.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which nb is fixed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nb_B</span></code>:</dt>
+<dd>The vector nb fixed to frame B, expressed in frame B.</dd>
+<dt>Precondition:</dt>
+<dd>nb_B should be a non-zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if nb_B is close to zero.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt>
+<dd>The cost is c * (1-cosθ).</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

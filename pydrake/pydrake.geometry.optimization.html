@@ -841,7 +841,7 @@ graph.</p>
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7ff691bc68f0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f6b06bd4770&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -875,7 +875,7 @@ set.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7ff691bc3370&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f6b05e79330&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>
@@ -1308,19 +1308,31 @@ of the returned Hyperellipsoid.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.ContainedIn">
-<code class="descname">ContainedIn</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ContainedIn" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ContainedIn</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em>, <em>tol: float = 1e-09</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ContainedIn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true iff this HPolyhedron is entirely contained in the
 HPolyhedron other. This is done by checking whether every inequality
 in <code class="docutils literal notranslate"><span class="pre">other</span></code> is redundant when added to this.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tol</span></code>:</dt>
+<dd>We check if this polyhedron is contained in
+other.A().row(i).dot(x) &lt;= other.b()(i) + tol. The larger tol
+value is, the more relaxation we add to the containment. If tol is
+negative, then we check if a shrinked <code class="docutils literal notranslate"><span class="pre">other</span></code> contains this
+polyheron.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.Intersection">
-<code class="descname">Intersection</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em>, <em>check_for_redundancy: bool = False</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.Intersection" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Intersection</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em>, <em>check_for_redundancy: bool = False</em>, <em>tol: float = 1e-09</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.Intersection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the intersection of two HPolyhedron by adding the rows of
 inequalities from <code class="docutils literal notranslate"><span class="pre">other</span></code>. If <code class="docutils literal notranslate"><span class="pre">check_for_redundancy</span></code> is true then
-only adds the rows of <code class="docutils literal notranslate"><span class="pre">other</span></code> to this HPolyhedron if the inequality
-is not implied by the inequalities from this HPolyhedron.</p>
+only adds the rows of <code class="docutils literal notranslate"><span class="pre">other</span></code> other.A().row(i).dot(x)&lt;=other.b()(i)
+to this HPolyhedron if the inequality
+other.A().row(i).dot(x)&lt;=other.b()(i)+tol is not implied by the
+inequalities from this HPolyhedron. A positive tol means it is more
+likely to deem a constraint being redundant and remove it. A negative
+tol means it is less likely to remove a constraint.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -1385,11 +1397,19 @@ dimension. This method may throw a runtime error if <code class="docutils litera
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.ReduceInequalities">
-<code class="descname">ReduceInequalities</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ReduceInequalities" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ReduceInequalities</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>tol: float = 1e-09</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ReduceInequalities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reduces some (not necessarily all) redundant inequalities in the
 HPolyhedron. This is not guaranteed to give the minimal representation
 of the polyhedron but is a relatively fast way to reduce the number of
 inequalities.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tol</span></code>:</dt>
+<dd>For a constraint c’x&lt;=d, if the halfspace c’x&lt;=d + tol contains
+the hpolyhedron generated by the rest of the constraints, then we
+remove this inequality. A positive tol means it is more likely to
+remove a constraint, a negative tol means it is less likey to
+remote a constraint.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
