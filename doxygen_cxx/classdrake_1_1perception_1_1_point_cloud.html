@@ -234,6 +234,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc8e346be919f7dbb4995d6365492301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301">resize</a> (<a class="el" href="classint.html">int</a> new_size, bool skip_initialize=false)</td></tr>
 <tr class="memdesc:abc8e346be919f7dbb4995d6365492301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conservative resize; will maintain existing data, and initialize new data to their invalid values.  <a href="#abc8e346be919f7dbb4995d6365492301">More...</a><br /></td></tr>
 <tr class="separator:abc8e346be919f7dbb4995d6365492301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13abe761922caf34ccb5530adc0dff21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a13abe761922caf34ccb5530adc0dff21">VoxelizedDownSample</a> (double voxel_size) const</td></tr>
+<tr class="memdesc:a13abe761922caf34ccb5530adc0dff21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3D grid with cells of dimension voxel_size.  <a href="#a13abe761922caf34ccb5530adc0dff21">More...</a><br /></td></tr>
+<tr class="separator:a13abe761922caf34ccb5530adc0dff21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometric Descriptors - XYZs</div></td></tr>
 <tr class="memitem:abbefd7d1920434ef863911302c2da821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821">has_xyzs</a> () const</td></tr>
 <tr class="memdesc:abbefd7d1920434ef863911302c2da821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this cloud provides XYZ values.  <a href="#abbefd7d1920434ef863911302c2da821">More...</a><br /></td></tr>
@@ -298,12 +301,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a633c3fd7c0fad6c4a9aaf1174e962c09"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a41d294e761edcf58942f699027fe6c23">D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a633c3fd7c0fad6c4a9aaf1174e962c09">mutable_descriptors</a> ()</td></tr>
 <tr class="memdesc:a633c3fd7c0fad6c4a9aaf1174e962c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to descriptor values.  <a href="#a633c3fd7c0fad6c4a9aaf1174e962c09">More...</a><br /></td></tr>
 <tr class="separator:a633c3fd7c0fad6c4a9aaf1174e962c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86edb2fabfc24b9a791070aa03d79e9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a86edb2fabfc24b9a791070aa03d79e9b">descriptor</a> (<a class="el" href="classint.html">int</a> i) const</td></tr>
-<tr class="memdesc:a86edb2fabfc24b9a791070aa03d79e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to a descriptor value.  <a href="#a86edb2fabfc24b9a791070aa03d79e9b">More...</a><br /></td></tr>
-<tr class="separator:a86edb2fabfc24b9a791070aa03d79e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5cd0db051c8712234f2aa3eb0b9b677"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ad5cd0db051c8712234f2aa3eb0b9b677">mutable_descriptor</a> (<a class="el" href="classint.html">int</a> i)</td></tr>
-<tr class="memdesc:ad5cd0db051c8712234f2aa3eb0b9b677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to a descriptor value.  <a href="#ad5cd0db051c8712234f2aa3eb0b9b677">More...</a><br /></td></tr>
-<tr class="separator:ad5cd0db051c8712234f2aa3eb0b9b677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6bfb48a90e54792ea94f835787c79a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a41d294e761edcf58942f699027fe6c23">D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acd6bfb48a90e54792ea94f835787c79a">descriptor</a> (<a class="el" href="classint.html">int</a> i) const</td></tr>
+<tr class="memdesc:acd6bfb48a90e54792ea94f835787c79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to a descriptor value.  <a href="#acd6bfb48a90e54792ea94f835787c79a">More...</a><br /></td></tr>
+<tr class="separator:acd6bfb48a90e54792ea94f835787c79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155b879601cf0abdb27ac79211763e0b"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a41d294e761edcf58942f699027fe6c23">D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a155b879601cf0abdb27ac79211763e0b">mutable_descriptor</a> (<a class="el" href="classint.html">int</a> i)</td></tr>
+<tr class="memdesc:a155b879601cf0abdb27ac79211763e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to a descriptor value.  <a href="#a155b879601cf0abdb27ac79211763e0b">More...</a><br /></td></tr>
+<tr class="separator:a155b879601cf0abdb27ac79211763e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Container Manipulation</div></td></tr>
 <tr class="memitem:acee5db2d53b1b703ab6a50eb836e07b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acee5db2d53b1b703ab6a50eb836e07b9">SetFrom</a> (const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> &amp;other, <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">pc_flags::Fields</a> fields_in=<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afa60bc914dc1d7f672ffe8799bd04d7ea4">pc_flags::kInherit</a>, bool allow_resize=true)</td></tr>
 <tr class="memdesc:acee5db2d53b1b703ab6a50eb836e07b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies all points from another point cloud.  <a href="#acee5db2d53b1b703ab6a50eb836e07b9">More...</a><br /></td></tr>
@@ -577,14 +580,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a86edb2fabfc24b9a791070aa03d79e9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86edb2fabfc24b9a791070aa03d79e9b">&#9670;&nbsp;</a></span>descriptor()</h2>
+<a id="acd6bfb48a90e54792ea94f835787c79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6bfb48a90e54792ea94f835787c79a">&#9670;&nbsp;</a></span>descriptor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a>&gt; descriptor </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a41d294e761edcf58942f699027fe6c23">D</a>&gt; descriptor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -882,14 +885,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad5cd0db051c8712234f2aa3eb0b9b677"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5cd0db051c8712234f2aa3eb0b9b677">&#9670;&nbsp;</a></span>mutable_descriptor()</h2>
+<a id="a155b879601cf0abdb27ac79211763e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a155b879601cf0abdb27ac79211763e0b">&#9670;&nbsp;</a></span>mutable_descriptor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Ref&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a>&gt; &gt; mutable_descriptor </td>
+          <td class="memname">Eigen::Ref&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a41d294e761edcf58942f699027fe6c23">D</a>&gt; &gt; mutable_descriptor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -1315,6 +1318,33 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the number of points in this point cloud. </p>
+
+</div>
+</div>
+<a id="a13abe761922caf34ccb5530adc0dff21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13abe761922caf34ccb5530adc0dff21">&#9670;&nbsp;</a></span>VoxelizedDownSample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> VoxelizedDownSample </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>voxel_size</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3D grid with cells of dimension voxel_size. </p>
+<p>Each occupied voxel will result in one point in the downsampled cloud, with a location corresponding to the centroid of the points in that voxel. Points with non-finite xyz values are ignored. All other fields (e.g. rgbs, normals, and descriptors) with finite values will also be averaged across the points in a voxel. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values.">has_xyzs()</a> is false. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if voxel_size &lt;= 0. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

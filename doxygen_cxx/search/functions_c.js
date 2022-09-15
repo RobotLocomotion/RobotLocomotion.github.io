@@ -188,7 +188,7 @@ var searchData=
   ['mutable_5fbody_5fforces',['mutable_body_forces',['../classdrake_1_1multibody_1_1_multibody_forces.html#a8305e8fcc4884808d757748513b4855e',1,'drake::multibody::MultibodyForces']]],
   ['mutable_5fbuilder',['mutable_builder',['../classdrake_1_1planning_1_1_robot_diagram_builder.html#a23cff14068739e164e97b7e3263ef89b',1,'drake::planning::RobotDiagramBuilder']]],
   ['mutable_5fdata',['mutable_data',['../classdrake_1_1multibody_1_1_spatial_vector.html#a0956f52a2d65962e383a87b3e6c3a30b',1,'drake::multibody::SpatialVector']]],
-  ['mutable_5fdescriptor',['mutable_descriptor',['../classdrake_1_1perception_1_1_point_cloud.html#ad5cd0db051c8712234f2aa3eb0b9b677',1,'drake::perception::PointCloud']]],
+  ['mutable_5fdescriptor',['mutable_descriptor',['../classdrake_1_1perception_1_1_point_cloud.html#a155b879601cf0abdb27ac79211763e0b',1,'drake::perception::PointCloud']]],
   ['mutable_5fdescriptors',['mutable_descriptors',['../classdrake_1_1perception_1_1_point_cloud.html#a633c3fd7c0fad6c4a9aaf1174e962c09',1,'drake::perception::PointCloud']]],
   ['mutable_5fgeneralized_5fforces',['mutable_generalized_forces',['../classdrake_1_1multibody_1_1_multibody_forces.html#aa49f61a7a12d45b3e94308cc9d8148c1',1,'drake::multibody::MultibodyForces']]],
   ['mutable_5fgravity_5ffield',['mutable_gravity_field',['../classdrake_1_1multibody_1_1_multibody_plant.html#a011da7195d022b5768df17eeb86ae707',1,'drake::multibody::MultibodyPlant']]],

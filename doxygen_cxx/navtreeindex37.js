@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html":[1,4,0,0,9],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a1c50c03e94472e430e7e44184107ae0d":[1,4,0,0,9,1],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a2edea43a5cc1cf93774961dedc8b0d2f":[1,4,0,0,9,5],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24":[1,4,0,0,9,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html":[3,0,0,16,2,9],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a06b00bdf9cf61457cade4e39ebc40b28":[3,0,0,16,2,9,2],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a250b7dda39fb41640df16e3d85bbc8ea":[3,0,0,16,2,9,0],
-"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a2d5e3af9235581bbca735ace1a676ac6":[3,0,0,16,2,9,3],
-"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a47d45f4dacd4da362d0017dde8778d12":[3,0,0,16,2,9,7]
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a2d5e3af9235581bbca735ace1a676ac6":[3,0,0,16,2,9,3]
 };

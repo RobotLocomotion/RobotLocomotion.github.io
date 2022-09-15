@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_image.html#aae0d0fb11c38bb3141999d478ee1f814":[3,0,0,16,8,7,9],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#ac16f69a51a4c8238d44ea1d3ee0683c3":[3,0,0,16,8,7,13],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#ad33e26f692dbdcd6376ceb84b1fcd2c1":[3,0,0,16,8,7,0],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#ad3774f6419003470f54fd495124ef51f":[3,0,0,16,8,7,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,18,2,13],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1d2630303963dbd6257823c89b4164ce":[3,0,0,18,2,7],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1ffe41e9d9d04dc5cd0b0dd097435ebc":[3,0,0,18,2,2],
-"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a58fd4c3b54d164206645161e187bac25":[3,0,0,18,2,0],
-"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,18,2,6]
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a58fd4c3b54d164206645161e187bac25":[3,0,0,18,2,0]
 };

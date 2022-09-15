@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683af":[4,0,0,9,2,3],
+"point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afa60bc914dc1d7f672ffe8799bd04d7ea4":[4,0,0,9,2,3,1],
 "point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afa634ee767a8e90ff4d56e140459cca31f":[4,0,0,9,2,3,0],
 "point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afaa75cd65c9c6667325634e0d31778b41e":[4,0,0,9,2,3,4],
 "point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afaba0ec049309fcce2fbb0aa588bacce66":[4,0,0,9,2,3,3],
@@ -14,9 +16,9 @@ var NAVTREEINDEX49 =
 "pointer__cast_8h.html#a983e5f23fd0a884e01038572bd3e24a2":[4,0,0,1,44,2],
 "pointer__cast_8h.html#ab53bd4a15e73e524b3f73c625ea88176":[4,0,0,1,44,0],
 "pointer__cast_8h.html#acd10687a188332bb1f67fb3acf28f208":[4,0,0,1,44,1],
-"polygon__surface__mesh_8h.html":[4,0,0,4,2,45],
-"polygon__surface__mesh__field_8h.html":[4,0,0,4,2,46],
-"polygon__surface__mesh__field_8h.html#a28c174a30e183e46f90e66baf17ad992":[4,0,0,4,2,46,0],
+"polygon__surface__mesh_8h.html":[4,0,0,4,2,46],
+"polygon__surface__mesh__field_8h.html":[4,0,0,4,2,47],
+"polygon__surface__mesh__field_8h.html#a28c174a30e183e46f90e66baf17ad992":[4,0,0,4,2,47,0],
 "polyhedron__constraint_8h.html":[4,0,0,8,5,14],
 "polynomial_8h.html":[4,0,0,1,45],
 "polynomial_8h.html#a00cbebcd97766579bb36e35abcf44acf":[4,0,0,1,45,5],
@@ -36,7 +38,7 @@ var NAVTREEINDEX49 =
 "populate__cylinder__plant_8h.html#a5a816161acad2f3ad08d68e4507ee9de":[4,0,0,3,11,0,0,0],
 "port__base_8h.html":[4,0,0,12,3,33],
 "port__switch_8h.html":[4,0,0,12,6,17],
-"posed__half__space_8h.html":[4,0,0,4,2,47],
+"posed__half__space_8h.html":[4,0,0,4,2,48],
 "position__constraint_8h.html":[4,0,0,8,5,15],
 "position__cost_8h.html":[4,0,0,8,5,16],
 "position__kinematics__cache_8h.html":[4,0,0,8,13,31],
@@ -90,7 +92,7 @@ var NAVTREEINDEX49 =
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,11,44,6],
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,44,7],
 "propeller_8h.html":[4,0,0,8,10,24],
-"proximity__doxygen_8h.html":[4,0,0,4,2,48],
+"proximity__doxygen_8h.html":[4,0,0,4,2,49],
 "proximity__engine_8h.html":[4,0,0,4,34],
 "proximity__properties_8h.html":[4,0,0,4,35],
 "proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,35,2],
@@ -98,7 +100,7 @@ var NAVTREEINDEX49 =
 "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,35,0],
 "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,35,4],
 "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,35,3],
-"proximity__utilities_8h.html":[4,0,0,4,2,49],
+"proximity__utilities_8h.html":[4,0,0,4,2,50],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,8],
 "pydrake__pybind_8h.html":[4,0,0,0,0,9],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,9,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a56192ce118646021d72474e9520a804a":[4,0,0,11,45,1,5],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a6973c9c90ce92aa52ce62a6e0fc4664d":[4,0,0,11,45,1,3],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43":[4,0,0,11,45,1,6],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f":[4,0,0,11,45,1,10],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8":[4,0,0,11,45,1,7],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74adb2b51a6cdf2edf29dc2bfdcefef6ce0":[4,0,0,11,45,1,4]
+"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f":[4,0,0,11,45,1,10]
 };

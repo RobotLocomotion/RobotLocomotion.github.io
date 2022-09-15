@@ -682,6 +682,28 @@ the fields indicated this parameter.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.perception.PointCloud.VoxelizedDownSample">
+<code class="descname">VoxelizedDownSample</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>voxel_size: float</em><span class="sig-paren">)</span> &#x2192; pydrake.perception.PointCloud<a class="headerlink" href="#pydrake.perception.PointCloud.VoxelizedDownSample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a down-sampled point cloud by grouping all xyzs in this cloud
+into a 3D grid with cells of dimension voxel_size. Each occupied voxel
+will result in one point in the downsampled cloud, with a location
+corresponding to the centroid of the points in that voxel. Points with
+non-finite xyz values are ignored. All other fields (e.g. rgbs,
+normals, and descriptors) with finite values will also be averaged
+across the points in a voxel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if has_xyzs() is false.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if voxel_size &lt;= 0.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.perception.PointCloud.xyz">
 <code class="descname">xyz</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float32[3, 1]]<a class="headerlink" href="#pydrake.perception.PointCloud.xyz" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns access to an XYZ value.</p>

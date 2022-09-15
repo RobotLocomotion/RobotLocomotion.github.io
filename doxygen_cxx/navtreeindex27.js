@@ -1,5 +1,6 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a":[3,0,0,15,58,44],
 "classdrake_1_1symbolic_1_1_polynomial.html#a3964b57f6f9f9957e6000b10a0383a34":[3,0,0,15,58,6],
 "classdrake_1_1symbolic_1_1_polynomial.html#a3c2344073950451dcc9f2676cd9bf6e8":[3,0,0,15,58,48],
 "classdrake_1_1symbolic_1_1_polynomial.html#a464c802c8b3157e578c64b7930859242":[3,0,0,15,58,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1systems_1_1_antiderivative_function.html#a297cc996796286bf9462670369c51bf2":[3,0,0,16,13,3],
 "classdrake_1_1systems_1_1_antiderivative_function.html#a44b79a184f3de81211a3c718011d7909":[3,0,0,16,13,8],
 "classdrake_1_1systems_1_1_antiderivative_function.html#a7ad782922312536d160ad1f0be6965e8":[3,0,0,16,13,7],
-"classdrake_1_1systems_1_1_antiderivative_function.html#a9dd04e4e29ff34ecdaebcad75923165c":[3,0,0,16,13,2],
-"classdrake_1_1systems_1_1_antiderivative_function.html#aa77b1a0ffd8ec53e3327d467726e08ba":[3,0,0,16,13,0]
+"classdrake_1_1systems_1_1_antiderivative_function.html#a9dd04e4e29ff34ecdaebcad75923165c":[3,0,0,16,13,2]
 };
