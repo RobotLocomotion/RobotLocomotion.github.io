@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 741;
+var viewWidth = 886;
 var viewHeight = 117;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,99 +54,116 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/systems/lcm/lcm_buses.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-113 737,-113 737,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-113 881.5,-113 881.5,4 -4,4"/>
 <!-- Node21 -->
 <g id="node1" class="node">
 <title>Node21</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="322.5,-78.5 322.5,-108.5 452.5,-108.5 452.5,-78.5 322.5,-78.5"/>
-<text text-anchor="start" x="330.5" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/systems/lcm/lcm</text>
-<text text-anchor="middle" x="387.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_buses.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="390,-78.5 390,-108.5 520,-108.5 520,-78.5 390,-78.5"/>
+<text text-anchor="start" x="398" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/systems/lcm/lcm</text>
+<text text-anchor="middle" x="455" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_buses.h</text>
 </a>
 </g>
 </g>
 <!-- Node22 -->
 <g id="node2" class="node">
 <title>Node22</title>
-<g id="a_node2"><a xlink:href="schunk__wsg__driver__functions_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-0.5 0,-41.5 141,-41.5 141,-0.5 0,-0.5"/>
+<g id="a_node2"><a xlink:href="iiwa__driver__functions_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-0.5 0,-41.5 126,-41.5 126,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/manipulation</text>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/schunk_wsg/schunk_wsg</text>
-<text text-anchor="middle" x="70.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_driver_functions.h</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/kuka_iiwa/iiwa_driver</text>
+<text text-anchor="middle" x="63" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_functions.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node22 -->
 <g id="edge1" class="edge">
 <title>Node21&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M312.36,-77.34C265.44,-67.67 203.83,-54.64 149.5,-42 146.74,-41.36 143.94,-40.7 141.1,-40.02"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="311.95,-80.82 322.45,-79.41 313.36,-73.97 311.95,-80.82"/>
+<path fill="none" stroke="midnightblue" d="M379.76,-83.1C314.62,-74.38 218.08,-60.03 135,-42 132.08,-41.37 129.11,-40.69 126.11,-39.97"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="379.56,-86.61 389.94,-84.45 380.48,-79.67 379.56,-86.61"/>
 </g>
 <!-- Node23 -->
 <g id="node3" class="node">
 <title>Node23</title>
-<g id="a_node3"><a xlink:href="apply__driver__configs_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="159,-6 159,-36 308,-36 308,-6 159,-6"/>
-<text text-anchor="start" x="167" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">drake/manipulation</text>
-<text text-anchor="middle" x="233.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">/util/apply_driver_configs.h</text>
+<g id="a_node3"><a xlink:href="schunk__wsg__driver__functions_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="144.5,-0.5 144.5,-41.5 285.5,-41.5 285.5,-0.5 144.5,-0.5"/>
+<text text-anchor="start" x="152.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/manipulation</text>
+<text text-anchor="start" x="152.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/schunk_wsg/schunk_wsg</text>
+<text text-anchor="middle" x="215" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_driver_functions.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node23 -->
 <g id="edge2" class="edge">
 <title>Node21&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M347.5,-74.19C321.51,-62.29 288.15,-47.02 264.24,-36.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="346.16,-77.42 356.71,-78.4 349.07,-71.06 346.16,-77.42"/>
+<path fill="none" stroke="midnightblue" d="M397.29,-75.55C362.48,-65.32 318,-52.26 281.7,-41.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="396.72,-79.03 407.3,-78.49 398.69,-72.31 396.72,-79.03"/>
 </g>
 <!-- Node24 -->
 <g id="node4" class="node">
 <title>Node24</title>
-<g id="a_node4"><a xlink:href="zero__force__driver__functions_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="326,-0.5 326,-41.5 449,-41.5 449,-0.5 326,-0.5"/>
-<text text-anchor="start" x="334" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/manipulation</text>
-<text text-anchor="start" x="334" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/util/zero_force_driver</text>
-<text text-anchor="middle" x="387.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_functions.h</text>
+<g id="a_node4"><a xlink:href="apply__driver__configs_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="303.5,-6 303.5,-36 452.5,-36 452.5,-6 303.5,-6"/>
+<text text-anchor="start" x="311.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">drake/manipulation</text>
+<text text-anchor="middle" x="378" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">/util/apply_driver_configs.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node24 -->
 <g id="edge3" class="edge">
 <title>Node21&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M387.5,-67.98C387.5,-59.35 387.5,-49.76 387.5,-41.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="384,-68.23 387.5,-78.23 391,-68.23 384,-68.23"/>
+<path fill="none" stroke="midnightblue" d="M432.02,-71.46C419.51,-60 404.36,-46.14 393.3,-36"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="429.68,-74.06 439.42,-78.23 434.41,-68.9 429.68,-74.06"/>
 </g>
 <!-- Node25 -->
 <g id="node5" class="node">
 <title>Node25</title>
-<g id="a_node5"><a xlink:href="lcm__config__functions_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="467.5,-6 467.5,-36 597.5,-36 597.5,-6 467.5,-6"/>
-<text text-anchor="start" x="475.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">drake/systems/lcm/lcm</text>
-<text text-anchor="middle" x="532.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">_config_functions.h</text>
+<g id="a_node5"><a xlink:href="zero__force__driver__functions_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="470.5,-0.5 470.5,-41.5 593.5,-41.5 593.5,-0.5 470.5,-0.5"/>
+<text text-anchor="start" x="478.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/manipulation</text>
+<text text-anchor="start" x="478.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/util/zero_force_driver</text>
+<text text-anchor="middle" x="532" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_functions.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node25 -->
 <g id="edge4" class="edge">
 <title>Node21&#45;&gt;Node25</title>
-<path fill="none" stroke="midnightblue" d="M425.49,-74.03C449.91,-62.16 481.14,-46.97 503.56,-36.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="423.96,-70.88 416.49,-78.4 427.02,-77.18 423.96,-70.88"/>
+<path fill="none" stroke="midnightblue" d="M478.07,-71.38C488.39,-61.93 500.49,-50.85 510.61,-41.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="475.59,-68.9 470.58,-78.23 480.32,-74.06 475.59,-68.9"/>
 </g>
 <!-- Node26 -->
 <g id="node6" class="node">
 <title>Node26</title>
-<g id="a_node6"><a xlink:href="visualization__config__functions_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="616,-0.5 616,-41.5 733,-41.5 733,-0.5 616,-0.5"/>
-<text text-anchor="start" x="624" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/visualization</text>
-<text text-anchor="start" x="624" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/visualization_config</text>
-<text text-anchor="middle" x="674.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_functions.h</text>
+<g id="a_node6"><a xlink:href="lcm__config__functions_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="612,-6 612,-36 742,-36 742,-6 612,-6"/>
+<text text-anchor="start" x="620" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">drake/systems/lcm/lcm</text>
+<text text-anchor="middle" x="677" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">_config_functions.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node26 -->
 <g id="edge5" class="edge">
 <title>Node21&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M462.87,-76.28C505.23,-66.87 558.98,-54.46 606.5,-42 609.59,-41.19 612.76,-40.34 615.96,-39.46"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="461.92,-72.91 452.91,-78.48 463.43,-79.74 461.92,-72.91"/>
+<path fill="none" stroke="midnightblue" d="M508.98,-75.36C546.89,-63.32 596.98,-47.41 632.58,-36.11"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="507.6,-72.12 499.13,-78.49 509.72,-78.8 507.6,-72.12"/>
+</g>
+<!-- Node27 -->
+<g id="node7" class="node">
+<title>Node27</title>
+<g id="a_node7"><a xlink:href="visualization__config__functions_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="760.5,-0.5 760.5,-41.5 877.5,-41.5 877.5,-0.5 760.5,-0.5"/>
+<text text-anchor="start" x="768.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/visualization</text>
+<text text-anchor="start" x="768.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/visualization_config</text>
+<text text-anchor="middle" x="819" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_functions.h</text>
+</a>
+</g>
+</g>
+<!-- Node21&#45;&gt;Node27 -->
+<g id="edge6" class="edge">
+<title>Node21&#45;&gt;Node27</title>
+<path fill="none" stroke="midnightblue" d="M530.27,-82.15C590.39,-73.28 676.58,-59.23 751,-42 754,-41.31 757.06,-40.56 760.14,-39.77"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="529.49,-78.72 520.11,-83.63 530.51,-85.65 529.49,-78.72"/>
 </g>
 </g>
 </svg>

@@ -841,7 +841,7 @@ graph.</p>
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fa338d46f70&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f05ad306430&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -875,7 +875,7 @@ set.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fa337758830&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f05adecab70&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>
@@ -1186,6 +1186,30 @@ the convex relaxation is tight.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.flow_tolerance">
+<code class="descname">flow_tolerance</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.flow_tolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tolerance for ignoring flow along a given edge during random rounding.
+If convex_relaxation is false or max_rounded_paths is less than or
+equal to zero, this option is ignored.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.max_rounded_paths">
+<code class="descname">max_rounded_paths</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.max_rounded_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of distinct paths to compare during random rounding;
+only the lowest cost path is returned. If convex_relaxation is false
+or this is less than or equal to zero, rounding is not performed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.max_rounding_trials">
+<code class="descname">max_rounding_trials</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.max_rounding_trials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of trials to find a novel path during random rounding.
+If convex_relaxation is false or max_rounded_paths is less than or
+equal to zero, this option is ignored.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.preprocessing">
 <code class="descname">preprocessing</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.preprocessing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs a preprocessing step to remove edges that cannot lie on the
@@ -1194,6 +1218,14 @@ reduction in computation by reducing the size of the optimization
 solved. Note that this preprocessing is not exact. There may be edges
 that cannot lie on the path from source to target that this does not
 detect.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.rounding_seed">
+<code class="descname">rounding_seed</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.rounding_seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random seed to use for random rounding. If convex_relaxation is false
+or max_rounded_paths is less than or equal to zero, this option is
+ignored.</p>
 </dd></dl>
 
 <dl class="attribute">

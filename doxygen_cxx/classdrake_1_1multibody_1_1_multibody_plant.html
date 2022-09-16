@@ -750,6 +750,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2516569f5a2cc27e76ee0cc8b728746"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746">CalcJacobianTranslationalVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;p_BoBi_B, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Js_v_ABi_E) const</td></tr>
 <tr class="memdesc:ae2516569f5a2cc27e76ee0cc8b728746"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi's translational velocity Jacobian in frame A with respect to "speeds" 𝑠.  <a href="#ae2516569f5a2cc27e76ee0cc8b728746">More...</a><br /></td></tr>
 <tr class="separator:ae2516569f5a2cc27e76ee0cc8b728746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d5973a221d0728e0c1c3e458fac9a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac7d5973a221d0728e0c1c3e458fac9a5">CalcJacobianPositionVector</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;p_BoBi_B, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Jq_p_AoBi_E) const</td></tr>
+<tr class="memdesc:ac7d5973a221d0728e0c1c3e458fac9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi, Bi's position vector Jacobian in frame A with respect to the generalized positions q ≜ [q₁ ...  <a href="#ac7d5973a221d0728e0c1c3e458fac9a5">More...</a><br /></td></tr>
+<tr class="separator:ac7d5973a221d0728e0c1c3e458fac9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e686199a5e9ddee98538741b7a0382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa4e686199a5e9ddee98538741b7a0382">CalcJacobianCenterOfMassTranslationalVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; Js_v_ACcm_E) const</td></tr>
 <tr class="memdesc:aa4e686199a5e9ddee98538741b7a0382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point CCm is the center of mass of the system of all non-world bodies contained in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#aa4e686199a5e9ddee98538741b7a0382">More...</a><br /></td></tr>
 <tr class="separator:aa4e686199a5e9ddee98538741b7a0382"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2486,6 +2489,82 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. J𝑠_v_ACcm_ = ∑ (mᵢ Jᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and Jᵢ is Bcm's translational velocity Jacobian in frame A, expressed in frame E (Bcm is the center of mass of the iᵗʰ body). </dd></dl>
+
+</div>
+</div>
+<a id="ac7d5973a221d0728e0c1c3e458fac9a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d5973a221d0728e0c1c3e458fac9a5">&#9670;&nbsp;</a></span>CalcJacobianPositionVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcJacobianPositionVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_BoBi_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>Jq_p_AoBi_E</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi, Bi's position vector Jacobian in frame A with respect to the generalized positions q ≜ [q₁ ... </p>
+<p>qₙ]ᵀ as </p><pre>
+     Jq_p_AoBi ≜ [ ᴬ∂(p_AoBi)/∂q₁,  ...  ᴬ∂(p_AoBi)/∂qₙ ]
+</pre><p> where p_AoBi is Bi's position vector from point Ao (frame A's origin) and ᴬ∂(p_AoBi)/∂qᵣ denotes the partial derivative in frame A of p_AoBi with respect to the generalized position qᵣ, where qᵣ is one of q₁ ... qₙ. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame on which point Bi is affixed/welded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBi_B</td><td>A position vector or list of k position vectors from Bo (frame_B's origin) to points Bi (Bi is regarded as affixed to B), where each position vector is expressed in frame_B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which partial derivatives are calculated and the frame in which point Ao is affixed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which the Jacobian Jq_p_AoBi is expressed on output. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Jq_p_AoBi_E</td><td>Point Bi's position vector Jacobian in frame A with generalized positions q, expressed in frame E. Jq_p_AoBi_E is a <code>3*k x n</code> matrix, where k is the number of points Bi and n is the number of elements in q. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if Jq_p_AoBi_E is nullptr or not sized <code>3*k x n</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Jq̇_v_ABi = Jq_p_AoBi. In other words, point Bi's velocity Jacobian in frame A with respect to q̇ is equal to point Bi's position vector Jacobian in frame A with respect to q. <pre>
+[∂(v_ABi)/∂q̇₁, ... ∂(v_ABi)/∂q̇ₙ] = [ᴬ∂(p_AoBi)/∂q₁, ... ᴬ∂(p_AoBi)/∂qₙ]
+</pre> Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point fixed/welded to frame A, i.e., this calculation's result is the same if point Ao is replaced with any point fixed on frame A. </dd></dl>
 
 </div>
 </div>

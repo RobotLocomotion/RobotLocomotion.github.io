@@ -182,6 +182,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4c59b29655e8164083e8704ac82979b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a4c59b29655e8164083e8704ac82979b2">preprocessing</a> {false}</td></tr>
 <tr class="memdesc:a4c59b29655e8164083e8704ac82979b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a preprocessing step to remove edges that cannot lie on the path from source to target.  <a href="#a4c59b29655e8164083e8704ac82979b2">More...</a><br /></td></tr>
 <tr class="separator:a4c59b29655e8164083e8704ac82979b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac584721f13a52d5e19df707b30f95ece"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ac584721f13a52d5e19df707b30f95ece">max_rounded_paths</a> {0}</td></tr>
+<tr class="memdesc:ac584721f13a52d5e19df707b30f95ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of distinct paths to compare during random rounding; only the lowest cost path is returned.  <a href="#ac584721f13a52d5e19df707b30f95ece">More...</a><br /></td></tr>
+<tr class="separator:ac584721f13a52d5e19df707b30f95ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6430583dae0d07964009a4345136d8ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6430583dae0d07964009a4345136d8ca">max_rounding_trials</a> {100}</td></tr>
+<tr class="memdesc:a6430583dae0d07964009a4345136d8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of trials to find a novel path during random rounding.  <a href="#a6430583dae0d07964009a4345136d8ca">More...</a><br /></td></tr>
+<tr class="separator:a6430583dae0d07964009a4345136d8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fa9cf3c24726cbf70d03c92300b70c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa3fa9cf3c24726cbf70d03c92300b70c">flow_tolerance</a> {1e-5}</td></tr>
+<tr class="memdesc:aa3fa9cf3c24726cbf70d03c92300b70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tolerance for ignoring flow along a given edge during random rounding.  <a href="#aa3fa9cf3c24726cbf70d03c92300b70c">More...</a><br /></td></tr>
+<tr class="separator:aa3fa9cf3c24726cbf70d03c92300b70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb7b16d4d092f7b7572de4c058b30d96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#abb7b16d4d092f7b7572de4c058b30d96">rounding_seed</a> {0}</td></tr>
+<tr class="memdesc:abb7b16d4d092f7b7572de4c058b30d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random seed to use for random rounding.  <a href="#abb7b16d4d092f7b7572de4c058b30d96">More...</a><br /></td></tr>
+<tr class="separator:abb7b16d4d092f7b7572de4c058b30d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1717b842ef7560038a1ee8f5076d7721"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1717b842ef7560038a1ee8f5076d7721">solver</a> {nullptr}</td></tr>
 <tr class="memdesc:a1717b842ef7560038a1ee8f5076d7721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimizer to be used to solve the shortest path optimization problem.  <a href="#a1717b842ef7560038a1ee8f5076d7721">More...</a><br /></td></tr>
 <tr class="separator:a1717b842ef7560038a1ee8f5076d7721"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,6 +245,57 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa3fa9cf3c24726cbf70d03c92300b70c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fa9cf3c24726cbf70d03c92300b70c">&#9670;&nbsp;</a></span>flow_tolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double flow_tolerance {1e-5}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tolerance for ignoring flow along a given edge during random rounding. </p>
+<p>If convex_relaxation is false or max_rounded_paths is less than or equal to zero, this option is ignored. </p>
+
+</div>
+</div>
+<a id="ac584721f13a52d5e19df707b30f95ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac584721f13a52d5e19df707b30f95ece">&#9670;&nbsp;</a></span>max_rounded_paths</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> max_rounded_paths {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of distinct paths to compare during random rounding; only the lowest cost path is returned. </p>
+<p>If convex_relaxation is false or this is less than or equal to zero, rounding is not performed. </p>
+
+</div>
+</div>
+<a id="a6430583dae0d07964009a4345136d8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6430583dae0d07964009a4345136d8ca">&#9670;&nbsp;</a></span>max_rounding_trials</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> max_rounding_trials {100}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of trials to find a novel path during random rounding. </p>
+<p>If convex_relaxation is false or max_rounded_paths is less than or equal to zero, this option is ignored. </p>
+
+</div>
+</div>
 <a id="a4c59b29655e8164083e8704ac82979b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c59b29655e8164083e8704ac82979b2">&#9670;&nbsp;</a></span>preprocessing</h2>
 
@@ -247,6 +310,23 @@ Public Attributes</h2></td></tr>
 
 <p>Performs a preprocessing step to remove edges that cannot lie on the path from source to target. </p>
 <p>In most cases, preprocessing causes a net reduction in computation by reducing the size of the optimization solved. Note that this preprocessing is not exact. There may be edges that cannot lie on the path from source to target that this does not detect. </p>
+
+</div>
+</div>
+<a id="abb7b16d4d092f7b7572de4c058b30d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb7b16d4d092f7b7572de4c058b30d96">&#9670;&nbsp;</a></span>rounding_seed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> rounding_seed {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Random seed to use for random rounding. </p>
+<p>If convex_relaxation is false or max_rounded_paths is less than or equal to zero, this option is ignored. </p>
 
 </div>
 </div>

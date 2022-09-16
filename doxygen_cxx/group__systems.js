@@ -89,6 +89,7 @@ var group__systems =
       [ "CalcJacobianAngularVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#aac6058b002bdb83057539ad9785267b7", null ],
       [ "CalcJacobianCenterOfMassTranslationalVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#aa4e686199a5e9ddee98538741b7a0382", null ],
       [ "CalcJacobianCenterOfMassTranslationalVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#afab5cf2a636d29dd5b05225fab9b72de", null ],
+      [ "CalcJacobianPositionVector", "classdrake_1_1multibody_1_1_multibody_plant.html#ac7d5973a221d0728e0c1c3e458fac9a5", null ],
       [ "CalcJacobianSpatialVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313", null ],
       [ "CalcJacobianTranslationalVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746", null ],
       [ "CalcMassMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#adf95c4544e8855015c110ba173ccdd0b", null ],

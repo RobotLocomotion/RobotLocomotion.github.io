@@ -381,6 +381,8 @@ var hierarchy =
     [ "Identifier< class RoleVersionTag >", "classdrake_1_1_identifier.html", null ],
     [ "Identifier< class SourceTag >", "classdrake_1_1_identifier.html", null ],
     [ "Rotation::Identity", "structdrake_1_1schema_1_1_rotation_1_1_identity.html", null ],
+    [ "IiwaControlPorts", "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html", null ],
+    [ "IiwaDriver", "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html", null ],
     [ "ConstraintRelaxingIk::IkCartesianWaypoint", "structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html", null ],
     [ "Image< kPixelType >", "classdrake_1_1systems_1_1sensors_1_1_image.html", null ],
     [ "ImageTraits< PixelType >", "structdrake_1_1systems_1_1sensors_1_1_image_traits.html", null ],
@@ -586,8 +588,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]

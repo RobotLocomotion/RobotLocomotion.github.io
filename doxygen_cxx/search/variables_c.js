@@ -5,6 +5,8 @@ var searchData=
   ['max_5fiter',['max_iter',['../structdrake_1_1multibody_1_1_calc_grid_points_options.html#a53380b3b14c20bdfcb3bc9970c421231',1,'drake::multibody::CalcGridPointsOptions']]],
   ['max_5fiterations',['max_iterations',['../structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a82eead8e5a402b5c5da8b449073bad45',1,'drake::multibody::TamsiSolverParameters']]],
   ['max_5fnum_5fallocations',['max_num_allocations',['../structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df',1,'drake::test::LimitMallocParams']]],
+  ['max_5frounded_5fpaths',['max_rounded_paths',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ac584721f13a52d5e19df707b30f95ece',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
+  ['max_5frounding_5ftrials',['max_rounding_trials',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6430583dae0d07964009a4345136d8ca',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
   ['max_5fseg_5flength',['max_seg_length',['../structdrake_1_1multibody_1_1_calc_grid_points_options.html#ae62d09bc52470752b2fd4589c92049f5',1,'drake::multibody::CalcGridPointsOptions']]],
   ['max_5fstep_5fsize',['max_step_size',['../structdrake_1_1systems_1_1_simulator_config.html#a952be0fb54cfff1d4d56de3caf4b3d31',1,'drake::systems::SimulatorConfig']]],
   ['mean',['mean',['../classdrake_1_1schema_1_1_gaussian.html#abb40a2ee28b839fb572e161c68141faf',1,'drake::schema::Gaussian::mean()'],['../classdrake_1_1schema_1_1_gaussian_vector.html#a4505d59d4b827b167f46b7fe144e69e9',1,'drake::schema::GaussianVector::mean()']]],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX44 =
 {
+"formula_8h.html#a952d7f91d0e9e67110274daf0d17f132":[4,0,0,1,3,0,7,13],
+"formula_8h.html#a9594d5ed428f5fac27aced9c9fcd28d1":[4,0,0,1,3,0,7,75],
+"formula_8h.html#a96f5414ecb9fa8f70d2303a3408aa95b":[4,0,0,1,3,0,7,17],
+"formula_8h.html#a9a8a8cf51365e956ea445cf6b77d2577":[4,0,0,1,3,0,7,29],
 "formula_8h.html#aa4f5aab12f951d127ecfaf06b4f175c5":[4,0,0,1,3,0,7,51],
 "formula_8h.html#aa71ff98005aa4a5b0d0639c055fb295f":[4,0,0,1,3,0,7,22],
 "formula_8h.html#aa9fbe2690e2170be14656811a9d860d5":[4,0,0,1,3,0,7,33],
@@ -98,8 +102,8 @@ var NAVTREEINDEX44 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,3,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,11,22],
-"functions.html":[3,3,0,0],
 "functions.html":[3,3,0],
+"functions.html":[3,3,0,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -175,8 +179,8 @@ var NAVTREEINDEX44 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
+"functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX44 =
 "generic__polynomial_8h.html#abaab72f1cd4050603b25467fa909ec24":[4,0,0,1,3,6,27],
 "generic__polynomial_8h.html#abb122f4c4c5c71d0734c3b517a146df9":[4,0,0,1,3,6,26],
 "generic__polynomial_8h.html#aca14414fd5dcd3628a3a5aff79eabebc":[4,0,0,1,3,6,7],
-"generic__polynomial_8h.html#acf8ec1d6463a6936e7865e8cef04082f":[4,0,0,1,3,6,3],
-"generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,3,6,28],
-"generic__polynomial_8h.html#adfcadf9b33656022c0c071a8af3fd85e":[4,0,0,1,3,6,32],
-"generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,3,6,23],
-"generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,3,6,30]
+"generic__polynomial_8h.html#acf8ec1d6463a6936e7865e8cef04082f":[4,0,0,1,3,6,3]
 };
