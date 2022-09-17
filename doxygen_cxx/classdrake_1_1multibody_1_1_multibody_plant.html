@@ -2564,7 +2564,8 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Jq̇_v_ABi = Jq_p_AoBi. In other words, point Bi's velocity Jacobian in frame A with respect to q̇ is equal to point Bi's position vector Jacobian in frame A with respect to q. <pre>
 [∂(v_ABi)/∂q̇₁, ... ∂(v_ABi)/∂q̇ₙ] = [ᴬ∂(p_AoBi)/∂q₁, ... ᴬ∂(p_AoBi)/∂qₙ]
-</pre> Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point fixed/welded to frame A, i.e., this calculation's result is the same if point Ao is replaced with any point fixed on frame A. </dd></dl>
+</pre> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a> for details on Jq̇_v_ABi. Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em><a class="el" href="namespacedrake.html#a624916a36af99a1ddfed08a25047cbea" title="Checks truth for at least one element in matrix m.">any</a></em> point fixed/welded to frame A, i.e., this calculation's result is the same if point Ao is replaced with <a class="el" href="namespacedrake.html#a624916a36af99a1ddfed08a25047cbea" title="Checks truth for at least one element in matrix m.">any</a> point fixed on frame A. </dd></dl>
 
 </div>
 </div>
@@ -2735,6 +2736,7 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
 <dl class="section note"><dt>Note</dt><dd>When 𝑠 = q̇, <code>Jq̇_v_ABi = Jq_p_AoBi</code>. In other words, point Bi's velocity Jacobian in frame A with respect to q̇ is equal to point Bi's position Jacobian from Ao (A's origin) in frame A with respect to q. <pre>
 [∂(v_ABi)/∂q̇₁,  ...  ∂(v_ABi)/∂q̇ⱼ] = [∂(p_AoBi)/∂q₁,  ...  ∂(p_AoBi)/∂qⱼ]
 </pre> Note: Each partial derivative of p_AoBi is taken in frame A. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac7d5973a221d0728e0c1c3e458fac9a5" title="For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi, Bi&#39;s position vector Jacobian in...">CalcJacobianPositionVector()</a> for details on Jq_p_AoBi. </dd></dl>
 
 </div>
 </div>

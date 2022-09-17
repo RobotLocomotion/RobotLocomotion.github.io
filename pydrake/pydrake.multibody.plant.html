@@ -2815,6 +2815,66 @@ iᵗʰ body).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcJacobianPositionVector">
+<code class="descname">CalcJacobianPositionVector</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], frame_B: pydrake.multibody.tree.Frame_[float], p_BoBi_B: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], frame_A: pydrake.multibody.tree.Frame_[float], frame_E: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcJacobianPositionVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi,
+Bi’s position vector Jacobian in frame A with respect to the
+generalized positions q ≜ [q₁ … qₙ]ᵀ as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Jq_p_AoBi ≜ [ ᴬ∂(p_AoBi)/∂q₁,  ...  ᴬ∂(p_AoBi)/∂qₙ ]
+</pre></div>
+</div>
+<p>where p_AoBi is Bi’s position vector from point Ao (frame A’s origin)
+and ᴬ∂(p_AoBi)/∂qᵣ denotes the partial derivative in frame A of p_AoBi
+with respect to the generalized position qᵣ, where qᵣ is one of q₁ …
+qₙ.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt>
+<dd>The frame on which point Bi is affixed/welded.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBi_B</span></code>:</dt>
+<dd>A position vector or list of k position vectors from Bo (frame_B’s
+origin) to points Bi (Bi is regarded as affixed to B), where each
+position vector is expressed in frame_B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt>
+<dd>The frame in which partial derivatives are calculated and the
+frame in which point Ao is affixed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt>
+<dd>The frame in which the Jacobian Jq_p_AoBi is expressed on output.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Jq_p_AoBi_E</span></code>:</dt>
+<dd>Point Bi’s position vector Jacobian in frame A with generalized
+positions q, expressed in frame E. Jq_p_AoBi_E is a <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>
+matrix, where k is the number of points Bi and n is the number of
+elements in q. The Jacobian is a function of only generalized
+positions q (which are pulled from the context).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Jq_p_AoBi_E is nullptr or not sized <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Jq̇_v_ABi = Jq_p_AoBi. In other words, point Bi’s velocity
+Jacobian in frame A with respect to q̇ is equal to point Bi’s
+position vector Jacobian in frame A with respect to q.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[∂(v_ABi)/∂q̇₁, ... ∂(v_ABi)/∂q̇ₙ] = [ᴬ∂(p_AoBi)/∂q₁, ... ᴬ∂(p_AoBi)/∂qₙ]
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianTranslationalVelocity() for details on Jq̇_v_ABi.
+Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point
+fixed/welded to frame A, i.e., this calculation’s result is the
+same if point Ao is replaced with any point fixed on frame A.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcJacobianSpatialVelocity">
 <code class="descname">CalcJacobianSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_B: pydrake.multibody.tree.Frame_[float], p_BP: numpy.ndarray[numpy.float64[3, 1]], frame_A: pydrake.multibody.tree.Frame_[float], frame_E: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcJacobianSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp’s
@@ -2943,6 +3003,10 @@ respect to q.</p>
 </pre></div>
 </div>
 <p>Note: Each partial derivative of p_AoBi is taken in frame A.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianPositionVector() for details on Jq_p_AoBi.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -7088,6 +7152,66 @@ iᵗʰ body).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcJacobianPositionVector">
+<code class="descname">CalcJacobianPositionVector</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], frame_B: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BoBi_B: numpy.ndarray[object[3, n], flags.f_contiguous], frame_A: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_E: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcJacobianPositionVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi,
+Bi’s position vector Jacobian in frame A with respect to the
+generalized positions q ≜ [q₁ … qₙ]ᵀ as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Jq_p_AoBi ≜ [ ᴬ∂(p_AoBi)/∂q₁,  ...  ᴬ∂(p_AoBi)/∂qₙ ]
+</pre></div>
+</div>
+<p>where p_AoBi is Bi’s position vector from point Ao (frame A’s origin)
+and ᴬ∂(p_AoBi)/∂qᵣ denotes the partial derivative in frame A of p_AoBi
+with respect to the generalized position qᵣ, where qᵣ is one of q₁ …
+qₙ.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt>
+<dd>The frame on which point Bi is affixed/welded.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBi_B</span></code>:</dt>
+<dd>A position vector or list of k position vectors from Bo (frame_B’s
+origin) to points Bi (Bi is regarded as affixed to B), where each
+position vector is expressed in frame_B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt>
+<dd>The frame in which partial derivatives are calculated and the
+frame in which point Ao is affixed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt>
+<dd>The frame in which the Jacobian Jq_p_AoBi is expressed on output.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Jq_p_AoBi_E</span></code>:</dt>
+<dd>Point Bi’s position vector Jacobian in frame A with generalized
+positions q, expressed in frame E. Jq_p_AoBi_E is a <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>
+matrix, where k is the number of points Bi and n is the number of
+elements in q. The Jacobian is a function of only generalized
+positions q (which are pulled from the context).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Jq_p_AoBi_E is nullptr or not sized <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Jq̇_v_ABi = Jq_p_AoBi. In other words, point Bi’s velocity
+Jacobian in frame A with respect to q̇ is equal to point Bi’s
+position vector Jacobian in frame A with respect to q.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[∂(v_ABi)/∂q̇₁, ... ∂(v_ABi)/∂q̇ₙ] = [ᴬ∂(p_AoBi)/∂q₁, ... ᴬ∂(p_AoBi)/∂qₙ]
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianTranslationalVelocity() for details on Jq̇_v_ABi.
+Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point
+fixed/welded to frame A, i.e., this calculation’s result is the
+same if point Ao is replaced with any point fixed on frame A.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcJacobianSpatialVelocity">
 <code class="descname">CalcJacobianSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_B: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BP: numpy.ndarray[object[3, 1]], frame_A: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_E: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcJacobianSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp’s
@@ -7216,6 +7340,10 @@ respect to q.</p>
 </pre></div>
 </div>
 <p>Note: Each partial derivative of p_AoBi is taken in frame A.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianPositionVector() for details on Jq_p_AoBi.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -11359,6 +11487,66 @@ iᵗʰ body).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcJacobianPositionVector">
+<code class="descname">CalcJacobianPositionVector</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], frame_B: pydrake.multibody.tree.Frame_[Expression], p_BoBi_B: numpy.ndarray[object[3, n], flags.f_contiguous], frame_A: pydrake.multibody.tree.Frame_[Expression], frame_E: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcJacobianPositionVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi,
+Bi’s position vector Jacobian in frame A with respect to the
+generalized positions q ≜ [q₁ … qₙ]ᵀ as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Jq_p_AoBi ≜ [ ᴬ∂(p_AoBi)/∂q₁,  ...  ᴬ∂(p_AoBi)/∂qₙ ]
+</pre></div>
+</div>
+<p>where p_AoBi is Bi’s position vector from point Ao (frame A’s origin)
+and ᴬ∂(p_AoBi)/∂qᵣ denotes the partial derivative in frame A of p_AoBi
+with respect to the generalized position qᵣ, where qᵣ is one of q₁ …
+qₙ.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt>
+<dd>The frame on which point Bi is affixed/welded.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBi_B</span></code>:</dt>
+<dd>A position vector or list of k position vectors from Bo (frame_B’s
+origin) to points Bi (Bi is regarded as affixed to B), where each
+position vector is expressed in frame_B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt>
+<dd>The frame in which partial derivatives are calculated and the
+frame in which point Ao is affixed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt>
+<dd>The frame in which the Jacobian Jq_p_AoBi is expressed on output.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Jq_p_AoBi_E</span></code>:</dt>
+<dd>Point Bi’s position vector Jacobian in frame A with generalized
+positions q, expressed in frame E. Jq_p_AoBi_E is a <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>
+matrix, where k is the number of points Bi and n is the number of
+elements in q. The Jacobian is a function of only generalized
+positions q (which are pulled from the context).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Jq_p_AoBi_E is nullptr or not sized <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Jq̇_v_ABi = Jq_p_AoBi. In other words, point Bi’s velocity
+Jacobian in frame A with respect to q̇ is equal to point Bi’s
+position vector Jacobian in frame A with respect to q.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[∂(v_ABi)/∂q̇₁, ... ∂(v_ABi)/∂q̇ₙ] = [ᴬ∂(p_AoBi)/∂q₁, ... ᴬ∂(p_AoBi)/∂qₙ]
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianTranslationalVelocity() for details on Jq̇_v_ABi.
+Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point
+fixed/welded to frame A, i.e., this calculation’s result is the
+same if point Ao is replaced with any point fixed on frame A.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcJacobianSpatialVelocity">
 <code class="descname">CalcJacobianSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_B: pydrake.multibody.tree.Frame_[Expression], p_BP: numpy.ndarray[object[3, 1]], frame_A: pydrake.multibody.tree.Frame_[Expression], frame_E: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcJacobianSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp’s
@@ -11487,6 +11675,10 @@ respect to q.</p>
 </pre></div>
 </div>
 <p>Note: Each partial derivative of p_AoBi is taken in frame A.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianPositionVector() for details on Jq_p_AoBi.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -15630,6 +15822,66 @@ iᵗʰ body).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcJacobianPositionVector">
+<code class="descname">CalcJacobianPositionVector</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], frame_B: pydrake.multibody.tree.Frame_[float], p_BoBi_B: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], frame_A: pydrake.multibody.tree.Frame_[float], frame_E: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcJacobianPositionVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi,
+Bi’s position vector Jacobian in frame A with respect to the
+generalized positions q ≜ [q₁ … qₙ]ᵀ as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Jq_p_AoBi ≜ [ ᴬ∂(p_AoBi)/∂q₁,  ...  ᴬ∂(p_AoBi)/∂qₙ ]
+</pre></div>
+</div>
+<p>where p_AoBi is Bi’s position vector from point Ao (frame A’s origin)
+and ᴬ∂(p_AoBi)/∂qᵣ denotes the partial derivative in frame A of p_AoBi
+with respect to the generalized position qᵣ, where qᵣ is one of q₁ …
+qₙ.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt>
+<dd>The frame on which point Bi is affixed/welded.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBi_B</span></code>:</dt>
+<dd>A position vector or list of k position vectors from Bo (frame_B’s
+origin) to points Bi (Bi is regarded as affixed to B), where each
+position vector is expressed in frame_B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt>
+<dd>The frame in which partial derivatives are calculated and the
+frame in which point Ao is affixed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt>
+<dd>The frame in which the Jacobian Jq_p_AoBi is expressed on output.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Jq_p_AoBi_E</span></code>:</dt>
+<dd>Point Bi’s position vector Jacobian in frame A with generalized
+positions q, expressed in frame E. Jq_p_AoBi_E is a <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>
+matrix, where k is the number of points Bi and n is the number of
+elements in q. The Jacobian is a function of only generalized
+positions q (which are pulled from the context).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Jq_p_AoBi_E is nullptr or not sized <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Jq̇_v_ABi = Jq_p_AoBi. In other words, point Bi’s velocity
+Jacobian in frame A with respect to q̇ is equal to point Bi’s
+position vector Jacobian in frame A with respect to q.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[∂(v_ABi)/∂q̇₁, ... ∂(v_ABi)/∂q̇ₙ] = [ᴬ∂(p_AoBi)/∂q₁, ... ᴬ∂(p_AoBi)/∂qₙ]
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianTranslationalVelocity() for details on Jq̇_v_ABi.
+Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point
+fixed/welded to frame A, i.e., this calculation’s result is the
+same if point Ao is replaced with any point fixed on frame A.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcJacobianSpatialVelocity">
 <code class="descname">CalcJacobianSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_B: pydrake.multibody.tree.Frame_[float], p_BP: numpy.ndarray[numpy.float64[3, 1]], frame_A: pydrake.multibody.tree.Frame_[float], frame_E: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcJacobianSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp’s
@@ -15758,6 +16010,10 @@ respect to q.</p>
 </pre></div>
 </div>
 <p>Note: Each partial derivative of p_AoBi is taken in frame A.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcJacobianPositionVector() for details on Jq_p_AoBi.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
