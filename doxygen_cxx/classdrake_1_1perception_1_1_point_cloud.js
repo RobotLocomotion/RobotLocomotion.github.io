@@ -12,6 +12,7 @@ var classdrake_1_1perception_1_1_point_cloud =
     [ "descriptor", "classdrake_1_1perception_1_1_point_cloud.html#acd6bfb48a90e54792ea94f835787c79a", null ],
     [ "descriptor_type", "classdrake_1_1perception_1_1_point_cloud.html#a41ef656657edeb72eff1b12fdd4480c4", null ],
     [ "descriptors", "classdrake_1_1perception_1_1_point_cloud.html#a9bba27b505a1ff06953ecdb5334ad9e5", null ],
+    [ "EstimateNormals", "classdrake_1_1perception_1_1_point_cloud.html#abd31b4f5d765431cc1f69ca727419ff1", null ],
     [ "Expand", "classdrake_1_1perception_1_1_point_cloud.html#a05c7caacbe62c00dba9f7bf755b68f0f", null ],
     [ "fields", "classdrake_1_1perception_1_1_point_cloud.html#a839be4b612d6b3d4a6250f5e308b4569", null ],
     [ "has_descriptors", "classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d", null ],

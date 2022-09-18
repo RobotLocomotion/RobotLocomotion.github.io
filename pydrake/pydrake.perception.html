@@ -499,6 +499,41 @@ xyz values within the axis-aligned bounding box defined by
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.perception.PointCloud.EstimateNormals">
+<code class="descname">EstimateNormals</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>radius: float</em>, <em>num_closest: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.perception.PointCloud.EstimateNormals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimates the normal vectors in <code class="docutils literal notranslate"><span class="pre">this</span></code> by fitting a plane at each
+point in the cloud using up to <code class="docutils literal notranslate"><span class="pre">num_closest</span></code> points within Euclidean
+distance <code class="docutils literal notranslate"><span class="pre">radius</span></code> from the point. If has_normals() is false, then
+new normals will be allocated (and has_normals() will become true).
+Points for which the normals cannot be estimated (because the <code class="docutils literal notranslate"><span class="pre">this</span></code>
+has less than two closest points within the <code class="docutils literal notranslate"><span class="pre">radius)</span></code>, will receive
+normal [NaN, NaN, NaN]. Normals estimated from two closest points will
+be orthogonal to the vector between those points, but can be arbitrary
+in the last dimension.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">true iff all points were assigned normals by having at least
+<em>three</em> closest points within <code class="docutils literal notranslate"><span class="pre">radius</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">radius</span></code> &gt; 0 and <code class="docutils literal notranslate"><span class="pre">num_closest</span></code> &gt;= 3.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if has_xyzs() is false.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.perception.PointCloud.fields">
 <code class="descname">fields</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; pydrake.perception.Fields<a class="headerlink" href="#pydrake.perception.PointCloud.fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the fields provided by this point cloud.</p>

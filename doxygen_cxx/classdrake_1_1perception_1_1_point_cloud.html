@@ -237,6 +237,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13abe761922caf34ccb5530adc0dff21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a13abe761922caf34ccb5530adc0dff21">VoxelizedDownSample</a> (double voxel_size) const</td></tr>
 <tr class="memdesc:a13abe761922caf34ccb5530adc0dff21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3D grid with cells of dimension voxel_size.  <a href="#a13abe761922caf34ccb5530adc0dff21">More...</a><br /></td></tr>
 <tr class="separator:a13abe761922caf34ccb5530adc0dff21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd31b4f5d765431cc1f69ca727419ff1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abd31b4f5d765431cc1f69ca727419ff1">EstimateNormals</a> (double radius, <a class="el" href="classint.html">int</a> num_closest)</td></tr>
+<tr class="memdesc:abd31b4f5d765431cc1f69ca727419ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the normal vectors in <code>this</code> by fitting a plane at each point in the cloud using up to <code>num_closest</code> points within Euclidean distance <code>radius</code> from the point.  <a href="#abd31b4f5d765431cc1f69ca727419ff1">More...</a><br /></td></tr>
+<tr class="separator:abd31b4f5d765431cc1f69ca727419ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometric Descriptors - XYZs</div></td></tr>
 <tr class="memitem:abbefd7d1920434ef863911302c2da821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821">has_xyzs</a> () const</td></tr>
 <tr class="memdesc:abbefd7d1920434ef863911302c2da821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this cloud provides XYZ values.  <a href="#abbefd7d1920434ef863911302c2da821">More...</a><br /></td></tr>
@@ -637,6 +640,45 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns access to descriptor values. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d" title="Returns if this point cloud provides descriptor values.">has_descriptors()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="abd31b4f5d765431cc1f69ca727419ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd31b4f5d765431cc1f69ca727419ff1">&#9670;&nbsp;</a></span>EstimateNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EstimateNormals </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>num_closest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimates the normal vectors in <code>this</code> by fitting a plane at each point in the cloud using up to <code>num_closest</code> points within Euclidean distance <code>radius</code> from the point. </p>
+<p>If <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals.">has_normals()</a> is false, then new normals will be allocated (and <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals.">has_normals()</a> will become true). Points for which the normals cannot be estimated (because the <code>this</code> has less than two closest points within the <code>radius</code>), will receive normal [NaN, NaN, NaN]. Normals estimated from two closest points will be orthogonal to the vector between those points, but can be arbitrary in the last dimension.</p>
+<dl class="section return"><dt>Returns</dt><dd>true iff all points were assigned normals by having at least <em>three</em> closest points within <code>radius</code>.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>radius</code> &gt; 0 and <code>num_closest</code> &gt;= 3. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values.">has_xyzs()</a> is false. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
