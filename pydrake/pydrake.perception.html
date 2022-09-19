@@ -540,6 +540,24 @@ in the last dimension.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.perception.PointCloud.FlipNormalsTowardPoint">
+<code class="descname">FlipNormalsTowardPoint</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud, p_CP: numpy.ndarray[numpy.float32[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.perception.PointCloud.FlipNormalsTowardPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the sign of the normals in <code class="docutils literal notranslate"><span class="pre">this</span></code>, if necessary, so that
+each normal points toward the point <code class="docutils literal notranslate"><span class="pre">P</span></code> in the frame <code class="docutils literal notranslate"><span class="pre">C</span></code> in which
+the xyzs of <code class="docutils literal notranslate"><span class="pre">this</span></code> cloud are represented. This can be useful, for
+instance, when <code class="docutils literal notranslate"><span class="pre">P</span></code> is the position of the camera used to generate
+the cloud.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if has_xyzs() != true or has_normals() != true.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.perception.PointCloud.has_normals">
 <code class="descname">has_normals</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.perception.PointCloud.has_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns if this cloud provides normals.</p>

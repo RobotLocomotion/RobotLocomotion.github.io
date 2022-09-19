@@ -152,7 +152,7 @@ officially supports:</p>
 <table>
   <thead>
     <tr>
-      <th>Operating System ⁽³⁾⁽⁴⁾</th>
+      <th>Operating System ⁽³⁾</th>
       <th>Architecture</th>
       <th>Python</th>
     </tr>
@@ -196,9 +196,6 @@ reported <code class="highlighter-rouge">which -a python python3</code> refer to
 require a working display server.  Most personal computers will have this
 already built in, but some cloud or docker environments may not.</p>
 
-<p>⁽⁴⁾ Ubuntu 22.04 (Jammy Jellyfish) pre-built binaries are not yet available
-for pip.</p>
-
 <p>Additionally, if you are compiling your own C++ code against Drake’s C++ code
 and are using Drake’s pre-compiled binaries, then you must use the same
 compiler as our releases:</p>
@@ -208,24 +205,29 @@ compiler as our releases:</p>
     <tr>
       <th>Operating System</th>
       <th>C/C++ Compiler</th>
+      <th>Std</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
       <td>GCC 9.3</td>
+      <td>C++17</td>
     </tr>
     <tr>
       <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
       <td>GCC 11.2</td>
+      <td>C++17</td>
     </tr>
     <tr>
       <td>macOS Big Sur (11)</td>
       <td>Apple LLVM 12.0.5 (Xcode 12.5)</td>
+      <td>C++17</td>
     </tr>
     <tr>
       <td>macOS Monterey (12) on x86_64</td>
       <td>Apple LLVM 13.0.0 (Xcode 13.1)</td>
+      <td>C++17</td>
     </tr>
   </tbody>
 </table>

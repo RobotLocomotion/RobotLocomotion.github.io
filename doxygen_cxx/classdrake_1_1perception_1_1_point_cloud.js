@@ -15,6 +15,7 @@ var classdrake_1_1perception_1_1_point_cloud =
     [ "EstimateNormals", "classdrake_1_1perception_1_1_point_cloud.html#abd31b4f5d765431cc1f69ca727419ff1", null ],
     [ "Expand", "classdrake_1_1perception_1_1_point_cloud.html#a05c7caacbe62c00dba9f7bf755b68f0f", null ],
     [ "fields", "classdrake_1_1perception_1_1_point_cloud.html#a839be4b612d6b3d4a6250f5e308b4569", null ],
+    [ "FlipNormalsTowardPoint", "classdrake_1_1perception_1_1_point_cloud.html#ac88cb4e1172a056b6529b6f5a8b084ed", null ],
     [ "has_descriptors", "classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d", null ],
     [ "has_descriptors", "classdrake_1_1perception_1_1_point_cloud.html#ac10ac8214a457e1c92341f8ca631a7d0", null ],
     [ "has_normals", "classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03", null ],

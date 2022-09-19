@@ -334,6 +334,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3e3e56ca9276b5caf4c6422154616ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#aa3e3e56ca9276b5caf4c6422154616ca">Crop</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;lower_xyz, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;upper_xyz)</td></tr>
 <tr class="memdesc:aa3e3e56ca9276b5caf4c6422154616ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new point cloud containing only the points in <code>this</code> with xyz values within the axis-aligned bounding box defined by <code>lower_xyz</code> and <code>upper_xyz</code>.  <a href="#aa3e3e56ca9276b5caf4c6422154616ca">More...</a><br /></td></tr>
 <tr class="separator:aa3e3e56ca9276b5caf4c6422154616ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88cb4e1172a056b6529b6f5a8b084ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac88cb4e1172a056b6529b6f5a8b084ed">FlipNormalsTowardPoint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;p_CP)</td></tr>
+<tr class="memdesc:ac88cb4e1172a056b6529b6f5a8b084ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the sign of the normals in <code>this</code>, if necessary, so that each normal points toward the point <code>P</code> in the frame <code>C</code> in which the xyzs of <code>this</code> cloud are represented.  <a href="#ac88cb4e1172a056b6529b6f5a8b084ed">More...</a><br /></td></tr>
+<tr class="separator:ac88cb4e1172a056b6529b6f5a8b084ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -735,6 +738,32 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the fields provided by this point cloud. </p>
+
+</div>
+</div>
+<a id="ac88cb4e1172a056b6529b6f5a8b084ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88cb4e1172a056b6529b6f5a8b084ed">&#9670;&nbsp;</a></span>FlipNormalsTowardPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlipNormalsTowardPoint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_CP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the sign of the normals in <code>this</code>, if necessary, so that each normal points toward the point <code>P</code> in the frame <code>C</code> in which the xyzs of <code>this</code> cloud are represented. </p>
+<p>This can be useful, for instance, when <code>P</code> is the position of the camera used to generate the cloud. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values.">has_xyzs()</a> != true or <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals.">has_normals()</a> != true. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
