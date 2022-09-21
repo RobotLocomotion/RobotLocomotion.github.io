@@ -14,7 +14,7 @@ var classdrake_1_1geometry_1_1_geometry_state =
     [ "CollisionFiltered", "classdrake_1_1geometry_1_1_geometry_state.html#af4db95ba77c24795f0671d5f9989e83d", null ],
     [ "ComputeContactSurfaces", "classdrake_1_1geometry_1_1_geometry_state.html#ab15e2fff4faa847eb6a7ba82e1d4f035", null ],
     [ "ComputeContactSurfacesWithFallback", "classdrake_1_1geometry_1_1_geometry_state.html#a9c5e3da8410ee9aa2ae555912d9c98e6", null ],
-    [ "ComputeDeformableRigidContact", "classdrake_1_1geometry_1_1_geometry_state.html#a7f762f8d67225aba49d1673272716b2e", null ],
+    [ "ComputeDeformableContact", "classdrake_1_1geometry_1_1_geometry_state.html#a0e8749d9307aa501666ca431ab626ff0", null ],
     [ "ComputePointPairPenetration", "classdrake_1_1geometry_1_1_geometry_state.html#af3b16adde799eb804619dc86f3703f4f", null ],
     [ "ComputeSignedDistancePairClosestPoints", "classdrake_1_1geometry_1_1_geometry_state.html#a2df45ca643518e6318a1cd1359e3bca0", null ],
     [ "ComputeSignedDistancePairwiseClosestPoints", "classdrake_1_1geometry_1_1_geometry_state.html#a8ceca86747a9346b7a75dd5a896db130", null ],

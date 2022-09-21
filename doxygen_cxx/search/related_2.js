@@ -2,6 +2,7 @@ var searchData=
 [
   ['cache',['Cache',['../classdrake_1_1systems_1_1_cache_entry_value.html#ac9d22b110b724211d946d911ecacdf64',1,'drake::systems::CacheEntryValue']]],
   ['ceil',['ceil',['../classdrake_1_1symbolic_1_1_expression.html#a2e5ea5116992b4f695c16ad0f297686b',1,'drake::symbolic::Expression']]],
+  ['clamp',['clamp',['../classdrake_1_1symbolic_1_1_expression.html#ad62c6b17ca0d4f9bbbefe1aff58d46ca',1,'drake::symbolic::Expression']]],
   ['collisionfilterdecltester',['CollisionFilterDeclTester',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html#ae06d74fad128303b6ac7c9264a1b1d38',1,'drake::geometry::CollisionFilterDeclaration']]],
   ['connectwithnamelookup',['ConnectWithNameLookup',['../classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a8b5771795cfa78648ca7107ac7018d76',1,'drake::multibody::ContactResultsToLcmSystem']]],
   ['constantvaluesource',['ConstantValueSource',['../classdrake_1_1systems_1_1_constant_value_source.html#aec078a534b7e75d0c96ae5ff565d24e9',1,'drake::systems::ConstantValueSource']]],

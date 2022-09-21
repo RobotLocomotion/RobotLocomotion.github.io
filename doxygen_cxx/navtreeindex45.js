@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"generic__polynomial_8h.html#abaab72f1cd4050603b25467fa909ec24":[4,0,0,1,3,6,27],
+"generic__polynomial_8h.html#abb122f4c4c5c71d0734c3b517a146df9":[4,0,0,1,3,6,26],
 "generic__polynomial_8h.html#aca14414fd5dcd3628a3a5aff79eabebc":[4,0,0,1,3,6,7],
 "generic__polynomial_8h.html#acf8ec1d6463a6936e7865e8cef04082f":[4,0,0,1,3,6,3],
 "generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,3,6,28],
@@ -126,10 +128,10 @@ var NAVTREEINDEX45 =
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,15,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,15,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
 "group__drake__contacts.html":[1,3,3],
@@ -149,8 +151,8 @@ var NAVTREEINDEX45 =
 "group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,4,11],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,11],
-"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,4,12],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,12],
+"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,4,12],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,4,10],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,10],
 "group__geometry__roles.html":[1,5,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "hydroelastic__contact__info_8h.html":[4,0,0,8,10,12],
 "hydroelastic__contact__visualizer_8h.html":[4,0,0,8,7,2],
 "hydroelastic__engine_8h.html":[4,0,0,8,4,0],
-"hydroelastic__internal_8h.html":[4,0,0,4,2,18],
-"hydroelastic__quadrature__point__data_8h.html":[4,0,0,8,10,13],
-"hydroelastic__quadrature__point__data_8h.html#a0833cf112bc08569736e6aca2251ebaf":[4,0,0,8,10,13,1]
+"hydroelastic__internal_8h.html":[4,0,0,4,2,18]
 };

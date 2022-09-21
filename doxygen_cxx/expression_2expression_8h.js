@@ -19,6 +19,7 @@ var expression_2expression_8h =
     [ "atan2", "expression_2expression_8h.html#a03d536a13db7de62414f5279c60148aa", null ],
     [ "ceil", "expression_2expression_8h.html#a9d4ba82d6dffb1c0c6f40a768f86eae7", null ],
     [ "CheckStructuralEquality", "expression_2expression_8h.html#ac3c13478861afcc48abcec64900b0c66", null ],
+    [ "clamp", "expression_2expression_8h.html#a5470db9b5571df2d904addff09a2b98e", null ],
     [ "cond", "expression_2expression_8h.html#ab24b40e467980140b850478ea0b9e766", null ],
     [ "cos", "expression_2expression_8h.html#a6b4d1b24311f37c799ef18498b95020c", null ],
     [ "cosh", "expression_2expression_8h.html#a79d98cdd1dd5802fe6c341ecfe9c6cce", null ],

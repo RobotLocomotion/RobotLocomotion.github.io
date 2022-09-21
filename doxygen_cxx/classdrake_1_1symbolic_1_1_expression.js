@@ -38,6 +38,7 @@ var classdrake_1_1symbolic_1_1_expression =
     [ "atan", "classdrake_1_1symbolic_1_1_expression.html#acf24c6f256d7360650cb379c22886409", null ],
     [ "atan2", "classdrake_1_1symbolic_1_1_expression.html#a9ddcc51253066082911475e06b0ac994", null ],
     [ "ceil", "classdrake_1_1symbolic_1_1_expression.html#a2e5ea5116992b4f695c16ad0f297686b", null ],
+    [ "clamp", "classdrake_1_1symbolic_1_1_expression.html#ad62c6b17ca0d4f9bbbefe1aff58d46ca", null ],
     [ "cos", "classdrake_1_1symbolic_1_1_expression.html#a8d78919127ccba2ba24cdb1b0c57613d", null ],
     [ "cosh", "classdrake_1_1symbolic_1_1_expression.html#a27a345a84e6b273a71aa02ee312f9c51", null ],
     [ "exp", "classdrake_1_1symbolic_1_1_expression.html#a27e661d9a5f1936f326068b2dea3eecc", null ],

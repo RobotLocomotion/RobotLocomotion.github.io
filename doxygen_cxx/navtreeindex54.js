@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,16,2,0,6],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,16,2,0,4],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,16,2,0,0],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,16,2,0,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,16,2,0,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html#a69e9ace88f698342e05dcf0cc1899818":[3,0,1,26,0],
 "structstd_1_1numeric__limits_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,28],
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,1,29],
-"structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a834c467da58ea1d81821952d3c473b64":[3,0,1,29,0],
-"structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,1,30],
-"subvector_8h.html":[4,0,0,12,3,37]
+"structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a834c467da58ea1d81821952d3c473b64":[3,0,1,29,0]
 };

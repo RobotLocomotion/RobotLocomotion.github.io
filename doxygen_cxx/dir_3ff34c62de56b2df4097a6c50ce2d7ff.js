@@ -1,7 +1,7 @@
 var dir_3ff34c62de56b2df4097a6c50ce2d7ff =
 [
     [ "contact_surface.h", "contact__surface_8h.html", "contact__surface_8h" ],
-    [ "deformable_rigid_contact.h", "deformable__rigid__contact_8h.html", null ],
+    [ "deformable_contact.h", "deformable__contact_8h.html", null ],
     [ "penetration_as_point_pair.h", "penetration__as__point__pair_8h.html", [
       [ "PenetrationAsPointPair", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", "structdrake_1_1geometry_1_1_penetration_as_point_pair" ]
     ] ],
