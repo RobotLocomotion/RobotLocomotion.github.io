@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a82a43d32c412efc0f5e1b6ccc1b1cc17":[3,0,0,9,67,40],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a8509d6f7951179378f848f5f4cc37720":[3,0,0,9,67,9],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a87e215bccd4ce720b787f8b5195a7551":[3,0,0,9,67,1],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a9616b9b963139066953c80ac978c362a":[3,0,0,9,67,27],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a9ecf49938d41de3ed0378c11cd6e8960":[3,0,0,9,84,3],
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#aab13b7707222ff73198e714da6069fe6":[3,0,0,9,84,4],
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#ab620be5cc7073a671f9a453cd8799731":[3,0,0,9,84,5],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[3,0,0,9,84,9],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#acbe14cf81fbda3485c70f4e6184c5074":[3,0,0,9,84,8]
+"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[3,0,0,9,84,9]
 };

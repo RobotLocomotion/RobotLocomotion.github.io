@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"structdrake_1_1is__eigen__vector__expression__double__pair.html":[3,0,0,37],
+"structdrake_1_1is__eigen__vector__of.html":[3,0,0,38],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html":[3,0,0,5,3],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a2afa576ab76689448a15ea95d2d5a531":[3,0,0,5,3,3],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a3088c7d186c65efc9139b0d9d5772c4a":[3,0,0,5,3,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html":[3,0,0,9,4,6],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108":[3,0,0,9,4,6,2],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[3,0,0,9,4,6,6],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40":[3,0,0,9,4,6,7],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a6255b4003c79e2d88d1c5b233a75a732":[3,0,0,9,4,6,4],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,6,1]
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40":[3,0,0,9,4,6,7]
 };

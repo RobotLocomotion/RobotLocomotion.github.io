@@ -17,6 +17,7 @@ var classdrake_1_1geometry_1_1_scene_graph =
     [ "get_query_output_port", "classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4", null ],
     [ "get_source_configuration_port", "classdrake_1_1geometry_1_1_scene_graph.html#a14fe2ae2ffcc6ef39c82b2ebf2561e9d", null ],
     [ "get_source_pose_port", "classdrake_1_1geometry_1_1_scene_graph.html#af6a9586065e37f08cc0dd316e9bdd480", null ],
+    [ "GetRendererTypeName", "classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880", null ],
     [ "HasRenderer", "classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db", null ],
     [ "model_inspector", "classdrake_1_1geometry_1_1_scene_graph.html#a503a5f4ba34cf182f67427e63ff48754", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_scene_graph.html#a0a8b0295af9d14d2555ceca831cd8a14", null ],

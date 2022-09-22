@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"compute__torque_8h.html#a66eda6d10bb53572748c1f28aaf5d6ab":[4,0,0,12,1,0,0,0],
 "cond_8h.html":[4,0,0,1,12],
 "cond_8h.html#a0b6d557a3ef060688cb028f17975ffca":[4,0,0,1,12,0],
 "cond_8h.html#a1d122c5050b7d174b5a35e39c52bfb09":[4,0,0,1,12,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "dir_9acdd6771460017440c69ee654743722.html":[4,0,0,3,11],
 "dir_9f920ef99dcb5f2ba14ba6c3f54b363c.html":[4,0,0,12,0],
 "dir_a1f72b1e53a5842fc3b6b3072554bf94.html":[4,0,0,1,0],
-"dir_a361a47504c6f179d0e8aaa8b79dec3e.html":[4,0,0,1,2],
-"dir_a36da230f0956f48b11c85f7d599788f.html":[4,0,0,1]
+"dir_a361a47504c6f179d0e8aaa8b79dec3e.html":[4,0,0,1,2]
 };

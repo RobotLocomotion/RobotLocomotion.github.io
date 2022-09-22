@@ -246,8 +246,8 @@ var NAVTREEINDEX4 =
 "classdrake_1_1geometry_1_1_meshcat.html#a37b1b4538dd47e4dc5fd9c671454b4d2":[3,0,0,4,25,21],
 "classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf":[3,0,0,4,25,26],
 "classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5":[3,0,0,4,25,44],
+"classdrake_1_1geometry_1_1_meshcat.html#a43359df502fdd09710254663b75adeca":[3,0,0,4,25,8],
 "classdrake_1_1geometry_1_1_meshcat.html#a48d1b2e65ac43693b86ca290ff84d38a":[3,0,0,4,25,40],
 "classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e":[3,0,0,4,25,32],
-"classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027":[3,0,0,4,25,36],
-"classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc":[3,0,0,4,25,12]
+"classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027":[3,0,0,4,25,36]
 };

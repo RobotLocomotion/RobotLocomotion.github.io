@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1lcm_1_1_subscriber.html#a3ea2ced420106e08700676e94eec98be":[3,0,0,5,5,8],
 "classdrake_1_1lcm_1_1_subscriber.html#a98d9c60d19f950a9eab8dcdafd1b5c8b":[3,0,0,5,5,6],
 "classdrake_1_1lcm_1_1_subscriber.html#aa60a28d678cc655573ba1fb411467e86":[3,0,0,5,5,2],
 "classdrake_1_1lcm_1_1_subscriber.html#aaaccfbbb39adad66c631de0c0c6293e3":[3,0,0,5,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1math_1_1_barycentric_mesh.html#a1d2bb19d26672557477391f5a217dc41":[3,0,0,8,0,3],
 "classdrake_1_1math_1_1_barycentric_mesh.html#a247ef286093cfe5b95164c5fbced2737":[3,0,0,8,0,8],
 "classdrake_1_1math_1_1_barycentric_mesh.html#a29f6050f9d7eee48c6475c53071d71db":[3,0,0,8,0,7],
-"classdrake_1_1math_1_1_barycentric_mesh.html#a2d6527a00bfe67cbba218d07c0136f6b":[3,0,0,8,0,16],
-"classdrake_1_1math_1_1_barycentric_mesh.html#a4618e2ba4dde382cce4aa0a7f1845b02":[3,0,0,8,0,5]
+"classdrake_1_1math_1_1_barycentric_mesh.html#a2d6527a00bfe67cbba218d07c0136f6b":[3,0,0,8,0,16]
 };

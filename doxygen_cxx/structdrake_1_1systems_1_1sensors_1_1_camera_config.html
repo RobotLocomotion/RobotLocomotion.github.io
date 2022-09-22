@@ -243,6 +243,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a447b42f56ec0921186385e6863a6548d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d">renderer_name</a> {&quot;default&quot;}</td></tr>
 <tr class="memdesc:a447b42f56ec0921186385e6863a6548d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">geometry::render::RenderEngine</a> that this camera uses.  <a href="#a447b42f56ec0921186385e6863a6548d">More...</a><br /></td></tr>
 <tr class="separator:a447b42f56ec0921186385e6863a6548d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3cf1bcc14fdfe348e72ab596466f675"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ab3cf1bcc14fdfe348e72ab596466f675">renderer_class</a></td></tr>
+<tr class="memdesc:ab3cf1bcc14fdfe348e72ab596466f675"><td class="mdescLeft">&#160;</td><td class="mdescRight">The choice of render engine implementation to use.  <a href="#ab3cf1bcc14fdfe348e72ab596466f675">More...</a><br /></td></tr>
+<tr class="separator:ab3cf1bcc14fdfe348e72ab596466f675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3">background</a> {204 / 255.0, 229 / 255.0, 255 / 255.0, 1.0}</td></tr>
 <tr class="memdesc:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "background" color.  <a href="#a01a2a4e8cf420c179bc1253ca3d3a1c3">More...</a><br /></td></tr>
 <tr class="separator:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -608,6 +611,27 @@ Camera intrinsics</h2></td></tr>
 
 <p>The camera name. </p>
 <p>This <code>name</code> is used as part of the corresponding <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> system's name and serves as a suffix of the LCM channel name. </p><dl class="section pre"><dt>Precondition</dt><dd><code>name</code> is not empty. </dd></dl>
+
+</div>
+</div>
+<a id="ab3cf1bcc14fdfe348e72ab596466f675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cf1bcc14fdfe348e72ab596466f675">&#9670;&nbsp;</a></span>renderer_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string renderer_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The choice of render engine implementation to use. </p>
+<p>The value should be one of empty, '"RenderEngineVtk"', or '"RenderEngineGl"'. An <code>empty</code> string signals, in essence, "don't care". If a render engine with that name has already been configured, the camera will use it (regardless of type). If the name doesn't already exist, the default, slower, more portable, and more robust RenderEngineVtk will be instantiated. RenderEngineGl can be selected if you are on Ubuntu and need the improved performance (at the <em>possible</em> cost of lesser image fidelity).</p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>renderer_class</code> is empty or one of '"RenderEngineVtk"' or '"RenderEngineGl"'. </dd>
+<dd>
+For two cameras with the same <code>renderer_name</code> value, they must also specify the same <code>renderer_class</code> (either implicitly or explicitly). </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880" title="Reports the type name for the RenderEngine registered with the given name.">drake::geometry::SceneGraph::GetRendererTypeName()</a>. </dd></dl>
 
 </div>
 </div>

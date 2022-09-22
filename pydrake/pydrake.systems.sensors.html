@@ -462,6 +462,33 @@ point in the center of the image.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.renderer_class">
+<code class="descname">renderer_class</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.renderer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>The choice of render engine implementation to use. The value should be
+one of empty, ‘“RenderEngineVtk”’, or ‘“RenderEngineGl”’. An <code class="docutils literal notranslate"><span class="pre">empty</span></code>
+string signals, in essence, “don’t care”. If a render engine with that
+name has already been configured, the camera will use it (regardless
+of type). If the name doesn’t already exist, the default, slower, more
+portable, and more robust RenderEngineVtk will be instantiated.
+RenderEngineGl can be selected if you are on Ubuntu and need the
+improved performance (at the <em>possible</em> cost of lesser image
+fidelity).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> is empty or one of ‘“RenderEngineVtk”’ or
+‘“RenderEngineGl”’.</dd>
+<dt>Precondition:</dt>
+<dd>For two cameras with the same <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> value, they must
+also specify the same <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> (either implicitly or
+explicitly).</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::geometry::SceneGraph::GetRendererTypeName().</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.systems.sensors.CameraConfig.renderer_name">
 <code class="descname">renderer_name</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.renderer_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the geometry::render::RenderEngine that this camera uses.

@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ac7bc5a0b2ae3302cdf987ad5d96bcc64":[3,0,0,9,2,1,6],
 "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#ac813aeeaac795ab54e2e7fc1055f9984":[3,0,0,9,2,1,9],
 "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#acfb3b6934ba38d10192872d95efabad8":[3,0,0,9,2,1,15],
 "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#adbccaccf885eb95aa54e7f4a1e73968e":[3,0,0,9,2,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#a33a5379092bf470e5e5feb62c10cef4e":[3,0,0,11,1,6],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#a418f38f35985db362b3a2183e5078901":[3,0,0,11,1,5],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#a77116652505ffbb1982b08000bff8205":[3,0,0,11,1,8],
-"classdrake_1_1planning_1_1_robot_diagram_builder.html#a8ece7200f1a08cda985cc4ab68b0ce33":[3,0,0,11,1,4],
-"classdrake_1_1planning_1_1_robot_diagram_builder.html#a9866c32c40cd79bf8d27fc03d7b5cf72":[3,0,0,11,1,2]
+"classdrake_1_1planning_1_1_robot_diagram_builder.html#a8ece7200f1a08cda985cc4ab68b0ce33":[3,0,0,11,1,4]
 };

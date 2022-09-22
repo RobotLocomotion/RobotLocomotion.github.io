@@ -161,7 +161,8 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1render.h
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry::render Namespace Reference</div>  </div>
 </div><!--header-->
@@ -221,6 +222,12 @@ Functions</h2></td></tr>
 <tr class="separator:a4e584cc1e211ddaf85d2e3be432085fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d2737524b6193ba17538d7fd5ba934c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a8d2737524b6193ba17538d7fd5ba934c">TransformToDrakeCylinder</a> (vtkTransform *transform, vtkTransformPolyDataFilter *transform_filter, vtkCylinderSource *vtk_cylinder)</td></tr>
 <tr class="separator:a8d2737524b6193ba17538d7fd5ba934c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6a949953d76af52d6dd1b13417cb556a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a">kHasRenderEngineGl</a></td></tr>
+<tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineGl implementation.  <a href="#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
+<tr class="separator:a6a949953d76af52d6dd1b13417cb556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a77576ec311ba594b4e3a3cf15f0b11f1"></a>
@@ -304,9 +311,15 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation which uses a purely OpenGL renderer. </p>
-<p>The engine only works under Ubuntu. If called on a Mac, it will produce a "dummy" implementation.</p>
+<p>The engine only works under Ubuntu. If called on a Mac, it will throw.</p>
 <dl class="section note"><dt>Note</dt><dd>RenderEngineGl behaves a bit differently from other <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations (e.g., <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>) with respect to displayed images. First, RenderEngineGl can only display a <em>single</em> image type at a time. So, if a shown window has been requested for both label and color images, the images will alternate in the same window. Second, the window display draws all images <em>flipped vertically</em>. The image produced will be compatible with the Drake ecosystem, only the visualization will be upside down. This has been documented in <a href="https://github.com/RobotLocomotion/drake/issues/14254">https://github.com/RobotLocomotion/drake/issues/14254</a>.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>RenderEngineGl is not threadsafe. If a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> is instantiated with a RenderEngineGl and there are multiple Context instances for that <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>, rendering in multiple threads may exhibit issues. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>RenderEngineGl is not threadsafe. If a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> is instantiated with a RenderEngineGl and there are multiple Context instances for that <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>, rendering in multiple threads may exhibit issues.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if kHasRenderEngineGl is false. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -403,6 +416,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6a949953d76af52d6dd1b13417cb556a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a949953d76af52d6dd1b13417cb556a">&#9670;&nbsp;</a></span>kHasRenderEngineGl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kHasRenderEngineGl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the availability of the RenderEngineGl implementation. </p>
 
 </div>
 </div>

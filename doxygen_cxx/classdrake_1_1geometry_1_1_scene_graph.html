@@ -363,8 +363,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a72f7d830f6776bb7403c6bbc66d1d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new render engine to this SceneGraph.  <a href="#a72f7d830f6776bb7403c6bbc66d1d676">More...</a><br /></td></tr>
 <tr class="separator:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db">HasRenderer</a> (const std::string &amp;name) const</td></tr>
-<tr class="memdesc:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if this SceneGraph has a renderer registered to the given name.  <a href="#a9ab68336b439ffd7ac7f1e1fe6a025db">More...</a><br /></td></tr>
+<tr class="memdesc:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if this SceneGraph has a renderer registered with the given name.  <a href="#a9ab68336b439ffd7ac7f1e1fe6a025db">More...</a><br /></td></tr>
 <tr class="separator:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cdf0a6693c255362906281ff2f7d880"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880">GetRendererTypeName</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a9cdf0a6693c255362906281ff2f7d880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the type name for the RenderEngine registered with the given <code>name</code>.  <a href="#a9cdf0a6693c255362906281ff2f7d880">More...</a><br /></td></tr>
+<tr class="separator:a9cdf0a6693c255362906281ff2f7d880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae614976e788b66b5ceed6df5fa7fba5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae614976e788b66b5ceed6df5fa7fba5e">RendererCount</a> () const</td></tr>
 <tr class="memdesc:ae614976e788b66b5ceed6df5fa7fba5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the number of renderers registered to this SceneGraph.  <a href="#ae614976e788b66b5ceed6df5fa7fba5e">More...</a><br /></td></tr>
 <tr class="separator:ae614976e788b66b5ceed6df5fa7fba5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2044,6 +2047,27 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
+<a id="a9cdf0a6693c255362906281ff2f7d880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cdf0a6693c255362906281ff2f7d880">&#9670;&nbsp;</a></span>GetRendererTypeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetRendererTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the type name for the RenderEngine registered with the given <code>name</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the RenderEngine's most derived type (as produced by <a class="el" href="classdrake_1_1_nice_type_name.html#a65c4629b9ee5e540e85bfc3298a5445b" title="Returns a nicely demangled and canonicalized type name that is the same on all platforms,...">NiceTypeName::Get()</a>). An empty string if there is no RenderEngine registered with the given <code>name</code>. </dd></dl>
+
+</div>
+</div>
 <a id="a9ab68336b439ffd7ac7f1e1fe6a025db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ab68336b439ffd7ac7f1e1fe6a025db">&#9670;&nbsp;</a></span>HasRenderer()</h2>
 
@@ -2060,7 +2084,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
       </table>
 </div><div class="memdoc">
 
-<p>Reports if this SceneGraph has a renderer registered to the given name. </p>
+<p>Reports true if this SceneGraph has a renderer registered with the given name. </p>
 
 </div>
 </div>

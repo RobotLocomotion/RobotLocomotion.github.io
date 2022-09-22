@@ -7,6 +7,7 @@ var searchData=
   ['relative_5ftolerance',['relative_tolerance',['../structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a8acbff0eb102fe9c676bdbe5933a13d8',1,'drake::multibody::TamsiSolverParameters']]],
   ['render_5fendpoint',['render_endpoint',['../structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311',1,'drake::geometry::RenderEngineGltfClientParams']]],
   ['renderer',['renderer',['../structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a03efd7c9872deae4825e151ddd94a1f4',1,'drake::geometry::render::RenderEngineVtk::RenderingPipeline']]],
+  ['renderer_5fclass',['renderer_class',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ab3cf1bcc14fdfe348e72ab596466f675',1,'drake::systems::sensors::CameraConfig']]],
   ['renderer_5fname',['renderer_name',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d',1,'drake::systems::sensors::CameraConfig']]],
   ['reported_5fruntime',['reported_runtime',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#ae91d6264528898aea42defb33f87f6b8',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
   ['require_5fsample_5fpoint_5fis_5fcontained',['require_sample_point_is_contained',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d',1,'drake::geometry::optimization::IrisOptions']]],
