@@ -778,6 +778,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ada20909a7ef482cf1fecbe11bbcf67d4"><td class="memTemplItemLeft" align="right" valign="top">::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ada20909a7ef482cf1fecbe11bbcf67d4">is_dynamic_castable</a> (const std::unique_ptr&lt; FromType &gt; &amp;ptr)</td></tr>
 <tr class="memdesc:ada20909a7ef482cf1fecbe11bbcf67d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>ptr</code>, a shared pointer to <code>FromType</code> class, can be safely converted to a shared pointer to <code>ToType</code> class.  <a href="#ada20909a7ef482cf1fecbe11bbcf67d4">More...</a><br /></td></tr>
 <tr class="separator:ada20909a7ef482cf1fecbe11bbcf67d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
+<tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for fmt::runtime.  <a href="#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
+<tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1logging.html#a9cae370466ffb304c10aebea42eca26b">logging::logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae32fd151ebc2dab30d9546f1dbef0c79">log</a> ()</td></tr>
 <tr class="memdesc:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve an instance of a logger to use for logging; for example:  <a href="#ae32fd151ebc2dab30d9546f1dbef0c79">More...</a><br /></td></tr>
 <tr class="separator:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2401,6 +2404,27 @@ Variables</h2></td></tr>
 
 <p>(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles, or else an error message when not found. </p>
 <p>When <a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a" title="(Advanced.) Returns true iff this process has Bazel runfiles available.">HasRunfiles()</a> is false, returns an error. The <code>resource_path</code> looks like <code>workspace/pkg/subpkg/file.ext</code>, e.g., "drake/common/foo.txt". </p>
+
+</div>
+</div>
+<a id="a81e617b6a0e80e141a49c7a5bd2b5cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e617b6a0e80e141a49c7a5bd2b5cce">&#9670;&nbsp;</a></span>fmt_runtime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto drake::fmt_runtime </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When using fmt &gt;= 8, this is an alias for fmt::runtime. </p>
+<p>When using fmt &lt; 8, this is a no-op. </p>
 
 </div>
 </div>

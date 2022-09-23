@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pydrake.math" href="pydrake.math.html" />
+    <link rel="next" title="pydrake.manipulation.util" href="pydrake.manipulation.util.html" />
     <link rel="prev" title="pydrake.manipulation.planner" href="pydrake.manipulation.planner.html" /> 
 </head>
 
@@ -135,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.kuka_iiwa.html">pydrake.manipulation.kuka_iiwa</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.planner.html">pydrake.manipulation.planner</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.manipulation.schunk_wsg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.util.html">pydrake.manipulation.util</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
@@ -215,10 +216,34 @@
 <span id="pydrake-manipulation-schunk-wsg"></span><h1>pydrake.manipulation.schunk_wsg<a class="headerlink" href="#module-pydrake.manipulation.schunk_wsg" title="Permalink to this headline">¶</a></h1>
 <p>Tools for schunk wsg.</p>
 <dl class="function">
+<dt id="pydrake.manipulation.schunk_wsg.ApplyDriverConfig">
+<code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">ApplyDriverConfig</code><span class="sig-paren">(</span><em>driver_config: pydrake.manipulation.schunk_wsg.SchunkWsgDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: Dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: pydrake.systems.lcm.LcmBuses, builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.ApplyDriverConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wires up Drake systems between an LCM interface and the actuation
+input ports of a MultibodyPlant. This simulates the role that driver
+software and robot firmware would take in real life.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.manipulation.schunk_wsg.BuildSchunkWsgControl">
+<code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">BuildSchunkWsgControl</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, wsg_instance: drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;, lcm: pydrake.lcm.DrakeLcmInterface, builder: pydrake.systems.framework.DiagramBuilder_[float], pid_gains: Optional[numpy.ndarray[numpy.float64[3, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.BuildSchunkWsgControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds (into <code class="docutils literal notranslate"><span class="pre">builder)</span></code> the WSG control and sensing systems for the
+wsg model in <code class="docutils literal notranslate"><span class="pre">plant</span></code> indicated by <code class="docutils literal notranslate"><span class="pre">wsg_instance</span></code>; hooks those
+systems up to <code class="docutils literal notranslate"><span class="pre">lcm</span></code> and the relevant MultibodyPlant ports in the
+diagram. <code class="docutils literal notranslate"><span class="pre">pid_gains</span></code> can be used to override the default sim PID
+gains.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.manipulation.schunk_wsg.GetSchunkWsgOpenPosition">
 <code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">GetSchunkWsgOpenPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.GetSchunkWsgOpenPosition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the position vector corresponding to the open position of the
 gripper.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.manipulation.schunk_wsg.MakeMultibodyForceToWsgForceSystem">
+<code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">MakeMultibodyForceToWsgForceSystem</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.VectorSystem_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.MakeMultibodyForceToWsgForceSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method to create a MultibodyForceToWsgForceSystem.</p>
 </dd></dl>
 
 <dl class="function">
@@ -296,6 +321,55 @@ used.</p>
 <dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_position_input_port">
 <code class="descname">get_position_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_position_input_port" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgController">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">SchunkWsgController</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
+<p>This class implements a controller for a Schunk WSG gripper. It has
+two input ports: lcmt_schunk_wsg_command message and the current
+state, and an output port which emits the target force for the
+actuated finger. Note, only one of the command input ports should be
+connected, However, if both are connected, the message input will be
+ignored. The internal implementation consists of a PID controller
+(which controls the target position from the command message) combined
+with a saturation block (which applies the force control from the
+command message).</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">command_message&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgController</em>, <em>kp: float = 2000.0</em>, <em>ki: float = 0.0</em>, <em>kd: float = 5.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgDriver">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">SchunkWsgDriver</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>This config struct specifies how to wire up Drake systems between an
+LCM interface and the actuation input ports of a MultibodyPlant. This
+simulates the role that driver software and control cabinets would
+take in real life.</p>
+<p>It creates an LCM publisher on the <code class="docutils literal notranslate"><span class="pre">SCHUNK_WSG_STATUS</span></code> channel and
+an LCM subscriber on the <code class="docutils literal notranslate"><span class="pre">SCHUNK_WSG_COMMAND</span></code> channel.</p>
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgDriver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgDriver</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgDriver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgDriver.lcm_bus">
+<code class="descname">lcm_bus</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgDriver.lcm_bus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgDriver.pid_gains">
+<code class="descname">pid_gains</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgDriver.pid_gains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gains to apply to the the WSG fingers. The p term corresponds
+approximately to the elastic modulus of the belt, the d term to the
+viscous friction of the geartrain. The i term is nonphysical.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -420,7 +494,7 @@ fingers (positive implies non-penetration).</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pydrake.math.html" class="btn btn-neutral float-right" title="pydrake.math" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pydrake.manipulation.util.html" class="btn btn-neutral float-right" title="pydrake.manipulation.util" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="pydrake.manipulation.planner.html" class="btn btn-neutral float-left" title="pydrake.manipulation.planner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

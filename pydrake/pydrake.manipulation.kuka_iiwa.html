@@ -135,6 +135,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.manipulation.kuka_iiwa</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.planner.html">pydrake.manipulation.planner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.schunk_wsg.html">pydrake.manipulation.schunk_wsg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.util.html">pydrake.manipulation.util</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
@@ -214,6 +215,35 @@
   <div class="section" id="module-pydrake.manipulation.kuka_iiwa">
 <span id="pydrake-manipulation-kuka-iiwa"></span><h1>pydrake.manipulation.kuka_iiwa<a class="headerlink" href="#module-pydrake.manipulation.kuka_iiwa" title="Permalink to this headline">¶</a></h1>
 <p>Tools for kuka iiwa.</p>
+<dl class="function">
+<dt id="pydrake.manipulation.kuka_iiwa.ApplyDriverConfig">
+<code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">ApplyDriverConfig</code><span class="sig-paren">(</span><em>driver_config: pydrake.manipulation.kuka_iiwa.IiwaDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: Dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: pydrake.systems.lcm.LcmBuses, builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.ApplyDriverConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wires up Drake systems between an LCM interface and the actuation
+input ports of a MultibodyPlant. This simulates the role that driver
+software and control cabinets would take in real life.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>model_instance_name is in models_from_directives.</dd>
+<dt>Precondition:</dt>
+<dd>driver_config.hand_model_name is in models_from_directives.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.manipulation.kuka_iiwa.BuildIiwaControl">
+<code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">BuildIiwaControl</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, iiwa_instance: drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;, controller_plant: drake::multibody::MultibodyPlant&lt;double&gt;, lcm: pydrake.lcm.DrakeLcmInterface, builder: pydrake.systems.framework.DiagramBuilder_[float], ext_joint_filter_tau: float = 0.01, desired_iiwa_kp_gains: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.BuildIiwaControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance)</span></code> and a
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>, installs in that builder the systems necessary to control
+and monitor an Iiwa described by <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> in that plant.</p>
+<p>The installed plant will communicate over the LCM interface <code class="docutils literal notranslate"><span class="pre">lcm</span></code>.</p>
+<p>The installed plant will connect itself to the actuation input port
+and state output ports in <code class="docutils literal notranslate"><span class="pre">plant</span></code> corresponding to the Iiwa model.</p>
+<p><code class="docutils literal notranslate"><span class="pre">desired_iiwa_kp_gains</span></code> is an optional argument to pass in gains
+corresponding to the Iiwa Dof (7) in the controller. If no argument is
+passed, the gains derived from hardware will be used instead
+(hardcoded within the implementation of this function).</p>
+</dd></dl>
+
 <dl class="function">
 <dt id="pydrake.manipulation.kuka_iiwa.get_iiwa_max_joint_velocities">
 <code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">get_iiwa_max_joint_velocities</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.get_iiwa_max_joint_velocities" title="Permalink to this definition">¶</a></dt>
@@ -307,6 +337,41 @@ lcmt_iiwa_command.</p>
 <dl class="method">
 <dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_torque_input_port">
 <code class="descname">get_torque_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_torque_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaDriver">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">IiwaDriver</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>This config struct specifies how to wire up Drake systems between an
+LCM interface and the actuation input ports of a MultibodyPlant. This
+simulates the role that driver software and control cabinets would
+take in real life.</p>
+<p>It creates an LCM publisher on the <code class="docutils literal notranslate"><span class="pre">IIWA_STATUS</span></code> channel and an LCM
+subscriber on the <code class="docutils literal notranslate"><span class="pre">IIWA_COMMAND</span></code> channel.</p>
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaDriver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaDriver</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaDriver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaDriver.ext_joint_filter_tau">
+<code class="descname">ext_joint_filter_tau</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaDriver.ext_joint_filter_tau" title="Permalink to this definition">¶</a></dt>
+<dd><p>Per BuildIiwaControl.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaDriver.hand_model_name">
+<code class="descname">hand_model_name</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaDriver.hand_model_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the model (<code class="docutils literal notranslate"><span class="pre">name</span></code> element of the <code class="docutils literal notranslate"><span class="pre">add_model</span></code>
+directive) in the simulation that the driver will analyze to compute
+end effector inertia for its copy of the arm in inverse dynamics.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaDriver.lcm_bus">
+<code class="descname">lcm_bus</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaDriver.lcm_bus" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

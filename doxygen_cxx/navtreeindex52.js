@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"structdrake_1_1is__eigen__vector.html":[3,0,0,36],
 "structdrake_1_1is__eigen__vector__expression__double__pair.html":[3,0,0,37],
 "structdrake_1_1is__eigen__vector__of.html":[3,0,0,38],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html":[3,0,0,5,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,5,0],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html":[3,0,0,9,4,6],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108":[3,0,0,9,4,6,2],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[3,0,0,9,4,6,6],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40":[3,0,0,9,4,6,7]
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[3,0,0,9,4,6,6]
 };
