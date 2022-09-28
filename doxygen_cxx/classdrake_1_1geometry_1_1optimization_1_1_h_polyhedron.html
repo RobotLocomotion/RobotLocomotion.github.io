@@ -215,9 +215,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba50cc657a0a2c943a9657cb820e8289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289">PontryaginDifference</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
 <tr class="memdesc:aba50cc657a0a2c943a9657cb820e8289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Pontryagin (Minkowski) Difference of <code>this</code> and <code>other</code>.  <a href="#aba50cc657a0a2c943a9657cb820e8289">More...</a><br /></td></tr>
 <tr class="separator:aba50cc657a0a2c943a9657cb820e8289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2407530f5ce361dc71745b019e5db10f"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2407530f5ce361dc71745b019e5db10f">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, const Eigen::Ref&lt; Eigen::VectorXd &gt; &amp;previous_sample) const</td></tr>
-<tr class="memdesc:a2407530f5ce361dc71745b019e5db10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an (approximately) uniform sample from the set using the hit and run Markov-chain Monte-Carlo strategy described at <a href="https://mathoverflow.net/a/162327">https://mathoverflow.net/a/162327</a> and the cited paper.  <a href="#a2407530f5ce361dc71745b019e5db10f">More...</a><br /></td></tr>
-<tr class="separator:a2407530f5ce361dc71745b019e5db10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2868cdc8eb8014cc089b727487f2c1e3"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2868cdc8eb8014cc089b727487f2c1e3">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;previous_sample) const</td></tr>
+<tr class="memdesc:a2868cdc8eb8014cc089b727487f2c1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an (approximately) uniform sample from the set using the hit and run Markov-chain Monte-Carlo strategy described at <a href="https://mathoverflow.net/a/162327">https://mathoverflow.net/a/162327</a> and the cited paper.  <a href="#a2868cdc8eb8014cc089b727487f2c1e3">More...</a><br /></td></tr>
+<tr class="separator:a2868cdc8eb8014cc089b727487f2c1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad53e47e943684bee743276ad5027e5a2"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad53e47e943684bee743276ad5027e5a2">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const</td></tr>
 <tr class="memdesc:ad53e47e943684bee743276ad5027e5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of UniformSample that uses the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1" title="Solves a linear program to compute the center of the largest inscribed ball in the polyhedron.">ChebyshevCenter()</a> as the previous_sample as a feasible point to start the Markov chain sampling.  <a href="#ad53e47e943684bee743276ad5027e5a2">More...</a><br /></td></tr>
 <tr class="separator:ad53e47e943684bee743276ad5027e5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -953,8 +953,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a2407530f5ce361dc71745b019e5db10f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2407530f5ce361dc71745b019e5db10f">&#9670;&nbsp;</a></span>UniformSample() <span class="overload">[1/2]</span></h2>
+<a id="a2868cdc8eb8014cc089b727487f2c1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2868cdc8eb8014cc089b727487f2c1e3">&#9670;&nbsp;</a></span>UniformSample() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -968,7 +968,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>previous_sample</em>&#160;</td>
         </tr>
         <tr>

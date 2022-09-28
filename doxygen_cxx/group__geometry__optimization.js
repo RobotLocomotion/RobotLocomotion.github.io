@@ -139,7 +139,7 @@ var group__geometry__optimization =
       [ "PontryaginDifference", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289", null ],
       [ "ReduceInequalities", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb", null ],
       [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8e8824802dedfbc36776227f7482b6bc", null ],
-      [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2407530f5ce361dc71745b019e5db10f", null ],
+      [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2868cdc8eb8014cc089b727487f2c1e3", null ],
       [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad53e47e943684bee743276ad5027e5a2", null ]
     ] ],
     [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", [
