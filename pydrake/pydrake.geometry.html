@@ -68,7 +68,7 @@
         </li>
         <li class="site-menu-item site-menu-item-main">Resources
           <div class="sub">
-            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
           </div>
         </li>
         <li class="github-link">
@@ -375,8 +375,12 @@ canonical frame with its dimensions aligned with the frame’s axes. The
 size of the box is given by three sizes.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Box.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Box</em>, <em>width: float</em>, <em>depth: float</em>, <em>height: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Box.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a box with the given <code class="docutils literal notranslate"><span class="pre">width</span></code>, <cite>depth</cite>, and <code class="docutils literal notranslate"><span class="pre">height</span></code>,
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Box.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Box, width: float, depth: float, height: float) -&gt; None</li>
+</ol>
+<p>Constructs a box with the given <code class="docutils literal notranslate"><span class="pre">width</span></code>, <cite>depth</cite>, and <code class="docutils literal notranslate"><span class="pre">height</span></code>,
 which specify the box’s dimension along the canonical x-, y-, and
 z-axes, respectively.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -388,6 +392,20 @@ z-axes, respectively.</p>
 <li><code class="xref py py-exc docutils literal notranslate"><span class="pre">positive.</span></code></li>
 </ul>
 </td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Box, measures: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a box with a vector of measures: width, depth, and height
+– the box’s dimensions along the canonical x-, y-, and z-axes,
+respectively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the measures are not strictly positive.</td>
 </tr>
 </tbody>
 </table>
@@ -451,8 +469,12 @@ C, centered on the frame origin and with the length of the capsule
 parallel with the frame’s z-axis.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Capsule.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Capsule</em>, <em>radius: float</em>, <em>length: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Capsule.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a capsule with the given <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code>.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Capsule.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Capsule, radius: float, length: float) -&gt; None</li>
+</ol>
+<p>Constructs a capsule with the given <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -462,6 +484,18 @@ parallel with the frame’s z-axis.</p>
 <li><code class="xref py py-exc docutils literal notranslate"><span class="pre">positive.</span></code></li>
 </ul>
 </td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Capsule, measures: numpy.ndarray[numpy.float64[2, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a capsule with a vector of measures: radius and length.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the measures are not strictly positive.</td>
 </tr>
 </tbody>
 </table>
@@ -1799,8 +1833,12 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 the length of the cylinder parallel with the frame’s z-axis.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Cylinder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Cylinder</em>, <em>radius: float</em>, <em>length: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Cylinder.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a cylinder with the given <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code>.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Cylinder.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Cylinder, radius: float, length: float) -&gt; None</li>
+</ol>
+<p>Constructs a cylinder with the given <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1810,6 +1848,18 @@ the length of the cylinder parallel with the frame’s z-axis.</p>
 <li><code class="xref py py-exc docutils literal notranslate"><span class="pre">positive.</span></code></li>
 </ul>
 </td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Cylinder, measures: numpy.ndarray[numpy.float64[2, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a cylinder with a vector of measures: radius and length.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the measures are not strictly positive.</td>
 </tr>
 </tbody>
 </table>
@@ -2361,19 +2411,38 @@ details.</p>
 <p>Definition of an ellipsoid. It is centered on the origin of its
 canonical frame with its dimensions aligned with the frame’s axes. The
 standard equation for the ellipsoid is:</p>
-<p>x²/a² + y²/b² + z²/c² = 1, where a,b,c are the lengths of the
-principal semi-axes of the ellipsoid. The bounding box of the
-ellipsoid is [-a,a]x[-b,b]x[-c,c].</p>
+<p>x²/a² + y²/b² + z²/c² = 1,</p>
+<p>where a,b,c are the lengths of the principal semi-axes of the
+ellipsoid. The bounding box of the ellipsoid is [-a,a]x[-b,b]x[-c,c].</p>
 <dl class="method">
 <dt id="pydrake.geometry.Ellipsoid.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Ellipsoid</em>, <em>a: float</em>, <em>b: float</em>, <em>c: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Ellipsoid.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs an ellipsoid with the given lengths of its principal
-semi-axes.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Ellipsoid.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Ellipsoid, a: float, b: float, c: float) -&gt; None</li>
+</ol>
+<p>Constructs an ellipsoid with the given lengths of its principal
+semi-axes, with a, b, and c measured along the x-, y-, and z- axes of
+the canonical frame, respectively.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">a</span></code>, <cite>b</cite>, or <code class="docutils literal notranslate"><span class="pre">c</span></code> are not strictly positive.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Ellipsoid, measures: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs an ellipsoid with a vector of measures: the lengths of its
+principal semi-axes, with a, b, and c measured along the x-, y-, and
+z- axes of the canonical frame, respectively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the measures are not strictly positive.</td>
 </tr>
 </tbody>
 </table>
@@ -5057,14 +5126,18 @@ meshcat_path “Meshcat paths” for the semantics.</dd>
 in the direction of the frame’s +z axis. Or, more formally: a finite
 section of a Lorentz cone (aka “second-order cone”), defined by</p>
 <p>sqrt(x²/a² + y²/b²) ≤ z; z ∈ [0, height],</p>
-<p>where <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are the lengths of the principle semi-axes of
+<p>where <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are the lengths of the principal semi-axes of
 the horizontal section at <code class="docutils literal notranslate"><span class="pre">z=height()</span></code>.</p>
 <p>This shape is currently only supported by Meshcat. It will not appear
 in any renderings, proximity queries, or other visualizers.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatCone.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatCone</em>, <em>height: float</em>, <em>a: float = 1.0</em>, <em>b: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatCone.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the parameterized cone.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatCone.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.MeshcatCone, height: float, a: float = 1.0, b: float = 1.0) -&gt; None</li>
+</ol>
+<p>Constructs the parameterized cone.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5074,6 +5147,19 @@ in any renderings, proximity queries, or other visualizers.</p>
 <li><code class="xref py py-exc docutils literal notranslate"><span class="pre">positive.</span></code></li>
 </ul>
 </td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.MeshcatCone, measures: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a cone with a vector of measures: height and principal
+semi-axes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the measures are not strictly positive.</td>
 </tr>
 </tbody>
 </table>

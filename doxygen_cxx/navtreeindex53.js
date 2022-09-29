@@ -1,5 +1,10 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,5,1],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,5,0],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html":[3,0,0,9,4,6],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108":[3,0,0,9,4,6,2],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[3,0,0,9,4,6,6],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40":[3,0,0,9,4,6,7],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a6255b4003c79e2d88d1c5b233a75a732":[3,0,0,9,4,6,4],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,6,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ad8b2d6d03c5f48ff4e9f2b5607386d2d":[3,0,0,16,1,2,2],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html":[3,0,0,16,1,7],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,16,1,7,2],
-"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a231a08c109ea1cc7dacf351a1c291cb7":[3,0,0,16,1,7,0],
-"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,16,1,7,1],
-"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831":[3,0,0,16,1,7,3],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[3,0,0,16,2,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[3,0,0,16,2,0,7],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,16,2,0,5]
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a231a08c109ea1cc7dacf351a1c291cb7":[3,0,0,16,1,7,0]
 };

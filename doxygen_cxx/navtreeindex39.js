@@ -1,5 +1,10 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ad75f0fc988a8d82c3b45614c4e296ab2":[1,2,4,2,10],
+"classdrake_1_1systems_1_1sensors_1_1_image.html":[3,0,0,16,8,7],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a149e06f2677943852d4e59bdadf4e23f":[3,0,0,16,8,7,7],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a1950eac0081009de55c31671d31a876e":[3,0,0,16,8,7,8],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a2338c4484ceb8bfeb5461f6b15827432":[3,0,0,16,8,7,3],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#a56bfa8fae91947eb5802d2e208405904":[3,0,0,16,8,7,14],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#a61e017cbe872361d21096830708bcf94":[3,0,0,16,8,7,6],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#a6fb996b03aacc705c967a2e759fca69d":[3,0,0,16,8,7,11],
@@ -244,10 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a518b6f39638b5dcca07dd2f721c7ac70":[3,0,0,18,1,3],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,18,1,6],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,18,1,11],
-"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9f9ca6881495c3e9ce261df8ca9b5514":[3,0,0,18,1,0],
-"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ab72583d843169e9123e0aa7b87439bda":[3,0,0,18,1,9],
-"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#abfc9a61381e3e22126ab92fff4a9bc33":[3,0,0,18,1,5],
-"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,1,7],
-"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ae7aaaebd7e27434069ba5af047713628":[3,0,0,18,1,12],
-"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#aee0d01536c69b892fb45553cf4b67bb7":[3,0,0,18,1,2]
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9f9ca6881495c3e9ce261df8ca9b5514":[3,0,0,18,1,0]
 };
