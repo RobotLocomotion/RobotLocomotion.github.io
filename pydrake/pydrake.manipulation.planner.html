@@ -301,27 +301,64 @@ position commands to match the initial positions of the robot.</p>
 <dd><p>Contains parameters for differential inverse kinematics.</p>
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>num_positions: int = 0</em>, <em>num_velocities: int = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor. Initializes the nominal joint position to zeros of size
-<code class="docutils literal notranslate"><span class="pre">num_positions</span></code>. Timestep is initialized to 1. The end effector
-gains are initialized to ones. All constraints are initialized to
-nullopt.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, num_positions: int, num_velocities: int = None) -&gt; None</li>
+</ol>
+<p>Constructor. Initializes the nominal joint position to zeros of size
+<code class="docutils literal notranslate"><span class="pre">num_positions</span></code>. The time step is initialized to 1. The end effector
+gains are initialized to ones. The joint centering gains are
+initialized to zero. All constraints are initialized to nullopt.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>:</dt>
 <dd>Number of generalized positions.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_velocities</span></code>:</dt>
-<dd>Number of generalized velocities.</dd>
+<dd>Number of generalized velocities (by default it will be set to
+num_positions).</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently DoDifferentialInverseKinematics requires that
+num_positions == num_velocities.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; None</li>
+</ol>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>num_positions is now a mandatory argument for the constructor.
+This default constructor sets num_positions = 1. This will be
+removed from Drake on or after 2023-01-01.</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_flag">
+<code class="descname">get_end_effector_velocity_flag</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[bool[6, 1]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_flag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_gain">
 <code class="descname">get_end_effector_velocity_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[6, 1]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_gain" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use get_end_effector_velocity_flag instead. (The gains before were
+actually only acting as a flag). This will be removed from Drake
+on or after 2023-01-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_acceleration_limits">
 <code class="descname">get_joint_acceleration_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[Tuple[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, 1]]]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_acceleration_limits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_centering_gain">
+<code class="descname">get_joint_centering_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_centering_gain" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -332,6 +369,11 @@ nullopt.</p>
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_velocity_limits">
 <code class="descname">get_joint_velocity_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[Tuple[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, 1]]]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_velocity_limits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_maximum_scaling_to_report_stuck">
+<code class="descname">get_maximum_scaling_to_report_stuck</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_maximum_scaling_to_report_stuck" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -350,33 +392,52 @@ nullopt.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_time_step">
+<code class="descname">get_time_step</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_time_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_timestep">
 <code class="descname">get_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_timestep" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;name Getters.</p>
+<dd><p>&#64;name Getters. (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use get_time_step() instead of get_timestep(). This will be
+removed from Drake on or after 2023-01-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_unconstrained_degrees_of_freedom_velocity_limit">
 <code class="descname">get_unconstrained_degrees_of_freedom_velocity_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[float]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_unconstrained_degrees_of_freedom_velocity_limit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>The unconstrained_degrees_of_freedom_velocity_limit is no longer
+used in the differential IK formulation and will be removed from
+this parameters class. This will be removed from Drake on or after
+2023-01-01.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_flag">
+<code class="descname">set_end_effector_velocity_flag</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, flag_E: numpy.ndarray[bool[6, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_flag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the end effector flags in the body frame. If a spatial velocity
+flag is set to false, it will not be included in the differential IK
+formulation.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_gain">
 <code class="descname">set_end_effector_velocity_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: numpy.ndarray[numpy.float64[6, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_gain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the end effector gains in the body frame. Gains can be used to
-specify relative importance among different dimensions.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if any element of <code class="docutils literal notranslate"><span class="pre">gain_E</span></code> is larger than 1 or</li>
-<li>smaller than 0.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use set_end_effector_velocity_flag instead. (The gains before were
+actually only acting as a flag). This will be removed from Drake
+on or after 2023-01-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -401,6 +462,17 @@ bound.</dd>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_centering_gain">
+<code class="descname">set_joint_centering_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, K: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_centering_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the joint centering gain, K, so that the joint centering command
+is v_next = K * (q_nominal - q_current).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>K must be num_velocities x num_positions.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -452,6 +524,17 @@ bound.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_maximum_scaling_to_report_stuck">
+<code class="descname">set_maximum_scaling_to_report_stuck</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>scaling: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_maximum_scaling_to_report_stuck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the threshold for α below which the status returned is
+DifferentialInverseKinematicsStatus::kStuck. α is the scaling of the
+commanded spatial velocity, so when α is small, it means that the
+actual spatial velocity magnitude will be small proportional to the
+commanded.</p>
+<p><em>Default:</em> 0.01.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_nominal_joint_position">
 <code class="descname">set_nominal_joint_position</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_nominal_joint_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the nominal joint position.</p>
@@ -466,9 +549,9 @@ bound.</dd>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep">
-<code class="descname">set_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;name Setters. Sets timestep to <code class="docutils literal notranslate"><span class="pre">dt</span></code>.</p>
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_time_step">
+<code class="descname">set_time_step</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>dt: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_time_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#64;name Setters. Sets time step to <code class="docutils literal notranslate"><span class="pre">dt</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -480,6 +563,17 @@ bound.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep">
+<code class="descname">set_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use set_time_step() instead of set_timestep(). This will be
+removed from Drake on or after 2023-01-01.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit">
 <code class="descname">set_unconstrained_degrees_of_freedom_velocity_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the max magnitude of the velocity in the unconstrained degree of
@@ -488,10 +582,17 @@ freedom to <code class="docutils literal notranslate"><span class="pre">limit</s
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if limit &lt; 0.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if limit &lt; 0. / (Deprecated.)</td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>The unconstrained_degrees_of_freedom_velocity_limit is no longer
+used in the differential IK formulation and will be removed from
+this parameters class. This will be removed from Drake on or after
+2023-01-01.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -566,40 +667,40 @@ freedom to <code class="docutils literal notranslate"><span class="pre">limit</s
 </ol>
 <p>Computes a generalized velocity v_next, via the following
 MathematicalProgram:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">min_</span><span class="p">{</span><span class="n">v_next</span><span class="p">,</span><span class="n">alpha</span><span class="p">}</span>   <span class="mi">100</span> <span class="o">*</span> <span class="o">|</span> <span class="n">alpha</span> <span class="o">-</span> <span class="o">|</span><span class="n">V</span><span class="o">|</span> <span class="o">|^</span><span class="mi">2</span>
-                       <span class="o">//</span> <span class="n">iff</span> <span class="n">J</span><span class="o">.</span><span class="n">rows</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">J</span><span class="o">.</span><span class="n">cols</span><span class="p">(),</span> <span class="n">then</span>
-                         <span class="o">+</span> <span class="o">|</span> <span class="n">q_current</span> <span class="o">+</span> <span class="n">v_next</span><span class="o">*</span><span class="n">dt</span> <span class="o">-</span> <span class="n">q_nominal</span> <span class="o">|^</span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">min_</span><span class="p">{</span><span class="n">v_next</span><span class="p">,</span><span class="n">alpha</span><span class="p">}</span>  <span class="o">-</span><span class="mi">100</span> <span class="o">*</span> <span class="n">alpha</span>
+                        <span class="o">+</span> <span class="o">|</span> <span class="n">P</span> <span class="o">*</span> <span class="p">(</span><span class="n">v_next</span> <span class="o">-</span> <span class="n">K</span> <span class="o">*</span> <span class="p">(</span><span class="n">q_nominal</span> <span class="o">-</span> <span class="n">q_current</span><span class="p">))</span> <span class="o">|^</span><span class="mi">2</span>
 
-  <span class="n">s</span><span class="o">.</span><span class="n">t</span><span class="o">.</span> <span class="n">J</span><span class="o">*</span><span class="n">v_next</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">V</span> <span class="o">/</span> <span class="o">|</span><span class="n">V</span><span class="o">|</span>  <span class="o">//</span> <span class="n">J</span><span class="o">*</span><span class="n">v_next</span> <span class="n">has</span> <span class="n">the</span> <span class="n">same</span> <span class="n">direction</span> <span class="k">as</span> <span class="n">V</span>
-       <span class="n">joint_lim_min</span> <span class="o">&lt;=</span> <span class="n">q_current</span> <span class="o">+</span> <span class="n">v_next</span><span class="o">*</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="n">joint_lim_max</span>
-       <span class="n">joint_vel_lim_min</span> <span class="o">&lt;=</span> <span class="n">v_next</span> <span class="o">&lt;=</span> <span class="n">joint_vel_lim_max</span>
-       <span class="n">joint_accel_lim_min</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">v_next</span> <span class="o">-</span> <span class="n">v_current</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span> <span class="o">&lt;=</span>
-         <span class="n">joint_accel_lim_max</span>
-       <span class="k">for</span> <span class="nb">all</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">J</span><span class="o">.</span><span class="n">rows</span><span class="p">(),</span>
-         <span class="o">-</span><span class="n">unconstrained_vel_lim</span> <span class="o">&lt;=</span> <span class="n">S</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="s1">&#39; v_next &lt;= unconstrained_vel_lim</span>
-         <span class="n">where</span> <span class="n">J</span> <span class="o">=</span> <span class="n">UΣS</span><span class="s1">&#39; is the SVD, with the singular values in decreasing</span>
-         <span class="n">order</span><span class="o">.</span>  <span class="n">Note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">constraint</span> <span class="ow">is</span> <span class="n">imposed</span> <span class="n">on</span> <span class="n">each</span> <span class="n">column</span>
-         <span class="n">independently</span><span class="o">.</span>
-
-       <span class="ow">and</span> <span class="nb">any</span> <span class="n">additional</span> <span class="n">linear</span> <span class="n">constraints</span> <span class="n">added</span> <span class="n">via</span>
-         <span class="n">AddLinearVelocityConstraint</span><span class="p">()</span> <span class="ow">in</span> <span class="n">the</span>
-         <span class="n">DifferentialInverseKinematicsParameters</span><span class="o">.</span>
-  <span class="n">where</span> <span class="n">J</span><span class="o">.</span><span class="n">rows</span><span class="p">()</span> <span class="o">==</span> <span class="n">V</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="ow">and</span>
-  <span class="n">J</span><span class="o">.</span><span class="n">cols</span><span class="p">()</span> <span class="o">==</span> <span class="n">v_current</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">q_current</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">v_next</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span>  <span class="n">V</span>
-  <span class="n">can</span> <span class="n">have</span> <span class="nb">any</span> <span class="n">size</span><span class="p">,</span> <span class="k">with</span> <span class="n">each</span> <span class="n">element</span> <span class="n">representing</span> <span class="n">a</span> <span class="n">constraint</span> <span class="n">on</span> <span class="n">the</span>
-  <span class="n">solution</span> <span class="p">(</span><span class="mi">6</span> <span class="n">constraints</span> <span class="n">specifying</span> <span class="n">an</span> <span class="n">end</span><span class="o">-</span><span class="n">effector</span> <span class="n">pose</span> <span class="ow">is</span> <span class="n">typical</span><span class="p">,</span> <span class="n">but</span>
-  <span class="ow">not</span> <span class="n">required</span><span class="p">)</span><span class="o">.</span>
+  <span class="n">s</span><span class="o">.</span><span class="n">t</span><span class="o">.</span>
+    <span class="n">J</span> <span class="o">*</span> <span class="n">v_next</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">V</span><span class="p">,</span> <span class="o">//</span> <span class="n">J</span> <span class="o">*</span> <span class="n">v_next</span> <span class="n">has</span> <span class="n">the</span> <span class="n">same</span> <span class="n">direction</span> <span class="k">as</span> <span class="n">V</span>
+    <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">alpha</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span>        <span class="o">//</span> <span class="n">Never</span> <span class="n">go</span> <span class="n">faster</span> <span class="n">than</span> <span class="n">V</span>
+    <span class="n">joint_lim_min</span> <span class="o">&lt;=</span> <span class="n">q_current</span> <span class="o">+</span> <span class="n">v_next</span><span class="o">*</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="n">joint_lim_max</span><span class="p">,</span>
+    <span class="n">joint_vel_lim_min</span> <span class="o">&lt;=</span> <span class="n">v_next</span> <span class="o">&lt;=</span> <span class="n">joint_vel_lim_max</span><span class="p">,</span>
+    <span class="n">joint_accel_lim_min</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">v_next</span> <span class="o">-</span> <span class="n">v_current</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="n">joint_accel_lim_max</span><span class="p">,</span>
+    <span class="ow">and</span> <span class="n">additional</span> <span class="n">linear</span> <span class="n">velocity</span> <span class="n">constraints</span><span class="p">,</span>
 </pre></div>
 </div>
+<p>where: - The rows of P form an orthonormal basis for the nullspace of
+J, - J.rows() == V.size(), - J.cols() == v_current.size() ==
+q_current.size() == v_next.size(), - V can have any size, with each
+element representing a constraint on the solution (6 constraints
+specifying an end-effector spatial velocity is typical, but not
+required), - K is the joint_centering_gain, - the “additional linear
+velocity constraints” are added via
+DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
 direction as V, and the difference between <a href="#id1"><span class="problematic" id="id2">|V|</span></a> and <a href="#id3"><span class="problematic" id="id4">|J * v_next|</span></a> is
 minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
-well. If the problem is redundant, a secondary objective to minimize
-<a href="#id5"><span class="problematic" id="id6">|q_current + v_next * dt - q_nominal|</span></a> is added to the problem.</p>
-<p>It is possible that the solver is unable to find such a generalized
-velocity while not violating the constraints, in which case, status
-will be set to kStuck in the returned
-DifferentialInverseKinematicsResult.</p>
+well. In the nullspace of this objective, we have a secondary
+objective to minimize <a href="#id5"><span class="problematic" id="id6">|v_next - K * (q_nominal - q_current)|</span></a>.</p>
+<p>For more details, see
+<a class="reference external" href="https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints">https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints</a> .</p>
+<p>If q_current is a feasible point, then v_next = 0 should always be a
+feasible solution. If the problem data is bad (q_current is
+infeasible, and no feasible velocities can restore feasibility in one
+step), then it is possible that the solver cannot find a solution, in
+which case, status will be set to kNoSolution in the returned
+DifferentialInverseKinematicsResult. If the velocity scaling, alpha,
+is very small, then the status will be set to kStuck.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_current</span></code>:</dt>
 <dd>The current generalized position.</dd>
@@ -629,10 +730,9 @@ be set to v, otherwise it will be nullopt.</td>
 </ol>
 <p>A wrapper over DoDifferentialInverseKinematics(q_current, v_current,
 V, J, params) that tracks frame E’s spatial velocity. q_current and
-v_current are taken from <code class="docutils literal notranslate"><span class="pre">context</span></code>. V is computed by first
-transforming <code class="docutils literal notranslate"><span class="pre">V_WE</span></code> to V_WE_E, then taking the element-wise product
-between V_WE_E and the gains (specified in frame E) in <code class="docutils literal notranslate"><span class="pre">parameters</span></code>,
-and only selecting the non zero elements. J is computed similarly.</p>
+v_current are taken from <code class="docutils literal notranslate"><span class="pre">context</span></code>. V and J are expressed in E, and
+only the elements with non-zero gains in <code class="docutils literal notranslate"><span class="pre">parameters</span></code>
+get_end_effector_velocity_gains() are used in the program.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt>
 <dd>A MultibodyPlant model.</dd>

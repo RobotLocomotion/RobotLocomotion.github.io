@@ -1,5 +1,14 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a5a6d68bf65261dba0c10a00174fed83c":[3,0,0,9,67,37],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a5c0f659ca0d1286108f3238040cea74a":[3,0,0,9,67,45],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a631d7db4d8c28e6108d78b8309dabc2b":[3,0,0,9,67,42],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a63faf9877a005bf08269b508f2d17b42":[3,0,0,9,67,12],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a66a9857b35a25e766eda6fb149fb9134":[3,0,0,9,67,17],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a6ad677024790190d7f913839cbdf0902":[3,0,0,9,67,20],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a6b63ae12f2b1cc131b2584efe07a2b6b":[3,0,0,9,67,7],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a719e23ae8c26b0c8cf0c7f30dd112559":[3,0,0,9,67,0],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a73703796210df51bb25acbb19168913a":[3,0,0,9,67,13],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a73ee8d395f9f46a1086071be0faa8e37":[3,0,0,9,67,5],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a772d06048b8ada1e80045b45a32e51f0":[3,0,0,9,67,22],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a7a0d8c42739dc16a87225c2b0057517b":[3,0,0,9,67,28],
@@ -240,14 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_toppra.html#aa6404ed212fab2af0bad98457df07d16":[1,4,2,4,9],
 "classdrake_1_1multibody_1_1_toppra.html#ab013d8e5872653e5d10eaae0f3daa3dc":[1,4,2,4,12],
 "classdrake_1_1multibody_1_1_toppra.html#ac05332bb6e89f996e9501a52af6e307f":[1,4,2,4,10],
-"classdrake_1_1multibody_1_1_toppra.html#ac6962da0cfeb19c216cf5920469e7926":[1,4,2,4,0],
-"classdrake_1_1multibody_1_1_toppra.html#ac9fc9da3b84296fbc0292963ecffb699":[1,4,2,4,3],
-"classdrake_1_1multibody_1_1_triangle_quadrature.html":[3,0,0,9,83],
-"classdrake_1_1multibody_1_1_triangle_quadrature.html#a6d070afc5572e9a355f4a92276468382":[3,0,0,9,83,0],
-"classdrake_1_1multibody_1_1_triangle_quadrature.html#aa85b8dec31c1606ed502553bee32c195":[3,0,0,9,83,1],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html":[3,0,0,9,84],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a1f6623bbb6af50824c6c0c3d2733e809":[3,0,0,9,84,7],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a3061509e2566159ffd0d70258932901c":[3,0,0,9,84,6],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a7e3b1644467cb91e5b886b97a10ce047":[3,0,0,9,84,0],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a8a3a4c92ec269f8a9bb5100cf1e9820b":[3,0,0,9,84,1]
+"classdrake_1_1multibody_1_1_toppra.html#ac6962da0cfeb19c216cf5920469e7926":[1,4,2,4,0]
 };

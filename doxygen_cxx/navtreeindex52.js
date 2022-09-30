@@ -1,5 +1,14 @@
 var NAVTREEINDEX52 =
 {
+"structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,4,36],
+"structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,4,36,0],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html":[3,0,0,4,1,6],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65":[3,0,0,4,1,6,1],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,1,6,0],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459":[3,0,0,4,1,6,2],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#aebb830a8d1d43f282fde08aad2b4adca":[3,0,0,4,1,6,3],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html":[3,0,0,4,1,7,0],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a03efd7c9872deae4825e151ddd94a1f4":[3,0,0,4,1,7,0,2],
 "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a6dd823d967d7e56c82631751ed8325c9":[3,0,0,4,1,7,0,0],
 "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a7d42756fe3095b8eff79aa74b0683a1e":[3,0,0,4,1,7,0,3],
 "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a9d1c60bda05bb2119210b14babbab0ad":[3,0,0,4,1,7,0,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html":[3,0,0,9,4,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a4e550ebb9a213be8a3939f0c6ad4816b":[3,0,0,9,4,3,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,3,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,3,5],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,3,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ae88fbb6c242a8feeda1597a4462514a7":[3,0,0,9,4,3,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#aefc35c7944eed319c89bc1b399f0eb67":[3,0,0,9,4,3,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html":[3,0,0,9,4,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,4,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,4,2],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,4,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html":[3,0,0,9,4,5],
-"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a36dbe2aa2c05a792070d7b44d5c06e87":[3,0,0,9,4,5,3]
+"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,3,5]
 };

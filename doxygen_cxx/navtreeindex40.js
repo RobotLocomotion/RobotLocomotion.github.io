@@ -1,5 +1,14 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#aff77c2afe03fcd56388b20d75726e9fe":[3,0,0,18,0,16],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html":[3,0,0,18,1],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,18,1,13],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a1b0dc2e082a27d735c084f0c39c47bad":[3,0,0,18,1,10],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a489f89c546fea3e35bac6689e00be0db":[3,0,0,18,1,1],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a518b6f39638b5dcca07dd2f721c7ac70":[3,0,0,18,1,3],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,18,1,6],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,18,1,11],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9f9ca6881495c3e9ce261df8ca9b5514":[3,0,0,18,1,0],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ab72583d843169e9123e0aa7b87439bda":[3,0,0,18,1,9],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#abfc9a61381e3e22126ab92fff4a9bc33":[3,0,0,18,1,5],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,1,7],
@@ -240,14 +249,5 @@ var NAVTREEINDEX40 =
 "common_2autodiff_8h.html":[4,0,0,1,7],
 "common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[4,0,0,1,7,0],
 "common__solver__option_8h.html":[4,0,0,11,9],
-"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40":[4,0,0,11,9,0],
-"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8":[4,0,0,11,9,0,0],
-"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100":[4,0,0,11,9,0,1],
-"common__solver__option_8h.html#aed794af38e7da9270528fd2185861862":[4,0,0,11,9,1],
-"compass__gait_8h.html":[4,0,0,3,4,0],
-"compass__gait__geometry_8h.html":[4,0,0,3,4,1],
-"compliant__contact__manager_8h.html":[4,0,0,8,10,1],
-"compliant__contact__manager_8h.html#aae47cefb23deac8f4c80e3b2f26281a1":[4,0,0,8,10,1,0],
-"compute__numerical__gradient_8h.html":[4,0,0,7,4],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400a":[4,0,0,7,4,1]
+"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40":[4,0,0,11,9,0]
 };
