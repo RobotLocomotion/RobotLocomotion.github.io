@@ -841,7 +841,7 @@ graph.</p>
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fcda39fd9b0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f45fa02aa70&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -875,7 +875,7 @@ set.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fcda2d632b0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f45f9435cf0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>
@@ -1624,7 +1624,7 @@ the intersection.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.Iris">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False, prog_with_additional_constraints is not set, num_additional_constraint_infeasible_samples=10, random_seed=1234)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, num_collision_infeasible_samples=5, prog_with_additional_constraints is not set, num_additional_constraint_infeasible_samples=5, random_seed=1234)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
 algorithm, as described in</p>
 <p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of
@@ -1660,17 +1660,19 @@ positive integer).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.IrisInConfigurationSpace">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=False, prog_with_additional_constraints is not set, num_additional_constraint_infeasible_samples=10, random_seed=1234)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, num_collision_infeasible_samples=5, prog_with_additional_constraints is not set, num_additional_constraint_infeasible_samples=5, random_seed=1234)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
 <dd><p>A variation of the Iris (Iterative Region Inflation by Semidefinite
 programming) algorithm which finds collision-free regions in the
-configuration space* of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<em>configuration space</em> of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">Iris for details on the original algorithm. The possibility of
-this configuration-space variant was suggested in the original
-IRIS paper, but substantial new ideas have been employed here to
-address the non-convexity of configuration-space obstacles; these
-will be documented in a forth-coming publication.</p>
+<p class="last">Iris for details on the original algorithm. This variant uses
+nonlinear optimization (instead of convex optimization) to find
+collisions in configuration space; each potential collision is
+probabilistically “certified” by restarting the nonlinear
+optimization from random initial seeds inside the candidate IRIS
+region until it fails to find a collision in
+<code class="docutils literal notranslate"><span class="pre">options.num_collision_infeasible_samples</span></code> consecutive attempts.</p>
 </div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
@@ -1681,9 +1683,24 @@ connected to a SceneGraph in a systems::Diagram.</dd>
 of the plant set to the initialIRIS seed configuration.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
 <dd>provides additional configuration options. In particular,
-<code class="docutils literal notranslate"><span class="pre">options.enabled_ibex</span></code> may have a significant impact on the
-runtime of the algorithm.</dd>
+increasing <code class="docutils literal notranslate"><span class="pre">options.num_collision_infeasible_samples</span></code> increases
+the chances that the IRIS regions are collision free but can also
+significantly increase the run-time of the algorithm. The same
+goes for
+<code class="docutils literal notranslate"><span class="pre">options.num_additional_constraints_infeasible_samples</span></code>.</dd>
 </dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the sample configuration in <code class="docutils literal notranslate"><span class="pre">context</span></code> is</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">infeasible.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="class">
@@ -1701,15 +1718,6 @@ runtime of the algorithm.</dd>
 <dd><p>For IRIS in configuration space, we retreat by this margin from each
 C-space obstacle in order to avoid the possibility of requiring an
 infinite number of faces to approximate a curved boundary.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.geometry.optimization.IrisOptions.enable_ibex">
-<code class="descname">enable_ibex</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.enable_ibex" title="Permalink to this definition">¶</a></dt>
-<dd><p>For IRIS in configuration space, we can optionally use IbexSolver to
-rigorously confirm that regions are collision-free. This step may be
-computationally demanding, so we disable it by default for a faster
-algorithm for obtaining regions without the rigorous guarantee.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1731,6 +1739,18 @@ requested before moving on to the next constraint.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.num_collision_infeasible_samples">
+<code class="descname">num_collision_infeasible_samples</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.num_collision_infeasible_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each possible collision, IRIS will search for a counter-example by
+formulating a (likely nonconvex) optimization problem. The initial
+guess for this optimization is taken by sampling uniformly inside the
+current IRIS region. This option controls the termination condition
+for that counter-example search, defining the number of consecutive
+failures to find a counter-example requested before moving on to the
+next constraint.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.geometry.optimization.IrisOptions.prog_with_additional_constraints">
 <code class="descname">prog_with_additional_constraints</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.prog_with_additional_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>By default, IRIS in configuration space certifies regions for
@@ -1745,11 +1765,6 @@ it contains any unsupported constraints.</p>
 <p>For example, one could create an InverseKinematics problem with rich
 kinematic constraints, and then pass <code class="docutils literal notranslate"><span class="pre">InverseKinematics::prog()</span></code>
 into this option.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Currently, when prog_with_additional_constraints is set, the
-enable_ibex option must be <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-</div>
 </dd></dl>
 
 <dl class="attribute">

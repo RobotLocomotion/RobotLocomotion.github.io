@@ -1,15 +1,16 @@
 var NAVTREEINDEX46 =
 {
+"hopf__coordinate_8h.html#a82d0a7052d08481add2e9086b98144dd":[4,0,0,7,19,0],
 "hopf__coordinate_8h.html#ab948fdacb210871495edea82aa001473":[4,0,0,7,19,1],
 "hpolyhedron_8h.html":[4,0,0,4,1,3],
 "hydroelastic__callback_8h.html":[4,0,0,4,2,17],
-"hydroelastic__contact__info_8h.html":[4,0,0,8,10,13],
+"hydroelastic__contact__info_8h.html":[4,0,0,8,10,14],
 "hydroelastic__contact__visualizer_8h.html":[4,0,0,8,7,2],
 "hydroelastic__engine_8h.html":[4,0,0,8,4,0],
 "hydroelastic__internal_8h.html":[4,0,0,4,2,18],
-"hydroelastic__quadrature__point__data_8h.html":[4,0,0,8,10,14],
-"hydroelastic__quadrature__point__data_8h.html#a0833cf112bc08569736e6aca2251ebaf":[4,0,0,8,10,14,1],
-"hydroelastic__traction__calculator_8h.html":[4,0,0,8,10,15],
+"hydroelastic__quadrature__point__data_8h.html":[4,0,0,8,10,15],
+"hydroelastic__quadrature__point__data_8h.html#a0833cf112bc08569736e6aca2251ebaf":[4,0,0,8,10,15,1],
+"hydroelastic__traction__calculator_8h.html":[4,0,0,8,10,16],
 "hydroelastic__user__guide__doxygen_8h.html":[4,0,0,8,4,1],
 "hyperellipsoid_8h.html":[4,0,0,4,1,4],
 "ibex__converter_8h.html":[4,0,0,11,25],
@@ -106,7 +107,7 @@ var NAVTREEINDEX46 =
 "internal__buffer__dim_8h.html":[4,0,0,4,5,1],
 "internal__frame_8h.html":[4,0,0,4,24],
 "internal__geometry_8h.html":[4,0,0,4,25],
-"internal__geometry__names_8h.html":[4,0,0,8,10,16],
+"internal__geometry__names_8h.html":[4,0,0,8,10,17],
 "internal__http__service_8h.html":[4,0,0,4,6,1],
 "internal__http__service__curl_8h.html":[4,0,0,4,6,2],
 "internal__opengl__context_8h.html":[4,0,0,4,5,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "logistic__system_8h.html":[4,0,0,12,0,0,7],
 "luenberger__observer_8h.html":[4,0,0,12,2,1],
 "lyapunov_8h.html":[4,0,0,12,0,11],
-"lyapunov_8h.html#ga2ccd9a43fd950b9e3490dd8c98534c3e":[4,0,0,12,0,11,0],
-"make__acrobot__plant_8h.html":[4,0,0,8,0,0,1]
+"lyapunov_8h.html#ga2ccd9a43fd950b9e3490dd8c98534c3e":[4,0,0,12,0,11,0]
 };

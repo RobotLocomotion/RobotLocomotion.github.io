@@ -223,7 +223,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gad54a224f37c1a0dc86eaec300ef874af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">More...</a><br /></td></tr>
 <tr class="separator:gad54a224f37c1a0dc86eaec300ef874af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8">IrisInConfigurationSpace</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
-<tr class="memdesc:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the configuration space* of <code>plant</code>.  <a href="group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8">More...</a><br /></td></tr>
+<tr class="memdesc:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code>plant</code>.  <a href="group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8">More...</a><br /></td></tr>
 <tr class="separator:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -312,13 +312,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the configuration space* of <code>plant</code>. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6" title="The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.">Iris</a> for details on the original algorithm. The possibility of this configuration-space variant was suggested in the original IRIS paper, but substantial new ideas have been employed here to address the non-convexity of configuration-space obstacles; these will be documented in a forth-coming publication.</dd></dl>
+<p>A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code>plant</code>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6" title="The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.">Iris</a> for details on the original algorithm. This variant uses nonlinear <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a> (instead of convex <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a>) to find collisions in configuration space; each potential collision is probabilistically "certified" by restarting the nonlinear <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a> from random initial seeds inside the candidate IRIS region until it fails to find a collision in <code>options.num_collision_infeasible_samples</code> consecutive attempts.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plant</td><td>describes the kinematics of configuration space. It must be connected to a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> in a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">systems::Diagram</a>. </td></tr>
     <tr><td class="paramname">context</td><td>is a context of the <code>plant</code>. The context must have the positions of the plant set to the initialIRIS seed configuration. </td></tr>
-    <tr><td class="paramname">options</td><td>provides additional configuration options. In particular, <code>options.enabled_ibex</code> may have a significant impact on the runtime of the algorithm. </td></tr>
+    <tr><td class="paramname">options</td><td>provides additional configuration options. In particular, increasing <code>options.num_collision_infeasible_samples</code> increases the chances that the IRIS regions are collision free but can also significantly increase the run-time of the algorithm. The same goes for <code>options.num_additional_constraints_infeasible_samples</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the sample configuration in <code>context</code> is infeasible. </td></tr>
   </table>
   </dd>
 </dl>

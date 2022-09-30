@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"dir_8f847be5c0c53e92edc6178d5e17891e.html":[4,0,0,3,18],
 "dir_90a47678bc0a869c6c11f834a8ae1688.html":[4,0,0,12,9],
 "dir_970ffa4dc1494551190363316edbd789.html":[4,0,0,3,9],
 "dir_9acdd6771460017440c69ee654743722.html":[4,0,0,3,11],
@@ -53,7 +54,7 @@ var NAVTREEINDEX42 =
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,10],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,10,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,10,1],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,10],
+"discrete__contact__pair_8h.html":[4,0,0,8,10,11],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
@@ -61,8 +62,8 @@ var NAVTREEINDEX42 =
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,1],
-"discrete__update__manager_8h.html":[4,0,0,8,10,11],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,11,0],
+"discrete__update__manager_8h.html":[4,0,0,8,10,12],
+"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,12,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
 "distance__constraint_8h.html":[4,0,0,8,5,4],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "expression_2expression_8h.html#a38f904009d1e4f9ad6f5ed22a4e4c41b":[4,0,0,1,3,0,3,37],
 "expression_2expression_8h.html#a3abe49c1083796a8b370bab55535aa72":[4,0,0,1,3,0,3,110],
 "expression_2expression_8h.html#a3f0ddd00582ffc739418f9198e0f6a9c":[4,0,0,1,3,0,3,87],
-"expression_2expression_8h.html#a3f6413d336e52ed76599cc96a8c87eee":[4,0,0,1,3,0,3,81],
-"expression_2expression_8h.html#a43e7c74e8b9ea1c9c5843c590e388009":[4,0,0,1,3,0,3,104]
+"expression_2expression_8h.html#a3f6413d336e52ed76599cc96a8c87eee":[4,0,0,1,3,0,3,81]
 };

@@ -412,7 +412,7 @@ the email address associated with your github account.</p>
       <li>Edit the first line to refer to the YYYYMMDD for this release.
         <ol>
           <li>For reference, the typical content is thus:
-            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:focal-20220420
+            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:jammy-20220929
 
 RUN apt-get -q update &amp;&amp; apt-get -q install -y --no-install-recommends nginx-light xvfb &amp;&amp; apt-get -q clean
 
@@ -443,9 +443,12 @@ file should have the following content:
 <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Finit.ipynb">init.ipynb</a>
 has this cell added the bottom, as a Drake-specific customization:
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
+/opt/drake/share/drake/setup/deepnote/install_nginx
 /opt/drake/share/drake/setup/deepnote/install_xvfb
 </code></pre></div>    </div>
-    <p>In case the display server is not working later on, this might be a good place to double-check.</p>
+    <p>In case the display server is not working later on, this might be a good place to double-check.
+For Jammy we also needed to add <code class="highlighter-rouge">cd /work</code> atop the stanza that checks for
+<code class="highlighter-rouge">requirements.txt</code> to get it working again.</p>
   </li>
   <li>Copy the updated tutorials from the pinned Dockerfile release
 (in <code class="highlighter-rouge">/opt/drake/share/drake/tutorials/...</code>) into the Deepnote project

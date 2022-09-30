@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"generic__polynomial_8h.html#a6e51bfc83d5ab488518b664db9e5cd34":[4,0,0,1,3,6,11],
 "generic__polynomial_8h.html#a7632adf109d2b13d0a4fb81e7cb81f96":[4,0,0,1,3,6,25],
 "generic__polynomial_8h.html#a830fbf97ac01bf807b4915e3087585da":[4,0,0,1,3,6,35],
 "generic__polynomial_8h.html#a876c3318865d9ffaadd1c3f7a711fdfa":[4,0,0,1,3,6,4],
@@ -131,8 +132,8 @@ var NAVTREEINDEX45 =
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,15,1],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,15,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
-"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,15,0],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,15,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "hash_8h.html#aeacd6804761e9fb9f0fa26a6766f1444":[4,0,0,1,35,5],
 "hermitian__dense__output_8h.html":[4,0,0,12,0,5],
 "hierarchy.html":[3,2],
-"hopf__coordinate_8h.html":[4,0,0,7,19],
-"hopf__coordinate_8h.html#a82d0a7052d08481add2e9086b98144dd":[4,0,0,7,19,0]
+"hopf__coordinate_8h.html":[4,0,0,7,19]
 };

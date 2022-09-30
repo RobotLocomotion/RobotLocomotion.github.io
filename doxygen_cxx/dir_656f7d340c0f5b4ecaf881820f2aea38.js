@@ -5,6 +5,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "constraint_specs.h", "constraint__specs_8h.html", null ],
     [ "contact_jacobians.h", "contact__jacobians_8h.html", null ],
     [ "contact_model_doxygen.h", "contact__model__doxygen_8h.html", null ],
+    [ "contact_pair_kinematics.h", "contact__pair__kinematics_8h.html", null ],
     [ "contact_results.h", "contact__results_8h.html", [
       [ "ContactResults", "classdrake_1_1multibody_1_1_contact_results.html", "classdrake_1_1multibody_1_1_contact_results" ]
     ] ],
@@ -38,6 +39,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "propeller.h", "propeller_8h.html", [
       [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", "structdrake_1_1multibody_1_1_propeller_info" ]
     ] ],
+    [ "sap_driver.h", "sap__driver_8h.html", null ],
     [ "scalar_convertible_component.h", "scalar__convertible__component_8h.html", null ],
     [ "tamsi_solver.h", "tamsi__solver_8h.html", "tamsi__solver_8h" ],
     [ "wing.h", "wing_8h.html", null ]

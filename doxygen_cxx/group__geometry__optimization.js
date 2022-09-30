@@ -173,9 +173,9 @@ var group__geometry__optimization =
     [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", [
       [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac", null ],
       [ "configuration_space_margin", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db", null ],
-      [ "enable_ibex", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b", null ],
       [ "iteration_limit", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72", null ],
       [ "num_additional_constraint_infeasible_samples", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75", null ],
+      [ "num_collision_infeasible_samples", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd", null ],
       [ "prog_with_additional_constraints", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2", null ],
       [ "random_seed", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee", null ],
       [ "relative_termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7", null ],

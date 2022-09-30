@@ -193,13 +193,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
 <tr class="memdesc:a033befdd75124d17abb45b56c75a71db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IRIS in configuration space, we retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary.  <a href="#a033befdd75124d17abb45b56c75a71db">More...</a><br /></td></tr>
 <tr class="separator:a033befdd75124d17abb45b56c75a71db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a177905e4b330d153a1ee016f913dc31b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b">enable_ibex</a> = false</td></tr>
-<tr class="memdesc:a177905e4b330d153a1ee016f913dc31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IRIS in configuration space, we can optionally use IbexSolver to rigorously confirm that regions are collision-free.  <a href="#a177905e4b330d153a1ee016f913dc31b">More...</a><br /></td></tr>
-<tr class="separator:a177905e4b330d153a1ee016f913dc31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67295e7681f83a17890571e4b6b0a7dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd">num_collision_infeasible_samples</a> {5}</td></tr>
+<tr class="memdesc:a67295e7681f83a17890571e4b6b0a7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each possible collision, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem.  <a href="#a67295e7681f83a17890571e4b6b0a7dd">More...</a><br /></td></tr>
+<tr class="separator:a67295e7681f83a17890571e4b6b0a7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafcf4ea1cbea01d087cc559402acddf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2">prog_with_additional_constraints</a> {}</td></tr>
 <tr class="memdesc:aafcf4ea1cbea01d087cc559402acddf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, IRIS in configuration space certifies regions for collision avoidance constraints and joint limits.  <a href="#aafcf4ea1cbea01d087cc559402acddf2">More...</a><br /></td></tr>
 <tr class="separator:aafcf4ea1cbea01d087cc559402acddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a985034493b538c4431e48f45ba012e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75">num_additional_constraint_infeasible_samples</a> {10}</td></tr>
+<tr class="memitem:a985034493b538c4431e48f45ba012e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75">num_additional_constraint_infeasible_samples</a> {5}</td></tr>
 <tr class="memdesc:a985034493b538c4431e48f45ba012e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each constraint in <code>prog_with_additional_constraints</code>, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem.  <a href="#a985034493b538c4431e48f45ba012e75">More...</a><br /></td></tr>
 <tr class="separator:a985034493b538c4431e48f45ba012e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9059bc845096b2f05414a66c836b4ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee">random_seed</a> {1234}</td></tr>
@@ -249,23 +249,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a177905e4b330d153a1ee016f913dc31b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a177905e4b330d153a1ee016f913dc31b">&#9670;&nbsp;</a></span>enable_ibex</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool enable_ibex = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>For IRIS in configuration space, we can optionally use IbexSolver to rigorously confirm that regions are collision-free. </p>
-<p>This step may be computationally demanding, so we disable it by default for a faster algorithm for obtaining regions without the rigorous guarantee. </p>
-
-</div>
-</div>
 <a id="ab9404d7dc104e7eb4e27ed7e38ccff72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9404d7dc104e7eb4e27ed7e38ccff72">&#9670;&nbsp;</a></span>iteration_limit</h2>
 
@@ -289,12 +272,29 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> num_additional_constraint_infeasible_samples {10}</td>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_additional_constraint_infeasible_samples {5}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>For each constraint in <code>prog_with_additional_constraints</code>, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem. </p>
+<p>The initial guess for this optimization is taken by sampling uniformly inside the current IRIS region. This option controls the termination condition for that counter-example search, defining the number of consecutive failures to find a counter-example requested before moving on to the next constraint. </p>
+
+</div>
+</div>
+<a id="a67295e7681f83a17890571e4b6b0a7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67295e7681f83a17890571e4b6b0a7dd">&#9670;&nbsp;</a></span>num_collision_infeasible_samples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_collision_infeasible_samples {5}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For each possible collision, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem. </p>
 <p>The initial guess for this optimization is taken by sampling uniformly inside the current IRIS region. This option controls the termination condition for that counter-example search, defining the number of consecutive failures to find a counter-example requested before moving on to the next constraint. </p>
 
 </div>
@@ -315,8 +315,7 @@ Public Attributes</h2></td></tr>
 <p>This option can be used to pass additional constraints that should be satisfied by the IRIS region. We accept these in the form of a MathematicalProgram:</p>
 <p>find q subject to g(q) ≤ 0.</p>
 <p>The decision_variables() for the program are taken to define <code>q</code>. IRIS will silently ignore any costs in <code>prog_with_additional_constraints</code>, and will throw std::runtime_error if it contains any unsupported constraints.</p>
-<p>For example, one could create an InverseKinematics problem with rich kinematic constraints, and then pass <code>InverseKinematics::prog()</code> into this option.</p>
-<dl class="section note"><dt>Note</dt><dd>Currently, when prog_with_additional_constraints is set, the enable_ibex option must be <code>false</code>. </dd></dl>
+<p>For example, one could create an InverseKinematics problem with rich kinematic constraints, and then pass <code>InverseKinematics::prog()</code> into this option. </p>
 
 </div>
 </div>
