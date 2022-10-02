@@ -5,7 +5,6 @@ var classdrake_1_1lcm_1_1_drake_lcm =
     [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html#a715527eb52d67dfc6e8c7b740e3b9d61", null ],
     [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html#a967614050b3110b0dcf4c5d632826c2a", null ],
     [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html#a3a12b8235a110920fe69b415213a10b8", null ],
-    [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html#a03213b86d60c722db2428871f0ddf89f", null ],
     [ "~DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html#a7678d452d02b7abeed1fcc658e570497", null ],
     [ "get_lcm_instance", "classdrake_1_1lcm_1_1_drake_lcm.html#a053aa138ef7646bdd2ad76db0657b13b", null ],
     [ "get_lcm_url", "classdrake_1_1lcm_1_1_drake_lcm.html#a58ffc29be696f46957f858506550bc75", null ],

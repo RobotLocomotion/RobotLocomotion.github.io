@@ -50,7 +50,6 @@ var searchData=
   ['solverid',['SolverId',['../classdrake_1_1solvers_1_1_solver_id.html',1,'drake::solvers']]],
   ['solverinterface',['SolverInterface',['../classdrake_1_1solvers_1_1_solver_interface.html',1,'drake::solvers']]],
   ['solveroptions',['SolverOptions',['../classdrake_1_1solvers_1_1_solver_options.html',1,'drake::solvers']]],
-  ['solverout',['SolverOut',['../structdrake_1_1solvers_1_1fbstab_1_1_solver_out.html',1,'drake::solvers::fbstab']]],
   ['solvertypeconverter',['SolverTypeConverter',['../classdrake_1_1solvers_1_1_solver_type_converter.html',1,'drake::solvers']]],
   ['solvestatusinfo',['SolveStatusInfo',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html',1,'drake::solvers::GurobiSolver']]],
   ['sortedpair',['SortedPair',['../structdrake_1_1_sorted_pair.html',1,'drake']]],

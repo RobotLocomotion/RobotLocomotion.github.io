@@ -203,9 +203,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9dd2e395ffa22f3d6a83ff596a26f1ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a9dd2e395ffa22f3d6a83ff596a26f1ff">AddWorldPositionConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> body_index, const Eigen::Vector3d &amp;p_BQ, const Eigen::Vector3d &amp;box_lb_F, const Eigen::Vector3d &amp;box_ub_F, const math::RigidTransformd &amp;X_WF=math::RigidTransformd())</td></tr>
 <tr class="memdesc:a9dd2e395ffa22f3d6a83ff596a26f1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the position of a point <code>Q</code> on a body <code>B</code> (whose index is <code>body_index</code>), is within a box in a specified frame <code>F</code>.  <a href="#a9dd2e395ffa22f3d6a83ff596a26f1ff">More...</a><br /></td></tr>
 <tr class="separator:a9dd2e395ffa22f3d6a83ff596a26f1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17186815f3922a2169acaf53aeb182b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a17186815f3922a2169acaf53aeb182b2">AddWorldPositionConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> body_index, const Eigen::Vector3d &amp;p_BQ, const Eigen::Vector3d &amp;box_lb_F, const Eigen::Vector3d &amp;box_ub_F, const Eigen::Isometry3d &amp;X_WF)</td></tr>
-<tr class="memdesc:a17186815f3922a2169acaf53aeb182b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">@exclude_from_pydrake_mkdoc  <a href="#a17186815f3922a2169acaf53aeb182b2">More...</a><br /></td></tr>
-<tr class="separator:a17186815f3922a2169acaf53aeb182b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec429d0b3253b415fcb92f22ba218c2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#aec429d0b3253b415fcb92f22ba218c2b">AddWorldRelativePositionConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> body_index_B, const Eigen::Vector3d &amp;p_BQ, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> body_index_A, const Eigen::Vector3d &amp;p_AP, const Eigen::Vector3d &amp;box_lb_F, const Eigen::Vector3d &amp;box_ub_F, const math::RigidTransformd &amp;X_WF=math::RigidTransformd())</td></tr>
 <tr class="memdesc:aec429d0b3253b415fcb92f22ba218c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the position of a point <code>Q</code> on a body <code>B</code> relative to a point <code>P</code> on body <code>A</code>, is within a box in a specified frame <code>F</code>.  <a href="#aec429d0b3253b415fcb92f22ba218c2b">More...</a><br /></td></tr>
 <tr class="separator:aec429d0b3253b415fcb92f22ba218c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -536,7 +533,7 @@ body_orientation_cost(i) * body_orientation_error(i)
 </div>
 </div>
 <a id="a9dd2e395ffa22f3d6a83ff596a26f1ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dd2e395ffa22f3d6a83ff596a26f1ff">&#9670;&nbsp;</a></span>AddWorldPositionConstraint() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd2e395ffa22f3d6a83ff596a26f1ff">&#9670;&nbsp;</a></span>AddWorldPositionConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -608,56 +605,6 @@ body_orientation_cost(i) * body_orientation_error(i)
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a17186815f3922a2169acaf53aeb182b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17186815f3922a2169acaf53aeb182b2">&#9670;&nbsp;</a></span>AddWorldPositionConstraint() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a>&gt; AddWorldPositionConstraint </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td>
-          <td class="paramname"><em>body_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>p_BQ</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>box_lb_F</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>box_ub_F</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
-          <td class="paramname"><em>X_WF</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>@exclude_from_pydrake_mkdoc </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Use the method taking a RigidTransform instead of Isometry3d. <br />
- This will be removed from Drake on or after 2022-10-01.</dd></dl>
 
 </div>
 </div>

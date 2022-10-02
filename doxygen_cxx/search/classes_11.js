@@ -29,7 +29,6 @@ var searchData=
   ['rgba',['Rgba',['../classdrake_1_1geometry_1_1_rgba.html',1,'drake::geometry']]],
   ['rgbdsensor',['RgbdSensor',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html',1,'drake::systems::sensors']]],
   ['rgbdsensordiscrete',['RgbdSensorDiscrete',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html',1,'drake::systems::sensors']]],
-  ['riccatilinearsolver',['RiccatiLinearSolver',['../classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html',1,'drake::solvers::fbstab']]],
   ['rigidbody',['RigidBody',['../classdrake_1_1multibody_1_1_rigid_body.html',1,'drake::multibody']]],
   ['rigidtransform',['RigidTransform',['../classdrake_1_1math_1_1_rigid_transform.html',1,'drake::math']]],
   ['rigidtransform_3c_20double_20_3e',['RigidTransform&lt; double &gt;',['../classdrake_1_1math_1_1_rigid_transform.html',1,'drake::math']]],

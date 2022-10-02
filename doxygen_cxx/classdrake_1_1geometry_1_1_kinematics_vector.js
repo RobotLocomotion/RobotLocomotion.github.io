@@ -6,7 +6,6 @@ var classdrake_1_1geometry_1_1_kinematics_vector =
     [ "KinematicsVector", "classdrake_1_1geometry_1_1_kinematics_vector.html#a2b59b2a7414e94d3e61bc961ecbe0286", null ],
     [ "~KinematicsVector", "classdrake_1_1geometry_1_1_kinematics_vector.html#a44487065c2257c5c1cb045a6c7dff805", null ],
     [ "clear", "classdrake_1_1geometry_1_1_kinematics_vector.html#ac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "frame_ids", "classdrake_1_1geometry_1_1_kinematics_vector.html#a92b7222f9e3bcb67cf4b55ba3e03c771", null ],
     [ "has_id", "classdrake_1_1geometry_1_1_kinematics_vector.html#afa31ec21de4026953a4add92ab0e025b", null ],
     [ "ids", "classdrake_1_1geometry_1_1_kinematics_vector.html#a5c87029705f9cdb6c64c5dc0d28a49ae", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_kinematics_vector.html#adb0b732826563f4d13c3411c56a0d54f", null ],

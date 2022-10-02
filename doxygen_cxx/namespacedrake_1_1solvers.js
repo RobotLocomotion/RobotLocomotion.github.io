@@ -1,6 +1,5 @@
 var namespacedrake_1_1solvers =
 [
-    [ "fbstab", "namespacedrake_1_1solvers_1_1fbstab.html", "namespacedrake_1_1solvers_1_1fbstab" ],
     [ "AddRotationMatrixBoxSphereIntersectionReturn", "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html", "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return" ],
     [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth" ],
     [ "AugmentedLagrangianSmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html", "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth" ],

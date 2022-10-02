@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['densecomponentunittests',['DenseComponentUnitTests',['../classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#ac80cf29e054d6de6794351ea79da99b0',1,'drake::solvers::fbstab::DenseLinearSolver']]],
-  ['mpccomponentunittests',['MpcComponentUnitTests',['../classdrake_1_1solvers_1_1fbstab_1_1_mpc_data.html#a96cc4970ea7bcb0ea0655d9d809797f4',1,'drake::solvers::fbstab::MpcData::MpcComponentUnitTests()'],['../classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html#a96cc4970ea7bcb0ea0655d9d809797f4',1,'drake::solvers::fbstab::RiccatiLinearSolver::MpcComponentUnitTests()']]],
   ['tamsisolvertester',['TamsiSolverTester',['../classdrake_1_1multibody_1_1_tamsi_solver.html#a4be23a2b9c291aeb80deed52cf42ba6d',1,'drake::multibody::TamsiSolver']]],
   ['tan',['tan',['../classdrake_1_1symbolic_1_1_expression.html#a734f5b457c5a0b898ab8b6f247f0ce76',1,'drake::symbolic::Expression']]],
   ['tanh',['tanh',['../classdrake_1_1symbolic_1_1_expression.html#ae96194d93ad39bcb2b7ed22891f44ec7',1,'drake::symbolic::Expression']]],

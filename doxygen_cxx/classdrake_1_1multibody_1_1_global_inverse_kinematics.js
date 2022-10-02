@@ -10,7 +10,6 @@ var classdrake_1_1multibody_1_1_global_inverse_kinematics =
     [ "AddPostureCost", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a0c2375608a204c57fb88fbb70d2e90c1", null ],
     [ "AddWorldOrientationConstraint", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#abd9dab40309516418c4505d11b0e3207", null ],
     [ "AddWorldPositionConstraint", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a9dd2e395ffa22f3d6a83ff596a26f1ff", null ],
-    [ "AddWorldPositionConstraint", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a17186815f3922a2169acaf53aeb182b2", null ],
     [ "AddWorldRelativePositionConstraint", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#aec429d0b3253b415fcb92f22ba218c2b", null ],
     [ "body_position", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a6cde631adfd94e6c518134b3bde8352b", null ],
     [ "body_rotation_matrix", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a74b87ef32b6e8aeeb68d6423454c932f", null ],

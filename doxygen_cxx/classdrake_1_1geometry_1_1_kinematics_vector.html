@@ -220,9 +220,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa31ec21de4026953a4add92ab0e025b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#afa31ec21de4026953a4add92ab0e025b">has_id</a> (Id id) const</td></tr>
 <tr class="memdesc:afa31ec21de4026953a4add92ab0e025b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if the given id is a member of this data.  <a href="#afa31ec21de4026953a4add92ab0e025b">More...</a><br /></td></tr>
 <tr class="separator:afa31ec21de4026953a4add92ab0e025b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b7222f9e3bcb67cf4b55ba3e03c771"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a92b7222f9e3bcb67cf4b55ba3e03c771">frame_ids</a> () const</td></tr>
-<tr class="memdesc:a92b7222f9e3bcb67cf4b55ba3e03c771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a range object for all of the existing ids in the vector.  <a href="#a92b7222f9e3bcb67cf4b55ba3e03c771">More...</a><br /></td></tr>
-<tr class="separator:a92b7222f9e3bcb67cf4b55ba3e03c771"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a5c87029705f9cdb6c64c5dc0d28a49ae">ids</a> () const</td></tr>
 <tr class="memdesc:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a range object for all of the existing ids in the vector.  <a href="#a5c87029705f9cdb6c64c5dc0d28a49ae">More...</a><br /></td></tr>
 <tr class="separator:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -362,27 +359,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clears all values, resetting the size to zero. </p>
-
-</div>
-</div>
-<a id="a92b7222f9e3bcb67cf4b55ba3e03c771"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92b7222f9e3bcb67cf4b55ba3e03c771">&#9670;&nbsp;</a></span>frame_ids()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;Id&gt; frame_ids </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Provides a range object for all of the existing ids in the vector. </p>
-<p>This is intended to be used as: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (Id <span class="keywordtype">id</span> : this_vector.frame_ids()) {</div><div class="line"> ...</div><div class="line"> <span class="comment">// Obtain the KinematicsValue of an id by `this_vector.value(id)`</span></div><div class="line"> ...</div><div class="line">}</div></div><!-- fragment --><p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use ids() instead. <br />
- This will be removed from Drake on or after 2022-10-01.</dd></dl>
 
 </div>
 </div>

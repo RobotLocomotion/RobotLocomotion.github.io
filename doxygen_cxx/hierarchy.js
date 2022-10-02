@@ -113,9 +113,6 @@ var hierarchy =
     [ "DampingModel< T >", "classdrake_1_1multibody_1_1fem_1_1_damping_model.html", null ],
     [ "DeformableBodyConfig< T >", "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html", null ],
     [ "DelegatingHasher", "structdrake_1_1_delegating_hasher.html", null ],
-    [ "DenseData", "classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html", null ],
-    [ "DenseFeasibility", "classdrake_1_1solvers_1_1fbstab_1_1_dense_feasibility.html", null ],
-    [ "DenseLinearSolver", "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html", null ],
     [ "DenseOutput< T >", "classdrake_1_1systems_1_1_dense_output.html", [
       [ "ScalarDenseOutput< T >", "classdrake_1_1systems_1_1_scalar_dense_output.html", [
         [ "ScalarViewDenseOutput< T >", "classdrake_1_1systems_1_1_scalar_view_dense_output.html", null ]
@@ -124,8 +121,6 @@ var hierarchy =
         [ "HermitianDenseOutput< T >", "classdrake_1_1systems_1_1_hermitian_dense_output.html", null ]
       ] ]
     ] ],
-    [ "DenseResidual", "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html", null ],
-    [ "DenseVariable", "classdrake_1_1solvers_1_1fbstab_1_1_dense_variable.html", null ],
     [ "DependencyGraph", "classdrake_1_1systems_1_1_dependency_graph.html", null ],
     [ "DependencyTracker", "classdrake_1_1systems_1_1_dependency_tracker.html", null ],
     [ "DepthRange", "classdrake_1_1geometry_1_1render_1_1_depth_range.html", null ],
@@ -306,9 +301,6 @@ var hierarchy =
     [ "ExpressionMulFactory", "classdrake_1_1symbolic_1_1_expression_mul_factory.html", null ],
     [ "ExternallyAppliedSpatialForce< T >", "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html", null ],
     [ "ExternalSystemConstraint", "classdrake_1_1systems_1_1_external_system_constraint.html", null ],
-    [ "FBstabAlgorithm< Variable, Residual, Data, LinearSolver, Feasibility >", "classdrake_1_1solvers_1_1fbstab_1_1_f_bstab_algorithm.html", null ],
-    [ "FBstabDense", "classdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense.html", null ],
-    [ "FBstabMpc", "classdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc.html", null ],
     [ "FemModel< T >", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html", null ],
     [ "FemModel< Element::T >", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html", null ],
     [ "FemState< T >", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html", null ],
@@ -482,10 +474,6 @@ var hierarchy =
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
-    [ "MpcData", "classdrake_1_1solvers_1_1fbstab_1_1_mpc_data.html", null ],
-    [ "MpcFeasibility", "classdrake_1_1solvers_1_1fbstab_1_1_mpc_feasibility.html", null ],
-    [ "MpcResidual", "classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html", null ],
-    [ "MpcVariable", "classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html", null ],
     [ "MultibodyElement< ElementType, T, ElementIndexType >", "classdrake_1_1multibody_1_1_multibody_element.html", [
       [ "Body< double >", "classdrake_1_1multibody_1_1_body.html", null ]
     ] ],
@@ -612,10 +600,6 @@ var hierarchy =
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
-    [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
-    [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
-    [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", null ],
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
@@ -637,7 +621,6 @@ var hierarchy =
     [ "MixedIntegerRotationConstraintGenerator::ReturnType", "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html", null ],
     [ "RewritingRule", "classdrake_1_1symbolic_1_1_rewriting_rule.html", null ],
     [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html", null ],
-    [ "RiccatiLinearSolver", "classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html", null ],
     [ "RigidTransform< T >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RigidTransform< double >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RlocationOrError", "structdrake_1_1_rlocation_or_error.html", null ],
@@ -721,7 +704,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "SolverOptions", "classdrake_1_1solvers_1_1_solver_options.html", null ],
-    [ "SolverOut", "structdrake_1_1solvers_1_1fbstab_1_1_solver_out.html", null ],
     [ "SolverTypeConverter", "classdrake_1_1solvers_1_1_solver_type_converter.html", null ],
     [ "GurobiSolver::SolveStatusInfo", "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html", null ],
     [ "SortedPair< T >", "structdrake_1_1_sorted_pair.html", null ],

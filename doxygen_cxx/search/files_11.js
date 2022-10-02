@@ -25,7 +25,6 @@ var searchData=
   ['revolute_5fspring_2eh',['revolute_spring.h',['../revolute__spring_8h.html',1,'']]],
   ['rgba_2eh',['rgba.h',['../rgba_8h.html',1,'']]],
   ['rgbd_5fsensor_2eh',['rgbd_sensor.h',['../rgbd__sensor_8h.html',1,'']]],
-  ['riccati_5flinear_5fsolver_2eh',['riccati_linear_solver.h',['../riccati__linear__solver_8h.html',1,'']]],
   ['rigid_5fbody_2eh',['rigid_body.h',['../rigid__body_8h.html',1,'']]],
   ['rigid_5ftransform_2eh',['rigid_transform.h',['../rigid__transform_8h.html',1,'']]],
   ['rimless_5fwheel_2eh',['rimless_wheel.h',['../rimless__wheel_8h.html',1,'']]],
