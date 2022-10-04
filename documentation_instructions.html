@@ -180,7 +180,7 @@ supported on Ubuntu <strong>20.04</strong> only.</p>
 <span class="nv">$ </span>bazel run //doc/pydrake:build     <span class="nt">--</span> <span class="nt">--serve</span> pydrake.math          <span class="c"># Python math API.</span>
 <span class="nv">$ </span>bazel run //doc:build             <span class="nt">--</span> <span class="nt">--serve</span> <span class="o">{</span>drake,pydrake<span class="o">}</span>.math  <span class="c"># Both at once.</span>
 
-<span class="c"># Further speed up preview by omitting expensive `dot` graphs:</span>
+<span class="c"># Further speed up preview by omitting expensive `dot` graphs (C++ API only):</span>
 <span class="nv">$ </span>bazel run //doc/doxygen_cxx:build <span class="nt">--</span> <span class="nt">--serve</span> <span class="nt">--quick</span> drake.math
 </code></pre></div></div>
 
