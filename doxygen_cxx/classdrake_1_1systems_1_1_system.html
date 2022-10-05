@@ -371,7 +371,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7">GetUniquePeriodicDiscreteUpdateAttribute</a> () const</td></tr>
 <tr class="memdesc:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether there exists a unique periodic attribute that triggers one or more discrete update events (and, if so, returns that unique periodic attribute).  <a href="#a63e5a7b117d53a54d79d44a63b2cffb7">More...</a><br /></td></tr>
 <tr class="separator:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb5016cfee3ccd384e0a0ba62b4da5bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc">IsDifferenceEquationSystem</a> (double *time_period=nullptr) const</td></tr>
+<tr class="memitem:aeb5016cfee3ccd384e0a0ba62b4da5bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc">IsDifferenceEquationSystem</a> (<a class="el" href="classdouble.html">double</a> *time_period=nullptr) const</td></tr>
 <tr class="memdesc:aeb5016cfee3ccd384e0a0ba62b4da5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the state dynamics of this system are governed exclusively by a difference equation on a single discrete state group and with a unique periodic update (having zero offset).  <a href="#aeb5016cfee3ccd384e0a0ba62b4da5bc">More...</a><br /></td></tr>
 <tr class="separator:aeb5016cfee3ccd384e0a0ba62b4da5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdd73a23410d860ee73dc021663ec99f"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a>, std::vector&lt; const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a>&lt; T &gt; * &gt;, <a class="el" href="structdrake_1_1systems_1_1_periodic_event_data_comparator.html">PeriodicEventDataComparator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#acdd73a23410d860ee73dc021663ec99f">GetPeriodicEvents</a> () const</td></tr>
@@ -465,7 +465,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af99fae784f8ff0d30444e35d13601177"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system_constraint.html">SystemConstraint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#af99fae784f8ff0d30444e35d13601177">get_constraint</a> (<a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a> constraint_index) const</td></tr>
 <tr class="memdesc:af99fae784f8ff0d30444e35d13601177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constraint at index <code>constraint_index</code>.  <a href="#af99fae784f8ff0d30444e35d13601177">More...</a><br /></td></tr>
 <tr class="separator:af99fae784f8ff0d30444e35d13601177"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4adf20a88ef081c27ea071d880292209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a4adf20a88ef081c27ea071d880292209">CheckSystemConstraintsSatisfied</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, double tol) const</td></tr>
+<tr class="memitem:a4adf20a88ef081c27ea071d880292209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a4adf20a88ef081c27ea071d880292209">CheckSystemConstraintsSatisfied</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdouble.html">double</a> tol) const</td></tr>
 <tr class="memdesc:a4adf20a88ef081c27ea071d880292209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <code>context</code> satisfies all of the registered SystemConstraints with tolerance <code>tol</code>.  <a href="#a4adf20a88ef081c27ea071d880292209">More...</a><br /></td></tr>
 <tr class="separator:a4adf20a88ef081c27ea071d880292209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c711d92735642b2fa7fc975e9b5bf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a24c711d92735642b2fa7fc975e9b5bf8">CopyContinuousStateVector</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
@@ -494,7 +494,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa1fac664a1c120c425bc522d7ecb435c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an opaque integer that uniquely identifies this system in the Graphviz output.  <a href="#aa1fac664a1c120c425bc522d7ecb435c">More...</a><br /></td></tr>
 <tr class="separator:aa1fac664a1c120c425bc522d7ecb435c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Scalar type conversion utilities</div></td></tr>
-<tr class="memitem:a601fb2c6cf565d954253d25725ae9d6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a601fb2c6cf565d954253d25725ae9d6b">FixInputPortsFrom</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;other_system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;other_context, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *target_context) const</td></tr>
+<tr class="memitem:a601fb2c6cf565d954253d25725ae9d6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a601fb2c6cf565d954253d25725ae9d6b">FixInputPortsFrom</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;other_system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;other_context, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *target_context) const</td></tr>
 <tr class="memdesc:a601fb2c6cf565d954253d25725ae9d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixes all of the input ports in <code>target_context</code> to their current values in <code>other_context</code>, as evaluated by <code>other_system</code>.  <a href="#a601fb2c6cf565d954253d25725ae9d6b">More...</a><br /></td></tr>
 <tr class="separator:a601fb2c6cf565d954253d25725ae9d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a686f497f27885d9f632df0c43d29a0d6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a686f497f27885d9f632df0c43d29a0d6">get_system_scalar_converter</a> () const</td></tr>
@@ -2197,7 +2197,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tol</em>&#160;</td>
         </tr>
         <tr>
@@ -3478,13 +3478,13 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
         <tr>
           <td class="memname">void FixInputPortsFrom </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>other_system</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>other_context</em>, </td>
         </tr>
         <tr>
@@ -4668,7 +4668,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
         <tr>
           <td class="memname">bool IsDifferenceEquationSystem </td>
           <td>(</td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a> *&#160;</td>
           <td class="paramname"><em>time_period</em> = <code>nullptr</code></td><td>)</td>
           <td> const</td>
         </tr>

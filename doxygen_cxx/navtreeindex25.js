@@ -1,5 +1,10 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#abd3fe857715eed6378d27109fc02e870":[3,0,0,15,34,0],
+"classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,15,34,6],
+"classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#aea1591b1773209f55ccc85356efb639a":[3,0,0,15,34,8],
+"classdrake_1_1symbolic_1_1_expression_var.html":[3,0,0,15,35],
+"classdrake_1_1symbolic_1_1_expression_var.html#a05fdc56be2bae58a250b0528b539f0ad":[3,0,0,15,35,8],
 "classdrake_1_1symbolic_1_1_expression_var.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,15,35,11],
 "classdrake_1_1symbolic_1_1_expression_var.html#a17a687a22fc3792625f3e48fff7f0269":[3,0,0,15,35,3],
 "classdrake_1_1symbolic_1_1_expression_var.html#a394ebf0f4ba5635912e2857881211e14":[3,0,0,15,35,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#afc04b29f47d940c6d78b2919cad9a739":[3,0,0,15,53,18],
 "classdrake_1_1symbolic_1_1_monomial.html":[3,0,0,15,55],
 "classdrake_1_1symbolic_1_1_monomial.html#a07e43dd6afaaafb0291e1067a4479212":[3,0,0,15,55,21],
-"classdrake_1_1symbolic_1_1_monomial.html#a142e59e0b2b6c055a07ac2fec890ead0":[3,0,0,15,55,18],
-"classdrake_1_1symbolic_1_1_monomial.html#a15533adad51a734ccda3dbb2438fbaf5":[3,0,0,15,55,24],
-"classdrake_1_1symbolic_1_1_monomial.html#a1d0553f396185535b2ba95351ac4902c":[3,0,0,15,55,13],
-"classdrake_1_1symbolic_1_1_monomial.html#a1dcf0748daabdb165757d2aa3674c082":[3,0,0,15,55,11],
-"classdrake_1_1symbolic_1_1_monomial.html#a4135d2c26ecd06180456a7ca15e05432":[3,0,0,15,55,19],
-"classdrake_1_1symbolic_1_1_monomial.html#a551cc6131366e79e2cd0aeab92092c9c":[3,0,0,15,55,12]
+"classdrake_1_1symbolic_1_1_monomial.html#a142e59e0b2b6c055a07ac2fec890ead0":[3,0,0,15,55,18]
 };

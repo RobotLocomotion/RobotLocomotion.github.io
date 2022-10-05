@@ -440,7 +440,7 @@ Typedefs</h2></td></tr>
 <tr class="separator:a91ed74a4ca04549f64c547dfba0724d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac27bca68509bbb001ab8073089b48031"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ac27bca68509bbb001ab8073089b48031">IndeterminatesRefList</a> = std::list&lt; Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#a91ed74a4ca04549f64c547dfba0724d5">VectorXIndeterminate</a> &gt; &gt;</td></tr>
 <tr class="separator:ac27bca68509bbb001ab8073089b48031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc2a57e87ae4e4088e12967a25a7c229"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">MinimumValuePenaltyFunction</a> = std::function&lt; void(double x, double *penalty, double *dpenalty_dx)&gt;</td></tr>
+<tr class="memitem:adc2a57e87ae4e4088e12967a25a7c229"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">MinimumValuePenaltyFunction</a> = std::function&lt; void(<a class="el" href="classdouble.html">double</a> x, <a class="el" href="classdouble.html">double</a> *penalty, <a class="el" href="classdouble.html">double</a> *dpenalty_dx)&gt;</td></tr>
 <tr class="memdesc:adc2a57e87ae4e4088e12967a25a7c229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the penalty function φ(x) and its derivatives dφ(x)/dx.  <a href="#adc2a57e87ae4e4088e12967a25a7c229">More...</a><br /></td></tr>
 <tr class="separator:adc2a57e87ae4e4088e12967a25a7c229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5617ec1dc3b70cd1683d8850fe69585d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> = std::unordered_set&lt; <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a>, <a class="el" href="namespacedrake.html#a323dc8b0cc629c61d4da8feeaa8cd4f5">DefaultHash</a> &gt;</td></tr>
@@ -566,10 +566,10 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a38b2721b2175272485def57c7a8b9c6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a38b2721b2175272485def57c7a8b9c6a">AggregateLinearCosts</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;&gt; &amp;linear_costs, Eigen::SparseVector&lt; double &gt; *linear_coeff, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *vars, double *constant_cost)</td></tr>
+<tr class="memitem:a38b2721b2175272485def57c7a8b9c6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a38b2721b2175272485def57c7a8b9c6a">AggregateLinearCosts</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;&gt; &amp;linear_costs, Eigen::SparseVector&lt; <a class="el" href="classdouble.html">double</a> &gt; *linear_coeff, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *vars, <a class="el" href="classdouble.html">double</a> *constant_cost)</td></tr>
 <tr class="memdesc:a38b2721b2175272485def57c7a8b9c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given many linear costs, aggregate them into.  <a href="#a38b2721b2175272485def57c7a8b9c6a">More...</a><br /></td></tr>
 <tr class="separator:a38b2721b2175272485def57c7a8b9c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd9e7d960a7e287ea283ffa9aee89d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#afd9e7d960a7e287ea283ffa9aee89d41">AggregateQuadraticAndLinearCosts</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&gt; &amp;quadratic_costs, const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;&gt; &amp;linear_costs, Eigen::SparseMatrix&lt; double &gt; *Q_lower, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *quadratic_vars, Eigen::SparseVector&lt; double &gt; *linear_coeff, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *linear_vars, double *constant_cost)</td></tr>
+<tr class="memitem:afd9e7d960a7e287ea283ffa9aee89d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#afd9e7d960a7e287ea283ffa9aee89d41">AggregateQuadraticAndLinearCosts</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&gt; &amp;quadratic_costs, const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;&gt; &amp;linear_costs, Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; *Q_lower, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *quadratic_vars, Eigen::SparseVector&lt; <a class="el" href="classdouble.html">double</a> &gt; *linear_coeff, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *linear_vars, <a class="el" href="classdouble.html">double</a> *constant_cost)</td></tr>
 <tr class="memdesc:afd9e7d960a7e287ea283ffa9aee89d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given many linear and quadratic costs, aggregate them into.  <a href="#afd9e7d960a7e287ea283ffa9aee89d41">More...</a><br /></td></tr>
 <tr class="separator:afd9e7d960a7e287ea283ffa9aee89d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebc36100fe5dc287d0c0c41a65c31c21"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="structdrake_1_1solvers_1_1_bound.html">Bound</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aebc36100fe5dc287d0c0c41a65c31c21">AggregateBoundingBoxConstraints</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&gt; &amp;bounding_box_constraints)</td></tr>
@@ -644,17 +644,17 @@ Functions</h2></td></tr>
 <tr class="separator:a1460b4c245321e57b234a724d774fc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0cd38a406880348f0c7fda298c66c2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#abf0cd38a406880348f0c7fda298c66c2">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
 <tr class="separator:abf0cd38a406880348f0c7fda298c66c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a014d2838aa5fae12520da4ebf46005ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a014d2838aa5fae12520da4ebf46005ca">GetVariableValue</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
+<tr class="memitem:a014d2838aa5fae12520da4ebf46005ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a014d2838aa5fae12520da4ebf46005ca">GetVariableValue</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
 <tr class="memdesc:a014d2838aa5fae12520da4ebf46005ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the value of a single variable <code>var</code> from <code>variable_values</code>.  <a href="#a014d2838aa5fae12520da4ebf46005ca">More...</a><br /></td></tr>
 <tr class="separator:a014d2838aa5fae12520da4ebf46005ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd8c88bd4238ccc189020ed7d99b1792"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:afd8c88bd4238ccc189020ed7d99b1792"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#afd8c88bd4238ccc189020ed7d99b1792">GetVariableValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
+<tr class="memitem:afd8c88bd4238ccc189020ed7d99b1792"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; <a class="el" href="classdouble.html">double</a>, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#afd8c88bd4238ccc189020ed7d99b1792">GetVariableValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
 <tr class="memdesc:afd8c88bd4238ccc189020ed7d99b1792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload <a class="el" href="namespacedrake_1_1solvers.html#a014d2838aa5fae12520da4ebf46005ca" title="Retrieve the value of a single variable var from variable_values.">GetVariableValue()</a> function, but for an Eigen matrix of decision variables.  <a href="#afd8c88bd4238ccc189020ed7d99b1792">More...</a><br /></td></tr>
 <tr class="separator:afd8c88bd4238ccc189020ed7d99b1792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d06c693e90f6849f70d4b549f015e1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a0d06c693e90f6849f70d4b549f015e1e">ExponentiallySmoothedHingeLoss</a> (double x, double *penalty, double *dpenalty_dx)</td></tr>
+<tr class="memitem:a0d06c693e90f6849f70d4b549f015e1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a0d06c693e90f6849f70d4b549f015e1e">ExponentiallySmoothedHingeLoss</a> (<a class="el" href="classdouble.html">double</a> x, <a class="el" href="classdouble.html">double</a> *penalty, <a class="el" href="classdouble.html">double</a> *dpenalty_dx)</td></tr>
 <tr class="memdesc:a0d06c693e90f6849f70d4b549f015e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A hinge loss function smoothed by exponential function.  <a href="#a0d06c693e90f6849f70d4b549f015e1e">More...</a><br /></td></tr>
 <tr class="separator:a0d06c693e90f6849f70d4b549f015e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c445985c8e0f84a2f88f2e70c8f9983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5c445985c8e0f84a2f88f2e70c8f9983">QuadraticallySmoothedHingeLoss</a> (double x, double *penalty, double *dpenalty_dx)</td></tr>
+<tr class="memitem:a5c445985c8e0f84a2f88f2e70c8f9983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5c445985c8e0f84a2f88f2e70c8f9983">QuadraticallySmoothedHingeLoss</a> (<a class="el" href="classdouble.html">double</a> x, <a class="el" href="classdouble.html">double</a> *penalty, <a class="el" href="classdouble.html">double</a> *dpenalty_dx)</td></tr>
 <tr class="memdesc:a5c445985c8e0f84a2f88f2e70c8f9983"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linear hinge loss, smoothed with a quadratic loss near the origin.  <a href="#a5c445985c8e0f84a2f88f2e70c8f9983">More...</a><br /></td></tr>
 <tr class="separator:a5c445985c8e0f84a2f88f2e70c8f9983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f7d6f23d494612f72e8efc99b87143c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a2f7d6f23d494612f72e8efc99b87143c">CeilLog2</a> (<a class="el" href="classint.html">int</a> n)</td></tr>
@@ -681,7 +681,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a6c59daf7e576403f76128d2063303e9b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a6c59daf7e576403f76128d2063303e9b">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a> &amp;binning)</td></tr>
 <tr class="separator:a6c59daf7e576403f76128d2063303e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c2dee1da65ed555024f9d2f7ba82141"><td class="memTemplParams" colspan="2">template&lt;typename DerivedPhiX , typename DerivedPhiY , typename DerivedBx , typename DerivedBy &gt; </td></tr>
-<tr class="memitem:a1c2dee1da65ed555024f9d2f7ba82141"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiX, double &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiY, double &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a1c2dee1da65ed555024f9d2f7ba82141">AddBilinearProductMcCormickEnvelopeSos2</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const DerivedPhiX &amp;phi_x, const DerivedPhiY &amp;phi_y, const DerivedBx &amp;Bx, const DerivedBy &amp;By, <a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a> binning)</td></tr>
+<tr class="memitem:a1c2dee1da65ed555024f9d2f7ba82141"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiX, <a class="el" href="classdouble.html">double</a> &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiY, <a class="el" href="classdouble.html">double</a> &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a1c2dee1da65ed555024f9d2f7ba82141">AddBilinearProductMcCormickEnvelopeSos2</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const DerivedPhiX &amp;phi_x, const DerivedPhiY &amp;phi_y, const DerivedBx &amp;Bx, const DerivedBy &amp;By, <a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a> binning)</td></tr>
 <tr class="memdesc:a1c2dee1da65ed555024f9d2f7ba82141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add constraints to the optimization program, such that the bilinear product x * y is approximated by w, using Special Ordered Set of Type 2 (sos2) constraint.  <a href="#a1c2dee1da65ed555024f9d2f7ba82141">More...</a><br /></td></tr>
 <tr class="separator:a1c2dee1da65ed555024f9d2f7ba82141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81f7d44186352e1090de1343d468cad2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a81f7d44186352e1090de1343d468cad2">AddBilinearProductMcCormickEnvelopeMultipleChoice</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;phi_x, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;phi_y, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;Bx, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;By)</td></tr>
@@ -698,7 +698,7 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <tr class="memitem:af6b2d302506a6a2fe144c79bd2598131"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::MatrixXd, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af6b2d302506a6a2fe144c79bd2598131">DecomposeNonConvexQuadraticForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q)</td></tr>
 <tr class="memdesc:af6b2d302506a6a2fe144c79bd2598131"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a non-convex homogeneous quadratic form xᵀQx, where Q is not necessarily a positive semidefinite matrix, we decompose it as a difference between two convex homogeneous quadratic forms xᵀQx = xᵀQ₁x - xᵀQ₂x, Q₁, Q₂ are positive semidefinite.  <a href="#af6b2d302506a6a2fe144c79bd2598131">More...</a><br /></td></tr>
 <tr class="separator:af6b2d302506a6a2fe144c79bd2598131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaea88a3c59172c77e8537633348a057a9"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt; &gt;, <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9">AddRelaxNonConvexQuadraticConstraintInTrustRegion</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;x, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q1, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q2, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;y, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;p, double lower_bound, double upper_bound, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;linearization_point, double trust_region_gap)</td></tr>
+<tr class="memitem:gaea88a3c59172c77e8537633348a057a9"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt; &gt;, <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9">AddRelaxNonConvexQuadraticConstraintInTrustRegion</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;x, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q1, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q2, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;y, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;p, <a class="el" href="classdouble.html">double</a> lower_bound, <a class="el" href="classdouble.html">double</a> upper_bound, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;linearization_point, <a class="el" href="classdouble.html">double</a> trust_region_gap)</td></tr>
 <tr class="memdesc:gaea88a3c59172c77e8537633348a057a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a non-convex quadratic constraint lb ≤ xᵀQ₁x - xᵀQ₂x + pᵀy ≤ ub where Q₁, Q₂ are both positive semidefinite matrices.  <a href="group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9">More...</a><br /></td></tr>
 <tr class="separator:gaea88a3c59172c77e8537633348a057a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9345a87a13b6c67ee3f98a0910b133c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a9345a87a13b6c67ee3f98a0910b133c9">AreRequiredAttributesSupported</a> (const <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;required, const <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;supported, std::string *unsupported_message=nullptr)</td></tr>
@@ -861,7 +861,7 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">MinimumValuePenaltyFunction</a> =  std::function&lt;void(double x, double* penalty, double* dpenalty_dx)&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">MinimumValuePenaltyFunction</a> =  std::function&lt;void(<a class="el" href="classdouble.html">double</a> x, <a class="el" href="classdouble.html">double</a>* penalty, <a class="el" href="classdouble.html">double</a>* dpenalty_dx)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1415,7 +1415,7 @@ Model".</p>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiX, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiY, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt;DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime&gt; &gt; drake::solvers::AddBilinearProductMcCormickEnvelopeSos2 </td>
+          <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiX, <a class="el" href="classdouble.html">double</a>&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiY, <a class="el" href="classdouble.html">double</a>&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt;DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime&gt; &gt; drake::solvers::AddBilinearProductMcCormickEnvelopeSos2 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *&#160;</td>
           <td class="paramname"><em>prog</em>, </td>
@@ -1981,7 +1981,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::SparseVector&lt; double &gt; *&#160;</td>
+          <td class="paramtype">Eigen::SparseVector&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
           <td class="paramname"><em>linear_coeff</em>, </td>
         </tr>
         <tr>
@@ -1993,7 +1993,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a> *&#160;</td>
           <td class="paramname"><em>constant_cost</em>&#160;</td>
         </tr>
         <tr>
@@ -2038,7 +2038,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::SparseMatrix&lt; double &gt; *&#160;</td>
+          <td class="paramtype">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
           <td class="paramname"><em>Q_lower</em>, </td>
         </tr>
         <tr>
@@ -2050,7 +2050,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::SparseVector&lt; double &gt; *&#160;</td>
+          <td class="paramtype">Eigen::SparseVector&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
           <td class="paramname"><em>linear_coeff</em>, </td>
         </tr>
         <tr>
@@ -2062,7 +2062,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a> *&#160;</td>
           <td class="paramname"><em>constant_cost</em>&#160;</td>
         </tr>
         <tr>
@@ -2552,19 +2552,19 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="memname">void drake::solvers::ExponentiallySmoothedHingeLoss </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a> *&#160;</td>
           <td class="paramname"><em>penalty</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a> *&#160;</td>
           <td class="paramname"><em>dpenalty_dx</em>&#160;</td>
         </tr>
         <tr>
@@ -2734,7 +2734,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double drake::solvers::GetVariableValue </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> drake::solvers::GetVariableValue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
           <td class="paramname"><em>var</em>, </td>
@@ -2786,7 +2786,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;double, Derived&gt; &gt; drake::solvers::GetVariableValue </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;<a class="el" href="classdouble.html">double</a>, Derived&gt; &gt; drake::solvers::GetVariableValue </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>var</em>, </td>
@@ -3297,19 +3297,19 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
         <tr>
           <td class="memname">void drake::solvers::QuadraticallySmoothedHingeLoss </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a> *&#160;</td>
           <td class="paramname"><em>penalty</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a> *&#160;</td>
           <td class="paramname"><em>dpenalty_dx</em>&#160;</td>
         </tr>
         <tr>

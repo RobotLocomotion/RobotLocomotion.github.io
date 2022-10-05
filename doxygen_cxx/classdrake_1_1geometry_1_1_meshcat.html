@@ -233,22 +233,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973d81c7adb1da00361eaeab4118604f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a973d81c7adb1da00361eaeab4118604f">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
 <tr class="memdesc:a973d81c7adb1da00361eaeab4118604f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the 3D object at a given <code>path</code> in the scene tree.  <a href="#a973d81c7adb1da00361eaeab4118604f">More...</a><br /></td></tr>
 <tr class="separator:a973d81c7adb1da00361eaeab4118604f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">perception::PointCloud</a> &amp;point_cloud, double point_size=0.001, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
+<tr class="memitem:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">perception::PointCloud</a> &amp;point_cloud, <a class="el" href="classdouble.html">double</a> point_size=0.001, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
 <tr class="memdesc:a4a847b014dcf8f38f0317dfab8eca71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at a given <code>path</code> in the scene tree to be <code>point_cloud</code>.  <a href="#a4a847b014dcf8f38f0317dfab8eca71e">More...</a><br /></td></tr>
 <tr class="separator:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eccd1ff0cc4c435d813747c387838f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a5eccd1ff0cc4c435d813747c387838f2">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt; &amp;mesh, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0), bool wireframe=false, double wireframe_line_width=1.0)</td></tr>
+<tr class="memitem:a5eccd1ff0cc4c435d813747c387838f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a5eccd1ff0cc4c435d813747c387838f2">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;mesh, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0), bool wireframe=false, <a class="el" href="classdouble.html">double</a> wireframe_line_width=1.0)</td></tr>
 <tr class="memdesc:a5eccd1ff0cc4c435d813747c387838f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a>.  <a href="#a5eccd1ff0cc4c435d813747c387838f2">More...</a><br /></td></tr>
 <tr class="separator:a5eccd1ff0cc4c435d813747c387838f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b082d79e267c040cbd066a11cdcb54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa5b082d79e267c040cbd066a11cdcb54">SetLine</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, double line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
+<tr class="memitem:aa5b082d79e267c040cbd066a11cdcb54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa5b082d79e267c040cbd066a11cdcb54">SetLine</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, <a class="el" href="classdouble.html">double</a> line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
 <tr class="memdesc:aa5b082d79e267c040cbd066a11cdcb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a piecewise-linear interpolation between the <code>vertices</code>.  <a href="#aa5b082d79e267c040cbd066a11cdcb54">More...</a><br /></td></tr>
 <tr class="separator:aa5b082d79e267c040cbd066a11cdcb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7094785eea6bf85ebfef30083e7c1dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7094785eea6bf85ebfef30083e7c1dda">SetLineSegments</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;start, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;end, double line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
+<tr class="memitem:a7094785eea6bf85ebfef30083e7c1dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7094785eea6bf85ebfef30083e7c1dda">SetLineSegments</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;start, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;end, <a class="el" href="classdouble.html">double</a> line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
 <tr class="memdesc:a7094785eea6bf85ebfef30083e7c1dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a number of line segments.  <a href="#a7094785eea6bf85ebfef30083e7c1dda">More...</a><br /></td></tr>
 <tr class="separator:a7094785eea6bf85ebfef30083e7c1dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8087e1809c019639dbec27ab0b505e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af8087e1809c019639dbec27ab0b505e0">SetTriangleMesh</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, const Eigen::Ref&lt; const Eigen::Matrix3Xi &gt; &amp;faces, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0), bool wireframe=false, double wireframe_line_width=1.0)</td></tr>
+<tr class="memitem:af8087e1809c019639dbec27ab0b505e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af8087e1809c019639dbec27ab0b505e0">SetTriangleMesh</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, const Eigen::Ref&lt; const Eigen::Matrix3Xi &gt; &amp;faces, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0), bool wireframe=false, <a class="el" href="classdouble.html">double</a> wireframe_line_width=1.0)</td></tr>
 <tr class="memdesc:af8087e1809c019639dbec27ab0b505e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a triangular mesh.  <a href="#af8087e1809c019639dbec27ab0b505e0">More...</a><br /></td></tr>
 <tr class="separator:af8087e1809c019639dbec27ab0b505e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afef114ac7e9603068a91b8f0533a4ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#afef114ac7e9603068a91b8f0533a4ecc">SetTriangleColorMesh</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, const Eigen::Ref&lt; const Eigen::Matrix3Xi &gt; &amp;faces, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;colors, bool wireframe=false, double wireframe_line_width=1.0)</td></tr>
+<tr class="memitem:afef114ac7e9603068a91b8f0533a4ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#afef114ac7e9603068a91b8f0533a4ecc">SetTriangleColorMesh</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, const Eigen::Ref&lt; const Eigen::Matrix3Xi &gt; &amp;faces, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;colors, bool wireframe=false, <a class="el" href="classdouble.html">double</a> wireframe_line_width=1.0)</td></tr>
 <tr class="memdesc:afef114ac7e9603068a91b8f0533a4ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a triangular mesh with per-vertex coloring.  <a href="#afef114ac7e9603068a91b8f0533a4ecc">More...</a><br /></td></tr>
 <tr class="separator:afef114ac7e9603068a91b8f0533a4ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3dc13928478563343ff6ef72c16fc98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af3dc13928478563343ff6ef72c16fc98">SetCamera</a> (<a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html">PerspectiveCamera</a> camera, std::string path=&quot;/Cameras/default/rotated&quot;)</td></tr>
@@ -257,7 +257,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d89514b4f0f06e38a7bf5ea480435b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a9d89514b4f0f06e38a7bf5ea480435b9">SetCamera</a> (<a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html">OrthographicCamera</a> camera, std::string path=&quot;/Cameras/default/rotated&quot;)</td></tr>
 <tr class="memdesc:a9d89514b4f0f06e38a7bf5ea480435b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera.  <a href="#a9d89514b4f0f06e38a7bf5ea480435b9">More...</a><br /></td></tr>
 <tr class="separator:a9d89514b4f0f06e38a7bf5ea480435b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1464f94b8c5d602566dee2b83f47c5df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a1464f94b8c5d602566dee2b83f47c5df">Set2dRenderMode</a> (const math::RigidTransformd &amp;X_WC=math::RigidTransformd(Eigen::Vector3d{0, -1, 0}), double xmin=-1, double xmax=1, double ymin=-1, double ymax=1)</td></tr>
+<tr class="memitem:a1464f94b8c5d602566dee2b83f47c5df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a1464f94b8c5d602566dee2b83f47c5df">Set2dRenderMode</a> (const math::RigidTransformd &amp;X_WC=math::RigidTransformd(Eigen::Vector3d{0, -1, 0}), <a class="el" href="classdouble.html">double</a> xmin=-1, <a class="el" href="classdouble.html">double</a> xmax=1, <a class="el" href="classdouble.html">double</a> ymin=-1, <a class="el" href="classdouble.html">double</a> ymax=1)</td></tr>
 <tr class="memdesc:a1464f94b8c5d602566dee2b83f47c5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a number of settings to make <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> act as a 2D renderer.  <a href="#a1464f94b8c5d602566dee2b83f47c5df">More...</a><br /></td></tr>
 <tr class="separator:a1464f94b8c5d602566dee2b83f47c5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeec831adfeef24453c8c5b8b9d69625"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#adeec831adfeef24453c8c5b8b9d69625">ResetRenderMode</a> ()</td></tr>
@@ -272,16 +272,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8">Delete</a> (std::string_view path=&quot;&quot;)</td></tr>
 <tr class="memdesc:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the object at the given <code>path</code> as well as all of its children.  <a href="#af4681ade5efb8da0d67f86ecae9b9ac8">More...</a><br /></td></tr>
 <tr class="separator:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b">SetRealtimeRate</a> (double rate)</td></tr>
+<tr class="memitem:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b">SetRealtimeRate</a> (<a class="el" href="classdouble.html">double</a> rate)</td></tr>
 <tr class="memdesc:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.  <a href="#a85a13960e9b5cbf4becb62e66e6f3a8b">More...</a><br /></td></tr>
 <tr class="separator:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af890c2ad444b8dcdaeee6453e436b8d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3">SetProperty</a> (std::string_view path, std::string property, bool value)</td></tr>
 <tr class="memdesc:af890c2ad444b8dcdaeee6453e436b8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#af890c2ad444b8dcdaeee6453e436b8d3">More...</a><br /></td></tr>
 <tr class="separator:af890c2ad444b8dcdaeee6453e436b8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9eb77512050207a9b91e2da278568a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af9eb77512050207a9b91e2da278568a4">SetProperty</a> (std::string_view path, std::string property, double value)</td></tr>
+<tr class="memitem:af9eb77512050207a9b91e2da278568a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af9eb77512050207a9b91e2da278568a4">SetProperty</a> (std::string_view path, std::string property, <a class="el" href="classdouble.html">double</a> value)</td></tr>
 <tr class="memdesc:af9eb77512050207a9b91e2da278568a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#af9eb77512050207a9b91e2da278568a4">More...</a><br /></td></tr>
 <tr class="separator:af9eb77512050207a9b91e2da278568a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ca09d605f1d8c991e98793136a3b027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027">SetProperty</a> (std::string_view path, std::string property, const std::vector&lt; double &gt; &amp;value)</td></tr>
+<tr class="memitem:a4ca09d605f1d8c991e98793136a3b027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027">SetProperty</a> (std::string_view path, std::string property, const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;value)</td></tr>
 <tr class="memdesc:a4ca09d605f1d8c991e98793136a3b027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#a4ca09d605f1d8c991e98793136a3b027">More...</a><br /></td></tr>
 <tr class="separator:a4ca09d605f1d8c991e98793136a3b027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a385b6142ccc841b5b51a14825b7cebdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf">SetAnimation</a> (const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;animation)</td></tr>
@@ -325,13 +325,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aece8086277995b5f6b9fabc80aee7e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aece8086277995b5f6b9fabc80aee7e20">DeleteButton</a> (std::string name)</td></tr>
 <tr class="memdesc:aece8086277995b5f6b9fabc80aee7e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the button <code>name</code> from the GUI.  <a href="#aece8086277995b5f6b9fabc80aee7e20">More...</a><br /></td></tr>
 <tr class="separator:aece8086277995b5f6b9fabc80aee7e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43359df502fdd09710254663b75adeca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a43359df502fdd09710254663b75adeca">AddSlider</a> (std::string name, double min, double max, double step, double value, std::string decrement_keycode=&quot;&quot;, std::string increment_keycode=&quot;&quot;)</td></tr>
+<tr class="memitem:a43359df502fdd09710254663b75adeca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a43359df502fdd09710254663b75adeca">AddSlider</a> (std::string name, <a class="el" href="classdouble.html">double</a> min, <a class="el" href="classdouble.html">double</a> max, <a class="el" href="classdouble.html">double</a> step, <a class="el" href="classdouble.html">double</a> value, std::string decrement_keycode=&quot;&quot;, std::string increment_keycode=&quot;&quot;)</td></tr>
 <tr class="memdesc:a43359df502fdd09710254663b75adeca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a slider with the label <code>name</code> to the meshcat browser controls GUI.  <a href="#a43359df502fdd09710254663b75adeca">More...</a><br /></td></tr>
 <tr class="separator:a43359df502fdd09710254663b75adeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad933314f09b40dd5758387e29c952c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad933314f09b40dd5758387e29c952c8b">SetSliderValue</a> (std::string name, double value)</td></tr>
+<tr class="memitem:ad933314f09b40dd5758387e29c952c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad933314f09b40dd5758387e29c952c8b">SetSliderValue</a> (std::string name, <a class="el" href="classdouble.html">double</a> value)</td></tr>
 <tr class="memdesc:ad933314f09b40dd5758387e29c952c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current <code>value</code> of the slider <code>name</code>.  <a href="#ad933314f09b40dd5758387e29c952c8b">More...</a><br /></td></tr>
 <tr class="separator:ad933314f09b40dd5758387e29c952c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad687bbb7459a2c4c012392a2adf7f177"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad687bbb7459a2c4c012392a2adf7f177">GetSliderValue</a> (std::string_view name)</td></tr>
+<tr class="memitem:ad687bbb7459a2c4c012392a2adf7f177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad687bbb7459a2c4c012392a2adf7f177">GetSliderValue</a> (std::string_view name)</td></tr>
 <tr class="memdesc:ad687bbb7459a2c4c012392a2adf7f177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <code>value</code> of the slider <code>name</code>.  <a href="#ad687bbb7459a2c4c012392a2adf7f177">More...</a><br /></td></tr>
 <tr class="separator:ad687bbb7459a2c4c012392a2adf7f177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fc49ac1d55ac00b10946b748db02dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc">DeleteSlider</a> (std::string name)</td></tr>
@@ -528,25 +528,25 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>min</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>max</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>step</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
@@ -809,7 +809,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double GetSliderValue </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetSliderValue </td>
           <td>(</td>
           <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -951,25 +951,25 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>xmin</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>xmax</em> = <code>1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>ymin</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>ymax</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -1089,7 +1089,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>line_width</em> = <code>1.0</code>, </td>
         </tr>
         <tr>
@@ -1146,7 +1146,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>line_width</em> = <code>1.0</code>, </td>
         </tr>
         <tr>
@@ -1248,7 +1248,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>point_size</em> = <code>0.001</code>, </td>
         </tr>
         <tr>
@@ -1293,7 +1293,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
         </tr>
         <tr>
@@ -1311,7 +1311,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>wireframe_line_width</em> = <code>1.0</code>&#160;</td>
         </tr>
         <tr>
@@ -1403,7 +1403,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -1449,7 +1449,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -1483,7 +1483,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void SetRealtimeRate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>rate</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1516,7 +1516,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -1651,7 +1651,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>wireframe_line_width</em> = <code>1.0</code>&#160;</td>
         </tr>
         <tr>
@@ -1716,7 +1716,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>wireframe_line_width</em> = <code>1.0</code>&#160;</td>
         </tr>
         <tr>

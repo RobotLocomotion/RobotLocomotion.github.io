@@ -173,10 +173,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_const
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a54f54da0d0814ab18947d36b3adb8ef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_constraint_adapter.html#a54f54da0d0814ab18947d36b3adb8ef4">SystemConstraintAdapter</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; *system)</td></tr>
+<tr class="memitem:a54f54da0d0814ab18947d36b3adb8ef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_constraint_adapter.html#a54f54da0d0814ab18947d36b3adb8ef4">SystemConstraintAdapter</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *system)</td></tr>
 <tr class="separator:a54f54da0d0814ab18947d36b3adb8ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd709b6eff1c2841efc7fbf0f82a7429"><td class="memTemplParams" colspan="2">template&lt;typename UpdateContextFromDecisionVariablesGenericFunction &gt; </td></tr>
-<tr class="memitem:abd709b6eff1c2841efc7fbf0f82a7429"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system_constraint_wrapper.html">SystemConstraintWrapper</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_constraint_adapter.html#abd709b6eff1c2841efc7fbf0f82a7429">Create</a> (<a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a> index, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context, UpdateContextFromDecisionVariablesGenericFunction updater, <a class="el" href="classint.html">int</a> x_size) const</td></tr>
+<tr class="memitem:abd709b6eff1c2841efc7fbf0f82a7429"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system_constraint_wrapper.html">SystemConstraintWrapper</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_constraint_adapter.html#abd709b6eff1c2841efc7fbf0f82a7429">Create</a> (<a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a> index, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, UpdateContextFromDecisionVariablesGenericFunction updater, <a class="el" href="classint.html">int</a> x_size) const</td></tr>
 <tr class="memdesc:abd709b6eff1c2841efc7fbf0f82a7429"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates a <a class="el" href="classdrake_1_1solvers_1_1_constraint.html" title="A constraint is a function + lower and upper bounds.">solvers::Constraint</a> from a <a class="el" href="classdrake_1_1systems_1_1_system_constraint.html" title="A SystemConstraint is a generic base-class for constraints on Systems.">SystemConstraint</a>.  <a href="#abd709b6eff1c2841efc7fbf0f82a7429">More...</a><br /></td></tr>
 <tr class="separator:abd709b6eff1c2841efc7fbf0f82a7429"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a452e2ca37458e6442e22a09b575bcf0a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_constraint_adapter.html#a452e2ca37458e6442e22a09b575bcf0a">MaybeCreateConstraintSymbolically</a> (<a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a> index, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;context) const</td></tr>
@@ -266,7 +266,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_constraint_adapter.html">SystemConstraintAdapter</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
           <td class="paramname"><em>system</em></td><td>)</td>
           <td></td>
         </tr>
@@ -296,7 +296,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
         </tr>
         <tr>

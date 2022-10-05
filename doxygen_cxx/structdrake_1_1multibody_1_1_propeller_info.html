@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1multibody_1_1_propeller
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6c7969c7bd07717edfa11d012a9a0129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#a6c7969c7bd07717edfa11d012a9a0129">PropellerInfo</a> (const <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> &amp;body_index_, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_BP_=<a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt;::Identity(), double thrust_ratio_=1.0, double moment_ratio_=0.0)</td></tr>
+<tr class="memitem:a6c7969c7bd07717edfa11d012a9a0129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#a6c7969c7bd07717edfa11d012a9a0129">PropellerInfo</a> (const <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> &amp;body_index_, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BP_=<a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::Identity(), <a class="el" href="classdouble.html">double</a> thrust_ratio_=1.0, <a class="el" href="classdouble.html">double</a> moment_ratio_=0.0)</td></tr>
 <tr class="separator:a6c7969c7bd07717edfa11d012a9a0129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a5449c9c55e68b1b71610692e6758f31e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e">PropellerInfo</a> (const <a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html">PropellerInfo</a> &amp;)=default</td></tr>
@@ -190,13 +190,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad703376a8c6bebf64b16bb6b34cfeec0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#ad703376a8c6bebf64b16bb6b34cfeec0">body_index</a></td></tr>
 <tr class="memdesc:ad703376a8c6bebf64b16bb6b34cfeec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The BodyIndex of a <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> to which the propeller is attached.  <a href="#ad703376a8c6bebf64b16bb6b34cfeec0">More...</a><br /></td></tr>
 <tr class="separator:ad703376a8c6bebf64b16bb6b34cfeec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4bf070125ac43cd7e0a086be12d049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#ada4bf070125ac43cd7e0a086be12d049">X_BP</a> {}</td></tr>
+<tr class="memitem:ada4bf070125ac43cd7e0a086be12d049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#ada4bf070125ac43cd7e0a086be12d049">X_BP</a> {}</td></tr>
 <tr class="memdesc:ada4bf070125ac43cd7e0a086be12d049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pose of the propeller frame P measured in the body frame B.  <a href="#ada4bf070125ac43cd7e0a086be12d049">More...</a><br /></td></tr>
 <tr class="separator:ada4bf070125ac43cd7e0a086be12d049"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac154ef8cde7d8d7431d15790225c5b4d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#ac154ef8cde7d8d7431d15790225c5b4d">thrust_ratio</a> {1.0}</td></tr>
+<tr class="memitem:ac154ef8cde7d8d7431d15790225c5b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#ac154ef8cde7d8d7431d15790225c5b4d">thrust_ratio</a> {1.0}</td></tr>
 <tr class="memdesc:ac154ef8cde7d8d7431d15790225c5b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The z component (in frame P) of the spatial force will have magnitude <code>thrust_ratio*command</code> in Newtons.  <a href="#ac154ef8cde7d8d7431d15790225c5b4d">More...</a><br /></td></tr>
 <tr class="separator:ac154ef8cde7d8d7431d15790225c5b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30a3388e8684851fd367f80bb8a35249"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249">moment_ratio</a> {0.0}</td></tr>
+<tr class="memitem:a30a3388e8684851fd367f80bb8a35249"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249">moment_ratio</a> {0.0}</td></tr>
 <tr class="memdesc:a30a3388e8684851fd367f80bb8a35249"><td class="mdescLeft">&#160;</td><td class="mdescRight">The moment about the z axis (in frame P) of the spatial force will have magnitude <code>moment_ratio*command</code> in Newton-meters.  <a href="#a30a3388e8684851fd367f80bb8a35249">More...</a><br /></td></tr>
 <tr class="separator:a30a3388e8684851fd367f80bb8a35249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -271,19 +271,19 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_BP_</em> = <code><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;double&gt;::Identity()</code>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_BP_</em> = <code><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;::Identity()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>thrust_ratio_</em> = <code>1.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>moment_ratio_</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
@@ -379,7 +379,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double moment_ratio {0.0}</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> moment_ratio {0.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -396,7 +396,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double thrust_ratio {1.0}</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> thrust_ratio {1.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -413,7 +413,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;double&gt; X_BP {}</td>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; X_BP {}</td>
         </tr>
       </table>
 </div><div class="memdoc">

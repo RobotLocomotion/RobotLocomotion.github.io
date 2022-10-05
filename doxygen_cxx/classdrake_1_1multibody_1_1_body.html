@@ -226,13 +226,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29">floating_velocity_suffix</a> (<a class="el" href="classint.html">int</a> velocity_index_in_body) const</td></tr>
 <tr class="memdesc:a4bf67c08cb5fb34309c4c220d9872d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#a4bf67c08cb5fb34309c4c220d9872d29">More...</a><br /></td></tr>
 <tr class="separator:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9539540983caa3c52d28faf7f2d4d33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">get_default_mass</a> () const</td></tr>
+<tr class="memitem:af9539540983caa3c52d28faf7f2d4d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">get_default_mass</a> () const</td></tr>
 <tr class="memdesc:af9539540983caa3c52d28faf7f2d4d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af9539540983caa3c52d28faf7f2d4d33">More...</a><br /></td></tr>
 <tr class="separator:af9539540983caa3c52d28faf7f2d4d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6876fd491bb5bbb889916a0e19d3d154"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a6876fd491bb5bbb889916a0e19d3d154">default_mass</a> () const =0</td></tr>
+<tr class="memitem:a6876fd491bb5bbb889916a0e19d3d154"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a6876fd491bb5bbb889916a0e19d3d154">default_mass</a> () const =0</td></tr>
 <tr class="memdesc:a6876fd491bb5bbb889916a0e19d3d154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default mass (not Context dependent) for <code>this</code> body.  <a href="#a6876fd491bb5bbb889916a0e19d3d154">More...</a><br /></td></tr>
 <tr class="separator:a6876fd491bb5bbb889916a0e19d3d154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ab7c1567a817bcac604694e0a2dcd5afd">default_rotational_inertia</a> () const =0</td></tr>
+<tr class="memitem:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ab7c1567a817bcac604694e0a2dcd5afd">default_rotational_inertia</a> () const =0</td></tr>
 <tr class="memdesc:ab7c1567a817bcac604694e0a2dcd5afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default rotational inertia (not Context dependent) for <code>this</code> body B's about Bo (B's origin), expressed in B (this body's frame).  <a href="#ab7c1567a817bcac604694e0a2dcd5afd">More...</a><br /></td></tr>
 <tr class="separator:ab7c1567a817bcac604694e0a2dcd5afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa46153851db12c78debe3460b545a6e1"><td class="memItemLeft" align="right" valign="top">virtual const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1">get_mass</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const =0</td></tr>
@@ -314,7 +314,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods are meant to be called by MultibodyTree::CloneToScalar() when making a clone of the entire tree or a new instance templated on a different scalar type.</p>
 <p>The only const argument to these methods is the new MultibodyTree clone under construction. Specific Body subclasses might specify a number of prerequisites on the cloned tree and therefore require it to be at a given state of cloning (for instance requiring that the cloned tree already contains all the frames in the world as in the original tree.) See MultibodyTree::CloneToScalar() for a list of prerequisites that are guaranteed to be satisfied during the cloning process. </p>
 </div></td></tr>
-<tr class="memitem:a92f958ac0c25a9b239ba93ef5164ef3d"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a92f958ac0c25a9b239ba93ef5164ef3d">DoCloneToScalar</a> (const internal::MultibodyTree&lt; double &gt; &amp;tree_clone) const =0</td></tr>
+<tr class="memitem:a92f958ac0c25a9b239ba93ef5164ef3d"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a92f958ac0c25a9b239ba93ef5164ef3d">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="memdesc:a92f958ac0c25a9b239ba93ef5164ef3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Body (templated on T) to a body templated on <code>double</code>.  <a href="#a92f958ac0c25a9b239ba93ef5164ef3d">More...</a><br /></td></tr>
 <tr class="separator:a92f958ac0c25a9b239ba93ef5164ef3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac30c4ad9b052699cd01568d8bf024a3c"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ac30c4ad9b052699cd01568d8bf024a3c">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
@@ -697,7 +697,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double default_mass </td>
+          <td class="memname">virtual <a class="el" href="classdouble.html">double</a> default_mass </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -727,7 +727,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;double&gt; default_rotational_inertia </td>
+          <td class="memname">virtual <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; default_rotational_inertia </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -762,9 +762,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt;double&gt; &gt; DoCloneToScalar </td>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>tree_clone</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -1071,7 +1071,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double get_default_mass </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> get_default_mass </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

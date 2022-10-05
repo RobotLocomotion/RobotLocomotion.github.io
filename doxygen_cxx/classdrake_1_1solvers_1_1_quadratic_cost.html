@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_quadratic_co
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e2bb03f89f73d8ddcdd81e7040df9f6"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ , typename Derivedb &gt; </td></tr>
-<tr class="memitem:a0e2bb03f89f73d8ddcdd81e7040df9f6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#a0e2bb03f89f73d8ddcdd81e7040df9f6">QuadraticCost</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#a12ae196564e0fc7d445a35031ce5bfd7">Q</a>, const Eigen::MatrixBase&lt; Derivedb &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#aae45694d3595659922653fd027d15cb6">b</a>, double <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#adef0fed0cb1426f67a076769f9867786">c</a>=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
+<tr class="memitem:a0e2bb03f89f73d8ddcdd81e7040df9f6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#a0e2bb03f89f73d8ddcdd81e7040df9f6">QuadraticCost</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#a12ae196564e0fc7d445a35031ce5bfd7">Q</a>, const Eigen::MatrixBase&lt; Derivedb &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#aae45694d3595659922653fd027d15cb6">b</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#adef0fed0cb1426f67a076769f9867786">c</a>=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
 <tr class="memdesc:a0e2bb03f89f73d8ddcdd81e7040df9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a cost of the form </p><p class="formulaDsp">
 \[ .5 x&#39;Qx + b&#39;x + c \]
 </p>
@@ -189,13 +189,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a12ae196564e0fc7d445a35031ce5bfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae45694d3595659922653fd027d15cb6"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#aae45694d3595659922653fd027d15cb6">b</a> () const</td></tr>
 <tr class="separator:aae45694d3595659922653fd027d15cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adef0fed0cb1426f67a076769f9867786"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#adef0fed0cb1426f67a076769f9867786">c</a> () const</td></tr>
+<tr class="memitem:adef0fed0cb1426f67a076769f9867786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#adef0fed0cb1426f67a076769f9867786">c</a> () const</td></tr>
 <tr class="separator:adef0fed0cb1426f67a076769f9867786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8542e0956a41902b653789fa2298c960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#a8542e0956a41902b653789fa2298c960">is_convex</a> () const</td></tr>
 <tr class="memdesc:a8542e0956a41902b653789fa2298c960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this cost is convex.  <a href="#a8542e0956a41902b653789fa2298c960">More...</a><br /></td></tr>
 <tr class="separator:a8542e0956a41902b653789fa2298c960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ , typename DerivedB &gt; </td></tr>
-<tr class="memitem:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;new_Q, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;new_b, double new_c=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
+<tr class="memitem:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;new_Q, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;new_b, <a class="el" href="classdouble.html">double</a> new_c=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
 <tr class="memdesc:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the quadratic and linear term of the constraint.  <a href="#ad8c35d27fe08f9f0273d03bbd7f3f940">More...</a><br /></td></tr>
 <tr class="separator:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
@@ -348,7 +348,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>c</em> = <code>0.</code>, </td>
         </tr>
         <tr>
@@ -431,7 +431,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double c </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> c </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -553,7 +553,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>new_c</em> = <code>0.</code>, </td>
         </tr>
         <tr>

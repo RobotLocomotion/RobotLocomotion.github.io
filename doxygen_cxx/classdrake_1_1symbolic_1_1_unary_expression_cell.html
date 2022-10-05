@@ -185,7 +185,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ef4381c3fe2cdb5b514865f6e66dcff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#a3ef4381c3fe2cdb5b514865f6e66dcff">Less</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;e) const override</td></tr>
 <tr class="memdesc:a3ef4381c3fe2cdb5b514865f6e66dcff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides lexicographical ordering between expressions.  <a href="#a3ef4381c3fe2cdb5b514865f6e66dcff">More...</a><br /></td></tr>
 <tr class="separator:a3ef4381c3fe2cdb5b514865f6e66dcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3acb8f966e8bcc451ccd870c82c103b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#aa3acb8f966e8bcc451ccd870c82c103b">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const override</td></tr>
+<tr class="memitem:aa3acb8f966e8bcc451ccd870c82c103b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#aa3acb8f966e8bcc451ccd870c82c103b">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const override</td></tr>
 <tr class="memdesc:aa3acb8f966e8bcc451ccd870c82c103b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates under a given environment (by default, an empty environment).  <a href="#aa3acb8f966e8bcc451ccd870c82c103b">More...</a><br /></td></tr>
 <tr class="separator:aa3acb8f966e8bcc451ccd870c82c103b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac88f1c0b665277c2fb815a7c998ff73"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#aac88f1c0b665277c2fb815a7c998ff73">get_argument</a> () const</td></tr>
@@ -238,7 +238,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1846b343a25f0364bb0468dc20b6a98a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#a1846b343a25f0364bb0468dc20b6a98a">UnaryExpressionCell</a> (<a class="el" href="namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91">ExpressionKind</a> k, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> e, bool is_poly, bool <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a7807c6d0df8070169a8c81d281a93c12">is_expanded</a>)</td></tr>
 <tr class="memdesc:a1846b343a25f0364bb0468dc20b6a98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html" title="Represents the base class for unary expressions.">UnaryExpressionCell</a> of kind <code>k</code> with <code>e</code>, <code>is_poly</code>, and <code>is_expanded</code>.  <a href="#a1846b343a25f0364bb0468dc20b6a98a">More...</a><br /></td></tr>
 <tr class="separator:a1846b343a25f0364bb0468dc20b6a98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c1076642ac67c42128ec9349f6d789"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#a11c1076642ac67c42128ec9349f6d789">DoEvaluate</a> (double v) const =0</td></tr>
+<tr class="memitem:a11c1076642ac67c42128ec9349f6d789"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#a11c1076642ac67c42128ec9349f6d789">DoEvaluate</a> (<a class="el" href="classdouble.html">double</a> v) const =0</td></tr>
 <tr class="memdesc:a11c1076642ac67c42128ec9349f6d789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the evaluation result f(<code>v</code> ).  <a href="#a11c1076642ac67c42128ec9349f6d789">More...</a><br /></td></tr>
 <tr class="separator:a11c1076642ac67c42128ec9349f6d789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1symbolic_1_1_expression_cell"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1symbolic_1_1_expression_cell')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a></td></tr>
@@ -308,9 +308,9 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double DoEvaluate </td>
+          <td class="memname">virtual <a class="el" href="classdouble.html">double</a> DoEvaluate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -366,7 +366,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Evaluate </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> Evaluate </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;&#160;</td>
           <td class="paramname"><em>env</em></td><td>)</td>

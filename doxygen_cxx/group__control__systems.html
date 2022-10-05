@@ -189,22 +189,22 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae068476fdb8f21578acb538f70ec3e14"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#gae068476fdb8f21578acb538f70ec3e14">LinearProgrammingApproximateDynamicProgramming</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; *simulator, const std::function&lt; double(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context)&gt; &amp;cost_function, const std::function&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>(const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;state, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;parameters)&gt; &amp;linearly_parameterized_cost_to_go_function, <a class="el" href="classint.html">int</a> num_parameters, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;state_samples, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;input_samples, double timestep, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a>())</td></tr>
+<tr class="memitem:gae068476fdb8f21578acb538f70ec3e14"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#gae068476fdb8f21578acb538f70ec3e14">LinearProgrammingApproximateDynamicProgramming</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *simulator, const std::function&lt; <a class="el" href="classdouble.html">double</a>(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context)&gt; &amp;cost_function, const std::function&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>(const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;state, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;parameters)&gt; &amp;linearly_parameterized_cost_to_go_function, <a class="el" href="classint.html">int</a> num_parameters, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;state_samples, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;input_samples, <a class="el" href="classdouble.html">double</a> timestep, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a>())</td></tr>
 <tr class="memdesc:gae068476fdb8f21578acb538f70ec3e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the Linear Programming approach to approximate dynamic programming.  <a href="group__control__systems.html#gae068476fdb8f21578acb538f70ec3e14">More...</a><br /></td></tr>
 <tr class="separator:gae068476fdb8f21578acb538f70ec3e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ebe52e849a0597ad54f37ab6e35df8a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#ga2ebe52e849a0597ad54f37ab6e35df8a">MakeFiniteHorizonLinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context, double t0, double tf, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a>())</td></tr>
+<tr class="memitem:ga2ebe52e849a0597ad54f37ab6e35df8a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#ga2ebe52e849a0597ad54f37ab6e35df8a">MakeFiniteHorizonLinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, <a class="el" href="classdouble.html">double</a> t0, <a class="el" href="classdouble.html">double</a> tf, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a>())</td></tr>
 <tr class="memdesc:ga2ebe52e849a0597ad54f37ab6e35df8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of FiniteHorizonLinearQuadraticRegulator that returns a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> implementing the regulator (controller) as a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, with a single "plant_state" input for the estimated plant state, and a single "control" output for the regulator control output.  <a href="group__control__systems.html#ga2ebe52e849a0597ad54f37ab6e35df8a">More...</a><br /></td></tr>
 <tr class="separator:ga2ebe52e849a0597ad54f37ab6e35df8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeaf380f9c445eee90a846b57f8b70ba7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#gaeaf380f9c445eee90a846b57f8b70ba7">LinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; double &gt; &amp;system, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; double, 0, 0 &gt;::Zero())</td></tr>
+<tr class="memitem:gaeaf380f9c445eee90a846b57f8b70ba7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#gaeaf380f9c445eee90a846b57f8b70ba7">LinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero())</td></tr>
 <tr class="memdesc:gaeaf380f9c445eee90a846b57f8b70ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a system that implements the optimal time-invariant linear quadratic regulator (LQR).  <a href="group__control__systems.html#gaeaf380f9c445eee90a846b57f8b70ba7">More...</a><br /></td></tr>
 <tr class="separator:gaeaf380f9c445eee90a846b57f8b70ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga048915783bddb58606c84332b91dad6c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#ga048915783bddb58606c84332b91dad6c">LinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; double, 0, 0 &gt;::Zero(), <a class="el" href="classint.html">int</a> input_port_index=0)</td></tr>
+<tr class="memitem:ga048915783bddb58606c84332b91dad6c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#ga048915783bddb58606c84332b91dad6c">LinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero(), <a class="el" href="classint.html">int</a> input_port_index=0)</td></tr>
 <tr class="memdesc:ga048915783bddb58606c84332b91dad6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearizes the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> around the specified <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>, computes the optimal time-invariant linear quadratic regulator (LQR), and returns a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> which implements that regulator in the original <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>'s coordinates.  <a href="group__control__systems.html#ga048915783bddb58606c84332b91dad6c">More...</a><br /></td></tr>
 <tr class="separator:ga048915783bddb58606c84332b91dad6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaedff9f0a8ddce5d29888ed611ce8bee2"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#gaedff9f0a8ddce5d29888ed611ce8bee2">ControllabilityMatrix</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; double &gt; &amp;sys)</td></tr>
+<tr class="memitem:gaedff9f0a8ddce5d29888ed611ce8bee2"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#gaedff9f0a8ddce5d29888ed611ce8bee2">ControllabilityMatrix</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sys)</td></tr>
 <tr class="memdesc:gaedff9f0a8ddce5d29888ed611ce8bee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the controllability matrix: R = [B, AB, ..., A^{n-1}B].  <a href="group__control__systems.html#gaedff9f0a8ddce5d29888ed611ce8bee2">More...</a><br /></td></tr>
 <tr class="separator:gaedff9f0a8ddce5d29888ed611ce8bee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8bc6169b50b1b127ed5f1b70afcb64ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#ga8bc6169b50b1b127ed5f1b70afcb64ca">IsControllable</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; double &gt; &amp;sys, std::optional&lt; double &gt; threshold=std::nullopt)</td></tr>
+<tr class="memitem:ga8bc6169b50b1b127ed5f1b70afcb64ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#ga8bc6169b50b1b127ed5f1b70afcb64ca">IsControllable</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sys, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; threshold=std::nullopt)</td></tr>
 <tr class="memdesc:ga8bc6169b50b1b127ed5f1b70afcb64ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the controllability matrix is full row rank.  <a href="group__control__systems.html#ga8bc6169b50b1b127ed5f1b70afcb64ca">More...</a><br /></td></tr>
 <tr class="separator:ga8bc6169b50b1b127ed5f1b70afcb64ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -218,7 +218,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::MatrixXd drake::systems::ControllabilityMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>sys</em></td><td>)</td>
           <td></td>
         </tr>
@@ -238,13 +238,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool drake::systems::IsControllable </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>sys</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; double &gt;&#160;</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
           <td class="paramname"><em>threshold</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
@@ -268,13 +268,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::VectorXd drake::systems::controllers::LinearProgrammingApproximateDynamicProgramming </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
           <td class="paramname"><em>simulator</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::function&lt; double(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context)&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; <a class="el" href="classdouble.html">double</a>(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context)&gt; &amp;&#160;</td>
           <td class="paramname"><em>cost_function</em>, </td>
         </tr>
         <tr>
@@ -304,7 +304,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>timestep</em>, </td>
         </tr>
         <tr>
@@ -349,9 +349,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt;double&gt; &gt; drake::systems::controllers::LinearQuadraticRegulator </td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; drake::systems::controllers::LinearQuadraticRegulator </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>system</em>, </td>
         </tr>
         <tr>
@@ -370,7 +370,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>N</em> = <code>Eigen::Matrix&lt;&#160;double,&#160;0,&#160;0&#160;&gt;::Zero()</code>&#160;</td>
+          <td class="paramname"><em>N</em> = <code>Eigen::Matrix&lt;&#160;<a class="el" href="classdouble.html">double</a>,&#160;0,&#160;0&#160;&gt;::Zero()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -415,15 +415,15 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt;double&gt; &gt; drake::systems::controllers::LinearQuadraticRegulator </td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; drake::systems::controllers::LinearQuadraticRegulator </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>system</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
         </tr>
         <tr>
@@ -442,7 +442,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>N</em> = <code>Eigen::Matrix&lt;&#160;double,&#160;0,&#160;0&#160;&gt;::Zero()</code>, </td>
+          <td class="paramname"><em>N</em> = <code>Eigen::Matrix&lt;&#160;<a class="el" href="classdouble.html">double</a>,&#160;0,&#160;0&#160;&gt;::Zero()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -497,27 +497,27 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;double&gt; &gt; drake::systems::controllers::MakeFiniteHorizonLinearQuadraticRegulator </td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; drake::systems::controllers::MakeFiniteHorizonLinearQuadraticRegulator </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>system</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>t0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tf</em>, </td>
         </tr>
         <tr>

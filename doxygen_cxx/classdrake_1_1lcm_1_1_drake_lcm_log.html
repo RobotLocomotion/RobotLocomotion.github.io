@@ -178,7 +178,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aecca52377a3a88d3601b08d71cd7022a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c881067d321c1678ec479ca0592f3e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a1c881067d321c1678ec479ca0592f3e2">~DrakeLcmLog</a> () override</td></tr>
 <tr class="separator:a1c881067d321c1678ec479ca0592f3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd0220f8edd30974a57455051032abd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a4dd0220f8edd30974a57455051032abd">Publish</a> (const std::string &amp;channel, const void *data, <a class="el" href="classint.html">int</a> data_size, std::optional&lt; double &gt; time_sec) override</td></tr>
+<tr class="memitem:a4dd0220f8edd30974a57455051032abd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a4dd0220f8edd30974a57455051032abd">Publish</a> (const std::string &amp;channel, const void *data, <a class="el" href="classint.html">int</a> data_size, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; time_sec) override</td></tr>
 <tr class="memdesc:a4dd0220f8edd30974a57455051032abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an entry occurred at <code>timestamp</code> with content <code>data</code> to the log file.  <a href="#a4dd0220f8edd30974a57455051032abd">More...</a><br /></td></tr>
 <tr class="separator:a4dd0220f8edd30974a57455051032abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16db47193b9958a05c3566ab54f01b76"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a16db47193b9958a05c3566ab54f01b76">Subscribe</a> (const std::string &amp;channel, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867">HandlerFunction</a> handler) override</td></tr>
@@ -190,19 +190,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a15fc920a34211ee4dfe6a9ccd51b8a02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a15fc920a34211ee4dfe6a9ccd51b8a02">HandleSubscriptions</a> (<a class="el" href="classint.html">int</a>) override</td></tr>
 <tr class="memdesc:a15fc920a34211ee4dfe6a9ccd51b8a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a no-op for Read mode, and an exception in Write mode.  <a href="#a15fc920a34211ee4dfe6a9ccd51b8a02">More...</a><br /></td></tr>
 <tr class="separator:a15fc920a34211ee4dfe6a9ccd51b8a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66ed18c7aa63c58be2fef656d0e66da1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a66ed18c7aa63c58be2fef656d0e66da1">GetNextMessageTime</a> () const</td></tr>
+<tr class="memitem:a66ed18c7aa63c58be2fef656d0e66da1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a66ed18c7aa63c58be2fef656d0e66da1">GetNextMessageTime</a> () const</td></tr>
 <tr class="memdesc:a66ed18c7aa63c58be2fef656d0e66da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time in seconds for the next logged message's occurrence time or infinity if there are no more messages in the current log.  <a href="#a66ed18c7aa63c58be2fef656d0e66da1">More...</a><br /></td></tr>
 <tr class="separator:a66ed18c7aa63c58be2fef656d0e66da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a298fab59b3f5c969058710cf738003fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a298fab59b3f5c969058710cf738003fc">DispatchMessageAndAdvanceLog</a> (double current_time)</td></tr>
+<tr class="memitem:a298fab59b3f5c969058710cf738003fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a298fab59b3f5c969058710cf738003fc">DispatchMessageAndAdvanceLog</a> (<a class="el" href="classdouble.html">double</a> current_time)</td></tr>
 <tr class="memdesc:a298fab59b3f5c969058710cf738003fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let <code>MSG</code> be the next message event in the log, if <code>current_time</code> matches <code>MSG</code>'s timestamp, for every DrakeLcmMessageHandlerInterface <code>sub</code> that's subscribed to <code>MSG</code>'s channel, invoke <code>sub</code>'s HandleMessage method.  <a href="#a298fab59b3f5c969058710cf738003fc">More...</a><br /></td></tr>
 <tr class="separator:a298fab59b3f5c969058710cf738003fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0eced80d7591ebe55498b3b52657f95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#aa0eced80d7591ebe55498b3b52657f95">is_write</a> () const</td></tr>
 <tr class="memdesc:aa0eced80d7591ebe55498b3b52657f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this instance is constructed in write-only mode.  <a href="#aa0eced80d7591ebe55498b3b52657f95">More...</a><br /></td></tr>
 <tr class="separator:aa0eced80d7591ebe55498b3b52657f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a290743ebfabc452b881ff02106742839"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a290743ebfabc452b881ff02106742839">timestamp_to_second</a> (uint64_t timestamp) const</td></tr>
+<tr class="memitem:a290743ebfabc452b881ff02106742839"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a290743ebfabc452b881ff02106742839">timestamp_to_second</a> (uint64_t timestamp) const</td></tr>
 <tr class="memdesc:a290743ebfabc452b881ff02106742839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts <code>timestamp</code> (in microseconds) to time (in seconds) relative to the starting time passed to the constructor.  <a href="#a290743ebfabc452b881ff02106742839">More...</a><br /></td></tr>
 <tr class="separator:a290743ebfabc452b881ff02106742839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abae47b0fd77178782bad6dbf241d7477"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#abae47b0fd77178782bad6dbf241d7477">second_to_timestamp</a> (double sec) const</td></tr>
+<tr class="memitem:abae47b0fd77178782bad6dbf241d7477"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#abae47b0fd77178782bad6dbf241d7477">second_to_timestamp</a> (<a class="el" href="classdouble.html">double</a> sec) const</td></tr>
 <tr class="memdesc:abae47b0fd77178782bad6dbf241d7477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts time (in seconds) relative to the starting time passed to the constructor to a timestamp in microseconds.  <a href="#abae47b0fd77178782bad6dbf241d7477">More...</a><br /></td></tr>
 <tr class="separator:abae47b0fd77178782bad6dbf241d7477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58ffc29be696f46957f858506550bc75"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a58ffc29be696f46957f858506550bc75">get_lcm_url</a> () const override</td></tr>
@@ -380,7 +380,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void DispatchMessageAndAdvanceLog </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>current_time</em></td><td>)</td>
           <td></td>
         </tr>
@@ -436,7 +436,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double GetNextMessageTime </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetNextMessageTime </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -585,7 +585,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; double &gt;&#160;</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
           <td class="paramname"><em>time_sec</em>&#160;</td>
         </tr>
         <tr>
@@ -631,7 +631,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">uint64_t second_to_timestamp </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>sec</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -734,7 +734,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double timestamp_to_second </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> timestamp_to_second </td>
           <td>(</td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>timestamp</em></td><td>)</td>

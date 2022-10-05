@@ -1105,6 +1105,7 @@ var hierarchy =
     [ "const ContextConstraintCalc< Element::T >", "classconst_01_context_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "const SystemConstraintCalc< double >", "classconst_01_system_constraint_calc_3_01double_01_4.html", null ],
     [ "const SystemConstraintCalc< Element::T >", "classconst_01_system_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
+    [ "double", "classdouble.html", null ],
     [ "InputPortLocator", "class_input_port_locator.html", null ],
     [ "int", "classint.html", null ],
     [ "int64_t", "classint64__t.html", null ],

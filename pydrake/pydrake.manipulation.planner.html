@@ -224,9 +224,11 @@ joint position commands.</p>
 <p>Rather than calling DoDifferentialInverseKinematics on the current
 measured positions of the robot, this System maintains its own
 internal state and integrates successive velocity commands open loop.
-Using measured joint positions in a feedback loop can lead to undamped
-oscillations in the redundant joints; we hope to resolve this and are
-tracking it in #9773.</p>
+If DoDifferentialInverseKinematics returns kNoSolution, then the
+integrator will hold the integrated position (with zero velocity); on
+kStuck the integration will continue (though “kStuck” implies that the
+achieved spatial velocity will be much smaller than what was
+commanded).</p>
 <p>Note: It is highly recommended that the user calls <code class="docutils literal notranslate"><span class="pre">SetPosition()</span></code>
 once to initialize the position commands to match the initial
 positions of the robot. Alternatively, one can connect the optional
@@ -234,6 +236,9 @@ positions of the robot. Alternatively, one can connect the optional
 and simply sets the positions to the positions on this input port (the
 port accepts the state vector with positions and velocities for easy
 of use with MultibodyPlant, but only the positions are used).</p>
+<p>Note: Using measured joint positions in a feedback loop can lead to
+undamped oscillations in the redundant joints; we hope to resolve this
+and are tracking it in #9773.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">X_WE_desired&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">robot_state (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DifferentialInverseKinematicsIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; joint_positions</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator</em>, <em>robot: drake::multibody::MultibodyPlant&lt;double&gt;</em>, <em>frame_E: drake::multibody::Frame&lt;double&gt;</em>, <em>time_step: float</em>, <em>parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>robot_context: pydrake.systems.framework.Context_[float] = None</em>, <em>log_only_when_result_state_changes: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator.__init__" title="Permalink to this definition">¶</a></dt>
@@ -308,7 +313,7 @@ position commands to match the initial positions of the robot.</p>
 </ol>
 <p>Constructor. Initializes the nominal joint position to zeros of size
 <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>. The time step is initialized to 1. The end effector
-gains are initialized to ones. The joint centering gains are
+flags are initialized to True. The joint centering gains are
 initialized to zero. All constraints are initialized to nullopt.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>:</dt>
@@ -333,6 +338,16 @@ This default constructor sets num_positions = 1. This will be
 removed from Drake on or after 2023-01-01.</dd>
 </dl>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_angular_speed_limit">
+<code class="descname">get_end_effector_angular_speed_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_angular_speed_limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_translational_velocity_limits">
+<code class="descname">get_end_effector_translational_velocity_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[Tuple[numpy.ndarray[numpy.float64[3, 1]], numpy.ndarray[numpy.float64[3, 1]]]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_translational_velocity_limits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_flag">
@@ -418,6 +433,21 @@ used in the differential IK formulation and will be removed from
 this parameters class. This will be removed from Drake on or after
 2023-01-01.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_angular_speed_limit">
+<code class="descname">set_end_effector_angular_speed_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>speed: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_angular_speed_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>When calling DoDifferentialInverseKinematics with a desired
+end-effector pose, this limits the magnitude of the angular velocity
+vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_translational_velocity_limits">
+<code class="descname">set_end_effector_translational_velocity_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, lower: numpy.ndarray[numpy.float64[3, 1]], upper: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_translational_velocity_limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>When calling DoDifferentialInverseKinematics with a desired
+end-effector pose, this sets limits on the translational velocity.</p>
 </dd></dl>
 
 <dl class="method">

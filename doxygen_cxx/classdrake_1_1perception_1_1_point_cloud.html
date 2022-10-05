@@ -234,10 +234,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc8e346be919f7dbb4995d6365492301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301">resize</a> (<a class="el" href="classint.html">int</a> new_size, bool skip_initialize=false)</td></tr>
 <tr class="memdesc:abc8e346be919f7dbb4995d6365492301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conservative resize; will maintain existing data, and initialize new data to their invalid values.  <a href="#abc8e346be919f7dbb4995d6365492301">More...</a><br /></td></tr>
 <tr class="separator:abc8e346be919f7dbb4995d6365492301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13abe761922caf34ccb5530adc0dff21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a13abe761922caf34ccb5530adc0dff21">VoxelizedDownSample</a> (double voxel_size) const</td></tr>
+<tr class="memitem:a13abe761922caf34ccb5530adc0dff21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a13abe761922caf34ccb5530adc0dff21">VoxelizedDownSample</a> (<a class="el" href="classdouble.html">double</a> voxel_size) const</td></tr>
 <tr class="memdesc:a13abe761922caf34ccb5530adc0dff21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3D grid with cells of dimension voxel_size.  <a href="#a13abe761922caf34ccb5530adc0dff21">More...</a><br /></td></tr>
 <tr class="separator:a13abe761922caf34ccb5530adc0dff21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd31b4f5d765431cc1f69ca727419ff1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abd31b4f5d765431cc1f69ca727419ff1">EstimateNormals</a> (double radius, <a class="el" href="classint.html">int</a> num_closest)</td></tr>
+<tr class="memitem:abd31b4f5d765431cc1f69ca727419ff1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abd31b4f5d765431cc1f69ca727419ff1">EstimateNormals</a> (<a class="el" href="classdouble.html">double</a> radius, <a class="el" href="classint.html">int</a> num_closest)</td></tr>
 <tr class="memdesc:abd31b4f5d765431cc1f69ca727419ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the normal vectors in <code>this</code> by fitting a plane at each point in the cloud using up to <code>num_closest</code> points within Euclidean distance <code>radius</code> from the point.  <a href="#abd31b4f5d765431cc1f69ca727419ff1">More...</a><br /></td></tr>
 <tr class="separator:abd31b4f5d765431cc1f69ca727419ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometric Descriptors - XYZs</div></td></tr>
@@ -655,7 +655,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool EstimateNormals </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>radius</em>, </td>
         </tr>
         <tr>
@@ -1401,7 +1401,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> VoxelizedDownSample </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>voxel_size</em></td><td>)</td>
           <td> const</td>
         </tr>

@@ -204,17 +204,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae20c365943aa8acb50dfd6b99b7e5194"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae20c365943aa8acb50dfd6b99b7e5194">Solve</a> ()</td></tr>
 <tr class="memdesc:ae20c365943aa8acb50dfd6b99b7e5194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the mixed-integer problem (MIP) through a branch and bound process.  <a href="#ae20c365943aa8acb50dfd6b99b7e5194">More...</a><br /></td></tr>
 <tr class="separator:ae20c365943aa8acb50dfd6b99b7e5194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57c1b4cd100b3f6f6b6a22d8e924df4e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a57c1b4cd100b3f6f6b6a22d8e924df4e">GetOptimalCost</a> () const</td></tr>
+<tr class="memitem:a57c1b4cd100b3f6f6b6a22d8e924df4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a57c1b4cd100b3f6f6b6a22d8e924df4e">GetOptimalCost</a> () const</td></tr>
 <tr class="memdesc:a57c1b4cd100b3f6f6b6a22d8e924df4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the optimal cost.  <a href="#a57c1b4cd100b3f6f6b6a22d8e924df4e">More...</a><br /></td></tr>
 <tr class="separator:a57c1b4cd100b3f6f6b6a22d8e924df4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc5e96185337f0863d683468d816524"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a8fc5e96185337f0863d683468d816524">GetSubOptimalCost</a> (<a class="el" href="classint.html">int</a> nth_suboptimal_cost) const</td></tr>
+<tr class="memitem:a8fc5e96185337f0863d683468d816524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a8fc5e96185337f0863d683468d816524">GetSubOptimalCost</a> (<a class="el" href="classint.html">int</a> nth_suboptimal_cost) const</td></tr>
 <tr class="memdesc:a8fc5e96185337f0863d683468d816524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the n'th sub-optimal cost.  <a href="#a8fc5e96185337f0863d683468d816524">More...</a><br /></td></tr>
 <tr class="separator:a8fc5e96185337f0863d683468d816524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2907eb511a4430de927ebee2d8b0ecd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2907eb511a4430de927ebee2d8b0ecd">GetSolution</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;mip_var, <a class="el" href="classint.html">int</a> nth_best_solution=0) const</td></tr>
+<tr class="memitem:ae2907eb511a4430de927ebee2d8b0ecd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2907eb511a4430de927ebee2d8b0ecd">GetSolution</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;mip_var, <a class="el" href="classint.html">int</a> nth_best_solution=0) const</td></tr>
 <tr class="memdesc:ae2907eb511a4430de927ebee2d8b0ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the n'th best integral solution for a variable.  <a href="#ae2907eb511a4430de927ebee2d8b0ecd">More...</a><br /></td></tr>
 <tr class="separator:ae2907eb511a4430de927ebee2d8b0ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50d311ece86b31be431360646842cea3"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a50d311ece86b31be431360646842cea3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a50d311ece86b31be431360646842cea3">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mip_vars, <a class="el" href="classint.html">int</a> nth_best_solution=0) const</td></tr>
+<tr class="memitem:a50d311ece86b31be431360646842cea3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; <a class="el" href="classdouble.html">double</a>, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a50d311ece86b31be431360646842cea3">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mip_vars, <a class="el" href="classint.html">int</a> nth_best_solution=0) const</td></tr>
 <tr class="memdesc:a50d311ece86b31be431360646842cea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the n'th best integral solution for some variables.  <a href="#a50d311ece86b31be431360646842cea3">More...</a><br /></td></tr>
 <tr class="separator:a50d311ece86b31be431360646842cea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4b404e4ea0df894df0931ebe69a369"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#abc4b404e4ea0df894df0931ebe69a369">GetNewVariable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;old_variable) const</td></tr>
@@ -248,25 +248,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a719c090639f83a753f8b6f07937cf4bd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html">MixedIntegerBranchAndBoundNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a719c090639f83a753f8b6f07937cf4bd">root</a> () const</td></tr>
 <tr class="memdesc:a719c090639f83a753f8b6f07937cf4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the root node.  <a href="#a719c090639f83a753f8b6f07937cf4bd">More...</a><br /></td></tr>
 <tr class="separator:a719c090639f83a753f8b6f07937cf4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6f433c7211d34645537b436f8ce2ef"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ace6f433c7211d34645537b436f8ce2ef">best_upper_bound</a> () const</td></tr>
+<tr class="memitem:ace6f433c7211d34645537b436f8ce2ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ace6f433c7211d34645537b436f8ce2ef">best_upper_bound</a> () const</td></tr>
 <tr class="memdesc:ace6f433c7211d34645537b436f8ce2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the best upper bound.  <a href="#ace6f433c7211d34645537b436f8ce2ef">More...</a><br /></td></tr>
 <tr class="separator:ace6f433c7211d34645537b436f8ce2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0725fe3bca9f45b63acf89684785f742"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0725fe3bca9f45b63acf89684785f742">best_lower_bound</a> () const</td></tr>
+<tr class="memitem:a0725fe3bca9f45b63acf89684785f742"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0725fe3bca9f45b63acf89684785f742">best_lower_bound</a> () const</td></tr>
 <tr class="memdesc:a0725fe3bca9f45b63acf89684785f742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the best lower bound.  <a href="#a0725fe3bca9f45b63acf89684785f742">More...</a><br /></td></tr>
 <tr class="separator:a0725fe3bca9f45b63acf89684785f742"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2f75e9f12c5f7c50128e358aeb50fe8"><td class="memItemLeft" align="right" valign="top">const std::multimap&lt; double, Eigen::VectorXd &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2f75e9f12c5f7c50128e358aeb50fe8">solutions</a> () const</td></tr>
+<tr class="memitem:ae2f75e9f12c5f7c50128e358aeb50fe8"><td class="memItemLeft" align="right" valign="top">const std::multimap&lt; <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2f75e9f12c5f7c50128e358aeb50fe8">solutions</a> () const</td></tr>
 <tr class="memdesc:ae2f75e9f12c5f7c50128e358aeb50fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the solutions.  <a href="#ae2f75e9f12c5f7c50128e358aeb50fe8">More...</a><br /></td></tr>
 <tr class="separator:ae2f75e9f12c5f7c50128e358aeb50fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0598b6d13789654fff177485ec10e4c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0598b6d13789654fff177485ec10e4c3">set_absolute_gap_tol</a> (double tol)</td></tr>
+<tr class="memitem:a0598b6d13789654fff177485ec10e4c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0598b6d13789654fff177485ec10e4c3">set_absolute_gap_tol</a> (<a class="el" href="classdouble.html">double</a> tol)</td></tr>
 <tr class="memdesc:a0598b6d13789654fff177485ec10e4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for the absolute gap tolerance.  <a href="#a0598b6d13789654fff177485ec10e4c3">More...</a><br /></td></tr>
 <tr class="separator:a0598b6d13789654fff177485ec10e4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac182ef89ebdff90a7ab89a3cf220f742"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ac182ef89ebdff90a7ab89a3cf220f742">absolute_gap_tol</a> () const</td></tr>
+<tr class="memitem:ac182ef89ebdff90a7ab89a3cf220f742"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ac182ef89ebdff90a7ab89a3cf220f742">absolute_gap_tol</a> () const</td></tr>
 <tr class="memdesc:ac182ef89ebdff90a7ab89a3cf220f742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the absolute gap tolerance.  <a href="#ac182ef89ebdff90a7ab89a3cf220f742">More...</a><br /></td></tr>
 <tr class="separator:ac182ef89ebdff90a7ab89a3cf220f742"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2298de70981f8a943caf9f95729f49f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ac2298de70981f8a943caf9f95729f49f">set_relative_gap_tol</a> (double tol)</td></tr>
+<tr class="memitem:ac2298de70981f8a943caf9f95729f49f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ac2298de70981f8a943caf9f95729f49f">set_relative_gap_tol</a> (<a class="el" href="classdouble.html">double</a> tol)</td></tr>
 <tr class="memdesc:ac2298de70981f8a943caf9f95729f49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for the relative gap tolerance.  <a href="#ac2298de70981f8a943caf9f95729f49f">More...</a><br /></td></tr>
 <tr class="separator:ac2298de70981f8a943caf9f95729f49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f64cf74ec0163bd28e293d2c47d966"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a06f64cf74ec0163bd28e293d2c47d966">relative_gap_tol</a> () const</td></tr>
+<tr class="memitem:a06f64cf74ec0163bd28e293d2c47d966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a06f64cf74ec0163bd28e293d2c47d966">relative_gap_tol</a> () const</td></tr>
 <tr class="memdesc:a06f64cf74ec0163bd28e293d2c47d966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeter for the relative gap tolerance.  <a href="#a06f64cf74ec0163bd28e293d2c47d966">More...</a><br /></td></tr>
 <tr class="separator:a06f64cf74ec0163bd28e293d2c47d966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -441,7 +441,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double absolute_gap_tol </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> absolute_gap_tol </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -460,7 +460,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double best_lower_bound </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> best_lower_bound </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -479,7 +479,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double best_upper_bound </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> best_upper_bound </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -569,7 +569,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double GetOptimalCost </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetOptimalCost </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -588,7 +588,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double GetSolution </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetSolution </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
           <td class="paramname"><em>mip_var</em>, </td>
@@ -634,7 +634,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;double, Derived&gt; &gt; GetSolution </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;<a class="el" href="classdouble.html">double</a>, Derived&gt; &gt; GetSolution </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>mip_vars</em>, </td>
@@ -680,7 +680,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double GetSubOptimalCost </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetSubOptimalCost </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
           <td class="paramname"><em>nth_suboptimal_cost</em></td><td>)</td>
@@ -753,7 +753,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double relative_gap_tol </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> relative_gap_tol </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -794,7 +794,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void set_absolute_gap_tol </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tol</em></td><td>)</td>
           <td></td>
         </tr>
@@ -815,7 +815,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void set_relative_gap_tol </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tol</em></td><td>)</td>
           <td></td>
         </tr>
@@ -977,7 +977,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::multimap&lt;double, Eigen::VectorXd&gt;&amp; solutions </td>
+          <td class="memname">const std::multimap&lt;<a class="el" href="classdouble.html">double</a>, Eigen::VectorXd&gt;&amp; solutions </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

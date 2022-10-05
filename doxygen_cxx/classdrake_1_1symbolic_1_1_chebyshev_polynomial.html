@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a03a72be3355e6291a8ace9016df45bbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a03a72be3355e6291a8ace9016df45bbd">ToPolynomial</a> () const</td></tr>
 <tr class="memdesc:a03a72be3355e6291a8ace9016df45bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts this Chebyshev polynomial to a polynomial with monomial basis.  <a href="#a03a72be3355e6291a8ace9016df45bbd">More...</a><br /></td></tr>
 <tr class="separator:a03a72be3355e6291a8ace9016df45bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02d52040a8c27a93acbf3c6f4438f912"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a02d52040a8c27a93acbf3c6f4438f912">Evaluate</a> (double var_val) const</td></tr>
+<tr class="memitem:a02d52040a8c27a93acbf3c6f4438f912"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a02d52040a8c27a93acbf3c6f4438f912">Evaluate</a> (<a class="el" href="classdouble.html">double</a> var_val) const</td></tr>
 <tr class="memdesc:a02d52040a8c27a93acbf3c6f4438f912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates this Chebyshev polynomial at <code>var_val</code>.  <a href="#a02d52040a8c27a93acbf3c6f4438f912">More...</a><br /></td></tr>
 <tr class="separator:a02d52040a8c27a93acbf3c6f4438f912"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a387079b52f79c8490fcc3ca011e5b70d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a387079b52f79c8490fcc3ca011e5b70d">operator==</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html">ChebyshevPolynomial</a> &amp;other) const</td></tr>
@@ -200,7 +200,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a28f7f91a7edf412dddfa57c1a479cd4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a28f7f91a7edf412dddfa57c1a479cd4a">operator&lt;</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html">ChebyshevPolynomial</a> &amp;other) const</td></tr>
 <tr class="memdesc:a28f7f91a7edf412dddfa57c1a479cd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare this to another Chebyshev polynomial, returns True if this is regarded as less than the other, otherwise returns false.  <a href="#a28f7f91a7edf412dddfa57c1a479cd4a">More...</a><br /></td></tr>
 <tr class="separator:a28f7f91a7edf412dddfa57c1a479cd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a9144f1ebdf663cbf084afd81e83923"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html">ChebyshevPolynomial</a>, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a1a9144f1ebdf663cbf084afd81e83923">Differentiate</a> () const</td></tr>
+<tr class="memitem:a1a9144f1ebdf663cbf084afd81e83923"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html">ChebyshevPolynomial</a>, <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a1a9144f1ebdf663cbf084afd81e83923">Differentiate</a> () const</td></tr>
 <tr class="memdesc:a1a9144f1ebdf663cbf084afd81e83923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the differentiation of a Chebyshev polynomial dTₙ(x)/dx = nUₙ₋₁(x) where Uₙ₋₁(x) is a Chebyshev polynomial of the second kind.  <a href="#a1a9144f1ebdf663cbf084afd81e83923">More...</a><br /></td></tr>
 <tr class="separator:a1a9144f1ebdf663cbf084afd81e83923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -338,7 +338,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::pair&lt;<a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html">ChebyshevPolynomial</a>, double&gt; &gt; Differentiate </td>
+          <td class="memname">std::vector&lt;std::pair&lt;<a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html">ChebyshevPolynomial</a>, <a class="el" href="classdouble.html">double</a>&gt; &gt; Differentiate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -368,9 +368,9 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double Evaluate </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> Evaluate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>var_val</em></td><td>)</td>
           <td> const</td>
         </tr>

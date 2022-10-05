@@ -292,7 +292,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a97a2e708e234263ed4edabe99b7b43f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a97a2e708e234263ed4edabe99b7b43f5">DoCalcAndAddForceContribution</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;, const internal::VelocityKinematicsCache&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const override</td></tr>
 <tr class="memdesc:a97a2e708e234263ed4edabe99b7b43f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called only from the public non-virtual CalcAndAddForceContributions() which will already have error-checked the parameters so you don't have to.  <a href="#a97a2e708e234263ed4edabe99b7b43f5">More...</a><br /></td></tr>
 <tr class="separator:a97a2e708e234263ed4edabe99b7b43f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5dcbffaf94d72a77259e5d18f4dafcd"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#aa5dcbffaf94d72a77259e5d18f4dafcd">DoCloneToScalar</a> (const internal::MultibodyTree&lt; double &gt; &amp;) const override</td></tr>
+<tr class="memitem:aa5dcbffaf94d72a77259e5d18f4dafcd"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#aa5dcbffaf94d72a77259e5d18f4dafcd">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;) const override</td></tr>
 <tr class="memdesc:aa5dcbffaf94d72a77259e5d18f4dafcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <code>double</code>.  <a href="#aa5dcbffaf94d72a77259e5d18f4dafcd">More...</a><br /></td></tr>
 <tr class="separator:aa5dcbffaf94d72a77259e5d18f4dafcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb80046d035fd956ed690d2fe1b3cbfb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#adb80046d035fd956ed690d2fe1b3cbfb">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;) const override</td></tr>
@@ -792,9 +792,9 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt;double&gt; &gt; DoCloneToScalar </td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>tree_clone</em></td><td>)</td>
           <td> const</td>
         </tr>

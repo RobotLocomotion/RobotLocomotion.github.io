@@ -268,11 +268,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:af23c3981782540c98f8a1cb2abc59627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an AutoDiff matrix given a matrix of values and a gradient matrix.  <a href="#af23c3981782540c98f8a1cb2abc59627">More...</a><br /></td></tr>
 <tr class="separator:af23c3981782540c98f8a1cb2abc59627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe3277d7c068b3f82ccb6b025d44ab11"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:afe3277d7c068b3f82ccb6b025d44ab11"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#afe3277d7c068b3f82ccb6b025d44ab11">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, double precision=Eigen::NumTraits&lt; double &gt;::dummy_precision())</td></tr>
+<tr class="memitem:afe3277d7c068b3f82ccb6b025d44ab11"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#afe3277d7c068b3f82ccb6b025d44ab11">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, <a class="el" href="classdouble.html">double</a> precision=Eigen::NumTraits&lt; <a class="el" href="classdouble.html">double</a> &gt;::dummy_precision())</td></tr>
 <tr class="memdesc:afe3277d7c068b3f82ccb6b025d44ab11"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>B = DiscardZeroGradient(A, precision)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, but first checking that the gradient matrix is empty or zero.  <a href="#afe3277d7c068b3f82ccb6b025d44ab11">More...</a><br /></td></tr>
 <tr class="separator:afe3277d7c068b3f82ccb6b025d44ab11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_same_v&lt; typename Derived::Scalar, double &gt;, <a class="el" href="classint.html">int</a> &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4360e58bcb10c6b20aa3e28fed7297fb">GetDerivativeSize</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;A)</td></tr>
+<tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classint.html">int</a> &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4360e58bcb10c6b20aa3e28fed7297fb">GetDerivativeSize</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;A)</td></tr>
 <tr class="memdesc:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of AutoDiffScalars, returns the size of the derivatives.  <a href="#a4360e58bcb10c6b20aa3e28fed7297fb">More...</a><br /></td></tr>
 <tr class="separator:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b9faaffd818a335e485c9c38fe67f0e"><td class="memTemplParams" colspan="2">template&lt;typename DerivedX , typename DerivedY , typename DerivedCalcX &gt; </td></tr>
@@ -393,17 +393,17 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6d81fb8e0b28f46bad7838ed39bffbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a column vector containing the stacked columns of the lower triangular part of a square matrix, returning a symmetric matrix whose lower triangular part is the same as the original matrix.  <a href="#a6d81fb8e0b28f46bad7838ed39bffbce">More...</a><br /></td></tr>
 <tr class="separator:a6d81fb8e0b28f46bad7838ed39bffbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8a6d10bc0b3dfc5902d0a06f186dba8f">IsPositiveDefinite</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, double eigenvalue_tolerance=0.0, double symmetry_tolerance=0.0)</td></tr>
+<tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8a6d10bc0b3dfc5902d0a06f186dba8f">IsPositiveDefinite</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, <a class="el" href="classdouble.html">double</a> eigenvalue_tolerance=0.0, <a class="el" href="classdouble.html">double</a> symmetry_tolerance=0.0)</td></tr>
 <tr class="memdesc:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash;.  <a href="#a8a6d10bc0b3dfc5902d0a06f186dba8f">More...</a><br /></td></tr>
 <tr class="separator:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a48484009086db12d881bea6bcaab2514">NormalizeVector</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;x, typename Derived::PlainObject &amp;x_norm, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 1 &gt;::type *dx_norm=nullptr, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 2 &gt;::type *ddx_norm=nullptr)</td></tr>
 <tr class="memdesc:a48484009086db12d881bea6bcaab2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normalized vector, optionally with its gradient and second derivative.  <a href="#a48484009086db12d881bea6bcaab2514">More...</a><br /></td></tr>
 <tr class="separator:a48484009086db12d881bea6bcaab2514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fccff311f09a5a35afac17388541c7f"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fccff311f09a5a35afac17388541c7f">DecomposePSDmatrixIntoXtransposeTimesX</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Y, double zero_tol)</td></tr>
+<tr class="memitem:a2fccff311f09a5a35afac17388541c7f"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fccff311f09a5a35afac17388541c7f">DecomposePSDmatrixIntoXtransposeTimesX</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Y, <a class="el" href="classdouble.html">double</a> zero_tol)</td></tr>
 <tr class="memdesc:a2fccff311f09a5a35afac17388541c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a symmetric positive semidefinite matrix Y, decompose it into XᵀX, where the number of rows in X equals to the rank of Y.  <a href="#a2fccff311f09a5a35afac17388541c7f">More...</a><br /></td></tr>
 <tr class="separator:a2fccff311f09a5a35afac17388541c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a296872692791b1e6d9e27311fc55a694"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::MatrixXd, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a296872692791b1e6d9e27311fc55a694">DecomposePositiveQuadraticForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, double c, double tol=0)</td></tr>
+<tr class="memitem:a296872692791b1e6d9e27311fc55a694"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::MatrixXd, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a296872692791b1e6d9e27311fc55a694">DecomposePositiveQuadraticForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, <a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdouble.html">double</a> tol=0)</td></tr>
 <tr class="memdesc:a296872692791b1e6d9e27311fc55a694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where.  <a href="#a296872692791b1e6d9e27311fc55a694">More...</a><br /></td></tr>
 <tr class="separator:a296872692791b1e6d9e27311fc55a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c66e16411c4f0d53e005658a49ccf6a"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8c66e16411c4f0d53e005658a49ccf6a">BalanceQuadraticForms</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;S, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;P)</td></tr>
@@ -453,15 +453,15 @@ Functions</h2></td></tr>
 <tr class="memdesc:a06541dcb249b4b951ea73d45d2067337"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates how well a quaternion and its time-derivative satisfy the quaternion time-derivative constraint specified in [Kane, 1983] Section 1.13, equations 12-13, page 59.  <a href="#a06541dcb249b4b951ea73d45d2067337">More...</a><br /></td></tr>
 <tr class="separator:a06541dcb249b4b951ea73d45d2067337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056f9de21690e59551e2904bde9ac928"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a056f9de21690e59551e2904bde9ac928"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a056f9de21690e59551e2904bde9ac928">IsQuaternionValid</a> (const Eigen::Quaternion&lt; T &gt; &amp;quat, const double tolerance)</td></tr>
+<tr class="memitem:a056f9de21690e59551e2904bde9ac928"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a056f9de21690e59551e2904bde9ac928">IsQuaternionValid</a> (const Eigen::Quaternion&lt; T &gt; &amp;quat, const <a class="el" href="classdouble.html">double</a> tolerance)</td></tr>
 <tr class="memdesc:a056f9de21690e59551e2904bde9ac928"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function tests if a quaternion satisfies the quaternion constraint specified in [Kane, 1983] Section 1.3, equation 4, page 12, i.e., a quaternion [w, x, y, z] must satisfy: w^2 + x^2 + y^2 + z^2 = 1.  <a href="#a056f9de21690e59551e2904bde9ac928">More...</a><br /></td></tr>
 <tr class="separator:a056f9de21690e59551e2904bde9ac928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b38bdfc1e3df8662c8726bc89a08ed0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3b38bdfc1e3df8662c8726bc89a08ed0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3b38bdfc1e3df8662c8726bc89a08ed0">IsBothQuaternionAndQuaternionDtOK</a> (const Eigen::Quaternion&lt; T &gt; &amp;quat, const <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; &amp;quatDt, const double tolerance)</td></tr>
+<tr class="memitem:a3b38bdfc1e3df8662c8726bc89a08ed0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3b38bdfc1e3df8662c8726bc89a08ed0">IsBothQuaternionAndQuaternionDtOK</a> (const Eigen::Quaternion&lt; T &gt; &amp;quat, const <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; &amp;quatDt, const <a class="el" href="classdouble.html">double</a> tolerance)</td></tr>
 <tr class="memdesc:a3b38bdfc1e3df8662c8726bc89a08ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function tests if a quaternion satisfies the time-derivative constraint specified in [Kane, 1983] Section 1.13, equation 13, page 59.  <a href="#a3b38bdfc1e3df8662c8726bc89a08ed0">More...</a><br /></td></tr>
 <tr class="separator:a3b38bdfc1e3df8662c8726bc89a08ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e47f892f2417dfc861a095328019361"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2e47f892f2417dfc861a095328019361"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2e47f892f2417dfc861a095328019361">IsQuaternionAndQuaternionDtEqualAngularVelocityExpressedInB</a> (const Eigen::Quaternion&lt; T &gt; &amp;quat, const <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; &amp;quatDt, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;w_B, const double tolerance)</td></tr>
+<tr class="memitem:a2e47f892f2417dfc861a095328019361"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2e47f892f2417dfc861a095328019361">IsQuaternionAndQuaternionDtEqualAngularVelocityExpressedInB</a> (const Eigen::Quaternion&lt; T &gt; &amp;quat, const <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; &amp;quatDt, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;w_B, const <a class="el" href="classdouble.html">double</a> tolerance)</td></tr>
 <tr class="memdesc:a2e47f892f2417dfc861a095328019361"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function tests if a quaternion and a quaternions time-derivative can calculate and match an angular velocity to within a tolerance.  <a href="#a2e47f892f2417dfc861a095328019361">More...</a><br /></td></tr>
 <tr class="separator:a2e47f892f2417dfc861a095328019361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c92561b046b32c1ebe172bd32dc8276"><td class="memTemplParams" colspan="2">template&lt;typename T  = double, class Generator  = RandomGenerator&gt; </td></tr>
@@ -492,7 +492,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aa02d13e3a0cbc27e905be533959b8d2a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt; typename DerivedR::Scalar, <a class="el" href="namespacedrake.html#a07869e660ffe730425feca7595de2273">drake::kQuaternionSize</a>, 1 &gt;, DerivedDR::ColsAtCompileTime &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aa02d13e3a0cbc27e905be533959b8d2a">drotmat2quat</a> (const Eigen::MatrixBase&lt; DerivedR &gt; &amp;R, const Eigen::MatrixBase&lt; DerivedDR &gt; &amp;dR)</td></tr>
 <tr class="memdesc:aa02d13e3a0cbc27e905be533959b8d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of the function that converts rotation matrix to quaternion.  <a href="#aa02d13e3a0cbc27e905be533959b8d2a">More...</a><br /></td></tr>
 <tr class="separator:aa02d13e3a0cbc27e905be533959b8d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab095ea87a1517bb9bae78d221f5d34da"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab095ea87a1517bb9bae78d221f5d34da">ProjectMatToRotMatWithAxis</a> (const Eigen::Matrix3d &amp;M, const Eigen::Vector3d &amp;axis, double angle_lb, double angle_ub)</td></tr>
+<tr class="memitem:ab095ea87a1517bb9bae78d221f5d34da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab095ea87a1517bb9bae78d221f5d34da">ProjectMatToRotMatWithAxis</a> (const Eigen::Matrix3d &amp;M, const Eigen::Vector3d &amp;axis, <a class="el" href="classdouble.html">double</a> angle_lb, <a class="el" href="classdouble.html">double</a> angle_ub)</td></tr>
 <tr class="memdesc:ab095ea87a1517bb9bae78d221f5d34da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects an approximate 3 x 3 rotation matrix M onto an orthonormal matrix R so that R is a rotation matrix associated with a angle-axis rotation by an angle θ about a vector direction <code>axis</code>, with <code>angle_lb &lt;= θ &lt;= angle_ub</code>.  <a href="#ab095ea87a1517bb9bae78d221f5d34da">More...</a><br /></td></tr>
 <tr class="separator:ab095ea87a1517bb9bae78d221f5d34da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adecdf6a7ef606861457807da4b56e7ff"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 , class T3 &gt; </td></tr>
@@ -532,11 +532,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:a34a14f4ecff0af11999f7d416c3316bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when the matrix in linear_solver and b are both double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> matrices.  <a href="#a34a14f4ecff0af11999f7d416c3316bf">More...</a><br /></td></tr>
 <tr class="separator:a34a14f4ecff0af11999f7d416c3316bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ecf90a76392d69deecb8feb29e19a7"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedB &gt; </td></tr>
-<tr class="memitem:ac1ecf90a76392d69deecb8feb29e19a7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename LinearSolver::MatrixType::Scalar, double &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedB::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ac1ecf90a76392d69deecb8feb29e19a7">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memitem:ac1ecf90a76392d69deecb8feb29e19a7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename LinearSolver::MatrixType::Scalar, <a class="el" href="classdouble.html">double</a> &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedB::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ac1ecf90a76392d69deecb8feb29e19a7">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
 <tr class="memdesc:ac1ecf90a76392d69deecb8feb29e19a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized the matrix in linear_solver is a double-valued matrix and b is an AutoDiffScalar-valued matrix.  <a href="#ac1ecf90a76392d69deecb8feb29e19a7">More...</a><br /></td></tr>
 <tr class="separator:ac1ecf90a76392d69deecb8feb29e19a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fe42b78445dde235cc217342ba8ab87"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a2fe42b78445dde235cc217342ba8ab87"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fe42b78445dde235cc217342ba8ab87">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memitem:a2fe42b78445dde235cc217342ba8ab87"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, <a class="el" href="classdouble.html">double</a> &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fe42b78445dde235cc217342ba8ab87">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
 <tr class="memdesc:a2fe42b78445dde235cc217342ba8ab87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is a double-valued matrix and b is an AutoDiffScalar-valued matrix.  <a href="#a2fe42b78445dde235cc217342ba8ab87">More...</a><br /></td></tr>
 <tr class="separator:a2fe42b78445dde235cc217342ba8ab87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bfcba20c731dc23e4f48c367e36c9de"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
@@ -1179,13 +1179,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tol</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -1267,7 +1267,7 @@ d₁ = P*d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>zero_tol</em>&#160;</td>
         </tr>
         <tr>
@@ -1366,8 +1366,8 @@ d₁ = P*d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>precision</em> = <code>Eigen::NumTraits&lt;double&gt;::dummy_precision()</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>precision</em> = <code>Eigen::NumTraits&lt;<a class="el" href="classdouble.html">double</a>&gt;::dummy_precision()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1728,7 +1728,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;!std::is_same_v&lt;typename Derived::Scalar, double&gt;, <a class="el" href="classint.html">int</a>&gt;::type drake::math::GetDerivativeSize </td>
+          <td class="memname">std::enable_if&lt;!std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classint.html">int</a>&gt;::type drake::math::GetDerivativeSize </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>A</em></td><td>)</td>
@@ -2349,7 +2349,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tolerance</em>&#160;</td>
         </tr>
         <tr>
@@ -2392,13 +2392,13 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>eigenvalue_tolerance</em> = <code>0.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>symmetry_tolerance</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
@@ -2442,7 +2442,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tolerance</em>&#160;</td>
         </tr>
         <tr>
@@ -2482,7 +2482,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>tolerance</em>&#160;</td>
         </tr>
         <tr>
@@ -2740,7 +2740,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double drake::math::ProjectMatToRotMatWithAxis </td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> drake::math::ProjectMatToRotMatWithAxis </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
           <td class="paramname"><em>M</em>, </td>
@@ -2754,13 +2754,13 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>angle_lb</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>angle_ub</em>&#160;</td>
         </tr>
         <tr>
@@ -3408,7 +3408,7 @@ else
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename LinearSolver::MatrixType::Scalar, double&gt; &amp;&amp; internal::is_autodiff_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedB::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename LinearSolver::MatrixType::Scalar, <a class="el" href="classdouble.html">double</a>&gt; &amp;&amp; internal::is_autodiff_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedB::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;&#160;</td>
           <td class="paramname"><em>linear_solver</em>, </td>
@@ -3439,7 +3439,7 @@ else
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; internal::is_autodiff_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, <a class="el" href="classdouble.html">double</a>&gt; &amp;&amp; internal::is_autodiff_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;&#160;</td>
           <td class="paramname"><em>linear_solver</em>, </td>

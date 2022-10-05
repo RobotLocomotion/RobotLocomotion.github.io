@@ -228,7 +228,73 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.benchmarks.all.html">pydrake.multibody.benchmarks.all</a></li>
 </ul>
 </div>
-<span class="target" id="module-pydrake.multibody.benchmarks"></span></div>
+<span class="target" id="module-pydrake.multibody.benchmarks"></span><dl class="class">
+<dt id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.benchmarks.</code><code class="descname">MassDamperSpringAnalyticalSolution</code><a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides an analytical solution to a mass-damper-spring
+system. The system consists of a particle Q of mass m that can only
+move left/right on flat Earth (frame N). Particle Q is connected by an
+ideal translational spring/damper. The other end of the spring/damper
+is welded to point No (the origin of frame N). Q’s position from No is
+x*Nx where x(t) is a time- dependent variable (to-be-calculated) and
+Nx is a horizontal unit vector fixed in Earth (N). The spring force on
+Q is -k*x*Nx, where k is a spring constant. The damper force on Q is
+-b*ẋ*Nx where b is a damper constant and ẋ is the time-derivative of
+x.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All units must be self-consistent (e.g., standard SI with MKS
+units). The solution provided herein is also applicable to a
+rotating system, e.g., having rigid-body inertia, rotational
+damper, rotational spring.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</em>, <em>mass: float</em>, <em>b: float</em>, <em>k: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This constructs the aforementioned mass-damper-spring system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
+<dd>Mass of system (particle Q).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
+<dd>Linear damping constant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">k</span></code>:</dt>
+<dd>Linear spring constant.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_x">
+<code class="descname">get_x</code><span class="sig-paren">(</span><em>self: pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</em>, <em>t: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns x (Nx measure of Q’s position from No) at time t.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDt">
+<code class="descname">get_xDt</code><span class="sig-paren">(</span><em>self: pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</em>, <em>t: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ẋ (Nx measure of Q’s velocity in N) at time t.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDtDt">
+<code class="descname">get_xDtDt</code><span class="sig-paren">(</span><em>self: pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</em>, <em>t: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDtDt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ẍ (Nx measure of Q’s acceleration in N) at time t.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.SetInitialValue">
+<code class="descname">SetInitialValue</code><span class="sig-paren">(</span><em>self: pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</em>, <em>x0: float</em>, <em>xDt0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.SetInitialValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the initial values of x and ẋ for <code class="docutils literal notranslate"><span class="pre">this</span></code> system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x0</span></code>:</dt>
+<dd>Initial value of x (value of x at time t = 0).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">xDt0</span></code>:</dt>
+<dd>Initial value of ẋ (value of ẋ at time t = 0).</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 
 
            </div>

@@ -181,10 +181,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a79e599c5f17d0fc2e46e6d7e8f9c48b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a79e599c5f17d0fc2e46e6d7e8f9c48b4">SetPositionControlledGains</a> (double pid_frequency, double Ieff, Eigen::VectorXd *Kp, Eigen::VectorXd *Ki, Eigen::VectorXd *Kd)</td></tr>
+<tr class="memitem:a79e599c5f17d0fc2e46e6d7e8f9c48b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a79e599c5f17d0fc2e46e6d7e8f9c48b4">SetPositionControlledGains</a> (<a class="el" href="classdouble.html">double</a> pid_frequency, <a class="el" href="classdouble.html">double</a> Ieff, Eigen::VectorXd *Kp, Eigen::VectorXd *Ki, Eigen::VectorXd *Kd)</td></tr>
 <tr class="memdesc:a79e599c5f17d0fc2e46e6d7e8f9c48b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the feedback gains for the simulated position control.  <a href="#a79e599c5f17d0fc2e46e6d7e8f9c48b4">More...</a><br /></td></tr>
 <tr class="separator:a79e599c5f17d0fc2e46e6d7e8f9c48b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d2ec06517e2f3f62e7dbb5e7aa823ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a5d2ec06517e2f3f62e7dbb5e7aa823ec">GetControlPortMapping</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; *Sx, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; *Sy)</td></tr>
+<tr class="memitem:a5d2ec06517e2f3f62e7dbb5e7aa823ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a5d2ec06517e2f3f62e7dbb5e7aa823ec">GetControlPortMapping</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sx, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sy)</td></tr>
 <tr class="memdesc:a5d2ec06517e2f3f62e7dbb5e7aa823ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates selector matrices which extract state xₛ in a known order from the plant's full x (<code>xₛ = Sx⋅x</code>) and promote the controller's ordered yₛ into the full plant's input actuation (<code>u = Su⋅uₛ</code>).  <a href="#a5d2ec06517e2f3f62e7dbb5e7aa823ec">More...</a><br /></td></tr>
 <tr class="separator:a5d2ec06517e2f3f62e7dbb5e7aa823ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2d121f2271515f2b2210c4876af2b0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a4b2d121f2271515f2b2210c4876af2b0">GetPreferredJointOrdering</a> ()</td></tr>
@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a183f825ede63af058a9915f0df9b0769"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a183f825ede63af058a9915f0df9b0769">kAllegroNumJoints</a> = 16</td></tr>
 <tr class="separator:a183f825ede63af058a9915f0df9b0769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cfe0e130688b9fbe28a6a401caff04c"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a4cfe0e130688b9fbe28a6a401caff04c">kHardwareStatusPeriod</a> = 0.003</td></tr>
+<tr class="memitem:a4cfe0e130688b9fbe28a6a401caff04c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a4cfe0e130688b9fbe28a6a401caff04c">kHardwareStatusPeriod</a> = 0.003</td></tr>
 <tr class="separator:a4cfe0e130688b9fbe28a6a401caff04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -208,19 +208,19 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void drake::examples::allegro_hand::GetControlPortMapping </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>plant</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
           <td class="paramname"><em>Sx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
           <td class="paramname"><em>Sy</em>&#160;</td>
         </tr>
         <tr>
@@ -274,13 +274,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void drake::examples::allegro_hand::SetPositionControlledGains </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>pid_frequency</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>Ieff</em>, </td>
         </tr>
         <tr>
@@ -335,7 +335,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const double kHardwareStatusPeriod = 0.003</td>
+          <td class="memname">const <a class="el" href="classdouble.html">double</a> kHardwareStatusPeriod = 0.003</td>
         </tr>
       </table>
 </div><div class="memdoc">

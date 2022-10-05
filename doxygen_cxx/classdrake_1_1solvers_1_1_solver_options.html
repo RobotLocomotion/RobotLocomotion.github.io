@@ -183,7 +183,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_solver_optio
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a00057ee2a6cf17318bf940681f2aeb20"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20">OptionValue</a> = std::variant&lt; double, <a class="el" href="classint.html">int</a>, std::string &gt;</td></tr>
+<tr class="memitem:a00057ee2a6cf17318bf940681f2aeb20"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20">OptionValue</a> = std::variant&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="classint.html">int</a>, std::string &gt;</td></tr>
 <tr class="memdesc:a00057ee2a6cf17318bf940681f2aeb20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The values stored in <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html" title="Stores options for multiple solvers.">SolverOptions</a> can be double, int, or string.  <a href="#a00057ee2a6cf17318bf940681f2aeb20">More...</a><br /></td></tr>
 <tr class="separator:a00057ee2a6cf17318bf940681f2aeb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -191,7 +191,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ed5b563dbc1aeae6e6396cf04dc3d63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a6ed5b563dbc1aeae6e6396cf04dc3d63">SolverOptions</a> ()=default</td></tr>
 <tr class="separator:a6ed5b563dbc1aeae6e6396cf04dc3d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64f5a75df2c33b77454e88fae4d08047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047">SetOption</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id, const std::string &amp;solver_option, double option_value)</td></tr>
+<tr class="memitem:a64f5a75df2c33b77454e88fae4d08047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047">SetOption</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id, const std::string &amp;solver_option, <a class="el" href="classdouble.html">double</a> option_value)</td></tr>
 <tr class="memdesc:a64f5a75df2c33b77454e88fae4d08047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a double-valued solver option for a specific solver.  <a href="#a64f5a75df2c33b77454e88fae4d08047">More...</a><br /></td></tr>
 <tr class="separator:a64f5a75df2c33b77454e88fae4d08047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ab5717db6c3382362d3622a187cfaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#ac1ab5717db6c3382362d3622a187cfaa">SetOption</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id, const std::string &amp;solver_option, <a class="el" href="classint.html">int</a> option_value)</td></tr>
@@ -203,7 +203,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac54f45d8221218d66a7f603bee90d21f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f">SetOption</a> (<a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a> key, <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20">OptionValue</a> value)</td></tr>
 <tr class="memdesc:ac54f45d8221218d66a7f603bee90d21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a common option for all solvers supporting that option (for example, printing the progress in each iteration).  <a href="#ac54f45d8221218d66a7f603bee90d21f">More...</a><br /></td></tr>
 <tr class="separator:ac54f45d8221218d66a7f603bee90d21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67dd3ecde66be98e181e18e72dda8a66"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a67dd3ecde66be98e181e18e72dda8a66">GetOptionsDouble</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
+<tr class="memitem:a67dd3ecde66be98e181e18e72dda8a66"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a67dd3ecde66be98e181e18e72dda8a66">GetOptionsDouble</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
 <tr class="separator:a67dd3ecde66be98e181e18e72dda8a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad61449561de80a18154855903a80e5"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a3ad61449561de80a18154855903a80e5">GetOptionsInt</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
 <tr class="separator:a3ad61449561de80a18154855903a80e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,7 +254,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20">OptionValue</a> =  std::variant&lt;double, <a class="el" href="classint.html">int</a>, std::string&gt;</td>
+          <td class="memname">using <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20">OptionValue</a> =  std::variant&lt;<a class="el" href="classdouble.html">double</a>, <a class="el" href="classint.html">int</a>, std::string&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -483,7 +483,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt;std::string, double&gt;&amp; GetOptionsDouble </td>
+          <td class="memname">const std::unordered_map&lt;std::string, <a class="el" href="classdouble.html">double</a>&gt;&amp; GetOptionsDouble </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
           <td class="paramname"><em>solver_id</em></td><td>)</td>
@@ -683,7 +683,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>option_value</em>&#160;</td>
         </tr>
         <tr>

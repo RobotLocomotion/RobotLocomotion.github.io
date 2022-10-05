@@ -191,7 +191,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae48736fe174b3ad0acbed4b1b8b8926a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#ae48736fe174b3ad0acbed4b1b8b8926a">get_lcm_url</a> () const =0</td></tr>
 <tr class="memdesc:ae48736fe174b3ad0acbed4b1b8b8926a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a URL describing the transport of this LCM interface.  <a href="#ae48736fe174b3ad0acbed4b1b8b8926a">More...</a><br /></td></tr>
 <tr class="separator:ae48736fe174b3ad0acbed4b1b8b8926a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa654c10b33c6799f374608cce0352712"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#aa654c10b33c6799f374608cce0352712">Publish</a> (const std::string &amp;channel, const void *data, <a class="el" href="classint.html">int</a> data_size, std::optional&lt; double &gt; time_sec)=0</td></tr>
+<tr class="memitem:aa654c10b33c6799f374608cce0352712"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#aa654c10b33c6799f374608cce0352712">Publish</a> (const std::string &amp;channel, const void *data, <a class="el" href="classint.html">int</a> data_size, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; time_sec)=0</td></tr>
 <tr class="memdesc:aa654c10b33c6799f374608cce0352712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most users should use the <a class="el" href="namespacedrake_1_1lcm.html#a7f10e39fd5048940095d76f21bdf760d" title="Publishes an LCM message on channel channel.">drake::lcm::Publish()</a> free function, instead of this interface method.  <a href="#aa654c10b33c6799f374608cce0352712">More...</a><br /></td></tr>
 <tr class="separator:aa654c10b33c6799f374608cce0352712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a204b8732f3fb2f89d2139ba0f2d0e6c2"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a204b8732f3fb2f89d2139ba0f2d0e6c2">Subscribe</a> (const std::string &amp;channel, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867">HandlerFunction</a>)=0</td></tr>
@@ -515,7 +515,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; double &gt;&#160;</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
           <td class="paramname"><em>time_sec</em>&#160;</td>
         </tr>
         <tr>

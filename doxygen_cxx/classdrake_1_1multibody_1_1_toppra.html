@@ -178,10 +178,10 @@ Parameterization based on Reachability Analysis" by Hung Pham and Quang Cuong Ph
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9024708d5314cf3655e2b72c5c138a39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a9024708d5314cf3655e2b72c5c138a39">~Toppra</a> ()</td></tr>
 <tr class="separator:a9024708d5314cf3655e2b72c5c138a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9fc9da3b84296fbc0292963ecffb699"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#ac9fc9da3b84296fbc0292963ecffb699">Toppra</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; double &gt; &amp;path, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;plant, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;gridpoints)</td></tr>
+<tr class="memitem:ac9fc9da3b84296fbc0292963ecffb699"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#ac9fc9da3b84296fbc0292963ecffb699">Toppra</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;path, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;gridpoints)</td></tr>
 <tr class="memdesc:ac9fc9da3b84296fbc0292963ecffb699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an inverse kinematics problem for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#ac9fc9da3b84296fbc0292963ecffb699">More...</a><br /></td></tr>
 <tr class="separator:ac9fc9da3b84296fbc0292963ecffb699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a243a423bdac8eca7742c66d6a85960b1"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a243a423bdac8eca7742c66d6a85960b1">SolvePathParameterization</a> ()</td></tr>
+<tr class="memitem:a243a423bdac8eca7742c66d6a85960b1"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a243a423bdac8eca7742c66d6a85960b1">SolvePathParameterization</a> ()</td></tr>
 <tr class="memdesc:a243a423bdac8eca7742c66d6a85960b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the TOPPRA optimization and returns the time optimized path parameterization s(t).  <a href="#a243a423bdac8eca7742c66d6a85960b1">More...</a><br /></td></tr>
 <tr class="separator:a243a423bdac8eca7742c66d6a85960b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6404ed212fab2af0bad98457df07d16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#aa6404ed212fab2af0bad98457df07d16">AddJointVelocityLimit</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lower_limit, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;upper_limit)</td></tr>
@@ -193,13 +193,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34e3c0664e1e847c82fb7a4eee9374cc"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a34e3c0664e1e847c82fb7a4eee9374cc">AddJointTorqueLimit</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lower_limit, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;upper_limit, <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> discretization=<a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">ToppraDiscretization::kInterpolation</a>)</td></tr>
 <tr class="memdesc:a34e3c0664e1e847c82fb7a4eee9374cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a torque limit to all the degrees of freedom in the plant.  <a href="#a34e3c0664e1e847c82fb7a4eee9374cc">More...</a><br /></td></tr>
 <tr class="separator:a34e3c0664e1e847c82fb7a4eee9374cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49b61c91e6284f5a884080aa045c8acd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a49b61c91e6284f5a884080aa045c8acd">AddFrameVelocityLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;constraint_frame, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;lower_limit, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;upper_limit)</td></tr>
+<tr class="memitem:a49b61c91e6284f5a884080aa045c8acd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a49b61c91e6284f5a884080aa045c8acd">AddFrameVelocityLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;constraint_frame, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;lower_limit, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;upper_limit)</td></tr>
 <tr class="memdesc:a49b61c91e6284f5a884080aa045c8acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a limit on the elements of the spatial velocity of the given frame, measured and and expressed in the world frame.  <a href="#a49b61c91e6284f5a884080aa045c8acd">More...</a><br /></td></tr>
 <tr class="separator:a49b61c91e6284f5a884080aa045c8acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cee3da4435b14492b675df2a473f611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a5cee3da4435b14492b675df2a473f611">AddFrameTranslationalSpeedLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;constraint_frame, const double &amp;upper_limit)</td></tr>
+<tr class="memitem:a5cee3da4435b14492b675df2a473f611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a5cee3da4435b14492b675df2a473f611">AddFrameTranslationalSpeedLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;constraint_frame, const <a class="el" href="classdouble.html">double</a> &amp;upper_limit)</td></tr>
 <tr class="memdesc:a5cee3da4435b14492b675df2a473f611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a limit on the magnitude of the translational velocity of the given frame, measured and expressed in the world frame.  <a href="#a5cee3da4435b14492b675df2a473f611">More...</a><br /></td></tr>
 <tr class="separator:a5cee3da4435b14492b675df2a473f611"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4439ae2c06e737634078434d897cceaf"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a4439ae2c06e737634078434d897cceaf">AddFrameAccelerationLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;constraint_frame, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;lower_limit, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;upper_limit, <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> discretization=<a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">ToppraDiscretization::kInterpolation</a>)</td></tr>
+<tr class="memitem:a4439ae2c06e737634078434d897cceaf"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a4439ae2c06e737634078434d897cceaf">AddFrameAccelerationLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;constraint_frame, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;lower_limit, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;upper_limit, <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> discretization=<a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">ToppraDiscretization::kInterpolation</a>)</td></tr>
 <tr class="memdesc:a4439ae2c06e737634078434d897cceaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a limit on the elements of the spatial acceleration of the given frame, measured and and expressed in the world frame.  <a href="#a4439ae2c06e737634078434d897cceaf">More...</a><br /></td></tr>
 <tr class="separator:a4439ae2c06e737634078434d897cceaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac05332bb6e89f996e9501a52af6e307f"><td class="memItemLeft" align="right" valign="top">static Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#ac05332bb6e89f996e9501a52af6e307f">CalcGridPoints</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; double &gt; &amp;path, const <a class="el" href="structdrake_1_1multibody_1_1_calc_grid_points_options.html">CalcGridPointsOptions</a> &amp;options)</td></tr>
+<tr class="memitem:ac05332bb6e89f996e9501a52af6e307f"><td class="memItemLeft" align="right" valign="top">static Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#ac05332bb6e89f996e9501a52af6e307f">CalcGridPoints</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;path, const <a class="el" href="structdrake_1_1multibody_1_1_calc_grid_points_options.html">CalcGridPointsOptions</a> &amp;options)</td></tr>
 <tr class="memdesc:ac05332bb6e89f996e9501a52af6e307f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes a path and generates a sequence of gridpoints selected to control the interpolation error of the optimization.  <a href="#ac05332bb6e89f996e9501a52af6e307f">More...</a><br /></td></tr>
 <tr class="separator:ac05332bb6e89f996e9501a52af6e307f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -297,13 +297,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html">Toppra</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>plant</em>, </td>
         </tr>
         <tr>
@@ -346,7 +346,7 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
         <tr>
           <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a>&gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a>&gt; &gt; AddFrameAccelerationLimit </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>constraint_frame</em>, </td>
         </tr>
         <tr>
@@ -398,13 +398,13 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a>&gt; AddFrameTranslationalSpeedLimit </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>constraint_frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a> &amp;&#160;</td>
           <td class="paramname"><em>upper_limit</em>&#160;</td>
         </tr>
         <tr>
@@ -436,7 +436,7 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a>&gt; AddFrameVelocityLimit </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>constraint_frame</em>, </td>
         </tr>
         <tr>
@@ -611,7 +611,7 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
         <tr>
           <td class="memname">static Eigen::VectorXd CalcGridPoints </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -699,7 +699,7 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt;double&gt; &gt; SolvePathParameterization </td>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; SolvePathParameterization </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

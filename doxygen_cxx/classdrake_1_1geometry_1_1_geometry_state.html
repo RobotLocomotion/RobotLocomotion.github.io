@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8d0d78e60bcdc0948d45eb96af6a08e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a8d0d78e60bcdc0948d45eb96af6a08e0">More...</a><br /></td></tr>
 <tr class="separator:a8d0d78e60bcdc0948d45eb96af6a08e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42aa02fd500e7cca72c02d29808d003b"><td class="memTemplParams" colspan="2">template&lt;class T1  = T&gt; </td></tr>
-<tr class="memitem:a42aa02fd500e7cca72c02d29808d003b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!std::is_same_v&lt; T1, double &gt;, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a42aa02fd500e7cca72c02d29808d003b">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; double &gt; &amp;other)</td></tr>
+<tr class="memitem:a42aa02fd500e7cca72c02d29808d003b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!std::is_same_v&lt; T1, <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a42aa02fd500e7cca72c02d29808d003b">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;other)</td></tr>
 <tr class="memdesc:a42aa02fd500e7cca72c02d29808d003b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow assignment from a GeometryState&lt;double&gt; to a GeometryState&lt;T&gt;.  <a href="#a42aa02fd500e7cca72c02d29808d003b">More...</a><br /></td></tr>
 <tr class="separator:a42aa02fd500e7cca72c02d29808d003b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -307,13 +307,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9547320de75a6ac00225c08b9638104"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ad9547320de75a6ac00225c08b9638104">GetShape</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
 <tr class="memdesc:ad9547320de75a6ac00225c08b9638104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#acea936a2d449be8d43bb1037568cc81b" title="Introspects the geometry indicated by the given geometry_id.">SceneGraphInspector::Reify()</a>.  <a href="#ad9547320de75a6ac00225c08b9638104">More...</a><br /></td></tr>
 <tr class="separator:ad9547320de75a6ac00225c08b9638104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d31605981da8ffc831d41009cc22a3d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a3d31605981da8ffc831d41009cc22a3d">GetPoseInFrame</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memitem:a3d31605981da8ffc831d41009cc22a3d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a3d31605981da8ffc831d41009cc22a3d">GetPoseInFrame</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a3d31605981da8ffc831d41009cc22a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of SceneGraphInspector::X_FG().  <a href="#a3d31605981da8ffc831d41009cc22a3d">More...</a><br /></td></tr>
 <tr class="separator:a3d31605981da8ffc831d41009cc22a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a4eab8cdd87647bbae03cca106fe55"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a33a4eab8cdd87647bbae03cca106fe55">GetPoseInParent</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memitem:a33a4eab8cdd87647bbae03cca106fe55"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a33a4eab8cdd87647bbae03cca106fe55">GetPoseInParent</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a33a4eab8cdd87647bbae03cca106fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of SceneGraphInspector::X_PG().  <a href="#a33a4eab8cdd87647bbae03cca106fe55">More...</a><br /></td></tr>
 <tr class="separator:a33a4eab8cdd87647bbae03cca106fe55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d19b4df9597abbaaefef9ebecfef7a"><td class="memItemLeft" align="right" valign="top">std::variant&lt; std::monostate, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt; *, const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; double &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a92d19b4df9597abbaaefef9ebecfef7a">maybe_get_hydroelastic_mesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memitem:a92d19b4df9597abbaaefef9ebecfef7a"><td class="memItemLeft" align="right" valign="top">std::variant&lt; std::monostate, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *, const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a92d19b4df9597abbaaefef9ebecfef7a">maybe_get_hydroelastic_mesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a92d19b4df9597abbaaefef9ebecfef7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a92d19b4df9597abbaaefef9ebecfef7a" title="Returns the mesh used to represent this geometry in hydroelastic contact calculations,...">SceneGraphInspector::maybe_get_hydroelastic_mesh()</a>.  <a href="#a92d19b4df9597abbaaefef9ebecfef7a">More...</a><br /></td></tr>
 <tr class="separator:a92d19b4df9597abbaaefef9ebecfef7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6af6c5ad58318c3069f4becb57e06823"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a6af6c5ad58318c3069f4becb57e06823">GetProximityProperties</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
@@ -325,7 +325,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a929a3ac88f2a7e016de7b8d258c585d8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a929a3ac88f2a7e016de7b8d258c585d8">GetPerceptionProperties</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
 <tr class="memdesc:a929a3ac88f2a7e016de7b8d258c585d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a50bbeaf688249f73750680af158ab444" title="Returns a pointer to the const perception properties of the geometry with the given geometry_id.">SceneGraphInspector::GetPerceptionProperties()</a>.  <a href="#a929a3ac88f2a7e016de7b8d258c585d8">More...</a><br /></td></tr>
 <tr class="separator:a929a3ac88f2a7e016de7b8d258c585d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a58efa800a86370e7c5ad9b6849302c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; double &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a9a58efa800a86370e7c5ad9b6849302c">GetReferenceMesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
+<tr class="memitem:a9a58efa800a86370e7c5ad9b6849302c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a9a58efa800a86370e7c5ad9b6849302c">GetReferenceMesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
 <tr class="memdesc:a9a58efa800a86370e7c5ad9b6849302c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a1323170e73b8758ec1f22bfa1fd9a4de" title="Returns the reference mesh of the geometry with the given geometry_id.">SceneGraphInspector::GetReferenceMesh()</a>.  <a href="#a9a58efa800a86370e7c5ad9b6849302c">More...</a><br /></td></tr>
 <tr class="separator:a9a58efa800a86370e7c5ad9b6849302c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa89ca0267e4297ea3e505971673ac22c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#aa89ca0267e4297ea3e505971673ac22c">IsDeformableGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
@@ -373,7 +373,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d5ce10663016908c218c43f6da3c79a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a8d5ce10663016908c218c43f6da3c79a">RegisterAnchoredGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry)</td></tr>
 <tr class="memdesc:a8d5ce10663016908c218c43f6da3c79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a8d5ce10663016908c218c43f6da3c79a" title="Registers a new anchored geometry G for this source.">SceneGraph::RegisterAnchoredGeometry()</a>.  <a href="#a8d5ce10663016908c218c43f6da3c79a">More...</a><br /></td></tr>
 <tr class="separator:a8d5ce10663016908c218c43f6da3c79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab671140650fb6a01e915a200e9aaa3bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ab671140650fb6a01e915a200e9aaa3bf">RegisterDeformableGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry, double resolution_hint)</td></tr>
+<tr class="memitem:ab671140650fb6a01e915a200e9aaa3bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ab671140650fb6a01e915a200e9aaa3bf">RegisterDeformableGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry, <a class="el" href="classdouble.html">double</a> resolution_hint)</td></tr>
 <tr class="memdesc:ab671140650fb6a01e915a200e9aaa3bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab671140650fb6a01e915a200e9aaa3bf">SceneGraph::RegisterDeformableGeometry()</a>  <a href="#ab671140650fb6a01e915a200e9aaa3bf">More...</a><br /></td></tr>
 <tr class="separator:ab671140650fb6a01e915a200e9aaa3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd98b48bb76635a3f5055f418908912d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#afd98b48bb76635a3f5055f418908912d">RemoveGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id)</td></tr>
@@ -418,7 +418,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a9c5e3da8410ee9aa2ae555912d9c98e6" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface wher...">QueryObject::ComputeContactSurfacesWithFallback()</a>.  <a href="#a9c5e3da8410ee9aa2ae555912d9c98e6">More...</a><br /></td></tr>
 <tr class="separator:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e8749d9307aa501666ca431ab626ff0"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
-<tr class="memitem:a0e8749d9307aa501666ca431ab626ff0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; T1, double &gt;, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a0e8749d9307aa501666ca431ab626ff0">ComputeDeformableContact</a> (internal::DeformableContact&lt; T &gt; *deformable_contact) const</td></tr>
+<tr class="memitem:a0e8749d9307aa501666ca431ab626ff0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; T1, <a class="el" href="classdouble.html">double</a> &gt;, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a0e8749d9307aa501666ca431ab626ff0">ComputeDeformableContact</a> (internal::DeformableContact&lt; T &gt; *deformable_contact) const</td></tr>
 <tr class="memdesc:a0e8749d9307aa501666ca431ab626ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0e8749d9307aa501666ca431ab626ff0" title="Reports contact information among all deformable geometries.">QueryObject::ComputeDeformableContact()</a>.  <a href="#a0e8749d9307aa501666ca431ab626ff0">More...</a><br /></td></tr>
 <tr class="separator:a0e8749d9307aa501666ca431ab626ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48676624208ba13c78edbc098203f1ea"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a48676624208ba13c78edbc098203f1ea">FindCollisionCandidates</a> () const</td></tr>
@@ -434,13 +434,13 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Signed Distance Queries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#signed_distance_query">Signed Distance Queries</a> for more details. </p>
 </div></td></tr>
-<tr class="memitem:a8ceca86747a9346b7a75dd5a896db130"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a8ceca86747a9346b7a75dd5a896db130">ComputeSignedDistancePairwiseClosestPoints</a> (double max_distance) const</td></tr>
+<tr class="memitem:a8ceca86747a9346b7a75dd5a896db130"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a8ceca86747a9346b7a75dd5a896db130">ComputeSignedDistancePairwiseClosestPoints</a> (<a class="el" href="classdouble.html">double</a> max_distance) const</td></tr>
 <tr class="memdesc:a8ceca86747a9346b7a75dd5a896db130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52" title="Computes the signed distance together with the nearest points across all pairs of geometries in the w...">QueryObject::ComputeSignedDistancePairwiseClosestPoints()</a>.  <a href="#a8ceca86747a9346b7a75dd5a896db130">More...</a><br /></td></tr>
 <tr class="separator:a8ceca86747a9346b7a75dd5a896db130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df45ca643518e6318a1cd1359e3bca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a2df45ca643518e6318a1cd1359e3bca0">ComputeSignedDistancePairClosestPoints</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id_A, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id_B) const</td></tr>
 <tr class="memdesc:a2df45ca643518e6318a1cd1359e3bca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7a66a8b3fc43f34d11a9cd475fb77ee1" title="A variant of ComputeSignedDistancePairwiseClosestPoints() which computes the signed distance (and wit...">QueryObject::ComputeSignedDistancePairClosestPoints()</a>.  <a href="#a2df45ca643518e6318a1cd1359e3bca0">More...</a><br /></td></tr>
 <tr class="separator:a2df45ca643518e6318a1cd1359e3bca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae42e6f719f5768457bc1cd9535ddf7f0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html">SignedDistanceToPoint</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ae42e6f719f5768457bc1cd9535ddf7f0">ComputeSignedDistanceToPoint</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, double threshold) const</td></tr>
+<tr class="memitem:ae42e6f719f5768457bc1cd9535ddf7f0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html">SignedDistanceToPoint</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ae42e6f719f5768457bc1cd9535ddf7f0">ComputeSignedDistanceToPoint</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, <a class="el" href="classdouble.html">double</a> threshold) const</td></tr>
 <tr class="memdesc:ae42e6f719f5768457bc1cd9535ddf7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c" title="Computes the signed distances and gradients to a query point from each geometry in the scene.">QueryObject::ComputeSignedDistanceToPoint()</a>.  <a href="#ae42e6f719f5768457bc1cd9535ddf7f0">More...</a><br /></td></tr>
 <tr class="separator:ae42e6f719f5768457bc1cd9535ddf7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Render Queries</div></td></tr>
@@ -906,7 +906,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_same_v&lt;T1, double&gt;, void&gt; ComputeDeformableContact </td>
+          <td class="memname">std::enable_if_t&lt;std::is_same_v&lt;T1, <a class="el" href="classdouble.html">double</a>&gt;, void&gt; ComputeDeformableContact </td>
           <td>(</td>
           <td class="paramtype">internal::DeformableContact&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>deformable_contact</em></td><td>)</td>
@@ -977,7 +977,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt;T&gt; &gt; ComputeSignedDistancePairwiseClosestPoints </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>max_distance</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -1003,7 +1003,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>threshold</em>&#160;</td>
         </tr>
         <tr>
@@ -1592,7 +1592,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;double&gt;&amp; GetPoseInFrame </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; GetPoseInFrame </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
           <td class="paramname"><em>geometry_id</em></td><td>)</td>
@@ -1612,7 +1612,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;double&gt;&amp; GetPoseInParent </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; GetPoseInParent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
           <td class="paramname"><em>geometry_id</em></td><td>)</td>
@@ -1652,7 +1652,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt;double&gt;* GetReferenceMesh </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;* GetReferenceMesh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -1822,7 +1822,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::variant&lt;std::monostate, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt;double&gt;*, const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt;double&gt;*&gt; maybe_get_hydroelastic_mesh </td>
+          <td class="memname">std::variant&lt;std::monostate, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;*, const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;*&gt; maybe_get_hydroelastic_mesh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
           <td class="paramname"><em>geometry_id</em></td><td>)</td>
@@ -2097,9 +2097,9 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;!std::is_same_v&lt;T1, double&gt;, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt;T&gt;&amp;&gt; operator= </td>
+          <td class="memname">std::enable_if_t&lt;!std::is_same_v&lt;T1, <a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt;T&gt;&amp;&gt; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2167,7 +2167,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>resolution_hint</em>&#160;</td>
         </tr>
         <tr>
