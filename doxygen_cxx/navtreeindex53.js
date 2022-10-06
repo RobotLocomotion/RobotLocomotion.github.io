@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[3,0,0,16,2,0],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[3,0,0,16,2,0,7],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,16,2,0,5],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[3,0,0,16,2,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,1,23],
 "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html#aacab57c845ae554fb21a347bf8137ef3":[3,0,1,23,0],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,24],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,1,24,0],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,25]
+"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,1,24,0]
 };

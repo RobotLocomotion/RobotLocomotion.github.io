@@ -167,8 +167,24 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_parser.htm
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Parses SDF and URDF input files into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and (optionally) a SceneGraph. </p>
-<p>For documentation of Drake-specific extensions and limitations, see <a class="el" href="group__multibody__parsing.html">Parsing Models for Multibody Dynamics</a>.</p>
+<div class="textblock"><p>Parses model description input into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and (optionally) a SceneGraph. </p>
+<p>A variety of input formats are supported, and are recognized by filename suffixes:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File format  </th><th class="markdownTableHeadNone">Filename suffix   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">URDF  </td><td class="markdownTableBodyNone">".urdf"   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">SDFormat  </td><td class="markdownTableBodyNone">".sdf"   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">MJCF (Mujoco XML)  </td><td class="markdownTableBodyNone">".xml"   </td></tr>
+</table>
+<p>The output of parsing is one or more model instances added to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> provided to the parser at construction.</p>
+<p>SDFormat files may contain multiple <code>&lt;model&gt;</code> elements. New model instances will be added to <code>plant</code> for each <code>&lt;model&gt;</code> tag in the file.</p>
+<dl class="section note"><dt>Note</dt><dd>Adding multiple root-level models, i.e, <code>&lt;model&gt;</code>s directly under <code>&lt;sdf&gt;</code>, is deprecated. If you need multiple models in a single file, please use an SDFormat world tag.</dd></dl>
+<p>URDF files contain a single <code>&lt;robot&gt;</code> element. Only a single model instance will be added to <code>plant</code>.</p>
+<p>MJCF (MuJoCo XML) files typically contain many bodies, they will all be added as a single model instance in the <code>plant</code>.</p>
+<p>For more documentation of Drake-specific treatment of these input formats, see <a class="el" href="group__multibody__parsing.html">Parsing Models for Multibody Dynamics</a>.</p>
 <p>When parsing literal quantities, Parser assumes SI units and radians in the absence of units specified by the format itself. This includes the literals in the explicitly specified files as well as referenced files such as OBJ or other data file formats. </p>
 </div>
 <p><code>#include &lt;drake/multibody/parsing/parser.h&gt;</code></p>
@@ -176,7 +192,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_parser.htm
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a3870fb0f175a5841b63b621acf15d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2a3870fb0f175a5841b63b621acf15d5">Parser</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:a2a3870fb0f175a5841b63b621acf15d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> that adds models to the given plant and (optionally) scene_graph.  <a href="#a2a3870fb0f175a5841b63b621acf15d5">More...</a><br /></td></tr>
+<tr class="memdesc:a2a3870fb0f175a5841b63b621acf15d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> that adds models to the given plant and (optionally) scene_graph.  <a href="#a2a3870fb0f175a5841b63b621acf15d5">More...</a><br /></td></tr>
 <tr class="separator:a2a3870fb0f175a5841b63b621acf15d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcfdbffd423372fd0b6ece742437971"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a> ()</td></tr>
 <tr class="memdesc:adbcfdbffd423372fd0b6ece742437971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable reference to the plant that will be modified by this parser.  <a href="#adbcfdbffd423372fd0b6ece742437971">More...</a><br /></td></tr>
@@ -188,13 +204,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a80f0b282c1e0ed11863458fa49b448ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cause all subsequent Add*Model*() operations to use strict parsing; warnings will be treated as errors.  <a href="#a80f0b282c1e0ed11863458fa49b448ae">More...</a><br /></td></tr>
 <tr class="separator:a80f0b282c1e0ed11863458fa49b448ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2">AddAllModelsFromFile</a> (const std::string &amp;file_name)</td></tr>
-<tr class="memdesc:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SDF, URDF, or MJCF file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#a9b40bb492d33e373b3bfcf5d440a36c2">More...</a><br /></td></tr>
+<tr class="memdesc:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#a9b40bb492d33e373b3bfcf5d440a36c2">More...</a><br /></td></tr>
 <tr class="separator:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc82a9937f1710e5da413dcad7a3ded"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2bc82a9937f1710e5da413dcad7a3ded">AddModelFromFile</a> (const std::string &amp;file_name, const std::string &amp;model_name={})</td></tr>
-<tr class="memdesc:a2bc82a9937f1710e5da413dcad7a3ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SDFormat, URDF, or MJCF file named in <code>file_name</code> and adds one top-level model to <code>plant</code>.  <a href="#a2bc82a9937f1710e5da413dcad7a3ded">More...</a><br /></td></tr>
+<tr class="memdesc:a2bc82a9937f1710e5da413dcad7a3ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>file_name</code> and adds one top-level model to <code>plant</code>.  <a href="#a2bc82a9937f1710e5da413dcad7a3ded">More...</a><br /></td></tr>
 <tr class="separator:a2bc82a9937f1710e5da413dcad7a3ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a818199bfa51f6b3d5e9a8660bc4e486c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a818199bfa51f6b3d5e9a8660bc4e486c">AddModelFromString</a> (const std::string &amp;file_contents, const std::string &amp;file_type, const std::string &amp;model_name={})</td></tr>
-<tr class="memdesc:a818199bfa51f6b3d5e9a8660bc4e486c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides same functionality as AddModelFromFile, but instead parses the SDFormat or URDF XML data via <code>file_contents</code> with type dictated by <code>file_type</code>.  <a href="#a818199bfa51f6b3d5e9a8660bc4e486c">More...</a><br /></td></tr>
+<tr class="memdesc:a818199bfa51f6b3d5e9a8660bc4e486c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides same functionality as AddModelFromFile, but instead parses the model description text data via <code>file_contents</code> with format dictated by <code>file_type</code>.  <a href="#a818199bfa51f6b3d5e9a8660bc4e486c">More...</a><br /></td></tr>
 <tr class="separator:a818199bfa51f6b3d5e9a8660bc4e486c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a874a4b22e398a11c45d9f3530c9add35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35">Parser</a> (const <a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a> &amp;)=delete</td></tr>
@@ -298,7 +314,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> that adds models to the given plant and (optionally) scene_graph. </p>
+<p>Creates a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> that adds models to the given plant and (optionally) scene_graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plant</td><td>A pointer to a mutable <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> object to which parsed model(s) will be added; <code>plant-&gt;is_finalized()</code> must remain <code>false</code> for as long as the <code>plant</code> is in used by <code>this</code>. </td></tr>
@@ -326,14 +342,10 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Parses the SDF, URDF, or MJCF file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>. </p>
-<p>SDFormat files may contain multiple <code>&lt;model&gt;</code> elements. New model instances will be added to <code>plant</code> for each <code>&lt;model&gt;</code> tag in the file.</p>
-<dl class="section note"><dt>Note</dt><dd>Adding multiple root-level models, i.e, <code>&lt;model&gt;</code>s directly under <code>&lt;sdf&gt;</code>, is deprecated. If you need multiple models in a single file, please use an SDFormat world file.</dd></dl>
-<p>URDF files contain a single <code>&lt;robot&gt;</code> element. Only a single model instance will be added to <code>plant</code>.</p>
-<p>MJCF (MuJoCo XML) files typically contain many bodies, they will all be added as a single model instance in the <code>plant</code>.</p>
+<p>Parses the input file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the SDF, URDF, or MJCF file to be parsed. The file type will be inferred from the extension. </td></tr>
+    <tr><td class="paramname">file_name</td><td>The name of the file to be parsed. The file type will be inferred from the extension. </td></tr>
   </table>
   </dd>
 </dl>
@@ -373,9 +385,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Parses the SDFormat, URDF, or MJCF file named in <code>file_name</code> and adds one top-level model to <code>plant</code>. </p>
-<p>It is an error to call this using an SDFormat file with more than one root-level <code>&lt;model&gt;</code> element.</p>
-<dl class="section note"><dt>Note</dt><dd>This function might create additional model instances corresponding to nested models found in the top level SDFormat model. This means that elements contained by the returned model instance may not comprise all of the added elements due to how model instances are mutually exclusive and not hierarchical (#14043).</dd></dl>
+<p>Parses the input file named in <code>file_name</code> and adds one top-level model to <code>plant</code>. </p>
+<p>It is an error to call this using any file that adds more than one model instance.</p>
+<dl class="section note"><dt>Note</dt><dd>This function might create additional model instances corresponding to nested models found in the top level file. This means that elements contained by the returned model instance may not comprise all of the added elements due to how model instances are mutually exclusive and not hierarchical (#14043).</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="http://sdformat.org/tutorials?tut=composition&ver=1.7">http://sdformat.org/tutorials?tut=composition&amp;ver=1.7</a> for details on nesting in SDFormat. </dd></dl>
 
 </div>
@@ -412,12 +424,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Provides same functionality as AddModelFromFile, but instead parses the SDFormat or URDF XML data via <code>file_contents</code> with type dictated by <code>file_type</code>. </p>
+<p>Provides same functionality as AddModelFromFile, but instead parses the model description text data via <code>file_contents</code> with format dictated by <code>file_type</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_contents</td><td>The XML data to be parsed. </td></tr>
-    <tr><td class="paramname">file_type</td><td>The data format; must be either "sdf", "urdf", or "xml". </td></tr>
-    <tr><td class="paramname">model_name</td><td>The name given to the newly created instance of this model. If empty, the "name" attribute from the <code>&lt;model&gt;</code> or <code>&lt;robot&gt;</code> tag will be used. </td></tr>
+    <tr><td class="paramname">file_contents</td><td>The model data to be parsed. </td></tr>
+    <tr><td class="paramname">file_type</td><td>The data format; must be one of the filename suffixes listed above, <em>without</em> the leading dot (.) . </td></tr>
+    <tr><td class="paramname">model_name</td><td>The name given to the newly created instance of this model. If empty, the model name provided by the input text will be used. </td></tr>
   </table>
   </dd>
 </dl>

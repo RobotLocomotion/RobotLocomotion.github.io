@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,9,4,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,9,4,0,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,9,4,0,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,16,1,7,2],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a231a08c109ea1cc7dacf351a1c291cb7":[3,0,0,16,1,7,0],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,16,1,7,1],
-"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831":[3,0,0,16,1,7,3],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[3,0,0,16,2,0]
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831":[3,0,0,16,1,7,3]
 };

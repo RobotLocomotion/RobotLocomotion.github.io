@@ -466,9 +466,29 @@ if <code class="docutils literal notranslate"><span class="pre">package_name</sp
 <dl class="class">
 <dt id="pydrake.multibody.parsing.Parser">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">Parser</code><a class="headerlink" href="#pydrake.multibody.parsing.Parser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parses SDF and URDF input files into a MultibodyPlant and (optionally)
-a SceneGraph. For documentation of Drake-specific extensions and
-limitations, see multibody_parsing.</p>
+<dd><p>Parses model description input into a MultibodyPlant and (optionally)
+a SceneGraph. A variety of input formats are supported, and are
+recognized by filename suffixes:</p>
+<p>File format | Filename suffix ———————— |
+————— URDF | “.urdf” SDFormat | “.sdf” MJCF (Mujoco XML) |
+“.xml”</p>
+<p>The output of parsing is one or more model instances added to the
+MultibodyPlant provided to the parser at construction.</p>
+<p>SDFormat files may contain multiple <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> elements. New model
+instances will be added to <code class="docutils literal notranslate"><span class="pre">plant</span></code> for each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag in the
+file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Adding multiple root-level models, i.e, <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;`s</span> <span class="pre">directly</span> <span class="pre">under</span>
+<span class="pre">`&lt;sdf&gt;</span></code>, is deprecated. If you need multiple models in a single
+file, please use an SDFormat world tag.</p>
+</div>
+<p>URDF files contain a single <code class="docutils literal notranslate"><span class="pre">&lt;robot&gt;</span></code> element. Only a single model
+instance will be added to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<p>MJCF (MuJoCo XML) files typically contain many bodies, they will all
+be added as a single model instance in the <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<p>For more documentation of Drake-specific treatment of these input
+formats, see multibody_parsing.</p>
 <p>When parsing literal quantities, Parser assumes SI units and radians
 in the absence of units specified by the format itself. This includes
 the literals in the explicitly specified files as well as referenced
@@ -493,25 +513,12 @@ nullptr.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.parsing.Parser.AddAllModelsFromFile">
 <code class="descname">AddAllModelsFromFile</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em>, <em>file_name: str</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.ModelInstanceIndex]<a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddAllModelsFromFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parses the SDF, URDF, or MJCF file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all
-of its model(s) to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
-<p>SDFormat files may contain multiple <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> elements. New model
-instances will be added to <code class="docutils literal notranslate"><span class="pre">plant</span></code> for each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag in the
-file.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Adding multiple root-level models, i.e, <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;`s</span> <span class="pre">directly</span> <span class="pre">under</span>
-<span class="pre">`&lt;sdf&gt;</span></code>, is deprecated. If you need multiple models in a single
-file, please use an SDFormat world file.</p>
-</div>
-<p>URDF files contain a single <code class="docutils literal notranslate"><span class="pre">&lt;robot&gt;</span></code> element. Only a single model
-instance will be added to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
-<p>MJCF (MuJoCo XML) files typically contain many bodies, they will all
-be added as a single model instance in the <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all of its
+model(s) to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_name</span></code>:</dt>
-<dd>The name of the SDF, URDF, or MJCF file to be parsed. The file
-type will be inferred from the extension.</dd>
+<dd>The name of the file to be parsed. The file type will be inferred
+from the extension.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -529,18 +536,16 @@ including nested models.</td>
 <dl class="method">
 <dt id="pydrake.multibody.parsing.Parser.AddModelFromFile">
 <code class="descname">AddModelFromFile</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em>, <em>file_name: str</em>, <em>model_name: str = ''</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ModelInstanceIndex<a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelFromFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parses the SDFormat, URDF, or MJCF file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and
-adds one top-level model to <code class="docutils literal notranslate"><span class="pre">plant</span></code>. It is an error to call this
-using an SDFormat file with more than one root-level <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code>
-element.</p>
+<dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds one top-level
+model to <code class="docutils literal notranslate"><span class="pre">plant</span></code>. It is an error to call this using any file that
+adds more than one model instance.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function might create additional model instances
-corresponding to nested models found in the top level SDFormat
-model. This means that elements contained by the returned model
-instance may not comprise all of the added elements due to how
-model instances are mutually exclusive and not hierarchical
-(#14043).</p>
+corresponding to nested models found in the top level file. This
+means that elements contained by the returned model instance may
+not comprise all of the added elements due to how model instances
+are mutually exclusive and not hierarchical (#14043).</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -553,17 +558,17 @@ on nesting in SDFormat.</p>
 <dt id="pydrake.multibody.parsing.Parser.AddModelFromString">
 <code class="descname">AddModelFromString</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em>, <em>file_contents: str</em>, <em>file_type: str</em>, <em>model_name: str = ''</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ModelInstanceIndex<a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelFromString" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides same functionality as AddModelFromFile, but instead parses
-the SDFormat or URDF XML data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with type dictated
-by <code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
+the model description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with format
+dictated by <code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_contents</span></code>:</dt>
-<dd>The XML data to be parsed.</dd>
+<dd>The model data to be parsed.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_type</span></code>:</dt>
-<dd>The data format; must be either “sdf”, “urdf”, or “xml”.</dd>
+<dd>The data format; must be one of the filename suffixes listed
+above, <em>without</em> the leading dot (.) .</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_name</span></code>:</dt>
 <dd>The name given to the newly created instance of this model. If
-empty, the “name” attribute from the <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;robot&gt;</span></code>
-tag will be used.</dd>
+empty, the model name provided by the input text will be used.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

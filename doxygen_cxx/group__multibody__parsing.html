@@ -162,10 +162,13 @@ $(document).ready(function(){initNavTree('group__multibody__parsing.html','');})
 <div class="title">Parsing Models for Multibody Dynamics<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Drake's <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph.">drake::multibody::Parser</a> accepts model files written in either SDFormat or URDF. </p>
-<p>In both formats, however, there are Drake-specific extensions and Drake-specific limitations.</p>
+<p>Drake's <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">drake::multibody::Parser</a> accepts model files written in a variety of input formats. </p>
+<p>Drake's parsing of URDF, SDFormat, and MJCF (Mujoco XML) has Drake-specific extensions and limitations.</p>
 <p>The result of the parse is an in-memory model realized within <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">drake::multibody::MultibodyPlant</a> and (optionally) <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">drake::geometry::SceneGraph</a>. Note that parses that do not use a <code>SceneGraph</code> will effectively ignore geometric model elements, especially <code>//visual</code> and <code>//collision</code> elements.</p>
-<p>In the reference sections below, the relevant usage paths for various tags are indicated using <a href="https://www.w3.org/TR/xpath-31/">XPath</a> notation.</p>
+<p>In the reference sections below, when discussing XML formats, the relevant usage paths for various tags are indicated using <a href="https://www.w3.org/TR/xpath-31/">XPath</a> notation.</p>
+<h1><a class="anchor" id="multibody_parsing_mjcf"></a>
+MJCF (Mujoco XML) Support</h1>
+<p>There is limited, undocumented support for parsing MJCF (Mujoco XML) files. The files are recognized by an .xml file extension. The scope of features that are actually supported still need to be documented.</p>
 <h1><a class="anchor" id="multibody_parsing_sdf"></a>
 SDFormat Support</h1>
 <p>Drake supports SDFormat files following the specification at <a href="http://sdformat.org/spec">http://sdformat.org/spec</a>. As of this writing, the supported spec version is 1.9, but check also the Drake release notes for current status.</p>
