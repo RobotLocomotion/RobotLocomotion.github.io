@@ -263,7 +263,7 @@ to maintain over time.</li>
 <h2 id="cutting-the-release">Cutting the release</h2>
 
 <ol>
-  <li>Find a plausible build to use
+  <li>Find a plausible nightly build to use:
     <ol>
       <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean</li>
       <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/</a>
@@ -282,24 +282,55 @@ to (open the latest build, go to “View as plain text”, and search for
 with today’s date (they kick off after midnight).  All of the builds
 should have the same date. If not, wait until the following night.</li>
       <li>Use the
-<code class="highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool to download
-and verify that all the release candidates are built from the same
-commit.  (It’s usage
-instructions are atop its source code:
+<code class="highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool with the
+<code class="highlighter-rouge">--find-git-sha</code> option to download and verify that all the nightlies
+are built from the same commit.  (It’s usage instructions are atop its
+source code:
 <a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/download_release_candidate.py">download_release_candidate.py</a>.)</li>
     </ol>
   </li>
+  <li>Launch the wheel staging builds for that git commit sha:
+    <ol>
+      <li>For both macOS and linux, open the jenkins build page from
+this list:
+        <ul>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Wheel/job/mac-big-sur-unprovisioned-clang-wheel-staging-snopt-mosek-release/">macOS Jenkins Wheel Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-focal-unprovisioned-gcc-wheel-staging-snopt-mosek-release/">linux Jenkins Wheel Staging</a></li>
+        </ul>
+      </li>
+      <li>In the upper right, click “log in” (unless you’re already logged in). This
+will use your GitHub credentials.</li>
+      <li>Click “Build with Parameters”.</li>
+      <li>Change “sha1” to the full <strong>git sha</strong> corresponding to <code class="highlighter-rouge">v1.N.0</code> and
+“release_version” to <code class="highlighter-rouge">1.N.0</code> (no “v”).</li>
+      <li>Click “Build”; each build will take around an hour, give or take.</li>
+      <li>Note: The macOS job will produce one <code class="highlighter-rouge">.whl</code> file, whereas the linux job
+will produce multiple <code class="highlighter-rouge">.whl</code> files (in the same job).</li>
+      <li>Wait for those two build jobs to succeed.  It’s OK to work on release
+notes finishing touches in the meantime, but do not merge the release
+notes nor tag the release until the wheel builds have succeeded.</li>
+    </ol>
+  </li>
   <li>Update the release notes to have the <code class="highlighter-rouge">YYYYMMDD</code> we choose, and to make
-sure that the nightly build git sha from the prior step matches the
+sure that the nightly build git sha from the prior steps matches the
 <code class="highlighter-rouge">newest_commit</code> whose changes are enumerated in the notes.  Some dates
 are YYYYMMDD format, some are YYYY-MM-DD format; be sure to manually fix
 them all.
     <ol>
-      <li>Update the github links within doc/_pages/from_binary.md to reflect the
-upcoming v1.N.0 and YYYYMMDD.</li>
+      <li>Update the github links within <code class="highlighter-rouge">doc/_pages/from_binary.md</code> to reflect
+the upcoming v1.N.0 and YYYYMMDD.</li>
     </ol>
   </li>
-  <li>Re-enable CI by reverting the commit you added in step 3.</li>
+  <li>Re-enable CI by reverting the commit you added way up above in step 3.</li>
+  <li>Wait for the wheel builds to complete, and then download release artifacts:
+    <ol>
+      <li>Use the
+<code class="highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool with the
+<code class="highlighter-rouge">--version</code> option to download and verify all binaries.  (It’s usage
+instructions are atop its source code:
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/download_release_candidate.py">download_release_candidate.py</a>.)</li>
+    </ol>
+  </li>
   <li>Merge the release notes PR
     <ol>
       <li>Take care when squashing not to accept github’s auto-generated commit message if it is not appropriate.</li>
@@ -330,8 +361,13 @@ appropriate edits as follows:
         </ul>
       </li>
       <li>Into the box labeled “Attach binaries by dropping them here or selecting
-them.”, drag and drop the 9 release binary artifacts from above (the 3
-tarballs, and their 6 checksums).</li>
+them.”, drag and drop the 9 <code class="highlighter-rouge">tgz</code>-related binary artifacts from
+<code class="highlighter-rouge">/tmp/drake-release/v1.N.0</code> (the 3 tarballs, and their 6 checksums).
+        <ul>
+          <li>Do not attach the <code class="highlighter-rouge">whl</code>-related binary artifacts; we’ll upload those
+pypi a bit later on.</li>
+        </ul>
+      </li>
       <li>Choose “Save draft” and take a deep breath.</li>
     </ol>
   </li>
@@ -345,6 +381,27 @@ and upload the releases to S3. Be sure to provide her with the binary
 date, commit SHA, and release tag in the same ping.</li>
       <li>Announce on Drake Slack, <code class="highlighter-rouge">#general</code>.</li>
       <li>Party on, Wayne.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="post-release-wheel-upload">Post-release wheel upload</h2>
+
+<p>After tagging the release, you must manually upload a PyPI release.</p>
+
+<p>If you haven’t done so already, follow Drake’s PyPI
+<a href="https://docs.google.com/document/d/17D0yzyr0kGH44eWpiNY7E33A8hW1aiJRmADaoAlVISE/edit#">account setup</a>
+instructions to obtain a username and password.</p>
+
+<ol>
+  <li>
+    <p>Run <code class="highlighter-rouge">twine</code> to upload the wheel release, as follows:</p>
+
+    <ol>
+      <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
+      <li>Run <code class="highlighter-rouge">twine upload /tmp/drake_release/v1.N.0/*.whl</code>.</li>
+      <li>Confirm that all of the uploads succeeded without any error messages in
+your terminal.</li>
     </ol>
   </li>
 </ol>
@@ -492,51 +549,6 @@ running the notebook themselves.</li>
   <li>On the right side, click “Environment” then “Stop Machine”, as a
 courtesy. (It will time out on its own within the hour, but we might as
 well save a few nanograms of CO2 where we can.)</li>
-</ol>
-
-<h2 id="post-release-wheel-builds">Post-release wheel builds</h2>
-
-<p>After tagging the release, you must manually build and upload a PyPI release.</p>
-
-<p>If you haven’t done so already, follow Drake’s PyPI
-<a href="https://docs.google.com/document/d/17D0yzyr0kGH44eWpiNY7E33A8hW1aiJRmADaoAlVISE/edit#">account setup</a>
-instructions to obtain a username and password.</p>
-
-<p>To build the wheel artifacts, use the staging job for each platform:</p>
-
-<ul>
-  <li><a href="https://drake-jenkins.csail.mit.edu/view/Wheel/job/mac-big-sur-unprovisioned-clang-wheel-staging-snopt-mosek-release/">macOS Jenkins Wheel Staging</a></li>
-  <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-focal-unprovisioned-gcc-wheel-staging-snopt-mosek-release/">linux Jenkins Wheel Staging</a></li>
-</ul>
-
-<p>For both macOS and linux launching the job is the same.  macOS will produce
-one <code class="highlighter-rouge">.whl</code>, whereas linux will produce multiple (in the same build).  For both
-macOS and linux:</p>
-
-<ol>
-  <li>Open the jenkins build page from the above list.</li>
-  <li>In the upper right, click “log in” (unless you’re already logged in). This
-will use your GitHub credentials.</li>
-  <li>Click “Build with Parameters”.</li>
-  <li>Change “sha1” to the full <strong>git sha</strong> corresponding to <code class="highlighter-rouge">v1.N.0</code> and
-“release_version” to <code class="highlighter-rouge">1.N.0</code>.</li>
-  <li>Click “Build”; the build will finish after approximately 45 minutes for linux
-and 75 minutes for macOS.</li>
-  <li>After it’s finished, open the “Console Output” and scroll to the bottom to
-find the URL of the built wheel, which will be something like
-<code class="highlighter-rouge">https://drake-packages.csail.mit.edu/drake/staging/drake-1.N.0-cp39-cp39-macosx_11_0_x86_64.whl</code>.</li>
-  <li>Download the wheel(s) built on Jenkins.  A <code class="highlighter-rouge">.sha512</code> file is also uploaded
-which should be used to confirm the downloaded <code class="highlighter-rouge">.whl</code> file, once an
-artifact is uploaded to PyPI it cannot be overwritten.</li>
-</ol>
-
-<p>Finally, after you have all of the <code class="highlighter-rouge">.whl</code> files downloaded and verified, run
-<code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path to the
-files you downloaded.</p>
-
-<ol>
-  <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
-  <li>You may upload each individually, or do <code class="highlighter-rouge">twine upload a.whl b.whl c.whl</code>.</li>
 </ol>
 
       </article>

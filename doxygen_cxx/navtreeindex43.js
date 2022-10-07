@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"formula_8h.html#a2b2c6f4240ba42744712ab5f5c73c1db":[4,0,0,1,3,0,7,83],
 "formula_8h.html#a2c7303caa2be22b055163dc4e7134834":[4,0,0,1,3,0,7,9],
 "formula_8h.html#a322e2ae11441c6769b244c680c9b565a":[4,0,0,1,3,0,7,62],
 "formula_8h.html#a3821701f71cdfe8c9fbb277e017b384d":[4,0,0,1,3,0,7,19],
@@ -200,8 +201,8 @@ var NAVTREEINDEX43 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6,0],
 "functions_rela.html":[3,3,6],
+"functions_rela.html":[3,3,6,0],
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "functions_vars_q.html":[3,3,2,16],
 "functions_vars_r.html":[3,3,2,17],
 "functions_vars_s.html":[3,3,2,18],
-"functions_vars_t.html":[3,3,2,19],
-"functions_vars_u.html":[3,3,2,20]
+"functions_vars_t.html":[3,3,2,19]
 };

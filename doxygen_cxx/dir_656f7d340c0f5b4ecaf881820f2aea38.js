@@ -6,6 +6,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "contact_jacobians.h", "contact__jacobians_8h.html", null ],
     [ "contact_model_doxygen.h", "contact__model__doxygen_8h.html", null ],
     [ "contact_pair_kinematics.h", "contact__pair__kinematics_8h.html", null ],
+    [ "contact_properties.h", "contact__properties_8h.html", null ],
     [ "contact_results.h", "contact__results_8h.html", [
       [ "ContactResults", "classdrake_1_1multibody_1_1_contact_results.html", "classdrake_1_1multibody_1_1_contact_results" ]
     ] ],

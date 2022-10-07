@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"piecewise__polynomial_8h.html":[4,0,0,1,5,4],
 "piecewise__pose_8h.html":[4,0,0,1,5,5],
 "piecewise__quaternion_8h.html":[4,0,0,1,5,6],
 "piecewise__trajectory_8h.html":[4,0,0,1,5,7],
@@ -59,7 +60,7 @@ var NAVTREEINDEX48 =
 "point__cloud__to__lcm_8h.html":[4,0,0,9,3],
 "point__contact__data_8h.html":[4,0,0,8,2,9],
 "point__contact__visualizer_8h.html":[4,0,0,8,7,4],
-"point__pair__contact__info_8h.html":[4,0,0,8,10,25],
+"point__pair__contact__info_8h.html":[4,0,0,8,10,26],
 "point__to__point__distance__constraint_8h.html":[4,0,0,8,5,13],
 "pointer__cast_8h.html":[4,0,0,1,44],
 "pointer__cast_8h.html#a983e5f23fd0a884e01038572bd3e24a2":[4,0,0,1,44,2],
@@ -140,7 +141,7 @@ var NAVTREEINDEX48 =
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[4,0,0,11,43,2,8],
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,11,43,6],
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,43,7],
-"propeller_8h.html":[4,0,0,8,10,26],
+"propeller_8h.html":[4,0,0,8,10,27],
 "proximity__doxygen_8h.html":[4,0,0,4,2,49],
 "proximity__engine_8h.html":[4,0,0,4,33],
 "proximity__properties_8h.html":[4,0,0,4,34],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "render__doxygen_8h.html":[4,0,0,4,4,2],
 "render__engine_8h.html":[4,0,0,4,4,3],
 "render__engine__gl__params_8h.html":[4,0,0,4,5,10],
-"render__engine__gltf__client__params_8h.html":[4,0,0,4,6,5],
-"render__engine__vtk__params_8h.html":[4,0,0,4,7,4]
+"render__engine__gltf__client__params_8h.html":[4,0,0,4,6,5]
 };

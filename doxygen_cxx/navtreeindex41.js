@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"dir_1276f2ac0d82a2c7322b9222608e1820.html":[4,0,0,3,1],
 "dir_1b53483452bb55d26e3cb66e1b6a096d.html":[4,0,0,8,0,0],
 "dir_1cfb1308721b0b1c7dbbf4fcf7c61022.html":[4,0,0,3,10],
 "dir_2186f45272e5c29e3ac18ec762ab7501.html":[4,0,0,12,3],
@@ -105,7 +106,7 @@ var NAVTREEINDEX41 =
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,10],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,10,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,10,1],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,11],
+"discrete__contact__pair_8h.html":[4,0,0,8,10,12],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
@@ -113,8 +114,8 @@ var NAVTREEINDEX41 =
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,1],
-"discrete__update__manager_8h.html":[4,0,0,8,10,12],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,12,0],
+"discrete__update__manager_8h.html":[4,0,0,8,10,13],
+"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,13,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
 "distance__constraint_8h.html":[4,0,0,8,5,4],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "expect__no__throw_8h.html#a7226e0d109de2f98e1406ddf564aa967":[4,0,0,1,4,1,0],
 "expect__no__throw_8h.html#a99229e82a8cddb4346c74b49716bafc9":[4,0,0,1,4,1,1],
 "expect__no__throw_8h.html#ae8eedd9e4d5d0114603862cd217cb469":[4,0,0,1,4,1,2],
-"expect__throws__message_8h.html":[4,0,0,1,4,2],
-"expect__throws__message_8h.html#a3032825862f840191f81ddc8ca53072e":[4,0,0,1,4,2,2]
+"expect__throws__message_8h.html":[4,0,0,1,4,2]
 };
