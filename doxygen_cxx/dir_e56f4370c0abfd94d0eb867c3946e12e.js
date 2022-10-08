@@ -3,6 +3,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     [ "detail_collision_filter_group_resolver.h", "detail__collision__filter__group__resolver_8h.html", null ],
     [ "detail_common.h", "detail__common_8h.html", null ],
     [ "detail_composite_parse.h", "detail__composite__parse_8h.html", null ],
+    [ "detail_dmd_parser.h", "detail__dmd__parser_8h.html", null ],
     [ "detail_ignition.h", "detail__ignition_8h.html", null ],
     [ "detail_mujoco_parser.h", "detail__mujoco__parser_8h.html", null ],
     [ "detail_parsing_workspace.h", "detail__parsing__workspace_8h.html", null ],

@@ -178,12 +178,15 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_parser.htm
 <td class="markdownTableBodyNone">SDFormat  </td><td class="markdownTableBodyNone">".sdf"   </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">MJCF (Mujoco XML)  </td><td class="markdownTableBodyNone">".xml"   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Drake Model Directives  </td><td class="markdownTableBodyNone">".dmd.yaml"   </td></tr>
 </table>
 <p>The output of parsing is one or more model instances added to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> provided to the parser at construction.</p>
 <p>SDFormat files may contain multiple <code>&lt;model&gt;</code> elements. New model instances will be added to <code>plant</code> for each <code>&lt;model&gt;</code> tag in the file.</p>
 <dl class="section note"><dt>Note</dt><dd>Adding multiple root-level models, i.e, <code>&lt;model&gt;</code>s directly under <code>&lt;sdf&gt;</code>, is deprecated. If you need multiple models in a single file, please use an SDFormat world tag.</dd></dl>
 <p>URDF files contain a single <code>&lt;robot&gt;</code> element. Only a single model instance will be added to <code>plant</code>.</p>
 <p>MJCF (MuJoCo XML) files typically contain many bodies, they will all be added as a single model instance in the <code>plant</code>.</p>
+<p>Drake Model Directives are only available via AddAllModelsFromFile. The single-model methods (AddModelFromFile, AddModelFromString) cannot load model directives.</p>
 <p>For more documentation of Drake-specific treatment of these input formats, see <a class="el" href="group__multibody__parsing.html">Parsing Models for Multibody Dynamics</a>.</p>
 <p>When parsing literal quantities, Parser assumes SI units and radians in the absence of units specified by the format itself. This includes the literals in the explicitly specified files as well as referenced files such as OBJ or other data file formats. </p>
 </div>

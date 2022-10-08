@@ -471,7 +471,7 @@ a SceneGraph. A variety of input formats are supported, and are
 recognized by filename suffixes:</p>
 <p>File format | Filename suffix ———————— |
 ————— URDF | “.urdf” SDFormat | “.sdf” MJCF (Mujoco XML) |
-“.xml”</p>
+“.xml” Drake Model Directives | “.dmd.yaml”</p>
 <p>The output of parsing is one or more model instances added to the
 MultibodyPlant provided to the parser at construction.</p>
 <p>SDFormat files may contain multiple <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> elements. New model
@@ -487,6 +487,9 @@ file, please use an SDFormat world tag.</p>
 instance will be added to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <p>MJCF (MuJoCo XML) files typically contain many bodies, they will all
 be added as a single model instance in the <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<p>Drake Model Directives are only available via AddAllModelsFromFile.
+The single-model methods (AddModelFromFile, AddModelFromString) cannot
+load model directives.</p>
 <p>For more documentation of Drake-specific treatment of these input
 formats, see multibody_parsing.</p>
 <p>When parsing literal quantities, Parser assumes SI units and radians

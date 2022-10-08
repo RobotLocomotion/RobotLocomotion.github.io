@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,24],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,1,24,0],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,25],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html#ad8fefac14435343adfcc69f7348f0961":[3,0,1,25,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "volumetric__element_8h.html":[4,0,0,8,3,28],
 "volumetric__model_8h.html":[4,0,0,8,3,29],
 "vpolytope_8h.html":[4,0,0,4,1,10],
-"vtk__to__volume__mesh_8h.html":[4,0,0,4,2,58],
-"weld__joint_8h.html":[4,0,0,8,13,51]
+"vtk__to__volume__mesh_8h.html":[4,0,0,4,2,58]
 };
