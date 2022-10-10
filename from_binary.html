@@ -165,13 +165,21 @@ Mac are available to download as attachments from Drake’s GitHub
 <a href="https://github.com/RobotLocomotion/drake/releases">releases</a> page.</p>
 
 <p>The most recent release is
-<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.8.0">v1.8.0</a>:</p>
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.9.0">v1.9.0</a>:</p>
 
 <ul>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.8.0/drake-20220919-focal.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.8.0/drake-20220919-focal.tar.gz</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.8.0/drake-20220919-jammy.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.8.0/drake-20220919-jammy.tar.gz</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.8.0/drake-20220919-mac.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.8.0/drake-20220919-mac.tar.gz</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-focal.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-focal.tar.gz</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-jammy.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-jammy.tar.gz</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-mac.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-mac.tar.gz</a> (for x86_64)</li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-mac-arm64.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-mac-arm64.tar.gz</a> (for arm64)</li>
 </ul>
+
+<p>Users of macOS must download using a command-line tool such as <code class="highlighter-rouge">curl</code> instead
+of using a web browser, to avoid hassles from Gatekeeper checks for malicious
+software. For example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSLO https://github.com/RobotLocomotion/drake/releases/download/v1.9.0/drake-20221009-mac-arm64.tar.gz
+</code></pre></div></div>
 
 <h3 id="use-as-a-c-library">Use as a C++ library</h3>
 
@@ -183,7 +191,8 @@ example.</p>
 <h3 id="use-as-a-python-library">Use as a Python library</h3>
 
 <p>In most cases, we suggest using our <a href="/pip.html">pip releases</a>, because that
-will be more convenient than manually downloading.  However, if you need both
+will be more convenient than manually downloading.  However, if you are running
+on macOS arm64 or if you need both
 C++ and Python API support, then pip will not work.  This section shows
 how to incorporate a manual download into a
 <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">virtual environment</a>
@@ -219,21 +228,27 @@ Mac are generated nightly and are available to download at:</p>
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-focal.tar.gz</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-jammy.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz</a> (for x86_64)</li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac-arm64.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac-arm64.tar.gz</a> (for arm64)</li>
 </ul>
 
 <p>Older packages for specific dates are available by replacing <code class="highlighter-rouge">latest</code> with an
-8-digit date, e.g., <code class="highlighter-rouge">20220721</code> for July 21st, 2022.</p>
+8-digit date, e.g., <code class="highlighter-rouge">20221005</code> for October 5th, 2022.</p>
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-focal.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-jammy.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20220721-mac.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-focal.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-jammy.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-mac.tar.gz</a> (for x86_64)</li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-mac-arm64.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221005-mac-arm64.tar.gz</a> (for arm64)</li>
 </ul>
 
 <p>Nightly archives are retained for 56 days from their date of creation.</p>
 
 <p>The installation instructions are identical to stable releases as shown above.</p>
+
+<p>As with stable releases, users of macOS must download using a command-line tool
+such as <code class="highlighter-rouge">curl</code> instead of using a web browser, to avoid hassles from
+Gatekeeper checks for malicious software.</p>
 
       </article>
     </div>

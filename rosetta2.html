@@ -137,17 +137,21 @@ analysis.
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <h1 id="overview">Overview</h1>
+        <h1 id="instructions">Instructions</h1>
 
-<p>For users running on Apple’s newer arm64 hardware, to use Drake’s pre-compiled
-releases you must run Drake’s x86_64 binaries using Apple’s Rosetta 2 emulation.
-Running natively on arm64 is currently only supported by <a href="/from_source.html">building Drake from
-source</a>.</p>
+<div class="warning">
+  <p><strong>The advice on this page is no longer necessary as of current Drake.</strong></p>
 
-<h1 id="instructions">Instructions</h1>
+  <p>For older versions of Drake, users running on Apple’s newer arm64 hardware were
+required to run Drake’s x86_64 binaries using Apple’s Rosetta 2 emulation. That
+is no longer the case as of v1.9.0. The page serves as a historical record for
+how to run Drake x86_64 under Rosetta 2 emulation. Most users should ignore it
+and follow one of the typical <a href="/installation.html">installation</a> instructions
+instead.</p>
+</div>
 
-<p>To run pre-compiled Drake on Apple’s newer arm64 hardware, <strong>you must do all of
-your work in an x86_64 shell</strong>:</p>
+<p>To run macOS x86_64 pre-compiled Drake binaries on Apple’s newer arm64 hardware,
+you must do all of your work in an x86_64 shell:</p>
 
 <ol>
   <li>Use <code class="highlighter-rouge">arch -x86_64 /bin/bash</code> to obtain a shell.</li>

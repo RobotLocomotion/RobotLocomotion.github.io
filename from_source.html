@@ -151,12 +151,12 @@ integration. Any other configurations are provided on a best-effort basis.</p>
 <table>
   <thead>
     <tr>
-      <th>Operating System ⁽³⁾</th>
+      <th>Operating System ⁽²⁾</th>
       <th>Architecture</th>
-      <th>Python</th>
+      <th>Python ⁽¹⁾</th>
       <th>Bazel</th>
       <th>CMake</th>
-      <th>C/C++ Compiler ⁽⁴⁾</th>
+      <th>C/C++ Compiler ⁽³⁾</th>
       <th>Java</th>
     </tr>
   </thead>
@@ -164,7 +164,7 @@ integration. Any other configurations are provided on a best-effort basis.</p>
     <tr>
       <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
       <td>x86_64</td>
-      <td>3.8 ⁽²⁾</td>
+      <td>3.8</td>
       <td>5.3</td>
       <td>3.16</td>
       <td>GCC 9 (default) or Clang 12</td>
@@ -173,7 +173,7 @@ integration. Any other configurations are provided on a best-effort basis.</p>
     <tr>
       <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
       <td>x86_64</td>
-      <td>3.10 ⁽²⁾</td>
+      <td>3.10</td>
       <td>5.3</td>
       <td>3.22</td>
       <td>GCC 11 (default) or Clang 12</td>
@@ -182,7 +182,7 @@ integration. Any other configurations are provided on a best-effort basis.</p>
     <tr>
       <td>macOS Big Sur (11)</td>
       <td>x86_64</td>
-      <td>3.10 ⁽²⁾</td>
+      <td>3.10</td>
       <td>5.3</td>
       <td>3.24</td>
       <td>Apple LLVM 12 (Xcode 12)</td>
@@ -191,7 +191,7 @@ integration. Any other configurations are provided on a best-effort basis.</p>
     <tr>
       <td>macOS Monterey (12)</td>
       <td>x86_64</td>
-      <td>3.10 ⁽²⁾</td>
+      <td>3.10</td>
       <td>5.3</td>
       <td>3.24</td>
       <td>Apple LLVM 14 (Xcode 14)</td>
@@ -199,8 +199,8 @@ integration. Any other configurations are provided on a best-effort basis.</p>
     </tr>
     <tr>
       <td>macOS Monterey (12)</td>
-      <td>arm64 ⁽¹⁾</td>
-      <td>3.10 ⁽²⁾</td>
+      <td>arm64</td>
+      <td>3.10</td>
       <td>5.3</td>
       <td>3.24</td>
       <td>Apple LLVM 14 (Xcode 14)</td>
@@ -209,18 +209,14 @@ integration. Any other configurations are provided on a best-effort basis.</p>
   </tbody>
 </table>
 
-<p>⁽¹⁾ For users running on Apple’s newer arm64 hardware, you may run Drake in
-native arm64 mode when building from source. However, to use Drake’s
-pre-compiled binaries, refer to <a href="/rosetta2.html">Running under Rosetta 2</a> for
-instructions on running using x86_64 emulation.</p>
+<p>⁽¹⁾ CPython is the only Python implementation supported.</p>
 
-<p>⁽²⁾ CPython is the only Python implementation supported.</p>
-
-<p>⁽³⁾ Drake features that perform image rendering (e.g., camera simulation)
+<p>⁽²⁾ Drake features that perform image rendering (e.g., camera simulation)
 require a working display server.  Most personal computers will have this
-already built in, but some cloud or docker environments may not.</p>
+already built in, but some cloud or docker environments may require extra
+setup steps.</p>
 
-<p>⁽⁴⁾ Drake requires a compiler running in C++17 or C++20 mode.</p>
+<p>⁽³⁾ Drake requires a compiler running in C++17 or C++20 mode.</p>
 
 <h1 id="getting-drake">Getting Drake</h1>
 
