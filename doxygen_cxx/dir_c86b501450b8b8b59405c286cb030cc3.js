@@ -74,6 +74,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", "structdrake_1_1solvers_1_1_mosek_solver_details" ],
       [ "MosekSolver", "classdrake_1_1solvers_1_1_mosek_solver.html", "classdrake_1_1solvers_1_1_mosek_solver" ]
     ] ],
+    [ "mosek_solver_internal.h", "mosek__solver__internal_8h.html", null ],
     [ "nlopt_solver.h", "nlopt__solver_8h.html", [
       [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", "structdrake_1_1solvers_1_1_nlopt_solver_details" ],
       [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html", "classdrake_1_1solvers_1_1_nlopt_solver" ]

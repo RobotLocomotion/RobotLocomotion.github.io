@@ -112,14 +112,14 @@ var NAVTREEINDEX =
 "group__solver__evaluators.html",
 "ldlt_8h.html",
 "namespacedrake_1_1examples_1_1allegro__hand.html",
-"pid__controller_8h.html",
-"render__engine__gltf__client__params_8h.html",
-"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538",
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html",
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#abf7bcad233bb525d781901c05545b68e",
-"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38",
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html",
-"weld__joint_8h.html"
+"pid__controlled__system_8h.html",
+"render__engine__gl__params_8h.html",
+"spatial__algebra_8h.html",
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ac584721f13a52d5e19df707b30f95ece",
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f",
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a231a08c109ea1cc7dacf351a1c291cb7",
+"structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html#aacab57c845ae554fb21a347bf8137ef3",
+"vtk__to__volume__mesh_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
