@@ -171,6 +171,7 @@ $(document).ready(function(){initNavTree('event_8h.html','');});
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;unordered_set&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;variant&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="value_8h.html">drake/common/value.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="context_8h.html">drake/systems/framework/context.h</a>&quot;</code><br />
@@ -209,20 +210,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_composite_event_collection.html">LeafCompositeEventCollection&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html" title="This class bundles an instance of each EventCollection&lt;EventType&gt; into one object that stores the het...">CompositeEventCollection</a> for a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>.  <a href="classdrake_1_1systems_1_1_leaf_composite_event_collection.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for storing trigger-specific data to be passed to event handlers.  <a href="classdrake_1_1systems_1_1_event_data.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A token describing an event that recurs on a fixed period.  <a href="classdrake_1_1systems_1_1_periodic_event_data.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An event data variant describing an event that recurs on a fixed period.  <a href="classdrake_1_1systems_1_1_periodic_event_data.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_witness_triggered_event_data.html">WitnessTriggeredEventData&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for storing data from a witness function triggering to be passed to event handlers.  <a href="classdrake_1_1systems_1_1_witness_triggered_event_data.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An event data variant for storing data from a witness function triggering to be passed to event handlers.  <a href="classdrake_1_1systems_1_1_witness_triggered_event_data.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class that represents an event.  <a href="classdrake_1_1systems_1_1_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_periodic_event_data_comparator.html">PeriodicEventDataComparator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for comparing two <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html" title="A token describing an event that recurs on a fixed period.">PeriodicEventData</a> objects for use in a map container, using an arbitrary comparison method.  <a href="structdrake_1_1systems_1_1_periodic_event_data_comparator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for comparing two <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html" title="An event data variant describing an event that recurs on a fixed period.">PeriodicEventData</a> objects for use in a map container, using an arbitrary comparison method.  <a href="structdrake_1_1systems_1_1_periodic_event_data_comparator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents a publish event.  <a href="classdrake_1_1systems_1_1_publish_event.html#details">More...</a><br /></td></tr>

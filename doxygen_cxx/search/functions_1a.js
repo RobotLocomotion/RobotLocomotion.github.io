@@ -53,7 +53,6 @@ var searchData=
   ['_7eequalityconstrainedqpsolver',['~EqualityConstrainedQPSolver',['../classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a57b5780fc1b3d4d04e4aeb3bbb37be61',1,'drake::solvers::EqualityConstrainedQPSolver']]],
   ['_7eevaluatorbase',['~EvaluatorBase',['../classdrake_1_1solvers_1_1_evaluator_base.html#a6f67d60764689193d6eeb89600ef781e',1,'drake::solvers::EvaluatorBase']]],
   ['_7eeventcollection',['~EventCollection',['../classdrake_1_1systems_1_1_event_collection.html#a8a7bb86bd2c430815cd89f0216d707e3',1,'drake::systems::EventCollection']]],
-  ['_7eeventdata',['~EventData',['../classdrake_1_1systems_1_1_event_data.html#adef16a0c11f8bc1a011080510b6016a7',1,'drake::systems::EventData']]],
   ['_7eexpliciteulerintegrator',['~ExplicitEulerIntegrator',['../classdrake_1_1systems_1_1_explicit_euler_integrator.html#a3663050b72d552229994cc1f10da1e8e',1,'drake::systems::ExplicitEulerIntegrator']]],
   ['_7eexponentialconeconstraint',['~ExponentialConeConstraint',['../classdrake_1_1solvers_1_1_exponential_cone_constraint.html#abef24e9a5f88d1bf2cac8a829f0e1062',1,'drake::solvers::ExponentialConeConstraint']]],
   ['_7eexponentialpluspiecewisepolynomial',['~ExponentialPlusPiecewisePolynomial',['../classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#abfc9a61381e3e22126ab92fff4a9bc33',1,'drake::trajectories::ExponentialPlusPiecewisePolynomial']]],

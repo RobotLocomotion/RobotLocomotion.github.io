@@ -172,7 +172,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_event.html',
 class drake::systems::Event&lt; T &gt;</h3>
 
 <p>Abstract base class that represents an event. </p>
-<p>The base event contains two main pieces of information: an enum trigger type and an optional attribute of <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> that can be used to explain why the event is triggered. Derived classes should contain a function pointer to an optional callback function that handles the event. See <a class="el" href="group__event__callbacks.html">Event Callbacks</a> for detail. No-op is the default handling behavior. Currently, the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> framework only supports three concrete event types: <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>, <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>, and <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> distinguished by their callback functions' write access level to the <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>.</p>
+<p>The base event contains two main pieces of information: an enum trigger type and an optional attribute that can be used to explain why the event is triggered. Derived classes should contain a function pointer to an optional callback function that handles the event. See <a class="el" href="group__event__callbacks.html">Event Callbacks</a> for detail. No-op is the default handling behavior. Currently, the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> framework supports three concrete event types: <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>, <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>, and <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> distinguished by their callback functions' write access level to the <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>.</p>
 <p><a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a> handling occurs during a simulation of a system. The logic that describes when particular event types are handled is described in the class documentation for <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. </p>
 </div>
 <p><code>#include &lt;drake/systems/framework/event.h&gt;</code></p>
@@ -193,15 +193,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa07940fbacd0e4c0ed1a226e303afe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">TriggerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#aaa07940fbacd0e4c0ed1a226e303afe6">get_trigger_type</a> () const</td></tr>
 <tr class="memdesc:aaa07940fbacd0e4c0ed1a226e303afe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the trigger type.  <a href="#aaa07940fbacd0e4c0ed1a226e303afe6">More...</a><br /></td></tr>
 <tr class="separator:aaa07940fbacd0e4c0ed1a226e303afe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8417c633cc8646104ae00c407f856044"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a8417c633cc8646104ae00c407f856044">has_event_data</a> () const</td></tr>
-<tr class="memdesc:a8417c633cc8646104ae00c407f856044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this event has associated data.  <a href="#a8417c633cc8646104ae00c407f856044">More...</a><br /></td></tr>
-<tr class="separator:a8417c633cc8646104ae00c407f856044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaed6b9f2471fedf1633f8092f49d05f7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#aaed6b9f2471fedf1633f8092f49d05f7">get_event_data</a> () const</td></tr>
-<tr class="memdesc:aaed6b9f2471fedf1633f8092f49d05f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the event data.  <a href="#aaed6b9f2471fedf1633f8092f49d05f7">More...</a><br /></td></tr>
-<tr class="separator:aaed6b9f2471fedf1633f8092f49d05f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b4011486f230f08479c8f0cafe7814c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a2b4011486f230f08479c8f0cafe7814c">get_mutable_event_data</a> ()</td></tr>
-<tr class="memdesc:a2b4011486f230f08479c8f0cafe7814c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to the event data.  <a href="#a2b4011486f230f08479c8f0cafe7814c">More...</a><br /></td></tr>
-<tr class="separator:a2b4011486f230f08479c8f0cafe7814c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44b90e61d7ee699815e2cdc7decdb1a"><td class="memTemplParams" colspan="2">template&lt;typename EventDataType &gt; </td></tr>
+<tr class="memitem:ac44b90e61d7ee699815e2cdc7decdb1a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ac44b90e61d7ee699815e2cdc7decdb1a">has_event_data</a> () const</td></tr>
+<tr class="memdesc:ac44b90e61d7ee699815e2cdc7decdb1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this event has associated data of the given <code>EventDataType</code>.  <a href="#ac44b90e61d7ee699815e2cdc7decdb1a">More...</a><br /></td></tr>
+<tr class="separator:ac44b90e61d7ee699815e2cdc7decdb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae460d48b3fc4faba93055b7ab7c7e64d"><td class="memTemplParams" colspan="2">template&lt;typename EventDataType &gt; </td></tr>
+<tr class="memitem:ae460d48b3fc4faba93055b7ab7c7e64d"><td class="memTemplItemLeft" align="right" valign="top">const EventDataType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ae460d48b3fc4faba93055b7ab7c7e64d">get_event_data</a> () const</td></tr>
+<tr class="memdesc:ae460d48b3fc4faba93055b7ab7c7e64d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the event data.  <a href="#ae460d48b3fc4faba93055b7ab7c7e64d">More...</a><br /></td></tr>
+<tr class="separator:ae460d48b3fc4faba93055b7ab7c7e64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99922e735cedd026107c5c816c58f643"><td class="memTemplParams" colspan="2">template&lt;typename EventDataType &gt; </td></tr>
+<tr class="memitem:a99922e735cedd026107c5c816c58f643"><td class="memTemplItemLeft" align="right" valign="top">EventDataType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a99922e735cedd026107c5c816c58f643">get_mutable_event_data</a> ()</td></tr>
+<tr class="memdesc:a99922e735cedd026107c5c816c58f643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to the event data.  <a href="#a99922e735cedd026107c5c816c58f643">More...</a><br /></td></tr>
+<tr class="separator:a99922e735cedd026107c5c816c58f643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad715f1cc5984c07268a9b447ac869684"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ad715f1cc5984c07268a9b447ac869684">AddToComposite</a> (<a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">TriggerType</a> trigger_type, <a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html">CompositeEventCollection</a>&lt; T &gt; *events) const</td></tr>
 <tr class="memdesc:ad715f1cc5984c07268a9b447ac869684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a clone of <code>this</code> event to the event collection <code>events</code>, with the given trigger type.  <a href="#ad715f1cc5984c07268a9b447ac869684">More...</a><br /></td></tr>
 <tr class="separator:ad715f1cc5984c07268a9b447ac869684"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -435,14 +438,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaed6b9f2471fedf1633f8092f49d05f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaed6b9f2471fedf1633f8092f49d05f7">&#9670;&nbsp;</a></span>get_event_data()</h2>
+<a id="ae460d48b3fc4faba93055b7ab7c7e64d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae460d48b3fc4faba93055b7ab7c7e64d">&#9670;&nbsp;</a></span>get_event_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a>* get_event_data </td>
+          <td class="memname">const EventDataType* get_event_data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -451,18 +454,24 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a const pointer to the event data. </p>
-<p>The returned value can be nullptr, which means this event does not have any associated data. </p>
+<p>The returned value can be nullptr, which means this event does not have any associated data of the given <code>EventDataType</code>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">EventDataType</td><td>the expected data type for an event that has this trigger type (<a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html" title="An event data variant describing an event that recurs on a fixed period.">PeriodicEventData</a> or <a class="el" href="classdrake_1_1systems_1_1_witness_triggered_event_data.html" title="An event data variant for storing data from a witness function triggering to be passed to event handl...">WitnessTriggeredEventData</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a2b4011486f230f08479c8f0cafe7814c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b4011486f230f08479c8f0cafe7814c">&#9670;&nbsp;</a></span>get_mutable_event_data()</h2>
+<a id="a99922e735cedd026107c5c816c58f643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99922e735cedd026107c5c816c58f643">&#9670;&nbsp;</a></span>get_mutable_event_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a>* get_mutable_event_data </td>
+          <td class="memname">EventDataType* get_mutable_event_data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -471,7 +480,13 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a mutable pointer to the event data. </p>
-<p>The returned value can be nullptr, which means this event does not have any associated data. </p>
+<p>The returned value can be nullptr, which means this event does not have any associated data of the given <code>EventDataType</code>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">EventDataType</td><td>the expected data type for an event that has this trigger type (<a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html" title="An event data variant describing an event that recurs on a fixed period.">PeriodicEventData</a> or <a class="el" href="classdrake_1_1systems_1_1_witness_triggered_event_data.html" title="An event data variant for storing data from a witness function triggering to be passed to event handl...">WitnessTriggeredEventData</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -494,8 +509,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8417c633cc8646104ae00c407f856044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8417c633cc8646104ae00c407f856044">&#9670;&nbsp;</a></span>has_event_data()</h2>
+<a id="ac44b90e61d7ee699815e2cdc7decdb1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44b90e61d7ee699815e2cdc7decdb1a">&#9670;&nbsp;</a></span>has_event_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -509,7 +524,13 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if this event has associated data. </p>
+<p>Returns true if this event has associated data of the given <code>EventDataType</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">EventDataType</td><td>the expected data type for an event that has this trigger type (<a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html" title="An event data variant describing an event that recurs on a fixed period.">PeriodicEventData</a> or <a class="el" href="classdrake_1_1systems_1_1_witness_triggered_event_data.html" title="An event data variant for storing data from a witness function triggering to be passed to event handl...">WitnessTriggeredEventData</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

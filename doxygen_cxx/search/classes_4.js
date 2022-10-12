@@ -34,7 +34,6 @@ var searchData=
   ['eventcollection_3c_20drake_3a_3asystems_3a_3aunrestrictedupdateevent_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e_20_3e',['EventCollection&lt; drake::systems::UnrestrictedUpdateEvent&lt; drake::symbolic::Expression &gt; &gt;',['../classdrake_1_1systems_1_1_event_collection.html',1,'drake::systems']]],
   ['eventcollection_3c_20drake_3a_3asystems_3a_3aunrestrictedupdateevent_3c_20element_3a_3at_20_3e_20_3e',['EventCollection&lt; drake::systems::UnrestrictedUpdateEvent&lt; Element::T &gt; &gt;',['../classdrake_1_1systems_1_1_event_collection.html',1,'drake::systems']]],
   ['eventcollection_3c_20drake_3a_3asystems_3a_3aunrestrictedupdateevent_3c_20t_20_3e_20_3e',['EventCollection&lt; drake::systems::UnrestrictedUpdateEvent&lt; T &gt; &gt;',['../classdrake_1_1systems_1_1_event_collection.html',1,'drake::systems']]],
-  ['eventdata',['EventData',['../classdrake_1_1systems_1_1_event_data.html',1,'drake::systems']]],
   ['eventstatus',['EventStatus',['../classdrake_1_1systems_1_1_event_status.html',1,'drake::systems']]],
   ['expliciterrorcontrolledintegratortest',['ExplicitErrorControlledIntegratorTest',['../structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html',1,'drake::systems::analysis_test']]],
   ['expliciteulerintegrator',['ExplicitEulerIntegrator',['../classdrake_1_1systems_1_1_explicit_euler_integrator.html',1,'drake::systems']]],

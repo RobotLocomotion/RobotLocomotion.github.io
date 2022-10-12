@@ -258,10 +258,6 @@ var hierarchy =
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
-    [ "EventData", "classdrake_1_1systems_1_1_event_data.html", [
-      [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", null ],
-      [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", null ]
-    ] ],
     [ "EventStatus", "classdrake_1_1systems_1_1_event_status.html", null ],
     [ "exponential_distribution< drake::symbolic::Expression >", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html", null ],
@@ -571,13 +567,14 @@ var hierarchy =
     [ "PendulumParameters", "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html", null ],
     [ "PenetrationAsPointPair< T >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
     [ "DynamicProgrammingOptions::PeriodicBoundaryCondition", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html", null ],
+    [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", null ],
     [ "PeriodicEventDataComparator", "structdrake_1_1systems_1_1_periodic_event_data_comparator.html", null ],
     [ "Meshcat::PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", null ],
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -1049,7 +1046,6 @@ var hierarchy =
       [ "copyable_unique_ptr< drake::geometry::Shape >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::CacheEntryValue >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Context< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
-      [ "copyable_unique_ptr< drake::systems::EventData >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::FixedInputPortValue >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< AutoDiffXd > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
@@ -1098,6 +1094,7 @@ var hierarchy =
     [ "VolumeMeshTester< T >", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", null ],
     [ "WitnessFunction< T >", "classdrake_1_1systems_1_1_witness_function.html", null ],
+    [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", null ],
     [ "wrap_arg_default< T >", "structdrake_1_1pydrake_1_1wrap__arg__default.html", null ],
     [ "ZeroForceDriver", "structdrake_1_1manipulation_1_1_zero_force_driver.html", null ],
     [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html", null ],

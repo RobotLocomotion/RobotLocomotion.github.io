@@ -6,7 +6,6 @@ var event_8h =
     [ "LeafEventCollection", "classdrake_1_1systems_1_1_leaf_event_collection.html", "classdrake_1_1systems_1_1_leaf_event_collection" ],
     [ "CompositeEventCollection", "classdrake_1_1systems_1_1_composite_event_collection.html", "classdrake_1_1systems_1_1_composite_event_collection" ],
     [ "LeafCompositeEventCollection", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", "classdrake_1_1systems_1_1_leaf_composite_event_collection" ],
-    [ "EventData", "classdrake_1_1systems_1_1_event_data.html", "classdrake_1_1systems_1_1_event_data" ],
     [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", "classdrake_1_1systems_1_1_periodic_event_data" ],
     [ "WitnessTriggeredEventData", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", "classdrake_1_1systems_1_1_witness_triggered_event_data" ],
     [ "Event", "classdrake_1_1systems_1_1_event.html", "classdrake_1_1systems_1_1_event" ],

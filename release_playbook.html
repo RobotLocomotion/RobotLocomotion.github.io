@@ -362,8 +362,8 @@ appropriate edits as follows:
         </ul>
       </li>
       <li>Into the box labeled “Attach binaries by dropping them here or selecting
-them.”, drag and drop the 9 <code class="highlighter-rouge">tgz</code>-related binary artifacts from
-<code class="highlighter-rouge">/tmp/drake-release/v1.N.0</code> (the 3 tarballs, and their 6 checksums).
+them.”, drag and drop the 12 <code class="highlighter-rouge">tgz</code>-related binary artifacts from
+<code class="highlighter-rouge">/tmp/drake-release/v1.N.0</code> (the 4 tarballs, and their 8 checksums).
         <ul>
           <li>Do not attach the <code class="highlighter-rouge">whl</code>-related binary artifacts; we’ll upload those
 pypi a bit later on.</li>
@@ -400,7 +400,7 @@ instructions to obtain a username and password.</p>
 
     <ol>
       <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
-      <li>Run <code class="highlighter-rouge">twine upload /tmp/drake_release/v1.N.0/*.whl</code>.</li>
+      <li>Run <code class="highlighter-rouge">twine upload /tmp/drake-release/v1.N.0/*.whl</code>.</li>
       <li>Confirm that all of the uploads succeeded without any error messages in
 your terminal.</li>
     </ol>
@@ -531,6 +531,10 @@ the option vanishes and the notebook completes.</li>
           <li>Do not try to run the <code class="highlighter-rouge">licensed_solvers_deepnote</code> notebook.
 (You do not have a suitable license key.)</li>
           <li>If you get an error like “Synchronization of file … failed, your changes are not being saved. You might be running out of disk quota” you may ignore it.</li>
+          <li>In the “rendering multibody plant” tutorial, sometimes the rendering
+step may crash with an interrupted error. In that case, click through
+to the “Environment” gear in the right-hand panel, then into the
+“init.ipynb” notbook and re-run the initialization.</li>
         </ol>
       </li>
       <li>For all markdown cells, quickly skim over the rendered output to check

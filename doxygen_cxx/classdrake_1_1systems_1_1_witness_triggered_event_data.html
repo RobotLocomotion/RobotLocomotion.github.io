@@ -169,8 +169,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_witness_trig
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class drake::systems::WitnessTriggeredEventData&lt; T &gt;</h3>
 
-<p>Class for storing data from a witness function triggering to be passed to event handlers. </p>
-<p>A witness function isolates the time to a (typically small) window during which the witness function crosses zero. The time and state at both sides of this window are passed to the event handler so that the system can precisely determine the reason that the witness function triggered. </p>
+<p>An event data variant for storing data from a witness function triggering to be passed to event handlers. </p>
+<p>A witness function isolates time to a (typically small) window during which the witness function crosses zero. The time and state at both sides of this window are passed to the event handler so that the system can precisely determine the reason that the witness function triggered. </p>
 </div>
 <p><code>#include &lt;drake/systems/framework/event.h&gt;</code></p>
 <table class="memberdecls">
@@ -217,24 +217,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1b26187f02b3bfdb6b307226aac8807c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa60c7abd51a6b294c7420cf887fe45d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_witness_triggered_event_data.html">WitnessTriggeredEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa60c7abd51a6b294c7420cf887fe45d1">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_witness_triggered_event_data.html">WitnessTriggeredEventData</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:aa60c7abd51a6b294c7420cf887fe45d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classdrake_1_1systems_1_1_event_data"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1systems_1_1_event_data')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a></td></tr>
-<tr class="memitem:a81d9969ab11ea5758033221531e98fe8 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html#a81d9969ab11ea5758033221531e98fe8">EventData</a> ()</td></tr>
-<tr class="separator:a81d9969ab11ea5758033221531e98fe8 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adef16a0c11f8bc1a011080510b6016a7 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html#adef16a0c11f8bc1a011080510b6016a7">~EventData</a> ()</td></tr>
-<tr class="separator:adef16a0c11f8bc1a011080510b6016a7 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4005602abe868bbb0ef30a58458f3a98 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html#a4005602abe868bbb0ef30a58458f3a98">Clone</a> () const</td></tr>
-<tr class="separator:a4005602abe868bbb0ef30a58458f3a98 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26a64909704015535dcbf219853989d6 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html#a26a64909704015535dcbf219853989d6">EventData</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> &amp;)=default</td></tr>
-<tr class="separator:a26a64909704015535dcbf219853989d6 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10f3f69ae80434c5afaa69a62a366aa1 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html#a10f3f69ae80434c5afaa69a62a366aa1">operator=</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> &amp;)=default</td></tr>
-<tr class="separator:a10f3f69ae80434c5afaa69a62a366aa1 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad605426df8f0214f090ca363648db027 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html#ad605426df8f0214f090ca363648db027">EventData</a> (<a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:ad605426df8f0214f090ca363648db027 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9323be9aeb00cc0bc7802769e4a78714 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_data.html#a9323be9aeb00cc0bc7802769e4a78714">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_event_data.html">EventData</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:a9323be9aeb00cc0bc7802769e4a78714 inherit pub_methods_classdrake_1_1systems_1_1_event_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a804a54725e78d25bd66d4d5800e6c61b"></a>

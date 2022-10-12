@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="pydrake.systems.lcm" href="pydrake.systems.lcm.html" />
-    <link rel="prev" title="pydrake.systems.controllers" href="pydrake.systems.controllers.html" /> 
+    <link rel="prev" title="pydrake.systems.drawing" href="pydrake.systems.drawing.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -141,6 +141,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.framework</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
@@ -6111,14 +6112,13 @@ examining the value of a group.</p>
 <em class="property">class </em><code class="descname">Event_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Event_.Event_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract base class that represents an event. The base event contains
 two main pieces of information: an enum trigger type and an optional
-attribute of AbstractValue that can be used to explain why the event
-is triggered. Derived classes should contain a function pointer to an
-optional callback function that handles the event. See event_callbacks
-for detail. No-op is the default handling behavior. Currently, the
-System framework only supports three concrete event types:
-PublishEvent, DiscreteUpdateEvent, and UnrestrictedUpdateEvent
-distinguished by their callback functions’ write access level to the
-State.</p>
+attribute that can be used to explain why the event is triggered.
+Derived classes should contain a function pointer to an optional
+callback function that handles the event. See event_callbacks for
+detail. No-op is the default handling behavior. Currently, the System
+framework supports three concrete event types: PublishEvent,
+DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
+their callback functions’ write access level to the State.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
 class documentation for Simulator.</p>
@@ -6143,14 +6143,13 @@ class documentation for Simulator.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Event_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.framework.Event_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract base class that represents an event. The base event contains
 two main pieces of information: an enum trigger type and an optional
-attribute of AbstractValue that can be used to explain why the event
-is triggered. Derived classes should contain a function pointer to an
-optional callback function that handles the event. See event_callbacks
-for detail. No-op is the default handling behavior. Currently, the
-System framework only supports three concrete event types:
-PublishEvent, DiscreteUpdateEvent, and UnrestrictedUpdateEvent
-distinguished by their callback functions’ write access level to the
-State.</p>
+attribute that can be used to explain why the event is triggered.
+Derived classes should contain a function pointer to an optional
+callback function that handles the event. See event_callbacks for
+detail. No-op is the default handling behavior. Currently, the System
+framework supports three concrete event types: PublishEvent,
+DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
+their callback functions’ write access level to the State.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
 class documentation for Simulator.</p>
@@ -6173,14 +6172,13 @@ class documentation for Simulator.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Event_[Expression]</code><a class="headerlink" href="#pydrake.systems.framework.Event_[Expression]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract base class that represents an event. The base event contains
 two main pieces of information: an enum trigger type and an optional
-attribute of AbstractValue that can be used to explain why the event
-is triggered. Derived classes should contain a function pointer to an
-optional callback function that handles the event. See event_callbacks
-for detail. No-op is the default handling behavior. Currently, the
-System framework only supports three concrete event types:
-PublishEvent, DiscreteUpdateEvent, and UnrestrictedUpdateEvent
-distinguished by their callback functions’ write access level to the
-State.</p>
+attribute that can be used to explain why the event is triggered.
+Derived classes should contain a function pointer to an optional
+callback function that handles the event. See event_callbacks for
+detail. No-op is the default handling behavior. Currently, the System
+framework supports three concrete event types: PublishEvent,
+DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
+their callback functions’ write access level to the State.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
 class documentation for Simulator.</p>
@@ -6203,14 +6201,13 @@ class documentation for Simulator.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Event_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Event_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract base class that represents an event. The base event contains
 two main pieces of information: an enum trigger type and an optional
-attribute of AbstractValue that can be used to explain why the event
-is triggered. Derived classes should contain a function pointer to an
-optional callback function that handles the event. See event_callbacks
-for detail. No-op is the default handling behavior. Currently, the
-System framework only supports three concrete event types:
-PublishEvent, DiscreteUpdateEvent, and UnrestrictedUpdateEvent
-distinguished by their callback functions’ write access level to the
-State.</p>
+attribute that can be used to explain why the event is triggered.
+Derived classes should contain a function pointer to an optional
+callback function that handles the event. See event_callbacks for
+detail. No-op is the default handling behavior. Currently, the System
+framework supports three concrete event types: PublishEvent,
+DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
+their callback functions’ write access level to the State.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
 class documentation for Simulator.</p>
@@ -6225,24 +6222,6 @@ class documentation for Simulator.</p>
 <code class="descname">get_trigger_type</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Event_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.TriggerType<a class="headerlink" href="#pydrake.systems.framework.Event_[float].get_trigger_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the trigger type.</p>
 </dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.systems.framework.EventData">
-<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">EventData</code><a class="headerlink" href="#pydrake.systems.framework.EventData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Base class for storing trigger-specific data to be passed to event
-handlers.</p>
-<dl class="attribute">
-<dt id="pydrake.systems.framework.EventData.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.EventData.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.EventData.Clone">
-<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.EventData</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.EventData<a class="headerlink" href="#pydrake.systems.framework.EventData.Clone" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -12216,10 +12195,9 @@ is out of bounds.</p>
 <dl class="class">
 <dt id="pydrake.systems.framework.PeriodicEventData">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">PeriodicEventData</code><a class="headerlink" href="#pydrake.systems.framework.PeriodicEventData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.EventData" title="pydrake.systems.framework.EventData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.EventData</span></code></a></p>
-<p>A token describing an event that recurs on a fixed period. The events
-are triggered at time = offset_sec + i * period_sec, where i is a
-non-negative integer.</p>
+<dd><p>An event data variant describing an event that recurs on a fixed
+period. The events are triggered at time = offset_sec + i *
+period_sec, where i is a non-negative integer.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.framework.PeriodicEventData.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.PeriodicEventData.__init__" title="Permalink to this definition">¶</a></dt>
@@ -12483,8 +12461,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_.State_[float].get_abstract_state">
-<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const pointer to the abstract component of the state at
+<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[float]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
+<code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
+<ol class="arabic simple" start="2">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[float], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
 <code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -12553,8 +12540,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[AutoDiffXd].get_abstract_state">
-<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_[AutoDiffXd].get_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const pointer to the abstract component of the state at
+<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[AutoDiffXd].get_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[AutoDiffXd]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
+<code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
+<ol class="arabic simple" start="2">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[AutoDiffXd], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
 <code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -12621,8 +12617,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[Expression].get_abstract_state">
-<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_[Expression].get_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const pointer to the abstract component of the state at
+<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[Expression].get_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[Expression]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
+<code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
+<ol class="arabic simple" start="2">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[Expression], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
 <code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -12689,8 +12694,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[float].get_abstract_state">
-<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_[float].get_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const pointer to the abstract component of the state at
+<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[float].get_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[float]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
+<code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
+<ol class="arabic simple" start="2">
+<li>get_abstract_state(self: pydrake.systems.framework.State_[float], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a const pointer to the abstract component of the state at
 <code class="docutils literal notranslate"><span class="pre">index</span></code>. Asserts if <code class="docutils literal notranslate"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -17749,6 +17763,10 @@ correspond to receiving sensory data from the hardware.</p>
 <blockquote>
 <div>kWitness : This trigger indicates that an associated event is triggered by the</div></blockquote>
 <p>zero crossing of a witness function.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">WitnessTriggeredEventData.</p>
+</div>
 <dl class="method">
 <dt id="pydrake.systems.framework.TriggerType.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.TriggerType</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.TriggerType.__init__" title="Permalink to this definition">¶</a></dt>
@@ -18959,7 +18977,7 @@ kPositiveThenNonNegative OR kNegativeThenNonNegative.</p>
         <a href="pydrake.systems.lcm.html" class="btn btn-neutral float-right" title="pydrake.systems.lcm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.controllers.html" class="btn btn-neutral float-left" title="pydrake.systems.controllers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.drawing.html" class="btn btn-neutral float-left" title="pydrake.systems.drawing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

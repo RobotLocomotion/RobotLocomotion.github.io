@@ -141,6 +141,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
@@ -4954,6 +4955,178 @@ the default when no input is connected.</dd>
 <dt id="pydrake.systems.primitives.PerceptronActivationType.value">
 <code class="descname">value</code><a class="headerlink" href="#pydrake.systems.primitives.PerceptronActivationType.value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.PortSwitch">
+<code class="descclassname">pydrake.systems.primitives.</code><code class="descname">PortSwitch</code><a class="headerlink" href="#pydrake.systems.primitives.PortSwitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.primitives.PortSwitch_[float]" title="pydrake.systems.primitives.PortSwitch_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.primitives.PortSwitch_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.primitives.PortSwitch_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">PortSwitch_</code><a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.primitives.PortSwitch_[float]" title="pydrake.systems.primitives.PortSwitch_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PortSwitch_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.PortSwitch_[AutoDiffXd]" title="pydrake.systems.primitives.PortSwitch_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PortSwitch_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.PortSwitch_[Expression]" title="pydrake.systems.primitives.PortSwitch_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PortSwitch_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.systems.primitives.PortSwitch_.PortSwitch_[float]">
+<em class="property">class </em><code class="descname">PortSwitch_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_.PortSwitch_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A simple system that passes through the value from just one of its
+input ports to the output. All inputs (except for the port_selector)
+must have the same data type as the output.</p>
+<p>This system only evaluates the port_selector port and the input port
+that is indicated by port_selector at runtime. Because of the System
+framework’s “pull architecture”, this means that entire sub-diagrams
+can potentially be added with minimal runtime cost (their outputs will
+not be evaluated until they are selected). Just remember that their
+state dynamics <em>will</em> still be evaluated when the diagram’s dynamics
+are evaluated (e.g. during simulation), and their output ports could
+be evaluated via other connections.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">port_selector&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PortSwitch</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; value</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_.PortSwitch_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[float], vector_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_.PortSwitch_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a vector-valued PortSwitch. All input ports declared via
+DeclareInputPort() will be vector-valued ports of size
+<code class="docutils literal notranslate"><span class="pre">vector_size</span></code>, which must be greater than zero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_.PortSwitch_[float].DeclareInputPort">
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[float], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_.PortSwitch_[float].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new input port to the switch with port name <code class="docutils literal notranslate"><span class="pre">name</span></code>. The
+type of this port is already defined by the type of the output port.
+This must be called before any Context is allocated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_.PortSwitch_[float].get_port_selector_input_port">
+<code class="descname">get_port_selector_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_.PortSwitch_[float].get_port_selector_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port-selector input port, which is an abstract-valued port
+of type InputPortIndex.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.PortSwitch_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">PortSwitch_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>A simple system that passes through the value from just one of its
+input ports to the output. All inputs (except for the port_selector)
+must have the same data type as the output.</p>
+<p>This system only evaluates the port_selector port and the input port
+that is indicated by port_selector at runtime. Because of the System
+framework’s “pull architecture”, this means that entire sub-diagrams
+can potentially be added with minimal runtime cost (their outputs will
+not be evaluated until they are selected). Just remember that their
+state dynamics <em>will</em> still be evaluated when the diagram’s dynamics
+are evaluated (e.g. during simulation), and their output ports could
+be evaluated via other connections.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">port_selector&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PortSwitch</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; value</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[AutoDiffXd], vector_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a vector-valued PortSwitch. All input ports declared via
+DeclareInputPort() will be vector-valued ports of size
+<code class="docutils literal notranslate"><span class="pre">vector_size</span></code>, which must be greater than zero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[AutoDiffXd].DeclareInputPort">
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[AutoDiffXd], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[AutoDiffXd].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new input port to the switch with port name <code class="docutils literal notranslate"><span class="pre">name</span></code>. The
+type of this port is already defined by the type of the output port.
+This must be called before any Context is allocated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[AutoDiffXd].get_port_selector_input_port">
+<code class="descname">get_port_selector_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[AutoDiffXd].get_port_selector_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port-selector input port, which is an abstract-valued port
+of type InputPortIndex.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.PortSwitch_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">PortSwitch_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>A simple system that passes through the value from just one of its
+input ports to the output. All inputs (except for the port_selector)
+must have the same data type as the output.</p>
+<p>This system only evaluates the port_selector port and the input port
+that is indicated by port_selector at runtime. Because of the System
+framework’s “pull architecture”, this means that entire sub-diagrams
+can potentially be added with minimal runtime cost (their outputs will
+not be evaluated until they are selected). Just remember that their
+state dynamics <em>will</em> still be evaluated when the diagram’s dynamics
+are evaluated (e.g. during simulation), and their output ports could
+be evaluated via other connections.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">port_selector&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PortSwitch</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; value</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[Expression], vector_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a vector-valued PortSwitch. All input ports declared via
+DeclareInputPort() will be vector-valued ports of size
+<code class="docutils literal notranslate"><span class="pre">vector_size</span></code>, which must be greater than zero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[Expression].DeclareInputPort">
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[Expression], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[Expression].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new input port to the switch with port name <code class="docutils literal notranslate"><span class="pre">name</span></code>. The
+type of this port is already defined by the type of the output port.
+This must be called before any Context is allocated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[Expression].get_port_selector_input_port">
+<code class="descname">get_port_selector_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[Expression].get_port_selector_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port-selector input port, which is an abstract-valued port
+of type InputPortIndex.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.PortSwitch_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">PortSwitch_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A simple system that passes through the value from just one of its
+input ports to the output. All inputs (except for the port_selector)
+must have the same data type as the output.</p>
+<p>This system only evaluates the port_selector port and the input port
+that is indicated by port_selector at runtime. Because of the System
+framework’s “pull architecture”, this means that entire sub-diagrams
+can potentially be added with minimal runtime cost (their outputs will
+not be evaluated until they are selected). Just remember that their
+state dynamics <em>will</em> still be evaluated when the diagram’s dynamics
+are evaluated (e.g. during simulation), and their output ports could
+be evaluated via other connections.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">port_selector&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PortSwitch</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; value</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[float], vector_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a vector-valued PortSwitch. All input ports declared via
+DeclareInputPort() will be vector-valued ports of size
+<code class="docutils literal notranslate"><span class="pre">vector_size</span></code>, which must be greater than zero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[float].DeclareInputPort">
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[float], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[float].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new input port to the switch with port name <code class="docutils literal notranslate"><span class="pre">name</span></code>. The
+type of this port is already defined by the type of the output port.
+This must be called before any Context is allocated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.PortSwitch_[float].get_port_selector_input_port">
+<code class="descname">get_port_selector_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.PortSwitch_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.PortSwitch_[float].get_port_selector_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port-selector input port, which is an abstract-valued port
+of type InputPortIndex.</p>
+</dd></dl>
 
 </dd></dl>
 

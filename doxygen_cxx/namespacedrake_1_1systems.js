@@ -45,7 +45,6 @@ var namespacedrake_1_1systems =
     [ "DiscreteValues", "classdrake_1_1systems_1_1_discrete_values.html", "classdrake_1_1systems_1_1_discrete_values" ],
     [ "Event", "classdrake_1_1systems_1_1_event.html", "classdrake_1_1systems_1_1_event" ],
     [ "EventCollection", "classdrake_1_1systems_1_1_event_collection.html", "classdrake_1_1systems_1_1_event_collection" ],
-    [ "EventData", "classdrake_1_1systems_1_1_event_data.html", "classdrake_1_1systems_1_1_event_data" ],
     [ "EventStatus", "classdrake_1_1systems_1_1_event_status.html", "classdrake_1_1systems_1_1_event_status" ],
     [ "ExplicitEulerIntegrator", "classdrake_1_1systems_1_1_explicit_euler_integrator.html", "classdrake_1_1systems_1_1_explicit_euler_integrator" ],
     [ "ExternalSystemConstraint", "classdrake_1_1systems_1_1_external_system_constraint.html", "classdrake_1_1systems_1_1_external_system_constraint" ],
