@@ -4194,8 +4194,8 @@ subsystem of this diagram.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Diagram_.Diagram_[float].GetSubsystemByName">
 <code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[float], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.System_[float]<a class="headerlink" href="#pydrake.systems.framework.Diagram_.Diagram_[float].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves a reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code> returned by
-get_name().</p>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4204,6 +4204,10 @@ get_name().</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System&lt;T&gt;::get_name()</p>
@@ -4272,8 +4276,8 @@ subsystem of this diagram.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Diagram_[AutoDiffXd].GetSubsystemByName">
 <code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[AutoDiffXd], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.System_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.Diagram_[AutoDiffXd].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves a reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code> returned by
-get_name().</p>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4282,6 +4286,10 @@ get_name().</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System&lt;T&gt;::get_name()</p>
@@ -4348,8 +4356,8 @@ subsystem of this diagram.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Diagram_[Expression].GetSubsystemByName">
 <code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[Expression], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.System_[Expression]<a class="headerlink" href="#pydrake.systems.framework.Diagram_[Expression].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves a reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code> returned by
-get_name().</p>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4358,6 +4366,10 @@ get_name().</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System&lt;T&gt;::get_name()</p>
@@ -4424,8 +4436,8 @@ subsystem of this diagram.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Diagram_[float].GetSubsystemByName">
 <code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[float], name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.System_[float]<a class="headerlink" href="#pydrake.systems.framework.Diagram_[float].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves a reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code> returned by
-get_name().</p>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4434,6 +4446,10 @@ get_name().</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System&lt;T&gt;::get_name()</p>
@@ -4697,15 +4713,85 @@ provided.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetMutableSubsystemByName">
+<code class="descname">GetMutableSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetMutableSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a mutable reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableDowncastSubsystemByName()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetMutableSystems">
 <code class="descname">GetMutableSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetMutableSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSystems()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetSubsystemByName">
+<code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetSystems">
 <code class="descname">GetSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetMutableSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSystems()</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -4951,15 +5037,85 @@ provided.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetMutableSubsystemByName">
+<code class="descname">GetMutableSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetMutableSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a mutable reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableDowncastSubsystemByName()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetMutableSystems">
 <code class="descname">GetMutableSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetMutableSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSystems()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetSubsystemByName">
+<code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetSystems">
 <code class="descname">GetSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetMutableSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSystems()</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -5203,15 +5359,85 @@ provided.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[Expression].GetMutableSubsystemByName">
+<code class="descname">GetMutableSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[Expression], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[Expression].GetMutableSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a mutable reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableDowncastSubsystemByName()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_[Expression].GetMutableSystems">
 <code class="descname">GetMutableSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[Expression]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[Expression].GetMutableSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSystems()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[Expression].GetSubsystemByName">
+<code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[Expression], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[Expression].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_[Expression].GetSystems">
 <code class="descname">GetSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[Expression]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[Expression].GetSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetMutableSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSystems()</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -5455,15 +5681,85 @@ provided.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[float].GetMutableSubsystemByName">
+<code class="descname">GetMutableSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[float].GetMutableSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a mutable reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableDowncastSubsystemByName()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_[float].GetMutableSystems">
 <code class="descname">GetMutableSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[float].GetMutableSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSystems()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[float].GetSubsystemByName">
+<code class="descname">GetSubsystemByName</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], name: str</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[float].GetSubsystemByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a const reference to the subsystem with name <code class="docutils literal notranslate"><span class="pre">name</span></code>
+returned by get_name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if a unique match cannot be found.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System&lt;T&gt;::get_name()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetDowncastSubsystemByName()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_[float].GetSystems">
 <code class="descname">GetSystems</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[float].GetSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of contained Systems. See also GetMutableSystems().</p>
+<dd><p>Returns the list of contained Systems.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetSubsystemByName()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetMutableSystems()</p>
+</div>
 </dd></dl>
 
 </dd></dl>

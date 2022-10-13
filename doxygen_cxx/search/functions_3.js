@@ -319,7 +319,7 @@ var searchData=
   ['duration',['duration',['../classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309',1,'drake::trajectories::PiecewiseTrajectory']]],
   ['dynamic_5ffriction',['dynamic_friction',['../classdrake_1_1multibody_1_1_coulomb_friction.html#a092e05e3995b9dcf1b34a4c596678ae6',1,'drake::multibody::CoulombFriction']]],
   ['dynamic_5fpointer_5fcast',['dynamic_pointer_cast',['../namespacedrake.html#ab53bd4a15e73e524b3f73c625ea88176',1,'drake']]],
-  ['dynamic_5fpointer_5fcast_5for_5fthrow',['dynamic_pointer_cast_or_throw',['../namespacedrake.html#acd10687a188332bb1f67fb3acf28f208',1,'drake']]],
+  ['dynamic_5fpointer_5fcast_5for_5fthrow',['dynamic_pointer_cast_or_throw',['../namespacedrake.html#acd10687a188332bb1f67fb3acf28f208',1,'drake::dynamic_pointer_cast_or_throw(std::unique_ptr&lt; U &gt; &amp;&amp;other)'],['../namespacedrake.html#a36437147c667653017cba46d057455d9',1,'drake::dynamic_pointer_cast_or_throw(U *other)']]],
   ['dynamicprogrammingoptions',['DynamicProgrammingOptions',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
   ['dynamics',['dynamics',['../classdrake_1_1systems_1_1_symbolic_vector_system.html#a17a6d51848ae96e35bdf4cfccfd7129b',1,'drake::systems::SymbolicVectorSystem']]],
   ['dynamicsbiasterm',['DynamicsBiasTerm',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a8b1d92334bf606793a4fe3d1cb687bf1',1,'drake::examples::acrobot::AcrobotPlant::DynamicsBiasTerm()'],['../classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a8b1d92334bf606793a4fe3d1cb687bf1',1,'drake::examples::compass_gait::CompassGait::DynamicsBiasTerm()']]]

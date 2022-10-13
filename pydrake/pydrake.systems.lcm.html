@@ -262,9 +262,9 @@ bus of the same name.</p>
 <dl class="method">
 <dt id="pydrake.systems.lcm.LcmBuses.Find">
 <code class="descname">Find</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmBuses</em>, <em>description_of_caller: str</em>, <em>bus_name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.lcm.DrakeLcmInterface<a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.Find" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finds the bus of the given name, or throws if there is no such bus.
-The return value is an alias into memory owned by the DiagramBuilder,
-and is never nullptr.</p>
+<dd><p>Finds the bus of the given name, or throws if there is no such bus.</p>
+<p>The return value is an alias into memory owned elsewhere (typically by
+a DiagramBuilder or a Diagram) and is never nullptr.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">description_of_caller</span></code>:</dt>
 <dd>is a noun phrase that will be used when creating an error message.

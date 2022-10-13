@@ -268,14 +268,65 @@ is not found.</p>
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pydrake.multibody.parsing.ModelDirective">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">ModelDirective</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Union structure for model directives.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This was designed before support for <code class="docutils literal notranslate"><span class="pre">std::variant&lt;&gt;</span></code> was
+around, and thus we used a parent field, rather than a YAML tag,
+to designate the intended type for the directive.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.parsing.ModelDirective.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.ModelDirective</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.ModelDirective.add_collision_filter_group">
+<code class="descname">add_collision_filter_group</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_collision_filter_group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.ModelDirective.add_directives">
+<code class="descname">add_directives</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_directives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.ModelDirective.add_frame">
+<code class="descname">add_frame</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.ModelDirective.add_model">
+<code class="descname">add_model</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.ModelDirective.add_model_instance">
+<code class="descname">add_model_instance</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_model_instance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.ModelDirective.add_weld">
+<code class="descname">add_weld</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_weld" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.parsing.ModelDirectives">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">ModelDirectives</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirectives" title="Permalink to this definition">¶</a></dt>
 <dd><p>Top-level structure for a model directives yaml file schema.</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.multibody.parsing.ModelDirectives.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirectives.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.ModelDirectives</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.ModelDirectives.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.ModelDirectives.directives">
+<code class="descname">directives</code><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirectives.directives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

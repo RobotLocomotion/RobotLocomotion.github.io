@@ -234,6 +234,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d78e9d85a3593c7656aeddbf90d4766"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7d78e9d85a3593c7656aeddbf90d4766">GetMutableSystems</a> ()</td></tr>
 <tr class="memdesc:a7d78e9d85a3593c7656aeddbf90d4766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of contained Systems.  <a href="#a7d78e9d85a3593c7656aeddbf90d4766">More...</a><br /></td></tr>
 <tr class="separator:a7d78e9d85a3593c7656aeddbf90d4766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a87442c45f9ee72c4a2c234587f9776"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a2a87442c45f9ee72c4a2c234587f9776">GetSubsystemByName</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:a2a87442c45f9ee72c4a2c234587f9776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a const reference to the subsystem with name <code>name</code> returned by get_name().  <a href="#a2a87442c45f9ee72c4a2c234587f9776">More...</a><br /></td></tr>
+<tr class="separator:a2a87442c45f9ee72c4a2c234587f9776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50253d2cda68aa3b3189e83081734607"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a50253d2cda68aa3b3189e83081734607">GetMutableSubsystemByName</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a50253d2cda68aa3b3189e83081734607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a mutable reference to the subsystem with name <code>name</code> returned by get_name().  <a href="#a50253d2cda68aa3b3189e83081734607">More...</a><br /></td></tr>
+<tr class="separator:a50253d2cda68aa3b3189e83081734607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8733b5799e3a872764125e9c031dae57"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class MySystem&gt; </td></tr>
+<tr class="memitem:a8733b5799e3a872764125e9c031dae57"><td class="memTemplItemLeft" align="right" valign="top">const MySystem&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a8733b5799e3a872764125e9c031dae57">GetDowncastSubsystemByName</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:a8733b5799e3a872764125e9c031dae57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a const reference to the subsystem with name <code>name</code> returned by get_name(), downcast to the type provided as a template argument.  <a href="#a8733b5799e3a872764125e9c031dae57">More...</a><br /></td></tr>
+<tr class="separator:a8733b5799e3a872764125e9c031dae57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cadce2d85acbc42089b6778d041258a"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class MySystem&gt; </td></tr>
+<tr class="memitem:a7cadce2d85acbc42089b6778d041258a"><td class="memTemplItemLeft" align="right" valign="top">MySystem&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7cadce2d85acbc42089b6778d041258a">GetMutableDowncastSubsystemByName</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a7cadce2d85acbc42089b6778d041258a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a mutable reference to the subsystem with name <code>name</code> returned by get_name(), downcast to the type provided as a template argument.  <a href="#a7cadce2d85acbc42089b6778d041258a">More...</a><br /></td></tr>
+<tr class="separator:a7cadce2d85acbc42089b6778d041258a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc3f35c7cd5f2a99c88deb5829655c6"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51">InputPortLocator</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5">OutputPortLocator</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#adbc3f35c7cd5f2a99c88deb5829655c6">connection_map</a> () const</td></tr>
 <tr class="memdesc:adbc3f35c7cd5f2a99c88deb5829655c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a reference to the map of connections between Systems.  <a href="#adbc3f35c7cd5f2a99c88deb5829655c6">More...</a><br /></td></tr>
 <tr class="separator:adbc3f35c7cd5f2a99c88deb5829655c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -992,6 +1006,107 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
+<a id="a8733b5799e3a872764125e9c031dae57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8733b5799e3a872764125e9c031dae57">&#9670;&nbsp;</a></span>GetDowncastSubsystemByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const MySystem&lt;T&gt;&amp; GetDowncastSubsystemByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a const reference to the subsystem with name <code>name</code> returned by get_name(), downcast to the type provided as a template argument. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MySystem</td><td>is the downcast type, e.g., <a class="el" href="classdrake_1_1systems_1_1_adder.html" title="An adder for arbitrarily many inputs of equal size.">drake::systems::Adder</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a unique match cannot be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7cadce2d85acbc42089b6778d041258a" title="Retrieves a mutable reference to the subsystem with name name returned by get_name(),...">GetMutableDowncastSubsystemByName()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a2a87442c45f9ee72c4a2c234587f9776" title="Retrieves a const reference to the subsystem with name name returned by get_name().">GetSubsystemByName()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a7cadce2d85acbc42089b6778d041258a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cadce2d85acbc42089b6778d041258a">&#9670;&nbsp;</a></span>GetMutableDowncastSubsystemByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MySystem&lt;T&gt;&amp; GetMutableDowncastSubsystemByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a mutable reference to the subsystem with name <code>name</code> returned by get_name(), downcast to the type provided as a template argument. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MySystem</td><td>is the downcast type, e.g., <a class="el" href="classdrake_1_1systems_1_1_adder.html" title="An adder for arbitrarily many inputs of equal size.">drake::systems::Adder</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a unique match cannot be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a8733b5799e3a872764125e9c031dae57" title="Retrieves a const reference to the subsystem with name name returned by get_name(),...">GetDowncastSubsystemByName()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a50253d2cda68aa3b3189e83081734607" title="Retrieves a mutable reference to the subsystem with name name returned by get_name().">GetMutableSubsystemByName()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a50253d2cda68aa3b3189e83081734607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50253d2cda68aa3b3189e83081734607">&#9670;&nbsp;</a></span>GetMutableSubsystemByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp; GetMutableSubsystemByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a mutable reference to the subsystem with name <code>name</code> returned by get_name(). </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a unique match cannot be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aea1591b1773209f55ccc85356efb639a" title="Returns the name last supplied to set_name(), if any.">System&lt;T&gt;::get_name()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a2a87442c45f9ee72c4a2c234587f9776" title="Retrieves a const reference to the subsystem with name name returned by get_name().">GetSubsystemByName()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7cadce2d85acbc42089b6778d041258a" title="Retrieves a mutable reference to the subsystem with name name returned by get_name(),...">GetMutableDowncastSubsystemByName()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a7d78e9d85a3593c7656aeddbf90d4766"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d78e9d85a3593c7656aeddbf90d4766">&#9670;&nbsp;</a></span>GetMutableSystems()</h2>
 
@@ -1008,7 +1123,40 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 </div><div class="memdoc">
 
 <p>Returns the list of contained Systems. </p>
-<p>See also <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3ed5126a47b838a40adfce66bc85e841" title="Returns the list of contained Systems.">GetSystems()</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a50253d2cda68aa3b3189e83081734607" title="Retrieves a mutable reference to the subsystem with name name returned by get_name().">GetMutableSubsystemByName()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3ed5126a47b838a40adfce66bc85e841" title="Returns the list of contained Systems.">GetSystems()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2a87442c45f9ee72c4a2c234587f9776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a87442c45f9ee72c4a2c234587f9776">&#9670;&nbsp;</a></span>GetSubsystemByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp; GetSubsystemByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a const reference to the subsystem with name <code>name</code> returned by get_name(). </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a unique match cannot be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aea1591b1773209f55ccc85356efb639a" title="Returns the name last supplied to set_name(), if any.">System&lt;T&gt;::get_name()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a50253d2cda68aa3b3189e83081734607" title="Retrieves a mutable reference to the subsystem with name name returned by get_name().">GetMutableSubsystemByName()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a8733b5799e3a872764125e9c031dae57" title="Retrieves a const reference to the subsystem with name name returned by get_name(),...">GetDowncastSubsystemByName()</a> </dd></dl>
 
 </div>
 </div>
@@ -1028,7 +1176,9 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 </div><div class="memdoc">
 
 <p>Returns the list of contained Systems. </p>
-<p>See also <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7d78e9d85a3593c7656aeddbf90d4766" title="Returns the list of contained Systems.">GetMutableSystems()</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a2a87442c45f9ee72c4a2c234587f9776" title="Retrieves a const reference to the subsystem with name name returned by get_name().">GetSubsystemByName()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7d78e9d85a3593c7656aeddbf90d4766" title="Returns the list of contained Systems.">GetMutableSystems()</a> </dd></dl>
 
 </div>
 </div>

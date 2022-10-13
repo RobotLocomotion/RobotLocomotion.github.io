@@ -1,5 +1,12 @@
 var NAVTREEINDEX52 =
 {
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[3,0,0,9,3,1,3],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,9,4,0],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,9,4,0,2],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,9,4,0,3],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,0,1],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,0,4],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,0,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html":[3,0,0,9,4,1],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a7928432abfdcccb409e49b309ebf3026":[3,0,0,9,4,1,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,1,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html":[3,0,0,16,1,7],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,16,1,7,2],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a231a08c109ea1cc7dacf351a1c291cb7":[3,0,0,16,1,7,0],
-"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,16,1,7,1],
-"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831":[3,0,0,16,1,7,3],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[3,0,0,16,2,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[3,0,0,16,2,0,7],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,16,2,0,5],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[3,0,0,16,2,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,16,2,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,16,2,0,3]
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,16,1,7,1]
 };

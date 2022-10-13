@@ -313,8 +313,6 @@
 </li>
         <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.AddFrame.__init__">(pydrake.multibody.parsing.AddFrame attribute)</a>
 </li>
-        <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirectives.__init__">(pydrake.multibody.parsing.ModelDirectives attribute)</a>
-</li>
         <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelInstanceInfo.__init__">(pydrake.multibody.parsing.ModelInstanceInfo attribute)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.HydroelasticContactInfo_.HydroelasticContactInfo_[float].__init__">(pydrake.multibody.plant.HydroelasticContactInfo_.HydroelasticContactInfo_[float] attribute)</a>
@@ -1244,6 +1242,10 @@
         <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.Toppra.__init__">(pydrake.multibody.optimization.Toppra method)</a>
 </li>
         <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.ToppraDiscretization.__init__">(pydrake.multibody.optimization.ToppraDiscretization method)</a>
+</li>
+        <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.__init__">(pydrake.multibody.parsing.ModelDirective method)</a>
+</li>
+        <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirectives.__init__">(pydrake.multibody.parsing.ModelDirectives method)</a>
 </li>
         <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.PackageMap.__init__">(pydrake.multibody.parsing.PackageMap method)</a>
 </li>
@@ -2370,9 +2372,21 @@
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.Add2NormSquaredCost">Add2NormSquaredCost() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.add_collision_filter_group">add_collision_filter_group (pydrake.multibody.parsing.ModelDirective attribute)</a>
+</li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.add_directives">add_directives (pydrake.multibody.parsing.ModelDirective attribute)</a>
+</li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.add_frame">add_frame (pydrake.multibody.parsing.ModelDirective attribute)</a>
+</li>
       <li><a href="pydrake.common.cpp_template.html#pydrake.common.cpp_template.TemplateBase.add_instantiation">add_instantiation() (pydrake.common.cpp_template.TemplateBase method)</a>
 </li>
       <li><a href="pydrake.common.cpp_template.html#pydrake.common.cpp_template.TemplateBase.add_instantiations">add_instantiations() (pydrake.common.cpp_template.TemplateBase method)</a>
+</li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.add_model">add_model (pydrake.multibody.parsing.ModelDirective attribute)</a>
+</li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.add_model_instance">add_model_instance (pydrake.multibody.parsing.ModelDirective attribute)</a>
+</li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.add_weld">add_weld (pydrake.multibody.parsing.ModelDirective attribute)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser.AddAllModelsFromFile">AddAllModelsFromFile() (pydrake.multibody.parsing.Parser method)</a>
 </li>
@@ -2650,14 +2664,14 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPolyhedronConstraint">AddPolyhedronConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">AddPositionConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionCost">AddPositionCost() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint">AddPositiveDiagonallyDominantMatrixConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddPositiveSemidefiniteConstraint">AddPositiveSemidefiniteConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.AddPostureCost">AddPostureCost() (pydrake.multibody.inverse_kinematics.GlobalInverseKinematics method)</a>
@@ -2982,6 +2996,8 @@
         <li><a href="pydrake.manipulation.util.html#pydrake.manipulation.util.ApplyDriverConfig">(in module pydrake.manipulation.util)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.manipulation.html#pydrake.manipulation.ApplyDriverConfigs">ApplyDriverConfigs() (in module pydrake.manipulation)</a>
+</li>
       <li><a href="pydrake.systems.lcm.html#pydrake.systems.lcm.ApplyLcmBusConfig">ApplyLcmBusConfig() (in module pydrake.systems.lcm)</a>
 </li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.ApplySimulatorConfig">ApplySimulatorConfig() (in module pydrake.systems.analysis)</a>
@@ -6099,6 +6115,8 @@
       <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectCollocation">DirectCollocation (class in pydrake.systems.trajectory_optimization)</a>
 </li>
       <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectCollocationConstraint">DirectCollocationConstraint (class in pydrake.systems.trajectory_optimization)</a>
+</li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirectives.directives">directives (pydrake.multibody.parsing.ModelDirectives attribute)</a>
 </li>
       <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectTranscription">DirectTranscription (class in pydrake.systems.trajectory_optimization)</a>
 </li>
@@ -9256,8 +9274,6 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraph_[float].get_source_pose_port">(pydrake.geometry.SceneGraph_[float] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.ConstantVectorSource_.ConstantVectorSource_[float].get_source_value">get_source_value() (pydrake.systems.primitives.ConstantVectorSource_.ConstantVectorSource_[float] method)</a>
 
       <ul>
@@ -9268,6 +9284,8 @@
         <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.ConstantVectorSource_[float].get_source_value">(pydrake.systems.primitives.ConstantVectorSource_[float] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.LinearConstraint.get_sparse_A">get_sparse_A() (pydrake.solvers.LinearConstraint method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.Wing_.Wing_[float].get_spatial_force_output_port">get_spatial_force_output_port() (pydrake.multibody.plant.Wing_.Wing_[float] method)</a>
@@ -10416,6 +10434,16 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].GetMutablePositionsAndVelocities">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetMutableSubsystemByName">GetMutableSubsystemByName() (pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetMutableSubsystemByName">(pydrake.systems.framework.DiagramBuilder_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_[Expression].GetMutableSubsystemByName">(pydrake.systems.framework.DiagramBuilder_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_[float].GetMutableSubsystemByName">(pydrake.systems.framework.DiagramBuilder_[float] method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMutableSubsystemContext">GetMutableSubsystemContext() (pydrake.systems.framework.System_.System_[float] method)</a>
 
       <ul>
@@ -10833,6 +10861,14 @@
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_.Diagram_[float].GetSubsystemByName">GetSubsystemByName() (pydrake.systems.framework.Diagram_.Diagram_[float] method)</a>
 
       <ul>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].GetSubsystemByName">(pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetSubsystemByName">(pydrake.systems.framework.DiagramBuilder_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_[Expression].GetSubsystemByName">(pydrake.systems.framework.DiagramBuilder_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_[float].GetSubsystemByName">(pydrake.systems.framework.DiagramBuilder_[float] method)</a>
+</li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[AutoDiffXd].GetSubsystemByName">(pydrake.systems.framework.Diagram_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[Expression].GetSubsystemByName">(pydrake.systems.framework.Diagram_[Expression] method)</a>
@@ -13322,10 +13358,10 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatAnimation.LoopMode">MeshcatAnimation.LoopMode (class in pydrake.geometry)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatCone">MeshcatCone (class in pydrake.geometry)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatParams">MeshcatParams (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatPointCloudVisualizer">MeshcatPointCloudVisualizer (in module pydrake.geometry)</a>
@@ -13457,6 +13493,8 @@
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelInstanceInfo.model_name">model_name (pydrake.multibody.parsing.ModelInstanceInfo attribute)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelInstanceInfo.model_path">model_path (pydrake.multibody.parsing.ModelInstanceInfo attribute)</a>
+</li>
+      <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective">ModelDirective (class in pydrake.multibody.parsing)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirectives">ModelDirectives (class in pydrake.multibody.parsing)</a>
 </li>
@@ -19959,6 +19997,8 @@
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem_[Expression]">VectorSystem_[Expression] (class in pydrake.systems.framework)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem_[float]">VectorSystem_[float] (class in pydrake.systems.framework)</a>
+</li>
+      <li><a href="pydrake.math.html#pydrake.math.VectorToSkewSymmetric">VectorToSkewSymmetric() (in module pydrake.math)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint_.PrismaticJoint_[float].velocity_lower_limit">velocity_lower_limit() (pydrake.multibody.tree.PrismaticJoint_.PrismaticJoint_[float] method)</a>
 

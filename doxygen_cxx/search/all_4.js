@@ -508,7 +508,7 @@ var searchData=
   ['dynamic_5ffriction',['dynamic_friction',['../classdrake_1_1multibody_1_1_coulomb_friction.html#a092e05e3995b9dcf1b34a4c596678ae6',1,'drake::multibody::CoulombFriction']]],
   ['dynamic_5ffriction_5ftorque',['dynamic_friction_torque',['../structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7',1,'drake::multibody::DoorHingeConfig']]],
   ['dynamic_5fpointer_5fcast',['dynamic_pointer_cast',['../namespacedrake.html#ab53bd4a15e73e524b3f73c625ea88176',1,'drake']]],
-  ['dynamic_5fpointer_5fcast_5for_5fthrow',['dynamic_pointer_cast_or_throw',['../namespacedrake.html#acd10687a188332bb1f67fb3acf28f208',1,'drake']]],
+  ['dynamic_5fpointer_5fcast_5for_5fthrow',['dynamic_pointer_cast_or_throw',['../namespacedrake.html#acd10687a188332bb1f67fb3acf28f208',1,'drake::dynamic_pointer_cast_or_throw(std::unique_ptr&lt; U &gt; &amp;&amp;other)'],['../namespacedrake.html#a36437147c667653017cba46d057455d9',1,'drake::dynamic_pointer_cast_or_throw(U *other)']]],
   ['dynamic_5fprogramming_2eh',['dynamic_programming.h',['../dynamic__programming_8h.html',1,'']]],
   ['dynamicprogrammingoptions',['DynamicProgrammingOptions',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html',1,'DynamicProgrammingOptions'],['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741',1,'drake::systems::controllers::DynamicProgrammingOptions::DynamicProgrammingOptions()']]],
   ['dynamics',['dynamics',['../classdrake_1_1systems_1_1_symbolic_vector_system.html#a17a6d51848ae96e35bdf4cfccfd7129b',1,'drake::systems::SymbolicVectorSystem']]],

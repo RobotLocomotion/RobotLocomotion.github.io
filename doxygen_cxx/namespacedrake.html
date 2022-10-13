@@ -705,6 +705,10 @@ Functions</h2></td></tr>
 <tr class="memitem:acd10687a188332bb1f67fb3acf28f208"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acd10687a188332bb1f67fb3acf28f208">dynamic_pointer_cast_or_throw</a> (std::unique_ptr&lt; U &gt; &amp;&amp;other)</td></tr>
 <tr class="memdesc:acd10687a188332bb1f67fb3acf28f208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts the object owned by the std::unique_ptr <code>other</code> from type <code>U</code> to <code>T</code>; if <code>other</code> is nullptr or the cast fails, throws a std::exception.  <a href="#acd10687a188332bb1f67fb3acf28f208">More...</a><br /></td></tr>
 <tr class="separator:acd10687a188332bb1f67fb3acf28f208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36437147c667653017cba46d057455d9"><td class="memTemplParams" colspan="2">template&lt;class T , class U &gt; </td></tr>
+<tr class="memitem:a36437147c667653017cba46d057455d9"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a36437147c667653017cba46d057455d9">dynamic_pointer_cast_or_throw</a> (U *other)</td></tr>
+<tr class="memdesc:a36437147c667653017cba46d057455d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts the pointer <code>other</code> from type <code>U</code> to <code>T</code> using <code>dynamic_cast</code>.  <a href="#a36437147c667653017cba46d057455d9">More...</a><br /></td></tr>
+<tr class="separator:a36437147c667653017cba46d057455d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cb9413bd3124511459d856f6eef5f3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a95cb9413bd3124511459d856f6eef5f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a95cb9413bd3124511459d856f6eef5f3">pow</a> (const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;base, typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::PowerType exponent)</td></tr>
 <tr class="memdesc:a95cb9413bd3124511459d856f6eef5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides power function for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <a href="#a95cb9413bd3124511459d856f6eef5f3">More...</a><br /></td></tr>
@@ -2181,7 +2185,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="acd10687a188332bb1f67fb3acf28f208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd10687a188332bb1f67fb3acf28f208">&#9670;&nbsp;</a></span>dynamic_pointer_cast_or_throw()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acd10687a188332bb1f67fb3acf28f208">&#9670;&nbsp;</a></span>dynamic_pointer_cast_or_throw() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2205,6 +2209,34 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <p>Note that this function only supports default deleters. </p>
+
+</div>
+</div>
+<a id="a36437147c667653017cba46d057455d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36437147c667653017cba46d057455d9">&#9670;&nbsp;</a></span>dynamic_pointer_cast_or_throw() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* drake::dynamic_pointer_cast_or_throw </td>
+          <td>(</td>
+          <td class="paramtype">U *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Casts the pointer <code>other</code> from type <code>U</code> to <code>T</code> using <code>dynamic_cast</code>. </p>
+<p>The result is never nullptr.</p>
+<p>This differs from the C++ built-in dynamic_cast by providing a nicer exception message, and always throwing on any failure.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>other</code> is nullptr or the cast fails. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

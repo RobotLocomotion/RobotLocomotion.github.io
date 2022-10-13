@@ -221,7 +221,43 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.util.html">pydrake.manipulation.util</a></li>
 </ul>
 </div>
-<span class="target" id="module-pydrake.manipulation"></span></div>
+<span class="target" id="module-pydrake.manipulation"></span><dl class="function">
+<dt id="pydrake.manipulation.ApplyDriverConfigs">
+<code class="descclassname">pydrake.manipulation.</code><code class="descname">ApplyDriverConfigs</code><span class="sig-paren">(</span><em>*</em>, <em>driver_configs</em>, <em>sim_plant</em>, <em>models_from_directives</em>, <em>lcm_buses</em>, <em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.ApplyDriverConfigs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies many driver configurations to a model.</p>
+<p>A “driver configuration” helps stack Drake systems between an LCM interface
+subscriber system and the actuation input ports of a MultibodyPlant (to
+enact the driver command), as well as the output ports of a MultibodyPlant
+back to an LCM interface publisher system (to provide the driver status).</p>
+<p>These conceptually simulate “drivers” – they take the role that driver
+software and control cabinets would take in real life – but may also
+model some physical properties of the robot that are not easily reflected
+in MultibodyPlant (e.g., the WSG belt drive).</p>
+<p>This function assumes that the ApplyDriverConfig functions associated with
+the values in the driver_configs map are defined in the same module as the
+value itself.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>driver_configs</strong> – The configurations to apply, mapping a <code class="docutils literal notranslate"><span class="pre">str</span></code> model
+instance name to some kind of a DriverConfig object (e.g., a
+<code class="docutils literal notranslate"><span class="pre">pydrake.manipulation.util.ZeroForceDriver</span></code>).</li>
+<li><strong>sim_plant</strong> – The plant containing the model.</li>
+<li><strong>models_from_directives</strong> – The list of <code class="docutils literal notranslate"><span class="pre">ModelInstanceInfo</span></code> from
+previously-loaded directives (e.g., from <code class="docutils literal notranslate"><span class="pre">ProcessModelDirectives</span></code>).</li>
+<li><strong>lcm_buses</strong> – The available LCM buses to drive and/or sense from this
+driver.</li>
+<li><strong>builder</strong> – The <code class="docutils literal notranslate"><span class="pre">DiagramBuilder</span></code> into which to install this driver.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 
 
            </div>
