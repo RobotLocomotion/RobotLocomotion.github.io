@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"leaf__output__port_8h.html":[4,0,0,12,3,27],
 "leaf__system_8h.html":[4,0,0,12,3,28],
 "limit__malloc_8h.html":[4,0,0,1,4,5],
 "linear__bushing__roll__pitch__yaw_8h.html":[4,0,0,8,13,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
 "namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,3,1],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1],
-"namespacedrake_1_1examples_1_1ball__plate.html":[2,0,0,3,2]
+"namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1planning_1_1_robot_diagram.html#ac7c6e346d3db2d0d384a3d1967ca9f5a":[3,0,0,11,0,2],
 "classdrake_1_1planning_1_1_robot_diagram.html#aca25a244485799151f75d32f9b8ee324":[3,0,0,11,0,9],
 "classdrake_1_1planning_1_1_robot_diagram.html#acc4522226fa8219775737675c801dfd6":[3,0,0,11,0,10],
 "classdrake_1_1planning_1_1_robot_diagram.html#ad18aafba34769e8927cd099f1c5e0ad8":[3,0,0,11,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1solvers_1_1_binding.html#aeabaeeea5278d5274171491f34c48dca":[3,0,0,14,3,5],
 "classdrake_1_1solvers_1_1_binding.html#af010068c7bb5f5bb77fe6d432cd1cf01":[3,0,0,14,3,14],
 "classdrake_1_1solvers_1_1_binding.html#af68e788f7f1c64b6be5fe4de2ea36706":[3,0,0,14,3,4],
-"classdrake_1_1solvers_1_1_bounding_box_constraint.html":[1,1,0,27],
-"classdrake_1_1solvers_1_1_bounding_box_constraint.html#a0f4aea653972c0370d15013802058f8b":[1,1,0,27,4]
+"classdrake_1_1solvers_1_1_bounding_box_constraint.html":[1,1,0,27]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"piecewise__polynomial_8h.html":[4,0,0,1,5,4],
 "piecewise__pose_8h.html":[4,0,0,1,5,5],
 "piecewise__quaternion_8h.html":[4,0,0,1,5,6],
 "piecewise__trajectory_8h.html":[4,0,0,1,5,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "render__camera_8h.html":[4,0,0,4,4,1],
 "render__doxygen_8h.html":[4,0,0,4,4,2],
 "render__engine_8h.html":[4,0,0,4,4,3],
-"render__engine__gl__params_8h.html":[4,0,0,4,5,10],
-"render__engine__gltf__client__params_8h.html":[4,0,0,4,6,5]
+"render__engine__gl__params_8h.html":[4,0,0,4,5,10]
 };

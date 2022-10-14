@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#affad14a5bd9a8a9827a0e9d15d08dd4e":[1,5,4,1,10],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html":[1,1,1,2],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html":[1,5,4,2],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a22d9ed4306dc8b33178c4ba7255fbeca":[1,1,1,2,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#ae68336f6101d2c47cee1a1eb7dc926f6":[1,5,4,5,4],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#aecaa71c6fa73805192424c08eed6db2b":[1,1,1,5,0],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#aecaa71c6fa73805192424c08eed6db2b":[1,5,4,5,0],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,1,1,7],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,5,4,7]
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,1,1,7]
 };

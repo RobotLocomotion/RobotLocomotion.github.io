@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1systems_1_1sensors_1_1_
 <li>Ranges must be specified such that the "minimum" value is less than or equal to the "maximum" value. This includes the clipping range [<code>clipping_near</code>, <code>clipping_far</code>] and depth range [<code>z_near</code>, <code>z_far</code>].</li>
 <li>The depth range must lie <em>entirely</em> within the clipping range.</li>
 </ul>
-<p>The values are only checked when the configuration is operated on: during serialization, after deserialization, and when applying the configuration (see <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16" title="Constructs a camera network (rgbd sensor and publishing systems) connected to scene_graph.">ApplyCameraConfig()</a>.) </p>
+<p>The values are only checked when the configuration is operated on: during serialization, after deserialization, and when applying the configuration (see <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95" title="Constructs a simulated camera sensor (rgbd sensor and publishing systems) within builder.">ApplyCameraConfig()</a>.) </p>
 </div>
 <p><code>#include &lt;drake/systems/sensors/camera_config.h&gt;</code></p>
 <table class="memberdecls">
@@ -268,6 +268,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad4489c31400be9adcd1f625f99c48134"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4489c31400be9adcd1f625f99c48134">do_compress</a> {true}</td></tr>
 <tr class="memdesc:ad4489c31400be9adcd1f625f99c48134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether the images are broadcast in a compressed format.  <a href="#ad4489c31400be9adcd1f625f99c48134">More...</a><br /></td></tr>
 <tr class="separator:ad4489c31400be9adcd1f625f99c48134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c6ff118d1301201b7fe48a73a9f0bf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf">lcm_bus</a> {&quot;default&quot;}</td></tr>
+<tr class="memdesc:ad4c6ff118d1301201b7fe48a73a9f0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which LCM URL to use.  <a href="#ad4c6ff118d1301201b7fe48a73a9f0bf">More...</a><br /></td></tr>
+<tr class="separator:ad4c6ff118d1301201b7fe48a73a9f0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Camera intrinsics</h2></td></tr>
@@ -594,6 +597,23 @@ Camera intrinsics</h2></td></tr>
 
 <p>Image height (in pixels). </p>
 <dl class="section pre"><dt>Precondition</dt><dd>height &gt; 0. </dd></dl>
+
+</div>
+</div>
+<a id="ad4c6ff118d1301201b7fe48a73a9f0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c6ff118d1301201b7fe48a73a9f0bf">&#9670;&nbsp;</a></span>lcm_bus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lcm_bus {&quot;default&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Which LCM URL to use. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">drake::systems::lcm::LcmBuses</a> </dd></dl>
 
 </div>
 </div>

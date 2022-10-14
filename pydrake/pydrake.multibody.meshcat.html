@@ -623,7 +623,7 @@ systems::ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[float], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[float], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, decrement_keycodes: List[str] = [], increment_keycodes: List[str] = []</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a meshcat slider for each joint in the given plant.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt>
@@ -650,6 +650,14 @@ increment by which the slider can change values (and therefore
 update our output port’s value). May be a single value or else a
 vector of length plant.num_positions(). If no value is provided, a
 sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt>
+<dd>(Optional) A vector of length plant.num_positions() with keycodes
+to assign to decrement the value of each individual joint slider.
+See Meshcat::AddSlider for more details.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt>
+<dd>(Optional) A vector of length plant.num_positions() with keycodes
+to assign to increment the value of each individual joint slider.
+See Meshcat::AddSlider for more details.</dd>
 </dl>
 </dd></dl>
 
@@ -668,7 +676,7 @@ on this instance concurrently on another thread.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].Run">
-<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], diagram: pydrake.systems.framework.Diagram_[float], timeout: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].Run" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], diagram: pydrake.systems.framework.Diagram_[float], timeout: Optional[float] = None, stop_button_keycode: str = 'Escape'</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].Run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
 whenever our sliders’ values change. Blocks until the user clicks a
 “Stop” button in the MeshCat control panel, or if the timeout limit is
@@ -679,12 +687,19 @@ reached.</p>
 seconds) to wait before returning. If the button is clicked, this
 function will return promptly, without waiting for the timeout.
 When no timeout is given, this function will block indefinitely.</dd>
-<dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt>
+<dd>keycode that will be assigned to the “Stop” button. Setting this
+to the empty string means no keycode. See Meschat::AddButton for
+details.</dd>
+<dt><em>Default:</em> “Escape”.</dt>
+<dd>$Precondition:</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</p>
+<dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain this JointSliders system.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">diagarm</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
+<dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
 JointSliders system’s constructor.</dd>
 </dl>
 </dd></dl>
@@ -732,7 +747,7 @@ systems::ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, decrement_keycodes: List[str] = [], increment_keycodes: List[str] = []</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a meshcat slider for each joint in the given plant.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt>
@@ -759,6 +774,14 @@ increment by which the slider can change values (and therefore
 update our output port’s value). May be a single value or else a
 vector of length plant.num_positions(). If no value is provided, a
 sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt>
+<dd>(Optional) A vector of length plant.num_positions() with keycodes
+to assign to decrement the value of each individual joint slider.
+See Meshcat::AddSlider for more details.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt>
+<dd>(Optional) A vector of length plant.num_positions() with keycodes
+to assign to increment the value of each individual joint slider.
+See Meshcat::AddSlider for more details.</dd>
 </dl>
 </dd></dl>
 
@@ -777,7 +800,7 @@ on this instance concurrently on another thread.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].Run">
-<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[AutoDiffXd], diagram: pydrake.systems.framework.Diagram_[AutoDiffXd], timeout: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].Run" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[AutoDiffXd], diagram: pydrake.systems.framework.Diagram_[AutoDiffXd], timeout: Optional[float] = None, stop_button_keycode: str = 'Escape'</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].Run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
 whenever our sliders’ values change. Blocks until the user clicks a
 “Stop” button in the MeshCat control panel, or if the timeout limit is
@@ -788,12 +811,19 @@ reached.</p>
 seconds) to wait before returning. If the button is clicked, this
 function will return promptly, without waiting for the timeout.
 When no timeout is given, this function will block indefinitely.</dd>
-<dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt>
+<dd>keycode that will be assigned to the “Stop” button. Setting this
+to the empty string means no keycode. See Meschat::AddButton for
+details.</dd>
+<dt><em>Default:</em> “Escape”.</dt>
+<dd>$Precondition:</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</p>
+<dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain this JointSliders system.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">diagarm</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
+<dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
 JointSliders system’s constructor.</dd>
 </dl>
 </dd></dl>
@@ -839,7 +869,7 @@ systems::ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.JointSliders_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[float], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[float], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, decrement_keycodes: List[str] = [], increment_keycodes: List[str] = []</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a meshcat slider for each joint in the given plant.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt>
@@ -866,6 +896,14 @@ increment by which the slider can change values (and therefore
 update our output port’s value). May be a single value or else a
 vector of length plant.num_positions(). If no value is provided, a
 sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt>
+<dd>(Optional) A vector of length plant.num_positions() with keycodes
+to assign to decrement the value of each individual joint slider.
+See Meshcat::AddSlider for more details.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt>
+<dd>(Optional) A vector of length plant.num_positions() with keycodes
+to assign to increment the value of each individual joint slider.
+See Meshcat::AddSlider for more details.</dd>
 </dl>
 </dd></dl>
 
@@ -884,7 +922,7 @@ on this instance concurrently on another thread.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.JointSliders_[float].Run">
-<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], diagram: pydrake.systems.framework.Diagram_[float], timeout: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float].Run" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], diagram: pydrake.systems.framework.Diagram_[float], timeout: Optional[float] = None, stop_button_keycode: str = 'Escape'</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float].Run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
 whenever our sliders’ values change. Blocks until the user clicks a
 “Stop” button in the MeshCat control panel, or if the timeout limit is
@@ -895,12 +933,19 @@ reached.</p>
 seconds) to wait before returning. If the button is clicked, this
 function will return promptly, without waiting for the timeout.
 When no timeout is given, this function will block indefinitely.</dd>
-<dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt>
+<dd>keycode that will be assigned to the “Stop” button. Setting this
+to the empty string means no keycode. See Meschat::AddButton for
+details.</dd>
+<dt><em>Default:</em> “Escape”.</dt>
+<dd>$Precondition:</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</p>
+<dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain this JointSliders system.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">diagarm</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
+<dd><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
 JointSliders system’s constructor.</dd>
 </dl>
 </dd></dl>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a3cb6014636db3579a84defd7824ee4c1":[3,0,0,9,67,29],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66":[3,0,0,9,67,16],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a5a6d68bf65261dba0c10a00174fed83c":[3,0,0,9,67,37],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a5c0f659ca0d1286108f3238040cea74a":[3,0,0,9,67,45],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_toppra.html#a68128c4e24b7fb5ced993cc55f2453a6":[1,4,2,4,7],
 "classdrake_1_1multibody_1_1_toppra.html#a9024708d5314cf3655e2b72c5c138a39":[1,4,2,4,2],
 "classdrake_1_1multibody_1_1_toppra.html#aa6404ed212fab2af0bad98457df07d16":[1,4,2,4,9],
-"classdrake_1_1multibody_1_1_toppra.html#ab013d8e5872653e5d10eaae0f3daa3dc":[1,4,2,4,12],
-"classdrake_1_1multibody_1_1_toppra.html#ac05332bb6e89f996e9501a52af6e307f":[1,4,2,4,10]
+"classdrake_1_1multibody_1_1_toppra.html#ab013d8e5872653e5d10eaae0f3daa3dc":[1,4,2,4,12]
 };

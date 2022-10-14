@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/systems/sensors/camera_config_functions.h File Reference</title>
+<title>Drake: drake/systems/sensors -&gt; lcm Relation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('camera__config__functions_8h.html','');});
+$(document).ready(function(){initNavTree('dir_892460009e18f4b08a77d36884a88a01.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -157,52 +157,13 @@ $(document).ready(function(){initNavTree('camera__config__functions_8h.html','')
 </iframe>
 </div>
 
-<div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
-  <div class="headertitle">
-<div class="title">camera_config_functions.h File Reference</div>  </div>
-</div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="drake__lcm__interface_8h.html">drake/lcm/drake_lcm_interface.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="lcm__buses_8h.html">drake/systems/lcm/lcm_buses.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="camera__config_8h.html">drake/systems/sensors/camera_config.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for camera_config_functions.h:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="camera__config__functions_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1systems"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html">drake::systems</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1systems_1_1sensors"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html">drake::systems::sensors</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aa3ab5841aed63bd66db330dc9486be95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95">ApplyCameraConfig</a> (const CameraConfig &amp;config, DiagramBuilder&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const systems::lcm::LcmBuses *lcm_buses=nullptr, const multibody::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
-<tr class="memdesc:aa3ab5841aed63bd66db330dc9486be95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a simulated camera sensor (rgbd sensor and publishing systems) within <code>builder</code>.  <a href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95">More...</a><br /></td></tr>
-<tr class="separator:aa3ab5841aed63bd66db330dc9486be95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a995afeb23f063180d03cac4de9bfbf16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16">ApplyCameraConfig</a> (const CameraConfig &amp;config, multibody::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, DiagramBuilder&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm)</td></tr>
-<tr class="memdesc:a995afeb23f063180d03cac4de9bfbf16"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16">More...</a><br /></td></tr>
-<tr class="separator:a995afeb23f063180d03cac4de9bfbf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+<h3>sensors &rarr; lcm Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in drake/systems/sensors</th><th class="dirtab">Includes file in drake/systems/lcm</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="camera__config__functions_8h.html">camera_config_functions.h</a></td><td class="dirtab"><a class="el" href="lcm__buses_8h.html">lcm_buses.h</a></td></tr></table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_b7a0e33b407baa23d8a077e33033c988.html">systems</a></li><li class="navelem"><a class="el" href="dir_892460009e18f4b08a77d36884a88a01.html">sensors</a></li><li class="navelem"><a class="el" href="camera__config__functions_8h.html">camera_config_functions.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_b7a0e33b407baa23d8a077e33033c988.html">systems</a></li><li class="navelem"><a class="el" href="dir_892460009e18f4b08a77d36884a88a01.html">sensors</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

@@ -168,11 +168,11 @@ $(document).ready(function(){initNavTree('group__multibody__notation__basics.htm
 <p>Let the frame providing a basis be frame \(F\). In typeset equations we use bracket notation \([Q]_F\) to denote that quantity \(Q\) is being expressed in \(F\)'s basis \(F_x,F_y,F_z\). In code or comments, we translate this to <em>monogram notation</em>, described in detail below. Here monogram notation would be <code>Q_F</code> (<code>Q</code> would be replaced by the actual quantity). As a simple example, a vector \(r\) expressed in frame \(W\) would be \([r]_W\) or <code>r_W</code> in code. For the remainder of this documentation, we will generally use the default font for single-letter variables because formatting them with \(\LaTeX\) or <code>code font</code> makes the source hard to read and write, and the result does not add any clarity to the documentation. So in this document and in most of Drake's Doxygen-formatted documentation, \(F\)≡<code>F</code>≡F. Individual Drake programmers are <em>allowed</em> to be fussier about single-letter typography but we don't require it; readers should not infer any meaning to the font choice. We are more careful about the font for more complex symbols and equations.</p>
 <p>Physical quantities in general may be characterized by</p><ul>
 <li>a symbol for the quantity type, e.g. \(v\) for velocity or \(I\) for inertia,</li>
-<li>a reference symbol (typically a body or frame, can be a point),</li>
+<li>a reference symbol (typically a "measured-in" body or frame, can sometimes be a "measured from" point),</li>
 <li>a target symbol (can be a point, body, or frame), and</li>
 <li>an index for selecting a particular quantity from a collection (rarely needed in practice).</li>
 </ul>
-<p>Quantities involving mass properties may have an additional "taken about" point; we'll discuss that elsewhere.</p>
+<p>Quantities involving mass properties may have an additional "taken about" point; <em>relative</em> velocities and accelerations may need an additional frame; we'll discuss those elsewhere.</p>
 <p>(Note that a physical quantity does not have an expressed-in frame; that is necessary only for numerical computation.)</p>
 <p>Particular physical quantities may not have all of these characteristics. If all are present, a generic physical quantity would look like this: </p><p class="formulaDsp">
 \[^RQ_i^T\]

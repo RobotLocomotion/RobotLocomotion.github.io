@@ -226,14 +226,42 @@
 <p>Bindings for the sensors portion of the Systems framework.</p>
 <dl class="function">
 <dt id="pydrake.systems.sensors.ApplyCameraConfig">
-<code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ApplyCameraConfig</code><span class="sig-paren">(</span><em>config: pydrake.systems.sensors.CameraConfig, plant: drake::multibody::MultibodyPlant&lt;double&gt;, builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.ApplyCameraConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a camera network (rgbd sensor and publishing systems)
-connected to <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>. As specified, the RGB and/or depth
-images from the camera are published via <code class="docutils literal notranslate"><span class="pre">lcm</span></code> on the channel
+<code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ApplyCameraConfig</code><span class="sig-paren">(</span><em>config: pydrake.systems.sensors.CameraConfig, builder: pydrake.systems.framework.DiagramBuilder_[float], lcm_buses: pydrake.systems.lcm.LcmBuses = None, plant: drake::multibody::MultibodyPlant&lt;double&gt; = None, scene_graph: pydrake.geometry.SceneGraph_[float] = None, lcm: pydrake.lcm.DrakeLcmInterface = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.ApplyCameraConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a simulated camera sensor (rgbd sensor and publishing
+systems) within <code class="docutils literal notranslate"><span class="pre">builder</span></code>. As specified, the RGB and/or depth images
+from the camera are published via <code class="docutils literal notranslate"><span class="pre">lcm</span></code> on the channel
 <code class="docutils literal notranslate"><span class="pre">DRAKE_RGBD_CAMERA_IMAGES_{camera_config.name}</span></code>.</p>
 <dl class="docutils">
-<dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">plant</span></code> and <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> both belong to the <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt>
+<dd>The camera configuration.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">builder</span></code>:</dt>
+<dd>The diagram to add sensor and publishing systems into.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt>
+<dd>(Optional) The available LCM buses to use for camera message
+publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">lcm</span></code> interface if
+provided, or else the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> must be set to “default”
+in which case an appropriate drake::lcm::DrakeLcm object is
+constructed and used internally.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>(Optional) The MultibodyPlant to use for kinematics. In the common
+case where a MultibodyPlant has already been added to <code class="docutils literal notranslate"><span class="pre">builder</span></code>
+using either AddMultibodyPlant() or AddMultibodyPlantSceneGraph(),
+the default value (nullptr) here is suitable and generally should
+be preferred. When provided, it must be a System that’s been added
+to the the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, uses the system
+named “plant” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt>
+<dd>(Optional) The SceneGraph to use for rendering. In the common case
+where a SceneGraph has already been added to <code class="docutils literal notranslate"><span class="pre">builder</span></code> using
+either AddMultibodyPlant() or AddMultibodyPlantSceneGraph(), the
+default value (nullptr) here is suitable and generally should be
+preferred. When provided, it must be a System that’s been added to
+the the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, uses the system
+named “scene_graph” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt>
+<dd>(Optional) The LCM interface used for visualization message
+publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> value
+to look up the appropriate interface from <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -243,6 +271,28 @@ images from the camera are published via <code class="docutils literal notransla
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>The <code class="docutils literal notranslate"><span class="pre">builder</span></code> is non-null.</dd>
+<dt>Precondition:</dt>
+<dd>Either the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> is set to “default”, or else
+<code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code> is non-null and contains a bus named
+<code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code>, or else <code class="docutils literal notranslate"><span class="pre">lcm</span></code> is non-null.</dd>
+<dt>Precondition:</dt>
+<dd>Either the given <code class="docutils literal notranslate"><span class="pre">builder</span></code> contains a MultibodyPlant system
+named “plant” or else the provided <code class="docutils literal notranslate"><span class="pre">plant</span></code> is non-null.</dd>
+<dt>Precondition:</dt>
+<dd>Either the given <code class="docutils literal notranslate"><span class="pre">builder</span></code> contains a SceneGraph system named
+“scene_graph” or else the provided <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> is non-null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::multibody::AddMultibodyPlant()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::systems::lcm::ApplyLcmBusConfig()</p>
+</div>
 </dd></dl>
 
 <dl class="class">
@@ -440,6 +490,16 @@ focal length given computation for <code class="docutils literal notranslate"><s
 <dt>Precondition:</dt>
 <dd>height &gt; 0.</dd>
 </dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.CameraConfig.lcm_bus">
+<code class="descname">lcm_bus</code><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.lcm_bus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which LCM URL to use.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">drake::systems::lcm::LcmBuses</p>
+</div>
 </dd></dl>
 
 <dl class="attribute">

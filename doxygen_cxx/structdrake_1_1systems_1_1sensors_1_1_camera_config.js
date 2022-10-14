@@ -18,6 +18,7 @@ var structdrake_1_1systems_1_1sensors_1_1_camera_config =
     [ "focal", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a868b65aa60ea2274975c87d28987eb29", null ],
     [ "fps", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a63da2a617b72a1630998a4d8b4d26cd3", null ],
     [ "height", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad12fc34ce789bce6c8a05d8a17138534", null ],
+    [ "lcm_bus", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf", null ],
     [ "name", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9b45b3e13bd9167aab02e17e08916231", null ],
     [ "renderer_class", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ab3cf1bcc14fdfe348e72ab596466f675", null ],
     [ "renderer_name", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d", null ],

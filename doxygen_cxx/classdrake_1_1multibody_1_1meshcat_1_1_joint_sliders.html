@@ -195,18 +195,18 @@ class drake::multibody::meshcat::JointSliders&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a109aee7d97f74edfd4a41a92387ab6de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a109aee7d97f74edfd4a41a92387ab6de">JointSliders</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, std::optional&lt; Eigen::VectorXd &gt; initial_value={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; lower_limit={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; upper_limit={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; step={})</td></tr>
-<tr class="memdesc:a109aee7d97f74edfd4a41a92387ab6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a meshcat slider for each joint in the given plant.  <a href="#a109aee7d97f74edfd4a41a92387ab6de">More...</a><br /></td></tr>
-<tr class="separator:a109aee7d97f74edfd4a41a92387ab6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ebb1951c6fc9e753c7452c13f6dade"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a86ebb1951c6fc9e753c7452c13f6dade">JointSliders</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, std::optional&lt; Eigen::VectorXd &gt; initial_value={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; lower_limit={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; upper_limit={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; step={}, std::vector&lt; std::string &gt; decrement_keycodes={}, std::vector&lt; std::string &gt; increment_keycodes={})</td></tr>
+<tr class="memdesc:a86ebb1951c6fc9e753c7452c13f6dade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a meshcat slider for each joint in the given plant.  <a href="#a86ebb1951c6fc9e753c7452c13f6dade">More...</a><br /></td></tr>
+<tr class="separator:a86ebb1951c6fc9e753c7452c13f6dade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e5aab0612d67400354a4fe71278a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21">Delete</a> ()</td></tr>
 <tr class="memdesc:ac2e5aab0612d67400354a4fe71278a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes our sliders from the associated meshcat instance.  <a href="#ac2e5aab0612d67400354a4fe71278a21">More...</a><br /></td></tr>
 <tr class="separator:ac2e5aab0612d67400354a4fe71278a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bef86c00f2afad929304ad1866d1c33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a0bef86c00f2afad929304ad1866d1c33">~JointSliders</a> () final</td></tr>
 <tr class="memdesc:a0bef86c00f2afad929304ad1866d1c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21" title="Removes our sliders from the associated meshcat instance.">Delete()</a>, if one has not already been done.  <a href="#a0bef86c00f2afad929304ad1866d1c33">More...</a><br /></td></tr>
 <tr class="separator:a0bef86c00f2afad929304ad1866d1c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7efa8b3ad513010aefc21c33a2ff9b2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7efa8b3ad513010aefc21c33a2ff9b2f">Run</a> (const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">systems::Diagram</a>&lt; T &gt; &amp;diagram, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; timeout=std::nullopt) const</td></tr>
-<tr class="memdesc:a7efa8b3ad513010aefc21c33a2ff9b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes the given Diagram (typically, to cause it to be visualized) whenever our sliders' values change.  <a href="#a7efa8b3ad513010aefc21c33a2ff9b2f">More...</a><br /></td></tr>
-<tr class="separator:a7efa8b3ad513010aefc21c33a2ff9b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ed32750fc3e768208222e9774992e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a97ed32750fc3e768208222e9774992e3">Run</a> (const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">systems::Diagram</a>&lt; T &gt; &amp;diagram, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; timeout=std::nullopt, std::string stop_button_keycode=&quot;Escape&quot;) const</td></tr>
+<tr class="memdesc:a97ed32750fc3e768208222e9774992e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes the given Diagram (typically, to cause it to be visualized) whenever our sliders' values change.  <a href="#a97ed32750fc3e768208222e9774992e3">More...</a><br /></td></tr>
+<tr class="separator:a97ed32750fc3e768208222e9774992e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0ba4dc73d12957c13ae22e2a2ef939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939">SetPositions</a> (const Eigen::VectorXd &amp;q)</td></tr>
 <tr class="memdesc:abf0ba4dc73d12957c13ae22e2a2ef939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all robot positions (corresponding to joint positions and potentially positions not associated with any joint) to the values in <code>q</code>.  <a href="#abf0ba4dc73d12957c13ae22e2a2ef939">More...</a><br /></td></tr>
 <tr class="separator:abf0ba4dc73d12957c13ae22e2a2ef939"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1299,8 +1299,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a109aee7d97f74edfd4a41a92387ab6de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a109aee7d97f74edfd4a41a92387ab6de">&#9670;&nbsp;</a></span>JointSliders() <span class="overload">[3/3]</span></h2>
+<a id="a86ebb1951c6fc9e753c7452c13f6dade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ebb1951c6fc9e753c7452c13f6dade">&#9670;&nbsp;</a></span>JointSliders() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1339,7 +1339,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt;&#160;</td>
-          <td class="paramname"><em>step</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>step</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>decrement_keycodes</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>increment_keycodes</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1357,7 +1369,9 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">initial_value</td><td>(Optional) If provided, the sliders' initial values will be as given; otherwise, the plant's default values will be used.</td></tr>
     <tr><td class="paramname">lower_limit</td><td>(Optional) The lower limit of the slider will be the maximum value of this number and any limit specified in the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. May be a single value or else a vector of length plant.num_positions(). If no value is provided, a sensible default will be used.</td></tr>
     <tr><td class="paramname">upper_limit</td><td>(Optional) The upper limit of the slider will be the minimum value of this number and any limit specified in the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. May be a single value or else a vector of length plant.num_positions(). If no value is provided, a sensible default will be used.</td></tr>
-    <tr><td class="paramname">step</td><td>(Optional) The step argument of the slider, which is the smallest increment by which the slider can change values (and therefore update our output port's value). May be a single value or else a vector of length plant.num_positions(). If no value is provided, a sensible default will be used. </td></tr>
+    <tr><td class="paramname">step</td><td>(Optional) The step argument of the slider, which is the smallest increment by which the slider can change values (and therefore update our output port's value). May be a single value or else a vector of length plant.num_positions(). If no value is provided, a sensible default will be used.</td></tr>
+    <tr><td class="paramname">decrement_keycodes</td><td>(Optional) A vector of length plant.num_positions() with keycodes to assign to decrement the value of each individual joint slider. See Meshcat::AddSlider for more details.</td></tr>
+    <tr><td class="paramname">increment_keycodes</td><td>(Optional) A vector of length plant.num_positions() with keycodes to assign to increment the value of each individual joint slider. See Meshcat::AddSlider for more details. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1465,8 +1479,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7efa8b3ad513010aefc21c33a2ff9b2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7efa8b3ad513010aefc21c33a2ff9b2f">&#9670;&nbsp;</a></span>Run()</h2>
+<a id="a97ed32750fc3e768208222e9774992e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ed32750fc3e768208222e9774992e3">&#9670;&nbsp;</a></span>Run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1481,7 +1495,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>std::nullopt</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>stop_button_keycode</em> = <code>&quot;Escape&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1496,6 +1516,8 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">timeout</td><td>(Optional) In the absence of a button click, the duration (in seconds) to wait before returning. If the button is clicked, this function will return promptly, without waiting for the timeout. When no timeout is given, this function will block indefinitely.</td></tr>
+    <tr><td class="paramname">a</td><td>keycode that will be assigned to the "Stop" button. Setting this to the empty string means no keycode. See Meschat::AddButton for details. <br />
+ <em>Default:</em> "Escape".</td></tr>
   </table>
   </dd>
 </dl>
@@ -1503,7 +1525,7 @@ Additional Inherited Members</h2></td></tr>
 <dd>
 <code>diagram</code> must contain this <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html" title="JointSliders adds slider bars to the Meshcat control panel for the joints of a MultibodyPlant.">JointSliders</a> system. </dd>
 <dd>
-<code>diagarm</code> must contain the <code>plant</code> that was passed into this <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html" title="JointSliders adds slider bars to the Meshcat control panel for the joints of a MultibodyPlant.">JointSliders</a> system's constructor. </dd></dl>
+<code>diagram</code> must contain the <code>plant</code> that was passed into this <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html" title="JointSliders adds slider bars to the Meshcat control panel for the joints of a MultibodyPlant.">JointSliders</a> system's constructor. </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"render__engine__gltf__client__params_8h.html":[4,0,0,4,6,5],
 "render__engine__vtk__params_8h.html":[4,0,0,4,7,4],
 "render__gl_2factory_8h.html":[4,0,0,4,5,0],
 "render__gl_2factory_8h.html#a6a949953d76af52d6dd1b13417cb556a":[4,0,0,4,5,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,58],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,10],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
-"spatial__algebra_8h.html":[4,0,0,8,6,1],
-"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0]
+"spatial__algebra_8h.html":[4,0,0,8,6,1]
 };
