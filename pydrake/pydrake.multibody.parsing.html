@@ -220,19 +220,97 @@
 <span id="pydrake-multibody-parsing"></span><h1>pydrake.multibody.parsing<a class="headerlink" href="#module-pydrake.multibody.parsing" title="Permalink to this headline">¶</a></h1>
 <p>SDF and URDF parsing for MultibodyPlant and SceneGraph.</p>
 <dl class="class">
+<dt id="pydrake.multibody.parsing.AddCollisionFilterGroup">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">AddCollisionFilterGroup</code><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directive to add a collision filter group. This directive is analogous
+to tag_drake_collision_filter_group in XML model formats.</p>
+<dl class="method">
+<dt id="pydrake.multibody.parsing.AddCollisionFilterGroup.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.AddCollisionFilterGroup</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddCollisionFilterGroup.ignored_collision_filter_groups">
+<code class="descname">ignored_collision_filter_groups</code><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.ignored_collision_filter_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Names of groups against which to ignore collisions. If another group
+is named, collisions between this group and that group will be
+ignored. If this group is named, collisions within this group will be
+ignored. Names may be scoped and refer to other groups defined
+elsewhere in this file or transitively included directives or model
+files. This data is analogous to a sequence of
+tag_drake_ignored_collision_filter_group in XML model formats.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddCollisionFilterGroup.members">
+<code class="descname">members</code><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.members" title="Permalink to this definition">¶</a></dt>
+<dd><p>Names of members of the group. May be scoped and refer to bodies of
+already added models. This data is analogous to a sequence of
+tag_drake_member in XML model formats.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddCollisionFilterGroup.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of group to be added. Must not be a scoped name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.parsing.AddDirectives">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">AddDirectives</code><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directive to incorporate another model directives file, optionally
+with its elements prefixed with a namespace.</p>
+<dl class="method">
+<dt id="pydrake.multibody.parsing.AddDirectives.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.AddDirectives</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddDirectives.file">
+<code class="descname">file</code><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>//`` URI of the file to add.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">The <a href="#id1"><span class="problematic" id="id2">``</span></a>package</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddDirectives.model_namespace">
+<code class="descname">model_namespace</code><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives.model_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Namespaces base model instance for processing directive files. Affects
+scoping (i.e. the following members): - AddModel::name -
+AddModelInstance::name - AddFrame::name - AddWeld::parent -
+AddWeld::child - AddFrame::X_PF::base_frame -
+AddCollisionFilterGroup::name - AddCollisionFilterGroup::members -
+AddCollisionFilterGroup::ignored_colllision_filter_groups -
+AddDirectives::model_namespace See <code class="docutils literal notranslate"><span class="pre">README.md</span></code> for example
+references and namespacing.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.parsing.AddFrame">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">AddFrame</code><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Directive to add a Frame to the scene. The added frame must have a
+name and a transform with a base frame and offset.</p>
+<dl class="method">
 <dt id="pydrake.multibody.parsing.AddFrame.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.AddFrame</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.AddFrame.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.multibody.parsing.AddFrame.name">
 <code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of frame to be added. If scope is specified, will override model
-instance; otherwise, will use <a href="#id1"><span class="problematic" id="id2">`</span></a>X_PF.base_frame`s instance.</p>
+instance; otherwise, will use <a href="#id3"><span class="problematic" id="id4">`</span></a>X_PF.base_frame`s instance.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -240,6 +318,98 @@ instance; otherwise, will use <a href="#id1"><span class="problematic" id="id2">
 <code class="descname">X_PF</code><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame.X_PF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pose of frame to be added, <code class="docutils literal notranslate"><span class="pre">F</span></code>, w.r.t. parent frame <code class="docutils literal notranslate"><span class="pre">P</span></code> (as
 defined by <code class="docutils literal notranslate"><span class="pre">X_PF.base_frame</span></code>).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.parsing.AddModel">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">AddModel</code><a class="headerlink" href="#pydrake.multibody.parsing.AddModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directive to add a model from a URDF or SDFormat file to a scene,
+using a given name for the added instance.</p>
+<dl class="method">
+<dt id="pydrake.multibody.parsing.AddModel.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.AddModel</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.AddModel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddModel.default_free_body_pose">
+<code class="descname">default_free_body_pose</code><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.default_free_body_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map of body_name =&gt; default free body pose.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddModel.default_joint_positions">
+<code class="descname">default_joint_positions</code><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.default_joint_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map of joint_name =&gt; default position vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddModel.file">
+<code class="descname">file</code><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>//`` URI of the file to add.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">The <a href="#id5"><span class="problematic" id="id6">``</span></a>package</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddModel.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The model instance name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.parsing.AddModelInstance">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">AddModelInstance</code><a class="headerlink" href="#pydrake.multibody.parsing.AddModelInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directive to add an empty, named model instance to a scene.</p>
+<dl class="method">
+<dt id="pydrake.multibody.parsing.AddModelInstance.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.AddModelInstance</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.AddModelInstance.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddModelInstance.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.parsing.AddModelInstance.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The model instance name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.parsing.AddWeld">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.parsing.</code><code class="descname">AddWeld</code><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directive to add a weld between two named frames, a parent and a
+child.</p>
+<dl class="method">
+<dt id="pydrake.multibody.parsing.AddWeld.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.AddWeld</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddWeld.child">
+<code class="descname">child</code><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Child frame. Can (and should) specify scope.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddWeld.parent">
+<code class="descname">parent</code><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent frame. Can specify scope.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.parsing.AddWeld.X_PC">
+<code class="descname">X_PC</code><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.X_PC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative transform between the parent frame P and the child frame C.
+If unspecified, the Identity transform will be used.</p>
 </dd></dl>
 
 </dd></dl>
