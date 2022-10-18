@@ -209,6 +209,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2">AddAllModelsFromFile</a> (const std::string &amp;file_name)</td></tr>
 <tr class="memdesc:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#a9b40bb492d33e373b3bfcf5d440a36c2">More...</a><br /></td></tr>
 <tr class="separator:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f86ad0f6f34758be876e93e46ec2e79"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a0f86ad0f6f34758be876e93e46ec2e79">AddModelsFromString</a> (const std::string &amp;file_contents, const std::string &amp;file_type)</td></tr>
+<tr class="memdesc:a0f86ad0f6f34758be876e93e46ec2e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides same functionality as AddAllModelsFromFile, but instead parses the model description text data via <code>file_contents</code> with format dictated by <code>file_type</code>.  <a href="#a0f86ad0f6f34758be876e93e46ec2e79">More...</a><br /></td></tr>
+<tr class="separator:a0f86ad0f6f34758be876e93e46ec2e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc82a9937f1710e5da413dcad7a3ded"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2bc82a9937f1710e5da413dcad7a3ded">AddModelFromFile</a> (const std::string &amp;file_name, const std::string &amp;model_name={})</td></tr>
 <tr class="memdesc:a2bc82a9937f1710e5da413dcad7a3ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>file_name</code> and adds one top-level model to <code>plant</code>.  <a href="#a2bc82a9937f1710e5da413dcad7a3ded">More...</a><br /></td></tr>
 <tr class="separator:a2bc82a9937f1710e5da413dcad7a3ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,6 +440,52 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The instance index for the newly added model. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in case of errors. (Deprecated.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Use AddModelsFromString() instead. <br />
+ This will be removed from Drake on or after 2023-04-01.</dd></dl>
+
+</div>
+</div>
+<a id="a0f86ad0f6f34758be876e93e46ec2e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f86ad0f6f34758be876e93e46ec2e79">&#9670;&nbsp;</a></span>AddModelsFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&gt; AddModelsFromString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_contents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides same functionality as AddAllModelsFromFile, but instead parses the model description text data via <code>file_contents</code> with format dictated by <code>file_type</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_contents</td><td>The model data to be parsed. </td></tr>
+    <tr><td class="paramname">file_type</td><td>The data format; must be one of the filename suffixes listed above, <em>without</em> the leading dot (.). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The set of model instance indices for the newly added models, including nested models. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>in case of errors. </td></tr>

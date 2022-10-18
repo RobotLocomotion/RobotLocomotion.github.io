@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_screw_join
 class drake::multibody::ScrewJoint&lt; T &gt;</h3>
 
 <p>This joint models a screw joint allowing two bodies to rotate about one axis while translating along that same axis with one degree of freedom. </p>
-<p>That is, given a frame F attached to the parent body P and a frame M attached to the child body B (see the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class's documentation), this joint allows frame M to translate (while rotating) along the z axis of frame F, with M's z-axis Mz and F's z-axis Fz coincident at all times. The rotation about z-axis of F and their rate specify the state of the joint. Zero (θ) corresponds to frames F and M being coincident and aligned. Translation z is defined to be positive in the direction of the respective axis and the rotation θ is defined to be positive according to the right-hand-rule with the thumb aligned in the direction of frame F's z-axis.</p>
+<p>That is, given a frame F attached to the parent body P and a frame M attached to the child body B (see the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class's documentation), this joint allows frame M to translate (while rotating) along an axis â. Axis â is constant and has the same measures in both frames F and M, that is, <code>â_F = â_M</code>. The rotation about the <code>â_F</code> axis and its rate specify the state of the joint. Zero (θ) corresponds to frames F and M being coincident and aligned. The translation distance is defined positive when child body B translates along the direction of â, and the rotation θ is defined to be positive according to the right-hand-rule with the thumb aligned in the direction of the <code>â_F</code> axis.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -194,11 +194,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac17d35a2433c154463a76f2c97399c83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ac17d35a2433c154463a76f2c97399c83">ScrewJoint</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6">frame_on_child</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#a7c551ba379c10c64505157d498c83327">screw_pitch</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#aad91b55e6b714db4ba96190e6fab07ac">damping</a>)</td></tr>
 <tr class="memdesc:ac17d35a2433c154463a76f2c97399c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to create a screw joint between two bodies so that frame F attached to the parent body P and frame M attached to the child body B translate and rotate as described in the class's documentation.  <a href="#ac17d35a2433c154463a76f2c97399c83">More...</a><br /></td></tr>
 <tr class="separator:ac17d35a2433c154463a76f2c97399c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92dad6df59ace2a85b68cb6b43d960c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ad92dad6df59ace2a85b68cb6b43d960c">ScrewJoint</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6">frame_on_child</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;axis, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#a7c551ba379c10c64505157d498c83327">screw_pitch</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#aad91b55e6b714db4ba96190e6fab07ac">damping</a>)</td></tr>
+<tr class="memdesc:ad92dad6df59ace2a85b68cb6b43d960c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to create a screw joint between two bodies so that frame F attached to the parent body P and frame M attached to the child body B translate and rotate as described in the class's documentation.  <a href="#ad92dad6df59ace2a85b68cb6b43d960c">More...</a><br /></td></tr>
+<tr class="separator:ad92dad6df59ace2a85b68cb6b43d960c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4fa9c904accccf5900c63c3e65ca277"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ae4fa9c904accccf5900c63c3e65ca277">type_name</a> () const final</td></tr>
 <tr class="memdesc:ae4fa9c904accccf5900c63c3e65ca277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying the type of <code>this</code> joint, such as "revolute" or "prismatic".  <a href="#ae4fa9c904accccf5900c63c3e65ca277">More...</a><br /></td></tr>
 <tr class="separator:ae4fa9c904accccf5900c63c3e65ca277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b8122291d80cddbfca6630975e3ae7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#a99b8122291d80cddbfca6630975e3ae7">screw_axis</a> () const</td></tr>
+<tr class="memdesc:a99b8122291d80cddbfca6630975e3ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the normalized axis of motion of <code>this</code> joint as a unit vector.  <a href="#a99b8122291d80cddbfca6630975e3ae7">More...</a><br /></td></tr>
+<tr class="separator:a99b8122291d80cddbfca6630975e3ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c551ba379c10c64505157d498c83327"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#a7c551ba379c10c64505157d498c83327">screw_pitch</a> () const</td></tr>
-<tr class="memdesc:a7c551ba379c10c64505157d498c83327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>this</code> joint's amount of translation in meters occuring over a one full revolution.  <a href="#a7c551ba379c10c64505157d498c83327">More...</a><br /></td></tr>
+<tr class="memdesc:a7c551ba379c10c64505157d498c83327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>this</code> joint's amount of translation in meters occurring over a one full revolution.  <a href="#a7c551ba379c10c64505157d498c83327">More...</a><br /></td></tr>
 <tr class="separator:a7c551ba379c10c64505157d498c83327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad91b55e6b714db4ba96190e6fab07ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#aad91b55e6b714db4ba96190e6fab07ac">damping</a> () const</td></tr>
 <tr class="memdesc:aad91b55e6b714db4ba96190e6fab07ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>this</code> joint's damping constant N⋅m⋅s for the rotational degree.  <a href="#aad91b55e6b714db4ba96190e6fab07ac">More...</a><br /></td></tr>
@@ -244,7 +250,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab9186c6bff7f6987e8ac599f6b9b4150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the translational velocity vz, in meters per second, of <code>this</code> joint's Mo measured and expressed in frame F from <code>context</code>.  <a href="#ab9186c6bff7f6987e8ac599f6b9b4150">More...</a><br /></td></tr>
 <tr class="separator:ab9186c6bff7f6987e8ac599f6b9b4150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf699bc1f257211c009c305fe764aa69"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html">ScrewJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#adf699bc1f257211c009c305fe764aa69">set_translational_velocity</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const T &amp;vz) const</td></tr>
-<tr class="memdesc:adf699bc1f257211c009c305fe764aa69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the translational velocity, in meters per second, of this <code>this</code> joint's Mo along frame F's Z-axis to <code>vz</code>.  <a href="#adf699bc1f257211c009c305fe764aa69">More...</a><br /></td></tr>
+<tr class="memdesc:adf699bc1f257211c009c305fe764aa69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the translational velocity, in meters per second, of this <code>this</code> joint's Mo along frame F's â-axis to <code>vz</code>.  <a href="#adf699bc1f257211c009c305fe764aa69">More...</a><br /></td></tr>
 <tr class="separator:adf699bc1f257211c009c305fe764aa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad76be9d40c3f33db0711c565cb3c7278"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ad76be9d40c3f33db0711c565cb3c7278">get_angular_velocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:ad76be9d40c3f33db0711c565cb3c7278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the rate of change, in radians per second, of <code>this</code> joint's angle θ from <code>context</code>.  <a href="#ad76be9d40c3f33db0711c565cb3c7278">More...</a><br /></td></tr>
@@ -457,7 +463,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5cc13f9bc5254c723bf7ce65b3f74db1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cc13f9bc5254c723bf7ce65b3f74db1">&#9670;&nbsp;</a></span>ScrewJoint() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc13f9bc5254c723bf7ce65b3f74db1">&#9670;&nbsp;</a></span>ScrewJoint() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,7 +489,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a860344579493829af87f8235ed7793ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a860344579493829af87f8235ed7793ed">&#9670;&nbsp;</a></span>ScrewJoint() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a860344579493829af87f8235ed7793ed">&#9670;&nbsp;</a></span>ScrewJoint() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -509,7 +515,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="ac17d35a2433c154463a76f2c97399c83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac17d35a2433c154463a76f2c97399c83">&#9670;&nbsp;</a></span>ScrewJoint() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17d35a2433c154463a76f2c97399c83">&#9670;&nbsp;</a></span>ScrewJoint() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -553,15 +559,84 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor to create a screw joint between two bodies so that frame F attached to the parent body P and frame M attached to the child body B translate and rotate as described in the class's documentation. </p>
-<p>This constructor signature creates a joint with no joint limits, i.e. the joint angular position, angular velocity and angular acceleration limits are the pair <code>(-∞, ∞)</code>. These can be set using the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> methods <a class="el" href="classdrake_1_1multibody_1_1_joint.html#afde50cf98836177d8391d03fee84734d" title="Sets the position limits to lower_limits and upper_limits.">set_position_limits()</a>, <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa9f0a027f73bf8ed5a1d4fc23c6ad89f" title="Sets the velocity limits to lower_limits and upper_limits.">set_velocity_limits()</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a03980282fa5be97bfe6bd86f2d6c186a" title="Sets the acceleration limits to lower_limits and upper_limits.">set_acceleration_limits()</a> in radians, radians/sec, radians/sec^2 units. The first three arguments to this constructor are those of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class constructor. See the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class's documentation for details. The additional parameters are: </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This constructor signature creates a joint with the axis â set to the z-axis and no joint limits, i.e. the joint angular position, angular velocity and angular acceleration limits are the pair <code>(-∞, ∞)</code>. These can be set using the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> methods <a class="el" href="classdrake_1_1multibody_1_1_joint.html#afde50cf98836177d8391d03fee84734d" title="Sets the position limits to lower_limits and upper_limits.">set_position_limits()</a>, <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa9f0a027f73bf8ed5a1d4fc23c6ad89f" title="Sets the velocity limits to lower_limits and upper_limits.">set_velocity_limits()</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a03980282fa5be97bfe6bd86f2d6c186a" title="Sets the acceleration limits to lower_limits and upper_limits.">set_acceleration_limits()</a> in radians, radians/s, radians/s² units. The first three arguments to this constructor are those of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class constructor. See the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class's documentation for details. The additional parameters are: </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">screw_pitch</td><td>Amount of translation in meters occuring over a one full screw revolution. It's domain is (-∞, ∞). When the screw pitch is negative, positive rotation will result in translating towards the negative direction of z-axis. When the screw pitch is zero, this joint will behave like a revolute joint. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">screw_pitch</td><td>Amount of translation in meters occurring over a one full screw revolution. It's domain is (-∞, ∞). When the screw pitch is negative, positive rotation will result in translating towards the negative direction of z-axis. When the screw pitch is zero, this joint will behave like a revolute joint. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">damping</td><td>Viscous damping coefficient, N⋅m⋅s/rad for rotation, used to model losses within the joint. See documentation of <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#aad91b55e6b714db4ba96190e6fab07ac" title="Returns this joint&#39;s damping constant N⋅m⋅s for the rotational degree.">damping()</a> for details on modelling of the damping torque. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if damping is negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad92dad6df59ace2a85b68cb6b43d960c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92dad6df59ace2a85b68cb6b43d960c">&#9670;&nbsp;</a></span>ScrewJoint() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html">ScrewJoint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_on_parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_on_child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>screw_pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>damping</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor to create a screw joint between two bodies so that frame F attached to the parent body P and frame M attached to the child body B translate and rotate as described in the class's documentation. </p>
+<p>This constructor signature creates a joint with no joint limits, i.e. the joint angular position, angular velocity and angular acceleration limits are the pair <code>(-∞, ∞)</code>. These can be set using the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> methods <a class="el" href="classdrake_1_1multibody_1_1_joint.html#afde50cf98836177d8391d03fee84734d" title="Sets the position limits to lower_limits and upper_limits.">set_position_limits()</a>, <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa9f0a027f73bf8ed5a1d4fc23c6ad89f" title="Sets the velocity limits to lower_limits and upper_limits.">set_velocity_limits()</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a03980282fa5be97bfe6bd86f2d6c186a" title="Sets the acceleration limits to lower_limits and upper_limits.">set_acceleration_limits()</a> in radians, radians/s, radians/s² units. The first three arguments to this constructor are those of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class constructor. See the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class's documentation for details. The additional parameters are: </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis</td><td>A vector in ℝ³ specifying the axis of motion for this joint. The coordinates of <code>axis</code> expressed in frames F and M are the same at all times, that is, <code>axis_F = axis_M</code>. In other words, <code>axis_F</code> (or <code>axis_M</code>) is the eigenvector of <code>R_FM</code> with eigenvalue equal to one. This vector can have any length, only the direction is used. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">screw_pitch</td><td>Amount of translation in meters occurring over a one full screw revolution. It's domain is (-∞, ∞). When the screw pitch is negative, positive rotation will result in translating towards the negative direction of â-axis. When the screw pitch is zero, this joint will behave like a revolute joint. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">damping</td><td>Viscous damping coefficient, N⋅m⋅s/rad for rotation, used to model losses within the joint. See documentation of <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#aad91b55e6b714db4ba96190e6fab07ac" title="Returns this joint&#39;s damping constant N⋅m⋅s for the rotational degree.">damping()</a> for details on modelling of the damping torque. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the L2 norm of <code>axis</code> is less than the square root of machine epsilon. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if damping is negative. </td></tr>
   </table>
   </dd>
@@ -586,7 +661,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns <code>this</code> joint's damping constant N⋅m⋅s for the rotational degree. </p>
-<p>The damping torque (in N⋅m) is modeled as <code>τ = -damping⋅ω</code> i.e. opposing motion, with ω the angular rate for <code>this</code> joint (see <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ad76be9d40c3f33db0711c565cb3c7278" title="Gets the rate of change, in radians per second, of this joint&#39;s angle θ from context.">get_angular_velocity()</a>) and τ the torque on child body B expressed in frame F as t_B_F = τ⋅Fz_F. </p>
+<p>The damping torque (in N⋅m) is modeled as <code>τ = -damping⋅ω</code> i.e. opposing motion, with ω the angular rate for <code>this</code> joint (see <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ad76be9d40c3f33db0711c565cb3c7278" title="Gets the rate of change, in radians per second, of this joint&#39;s angle θ from context.">get_angular_velocity()</a>) and τ the torque on child body B expressed in frame F as t_B_F = τ⋅Fâ_F. </p>
 
 </div>
 </div>
@@ -769,34 +844,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af39612657328ea5e88a3ba3563e0614e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af39612657328ea5e88a3ba3563e0614e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html">ScrewJoint</a>&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html">ScrewJoint</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae671f2537983e7868cbd9eeb651bebda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae671f2537983e7868cbd9eeb651bebda">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae671f2537983e7868cbd9eeb651bebda">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,6 +870,52 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="af39612657328ea5e88a3ba3563e0614e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39612657328ea5e88a3ba3563e0614e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html">ScrewJoint</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html">ScrewJoint</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99b8122291d80cddbfca6630975e3ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b8122291d80cddbfca6630975e3ae7">&#9670;&nbsp;</a></span>screw_axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; screw_axis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the normalized axis of motion of <code>this</code> joint as a unit vector. </p>
+<p>Since the measures of this axis in either frame F or M are the same (see this class's documentation for frame definitions) then, <code>axis = axis_F = axis_M</code>. </p>
+
+</div>
+</div>
 <a id="a7c551ba379c10c64505157d498c83327"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c551ba379c10c64505157d498c83327">&#9670;&nbsp;</a></span>screw_pitch()</h2>
 
@@ -836,7 +931,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns <code>this</code> joint's amount of translation in meters occuring over a one full revolution. </p>
+<p>Returns <code>this</code> joint's amount of translation in meters occurring over a one full revolution. </p>
 
 </div>
 </div>
@@ -1060,11 +1155,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the translational velocity, in meters per second, of this <code>this</code> joint's Mo along frame F's Z-axis to <code>vz</code>. </p>
+<p>Sets the translational velocity, in meters per second, of this <code>this</code> joint's Mo along frame F's â-axis to <code>vz</code>. </p>
 <p>The new translational velocity gets stored in <code>context</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context of the model this joint belongs to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vz</td><td>The desired translational velocity of <code>this</code> joint in meters per second along F frame's Z-axis. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vz</td><td>The desired translational velocity of <code>this</code> joint in meters per second along F frame's â-axis. </td></tr>
   </table>
   </dd>
 </dl>

@@ -800,6 +800,37 @@ empty, the model name provided by the input text will be used.</dd>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The instance index for the newly added model.</td>
 </tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in case of errors. (Deprecated.)</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use AddModelsFromString() instead. This will be removed from Drake
+on or after 2023-04-01.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.parsing.Parser.AddModelsFromString">
+<code class="descname">AddModelsFromString</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em>, <em>file_contents: str</em>, <em>file_type: str</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.ModelInstanceIndex]<a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides same functionality as AddAllModelsFromFile, but instead
+parses the model description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with
+format dictated by <code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_contents</span></code>:</dt>
+<dd>The model data to be parsed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_type</span></code>:</dt>
+<dd>The data format; must be one of the filename suffixes listed
+above, <em>without</em> the leading dot (.).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The set of model instance indices for the newly added models,
+including nested models.</td>
+</tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in case of errors.</td>
 </tr>
 </tbody>

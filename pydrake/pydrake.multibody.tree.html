@@ -13395,8 +13395,8 @@ meters per second.</dd>
 <code class="descname">translation_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticJoint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_.PrismaticJoint_[float].translation_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of translation for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13631,8 +13631,8 @@ meters per second.</dd>
 <code class="descname">translation_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd].translation_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of translation for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13865,8 +13865,8 @@ meters per second.</dd>
 <code class="descname">translation_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_[Expression].translation_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of translation for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14099,8 +14099,8 @@ meters per second.</dd>
 <code class="descname">translation_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticJoint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_[float].translation_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of translation for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14201,8 +14201,7 @@ origins are coincident at all times, the measures of <code class="docutils liter
 either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
 <span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
 eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used. This method
-aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</dd>
+can have any length, only the direction is used.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt>
 <dd>Lower position limit, in radians, for the rotation coordinate (see
 get_angle()).</dd>
@@ -14219,9 +14218,17 @@ the joint. The damping torque (in N⋅m) is modeled as <code class="docutils lit
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if damping is negative.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -14317,8 +14324,8 @@ angle (see get_angle()) from <code class="docutils literal notranslate"><span cl
 <code class="descname">revolute_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RevoluteJoint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_.RevoluteJoint_[float].revolute_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of revolution of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14469,8 +14476,7 @@ origins are coincident at all times, the measures of <code class="docutils liter
 either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
 <span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
 eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used. This method
-aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</dd>
+can have any length, only the direction is used.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt>
 <dd>Lower position limit, in radians, for the rotation coordinate (see
 get_angle()).</dd>
@@ -14487,9 +14493,17 @@ the joint. The damping torque (in N⋅m) is modeled as <code class="docutils lit
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if damping is negative.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -14585,8 +14599,8 @@ angle (see get_angle()) from <code class="docutils literal notranslate"><span cl
 <code class="descname">revolute_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd].revolute_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of revolution of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14735,8 +14749,7 @@ origins are coincident at all times, the measures of <code class="docutils liter
 either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
 <span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
 eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used. This method
-aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</dd>
+can have any length, only the direction is used.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt>
 <dd>Lower position limit, in radians, for the rotation coordinate (see
 get_angle()).</dd>
@@ -14753,9 +14766,17 @@ the joint. The damping torque (in N⋅m) is modeled as <code class="docutils lit
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if damping is negative.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -14851,8 +14872,8 @@ angle (see get_angle()) from <code class="docutils literal notranslate"><span cl
 <code class="descname">revolute_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RevoluteJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_[Expression].revolute_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of revolution of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -15001,8 +15022,7 @@ origins are coincident at all times, the measures of <code class="docutils liter
 either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
 <span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
 eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used. This method
-aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</dd>
+can have any length, only the direction is used.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt>
 <dd>Lower position limit, in radians, for the rotation coordinate (see
 get_angle()).</dd>
@@ -15019,9 +15039,17 @@ the joint. The damping torque (in N⋅m) is modeled as <code class="docutils lit
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if damping is negative.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if pos_lower_limit &gt; pos_upper_limit.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -15117,8 +15145,8 @@ angle (see get_angle()) from <code class="docutils literal notranslate"><span cl
 <code class="descname">revolute_axis</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RevoluteJoint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_[float].revolute_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the axis of revolution of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frames’s definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span>
-<span class="pre">=</span> <span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
+<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -18502,30 +18530,35 @@ one axis while translating along that same axis with one degree of
 freedom. That is, given a frame F attached to the parent body P and a
 frame M attached to the child body B (see the Joint class’s
 documentation), this joint allows frame M to translate (while
-rotating) along the z axis of frame F, with M’s z-axis Mz and F’s
-z-axis Fz coincident at all times. The rotation about z-axis of F and
-their rate specify the state of the joint. Zero (θ) corresponds to
-frames F and M being coincident and aligned. Translation z is defined
-to be positive in the direction of the respective axis and the
-rotation θ is defined to be positive according to the right-hand-rule
-with the thumb aligned in the direction of frame F’s z-axis.</p>
+rotating) along an axis â. Axis â is constant and has the same
+measures in both frames F and M, that is, <code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>. The
+rotation about the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis and its rate specify the state of the
+joint. Zero (θ) corresponds to frames F and M being coincident and
+aligned. The translation distance is defined positive when child body
+B translates along the direction of â, and the rotation θ is defined
+to be positive according to the right-hand-rule with the thumb aligned
+in the direction of the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float = 0, damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor to create a screw joint between two bodies so that frame F
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
 translate and rotate as described in the class’s documentation. This
-constructor signature creates a joint with no joint limits, i.e. the
-joint angular position, angular velocity and angular acceleration
-limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
-methods set_position_limits(), set_velocity_limits() and
-set_acceleration_limits() in radians, radians/sec, radians/sec^2
-units. The first three arguments to this constructor are those of the
-Joint class constructor. See the Joint class’s documentation for
-details. The additional parameters are:</p>
+constructor signature creates a joint with the axis â set to the
+z-axis and no joint limits, i.e. the joint angular position, angular
+velocity and angular acceleration limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>.
+These can be set using the Joint methods set_position_limits(),
+set_velocity_limits() and set_acceleration_limits() in radians,
+radians/s, radians/s² units. The first three arguments to this
+constructor are those of the Joint class constructor. See the Joint
+class’s documentation for details. The additional parameters are:</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
-<dd>Amount of translation in meters occuring over a one full screw
+<dd>Amount of translation in meters occurring over a one full screw
 revolution. It’s domain is (-∞, ∞). When the screw pitch is
 negative, positive rotation will result in translating towards the
 negative direction of z-axis. When the screw pitch is zero, this
@@ -18543,6 +18576,54 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
+attached to the parent body P and frame M attached to the child body B
+translate and rotate as described in the class’s documentation. This
+constructor signature creates a joint with no joint limits, i.e. the
+joint angular position, angular velocity and angular acceleration
+limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
+methods set_position_limits(), set_velocity_limits() and
+set_acceleration_limits() in radians, radians/s, radians/s² units. The
+first three arguments to this constructor are those of the Joint class
+constructor. See the Joint class’s documentation for details. The
+additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt>
+<dd>A vector in ℝ³ specifying the axis of motion for this joint. The
+coordinates of <code class="docutils literal notranslate"><span class="pre">axis</span></code> expressed in frames F and M are the same
+at all times, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>. In other words,
+<code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with
+eigenvalue equal to one. This vector can have any length, only the
+direction is used.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
+<dd>Amount of translation in meters occurring over a one full screw
+revolution. It’s domain is (-∞, ∞). When the screw pitch is
+negative, positive rotation will result in translating towards the
+negative direction of â-axis. When the screw pitch is zero, this
+joint will behave like a revolute joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt>
+<dd>Viscous damping coefficient, N⋅m⋅s/rad for rotation, used to model
+losses within the joint. See documentation of damping() for
+details on modelling of the damping torque.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -18552,7 +18633,7 @@ details on modelling of the damping torque.</dd>
 degree. The damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>
 i.e. opposing motion, with ω the angular rate for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint (see
 get_angular_velocity()) and τ the torque on child body B expressed in
-frame F as t_B_F = τ⋅Fz_F.</p>
+frame F as t_B_F = τ⋅Fâ_F.</p>
 </dd></dl>
 
 <dl class="method">
@@ -18633,8 +18714,8 @@ joint’s Mo measured and expressed in frame F from <code class="docutils litera
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].screw_pitch">
 <code class="descname">screw_pitch</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].screw_pitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occuring over
-a one full revolution.</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occurring
+over a one full revolution.</p>
 </dd></dl>
 
 <dl class="method">
@@ -18725,14 +18806,14 @@ to (z).</p>
 <dt id="pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].set_translational_velocity">
 <code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[float], context: pydrake.systems.framework.Context_[float], translation_dot: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ScrewJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the translational velocity, in meters per second, of this
-<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s Z-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
+<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s â-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
 translational velocity gets stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context of the model this joint belongs to.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vz</span></code>:</dt>
 <dd>The desired translational velocity of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint in meters per
-second along F frame’s Z-axis.</dd>
+second along F frame’s â-axis.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -18757,30 +18838,35 @@ one axis while translating along that same axis with one degree of
 freedom. That is, given a frame F attached to the parent body P and a
 frame M attached to the child body B (see the Joint class’s
 documentation), this joint allows frame M to translate (while
-rotating) along the z axis of frame F, with M’s z-axis Mz and F’s
-z-axis Fz coincident at all times. The rotation about z-axis of F and
-their rate specify the state of the joint. Zero (θ) corresponds to
-frames F and M being coincident and aligned. Translation z is defined
-to be positive in the direction of the respective axis and the
-rotation θ is defined to be positive according to the right-hand-rule
-with the thumb aligned in the direction of frame F’s z-axis.</p>
+rotating) along an axis â. Axis â is constant and has the same
+measures in both frames F and M, that is, <code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>. The
+rotation about the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis and its rate specify the state of the
+joint. Zero (θ) corresponds to frames F and M being coincident and
+aligned. The translation distance is defined positive when child body
+B translates along the direction of â, and the rotation θ is defined
+to be positive according to the right-hand-rule with the thumb aligned
+in the direction of the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], screw_pitch: float = 0, damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor to create a screw joint between two bodies so that frame F
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
 translate and rotate as described in the class’s documentation. This
-constructor signature creates a joint with no joint limits, i.e. the
-joint angular position, angular velocity and angular acceleration
-limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
-methods set_position_limits(), set_velocity_limits() and
-set_acceleration_limits() in radians, radians/sec, radians/sec^2
-units. The first three arguments to this constructor are those of the
-Joint class constructor. See the Joint class’s documentation for
-details. The additional parameters are:</p>
+constructor signature creates a joint with the axis â set to the
+z-axis and no joint limits, i.e. the joint angular position, angular
+velocity and angular acceleration limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>.
+These can be set using the Joint methods set_position_limits(),
+set_velocity_limits() and set_acceleration_limits() in radians,
+radians/s, radians/s² units. The first three arguments to this
+constructor are those of the Joint class constructor. See the Joint
+class’s documentation for details. The additional parameters are:</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
-<dd>Amount of translation in meters occuring over a one full screw
+<dd>Amount of translation in meters occurring over a one full screw
 revolution. It’s domain is (-∞, ∞). When the screw pitch is
 negative, positive rotation will result in translating towards the
 negative direction of z-axis. When the screw pitch is zero, this
@@ -18798,6 +18884,54 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
+attached to the parent body P and frame M attached to the child body B
+translate and rotate as described in the class’s documentation. This
+constructor signature creates a joint with no joint limits, i.e. the
+joint angular position, angular velocity and angular acceleration
+limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
+methods set_position_limits(), set_velocity_limits() and
+set_acceleration_limits() in radians, radians/s, radians/s² units. The
+first three arguments to this constructor are those of the Joint class
+constructor. See the Joint class’s documentation for details. The
+additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt>
+<dd>A vector in ℝ³ specifying the axis of motion for this joint. The
+coordinates of <code class="docutils literal notranslate"><span class="pre">axis</span></code> expressed in frames F and M are the same
+at all times, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>. In other words,
+<code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with
+eigenvalue equal to one. This vector can have any length, only the
+direction is used.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
+<dd>Amount of translation in meters occurring over a one full screw
+revolution. It’s domain is (-∞, ∞). When the screw pitch is
+negative, positive rotation will result in translating towards the
+negative direction of â-axis. When the screw pitch is zero, this
+joint will behave like a revolute joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt>
+<dd>Viscous damping coefficient, N⋅m⋅s/rad for rotation, used to model
+losses within the joint. See documentation of damping() for
+details on modelling of the damping torque.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -18807,7 +18941,7 @@ details on modelling of the damping torque.</dd>
 degree. The damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>
 i.e. opposing motion, with ω the angular rate for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint (see
 get_angular_velocity()) and τ the torque on child body B expressed in
-frame F as t_B_F = τ⋅Fz_F.</p>
+frame F as t_B_F = τ⋅Fâ_F.</p>
 </dd></dl>
 
 <dl class="method">
@@ -18888,8 +19022,8 @@ joint’s Mo measured and expressed in frame F from <code class="docutils litera
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].screw_pitch">
 <code class="descname">screw_pitch</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].screw_pitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occuring over
-a one full revolution.</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occurring
+over a one full revolution.</p>
 </dd></dl>
 
 <dl class="method">
@@ -18980,14 +19114,14 @@ to (z).</p>
 <dt id="pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].set_translational_velocity">
 <code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], translation_dot: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ScrewJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the translational velocity, in meters per second, of this
-<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s Z-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
+<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s â-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
 translational velocity gets stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context of the model this joint belongs to.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vz</span></code>:</dt>
 <dd>The desired translational velocity of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint in meters per
-second along F frame’s Z-axis.</dd>
+second along F frame’s â-axis.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -19010,30 +19144,35 @@ one axis while translating along that same axis with one degree of
 freedom. That is, given a frame F attached to the parent body P and a
 frame M attached to the child body B (see the Joint class’s
 documentation), this joint allows frame M to translate (while
-rotating) along the z axis of frame F, with M’s z-axis Mz and F’s
-z-axis Fz coincident at all times. The rotation about z-axis of F and
-their rate specify the state of the joint. Zero (θ) corresponds to
-frames F and M being coincident and aligned. Translation z is defined
-to be positive in the direction of the respective axis and the
-rotation θ is defined to be positive according to the right-hand-rule
-with the thumb aligned in the direction of frame F’s z-axis.</p>
+rotating) along an axis â. Axis â is constant and has the same
+measures in both frames F and M, that is, <code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>. The
+rotation about the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis and its rate specify the state of the
+joint. Zero (θ) corresponds to frames F and M being coincident and
+aligned. The translation distance is defined positive when child body
+B translates along the direction of â, and the rotation θ is defined
+to be positive according to the right-hand-rule with the thumb aligned
+in the direction of the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_[Expression].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], screw_pitch: float = 0, damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor to create a screw joint between two bodies so that frame F
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
 translate and rotate as described in the class’s documentation. This
-constructor signature creates a joint with no joint limits, i.e. the
-joint angular position, angular velocity and angular acceleration
-limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
-methods set_position_limits(), set_velocity_limits() and
-set_acceleration_limits() in radians, radians/sec, radians/sec^2
-units. The first three arguments to this constructor are those of the
-Joint class constructor. See the Joint class’s documentation for
-details. The additional parameters are:</p>
+constructor signature creates a joint with the axis â set to the
+z-axis and no joint limits, i.e. the joint angular position, angular
+velocity and angular acceleration limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>.
+These can be set using the Joint methods set_position_limits(),
+set_velocity_limits() and set_acceleration_limits() in radians,
+radians/s, radians/s² units. The first three arguments to this
+constructor are those of the Joint class constructor. See the Joint
+class’s documentation for details. The additional parameters are:</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
-<dd>Amount of translation in meters occuring over a one full screw
+<dd>Amount of translation in meters occurring over a one full screw
 revolution. It’s domain is (-∞, ∞). When the screw pitch is
 negative, positive rotation will result in translating towards the
 negative direction of z-axis. When the screw pitch is zero, this
@@ -19051,6 +19190,54 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
+attached to the parent body P and frame M attached to the child body B
+translate and rotate as described in the class’s documentation. This
+constructor signature creates a joint with no joint limits, i.e. the
+joint angular position, angular velocity and angular acceleration
+limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
+methods set_position_limits(), set_velocity_limits() and
+set_acceleration_limits() in radians, radians/s, radians/s² units. The
+first three arguments to this constructor are those of the Joint class
+constructor. See the Joint class’s documentation for details. The
+additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt>
+<dd>A vector in ℝ³ specifying the axis of motion for this joint. The
+coordinates of <code class="docutils literal notranslate"><span class="pre">axis</span></code> expressed in frames F and M are the same
+at all times, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>. In other words,
+<code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with
+eigenvalue equal to one. This vector can have any length, only the
+direction is used.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
+<dd>Amount of translation in meters occurring over a one full screw
+revolution. It’s domain is (-∞, ∞). When the screw pitch is
+negative, positive rotation will result in translating towards the
+negative direction of â-axis. When the screw pitch is zero, this
+joint will behave like a revolute joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt>
+<dd>Viscous damping coefficient, N⋅m⋅s/rad for rotation, used to model
+losses within the joint. See documentation of damping() for
+details on modelling of the damping torque.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -19060,7 +19247,7 @@ details on modelling of the damping torque.</dd>
 degree. The damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>
 i.e. opposing motion, with ω the angular rate for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint (see
 get_angular_velocity()) and τ the torque on child body B expressed in
-frame F as t_B_F = τ⋅Fz_F.</p>
+frame F as t_B_F = τ⋅Fâ_F.</p>
 </dd></dl>
 
 <dl class="method">
@@ -19141,8 +19328,8 @@ joint’s Mo measured and expressed in frame F from <code class="docutils litera
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_[Expression].screw_pitch">
 <code class="descname">screw_pitch</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[Expression].screw_pitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occuring over
-a one full revolution.</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occurring
+over a one full revolution.</p>
 </dd></dl>
 
 <dl class="method">
@@ -19233,14 +19420,14 @@ to (z).</p>
 <dt id="pydrake.multibody.tree.ScrewJoint_[Expression].set_translational_velocity">
 <code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[Expression], context: pydrake.systems.framework.Context_[Expression], translation_dot: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ScrewJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[Expression].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the translational velocity, in meters per second, of this
-<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s Z-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
+<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s â-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
 translational velocity gets stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context of the model this joint belongs to.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vz</span></code>:</dt>
 <dd>The desired translational velocity of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint in meters per
-second along F frame’s Z-axis.</dd>
+second along F frame’s â-axis.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -19263,30 +19450,35 @@ one axis while translating along that same axis with one degree of
 freedom. That is, given a frame F attached to the parent body P and a
 frame M attached to the child body B (see the Joint class’s
 documentation), this joint allows frame M to translate (while
-rotating) along the z axis of frame F, with M’s z-axis Mz and F’s
-z-axis Fz coincident at all times. The rotation about z-axis of F and
-their rate specify the state of the joint. Zero (θ) corresponds to
-frames F and M being coincident and aligned. Translation z is defined
-to be positive in the direction of the respective axis and the
-rotation θ is defined to be positive according to the right-hand-rule
-with the thumb aligned in the direction of frame F’s z-axis.</p>
+rotating) along an axis â. Axis â is constant and has the same
+measures in both frames F and M, that is, <code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>. The
+rotation about the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis and its rate specify the state of the
+joint. Zero (θ) corresponds to frames F and M being coincident and
+aligned. The translation distance is defined positive when child body
+B translates along the direction of â, and the rotation θ is defined
+to be positive according to the right-hand-rule with the thumb aligned
+in the direction of the <code class="docutils literal notranslate"><span class="pre">â_F</span></code> axis.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float = 0, damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor to create a screw joint between two bodies so that frame F
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
 translate and rotate as described in the class’s documentation. This
-constructor signature creates a joint with no joint limits, i.e. the
-joint angular position, angular velocity and angular acceleration
-limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
-methods set_position_limits(), set_velocity_limits() and
-set_acceleration_limits() in radians, radians/sec, radians/sec^2
-units. The first three arguments to this constructor are those of the
-Joint class constructor. See the Joint class’s documentation for
-details. The additional parameters are:</p>
+constructor signature creates a joint with the axis â set to the
+z-axis and no joint limits, i.e. the joint angular position, angular
+velocity and angular acceleration limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>.
+These can be set using the Joint methods set_position_limits(),
+set_velocity_limits() and set_acceleration_limits() in radians,
+radians/s, radians/s² units. The first three arguments to this
+constructor are those of the Joint class constructor. See the Joint
+class’s documentation for details. The additional parameters are:</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
-<dd>Amount of translation in meters occuring over a one full screw
+<dd>Amount of translation in meters occurring over a one full screw
 revolution. It’s domain is (-∞, ∞). When the screw pitch is
 negative, positive rotation will result in translating towards the
 negative direction of z-axis. When the screw pitch is zero, this
@@ -19304,6 +19496,54 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
+</ol>
+<p>Constructor to create a screw joint between two bodies so that frame F
+attached to the parent body P and frame M attached to the child body B
+translate and rotate as described in the class’s documentation. This
+constructor signature creates a joint with no joint limits, i.e. the
+joint angular position, angular velocity and angular acceleration
+limits are the pair <code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint
+methods set_position_limits(), set_velocity_limits() and
+set_acceleration_limits() in radians, radians/s, radians/s² units. The
+first three arguments to this constructor are those of the Joint class
+constructor. See the Joint class’s documentation for details. The
+additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt>
+<dd>A vector in ℝ³ specifying the axis of motion for this joint. The
+coordinates of <code class="docutils literal notranslate"><span class="pre">axis</span></code> expressed in frames F and M are the same
+at all times, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>. In other words,
+<code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with
+eigenvalue equal to one. This vector can have any length, only the
+direction is used.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">screw_pitch</span></code>:</dt>
+<dd>Amount of translation in meters occurring over a one full screw
+revolution. It’s domain is (-∞, ∞). When the screw pitch is
+negative, positive rotation will result in translating towards the
+negative direction of â-axis. When the screw pitch is zero, this
+joint will behave like a revolute joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt>
+<dd>Viscous damping coefficient, N⋅m⋅s/rad for rotation, used to model
+losses within the joint. See documentation of damping() for
+details on modelling of the damping torque.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the L2 norm of <code class="docutils literal notranslate"><span class="pre">axis</span></code> is less than the square</li>
+<li>root of machine epsilon.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if damping is negative.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -19313,7 +19553,7 @@ details on modelling of the damping torque.</dd>
 degree. The damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>
 i.e. opposing motion, with ω the angular rate for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint (see
 get_angular_velocity()) and τ the torque on child body B expressed in
-frame F as t_B_F = τ⋅Fz_F.</p>
+frame F as t_B_F = τ⋅Fâ_F.</p>
 </dd></dl>
 
 <dl class="method">
@@ -19394,8 +19634,8 @@ joint’s Mo measured and expressed in frame F from <code class="docutils litera
 <dl class="method">
 <dt id="pydrake.multibody.tree.ScrewJoint_[float].screw_pitch">
 <code class="descname">screw_pitch</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[float].screw_pitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occuring over
-a one full revolution.</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s amount of translation in meters occurring
+over a one full revolution.</p>
 </dd></dl>
 
 <dl class="method">
@@ -19486,14 +19726,14 @@ to (z).</p>
 <dt id="pydrake.multibody.tree.ScrewJoint_[float].set_translational_velocity">
 <code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.ScrewJoint_[float], context: pydrake.systems.framework.Context_[float], translation_dot: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ScrewJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[float].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the translational velocity, in meters per second, of this
-<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s Z-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
+<code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s Mo along frame F’s â-axis to <code class="docutils literal notranslate"><span class="pre">vz</span></code>. The new
 translational velocity gets stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context of the model this joint belongs to.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vz</span></code>:</dt>
 <dd>The desired translational velocity of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint in meters per
-second along F frame’s Z-axis.</dd>
+second along F frame’s â-axis.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

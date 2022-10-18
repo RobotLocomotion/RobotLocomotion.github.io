@@ -644,7 +644,7 @@ Friends</h2></td></tr>
 <p>Constructor to create a revolute joint between two bodies so that frame F attached to the parent body P and frame M attached to the child body B, rotate relatively to one another about a common axis. </p>
 <p>See this class's documentation for further details on the definition of these frames and rotation angle. The first three arguments to this constructor are those of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class constructor. See the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class's documentation for details. The additional parameters are: </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">axis</td><td>A vector in ℝ³ specifying the axis of revolution for this joint. Given that frame M only rotates with respect to F and their origins are coincident at all times, the measures of <code>axis</code> in either frame F or M are exactly the same, that is, <code>axis_F = axis_M</code>. In other words, <code>axis_F</code> (or <code>axis_M</code>) is the eigenvector of <code>R_FM</code> with eigenvalue equal to one. This vector can have any length, only the direction is used. This method aborts if <code>axis</code> is the zero vector. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis</td><td>A vector in ℝ³ specifying the axis of revolution for this joint. Given that frame M only rotates with respect to F and their origins are coincident at all times, the measures of <code>axis</code> in either frame F or M are exactly the same, that is, <code>axis_F = axis_M</code>. In other words, <code>axis_F</code> (or <code>axis_M</code>) is the eigenvector of <code>R_FM</code> with eigenvalue equal to one. This vector can have any length, only the direction is used. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pos_lower_limit</td><td>Lower position limit, in radians, for the rotation coordinate (see <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a27e174cbce9d8926ec3eefc7d04e6e7c" title="Gets the rotation angle of this mobilizer from context.">get_angle()</a>). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pos_upper_limit</td><td>Upper position limit, in radians, for the rotation coordinate (see <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a27e174cbce9d8926ec3eefc7d04e6e7c" title="Gets the rotation angle of this mobilizer from context.">get_angle()</a>). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">damping</td><td>Viscous damping coefficient, in N⋅m⋅s, used to model losses within the joint. The damping torque (in N⋅m) is modeled as <code>τ = -damping⋅ω</code>, i.e. opposing motion, with ω the angular rate for <code>this</code> joint (see <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#addceb3a2a537456ecc55a5ffc35a0df1" title="Gets the rate of change, in radians per second, of this joint&#39;s angle (see get_angle()) from context.">get_angular_rate()</a>). </td></tr>
@@ -653,6 +653,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the L2 norm of <code>axis</code> is less than the square root of machine epsilon. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if damping is negative. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if pos_lower_limit &gt; pos_upper_limit. </td></tr>
   </table>
@@ -1031,7 +1032,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the axis of revolution of <code>this</code> joint as a unit vector. </p>
-<p>Since the measures of this axis in either frame F or M are the same (see this class's documentation for frames's definitions) then, <code>axis = axis_F = axis_M</code>. </p>
+<p>Since the measures of this axis in either frame F or M are the same (see this class's documentation for frame definitions) then, <code>axis = axis_F = axis_M</code>. </p>
 
 </div>
 </div>
