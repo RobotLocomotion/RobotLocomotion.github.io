@@ -206,7 +206,7 @@ using an even more comprehensive set of unit tests.
 If problems are detected on this branch, the build cop will
 <a href="buildcop.html">revert the PRs that most likely caused the problem</a>.
 To increase the likelihood that your pull requests pass CI tests and are not
-reverted, you can run the unit tests locally. Instructions for how to do that
+reverted, you can run the unit tests locally; instructions for how to do that
 are provided <a href="/unit_testing_instructions.html">here</a>. Note, however, that there are
 many computationally-demanding tests and running the entire test suite can take
 several hours depending on your machine.</p>
@@ -254,8 +254,8 @@ downgrade Bazel. If on Mac, there is no easy mechanism to downgrade with
 Homebrew; however, we generally try to stay on top of Bazel versions.</p>
 
   <p>If you have tried and are unable to configure your system by
-<a href="/from_source.html">following the instructions</a> please do not hesitate
-to <a href="/getting_help.html">ask for help</a>.</p>
+<a href="/from_source.html">following the instructions for source installation</a>
+please do not hesitate to <a href="/getting_help.html">ask for help</a>.</p>
 
   <h1 id="issue-tracking">Issue Tracking</h1>
 
@@ -289,7 +289,7 @@ green <code class="highlighter-rouge">+###</code> number as reported by github),
     <li>Data files do not count towards the line limit.</li>
     <li>Machine-generated changes do not count towards the line limit.</li>
     <li>Files in
-<a href="/directory_structure.html">Special Directories</a>
+<a href="/directory_structure.html#dev-directories">Dev Directories</a>
 do not count towards the line limit.</li>
     <li>This rule may be overridden by agreement of at least two platform reviewers
 (listed below).</li>
@@ -366,7 +366,7 @@ Choose the “Squash and merge option” unless otherwise instructed (see
 <a href="/reviewable.html#curated-commits">Curated Commits</a>).</p>
 
   <p><strong>After Merge.</strong> If your PR breaks continuous integration, the
-<a href="/buildcop.html">buildcop</a> will contact you to work out a resolution.</p>
+<a href="/buildcop.html">build cop</a> will contact you to work out a resolution.</p>
 
   <h2 id="review-process-tooling">Review Process Tooling</h2>
 

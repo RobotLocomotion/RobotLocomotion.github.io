@@ -1668,7 +1668,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
     <tr><td class="paramname">vertices</td><td>is a 3-by-N matrix of 3D point defining the vertices of the mesh. </td></tr>
     <tr><td class="paramname">faces</td><td>is a 3-by-M integer matrix with each entry denoting an index into vertices and each column denoting one face (aka <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html" title="SurfaceTriangle represents a triangular face in a TriangleSurfaceMesh.">SurfaceTriangle</a>). </td></tr>
-    <tr><td class="paramname">colors</td><td>is a 3-by-N matrix of color values, one color per vertex of the mesh. </td></tr>
+    <tr><td class="paramname">colors</td><td>is a 3-by-N matrix of RGB color values, one color per vertex of the mesh. Color values are in the range [0, 1]. </td></tr>
     <tr><td class="paramname">wireframe</td><td>if "true", then only the triangle edges are visualized, not the faces. </td></tr>
     <tr><td class="paramname">wireframe_line_width</td><td>is the width in pixels. Due to limitations in WebGL implementations, the line width may be 1 regardless of the set value. </td></tr>
   </table>

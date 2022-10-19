@@ -138,8 +138,8 @@ analysis.
     <div class="contain">
       <article class="markdown-body">
         <p>This section provides a list of tools that some have found useful for ensuring
-their code abides by <a href="/code_style_guide.html">Drake’s coding style</a>. The list
-is by no means comprehensive.
+their code abides by <a href="/code_style_guide.html">Drake’s Code Style Guide</a>.
+The list is by no means comprehensive.
 If your favorite tools or methodologies are not listed, we would be delighted
 to learn about them. Please document your trick and submit a pull request!</p>
 
@@ -173,14 +173,15 @@ bazel test --config lint //common/...  # Check common/ and its child subdirector
 line.</li>
     </ul>
   </li>
-  <li>Bazel: Uses both pycodestyle like Python, and also <a href="/bazel.html#updating-build-files">buildifier</a>.</li>
+  <li>Bazel: Uses both pycodestyle like Python, and also the buildifier tool as
+described in <a href="/bazel.html#updating-build-files">Updating BUILD files</a>.</li>
 </ul>
 
 <h1 id="manual-style-fixups">Manual style fixups</h1>
 
 <h2 id="cc-clang-format">C/C++: Clang-Format</h2>
 
-<p>The <a href="/from_source.html#mandatory-platform-specific-instructions">Mandatory platform specific instructions</a>
+<p>The <a href="/from_source.html#mandatory-platform-specific-instructions">Mandatory platform-specific instructions</a>
 install Drake’s required version of <code class="highlighter-rouge">clang-format</code>, depending on the platform
 (macOS or Ubuntu).</p>
 

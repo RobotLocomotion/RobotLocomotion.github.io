@@ -745,7 +745,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c27da874a5e06bccfb91ff25ec05fb9"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0c27da874a5e06bccfb91ff25ec05fb9">indeterminates_index</a> () const</td></tr>
 <tr class="memdesc:a0c27da874a5e06bccfb91ff25ec05fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping from an indeterminate ID to its index in the vector containing all the indeterminates in the mathematical program.  <a href="#a0c27da874a5e06bccfb91ff25ec05fb9">More...</a><br /></td></tr>
 <tr class="separator:a0c27da874a5e06bccfb91ff25ec05fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment.</div></td></tr>
 <tr class="memitem:a6d281d024510ccc0f7787ebbb1e534ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a6d281d024510ccc0f7787ebbb1e534ee">MathematicalProgram</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)=delete</td></tr>
 <tr class="separator:a6d281d024510ccc0f7787ebbb1e534ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a751cdda7529e03736fc7530fad6bd7fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a751cdda7529e03736fc7530fad6bd7fa">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)=delete</td></tr>
@@ -5158,7 +5158,8 @@ x+y &gt;= 0
 <li>solver settings</li>
 <li>initial guess</li>
 </ul>
-<p>However, the clone's x values will be initialized to NaN, and all internal solvers will be freshly constructed. </p><dl class="retval"><dt>Return values</dt><dd>
+<p>Note that this is currently a <em>shallow</em> clone. The costs and constraints are not themselves cloned.</p>
+<dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">new_prog.</td><td>The newly constructed mathematical program. </td></tr>
   </table>

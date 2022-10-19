@@ -4706,6 +4706,33 @@ additionally allows scale and sheer).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetTriangleColorMesh">
+<code class="descname">SetTriangleColorMesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat, path: str, vertices: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], faces: numpy.ndarray[numpy.int32[3, n], flags.f_contiguous], colors: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], wireframe: bool = False, wireframe_line_width: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetTriangleColorMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the “object” at <code class="docutils literal notranslate"><span class="pre">path</span></code> in the scene tree to a triangular mesh
+with per-vertex coloring.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vertices</span></code>:</dt>
+<dd>is a 3-by-N matrix of 3D point defining the vertices of the mesh.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">faces</span></code>:</dt>
+<dd>is a 3-by-M integer matrix with each entry denoting an index into
+vertices and each column denoting one face (aka SurfaceTriangle).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">colors</span></code>:</dt>
+<dd>is a 3-by-N matrix of RGB color values, one color per vertex of
+the mesh. Color values are in the range [0, 1].</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">wireframe</span></code>:</dt>
+<dd>if “true”, then only the triangle edges are visualized, not the
+faces.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">wireframe_line_width</span></code>:</dt>
+<dd>is the width in pixels. Due to limitations in WebGL
+implementations, the line width may be 1 regardless of the set
+value.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.Meshcat.SetTriangleMesh">
 <code class="descname">SetTriangleMesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat, path: str, vertices: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], faces: numpy.ndarray[numpy.int32[3, n], flags.f_contiguous], rgba: pydrake.geometry.Rgba = Rgba(r=0.1, g=0.1, b=0.1, a=1.0), wireframe: bool = False, wireframe_line_width: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetTriangleMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the “object” at <code class="docutils literal notranslate"><span class="pre">path</span></code> in the scene tree to a triangular mesh.</p>

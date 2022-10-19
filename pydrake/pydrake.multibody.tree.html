@@ -18543,7 +18543,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -18576,6 +18576,7 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
 </ol>
@@ -18851,7 +18852,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -18884,6 +18885,7 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
 </ol>
@@ -19157,7 +19159,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -19190,6 +19192,7 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
 </ol>
@@ -19463,7 +19466,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float = 0, damping: float = 0) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -19496,6 +19499,7 @@ details on modelling of the damping torque.</dd>
 </tr>
 </tbody>
 </table>
+<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</li>
 </ol>
