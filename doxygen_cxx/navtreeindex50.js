@@ -1,15 +1,17 @@
 var NAVTREEINDEX50 =
 {
+"space__xyz__mobilizer_8h.html":[4,0,0,8,14,43],
+"sparse__and__dense__matrix_8h.html":[4,0,0,11,58],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,10],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
-"spatial__derivative_8h.html":[4,0,0,8,11,2],
-"spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,11,2,1],
-"spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,11,2,0],
+"spatial__derivative_8h.html":[4,0,0,8,12,2],
+"spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,12,2,1],
+"spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,12,2,0],
 "spatial__force_8h.html":[4,0,0,8,6,2],
-"spatial__inertia_8h.html":[4,0,0,8,13,44],
-"spatial__kinematics_8h.html":[4,0,0,8,11,3],
+"spatial__inertia_8h.html":[4,0,0,8,14,44],
+"spatial__kinematics_8h.html":[4,0,0,8,12,3],
 "spatial__momentum_8h.html":[4,0,0,8,6,3],
 "spatial__vector_8h.html":[4,0,0,8,6,4],
 "spatial__velocity_8h.html":[4,0,0,8,6,5],
@@ -124,7 +126,7 @@ var NAVTREEINDEX50 =
 "stochastic_8h.html#aefc9cc6990399b1828a73e50c2d360ee":[4,0,0,1,2,1,23],
 "stochastic_8h.html#af9a9a11adf4beb57a9f7b959e190ed3d":[4,0,0,1,2,1,16],
 "stochastic__systems_8h.html":[4,0,0,12,11],
-"string__view__map__key_8h.html":[4,0,0,8,13,45],
+"string__view__map__key_8h.html":[4,0,0,8,14,45],
 "structdrake_1_1_delegating_hasher.html":[3,0,0,23],
 "structdrake_1_1_delegating_hasher.html#a2f06de017c348e04061971db98125a4e":[3,0,0,23,1],
 "structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,23,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1717b842ef7560038a1ee8f5076d7721":[3,0,0,4,0,3,7],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a4c59b29655e8164083e8704ac82979b2":[3,0,0,4,0,3,5],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6430583dae0d07964009a4345136d8ca":[3,0,0,4,0,3,4],
-"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a65e0db722c8e6c4cc2fdd74c7f423af5":[3,0,0,4,0,3,0],
-"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a85c597db40ea9e365e85f617aec19a60":[3,0,0,4,0,3,1],
-"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa3fa9cf3c24726cbf70d03c92300b70c":[3,0,0,4,0,3,2]
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a65e0db722c8e6c4cc2fdd74c7f423af5":[3,0,0,4,0,3,0]
 };

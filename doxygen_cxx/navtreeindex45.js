@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b":[1,4,0,1,4],
 "group__solver__evaluators.html":[1,1,0],
 "group__solver__evaluators.html#ga4508ec670196c3fe45e9b52af8a73d4a":[1,1,0,47],
 "group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11":[1,1,0,50],
@@ -208,8 +209,8 @@ var NAVTREEINDEX45 =
 "jacobian_8h.html":[4,0,0,7,20],
 "jacobian_8h.html#a57457683becdddf605a55be881c065b4":[4,0,0,7,20,1],
 "jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f":[4,0,0,7,20,0],
-"joint_8h.html":[4,0,0,8,13,14],
-"joint__actuator_8h.html":[4,0,0,8,13,15],
+"joint_8h.html":[4,0,0,8,14,14],
+"joint__actuator_8h.html":[4,0,0,8,14,15],
 "joint__sliders_8h.html":[4,0,0,8,7,3],
 "kalman__filter_8h.html":[4,0,0,12,2,0],
 "kalman__filter_8h.html#ga3949eebe88ae99b71a997dfa0bad5cff":[4,0,0,12,2,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "lcm__pybind_8h.html":[4,0,0,0,0,3,4],
 "lcm__pybind_8h.html#a693c3984e0969506fd589ff21f08409b":[4,0,0,0,0,3,4,0],
 "lcm__scope__system_8h.html":[4,0,0,12,4,5],
-"lcm__subscriber__system_8h.html":[4,0,0,12,4,6],
-"lcmt__drake__signal__utils_8h.html":[4,0,0,5,5]
+"lcm__subscriber__system_8h.html":[4,0,0,12,4,6]
 };
