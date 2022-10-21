@@ -23732,9 +23732,16 @@ will be removed from Drake on or after 2022-12-01.</dd>
 </dd></dl>
 
 <dl class="function">
+<dt id="pydrake.multibody.tree.world_frame_index">
+<code class="descclassname">pydrake.multibody.tree.</code><code class="descname">world_frame_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.FrameIndex<a class="headerlink" href="#pydrake.multibody.tree.world_frame_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>For every MultibodyPlant the <strong>world</strong> frame <em>always</em> has this unique
+index and it is always zero.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.multibody.tree.world_index">
 <code class="descclassname">pydrake.multibody.tree.</code><code class="descname">world_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.BodyIndex<a class="headerlink" href="#pydrake.multibody.tree.world_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>For every MultibodyTree the <strong>world</strong> body <em>always</em> has this unique
+<dd><p>For every MultibodyPlant the <strong>world</strong> body <em>always</em> has this unique
 index and it is always zero.</p>
 </dd></dl>
 
@@ -23742,7 +23749,7 @@ index and it is always zero.</p>
 <dt id="pydrake.multibody.tree.world_model_instance">
 <code class="descclassname">pydrake.multibody.tree.</code><code class="descname">world_model_instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ModelInstanceIndex<a class="headerlink" href="#pydrake.multibody.tree.world_model_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the model instance containing the <em>world</em> body. For every
-MultibodyTree the <strong>world</strong> body <em>always</em> has this unique model
+MultibodyPlant the <strong>world</strong> body <em>always</em> has this unique model
 instance and it is always zero (as described in #3088).</p>
 </dd></dl>
 

@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,12,0,14,1],
 "render__benchmark__doxygen_8h.html":[4,0,0,4,0,0],
 "render__camera_8h.html":[4,0,0,4,4,1],
 "render__doxygen_8h.html":[4,0,0,4,4,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,0,9],
 "sorted__triplet_8h.html":[4,0,0,4,2,51],
 "sos__basis__generator_8h.html":[4,0,0,11,57],
-"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,57,0],
-"space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,42]
+"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,57,0]
 };

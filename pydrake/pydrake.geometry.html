@@ -8174,11 +8174,17 @@ to the world frame.</p>
 <ol class="arabic simple" start="2">
 <li>GetPoseInWorld(self: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId) -&gt; pydrake.math.RigidTransform_[float]</li>
 </ol>
-<p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
-relative to the world frame.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetConfigurationsInWorld().</p>
+<p>Reports the position of the frame of the rigid geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> relative to the world frame (X_WG).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This query is meaningless for deformable geometries. Their current
+state cannot be represented by a single rigid transformation.
+Instead, one should use GetConfigurationsInWorld() to get the
+current vertex positions of the deformable geometry in the world
+frame. On the other hand, it <em>is</em> meaningful to query the <em>fixed</em>
+pose of the <em>reference</em> geometry in its parent frame (see
+SceneGraphInspector::GetPoseInFrame()).</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -8186,7 +8192,7 @@ relative to the world frame.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
-<li>exists but is deformable.</li>
+<li>is deformable.</li>
 </ul>
 </td>
 </tr>
@@ -8931,11 +8937,17 @@ to the world frame.</p>
 <ol class="arabic simple" start="2">
 <li>GetPoseInWorld(self: pydrake.geometry.QueryObject_[AutoDiffXd], geometry_id: pydrake.geometry.GeometryId) -&gt; pydrake.math.RigidTransform_[AutoDiffXd]</li>
 </ol>
-<p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
-relative to the world frame.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetConfigurationsInWorld().</p>
+<p>Reports the position of the frame of the rigid geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> relative to the world frame (X_WG).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This query is meaningless for deformable geometries. Their current
+state cannot be represented by a single rigid transformation.
+Instead, one should use GetConfigurationsInWorld() to get the
+current vertex positions of the deformable geometry in the world
+frame. On the other hand, it <em>is</em> meaningful to query the <em>fixed</em>
+pose of the <em>reference</em> geometry in its parent frame (see
+SceneGraphInspector::GetPoseInFrame()).</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -8943,7 +8955,7 @@ relative to the world frame.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
-<li>exists but is deformable.</li>
+<li>is deformable.</li>
 </ul>
 </td>
 </tr>
@@ -9571,11 +9583,17 @@ to the world frame.</p>
 <ol class="arabic simple" start="2">
 <li>GetPoseInWorld(self: pydrake.geometry.QueryObject_[Expression], geometry_id: pydrake.geometry.GeometryId) -&gt; pydrake.math.RigidTransform_[Expression]</li>
 </ol>
-<p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
-relative to the world frame.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetConfigurationsInWorld().</p>
+<p>Reports the position of the frame of the rigid geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> relative to the world frame (X_WG).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This query is meaningless for deformable geometries. Their current
+state cannot be represented by a single rigid transformation.
+Instead, one should use GetConfigurationsInWorld() to get the
+current vertex positions of the deformable geometry in the world
+frame. On the other hand, it <em>is</em> meaningful to query the <em>fixed</em>
+pose of the <em>reference</em> geometry in its parent frame (see
+SceneGraphInspector::GetPoseInFrame()).</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -9583,7 +9601,7 @@ relative to the world frame.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
-<li>exists but is deformable.</li>
+<li>is deformable.</li>
 </ul>
 </td>
 </tr>
@@ -10326,11 +10344,17 @@ to the world frame.</p>
 <ol class="arabic simple" start="2">
 <li>GetPoseInWorld(self: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId) -&gt; pydrake.math.RigidTransform_[float]</li>
 </ol>
-<p>Reports the position of the geometry indicated by <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>
-relative to the world frame.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetConfigurationsInWorld().</p>
+<p>Reports the position of the frame of the rigid geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> relative to the world frame (X_WG).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This query is meaningless for deformable geometries. Their current
+state cannot be represented by a single rigid transformation.
+Instead, one should use GetConfigurationsInWorld() to get the
+current vertex positions of the deformable geometry in the world
+frame. On the other hand, it <em>is</em> meaningful to query the <em>fixed</em>
+pose of the <em>reference</em> geometry in its parent frame (see
+SceneGraphInspector::GetPoseInFrame()).</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -10338,7 +10362,7 @@ relative to the world frame.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the geometry <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is not valid or if it</li>
-<li>exists but is deformable.</li>
+<li>is deformable.</li>
 </ul>
 </td>
 </tr>
@@ -13951,13 +13975,18 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInParent()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -13976,13 +14005,18 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInFrame()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -14678,13 +14712,18 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInParent()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -14703,13 +14742,18 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInFrame()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -15403,13 +15447,18 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInParent()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -15428,13 +15477,18 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInFrame()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -16128,13 +16182,18 @@ to the frame F, then <code class="docutils literal notranslate"><span class="pre
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInParent()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -16153,13 +16212,18 @@ registered directly to F, then <code class="docutils literal notranslate"><span 
 <p class="first admonition-title">See also</p>
 <p class="last">GetPoseInFrame()</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For deformable geometries, this returns the pose of the reference
+mesh.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li>geometry or if it maps to a deformable geometry.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
 </ul>
 </td>
 </tr>

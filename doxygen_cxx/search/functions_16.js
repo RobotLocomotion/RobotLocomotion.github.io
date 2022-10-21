@@ -16,6 +16,7 @@ var searchData=
   ['world_5fbody',['world_body',['../classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864',1,'drake::multibody::MultibodyPlant']]],
   ['world_5fframe',['world_frame',['../classdrake_1_1multibody_1_1_multibody_plant.html#ac95da38020c32452f62a8cf973057c7a',1,'drake::multibody::MultibodyPlant']]],
   ['world_5fframe_5fid',['world_frame_id',['../classdrake_1_1geometry_1_1_scene_graph.html#aa0500b30ca4a9ac7e7332b30792cbb9e',1,'drake::geometry::SceneGraph::world_frame_id()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a435ca2d678e9212415a657db3629a8d1',1,'drake::geometry::SceneGraphInspector::world_frame_id()']]],
+  ['world_5fframe_5findex',['world_frame_index',['../namespacedrake_1_1multibody.html#a569c5d1b9e3d8f4f64ace4c946e4afc3',1,'drake::multibody']]],
   ['world_5findex',['world_index',['../namespacedrake_1_1multibody.html#ad1ac5ea10f28d336caaced34735b6dc9',1,'drake::multibody']]],
   ['world_5fmodel_5finstance',['world_model_instance',['../namespacedrake_1_1multibody.html#a777a2894881e59d27fc9eb7b4413406f',1,'drake::multibody']]],
   ['wrap',['wrap',['../structdrake_1_1pydrake_1_1wrap__arg__default.html#a48a259ef8336ef23e66f632b0ddad145',1,'drake::pydrake::wrap_arg_default']]],

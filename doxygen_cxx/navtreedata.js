@@ -111,15 +111,15 @@ var NAVTREEINDEX =
 "functions_vars_s.html",
 "group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b",
 "lcmt__drake__signal__utils_8h.html",
-"namespacedrake_1_1examples_1_1acrobot.html",
-"physical__model_8h.html",
-"render__benchmark__doxygen_8h.html",
-"space__xyz__mobilizer_8h.html",
-"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a85c597db40ea9e365e85f617aec19a60",
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a796122705bf6508783b49e113fb500b1",
-"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7",
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html",
-"volume__to__surface__mesh_8h.html"
+"namespacedrake_1_1examples.html",
+"pgs__solver_8h.html#a75ec46747224131fd800947a133929c7",
+"region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76",
+"space__xyz__floating__mobilizer_8h.html",
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a65e0db722c8e6c4cc2fdd74c7f423af5",
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b",
+"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a7cac66374092242d495c2d0716281a9b",
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html",
+"volume__mesh__field_8h.html#a6f0a99208aa3dea5d4a3094f4fdf9274"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -8,6 +8,7 @@ var multibody__tree__indexes_8h =
     [ "JointIndex", "multibody__tree__indexes_8h.html#a27485be8a33f5ed2ee7f3f8de9dd40c0", null ],
     [ "ModelInstanceIndex", "multibody__tree__indexes_8h.html#af65439a17091283a89eb12f1955c6db0", null ],
     [ "default_model_instance", "multibody__tree__indexes_8h.html#a786cd667a624e8cbd915cf50b02c8792", null ],
+    [ "world_frame_index", "multibody__tree__indexes_8h.html#a569c5d1b9e3d8f4f64ace4c946e4afc3", null ],
     [ "world_index", "multibody__tree__indexes_8h.html#ad1ac5ea10f28d336caaced34735b6dc9", null ],
     [ "world_model_instance", "multibody__tree__indexes_8h.html#a777a2894881e59d27fc9eb7b4413406f", null ]
 ];

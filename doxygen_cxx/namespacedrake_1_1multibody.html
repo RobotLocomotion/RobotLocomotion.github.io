@@ -530,8 +530,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:a7e468aa35ef6a84196ac20a13065ca0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>.  <a href="#a7e468aa35ef6a84196ac20a13065ca0c">More...</a><br /></td></tr>
 <tr class="separator:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ac5ea10f28d336caaced34735b6dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad1ac5ea10f28d336caaced34735b6dc9">world_index</a> ()</td></tr>
-<tr class="memdesc:ad1ac5ea10f28d336caaced34735b6dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For every MultibodyTree the <b>world</b> body <em>always</em> has this unique index and it is always zero.  <a href="#ad1ac5ea10f28d336caaced34735b6dc9">More...</a><br /></td></tr>
+<tr class="memdesc:ad1ac5ea10f28d336caaced34735b6dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For every <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> the <b>world</b> body <em>always</em> has this unique index and it is always zero.  <a href="#ad1ac5ea10f28d336caaced34735b6dc9">More...</a><br /></td></tr>
 <tr class="separator:ad1ac5ea10f28d336caaced34735b6dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569c5d1b9e3d8f4f64ace4c946e4afc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a569c5d1b9e3d8f4f64ace4c946e4afc3">world_frame_index</a> ()</td></tr>
+<tr class="memdesc:a569c5d1b9e3d8f4f64ace4c946e4afc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">For every <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> the <b>world</b> frame <em>always</em> has this unique index and it is always zero.  <a href="#a569c5d1b9e3d8f4f64ace4c946e4afc3">More...</a><br /></td></tr>
+<tr class="separator:a569c5d1b9e3d8f4f64ace4c946e4afc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a777a2894881e59d27fc9eb7b4413406f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a777a2894881e59d27fc9eb7b4413406f">world_model_instance</a> ()</td></tr>
 <tr class="memdesc:a777a2894881e59d27fc9eb7b4413406f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model instance containing the <em>world</em> body.  <a href="#a777a2894881e59d27fc9eb7b4413406f">More...</a><br /></td></tr>
 <tr class="separator:a777a2894881e59d27fc9eb7b4413406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1098,6 +1101,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a569c5d1b9e3d8f4f64ace4c946e4afc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569c5d1b9e3d8f4f64ace4c946e4afc3">&#9670;&nbsp;</a></span>world_frame_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a> drake::multibody::world_frame_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For every <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> the <b>world</b> frame <em>always</em> has this unique index and it is always zero. </p>
+
+</div>
+</div>
 <a id="ad1ac5ea10f28d336caaced34735b6dc9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1ac5ea10f28d336caaced34735b6dc9">&#9670;&nbsp;</a></span>world_index()</h2>
 
@@ -1113,7 +1135,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>For every MultibodyTree the <b>world</b> body <em>always</em> has this unique index and it is always zero. </p>
+<p>For every <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> the <b>world</b> body <em>always</em> has this unique index and it is always zero. </p>
 
 </div>
 </div>
@@ -1133,7 +1155,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the model instance containing the <em>world</em> body. </p>
-<p>For every MultibodyTree the <b>world</b> body <em>always</em> has this unique model instance and it is always zero (as described in #3088). </p>
+<p>For every <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> the <b>world</b> body <em>always</em> has this unique model instance and it is always zero (as described in #3088). </p>
 
 </div>
 </div>
