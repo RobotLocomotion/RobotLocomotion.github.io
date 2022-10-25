@@ -1,7 +1,5 @@
 var NAVTREEINDEX53 =
 {
-"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a7cac66374092242d495c2d0716281a9b":[3,0,0,16,1,2,0],
-"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7":[3,0,0,16,1,2,4],
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ad8b2d6d03c5f48ff4e9f2b5607386d2d":[3,0,0,16,1,2,2],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html":[3,0,0,16,1,7],
 "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,16,1,7,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX53 =
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,13],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,1,14],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,1,15],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,16]
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,16],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,1,17],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,1,18]
 };

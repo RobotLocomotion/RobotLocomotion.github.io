@@ -407,56 +407,6 @@ your terminal.</li>
   </li>
 </ol>
 
-<h2 id="post-release-follow-up">Post-release follow up</h2>
-
-<ol>
-  <li>Open the <a href="https://github.com/RobotLocomotion/drake/tree/v1.N.0/tools/workspace">tagged workspace</a>
-(editing that URL to have the correct value for <code class="highlighter-rouge">N</code>) and ensure that
-certain Drake-owned externals have sufficient tags:
-    <ol>
-      <li>Open <code class="highlighter-rouge">common_robotics_utilities/repository.bzl</code> and find the <code class="highlighter-rouge">commit =</code> used.
-        <ol>
-          <li>Open
-<a href="https://github.com/ToyotaResearchInstitute/common_robotics_utilities/releases">ToyotaResearchInstitute/common_robotics_utilities</a>
-and check whether that commit already has an associated release tag.</li>
-          <li>If not, then create a new release named <code class="highlighter-rouge">v0.0.foo</code> where <code class="highlighter-rouge">foo</code> is
-the 8-digit datestamp associated with the <code class="highlighter-rouge">commit</code> in question (i.e.,
-four digit year, two digit month, two digit day).</li>
-        </ol>
-      </li>
-      <li>Open <code class="highlighter-rouge">models_internal/repository.bzl</code> and find the <code class="highlighter-rouge">commit =</code> used.
-        <ol>
-          <li>Open
-<a href="https://github.com/RobotLocomotion/models/releases">RobotLocomotion/models</a>
-and check whether that commit already has an associated release tag.</li>
-          <li>If not, then create a new release named <code class="highlighter-rouge">v0.0.foo</code> where <code class="highlighter-rouge">foo</code> is
-the 8-digit datestamp associated with the <code class="highlighter-rouge">commit</code> in question (i.e.,
-four digit year, two digit month, two digit day).</li>
-        </ol>
-      </li>
-      <li>Open <code class="highlighter-rouge">optitrack_driver/repository.bzl</code> and find the <code class="highlighter-rouge">commit =</code> used.
-        <ol>
-          <li>Open
-<a href="https://github.com/RobotLocomotion/optitrack-driver/releases">RobotLocomotion/optitrack-driver</a>
-and check whether that commit already has an associated release tag.</li>
-          <li>If not, then create a new release named <code class="highlighter-rouge">v0.0.foo</code> where <code class="highlighter-rouge">foo</code> is
-the 8-digit datestamp associated with the <code class="highlighter-rouge">commit</code> in question (i.e.,
-four digit year, two digit month, two digit day).</li>
-        </ol>
-      </li>
-      <li>Open <code class="highlighter-rouge">styleguide/repository.bzl</code> and find the <code class="highlighter-rouge">commit =</code> used.
-        <ol>
-          <li>Open <a href="https://github.com/RobotLocomotion/styleguide/releases">RobotLocomotion/styleguide</a>
-and check whether that commit already has an associated release tag.</li>
-          <li>If not, then create a new release named <code class="highlighter-rouge">v0.0.foo</code> where <code class="highlighter-rouge">foo</code> is
-the 8-digit datestamp associated with the <code class="highlighter-rouge">commit</code> in question (i.e.,
-four digit year, two digit month, two digit day).</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
-
 <h2 id="post-release-tutorials-updates">Post-release tutorials updates</h2>
 
 <p>Upgrade our Deepnote-hosted tutorials to the latest release.  This requires

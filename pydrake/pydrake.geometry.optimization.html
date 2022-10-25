@@ -218,8 +218,7 @@
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">CartesianProduct</code><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯
-× Xₙ = {(x₁, x₂, …, xₙ) | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈ Xₙ} We
-currently require the sets X to be bounded.</p>
+× Xₙ = {(x₁, x₂, …, xₙ) | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈ Xₙ}.</p>
 <p>This class also supports a generalization of this concept in which the
 coordinates are transformed by the linear map, {x | y = Ax + b, y ∈ Y₁
 × Y₂ × ⋯ × Yₙ}, with the default values set to the identity map. This
@@ -233,19 +232,17 @@ transform of a CartesianProduct.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet]) -&gt; None</li>
 </ol>
-<p>Constructs the product from a vector of convex sets. All of the sets
-must be bounded.</p>
+<p>Constructs the product from a vector of convex sets.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.geometry.optimization.CartesianProduct, setA: pydrake.geometry.optimization.ConvexSet, setB: pydrake.geometry.optimization.ConvexSet) -&gt; None</li>
 </ol>
-<p>Constructs the product from a pair of convex sets. <code class="docutils literal notranslate"><span class="pre">setA</span></code> and
-<code class="docutils literal notranslate"><span class="pre">setB</span></code> must be bounded.</p>
+<p>Constructs the product from a pair of convex sets.</p>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>Constructs the product of convex sets in the transformed coordinates:
 {x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}. <code class="docutils literal notranslate"><span class="pre">A</span></code> must be full column
-rank, and all of the sets must be bounded.</p>
+rank.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.geometry.optimization.CartesianProduct, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
@@ -841,7 +838,7 @@ graph.</p>
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fb40c9fed30&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f5d113b2a30&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -875,7 +872,7 @@ set.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7fb40c9fee30&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f5d113b0bf0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>

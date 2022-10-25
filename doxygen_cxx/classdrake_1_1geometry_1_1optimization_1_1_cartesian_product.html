@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁, x₂, ..., xₙ) | x₁ ∈ X₁, x₂ ∈ X₂, ..., xₙ ∈ Xₙ} We currently require the sets X to be bounded. </p>
+<div class="textblock"><p>The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁, x₂, ..., xₙ) | x₁ ∈ X₁, x₂ ∈ X₂, ..., xₙ ∈ Xₙ}. </p>
 <p>This class also supports a generalization of this concept in which the coordinates are transformed by the linear map, {x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}, with the default values set to the identity map. This concept is required for reasoning about cylinders in arbitrary poses as cartesian products, and more generally for describing any affine transform of a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a>. </p>
 </div>
 <p><code>#include &lt;drake/geometry/optimization/cartesian_product.h&gt;</code></p>
@@ -370,7 +370,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs the product from a vector of convex sets. </p>
-<p>All of the sets must be bounded. </p>
 
 </div>
 </div>
@@ -401,7 +400,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs the product from a pair of convex sets. </p>
-<p><code>setA</code> and <code>setB</code> must be bounded. </p>
 
 </div>
 </div>
@@ -438,7 +436,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs the product of convex sets in the transformed coordinates: {x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}. </p>
-<p><code>A</code> must be full column rank, and all of the sets must be bounded. </p>
+<p><code>A</code> must be full column rank. </p>
 
 </div>
 </div>

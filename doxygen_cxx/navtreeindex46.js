@@ -1,7 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"lcmt__drake__signal__utils_8h.html":[4,0,0,5,5],
-"lcmt__drake__signal__utils_8h.html#ad07460eef2c31323d507deca93c0ab4a":[4,0,0,5,5,0],
 "ldlt_8h.html":[4,0,0,1,3,0,10],
 "leaf__context_8h.html":[4,0,0,12,3,26],
 "leaf__output__port_8h.html":[4,0,0,12,3,27],
@@ -237,9 +235,9 @@ var NAVTREEINDEX46 =
 "my__vector_8h.html#a12aaf169acd19bb9d296a35a1eb110d1":[4,0,0,12,3,0,0,3],
 "my__vector_8h.html#a6cdee9b315771980e549ea647ac4a1b0":[4,0,0,12,3,0,0,1],
 "my__vector_8h.html#abb55fc11f1deac636394a2231637ab47":[4,0,0,12,3,0,0,4],
-"name__value_8h.html":[4,0,0,1,40],
-"name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944":[4,0,0,1,40,1],
-"name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,40,2],
+"name__value_8h.html":[4,0,0,1,39],
+"name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944":[4,0,0,1,39,1],
+"name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,39,2],
 "namespacedrake.html":[2,0,0],
 "namespacedrake.html":[3,0,0],
 "namespacedrake_1_1ad.html":[3,0,0,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX46 =
 "namespacedrake_1_1common.html":[3,0,0,2],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
-"namespacedrake_1_1examples.html":[3,0,0,3]
+"namespacedrake_1_1examples.html":[2,0,0,3],
+"namespacedrake_1_1examples.html":[3,0,0,3],
+"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0]
 };

@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pydrake.visualization.all" href="pydrake.visualization.all.html" />
+    <link rel="next" title="pydrake.visualization.meldis" href="pydrake.visualization.meldis.html" />
     <link rel="prev" title="pydrake.tutorials" href="pydrake.tutorials.html" /> 
 </head>
 
@@ -141,9 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.visualization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.visualization.all.html">pydrake.visualization.all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.visualization.meldis.html">pydrake.visualization.meldis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.visualization.plotting.html">pydrake.visualization.plotting</a></li>
 </ul>
 </li>
 </ul>
@@ -212,9 +210,7 @@
 <h1>pydrake.visualization<a class="headerlink" href="#pydrake-visualization" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.all.html">pydrake.visualization.all</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.meldis.html">pydrake.visualization.meldis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.plotting.html">pydrake.visualization.plotting</a></li>
 </ul>
 </div>
 <span class="target" id="module-pydrake.visualization"></span><p>Bindings for Visualization.</p>
@@ -353,6 +349,82 @@ named “plant” or else the provided <code class="docutils literal notranslate
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.visualization.Meldis">
+<em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">Meldis</code><span class="sig-paren">(</span><em>*</em>, <em>meshcat_host=None</em>, <em>meshcat_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.Meldis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>MeshCat LCM Display Server (MeLDiS)</p>
+<p>Offers a MeshCat visualization server that listens for and draws Drake’s
+legacy LCM visualization messages.</p>
+<p>If the meshcat_host parameter is not supplied, ‘localhost’ will be used by
+default.</p>
+<p>Refer to the pydrake.visualization.meldis module docs for details.</p>
+<dl class="method">
+<dt id="pydrake.visualization.Meldis.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*</em>, <em>meshcat_host=None</em>, <em>meshcat_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.Meldis.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.Meldis.serve_forever">
+<code class="descname">serve_forever</code><span class="sig-paren">(</span><em>*</em>, <em>idle_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.Meldis.serve_forever" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run indefinitely, forwarding LCM =&gt; MeshCat messages.</p>
+<p>If provided, the optional idle_timeout must be strictly positive and
+this loop will sys.exit after that many seconds without any websocket
+connections.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.visualization.plot_sublevelset_expression">
+<code class="descclassname">pydrake.visualization.</code><code class="descname">plot_sublevelset_expression</code><span class="sig-paren">(</span><em>ax</em>, <em>e</em>, <em>vertices=51</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.plot_sublevelset_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the 2D sub-level set e(x) &lt;= 1, which must contain the origin.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ax</strong> – the matplotlib axis to receive the plot</li>
+<li><strong>e</strong> – a symbolic expression in two variables</li>
+<li><strong>vertices</strong> – number of sample points along the boundary</li>
+<li><strong>kwargs</strong> – are passed to the matplotlib fill method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the return values from matplotlib’s fill command.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.visualization.plot_sublevelset_quadratic">
+<code class="descclassname">pydrake.visualization.</code><code class="descname">plot_sublevelset_quadratic</code><span class="sig-paren">(</span><em>ax, A, b=[0, 0], c=0, vertices=51, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.plot_sublevelset_quadratic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the 2D ellipse representing x’Ax + b’x + c &lt;= 1, e.g.
+the one sub-level set of a quadratic form.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ax</strong> – the matplotlib axis to receive the plot</li>
+<li><strong>A</strong> – an 2x2 PSD numpy array.</li>
+<li><strong>b</strong> – broadcastable to a 2x1 array</li>
+<li><strong>c</strong> – scalar</li>
+<li><strong>vertices</strong> – number of sample points along the boundary</li>
+<li><strong>kwargs</strong> – are passed to the matplotlib fill method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the return values from matplotlib’s fill command.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.visualization.VisualizationConfig">
 <em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">VisualizationConfig</code><a class="headerlink" href="#pydrake.visualization.VisualizationConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Settings for what MultibodyPlant and SceneGraph should send to meldis
@@ -434,7 +506,7 @@ point; see drake#15021 for details.)</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pydrake.visualization.all.html" class="btn btn-neutral float-right" title="pydrake.visualization.all" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pydrake.visualization.meldis.html" class="btn btn-neutral float-right" title="pydrake.visualization.meldis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="pydrake.tutorials.html" class="btn btn-neutral float-left" title="pydrake.tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

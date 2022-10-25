@@ -1,7 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,42],
-"space__xyz__mobilizer_8h.html":[4,0,0,8,14,43],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,58],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,10],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX50 =
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html":[3,0,0,4,0,3],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1717b842ef7560038a1ee8f5076d7721":[3,0,0,4,0,3,7],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a4c59b29655e8164083e8704ac82979b2":[3,0,0,4,0,3,5],
-"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6430583dae0d07964009a4345136d8ca":[3,0,0,4,0,3,4]
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6430583dae0d07964009a4345136d8ca":[3,0,0,4,0,3,4],
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a65e0db722c8e6c4cc2fdd74c7f423af5":[3,0,0,4,0,3,0],
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a85c597db40ea9e365e85f617aec19a60":[3,0,0,4,0,3,1]
 };

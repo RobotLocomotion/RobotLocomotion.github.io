@@ -1,6 +1,5 @@
 var NAVTREEINDEX33 =
 {
-"classdrake_1_1systems_1_1_saturation.html#ae5d33e1b76fd695a8f12ce8b9c62a034":[1,2,1,21,7],
 "classdrake_1_1systems_1_1_scalar_dense_output.html":[3,0,0,16,87],
 "classdrake_1_1systems_1_1_scalar_dense_output.html#a2d725908d9debd640d0405dcb445f5bf":[3,0,0,16,87,6],
 "classdrake_1_1systems_1_1_scalar_dense_output.html#a2fdb1e2e6e96c28657e7c3ecca22c149":[3,0,0,16,87,8],
@@ -249,5 +248,6 @@ var NAVTREEINDEX33 =
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#a8eb04bede37e10023a8c4681ca9adcad":[3,0,0,16,104,11],
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#a8fd6c7784cbd65fd703ac1e3077ae783":[3,0,0,16,104,3],
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#aab59143961b0dacdd5f0232dd7ced98d":[3,0,0,16,104,1],
-"classdrake_1_1systems_1_1_symbolic_vector_system.html#ab133988517ef5aa1471234a2c0223f0a":[3,0,0,16,104,5]
+"classdrake_1_1systems_1_1_symbolic_vector_system.html#ab133988517ef5aa1471234a2c0223f0a":[3,0,0,16,104,5],
+"classdrake_1_1systems_1_1_symbolic_vector_system.html#acf8451dffb1b2adcd1a55d4c282befc5":[3,0,0,16,104,7]
 };

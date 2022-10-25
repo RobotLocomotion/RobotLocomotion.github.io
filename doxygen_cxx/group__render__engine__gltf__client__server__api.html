@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: (Experimental) glTF Render Client-Server API</title>
+<title>Drake: glTF Render Client-Server API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -159,14 +159,18 @@ $(document).ready(function(){initNavTree('group__render__engine__gltf__client__s
 
 <div class="header">
   <div class="headertitle">
-<div class="title">(Experimental) glTF Render Client-Server API<div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &raquo; <a class="el" href="group__render__engines.html">Rendering Engines</a></div></div>  </div>
+<div class="title">glTF Render Client-Server API<div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &raquo; <a class="el" href="group__render__engines.html">Rendering Engines</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. Currently, the content of this page is primarily for facilitating code reviews and is subject to change during upcoming pull requests.</dd></dl>
-<p>Drake offers built-in renderers (RenderEngineVtk, RenderEngineGl), but in some cases users may want to use their own custom rendering implementations. One way to accomplish that is to subclass RenderEngine with a custom implementation and link that into Drake, but sometimes that leads to linker compatibility problems. Thus, we also offer another option: rendering using a remote procedure call (RPC). This document specifies the network API for servicing those requests. </p><hr/>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is currently in "beta testing" and may change without any deprecation notice ahead of time.</dd></dl>
+<h2 id="overview">Overview</h2>
+<p>Drake offers built-in renderers (RenderEngineVtk, RenderEngineGl), but in some cases users may want to use their own custom rendering implementations. One way to accomplish that is to subclass RenderEngine with a custom implementation and link that into Drake, but sometimes that leads to linker compatibility problems. Thus, we also offer another option: rendering using a remote procedure call (RPC). This document specifies the network API for servicing those requests.</p>
 <p>The <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html">glTF</a> render server API consists of two components: a client, and a server. The client generates and transmits glTF scene files to the server, which then renders and returns an image file back to the client. Drake implements the client side, which can be constructed via <a class="el" href="namespacedrake_1_1geometry.html#a99ba06b63779a45d0b347f3b6321ac43" title="Constructs a RenderEngine implementation which generates glTF  files to upload to a render server,...">MakeRenderEngineGltfClient()</a>. The server must respond with images of a certain type and dimension (width and height), but is otherwise free to produce any rendering desired in however much time it needs to render.</p>
+<p>The primary design goal for this RPC architecture is for batch-mode dataset generation (e.g., for machine learning), not for realtime simulation. We transmit the entire scene its entirety for each RPC request; the protocol does not support incremental changes to the scene.</p>
+<p>The server is welcome to add in fixed scene elements beyond what's transmitted (e.g., the server could add in a building's walls and floor, rather than having the client transmit that same immutable geometry in every RPC). However, for anything dynamic the design intent is that every RPC call is comprehensive on its own.</p>
 <p><b>Contents</b>:</p>
 <ul>
+<li><a href="#overview">Overview</a></li>
 <li><a href="#server-api">Server API</a><ul>
 <li><a href="#render-endpoint">Render Endpoint</a></li>
 <li><a href="#render-endpoint-form-data">Render Endpoint <code>&lt;form&gt;</code> Data</a></li>
