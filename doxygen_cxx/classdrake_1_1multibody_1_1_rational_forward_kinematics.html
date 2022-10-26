@@ -1,0 +1,519 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: RationalForwardKinematics Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_rational_forward_kinematics.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1_rational_forward_kinematics-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">RationalForwardKinematics Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>For certain robots (whose joint transforms are algebraic functions of joint variables, for example revolute/prismatic/floating-base joints), we can represent the pose (position, orientation) of each body, as rational functions, namely n(s) / d(s) where both the numerator n(s) and denominator d(s) are polynomials of s, and s is some variable related to the generalized position. </p>
+<p>One example is that for a rotation matrix with angle θ and axis a, the rotation matrix can be written as I + sinθ A + (1-cosθ) A², where A is the skew-symmetric matrix from axis a. We can use the stereographic projection to substitute the trigonometric function sinθ and cosθ as cosθ = cos(θ*+Δθ) = cos(θ*)•cos(Δθ) - sin(θ*)•sin(Δθ) = (1-s²)/(1+s²) cos(θ*)- 2s/(1+s²) sin(θ*) (1) sinθ = sin(θ*+Δθ) = sin(θ*)•cos(Δθ) - cos(θ*)•sin(Δθ) = (1-s²)/(1+s²) sin(θ*)- 2s/(1+s²) cos(θ*) (2) where θ* is the angle around which we take the stereographic projection. θ = θ*+Δθ, and s = tan(Δθ/2). With (1) and (2), both sinθ and cosθ are written as a rational function of s. Thus the rotation matrix can be written as rational functions of s.</p>
+<p>We will use q* to denote the nominal posture. For a revolute joint, the q* is the variable θ*. Note that the stereographic projection has a singularity at θ = θ* ± π, as s = tan(Δθ/2)=tan(±π/2) is ±infinity.</p>
+<p>Currently we only support robots with revolute and weld joints.</p>
+<p>Throughout this file, we use the following convention</p><ol type="1">
+<li>q denotes the generalized position of the entire robot. It includes the angle of a revolute joint, the displacement of a prismatic joint, etc.</li>
+<li>θ denotes the revolute joint angle.</li>
+<li>t=tan((θ-θ*)/2)</li>
+<li>s is the vector of variables, such that the robot body pose is written as an algebraic function (rational function) of s. </li>
+</ol>
+</div>
+<p><code>#include &lt;drake/multibody/rational/rational_forward_kinematics.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html">Pose</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a proxy for <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways.">math::RigidTransform</a>.  <a href="structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:adda199f0e8784ca13c32d2525af89019"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#adda199f0e8784ca13c32d2525af89019">RationalForwardKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529">plant</a>)</td></tr>
+<tr class="separator:adda199f0e8784ca13c32d2525af89019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2e4244a8a8f1a59a720eb1994d7d7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html">Pose</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b">CalcBodyPoseAsMultilinearPolynomial</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> body_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> expressed_body_index) const</td></tr>
+<tr class="memdesc:a3b2e4244a8a8f1a59a720eb1994d7d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pose X_AB as a multilinear polynomial function.  <a href="#a3b2e4244a8a8f1a59a720eb1994d7d7b">More...</a><br /></td></tr>
+<tr class="separator:a3b2e4244a8a8f1a59a720eb1994d7d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7bf899c5b65ecbc2169089be5086f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3">ConvertMultilinearPolynomialToRationalFunction</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;e) const</td></tr>
+<tr class="memdesc:a1d7bf899c5b65ecbc2169089be5086f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>.  <a href="#a1d7bf899c5b65ecbc2169089be5086f3">More...</a><br /></td></tr>
+<tr class="separator:a1d7bf899c5b65ecbc2169089be5086f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ae675822fc6ab4016c0fe093346bb8"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a47ae675822fc6ab4016c0fe093346bb8">ComputeSValue</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_val, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star_val) const</td></tr>
+<tr class="memdesc:a47ae675822fc6ab4016c0fe093346bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes values of s from q_val and q_star_val, while handling the index matching between q and s (we don't guarantee that s(i) is computed from q(i)).  <a href="#a47ae675822fc6ab4016c0fe093346bb8">More...</a><br /></td></tr>
+<tr class="separator:a47ae675822fc6ab4016c0fe093346bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5001e433b72f3005d744a7b9b71cc529"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529">plant</a> () const</td></tr>
+<tr class="separator:a5001e433b72f3005d744a7b9b71cc529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24c0eea31bde4b70102fe16f99c39be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s</a> () const</td></tr>
+<tr class="separator:af24c0eea31bde4b70102fe16f99c39be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:ae2f64cf4a62743cda2f74fff57f1c224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224">RationalForwardKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;)=delete</td></tr>
+<tr class="separator:ae2f64cf4a62743cda2f74fff57f1c224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af561a8c971a66f869986c5e4429352c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af561a8c971a66f869986c5e4429352c3">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;)=delete</td></tr>
+<tr class="separator:af561a8c971a66f869986c5e4429352c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377a632079f13b90b216530b0f5767b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a377a632079f13b90b216530b0f5767b4">RationalForwardKinematics</a> (<a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a377a632079f13b90b216530b0f5767b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac73a5a06e9d73c1e5c761e7accee6265"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ac73a5a06e9d73c1e5c761e7accee6265">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ac73a5a06e9d73c1e5c761e7accee6265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae2f64cf4a62743cda2f74fff57f1c224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f64cf4a62743cda2f74fff57f1c224">&#9670;&nbsp;</a></span>RationalForwardKinematics() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a377a632079f13b90b216530b0f5767b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377a632079f13b90b216530b0f5767b4">&#9670;&nbsp;</a></span>RationalForwardKinematics() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adda199f0e8784ca13c32d2525af89019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda199f0e8784ca13c32d2525af89019">&#9670;&nbsp;</a></span>RationalForwardKinematics() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>The plant for which we compute forward kinematics. <code>plant</code> should outlive this RationalForwardKinematics object. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3b2e4244a8a8f1a59a720eb1994d7d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2e4244a8a8f1a59a720eb1994d7d7b">&#9670;&nbsp;</a></span>CalcBodyPoseAsMultilinearPolynomial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html">Pose</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt; CalcBodyPoseAsMultilinearPolynomial </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_star</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td>
+          <td class="paramname"><em>body_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td>
+          <td class="paramname"><em>expressed_body_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the pose X_AB as a multilinear polynomial function. </p>
+<p>The indeterminates of the polynomials are cos_delta() and sin_delta(). To compute the pose as a rational function of indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>, we recommend to first call this function to compute the pose as a multilinear polynomial functions, and then call <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3" title="Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is...">ConvertMultilinearPolynomialToRationalFunction()</a> to convert these polynomials to rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q_star</td><td>The nominal posture q*. </td></tr>
+    <tr><td class="paramname">body_index</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> B, the body whose pose is computed. </td></tr>
+    <tr><td class="paramname">expressed_body_index</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> A, the body in whose frame the pose is expressed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>X_AB The pose of body <code>body_index</code> expressed in <code>expressed_body_index</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a47ae675822fc6ab4016c0fe093346bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ae675822fc6ab4016c0fe093346bb8">&#9670;&nbsp;</a></span>ComputeSValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd ComputeSValue </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_star_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes values of s from q_val and q_star_val, while handling the index matching between q and s (we don't guarantee that s(i) is computed from q(i)). </p>
+
+</div>
+</div>
+<a id="a1d7bf899c5b65ecbc2169089be5086f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7bf899c5b65ecbc2169089be5086f3">&#9670;&nbsp;</a></span>ConvertMultilinearPolynomialToRationalFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> ConvertMultilinearPolynomialToRationalFunction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>. </p>
+
+</div>
+</div>
+<a id="ac73a5a06e9d73c1e5c761e7accee6265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73a5a06e9d73c1e5c761e7accee6265">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af561a8c971a66f869986c5e4429352c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af561a8c971a66f869986c5e4429352c3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5001e433b72f3005d744a7b9b71cc529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5001e433b72f3005d744a7b9b71cc529">&#9670;&nbsp;</a></span>plant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; plant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af24c0eea31bde4b70102fe16f99c39be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24c0eea31bde4b70102fe16f99c39be">&#9670;&nbsp;</a></span>s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;&amp; s </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/rational/<a class="el" href="rational__forward__kinematics_8h.html">rational_forward_kinematics.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

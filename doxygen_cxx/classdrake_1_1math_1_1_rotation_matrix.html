@@ -262,6 +262,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a94f554d89721df33e9d6fd2a2fb73ff9"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a94f554d89721df33e9d6fd2a2fb73ff9">GetMaximumAbsoluteDifference</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a94f554d89721df33e9d6fd2a2fb73ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the infinity norm of <code>this</code> - <code>other</code> (i.e., the maximum absolute value of the difference between the elements of <code>this</code> and <code>other</code>).  <a href="#a94f554d89721df33e9d6fd2a2fb73ff9">More...</a><br /></td></tr>
 <tr class="separator:a94f554d89721df33e9d6fd2a2fb73ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf22daf86d67921b19763c3c43a6605e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#abf22daf86d67921b19763c3c43a6605e">ToRollPitchYaw</a> () const</td></tr>
+<tr class="memdesc:abf22daf86d67921b19763c3c43a6605e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> that represents <code>this</code> RotationMatrix, with roll-pitch-yaw angles <code>[r, p, y]</code> in the range <code>-π &lt;= r &lt;= π</code>, <code>-π/2 &lt;= p &lt;= π/2</code>, <code>-π &lt;= y &lt;= π</code>.  <a href="#abf22daf86d67921b19763c3c43a6605e">More...</a><br /></td></tr>
+<tr class="separator:abf22daf86d67921b19763c3c43a6605e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a978a8b146ac3388416fc5c72b553f91a"><td class="memItemLeft" align="right" valign="top">Eigen::Quaternion&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a978a8b146ac3388416fc5c72b553f91a">ToQuaternion</a> () const</td></tr>
 <tr class="memdesc:a978a8b146ac3388416fc5c72b553f91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a quaternion q that represents <code>this</code> RotationMatrix.  <a href="#a978a8b146ac3388416fc5c72b553f91a">More...</a><br /></td></tr>
 <tr class="separator:a978a8b146ac3388416fc5c72b553f91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1819,7 +1822,7 @@ Engineering and Computer Science, Massachusetts Institute of Technology" <a href
 </div><div class="memdoc">
 
 <p>Returns a quaternion q that represents <code>this</code> RotationMatrix. </p>
-<p>Since the quaternion <code>q</code> and <code>-q</code> represent the same RotationMatrix, this method chooses to return a canonical quaternion, i.e., with q(0) &gt;= 0. </p><dl class="section note"><dt>Note</dt><dd>There is a constructor in the <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> class that converts a rotation matrix to roll-pitch-yaw angles. </dd></dl>
+<p>Since the quaternion <code>q</code> and <code>-q</code> represent the same RotationMatrix, this method chooses to return a canonical quaternion, i.e., with q(0) &gt;= 0. </p>
 
 </div>
 </div>
@@ -1916,6 +1919,26 @@ Engineering and Computer Science, Massachusetts Institute of Technology" <a href
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a978a8b146ac3388416fc5c72b553f91a" title="Returns a quaternion q that represents this RotationMatrix.">ToQuaternion()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="abf22daf86d67921b19763c3c43a6605e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf22daf86d67921b19763c3c43a6605e">&#9670;&nbsp;</a></span>ToRollPitchYaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt;T&gt; ToRollPitchYaw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> that represents <code>this</code> RotationMatrix, with roll-pitch-yaw angles <code>[r, p, y]</code> in the range <code>-π &lt;= r &lt;= π</code>, <code>-π/2 &lt;= p &lt;= π/2</code>, <code>-π &lt;= y &lt;= π</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This new high-accuracy algorithm avoids numerical round-off issues encountered by some algorithms when pitch is within 1E-6 of π/2 or -π/2. </dd></dl>
 
 </div>
 </div>

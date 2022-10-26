@@ -1185,7 +1185,7 @@ class description).</p>
 
 <dl class="function">
 <dt id="pydrake.math.ComputeNumericalGradient">
-<code class="descclassname">pydrake.math.</code><code class="descname">ComputeNumericalGradient</code><span class="sig-paren">(</span><em>calc_func: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], x: numpy.ndarray[numpy.float64[m, 1]], option: pydrake.math.NumericalGradientOption = &lt;pydrake.math.NumericalGradientOption object at 0x7f5d113d0df0&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ComputeNumericalGradient" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.math.</code><code class="descname">ComputeNumericalGradient</code><span class="sig-paren">(</span><em>calc_func: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], x: numpy.ndarray[numpy.float64[m, 1]], option: pydrake.math.NumericalGradientOption = &lt;pydrake.math.NumericalGradientOption object at 0x7fa27505fef0&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ComputeNumericalGradient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the gradient of a function f(x) through numerical difference.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">calc_func</span></code>:</dt>
@@ -2214,6 +2214,39 @@ X_AB.</p>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].GetMaximumAbsoluteDifference">
+<code class="descname">GetMaximumAbsoluteDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].GetMaximumAbsoluteDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the infinity norm of <code class="docutils literal notranslate"><span class="pre">this</span></code> - <cite>other</cite> (i.e., the maximum
+absolute value of the difference between the elements of <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">other</span></code>).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to subtract from <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">‖<cite>this</cite> - <cite>other</cite>‖∞</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].GetMaximumAbsoluteTranslationDifference">
+<code class="descname">GetMaximumAbsoluteTranslationDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].GetMaximumAbsoluteTranslationDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum absolute value of the difference in the position
+vectors (translation) in <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>. In other words,
+returns the infinity norm of the difference in the position vectors.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform whose position vector is subtracted from the
+position vector in <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.math.RigidTransform_.RigidTransform_[float].Identity">
 <em class="property">static </em><code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].Identity" title="Permalink to this definition">¶</a></dt>
@@ -2275,6 +2308,25 @@ instructions for further speedups.</p>
 transform by accumulating round-off error with a large number of
 multiplies.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].IsExactlyEqualTo">
+<code class="descname">IsExactlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].IsExactlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if each element of <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to the
+corresponding element of <code class="docutils literal notranslate"><span class="pre">other</span></code>.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -2930,6 +2982,39 @@ X_AB.</p>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].GetMaximumAbsoluteDifference">
+<code class="descname">GetMaximumAbsoluteDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], other: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].GetMaximumAbsoluteDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the infinity norm of <code class="docutils literal notranslate"><span class="pre">this</span></code> - <cite>other</cite> (i.e., the maximum
+absolute value of the difference between the elements of <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">other</span></code>).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to subtract from <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">‖<cite>this</cite> - <cite>other</cite>‖∞</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].GetMaximumAbsoluteTranslationDifference">
+<code class="descname">GetMaximumAbsoluteTranslationDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], other: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].GetMaximumAbsoluteTranslationDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum absolute value of the difference in the position
+vectors (translation) in <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>. In other words,
+returns the infinity norm of the difference in the position vectors.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform whose position vector is subtracted from the
+position vector in <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.math.RigidTransform_[AutoDiffXd].Identity">
 <em class="property">static </em><code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[AutoDiffXd]<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].Identity" title="Permalink to this definition">¶</a></dt>
@@ -2991,6 +3076,25 @@ instructions for further speedups.</p>
 transform by accumulating round-off error with a large number of
 multiplies.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].IsExactlyEqualTo">
+<code class="descname">IsExactlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], other: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].IsExactlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if each element of <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to the
+corresponding element of <code class="docutils literal notranslate"><span class="pre">other</span></code>.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -3644,6 +3748,39 @@ X_AB.</p>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].GetMaximumAbsoluteDifference">
+<code class="descname">GetMaximumAbsoluteDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], other: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].GetMaximumAbsoluteDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the infinity norm of <code class="docutils literal notranslate"><span class="pre">this</span></code> - <cite>other</cite> (i.e., the maximum
+absolute value of the difference between the elements of <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">other</span></code>).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to subtract from <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">‖<cite>this</cite> - <cite>other</cite>‖∞</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].GetMaximumAbsoluteTranslationDifference">
+<code class="descname">GetMaximumAbsoluteTranslationDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], other: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].GetMaximumAbsoluteTranslationDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum absolute value of the difference in the position
+vectors (translation) in <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>. In other words,
+returns the infinity norm of the difference in the position vectors.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform whose position vector is subtracted from the
+position vector in <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.math.RigidTransform_[Expression].Identity">
 <em class="property">static </em><code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[Expression]<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].Identity" title="Permalink to this definition">¶</a></dt>
@@ -3705,6 +3842,25 @@ instructions for further speedups.</p>
 transform by accumulating round-off error with a large number of
 multiplies.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].IsExactlyEqualTo">
+<code class="descname">IsExactlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], other: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].IsExactlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if each element of <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to the
+corresponding element of <code class="docutils literal notranslate"><span class="pre">other</span></code>.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -4406,6 +4562,39 @@ X_AB.</p>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].GetMaximumAbsoluteDifference">
+<code class="descname">GetMaximumAbsoluteDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.RigidTransform_[float].GetMaximumAbsoluteDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the infinity norm of <code class="docutils literal notranslate"><span class="pre">this</span></code> - <cite>other</cite> (i.e., the maximum
+absolute value of the difference between the elements of <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">other</span></code>).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to subtract from <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">‖<cite>this</cite> - <cite>other</cite>‖∞</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].GetMaximumAbsoluteTranslationDifference">
+<code class="descname">GetMaximumAbsoluteTranslationDifference</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.RigidTransform_[float].GetMaximumAbsoluteTranslationDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum absolute value of the difference in the position
+vectors (translation) in <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>. In other words,
+returns the infinity norm of the difference in the position vectors.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform whose position vector is subtracted from the
+position vector in <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.math.RigidTransform_[float].Identity">
 <em class="property">static </em><code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.math.RigidTransform_[float].Identity" title="Permalink to this definition">¶</a></dt>
@@ -4467,6 +4656,25 @@ instructions for further speedups.</p>
 transform by accumulating round-off error with a large number of
 multiplies.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].IsExactlyEqualTo">
+<code class="descname">IsExactlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[float].IsExactlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal notranslate"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code> if each element of <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to the
+corresponding element of <code class="docutils literal notranslate"><span class="pre">other</span></code>.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -6907,11 +7115,6 @@ AngleAxis returned by this method chooses to have <code class="docutils literal 
 the quaternion <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> represent the same RotationMatrix,
 this method chooses to return a canonical quaternion, i.e., with q(0)
 &gt;= 0.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There is a constructor in the RollPitchYaw class that converts a
-rotation matrix to roll-pitch-yaw angles.</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -7611,11 +7814,6 @@ AngleAxis returned by this method chooses to have <code class="docutils literal 
 the quaternion <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> represent the same RotationMatrix,
 this method chooses to return a canonical quaternion, i.e., with q(0)
 &gt;= 0.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There is a constructor in the RollPitchYaw class that converts a
-rotation matrix to roll-pitch-yaw angles.</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -8313,11 +8511,6 @@ AngleAxis returned by this method chooses to have <code class="docutils literal 
 the quaternion <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> represent the same RotationMatrix,
 this method chooses to return a canonical quaternion, i.e., with q(0)
 &gt;= 0.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There is a constructor in the RollPitchYaw class that converts a
-rotation matrix to roll-pitch-yaw angles.</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -9063,11 +9256,6 @@ AngleAxis returned by this method chooses to have <code class="docutils literal 
 the quaternion <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> represent the same RotationMatrix,
 this method chooses to return a canonical quaternion, i.e., with q(0)
 &gt;= 0.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There is a constructor in the RollPitchYaw class that converts a
-rotation matrix to roll-pitch-yaw angles.</p>
-</div>
 </dd></dl>
 
 <dl class="method">

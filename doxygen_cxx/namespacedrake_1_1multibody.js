@@ -64,6 +64,7 @@ var namespacedrake_1_1multibody =
     [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html", "classdrake_1_1multibody_1_1_propeller" ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", "structdrake_1_1multibody_1_1_propeller_info" ],
     [ "QuaternionEulerIntegrationConstraint", "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html", "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint" ],
+    [ "RationalForwardKinematics", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html", "classdrake_1_1multibody_1_1_rational_forward_kinematics" ],
     [ "RevoluteJoint", "classdrake_1_1multibody_1_1_revolute_joint.html", "classdrake_1_1multibody_1_1_revolute_joint" ],
     [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html", "classdrake_1_1multibody_1_1_revolute_spring" ],
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],

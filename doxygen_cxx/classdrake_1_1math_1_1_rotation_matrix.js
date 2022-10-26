@@ -46,6 +46,7 @@ var classdrake_1_1math_1_1_rotation_matrix =
     [ "ToQuaternion", "classdrake_1_1math_1_1_rotation_matrix.html#a456c2f7787024658a08d612eea90c0d4", null ],
     [ "ToQuaternionAsVector4", "classdrake_1_1math_1_1_rotation_matrix.html#a910cd85b8df9b3955bf70771cf37ec53", null ],
     [ "ToQuaternionAsVector4", "classdrake_1_1math_1_1_rotation_matrix.html#a0b70e5f1c037ab68afdb2551c49ac517", null ],
+    [ "ToRollPitchYaw", "classdrake_1_1math_1_1_rotation_matrix.html#abf22daf86d67921b19763c3c43a6605e", null ],
     [ "transpose", "classdrake_1_1math_1_1_rotation_matrix.html#a12ff00690cd0b5145222c506a39946aa", null ],
     [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html#a876971dbbbcca2807eccb07b068df383", null ],
     [ "RotationMatrixd", "classdrake_1_1math_1_1_rotation_matrix.html#a9771c03401395a6e30c398f5663799ed", null ]

@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kuka__ii
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates and outputs lcmt_iiwa_status messages. </p>
 <p>Note that this system does not actually send the message an LCM channel. To send the message, the output of this system should be connected to a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ad52e88e4200c2cf0a094a08faff8583c" title="A factory method that returns an LcmPublisherSystem that takes Value&lt;LcmMessage&gt; message objects on i...">systems::lcm::LcmPublisherSystem::Make&lt;lcmt_iiwa_status&gt;()</a>.</p>
-<p>This system has many vector-valued input ports, each of which has exactly num_joints elements.</p>
+<p>This system has many vector-valued input ports, most of which have exactly num_joints elements. The exception is <code>time_measured</code> which is the one-dimensional time in seconds to set as the message timestamp (i.e. the time inputed will be converted to microseconds and sent to the hardware). It is optional and if unset, the context time is used.</p>
 <ul>
 <li><code>position_commanded</code>: the most recently received position command.</li>
 <li><code>position_measured</code>: the plant's current position.</li>
@@ -194,6 +194,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kuka__ii
 <td align="right" style="padding:5px 0px 5px 0px">torque_measured&rarr;</td></tr>
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px">torque_external&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">time_measured&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html" title="Creates and outputs lcmt_iiwa_status messages.">IiwaStatusSender</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
@@ -201,7 +203,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kuka__ii
 </table>
 </td></tr>
 </table>
-<p>The ports <code>velocity_estimated</code>, <code>torque_measured</code>, and <code>torque_external</code> may be left unconnected, as detailed above.</p>
+<p>The ports <code>velocity_estimated</code>, <code>torque_measured</code>, <code>torque_external</code>, and <code>time_measured</code> may be left unconnected, as detailed above.</p>
 <dl class="section see"><dt>See also</dt><dd><code>lcmt_iiwa_status.lcm</code> for additional documentation. </dd></dl>
 </div>
 <p><code>#include &lt;drake/manipulation/kuka_iiwa/iiwa_status_sender.h&gt;</code></p>
@@ -222,6 +224,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd6f4e4db626cf155bf661ee390a5a6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#acd6f4e4db626cf155bf661ee390a5a6c">operator=</a> (<a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:acd6f4e4db626cf155bf661ee390a5a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Named accessors for this System's input and output ports.</div></td></tr>
+<tr class="memitem:acb2a1537b07ca4cb89c020815ca28cde"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#acb2a1537b07ca4cb89c020815ca28cde">get_time_measured_input_port</a> () const</td></tr>
+<tr class="separator:acb2a1537b07ca4cb89c020815ca28cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac27d72548e04d961df7e17a7459b7904"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#ac27d72548e04d961df7e17a7459b7904">get_position_commanded_input_port</a> () const</td></tr>
 <tr class="separator:ac27d72548e04d961df7e17a7459b7904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8af7cf1d8a05ae8d29654e64830fc530"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#a8af7cf1d8a05ae8d29654e64830fc530">get_position_measured_input_port</a> () const</td></tr>
@@ -1360,6 +1364,23 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="acb2a1537b07ca4cb89c020815ca28cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2a1537b07ca4cb89c020815ca28cde">&#9670;&nbsp;</a></span>get_time_measured_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_time_measured_input_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6128ed8ef2bd0c01840ec8e1e6ac4fb8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6128ed8ef2bd0c01840ec8e1e6ac4fb8">&#9670;&nbsp;</a></span>get_torque_commanded_input_port()</h2>
 
@@ -1428,8 +1449,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a36344c417d4b72fbca17c9c5f049c50a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36344c417d4b72fbca17c9c5f049c50a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="acd6f4e4db626cf155bf661ee390a5a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6f4e4db626cf155bf661ee390a5a6c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1440,7 +1461,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1454,8 +1475,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="acd6f4e4db626cf155bf661ee390a5a6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd6f4e4db626cf155bf661ee390a5a6c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a36344c417d4b72fbca17c9c5f049c50a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36344c417d4b72fbca17c9c5f049c50a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1466,7 +1487,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html">IiwaStatusSender</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

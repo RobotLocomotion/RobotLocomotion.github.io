@@ -4,6 +4,7 @@ var searchData=
   ['randomgenerator',['RandomGenerator',['../classdrake_1_1_random_generator.html',1,'drake']]],
   ['randomsimulationresult',['RandomSimulationResult',['../structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html',1,'drake::systems::analysis']]],
   ['randomsource',['RandomSource',['../classdrake_1_1systems_1_1_random_source.html',1,'drake::systems']]],
+  ['rationalforwardkinematics',['RationalForwardKinematics',['../classdrake_1_1multibody_1_1_rational_forward_kinematics.html',1,'drake::multibody']]],
   ['rationalfunction',['RationalFunction',['../classdrake_1_1symbolic_1_1_rational_function.html',1,'drake::symbolic']]],
   ['regionofattractionoptions',['RegionOfAttractionOptions',['../structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html',1,'drake::systems::analysis']]],
   ['relationalformulacell',['RelationalFormulaCell',['../classdrake_1_1symbolic_1_1_relational_formula_cell.html',1,'drake::symbolic']]],
