@@ -2317,7 +2317,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div><div class="memdoc">
 
 <p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm). </p>
-<dl class="section note"><dt>Note</dt><dd>Currently no solver supports kL2NormCost, and the user will receive an error message if they add <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html" title="Implements a cost of the form ‖Ax + b‖₂.">L2NormCost</a> and call <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Currently only the <a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html" title="An implementation of SolverInterface for the commercially-licensed SNOPT solver (https://ccom....">SnoptSolver</a> and <a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html">IpoptSolver</a> support kL2NormCost. </dd></dl>
 
 </div>
 </div>

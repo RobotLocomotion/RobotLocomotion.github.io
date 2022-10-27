@@ -573,8 +573,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -780,6 +780,7 @@ var hierarchy =
             [ "MeshcatVisualizer< T >", "classdrake_1_1geometry_1_1_meshcat_visualizer.html", null ],
             [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
+            [ "ExternallyAppliedSpatialForceMultiplexer< T >", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html", null ],
             [ "MultibodyTreeSystem< T >", null, [
               [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
                 [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
@@ -1109,8 +1110,6 @@ var hierarchy =
     [ "int", "classint.html", null ],
     [ "int64_t", "classint64__t.html", null ],
     [ "OutputPortLocator", "class_output_port_locator.html", null ],
-    [ "pair< drake::systems::PeriodicEventData, std::unique_ptr< drake::systems::Event< double > > >", "classstd_1_1pair_3_01drake_1_1systems_1_1_periodic_event_data_00_01std_1_1unique__ptr_3_01drake_16d119f6a6720feeebeb6adeab3c76ee.html", null ],
-    [ "pair< drake::systems::PeriodicEventData, std::unique_ptr< drake::systems::Event< Element::T > > >", "classstd_1_1pair_3_01drake_1_1systems_1_1_periodic_event_data_00_01std_1_1unique__ptr_3_01drake_349c18b295ba89f5be2395110b502d9c.html", null ],
     [ "Vector3< Element::T >", "class_vector3_3_01_element_1_1_t_01_4.html", null ],
     [ "Vector6< T >", "class_vector6_3_01_t_01_4.html", null ],
     [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ],

@@ -28,6 +28,7 @@ var namespacedrake_1_1multibody =
     [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html", "classdrake_1_1multibody_1_1_door_hinge" ],
     [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", "structdrake_1_1multibody_1_1_door_hinge_config" ],
     [ "ExternallyAppliedSpatialForce", "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html", "structdrake_1_1multibody_1_1_externally_applied_spatial_force" ],
+    [ "ExternallyAppliedSpatialForceMultiplexer", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer" ],
     [ "FixedOffsetFrame", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", "classdrake_1_1multibody_1_1_fixed_offset_frame" ],
     [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html", "classdrake_1_1multibody_1_1_force_element" ],
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html", "classdrake_1_1multibody_1_1_frame" ],

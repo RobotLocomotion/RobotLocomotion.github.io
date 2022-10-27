@@ -168,6 +168,7 @@ $(document).ready(function(){initNavTree('matrix__util_8h.html','');});
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__throw_8h.html">drake/common/drake_throw.h</a>&quot;</code><br />
@@ -208,6 +209,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8a6d10bc0b3dfc5902d0a06f186dba8f">IsPositiveDefinite</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, <a class="el" href="classdouble.html">double</a> eigenvalue_tolerance=0.0, <a class="el" href="classdouble.html">double</a> symmetry_tolerance=0.0)</td></tr>
 <tr class="memdesc:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash;.  <a href="namespacedrake_1_1math.html#a8a6d10bc0b3dfc5902d0a06f186dba8f">More...</a><br /></td></tr>
 <tr class="separator:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd054648f2874f8e5a37769758a132b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aedd054648f2874f8e5a37769758a132b"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; MatrixX&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aedd054648f2874f8e5a37769758a132b">EigenToStdVector</a> (const Eigen::Ref&lt; const MatrixX&lt; T &gt;&gt; &amp;mat)</td></tr>
+<tr class="memdesc:aedd054648f2874f8e5a37769758a132b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MatrixX&lt;T&gt; into a std::vector&lt;MatrixX&lt;T&gt;&gt;, taking each column of the m-by-n matrix <code>mat</code> into an m-by-1 element of the returned std::vector.  <a href="namespacedrake_1_1math.html#aedd054648f2874f8e5a37769758a132b">More...</a><br /></td></tr>
+<tr class="separator:aedd054648f2874f8e5a37769758a132b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea43911b265b0798f5023e520c4ee005"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aea43911b265b0798f5023e520c4ee005"><td class="memTemplItemLeft" align="right" valign="top">MatrixX&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aea43911b265b0798f5023e520c4ee005">StdVectorToEigen</a> (const std::vector&lt; MatrixX&lt; T &gt;&gt; &amp;vec)</td></tr>
+<tr class="memdesc:aea43911b265b0798f5023e520c4ee005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a std::vector&lt;MatrixX&lt;T&gt;&gt; into a MatrixX&lt;T&gt;, composing each element of <code>vec</code> into a column of the returned matrix.  <a href="namespacedrake_1_1math.html#aea43911b265b0798f5023e520c4ee005">More...</a><br /></td></tr>
+<tr class="separator:aea43911b265b0798f5023e520c4ee005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

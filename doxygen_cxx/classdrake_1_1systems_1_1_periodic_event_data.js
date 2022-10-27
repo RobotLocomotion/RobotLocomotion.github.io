@@ -6,6 +6,7 @@ var classdrake_1_1systems_1_1_periodic_event_data =
     [ "offset_sec", "classdrake_1_1systems_1_1_periodic_event_data.html#a55aa9905f485cb2da33a6aaa66d0ba2a", null ],
     [ "operator=", "classdrake_1_1systems_1_1_periodic_event_data.html#a09faad2848deccc5cb17fdad88e337fe", null ],
     [ "operator=", "classdrake_1_1systems_1_1_periodic_event_data.html#a7f6298781b23703e7bc5baaa80445e68", null ],
+    [ "operator==", "classdrake_1_1systems_1_1_periodic_event_data.html#acde271aa3c82d147792e4a80cd2fa0af", null ],
     [ "period_sec", "classdrake_1_1systems_1_1_periodic_event_data.html#ae0d549f7573f59c0d28ea09b9afa5368", null ],
     [ "set_offset_sec", "classdrake_1_1systems_1_1_periodic_event_data.html#ab996311c7a243e244a41ac05300fbe45", null ],
     [ "set_period_sec", "classdrake_1_1systems_1_1_periodic_event_data.html#ad31e9e292fc3e1c8bab07478633e9a5b", null ]

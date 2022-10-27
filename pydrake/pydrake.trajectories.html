@@ -232,6 +232,15 @@
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[float]) -&gt; None</li>
+<li>__init__(self: pydrake.trajectories.BsplineTrajectory_[float], basis: pydrake.math.BsplineBasis_[float], control_points: List[List[float]]) -&gt; None</li>
+</ol>
+<p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>control_points.size() == basis.num_basis_functions()</dd>
+</dl>
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[float], basis: pydrake.math.BsplineBasis_[float], control_points: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; None</li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
@@ -337,6 +346,15 @@ original, even if knot values are duplicated. Note that
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd]) -&gt; None</li>
+<li>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd], basis: pydrake.math.BsplineBasis_[AutoDiffXd], control_points: List[List[pydrake.autodiffutils.AutoDiffXd]]) -&gt; None</li>
+</ol>
+<p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>control_points.size() == basis.num_basis_functions()</dd>
+</dl>
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd], basis: pydrake.math.BsplineBasis_[AutoDiffXd], control_points: List[numpy.ndarray[object[m, n]]]) -&gt; None</li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
@@ -440,6 +458,15 @@ original, even if knot values are duplicated. Note that
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression]) -&gt; None</li>
+<li>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression], basis: pydrake.math.BsplineBasis_[Expression], control_points: List[List[pydrake.symbolic.Expression]]) -&gt; None</li>
+</ol>
+<p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>control_points.size() == basis.num_basis_functions()</dd>
+</dl>
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression], basis: pydrake.math.BsplineBasis_[Expression], control_points: List[numpy.ndarray[object[m, n]]]) -&gt; None</li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
@@ -543,6 +570,15 @@ original, even if knot values are duplicated. Note that
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[float]) -&gt; None</li>
+<li>__init__(self: pydrake.trajectories.BsplineTrajectory_[float], basis: pydrake.math.BsplineBasis_[float], control_points: List[List[float]]) -&gt; None</li>
+</ol>
+<p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>control_points.size() == basis.num_basis_functions()</dd>
+</dl>
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.trajectories.BsplineTrajectory_[float], basis: pydrake.math.BsplineBasis_[float], control_points: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; None</li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and

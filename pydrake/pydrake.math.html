@@ -1185,7 +1185,7 @@ class description).</p>
 
 <dl class="function">
 <dt id="pydrake.math.ComputeNumericalGradient">
-<code class="descclassname">pydrake.math.</code><code class="descname">ComputeNumericalGradient</code><span class="sig-paren">(</span><em>calc_func: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], x: numpy.ndarray[numpy.float64[m, 1]], option: pydrake.math.NumericalGradientOption = &lt;pydrake.math.NumericalGradientOption object at 0x7fa27505fef0&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ComputeNumericalGradient" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.math.</code><code class="descname">ComputeNumericalGradient</code><span class="sig-paren">(</span><em>calc_func: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], x: numpy.ndarray[numpy.float64[m, 1]], option: pydrake.math.NumericalGradientOption = &lt;pydrake.math.NumericalGradientOption object at 0x7f1cae180570&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ComputeNumericalGradient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the gradient of a function f(x) through numerical difference.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">calc_func</span></code>:</dt>
@@ -7118,6 +7118,20 @@ this method chooses to return a canonical quaternion, i.e., with q(0)
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RotationMatrix_.RotationMatrix_[float].ToRollPitchYaw">
+<code class="descname">ToRollPitchYaw</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; drake::math::RollPitchYaw&lt;double&gt;<a class="headerlink" href="#pydrake.math.RotationMatrix_.RotationMatrix_[float].ToRollPitchYaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a RollPitchYaw that represents <code class="docutils literal notranslate"><span class="pre">this</span></code> RotationMatrix, with
+roll-pitch-yaw angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>,
+<cite>-π/2 &lt;= p &lt;= π/2</cite>, <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This new high-accuracy algorithm avoids numerical round-off issues
+encountered by some algorithms when pitch is within 1E-6 of π/2 or
+-π/2.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RotationMatrix_.RotationMatrix_[float].transpose">
 <code class="descname">transpose</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.math.RotationMatrix_.RotationMatrix_[float].transpose" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -7817,6 +7831,20 @@ this method chooses to return a canonical quaternion, i.e., with q(0)
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RotationMatrix_[AutoDiffXd].ToRollPitchYaw">
+<code class="descname">ToRollPitchYaw</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; drake::math::RollPitchYaw&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.math.RotationMatrix_[AutoDiffXd].ToRollPitchYaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a RollPitchYaw that represents <code class="docutils literal notranslate"><span class="pre">this</span></code> RotationMatrix, with
+roll-pitch-yaw angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>,
+<cite>-π/2 &lt;= p &lt;= π/2</cite>, <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This new high-accuracy algorithm avoids numerical round-off issues
+encountered by some algorithms when pitch is within 1E-6 of π/2 or
+-π/2.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RotationMatrix_[AutoDiffXd].transpose">
 <code class="descname">transpose</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[AutoDiffXd]<a class="headerlink" href="#pydrake.math.RotationMatrix_[AutoDiffXd].transpose" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -8511,6 +8539,20 @@ AngleAxis returned by this method chooses to have <code class="docutils literal 
 the quaternion <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> represent the same RotationMatrix,
 this method chooses to return a canonical quaternion, i.e., with q(0)
 &gt;= 0.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix_[Expression].ToRollPitchYaw">
+<code class="descname">ToRollPitchYaw</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[Expression]</em><span class="sig-paren">)</span> &#x2192; drake::math::RollPitchYaw&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.math.RotationMatrix_[Expression].ToRollPitchYaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a RollPitchYaw that represents <code class="docutils literal notranslate"><span class="pre">this</span></code> RotationMatrix, with
+roll-pitch-yaw angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>,
+<cite>-π/2 &lt;= p &lt;= π/2</cite>, <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This new high-accuracy algorithm avoids numerical round-off issues
+encountered by some algorithms when pitch is within 1E-6 of π/2 or
+-π/2.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -9256,6 +9298,20 @@ AngleAxis returned by this method chooses to have <code class="docutils literal 
 the quaternion <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> represent the same RotationMatrix,
 this method chooses to return a canonical quaternion, i.e., with q(0)
 &gt;= 0.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix_[float].ToRollPitchYaw">
+<code class="descname">ToRollPitchYaw</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; drake::math::RollPitchYaw&lt;double&gt;<a class="headerlink" href="#pydrake.math.RotationMatrix_[float].ToRollPitchYaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a RollPitchYaw that represents <code class="docutils literal notranslate"><span class="pre">this</span></code> RotationMatrix, with
+roll-pitch-yaw angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>,
+<cite>-π/2 &lt;= p &lt;= π/2</cite>, <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This new high-accuracy algorithm avoids numerical round-off issues
+encountered by some algorithms when pitch is within 1E-6 of π/2 or
+-π/2.</p>
+</div>
 </dd></dl>
 
 <dl class="method">

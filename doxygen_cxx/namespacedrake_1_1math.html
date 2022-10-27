@@ -396,6 +396,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8a6d10bc0b3dfc5902d0a06f186dba8f">IsPositiveDefinite</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, <a class="el" href="classdouble.html">double</a> eigenvalue_tolerance=0.0, <a class="el" href="classdouble.html">double</a> symmetry_tolerance=0.0)</td></tr>
 <tr class="memdesc:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash;.  <a href="#a8a6d10bc0b3dfc5902d0a06f186dba8f">More...</a><br /></td></tr>
 <tr class="separator:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd054648f2874f8e5a37769758a132b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aedd054648f2874f8e5a37769758a132b"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aedd054648f2874f8e5a37769758a132b">EigenToStdVector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;mat)</td></tr>
+<tr class="memdesc:aedd054648f2874f8e5a37769758a132b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MatrixX&lt;T&gt; into a std::vector&lt;MatrixX&lt;T&gt;&gt;, taking each column of the m-by-n matrix <code>mat</code> into an m-by-1 element of the returned std::vector.  <a href="#aedd054648f2874f8e5a37769758a132b">More...</a><br /></td></tr>
+<tr class="separator:aedd054648f2874f8e5a37769758a132b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea43911b265b0798f5023e520c4ee005"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aea43911b265b0798f5023e520c4ee005"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aea43911b265b0798f5023e520c4ee005">StdVectorToEigen</a> (const std::vector&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;vec)</td></tr>
+<tr class="memdesc:aea43911b265b0798f5023e520c4ee005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a std::vector&lt;MatrixX&lt;T&gt;&gt; into a MatrixX&lt;T&gt;, composing each element of <code>vec</code> into a column of the returned matrix.  <a href="#aea43911b265b0798f5023e520c4ee005">More...</a><br /></td></tr>
+<tr class="separator:aea43911b265b0798f5023e520c4ee005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a48484009086db12d881bea6bcaab2514">NormalizeVector</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;x, typename Derived::PlainObject &amp;x_norm, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 1 &gt;::type *dx_norm=nullptr, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 2 &gt;::type *ddx_norm=nullptr)</td></tr>
 <tr class="memdesc:a48484009086db12d881bea6bcaab2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normalized vector, optionally with its gradient and second derivative.  <a href="#a48484009086db12d881bea6bcaab2514">More...</a><br /></td></tr>
@@ -1620,6 +1628,26 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The gradient G. G is a 3 x N matrix. G(0,j) is the gradient of roll w.r.t x(j) G(1,j) is the gradient of pitch w.r.t x(j) G(2,j) is the gradient of yaw w.r.t x(j) </dd></dl>
+
+</div>
+</div>
+<a id="aedd054648f2874f8e5a37769758a132b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd054648f2874f8e5a37769758a132b">&#9670;&nbsp;</a></span>EigenToStdVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; &gt; drake::math::EigenToStdVector </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a MatrixX&lt;T&gt; into a std::vector&lt;MatrixX&lt;T&gt;&gt;, taking each column of the m-by-n matrix <code>mat</code> into an m-by-1 element of the returned std::vector. </p>
 
 </div>
 </div>
@@ -3619,6 +3647,27 @@ else
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A triplet with the row, column and value of the non-zero entries. See <a href="https://eigen.tuxfamily.org/dox/group__TutorialSparse.html">https://eigen.tuxfamily.org/dox/group__TutorialSparse.html</a> for more information on the triplet </dd></dl>
+
+</div>
+</div>
+<a id="aea43911b265b0798f5023e520c4ee005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea43911b265b0798f5023e520c4ee005">&#9670;&nbsp;</a></span>StdVectorToEigen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; drake::math::StdVectorToEigen </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a std::vector&lt;MatrixX&lt;T&gt;&gt; into a MatrixX&lt;T&gt;, composing each element of <code>vec</code> into a column of the returned matrix. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>all elements of <code>vec</code> must have one column and the same number of rows. </dd></dl>
 
 </div>
 </div>

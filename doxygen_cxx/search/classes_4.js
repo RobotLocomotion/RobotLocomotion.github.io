@@ -73,5 +73,6 @@ var searchData=
   ['expressionuninterpretedfunction',['ExpressionUninterpretedFunction',['../classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html',1,'drake::symbolic']]],
   ['expressionvar',['ExpressionVar',['../classdrake_1_1symbolic_1_1_expression_var.html',1,'drake::symbolic']]],
   ['externallyappliedspatialforce',['ExternallyAppliedSpatialForce',['../structdrake_1_1multibody_1_1_externally_applied_spatial_force.html',1,'drake::multibody']]],
+  ['externallyappliedspatialforcemultiplexer',['ExternallyAppliedSpatialForceMultiplexer',['../classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html',1,'drake::multibody']]],
   ['externalsystemconstraint',['ExternalSystemConstraint',['../classdrake_1_1systems_1_1_external_system_constraint.html',1,'drake::systems']]]
 ];

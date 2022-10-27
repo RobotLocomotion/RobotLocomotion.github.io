@@ -13874,19 +13874,31 @@ contained System <code class="docutils literal notranslate"><span class="pre">su
 <dl class="method">
 <dt id="pydrake.systems.framework.System_.System_[float].GetUniquePeriodicDiscreteUpdateAttribute">
 <code class="descname">GetUniquePeriodicDiscreteUpdateAttribute</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.systems.framework.PeriodicEventData]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].GetUniquePeriodicDiscreteUpdateAttribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets whether there exists a unique periodic attribute that triggers
-one or more discrete update events (and, if so, returns that unique
-periodic attribute). Thus, this method can be used (1) as a test to
-determine whether a system’s dynamics are at least partially governed
-by difference equations and (2) to obtain the difference equation
-update times.</p>
+<dd><p>Determines whether there exists a unique periodic timing (offset and
+period) that triggers one or more discrete update events (and, if so,
+returns that unique periodic timing). Thus, this method can be used
+(1) as a test to determine whether a system’s dynamics are at least
+partially governed by difference equations, and (2) to obtain the
+difference equation update times.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables including discrete variables.) Also, there may be
+trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those. If you are concerned with those, you can use
+GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the periodic trigger
-attributes if the unique periodic attribute exists, otherwise
-<code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the unique periodic trigger
+timing if it exists, otherwise <code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -13933,11 +13945,19 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 <dd><p>Returns true iff the state dynamics of this system are governed
 exclusively by a difference equation on a single discrete state group
 and with a unique periodic update (having zero offset). E.g., it is
-amenable to analysis of the form: x[n+1] = f(x[n], u[n]) Note that we
-do NOT consider the number of input ports here, because in practice
-many systems of interest (e.g. MultibodyPlant) have input ports that
-are safely treated as constant during the analysis. Consider using
-get_input_port_selection() to choose one.</p>
+amenable to analysis of the form:</p>
+<p>x[n+1] = f(x[n], u[n])</p>
+<p>Note that we do NOT consider the number of input ports here, because
+in practice many systems of interest (e.g. MultibodyPlant) have input
+ports that are safely treated as constant during the analysis.
+Consider using get_input_port_selection() to choose one.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In determining whether this system is governed as above, we do not
+consider unrestricted updates or any update events that have
+trigger types other than periodic. See
+GetUniquePeriodicDiscreteUpdateAttribute() for more information.</p>
+</div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_period</span></code>:</dt>
 <dd>if non-null, then iff the function returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, then
@@ -13957,7 +13977,8 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 will have a trigger type of kForced, with no additional data,
 attribute or custom callback. The Simulator can be configured to call
 this in Simulator::Initialize() and at the start of each continuous
-integration step. See the Simulator API for more details.</p>
+integration step (not recommended). See the Simulator API for more
+details.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14832,19 +14853,31 @@ contained System <code class="docutils literal notranslate"><span class="pre">su
 <dl class="method">
 <dt id="pydrake.systems.framework.System_[AutoDiffXd].GetUniquePeriodicDiscreteUpdateAttribute">
 <code class="descname">GetUniquePeriodicDiscreteUpdateAttribute</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.systems.framework.PeriodicEventData]<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].GetUniquePeriodicDiscreteUpdateAttribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets whether there exists a unique periodic attribute that triggers
-one or more discrete update events (and, if so, returns that unique
-periodic attribute). Thus, this method can be used (1) as a test to
-determine whether a system’s dynamics are at least partially governed
-by difference equations and (2) to obtain the difference equation
-update times.</p>
+<dd><p>Determines whether there exists a unique periodic timing (offset and
+period) that triggers one or more discrete update events (and, if so,
+returns that unique periodic timing). Thus, this method can be used
+(1) as a test to determine whether a system’s dynamics are at least
+partially governed by difference equations, and (2) to obtain the
+difference equation update times.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables including discrete variables.) Also, there may be
+trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those. If you are concerned with those, you can use
+GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the periodic trigger
-attributes if the unique periodic attribute exists, otherwise
-<code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the unique periodic trigger
+timing if it exists, otherwise <code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -14891,11 +14924,19 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 <dd><p>Returns true iff the state dynamics of this system are governed
 exclusively by a difference equation on a single discrete state group
 and with a unique periodic update (having zero offset). E.g., it is
-amenable to analysis of the form: x[n+1] = f(x[n], u[n]) Note that we
-do NOT consider the number of input ports here, because in practice
-many systems of interest (e.g. MultibodyPlant) have input ports that
-are safely treated as constant during the analysis. Consider using
-get_input_port_selection() to choose one.</p>
+amenable to analysis of the form:</p>
+<p>x[n+1] = f(x[n], u[n])</p>
+<p>Note that we do NOT consider the number of input ports here, because
+in practice many systems of interest (e.g. MultibodyPlant) have input
+ports that are safely treated as constant during the analysis.
+Consider using get_input_port_selection() to choose one.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In determining whether this system is governed as above, we do not
+consider unrestricted updates or any update events that have
+trigger types other than periodic. See
+GetUniquePeriodicDiscreteUpdateAttribute() for more information.</p>
+</div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_period</span></code>:</dt>
 <dd>if non-null, then iff the function returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, then
@@ -14915,7 +14956,8 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 will have a trigger type of kForced, with no additional data,
 attribute or custom callback. The Simulator can be configured to call
 this in Simulator::Initialize() and at the start of each continuous
-integration step. See the Simulator API for more details.</p>
+integration step (not recommended). See the Simulator API for more
+details.</p>
 </dd></dl>
 
 <dl class="method">
@@ -15788,19 +15830,31 @@ contained System <code class="docutils literal notranslate"><span class="pre">su
 <dl class="method">
 <dt id="pydrake.systems.framework.System_[Expression].GetUniquePeriodicDiscreteUpdateAttribute">
 <code class="descname">GetUniquePeriodicDiscreteUpdateAttribute</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression]</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.systems.framework.PeriodicEventData]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].GetUniquePeriodicDiscreteUpdateAttribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets whether there exists a unique periodic attribute that triggers
-one or more discrete update events (and, if so, returns that unique
-periodic attribute). Thus, this method can be used (1) as a test to
-determine whether a system’s dynamics are at least partially governed
-by difference equations and (2) to obtain the difference equation
-update times.</p>
+<dd><p>Determines whether there exists a unique periodic timing (offset and
+period) that triggers one or more discrete update events (and, if so,
+returns that unique periodic timing). Thus, this method can be used
+(1) as a test to determine whether a system’s dynamics are at least
+partially governed by difference equations, and (2) to obtain the
+difference equation update times.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables including discrete variables.) Also, there may be
+trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those. If you are concerned with those, you can use
+GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the periodic trigger
-attributes if the unique periodic attribute exists, otherwise
-<code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the unique periodic trigger
+timing if it exists, otherwise <code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -15847,11 +15901,19 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 <dd><p>Returns true iff the state dynamics of this system are governed
 exclusively by a difference equation on a single discrete state group
 and with a unique periodic update (having zero offset). E.g., it is
-amenable to analysis of the form: x[n+1] = f(x[n], u[n]) Note that we
-do NOT consider the number of input ports here, because in practice
-many systems of interest (e.g. MultibodyPlant) have input ports that
-are safely treated as constant during the analysis. Consider using
-get_input_port_selection() to choose one.</p>
+amenable to analysis of the form:</p>
+<p>x[n+1] = f(x[n], u[n])</p>
+<p>Note that we do NOT consider the number of input ports here, because
+in practice many systems of interest (e.g. MultibodyPlant) have input
+ports that are safely treated as constant during the analysis.
+Consider using get_input_port_selection() to choose one.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In determining whether this system is governed as above, we do not
+consider unrestricted updates or any update events that have
+trigger types other than periodic. See
+GetUniquePeriodicDiscreteUpdateAttribute() for more information.</p>
+</div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_period</span></code>:</dt>
 <dd>if non-null, then iff the function returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, then
@@ -15871,7 +15933,8 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 will have a trigger type of kForced, with no additional data,
 attribute or custom callback. The Simulator can be configured to call
 this in Simulator::Initialize() and at the start of each continuous
-integration step. See the Simulator API for more details.</p>
+integration step (not recommended). See the Simulator API for more
+details.</p>
 </dd></dl>
 
 <dl class="method">
@@ -16744,19 +16807,31 @@ contained System <code class="docutils literal notranslate"><span class="pre">su
 <dl class="method">
 <dt id="pydrake.systems.framework.System_[float].GetUniquePeriodicDiscreteUpdateAttribute">
 <code class="descname">GetUniquePeriodicDiscreteUpdateAttribute</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.systems.framework.PeriodicEventData]<a class="headerlink" href="#pydrake.systems.framework.System_[float].GetUniquePeriodicDiscreteUpdateAttribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets whether there exists a unique periodic attribute that triggers
-one or more discrete update events (and, if so, returns that unique
-periodic attribute). Thus, this method can be used (1) as a test to
-determine whether a system’s dynamics are at least partially governed
-by difference equations and (2) to obtain the difference equation
-update times.</p>
+<dd><p>Determines whether there exists a unique periodic timing (offset and
+period) that triggers one or more discrete update events (and, if so,
+returns that unique periodic timing). Thus, this method can be used
+(1) as a test to determine whether a system’s dynamics are at least
+partially governed by difference equations, and (2) to obtain the
+difference equation update times.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables including discrete variables.) Also, there may be
+trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those. If you are concerned with those, you can use
+GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the periodic trigger
-attributes if the unique periodic attribute exists, otherwise
-<code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">optional&lt;PeriodicEventData&gt; Contains the unique periodic trigger
+timing if it exists, otherwise <code class="docutils literal notranslate"><span class="pre">nullopt</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -16803,11 +16878,19 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 <dd><p>Returns true iff the state dynamics of this system are governed
 exclusively by a difference equation on a single discrete state group
 and with a unique periodic update (having zero offset). E.g., it is
-amenable to analysis of the form: x[n+1] = f(x[n], u[n]) Note that we
-do NOT consider the number of input ports here, because in practice
-many systems of interest (e.g. MultibodyPlant) have input ports that
-are safely treated as constant during the analysis. Consider using
-get_input_port_selection() to choose one.</p>
+amenable to analysis of the form:</p>
+<p>x[n+1] = f(x[n], u[n])</p>
+<p>Note that we do NOT consider the number of input ports here, because
+in practice many systems of interest (e.g. MultibodyPlant) have input
+ports that are safely treated as constant during the analysis.
+Consider using get_input_port_selection() to choose one.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In determining whether this system is governed as above, we do not
+consider unrestricted updates or any update events that have
+trigger types other than periodic. See
+GetUniquePeriodicDiscreteUpdateAttribute() for more information.</p>
+</div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_period</span></code>:</dt>
 <dd>if non-null, then iff the function returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, then
@@ -16827,7 +16910,8 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 will have a trigger type of kForced, with no additional data,
 attribute or custom callback. The Simulator can be configured to call
 this in Simulator::Initialize() and at the start of each continuous
-integration step. See the Simulator API for more details.</p>
+integration step (not recommended). See the Simulator API for more
+details.</p>
 </dd></dl>
 
 <dl class="method">

@@ -19,6 +19,9 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "externally_applied_spatial_force.h", "externally__applied__spatial__force_8h.html", [
       [ "ExternallyAppliedSpatialForce", "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html", "structdrake_1_1multibody_1_1_externally_applied_spatial_force" ]
     ] ],
+    [ "externally_applied_spatial_force_multiplexer.h", "externally__applied__spatial__force__multiplexer_8h.html", [
+      [ "ExternallyAppliedSpatialForceMultiplexer", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer" ]
+    ] ],
     [ "hydroelastic_contact_info.h", "hydroelastic__contact__info_8h.html", [
       [ "HydroelasticContactInfo", "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html", "classdrake_1_1multibody_1_1_hydroelastic_contact_info" ]
     ] ],

@@ -1,5 +1,12 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#a56e6fe46c8fdccc5a5945f778e80f018":[3,0,0,14,2,5],
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#a5ce6eb5b762cd581bb03d3a31775d1e1":[3,0,0,14,2,4],
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#aab9edba21b7a369d72b0334c04bad28e":[3,0,0,14,2,11],
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#aca338a7a2c8ecd216011a79c58e96349":[3,0,0,14,2,2],
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#ae5b1bd4761bd78ce8829c5e9073d67c8":[3,0,0,14,2,1],
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af71bc0054d63faf609fc493b47ec55db":[3,0,0,14,2,0],
+"classdrake_1_1solvers_1_1_binding.html":[3,0,0,14,3],
 "classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[3,0,0,14,3,3],
 "classdrake_1_1solvers_1_1_binding.html#a16a29060a22052fd99eeea242a14627a":[3,0,0,14,3,8],
 "classdrake_1_1solvers_1_1_binding.html#a236729b642e241e5c611e09dba8951d2":[3,0,0,14,3,11],
@@ -242,12 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1solvers_1_1_ipopt_solver.html#ac7f38cbeaed26717b3b9a8ee8595add5":[3,0,0,14,23,8],
 "classdrake_1_1solvers_1_1_ipopt_solver.html#ae3ba02c661d1f13cf2059642d34b5792":[3,0,0,14,23,4],
 "classdrake_1_1solvers_1_1_ipopt_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,23,11],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html":[1,1,0,36],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#a17be3710c66eca9567f09c640fd2ba41":[1,1,0,36,10],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#a1a0e4dcd0603f7c7ed930fa928087d54":[1,1,0,36,1],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc":[1,1,0,36,12],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,36,9],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#a853b185d1359bf1ed3e8bc1da9a9cb89":[1,1,0,36,2],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,36,7],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#a98c1be79276d7ddb736e1e17b9d4ab0d":[1,1,0,36,3]
+"classdrake_1_1solvers_1_1_l1_norm_cost.html":[1,1,0,36]
 };
