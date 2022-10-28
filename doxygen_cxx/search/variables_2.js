@@ -16,6 +16,7 @@ var searchData=
   ['color',['color',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a99fd5bfdf69925c53ed14a93a238065f',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
   ['commanded_5ffeedforward_5ftorque',['commanded_feedforward_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a37e70b641d41e69afa412de1fed01fe3',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]],
   ['commanded_5fpositions',['commanded_positions',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a64757f7b61980665cf6b5cd1efe1eb5b',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]],
+  ['configuration_5fobstacles',['configuration_obstacles',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6',1,'drake::geometry::optimization::IrisOptions']]],
   ['configuration_5fspace_5fmargin',['configuration_space_margin',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db',1,'drake::geometry::optimization::IrisOptions']]],
   ['constrain_5forientation',['constrain_orientation',['../structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a063aefa11fdbf773814f73dbf1fabd64',1,'drake::manipulation::planner::ConstraintRelaxingIk::IkCartesianWaypoint']]],
   ['contact_5fmodel',['contact_model',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#aa0f273688f2f9252eca8098377a5ea10',1,'drake::multibody::MultibodyPlantConfig']]],

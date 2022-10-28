@@ -322,6 +322,7 @@ var searchData=
   ['cond_2eh',['cond.h',['../cond_8h.html',1,'']]],
   ['conditiontraits_3c_20symbolic_3a_3aformula_20_3e',['ConditionTraits&lt; symbolic::Formula &gt;',['../structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html',1,'drake::assert']]],
   ['config',['config',['../classdrake_1_1multibody_1_1_door_hinge.html#aee83a80b0d92bc66464b6eadd01658f9',1,'drake::multibody::DoorHinge']]],
+  ['configuration_5fobstacles',['configuration_obstacles',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6',1,'drake::geometry::optimization::IrisOptions']]],
   ['configuration_5fspace_5fmargin',['configuration_space_margin',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db',1,'drake::geometry::optimization::IrisOptions']]],
   ['configuration_5fticket',['configuration_ticket',['../classdrake_1_1systems_1_1_system_base.html#a28830dced98dcdc1f498d8d250db0ae4',1,'drake::systems::SystemBase']]],
   ['configure_5fdefault_5fstate',['configure_default_state',['../classdrake_1_1systems_1_1_time_varying_affine_system.html#a2778272c29091f01050df5124f2560c7',1,'drake::systems::TimeVaryingAffineSystem']]],

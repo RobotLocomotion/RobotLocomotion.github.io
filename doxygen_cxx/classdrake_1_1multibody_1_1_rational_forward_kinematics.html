@@ -170,7 +170,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_rational_f
 <div class="textblock"><p>For certain robots (whose joint transforms are algebraic functions of joint variables, for example revolute/prismatic/floating-base joints), we can represent the pose (position, orientation) of each body, as rational functions, namely n(s) / d(s) where both the numerator n(s) and denominator d(s) are polynomials of s, and s is some variable related to the generalized position. </p>
 <p>One example is that for a rotation matrix with angle θ and axis a, the rotation matrix can be written as I + sinθ A + (1-cosθ) A², where A is the skew-symmetric matrix from axis a. We can use the stereographic projection to substitute the trigonometric function sinθ and cosθ as cosθ = cos(θ*+Δθ) = cos(θ*)•cos(Δθ) - sin(θ*)•sin(Δθ) = (1-s²)/(1+s²) cos(θ*)- 2s/(1+s²) sin(θ*) (1) sinθ = sin(θ*+Δθ) = sin(θ*)•cos(Δθ) - cos(θ*)•sin(Δθ) = (1-s²)/(1+s²) sin(θ*)- 2s/(1+s²) cos(θ*) (2) where θ* is the angle around which we take the stereographic projection. θ = θ*+Δθ, and s = tan(Δθ/2). With (1) and (2), both sinθ and cosθ are written as a rational function of s. Thus the rotation matrix can be written as rational functions of s.</p>
 <p>We will use q* to denote the nominal posture. For a revolute joint, the q* is the variable θ*. Note that the stereographic projection has a singularity at θ = θ* ± π, as s = tan(Δθ/2)=tan(±π/2) is ±infinity.</p>
-<p>Currently we only support robots with revolute and weld joints.</p>
+<p>For prismatic joint, we define s = d - d*, where d is the displacement of the joint, and d* is the joint value in q*.</p>
+<p>Currently we only support robots with revolute, prismatic and weld joints.</p>
 <p>Throughout this file, we use the following convention</p><ol type="1">
 <li>q denotes the generalized position of the entire robot. It includes the angle of a revolute joint, the displacement of a prismatic joint, etc.</li>
 <li>θ denotes the revolute joint angle.</li>
@@ -194,15 +195,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3b2e4244a8a8f1a59a720eb1994d7d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pose X_AB as a multilinear polynomial function.  <a href="#a3b2e4244a8a8f1a59a720eb1994d7d7b">More...</a><br /></td></tr>
 <tr class="separator:a3b2e4244a8a8f1a59a720eb1994d7d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d7bf899c5b65ecbc2169089be5086f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3">ConvertMultilinearPolynomialToRationalFunction</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;e) const</td></tr>
-<tr class="memdesc:a1d7bf899c5b65ecbc2169089be5086f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>.  <a href="#a1d7bf899c5b65ecbc2169089be5086f3">More...</a><br /></td></tr>
+<tr class="memdesc:a1d7bf899c5b65ecbc2169089be5086f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s()</a>.  <a href="#a1d7bf899c5b65ecbc2169089be5086f3">More...</a><br /></td></tr>
 <tr class="separator:a1d7bf899c5b65ecbc2169089be5086f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47ae675822fc6ab4016c0fe093346bb8"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a47ae675822fc6ab4016c0fe093346bb8">ComputeSValue</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_val, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star_val) const</td></tr>
 <tr class="memdesc:a47ae675822fc6ab4016c0fe093346bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes values of s from q_val and q_star_val, while handling the index matching between q and s (we don't guarantee that s(i) is computed from q(i)).  <a href="#a47ae675822fc6ab4016c0fe093346bb8">More...</a><br /></td></tr>
 <tr class="separator:a47ae675822fc6ab4016c0fe093346bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5001e433b72f3005d744a7b9b71cc529"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529">plant</a> () const</td></tr>
 <tr class="separator:a5001e433b72f3005d744a7b9b71cc529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af24c0eea31bde4b70102fe16f99c39be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s</a> () const</td></tr>
-<tr class="separator:af24c0eea31bde4b70102fe16f99c39be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851ee363d02555f11f4d45d8056b072a"><td class="memItemLeft" align="right" valign="top">Eigen::Map&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s</a> () const</td></tr>
+<tr class="separator:a851ee363d02555f11f4d45d8056b072a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ae2f64cf4a62743cda2f74fff57f1c224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224">RationalForwardKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;)=delete</td></tr>
 <tr class="separator:ae2f64cf4a62743cda2f74fff57f1c224"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -332,7 +333,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Computes the pose X_AB as a multilinear polynomial function. </p>
-<p>The indeterminates of the polynomials are cos_delta() and sin_delta(). To compute the pose as a rational function of indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>, we recommend to first call this function to compute the pose as a multilinear polynomial functions, and then call <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3" title="Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is...">ConvertMultilinearPolynomialToRationalFunction()</a> to convert these polynomials to rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The indeterminates of the polynomials are cos_delta() and sin_delta(). To compute the pose as a rational function of indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s()</a>, we recommend to first call this function to compute the pose as a multilinear polynomial functions, and then call <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3" title="Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is...">ConvertMultilinearPolynomialToRationalFunction()</a> to convert these polynomials to rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">q_star</td><td>The nominal posture q*. </td></tr>
     <tr><td class="paramname">body_index</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> B, the body whose pose is computed. </td></tr>
@@ -390,7 +391,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be">s()</a>. </p>
+<p>Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s()</a>. </p>
 
 </div>
 </div>
@@ -463,14 +464,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af24c0eea31bde4b70102fe16f99c39be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af24c0eea31bde4b70102fe16f99c39be">&#9670;&nbsp;</a></span>s()</h2>
+<a id="a851ee363d02555f11f4d45d8056b072a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a851ee363d02555f11f4d45d8056b072a">&#9670;&nbsp;</a></span>s()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;&amp; s </td>
+          <td class="memname">Eigen::Map&lt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt; &gt; s </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

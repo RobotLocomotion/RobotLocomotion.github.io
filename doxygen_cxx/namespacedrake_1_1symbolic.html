@@ -1661,7 +1661,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad88f58019962d307b9da7ebc9d32ec87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the variables representing sine and cosine functions with their stereographic projection.  <a href="#ad88f58019962d307b9da7ebc9d32ec87">More...</a><br /></td></tr>
 <tr class="separator:ad88f58019962d307b9da7ebc9d32ec87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74fae4346c33bfaf11326fcd6a85bd7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a74fae4346c33bfaf11326fcd6a85bd7e">SubstituteStereographicProjection</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;subs)</td></tr>
-<tr class="memdesc:a74fae4346c33bfaf11326fcd6a85bd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes sine and cosine function with their stereographic projection.  <a href="#a74fae4346c33bfaf11326fcd6a85bd7e">More...</a><br /></td></tr>
+<tr class="memdesc:a74fae4346c33bfaf11326fcd6a85bd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a74fae4346c33bfaf11326fcd6a85bd7e">More...</a><br /></td></tr>
 <tr class="separator:a74fae4346c33bfaf11326fcd6a85bd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -12555,16 +12555,18 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div><div class="memdoc">
 
 <p>Substitutes the variables representing sine and cosine functions with their stereographic projection. </p>
-<p>If e is a multilinear polynomial of cosθ and sinθ, and no cosθᵢ and sinθᵢ appear in the same monomial, then we replace cosθᵢ with (1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²), and get a rational polynomial of t. If the input expression doesn't contain the sine and cosine functions, then the returned rational has denominator being 1. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>For the moment, we put the following requirement on <code>e</code>: If the indeterminates of <code>e</code> include cosθ and sinθ, then e is a multilinear polynomial of cosθ and sinθ, in which cosθᵢ and sinθᵢ do not appear in the same monomial for any i. When this requirement is satisfied, we replace cosθᵢ with (1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²), and get a rational polynomial. The indeterminates of this rational polynomial are t together with the indeterminates in <code>e</code> that are not cosθ or sinθ. If the input expression doesn't contain the sine and cosine functions, then the returned rational has denominator being 1. Notice that the indeterminates of <code>e</code> can include variables other than cosθ and sinθ, and we impose no requirements on these variables that are not cosθ or sinθ.</p>
+<p>For example, e = x²ysinθ₁cosθ₂ + 3xsinθ₂cosθ₃ is a valid input. e = sinθ₁cosθ₁ + 1 is not valid because both an sinθ₁ and cosθ₁ appear in the same monomial. e = sin²θ₁ is not a valid input because it is quadratic in sinθ₁.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>The symbolic polynomial to be substituted. Note that e has to be a multilinear polynomial of variables in <code>sin_cos</code>, namely e.indeterminates() is a subset of all the variables in <code>sin_cos</code>, and no sin_cos[i].s and sin_cos[i].c appear in the same monomial. Namely that e can be sin_cos[0].s * sin_cos[1].c + 1 or t[0]*sin_cos[0].s * sin_cos[1].c + 1 (note t can also appear in e), but cannot be sin_cos[0].s * sin_cos[0].c (where sin_cos[0].s and sin_cos[0].c appear in the same monomial) or pow(sin_cos[0].s, 2) (where the degree or sin_cos[0].s is larger than 1). </td></tr>
+    <tr><td class="paramname">e</td><td>The symbolic polynomial to be substituted. Note that e has to be a multilinear polynomial of variables in <code>sin_cos</code>, namely inside each monomial m, m.degree(sin_cos[i].c) &lt;= 1, m.degree(sin_cos[i].s) &lt;= 1, and no sin_cos[i].s and sin_cos[i].c appear in the same monomial. Namely that e can be sin_cos[0].s * sin_cos[1].c + 1 or t[0]*sin_cos[0].s * sin_cos[1].c + 1 (note t can also appear in e), but cannot be sin_cos[0].s * sin_cos[0].c (where sin_cos[0].s and sin_cos[0].c appear in the same monomial) or pow(sin_cos[0].s, 2) (where the degree or sin_cos[0].s is larger than 1). </td></tr>
     <tr><td class="paramname">sin_cos</td><td>sin_cos(i) is the pair of variables (sᵢ, cᵢ), (where sᵢ=sinθᵢ, cᵢ=cosθᵢ) as documented above. </td></tr>
     <tr><td class="paramname">t</td><td>New variables to express cos and sin as rationals of t. tᵢ = tan(θᵢ/2). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>t.rows() == sin_cos.size() </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>e_rational The rational polynomial of e after replacement. The indeterminates of the polynomials are <code>t</code>. Example <pre class="fragment">* std::vector&lt;SinCos&gt; sin_cos;
+<dl class="section return"><dt>Returns</dt><dd>e_rational The rational polynomial of e after replacement. The indeterminates of the polynomials are <code>t</code> together with the indeterminates in <code>e</code> that are not cosθ or sinθ. Example <pre class="fragment">* std::vector&lt;SinCos&gt; sin_cos;
 * sin_cos.emplace_back(symbolic::Variable("s0"), symbolic::Variable("c0"));
 * sin_cos.emplace_back(symbolic::Variable("s1"), symbolic::Variable("c1"));
 * Vector2&lt;symbolic::Variable&gt; t(symbolic::Variable("t0"),
@@ -12606,24 +12608,10 @@ we do not provide operator*= function for this class, since operator*= would ret
       </table>
 </div><div class="memdoc">
 
-<p>Substitutes sine and cosine function with their stereographic projection. </p>
-<p>If e is a multilinear polynomial of cosθ and sinθ, and no cosθᵢ and sinθᵢ appear in the same monomial, then we replace cosθᵢ with (1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²), and get a rational polynomial of t. If the input expression doesn't contain the sine and cosine functions, then the returned rational has denominator being 1. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">e</td><td>The symbolic expression to be substituted. Note that e has to be a multilinear polynomial of cosθ and sinθ, and no cosθᵢ and sinθᵢ appear in the same monomial. Namely that e can be cosθ₁sinθ₂ + sinθ₂ or t₁cosθ₁sinθ₂ + sinθ₂ (note that t can also appear in e), but cannot be sinθ₁cosθ₁ (where sinθ₁ and cosθ₁ appear in the same monomial) or sin²θ₁ (where the degree or sinθ₁ is larger than 1). </td></tr>
-    <tr><td class="paramname">subs</td><td>Correspond each θᵢ to tᵢ, we will replace cosθᵢ with (1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>e_rational The rational polynomial after replacing cosθᵢ with (1-tᵢ²)/(1+tᵢ²), and sinθᵢ with 2tᵢ/(1+tᵢ²). The indeterminates of the rational polynomials are t.</dd></dl>
-<p>Example </p><pre class="fragment">* const symbolic::Variable theta1("theta1");
-* const symbolic::Variable theta2("theta1");
-* const symbolic::Variable t1{"t1");
-* const symbolic::Variable t2{"t2");
-* const auto e_rational = SubstituteStereographicProjection(t1 *
-*     sin(theta1)*cos(theta2) + 1, {{theta1, t1}, {theta2, t2}});
-* // The result of e_rational is
-* // (2t₁²(1−t₂²) + (1+t₁²)(1+t₂²)) / ((1+t₁²)(1+t₂²))
-* </pre> 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use the other SubstituteStereographicProjection which passes  e as a symbolic::Polynomial <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
+
 </div>
 </div>
 <a id="a78354ef5dda9c52bbc103d57712c303e"></a>

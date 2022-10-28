@@ -142,6 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.visualization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.visualization.meldis.html">pydrake.visualization.meldis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.visualization.model_visualizer.html">pydrake.visualization.model_visualizer</a></li>
 </ul>
 </li>
 </ul>
@@ -211,6 +212,7 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.meldis.html">pydrake.visualization.meldis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.model_visualizer.html">pydrake.visualization.model_visualizer</a></li>
 </ul>
 </div>
 <span class="target" id="module-pydrake.visualization"></span><p>Bindings for Visualization.</p>
@@ -349,6 +351,120 @@ named “plant” or else the provided <code class="docutils literal notranslate
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.visualization.ColorizeDepthImage">
+<em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">ColorizeDepthImage</code><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Converts a depth image to a color image.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">depth_image_32f&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeDepthImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Depth measurements are linearly mapped to a grayscale palette, with smaller
+(closer) values brighter and larger (further) values darker.</p>
+<p>The dynamic range of each input image determines the scale. The pixel with
+the smallest depth will be fully white (#FFFFFFFF), and largest depth will
+be fully black (#000000FF). Note that alpha channel is still 100% in both
+cases.</p>
+<p>Because the dynamic range is measured one input image a time, take note
+that a video recording of this System will not have consistent scaling
+across its entirety. The ability to set a fixed palette is future work.</p>
+<p>For the special depth pixel values “too close” or “too far”, the color
+pixel will use the <code class="docutils literal notranslate"><span class="pre">invalid_color</span></code> property (by default, a dim red).</p>
+<dl class="method">
+<dt id="pydrake.visualization.ColorizeDepthImage.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float]) -&gt; None</li>
+</ol>
+<p>Default constructor that declares no inputs, outputs, state,
+parameters, events, nor scalar-type conversion support (AutoDiff,
+etc.). To enable AutoDiff support, use the SystemScalarConverter-based
+constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float], converter: pydrake.systems.framework.SystemScalarConverter) -&gt; None</li>
+</ol>
+<p>Constructor that declares no inputs, outputs, state, parameters, or
+events, but allows subclasses to declare scalar-type conversion
+support (AutoDiff, etc.).</p>
+<p>The scalar-type conversion support will use <code class="docutils literal notranslate"><span class="pre">converter</span></code>. To enable
+scalar-type conversion support, pass a <code class="docutils literal notranslate"><span class="pre">SystemTypeTag&lt;S&gt;{}</span></code> where
+<code class="docutils literal notranslate"><span class="pre">S</span></code> must be the exact class of <code class="docutils literal notranslate"><span class="pre">this</span></code> being constructed.</p>
+<p>See system_scalar_conversion for detailed background and examples
+related to scalar-type conversion support.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.visualization.ColorizeLabelImage">
+<em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">ColorizeLabelImage</code><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Converts a label image to a color image.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">label_image&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeLabelImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Labels are mapped to colors with a built-in, fixed palette.</p>
+<p>For label pixels that do not represent a label (“don’t care”, “empty”,
+“unspecified”, etc.), the color pixel will use the <code class="docutils literal notranslate"><span class="pre">background_color</span></code>
+property (by default, black with 0% alpha).</p>
+<dl class="method">
+<dt id="pydrake.visualization.ColorizeLabelImage.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float]) -&gt; None</li>
+</ol>
+<p>Default constructor that declares no inputs, outputs, state,
+parameters, events, nor scalar-type conversion support (AutoDiff,
+etc.). To enable AutoDiff support, use the SystemScalarConverter-based
+constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float], converter: pydrake.systems.framework.SystemScalarConverter) -&gt; None</li>
+</ol>
+<p>Constructor that declares no inputs, outputs, state, parameters, or
+events, but allows subclasses to declare scalar-type conversion
+support (AutoDiff, etc.).</p>
+<p>The scalar-type conversion support will use <code class="docutils literal notranslate"><span class="pre">converter</span></code>. To enable
+scalar-type conversion support, pass a <code class="docutils literal notranslate"><span class="pre">SystemTypeTag&lt;S&gt;{}</span></code> where
+<code class="docutils literal notranslate"><span class="pre">S</span></code> must be the exact class of <code class="docutils literal notranslate"><span class="pre">this</span></code> being constructed.</p>
+<p>See system_scalar_conversion for detailed background and examples
+related to scalar-type conversion support.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.visualization.ConcatenateImages">
+<em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">ConcatenateImages</code><span class="sig-paren">(</span><em>*</em>, <em>rows=1</em>, <em>cols=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Stacks multiple input images into a single output image.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">color_image_r0_c0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">color_image_r0_c1&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConcatenateImages</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>As currently implemented, all inputs must be of type ImageRgba8U, must
+have identical width and height, and all ports must be connected (i.e.,
+with no gaps in the grid of rows x cols). Any of those conditions could
+be generalized as future work.</p>
+<dl class="method">
+<dt id="pydrake.visualization.ConcatenateImages.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*</em>, <em>rows=1</em>, <em>cols=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a ConcatenateImages system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rows</strong> – Number of images to stack vertically.</li>
+<li><strong>cols</strong> – Number of images to stack horizontally.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.ConcatenateImages.get_input_port">
+<code class="descname">get_input_port</code><span class="sig-paren">(</span><em>*</em>, <em>row</em>, <em>col</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.get_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the InputPort for the given (row, col) image.</p>
+<p>Rows and columns are 0-indexed, i.e., we have <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">row</span> <span class="pre">&lt;</span> <span class="pre">rows</span></code> and
+<code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">col</span> <span class="pre">&lt;</span> <span class="pre">cols</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.visualization.Meldis">
 <em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">Meldis</code><span class="sig-paren">(</span><em>*</em>, <em>meshcat_host=None</em>, <em>meshcat_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.Meldis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -371,6 +487,162 @@ default.</p>
 <p>If provided, the optional idle_timeout must be strictly positive and
 this loop will sys.exit after that many seconds without any websocket
 connections.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.visualization.ModelVisualizer">
+<em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">ModelVisualizer</code><span class="sig-paren">(</span><em>*</em>, <em>visualize_frames=False</em>, <em>triad_length=0.5</em>, <em>triad_radius=0.01</em>, <em>triad_opacity=1</em>, <em>publish_contacts=True</em>, <em>browser_new=False</em>, <em>pyplot=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Visualizes models from a file or string buffer in Drake Visualizer,
+meldis, or MeshCat.</p>
+<p>To use this class to visualize model(s), create an instance with
+any desired options, add any models, and then call Run():</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visualizer</span> <span class="o">=</span> <span class="n">ModelVisualizer</span><span class="p">(</span><span class="n">browser_new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The class also provides a <cite>parser</cite> property to allow more complex
+Parser handling, e.g. adding a model from a string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visualizer</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">AddModelsFromString</span><span class="p">(</span><span class="n">buffer_containing_model</span><span class="p">,</span> <span class="s1">&#39;sdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This class may also be run as a standalone command-line tool using the
+<code class="docutils literal notranslate"><span class="pre">pydrake.visualization.model_visualizer</span></code> script, or via
+<code class="docutils literal notranslate"><span class="pre">bazel</span> <span class="pre">run</span> <span class="pre">//tools:model_visualizer</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.visualization.ModelVisualizer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*</em>, <em>visualize_frames=False</em>, <em>triad_length=0.5</em>, <em>triad_radius=0.01</em>, <em>triad_opacity=1</em>, <em>publish_contacts=True</em>, <em>browser_new=False</em>, <em>pyplot=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a ModelVisualizer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>visualize_frames</strong> – a flag that visualizes frames as triads for all
+links.</li>
+<li><strong>triad_length</strong> – the length of visualization triads.</li>
+<li><strong>triad_radius</strong> – the radius of visualization triads.</li>
+<li><strong>triad_opacity</strong> – the opacity of visualization triads.</li>
+<li><strong>publish_contacts</strong> – a flag for VisualizationConfig.</li>
+<li><strong>browser_new</strong> – a flag that will open the MeshCat display in a new
+browser window.</li>
+<li><strong>pyplot</strong> – a flag that will open a pyplot figure for rendering using
+PlanarSceneGraphVisualizer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.ModelVisualizer.AddModels">
+<code class="descname">AddModels</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.AddModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds all models found in an input file.</p>
+<p>This can be called multiple times, until the object is finalized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> – the name of a file containing one or more models.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.browser_new">
+<code class="descname">browser_new</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.browser_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <cite>browser_new</cite> passed to the constructor, or the default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.ModelVisualizer.Finalize">
+<code class="descname">Finalize</code><span class="sig-paren">(</span><em>position=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.Finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finalizes the object and sets up the visualization using the provided
+options once models have been added.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> – a list of slider positions for the model(s); must match
+the number of positions in all model(s), including the 7 positions
+corresponding to any model bases that aren’t welded to the world.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.parser">
+<code class="descname">parser</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>The internal Parser instance.</p>
+<p>This property is only valid until Finalize is called.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.publish_contacts">
+<code class="descname">publish_contacts</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.publish_contacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <cite>publish_contacts</cite> passed to the constructor, or the
+default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.pyplot">
+<code class="descname">pyplot</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.pyplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <cite>pyplot</cite> passed to the constructor, or the default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.ModelVisualizer.Run">
+<code class="descname">Run</code><span class="sig-paren">(</span><em>position=None</em>, <em>loop_once=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.Run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the model. If Finalize() hasn’t already been explicitly called
+then the object will be finalized first.</p>
+<p>Will iterate once and exit if <cite>loop_once</cite> is True, otherwise will
+loop until the user quits.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>position</strong> – an ndarray-like list of slider positions for the model(s);
+must match the number of positions in all model(s), including the
+7 positions corresponding to any model bases that aren’t welded to
+the world.</li>
+<li><strong>loop_once</strong> – a flag that exits the evaluation loop after one pass.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.triad_length">
+<code class="descname">triad_length</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.triad_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <cite>triad_length</cite> passed to the constructor, or the default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.triad_opacity">
+<code class="descname">triad_opacity</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.triad_opacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <cite>triad_opacity</cite> passed to the constructor, or the default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.triad_radius">
+<code class="descname">triad_radius</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.triad_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <cite>triad_radius</cite> passed to the constructor, or the default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.ModelVisualizer.visualize_frames">
+<code class="descname">visualize_frames</code><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.visualize_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <cite>visualize_frames</cite> passed to the constructor, or the
+default.</p>
 </dd></dl>
 
 </dd></dl>
@@ -422,6 +694,135 @@ the one sub-level set of a quadratic form.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.visualization.VideoWriter">
+<em class="property">class </em><code class="descclassname">pydrake.visualization.</code><code class="descname">VideoWriter</code><span class="sig-paren">(</span><em>*</em>, <em>filename</em>, <em>fps=16.0</em>, <em>backend='PIL'</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Publishes RgbdSensor output to a video file.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">color_image&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VideoWriter</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The video will contain recorded images from the color_image input port.</p>
+<p>The methods AddToBuilder() or ConnectToRgbdSensor() make it easy to record
+color and/or depth and/or labels all at once.  For companion systems, see
+also ColorizeDepthImage, ColorizeLabelImage, and ConcatenateImages.</p>
+<p>This class delegates actual video output to one of two video backends,
+either “PIL” (aka Pillow) or “cv2”. PIL generally only supports image
+formats (e.g., gif, apng, webp) while cv2 also supports movies (e.g., mp4).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Once all images have been published, you must call
+<code class="docutils literal notranslate"><span class="pre">video_writer.Save()</span></code> to finish writing to the video file.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This class will fail at construction time if the specified <code class="docutils literal notranslate"><span class="pre">backend</span></code>
+module cannot be imported. You must ensure that whichever backend you
+choose is available in your environment. Drake neither bundles nor
+depends on either one.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Drake is currently not compatible with the Ubuntu 22.04 package of
+<code class="docutils literal notranslate"><span class="pre">python3-opencv</span></code> due to VTK conflicts (see drake#16502).</p>
+</div>
+<dl class="method">
+<dt id="pydrake.visualization.VideoWriter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*</em>, <em>filename</em>, <em>fps=16.0</em>, <em>backend='PIL'</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a VideoWriter system.</p>
+<p>In many cases, the AddToBuilder() or ConnectRgbdSensor() methods might
+be easier to use than this constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> – filename to write, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;output.gif&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;output.mp4&quot;</span></code></li>
+<li><strong>fps</strong> – the output video’s frame rate (in frames per second)</li>
+<li><strong>backend</strong> – which backend to use: “PIL” or “cv2”</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.visualization.VideoWriter.AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*</em>, <em>filename</em>, <em>builder</em>, <em>sensor_pose</em>, <em>fps=16.0</em>, <em>width=320</em>, <em>height=240</em>, <em>fov_y=0.5235987755982988</em>, <em>near=0.01</em>, <em>far=10.0</em>, <em>kinds=None</em>, <em>backend='PIL'</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a RgbdSensor and VideoWriter system to the given builder, using
+a world-fixed pose. Returns the VideoWriter system.</p>
+<p>See also ConnectRgbdSensor() in case you want to attach a VideoWriter
+to an already existing RgbdSensor (e.g., on attached to a robot).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> – filename to write, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;output.gif&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;output.mp4&quot;</span></code></li>
+<li><strong>builder</strong> – the DiagramBuilder</li>
+<li><strong>sensor_pose</strong> – the world-fixed position for the video camera</li>
+<li><strong>fps</strong> – the output video’s frame rate (in frames per second)</li>
+<li><strong>width</strong> – video camera width (in pixels)</li>
+<li><strong>height</strong> – video camera width (in pixels)</li>
+<li><strong>fov_y</strong> – video camera fov (in radians)</li>
+<li><strong>near</strong> – clipping plane distance (in meters)</li>
+<li><strong>far</strong> – clipping plane distance (in meters)</li>
+<li><strong>kinds</strong> – which image kind(s) to include in the video; valid
+options are <code class="docutils literal notranslate"><span class="pre">&quot;color&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;label&quot;</span></code>, and/or <code class="docutils literal notranslate"><span class="pre">&quot;depth&quot;</span></code></li>
+<li><strong>backend</strong> – which backend to use: “PIL” or “cv2”.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Once all images have been published, you must call
+<code class="docutils literal notranslate"><span class="pre">video_writer.Save()</span></code> to finish writing to the video file.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.VideoWriter.ConnectRgbdSensor">
+<code class="descname">ConnectRgbdSensor</code><span class="sig-paren">(</span><em>*</em>, <em>builder</em>, <em>sensor</em>, <em>kinds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.ConnectRgbdSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a VideoWriter system to the given builder and connects it to
+the given RgbdSensor. Returns the VideoWriter system.</p>
+<p>See also AddToBuilder() in case you want to record video from a world-
+fixed pose by creating a new sensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>builder</strong> – the DiagramBuilder</li>
+<li><strong>kinds</strong> – which image kind(s) to include in the video; valid
+options are <code class="docutils literal notranslate"><span class="pre">&quot;color&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;label&quot;</span></code>, and/or <code class="docutils literal notranslate"><span class="pre">&quot;depth&quot;</span></code>;
+when set to <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">&quot;color&quot;</span></code> only.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Once all images have been published, you must call
+<code class="docutils literal notranslate"><span class="pre">video_writer.Save()</span></code> to finish writing to the video file.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.VideoWriter.Save">
+<code class="descname">Save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.Save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flushes all images to the video file and closes the file.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Continuing a simulation after calling Save() will begin to
+overwrite the prior video with a new one.</p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">

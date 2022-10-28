@@ -10,5 +10,5 @@ var classdrake_1_1multibody_1_1_rational_forward_kinematics =
     [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ac73a5a06e9d73c1e5c761e7accee6265", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af561a8c971a66f869986c5e4429352c3", null ],
     [ "plant", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529", null ],
-    [ "s", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af24c0eea31bde4b70102fe16f99c39be", null ]
+    [ "s", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a", null ]
 ];

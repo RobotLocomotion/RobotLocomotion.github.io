@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pydrake.visualization.meldis &mdash; pydrake  documentation</title>
+  <title>pydrake.visualization.model_visualizer &mdash; pydrake  documentation</title>
   
 
   
@@ -37,8 +37,7 @@
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pydrake.visualization.model_visualizer" href="pydrake.visualization.model_visualizer.html" />
-    <link rel="prev" title="pydrake.visualization" href="pydrake.visualization.html" /> 
+    <link rel="prev" title="pydrake.visualization.meldis" href="pydrake.visualization.meldis.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -141,8 +140,8 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.visualization.meldis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.visualization.model_visualizer.html">pydrake.visualization.model_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.visualization.meldis.html">pydrake.visualization.meldis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.visualization.model_visualizer</a></li>
 </ul>
 </li>
 </ul>
@@ -192,7 +191,7 @@
         
           <li><a href="pydrake.visualization.html">pydrake.visualization</a> &raquo;</li>
         
-      <li>pydrake.visualization.meldis</li>
+      <li>pydrake.visualization.model_visualizer</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -209,41 +208,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-pydrake.visualization.meldis">
-<span id="pydrake-visualization-meldis"></span><h1>pydrake.visualization.meldis<a class="headerlink" href="#module-pydrake.visualization.meldis" title="Permalink to this headline">¶</a></h1>
-<p>MeshCat LCM Display Server (MeLDiS)</p>
-<p>A standalone program that can display Drake visualizations in MeshCat
-by listening for LCM messages that are broadcast by the simulation.</p>
-<p>This can stand in for the legacy <code class="docutils literal notranslate"><span class="pre">drake-visualizer</span></code> application of
-days past.</p>
-<p>From a Drake source build, run this as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">meldis</span> <span class="o">&amp;</span>
+  <div class="section" id="module-pydrake.visualization.model_visualizer">
+<span id="pydrake-visualization-model-visualizer"></span><h1>pydrake.visualization.model_visualizer<a class="headerlink" href="#module-pydrake.visualization.model_visualizer" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">model_visualizer</span></code> program displays a model file (e.g., <code class="docutils literal notranslate"><span class="pre">*.sdf</span></code>) in
+Drake’s built-in visualizers (MeshCat and/or Meldis). When viewing in MeshCat,
+joint sliders to posture the model are available by clicking on “Open Controls”
+in the top right corner.</p>
+<p>This command-line module is provided for convenience, but the feature is also
+available via the library class <code class="docutils literal notranslate"><span class="pre">pydrake.visualization.ModelVisualizer</span></code>.</p>
+<p>From a Drake source build, run this module as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">model_visualizer</span> <span class="o">--</span> <span class="o">--</span><span class="n">help</span>
 </pre></div>
 </div>
-<p>From a Drake binary release (including pip releases), run this as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">meldis</span>
+<p>From a Drake binary release (including pip releases), run this module as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">model_visualizer</span> <span class="o">--</span><span class="n">help</span>
 </pre></div>
 </div>
-<p>In many cases, passing <code class="docutils literal notranslate"><span class="pre">-w</span></code> (i.e., <code class="docutils literal notranslate"><span class="pre">--open-window</span></code>) to the program will be
-convenient:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">meldis</span> <span class="o">--</span> <span class="o">-</span><span class="n">w</span> <span class="o">&amp;</span>
+<p>Refer to the instructions printed by <code class="docutils literal notranslate"><span class="pre">--help</span></code> for additional details.</p>
+<p>An example of viewing an iiwa model file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">model_visualizer</span> <span class="o">--</span><span class="nb">open</span><span class="o">-</span><span class="n">window</span> \
+      <span class="n">package</span><span class="p">:</span><span class="o">//</span><span class="n">drake</span><span class="o">/</span><span class="n">manipulation</span><span class="o">/</span><span class="n">models</span><span class="o">/</span><span class="n">iiwa_description</span><span class="o">/</span><span class="n">iiwa7</span><span class="o">/</span><span class="n">iiwa7_with_box_collision</span><span class="o">.</span><span class="n">sdf</span>
 </pre></div>
 </div>
-<dl class="class">
-<dt id="pydrake.visualization.meldis.Meldis">
-<em class="property">class </em><code class="descclassname">pydrake.visualization.meldis.</code><code class="descname">Meldis</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.meldis.Meldis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.visualization._meldis.Meldis</span></code></p>
-<p>(Deprecated.) The import path pydrake.visualization.meldis.Meldis is
-deprecated. Use the import path pydrake.visualization.Meldis instead.
-The deprecated code will be removed from Drake on or after 2023-02-01.</p>
-<dl class="method">
-<dt id="pydrake.visualization.meldis.Meldis.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.meldis.Meldis.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-</dd></dl>
-
+<p>This program respects the <code class="docutils literal notranslate"><span class="pre">ROS_PACKAGE_PATH</span></code>; if your model uses external
+resources then you will need to set that environment variable.</p>
 </div>
 
 
@@ -254,10 +242,8 @@ The deprecated code will be removed from Drake on or after 2023-02-01.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pydrake.visualization.model_visualizer.html" class="btn btn-neutral float-right" title="pydrake.visualization.model_visualizer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="pydrake.visualization.html" class="btn btn-neutral float-left" title="pydrake.visualization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.visualization.meldis.html" class="btn btn-neutral float-left" title="pydrake.visualization.meldis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

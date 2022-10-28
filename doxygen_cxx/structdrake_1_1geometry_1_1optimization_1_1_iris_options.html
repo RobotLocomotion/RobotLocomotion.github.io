@@ -196,6 +196,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a67295e7681f83a17890571e4b6b0a7dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd">num_collision_infeasible_samples</a> {5}</td></tr>
 <tr class="memdesc:a67295e7681f83a17890571e4b6b0a7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each possible collision, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem.  <a href="#a67295e7681f83a17890571e4b6b0a7dd">More...</a><br /></td></tr>
 <tr class="separator:a67295e7681f83a17890571e4b6b0a7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2213eafbc5c4f73c4af52ecd163494c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6">configuration_obstacles</a> {}</td></tr>
+<tr class="memdesc:a2213eafbc5c4f73c4af52ecd163494c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IRIS in configuration space, it can be beneficial to not only specify task-space obstacles (passed in through the plant) but also obstacles that are defined by convex sets in the configuration space.  <a href="#a2213eafbc5c4f73c4af52ecd163494c6">More...</a><br /></td></tr>
+<tr class="separator:a2213eafbc5c4f73c4af52ecd163494c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafcf4ea1cbea01d087cc559402acddf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2">prog_with_additional_constraints</a> {}</td></tr>
 <tr class="memdesc:aafcf4ea1cbea01d087cc559402acddf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, IRIS in configuration space certifies regions for collision avoidance constraints and joint limits.  <a href="#aafcf4ea1cbea01d087cc559402acddf2">More...</a><br /></td></tr>
 <tr class="separator:aafcf4ea1cbea01d087cc559402acddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,6 +236,23 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2213eafbc5c4f73c4af52ecd163494c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2213eafbc5c4f73c4af52ecd163494c6">&#9670;&nbsp;</a></span>configuration_obstacles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> configuration_obstacles {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For IRIS in configuration space, it can be beneficial to not only specify task-space obstacles (passed in through the plant) but also obstacles that are defined by convex sets in the configuration space. </p>
+<p>This option can be used to pass in such configuration space obstacles. </p>
+
+</div>
+</div>
 <a id="a033befdd75124d17abb45b56c75a71db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a033befdd75124d17abb45b56c75a71db">&#9670;&nbsp;</a></span>configuration_space_margin</h2>
 

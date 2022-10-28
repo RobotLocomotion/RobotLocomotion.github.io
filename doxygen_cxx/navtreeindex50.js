@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6e645ae8d30d672d9800a422f4be4c9d":[4,0,0,11,55,0,11],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca71cedba88b736e372f499099329d5173":[4,0,0,11,55,0,3],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795":[4,0,0,11,55,0,6],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa71a8c0a25fe7a3d777fc06d50bada13":[4,0,0,11,55,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,4,40,2],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6":[3,0,0,4,40,3],
 "structdrake_1_1geometry_1_1_shape_tag.html":[3,0,0,4,47],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html":[3,0,0,4,48],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a01b0d3895f2cd2cbeed07c2b2af575e6":[3,0,0,4,48,4]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html":[3,0,0,4,48]
 };
