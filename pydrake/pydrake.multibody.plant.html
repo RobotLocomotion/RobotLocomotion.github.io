@@ -1283,6 +1283,59 @@ given surface.</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.multibody.plant.DiscreteContactSolver">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.plant.</code><code class="descname">DiscreteContactSolver</code><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the contact solver used for a discrete MultibodyPlant
+model.</p>
+<p>Note: the SAP solver only fully supports scalar type <code class="docutils literal notranslate"><span class="pre">double</span></code>. For
+scalar type <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>, the SAP solver throws if any constraint
+(including contact) is detected. As a consequence, one can only run
+dynamic simulations without any constraints under the combination of
+SAP and <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>. The SAP solver does not support symbolic
+calculations.</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li>[Castro et al., 2019] Castro, A.M, Qu, A., Kuppuswamy, N., Alspach, A.,
+Sherman, M.A., 2019. A Transition-Aware Method for the Simulation of
+Compliant Contact with Regularized Friction. Available online at
+<a class="reference external" href="https://arxiv.org/abs/1909.05700">https://arxiv.org/abs/1909.05700</a>.</li>
+<li>[Castro et al., 2022] Castro A., Permenter F. and Han X., 2022. An
+Unconstrained Convex Formulation of Compliant Contact. Available online at
+<a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>.</li>
+</ul>
+<p>Members:</p>
+<blockquote>
+<div><p>kTamsi : TAMSI solver, see [Castro et al., 2019].</p>
+<p>kSap : SAP solver, see [Castro et al., 2022].</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.multibody.plant.DiscreteContactSolver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DiscreteContactSolver</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.DiscreteContactSolver.kSap">
+<code class="descname">kSap</code><em class="property"> = &lt;DiscreteContactSolver.kSap: 1&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.kSap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.DiscreteContactSolver.kTamsi">
+<code class="descname">kTamsi</code><em class="property"> = &lt;DiscreteContactSolver.kTamsi: 0&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.kTamsi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.DiscreteContactSolver.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.DiscreteContactSolver.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.multibody.plant.ExternallyAppliedSpatialForce">
 <code class="descclassname">pydrake.multibody.plant.</code><code class="descname">ExternallyAppliedSpatialForce</code><a class="headerlink" href="#pydrake.multibody.plant.ExternallyAppliedSpatialForce" title="Permalink to this definition">¶</a></dt>
@@ -3771,6 +3824,13 @@ MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_discrete_contact_solver">
+<code class="descname">get_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.DiscreteContactSolver<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the contact solver type used for discrete MultibodyPlant
+models.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -5586,6 +5646,20 @@ ContactModel::kHydroelasticWithFallback.</p>
 MultibodyPlant. See geometry::HydroelasticContactRepresentation for
 available options. See GetDefaultContactSurfaceRepresentation() for
 explanation of default values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].set_discrete_contact_solver">
+<code class="descname">set_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], contact_solver: pydrake.multibody.plant.DiscreteContactSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].set_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError iff called post-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -8108,6 +8182,13 @@ MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_discrete_contact_solver">
+<code class="descname">get_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.DiscreteContactSolver<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the contact solver type used for discrete MultibodyPlant
+models.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -9923,6 +10004,20 @@ ContactModel::kHydroelasticWithFallback.</p>
 MultibodyPlant. See geometry::HydroelasticContactRepresentation for
 available options. See GetDefaultContactSurfaceRepresentation() for
 explanation of default values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_discrete_contact_solver">
+<code class="descname">set_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], contact_solver: pydrake.multibody.plant.DiscreteContactSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError iff called post-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -12443,6 +12538,13 @@ MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_discrete_contact_solver">
+<code class="descname">get_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.DiscreteContactSolver<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].get_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the contact solver type used for discrete MultibodyPlant
+models.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[Expression]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -14258,6 +14360,20 @@ ContactModel::kHydroelasticWithFallback.</p>
 MultibodyPlant. See geometry::HydroelasticContactRepresentation for
 available options. See GetDefaultContactSurfaceRepresentation() for
 explanation of default values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_discrete_contact_solver">
+<code class="descname">set_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], contact_solver: pydrake.multibody.plant.DiscreteContactSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].set_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError iff called post-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -16778,6 +16894,13 @@ MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].get_discrete_contact_solver">
+<code class="descname">get_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.DiscreteContactSolver<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].get_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the contact solver type used for discrete MultibodyPlant
+models.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -18593,6 +18716,20 @@ ContactModel::kHydroelasticWithFallback.</p>
 MultibodyPlant. See geometry::HydroelasticContactRepresentation for
 available options. See GetDefaultContactSurfaceRepresentation() for
 explanation of default values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].set_discrete_contact_solver">
+<code class="descname">set_discrete_contact_solver</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], contact_solver: pydrake.multibody.plant.DiscreteContactSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].set_discrete_contact_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError iff called post-finalize.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
