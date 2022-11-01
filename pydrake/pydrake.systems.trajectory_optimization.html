@@ -406,6 +406,209 @@ set to their current values (if they are connected/fixed in
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization">
+<em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">KinematicTrajectoryOptimization</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimizes a trajectory, q(t) subject to costs and constraints on the
+trajectory and its derivatives. This is accomplished using a <code class="docutils literal notranslate"><span class="pre">path</span></code>,
+r(s), represented as a BsplineTrajectory on the interval s∈[0,1], and
+a separate duration, T, which maps [0,1] =&gt; [0,T].</p>
+<p>The q(t) trajectory is commonly associated with, for instance, the
+generalized positions of a MultibodyPlant by adding multibody costs
+and constraints; in this case take note that the velocities in this
+optimization are q̇(t), not v(t).</p>
+<p>Use solvers::Solve to solve the problem. A typical use case could look
+like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">KinematicTrajectoryOptimization</span> <span class="n">trajopt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">add</span> <span class="n">costs</span> <span class="ow">and</span> <span class="n">constraints</span>
+<span class="n">trajopt</span><span class="o">.</span><span class="n">SetInitialGuess</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="n">auto</span> <span class="n">result</span> <span class="o">=</span> <span class="n">solvers</span><span class="p">::</span><span class="n">Solve</span><span class="p">(</span><span class="n">trajopt</span><span class="o">.</span><span class="n">prog</span><span class="p">());</span>
+<span class="n">auto</span> <span class="n">traj</span> <span class="o">=</span> <span class="n">trajopt</span><span class="o">.</span><span class="n">ReconstructTrajectory</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>When possible this class attempts to formulate convex forms of the
+costs and constraints.</p>
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, num_positions: int, num_control_points: int, spline_order: int = 4, duration: float = 1.0) -&gt; None</li>
+</ol>
+<p>Constructs an optimization problem for a position trajectory
+represented as a B-spline. The initial guess is the zero trajectory
+over the time interval [0, T].</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>:</dt>
+<dd>The number of rows in the B-spline.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_control_points</span></code>:</dt>
+<dd>The number of B-spline control points.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">spline_order</span></code>:</dt>
+<dd>The order of the B-spline.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">duration</span></code>:</dt>
+<dd>The duration (in seconds) of the initial guess.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, trajectory: pydrake.trajectories.BsplineTrajectory_[float]) -&gt; None</li>
+</ol>
+<p>Constructs an optimization problem for a trajectory represented by a
+B-spline with the same order and number of control points as
+<code class="docutils literal notranslate"><span class="pre">trajectory</span></code>. Additionally sets <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> as the initial guess
+for the optimization.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationConstraint">
+<code class="descname">AddDurationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: Optional[float], ub: Optional[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds upper and lower bounds on the duration of the trajectory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationCost">
+<code class="descname">AddDurationCost</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em>, <em>weight: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a linear cost on the duration of the trajectory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathAccelerationConstraint">
+<code class="descname">AddPathAccelerationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], s: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathAccelerationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a linear constraint on the second derivative of the path, <code class="docutils literal notranslate"><span class="pre">lb</span></code>
+≤ r̈(s) ≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>. Note that this does NOT directly constrain q̈(t).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>0 &lt;= <code class="docutils literal notranslate"><span class="pre">s</span></code> &lt;= 1.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathLengthCost">
+<code class="descname">AddPathLengthCost</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em>, <em>weight: float = 1.0</em>, <em>use_conic_constraint: bool = False</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathLengthCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a cost on an upper bound on length of the path, ∫₀ᵀ <a href="#id1"><span class="problematic" id="id2">|</span></a>q̇(t)|₂ dt,
+by summing the distance between the path control points. If
+<code class="docutils literal notranslate"><span class="pre">use_conic_constraint</span> <span class="pre">=</span> <span class="pre">false</span></code>, then costs are added via
+MathematicalProgram::AddL2NormCost; otherwise they are added via
+MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathPositionConstraint">
+<code class="descname">AddPathPositionConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathPositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddPathPositionConstraint(self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], s: float) -&gt; None</li>
+</ol>
+<p>Adds a linear constraint on the value of the path, <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤ r(s) ≤
+<code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>0 &lt;= <code class="docutils literal notranslate"><span class="pre">s</span></code> &lt;= 1.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>AddPathPositionConstraint(self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, constraint: pydrake.solvers.Constraint, s: float) -&gt; None</li>
+</ol>
+<p>Adds a (generic) constraint on path. The constraint will be evaluated
+as if it is bound with variables corresponding to <code class="docutils literal notranslate"><span class="pre">r(s)</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>constraint.num_vars() == num_positions()</dd>
+<dt>Precondition:</dt>
+<dd>0 &lt;= <code class="docutils literal notranslate"><span class="pre">s</span></code> &lt;= 1.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathVelocityConstraint">
+<code class="descname">AddPathVelocityConstraint</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], s: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathVelocityConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a linear constraint on the derivative of the path, <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤ ṙ(s)
+≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>. Note that this does NOT directly constrain q̇(t).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>0 &lt;= <code class="docutils literal notranslate"><span class="pre">s</span></code> &lt;= 1.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPositionBounds">
+<code class="descname">AddPositionBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPositionBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds upper and lower bounds on the positions trajectory, q(t). These
+bounds will be respected at all times, t∈[0,T]. This also implies the
+constraints are satisfied for r(s), for all s∈[0,1].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityBounds">
+<code class="descname">AddVelocityBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds upper and lower bounds on the velocity trajectory, q̇(t). These
+bounds will be respected at all times. Note this does NOT directly
+constrain ṙ(s).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.basis">
+<code class="descname">basis</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em><span class="sig-paren">)</span> &#x2192; pydrake.math.BsplineBasis_[float]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.basis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the basis used to represent the path, r(s), over s∈[0,1].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.control_points">
+<code class="descname">control_points</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.control_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the control points defining the path as an M-by-N matrix,
+where M is the number of positions and N is the number of control
+points.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.duration">
+<code class="descname">duration</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variable<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decision variable defining the time duration of the
+trajectory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.get_mutable_prog">
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for a mutable pointer to the optimization program.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.num_control_points">
+<code class="descname">num_control_points</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.num_control_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of control points used for the path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.num_positions">
+<code class="descname">num_positions</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.num_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of position variables.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.prog">
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.MathematicalProgram<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the optimization program.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.ReconstructTrajectory">
+<code class="descname">ReconstructTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em>, <em>result: pydrake.solvers.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.BsplineTrajectory_[float]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.ReconstructTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the trajectory q(t) from the <code class="docutils literal notranslate"><span class="pre">result</span></code> of solving <code class="docutils literal notranslate"><span class="pre">prog()</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.SetInitialGuess">
+<code class="descname">SetInitialGuess</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, trajectory: pydrake.trajectories.BsplineTrajectory_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.SetInitialGuess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the initial guess for the path and duration to match
+<code class="docutils literal notranslate"><span class="pre">trajectory</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>trajectory.rows() == num_positions()</dd>
+<dt>Precondition:</dt>
+<dd>trajectory.columns() == 1</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting">
 <em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">MultipleShooting</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="Permalink to this definition">¶</a></dt>
 <dd><p>MultipleShooting is an abstract class for trajectory optimization that

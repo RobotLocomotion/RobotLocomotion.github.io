@@ -505,7 +505,7 @@ var searchData=
   ['dummy_5fvalue_2eh',['dummy_value.h',['../dummy__value_8h.html',1,'']]],
   ['dummy_5fvalue_3c_20int_20_3e',['dummy_value&lt; int &gt;',['../structdrake_1_1dummy__value_3_01int_01_4.html',1,'drake']]],
   ['dummy_5fvalue_3c_20symbolic_3a_3aexpression_20_3e',['dummy_value&lt; symbolic::Expression &gt;',['../structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html',1,'drake']]],
-  ['duration',['duration',['../classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309',1,'drake::trajectories::PiecewiseTrajectory']]],
+  ['duration',['duration',['../classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309',1,'drake::trajectories::PiecewiseTrajectory::duration()'],['../classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ada7b35ee8b161bd6ccc2709ccf3c1022',1,'drake::systems::trajectory_optimization::KinematicTrajectoryOptimization::duration()']]],
   ['dynamic_5ffriction',['dynamic_friction',['../classdrake_1_1multibody_1_1_coulomb_friction.html#a092e05e3995b9dcf1b34a4c596678ae6',1,'drake::multibody::CoulombFriction']]],
   ['dynamic_5ffriction_5ftorque',['dynamic_friction_torque',['../structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7',1,'drake::multibody::DoorHingeConfig']]],
   ['dynamic_5fpointer_5fcast',['dynamic_pointer_cast',['../namespacedrake.html#ab53bd4a15e73e524b3f73c625ea88176',1,'drake']]],

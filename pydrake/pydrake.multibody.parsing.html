@@ -708,9 +708,9 @@ file, please use an SDFormat world tag.</p>
 instance will be added to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <p>MJCF (MuJoCo XML) files typically contain many bodies, they will all
 be added as a single model instance in the <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
-<p>Drake Model Directives are only available via AddAllModelsFromFile.
-The single-model methods (AddModelFromFile, AddModelFromString) cannot
-load model directives.</p>
+<p>Drake Model Directives are only available via AddModels or
+AddModelsFromString. The single-model methods (AddModelFromFile,
+AddModelFromString) cannot load model directives.</p>
 <p>For more documentation of Drake-specific treatment of these input
 formats, see multibody_parsing.</p>
 <p>When parsing literal quantities, Parser assumes SI units and radians
@@ -737,24 +737,7 @@ nullptr.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.parsing.Parser.AddAllModelsFromFile">
 <code class="descname">AddAllModelsFromFile</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em>, <em>file_name: str</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.ModelInstanceIndex]<a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddAllModelsFromFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all of its
-model(s) to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_name</span></code>:</dt>
-<dd>The name of the file to be parsed. The file type will be inferred
-from the extension.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The set of model instance indices for the newly added models,
-including nested models.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in case of errors.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>Legacy spelling of AddModels.</p>
 </dd></dl>
 
 <dl class="method">
@@ -812,11 +795,34 @@ on or after 2023-04-01.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.parsing.Parser.AddModels">
+<code class="descname">AddModels</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em>, <em>file_name: str</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.ModelInstanceIndex]<a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all of its
+model(s) to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_name</span></code>:</dt>
+<dd>The name of the file to be parsed. The file type will be inferred
+from the extension.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The set of model instance indices for the newly added models,
+including nested models.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in case of errors.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.parsing.Parser.AddModelsFromString">
 <code class="descname">AddModelsFromString</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em>, <em>file_contents: str</em>, <em>file_type: str</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.tree.ModelInstanceIndex]<a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromString" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides same functionality as AddAllModelsFromFile, but instead
-parses the model description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with
-format dictated by <code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
+<dd><p>Provides same functionality as AddModels, but instead parses the model
+description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with format dictated by
+<code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_contents</span></code>:</dt>
 <dd>The model data to be parsed.</dd>

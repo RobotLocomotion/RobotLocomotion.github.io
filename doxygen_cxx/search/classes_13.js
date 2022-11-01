@@ -26,6 +26,7 @@ var searchData=
   ['trajectory',['Trajectory',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],
   ['trajectory_3c_20autodiffxd_20_3e',['Trajectory&lt; AutoDiffXd &gt;',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],
   ['trajectory_3c_20double_20_3e',['Trajectory&lt; double &gt;',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],
+  ['trajectory_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['Trajectory&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],
   ['trajectoryaffinesystem',['TrajectoryAffineSystem',['../classdrake_1_1systems_1_1_trajectory_affine_system.html',1,'drake::systems']]],
   ['trajectorylinearsystem',['TrajectoryLinearSystem',['../classdrake_1_1systems_1_1_trajectory_linear_system.html',1,'drake::systems']]],
   ['trajectorysource',['TrajectorySource',['../classdrake_1_1systems_1_1_trajectory_source.html',1,'drake::systems']]],

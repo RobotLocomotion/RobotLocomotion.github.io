@@ -171,8 +171,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_shape_reifi
 <p>Any entity that consumes shape descriptions <em>must</em> implement this interface.</p>
 <p>This class explicitly enumerates all concrete shapes in its methods. The addition of a new concrete shape class requires the addition of a new corresponding method. There should <em>never</em> be a method that accepts the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> base class as an argument; it should <em>only</em> operate on concrete derived classes.</p>
 <p>The expected workflow is for a class that needs to turn shape specifications into concrete geometry instances to implement the ShapeReifier interface <em>and</em> invoke the <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Shape::Reify()</a> method. For example, a simple reifier that requires no user data would look like:</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>SimpleReifier : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01">ShapeReifier</a> {</div><div class="line">  <span class="keywordtype">void</span> ProcessShape(<span class="keyword">const</span> Shape&amp; shape) {</div><div class="line">    <span class="comment">// Requires no user data.</span></div><div class="line">    shape.Reify(<span class="keyword">this</span>);</div><div class="line">  }</div><div class="line">  ...</div><div class="line">  <span class="keywordtype">void</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a01146cd97faae87f9a56d857f75d535f">ImplementGeometry</a>(<span class="keyword">const</span> Sphere&amp; sphere, <span class="keywordtype">void</span>*)<span class="keyword"> override </span>{</div><div class="line">    <span class="comment">// Do work to create a sphere.</span></div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p>Or a complex reifier that requires user data would look like:</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>ComplexReifier : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01">ShapeReifier</a> {</div><div class="line">  <span class="keywordtype">void</span> ProcessShape(<span class="keyword">const</span> Shape&amp; shape) {</div><div class="line">    ImportantData data{...};</div><div class="line">    shape.Reify(<span class="keyword">this</span>, &amp;data);</div><div class="line">  }</div><div class="line">  ...</div><div class="line">  <span class="keywordtype">void</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a01146cd97faae87f9a56d857f75d535f">ImplementGeometry</a>(<span class="keyword">const</span> Sphere&amp; sphere, <span class="keywordtype">void</span>* data)<span class="keyword"> override </span>{</div><div class="line">    <a class="code" href="drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63">DRAKE_ASSERT</a>(data != <span class="keyword">nullptr</span>);</div><div class="line">    ImportantData&amp; data = *static_cast&lt;ImportantData*&gt;(data);</div><div class="line">    <span class="comment">// Do work to create a sphere using the provided user data.</span></div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p>Implementing a particular shape may require more data than is strictly encapsulated in the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>. The Implement* interface supports passing user data through a type-erased <code>void*</code>. Because a single class invoked <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Shape::Reify()</a> it is in a position to provide exactly the data the shape implementations require. </p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>SimpleReifier : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01">ShapeReifier</a> {</div><div class="line">  <span class="keywordtype">void</span> ProcessShape(<span class="keyword">const</span> Shape&amp; shape) {</div><div class="line">    <span class="comment">// Requires no user data.</span></div><div class="line">    shape.Reify(<span class="keyword">this</span>);</div><div class="line">  }</div><div class="line">  ...</div><div class="line">  <span class="keywordtype">void</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4">ImplementGeometry</a>(<span class="keyword">const</span> Sphere&amp; sphere, <span class="keywordtype">void</span>*)<span class="keyword"> override </span>{</div><div class="line">    <span class="comment">// Do work to create a sphere.</span></div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p>Or a complex reifier that requires user data would look like:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ComplexReifier : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01">ShapeReifier</a> {</div><div class="line">  <span class="keywordtype">void</span> ProcessShape(<span class="keyword">const</span> Shape&amp; shape) {</div><div class="line">    ImportantData data{...};</div><div class="line">    shape.Reify(<span class="keyword">this</span>, &amp;data);</div><div class="line">  }</div><div class="line">  ...</div><div class="line">  <span class="keywordtype">void</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4">ImplementGeometry</a>(<span class="keyword">const</span> Sphere&amp; sphere, <span class="keywordtype">void</span>* data)<span class="keyword"> override </span>{</div><div class="line">    <a class="code" href="drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63">DRAKE_ASSERT</a>(data != <span class="keyword">nullptr</span>);</div><div class="line">    ImportantData&amp; data = *static_cast&lt;ImportantData*&gt;(data);</div><div class="line">    <span class="comment">// Do work to create a sphere using the provided user data.</span></div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p>Implementing a particular shape may require more data than is strictly encapsulated in the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>. The Implement* interface supports passing user data through a type-erased <code>void*</code>. Because a single class invoked <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Shape::Reify()</a> it is in a position to provide exactly the data the shape implementations require. </p>
 </div>
 <p><code>#include &lt;drake/geometry/shape_specification.h&gt;</code></p>
 <table class="memberdecls">
@@ -180,24 +180,24 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_shape_reifi
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2b9a418dcb406a2c4cd4c4b0e29d093e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a2b9a418dcb406a2c4cd4c4b0e29d093e">~ShapeReifier</a> ()</td></tr>
 <tr class="separator:a2b9a418dcb406a2c4cd4c4b0e29d093e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01146cd97faae87f9a56d857f75d535f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a01146cd97faae87f9a56d857f75d535f">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a> &amp;sphere, void *user_data)</td></tr>
-<tr class="separator:a01146cd97faae87f9a56d857f75d535f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a23d9ae5ebc2f14337b5c36ad7ec44a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a6a23d9ae5ebc2f14337b5c36ad7ec44a">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a> &amp;cylinder, void *user_data)</td></tr>
-<tr class="separator:a6a23d9ae5ebc2f14337b5c36ad7ec44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47de7fe4f14cfa8a7a5f5f6fe30d64c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a47de7fe4f14cfa8a7a5f5f6fe30d64c9">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;half_space, void *user_data)</td></tr>
-<tr class="separator:a47de7fe4f14cfa8a7a5f5f6fe30d64c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0415a6de465125ed6e4166f5b6e4b4d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_box.html">Box</a> &amp;box, void *user_data)</td></tr>
 <tr class="separator:a0415a6de465125ed6e4166f5b6e4b4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55821ccfb027151e1e5b8aba5e89d876"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a55821ccfb027151e1e5b8aba5e89d876">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_capsule.html">Capsule</a> &amp;capsule, void *user_data)</td></tr>
 <tr class="separator:a55821ccfb027151e1e5b8aba5e89d876"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a785bf223f974959209931c60d1b7bd95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a785bf223f974959209931c60d1b7bd95">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a> &amp;ellipsoid, void *user_data)</td></tr>
-<tr class="separator:a785bf223f974959209931c60d1b7bd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b822cc5aaf8f0b2d34b6576c52ec83"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a27b822cc5aaf8f0b2d34b6576c52ec83">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> &amp;mesh, void *user_data)</td></tr>
-<tr class="separator:a27b822cc5aaf8f0b2d34b6576c52ec83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f19e61b141f9a59b12d686271a57116"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5f19e61b141f9a59b12d686271a57116">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;convex, void *user_data)</td></tr>
 <tr class="separator:a5f19e61b141f9a59b12d686271a57116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a23d9ae5ebc2f14337b5c36ad7ec44a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a6a23d9ae5ebc2f14337b5c36ad7ec44a">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a> &amp;cylinder, void *user_data)</td></tr>
+<tr class="separator:a6a23d9ae5ebc2f14337b5c36ad7ec44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785bf223f974959209931c60d1b7bd95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a785bf223f974959209931c60d1b7bd95">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a> &amp;ellipsoid, void *user_data)</td></tr>
+<tr class="separator:a785bf223f974959209931c60d1b7bd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47de7fe4f14cfa8a7a5f5f6fe30d64c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a47de7fe4f14cfa8a7a5f5f6fe30d64c9">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;half_space, void *user_data)</td></tr>
+<tr class="separator:a47de7fe4f14cfa8a7a5f5f6fe30d64c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b822cc5aaf8f0b2d34b6576c52ec83"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a27b822cc5aaf8f0b2d34b6576c52ec83">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> &amp;mesh, void *user_data)</td></tr>
+<tr class="separator:a27b822cc5aaf8f0b2d34b6576c52ec83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af104aa17b651dfc2491a960eace62b0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#af104aa17b651dfc2491a960eace62b0b">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_cone.html">MeshcatCone</a> &amp;cone, void *user_data)</td></tr>
 <tr class="separator:af104aa17b651dfc2491a960eace62b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01146cd97faae87f9a56d857f75d535f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a01146cd97faae87f9a56d857f75d535f">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a> &amp;sphere, void *user_data)</td></tr>
+<tr class="separator:a01146cd97faae87f9a56d857f75d535f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -320,122 +320,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a01146cd97faae87f9a56d857f75d535f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01146cd97faae87f9a56d857f75d535f">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[1/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ImplementGeometry </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a> &amp;&#160;</td>
-          <td class="paramname"><em>sphere</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>user_data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#acfcfc5b679c5e1ba2300b60839c9b6fa">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a859d9645a6882e4e2d9dd1fd04f284c4">RenderEngineVtk</a>.</p>
-
-</div>
-</div>
-<a id="a6a23d9ae5ebc2f14337b5c36ad7ec44a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a23d9ae5ebc2f14337b5c36ad7ec44a">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[2/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ImplementGeometry </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a> &amp;&#160;</td>
-          <td class="paramname"><em>cylinder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>user_data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a0f75b52f7e6cb66688b402656238ce7e">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a26647d202bf3306f48a7fefbf09e4e91">RenderEngineVtk</a>.</p>
-
-</div>
-</div>
-<a id="a47de7fe4f14cfa8a7a5f5f6fe30d64c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47de7fe4f14cfa8a7a5f5f6fe30d64c9">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[3/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ImplementGeometry </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;&#160;</td>
-          <td class="paramname"><em>half_space</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>user_data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a7a56c4d180771ce38636ecead72386a5">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a883142613402429f357102b1835d180a">RenderEngineVtk</a>.</p>
-
-</div>
-</div>
 <a id="a0415a6de465125ed6e4166f5b6e4b4d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0415a6de465125ed6e4166f5b6e4b4d4">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[4/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0415a6de465125ed6e4166f5b6e4b4d4">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[1/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -473,7 +359,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a55821ccfb027151e1e5b8aba5e89d876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55821ccfb027151e1e5b8aba5e89d876">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[5/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a55821ccfb027151e1e5b8aba5e89d876">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[2/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -510,8 +396,84 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5f19e61b141f9a59b12d686271a57116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f19e61b141f9a59b12d686271a57116">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[3/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ImplementGeometry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#ab6e8d6538d02b7fcc1ae6d50ddd8e0ad">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7e3d19bd99a23652bcc1079d6aabe3a6">RenderEngineVtk</a>.</p>
+
+</div>
+</div>
+<a id="a6a23d9ae5ebc2f14337b5c36ad7ec44a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a23d9ae5ebc2f14337b5c36ad7ec44a">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[4/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ImplementGeometry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a> &amp;&#160;</td>
+          <td class="paramname"><em>cylinder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a0f75b52f7e6cb66688b402656238ce7e">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a26647d202bf3306f48a7fefbf09e4e91">RenderEngineVtk</a>.</p>
+
+</div>
+</div>
 <a id="a785bf223f974959209931c60d1b7bd95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a785bf223f974959209931c60d1b7bd95">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[6/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a785bf223f974959209931c60d1b7bd95">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -545,6 +507,44 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a9b6e2e5a887db70340573c565f6355e8">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a1aaef1fd038d4ecb2ad9fd92e159c298">RenderEngineVtk</a>.</p>
+
+</div>
+</div>
+<a id="a47de7fe4f14cfa8a7a5f5f6fe30d64c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47de7fe4f14cfa8a7a5f5f6fe30d64c9">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[6/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ImplementGeometry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;&#160;</td>
+          <td class="paramname"><em>half_space</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a7a56c4d180771ce38636ecead72386a5">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a883142613402429f357102b1835d180a">RenderEngineVtk</a>.</p>
 
 </div>
 </div>
@@ -586,46 +586,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5f19e61b141f9a59b12d686271a57116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f19e61b141f9a59b12d686271a57116">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[8/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ImplementGeometry </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;&#160;</td>
-          <td class="paramname"><em>convex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>user_data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#ab6e8d6538d02b7fcc1ae6d50ddd8e0ad">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7e3d19bd99a23652bcc1079d6aabe3a6">RenderEngineVtk</a>.</p>
-
-</div>
-</div>
 <a id="af104aa17b651dfc2491a960eace62b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af104aa17b651dfc2491a960eace62b0b">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[9/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af104aa17b651dfc2491a960eace62b0b">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[8/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -659,6 +621,44 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a1c0d3ee8b72f274f7270fb8f1b40e298">ShapeName</a>.</p>
+
+</div>
+</div>
+<a id="a01146cd97faae87f9a56d857f75d535f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01146cd97faae87f9a56d857f75d535f">&#9670;&nbsp;</a></span>ImplementGeometry() <span class="overload">[9/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ImplementGeometry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a> &amp;&#160;</td>
+          <td class="paramname"><em>sphere</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#acfcfc5b679c5e1ba2300b60839c9b6fa">ShapeName</a>, and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a859d9645a6882e4e2d9dd1fd04f284c4">RenderEngineVtk</a>.</p>
 
 </div>
 </div>

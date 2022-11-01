@@ -51,6 +51,8 @@ var hierarchy =
     ] ],
     [ "Bound", "structdrake_1_1solvers_1_1_bound.html", null ],
     [ "BsplineBasis< T >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
+    [ "BsplineBasis< double >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
+    [ "BsplineBasis< drake::symbolic::Expression >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
     [ "FemModel< T >::Builder", "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html", null ],
     [ "Cache", "classdrake_1_1systems_1_1_cache.html", null ],
     [ "CacheEntry", "classdrake_1_1systems_1_1_cache_entry.html", null ],
@@ -415,6 +417,7 @@ var hierarchy =
     [ "ImplicitIntegrator< T >::IterationMatrix", "classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html", null ],
     [ "Joint< T >::JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", null ],
     [ "KinematicsVector< Id, KinematicsValue >", "classdrake_1_1geometry_1_1_kinematics_vector.html", null ],
+    [ "KinematicTrajectoryOptimization", "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html", null ],
     [ "KukaRobotJointReactionForces< T >", "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html", null ],
     [ "LcmBuses", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html", null ],
     [ "LcmImageTraits< PixelType >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html", null ],
@@ -573,8 +576,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -994,6 +997,9 @@ var hierarchy =
         [ "PiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html", null ]
       ] ]
     ] ],
+    [ "Trajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_trajectory.html", [
+      [ "BsplineTrajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ]
+    ] ],
     [ "Transform", "classdrake_1_1schema_1_1_transform.html", null ],
     [ "TriangleQuadrature< NumericReturnType, T >", "classdrake_1_1multibody_1_1_triangle_quadrature.html", null ],
     [ "TriangleQuadratureRule", "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html", [
@@ -1054,6 +1060,7 @@ var hierarchy =
       [ "copyable_unique_ptr< drake::systems::Parameters< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< drake::symbolic::Expression > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
+      [ "copyable_unique_ptr< drake::trajectories::BsplineTrajectory< drake::symbolic::Expression > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::trajectories::Trajectory< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::trajectories::Trajectory< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< Engine >", "classdrake_1_1copyable__unique__ptr.html", null ],
