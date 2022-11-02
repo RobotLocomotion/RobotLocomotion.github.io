@@ -10,7 +10,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "autodiff.h", "common_2autodiff_8h.html", "common_2autodiff_8h" ],
     [ "autodiff_overloads.h", "autodiff__overloads_8h.html", "autodiff__overloads_8h" ],
     [ "autodiffxd.h", "autodiffxd_8h.html", null ],
-    [ "autodiffxd_make_coherent.h", "autodiffxd__make__coherent_8h.html", "autodiffxd__make__coherent_8h" ],
     [ "bit_cast.h", "bit__cast_8h.html", null ],
     [ "cond.h", "cond_8h.html", "cond_8h" ],
     [ "constants.h", "constants_8h.html", "constants_8h" ],
@@ -66,8 +65,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     ] ],
     [ "scoped_singleton.h", "scoped__singleton_8h.html", null ],
     [ "sorted_pair.h", "sorted__pair_8h.html", "sorted__pair_8h" ],
-    [ "symbolic.h", "symbolic_8h.html", null ],
-    [ "symbolic_latex.h", "symbolic__latex_8h.html", null ],
     [ "temp_directory.h", "temp__directory_8h.html", "temp__directory_8h" ],
     [ "text_logging.h", "text__logging_8h.html", "text__logging_8h" ],
     [ "timer.h", "timer_8h.html", [

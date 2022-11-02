@@ -2764,11 +2764,7 @@ computations for robots, for instance:
 <li>SubstituteStereographicProjection(e: drake::symbolic::Polynomial, sin_cos: List[pydrake.symbolic.SinCos], t: numpy.ndarray[object[m, 1]]) -&gt; drake::symbolic::RationalFunction</li>
 </ol>
 <p>Substitutes the variables representing sine and cosine functions with
-their stereographic projection. For the moment, we put the following
-requirement on <code class="docutils literal notranslate"><span class="pre">e</span></code>: If the indeterminates of <code class="docutils literal notranslate"><span class="pre">e</span></code> include cosθ and
-sinθ, then e is a multilinear polynomial of cosθ and sinθ, in which
-cosθᵢ and sinθᵢ do not appear in the same monomial for any i. When
-this requirement is satisfied, we replace cosθᵢ with (1-tᵢ²)/(1+tᵢ²),
+their stereographic projection. We replace cosθᵢ with (1-tᵢ²)/(1+tᵢ²),
 and sinθᵢ with 2tᵢ/(1+tᵢ²), and get a rational polynomial. The
 indeterminates of this rational polynomial are t together with the
 indeterminates in <code class="docutils literal notranslate"><span class="pre">e</span></code> that are not cosθ or sinθ. If the input
@@ -2777,22 +2773,9 @@ returned rational has denominator being 1. Notice that the
 indeterminates of <code class="docutils literal notranslate"><span class="pre">e</span></code> can include variables other than cosθ and
 sinθ, and we impose no requirements on these variables that are not
 cosθ or sinθ.</p>
-<p>For example, e = x²ysinθ₁cosθ₂ + 3xsinθ₂cosθ₃ is a valid input. e =
-sinθ₁cosθ₁ + 1 is not valid because both an sinθ₁ and cosθ₁ appear in
-the same monomial. e = sin²θ₁ is not a valid input because it is
-quadratic in sinθ₁.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
-<dd>The symbolic polynomial to be substituted. Note that e has to be a
-multilinear polynomial of variables in <code class="docutils literal notranslate"><span class="pre">sin_cos</span></code>, namely inside
-each monomial m, m.degree(sin_cos[i].c) &lt;= 1,
-m.degree(sin_cos[i].s) &lt;= 1, and no sin_cos[i].s and sin_cos[i].c
-appear in the same monomial. Namely that e can be sin_cos[0].s *
-sin_cos[1].c + 1 or t[0]*sin_cos[0].s * sin_cos[1].c + 1 (note t
-can also appear in e), but cannot be sin_cos[0].s * sin_cos[0].c
-(where sin_cos[0].s and sin_cos[0].c appear in the same monomial)
-or pow(sin_cos[0].s, 2) (where the degree or sin_cos[0].s is
-larger than 1).</dd>
+<dd>The symbolic polynomial to be substituted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">sin_cos</span></code>:</dt>
 <dd>sin_cos(i) is the pair of variables (sᵢ, cᵢ), (where sᵢ=sinθᵢ,
 cᵢ=cosθᵢ) as documented above.</dd>

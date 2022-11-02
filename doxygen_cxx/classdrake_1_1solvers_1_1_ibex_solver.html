@@ -166,7 +166,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_ibex_solver.
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the IBEX solver (<a href="http://www.ibex-lib.org">http://www.ibex-lib.org</a>). </p>
+<div class="textblock"><p>(Deprecated.) IBEX support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>. </p>
+<p>This class will be removed from Drake on or after 2023-02-01.</p>
+<p>An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the IBEX solver (<a href="http://www.ibex-lib.org">http://www.ibex-lib.org</a>).</p>
 <p>This solver supports the following constraints / costs:</p><ul>
 <li><a class="el" href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html" title="An exponential cone constraint is a special type of convex cone constraint.">ExponentialConeConstraint</a></li>
 <li>GenericConstraint</li>
@@ -197,6 +199,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_ibex_solver.
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a952e3359c73355916108fd8d864940f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a952e3359c73355916108fd8d864940f7">IbexSolver</a> ()</td></tr>
+<tr class="memdesc:a952e3359c73355916108fd8d864940f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a952e3359c73355916108fd8d864940f7">More...</a><br /></td></tr>
 <tr class="separator:a952e3359c73355916108fd8d864940f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f418b764e839893a50268e34793ca25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a8f418b764e839893a50268e34793ca25">~IbexSolver</a> () final</td></tr>
 <tr class="separator:a8f418b764e839893a50268e34793ca25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,12 +265,16 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Static versions of the instance methods with similar names.</div></td></tr>
 <tr class="memitem:a4dc451b7db72a168d9f0da1746011b45"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a4dc451b7db72a168d9f0da1746011b45">id</a> ()</td></tr>
+<tr class="memdesc:a4dc451b7db72a168d9f0da1746011b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a4dc451b7db72a168d9f0da1746011b45">More...</a><br /></td></tr>
 <tr class="separator:a4dc451b7db72a168d9f0da1746011b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a277134785588d69bb461a4a402877e7a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a277134785588d69bb461a4a402877e7a">is_available</a> ()</td></tr>
+<tr class="memdesc:a277134785588d69bb461a4a402877e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a277134785588d69bb461a4a402877e7a">More...</a><br /></td></tr>
 <tr class="separator:a277134785588d69bb461a4a402877e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd">is_enabled</a> ()</td></tr>
+<tr class="memdesc:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a2acbb1fddaffbf52c3eaf70f6dfa41bd">More...</a><br /></td></tr>
 <tr class="separator:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793b4bef71b184ac87f03d80b21c04d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a793b4bef71b184ac87f03d80b21c04d2">ProgramAttributesSatisfied</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)</td></tr>
+<tr class="memdesc:a793b4bef71b184ac87f03d80b21c04d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a793b4bef71b184ac87f03d80b21c04d2">More...</a><br /></td></tr>
 <tr class="separator:a793b4bef71b184ac87f03d80b21c04d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -348,6 +355,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
+
 </div>
 </div>
 <a id="a8f418b764e839893a50268e34793ca25"></a>
@@ -399,6 +410,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
+
 </div>
 </div>
 <a id="a277134785588d69bb461a4a402877e7a"></a>
@@ -424,6 +439,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
+
 </div>
 </div>
 <a id="a2acbb1fddaffbf52c3eaf70f6dfa41bd"></a>
@@ -448,6 +467,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>
@@ -526,6 +549,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>

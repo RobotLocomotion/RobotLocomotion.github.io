@@ -177,7 +177,7 @@ $(document).ready(function(){initNavTree('group__python__bindings.html','');});
 <p>Some (but not all) exceptions to the above rules:</p>
 <ul>
 <li><code><a class="el" href="common_2autodiff_8h.html">drake/common/autodiff.h</a></code> symbols live in <code>pydrake.autodiffutils</code>.</li>
-<li><code><a class="el" href="symbolic_8h.html">drake/common/symbolic.h</a></code> symbols live in <code>pydrake.symbolic</code>.</li>
+<li><code>drake/common/symbolic.h</code> symbols live in <code>pydrake.symbolic</code>.</li>
 <li><code><a class="el" href="value_8h.html">drake/common/value.h</a></code> symbols live in <code>pydrake.common.value</code>.</li>
 <li><code>drake/systems/framework/*.h</code> symbols live in <code>pydrake.systems.framework</code> (per the rule) and the bindings are ultimately linked via <code>pydrake/systems/framework_py.cc</code>, but for compilation speed the binding definitions themselves are split into <code>./framework_py_{semantics,systems,values}.cc</code>.</li>
 </ul>

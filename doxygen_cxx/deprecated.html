@@ -164,82 +164,106 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">Body&lt; T &gt;::get_default_mass</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000017"></a>Use Body::default_mass(). <br />
+<dd><a class="anchor" id="_deprecated000013"></a>Use Body::default_mass(). <br />
  This will be removed from Drake on or after 2022-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#a0fcb9924b5d1e8b2ffcdf81c9d1f2e0b">DifferentialInverseKinematicsParameters::DifferentialInverseKinematicsParameters</a>  ()</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>num_positions is now a mandatory argument for the constructor. This  default constructor sets num_positions = 1. <br />
+<dd><a class="anchor" id="_deprecated000004"></a>num_positions is now a mandatory argument for the constructor. This  default constructor sets num_positions = 1. <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#af0fa3593157e170ef2ecb8e2c03ff0eb">DifferentialInverseKinematicsParameters::get_end_effector_velocity_gain</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Use get_end_effector_velocity_flag instead. (The gains  before were actually only acting as a flag). <br />
+<dd><a class="anchor" id="_deprecated000006"></a>Use get_end_effector_velocity_flag instead. (The gains  before were actually only acting as a flag). <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#ad5f34ff4f6fc6854f409c4ace006ff6d">DifferentialInverseKinematicsParameters::get_timestep</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use get_time_step() instead of get_timestep(). <br />
+<dd><a class="anchor" id="_deprecated000005"></a>Use get_time_step() instead of get_timestep(). <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#a29b6ac35fd2ca8b17e10cd0e82a3e473">DifferentialInverseKinematicsParameters::get_unconstrained_degrees_of_freedom_velocity_limit</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>The unconstrained_degrees_of_freedom_velocity_limit is no  longer used in the differential IK formulation and will be  removed from this parameters class. <br />
+<dd><a class="anchor" id="_deprecated000007"></a>The unconstrained_degrees_of_freedom_velocity_limit is no  longer used in the differential IK formulation and will be  removed from this parameters class. <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#adee66ad72a71ce2b8a8db0c9277a6a12">DifferentialInverseKinematicsParameters::set_end_effector_velocity_gain</a>  (const Vector6&lt; double &gt; &amp;gain_E)</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Use set_end_effector_velocity_flag instead. (The gains  before were actually only acting as a flag). <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Use set_end_effector_velocity_flag instead. (The gains  before were actually only acting as a flag). <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#ad1f63aeac21fea5ab2988b23d8004d89">DifferentialInverseKinematicsParameters::set_timestep</a>  (double dt)</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use set_time_step() instead of set_timestep(). <br />
+<dd><a class="anchor" id="_deprecated000008"></a>Use set_time_step() instead of set_timestep(). <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#ac1e91164084b272e2e962f5eec00a403">DifferentialInverseKinematicsParameters::set_unconstrained_degrees_of_freedom_velocity_limit</a>  (double limit)</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>The unconstrained_degrees_of_freedom_velocity_limit is no  longer used in the differential IK formulation and will be  removed from this parameters class. <br />
+<dd><a class="anchor" id="_deprecated000009"></a>The unconstrained_degrees_of_freedom_velocity_limit is no  longer used in the differential IK formulation and will be  removed from this parameters class. <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
-<dt>Member <a class="el" href="namespacedrake.html#a3c86a37d7ac815e5d42ab9d67363c14e">drake::autodiffxd_make_coherent</a>  (const AutoDiffXd &amp;donor, AutoDiffXd *recipient)</dt>
-<dd><a class="anchor" id="_deprecated000001"></a>This function is being removed;  if you still need it you may copy the code into your own project. <br />
- This will be removed from Drake on or after 2022-11-01. </dd>
-<dt>Member <a class="el" href="namespacedrake.html#a1d04dd581311ecdd2bbaaca3c1d1ff34">drake::autodiffxd_make_coherent</a>  (const double &amp;, double *)</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>This function is being removed;  if you still need it you may copy the code into your own project. <br />
- This will be removed from Drake on or after 2022-11-01. </dd>
-<dt>Member <a class="el" href="namespacedrake.html#a439ef8526114ad731981ac00415e6975">drake::autodiffxd_make_coherent</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> *)</dt>
-<dd><a class="anchor" id="_deprecated000003"></a>This function is being removed;  if you still need it you may copy the code into your own project. <br />
- This will be removed from Drake on or after 2022-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#adecdf6a7ef606861457807da4b56e7ff">drake::math::saturate</a>  (const T1 &amp;value, const T2 &amp;low, const T3 &amp;high)</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Use C++17's std::clamp instead <br />
+<dd><a class="anchor" id="_deprecated000011"></a>Use C++17's std::clamp instead <br />
  This will be removed from Drake on or after 2023-01-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1solvers.html#ab9867f403bc6e247a2b55c9022f6fa3a">drake::solvers::ReplaceBilinearTerms</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, const Eigen::Ref&lt; const VectorXDecisionVariable &gt; &amp;x, const Eigen::Ref&lt; const VectorXDecisionVariable &gt; &amp;y, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95" title="A matrix of dynamic size, templated on scalar type.">MatrixX&lt; symbolic::Expression &gt;</a>&gt; &amp;W)</dt>
-<dd><a class="anchor" id="_deprecated000023"></a>Use symbolic::ReplaceBilinearTerms in the namespace drake::symbolic <br />
+<dd><a class="anchor" id="_deprecated000019"></a>Use symbolic::ReplaceBilinearTerms in the namespace drake::symbolic <br />
  This will be removed from Drake on or after 2022-12-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#aec138ad5b7eb6d6db3533272fbf36cba">drake::symbolic::DecomposeAffineExpression</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, const std::unordered_map&lt; symbolic::Variable::Id, int &gt; &amp;map_var_to_index, const Eigen::MatrixBase&lt; Derived &gt; &amp;coeffs, double *constant_term)</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>Use the overloaded DecomposeAffineExpression which takes  coeffs as a pointer. <br />
- This will be removed from Drake on or after 2022-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#a74fae4346c33bfaf11326fcd6a85bd7e">drake::symbolic::SubstituteStereographicProjection</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, const std::unordered_map&lt; symbolic::Variable, symbolic::Variable &gt; &amp;subs)</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>Use the other SubstituteStereographicProjection which passes  e as a symbolic::Polynomial <br />
+<dd><a class="anchor" id="_deprecated000001"></a>Use the other SubstituteStereographicProjection which passes  e as a symbolic::Polynomial <br />
  This will be removed from Drake on or after 2023-02-01. </dd>
 <dt>Member <a class="el" href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">drake::systems::ApplySimulatorConfig</a>  (drake::systems::Simulator&lt; T &gt; *simulator, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html" title="The set of all configurable properties on a Simulator and IntegratorBase.">SimulatorConfig</a> &amp;config)</dt>
-<dd><a class="anchor" id="_deprecated000024"></a>Call ApplySimulatorConfig with the config parameter first. <br />
+<dd><a class="anchor" id="_deprecated000032"></a>Call ApplySimulatorConfig with the config parameter first. <br />
  This will be removed from Drake on or after 2022-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16">drake::systems::sensors::ApplyCameraConfig</a>  (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html" title="Configuration of a camera.">CameraConfig</a> &amp;config, multibody::MultibodyPlant&lt; double &gt; *plant, DiagramBuilder&lt; double &gt; *builder, geometry::SceneGraph&lt; double &gt; *scene_graph, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> *lcm)</dt>
-<dd><a class="anchor" id="_deprecated000026"></a>Use the LcmBuses-related overload instead. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
+<dd><a class="anchor" id="_deprecated000034"></a>Use the LcmBuses-related overload instead. <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#ad1cea2fd3744277d8b9e7a39bccdbdef">DrealSolver::CheckSatisfiability</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">symbolic::Formula</a> &amp;f, double delta)</dt>
+<dd><a class="anchor" id="_deprecated000021"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#aa9cbd2b0e109a2525109c4e534d37281">DrealSolver::DrealSolver</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000020"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a4dc451b7db72a168d9f0da1746011b45">DrealSolver::id</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000023"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a277134785588d69bb461a4a402877e7a">DrealSolver::is_available</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000024"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd">DrealSolver::is_enabled</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000025"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#ace0e106e0fe1c4573abf7bc4106bd735">DrealSolver::Minimize</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;objective, const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">symbolic::Formula</a> &amp;constraint, double delta, LocalOptimization local_optimization)</dt>
+<dd><a class="anchor" id="_deprecated000022"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a793b4bef71b184ac87f03d80b21c04d2">DrealSolver::ProgramAttributesSatisfied</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> &amp;)</dt>
+<dd><a class="anchor" id="_deprecated000026"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a4ac153fdc3d0436770083d5afd15c6dd">FixedOffsetFrame&lt; T &gt;::FixedOffsetFrame</a>  (const Frame&lt; T &gt; &amp;P, const math::RigidTransform&lt; double &gt; &amp;X_PF)</dt>
-<dd><a class="anchor" id="_deprecated000018"></a>The name parameter to the FixedOffsetFrame constructor is now required. <br />
+<dd><a class="anchor" id="_deprecated000014"></a>The name parameter to the FixedOffsetFrame constructor is now required. <br />
  This will be removed from Drake on or after 2022-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a538c495e3aa9bf9d957a7f46b106b3dc">FixedOffsetFrame&lt; T &gt;::FixedOffsetFrame</a>  (const Body&lt; T &gt; &amp;bodyB, const math::RigidTransform&lt; double &gt; &amp;X_BF)</dt>
-<dd><a class="anchor" id="_deprecated000019"></a>FixedOffsetFrame must always have name <br />
+<dd><a class="anchor" id="_deprecated000015"></a>FixedOffsetFrame must always have name <br />
  This will be removed from Drake on or after 2022-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a930d3e9d3ee5044dde9f4aaaec16b78a">Frame&lt; T &gt;::Frame</a>  (const Body&lt; T &gt; &amp;body)</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>The name parameter to the Frame constructor is now required. <br />
- This will be removed from Drake on or after 2022-12-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ae809ebbfe9cdb4f59ff5d8eb9f0e2331">GraphOfConvexSets::SolveShortestPath</a>  (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> &amp;target, bool convex_relaxation, const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">solvers::SolverInterface</a> *solver=nullptr, const std::optional&lt; solvers::SolverOptions &gt; &amp;solver_options=std::nullopt) const</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use version with GraphOfConvexSetsOptions <br />
+<dd><a class="anchor" id="_deprecated000016"></a>The name parameter to the Frame constructor is now required. <br />
  This will be removed from Drake on or after 2022-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4548f0a4271c422923bf96362bd832b1">GraphOfConvexSets::SolveShortestPath</a>  (VertexId source_id, VertexId target_id, bool convex_relaxation, const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">solvers::SolverInterface</a> *solver=nullptr, const std::optional&lt; solvers::SolverOptions &gt; &amp;solver_options=std::nullopt) const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use version with GraphOfConvexSetsOptions <br />
+<dd><a class="anchor" id="_deprecated000002"></a>Use version with GraphOfConvexSetsOptions <br />
  This will be removed from Drake on or after 2022-12-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ae809ebbfe9cdb4f59ff5d8eb9f0e2331">GraphOfConvexSets::SolveShortestPath</a>  (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> &amp;target, bool convex_relaxation, const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">solvers::SolverInterface</a> *solver=nullptr, const std::optional&lt; solvers::SolverOptions &gt; &amp;solver_options=std::nullopt) const</dt>
+<dd><a class="anchor" id="_deprecated000003"></a>Use version with GraphOfConvexSetsOptions <br />
+ This will be removed from Drake on or after 2022-12-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a952e3359c73355916108fd8d864940f7">IbexSolver::IbexSolver</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000027"></a>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a4dc451b7db72a168d9f0da1746011b45">IbexSolver::id</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000028"></a>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a277134785588d69bb461a4a402877e7a">IbexSolver::is_available</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000029"></a>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd">IbexSolver::is_enabled</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000030"></a>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html#a793b4bef71b184ac87f03d80b21c04d2">IbexSolver::ProgramAttributesSatisfied</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> &amp;)</dt>
+<dd><a class="anchor" id="_deprecated000031"></a>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a818199bfa51f6b3d5e9a8660bc4e486c">Parser::AddModelFromString</a>  (const std::string &amp;file_contents, const std::string &amp;file_type, const std::string &amp;model_name={})</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Use AddModelsFromString() instead. <br />
+<dd><a class="anchor" id="_deprecated000012"></a>Use AddModelsFromString() instead. <br />
  This will be removed from Drake on or after 2023-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ac65b91a4e295172543170ac6c12a415b">RigidBody&lt; T &gt;::RigidBody</a>  (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia&lt; double &gt;</a> &amp;M_BBo_B)</dt>
-<dd><a class="anchor" id="_deprecated000021"></a>The body_name parameter to the RigidBody constructor is now required. <br />
+<dd><a class="anchor" id="_deprecated000017"></a>The body_name parameter to the RigidBody constructor is now required. <br />
  This will be removed from Drake on or after 2022-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#acdd73a23410d860ee73dc021663ec99f">System&lt; T &gt;::GetPeriodicEvents</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000025"></a>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
+<dd><a class="anchor" id="_deprecated000033"></a>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
  This will be removed from Drake on or after 2023-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a4374412fa825a46abdc4b2484b9c1630">WeldJoint&lt; T &gt;::X_PC</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000022"></a>WeldJoint frame notation has changed. Use `X_FM()` instead. <br />
+<dd><a class="anchor" id="_deprecated000018"></a>WeldJoint frame notation has changed. Use `X_FM()` instead. <br />
  This will be removed from Drake on or after 2022-12-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

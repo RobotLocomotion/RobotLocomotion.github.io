@@ -1636,61 +1636,68 @@ solutions to the dual problem.</p>
 <dt id="pydrake.solvers.DrealSolver">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.</code><code class="descname">DrealSolver</code><a class="headerlink" href="#pydrake.solvers.DrealSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
-<p>An implementation of SolverInterface for the dReal4 solver
-(<a class="reference external" href="https://github.com/dreal/dreal4">https://github.com/dreal/dreal4</a>).</p>
-<p>Currently this implementation supports the following options: *
-precision &lt;double&gt;: This value is used as a termination condition.
-When the ICP algorithm finds an interval box whose width is smaller
-than this value, it concludes that the query is delta-satisfiable and
-provides the interval box as a witness. Default value = 0.001.</p>
-<ul class="simple">
-<li>use_local_optimization &lt;bool&gt;: Use local-optimization algorithms in</li>
-</ul>
-<p>solving exists-forall problem. For now, the solver is using NLopt. See
-<a class="reference external" href="https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15">https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15</a> for
-details. Default value = True.</p>
-<p>To see the full list of dReal4 options, visit
-<a class="reference external" href="https://github.com/dreal/dreal4#command-line-options">https://github.com/dreal/dreal4#command-line-options</a>.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>dReal support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
 <dl class="method">
 <dt id="pydrake.solvers.DrealSolver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.DrealSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.DrealSolver.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>dReal support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.solvers.DrealSolver.CheckSatisfiability">
 <em class="property">static </em><code class="descname">CheckSatisfiability</code><span class="sig-paren">(</span><em>f: pydrake.symbolic.Formula</em>, <em>delta: float</em><span class="sig-paren">)</span> &#x2192; Optional[Dict[pydrake.symbolic.Variable, pydrake.solvers.DrealSolver.Interval]]<a class="headerlink" href="#pydrake.solvers.DrealSolver.CheckSatisfiability" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks the satisfiability of a given formula <code class="docutils literal notranslate"><span class="pre">f</span></code> with a given
-precision <code class="docutils literal notranslate"><span class="pre">delta</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a model, a mapping from a variable to an interval, if <code class="docutils literal notranslate"><span class="pre">f</span></code> is
-δ-satisfiable.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a nullopt, if <code class="docutils literal notranslate"><span class="pre">is</span></code> unsatisfiable.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>dReal support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.solvers.DrealSolver.id">
 <em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.SolverId<a class="headerlink" href="#pydrake.solvers.DrealSolver.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>dReal support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="class">
 <dt id="pydrake.solvers.DrealSolver.Interval">
 <em class="property">class </em><code class="descname">Interval</code><a class="headerlink" href="#pydrake.solvers.DrealSolver.Interval" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class representing an interval of doubles.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>dReal support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
 <dl class="method">
 <dt id="pydrake.solvers.DrealSolver.Interval.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.DrealSolver.Interval</em>, <em>low: float</em>, <em>high: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.DrealSolver.Interval.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs an interval [low, high].</p>
+<dd><p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Precondition:</dt>
-<dd>Its lower bound <code class="docutils literal notranslate"><span class="pre">low</span></code> must be less than or equal to its upper
-bound <code class="docutils literal notranslate"><span class="pre">high</span></code>.</dd>
+<dt>Deprecated:</dt>
+<dd>dReal support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
 </dl>
 </dd></dl>
 
@@ -1723,7 +1730,9 @@ bound <code class="docutils literal notranslate"><span class="pre">high</span></
 <dl class="class">
 <dt id="pydrake.solvers.DrealSolver.LocalOptimization">
 <em class="property">class </em><code class="descname">LocalOptimization</code><a class="headerlink" href="#pydrake.solvers.DrealSolver.LocalOptimization" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether to use dReal’s –local-optimization option or not.</p>
+<dd><p>(Deprecated.) dReal support is being withdrawn from Drake; for
+details, see <a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>. This
+class will be removed from Drake on or after 2023-02-01.</p>
 <p>Members:</p>
 <blockquote>
 <div><p>kUse : Use “–local-optimization” option.</p>
@@ -1759,22 +1768,13 @@ bound <code class="docutils literal notranslate"><span class="pre">high</span></
 <dl class="staticmethod">
 <dt id="pydrake.solvers.DrealSolver.Minimize">
 <em class="property">static </em><code class="descname">Minimize</code><span class="sig-paren">(</span><em>objective: pydrake.symbolic.Expression</em>, <em>constraint: pydrake.symbolic.Formula</em>, <em>delta: float</em>, <em>local_optimization: pydrake.solvers.DrealSolver.LocalOptimization</em><span class="sig-paren">)</span> &#x2192; Optional[Dict[pydrake.symbolic.Variable, pydrake.solvers.DrealSolver.Interval]]<a class="headerlink" href="#pydrake.solvers.DrealSolver.Minimize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finds a solution to minimize <code class="docutils literal notranslate"><span class="pre">objective</span></code> function while satisfying a
-given <code class="docutils literal notranslate"><span class="pre">constraint</span></code> using <code class="docutils literal notranslate"><span class="pre">delta</span></code>. When <code class="docutils literal notranslate"><span class="pre">local_optimization</span></code> is
-Localoptimization::kUse, enable “–local-optimization” dReal option
-which uses NLopt’s local-optimization algorithms to refine
-counterexamples in the process of global optimization.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a model, a mapping from a variable to an interval, if a solution
-exists.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">nullopt, if there is no solution.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>dReal support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -2201,42 +2201,36 @@ integer optimization. Please refer to
 <dt id="pydrake.solvers.IbexSolver">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.</code><code class="descname">IbexSolver</code><a class="headerlink" href="#pydrake.solvers.IbexSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
-<p>An implementation of SolverInterface for the IBEX solver
-(<a class="reference external" href="http://www.ibex-lib.org">http://www.ibex-lib.org</a>).</p>
-<p>This solver supports the following constraints / costs: -
-ExponentialConeConstraint - GenericConstraint -
-LinearComplementarityConstraint - LinearConstraint -
-LinearEqualityConstraint - LorentzConeConstraint -
-RotatedLorentzConeConstraint - GenericCost - LinearCost -
-QuadraticCost</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Only costs and constraints that support symbolic evaluation are
-compatible with this solver.</p>
-</div>
-<p>Currently this implementation supports the following options: -
-rel_eps_f &lt;double&gt;: Relative precision (∈ ℝ⁺) on the objective. -
-abs_eps_f &lt;double&gt;: Absolute precision (∈ ℝ⁺) on the objective. -
-eps_h &lt;double&gt;: Equality relaxation value (∈ ℝ⁺). - rigor &lt;int&gt;:
-Activate rigor mode (certify feasibility of equations). 0 –&gt; rigor
-off, != 0 –&gt; rigor on. - random_seed &lt;double&gt;: Random seed (useful
-for reproducibility). - eps_x &lt;double&gt;: Precision on the variable (∈
-ℝ⁺). - trace &lt;int&gt;: Activate trace. Updates of loup/uplo are printed
-while minimizing. 0 - nothing is printed. 1 - prints every loup/uplo
-update. 2 - prints also each handled node. Note that trace = 1 if
-kPrintToConsole = true. - timeout &lt;double&gt;: Timeout (time in seconds).
-0.0 indicates +∞.</p>
-<p>See <a class="reference external" href="http://www.ibex-lib.org/doc/optim.html#options">http://www.ibex-lib.org/doc/optim.html#options</a> for more
-information.</p>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>IBEX support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
 <dl class="method">
 <dt id="pydrake.solvers.IbexSolver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.IbexSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.IbexSolver.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>IBEX support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.solvers.IbexSolver.id">
 <em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.SolverId<a class="headerlink" href="#pydrake.solvers.IbexSolver.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>IBEX support is being withdrawn from Drake; for details, see
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a> This will be
+removed from Drake on or after 2023-02-01.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -7323,10 +7317,8 @@ used in new code.</p>
 <blockquote>
 <div><p>kClp :</p>
 <p>kCsdp :</p>
-<p>kDReal :</p>
 <p>kEqualityConstrainedQP :</p>
 <p>kGurobi :</p>
-<p>kIbex :</p>
 <p>kIpopt :</p>
 <p>kLinearSystem :</p>
 <p>kMobyLCP :</p>
@@ -7335,6 +7327,8 @@ used in new code.</p>
 <p>kOsqp :</p>
 <p>kScs :</p>
 <p>kSnopt :</p>
+<p>kDReal : (Deprecated.)</p>
+<p>kIbex : (Deprecated.)</p>
 </div></blockquote>
 <dl class="method">
 <dt id="pydrake.solvers.SolverType.__init__">
@@ -7353,62 +7347,62 @@ used in new code.</p>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kDReal">
-<code class="descname">kDReal</code><em class="property"> = &lt;SolverType.kDReal: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kDReal" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kDReal</code><em class="property"> = &lt;SolverType.kDReal: 13&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kDReal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kEqualityConstrainedQP">
-<code class="descname">kEqualityConstrainedQP</code><em class="property"> = &lt;SolverType.kEqualityConstrainedQP: 3&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kEqualityConstrainedQP" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kEqualityConstrainedQP</code><em class="property"> = &lt;SolverType.kEqualityConstrainedQP: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kEqualityConstrainedQP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kGurobi">
-<code class="descname">kGurobi</code><em class="property"> = &lt;SolverType.kGurobi: 4&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kGurobi" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kGurobi</code><em class="property"> = &lt;SolverType.kGurobi: 3&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kGurobi" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kIbex">
-<code class="descname">kIbex</code><em class="property"> = &lt;SolverType.kIbex: 5&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kIbex" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kIbex</code><em class="property"> = &lt;SolverType.kIbex: 14&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kIbex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kIpopt">
-<code class="descname">kIpopt</code><em class="property"> = &lt;SolverType.kIpopt: 6&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kIpopt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kIpopt</code><em class="property"> = &lt;SolverType.kIpopt: 4&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kIpopt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kLinearSystem">
-<code class="descname">kLinearSystem</code><em class="property"> = &lt;SolverType.kLinearSystem: 7&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kLinearSystem" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kLinearSystem</code><em class="property"> = &lt;SolverType.kLinearSystem: 5&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kLinearSystem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kMobyLCP">
-<code class="descname">kMobyLCP</code><em class="property"> = &lt;SolverType.kMobyLCP: 8&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kMobyLCP" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kMobyLCP</code><em class="property"> = &lt;SolverType.kMobyLCP: 6&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kMobyLCP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kMosek">
-<code class="descname">kMosek</code><em class="property"> = &lt;SolverType.kMosek: 9&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kMosek" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kMosek</code><em class="property"> = &lt;SolverType.kMosek: 7&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kMosek" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kNlopt">
-<code class="descname">kNlopt</code><em class="property"> = &lt;SolverType.kNlopt: 10&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kNlopt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kNlopt</code><em class="property"> = &lt;SolverType.kNlopt: 8&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kNlopt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kOsqp">
-<code class="descname">kOsqp</code><em class="property"> = &lt;SolverType.kOsqp: 11&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kOsqp" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kOsqp</code><em class="property"> = &lt;SolverType.kOsqp: 9&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kOsqp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kScs">
-<code class="descname">kScs</code><em class="property"> = &lt;SolverType.kScs: 13&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kScs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kScs</code><em class="property"> = &lt;SolverType.kScs: 11&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kScs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.solvers.SolverType.kSnopt">
-<code class="descname">kSnopt</code><em class="property"> = &lt;SolverType.kSnopt: 12&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kSnopt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kSnopt</code><em class="property"> = &lt;SolverType.kSnopt: 10&gt;</em><a class="headerlink" href="#pydrake.solvers.SolverType.kSnopt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">

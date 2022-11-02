@@ -359,8 +359,6 @@ var searchData=
   ['autodiffvecxd',['AutoDiffVecXd',['../namespacedrake.html#a7b13142534d668d5d490b829b917fa16',1,'drake']]],
   ['autodiffxd',['AutoDiffXd',['../namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc',1,'drake']]],
   ['autodiffxd_2eh',['autodiffxd.h',['../autodiffxd_8h.html',1,'']]],
-  ['autodiffxd_5fmake_5fcoherent',['autodiffxd_make_coherent',['../namespacedrake.html#a3c86a37d7ac815e5d42ab9d67363c14e',1,'drake::autodiffxd_make_coherent(const AutoDiffXd &amp;donor, AutoDiffXd *recipient)'],['../namespacedrake.html#a1d04dd581311ecdd2bbaaca3c1d1ff34',1,'drake::autodiffxd_make_coherent(const double &amp;, double *)'],['../namespacedrake.html#a439ef8526114ad731981ac00415e6975',1,'drake::autodiffxd_make_coherent(const symbolic::Expression &amp;, symbolic::Expression *)']]],
-  ['autodiffxd_5fmake_5fcoherent_2eh',['autodiffxd_make_coherent.h',['../autodiffxd__make__coherent_8h.html',1,'']]],
   ['autoplay',['autoplay',['../classdrake_1_1geometry_1_1_meshcat_animation.html#a7eefae8a50c8aada8fccdbce7716d671',1,'drake::geometry::MeshcatAnimation']]],
   ['available',['available',['../classdrake_1_1solvers_1_1_solver_base.html#ac910159108658c34a743b0806d81ab10',1,'drake::solvers::SolverBase::available()'],['../classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa',1,'drake::solvers::SolverInterface::available()']]],
   ['axiallysymmetric',['AxiallySymmetric',['../classdrake_1_1multibody_1_1_unit_inertia.html#aa66b55a2788b7027b92ef7434da5569b',1,'drake::multibody::UnitInertia']]],

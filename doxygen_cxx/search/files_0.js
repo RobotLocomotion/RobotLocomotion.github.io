@@ -30,6 +30,5 @@ var searchData=
   ['autodiff_5fgradient_2eh',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]],
   ['autodiff_5foverloads_2eh',['autodiff_overloads.h',['../autodiff__overloads_8h.html',1,'']]],
   ['autodiff_5ftypes_5fpybind_2eh',['autodiff_types_pybind.h',['../autodiff__types__pybind_8h.html',1,'']]],
-  ['autodiffxd_2eh',['autodiffxd.h',['../autodiffxd_8h.html',1,'']]],
-  ['autodiffxd_5fmake_5fcoherent_2eh',['autodiffxd_make_coherent.h',['../autodiffxd__make__coherent_8h.html',1,'']]]
+  ['autodiffxd_2eh',['autodiffxd.h',['../autodiffxd_8h.html',1,'']]]
 ];

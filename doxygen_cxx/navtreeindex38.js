@@ -1,9 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acf0fec4b7afc9415a7441b0bb4e9cf33":[3,0,0,16,5,7,0],
-"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#aeae40f26cfe7f3992ac3b6a75e32133f":[3,0,0,16,5,7,6],
-"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html":[1,2,11,3],
-"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a2227250843f4dc54ecb253185461b199":[1,2,11,3,5],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a23186071020bd638fb54e1cc70517a5f":[1,2,11,3,2],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a3154e21e3ddd2f7aec07d8ec9a7ea2de":[1,2,11,3,3],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a3e7b10c80993d5689758c27cf5fdf220":[1,2,11,3,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ada7b35ee8b161bd6ccc2709ccf3c1022":[3,0,0,16,9,3,15],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adca55d80c38bff3a312419c47ff112d9":[3,0,0,16,9,3,11],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae36974e43ab46ab33b24010ec4099c05":[3,0,0,16,9,3,10],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[3,0,0,16,9,3,22]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[3,0,0,16,9,3,22],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052":[3,0,0,16,9,3,12],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af3392559929281e1d5db4f104ed4b8f1":[3,0,0,16,9,3,16],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[3,0,0,16,9,3,21],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[3,0,0,16,9,4]
 };

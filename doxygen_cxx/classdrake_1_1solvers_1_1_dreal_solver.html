@@ -169,19 +169,16 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_dreal_solver
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the dReal4 solver (<a href="https://github.com/dreal/dreal4">https://github.com/dreal/dreal4</a>). </p>
-<p>Currently this implementation supports the following options:</p><ul>
-<li>precision &lt;double&gt;: This value is used as a termination condition. When the ICP algorithm finds an interval box whose width is smaller than this value, it concludes that the query is delta-satisfiable and provides the interval box as a witness. Default value = 0.001.</li>
-<li>use_local_optimization &lt;bool&gt;: Use local-optimization algorithms in solving exists-forall problem. For now, the solver is using NLopt. See <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15">https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15</a> for details. Default value = True.</li>
-</ul>
-<p>To see the full list of dReal4 options, visit <a href="https://github.com/dreal/dreal4#command-line-options">https://github.com/dreal/dreal4#command-line-options</a>. </p>
+<div class="textblock"><p>(Deprecated.) dReal support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>. </p>
+<p>This class will be removed from Drake on or after 2023-02-01.</p>
+<p>An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the dReal4 solver (<a href="https://github.com/dreal/dreal4">https://github.com/dreal/dreal4</a>). </p>
 </div>
 <p><code>#include &lt;drake/solvers/dreal_solver.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver_1_1_interval.html">Interval</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class representing an interval of doubles.  <a href="classdrake_1_1solvers_1_1_dreal_solver_1_1_interval.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.) dReal support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>.  <a href="classdrake_1_1solvers_1_1_dreal_solver_1_1_interval.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -189,14 +186,16 @@ Public Types</h2></td></tr>
 <tr class="memitem:a4459e6841bfbe292b69a22e78414efba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a4459e6841bfbe292b69a22e78414efba">LocalOptimization</a> { <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a4459e6841bfbe292b69a22e78414efbaaa00aace6e961960b7c37ce3df0a8ac81">kUse</a>, 
 <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a4459e6841bfbe292b69a22e78414efbaa744547351be87c0eac44809fd7dd3608">kNotUse</a>
  }</td></tr>
-<tr class="memdesc:a4459e6841bfbe292b69a22e78414efba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether to use dReal's &ndash;local-optimization option or not.  <a href="classdrake_1_1solvers_1_1_dreal_solver.html#a4459e6841bfbe292b69a22e78414efba">More...</a><br /></td></tr>
+<tr class="memdesc:a4459e6841bfbe292b69a22e78414efba"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.) dReal support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>.  <a href="classdrake_1_1solvers_1_1_dreal_solver.html#a4459e6841bfbe292b69a22e78414efba">More...</a><br /></td></tr>
 <tr class="separator:a4459e6841bfbe292b69a22e78414efba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7743f92393cbd4b54a406f138f345fbe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a7743f92393cbd4b54a406f138f345fbe">IntervalBox</a> = std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver_1_1_interval.html">Interval</a> &gt;</td></tr>
+<tr class="memdesc:a7743f92393cbd4b54a406f138f345fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.) dReal support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>.  <a href="#a7743f92393cbd4b54a406f138f345fbe">More...</a><br /></td></tr>
 <tr class="separator:a7743f92393cbd4b54a406f138f345fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9cbd2b0e109a2525109c4e534d37281"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#aa9cbd2b0e109a2525109c4e534d37281">DrealSolver</a> ()</td></tr>
+<tr class="memdesc:aa9cbd2b0e109a2525109c4e534d37281"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aa9cbd2b0e109a2525109c4e534d37281">More...</a><br /></td></tr>
 <tr class="separator:aa9cbd2b0e109a2525109c4e534d37281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39674f66d893c55d1539fe52fe4fd3cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a39674f66d893c55d1539fe52fe4fd3cd">~DrealSolver</a> () final</td></tr>
 <tr class="separator:a39674f66d893c55d1539fe52fe4fd3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,19 +260,23 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1cea2fd3744277d8b9e7a39bccdbdef"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a7743f92393cbd4b54a406f138f345fbe">IntervalBox</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#ad1cea2fd3744277d8b9e7a39bccdbdef">CheckSatisfiability</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f, <a class="el" href="classdouble.html">double</a> delta)</td></tr>
-<tr class="memdesc:ad1cea2fd3744277d8b9e7a39bccdbdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the satisfiability of a given formula <code>f</code> with a given precision <code>delta</code>.  <a href="#ad1cea2fd3744277d8b9e7a39bccdbdef">More...</a><br /></td></tr>
+<tr class="memdesc:ad1cea2fd3744277d8b9e7a39bccdbdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad1cea2fd3744277d8b9e7a39bccdbdef">More...</a><br /></td></tr>
 <tr class="separator:ad1cea2fd3744277d8b9e7a39bccdbdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace0e106e0fe1c4573abf7bc4106bd735"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a7743f92393cbd4b54a406f138f345fbe">IntervalBox</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#ace0e106e0fe1c4573abf7bc4106bd735">Minimize</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;objective, const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;constraint, <a class="el" href="classdouble.html">double</a> delta, <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a4459e6841bfbe292b69a22e78414efba">LocalOptimization</a> local_optimization)</td></tr>
-<tr class="memdesc:ace0e106e0fe1c4573abf7bc4106bd735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a solution to minimize <code>objective</code> function while satisfying a given <code>constraint</code> using <code>delta</code>.  <a href="#ace0e106e0fe1c4573abf7bc4106bd735">More...</a><br /></td></tr>
+<tr class="memdesc:ace0e106e0fe1c4573abf7bc4106bd735"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ace0e106e0fe1c4573abf7bc4106bd735">More...</a><br /></td></tr>
 <tr class="separator:ace0e106e0fe1c4573abf7bc4106bd735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Static versions of the instance methods with similar names.</div></td></tr>
 <tr class="memitem:a4dc451b7db72a168d9f0da1746011b45"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a4dc451b7db72a168d9f0da1746011b45">id</a> ()</td></tr>
+<tr class="memdesc:a4dc451b7db72a168d9f0da1746011b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a4dc451b7db72a168d9f0da1746011b45">More...</a><br /></td></tr>
 <tr class="separator:a4dc451b7db72a168d9f0da1746011b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a277134785588d69bb461a4a402877e7a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a277134785588d69bb461a4a402877e7a">is_available</a> ()</td></tr>
+<tr class="memdesc:a277134785588d69bb461a4a402877e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a277134785588d69bb461a4a402877e7a">More...</a><br /></td></tr>
 <tr class="separator:a277134785588d69bb461a4a402877e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd">is_enabled</a> ()</td></tr>
+<tr class="memdesc:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a2acbb1fddaffbf52c3eaf70f6dfa41bd">More...</a><br /></td></tr>
 <tr class="separator:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793b4bef71b184ac87f03d80b21c04d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#a793b4bef71b184ac87f03d80b21c04d2">ProgramAttributesSatisfied</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)</td></tr>
+<tr class="memdesc:a793b4bef71b184ac87f03d80b21c04d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a793b4bef71b184ac87f03d80b21c04d2">More...</a><br /></td></tr>
 <tr class="separator:a793b4bef71b184ac87f03d80b21c04d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -299,6 +302,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) dReal support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>. </p>
+<p>This class will be removed from Drake on or after 2023-02-01. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
@@ -322,7 +328,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether to use dReal's &ndash;local-optimization option or not. </p>
+<p>(Deprecated.) dReal support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>. </p>
+<p>This class will be removed from Drake on or after 2023-02-01. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4459e6841bfbe292b69a22e78414efbaaa00aace6e961960b7c37ce3df0a8ac81"></a>kUse&#160;</td><td class="fielddoc"><p>Use "--local-optimization" option. </p>
 </td></tr>
@@ -400,6 +407,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
+
 </div>
 </div>
 <a id="a39674f66d893c55d1539fe52fe4fd3cd"></a>
@@ -462,10 +473,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks the satisfiability of a given formula <code>f</code> with a given precision <code>delta</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a model, a mapping from a variable to an interval, if <code>f</code> is δ-satisfiable. </dd>
-<dd>
-a nullopt, if <code>is</code> unsatisfiable. </dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>
@@ -492,6 +502,10 @@ a nullopt, if <code>is</code> unsatisfiable. </dd></dl>
 </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
+
 </div>
 </div>
 <a id="a277134785588d69bb461a4a402877e7a"></a>
@@ -517,6 +531,10 @@ a nullopt, if <code>is</code> unsatisfiable. </dd></dl>
 </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
+
 </div>
 </div>
 <a id="a2acbb1fddaffbf52c3eaf70f6dfa41bd"></a>
@@ -541,6 +559,10 @@ a nullopt, if <code>is</code> unsatisfiable. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>
@@ -590,11 +612,9 @@ a nullopt, if <code>is</code> unsatisfiable. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Finds a solution to minimize <code>objective</code> function while satisfying a given <code>constraint</code> using <code>delta</code>. </p>
-<p>When <code>local_optimization</code> is Localoptimization::kUse, enable "--local-optimization" dReal option which uses NLopt's local-optimization algorithms to refine counterexamples in the process of global optimization.</p>
-<dl class="section return"><dt>Returns</dt><dd>a model, a mapping from a variable to an interval, if a solution exists. </dd>
-<dd>
-nullopt, if there is no solution. </dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>
@@ -673,6 +693,10 @@ nullopt, if there is no solution. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>

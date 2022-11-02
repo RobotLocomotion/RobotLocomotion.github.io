@@ -1,7 +1,6 @@
 var decompose_8h =
 [
     [ "DecomposeAffineExpression", "decompose_8h.html#a47d95a6b1bc2f740b30a4735cc6dcd3c", null ],
-    [ "DecomposeAffineExpression", "decompose_8h.html#aec138ad5b7eb6d6db3533272fbf36cba", null ],
     [ "DecomposeAffineExpressions", "decompose_8h.html#a0c152941a4e06624bac5926fac2d4e32", null ],
     [ "DecomposeAffineExpressions", "decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e", null ],
     [ "DecomposeLinearExpressions", "decompose_8h.html#aa6c01361f464b3eae396f7d1a0e92c85", null ],

@@ -56,10 +56,6 @@ var NAVTREEINDEX0 =
 "autodiff__types__pybind_8h.html":[4,0,0,0,0,5],
 "autodiff__types__pybind_8h.html#a37d1df365240af0e1d20d1a5668eed71":[4,0,0,0,0,5,0],
 "autodiffxd_8h.html":[4,0,0,1,9],
-"autodiffxd__make__coherent_8h.html":[4,0,0,1,10],
-"autodiffxd__make__coherent_8h.html#a1d04dd581311ecdd2bbaaca3c1d1ff34":[4,0,0,1,10,1],
-"autodiffxd__make__coherent_8h.html#a3c86a37d7ac815e5d42ab9d67363c14e":[4,0,0,1,10,0],
-"autodiffxd__make__coherent_8h.html#a439ef8526114ad731981ac00415e6975":[4,0,0,1,10,2],
 "ball__rpy__joint_8h.html":[4,0,0,8,14,4],
 "barycentric_8h.html":[4,0,0,7,2],
 "barycentric__system_8h.html":[4,0,0,12,6,2],
@@ -70,7 +66,7 @@ var NAVTREEINDEX0 =
 "bilinear__product__util_8h.html#ab9867f403bc6e247a2b55c9022f6fa3a":[4,0,0,11,3,0],
 "binding_8h.html":[4,0,0,11,4],
 "binding_8h.html#aab097e2ddc8c73cd83a8ae0e801b9071":[4,0,0,11,4,2],
-"bit__cast_8h.html":[4,0,0,1,11],
+"bit__cast_8h.html":[4,0,0,1,10],
 "block__sparse__linear__operator_8h.html":[4,0,0,8,2,1],
 "block__sparse__matrix_8h.html":[4,0,0,8,2,2],
 "body_8h.html":[4,0,0,8,14,5],
@@ -249,5 +245,9 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#aaebc4cbcf8fd3bf18645752aaf7ef737":[3,0,0,43,49],
 "classdrake_1_1_polynomial.html#ab0f5130d25206fac74ef07d81bf8ec23":[3,0,0,43,15],
 "classdrake_1_1_polynomial.html#ab168243ddedae6540dc7fe18e0fd6f53":[3,0,0,43,48],
-"classdrake_1_1_polynomial.html#ab2d984c6a3f814a0cfe120febe762139":[3,0,0,43,14]
+"classdrake_1_1_polynomial.html#ab2d984c6a3f814a0cfe120febe762139":[3,0,0,43,14],
+"classdrake_1_1_polynomial.html#ab30704361ad1820a0a54f5127830d92a":[3,0,0,43,45],
+"classdrake_1_1_polynomial.html#abe5f08c6ad942153599928b9c7f9d0fa":[3,0,0,43,43],
+"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5],
+"classdrake_1_1_polynomial.html#ac86fb56fd075f1c1442883c77f200792":[3,0,0,43,40]
 };

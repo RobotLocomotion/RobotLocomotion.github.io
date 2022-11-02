@@ -1,9 +1,5 @@
 var NAVTREEINDEX13 =
 {
-"classdrake_1_1multibody_1_1_multibody_forces.html#a6843eaddec5b973e41314479f48e0aae":[3,0,0,9,47,3],
-"classdrake_1_1multibody_1_1_multibody_forces.html#a8305e8fcc4884808d757748513b4855e":[3,0,0,9,47,10],
-"classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e":[3,0,0,9,47,9],
-"classdrake_1_1multibody_1_1_multibody_forces.html#a9047cccd5c3ffdd52b8cb63ab985850c":[3,0,0,9,47,8],
 "classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65":[3,0,0,9,47,6],
 "classdrake_1_1multibody_1_1_multibody_forces.html#a979baec5b19c1b415da5e64c3565b9b1":[3,0,0,9,47,4],
 "classdrake_1_1multibody_1_1_multibody_forces.html#aa49f61a7a12d45b3e94308cc9d8148c1":[3,0,0,9,47,11],
@@ -249,5 +245,9 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_orientation_constraint.html#ab78d1f1f419685fc5ce820fcd7d8c4bb":[1,1,0,6,2],
 "classdrake_1_1multibody_1_1_orientation_constraint.html#aced68d25b3b28edb4e1af6ac2f8fd541":[1,1,0,6,4],
 "classdrake_1_1multibody_1_1_orientation_constraint.html#ae980c1406985953fe4b78c1435ff1785":[1,1,0,6,3],
-"classdrake_1_1multibody_1_1_orientation_cost.html":[1,1,0,7]
+"classdrake_1_1multibody_1_1_orientation_cost.html":[1,1,0,7],
+"classdrake_1_1multibody_1_1_orientation_cost.html#a0ea8ea2f07e6f0c96d1a60c3d75267dd":[1,1,0,7,5],
+"classdrake_1_1multibody_1_1_orientation_cost.html#a2f4d56ba3ea404dc555e9b20b0eeb950":[1,1,0,7,3],
+"classdrake_1_1multibody_1_1_orientation_cost.html#a66f9f9415ab0c93ed97d3503c856d87e":[1,1,0,7,0],
+"classdrake_1_1multibody_1_1_orientation_cost.html#a826128003751513bc7513bc1d1cb9456":[1,1,0,7,6]
 };
