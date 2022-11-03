@@ -16,6 +16,7 @@ var searchData=
   ['xcdot_5fticket',['xcdot_ticket',['../classdrake_1_1systems_1_1_system_base.html#ab42cd3bff14253894eb0a29edf843b3f',1,'drake::systems::SystemBase']]],
   ['xcf',['xcf',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa220cd3808a2ef7b27dcc1715589c77c',1,'drake::systems::WitnessTriggeredEventData']]],
   ['xd_5fticket',['xd_ticket',['../classdrake_1_1systems_1_1_system_base.html#a64938d044107c8eedc97f89aaf0e4a32',1,'drake::systems::SystemBase']]],
+  ['xd_5funique_5fperiodic_5fupdate_5fticket',['xd_unique_periodic_update_ticket',['../classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811',1,'drake::systems::SystemBase']]],
   ['xrelativetolerancename',['XRelativeToleranceName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#ae7ee35ef18027156f5cb7b485de8d574',1,'drake::solvers::NloptSolver']]],
   ['xu',['xu',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
   ['xv',['xv',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],

@@ -162,6 +162,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system.html'
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -374,6 +375,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7">GetUniquePeriodicDiscreteUpdateAttribute</a> () const</td></tr>
 <tr class="memdesc:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether there exists a unique periodic timing (offset and period) that triggers one or more discrete update events (and, if so, returns that unique periodic timing).  <a href="#a63e5a7b117d53a54d79d44a63b2cffb7">More...</a><br /></td></tr>
 <tr class="separator:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5466811f0b20ef0f23518948c1a1e4a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ab5466811f0b20ef0f23518948c1a1e4a">EvalUniquePeriodicDiscreteUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ab5466811f0b20ef0f23518948c1a1e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this System contains a unique periodic timing for discrete update events, this function executes the handlers for those periodic events to determine what their effect would be.  <a href="#ab5466811f0b20ef0f23518948c1a1e4a">More...</a><br /></td></tr>
+<tr class="separator:ab5466811f0b20ef0f23518948c1a1e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5016cfee3ccd384e0a0ba62b4da5bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc">IsDifferenceEquationSystem</a> (<a class="el" href="classdouble.html">double</a> *time_period=nullptr) const</td></tr>
 <tr class="memdesc:aeb5016cfee3ccd384e0a0ba62b4da5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the state dynamics of this system are governed exclusively by a difference equation on a single discrete state group and with a unique periodic update (having zero offset).  <a href="#aeb5016cfee3ccd384e0a0ba62b4da5bc">More...</a><br /></td></tr>
 <tr class="separator:aeb5016cfee3ccd384e0a0ba62b4da5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -760,6 +764,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0afc9712c887706c12039e871476f30c inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a0afc9712c887706c12039e871476f30c">pnc_ticket</a> ()</td></tr>
 <tr class="memdesc:a0afc9712c887706c12039e871476f30c inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket for the cache entry that holds the non-conservative power calculation.  <a href="classdrake_1_1systems_1_1_system_base.html#a0afc9712c887706c12039e871476f30c">More...</a><br /></td></tr>
 <tr class="separator:a0afc9712c887706c12039e871476f30c inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf3c0c47d4d7a5b2a28a8c0e76a4811 inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811">xd_unique_periodic_update_ticket</a> ()</td></tr>
+<tr class="memdesc:a5cf3c0c47d4d7a5b2a28a8c0e76a4811 inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a ticket for the cache entry that holds the unique periodic discrete update computation.  <a href="classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811">More...</a><br /></td></tr>
+<tr class="separator:a5cf3c0c47d4d7a5b2a28a8c0e76a4811 inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -993,6 +1000,22 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a7d078e4f799ae50f07ae35389352835f inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature:  <a href="classdrake_1_1systems_1_1_system_base.html#a7d078e4f799ae50f07ae35389352835f">More...</a><br /></td></tr>
 <tr class="separator:a7d078e4f799ae50f07ae35389352835f inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0c2bcc8b809ca6ccb30cdc6d65e0fef3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a0c2bcc8b809ca6ccb30cdc6d65e0fef3">FindUniquePeriodicDiscreteUpdatesOrThrow</a> (const char *api_name, const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, std::optional&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a> &gt; *timing, <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; *events)</td></tr>
+<tr class="memdesc:a0c2bcc8b809ca6ccb30cdc6d65e0fef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Static interface to DoFindUniquePeriodicDiscreteUpdatesOrThrow() to allow a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to invoke that private method on its subsystems.  <a href="#a0c2bcc8b809ca6ccb30cdc6d65e0fef3">More...</a><br /></td></tr>
+<tr class="separator:a0c2bcc8b809ca6ccb30cdc6d65e0fef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_classdrake_1_1systems_1_1_system_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classdrake_1_1systems_1_1_system_base')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a></td></tr>
+<tr class="memitem:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">set_parent_service</a> (<a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> *child, const internal::SystemParentServiceInterface *parent_service)</td></tr>
+<tr class="memdesc:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Declares that <code>parent_service</code> is the service interface of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> that owns this subsystem.  <a href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">More...</a><br /></td></tr>
+<tr class="separator:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a647a29d1660bcca523c4943cdc0ca1c8 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a647a29d1660bcca523c4943cdc0ca1c8">ThrowInputPortHasWrongType</a> (const char *func, const std::string &amp;system_pathname, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a>, const std::string &amp;port_name, const std::string &amp;expected_type, const std::string &amp;actual_type)</td></tr>
+<tr class="memdesc:a647a29d1660bcca523c4943cdc0ca1c8 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code> claiming the input port had some value type that was wrong.  <a href="classdrake_1_1systems_1_1_system_base.html#a647a29d1660bcca523c4943cdc0ca1c8">More...</a><br /></td></tr>
+<tr class="separator:a647a29d1660bcca523c4943cdc0ca1c8 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html">ContextSizes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">get_context_sizes</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;system)</td></tr>
+<tr class="memdesc:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to access protected <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad91661e6330ae28c6e7be235ed7bfd10" title="Obtains access to the declared Context partition sizes as accumulated during LeafSystem or Diagram co...">get_context_sizes()</a> recursively on its subsystems.  <a href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">More...</a><br /></td></tr>
+<tr class="separator:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a70a6f9e15c48813e173ebd6d48770fa1"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
@@ -1050,19 +1073,6 @@ Scalar type conversion by template parameter</h2></td></tr>
 <tr class="memitem:a864d167dd193cc0e71b45db451beda38"><td class="memTemplItemLeft" align="right" valign="top">static std::unique_ptr&lt; S&lt; U &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a864d167dd193cc0e71b45db451beda38">ToScalarType</a> (const S&lt; T &gt; &amp;from)</td></tr>
 <tr class="memdesc:a864d167dd193cc0e71b45db451beda38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of <code>from</code>, transmogrified to use the scalar type selected by a template parameter.  <a href="#a864d167dd193cc0e71b45db451beda38">More...</a><br /></td></tr>
 <tr class="separator:a864d167dd193cc0e71b45db451beda38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_static_methods_classdrake_1_1systems_1_1_system_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classdrake_1_1systems_1_1_system_base')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a></td></tr>
-<tr class="memitem:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">set_parent_service</a> (<a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> *child, const internal::SystemParentServiceInterface *parent_service)</td></tr>
-<tr class="memdesc:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Declares that <code>parent_service</code> is the service interface of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> that owns this subsystem.  <a href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">More...</a><br /></td></tr>
-<tr class="separator:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a647a29d1660bcca523c4943cdc0ca1c8 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a647a29d1660bcca523c4943cdc0ca1c8">ThrowInputPortHasWrongType</a> (const char *func, const std::string &amp;system_pathname, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a>, const std::string &amp;port_name, const std::string &amp;expected_type, const std::string &amp;actual_type)</td></tr>
-<tr class="memdesc:a647a29d1660bcca523c4943cdc0ca1c8 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code> claiming the input port had some value type that was wrong.  <a href="classdrake_1_1systems_1_1_system_base.html#a647a29d1660bcca523c4943cdc0ca1c8">More...</a><br /></td></tr>
-<tr class="separator:a647a29d1660bcca523c4943cdc0ca1c8 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html">ContextSizes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">get_context_sizes</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;system)</td></tr>
-<tr class="memdesc:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to access protected <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad91661e6330ae28c6e7be235ed7bfd10" title="Obtains access to the declared Context partition sizes as accumulated during LeafSystem or Diagram co...">get_context_sizes()</a> recursively on its subsystems.  <a href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">More...</a><br /></td></tr>
-<tr class="separator:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a718e74eb516f658aa9f80ab77706e4e5"></a>
@@ -3477,6 +3487,46 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 
 </div>
 </div>
+<a id="ab5466811f0b20ef0f23518948c1a1e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5466811f0b20ef0f23518948c1a1e4a">&#9670;&nbsp;</a></span>EvalUniquePeriodicDiscreteUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt;T&gt;&amp; EvalUniquePeriodicDiscreteUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If this System contains a unique periodic timing for discrete update events, this function executes the handlers for those periodic events to determine what their effect would be. </p>
+<p>Returns a reference to the discrete variable cache entry containing what values the discrete variables would have if these periodic events were triggered.</p>
+<p>Note that this function <em>does not</em> change the value of the discrete variables in the supplied <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. However, you can apply the result to the Context like this:</p><div class="fragment"><div class="line"><span class="keyword">const</span> DiscreteValue&lt;T&gt;&amp; updated =</div><div class="line">    system.EvalUniquePeriodicDiscreteUpdate(context);</div><div class="line">context.SetDiscreteState(updated);</div></div><!-- fragment --><p> You can write the updated values to a different Context than the one you used to calculate the update; the requirement is only that the discrete state in the destination has the same structure (number of groups and size of each group).</p>
+<p>You can use <a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a> to check whether you can call EvalUniquePeriodicDiscreteUpdate() safely, and to find the unique periodic timing information (offset and period).</p>
+<dl class="section warning"><dt>Warning</dt><dd>Even if we find a unique discrete update timing as described above, there may also be unrestricted updates performed with that timing or other timings. (Unrestricted updates can modify any state variables <em>including</em> discrete variables.) Also, there may be trigger types other than periodic that can modify discrete variables. This function does not attempt to look for any of those; they are simply ignored. If you are concerned with those, you can use <a class="el" href="classdrake_1_1systems_1_1_system.html#ad8a24b8f910f9d990db8e59bf2bae6d0" title="This method is called by Simulator::Initialize() to gather all update and publish events that are to ...">GetPerStepEvents()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>, and <a class="el" href="classdrake_1_1systems_1_1_system.html#adf1f428d7eb6e62bcdd26e9d5a770cba" title="Returns all periodic events in this System.">GetPeriodicEvents()</a> to get a more comprehensive picture of the event landscape.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> containing the current System state and the mutable cache space into which the result is written. The current state is <em>not</em> modified, though the cache entry may be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a> cache space in <code>context</code> containing the result of applying the discrete update event handlers to the current discrete variable values.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The referenced cache entry is recalcuated if anything in the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> has changed since last calculation. Subsequent calls just return the already-calculated value.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if there is not exactly one periodic timing in this System (which may be a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>) that triggers discrete update events.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Implementation</dt><dd>If recalculation is needed, copies the current discrete state values into preallocated <code>context</code> cache space. Applies the discrete update event handlers (in an unspecified order) to the cache copy, possibly updating it. Returns a reference to the possibly-updated cache space.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#adf1f428d7eb6e62bcdd26e9d5a770cba" title="Returns all periodic events in this System.">GetPeriodicEvents()</a> </dd></dl>
+
+</div>
+</div>
 <a id="aa184508e6a0494c1b8214dab77e34ce3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa184508e6a0494c1b8214dab77e34ce3">&#9670;&nbsp;</a></span>EvalVectorInput()</h2>
 
@@ -3517,6 +3567,62 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0c2bcc8b809ca6ccb30cdc6d65e0fef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2bcc8b809ca6ccb30cdc6d65e0fef3">&#9670;&nbsp;</a></span>FindUniquePeriodicDiscreteUpdatesOrThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void FindUniquePeriodicDiscreteUpdatesOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>api_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a> &gt; *&#160;</td>
+          <td class="paramname"><em>timing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; *&#160;</td>
+          <td class="paramname"><em>events</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Static interface to DoFindUniquePeriodicDiscreteUpdatesOrThrow() to allow a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to invoke that private method on its subsystems. </p>
 
 </div>
 </div>
@@ -4486,7 +4592,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#acfe09b96124f37f4df06d393d14af352" title="Maps all periodic triggered events for a System, organized by timing.">MapPeriodicEventsByTiming()</a>. </p>
-<p>If you are looking for the <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection</a> of periodic events (analogous to <a class="el" href="classdrake_1_1systems_1_1_system.html#ad8a24b8f910f9d990db8e59bf2bae6d0" title="This method is called by Simulator::Initialize() to gather all update and publish events that are to ...">GetPerStepEvents()</a> and <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>), see GetPeriodicEvents(Context, EventCollection). (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
+<p>If you are looking for the <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection</a> of periodic events (analogous to <a class="el" href="classdrake_1_1systems_1_1_system.html#ad8a24b8f910f9d990db8e59bf2bae6d0" title="This method is called by Simulator::Initialize() to gather all update and publish events that are to ...">GetPerStepEvents()</a> and <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>), see GetPeriodicEvents(Context, EventCollection). (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated:</a></b></dt><dd>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
  This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
@@ -4576,9 +4682,10 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>Determines whether there exists a unique periodic timing (offset and period) that triggers one or more discrete update events (and, if so, returns that unique periodic timing). </p>
-<p>Thus, this method can be used (1) as a test to determine whether a system's dynamics are at least partially governed by difference equations, and (2) to obtain the difference equation update times.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Even if we find a unique discrete update timing as described above, there may also be unrestricted updates performed with that timing or other timings. (Unrestricted updates can modify any state variables including discrete variables.) Also, there may be trigger types other than periodic that can modify discrete variables. This function does not attempt to look for any of those. If you are concerned with those, you can use <a class="el" href="classdrake_1_1systems_1_1_system.html#ad8a24b8f910f9d990db8e59bf2bae6d0" title="This method is called by Simulator::Initialize() to gather all update and publish events that are to ...">GetPerStepEvents()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>, and <a class="el" href="classdrake_1_1systems_1_1_system.html#adf1f428d7eb6e62bcdd26e9d5a770cba" title="Returns all periodic events in this System.">GetPeriodicEvents()</a> to get a more comprehensive picture of the event landscape.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>optional&lt;PeriodicEventData&gt; Contains the unique periodic trigger timing if it exists, otherwise <code>nullopt</code>. </dd></dl>
+<p>Thus, this method can be used (1) as a test to determine whether a system's dynamics are at least partially governed by difference equations, and (2) to obtain the difference equation update times. Use <a class="el" href="classdrake_1_1systems_1_1_system.html#ab5466811f0b20ef0f23518948c1a1e4a" title="If this System contains a unique periodic timing for discrete update events, this function executes t...">EvalUniquePeriodicDiscreteUpdate()</a> if you want to determine the actual effects of triggering these events.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Even if we find a unique discrete update timing as described above, there may also be unrestricted updates performed with that timing or other timings. (Unrestricted updates can modify any state variables <em>including</em> discrete variables.) Also, there may be trigger types other than periodic that can modify discrete variables. This function does not attempt to look for any of those; they are simply ignored. If you are concerned with those, you can use <a class="el" href="classdrake_1_1systems_1_1_system.html#ad8a24b8f910f9d990db8e59bf2bae6d0" title="This method is called by Simulator::Initialize() to gather all update and publish events that are to ...">GetPerStepEvents()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>, and <a class="el" href="classdrake_1_1systems_1_1_system.html#adf1f428d7eb6e62bcdd26e9d5a770cba" title="Returns all periodic events in this System.">GetPeriodicEvents()</a> to get a more comprehensive picture of the event landscape.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>optional&lt;PeriodicEventData&gt; Contains the unique periodic trigger timing if it exists, otherwise <code>nullopt</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#ab5466811f0b20ef0f23518948c1a1e4a" title="If this System contains a unique periodic timing for discrete update events, this function executes t...">EvalUniquePeriodicDiscreteUpdate()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc" title="Returns true iff the state dynamics of this system are governed exclusively by a difference equation ...">IsDifferenceEquationSystem()</a> </dd></dl>
 
 </div>
 </div>
@@ -4767,10 +4874,13 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>In determining whether this system is governed as above, we do not consider unrestricted updates or any update events that have trigger types other than periodic. See <a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a> for more information.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">time_period</td><td>if non-null, then iff the function returns <code>true</code>, then time_period is set to the period data returned from <a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a>. If the function returns <code>false</code> (the system is not a difference equation system), then <code>time_period</code> does not receive a value. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">time_period</td><td>if non-null, then iff the function returns <code>true</code>, then time_period is set to the period data returned from <a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a>. If the function returns <code>false</code> (the system is not a difference equation system), then <code>time_period</code> does not receive a value.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_system.html#ab5466811f0b20ef0f23518948c1a1e4a" title="If this System contains a unique periodic timing for discrete update events, this function executes t...">EvalUniquePeriodicDiscreteUpdate()</a> </dd></dl>
 
 </div>
 </div>

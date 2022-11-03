@@ -1493,6 +1493,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ade6ac4e26dcd9023a9f8146aa75454c7"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ade6ac4e26dcd9023a9f8146aa75454c7">OddDegreeMonomialBasis</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;vars, <a class="el" href="classint.html">int</a> degree)</td></tr>
 <tr class="memdesc:ade6ac4e26dcd9023a9f8146aa75454c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all odd degree monomials up to a given degree under the graded reverse lexicographic order.  <a href="#ade6ac4e26dcd9023a9f8146aa75454c7">More...</a><br /></td></tr>
 <tr class="separator:ade6ac4e26dcd9023a9f8146aa75454c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9487e2826e1e3dda3bed0697b25a11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#afe9487e2826e1e3dda3bed0697b25a11">CalcMonomialBasisOrderUpToOne</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;x, bool sort_monomial=false)</td></tr>
+<tr class="memdesc:afe9487e2826e1e3dda3bed0697b25a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all the monomials of <code>x</code>, such that the degree for x(i) is no larger than 1 for every x(i) in <code>x</code>.  <a href="#afe9487e2826e1e3dda3bed0697b25a11">More...</a><br /></td></tr>
+<tr class="separator:afe9487e2826e1e3dda3bed0697b25a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade37df718218bcbdbc1edd9a0b6a596a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ade37df718218bcbdbc1edd9a0b6a596a">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
 <tr class="memdesc:ade37df718218bcbdbc1edd9a0b6a596a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unary minus operation for polynomial.  <a href="#ade37df718218bcbdbc1edd9a0b6a596a">More...</a><br /></td></tr>
 <tr class="separator:ade37df718218bcbdbc1edd9a0b6a596a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2006,6 +2009,43 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe9487e2826e1e3dda3bed0697b25a11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9487e2826e1e3dda3bed0697b25a11">&#9670;&nbsp;</a></span>CalcMonomialBasisOrderUpToOne()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>&gt; drake::symbolic::CalcMonomialBasisOrderUpToOne </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sort_monomial</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates all the monomials of <code>x</code>, such that the degree for x(i) is no larger than 1 for every x(i) in <code>x</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>The variables whose monomials are generated. </td></tr>
+    <tr><td class="paramname">sort_monomial</td><td>If true, the returned monomials are sorted in the graded reverse lexicographic order. For example if x = (x₀, x₁) with x₀&lt; x₁, then this function returns [x₀x₁, x₁, x₀, 1]. If sort_monomial=false, then we return the monomials in an arbitrary order. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -9497,8 +9537,28 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
+<a id="ade37df718218bcbdbc1edd9a0b6a596a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade37df718218bcbdbc1edd9a0b6a596a">&#9670;&nbsp;</a></span>operator-() <span class="overload">[11/34]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> drake::symbolic::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unary minus operation for polynomial. </p>
+
+</div>
+</div>
 <a id="aed13274bad687cfe8b3a1effa40d3117"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed13274bad687cfe8b3a1effa40d3117">&#9670;&nbsp;</a></span>operator-() <span class="overload">[11/34]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed13274bad687cfe8b3a1effa40d3117">&#9670;&nbsp;</a></span>operator-() <span class="overload">[12/34]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9522,26 +9582,6 @@ we do not provide operator*= function for this class, since operator*= would ret
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="ade37df718218bcbdbc1edd9a0b6a596a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade37df718218bcbdbc1edd9a0b6a596a">&#9670;&nbsp;</a></span>operator-() <span class="overload">[12/34]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> drake::symbolic::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unary minus operation for polynomial. </p>
 
 </div>
 </div>
@@ -10657,39 +10697,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a528367e2321df46235c2fed21eb0d433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[4/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt; ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const Derived &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ScalarType &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than operator (&lt;). </p>
-<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt; v)</code> has a symbolic formula <code>a(i, j) &lt; v</code>. </p>
-
-</div>
-</div>
 <a id="aa4f5aab12f951d127ecfaf06b4f175c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4f5aab12f951d127ecfaf06b4f175c5">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f5aab12f951d127ecfaf06b4f175c5">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10716,6 +10725,37 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between a scalar <code>v</code> and an array <code>using</code> less-than operator (&lt;). </p>
 <p>That is, for all i and j, the (i, j)-th entry of <code>(v &lt; a)</code> has a symbolic formula <code>v &lt; a(i, j)</code>. </p>
+
+</div>
+</div>
+<a id="a528367e2321df46235c2fed21eb0d433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt; ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const Derived &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ScalarType &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than operator (&lt;). </p>
+<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt; v)</code> has a symbolic formula <code>a(i, j) &lt; v</code>. </p>
 
 </div>
 </div>

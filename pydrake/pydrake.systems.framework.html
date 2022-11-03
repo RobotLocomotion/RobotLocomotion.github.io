@@ -1282,6 +1282,23 @@ computations that depend on this discrete state group.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Currently notifies dependents of <em>all</em> groups.</p>
 </div>
+<ol class="arabic simple" start="3">
+<li>SetDiscreteState(self: pydrake.systems.framework.Context_[float], xd: drake::systems::DiscreteValues&lt;double&gt;) -&gt; None</li>
+</ol>
+<p>Sets all the discrete state variables in this Context from a
+compatible DiscreteValues object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError unless the number of groups and size of each group of</li>
+<li><code class="docutils literal notranslate"><span class="pre">xd</span></code> matches those in this Context.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -1872,6 +1889,23 @@ computations that depend on this discrete state group.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Currently notifies dependents of <em>all</em> groups.</p>
 </div>
+<ol class="arabic simple" start="3">
+<li>SetDiscreteState(self: pydrake.systems.framework.Context_[AutoDiffXd], xd: drake::systems::DiscreteValues&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; None</li>
+</ol>
+<p>Sets all the discrete state variables in this Context from a
+compatible DiscreteValues object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError unless the number of groups and size of each group of</li>
+<li><code class="docutils literal notranslate"><span class="pre">xd</span></code> matches those in this Context.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -2460,6 +2494,23 @@ computations that depend on this discrete state group.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Currently notifies dependents of <em>all</em> groups.</p>
 </div>
+<ol class="arabic simple" start="3">
+<li>SetDiscreteState(self: pydrake.systems.framework.Context_[Expression], xd: drake::systems::DiscreteValues&lt;drake::symbolic::Expression&gt;) -&gt; None</li>
+</ol>
+<p>Sets all the discrete state variables in this Context from a
+compatible DiscreteValues object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError unless the number of groups and size of each group of</li>
+<li><code class="docutils literal notranslate"><span class="pre">xd</span></code> matches those in this Context.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -3048,6 +3099,23 @@ computations that depend on this discrete state group.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Currently notifies dependents of <em>all</em> groups.</p>
 </div>
+<ol class="arabic simple" start="3">
+<li>SetDiscreteState(self: pydrake.systems.framework.Context_[float], xd: drake::systems::DiscreteValues&lt;double&gt;) -&gt; None</li>
+</ol>
+<p>Sets all the discrete state variables in this Context from a
+compatible DiscreteValues object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError unless the number of groups and size of each group of</li>
+<li><code class="docutils literal notranslate"><span class="pre">xd</span></code> matches those in this Context.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -13687,6 +13755,88 @@ get_time_derivatives_cache_entry()</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].EvalUniquePeriodicDiscreteUpdate">
+<code class="descname">EvalUniquePeriodicDiscreteUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DiscreteValues_[float]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].EvalUniquePeriodicDiscreteUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this System contains a unique periodic timing for discrete update
+events, this function executes the handlers for those periodic events
+to determine what their effect would be. Returns a reference to the
+discrete variable cache entry containing what values the discrete
+variables would have if these periodic events were triggered.</p>
+<p>Note that this function <em>does not</em> change the value of the discrete
+variables in the supplied Context. However, you can apply the result
+to the Context like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">DiscreteValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">updated</span> <span class="o">=</span>
+<span class="n">system</span><span class="o">.</span><span class="n">EvalUniquePeriodicDiscreteUpdate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="n">context</span><span class="o">.</span><span class="n">SetDiscreteState</span><span class="p">(</span><span class="n">updated</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can write the updated values to a different Context than the one
+you used to calculate the update; the requirement is only that the
+discrete state in the destination has the same structure (number of
+groups and size of each group).</p>
+<p>You can use GetUniquePeriodicDiscreteUpdateAttribute() to check
+whether you can call EvalUniquePeriodicDiscreteUpdate() safely, and to
+find the unique periodic timing information (offset and period).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The Context containing the current System state and the mutable
+cache space into which the result is written. The current state is
+<em>not</em> modified, though the cache entry may be updated.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to the DiscreteValues cache space in <code class="docutils literal notranslate"><span class="pre">context</span></code>
+containing the result of applying the discrete update event
+handlers to the current discrete variable values.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The referenced cache entry is recalcuated if anything in the given
+Context has changed since last calculation. Subsequent calls just
+return the already-calculated value.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if there is not exactly one periodic timing in this</li>
+<li>System (which may be a Diagram) that triggers discrete update</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">events.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&#64;par Implementation If recalculation is needed, copies the current
+discrete state values into preallocated <code class="docutils literal notranslate"><span class="pre">context</span></code> cache space.
+Applies the discrete update event handlers (in an unspecified order)
+to the cache copy, possibly updating it. Returns a reference to the
+possibly-updated cache space.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute(), GetPeriodicEvents()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_.System_[float].EvalVectorInput">
 <code class="descname">EvalVectorInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: pydrake.systems.framework.Context_[float], arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].EvalVectorInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the value of the vector-valued input port with the given
@@ -13879,17 +14029,19 @@ period) that triggers one or more discrete update events (and, if so,
 returns that unique periodic timing). Thus, this method can be used
 (1) as a test to determine whether a system’s dynamics are at least
 partially governed by difference equations, and (2) to obtain the
-difference equation update times.</p>
+difference equation update times. Use
+EvalUniquePeriodicDiscreteUpdate() if you want to determine the actual
+effects of triggering these events.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Even if we find a unique discrete update timing as described
 above, there may also be unrestricted updates performed with that
 timing or other timings. (Unrestricted updates can modify any
-state variables including discrete variables.) Also, there may be
-trigger types other than periodic that can modify discrete
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
 variables. This function does not attempt to look for any of
-those. If you are concerned with those, you can use
-GetPerStepEvents(), GetInitializationEvents(), and
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
 GetPeriodicEvents() to get a more comprehensive picture of the
 event landscape.</p>
 </div>
@@ -13902,6 +14054,10 @@ timing if it exists, otherwise <code class="docutils literal notranslate"><span 
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate(), IsDifferenceEquationSystem()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -13966,6 +14122,14 @@ GetUniquePeriodicDiscreteUpdateAttribute(). If the function
 returns <code class="docutils literal notranslate"><span class="pre">False</span></code> (the system is not a difference equation
 system), then <code class="docutils literal notranslate"><span class="pre">time_period</span></code> does not receive a value.</dd>
 </dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate()</p>
+</div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
 </dd></dl>
@@ -14666,6 +14830,88 @@ get_time_derivatives_cache_entry()</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[AutoDiffXd].EvalUniquePeriodicDiscreteUpdate">
+<code class="descname">EvalUniquePeriodicDiscreteUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DiscreteValues_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].EvalUniquePeriodicDiscreteUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this System contains a unique periodic timing for discrete update
+events, this function executes the handlers for those periodic events
+to determine what their effect would be. Returns a reference to the
+discrete variable cache entry containing what values the discrete
+variables would have if these periodic events were triggered.</p>
+<p>Note that this function <em>does not</em> change the value of the discrete
+variables in the supplied Context. However, you can apply the result
+to the Context like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">DiscreteValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">updated</span> <span class="o">=</span>
+<span class="n">system</span><span class="o">.</span><span class="n">EvalUniquePeriodicDiscreteUpdate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="n">context</span><span class="o">.</span><span class="n">SetDiscreteState</span><span class="p">(</span><span class="n">updated</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can write the updated values to a different Context than the one
+you used to calculate the update; the requirement is only that the
+discrete state in the destination has the same structure (number of
+groups and size of each group).</p>
+<p>You can use GetUniquePeriodicDiscreteUpdateAttribute() to check
+whether you can call EvalUniquePeriodicDiscreteUpdate() safely, and to
+find the unique periodic timing information (offset and period).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The Context containing the current System state and the mutable
+cache space into which the result is written. The current state is
+<em>not</em> modified, though the cache entry may be updated.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to the DiscreteValues cache space in <code class="docutils literal notranslate"><span class="pre">context</span></code>
+containing the result of applying the discrete update event
+handlers to the current discrete variable values.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The referenced cache entry is recalcuated if anything in the given
+Context has changed since last calculation. Subsequent calls just
+return the already-calculated value.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if there is not exactly one periodic timing in this</li>
+<li>System (which may be a Diagram) that triggers discrete update</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">events.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&#64;par Implementation If recalculation is needed, copies the current
+discrete state values into preallocated <code class="docutils literal notranslate"><span class="pre">context</span></code> cache space.
+Applies the discrete update event handlers (in an unspecified order)
+to the cache copy, possibly updating it. Returns a reference to the
+possibly-updated cache space.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute(), GetPeriodicEvents()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[AutoDiffXd].EvalVectorInput">
 <code class="descname">EvalVectorInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd], arg0: pydrake.systems.framework.Context_[AutoDiffXd], arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].EvalVectorInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the value of the vector-valued input port with the given
@@ -14858,17 +15104,19 @@ period) that triggers one or more discrete update events (and, if so,
 returns that unique periodic timing). Thus, this method can be used
 (1) as a test to determine whether a system’s dynamics are at least
 partially governed by difference equations, and (2) to obtain the
-difference equation update times.</p>
+difference equation update times. Use
+EvalUniquePeriodicDiscreteUpdate() if you want to determine the actual
+effects of triggering these events.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Even if we find a unique discrete update timing as described
 above, there may also be unrestricted updates performed with that
 timing or other timings. (Unrestricted updates can modify any
-state variables including discrete variables.) Also, there may be
-trigger types other than periodic that can modify discrete
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
 variables. This function does not attempt to look for any of
-those. If you are concerned with those, you can use
-GetPerStepEvents(), GetInitializationEvents(), and
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
 GetPeriodicEvents() to get a more comprehensive picture of the
 event landscape.</p>
 </div>
@@ -14881,6 +15129,10 @@ timing if it exists, otherwise <code class="docutils literal notranslate"><span 
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate(), IsDifferenceEquationSystem()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -14945,6 +15197,14 @@ GetUniquePeriodicDiscreteUpdateAttribute(). If the function
 returns <code class="docutils literal notranslate"><span class="pre">False</span></code> (the system is not a difference equation
 system), then <code class="docutils literal notranslate"><span class="pre">time_period</span></code> does not receive a value.</dd>
 </dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate()</p>
+</div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
 </dd></dl>
@@ -15643,6 +15903,88 @@ get_time_derivatives_cache_entry()</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[Expression].EvalUniquePeriodicDiscreteUpdate">
+<code class="descname">EvalUniquePeriodicDiscreteUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DiscreteValues_[Expression]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].EvalUniquePeriodicDiscreteUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this System contains a unique periodic timing for discrete update
+events, this function executes the handlers for those periodic events
+to determine what their effect would be. Returns a reference to the
+discrete variable cache entry containing what values the discrete
+variables would have if these periodic events were triggered.</p>
+<p>Note that this function <em>does not</em> change the value of the discrete
+variables in the supplied Context. However, you can apply the result
+to the Context like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">DiscreteValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">updated</span> <span class="o">=</span>
+<span class="n">system</span><span class="o">.</span><span class="n">EvalUniquePeriodicDiscreteUpdate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="n">context</span><span class="o">.</span><span class="n">SetDiscreteState</span><span class="p">(</span><span class="n">updated</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can write the updated values to a different Context than the one
+you used to calculate the update; the requirement is only that the
+discrete state in the destination has the same structure (number of
+groups and size of each group).</p>
+<p>You can use GetUniquePeriodicDiscreteUpdateAttribute() to check
+whether you can call EvalUniquePeriodicDiscreteUpdate() safely, and to
+find the unique periodic timing information (offset and period).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The Context containing the current System state and the mutable
+cache space into which the result is written. The current state is
+<em>not</em> modified, though the cache entry may be updated.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to the DiscreteValues cache space in <code class="docutils literal notranslate"><span class="pre">context</span></code>
+containing the result of applying the discrete update event
+handlers to the current discrete variable values.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The referenced cache entry is recalcuated if anything in the given
+Context has changed since last calculation. Subsequent calls just
+return the already-calculated value.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if there is not exactly one periodic timing in this</li>
+<li>System (which may be a Diagram) that triggers discrete update</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">events.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&#64;par Implementation If recalculation is needed, copies the current
+discrete state values into preallocated <code class="docutils literal notranslate"><span class="pre">context</span></code> cache space.
+Applies the discrete update event handlers (in an unspecified order)
+to the cache copy, possibly updating it. Returns a reference to the
+possibly-updated cache space.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute(), GetPeriodicEvents()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[Expression].EvalVectorInput">
 <code class="descname">EvalVectorInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression], arg0: pydrake.systems.framework.Context_[Expression], arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[Expression]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].EvalVectorInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the value of the vector-valued input port with the given
@@ -15835,17 +16177,19 @@ period) that triggers one or more discrete update events (and, if so,
 returns that unique periodic timing). Thus, this method can be used
 (1) as a test to determine whether a system’s dynamics are at least
 partially governed by difference equations, and (2) to obtain the
-difference equation update times.</p>
+difference equation update times. Use
+EvalUniquePeriodicDiscreteUpdate() if you want to determine the actual
+effects of triggering these events.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Even if we find a unique discrete update timing as described
 above, there may also be unrestricted updates performed with that
 timing or other timings. (Unrestricted updates can modify any
-state variables including discrete variables.) Also, there may be
-trigger types other than periodic that can modify discrete
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
 variables. This function does not attempt to look for any of
-those. If you are concerned with those, you can use
-GetPerStepEvents(), GetInitializationEvents(), and
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
 GetPeriodicEvents() to get a more comprehensive picture of the
 event landscape.</p>
 </div>
@@ -15858,6 +16202,10 @@ timing if it exists, otherwise <code class="docutils literal notranslate"><span 
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate(), IsDifferenceEquationSystem()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -15922,6 +16270,14 @@ GetUniquePeriodicDiscreteUpdateAttribute(). If the function
 returns <code class="docutils literal notranslate"><span class="pre">False</span></code> (the system is not a difference equation
 system), then <code class="docutils literal notranslate"><span class="pre">time_period</span></code> does not receive a value.</dd>
 </dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate()</p>
+</div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
 </dd></dl>
@@ -16620,6 +16976,88 @@ get_time_derivatives_cache_entry()</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[float].EvalUniquePeriodicDiscreteUpdate">
+<code class="descname">EvalUniquePeriodicDiscreteUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DiscreteValues_[float]<a class="headerlink" href="#pydrake.systems.framework.System_[float].EvalUniquePeriodicDiscreteUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this System contains a unique periodic timing for discrete update
+events, this function executes the handlers for those periodic events
+to determine what their effect would be. Returns a reference to the
+discrete variable cache entry containing what values the discrete
+variables would have if these periodic events were triggered.</p>
+<p>Note that this function <em>does not</em> change the value of the discrete
+variables in the supplied Context. However, you can apply the result
+to the Context like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">DiscreteValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">updated</span> <span class="o">=</span>
+<span class="n">system</span><span class="o">.</span><span class="n">EvalUniquePeriodicDiscreteUpdate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="n">context</span><span class="o">.</span><span class="n">SetDiscreteState</span><span class="p">(</span><span class="n">updated</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can write the updated values to a different Context than the one
+you used to calculate the update; the requirement is only that the
+discrete state in the destination has the same structure (number of
+groups and size of each group).</p>
+<p>You can use GetUniquePeriodicDiscreteUpdateAttribute() to check
+whether you can call EvalUniquePeriodicDiscreteUpdate() safely, and to
+find the unique periodic timing information (offset and period).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even if we find a unique discrete update timing as described
+above, there may also be unrestricted updates performed with that
+timing or other timings. (Unrestricted updates can modify any
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
+variables. This function does not attempt to look for any of
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
+GetPeriodicEvents() to get a more comprehensive picture of the
+event landscape.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The Context containing the current System state and the mutable
+cache space into which the result is written. The current state is
+<em>not</em> modified, though the cache entry may be updated.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to the DiscreteValues cache space in <code class="docutils literal notranslate"><span class="pre">context</span></code>
+containing the result of applying the discrete update event
+handlers to the current discrete variable values.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The referenced cache entry is recalcuated if anything in the given
+Context has changed since last calculation. Subsequent calls just
+return the already-calculated value.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if there is not exactly one periodic timing in this</li>
+<li>System (which may be a Diagram) that triggers discrete update</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">events.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&#64;par Implementation If recalculation is needed, copies the current
+discrete state values into preallocated <code class="docutils literal notranslate"><span class="pre">context</span></code> cache space.
+Applies the discrete update event handlers (in an unspecified order)
+to the cache copy, possibly updating it. Returns a reference to the
+possibly-updated cache space.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute(), GetPeriodicEvents()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[float].EvalVectorInput">
 <code class="descname">EvalVectorInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: pydrake.systems.framework.Context_[float], arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.System_[float].EvalVectorInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the value of the vector-valued input port with the given
@@ -16812,17 +17250,19 @@ period) that triggers one or more discrete update events (and, if so,
 returns that unique periodic timing). Thus, this method can be used
 (1) as a test to determine whether a system’s dynamics are at least
 partially governed by difference equations, and (2) to obtain the
-difference equation update times.</p>
+difference equation update times. Use
+EvalUniquePeriodicDiscreteUpdate() if you want to determine the actual
+effects of triggering these events.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Even if we find a unique discrete update timing as described
 above, there may also be unrestricted updates performed with that
 timing or other timings. (Unrestricted updates can modify any
-state variables including discrete variables.) Also, there may be
-trigger types other than periodic that can modify discrete
+state variables <em>including</em> discrete variables.) Also, there may
+be trigger types other than periodic that can modify discrete
 variables. This function does not attempt to look for any of
-those. If you are concerned with those, you can use
-GetPerStepEvents(), GetInitializationEvents(), and
+those; they are simply ignored. If you are concerned with those,
+you can use GetPerStepEvents(), GetInitializationEvents(), and
 GetPeriodicEvents() to get a more comprehensive picture of the
 event landscape.</p>
 </div>
@@ -16835,6 +17275,10 @@ timing if it exists, otherwise <code class="docutils literal notranslate"><span 
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate(), IsDifferenceEquationSystem()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -16899,6 +17343,14 @@ GetUniquePeriodicDiscreteUpdateAttribute(). If the function
 returns <code class="docutils literal notranslate"><span class="pre">False</span></code> (the system is not a difference equation
 system), then <code class="docutils literal notranslate"><span class="pre">time_period</span></code> does not receive a value.</dd>
 </dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetUniquePeriodicDiscreteUpdateAttribute()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalUniquePeriodicDiscreteUpdate()</p>
+</div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
 </dd></dl>

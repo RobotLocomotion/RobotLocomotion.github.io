@@ -21,6 +21,7 @@ var searchData=
   ['xcf',['xcf',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa220cd3808a2ef7b27dcc1715589c77c',1,'drake::systems::WitnessTriggeredEventData']]],
   ['xd',['xd',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a6734a991d96eb572b943a06ce7f5188c',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorOptions']]],
   ['xd_5fticket',['xd_ticket',['../classdrake_1_1systems_1_1_system_base.html#a64938d044107c8eedc97f89aaf0e4a32',1,'drake::systems::SystemBase']]],
+  ['xd_5funique_5fperiodic_5fupdate_5fticket',['xd_unique_periodic_update_ticket',['../classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811',1,'drake::systems::SystemBase']]],
   ['xmul',['xmul',['../structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab',1,'drake::solvers::SnoptSolverDetails']]],
   ['xrelativetolerancename',['XRelativeToleranceName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#ae7ee35ef18027156f5cb7b485de8d574',1,'drake::solvers::NloptSolver']]],
   ['xu',['xu',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],

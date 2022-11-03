@@ -63,6 +63,7 @@ var classdrake_1_1systems_1_1_context =
     [ "SetContinuousState", "classdrake_1_1systems_1_1_context.html#a0b9308e812da39661dce265468b6f90c", null ],
     [ "SetDiscreteState", "classdrake_1_1systems_1_1_context.html#ab6b22de379384d8336968f13e6480f1a", null ],
     [ "SetDiscreteState", "classdrake_1_1systems_1_1_context.html#a576f417e8e9d3076660b325153f7b348", null ],
+    [ "SetDiscreteState", "classdrake_1_1systems_1_1_context.html#a45629cc78414f352cfdc7802f12e40cd", null ],
     [ "SetStateAndParametersFrom", "classdrake_1_1systems_1_1_context.html#a17e6fd1b67831eabcf93c80f346d0216", null ],
     [ "SetTime", "classdrake_1_1systems_1_1_context.html#a3d5dddf9b2bb3283f9cd74c7a77517fc", null ],
     [ "SetTimeAndContinuousState", "classdrake_1_1systems_1_1_context.html#a9ce8807a2a969b40a480e3cc3c6ab2db", null ],

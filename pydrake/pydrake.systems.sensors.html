@@ -1690,6 +1690,48 @@ the color/depth/label constructor is used.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.systems.sensors.LcmImageArrayToImages">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">LcmImageArrayToImages</code><a class="headerlink" href="#pydrake.systems.sensors.LcmImageArrayToImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>An LcmImageArrayToImages takes as input an AbstractValue containing a
+<code class="docutils literal notranslate"><span class="pre">Value&lt;lcmt_image_array&gt;</span></code> LCM message that defines an array of
+images (lcmt_image). The system has output ports for one color image
+as an ImageRgba8U and one depth image as ImageDepth32F (intended to be
+similar to the API of RgbdCamera, though without the label image
+port).</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">image_array_t&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LcmImageArrayToImages</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.sensors.LcmImageArrayToImages.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.LcmImageArrayToImages</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.LcmImageArrayToImages.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.LcmImageArrayToImages.color_image_output_port">
+<code class="descname">color_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.LcmImageArrayToImages</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.LcmImageArrayToImages.color_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the abstract valued output port that contains a RGBA image of
+the type ImageRgba8U. The image will be empty if no color image was
+received in the most recent message (so, for example, sending color
+and depth in different messages will not produce useful results).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.LcmImageArrayToImages.depth_image_output_port">
+<code class="descname">depth_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.LcmImageArrayToImages</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.LcmImageArrayToImages.depth_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the abstract valued output port that contains an
+ImageDepth32F. The image will be empty if no color image was received
+in the most recent message (so, for example, sending color and depth
+in different messages will not produce useful results).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.LcmImageArrayToImages.image_array_t_input_port">
+<code class="descname">image_array_t_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.LcmImageArrayToImages</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.LcmImageArrayToImages.image_array_t_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the abstract valued input port that expects a
+<code class="docutils literal notranslate"><span class="pre">Value&lt;lcmt_image_array&gt;</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.systems.sensors.PixelFormat">
 <em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">PixelFormat</code><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Members:</p>

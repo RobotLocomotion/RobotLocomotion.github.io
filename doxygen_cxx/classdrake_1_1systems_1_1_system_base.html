@@ -518,6 +518,9 @@ Dependency tickets</h2></td></tr>
 <tr class="memitem:a0afc9712c887706c12039e871476f30c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a0afc9712c887706c12039e871476f30c">pnc_ticket</a> ()</td></tr>
 <tr class="memdesc:a0afc9712c887706c12039e871476f30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket for the cache entry that holds the non-conservative power calculation.  <a href="#a0afc9712c887706c12039e871476f30c">More...</a><br /></td></tr>
 <tr class="separator:a0afc9712c887706c12039e871476f30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf3c0c47d4d7a5b2a28a8c0e76a4811"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811">xd_unique_periodic_update_ticket</a> ()</td></tr>
+<tr class="memdesc:a5cf3c0c47d4d7a5b2a28a8c0e76a4811"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a ticket for the cache entry that holds the unique periodic discrete update computation.  <a href="#a5cf3c0c47d4d7a5b2a28a8c0e76a4811">More...</a><br /></td></tr>
+<tr class="separator:a5cf3c0c47d4d7a5b2a28a8c0e76a4811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0b7f7189714d79a830e909e281324533"></a>
@@ -3359,6 +3362,34 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 <p>Returns a ticket indicating dependence on all of the numerical discrete state variables, in any discrete variable group. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system_base.html#adf86073429b07d388b0157956bfdbac6" title="Returns a ticket indicating dependence on a particular discrete state variable xdᵢ (may be a vector).">discrete_state_ticket()</a> to obtain a ticket for just one discrete state variable. </dd></dl>
+
+</div>
+</div>
+<a id="a5cf3c0c47d4d7a5b2a28a8c0e76a4811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf3c0c47d4d7a5b2a28a8c0e76a4811">&#9670;&nbsp;</a></span>xd_unique_periodic_update_ticket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> xd_unique_periodic_update_ticket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns a ticket for the cache entry that holds the unique periodic discrete update computation. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#ab5466811f0b20ef0f23518948c1a1e4a" title="If this System contains a unique periodic timing for discrete update events, this function executes t...">System::EvalUniquePeriodicDiscreteUpdate()</a> </dd></dl>
 
 </div>
 </div>

@@ -98,6 +98,7 @@ var classdrake_1_1systems_1_1_system_base =
     [ "xc_ticket", "classdrake_1_1systems_1_1_system_base.html#a385e0d5605b81db0fbfc6bdd57affb5e", null ],
     [ "xcdot_ticket", "classdrake_1_1systems_1_1_system_base.html#ab42cd3bff14253894eb0a29edf843b3f", null ],
     [ "xd_ticket", "classdrake_1_1systems_1_1_system_base.html#a64938d044107c8eedc97f89aaf0e4a32", null ],
+    [ "xd_unique_periodic_update_ticket", "classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811", null ],
     [ "z_ticket", "classdrake_1_1systems_1_1_system_base.html#a340a9b088fc407f703a9e21ed9dee32e", null ],
     [ "internal::DiagramSystemBaseAttorney", "classdrake_1_1systems_1_1_system_base.html#a86007c147035e0b8e231296c4aedbfba", null ]
 ];

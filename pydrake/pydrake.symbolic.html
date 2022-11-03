@@ -252,6 +252,22 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="pydrake.symbolic.CalcMonomialBasisOrderUpToOne">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">CalcMonomialBasisOrderUpToOne</code><span class="sig-paren">(</span><em>x: pydrake.symbolic.Variables</em>, <em>sort_monomial: bool = False</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.symbolic.CalcMonomialBasisOrderUpToOne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates all the monomials of <code class="docutils literal notranslate"><span class="pre">x</span></code>, such that the degree for x(i) is
+no larger than 1 for every x(i) in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt>
+<dd>The variables whose monomials are generated.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">sort_monomial</span></code>:</dt>
+<dd>If true, the returned monomials are sorted in the graded reverse
+lexicographic order. For example if x = (x₀, x₁) with x₀&lt; x₁, then
+this function returns [x₀x₁, x₁, x₀, 1]. If sort_monomial=false,
+then we return the monomials in an arbitrary order.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.symbolic.ceil">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">ceil</code><span class="sig-paren">(</span><em>arg0: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.ceil" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>

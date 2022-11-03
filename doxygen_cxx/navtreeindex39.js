@@ -1,5 +1,8 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af3392559929281e1d5db4f104ed4b8f1":[3,0,0,16,9,3,16],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[3,0,0,16,9,3,21],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[3,0,0,16,9,4],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a040b81f85b87c2da89ca72d802975d7b":[3,0,0,16,9,4,2],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[3,0,0,16,9,4,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[3,0,0,16,9,4,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a80ed62d7a0f2d3eee401cdd29e47d534":[3,0,0,18,6,0],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d":[3,0,0,18,6,13],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426":[3,0,0,18,6,5],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,18,6,9],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d":[3,0,0,18,6,16],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,18,6,20],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5":[3,0,0,18,6,12]
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,18,6,9]
 };

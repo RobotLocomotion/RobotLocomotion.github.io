@@ -1,6 +1,5 @@
 var NAVTREEINDEX13 =
 {
-"classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65":[3,0,0,9,47,6],
 "classdrake_1_1multibody_1_1_multibody_forces.html#a979baec5b19c1b415da5e64c3565b9b1":[3,0,0,9,47,4],
 "classdrake_1_1multibody_1_1_multibody_forces.html#aa49f61a7a12d45b3e94308cc9d8148c1":[3,0,0,9,47,11],
 "classdrake_1_1multibody_1_1_multibody_forces.html#ab3f578949393a46b4234993e06381f52":[3,0,0,9,47,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_orientation_cost.html#a0ea8ea2f07e6f0c96d1a60c3d75267dd":[1,1,0,7,5],
 "classdrake_1_1multibody_1_1_orientation_cost.html#a2f4d56ba3ea404dc555e9b20b0eeb950":[1,1,0,7,3],
 "classdrake_1_1multibody_1_1_orientation_cost.html#a66f9f9415ab0c93ed97d3503c856d87e":[1,1,0,7,0],
-"classdrake_1_1multibody_1_1_orientation_cost.html#a826128003751513bc7513bc1d1cb9456":[1,1,0,7,6]
+"classdrake_1_1multibody_1_1_orientation_cost.html#a826128003751513bc7513bc1d1cb9456":[1,1,0,7,6],
+"classdrake_1_1multibody_1_1_orientation_cost.html#a904d2e0768e7cb0546c213b6f035d2e9":[1,1,0,7,1]
 };

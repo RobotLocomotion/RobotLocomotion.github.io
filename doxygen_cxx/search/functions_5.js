@@ -35,6 +35,7 @@ var searchData=
   ['findresourceorthrow',['FindResourceOrThrow',['../namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6',1,'drake']]],
   ['findresourceresult',['FindResourceResult',['../classdrake_1_1_find_resource_result.html#abc10476ea4826c86c6b9f940c9206bd9',1,'drake::FindResourceResult::FindResourceResult(const FindResourceResult &amp;)=default'],['../classdrake_1_1_find_resource_result.html#a98da321acd317fd87def222ebc979f3c',1,'drake::FindResourceResult::FindResourceResult(FindResourceResult &amp;&amp;)=default']]],
   ['findrunfile',['FindRunfile',['../namespacedrake.html#ae65839d11c343c02ff41aec068e4ff28',1,'drake']]],
+  ['finduniqueperiodicdiscreteupdatesorthrow',['FindUniquePeriodicDiscreteUpdatesOrThrow',['../classdrake_1_1systems_1_1_system.html#a0c2bcc8b809ca6ccb30cdc6d65e0fef3',1,'drake::systems::System']]],
   ['finger_5fbase_5fposition_5findex',['finger_base_position_index',['../classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ad7d18471338aeb466dd91b3bdddd0b9d',1,'drake::examples::planar_gripper::GripperBrickHelper']]],
   ['finger_5flink2_5fframe',['finger_link2_frame',['../classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#aee015903292c6e0091cbcaebed3f827a',1,'drake::examples::planar_gripper::GripperBrickHelper']]],
   ['finger_5fmid_5fposition_5findex',['finger_mid_position_index',['../classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#a5436faf2b9bdaf0d3b5a63b8d1ae0763',1,'drake::examples::planar_gripper::GripperBrickHelper']]],

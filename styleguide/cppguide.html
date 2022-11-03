@@ -280,17 +280,21 @@ guard:</p>
 <h3 id="Include_What_You_Use">Include What You Use</h3>
 
 <p>If a source or header file refers to a symbol defined elsewhere,
-the file should directly include a header file which properly intends
+the file should
+<span class="nondrake">directly</span>
+include a header file which properly intends
 to provide a declaration or definition of that symbol. It should not
 include header files for any other reason.
 </p>
 
+<div class="nondrake">
 <p>Do not rely on transitive inclusions. This allows people to remove
 no-longer-needed <code>#include</code> statements from their headers without
 breaking clients. This also applies to related headers
 - <code>foo.cc</code> should include <code>bar.h</code> if it uses a
 symbol from it even if <code>foo.h</code>
 includes <code>bar.h</code>.</p>
+</div>
 
 <p class="drake"><a name="iwyu_exception"/>
 While we encourage you to Include What You Use (IWYU) since it improves code
@@ -300,6 +304,12 @@ within a file be covered by the transitive closure of all #include
 statements in the file. We decided to make this exception because (1) we can
 always adopt an IWYU rule later, (2) to reduce verbosity, and (3) we don’t
 have a tool to enforce IWYU at this time.
+</p>
+
+<p class="drake">
+In particular, we do not expect a <code>foo.cc</code> file to repeat any
+<code>#include</code> statements from its associated <code>foo.h</code>
+header file.
 </p>
 
 <h3 id="Forward_Declarations">Forward Declarations</h3>
@@ -440,9 +450,83 @@ inlined even if they are declared as such; for example,
 virtual and recursive functions are not normally inlined.
 Usually recursive functions should not be inline. The
 main reason for making a virtual function inline is to
-place its definition in the class, either for convenience
-or to document its behavior, e.g., for accessors and
+place its definition in the class
+<span class="nondrake">either for convenience or</span>
+to document its behavior, e.g., for accessors and
 mutators.</p>
+
+<div class="drake">
+
+<p>The fundamental premise of this section is that function definitions should
+customarily be placed into <code>*.cc</code> files; only if there is an acute
+reason to put it in a header may it appear there.
+</p>
+
+<p>You are permitted to define a function inline (i.e., define it in the
+header file) only:
+<ol>
+  <li>if the function is a
+      <a href="#Function_Names"><code>snake_case</code></a>
+      getter or setter, especially in cases where the function generates no
+      object code; or</li>
+  <li>for constructors if all of the member fields themselves are cheap to
+      construct (e.g., primitive types, strings, structs of primitives, etc.);
+      or</li>
+  <li>for destructors if all of the member fields themselves are cheap to
+      destruct (note that the <code>std::</code> collection class templates
+      are <em>not</em> cheap to destruct),
+      <ol type="a">
+        <li>and the destructor is non-virtual; or</li>
+      </ol></li>
+  <li>if required by an open-ended template (e.g., the template class
+      <code>drake::Value&lt;T&gt;</code> can wrap any kind of <code>T</code>,
+      so its definitions cannot move to the <code>*.cc</code> file); or
+  <li>if the function call overhead is plausibly performance-sensitive when
+      measured against the cost of the function as a whole,
+      <ol type="a">
+        <li>and the function is non-virtual,</li>
+        <li>and the function is not recursive,</li>
+        <li>and the function is "small" (~10 lines).</li>
+      </ol></li>
+</ol></p>
+
+<p>For cases (1)..(4) our custom <em>is</em> to inline the function in the
+header file.</p>
+
+<p>For inline constructors and destructors (2)..(3), it's often simpler to
+allow the implicitly-generated
+<a href="https://en.cppreference.com/w/cpp/language/default_constructor#Implicitly-declared_default_constructor">constructor</a>
+or
+<a href="https://en.cppreference.com/w/cpp/language/destructor#Implicitly-declared_destructor">destructor</a>
+be used, without writing it out.
+</p>
+
+<p>Drake's assertion-like macros
+<code>DRAKE_DEMAND</code>,
+<code>DRAKE_ASSERT</code>, and
+<code>DRAKE_THROW_UNLESS</code>
+are carefully crafted with an eye to object code size and therefore are
+valid to call within an inline function. Use of those macros is not a
+sufficient reason on its own to force a function to be non-inline.
+In contrast, throwing an exception with
+<code>if (condition) { throw std::logic_error(fmt::format(...)); }</code>
+is usually a huge amount of object code and should not appear inline.
+</p>
+
+<p>Drake's macro for copyable classes
+<code>DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN</code>
+might bend the rules on function inlining when applied to classes with
+non-trivial member fields (e.g., <code>std::</code> collection types).
+That is not a sufficient reason to avoid the macro and declare the
+special operations one by one. If we find that the macro is too bloaty,
+we will provide alternative macro; declaring the operations by hand is
+too brittle.
+</p>
+
+</div>
+
+<h4 id="Inline_Functions_Scalars">Inline functions for classes templated on
+a scalar type</h4>
 
 <p class="drake">The use of a numerical scalar class template is not a
 sufficient reason on its own to place a method definition in a header file.
@@ -1473,7 +1557,10 @@ macros (either <code>DRAKE_NO_COPY_NO_MOVE_NO_ASSIGN</code> or
 <code>DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN</code>) whenever practical.
 Failing that, it should take the form of explicitly</span>
 declaring and/or deleting the appropriate operations in the <code>public</code>
-section of the declaration.</p>
+section of the declaration
+<span class="drake">except in the case of structs with no private fields
+(see below)</span>.
+</p>
 
 <p>Specifically, a copyable class should explicitly declare the copy
 operations, a move-only class should explicitly declare the move operations, and
@@ -1526,6 +1613,12 @@ class NotCopyableOrMovable {
       = delete;</span>
 };</span>
 
+<span class="drake">/** The config data for use by class Foo's constructor.
+This struct is copyable. */
+struct FooConfig {
+  std::string name;
+  double timeout{};
+};</span>
 </pre>
 
 <p>These declarations/deletions can be omitted only if they are obvious:</p>
@@ -1594,6 +1687,16 @@ and some functors.</p>
 
 <p>Note that member variables in structs and classes have
 <a href="#Variable_Names">different naming rules</a>.</p>
+
+<div class="drake">
+<p>For a <code>struct</code>, keep in mind that adding any constructor
+will disable aggregate initialization
+(e.g., <code>DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN</code> or even
+<code>MyStruct() = default;</code>). When writing a FooConfig or FooParams
+struct, we should generally not write out any constructors nor
+<code>DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN</code>.
+</p>
+</div>
 
 <h3 id="Structs_vs._Tuples">Structs vs. Pairs and Tuples</h3>
 
@@ -6561,6 +6664,11 @@ void foo() {  // Correct.  No extra indentation within namespace.
 <p>Use of horizontal whitespace depends on location. Never put
 trailing whitespace at the end of a line.</p>
 
+<div class="drake">For the pydrake bindings' C++ code (in drake/bindings/...),
+we lint using <tt>clang-format</tt> to enforce uniform formatting locally and
+via Jenkins (our continuous integration tool). The "whitespace style" for
+bindings is whatever the linter says it is.</div>
+
 <h4>General</h4>
 
 <pre>int i = 0;  // Two spaces before end-of-line comments.
@@ -6689,6 +6797,11 @@ useful:</p>
   this becomes a special case of the previous rule, helping the comment to
   "attach" to the subsequent declaration.</li>
 </ul>
+
+<div class="drake">For the pydrake bindings' C++ code (in drake/bindings/...),
+we lint using <tt>clang-format</tt> to enforce uniform formatting locally and
+via Jenkins (our continuous integration tool). The "whitespace style" for
+bindings is whatever the linter says it is.</div>
 
 <h2 id="Exceptions_to_the_Rules">Exceptions to the Rules</h2>
 

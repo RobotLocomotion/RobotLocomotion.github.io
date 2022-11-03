@@ -23,7 +23,6 @@ var classdrake_1_1multibody_1_1_body =
     [ "floating_positions_start", "classdrake_1_1multibody_1_1_body.html#a8e98e34e5da5ecfc7e03086b70cf5489", null ],
     [ "floating_velocities_start", "classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594", null ],
     [ "floating_velocity_suffix", "classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29", null ],
-    [ "get_default_mass", "classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33", null ],
     [ "get_mass", "classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1", null ],
     [ "get_num_flexible_positions", "classdrake_1_1multibody_1_1_body.html#a2333d75f20ed2f5d35a10119ef1ab5d5", null ],
     [ "get_num_flexible_velocities", "classdrake_1_1multibody_1_1_body.html#a686c86e06e668050d80c096e1200fe5a", null ],
