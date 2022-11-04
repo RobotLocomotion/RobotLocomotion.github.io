@@ -19,7 +19,7 @@ var classdrake_1_1systems_1_1_leaf_system =
     [ "DeclareAbstractOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#aea52af0c8afa64504398a2c447f28fa0", null ],
     [ "DeclareAbstractOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#ab6f3c977540fad65f3d381e2997910b9", null ],
     [ "DeclareAbstractParameter", "classdrake_1_1systems_1_1_leaf_system.html#ad7f954e701d1bfba3f8aad91dd4d89ca", null ],
-    [ "DeclareAbstractState", "classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4", null ],
+    [ "DeclareAbstractState", "classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911", null ],
     [ "DeclareContinuousState", "classdrake_1_1systems_1_1_leaf_system.html#a52a8bc29fc2fdead9b757e06c5c8a5c0", null ],
     [ "DeclareContinuousState", "classdrake_1_1systems_1_1_leaf_system.html#a59ad7afd2779aef7414c26220440403e", null ],
     [ "DeclareContinuousState", "classdrake_1_1systems_1_1_leaf_system.html#ab992aa647fda36ce82828bd49381299e", null ],

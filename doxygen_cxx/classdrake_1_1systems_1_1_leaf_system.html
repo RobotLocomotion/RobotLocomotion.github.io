@@ -657,7 +657,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:adaacaefcb0ba3875068f16135d5db200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a47ef984b4d9b8313d1239b76388882d2" title="Declares a discrete state group with model_vector.size() state variables, stored in a vector cloned f...">DeclareDiscreteState()</a> calls.  <a href="#adaacaefcb0ba3875068f16135d5db200">More...</a><br /></td></tr>
 <tr class="separator:adaacaefcb0ba3875068f16135d5db200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a99bcea586c5a09a1b50970aefb3127"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_abstract_values.html">AbstractValues</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a2a99bcea586c5a09a1b50970aefb3127">AllocateAbstractState</a> () const</td></tr>
-<tr class="memdesc:a2a99bcea586c5a09a1b50970aefb3127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4" title="Declares an abstract state.">DeclareAbstractState()</a> calls.  <a href="#a2a99bcea586c5a09a1b50970aefb3127">More...</a><br /></td></tr>
+<tr class="memdesc:a2a99bcea586c5a09a1b50970aefb3127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911" title="Declares an abstract state variable and provides a model value for it.">DeclareAbstractState()</a> calls.  <a href="#a2a99bcea586c5a09a1b50970aefb3127">More...</a><br /></td></tr>
 <tr class="separator:a2a99bcea586c5a09a1b50970aefb3127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c70248a52f7d20087fd6faf007aeb7b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a2c70248a52f7d20087fd6faf007aeb7b">AllocateParameters</a> () const</td></tr>
 <tr class="memdesc:a2c70248a52f7d20087fd6faf007aeb7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the parameters declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a6516c166d4aedeab3ae31544bbaecbba" title="Declares a numeric parameter using the given model_vector.">DeclareNumericParameter()</a> and <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ad7f954e701d1bfba3f8aad91dd4d89ca" title="Declares an abstract parameter using the given model_value.">DeclareAbstractParameter()</a> calls.  <a href="#a2c70248a52f7d20087fd6faf007aeb7b">More...</a><br /></td></tr>
@@ -840,11 +840,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ad02cadb14746ff469fa338d2351a5e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Declare abstract state variables</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Abstract state consists of any number of arbitrarily-typed variables, each represented by an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>.</p>
-<p>Each call to the <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4" title="Declares an abstract state.">DeclareAbstractState()</a> method produces another abstract state variable, and the abstract state variable index is returned. </p>
+<p>Each call to the <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911" title="Declares an abstract state variable and provides a model value for it.">DeclareAbstractState()</a> method produces another abstract state variable, and the abstract state variable index is returned. </p>
 </div></td></tr>
-<tr class="memitem:a471cc890e1d5fb20b9b257853d88cac4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4">DeclareAbstractState</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract_state)</td></tr>
-<tr class="memdesc:a471cc890e1d5fb20b9b257853d88cac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract state.  <a href="#a471cc890e1d5fb20b9b257853d88cac4">More...</a><br /></td></tr>
-<tr class="separator:a471cc890e1d5fb20b9b257853d88cac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca8f0611499af06d5135e26e543e911"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911">DeclareAbstractState</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
+<tr class="memdesc:a7ca8f0611499af06d5135e26e543e911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract state variable and provides a model value for it.  <a href="#a7ca8f0611499af06d5135e26e543e911">More...</a><br /></td></tr>
+<tr class="separator:a7ca8f0611499af06d5135e26e543e911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">(Advanced) Declare size of implicit time derivatives residual</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>for use with System::CalcImplicitTimeDerivativeResidual().</p>
 <p>Most commonly the default value, same as <a class="el" href="classdrake_1_1systems_1_1_system_base.html#aa568c26e18ea55bb339893881cff3e73" title="Returns the number of declared continuous state variables.">num_continuous_states()</a>, will be the correct size for the residual. </p>
@@ -1522,7 +1522,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4" title="Declares an abstract state.">DeclareAbstractState()</a> calls. </p>
+<p>Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911" title="Declares an abstract state variable and provides a model value for it.">DeclareAbstractState()</a> calls. </p>
 
 </div>
 </div>
@@ -1905,8 +1905,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a471cc890e1d5fb20b9b257853d88cac4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a471cc890e1d5fb20b9b257853d88cac4">&#9670;&nbsp;</a></span>DeclareAbstractState()</h2>
+<a id="a7ca8f0611499af06d5135e26e543e911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca8f0611499af06d5135e26e543e911">&#9670;&nbsp;</a></span>DeclareAbstractState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1918,7 +1918,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a> DeclareAbstractState </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>abstract_state</em></td><td>)</td>
+          <td class="paramname"><em>model_value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1929,14 +1929,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Declares an abstract state. </p>
+<p>Declares an abstract state variable and provides a model value for it. </p>
+<p>A <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> obtained with <a class="el" href="classdrake_1_1systems_1_1_system.html#ad047317ab91889c6743d5e47a64c7f08" title="This convenience method allocates a context using AllocateContext() and sets its default values using...">CreateDefaultContext()</a> will contain this abstract state variable initially set to a clone of the <code>model_value</code> given here. The actual concrete type is always preserved.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">abstract_state</td><td>The abstract state model value. </td></tr>
+    <tr><td class="paramname">model_value</td><td>The abstract state model value to be cloned as needed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>index of the declared abstract state. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>index of the declared abstract state variable. </dd></dl>
 
 </div>
 </div>

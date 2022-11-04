@@ -7952,17 +7952,21 @@ parameter.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareAbstractState">
-<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares an abstract state.</p>
+<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], model_value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares an abstract state variable and provides a model value for it.
+A Context obtained with CreateDefaultContext() will contain this
+abstract state variable initially set to a clone of the
+<code class="docutils literal notranslate"><span class="pre">model_value</span></code> given here. The actual concrete type is always
+preserved.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">abstract_state</span></code>:</dt>
-<dd>The abstract state model value.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_value</span></code>:</dt>
+<dd>The abstract state model value to be cloned as needed.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state variable.</td>
 </tr>
 </tbody>
 </table>
@@ -8870,17 +8874,21 @@ parameter.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareAbstractState">
-<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], arg0: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares an abstract state.</p>
+<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], model_value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares an abstract state variable and provides a model value for it.
+A Context obtained with CreateDefaultContext() will contain this
+abstract state variable initially set to a clone of the
+<code class="docutils literal notranslate"><span class="pre">model_value</span></code> given here. The actual concrete type is always
+preserved.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">abstract_state</span></code>:</dt>
-<dd>The abstract state model value.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_value</span></code>:</dt>
+<dd>The abstract state model value to be cloned as needed.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state variable.</td>
 </tr>
 </tbody>
 </table>
@@ -9786,17 +9794,21 @@ parameter.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareAbstractState">
-<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], arg0: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares an abstract state.</p>
+<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], model_value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares an abstract state variable and provides a model value for it.
+A Context obtained with CreateDefaultContext() will contain this
+abstract state variable initially set to a clone of the
+<code class="docutils literal notranslate"><span class="pre">model_value</span></code> given here. The actual concrete type is always
+preserved.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">abstract_state</span></code>:</dt>
-<dd>The abstract state model value.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_value</span></code>:</dt>
+<dd>The abstract state model value to be cloned as needed.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state variable.</td>
 </tr>
 </tbody>
 </table>
@@ -10702,17 +10714,21 @@ parameter.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareAbstractState">
-<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares an abstract state.</p>
+<code class="descname">DeclareAbstractState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], model_value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractStateIndex<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareAbstractState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares an abstract state variable and provides a model value for it.
+A Context obtained with CreateDefaultContext() will contain this
+abstract state variable initially set to a clone of the
+<code class="docutils literal notranslate"><span class="pre">model_value</span></code> given here. The actual concrete type is always
+preserved.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">abstract_state</span></code>:</dt>
-<dd>The abstract state model value.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_value</span></code>:</dt>
+<dd>The abstract state model value to be cloned as needed.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared abstract state variable.</td>
 </tr>
 </tbody>
 </table>

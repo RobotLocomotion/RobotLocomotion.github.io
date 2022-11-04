@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kuka__ii
 <div class="textblock"><p>Handles lcmt_iiwa_command message from a LcmSubscriberSystem. </p>
 <p>Note that this system does not actually subscribe to an LCM channel. To receive the message, the input of this system should be connected to a LcmSubscriberSystem::Make&lt;drake::lcmt_iiwa_command&gt;().</p>
 <p>It has one required input port, "lcmt_iiwa_command".</p>
-<p>It has two output ports: one for the commanded position for each joint, and one for commanded additional feedforward joint torque.</p>
+<p>It has three output ports: one for the commanded position for each joint, one for commanded additional feedforward joint torque, and one for the timestamp in the most recently received message.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
@@ -183,11 +183,12 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kuka__ii
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; position</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; torque</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; time</td></tr>
 </table>
 </td></tr>
 </table>
-<dl class="section user"><dt>Output prior to receiving a valid lcmt_iiwa_command message:</dt><dd>The "position" output initially feeds through from the "position_measured" input port &ndash; or if not connected, outputs zero. When discrete update events are enabled (e.g., during a simulation), the system latches the "position_measured" input into state during the first event, and the "position" output comes from the latched state, no longer fed through from the "position" input. Alternatively, the <a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#aedfdc1ea4461e65efa2fcdbe240f4ff6" title="(Advanced.) Copies the current &quot;position_measured&quot; input (or zero if not connected) into Context stat...">LatchInitialPosition()</a> method is available to achieve the same effect without using events. </dd></dl>
-<dl class="section user"><dt></dt><dd>The "torque" output will always be a vector of zeros. </dd></dl>
+<dl class="section user"><dt>Output prior to receiving a valid lcmt_iiwa_command message: The</dt><dd>"position" output initially feeds through from the "position_measured" input port &ndash; or if not connected, outputs zero. When discrete update events are enabled (e.g., during a simulation), the system latches the "position_measured" input into state during the first event, and the "position" output comes from the latched state, no longer fed through from the "position" input. Alternatively, the <a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#aedfdc1ea4461e65efa2fcdbe240f4ff6" title="(Advanced.) Copies the current &quot;position_measured&quot; input (or zero if not connected) into Context stat...">LatchInitialPosition()</a> method is available to achieve the same effect without using events. The "torque" output will be a vector of zeros, and the "time" output will be a vector of a single zero. </dd></dl>
 </div>
 <p><code>#include &lt;drake/manipulation/kuka_iiwa/iiwa_command_receiver.h&gt;</code></p>
 <table class="memberdecls">
@@ -218,6 +219,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa7827ac803fab661a42373ecaf7ef96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822286cebb312f2f326be140f71c42aa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a822286cebb312f2f326be140f71c42aa">get_commanded_torque_output_port</a> () const</td></tr>
 <tr class="separator:a822286cebb312f2f326be140f71c42aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bcaeadc839bfcc8a5dc093b6ad1956"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a57bcaeadc839bfcc8a5dc093b6ad1956">get_time_output_port</a> () const</td></tr>
+<tr class="separator:a57bcaeadc839bfcc8a5dc093b6ad1956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1systems_1_1_leaf_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1systems_1_1_leaf_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem&lt; double &gt;</a></td></tr>
 <tr class="memitem:a5341fd0b682386ac7623a65a898b48a0 inherit pub_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a5341fd0b682386ac7623a65a898b48a0">~LeafSystem</a> () override</td></tr>
 <tr class="separator:a5341fd0b682386ac7623a65a898b48a0 inherit pub_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -839,7 +842,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:adaacaefcb0ba3875068f16135d5db200 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a47ef984b4d9b8313d1239b76388882d2" title="Declares a discrete state group with model_vector.size() state variables, stored in a vector cloned f...">DeclareDiscreteState()</a> calls.  <a href="classdrake_1_1systems_1_1_leaf_system.html#adaacaefcb0ba3875068f16135d5db200">More...</a><br /></td></tr>
 <tr class="separator:adaacaefcb0ba3875068f16135d5db200 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a99bcea586c5a09a1b50970aefb3127 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_abstract_values.html">AbstractValues</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a2a99bcea586c5a09a1b50970aefb3127">AllocateAbstractState</a> () const</td></tr>
-<tr class="memdesc:a2a99bcea586c5a09a1b50970aefb3127 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4" title="Declares an abstract state.">DeclareAbstractState()</a> calls.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a2a99bcea586c5a09a1b50970aefb3127">More...</a><br /></td></tr>
+<tr class="memdesc:a2a99bcea586c5a09a1b50970aefb3127 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the states declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911" title="Declares an abstract state variable and provides a model value for it.">DeclareAbstractState()</a> calls.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a2a99bcea586c5a09a1b50970aefb3127">More...</a><br /></td></tr>
 <tr class="separator:a2a99bcea586c5a09a1b50970aefb3127 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c70248a52f7d20087fd6faf007aeb7b inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a2c70248a52f7d20087fd6faf007aeb7b">AllocateParameters</a> () const</td></tr>
 <tr class="memdesc:a2c70248a52f7d20087fd6faf007aeb7b inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the parameters declared in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a6516c166d4aedeab3ae31544bbaecbba" title="Declares a numeric parameter using the given model_vector.">DeclareNumericParameter()</a> and <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ad7f954e701d1bfba3f8aad91dd4d89ca" title="Declares an abstract parameter using the given model_value.">DeclareAbstractParameter()</a> calls.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a2c70248a52f7d20087fd6faf007aeb7b">More...</a><br /></td></tr>
@@ -961,9 +964,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ad02cadb14746ff469fa338d2351a5e68 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ad02cadb14746ff469fa338d2351a5e68">DeclareDiscreteState</a> (<a class="el" href="classint.html">int</a> num_state_variables)</td></tr>
 <tr class="memdesc:ad02cadb14746ff469fa338d2351a5e68 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a discrete state group with <code>num_state_variables</code> state variables, stored in a BasicVector initialized to be all-zero.  <a href="classdrake_1_1systems_1_1_leaf_system.html#ad02cadb14746ff469fa338d2351a5e68">More...</a><br /></td></tr>
 <tr class="separator:ad02cadb14746ff469fa338d2351a5e68 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a471cc890e1d5fb20b9b257853d88cac4 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4">DeclareAbstractState</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract_state)</td></tr>
-<tr class="memdesc:a471cc890e1d5fb20b9b257853d88cac4 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract state.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a471cc890e1d5fb20b9b257853d88cac4">More...</a><br /></td></tr>
-<tr class="separator:a471cc890e1d5fb20b9b257853d88cac4 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca8f0611499af06d5135e26e543e911 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911">DeclareAbstractState</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
+<tr class="memdesc:a7ca8f0611499af06d5135e26e543e911 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract state variable and provides a model value for it.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a7ca8f0611499af06d5135e26e543e911">More...</a><br /></td></tr>
+<tr class="separator:a7ca8f0611499af06d5135e26e543e911 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af35335637b5cf1c763d5e9112864fe09 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#af35335637b5cf1c763d5e9112864fe09">DeclareImplicitTimeDerivativesResidualSize</a> (<a class="el" href="classint.html">int</a> n)</td></tr>
 <tr class="memdesc:af35335637b5cf1c763d5e9112864fe09 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Overrides the default size for the implicit time derivatives residual.  <a href="classdrake_1_1systems_1_1_leaf_system.html#af35335637b5cf1c763d5e9112864fe09">More...</a><br /></td></tr>
 <tr class="separator:af35335637b5cf1c763d5e9112864fe09 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1394,6 +1397,23 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a57bcaeadc839bfcc8a5dc093b6ad1956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57bcaeadc839bfcc8a5dc093b6ad1956">&#9670;&nbsp;</a></span>get_time_output_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_time_output_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aedfdc1ea4461e65efa2fcdbe240f4ff6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aedfdc1ea4461e65efa2fcdbe240f4ff6">&#9670;&nbsp;</a></span>LatchInitialPosition()</h2>
 
@@ -1415,8 +1435,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac692c2788bc230d2ecdfa0ea34ffcbed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac692c2788bc230d2ecdfa0ea34ffcbed">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a2cca2749bb8b02bbf518ffe096d08e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cca2749bb8b02bbf518ffe096d08e11">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1427,7 +1447,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html">IiwaCommandReceiver</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html">IiwaCommandReceiver</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html">IiwaCommandReceiver</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1441,8 +1461,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a2cca2749bb8b02bbf518ffe096d08e11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cca2749bb8b02bbf518ffe096d08e11">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ac692c2788bc230d2ecdfa0ea34ffcbed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac692c2788bc230d2ecdfa0ea34ffcbed">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1453,7 +1473,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html">IiwaCommandReceiver</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html">IiwaCommandReceiver</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html">IiwaCommandReceiver</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

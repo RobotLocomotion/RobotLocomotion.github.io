@@ -1,5 +1,9 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a80ed62d7a0f2d3eee401cdd29e47d534":[3,0,0,18,6,0],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d":[3,0,0,18,6,13],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426":[3,0,0,18,6,5],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,18,6,9],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d":[3,0,0,18,6,16],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,18,6,20],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5":[3,0,0,18,6,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX40 =
 "dependency__tracker_8h.html":[4,0,0,12,3,10],
 "deprecated.html":[0],
 "deprecation__pybind_8h.html":[4,0,0,0,0,0,3],
-"deprecation__pybind_8h.html#a13cd6cd963823cafbc0068bacc7eeadd":[4,0,0,0,0,0,3,5],
-"deprecation__pybind_8h.html#a36e0f3795b29cfb57c0940ffc8780120":[4,0,0,0,0,0,3,2],
-"deprecation__pybind_8h.html#a40a674f4af53caa963b98daa8d85af39":[4,0,0,0,0,0,3,3],
-"deprecation__pybind_8h.html#a88a20567ddf6e5978a874a3cb46353f4":[4,0,0,0,0,0,3,4],
-"deprecation__pybind_8h.html#aa542768548608eefe8534a3bdc5c1cd4":[4,0,0,0,0,0,3,1]
+"deprecation__pybind_8h.html#a13cd6cd963823cafbc0068bacc7eeadd":[4,0,0,0,0,0,3,5]
 };

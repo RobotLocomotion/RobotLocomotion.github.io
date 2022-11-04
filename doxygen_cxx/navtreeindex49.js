@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"quaternion__floating__mobilizer_8h.html":[4,0,0,8,14,34],
+"quaternion__integration__constraint_8h.html":[4,0,0,8,8,4],
+"query__object_8h.html":[4,0,0,4,35],
+"quintic__scalar__system_8h.html":[4,0,0,12,0,0,12],
 "radau__integrator_8h.html":[4,0,0,12,0,13],
 "radau__integrator_8h.html#a0ef69bdb57d87753b8f827a134371822":[4,0,0,12,0,13,1],
 "radau__integrator_8h.html#af6af6956e79bb6e0b6fa6afe861fd91a":[4,0,0,12,0,13,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "snopt__solver_8h.html":[4,0,0,11,48],
 "solar__system_8h.html":[4,0,0,3,17,1],
 "solution__result_8h.html":[4,0,0,11,49],
-"solution__result_8h.html#a269b7066a168f80390ed6c496829ffcd":[4,0,0,11,49,1],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136f":[4,0,0,11,49,0],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45":[4,0,0,11,49,0,0],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520":[4,0,0,11,49,0,5],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8":[4,0,0,11,49,0,3]
+"solution__result_8h.html#a269b7066a168f80390ed6c496829ffcd":[4,0,0,11,49,1]
 };

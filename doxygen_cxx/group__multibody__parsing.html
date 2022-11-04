@@ -286,6 +286,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_relaxation_time">drake:relaxation_time</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rigid_hydroelastic">drake:rigid_hydroelastic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rotor_inertia">drake:rotor_inertia</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_screw_thread_pitch">drake:screw_thread_pitch</a></li>
 </ul>
 <h2><a class="anchor" id="tag_drake_acceleration"></a>
 drake:acceleration</h2>
@@ -437,7 +438,7 @@ drake:damping</h2>
 <h3><a class="anchor" id="tag_drake_damping_semantics"></a>
 Semantics</h3>
 <p>If the parent joint type is planar, construct a vector from the values (units of (N⋅s/m, N⋅s/m, N⋅m⋅s) respectively) and pass it to the <code>damping</code> parameter of the constructor of <a class="el" href="classdrake_1_1multibody_1_1_planar_joint.html" title="This joint models a planar joint allowing two bodies to translate and rotate relative to one another ...">drake::multibody::PlanarJoint</a>. The first two values are for translation; the third is for rotation. See that class for discussion of units and detailed semantics.</p>
-<p>URDF Note: The comparable feature in URDF is the standard <code>/robot/link/joint/dynamics/@damping</code> attribute.</p>
+<p>URDF Note: The comparable feature in URDF is the standard <code>/robot/joint/dynamics/@damping</code> attribute.</p>
 <h2><a class="anchor" id="tag_drake_declare_convex"></a>
 drake:declare_convex</h2>
 <ul>
@@ -473,8 +474,8 @@ Semantics</h3>
 <h2><a class="anchor" id="tag_drake_gear_ratio"></a>
 drake:gear_ratio</h2>
 <ul>
-<li>SDFormat path: <code>//model/link/joint/drake:gear_ratio</code></li>
-<li>URDF path: <code>/robot/link/joint/actuator/drake:gear_ratio@value</code></li>
+<li>SDFormat path: <code>//model/joint/drake:gear_ratio</code></li>
+<li>URDF path: <code>/robot/joint/actuator/drake:gear_ratio@value</code></li>
 <li>Syntax: Non-negative floating point value.</li>
 </ul>
 <h3><a class="anchor" id="tag_drake_gear_ratio_semantics"></a>
@@ -526,8 +527,8 @@ drake:joint</h2>
 Semantics</h3>
 <p>In both formats, the drake:joint element is used as a substitute for standard joint elements, to allow support for non-standard joint types. The overall semantics are the same as for a standard joint.</p>
 <p>In SDFormat, the only supported <code>type</code> value is <code>planar</code>. The element must contain nested <code>drake:parent</code>, <code>drake:child</code>, and <code>drake:damping</code> elements.</p>
-<p>In URDF, supported <code>type</code> values are one of <code>ball</code>, <code>planar</code>, or <code>universal</code>. The nested elements are the same as those defined by the standard joint element.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_parent">drake:parent</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_child">drake:child</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_damping">drake:damping</a></dd></dl>
+<p>In URDF, supported <code>type</code> values are one of <code>ball</code>, <code>planar</code>, <code>screw</code> or <code>universal</code>. The nested elements are the same as those defined by the standard joint element with the exception of the <code>screw</code> joint type, which requires a nested <code>drake:screw_thread_pitch</code> element.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_parent">drake:parent</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_child">drake:child</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_damping">drake:damping</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_screw_thread_pitch">drake:screw_thread_pitch</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_linear_bushing_rpy"></a>
 drake:linear_bushing_rpy</h2>
 <ul>
@@ -652,14 +653,26 @@ Semantics</h3>
 <h2><a class="anchor" id="tag_drake_rotor_inertia"></a>
 drake:rotor_inertia</h2>
 <ul>
-<li>SDFormat path: <code>//model/link/joint/drake:rotor_inertia</code></li>
-<li>URDF path: <code>/robot/link/joint/actuator/drake:rotor_inertia@value</code></li>
+<li>SDFormat path: <code>//model/joint/drake:rotor_inertia</code></li>
+<li>URDF path: <code>/robot/joint/actuator/drake:rotor_inertia@value</code></li>
 <li>Syntax: Non-negative floating point value.</li>
 </ul>
 <h3><a class="anchor" id="tag_drake_rotor_inertia_semantics"></a>
 Semantics</h3>
 <p>Applies the indicated rotor inertia value to the appropriate JointActuator object. Units are kg⋅m² for revolute joints, and kg for prismatic joints.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">drake::multibody::JointActuator</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_gear_ratio">drake:gear_ratio</a>, <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#reflected_inertia">Reflected Inertia</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">drake::multibody::JointActuator</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_gear_ratio">drake:gear_ratio</a>, <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#reflected_inertia">Reflected Inertia</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_screw_thread_pitch"></a>
+drake:screw_thread_pitch</h2>
+<ul>
+<li>SDFormat path: <code>//model/joint/screw_thread_pitch</code> <br />
+ Note this is <b>not</b> the custom attribute.</li>
+<li>URDF path: <code>/robot/joint/actuator/drake:screw_thread_pitch@value</code></li>
+<li>Syntax: Non-zero floating point value.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_screw_thread_pitch_semantics"></a>
+Semantics</h3>
+<p>Applies the indicated thread pitch value to the appropriate ScrewJoint object. This kinematic parameter specifies the axial distance traveled for each revolution of the joint. Units are m/revolution, with a positive value corresponding to a right-handed thread.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html" title="This joint models a screw joint allowing two bodies to rotate about one axis while translating along ...">drake::multibody::ScrewJoint</a> </dd></dl>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

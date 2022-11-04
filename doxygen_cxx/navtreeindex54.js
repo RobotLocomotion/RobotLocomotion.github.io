@@ -1,5 +1,9 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html":[3,0,0,16,8,37],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,37,0],
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,16,9,6],
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,16,9,6,0],
 "structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,16,9,6,1],
 "structdrake_1_1template__single__tag.html":[3,0,0,52],
 "structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,52,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX54 =
 "universal__mobilizer_8h.html":[4,0,0,8,14,49],
 "unrevised__lemke__solver_8h.html":[4,0,0,11,59],
 "unused_8h.html":[4,0,0,1,54],
-"unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,54,0],
-"utilities_8h.html":[4,0,0,4,42],
-"value_8h.html":[4,0,0,1,55],
-"value__checker_8h.html":[4,0,0,12,3,50],
-"value__producer_8h.html":[4,0,0,12,3,51]
+"unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,54,0]
 };

@@ -5,6 +5,7 @@ var classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver =
     [ "JacoStatusReceiver", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#ab3f03e00b717615f4f73e57033be0369", null ],
     [ "get_current_output_port", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a1793cb8aaa804ffbfa4578afe74db3d0", null ],
     [ "get_position_measured_output_port", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a9db3275e9ca71d56c13029264009c088", null ],
+    [ "get_time_measured_output_port", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a562702c3c7b4f37ee6b9eb21e6f29306", null ],
     [ "get_torque_external_output_port", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#af31537279098f22f07b865e7dd1499dc", null ],
     [ "get_torque_measured_output_port", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#aede38a253a15aa8d34d06a6dbfea0feb", null ],
     [ "get_velocity_measured_output_port", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a3dd6f7bd37a49b7236b4db5de8a05bd2", null ],

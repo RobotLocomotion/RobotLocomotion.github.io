@@ -1,5 +1,9 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adca55d80c38bff3a312419c47ff112d9":[3,0,0,16,9,3,11],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae36974e43ab46ab33b24010ec4099c05":[3,0,0,16,9,3,10],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[3,0,0,16,9,3,22],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052":[3,0,0,16,9,3,12],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af3392559929281e1d5db4f104ed4b8f1":[3,0,0,16,9,3,16],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[3,0,0,16,9,3,21],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[3,0,0,16,9,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507":[3,0,0,18,6,7],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4ff5241db765b5a4de7c88bb996d39a8":[3,0,0,18,6,10],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,18,6,8],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a65dc25e24cd2903a0861b9589065c897":[3,0,0,18,6,2],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a80ed62d7a0f2d3eee401cdd29e47d534":[3,0,0,18,6,0],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d":[3,0,0,18,6,13],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426":[3,0,0,18,6,5],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,18,6,9]
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a65dc25e24cd2903a0861b9589065c897":[3,0,0,18,6,2]
 };

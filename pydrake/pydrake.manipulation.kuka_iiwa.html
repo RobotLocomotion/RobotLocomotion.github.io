@@ -270,9 +270,10 @@ a longer lifetime than the Diagram.</p>
 To receive the message, the input of this system should be connected
 to a LcmSubscriberSystem::Make&lt;drake::lcmt_iiwa_command&gt;().</p>
 <p>It has one required input port, “lcmt_iiwa_command”.</p>
-<p>It has two output ports: one for the commanded position for each
-joint, and one for commanded additional feedforward joint torque.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">lcmt_iiwa_command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position_measured (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>IiwaCommandReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque</td></tr></table></td></tr></table><p>&#64;par Output prior to receiving a valid lcmt_iiwa_command message: The
+<p>It has three output ports: one for the commanded position for each
+joint, one for commanded additional feedforward joint torque, and one
+for the timestamp in the most recently received message.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">lcmt_iiwa_command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position_measured (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>IiwaCommandReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; time</td></tr></table></td></tr></table><p>&#64;par Output prior to receiving a valid lcmt_iiwa_command message: The
 “position” output initially feeds through from the “position_measured”
 input port – or if not connected, outputs zero. When discrete update
 events are enabled (e.g., during a simulation), the system latches the
@@ -280,7 +281,8 @@ events are enabled (e.g., during a simulation), the system latches the
 “position” output comes from the latched state, no longer fed through
 from the “position” input. Alternatively, the LatchInitialPosition()
 method is available to achieve the same effect without using events.
-&#64;par The “torque” output will always be a vector of zeros.</p>
+The “torque” output will be a vector of zeros, and the “time” output
+will be a vector of a single zero.</p>
 <dl class="method">
 <dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em>, <em>num_joints: int = 7</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.__init__" title="Permalink to this definition">¶</a></dt>
@@ -306,6 +308,11 @@ method is available to achieve the same effect without using events.
 <code class="descname">get_position_measured_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_position_measured_input_port" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_time_output_port">
+<code class="descname">get_time_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_time_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -322,11 +329,11 @@ position (which must be connected), one for commanded torque (which is
 optional), and one for the time to use, in seconds, for the message
 timestamp (which is optional). If the torque input port is not
 connected, then no torque values will be emitted in the resulting
-message. If the time_measured input port is not connected, the context
-time will be used for message timestamp.</p>
+message. If the time input port is not connected, the context time
+will be used for message timestamp.</p>
 <p>This system has one abstract-valued output port of type
 lcmt_iiwa_command.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">time_measured (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>IiwaCommandSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_iiwa_command</td></tr></table></td></tr></table><div class="admonition seealso">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">time (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>IiwaCommandSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_iiwa_command</td></tr></table></td></tr></table><div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><code class="docutils literal notranslate"><span class="pre">lcmt_iiwa_command.lcm</span></code> for additional documentation.</p>
 </div>
@@ -341,8 +348,8 @@ lcmt_iiwa_command.</p>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_time_measured_input_port">
-<code class="descname">get_time_measured_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_time_measured_input_port" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_time_input_port">
+<code class="descname">get_time_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_time_input_port" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
