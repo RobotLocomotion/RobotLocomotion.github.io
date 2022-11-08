@@ -1026,11 +1026,10 @@ diagram containing the MultibodyPlant and SceneGraph
 systems::DiagramBuilder&lt;double&gt; builder; auto items =
 AddMultibodyPlantSceneGraph(&amp;builder, 0.0); // 2. Add collision
 geometries to the plant
-Parser(&amp;(items.plant)).AddModelFromFile(“model.sdf”); // 3.
-Construct the diagram auto diagram = builder.Build(); // 4. Create
-diagram context. auto diagram_context=
-diagram-&gt;CreateDefaultContext(); // 5. Get the context for the
-plant. auto plant_context =
+Parser(&amp;(items.plant)).AddModels(“model.sdf”); // 3. Construct the
+diagram auto diagram = builder.Build(); // 4. Create diagram
+context. auto diagram_context= diagram-&gt;CreateDefaultContext(); //
+5. Get the context for the plant. auto plant_context =
 &amp;(diagram-&gt;GetMutableSubsystemContext(items.plant,
 diagram_context.get())); This context will be modified during
 calling ik.prog.Solve(…). When Solve() returns <code class="docutils literal notranslate"><span class="pre">result</span></code>,

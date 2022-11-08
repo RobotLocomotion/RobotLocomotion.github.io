@@ -1302,6 +1302,66 @@ compatible DiscreteValues object.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].SetStateAndParametersFrom">
+<code class="descname">SetStateAndParametersFrom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].SetStateAndParametersFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[float], source: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[float], source: drake::systems::Context&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[float], source: drake::systems::Context&lt;drake::symbolic::Expression&gt;) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.Context_.Context_[float].SetTime">
 <code class="descname">SetTime</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float], time_sec: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].SetTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the current time in seconds. Sends out of date notifications for
@@ -1906,6 +1966,66 @@ compatible DiscreteValues object.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_[AutoDiffXd].SetStateAndParametersFrom">
+<code class="descname">SetStateAndParametersFrom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].SetStateAndParametersFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[AutoDiffXd], source: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[AutoDiffXd], source: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[AutoDiffXd], source: drake::systems::Context&lt;drake::symbolic::Expression&gt;) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2514,6 +2634,66 @@ compatible DiscreteValues object.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.Context_[Expression].SetStateAndParametersFrom">
+<code class="descname">SetStateAndParametersFrom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].SetStateAndParametersFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[Expression], source: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[Expression], source: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[Expression], source: pydrake.systems.framework.Context_[Expression]) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.Context_[Expression].SetTime">
 <code class="descname">SetTime</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression], time_sec: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].SetTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the current time in seconds. Sends out of date notifications for
@@ -3116,6 +3296,66 @@ compatible DiscreteValues object.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_[float].SetStateAndParametersFrom">
+<code class="descname">SetStateAndParametersFrom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_[float].SetStateAndParametersFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[float], source: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[float], source: drake::systems::Context&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li>SetStateAndParametersFrom(self: pydrake.systems.framework.Context_[float], source: drake::systems::Context&lt;drake::symbolic::Expression&gt;) -&gt; None</li>
+</ol>
+<p>Copies all state and parameters in <code class="docutils literal notranslate"><span class="pre">source</span></code>, where numerical values
+are of type <code class="docutils literal notranslate"><span class="pre">U</span></code>, to <code class="docutils literal notranslate"><span class="pre">this</span></code> context. Time and accuracy are
+unchanged in <code class="docutils literal notranslate"><span class="pre">this</span></code> context, which means that this method can be
+called on a subcontext. Sends out of date notifications for all
+dependent computations in <code class="docutils literal notranslate"><span class="pre">this</span></code> context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
+See System::FixInputPortsFrom() if you want to copy those.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetTimeStateAndParametersFrom() if you want to copy time and
+accuracy along with state and parameters to a root context.</p>
+</div>
 </dd></dl>
 
 <dl class="method">

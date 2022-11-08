@@ -201,7 +201,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8032074837c5573af1b34f7bef6efc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#ad8032074837c5573af1b34f7bef6efc7">CalcRotationMatrixInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const override</td></tr>
 <tr class="memdesc:ad8032074837c5573af1b34f7bef6efc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rotation matrix <code>R_BF</code> that relates body frame B to <code>this</code> frame F (B is the body frame to which <code>this</code> frame F is attached).  <a href="#ad8032074837c5573af1b34f7bef6efc7">More...</a><br /></td></tr>
 <tr class="separator:ad8032074837c5573af1b34f7bef6efc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b5c4ac40ce044677fee01e472df024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#ab0b5c4ac40ce044677fee01e472df024">SetPoseInParentFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_PF) const</td></tr>
+<tr class="memdesc:ab0b5c4ac40ce044677fee01e472df024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the pose of <code>this</code> frame F in its parent frame P.  <a href="#ab0b5c4ac40ce044677fee01e472df024">More...</a><br /></td></tr>
+<tr class="separator:ab0b5c4ac40ce044677fee01e472df024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f31e8a6ec44d51427c1ea67a2f72aae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a1f31e8a6ec44d51427c1ea67a2f72aae">GetPoseInParentFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a1f31e8a6ec44d51427c1ea67a2f72aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rigid transform X_PF that characterizes <code>this</code> frame F's pose in its parent frame P.  <a href="#a1f31e8a6ec44d51427c1ea67a2f72aae">More...</a><br /></td></tr>
+<tr class="separator:a1f31e8a6ec44d51427c1ea67a2f72aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f75d54009c77d9ac842af3ebf742e49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a0f75d54009c77d9ac842af3ebf742e49">SetPoseInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_PF) const</td></tr>
+<tr class="memdesc:a0f75d54009c77d9ac842af3ebf742e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a0f75d54009c77d9ac842af3ebf742e49">More...</a><br /></td></tr>
 <tr class="separator:a0f75d54009c77d9ac842af3ebf742e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85ed93e3f60b6b39558dfcc087442495"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a85ed93e3f60b6b39558dfcc087442495">GetFixedPoseInBodyFrame</a> () const override</td></tr>
 <tr class="separator:a85ed93e3f60b6b39558dfcc087442495"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -783,8 +790,35 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aac483270050f386a8aa0b04de6f228b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac483270050f386a8aa0b04de6f228b9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1f31e8a6ec44d51427c1ea67a2f72aae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f31e8a6ec44d51427c1ea67a2f72aae">&#9670;&nbsp;</a></span>GetPoseInParentFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt; GetPoseInParentFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the rigid transform X_PF that characterizes <code>this</code> frame F's pose in its parent frame P. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the multibody plant. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>this</code> frame has been registered in the given <code>context</code>. </dd></dl>
+
+</div>
+</div>
+<a id="abd3d571fb1783d907df5934fb06f3040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3d571fb1783d907df5934fb06f3040">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,7 +829,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -809,8 +843,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abd3d571fb1783d907df5934fb06f3040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd3d571fb1783d907df5934fb06f3040">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aac483270050f386a8aa0b04de6f228b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac483270050f386a8aa0b04de6f228b9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,7 +855,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -860,6 +894,48 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>SetPoseInBodyFrame() was incorrectly named  so it has been replaced by SetPoseInParentFrame(). <br />
+ This will be removed from Drake on or after 2023-03-01.</dd></dl>
+
+</div>
+</div>
+<a id="ab0b5c4ac40ce044677fee01e472df024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b5c4ac40ce044677fee01e472df024">&#9670;&nbsp;</a></span>SetPoseInParentFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPoseInParentFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_PF</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the pose of <code>this</code> frame F in its parent frame P. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the multibody plant. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">X_PF</td><td>Rigid transform that characterizes <code>this</code> frame F's pose (orientation and position) in its parent frame P. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>this</code> frame has been registered in the given <code>context</code>. </dd></dl>
 
 </div>
 </div>

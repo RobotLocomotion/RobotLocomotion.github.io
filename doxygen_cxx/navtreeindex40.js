@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,18,6,8],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a65dc25e24cd2903a0861b9589065c897":[3,0,0,18,6,2],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a80ed62d7a0f2d3eee401cdd29e47d534":[3,0,0,18,6,0],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d":[3,0,0,18,6,13],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426":[3,0,0,18,6,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "demultiplexer_8h.html":[4,0,0,12,6,5],
 "dense__output_8h.html":[4,0,0,12,0,3],
 "dependency__tracker_8h.html":[4,0,0,12,3,10],
-"deprecated.html":[0],
-"deprecation__pybind_8h.html":[4,0,0,0,0,0,3],
-"deprecation__pybind_8h.html#a13cd6cd963823cafbc0068bacc7eeadd":[4,0,0,0,0,0,3,5]
+"deprecated.html":[0]
 };

@@ -3362,9 +3362,44 @@ Drake on or after 2022-12-01.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_.FixedOffsetFrame_[float].GetPoseInParentFrame">
+<code class="descname">GetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_.FixedOffsetFrame_[float].GetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rigid transform X_PF that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+pose in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.FixedOffsetFrame_.FixedOffsetFrame_[float].SetPoseInBodyFrame">
 <code class="descname">SetPoseInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[float], context: pydrake.systems.framework.Context_[float], X_PF: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_.FixedOffsetFrame_[float].SetPoseInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>SetPoseInBodyFrame() was incorrectly named so it has been replaced
+by SetPoseInParentFrame(). This will be removed from Drake on or
+after 2023-03-01.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_.FixedOffsetFrame_[float].SetPoseInParentFrame">
+<code class="descname">SetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[float], context: pydrake.systems.framework.Context_[float], X_PF: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_.FixedOffsetFrame_[float].SetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
+<dd>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
+(orientation and position) in its parent frame P.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -3442,9 +3477,44 @@ Drake on or after 2022-12-01.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd].GetPoseInParentFrame">
+<code class="descname">GetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd].GetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rigid transform X_PF that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+pose in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd].SetPoseInBodyFrame">
 <code class="descname">SetPoseInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X_PF: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd].SetPoseInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>SetPoseInBodyFrame() was incorrectly named so it has been replaced
+by SetPoseInParentFrame(). This will be removed from Drake on or
+after 2023-03-01.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd].SetPoseInParentFrame">
+<code class="descname">SetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X_PF: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd].SetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
+<dd>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
+(orientation and position) in its parent frame P.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -3520,9 +3590,44 @@ Drake on or after 2022-12-01.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_[Expression].GetPoseInParentFrame">
+<code class="descname">GetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[Expression].GetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rigid transform X_PF that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+pose in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.FixedOffsetFrame_[Expression].SetPoseInBodyFrame">
 <code class="descname">SetPoseInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], context: pydrake.systems.framework.Context_[Expression], X_PF: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[Expression].SetPoseInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>SetPoseInBodyFrame() was incorrectly named so it has been replaced
+by SetPoseInParentFrame(). This will be removed from Drake on or
+after 2023-03-01.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_[Expression].SetPoseInParentFrame">
+<code class="descname">SetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], context: pydrake.systems.framework.Context_[Expression], X_PF: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[Expression].SetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
+<dd>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
+(orientation and position) in its parent frame P.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -3598,9 +3703,44 @@ Drake on or after 2022-12-01.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_[float].GetPoseInParentFrame">
+<code class="descname">GetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[float].GetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rigid transform X_PF that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+pose in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.FixedOffsetFrame_[float].SetPoseInBodyFrame">
 <code class="descname">SetPoseInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[float], context: pydrake.systems.framework.Context_[float], X_PF: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[float].SetPoseInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>SetPoseInBodyFrame() was incorrectly named so it has been replaced
+by SetPoseInParentFrame(). This will be removed from Drake on or
+after 2023-03-01.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.FixedOffsetFrame_[float].SetPoseInParentFrame">
+<code class="descname">SetPoseInParentFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.FixedOffsetFrame_[float], context: pydrake.systems.framework.Context_[float], X_PF: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_[float].SetPoseInParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in its parent frame P.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody plant.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt>
+<dd>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
+(orientation and position) in its parent frame P.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

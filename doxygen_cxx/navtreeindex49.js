@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"quaternion_8h.html#adc96357c54438cadae5c8aefbd16713d":[4,0,0,7,26,0],
+"quaternion_8h.html#ae2ef93ff1fa2dc788507d6eadb4bb78f":[4,0,0,7,26,10],
 "quaternion__floating__mobilizer_8h.html":[4,0,0,8,14,34],
 "quaternion__integration__constraint_8h.html":[4,0,0,8,8,4],
 "query__object_8h.html":[4,0,0,4,35],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
 "sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,8,5,1],
 "snopt__solver_8h.html":[4,0,0,11,48],
-"solar__system_8h.html":[4,0,0,3,17,1],
-"solution__result_8h.html":[4,0,0,11,49],
-"solution__result_8h.html#a269b7066a168f80390ed6c496829ffcd":[4,0,0,11,49,1]
+"solar__system_8h.html":[4,0,0,3,17,1]
 };
