@@ -171,7 +171,12 @@ class drake::trajectories::PathParameterizedTrajectory&lt; T &gt;</h3>
 
 <p>A trajectory defined by a path and timing trajectory. </p>
 <p>Using a path of form <code>q(s)</code> and a time_scaling of the form <code>s(t)</code>, a full trajectory of form <code>q(t) = q(s(t))</code> is modeled.</p>
-<p>@tparam_default_scalars </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div>
 <p><code>#include &lt;drake/common/trajectories/path_parameterized_trajectory.h&gt;</code></p>
 <table class="memberdecls">

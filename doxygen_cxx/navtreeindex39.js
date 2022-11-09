@@ -1,5 +1,17 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a547060be7141e61d9ce65e75ae93f00d":[3,0,0,16,9,3,19],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a572b1c13ee61f1f9f2231d29f58f59fd":[3,0,0,16,9,3,7],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a65363bc4338584a02f119b225ae1cc98":[3,0,0,16,9,3,3],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a762563a2efd7d83a85bae4df50c66fa8":[3,0,0,16,9,3,13],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[3,0,0,16,9,3,17],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8375ea48a9fad7145ae1d2e97d851f76":[3,0,0,16,9,3,23],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a84164d4abbdec280932b2677ab56a210":[3,0,0,16,9,3,9],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9a8474ae1e7ce1dab9a404fd6e6f6054":[3,0,0,16,9,3,0],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aa04be32847a0a206b2ae988625279139":[3,0,0,16,9,3,2],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aab1f0d3cbfc0204c739cdd549d980d2b":[3,0,0,16,9,3,20],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[3,0,0,16,9,3,18],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ac483aaab159f1f529e6dae99ab3405d8":[3,0,0,16,9,3,4],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#acfc5214a690370e5a4f2906f038fed1c":[3,0,0,16,9,3,8],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ada7b35ee8b161bd6ccc2709ccf3c1022":[3,0,0,16,9,3,15],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adca55d80c38bff3a312419c47ff112d9":[3,0,0,16,9,3,11],
@@ -237,17 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,18,5,19],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,5,14],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#add41849231c25a154e54d762f55c488c":[3,0,0,18,5,5],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#af2a0658eb97b715c3c7066f1b24dd00b":[3,0,0,18,5,8],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html":[3,0,0,18,6],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401":[3,0,0,18,6,21],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0a4ac30a258a47b6ea610f16f4accece":[3,0,0,18,6,17],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0f1bc48c32072f8a84aa295528a66440":[3,0,0,18,6,18],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0":[3,0,0,18,6,19],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a205b86a6552919d515ba544c185c04c3":[3,0,0,18,6,4],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a293c775020a0b5f25770dd398ea14f1d":[3,0,0,18,6,3],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a3162d0b93cdd9f4259cc7d03b3370e56":[3,0,0,18,6,14],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a326ae949f44158da731ef777bba601ec":[3,0,0,18,6,11],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a43a07ba5dd1adae91520a5c386ee6c1b":[3,0,0,18,6,15],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507":[3,0,0,18,6,7],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4ff5241db765b5a4de7c88bb996d39a8":[3,0,0,18,6,10]
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#af2a0658eb97b715c3c7066f1b24dd00b":[3,0,0,18,5,8]
 };

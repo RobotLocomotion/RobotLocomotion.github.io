@@ -234,12 +234,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc8e346be919f7dbb4995d6365492301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301">resize</a> (<a class="el" href="classint.html">int</a> new_size, bool skip_initialize=false)</td></tr>
 <tr class="memdesc:abc8e346be919f7dbb4995d6365492301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conservative resize; will maintain existing data, and initialize new data to their invalid values.  <a href="#abc8e346be919f7dbb4995d6365492301">More...</a><br /></td></tr>
 <tr class="separator:abc8e346be919f7dbb4995d6365492301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13abe761922caf34ccb5530adc0dff21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a13abe761922caf34ccb5530adc0dff21">VoxelizedDownSample</a> (<a class="el" href="classdouble.html">double</a> voxel_size) const</td></tr>
-<tr class="memdesc:a13abe761922caf34ccb5530adc0dff21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3D grid with cells of dimension voxel_size.  <a href="#a13abe761922caf34ccb5530adc0dff21">More...</a><br /></td></tr>
-<tr class="separator:a13abe761922caf34ccb5530adc0dff21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd31b4f5d765431cc1f69ca727419ff1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abd31b4f5d765431cc1f69ca727419ff1">EstimateNormals</a> (<a class="el" href="classdouble.html">double</a> radius, <a class="el" href="classint.html">int</a> num_closest)</td></tr>
-<tr class="memdesc:abd31b4f5d765431cc1f69ca727419ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the normal vectors in <code>this</code> by fitting a plane at each point in the cloud using up to <code>num_closest</code> points within Euclidean distance <code>radius</code> from the point.  <a href="#abd31b4f5d765431cc1f69ca727419ff1">More...</a><br /></td></tr>
-<tr class="separator:abd31b4f5d765431cc1f69ca727419ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1897b2707adb1601f97ba98c53c1f84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ad1897b2707adb1601f97ba98c53c1f84">VoxelizedDownSample</a> (<a class="el" href="classdouble.html">double</a> voxel_size, bool parallelize=false) const</td></tr>
+<tr class="memdesc:ad1897b2707adb1601f97ba98c53c1f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3D grid with cells of dimension voxel_size.  <a href="#ad1897b2707adb1601f97ba98c53c1f84">More...</a><br /></td></tr>
+<tr class="separator:ad1897b2707adb1601f97ba98c53c1f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea79617b0daefddabb6c71dbab3d06ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#aea79617b0daefddabb6c71dbab3d06ff">EstimateNormals</a> (<a class="el" href="classdouble.html">double</a> radius, <a class="el" href="classint.html">int</a> num_closest, bool parallelize=false)</td></tr>
+<tr class="memdesc:aea79617b0daefddabb6c71dbab3d06ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the normal vectors in <code>this</code> by fitting a plane at each point in the cloud using up to <code>num_closest</code> points within Euclidean distance <code>radius</code> from the point.  <a href="#aea79617b0daefddabb6c71dbab3d06ff">More...</a><br /></td></tr>
+<tr class="separator:aea79617b0daefddabb6c71dbab3d06ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometric Descriptors - XYZs</div></td></tr>
 <tr class="memitem:abbefd7d1920434ef863911302c2da821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821">has_xyzs</a> () const</td></tr>
 <tr class="memdesc:abbefd7d1920434ef863911302c2da821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this cloud provides XYZ values.  <a href="#abbefd7d1920434ef863911302c2da821">More...</a><br /></td></tr>
@@ -646,8 +646,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abd31b4f5d765431cc1f69ca727419ff1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd31b4f5d765431cc1f69ca727419ff1">&#9670;&nbsp;</a></span>EstimateNormals()</h2>
+<a id="aea79617b0daefddabb6c71dbab3d06ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea79617b0daefddabb6c71dbab3d06ff">&#9670;&nbsp;</a></span>EstimateNormals()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,7 +662,13 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>num_closest</em>&#160;</td>
+          <td class="paramname"><em>num_closest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -673,7 +679,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Estimates the normal vectors in <code>this</code> by fitting a plane at each point in the cloud using up to <code>num_closest</code> points within Euclidean distance <code>radius</code> from the point. </p>
-<p>If <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals.">has_normals()</a> is false, then new normals will be allocated (and <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals.">has_normals()</a> will become true). Points for which the normals cannot be estimated (because the <code>this</code> has less than two closest points within the <code>radius</code>), will receive normal [NaN, NaN, NaN]. Normals estimated from two closest points will be orthogonal to the vector between those points, but can be arbitrary in the last dimension.</p>
+<p>If <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals.">has_normals()</a> is false, then new normals will be allocated (and <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals.">has_normals()</a> will become true). Points for which the normals cannot be estimated (because the <code>this</code> has less than two closest points within the <code>radius</code>), will receive normal [NaN, NaN, NaN]. Normals estimated from two closest points will be orthogonal to the vector between those points, but can be arbitrary in the last dimension. <code>parallelize</code> enables OpenMP parallelization.</p>
 <dl class="section return"><dt>Returns</dt><dd>true iff all points were assigned normals by having at least <em>three</em> closest points within <code>radius</code>.</dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><code>radius</code> &gt; 0 and <code>num_closest</code> &gt;= 3. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -1392,8 +1398,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a13abe761922caf34ccb5530adc0dff21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13abe761922caf34ccb5530adc0dff21">&#9670;&nbsp;</a></span>VoxelizedDownSample()</h2>
+<a id="ad1897b2707adb1601f97ba98c53c1f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1897b2707adb1601f97ba98c53c1f84">&#9670;&nbsp;</a></span>VoxelizedDownSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1402,14 +1408,24 @@ Static Public Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> VoxelizedDownSample </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>voxel_size</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>voxel_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3D grid with cells of dimension voxel_size. </p>
-<p>Each occupied voxel will result in one point in the downsampled cloud, with a location corresponding to the centroid of the points in that voxel. Points with non-finite xyz values are ignored. All other fields (e.g. rgbs, normals, and descriptors) with finite values will also be averaged across the points in a voxel. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Each occupied voxel will result in one point in the downsampled cloud, with a location corresponding to the centroid of the points in that voxel. Points with non-finite xyz values are ignored. All other fields (e.g. rgbs, normals, and descriptors) with finite values will also be averaged across the points in a voxel. <code>parallelize</code> enables OpenMP parallelization. Equivalent to Open3d's voxel_down_sample or PCL's VoxelGrid filter. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values.">has_xyzs()</a> is false. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if voxel_size &lt;= 0. </td></tr>

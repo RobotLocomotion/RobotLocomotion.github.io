@@ -333,6 +333,7 @@ var hierarchy =
     [ "CameraConfig::FovDegrees", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html", null ],
     [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html", null ],
     [ "FromDoubleTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html", null ],
+    [ "Meshcat::Gamepad", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html", null ],
     [ "GenericPolynomial< BasisElement >", "classdrake_1_1symbolic_1_1_generic_polynomial.html", null ],
     [ "GeometryFrame", "classdrake_1_1geometry_1_1_geometry_frame.html", null ],
     [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html", null ],
@@ -576,8 +577,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]

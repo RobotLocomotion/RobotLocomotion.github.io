@@ -15685,50 +15685,86 @@ SpatialInertia.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetCenterOfMassInBodyFrame">
 <code class="descname">SetCenterOfMassInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float], context: pydrake.systems.framework.Context_[float], com: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetCenterOfMassInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the center of mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">center_of_mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt>
+<dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
+expressed in B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
+without modifying I_BBo_B (B’s rotational inertia about Bo,
+expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetMass">
 <code class="descname">SetMass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float], context: pydrake.systems.framework.Context_[float], mass: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetMass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to
+<code class="docutils literal notranslate"><span class="pre">mass</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
+<dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
+scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetSpatialInertiaInBodyFrame">
 <code class="descname">SetSpatialInertiaInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float], context: pydrake.systems.framework.Context_[float], M_Bo_B: drake::multibody::SpatialInertia&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetSpatialInertiaInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the spatial inertia stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its spatial inertia that is stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>:</dt>
+<dd>spatial inertia of this rigid body B about Bo (B’s origin),
+expressed in B. M_Bo_B contains properties related to B’s mass,
+the position vector from Bo to Bcm (B’s center of mass), and
+G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -15888,50 +15924,86 @@ SpatialInertia.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].SetCenterOfMassInBodyFrame">
 <code class="descname">SetCenterOfMassInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], com: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[AutoDiffXd].SetCenterOfMassInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the center of mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">center_of_mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt>
+<dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
+expressed in B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
+without modifying I_BBo_B (B’s rotational inertia about Bo,
+expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].SetMass">
 <code class="descname">SetMass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], mass: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[AutoDiffXd].SetMass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to
+<code class="docutils literal notranslate"><span class="pre">mass</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
+<dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
+scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].SetSpatialInertiaInBodyFrame">
 <code class="descname">SetSpatialInertiaInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], M_Bo_B: drake::multibody::SpatialInertia&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[AutoDiffXd].SetSpatialInertiaInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the spatial inertia stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its spatial inertia that is stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>:</dt>
+<dd>spatial inertia of this rigid body B about Bo (B’s origin),
+expressed in B. M_Bo_B contains properties related to B’s mass,
+the position vector from Bo to Bcm (B’s center of mass), and
+G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -16089,50 +16161,86 @@ SpatialInertia.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[Expression].SetCenterOfMassInBodyFrame">
 <code class="descname">SetCenterOfMassInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[Expression], context: pydrake.systems.framework.Context_[Expression], com: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[Expression].SetCenterOfMassInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the center of mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">center_of_mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt>
+<dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
+expressed in B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
+without modifying I_BBo_B (B’s rotational inertia about Bo,
+expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[Expression].SetMass">
 <code class="descname">SetMass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[Expression], context: pydrake.systems.framework.Context_[Expression], mass: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[Expression].SetMass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to
+<code class="docutils literal notranslate"><span class="pre">mass</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
+<dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
+scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[Expression].SetSpatialInertiaInBodyFrame">
 <code class="descname">SetSpatialInertiaInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[Expression], context: pydrake.systems.framework.Context_[Expression], M_Bo_B: drake::multibody::SpatialInertia&lt;drake::symbolic::Expression&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[Expression].SetSpatialInertiaInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the spatial inertia stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its spatial inertia that is stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>:</dt>
+<dd>spatial inertia of this rigid body B about Bo (B’s origin),
+expressed in B. M_Bo_B contains properties related to B’s mass,
+the position vector from Bo to Bcm (B’s center of mass), and
+G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -16290,50 +16398,86 @@ SpatialInertia.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[float].SetCenterOfMassInBodyFrame">
 <code class="descname">SetCenterOfMassInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float], context: pydrake.systems.framework.Context_[float], com: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[float].SetCenterOfMassInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the center of mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">center_of_mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt>
+<dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
+expressed in B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
+without modifying I_BBo_B (B’s rotational inertia about Bo,
+expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[float].SetMass">
 <code class="descname">SetMass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float], context: pydrake.systems.framework.Context_[float], mass: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[float].SetMass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">mass</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its mass stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to
+<code class="docutils literal notranslate"><span class="pre">mass</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
+<dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
+scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.RigidBody_[float].SetSpatialInertiaInBodyFrame">
 <code class="descname">SetSpatialInertiaInBodyFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RigidBody_[float], context: pydrake.systems.framework.Context_[float], M_Bo_B: drake::multibody::SpatialInertia&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[float].SetSpatialInertiaInBodyFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the spatial inertia stored in <code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code></p>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its spatial inertia that is stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_Bo_B</span></code>:</dt>
+<dd>spatial inertia of this rigid body B about Bo (B’s origin),
+expressed in B. M_Bo_B contains properties related to B’s mass,
+the position vector from Bo to Bcm (B’s center of mass), and
+G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
 </ul>
 </td>
 </tr>

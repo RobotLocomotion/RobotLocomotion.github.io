@@ -1,0 +1,311 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Meshcat::Gamepad Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Meshcat::Gamepad Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Status of a gamepad obtained from the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> javascript client. </p>
+</div>
+<p><code>#include &lt;drake/geometry/meshcat.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae484f63d5fef688b4c3f438455d6eec9"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9">index</a></td></tr>
+<tr class="memdesc:ae484f63d5fef688b4c3f438455d6eec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">An an integer that is auto-incremented to be unique for each device currently connected to the system.  <a href="#ae484f63d5fef688b4c3f438455d6eec9">More...</a><br /></td></tr>
+<tr class="separator:ae484f63d5fef688b4c3f438455d6eec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28cb55393e1523165dc2b4f624437e29"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a28cb55393e1523165dc2b4f624437e29">button_values</a></td></tr>
+<tr class="memdesc:a28cb55393e1523165dc2b4f624437e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of floating point values representing analog buttons, such as the triggers on many modern gamepads.  <a href="#a28cb55393e1523165dc2b4f624437e29">More...</a><br /></td></tr>
+<tr class="separator:a28cb55393e1523165dc2b4f624437e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0de0a897162ef2c7d4a43529b8f25f7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7">axes</a></td></tr>
+<tr class="memdesc:aa0de0a897162ef2c7d4a43529b8f25f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of floating point values representing e.g.  <a href="#aa0de0a897162ef2c7d4a43529b8f25f7">More...</a><br /></td></tr>
+<tr class="separator:aa0de0a897162ef2c7d4a43529b8f25f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa0de0a897162ef2c7d4a43529b8f25f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0de0a897162ef2c7d4a43529b8f25f7">&#9670;&nbsp;</a></span>axes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdouble.html">double</a>&gt; axes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An array of floating point values representing e.g. </p>
+<p>analog thumbsticks. Each entry in the array is a floating point value in the range -1.0 – 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).</p>
+<p>In the standard gamepad mapping, we have:</p><ul>
+<li>axes[0] Left stick x (negative left/positive right)</li>
+<li>axes[1] Left stick y (negative up/positive down)</li>
+<li>axes[2] Right stick x (negative left/positive right)</li>
+<li>axes[3] Right stick y (negative up/positive down)</li>
+</ul>
+<p>Note that a stick that is left alone may not output all zeros. <a href="https://beej.us/blog/data/javascript-gamepad/">https://beej.us/blog/data/javascript-gamepad/</a> gives some useful advice for applying a deadzone to these values. </p>
+
+</div>
+</div>
+<a id="a28cb55393e1523165dc2b4f624437e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28cb55393e1523165dc2b4f624437e29">&#9670;&nbsp;</a></span>button_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdouble.html">double</a>&gt; button_values</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An array of floating point values representing analog buttons, such as the triggers on many modern gamepads. </p>
+<p>The values are normalized to the range [0.0, 1.0], with 0.0 representing a button that is not pressed, and 1.0 representing a button that is fully pressed.</p>
+<p>See <a href="https://w3c.github.io/gamepad/#dfn-standard-gamepad">https://w3c.github.io/gamepad/#dfn-standard-gamepad</a> for the standard mapping of gamepad buttons to this vector. </p>
+
+</div>
+</div>
+<a id="ae484f63d5fef688b4c3f438455d6eec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae484f63d5fef688b4c3f438455d6eec9">&#9670;&nbsp;</a></span>index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classint.html">int</a>&gt; index</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An an integer that is auto-incremented to be unique for each device currently connected to the system. </p>
+<p>If <code>index.has_value() == false</code>, then we have not yet received any gamepad status from the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> browser. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/geometry/<a class="el" href="meshcat_8h.html">meshcat.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a></li><li class="navelem"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

@@ -237,8 +237,8 @@ $(document).ready(function(){initNavTree('group__render__engine__gltf__client__s
 </ul>
 </li>
 <li>When <code>image_type="depth"</code>, the server may return:<ul>
-<li>A 32 bit float single channel TIFF image. The client will interpret this rendering as units of meters.</li>
-<li>TODO(zachfang): A single channel unsigned short PNG image. The client will interpret this rendering as units of millimeters and will convert to meters.</li>
+<li>A 32-bit float single channel TIFF image. The client will interpret this rendering as units of meters.</li>
+<li>A 16-bit integer single channel TIFF or PNG image. The client will interpret this rendering as units of millimeters. Pixels at their maximum value (2¹⁶-1) will be interpreted as kTooFar (i.e., infinity).</li>
 </ul>
 </li>
 <li>When <code>image_type="label"</code>, the server may return:<ul>

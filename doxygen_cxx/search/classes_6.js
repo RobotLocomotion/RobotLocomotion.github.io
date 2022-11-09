@@ -1,6 +1,7 @@
 var searchData=
 [
   ['gain',['Gain',['../classdrake_1_1systems_1_1_gain.html',1,'drake::systems']]],
+  ['gamepad',['Gamepad',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html',1,'drake::geometry::Meshcat']]],
   ['gaussian',['Gaussian',['../classdrake_1_1schema_1_1_gaussian.html',1,'drake::schema']]],
   ['gaussiantrianglequadraturerule',['GaussianTriangleQuadratureRule',['../classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule.html',1,'drake::multibody']]],
   ['gaussianvector',['GaussianVector',['../classdrake_1_1schema_1_1_gaussian_vector.html',1,'drake::schema']]],

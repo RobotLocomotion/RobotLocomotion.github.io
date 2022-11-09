@@ -1,5 +1,6 @@
 var classdrake_1_1geometry_1_1_meshcat =
 [
+    [ "Gamepad", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad" ],
     [ "OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera" ],
     [ "PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera" ],
     [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html#a7e8936185fd67ee1825d107010b66507", null ],
@@ -14,12 +15,13 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "DeleteButton", "classdrake_1_1geometry_1_1_meshcat.html#aece8086277995b5f6b9fabc80aee7e20", null ],
     [ "DeleteSlider", "classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc", null ],
     [ "Flush", "classdrake_1_1geometry_1_1_meshcat.html#a548a7b441b7900dcbd5481778c7dec9f", null ],
-    [ "GetButtonClicks", "classdrake_1_1geometry_1_1_meshcat.html#a092d27d205ba0c1c7b089269f33585dd", null ],
+    [ "GetButtonClicks", "classdrake_1_1geometry_1_1_meshcat.html#a3af3f4e27821f5f1630844a5cf4e39be", null ],
+    [ "GetGamepad", "classdrake_1_1geometry_1_1_meshcat.html#a99102c7b2a8ca0cd1a9f1d55b3819b7d", null ],
     [ "GetNumActiveConnections", "classdrake_1_1geometry_1_1_meshcat.html#a85bcb12442dbc8a27d51e005ec7a922f", null ],
     [ "GetPackedObject", "classdrake_1_1geometry_1_1_meshcat.html#abac0b91a968117e6d9b8792bc753d9d6", null ],
     [ "GetPackedProperty", "classdrake_1_1geometry_1_1_meshcat.html#afb7302d2b6d4d7da3a963790d56db20d", null ],
     [ "GetPackedTransform", "classdrake_1_1geometry_1_1_meshcat.html#a5cbfa93be716f89b71af1a3b0f414bb9", null ],
-    [ "GetSliderValue", "classdrake_1_1geometry_1_1_meshcat.html#ad687bbb7459a2c4c012392a2adf7f177", null ],
+    [ "GetSliderValue", "classdrake_1_1geometry_1_1_meshcat.html#ad1fcf0c27e47f09c7e05c1b700988cdd", null ],
     [ "HasPath", "classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_meshcat.html#a37b1b4538dd47e4dc5fd9c671454b4d2", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_meshcat.html#ac40bc1b2063091ffce4741216b559b53", null ],

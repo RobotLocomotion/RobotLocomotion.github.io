@@ -9,6 +9,7 @@ var searchData=
   ['frameworkfactory',['FrameworkFactory',['../classdrake_1_1systems_1_1_diagram_output_port.html#aec09700393c1247c681b270e72729bce',1,'drake::systems::DiagramOutputPort::FrameworkFactory()'],['../classdrake_1_1systems_1_1_input_port.html#aec09700393c1247c681b270e72729bce',1,'drake::systems::InputPort::FrameworkFactory()'],['../classdrake_1_1systems_1_1_leaf_output_port.html#aec09700393c1247c681b270e72729bce',1,'drake::systems::LeafOutputPort::FrameworkFactory()']]],
   ['if_5fthen_5felse',['if_then_else',['../classdrake_1_1symbolic_1_1_expression.html#adb59d484cb2b6737923c9b53e0ec432c',1,'drake::symbolic::Expression']]],
   ['intersect',['intersect',['../classdrake_1_1symbolic_1_1_variables.html#adbfb5367e72dfbaf7a778e6896113f64',1,'drake::symbolic::Variables']]],
+  ['inversedynamics',['InverseDynamics',['../classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a8a90c5e3ef0bcec77643392f99e44824',1,'drake::systems::controllers::InverseDynamics']]],
   ['is_5fabs',['is_abs',['../classdrake_1_1symbolic_1_1_expression.html#ab6046c9bad9a1c5a1ba51ec6157376c3',1,'drake::symbolic::Expression']]],
   ['is_5facos',['is_acos',['../classdrake_1_1symbolic_1_1_expression.html#a40a4e8165bee3d62bd4df8a68226098c',1,'drake::symbolic::Expression']]],
   ['is_5faddition',['is_addition',['../classdrake_1_1symbolic_1_1_expression.html#a5b8a1e5e59b460cac7c2d8b5cb1e172c',1,'drake::symbolic::Expression']]],
@@ -58,5 +59,6 @@ var searchData=
   ['multibodyplantmodelattorney_3c_20t_20_3e',['MultibodyPlantModelAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html#a7266290642dbb492700e7ebae2e00a20',1,'drake::multibody::MultibodyPlant']]],
   ['multibodytree_3c_20t_20_3e',['MultibodyTree&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d',1,'drake::multibody::MultibodyElement']]],
   ['onhandlesubscriptionserror',['OnHandleSubscriptionsError',['../classdrake_1_1lcm_1_1_drake_lcm_interface.html#ada4cdd96fd686bb8c6158d8012ed4245',1,'drake::lcm::DrakeLcmInterface']]],
+  ['portbaseattorney',['PortBaseAttorney',['../classdrake_1_1systems_1_1_port_base.html#ae66dba6ddcaf93db228ac9b10325c519',1,'drake::systems::PortBase']]],
   ['systembasecontextbaseattorney',['SystemBaseContextBaseAttorney',['../classdrake_1_1systems_1_1_context_base.html#afbf57f9a9ba557220adf6f9c6436c548',1,'drake::systems::ContextBase']]]
 ];

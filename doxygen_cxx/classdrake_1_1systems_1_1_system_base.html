@@ -347,12 +347,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a49bc2d35e014b293b9564cb9e85e5390"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a49bc2d35e014b293b9564cb9e85e5390">ThrowCantEvaluateInputPort</a> (const char *func, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> port_index) const</td></tr>
 <tr class="memdesc:a49bc2d35e014b293b9564cb9e85e5390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code>, that requires this input port to be evaluatable, but the port was neither fixed nor connected.  <a href="#a49bc2d35e014b293b9564cb9e85e5390">More...</a><br /></td></tr>
 <tr class="separator:a49bc2d35e014b293b9564cb9e85e5390"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace57c456b11046f56381f7b4ab7e2343"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html">InputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ace57c456b11046f56381f7b4ab7e2343">GetInputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
-<tr class="memdesc:ace57c456b11046f56381f7b4ab7e2343"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPortBase</a> at index <code>port_index</code>, throwing std::exception we don't like the port index.  <a href="#ace57c456b11046f56381f7b4ab7e2343">More...</a><br /></td></tr>
-<tr class="separator:ace57c456b11046f56381f7b4ab7e2343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18146b3800f5a63bbe4d08eae828883"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html">OutputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ab18146b3800f5a63bbe4d08eae828883">GetOutputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
-<tr class="memdesc:ab18146b3800f5a63bbe4d08eae828883"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html" title="OutputPortBase handles the scalar type-independent aspects of an OutputPort.">OutputPortBase</a> at index <code>port_index</code>, throwing std::exception if we don't like the port index.  <a href="#ab18146b3800f5a63bbe4d08eae828883">More...</a><br /></td></tr>
-<tr class="separator:ab18146b3800f5a63bbe4d08eae828883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23c3558eb24e413215f5f817f65ead0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html">InputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ae23c3558eb24e413215f5f817f65ead0">GetInputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index, bool warn_deprecated) const</td></tr>
+<tr class="memdesc:ae23c3558eb24e413215f5f817f65ead0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPortBase</a> at index <code>port_index</code>, throwing std::exception we don't like the port index.  <a href="#ae23c3558eb24e413215f5f817f65ead0">More...</a><br /></td></tr>
+<tr class="separator:ae23c3558eb24e413215f5f817f65ead0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf07bedd6db91eb448279aaea8254aa4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html">OutputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aaf07bedd6db91eb448279aaea8254aa4">GetOutputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index, bool warn_deprecated) const</td></tr>
+<tr class="memdesc:aaf07bedd6db91eb448279aaea8254aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html" title="OutputPortBase handles the scalar type-independent aspects of an OutputPort.">OutputPortBase</a> at index <code>port_index</code>, throwing std::exception if we don't like the port index.  <a href="#aaf07bedd6db91eb448279aaea8254aa4">More...</a><br /></td></tr>
+<tr class="separator:aaf07bedd6db91eb448279aaea8254aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36ffbedd99e6e5c0fb71753ad2b833b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a36ffbedd99e6e5c0fb71753ad2b833b7">ThrowValidateContextMismatch</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;) const</td></tr>
 <tr class="memdesc:a36ffbedd99e6e5c0fb71753ad2b833b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception with a message that the sanity check(s) given by ValidateContext have failed.  <a href="#a36ffbedd99e6e5c0fb71753ad2b833b7">More...</a><br /></td></tr>
 <tr class="separator:a36ffbedd99e6e5c0fb71753ad2b833b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1777,8 +1777,8 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="ace57c456b11046f56381f7b4ab7e2343"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace57c456b11046f56381f7b4ab7e2343">&#9670;&nbsp;</a></span>GetInputPortBaseOrThrow()</h2>
+<a id="ae23c3558eb24e413215f5f817f65ead0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23c3558eb24e413215f5f817f65ead0">&#9670;&nbsp;</a></span>GetInputPortBaseOrThrow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1796,7 +1796,13 @@ the port's value must be retrievable from the stored abstract value using <code>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>port_index</em>&#160;</td>
+          <td class="paramname"><em>port_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>warn_deprecated</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1812,12 +1818,12 @@ the port's value must be retrievable from the stored abstract value using <code>
 </div><div class="memdoc">
 
 <p>(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPortBase</a> at index <code>port_index</code>, throwing std::exception we don't like the port index. </p>
-<p>The name of the public API method that received the bad index is provided in <code>func</code> and is included in the error message. </p>
+<p>The name of the public API method that received the bad index is provided in <code>func</code> and is included in the error message. The <code>warn_deprecated</code> governs whether or not a deprecation warning should occur when the <code>port_index</code> is deprecated; calls made on behalf of the user should pass <code>true</code>; calls made on behalf or the framework internals should pass <code>false</code>. </p>
 
 </div>
 </div>
-<a id="ab18146b3800f5a63bbe4d08eae828883"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab18146b3800f5a63bbe4d08eae828883">&#9670;&nbsp;</a></span>GetOutputPortBaseOrThrow()</h2>
+<a id="aaf07bedd6db91eb448279aaea8254aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf07bedd6db91eb448279aaea8254aa4">&#9670;&nbsp;</a></span>GetOutputPortBaseOrThrow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1835,7 +1841,13 @@ the port's value must be retrievable from the stored abstract value using <code>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>port_index</em>&#160;</td>
+          <td class="paramname"><em>port_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>warn_deprecated</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1851,7 +1863,7 @@ the port's value must be retrievable from the stored abstract value using <code>
 </div><div class="memdoc">
 
 <p>(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html" title="OutputPortBase handles the scalar type-independent aspects of an OutputPort.">OutputPortBase</a> at index <code>port_index</code>, throwing std::exception if we don't like the port index. </p>
-<p>The name of the public API method that received the bad index is provided in <code>func</code> and is included in the error message. </p>
+<p>The name of the public API method that received the bad index is provided in <code>func</code> and is included in the error message. The <code>warn_deprecated</code> governs whether or not a deprecation warning should occur when the <code>port_index</code> is deprecated; calls made on behalf of the user should pass <code>true</code>; calls made on behalf or the framework internals should pass <code>false</code>. </p>
 
 </div>
 </div>

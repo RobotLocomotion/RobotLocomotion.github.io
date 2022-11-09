@@ -1,5 +1,17 @@
 var NAVTREEINDEX49 =
 {
+"quaternion_8h.html#a06541dcb249b4b951ea73d45d2067337":[4,0,0,7,26,2],
+"quaternion_8h.html#a0fc70ebdc0ea497711e6e7b69eddef2d":[4,0,0,7,26,14],
+"quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130":[4,0,0,7,26,13],
+"quaternion_8h.html#a2e47f892f2417dfc861a095328019361":[4,0,0,7,26,7],
+"quaternion_8h.html#a3b38bdfc1e3df8662c8726bc89a08ed0":[4,0,0,7,26,6],
+"quaternion_8h.html#a5e37615af3b6facc6f7dec51323a628e":[4,0,0,7,26,4],
+"quaternion_8h.html#a7e6bdc00adb60394da9687fc9aa5b0aa":[4,0,0,7,26,9],
+"quaternion_8h.html#a88a6d40e458bc9f766f33b819a7b4900":[4,0,0,7,26,5],
+"quaternion_8h.html#a98411a94334e6d40ef2ca10bfc053118":[4,0,0,7,26,1],
+"quaternion_8h.html#aad74d3c5baa84fa6ef04b6ada5ffcbe5":[4,0,0,7,26,12],
+"quaternion_8h.html#ab4bf90f81dcf655d829ed2d718251215":[4,0,0,7,26,3],
+"quaternion_8h.html#ad298b049679492bf3e846165c6c7e023":[4,0,0,7,26,11],
 "quaternion_8h.html#adc96357c54438cadae5c8aefbd16713d":[4,0,0,7,26,0],
 "quaternion_8h.html#ae2ef93ff1fa2dc788507d6eadb4bb78f":[4,0,0,7,26,10],
 "quaternion__floating__mobilizer_8h.html":[4,0,0,8,14,34],
@@ -237,17 +249,5 @@ var NAVTREEINDEX49 =
 "simulator__gflags_8h.html#a0cc9deeb95a8594918a525db7ac445c2":[4,0,0,12,0,25,3],
 "simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177":[4,0,0,12,0,25,5],
 "simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,12,0,25,1],
-"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,25,0],
-"simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,12,0,25,4],
-"simulator__print__stats_8h.html":[4,0,0,12,0,26],
-"simulator__print__stats_8h.html#a14e4e6cd73fdedd3dde63af60b3572e4":[4,0,0,12,0,26,0],
-"simulator__status_8h.html":[4,0,0,12,0,27],
-"sine_8h.html":[4,0,0,12,6,21],
-"single__output__vector__source_8h.html":[4,0,0,12,3,35],
-"slicing__and__indexing_8h.html":[4,0,0,8,10,31],
-"sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,8,5],
-"sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
-"sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,8,5,1],
-"snopt__solver_8h.html":[4,0,0,11,48],
-"solar__system_8h.html":[4,0,0,3,17,1]
+"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,25,0]
 };

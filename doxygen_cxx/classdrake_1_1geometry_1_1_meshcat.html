@@ -198,6 +198,9 @@ Recommended workflow</h1>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of a gamepad obtained from the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> javascript client.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html">OrthographicCamera</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties for an orthographic camera in three.js: <a href="https://threejs.org/docs/#api/en/cameras/OrthographicCamera">https://threejs.org/docs/#api/en/cameras/OrthographicCamera</a>.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -319,9 +322,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d8348a53b80daf5b86c879e1c720bbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a5d8348a53b80daf5b86c879e1c720bbf">AddButton</a> (std::string name, std::string keycode=&quot;&quot;)</td></tr>
 <tr class="memdesc:a5d8348a53b80daf5b86c879e1c720bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a button with the label <code>name</code> to the meshcat browser controls GUI.  <a href="#a5d8348a53b80daf5b86c879e1c720bbf">More...</a><br /></td></tr>
 <tr class="separator:a5d8348a53b80daf5b86c879e1c720bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a092d27d205ba0c1c7b089269f33585dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a092d27d205ba0c1c7b089269f33585dd">GetButtonClicks</a> (std::string_view name)</td></tr>
-<tr class="memdesc:a092d27d205ba0c1c7b089269f33585dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of times the button <code>name</code> has been clicked in the GUI, from the time that it was added to <code>this</code>.  <a href="#a092d27d205ba0c1c7b089269f33585dd">More...</a><br /></td></tr>
-<tr class="separator:a092d27d205ba0c1c7b089269f33585dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af3f4e27821f5f1630844a5cf4e39be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a3af3f4e27821f5f1630844a5cf4e39be">GetButtonClicks</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:a3af3f4e27821f5f1630844a5cf4e39be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of times the button <code>name</code> has been clicked in the GUI, from the time that it was added to <code>this</code>.  <a href="#a3af3f4e27821f5f1630844a5cf4e39be">More...</a><br /></td></tr>
+<tr class="separator:a3af3f4e27821f5f1630844a5cf4e39be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aece8086277995b5f6b9fabc80aee7e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aece8086277995b5f6b9fabc80aee7e20">DeleteButton</a> (std::string name)</td></tr>
 <tr class="memdesc:aece8086277995b5f6b9fabc80aee7e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the button <code>name</code> from the GUI.  <a href="#aece8086277995b5f6b9fabc80aee7e20">More...</a><br /></td></tr>
 <tr class="separator:aece8086277995b5f6b9fabc80aee7e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,15 +334,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad933314f09b40dd5758387e29c952c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad933314f09b40dd5758387e29c952c8b">SetSliderValue</a> (std::string name, <a class="el" href="classdouble.html">double</a> value)</td></tr>
 <tr class="memdesc:ad933314f09b40dd5758387e29c952c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current <code>value</code> of the slider <code>name</code>.  <a href="#ad933314f09b40dd5758387e29c952c8b">More...</a><br /></td></tr>
 <tr class="separator:ad933314f09b40dd5758387e29c952c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad687bbb7459a2c4c012392a2adf7f177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad687bbb7459a2c4c012392a2adf7f177">GetSliderValue</a> (std::string_view name)</td></tr>
-<tr class="memdesc:ad687bbb7459a2c4c012392a2adf7f177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <code>value</code> of the slider <code>name</code>.  <a href="#ad687bbb7459a2c4c012392a2adf7f177">More...</a><br /></td></tr>
-<tr class="separator:ad687bbb7459a2c4c012392a2adf7f177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1fcf0c27e47f09c7e05c1b700988cdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad1fcf0c27e47f09c7e05c1b700988cdd">GetSliderValue</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:ad1fcf0c27e47f09c7e05c1b700988cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <code>value</code> of the slider <code>name</code>.  <a href="#ad1fcf0c27e47f09c7e05c1b700988cdd">More...</a><br /></td></tr>
+<tr class="separator:ad1fcf0c27e47f09c7e05c1b700988cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fc49ac1d55ac00b10946b748db02dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc">DeleteSlider</a> (std::string name)</td></tr>
 <tr class="memdesc:a50fc49ac1d55ac00b10946b748db02dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the slider <code>name</code> from the GUI.  <a href="#a50fc49ac1d55ac00b10946b748db02dc">More...</a><br /></td></tr>
 <tr class="separator:a50fc49ac1d55ac00b10946b748db02dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af1bb2f8edfd7ee327ff24ad088e1c607">DeleteAddedControls</a> ()</td></tr>
 <tr class="memdesc:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance.  <a href="#af1bb2f8edfd7ee327ff24ad088e1c607">More...</a><br /></td></tr>
 <tr class="separator:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a99102c7b2a8ca0cd1a9f1d55b3819b7d">GetGamepad</a> () const</td></tr>
+<tr class="memdesc:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>.  <a href="#a99102c7b2a8ca0cd1a9f1d55b3819b7d">More...</a><br /></td></tr>
+<tr class="separator:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e8936185fd67ee1825d107010b66507"></a>
@@ -693,8 +699,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a092d27d205ba0c1c7b089269f33585dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a092d27d205ba0c1c7b089269f33585dd">&#9670;&nbsp;</a></span>GetButtonClicks()</h2>
+<a id="a3af3f4e27821f5f1630844a5cf4e39be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af3f4e27821f5f1630844a5cf4e39be">&#9670;&nbsp;</a></span>GetButtonClicks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -704,7 +710,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -716,6 +722,30 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a99102c7b2a8ca0cd1a9f1d55b3819b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99102c7b2a8ca0cd1a9f1d55b3819b7d">&#9670;&nbsp;</a></span>GetGamepad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a> GetGamepad </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+<p>See <a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html" title="Status of a gamepad obtained from the Meshcat javascript client.">Gamepad</a> for details on the returned values.</p>
+<p>Note that in javascript, gamepads are not detected until users "opt-in" by pressing a gamepad button or moving the thumbstick in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> window. If no gamepad information is available in javascript, then no messages are sent and the returned gamepad index will not have a value.</p>
+<p>Currently <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> only attempts to support one gamepad. If multiple gamepads are detected in the same <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> window, then only the status of the first connected gamepad in <code>navigator.GetGamepads()</code> is returned. If multiple <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> windows are connected to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance, and gamepads are being used in multiple windows, then the returned status will be the most recently received status message. Therefore using multiple gamepads simultaneously is not recommended.</p>
+<p>This feature is provided primarily to support applications where Drake is running on a remote machine (e.g. in the cloud), and the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> javascript in the browser is the only code running on the local machine which has access to the gamepad.</p>
+<p>For more details on javascript support for gamepads (or to test that your gamepad is working), see <a href="https://beej.us/blog/data/javascript-gamepad/">https://beej.us/blog/data/javascript-gamepad/</a>. </p>
 
 </div>
 </div>
@@ -802,8 +832,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad687bbb7459a2c4c012392a2adf7f177"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad687bbb7459a2c4c012392a2adf7f177">&#9670;&nbsp;</a></span>GetSliderValue()</h2>
+<a id="ad1fcf0c27e47f09c7e05c1b700988cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1fcf0c27e47f09c7e05c1b700988cdd">&#9670;&nbsp;</a></span>GetSliderValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -813,7 +843,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

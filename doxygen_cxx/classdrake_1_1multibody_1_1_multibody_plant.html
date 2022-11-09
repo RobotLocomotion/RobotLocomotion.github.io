@@ -189,7 +189,7 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; state</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr>
 <tr>
@@ -203,7 +203,7 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr>
 <tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr>
 <tr>
@@ -1091,8 +1091,10 @@ Contact modeling</h2></td></tr>
 <tr class="memitem:a3338392f611d5d9f93d0ea90e172c68c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3338392f611d5d9f93d0ea90e172c68c">get_contact_penalty_method_time_scale</a> () const</td></tr>
 <tr class="memdesc:a3338392f611d5d9f93d0ea90e172c68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a time-scale estimate <code>tc</code> based on the requested penetration allowance δ set with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">set_penetration_allowance()</a>.  <a href="#a3338392f611d5d9f93d0ea90e172c68c">More...</a><br /></td></tr>
 <tr class="separator:a3338392f611d5d9f93d0ea90e172c68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa94cf2eeba3e27ad35132211ae6d074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance</a> (<a class="el" href="classdouble.html">double</a> v_stiction=<a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.stiction_tolerance)</td></tr>
+<tr class="memitem:afa94cf2eeba3e27ad35132211ae6d074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance</a> (<a class="el" href="classdouble.html">double</a> v_stiction=<a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0cef6f48aa258bbb487ab62cec437cb8">stiction_tolerance</a>)</td></tr>
 <tr class="separator:afa94cf2eeba3e27ad35132211ae6d074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cef6f48aa258bbb487ab62cec437cb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0cef6f48aa258bbb487ab62cec437cb8">stiction_tolerance</a> () const</td></tr>
+<tr class="separator:a0cef6f48aa258bbb487ab62cec437cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93cf63581a2d40a28d9cf65a3017839b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b">GetDefaultContactSurfaceRepresentation</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>)</td></tr>
 <tr class="memdesc:a93cf63581a2d40a28d9cf65a3017839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default value for contact representation, given the desired time step.  <a href="#a93cf63581a2d40a28d9cf65a3017839b">More...</a><br /></td></tr>
 <tr class="separator:a93cf63581a2d40a28d9cf65a3017839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6866,8 +6868,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6878,7 +6880,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6892,8 +6894,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6904,7 +6906,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7352,7 +7354,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
           <td class="memname">void set_stiction_tolerance </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>v_stiction</em> = <code><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.stiction_tolerance</code></td><td>)</td>
+          <td class="paramname"><em>v_stiction</em> = <code><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0cef6f48aa258bbb487ab62cec437cb8">stiction_tolerance</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -8441,6 +8443,25 @@ manager != nullptr. </dd></dl>
 
 <p>Sets the vector of generalized velocities for <code>model_instance</code> in <code>v</code> using <code>v_instance</code>, leaving all other elements in the array untouched. </p>
 <p>This method throws an exception if <code>v</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">MultibodyPlant::num_velocities()</a> or <code>v_instance</code> is not of size <code>MultibodyPlant::num_positions(model_instance)</code>. </p>
+
+</div>
+</div>
+<a id="a0cef6f48aa258bbb487ab62cec437cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cef6f48aa258bbb487ab62cec437cb8">&#9670;&nbsp;</a></span>stiction_tolerance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> stiction_tolerance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the stiction tolerance parameter, in m/s. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance</a>. </dd></dl>
 
 </div>
 </div>

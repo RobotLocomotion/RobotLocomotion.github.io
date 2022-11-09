@@ -4253,6 +4253,53 @@ large “backpressure” and/or simply to make sure that the simulation
 does not get far ahead of the visualization.</p>
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.geometry.Meshcat.Gamepad">
+<em class="property">class </em><code class="descname">Gamepad</code><a class="headerlink" href="#pydrake.geometry.Meshcat.Gamepad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of a gamepad obtained from the Meshcat javascript client.</p>
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.Gamepad.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat.Gamepad</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.Gamepad.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.Meshcat.Gamepad.axes">
+<code class="descname">axes</code><a class="headerlink" href="#pydrake.geometry.Meshcat.Gamepad.axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of floating point values representing e.g. analog
+thumbsticks. Each entry in the array is a floating point value in the
+range -1.0 – 1.0, representing the axis position from the lowest value
+(-1.0) to the highest value (1.0).</p>
+<p>In the standard gamepad mapping, we have: - axes[0] Left stick x
+(negative left/positive right) - axes[1] Left stick y (negative
+up/positive down) - axes[2] Right stick x (negative left/positive
+right) - axes[3] Right stick y (negative up/positive down)</p>
+<p>Note that a stick that is left alone may not output all zeros.
+<a class="reference external" href="https://beej.us/blog/data/javascript-gamepad/">https://beej.us/blog/data/javascript-gamepad/</a> gives some useful advice
+for applying a deadzone to these values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.Meshcat.Gamepad.button_values">
+<code class="descname">button_values</code><a class="headerlink" href="#pydrake.geometry.Meshcat.Gamepad.button_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of floating point values representing analog buttons, such as
+the triggers on many modern gamepads. The values are normalized to the
+range [0.0, 1.0], with 0.0 representing a button that is not pressed,
+and 1.0 representing a button that is fully pressed.</p>
+<p>See <a class="reference external" href="https://w3c.github.io/gamepad/#dfn-standard-gamepad">https://w3c.github.io/gamepad/#dfn-standard-gamepad</a> for the
+standard mapping of gamepad buttons to this vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.Meshcat.Gamepad.index">
+<code class="descname">index</code><a class="headerlink" href="#pydrake.geometry.Meshcat.Gamepad.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>An an integer that is auto-incremented to be unique for each device
+currently connected to the system. If <code class="docutils literal notranslate"><span class="pre">index.has_value()</span> <span class="pre">==</span> <span class="pre">false</span></code>,
+then we have not yet received any gamepad status from the Meshcat
+browser.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="method">
 <dt id="pydrake.geometry.Meshcat.GetButtonClicks">
 <code class="descname">GetButtonClicks</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.Meshcat.GetButtonClicks" title="Permalink to this definition">¶</a></dt>
@@ -4268,6 +4315,32 @@ in all browsers.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.GetGamepad">
+<code class="descname">GetGamepad</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; drake::geometry::Meshcat::Gamepad<a class="headerlink" href="#pydrake.geometry.Meshcat.GetGamepad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the status from the most recently updated gamepad data in the
+Meshcat. See Gamepad for details on the returned values.</p>
+<p>Note that in javascript, gamepads are not detected until users
+“opt-in” by pressing a gamepad button or moving the thumbstick in the
+Meshcat window. If no gamepad information is available in javascript,
+then no messages are sent and the returned gamepad index will not have
+a value.</p>
+<p>Currently Meshcat only attempts to support one gamepad. If multiple
+gamepads are detected in the same Meshcat window, then only the status
+of the first connected gamepad in <code class="docutils literal notranslate"><span class="pre">navigator.GetGamepads()</span></code> is
+returned. If multiple Meshcat windows are connected to this Meshcat
+instance, and gamepads are being used in multiple windows, then the
+returned status will be the most recently received status message.
+Therefore using multiple gamepads simultaneously is not recommended.</p>
+<p>This feature is provided primarily to support applications where Drake
+is running on a remote machine (e.g. in the cloud), and the Meshcat
+javascript in the browser is the only code running on the local
+machine which has access to the gamepad.</p>
+<p>For more details on javascript support for gamepads (or to test that
+your gamepad is working), see
+<a class="reference external" href="https://beej.us/blog/data/javascript-gamepad/">https://beej.us/blog/data/javascript-gamepad/</a>.</p>
 </dd></dl>
 
 <dl class="method">

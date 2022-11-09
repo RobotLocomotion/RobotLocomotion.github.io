@@ -865,6 +865,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa8175cc7f364afbece28a7115f63428b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#aa8175cc7f364afbece28a7115f63428b">DeclareAbstractInputPort</a> (std::variant&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; name, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
 <tr class="memdesc:aa8175cc7f364afbece28a7115f63428b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract-valued input port using the given <code>model_value</code>.  <a href="#aa8175cc7f364afbece28a7115f63428b">More...</a><br /></td></tr>
 <tr class="separator:aa8175cc7f364afbece28a7115f63428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31558eeae0a97e2f8348b1e2d8d3f537"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a31558eeae0a97e2f8348b1e2d8d3f537">DeprecateInputPort</a> (const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;port, std::string message)</td></tr>
+<tr class="memdesc:a31558eeae0a97e2f8348b1e2d8d3f537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags an already-declared input port as deprecated.  <a href="#a31558eeae0a97e2f8348b1e2d8d3f537">More...</a><br /></td></tr>
+<tr class="separator:a31558eeae0a97e2f8348b1e2d8d3f537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Declare output ports</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="DeclareLeafOutputPort_documentation"></a> Methods in this section are used by derived classes to declare their output ports, which may be vector valued or abstract valued. Every output port must have an <em>allocator</em> function and a <em>calculator</em> function. The allocator returns an object suitable for holding a value of the output port. The calculator uses the contents of a given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to produce the output port's value, which is placed in an object of the type returned by the allocator.</p>
 <p>Although the allocator and calculator functions ultimately satisfy generic function signatures defined in <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html" title="(Advanced.) Implements an output port whose value is managed by a cache entry in the same LeafSystem ...">LeafOutputPort</a>, we provide a variety of <code><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a11479a5cb19f65f35f1a7f5530fb42a0" title="Declares a vector-valued output port by specifying (1) a model vector of type BasicVectorSubtype deri...">DeclareVectorOutputPort()</a></code> and <code><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#af669e17632efa35e1dd28f5af9a96b9b" title="Declares an abstract-valued output port by specifying a model value of concrete type OutputType and a...">DeclareAbstractOutputPort()</a></code> signatures here for convenient specification, with mapping to the generic form handled invisibly. In particular, allocators are most easily defined by providing a model value that can be used to construct an allocator that copies the model when a new value object is needed. Alternatively a method can be provided that constructs a value object when invoked (those methods are conventionally, but not necessarily, named <code>MakeSomething()</code> where <code>Something</code> is replaced by the output port value type).</p>
@@ -916,6 +919,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae5a6b16b54a2ae435e3e89980e4229e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ae5a6b16b54a2ae435e3e89980e4229e9">DeclareStateOutputPort</a> (std::variant&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; name, <a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a> state_index)</td></tr>
 <tr class="memdesc:ae5a6b16b54a2ae435e3e89980e4229e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract-valued output port whose value is the given abstract state of this system.  <a href="#ae5a6b16b54a2ae435e3e89980e4229e9">More...</a><br /></td></tr>
 <tr class="separator:ae5a6b16b54a2ae435e3e89980e4229e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1c491c558b95d5f171090a4248fa78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a3d1c491c558b95d5f171090a4248fa78">DeprecateOutputPort</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;port, std::string message)</td></tr>
+<tr class="memdesc:a3d1c491c558b95d5f171090a4248fa78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags an already-declared output port as deprecated.  <a href="#a3d1c491c558b95d5f171090a4248fa78">More...</a><br /></td></tr>
+<tr class="separator:a3d1c491c558b95d5f171090a4248fa78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Make witness functions</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods in this section are used by derived classes to make any witness functions useful for ensuring that integration ends a step upon entering particular times or states.</p>
 <p>In contrast to other declaration methods (e.g., <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a11479a5cb19f65f35f1a7f5530fb42a0" title="Declares a vector-valued output port by specifying (1) a model vector of type BasicVectorSubtype deri...">DeclareVectorOutputPort()</a>, for which the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> class creates and stores the objects and returns references to them, the witness function declaration functions return heap-allocated objects that the subclass of leaf system owns. This facilitates returning pointers to these objects in <a class="el" href="classdrake_1_1systems_1_1_system.html#af6d0f8fa7471b9cf026c9b7bf86f615c" title="Derived classes can override this method to provide witness functions active for the given state.">System::DoGetWitnessFunctions()</a>. </p>
@@ -1082,12 +1088,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a49bc2d35e014b293b9564cb9e85e5390 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a49bc2d35e014b293b9564cb9e85e5390">ThrowCantEvaluateInputPort</a> (const char *func, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> port_index) const</td></tr>
 <tr class="memdesc:a49bc2d35e014b293b9564cb9e85e5390 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code>, that requires this input port to be evaluatable, but the port was neither fixed nor connected.  <a href="classdrake_1_1systems_1_1_system_base.html#a49bc2d35e014b293b9564cb9e85e5390">More...</a><br /></td></tr>
 <tr class="separator:a49bc2d35e014b293b9564cb9e85e5390 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace57c456b11046f56381f7b4ab7e2343 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html">InputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ace57c456b11046f56381f7b4ab7e2343">GetInputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
-<tr class="memdesc:ace57c456b11046f56381f7b4ab7e2343 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPortBase</a> at index <code>port_index</code>, throwing std::exception we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#ace57c456b11046f56381f7b4ab7e2343">More...</a><br /></td></tr>
-<tr class="separator:ace57c456b11046f56381f7b4ab7e2343 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18146b3800f5a63bbe4d08eae828883 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html">OutputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ab18146b3800f5a63bbe4d08eae828883">GetOutputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
-<tr class="memdesc:ab18146b3800f5a63bbe4d08eae828883 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html" title="OutputPortBase handles the scalar type-independent aspects of an OutputPort.">OutputPortBase</a> at index <code>port_index</code>, throwing std::exception if we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#ab18146b3800f5a63bbe4d08eae828883">More...</a><br /></td></tr>
-<tr class="separator:ab18146b3800f5a63bbe4d08eae828883 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23c3558eb24e413215f5f817f65ead0 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html">InputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ae23c3558eb24e413215f5f817f65ead0">GetInputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index, bool warn_deprecated) const</td></tr>
+<tr class="memdesc:ae23c3558eb24e413215f5f817f65ead0 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPortBase</a> at index <code>port_index</code>, throwing std::exception we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#ae23c3558eb24e413215f5f817f65ead0">More...</a><br /></td></tr>
+<tr class="separator:ae23c3558eb24e413215f5f817f65ead0 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf07bedd6db91eb448279aaea8254aa4 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html">OutputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aaf07bedd6db91eb448279aaea8254aa4">GetOutputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index, bool warn_deprecated) const</td></tr>
+<tr class="memdesc:aaf07bedd6db91eb448279aaea8254aa4 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html" title="OutputPortBase handles the scalar type-independent aspects of an OutputPort.">OutputPortBase</a> at index <code>port_index</code>, throwing std::exception if we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#aaf07bedd6db91eb448279aaea8254aa4">More...</a><br /></td></tr>
+<tr class="separator:aaf07bedd6db91eb448279aaea8254aa4 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36ffbedd99e6e5c0fb71753ad2b833b7 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a36ffbedd99e6e5c0fb71753ad2b833b7">ThrowValidateContextMismatch</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;) const</td></tr>
 <tr class="memdesc:a36ffbedd99e6e5c0fb71753ad2b833b7 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception with a message that the sanity check(s) given by ValidateContext have failed.  <a href="classdrake_1_1systems_1_1_system_base.html#a36ffbedd99e6e5c0fb71753ad2b833b7">More...</a><br /></td></tr>
 <tr class="separator:a36ffbedd99e6e5c0fb71753ad2b833b7 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3789,6 +3795,84 @@ Additional Inherited Members</h2></td></tr>
 
 <p>(Advanced) Declares a vector-valued output port with type BasicVector&lt;T&gt; and size <code>size</code>, using the drake::dummy_value&lt;T&gt;, which is NaN when T = double. </p>
 <p><code>vector_calc_function</code> is a function for calculating the port's value at runtime. Note that this takes the calculator function in its most generic form; if you have a member function available use one of the other signatures. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html#a62d51f59c5dcae13358abd4585fb734d" title="Signature of a function suitable for calculating a value of a particular vector-valued output port,...">LeafOutputPort::CalcVectorCallback</a> </dd></dl>
+
+</div>
+</div>
+<a id="a31558eeae0a97e2f8348b1e2d8d3f537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31558eeae0a97e2f8348b1e2d8d3f537">&#9670;&nbsp;</a></span>DeprecateInputPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeprecateInputPort </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flags an already-declared input port as deprecated. </p>
+<p>The first attempt to use the port in a program will log a warning message. This function may be called at most once for any given port. </p>
+
+</div>
+</div>
+<a id="a3d1c491c558b95d5f171090a4248fa78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1c491c558b95d5f171090a4248fa78">&#9670;&nbsp;</a></span>DeprecateOutputPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeprecateOutputPort </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flags an already-declared output port as deprecated. </p>
+<p>The first attempt to use the port in a program will log a warning message. This function may be called at most once for any given port. </p>
 
 </div>
 </div>

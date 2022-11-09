@@ -18,5 +18,6 @@ var searchData=
   ['approach',['approach',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a070d67fe6a2aec68937b130e4e36afbf',1,'drake::multibody::GlobalInverseKinematics::Options']]],
   ['aspect',['aspect',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed',1,'drake::geometry::Meshcat::PerspectiveCamera']]],
   ['assume_5fnon_5fcontinuous_5fstates_5fare_5ffixed',['assume_non_continuous_states_are_fixed',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
+  ['axes',['axes',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7',1,'drake::geometry::Meshcat::Gamepad']]],
   ['axis',['axis',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44',1,'drake::schema::Rotation::AngleAxis']]]
 ];

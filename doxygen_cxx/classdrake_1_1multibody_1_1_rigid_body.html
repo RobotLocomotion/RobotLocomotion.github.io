@@ -229,13 +229,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad29bdedee3ec5b32d059216895168e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the spatial inertia stored in <code>context</code>.  <a href="#ad29bdedee3ec5b32d059216895168e8e">More...</a><br /></td></tr>
 <tr class="separator:ad29bdedee3ec5b32d059216895168e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad850c57d3a08a7992a9f22cc30e69ef9">SetMass</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const T &amp;mass) const</td></tr>
-<tr class="memdesc:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mass stored in <code>context</code> to <code>mass</code>.  <a href="#ad850c57d3a08a7992a9f22cc30e69ef9">More...</a><br /></td></tr>
+<tr class="memdesc:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> rigid body B, sets its mass stored in <code>context</code> to <code>mass</code>.  <a href="#ad850c57d3a08a7992a9f22cc30e69ef9">More...</a><br /></td></tr>
 <tr class="separator:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac79f50a47ba934e2c771f3384aae108f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ac79f50a47ba934e2c771f3384aae108f">SetCenterOfMassInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;com) const</td></tr>
-<tr class="memdesc:ac79f50a47ba934e2c771f3384aae108f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the center of mass stored in <code>context</code> to <code>center_of_mass</code>.  <a href="#ac79f50a47ba934e2c771f3384aae108f">More...</a><br /></td></tr>
+<tr class="memdesc:ac79f50a47ba934e2c771f3384aae108f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> rigid body B, sets its center of mass position stored in <code>context</code> to <code>com</code>.  <a href="#ac79f50a47ba934e2c771f3384aae108f">More...</a><br /></td></tr>
 <tr class="separator:ac79f50a47ba934e2c771f3384aae108f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e83508afc2db2bda9a1f25ed5201918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918">SetSpatialInertiaInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M_Bo_B) const</td></tr>
-<tr class="memdesc:a2e83508afc2db2bda9a1f25ed5201918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the spatial inertia stored in <code>context</code> to <code>M_Bo_B</code>.  <a href="#a2e83508afc2db2bda9a1f25ed5201918">More...</a><br /></td></tr>
+<tr class="memdesc:a2e83508afc2db2bda9a1f25ed5201918"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> rigid body B, sets its spatial inertia that is stored in <code>context</code> to <code>M_Bo_B</code>.  <a href="#a2e83508afc2db2bda9a1f25ed5201918">More...</a><br /></td></tr>
 <tr class="separator:a2e83508afc2db2bda9a1f25ed5201918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:afca86f5b938f1658a60abbc2c83a3428"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#afca86f5b938f1658a60abbc2c83a3428">RigidBody</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a> &amp;)=delete</td></tr>
@@ -1420,13 +1420,21 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the center of mass stored in <code>context</code> to <code>center_of_mass</code>. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is not owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> </td></tr>
+<p>For <code>this</code> rigid body B, sets its center of mass position stored in <code>context</code> to <code>com</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">com</td><td>position vector from Bo (B's origin) to Bcm (B's center of mass), expressed in B. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is not owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function changes <code>this</code> body B's center of mass position without modifying I_BBo_B (B's rotational inertia about Bo, expressed in B). If needed, use <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918" title="For this rigid body B, sets its spatial inertia that is stored in context to M_Bo_B.">SetSpatialInertiaInBodyFrame()</a>. </dd></dl>
 
 </div>
 </div>
@@ -1456,13 +1464,21 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the mass stored in <code>context</code> to <code>mass</code>. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is not owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> </td></tr>
+<p>For <code>this</code> rigid body B, sets its mass stored in <code>context</code> to <code>mass</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>mass of <code>this</code> rigid body B. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is not owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function changes <code>this</code> body B's mass and appropriately scales I_BBo_B (B's rotational inertia about Bo, expressed in B). </dd></dl>
 
 </div>
 </div>
@@ -1492,10 +1508,17 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the spatial inertia stored in <code>context</code> to <code>M_Bo_B</code>. </p>
+<p>For <code>this</code> rigid body B, sets its spatial inertia that is stored in <code>context</code> to <code>M_Bo_B</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M_Bo_B</td><td>spatial inertia of this rigid body B about Bo (B's origin), expressed in B. M_Bo_B contains properties related to B's mass, the position vector from Bo to Bcm (B's center of mass), and G_Bo_B (B's unit inertia about Bo expressed in B). </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is not owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is not owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
   </table>
   </dd>
 </dl>

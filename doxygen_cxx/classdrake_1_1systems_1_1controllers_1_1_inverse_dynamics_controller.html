@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1controllers_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">InverseDynamicsController&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__systems.html">Modeling Dynamical Systems</a> &raquo; <a class="el" href="group__control__systems.html">Controllers</a></div></div>  </div>
+<div class="title">InverseDynamicsController&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__systems.html">Modeling Dynamical Systems</a> &raquo; <a class="el" href="group__control__systems.html">Controllers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -170,7 +170,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1controllers_1
 class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 
 <p>A state feedback controller that uses a <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" title="Implements the PID controller.">PidController</a> to generate desired accelerations, which are then converted into torques using <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a>. </p>
-<p>More specifically, the output of this controller is: <code>torque = inverse_dynamics(q, v, vd_d)</code>, where <code>vd_d = kp(q* - q) + kd(v* - v) + ki int(q* - q) + vd*</code>. <code>q</code> and <code>v</code> stand for the generalized position and velocity, and <code>vd</code> is the generalized acceleration. <code>*</code> indicates reference values.</p>
+<p>More specifically, the output of this controller is: </p><pre>
+  force = inverse_dynamics(q, v, vd_command), where
+  vd_command = kp(q_d - q) + kd(v_d - v) + ki int(q_d - q) + vd_d.
+</pre><p> Here <code>q</code> and <code>v</code> stand for the generalized position and velocity, and <code>vd</code> is the generalized acceleration. The subscript <code>_d</code> indicates desired values, and <code>vd_command</code> indicates the acceleration command (which includes the stabilization terms) passed to the inverse dynamics computation.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
@@ -187,13 +190,12 @@ class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 </table>
 </td></tr>
 </table>
-<p>Ports show in <span style="color:gray">gray</span> may be absent, depending on how the system is constructed.</p>
-<p>This controller always has a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for estimated robot state <code>(q, v)</code>, a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for reference robot state <code>(q*, v*)</code> and a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> output port for computed torque <code>torque</code>. A constructor flag can be set to track reference acceleration <code>vd*</code> as well. When set, a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port is also declared, and it's content is used as <code>vd*</code>. When unset, <code>vd*</code> is be treated as zero.</p>
+<p>The desired acceleration port shown in <span style="color:gray">gray</span> may be absent, depending on the arguments passed to the constructor.</p>
 <p>Note that this class assumes the robot is fully actuated, its position and velocity have the same dimension, and it does not have a floating base. If violated, the program will abort. This controller was not designed for closed-loop systems: the controller accounts for neither constraint forces nor actuator forces applied at loop constraints. Use on such systems is not recommended.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a> for an accounting of <a class="el" href="namespacedrake.html#adcc2d90ce6051e150effadd72fac548c" title="Checks truth for all elements in matrix m.">all</a> forces incorporated into the inverse dynamics computation.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be <code>double</code>. </td></tr>
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -208,6 +210,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc69f9afaeed2d513cea0d18c778c3f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#abc69f9afaeed2d513cea0d18c778c3f6">InverseDynamicsController</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt;&gt; plant, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;kp, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;ki, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;kd, bool has_reference_acceleration)</td></tr>
 <tr class="memdesc:abc69f9afaeed2d513cea0d18c778c3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an inverse dynamics controller and takes the ownership of the input <code>plant</code>.  <a href="#abc69f9afaeed2d513cea0d18c778c3f6">More...</a><br /></td></tr>
 <tr class="separator:abc69f9afaeed2d513cea0d18c778c3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae10ee2e8047baecf8bce8236dd9ff428"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:ae10ee2e8047baecf8bce8236dd9ff428"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae10ee2e8047baecf8bce8236dd9ff428">InverseDynamicsController</a> (const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html">InverseDynamicsController</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="separator:ae10ee2e8047baecf8bce8236dd9ff428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab57d5be7c9dafb8bfe5807495fe200e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab57d5be7c9dafb8bfe5807495fe200e5">~InverseDynamicsController</a> () override</td></tr>
 <tr class="separator:ab57d5be7c9dafb8bfe5807495fe200e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab31e6c294928ac7c131675fad3777073"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab31e6c294928ac7c131675fad3777073">set_integral_value</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;value) const</td></tr>
@@ -1062,12 +1067,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a49bc2d35e014b293b9564cb9e85e5390 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a49bc2d35e014b293b9564cb9e85e5390">ThrowCantEvaluateInputPort</a> (const char *func, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> port_index) const</td></tr>
 <tr class="memdesc:a49bc2d35e014b293b9564cb9e85e5390 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code>, that requires this input port to be evaluatable, but the port was neither fixed nor connected.  <a href="classdrake_1_1systems_1_1_system_base.html#a49bc2d35e014b293b9564cb9e85e5390">More...</a><br /></td></tr>
 <tr class="separator:a49bc2d35e014b293b9564cb9e85e5390 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace57c456b11046f56381f7b4ab7e2343 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html">InputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ace57c456b11046f56381f7b4ab7e2343">GetInputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
-<tr class="memdesc:ace57c456b11046f56381f7b4ab7e2343 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPortBase</a> at index <code>port_index</code>, throwing std::exception we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#ace57c456b11046f56381f7b4ab7e2343">More...</a><br /></td></tr>
-<tr class="separator:ace57c456b11046f56381f7b4ab7e2343 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18146b3800f5a63bbe4d08eae828883 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html">OutputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ab18146b3800f5a63bbe4d08eae828883">GetOutputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
-<tr class="memdesc:ab18146b3800f5a63bbe4d08eae828883 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html" title="OutputPortBase handles the scalar type-independent aspects of an OutputPort.">OutputPortBase</a> at index <code>port_index</code>, throwing std::exception if we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#ab18146b3800f5a63bbe4d08eae828883">More...</a><br /></td></tr>
-<tr class="separator:ab18146b3800f5a63bbe4d08eae828883 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23c3558eb24e413215f5f817f65ead0 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html">InputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ae23c3558eb24e413215f5f817f65ead0">GetInputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index, bool warn_deprecated) const</td></tr>
+<tr class="memdesc:ae23c3558eb24e413215f5f817f65ead0 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPortBase</a> at index <code>port_index</code>, throwing std::exception we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#ae23c3558eb24e413215f5f817f65ead0">More...</a><br /></td></tr>
+<tr class="separator:ae23c3558eb24e413215f5f817f65ead0 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf07bedd6db91eb448279aaea8254aa4 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html">OutputPortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aaf07bedd6db91eb448279aaea8254aa4">GetOutputPortBaseOrThrow</a> (const char *func, <a class="el" href="classint.html">int</a> port_index, bool warn_deprecated) const</td></tr>
+<tr class="memdesc:aaf07bedd6db91eb448279aaea8254aa4 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html" title="OutputPortBase handles the scalar type-independent aspects of an OutputPort.">OutputPortBase</a> at index <code>port_index</code>, throwing std::exception if we don't like the port index.  <a href="classdrake_1_1systems_1_1_system_base.html#aaf07bedd6db91eb448279aaea8254aa4">More...</a><br /></td></tr>
+<tr class="separator:aaf07bedd6db91eb448279aaea8254aa4 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36ffbedd99e6e5c0fb71753ad2b833b7 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a36ffbedd99e6e5c0fb71753ad2b833b7">ThrowValidateContextMismatch</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;) const</td></tr>
 <tr class="memdesc:a36ffbedd99e6e5c0fb71753ad2b833b7 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception with a message that the sanity check(s) given by ValidateContext have failed.  <a href="classdrake_1_1systems_1_1_system_base.html#a36ffbedd99e6e5c0fb71753ad2b833b7">More...</a><br /></td></tr>
 <tr class="separator:a36ffbedd99e6e5c0fb71753ad2b833b7 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1119,7 +1124,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a66aa93bf35e68ebadbbd49e3ee740383"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66aa93bf35e68ebadbbd49e3ee740383">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a66aa93bf35e68ebadbbd49e3ee740383">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1145,7 +1150,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a2ea5c2a1e475e4872b9c4af8dafe1124"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ea5c2a1e475e4872b9c4af8dafe1124">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea5c2a1e475e4872b9c4af8dafe1124">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1171,7 +1176,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a732444f829ebfe8412054c910289173f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a732444f829ebfe8412054c910289173f">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a732444f829ebfe8412054c910289173f">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1221,7 +1226,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">kp</td><td>Position gain. </td></tr>
     <tr><td class="paramname">ki</td><td>Integral gain. </td></tr>
     <tr><td class="paramname">kd</td><td>Velocity gain. </td></tr>
-    <tr><td class="paramname">has_reference_acceleration</td><td>If true, there is an extra <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for <code>vd*</code>. If false, <code>vd*</code> is treated as zero, and no extra input port is declared. </td></tr>
+    <tr><td class="paramname">has_reference_acceleration</td><td>If true, there is an extra <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for <code>vd_d</code>. If false, <code>vd_d</code> is treated as zero, and no extra input port is declared. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1242,7 +1247,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="abc69f9afaeed2d513cea0d18c778c3f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc69f9afaeed2d513cea0d18c778c3f6">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc69f9afaeed2d513cea0d18c778c3f6">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1286,6 +1291,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs an inverse dynamics controller and takes the ownership of the input <code>plant</code>. </p>
+
+</div>
+</div>
+<a id="ae10ee2e8047baecf8bce8236dd9ff428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae10ee2e8047baecf8bce8236dd9ff428">&#9670;&nbsp;</a></span>InverseDynamicsController() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html">InverseDynamicsController</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html">InverseDynamicsController</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -4,6 +4,7 @@ var classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller =
     [ "InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a2ea5c2a1e475e4872b9c4af8dafe1124", null ],
     [ "InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a732444f829ebfe8412054c910289173f", null ],
     [ "InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#abc69f9afaeed2d513cea0d18c778c3f6", null ],
+    [ "InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae10ee2e8047baecf8bce8236dd9ff428", null ],
     [ "~InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab57d5be7c9dafb8bfe5807495fe200e5", null ],
     [ "get_input_port_desired_acceleration", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a87fbace92efba2a49277e2be09510e57", null ],
     [ "get_input_port_desired_state", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ac1f946b742285b20a12ed0e0e2ebad9d", null ],

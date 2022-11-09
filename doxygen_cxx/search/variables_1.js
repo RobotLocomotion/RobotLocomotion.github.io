@@ -13,5 +13,6 @@ var searchData=
   ['bodyb_5findex',['bodyB_index',['../structdrake_1_1multibody_1_1_contact_wrench.html#a30a12e215eabee7e1bdf08f0eb358fe0',1,'drake::multibody::ContactWrench']]],
   ['bottom',['bottom',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20',1,'drake::geometry::Meshcat::OrthographicCamera']]],
   ['brneg',['BRneg',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
-  ['brpos',['BRpos',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]]
+  ['brpos',['BRpos',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
+  ['button_5fvalues',['button_values',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a28cb55393e1523165dc2b4f624437e29',1,'drake::geometry::Meshcat::Gamepad']]]
 ];

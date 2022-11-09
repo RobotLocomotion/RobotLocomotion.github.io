@@ -500,7 +500,7 @@ xyz values within the axis-aligned bounding box defined by
 
 <dl class="method">
 <dt id="pydrake.perception.PointCloud.EstimateNormals">
-<code class="descname">EstimateNormals</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>radius: float</em>, <em>num_closest: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.perception.PointCloud.EstimateNormals" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EstimateNormals</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>radius: float</em>, <em>num_closest: int</em>, <em>parallelize: bool = False</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.perception.PointCloud.EstimateNormals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimates the normal vectors in <code class="docutils literal notranslate"><span class="pre">this</span></code> by fitting a plane at each
 point in the cloud using up to <code class="docutils literal notranslate"><span class="pre">num_closest</span></code> points within Euclidean
 distance <code class="docutils literal notranslate"><span class="pre">radius</span></code> from the point. If has_normals() is false, then
@@ -509,7 +509,7 @@ Points for which the normals cannot be estimated (because the <code class="docut
 has less than two closest points within the <code class="docutils literal notranslate"><span class="pre">radius)</span></code>, will receive
 normal [NaN, NaN, NaN]. Normals estimated from two closest points will
 be orthogonal to the vector between those points, but can be arbitrary
-in the last dimension.</p>
+in the last dimension. <code class="docutils literal notranslate"><span class="pre">parallelize</span></code> enables OpenMP parallelization.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -736,14 +736,16 @@ the fields indicated this parameter.</dd>
 
 <dl class="method">
 <dt id="pydrake.perception.PointCloud.VoxelizedDownSample">
-<code class="descname">VoxelizedDownSample</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>voxel_size: float</em><span class="sig-paren">)</span> &#x2192; pydrake.perception.PointCloud<a class="headerlink" href="#pydrake.perception.PointCloud.VoxelizedDownSample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">VoxelizedDownSample</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>voxel_size: float</em>, <em>parallelize: bool = False</em><span class="sig-paren">)</span> &#x2192; pydrake.perception.PointCloud<a class="headerlink" href="#pydrake.perception.PointCloud.VoxelizedDownSample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a down-sampled point cloud by grouping all xyzs in this cloud
 into a 3D grid with cells of dimension voxel_size. Each occupied voxel
 will result in one point in the downsampled cloud, with a location
 corresponding to the centroid of the points in that voxel. Points with
 non-finite xyz values are ignored. All other fields (e.g. rgbs,
 normals, and descriptors) with finite values will also be averaged
-across the points in a voxel.</p>
+across the points in a voxel. <code class="docutils literal notranslate"><span class="pre">parallelize</span></code> enables OpenMP
+parallelization. Equivalent to Open3d’s voxel_down_sample or PCL’s
+VoxelGrid filter.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

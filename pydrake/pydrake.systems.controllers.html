@@ -580,42 +580,36 @@ output (which is the input of the system passed in through
 <em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">InverseDynamics</code><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Solves inverse dynamics with no consideration for joint actuator force
-limits. The system also provides a pure gravity compensation mode.
-This system provides a BasicVector input port for the state <code class="docutils literal notranslate"><span class="pre">(q,</span>
-<span class="pre">v)</span></code>, where <code class="docutils literal notranslate"><span class="pre">q</span></code> is the generalized position and <code class="docutils literal notranslate"><span class="pre">v</span></code> is the
-generalized velocity, and a BasicVector output port for the computed
-generalized forces. There is an additional BasicVector input port for
-desired acceleration when configured to be <strong>not</strong> in pure gravity
-compensation mode.</p>
-<p>InverseDynamicsController uses a PID controller to generate desired
-acceleration and uses this class to compute generalized forces. This
-class should be used directly if desired acceleration is computed
-differently.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">Constructors for descriptions of how (and which) forces are
-incorporated into the inverse dynamics computation.</p>
-</div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamics</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Port <code class="docutils literal notranslate"><span class="pre">u0</span></code> accepts system state; port <code class="docutils literal notranslate"><span class="pre">y0</span></code> emits generalized
-forces. Port <code class="docutils literal notranslate"><span class="pre">u1</span></code> is only present when the <code class="docutils literal notranslate"><span class="pre">mode</span></code> at construction
-is not <code class="docutils literal notranslate"><span class="pre">kGravityCompensation</span></code>. When present, <code class="docutils literal notranslate"><span class="pre">u1</span></code> accepts desired
-accelerations.</p>
-<dl class="method">
-<dt id="pydrake.systems.controllers.InverseDynamics.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamics, plant: pydrake.multibody.plant.MultibodyPlant_[float], mode: drake::systems::controllers::InverseDynamics&lt;double&gt;::InverseDynamicsMode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the generalized force <code class="docutils literal notranslate"><span class="pre">tau_id</span></code> that needs to be applied so
+limits.</p>
+<p>Computes the generalized force <code class="docutils literal notranslate"><span class="pre">τ_id</span></code> that needs to be applied so
 that the multibody system undergoes a desired acceleration <code class="docutils literal notranslate"><span class="pre">vd_d</span></code>.
-That is, <code class="docutils literal notranslate"><span class="pre">tau_id</span></code> is the result of an inverse dynamics computation
+That is, <code class="docutils literal notranslate"><span class="pre">τ_id</span></code> is the result of an inverse dynamics computation
 according to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tau_id</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">vd_d</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">-</span> <span class="n">tau_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="n">tau_app</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">vd_d</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">-</span> <span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="n">τ_app</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix, <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias term
-containing Coriolis and gyroscopic effects, <code class="docutils literal notranslate"><span class="pre">tau_g(q)</span></code> is the vector
-of generalized forces due to gravity and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code> contains applied
+containing Coriolis and gyroscopic effects, <code class="docutils literal notranslate"><span class="pre">τ_g(q)</span></code> is the vector
+of generalized forces due to gravity and <code class="docutils literal notranslate"><span class="pre">τ_app</span></code> contains applied
 forces from force elements added to the multibody model (this can
 include damping, springs, etc. See
 MultibodyPlant::CalcForceElementsContribution()).</p>
+<p>The system also provides a pure gravity compensation mode via an
+option in the constructor. In this case, the output is simply</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span> <span class="o">=</span> <span class="o">-</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>InverseDynamicsController uses a PID controller to generate desired
+acceleration and uses this class to compute generalized forces. Use
+this class directly if desired acceleration is computed differently.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0 (estimated state)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span> (desired accelerations)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamics</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0 (force)</td></tr></table></td></tr></table><p>Port <code class="docutils literal notranslate"><span class="pre">u0</span></code> accepts system estimated state; port <code class="docutils literal notranslate"><span class="pre">y0</span></code> emits
+generalized forces. Port <code class="docutils literal notranslate"><span class="pre">u1</span></code> is only present when the <code class="docutils literal notranslate"><span class="pre">mode</span></code> at
+construction is not <code class="docutils literal notranslate"><span class="pre">kGravityCompensation</span></code>. When present, <code class="docutils literal notranslate"><span class="pre">u1</span></code>
+accepts desired accelerations.</p>
+<dl class="method">
+<dt id="pydrake.systems.controllers.InverseDynamics.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamics, plant: pydrake.multibody.plant.MultibodyPlant_[float], mode: pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode = &lt;InverseDynamicsMode.kInverseDynamics: 0&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the InverseDynamics system.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
 <dd>Pointer to the multibody plant model. The life span of <code class="docutils literal notranslate"><span class="pre">plant</span></code>
@@ -686,20 +680,19 @@ return <code class="docutils literal notranslate"><span class="pre">True</span><
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
 <p>A state feedback controller that uses a PidController to generate
 desired accelerations, which are then converted into torques using
-InverseDynamics. More specifically, the output of this controller is:
-<code class="docutils literal notranslate"><span class="pre">torque</span> <span class="pre">=</span> <span class="pre">inverse_dynamics(q,</span> <span class="pre">v,</span> <span class="pre">vd_d)</span></code>, where <code class="docutils literal notranslate"><span class="pre">vd_d</span> <span class="pre">=</span> <span class="pre">kp(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span>
-<span class="pre">kd(v*</span> <span class="pre">-</span> <span class="pre">v)</span> <span class="pre">+</span> <span class="pre">ki</span> <span class="pre">int(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span> <span class="pre">vd*</span></code>. <cite>q</cite> and <code class="docutils literal notranslate"><span class="pre">v</span></code> stand for the
-generalized position and velocity, and <code class="docutils literal notranslate"><span class="pre">vd</span></code> is the generalized
-acceleration. <code class="docutils literal notranslate"><span class="pre">*</span></code> indicates reference values.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamicsController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force</td></tr></table></td></tr></table><p>Ports show in &lt;span style=”color:gray”&gt;gray&lt;/span&gt; may be absent,
-depending on how the system is constructed.</p>
-<p>This controller always has a BasicVector input port for estimated
-robot state <code class="docutils literal notranslate"><span class="pre">(q,</span> <span class="pre">v)</span></code>, a BasicVector input port for reference robot
-state <code class="docutils literal notranslate"><span class="pre">(q*,</span> <span class="pre">v*)</span></code> and a BasicVector output port for computed torque
-<code class="docutils literal notranslate"><span class="pre">torque</span></code>. A constructor flag can be set to track reference
-acceleration <code class="docutils literal notranslate"><span class="pre">vd*</span></code> as well. When set, a BasicVector input port is
-also declared, and it’s content is used as <code class="docutils literal notranslate"><span class="pre">vd*</span></code>. When unset,
-<code class="docutils literal notranslate"><span class="pre">vd*</span></code> is be treated as zero.</p>
+InverseDynamics. More specifically, the output of this controller is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">force</span> <span class="o">=</span> <span class="n">inverse_dynamics</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">vd_command</span><span class="p">),</span> <span class="n">where</span>
+  <span class="n">vd_command</span> <span class="o">=</span> <span class="n">kp</span><span class="p">(</span><span class="n">q_d</span> <span class="o">-</span> <span class="n">q</span><span class="p">)</span> <span class="o">+</span> <span class="n">kd</span><span class="p">(</span><span class="n">v_d</span> <span class="o">-</span> <span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="n">ki</span> <span class="nb">int</span><span class="p">(</span><span class="n">q_d</span> <span class="o">-</span> <span class="n">q</span><span class="p">)</span> <span class="o">+</span> <span class="n">vd_d</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> stand for the generalized position and velocity,
+and <code class="docutils literal notranslate"><span class="pre">vd</span></code> is the generalized acceleration. The subscript <code class="docutils literal notranslate"><span class="pre">_d</span></code>
+indicates desired values, and <code class="docutils literal notranslate"><span class="pre">vd_command</span></code> indicates the
+acceleration command (which includes the stabilization terms) passed
+to the inverse dynamics computation.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamicsController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force</td></tr></table></td></tr></table><p>The desired acceleration port shown in &lt;span
+style=”color:gray”&gt;gray&lt;/span&gt; may be absent, depending on the
+arguments passed to the constructor.</p>
 <p>Note that this class assumes the robot is fully actuated, its position
 and velocity have the same dimension, and it does not have a floating
 base. If violated, the program will abort. This controller was not
@@ -729,8 +722,8 @@ InverseDynamicsController.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">kd</span></code>:</dt>
 <dd>Velocity gain.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">has_reference_acceleration</span></code>:</dt>
-<dd>If true, there is an extra BasicVector input port for <code class="docutils literal notranslate"><span class="pre">vd*</span></code>. If
-false, <code class="docutils literal notranslate"><span class="pre">vd*</span></code> is treated as zero, and no extra input port is
+<dd>If true, there is an extra BasicVector input port for <code class="docutils literal notranslate"><span class="pre">vd_d</span></code>. If
+false, <code class="docutils literal notranslate"><span class="pre">vd_d</span></code> is treated as zero, and no extra input port is
 declared.</dd>
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">plant</span></code> has been finalized (plant.is_finalized() returns

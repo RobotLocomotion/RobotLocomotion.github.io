@@ -64,6 +64,8 @@ var classdrake_1_1systems_1_1_leaf_system =
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#a580e15b4d10db0b8c07762b3ac36e632", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#aa76b1793d533fe138f7bd29fd84cd230", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#af3da3722efc85a5f8ab121b8c21664c5", null ],
+    [ "DeprecateInputPort", "classdrake_1_1systems_1_1_leaf_system.html#a31558eeae0a97e2f8348b1e2d8d3f537", null ],
+    [ "DeprecateOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#a3d1c491c558b95d5f171090a4248fa78", null ],
     [ "DoAllocateContext", "classdrake_1_1systems_1_1_leaf_system.html#adbd8db89a6261ad463d9184385bb7e22", null ],
     [ "DoCalcDiscreteVariableUpdates", "classdrake_1_1systems_1_1_leaf_system.html#ac2d40c691d5f0335d8dcde434a8fa7b1", null ],
     [ "DoCalcNextUpdateTime", "classdrake_1_1systems_1_1_leaf_system.html#a5c883b4b0aa7a507e29dee582d9ed0fb", null ],
