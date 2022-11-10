@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#a90384755e10483dbea11785e04234e2c":[3,0,0,3,12,1,0],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#abcb28da0deceb7458a992cbcdd6d1137":[3,0,0,3,12,1,8],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#acb952713a1d9e6805791d0739c346915":[3,0,0,3,12,1,6],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html#afca2b454193e9bb3dfa77520e989d571":[3,0,0,3,12,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1geometry_1_1_geometry_frame.html#a98e8cbbe5079e58af6cf72c73f698caf":[3,0,0,4,13,6],
 "classdrake_1_1geometry_1_1_geometry_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1":[3,0,0,4,13,5],
 "classdrake_1_1geometry_1_1_geometry_frame.html#adae0835938e38dbc9e1fea53cbf04870":[3,0,0,4,13,2],
-"classdrake_1_1geometry_1_1_geometry_frame.html#adc07d5a8a0c7fadf4271684a83934f46":[3,0,0,4,13,0],
-"classdrake_1_1geometry_1_1_geometry_frame.html#adf69ab59974e0430aa4f6a2b7f9738be":[3,0,0,4,13,7]
+"classdrake_1_1geometry_1_1_geometry_frame.html#adc07d5a8a0c7fadf4271684a83934f46":[3,0,0,4,13,0]
 };

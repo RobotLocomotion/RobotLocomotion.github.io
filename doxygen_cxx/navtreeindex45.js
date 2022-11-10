@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"group__estimation.html":[1,4,4],
 "group__estimator__systems.html":[1,2,3],
 "group__estimator__systems.html#ga3949eebe88ae99b71a997dfa0bad5cff":[1,2,3,4],
 "group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16":[1,2,3,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "iris_8h.html":[4,0,0,4,1,6],
 "iris_8h.html#ga3a51e0fec449a0abcf498f78a2a390a8":[4,0,0,4,1,6,1],
 "iris_8h.html#gad54a224f37c1a0dc86eaec300ef874af":[4,0,0,4,1,6,2],
-"iris_8h.html#gafd8111a93cb3461e05bec3477ee736f6":[4,0,0,4,1,6,0],
-"is__approx__equal__abstol_8h.html":[4,0,0,1,35]
+"iris_8h.html#gafd8111a93cb3461e05bec3477ee736f6":[4,0,0,4,1,6,0]
 };

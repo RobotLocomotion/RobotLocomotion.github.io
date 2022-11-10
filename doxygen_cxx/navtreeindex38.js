@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a4497ca6ec8ea51e6a64f26985d7e41c0":[3,0,0,16,5,6,4],
 "classdrake_1_1systems_1_1lcm_1_1_serializer.html#a4758f09d2f9e7f4fb68ddbd4d26a79b8":[3,0,0,16,5,6,7],
 "classdrake_1_1systems_1_1lcm_1_1_serializer.html#a671833651346535b186f22561b183698":[3,0,0,16,5,6,0],
 "classdrake_1_1systems_1_1lcm_1_1_serializer.html#a868390ca87ecfa7d8436db99da7d2ece":[3,0,0,16,5,6,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html":[3,0,0,16,9,3],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a2776d8c1a2ba6628d4b0870c76967c28":[3,0,0,16,9,3,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a2dc3464ced4836664ab6f75d389081db":[3,0,0,16,9,3,5],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a3ca6213bff8c9ae3df9fd4e864a58fb1":[3,0,0,16,9,3,14],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a52a66f722f28cf5671c9b9e7479fc56b":[3,0,0,16,9,3,6]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a3ca6213bff8c9ae3df9fd4e864a58fb1":[3,0,0,16,9,3,14]
 };

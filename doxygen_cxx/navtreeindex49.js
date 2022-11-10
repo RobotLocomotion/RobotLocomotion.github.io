@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"quaternion_8h.html#a056f9de21690e59551e2904bde9ac928":[4,0,0,7,26,8],
 "quaternion_8h.html#a06541dcb249b4b951ea73d45d2067337":[4,0,0,7,26,2],
 "quaternion_8h.html#a0fc70ebdc0ea497711e6e7b69eddef2d":[4,0,0,7,26,14],
 "quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130":[4,0,0,7,26,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "simulator__gflags_8h.html#a03ad7235991b77cba364074f82049d31":[4,0,0,12,0,25,2],
 "simulator__gflags_8h.html#a0cc9deeb95a8594918a525db7ac445c2":[4,0,0,12,0,25,3],
 "simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177":[4,0,0,12,0,25,5],
-"simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,12,0,25,1],
-"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,25,0]
+"simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,12,0,25,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,25,0],
 "simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,12,0,25,4],
 "simulator__print__stats_8h.html":[4,0,0,12,0,26],
 "simulator__print__stats_8h.html#a14e4e6cd73fdedd3dde63af60b3572e4":[4,0,0,12,0,26,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,25,0,0],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7":[3,0,0,4,25,0,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9":[3,0,0,4,25,0,3],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,4,25,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,25,1,1]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,4,25,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#a7abf83f965123608bf855d5eef56806f":[1,1,2,135],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a7b08a882bd0f9c823350bf877fe7867f":[1,1,2,43],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a7b12192393b9a53b4fd484ede7d52381":[1,1,2,88],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a7c3361c9cd54767f6b0441f3343eec35":[1,1,2,66],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a42bcf5a2b1cd301746dc0443e9bf6a33":[3,0,0,14,43,1],
 "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,14,43,3],
 "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a4fbe439fa696f39aed9159bb4a4a40fa":[3,0,0,14,43,2],
-"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a8d50e169e77da2ed6b44cd17fa94056d":[3,0,0,14,43,0],
-"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a9935b2abbc961a549015d331ba698f66":[3,0,0,14,43,5]
+"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a8d50e169e77da2ed6b44cd17fa94056d":[3,0,0,14,43,0]
 };

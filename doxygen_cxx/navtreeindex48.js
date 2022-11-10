@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"namespacemembers_func_s.html":[2,1,1,18],
 "namespacemembers_func_t.html":[2,1,1,19],
 "namespacemembers_func_u.html":[2,1,1,20],
 "namespacemembers_func_v.html":[2,1,1,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "quadrotor__plant_8h.html":[4,0,0,3,14,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,14,1,2],
 "quartic__scalar__system_8h.html":[4,0,0,12,0,0,11],
-"quaternion_8h.html":[4,0,0,7,26],
-"quaternion_8h.html#a056f9de21690e59551e2904bde9ac928":[4,0,0,7,26,8]
+"quaternion_8h.html":[4,0,0,7,26]
 };

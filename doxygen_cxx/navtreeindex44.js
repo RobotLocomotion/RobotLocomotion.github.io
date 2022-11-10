@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"functions_func_t.html":[3,3,1,19],
 "functions_func_u.html":[3,3,1,20],
 "functions_func_v.html":[3,3,1,21],
 "functions_func_w.html":[3,3,1,22],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
-"group__drake__contacts.html":[1,3,3],
-"group__estimation.html":[1,4,4]
+"group__drake__contacts.html":[1,3,3]
 };

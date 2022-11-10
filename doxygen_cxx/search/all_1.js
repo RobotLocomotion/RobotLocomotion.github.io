@@ -248,6 +248,7 @@ var searchData=
   ['affinesystem_3c_20double_20_3e',['AffineSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_affine_system.html',1,'drake::systems']]],
   ['aggregate_5fcosts_5fconstraints_2eh',['aggregate_costs_constraints.h',['../aggregate__costs__constraints_8h.html',1,'']]],
   ['aggregateboundingboxconstraints',['AggregateBoundingBoxConstraints',['../namespacedrake_1_1solvers.html#aebc36100fe5dc287d0c0c41a65c31c21',1,'drake::solvers::AggregateBoundingBoxConstraints(const std::vector&lt; Binding&lt; BoundingBoxConstraint &gt;&gt; &amp;bounding_box_constraints)'],['../namespacedrake_1_1solvers.html#a43caa3a499b973de17213d63a006b0ea',1,'drake::solvers::AggregateBoundingBoxConstraints(const MathematicalProgram &amp;prog, Eigen::VectorXd *lower, Eigen::VectorXd *upper)']]],
+  ['aggregateduplicatevariables',['AggregateDuplicateVariables',['../namespacedrake_1_1solvers.html#a5999ff5df38e426f3e6c4a69aeec4305',1,'drake::solvers']]],
   ['aggregatelinearcosts',['AggregateLinearCosts',['../namespacedrake_1_1solvers.html#a38b2721b2175272485def57c7a8b9c6a',1,'drake::solvers']]],
   ['aggregatequadraticandlinearcosts',['AggregateQuadraticAndLinearCosts',['../namespacedrake_1_1solvers.html#afd9e7d960a7e287ea283ffa9aee89d41',1,'drake::solvers']]],
   ['algorithms',['Algorithms',['../group__algorithms.html',1,'']]],

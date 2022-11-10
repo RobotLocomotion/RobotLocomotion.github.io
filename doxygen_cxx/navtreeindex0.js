@@ -17,11 +17,12 @@ var NAVTREEINDEX0 =
 "adder_8h.html":[4,0,0,12,6,0],
 "affine__system_8h.html":[4,0,0,12,6,1],
 "aggregate__costs__constraints_8h.html":[4,0,0,11,1],
-"aggregate__costs__constraints_8h.html#a2393a50b2a4547a3a88aa89c9f77e4bb":[4,0,0,11,1,5],
-"aggregate__costs__constraints_8h.html#a38b2721b2175272485def57c7a8b9c6a":[4,0,0,11,1,3],
+"aggregate__costs__constraints_8h.html#a2393a50b2a4547a3a88aa89c9f77e4bb":[4,0,0,11,1,6],
+"aggregate__costs__constraints_8h.html#a38b2721b2175272485def57c7a8b9c6a":[4,0,0,11,1,4],
 "aggregate__costs__constraints_8h.html#a43caa3a499b973de17213d63a006b0ea":[4,0,0,11,1,2],
+"aggregate__costs__constraints_8h.html#a5999ff5df38e426f3e6c4a69aeec4305":[4,0,0,11,1,3],
 "aggregate__costs__constraints_8h.html#aebc36100fe5dc287d0c0c41a65c31c21":[4,0,0,11,1,1],
-"aggregate__costs__constraints_8h.html#afd9e7d960a7e287ea283ffa9aee89d41":[4,0,0,11,1,4],
+"aggregate__costs__constraints_8h.html#afd9e7d960a7e287ea283ffa9aee89d41":[4,0,0,11,1,5],
 "all_8h.html":[4,0,0,1,3,0,0],
 "all_8h.html#a9bad86b8d25af2652383881372b2ef52":[4,0,0,1,3,0,0,0],
 "allegro__common_8h.html":[4,0,0,3,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#ab2d984c6a3f814a0cfe120febe762139":[3,0,0,43,14],
 "classdrake_1_1_polynomial.html#ab30704361ad1820a0a54f5127830d92a":[3,0,0,43,45],
 "classdrake_1_1_polynomial.html#abe5f08c6ad942153599928b9c7f9d0fa":[3,0,0,43,43],
-"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5],
-"classdrake_1_1_polynomial.html#ac86fb56fd075f1c1442883c77f200792":[3,0,0,43,40]
+"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5]
 };
