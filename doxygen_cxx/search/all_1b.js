@@ -191,6 +191,7 @@ var searchData=
   ['_7esolverinterface',['~SolverInterface',['../classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906',1,'drake::solvers::SolverInterface']]],
   ['_7esolvertypeconverter',['~SolverTypeConverter',['../classdrake_1_1solvers_1_1_solver_type_converter.html#a8cfb5efc2e1a6588ac3d83e16610b0d8',1,'drake::solvers::SolverTypeConverter']]],
   ['_7espringmassstatevector',['~SpringMassStateVector',['../classdrake_1_1systems_1_1_spring_mass_state_vector.html#a6d780c3e99c158d83e79ceb0c0e24e81',1,'drake::systems::SpringMassStateVector']]],
+  ['_7estackedtrajectory',['~StackedTrajectory',['../classdrake_1_1trajectories_1_1_stacked_trajectory.html#aac002eea06875b91ada866e249fc7b6f',1,'drake::trajectories::StackedTrajectory']]],
   ['_7estate',['~State',['../classdrake_1_1systems_1_1_state.html#a9014e03010baa760d959cd4938da85f2',1,'drake::systems::State']]],
   ['_7estatefeedbackcontrollerinterface',['~StateFeedbackControllerInterface',['../classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a2d5e3af9235581bbca735ace1a676ac6',1,'drake::systems::controllers::StateFeedbackControllerInterface']]],
   ['_7estaticequilibriumconstraint',['~StaticEquilibriumConstraint',['../classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a5e525a19d46b30f1d607e4f56019bbc0',1,'drake::multibody::StaticEquilibriumConstraint']]],

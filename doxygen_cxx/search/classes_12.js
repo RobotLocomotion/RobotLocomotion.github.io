@@ -74,6 +74,7 @@ var searchData=
   ['springmassstatevector',['SpringMassStateVector',['../classdrake_1_1systems_1_1_spring_mass_state_vector.html',1,'drake::systems']]],
   ['springmasssystem',['SpringMassSystem',['../classdrake_1_1systems_1_1_spring_mass_system.html',1,'drake::systems']]],
   ['springmasssystem_3c_20double_20_3e',['SpringMassSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_spring_mass_system.html',1,'drake::systems']]],
+  ['stackedtrajectory',['StackedTrajectory',['../classdrake_1_1trajectories_1_1_stacked_trajectory.html',1,'drake::trajectories']]],
   ['state',['State',['../classdrake_1_1systems_1_1_state.html',1,'drake::systems']]],
   ['statefeedbackcontrollerinterface',['StateFeedbackControllerInterface',['../classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html',1,'drake::systems::controllers']]],
   ['statefeedbackcontrollerinterface_3c_20double_20_3e',['StateFeedbackControllerInterface&lt; double &gt;',['../classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html',1,'drake::systems::controllers']]],

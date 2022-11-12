@@ -4823,6 +4823,218 @@ trajectory that is represented by simpler logic in each segment or
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.trajectories.StackedTrajectory">
+<code class="descclassname">pydrake.trajectories.</code><code class="descname">StackedTrajectory</code><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.trajectories.StackedTrajectory_[float]" title="pydrake.trajectories.StackedTrajectory_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.StackedTrajectory_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.trajectories.StackedTrajectory_">
+<em class="property">template </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">StackedTrajectory_</code><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.trajectories.StackedTrajectory_[float]" title="pydrake.trajectories.StackedTrajectory_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">StackedTrajectory_[float]</span></code></a>, <a class="reference internal" href="#pydrake.trajectories.StackedTrajectory_[AutoDiffXd]" title="pydrake.trajectories.StackedTrajectory_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">StackedTrajectory_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.trajectories.StackedTrajectory_[Expression]" title="pydrake.trajectories.StackedTrajectory_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">StackedTrajectory_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float]">
+<em class="property">class </em><code class="descname">StackedTrajectory_[float]</code><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_[float]" title="pydrake.trajectories.Trajectory_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[float]</span></code></a></p>
+<p>A StackedTrajectory stacks the values from one or more underlying
+Trajectory objects into a single Trajectory, without changing the
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> or <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>For sequencing trajectories in time instead, see PiecewiseTrajectory.</p>
+<p>All of the underlying Trajectory objects must have the same
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> and <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to true, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%cols()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>vstack</strong> of the the trajectories in
+the order they were added.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to false, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%rows()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>hstack</strong> of the the trajectories in
+the order they were added.</p>
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[float], rowwise: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an empty trajectory.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rowwise</span></code>:</dt>
+<dd>governs the stacking order</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float].Append">
+<code class="descname">Append</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[float], arg0: pydrake.trajectories.Trajectory_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float].Append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stacks another sub-Trajectory onto this. Refer to the class overview
+documentation for details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the matrix dimension is incompatible.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.Trajectory_[float]<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_.StackedTrajectory_[float].Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.trajectories.StackedTrajectory_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">StackedTrajectory_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_[AutoDiffXd]" title="pydrake.trajectories.Trajectory_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[AutoDiffXd]</span></code></a></p>
+<p>A StackedTrajectory stacks the values from one or more underlying
+Trajectory objects into a single Trajectory, without changing the
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> or <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>For sequencing trajectories in time instead, see PiecewiseTrajectory.</p>
+<p>All of the underlying Trajectory objects must have the same
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> and <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to true, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%cols()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>vstack</strong> of the the trajectories in
+the order they were added.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to false, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%rows()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>hstack</strong> of the the trajectories in
+the order they were added.</p>
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[AutoDiffXd], rowwise: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an empty trajectory.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rowwise</span></code>:</dt>
+<dd>governs the stacking order</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[AutoDiffXd].Append">
+<code class="descname">Append</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[AutoDiffXd], arg0: pydrake.trajectories.Trajectory_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[AutoDiffXd].Append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stacks another sub-Trajectory onto this. Refer to the class overview
+documentation for details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the matrix dimension is incompatible.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[AutoDiffXd].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.Trajectory_[AutoDiffXd]<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[AutoDiffXd].Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.trajectories.StackedTrajectory_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">StackedTrajectory_[Expression]</code><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_[Expression]" title="pydrake.trajectories.Trajectory_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[Expression]</span></code></a></p>
+<p>A StackedTrajectory stacks the values from one or more underlying
+Trajectory objects into a single Trajectory, without changing the
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> or <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>For sequencing trajectories in time instead, see PiecewiseTrajectory.</p>
+<p>All of the underlying Trajectory objects must have the same
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> and <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to true, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%cols()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>vstack</strong> of the the trajectories in
+the order they were added.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to false, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%rows()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>hstack</strong> of the the trajectories in
+the order they were added.</p>
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[Expression], rowwise: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an empty trajectory.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rowwise</span></code>:</dt>
+<dd>governs the stacking order</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[Expression].Append">
+<code class="descname">Append</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[Expression], arg0: pydrake.trajectories.Trajectory_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[Expression].Append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stacks another sub-Trajectory onto this. Refer to the class overview
+documentation for details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the matrix dimension is incompatible.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[Expression].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.Trajectory_[Expression]<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[Expression].Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.trajectories.StackedTrajectory_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">StackedTrajectory_[float]</code><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_[float]" title="pydrake.trajectories.Trajectory_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[float]</span></code></a></p>
+<p>A StackedTrajectory stacks the values from one or more underlying
+Trajectory objects into a single Trajectory, without changing the
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> or <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>For sequencing trajectories in time instead, see PiecewiseTrajectory.</p>
+<p>All of the underlying Trajectory objects must have the same
+<code class="docutils literal notranslate"><span class="pre">%start_time()</span></code> and <code class="docutils literal notranslate"><span class="pre">%end_time()</span></code>.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to true, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%cols()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>vstack</strong> of the the trajectories in
+the order they were added.</p>
+<p>When constructed with <code class="docutils literal notranslate"><span class="pre">rowwise</span></code> set to false, all of the underlying
+Trajectory objects must have the same number of <code class="docutils literal notranslate"><span class="pre">%rows()</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">value()</span></code> matrix will be the <strong>hstack</strong> of the the trajectories in
+the order they were added.</p>
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[float], rowwise: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an empty trajectory.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rowwise</span></code>:</dt>
+<dd>governs the stacking order</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[float].Append">
+<code class="descname">Append</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[float], arg0: pydrake.trajectories.Trajectory_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[float].Append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stacks another sub-Trajectory onto this. Refer to the class overview
+documentation for details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the matrix dimension is incompatible.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.StackedTrajectory_[float].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.StackedTrajectory_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.Trajectory_[float]<a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_[float].Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.trajectories.Trajectory">
 <code class="descclassname">pydrake.trajectories.</code><code class="descname">Trajectory</code><a class="headerlink" href="#pydrake.trajectories.Trajectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#pydrake.trajectories.Trajectory_[float]" title="pydrake.trajectories.Trajectory_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[float]</span></code></a></p>

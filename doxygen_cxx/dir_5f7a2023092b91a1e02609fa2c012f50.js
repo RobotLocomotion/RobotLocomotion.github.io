@@ -22,6 +22,9 @@ var dir_5f7a2023092b91a1e02609fa2c012f50 =
     [ "piecewise_trajectory.h", "piecewise__trajectory_8h.html", [
       [ "PiecewiseTrajectory", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", "classdrake_1_1trajectories_1_1_piecewise_trajectory" ]
     ] ],
+    [ "stacked_trajectory.h", "stacked__trajectory_8h.html", [
+      [ "StackedTrajectory", "classdrake_1_1trajectories_1_1_stacked_trajectory.html", "classdrake_1_1trajectories_1_1_stacked_trajectory" ]
+    ] ],
     [ "trajectory.h", "trajectory_8h.html", [
       [ "Trajectory", "classdrake_1_1trajectories_1_1_trajectory.html", "classdrake_1_1trajectories_1_1_trajectory" ]
     ] ]

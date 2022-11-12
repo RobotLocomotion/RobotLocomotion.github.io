@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: Class Members</title>
+<title>Drake: drake/common/trajectories/stacked_trajectory.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('functions_j.html','');});
+$(document).ready(function(){initNavTree('stacked__trajectory_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -157,61 +157,48 @@ $(document).ready(function(){initNavTree('functions_j.html','');});
 </iframe>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
+  <div class="headertitle">
+<div class="title">stacked_trajectory.h File Reference</div>  </div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
-
-<h3><a id="index_j"></a>- j -</h3><ul>
-<li>Jacobian()
-: <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a063e93564cb1e0d289b60a39b162f81d">Expression</a>
-, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html#a457a2287e3a85cef6f8ebe02402d4aec">GenericPolynomial&lt; BasisElement &gt;</a>
-, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a240c9c091a816878af16cabb5f7a65ca">Polynomial</a>
-</li>
-<li>JacobianComputationScheme
-: <a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html#a2b4a6fa64aa084c108eb7b54df744990">ImplicitIntegrator&lt; T &gt;</a>
-</li>
-<li>JacoCommandSender()
-: <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#ac729fa3f0a996804cc0ebf8c5f328c4a">JacoCommandSender</a>
-</li>
-<li>JacoStatusReceiver()
-: <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a6e5b8a20129aa9531dd46bbbcec20432">JacoStatusReceiver</a>
-</li>
-<li>JacoStatusSender()
-: <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a7e4c5ac1cf2a03519f75baa5849cab14">JacoStatusSender</a>
-</li>
-<li>joint()
-: <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#aec72adf302d35f0e2d9fb630bb99d4d2">DoorHinge&lt; T &gt;</a>
-</li>
-<li>Joint()
-: <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aaa791aaf45d7556c3af317fb6040bb2c">Joint&lt; T &gt;</a>
-</li>
-<li>joint()
-: <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86">JointActuator&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#aec72adf302d35f0e2d9fb630bb99d4d2">RevoluteSpring&lt; T &gt;</a>
-</li>
-<li>joint_torque
-: <a class="el" href="structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a0ad7eb248a5efdb50a33623eb9c84435">IiwaControlPorts</a>
-</li>
-<li>joint_velocities
-: <a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aac0e5776ad59e265686244006b0be308">DifferentialInverseKinematicsResult</a>
-</li>
-<li>JointActuator()
-: <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#ac2abe86d242ea7704d469dcabe028f3f">JointActuator&lt; T &gt;</a>
-</li>
-<li>JointImplementation()
-: <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a003ffd6a91f75e2a858b2fefaa2a061c">Joint&lt; T &gt;::JointImplementation</a>
-</li>
-<li>JointSliders()
-: <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047">JointSliders&lt; T &gt;</a>
-</li>
-<li>JointTester
-: <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a4c23b3d7f4f0a32f27069602e0d8397f">RevoluteJoint&lt; T &gt;</a>
-</li>
-</ul>
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="copyable__unique__ptr_8h.html">drake/common/copyable_unique_ptr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="reset__after__move_8h.html">drake/common/reset_after_move.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="trajectory_8h.html">drake/common/trajectories/trajectory.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for stacked_trajectory.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="stacked__trajectory_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_stacked_trajectory.html">StackedTrajectory&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A StackedTrajectory stacks the values from one or more underlying <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> objects into a single Trajectory, without changing the <code>start_time()</code> or <code>end_time()</code>.  <a href="classdrake_1_1trajectories_1_1_stacked_trajectory.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1trajectories"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1trajectories.html">drake::trajectories</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="dir_5f7a2023092b91a1e02609fa2c012f50.html">trajectories</a></li><li class="navelem"><a class="el" href="stacked__trajectory_8h.html">stacked_trajectory.h</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

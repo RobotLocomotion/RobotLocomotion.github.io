@@ -91,6 +91,7 @@ var searchData=
   ['spong_5fcontroller_2eh',['spong_controller.h',['../spong__controller_8h.html',1,'']]],
   ['spring_5fmass_5fdamper_5fsystem_2eh',['spring_mass_damper_system.h',['../spring__mass__damper__system_8h.html',1,'']]],
   ['spring_5fmass_5fsystem_2eh',['spring_mass_system.h',['../spring__mass__system_8h.html',1,'']]],
+  ['stacked_5ftrajectory_2eh',['stacked_trajectory.h',['../stacked__trajectory_8h.html',1,'']]],
   ['standard_5foperations_2eh',['standard_operations.h',['../standard__operations_8h.html',1,'']]],
   ['state_2eh',['state.h',['../state_8h.html',1,'']]],
   ['state_5ffeedback_5fcontroller_5finterface_2eh',['state_feedback_controller_interface.h',['../state__feedback__controller__interface_8h.html',1,'']]],
