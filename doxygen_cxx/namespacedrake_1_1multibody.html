@@ -241,6 +241,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for Coulomb's Law of Friction, namely:  <a href="classdrake_1_1multibody_1_1_coulomb_friction.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> implements the interface in PhysicalModel and provides the functionalities to specify deformable bodies.  <a href="classdrake_1_1multibody_1_1_deformable_model.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_distance_constraint.html">DistanceConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains the distance between a pair of geometries to be within a range [distance_lower, distance_upper].  <a href="classdrake_1_1multibody_1_1_distance_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -449,6 +452,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a9b7dce3eb33772802af322ca25ef4864"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> = <a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">solvers::MinimumValuePenaltyFunction</a></td></tr>
 <tr class="memdesc:a9b7dce3eb33772802af322ca25ef4864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the penalty function φ(x) and its derivatives dφ(x)/dx.  <a href="#a9b7dce3eb33772802af322ca25ef4864">More...</a><br /></td></tr>
 <tr class="separator:a9b7dce3eb33772802af322ca25ef4864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae810ad4b839c5925c285d08b4d269a56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> = <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; class DeformableBodyTag &gt;</td></tr>
+<tr class="memdesc:ae810ad4b839c5925c285d08b4d269a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniquely identifies a deformable body.  <a href="#ae810ad4b839c5925c285d08b4d269a56">More...</a><br /></td></tr>
+<tr class="separator:ae810ad4b839c5925c285d08b4d269a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f28f9f3c7b71cc803442f421b26352"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class DeformableBodyTag &gt;</td></tr>
+<tr class="memdesc:ad6f28f9f3c7b71cc803442f421b26352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internally indexes deformable bodies, only used after Finalize().  <a href="#ad6f28f9f3c7b71cc803442f421b26352">More...</a><br /></td></tr>
+<tr class="separator:ad6f28f9f3c7b71cc803442f421b26352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class FrameTag &gt;</td></tr>
 <tr class="memdesc:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify frames by index in a multibody tree system.  <a href="#a51c69848adb64ae45eebc1e5af5dbaa6">More...</a><br /></td></tr>
 <tr class="separator:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -615,6 +624,39 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type used to identify constraints by index within a multibody system. </p>
+
+</div>
+</div>
+<a id="ae810ad4b839c5925c285d08b4d269a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae810ad4b839c5925c285d08b4d269a56">&#9670;&nbsp;</a></span>DeformableBodyId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> =  <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt;class DeformableBodyTag&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uniquely identifies a deformable body. </p>
+<p>It is valid before and after Finalize(). </p>
+
+</div>
+</div>
+<a id="ad6f28f9f3c7b71cc803442f421b26352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f28f9f3c7b71cc803442f421b26352">&#9670;&nbsp;</a></span>DeformableBodyIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a> =  <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt;class DeformableBodyTag&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Internally indexes deformable bodies, only used after Finalize(). </p>
 
 </div>
 </div>

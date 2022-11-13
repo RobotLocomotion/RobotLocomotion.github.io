@@ -577,8 +577,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -640,6 +640,11 @@ var hierarchy =
     [ "RotationMatrix< double >", "classdrake_1_1math_1_1_rotation_matrix.html", null ],
     [ "Rotation::Rpy", "structdrake_1_1schema_1_1_rotation_1_1_rpy.html", null ],
     [ "scalar_predicate< T >", "structdrake_1_1scalar__predicate.html", null ],
+    [ "ScalarConvertibleComponent< T >", null, [
+      [ "PhysicalModel< T >", null, [
+        [ "DeformableModel< T >", "classdrake_1_1multibody_1_1_deformable_model.html", null ]
+      ] ]
+    ] ],
     [ "ScalarInitialValueProblem< T >", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", null ],
     [ "SceneGraphInspector< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "SceneGraphInspector< AutoDiffXd >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],

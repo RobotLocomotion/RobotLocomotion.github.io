@@ -2,6 +2,7 @@ var searchData=
 [
   ['dampingmodel',['DampingModel',['../classdrake_1_1multibody_1_1fem_1_1_damping_model.html',1,'drake::multibody::fem']]],
   ['deformablebodyconfig',['DeformableBodyConfig',['../classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html',1,'drake::multibody::fem']]],
+  ['deformablemodel',['DeformableModel',['../classdrake_1_1multibody_1_1_deformable_model.html',1,'drake::multibody']]],
   ['delegatinghasher',['DelegatingHasher',['../structdrake_1_1_delegating_hasher.html',1,'drake']]],
   ['demultiplexer',['Demultiplexer',['../classdrake_1_1systems_1_1_demultiplexer.html',1,'drake::systems']]],
   ['denseoutput',['DenseOutput',['../classdrake_1_1systems_1_1_dense_output.html',1,'drake::systems']]],

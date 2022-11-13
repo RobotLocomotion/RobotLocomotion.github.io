@@ -24,6 +24,7 @@ var namespacedrake_1_1multibody =
     [ "ContactWrenchEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_evaluator.html", "classdrake_1_1multibody_1_1_contact_wrench_evaluator" ],
     [ "ContactWrenchFromForceInWorldFrameEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator.html", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator" ],
     [ "CoulombFriction", "classdrake_1_1multibody_1_1_coulomb_friction.html", "classdrake_1_1multibody_1_1_coulomb_friction" ],
+    [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html", "classdrake_1_1multibody_1_1_deformable_model" ],
     [ "DistanceConstraint", "classdrake_1_1multibody_1_1_distance_constraint.html", "classdrake_1_1multibody_1_1_distance_constraint" ],
     [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html", "classdrake_1_1multibody_1_1_door_hinge" ],
     [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", "structdrake_1_1multibody_1_1_door_hinge_config" ],
