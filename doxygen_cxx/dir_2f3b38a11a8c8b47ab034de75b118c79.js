@@ -5,6 +5,7 @@ var dir_2f3b38a11a8c8b47ab034de75b118c79 =
     [ "finite_horizon_linear_quadratic_regulator.h", "finite__horizon__linear__quadratic__regulator_8h.html", "finite__horizon__linear__quadratic__regulator_8h" ],
     [ "inverse_dynamics.h", "inverse__dynamics_8h.html", null ],
     [ "inverse_dynamics_controller.h", "inverse__dynamics__controller_8h.html", null ],
+    [ "joint_stiffness_controller.h", "joint__stiffness__controller_8h.html", null ],
     [ "linear_model_predictive_controller.h", "linear__model__predictive__controller_8h.html", null ],
     [ "linear_quadratic_regulator.h", "linear__quadratic__regulator_8h.html", "linear__quadratic__regulator_8h" ],
     [ "pid_controlled_system.h", "pid__controlled__system_8h.html", [

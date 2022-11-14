@@ -1,0 +1,709 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.fem &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.multibody.inverse_kinematics" href="pydrake.multibody.inverse_kinematics.html" />
+    <link rel="prev" title="pydrake.multibody.benchmarks.all" href="pydrake.multibody.benchmarks.all.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+  
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
+</div>
+
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.fem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.meshcat.html">pydrake.multibody.meshcat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.optimization.html">pydrake.multibody.optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.plant.html">pydrake.multibody.plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.tree.html">pydrake.multibody.tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.fem</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.fem">
+<span id="pydrake-multibody-fem"></span><h1>pydrake.multibody.fem<a class="headerlink" href="#module-pydrake.multibody.fem" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for multibody fem.</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig">
+<code class="descclassname">pydrake.multibody.fem.</code><code class="descname">DeformableBodyConfig</code><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig_[float]" title="pydrake.multibody.fem.DeformableBodyConfig_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_">
+<em class="property">template </em><code class="descclassname">pydrake.multibody.fem.</code><code class="descname">DeformableBodyConfig_</code><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig_[float]" title="pydrake.multibody.fem.DeformableBodyConfig_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_[float]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]" title="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_[AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float]">
+<em class="property">class </em><code class="descname">DeformableBodyConfig_[float]</code><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>DeformableBodyConfig stores the physical parameters for a deformable
+body. A default constructed configuration approximately represents a
+hard rubber material (density, elasticity, and poisson’s ratio)
+without any damping. Damping coefficients are generally difficult to
+measure and we expect users will typically start with zero damping and
+tune the values to achieve reasonable dynamics. The config contains
+the following fields with their corresponding valid ranges: - Young’s
+modulus: Measures the stiffness of the material, has unit N/m². Must
+be positive. Default to 1e8. - Poisson’s ratio: Measures the Poisson
+effect (how much the material expands or contracts in directions
+perpendicular to the direction of loading) of the material, unitless.
+Must be greater than -1 and less than 0.5. Default to 0.49.</p>
+<ul class="simple">
+<li>Mass damping coefficient: Controls the strength of mass damping, has unit</li>
+</ul>
+<p>1/s. Must be non-negative. Default to 0. See DampingModel.
+- Stiffness damping coefficient: Controls the strength of stiffness damping,
+has unit s. Must be non-negative. Default to 0. See DampingModel.
+- Mass density: Has unit kg/m³. Must be positive. Default to 1.5e3.
+- Material model: The constitutive model that describes the stress-strain
+relationship of the body, see MaterialModel. Default to
+MaterialModel::kCorotated.</p>
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].mass_damping_coefficient">
+<code class="descname">mass_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].mass_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mass damping coefficient. See DampingModel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].mass_density">
+<code class="descname">mass_density</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].mass_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mass density, with unit of kg/m³.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].material_model">
+<code class="descname">material_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.fem.MaterialModel<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].material_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the constitutive model of the material.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].poissons_ratio">
+<code class="descname">poissons_ratio</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].poissons_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Poisson’s ratio, unitless.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_mass_damping_coefficient">
+<code class="descname">set_mass_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], mass_damping_coefficient: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_mass_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>mass_damping_coefficient &gt;= 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_mass_density">
+<code class="descname">set_mass_density</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], mass_density: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_mass_density" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>mass_density &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_material_model">
+<code class="descname">set_material_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], material_model: pydrake.multibody.fem.MaterialModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_material_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_poissons_ratio">
+<code class="descname">set_poissons_ratio</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], poissons_ratio: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_poissons_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>-1 &lt; poissons_ratio &lt; 0.5.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_stiffness_damping_coefficient">
+<code class="descname">set_stiffness_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], stiffness_damping_coefficient: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_stiffness_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>stiffness_damping_coefficient &gt;= 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_youngs_modulus">
+<code class="descname">set_youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], youngs_modulus: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].set_youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>youngs_modulus &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].stiffness_damping_coefficient">
+<code class="descname">stiffness_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].stiffness_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the stiffness damping coefficient. See DampingModel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].youngs_modulus">
+<code class="descname">youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_.DeformableBodyConfig_[float].youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Young’s modulus, with unit of N/m².</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.fem.</code><code class="descname">DeformableBodyConfig_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>DeformableBodyConfig stores the physical parameters for a deformable
+body. A default constructed configuration approximately represents a
+hard rubber material (density, elasticity, and poisson’s ratio)
+without any damping. Damping coefficients are generally difficult to
+measure and we expect users will typically start with zero damping and
+tune the values to achieve reasonable dynamics. The config contains
+the following fields with their corresponding valid ranges: - Young’s
+modulus: Measures the stiffness of the material, has unit N/m². Must
+be positive. Default to 1e8. - Poisson’s ratio: Measures the Poisson
+effect (how much the material expands or contracts in directions
+perpendicular to the direction of loading) of the material, unitless.
+Must be greater than -1 and less than 0.5. Default to 0.49.</p>
+<ul class="simple">
+<li>Mass damping coefficient: Controls the strength of mass damping, has unit</li>
+</ul>
+<p>1/s. Must be non-negative. Default to 0. See DampingModel.
+- Stiffness damping coefficient: Controls the strength of stiffness damping,
+has unit s. Must be non-negative. Default to 0. See DampingModel.
+- Mass density: Has unit kg/m³. Must be positive. Default to 1.5e3.
+- Material model: The constitutive model that describes the stress-strain
+relationship of the body, see MaterialModel. Default to
+MaterialModel::kCorotated.</p>
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].mass_damping_coefficient">
+<code class="descname">mass_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].mass_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mass damping coefficient. See DampingModel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].mass_density">
+<code class="descname">mass_density</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].mass_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mass density, with unit of kg/m³.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].material_model">
+<code class="descname">material_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.fem.MaterialModel<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].material_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the constitutive model of the material.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].poissons_ratio">
+<code class="descname">poissons_ratio</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].poissons_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Poisson’s ratio, unitless.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_mass_damping_coefficient">
+<code class="descname">set_mass_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd], mass_damping_coefficient: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_mass_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>mass_damping_coefficient &gt;= 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_mass_density">
+<code class="descname">set_mass_density</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd], mass_density: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_mass_density" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>mass_density &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_material_model">
+<code class="descname">set_material_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd], material_model: pydrake.multibody.fem.MaterialModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_material_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_poissons_ratio">
+<code class="descname">set_poissons_ratio</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd], poissons_ratio: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_poissons_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>-1 &lt; poissons_ratio &lt; 0.5.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_stiffness_damping_coefficient">
+<code class="descname">set_stiffness_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd], stiffness_damping_coefficient: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_stiffness_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>stiffness_damping_coefficient &gt;= 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_youngs_modulus">
+<code class="descname">set_youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd], youngs_modulus: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].set_youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>youngs_modulus &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].stiffness_damping_coefficient">
+<code class="descname">stiffness_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].stiffness_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the stiffness damping coefficient. See DampingModel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].youngs_modulus">
+<code class="descname">youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd].youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Young’s modulus, with unit of N/m².</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.fem.</code><code class="descname">DeformableBodyConfig_[float]</code><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>DeformableBodyConfig stores the physical parameters for a deformable
+body. A default constructed configuration approximately represents a
+hard rubber material (density, elasticity, and poisson’s ratio)
+without any damping. Damping coefficients are generally difficult to
+measure and we expect users will typically start with zero damping and
+tune the values to achieve reasonable dynamics. The config contains
+the following fields with their corresponding valid ranges: - Young’s
+modulus: Measures the stiffness of the material, has unit N/m². Must
+be positive. Default to 1e8. - Poisson’s ratio: Measures the Poisson
+effect (how much the material expands or contracts in directions
+perpendicular to the direction of loading) of the material, unitless.
+Must be greater than -1 and less than 0.5. Default to 0.49.</p>
+<ul class="simple">
+<li>Mass damping coefficient: Controls the strength of mass damping, has unit</li>
+</ul>
+<p>1/s. Must be non-negative. Default to 0. See DampingModel.
+- Stiffness damping coefficient: Controls the strength of stiffness damping,
+has unit s. Must be non-negative. Default to 0. See DampingModel.
+- Mass density: Has unit kg/m³. Must be positive. Default to 1.5e3.
+- Material model: The constitutive model that describes the stress-strain
+relationship of the body, see MaterialModel. Default to
+MaterialModel::kCorotated.</p>
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].mass_damping_coefficient">
+<code class="descname">mass_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].mass_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mass damping coefficient. See DampingModel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].mass_density">
+<code class="descname">mass_density</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].mass_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mass density, with unit of kg/m³.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].material_model">
+<code class="descname">material_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.fem.MaterialModel<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].material_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the constitutive model of the material.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].poissons_ratio">
+<code class="descname">poissons_ratio</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].poissons_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Poisson’s ratio, unitless.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].set_mass_damping_coefficient">
+<code class="descname">set_mass_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], mass_damping_coefficient: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].set_mass_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>mass_damping_coefficient &gt;= 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].set_mass_density">
+<code class="descname">set_mass_density</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], mass_density: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].set_mass_density" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>mass_density &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].set_material_model">
+<code class="descname">set_material_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], material_model: pydrake.multibody.fem.MaterialModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].set_material_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].set_poissons_ratio">
+<code class="descname">set_poissons_ratio</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], poissons_ratio: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].set_poissons_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>-1 &lt; poissons_ratio &lt; 0.5.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].set_stiffness_damping_coefficient">
+<code class="descname">set_stiffness_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], stiffness_damping_coefficient: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].set_stiffness_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>stiffness_damping_coefficient &gt;= 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].set_youngs_modulus">
+<code class="descname">set_youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float], youngs_modulus: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].set_youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Precondition:</dt>
+<dd>youngs_modulus &gt; 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].stiffness_damping_coefficient">
+<code class="descname">stiffness_damping_coefficient</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].stiffness_damping_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the stiffness damping coefficient. See DampingModel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.fem.DeformableBodyConfig_[float].youngs_modulus">
+<code class="descname">youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.DeformableBodyConfig_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_[float].youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Young’s modulus, with unit of N/m².</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.fem.MaterialModel">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.fem.</code><code class="descname">MaterialModel</code><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Types of material models for the deformable body.</p>
+<p>Members:</p>
+<blockquote>
+<div>kCorotated : Corotational model. Recommended for modeling large deformations. More</div></blockquote>
+<p>computationally expensive than the linear elasticity model.</p>
+<blockquote>
+<div>kLinear : Linear elasticity model. Recommended for modeling small deformations.</div></blockquote>
+<p>Less computationally expensive than non-linear models but is
+inaccurate for large deformations.</p>
+<dl class="method">
+<dt id="pydrake.multibody.fem.MaterialModel.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.fem.MaterialModel</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.fem.MaterialModel.kCorotated">
+<code class="descname">kCorotated</code><em class="property"> = &lt;MaterialModel.kCorotated: 0&gt;</em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kCorotated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.fem.MaterialModel.kLinear">
+<code class="descname">kLinear</code><em class="property"> = &lt;MaterialModel.kLinear: 1&gt;</em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kLinear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.fem.MaterialModel.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.fem.MaterialModel.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.inverse_kinematics.html" class="btn btn-neutral float-right" title="pydrake.multibody.inverse_kinematics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.benchmarks.all.html" class="btn btn-neutral float-left" title="pydrake.multibody.benchmarks.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

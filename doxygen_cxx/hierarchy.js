@@ -416,6 +416,7 @@ var hierarchy =
       [ "is_eigen_type< Derived >", "structdrake_1_1is__eigen__type.html", null ]
     ] ],
     [ "ImplicitIntegrator< T >::IterationMatrix", "classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html", null ],
+    [ "JointImpedanceController", "classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html", null ],
     [ "Joint< T >::JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", null ],
     [ "KinematicsVector< Id, KinematicsValue >", "classdrake_1_1geometry_1_1_kinematics_vector.html", null ],
     [ "KinematicTrajectoryOptimization", "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html", null ],
@@ -577,8 +578,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -809,6 +810,7 @@ var hierarchy =
             [ "StationarySystem< T >", "classdrake_1_1systems_1_1analysis__test_1_1_stationary_system.html", null ],
             [ "ConstantValueSource< T >", "classdrake_1_1systems_1_1_constant_value_source.html", null ],
             [ "InverseDynamics< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html", null ],
+            [ "JointStiffnessController< T >", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html", null ],
             [ "LinearModelPredictiveController< T >", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html", null ],
             [ "PidController< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html", null ],
             [ "Demultiplexer< T >", "classdrake_1_1systems_1_1_demultiplexer.html", null ],

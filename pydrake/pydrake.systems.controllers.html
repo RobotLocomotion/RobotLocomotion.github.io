@@ -785,6 +785,81 @@ must be a column vector of the appropriate size.</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.systems.controllers.JointStiffnessController">
+<em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">JointStiffnessController</code><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Implements a joint-space stiffness controller of the form</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>τ_control = −τ_g(q) − τ_app + kp⊙(q_d − q) + kd⊙(v_d − v)
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">Kp</span></code> and <code class="docutils literal notranslate"><span class="pre">Kd</span></code> are the joint stiffness and damping
+coefficients, respectively, <code class="docutils literal notranslate"><span class="pre">τ_g(q)</span></code> is the vector of generalized
+forces due to gravity, and <code class="docutils literal notranslate"><span class="pre">τ_app</span></code> contains applied forces from
+force elements added to the multibody model (this can include damping,
+springs, etc. See MultibodyPlant::CalcForceElementsContribution()).
+<code class="docutils literal notranslate"><span class="pre">q_d</span></code> and <code class="docutils literal notranslate"><span class="pre">v_d</span></code> are the desired (setpoint) values for the
+multibody positions and velocities, respectively. <code class="docutils literal notranslate"><span class="pre">kd</span></code> and <code class="docutils literal notranslate"><span class="pre">kp</span></code>
+are taken as vectors, and ⊙ represents elementwise multiplication.</p>
+<p>The goal of this controller is to produce a closed-loop dynamics that
+resembles a spring-damper dynamics at the joints around the setpoint:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M(q)v̇ + C(q,v)v + kp⊙(q - q_d) + kd⊙(v - v_d) = τ_ext,
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)v̇</span> <span class="pre">+</span> <span class="pre">C(q,v)v</span></code> are the original multibody mass and
+Coriolis terms, and <code class="docutils literal notranslate"><span class="pre">τ_ext</span></code> are any external generalized forces that
+can arise, e.g. from contact forces.</p>
+<p>The controller currently requires that plant.num_positions() ==
+plant.num_velocities() == plant.num_actuated_dofs().</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointStiffnessController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr></table></td></tr></table><p>Note that the joint impedance control as implemented on Kuka’s iiwa
+and Franka’ Panda is best modeled as a stiffness controller (unless
+one were to model the actual elastic joints and rotor-inertia
+shaping). See <a class="reference external" href="https://manipulation.csail.mit.edu/force.html">https://manipulation.csail.mit.edu/force.html</a> for more
+details.</p>
+<dl class="method">
+<dt id="pydrake.systems.controllers.JointStiffnessController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.JointStiffnessController, plant: pydrake.multibody.plant.MultibodyPlant_[float], kp: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the JointStiffnessController system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>Reference to the multibody plant model. The life span of <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+must be at least as long as that of this instance.</dd>
+<dt>Precondition:</dt>
+<dd>The plant must be finalized (i.e., plant.is_finalized() must
+return <code class="docutils literal notranslate"><span class="pre">True</span></code>).</dd>
+<dt>Precondition:</dt>
+<dd>plant.num_positions() == plant.num_velocities() ==
+plant.num_actuated_dofs() == kp.size() == kd.size()</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.JointStiffnessController.get_input_port_desired_state">
+<code class="descname">get_input_port_desired_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.JointStiffnessController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_input_port_desired_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the input port for the desired state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.JointStiffnessController.get_input_port_estimated_state">
+<code class="descname">get_input_port_estimated_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.JointStiffnessController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_input_port_estimated_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the input port for the estimated state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.JointStiffnessController.get_multibody_plant">
+<code class="descname">get_multibody_plant</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.JointStiffnessController</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.MultibodyPlant_[float]<a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_multibody_plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant pointer to the MultibodyPlant used for control.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.JointStiffnessController.get_output_port_generalized_force">
+<code class="descname">get_output_port_generalized_force</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.JointStiffnessController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_output_port_generalized_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port for the generalized forces implementing the
+control.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pydrake.systems.controllers.LinearProgrammingApproximateDynamicProgramming">
 <code class="descclassname">pydrake.systems.controllers.</code><code class="descname">LinearProgrammingApproximateDynamicProgramming</code><span class="sig-paren">(</span><em>arg0: pydrake.systems.analysis.Simulator_[float], arg1: Callable[[pydrake.systems.framework.Context_[float]], float], arg2: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[object[m, 1]]], pydrake.symbolic.Expression], arg3: int, arg4: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], arg5: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], arg6: float, arg7: pydrake.systems.controllers.DynamicProgrammingOptions</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.controllers.LinearProgrammingApproximateDynamicProgramming" title="Permalink to this definition">¶</a></dt>
