@@ -200,6 +200,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb">ReduceInequalities</a> (<a class="el" href="classdouble.html">double</a> tol=1E-9) const</td></tr>
 <tr class="memdesc:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces some (not necessarily all) redundant inequalities in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>.  <a href="#aff86786a71b7a4f6a0d8c8ad8c9f1eeb">More...</a><br /></td></tr>
 <tr class="separator:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e12342fc420701fbffd97025421575a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8e12342fc420701fbffd97025421575a">IsEmpty</a> () const</td></tr>
+<tr class="memdesc:a8e12342fc420701fbffd97025421575a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> defines an empty set.  <a href="#a8e12342fc420701fbffd97025421575a">More...</a><br /></td></tr>
+<tr class="separator:a8e12342fc420701fbffd97025421575a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74afcf0235bb70d4d936c093fbb85a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a74afcf0235bb70d4d936c093fbb85a5d">MaximumVolumeInscribedEllipsoid</a> () const</td></tr>
 <tr class="memdesc:a74afcf0235bb70d4d936c093fbb85a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the inscribed ellipsoid.  <a href="#a74afcf0235bb70d4d936c093fbb85a5d">More...</a><br /></td></tr>
 <tr class="separator:a74afcf0235bb70d4d936c093fbb85a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -704,6 +707,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns true iff the set is bounded, e.g. </p>
 <p>there exists an element-wise finite lower and upper bound for the set. For <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>, while there are some fast checks to confirm a set is unbounded, confirming boundedness requires solving a linear program (based on Stiemke’s theorem of alternatives). </p>
+
+</div>
+</div>
+<a id="a8e12342fc420701fbffd97025421575a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e12342fc420701fbffd97025421575a">&#9670;&nbsp;</a></span>IsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> defines an empty set. </p>
 
 </div>
 </div>

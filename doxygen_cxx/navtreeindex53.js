@@ -1,5 +1,13 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d":[3,0,0,14,0,0],
+"structdrake_1_1solvers_1_1_bound.html":[3,0,0,14,4],
+"structdrake_1_1solvers_1_1_bound.html#abb82b111deb51f3a5917cf8780fee484":[3,0,0,14,4,0],
+"structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,14,4,1],
+"structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,14,7],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,14,7,0],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,14,11],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,14,11,0],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,14,11,1],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,14,11,2],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#ab48163f67547336c2aadfc248321044a":[3,0,0,14,11,4],
@@ -241,13 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,8,2,1,2],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,16,8,2,1,3],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#ad60646285a52dc3f0786f43c6c6c8ba7":[3,0,0,16,8,2,1,4],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#ae776c7f36f23b580fc8353cc6764445a":[3,0,0,16,8,2,1,5],
-"structdrake_1_1systems_1_1sensors_1_1_color.html":[3,0,0,16,8,4],
-"structdrake_1_1systems_1_1sensors_1_1_color.html#a3ff0123200292ec4b7e3e6319d048fa0":[3,0,0,16,8,4,4],
-"structdrake_1_1systems_1_1sensors_1_1_color.html#a70aa3ccb6edfa3c0c478e50922c4a428":[3,0,0,16,8,4,3],
-"structdrake_1_1systems_1_1sensors_1_1_color.html#a7ba8c548fb8d75d2964aecfcaa190cf7":[3,0,0,16,8,4,0],
-"structdrake_1_1systems_1_1sensors_1_1_color.html#ab193f6df4384bd52ec983795719e707c":[3,0,0,16,8,4,1],
-"structdrake_1_1systems_1_1sensors_1_1_color.html#adab634951eeadcd5a7c8840eefbf780f":[3,0,0,16,8,4,2],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits.html":[3,0,0,16,8,9],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html":[3,0,0,16,8,10]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#ae776c7f36f23b580fc8353cc6764445a":[3,0,0,16,8,2,1,5]
 };

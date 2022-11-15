@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a8fcedd77201a6ff4ee603c107277a650":[3,0,0,9,0,2,0,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a9ff0e526c91586fb7a450151370377eb":[3,0,0,9,0,2,0,5],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab01f43989767b1d4836d5ed824e121cd":[3,0,0,9,0,2,0,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab8cc6237eaa898941ec89897b9fd0414":[3,0,0,9,0,2,0,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1perception_1_1_point_cloud.html#afc4df8c734872593efbc6c722b866764":[3,0,0,10,2,28],
 "classdrake_1_1perception_1_1_point_cloud.html#afdd6c6a1f7d8ff561217b55d7e5eb61c":[3,0,0,10,2,48],
 "classdrake_1_1perception_1_1_point_cloud_to_lcm.html":[3,0,0,10,3],
-"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a208857b41352ca62963c80a56884e1c7":[3,0,0,10,3,1],
-"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a5e0a26fc3b06486051c9658841e34353":[3,0,0,10,3,4]
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a208857b41352ca62963c80a56884e1c7":[3,0,0,10,3,1]
 };

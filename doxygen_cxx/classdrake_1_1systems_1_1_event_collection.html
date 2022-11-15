@@ -189,7 +189,7 @@ class drake::systems::EventCollection&lt; EventType &gt;</h3>
 </pre><p> This heterogeneous event collection can be processed by calling the appropriate handler on the appropriate homogeneous subcollection: </p><pre>
   sys.CalcUnrestrictedUpdate(context,
       all_events.get_unrestricted_update_events(), state);
-  sys.CalcDiscreteVariableUpdates(context,
+  sys.CalcDiscreteVariableUpdate(context,
       all_events.get_discrete_update_events(), discrete_state);
   sys.Publish(context, all_events.get_publish_events())
 </pre><p> For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, this is equivalent to (by expanding the dispatch mechanisms in the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> API): </p><pre>

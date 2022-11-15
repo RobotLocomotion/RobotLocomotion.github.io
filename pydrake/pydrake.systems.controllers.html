@@ -312,6 +312,36 @@ port is being used in the control design.</p>
 <code class="descname">periodic_boundary_conditions</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="class">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition">
+<em class="property">class </em><code class="descname">PeriodicBoundaryCondition</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition" title="Permalink to this definition">¶</a></dt>
+<dd><p>For algorithms that rely on approximations of the state-dynamics (as
+in FittedValueIteration), this is a list of state dimensions for which
+the state space maximum value should be “wrapped around” to ensure
+that all values are in the range [low, high). The classic example is
+for angles that are wrapped around at 2π.</p>
+<dl class="method">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition</em>, <em>state_index: int</em>, <em>low: float</em>, <em>high: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.high">
+<code class="descname">high</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.low">
+<code class="descname">low</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index">
+<code class="descname">state_index</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback">
 <code class="descname">visualization_callback</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback" title="Permalink to this definition">¶</a></dt>
@@ -1072,7 +1102,22 @@ that all values are in the range [low, high). The classic example is
 for angles that are wrapped around at 2π.</p>
 <dl class="method">
 <dt id="pydrake.systems.controllers.PeriodicBoundaryCondition.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.PeriodicBoundaryCondition</em>, <em>arg0: int</em>, <em>arg1: float</em>, <em>arg2: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition</em>, <em>state_index: int</em>, <em>low: float</em>, <em>high: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.PeriodicBoundaryCondition.high">
+<code class="descname">high</code><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.PeriodicBoundaryCondition.low">
+<code class="descname">low</code><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.PeriodicBoundaryCondition.state_index">
+<code class="descname">state_index</code><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.state_index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

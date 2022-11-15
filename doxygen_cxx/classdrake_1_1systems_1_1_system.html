@@ -296,8 +296,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a31898e0276f6bbc4edf7111f809afb01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01">Publish</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt;&gt; &amp;events) const</td></tr>
 <tr class="memdesc:a31898e0276f6bbc4edf7111f809afb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all publish event handlers.  <a href="#a31898e0276f6bbc4edf7111f809afb01">More...</a><br /></td></tr>
 <tr class="separator:a31898e0276f6bbc4edf7111f809afb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e69babd4887d33fc65c02fa7d0aafb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a59e69babd4887d33fc65c02fa7d0aafb">ForcedPublish</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a59e69babd4887d33fc65c02fa7d0aafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> that has trigger type kForced.  <a href="#a59e69babd4887d33fc65c02fa7d0aafb">More...</a><br /></td></tr>
+<tr class="separator:a59e69babd4887d33fc65c02fa7d0aafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafa5fa6fa51aaa8f987abb101e341739"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aafa5fa6fa51aaa8f987abb101e341739">Publish</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
-<tr class="memdesc:aafa5fa6fa51aaa8f987abb101e341739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces a publish on the system, given a <code>context</code>.  <a href="#aafa5fa6fa51aaa8f987abb101e341739">More...</a><br /></td></tr>
+<tr class="memdesc:aafa5fa6fa51aaa8f987abb101e341739"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#a59e69babd4887d33fc65c02fa7d0aafb" title="(Advanced) Manually triggers any PublishEvent that has trigger type kForced.">ForcedPublish()</a>  <a href="#aafa5fa6fa51aaa8f987abb101e341739">More...</a><br /></td></tr>
 <tr class="separator:aafa5fa6fa51aaa8f987abb101e341739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Cached evaluations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Given the values in a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>, a Drake System must be able to provide the results of particular computations needed for analysis and simulation of the System.</p>
@@ -342,14 +345,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2bb4c1e3572a8009863b5a342fcb5c49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a2bb4c1e3572a8009863b5a342fcb5c49">CalcImplicitTimeDerivativesResidual</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; &amp;proposed_derivatives, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; residual) const</td></tr>
 <tr class="memdesc:a2bb4c1e3572a8009863b5a342fcb5c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the implicit form of the System equations and returns the residual.  <a href="#a2bb4c1e3572a8009863b5a342fcb5c49">More...</a><br /></td></tr>
 <tr class="separator:a2bb4c1e3572a8009863b5a342fcb5c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8149a87420f63fc0835eece524e597c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6">CalcDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
+<tr class="memdesc:a8149a87420f63fc0835eece524e597c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all discrete variable update event handlers.  <a href="#a8149a87420f63fc0835eece524e597c6">More...</a><br /></td></tr>
+<tr class="separator:a8149a87420f63fc0835eece524e597c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b4b5edfcccb98a87f958bc9b6b626bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a2b4b5edfcccb98a87f958bc9b6b626bd">CalcDiscreteVariableUpdates</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
-<tr class="memdesc:a2b4b5edfcccb98a87f958bc9b6b626bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all discrete variable update event handlers.  <a href="#a2b4b5edfcccb98a87f958bc9b6b626bd">More...</a><br /></td></tr>
+<tr class="memdesc:a2b4b5edfcccb98a87f958bc9b6b626bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> (no final 's')  <a href="#a2b4b5edfcccb98a87f958bc9b6b626bd">More...</a><br /></td></tr>
 <tr class="separator:a2b4b5edfcccb98a87f958bc9b6b626bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3873890578a88001255c795f20f01e3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a3873890578a88001255c795f20f01e3f">ApplyDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a3873890578a88001255c795f20f01e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a2b4b5edfcccb98a87f958bc9b6b626bd" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdates()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>.  <a href="#a3873890578a88001255c795f20f01e3f">More...</a><br /></td></tr>
+<tr class="memdesc:a3873890578a88001255c795f20f01e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>.  <a href="#a3873890578a88001255c795f20f01e3f">More...</a><br /></td></tr>
 <tr class="separator:a3873890578a88001255c795f20f01e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fb4376d5f80e2fbaecae478c2ab10b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ae5fb4376d5f80e2fbaecae478c2ab10b">CalcForcedDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
+<tr class="memdesc:ae5fb4376d5f80e2fbaecae478c2ab10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> that has trigger type kForced.  <a href="#ae5fb4376d5f80e2fbaecae478c2ab10b">More...</a><br /></td></tr>
+<tr class="separator:ae5fb4376d5f80e2fbaecae478c2ab10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a054ef0e9e578c5abc57fd4dc8b12bd84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a054ef0e9e578c5abc57fd4dc8b12bd84">CalcDiscreteVariableUpdates</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
-<tr class="memdesc:a054ef0e9e578c5abc57fd4dc8b12bd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method forces a discrete update on the system given a <code>context</code>, and the updated discrete state is stored in <code>discrete_state</code>.  <a href="#a054ef0e9e578c5abc57fd4dc8b12bd84">More...</a><br /></td></tr>
+<tr class="memdesc:a054ef0e9e578c5abc57fd4dc8b12bd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#ae5fb4376d5f80e2fbaecae478c2ab10b" title="(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger type kForced.">CalcForcedDiscreteVariableUpdate()</a>  <a href="#a054ef0e9e578c5abc57fd4dc8b12bd84">More...</a><br /></td></tr>
 <tr class="separator:a054ef0e9e578c5abc57fd4dc8b12bd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad195518c9c6d2c9421e6e2b222514d89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89">CalcUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
 <tr class="memdesc:ad195518c9c6d2c9421e6e2b222514d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all unrestricted update event handlers.  <a href="#ad195518c9c6d2c9421e6e2b222514d89">More...</a><br /></td></tr>
@@ -357,8 +366,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1bc3701622107a616b3e45f9f0735233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a1bc3701622107a616b3e45f9f0735233">ApplyUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a1bc3701622107a616b3e45f9f0735233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the <code>state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>state</code>.  <a href="#a1bc3701622107a616b3e45f9f0735233">More...</a><br /></td></tr>
 <tr class="separator:a1bc3701622107a616b3e45f9f0735233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e86af4aa006febb699db0433d434da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da">CalcForcedUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
+<tr class="memdesc:a38e86af4aa006febb699db0433d434da"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> that has trigger type kForced.  <a href="#a38e86af4aa006febb699db0433d434da">More...</a><br /></td></tr>
+<tr class="separator:a38e86af4aa006febb699db0433d434da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25f04e429745ae7a16600c4dfda0f931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a25f04e429745ae7a16600c4dfda0f931">CalcUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
-<tr class="memdesc:a25f04e429745ae7a16600c4dfda0f931"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method forces an unrestricted update on the system given a <code>context</code>, and the updated state is stored in <code>state</code>.  <a href="#a25f04e429745ae7a16600c4dfda0f931">More...</a><br /></td></tr>
+<tr class="memdesc:a25f04e429745ae7a16600c4dfda0f931"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a>  <a href="#a25f04e429745ae7a16600c4dfda0f931">More...</a><br /></td></tr>
 <tr class="separator:a25f04e429745ae7a16600c4dfda0f931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a164afe3c1db737b93696b8808bb2c942"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a164afe3c1db737b93696b8808bb2c942">CalcNextUpdateTime</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html">CompositeEventCollection</a>&lt; T &gt; *events) const</td></tr>
 <tr class="memdesc:a164afe3c1db737b93696b8808bb2c942"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called by a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> during its calculation of the size of the next continuous step to attempt.  <a href="#a164afe3c1db737b93696b8808bb2c942">More...</a><br /></td></tr>
@@ -1697,16 +1709,16 @@ Scalar type conversion by template parameter</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a2b4b5edfcccb98a87f958bc9b6b626bd" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdates()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>. </p>
+<p>Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">events</td><td>The <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a> collection that resulted in the given <code>discrete_state</code>. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">discrete_state</td><td>The updated discrete state from a <a class="el" href="classdrake_1_1systems_1_1_system.html#a2b4b5edfcccb98a87f958bc9b6b626bd" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdates()</a> call. This is mutable to permit its contents to be swapped with the corresponding <code>context</code> contents (rather than copied). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">discrete_state</td><td>The updated discrete state from a <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> call. This is mutable to permit its contents to be swapped with the corresponding <code>context</code> contents (rather than copied). </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>The <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> whose discrete state is modified to match <code>discrete_state</code>. Note that swapping contents with <code>discrete_state</code> may cause addresses of individual discrete state group vectors in <code>context</code> to be different on return than they were on entry. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>discrete_state</code> is the result of a previous <a class="el" href="classdrake_1_1systems_1_1_system.html#a2b4b5edfcccb98a87f958bc9b6b626bd" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdates()</a> call that dispatched this <code>events</code> collection. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>discrete_state</code> is the result of a previous <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> call that dispatched this <code>events</code> collection. </dd></dl>
 
 </div>
 </div>
@@ -1794,6 +1806,43 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
+<a id="a8149a87420f63fc0835eece524e597c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8149a87420f63fc0835eece524e597c6">&#9670;&nbsp;</a></span>CalcDiscreteVariableUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcDiscreteVariableUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>events</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>discrete_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method is the public entry point for dispatching all discrete variable update event handlers. </p>
+<p>Using all the discrete update handlers in <code>events</code>, the method calculates the update <code>xd(n+1)</code> to discrete variables <code>xd(n)</code> in <code>context</code> and outputs the results to <code>discrete_state</code>. See documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#a921d9a050e25d0f2c55de265477c26f5" title="This function dispatches all discrete update events to the appropriate handlers.">DispatchDiscreteVariableUpdateHandler()</a> for more details. </p>
+
+</div>
+</div>
 <a id="a2b4b5edfcccb98a87f958bc9b6b626bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b4b5edfcccb98a87f958bc9b6b626bd">&#9670;&nbsp;</a></span>CalcDiscreteVariableUpdates() <span class="overload">[1/2]</span></h2>
 
@@ -1826,8 +1875,9 @@ Scalar type conversion by template parameter</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method is the public entry point for dispatching all discrete variable update event handlers. </p>
-<p>Using all the discrete update handlers in <code>events</code>, the method calculates the update <code>xd(n+1)</code> to discrete variables <code>xd(n)</code> in <code>context</code> and outputs the results to <code>discrete_state</code>. See documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#a921d9a050e25d0f2c55de265477c26f5" title="This function dispatches all discrete update events to the appropriate handlers.">DispatchDiscreteVariableUpdateHandler()</a> for more details. </p>
+<p>(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> (no final 's') </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">Deprecated:</a></b></dt><dd>Use CalcDiscreteVariableUpdate() (no final 's') instead <br />
+ This will be removed from Drake on or after 2023-03-01.</dd></dl>
 
 </div>
 </div>
@@ -1857,8 +1907,77 @@ Scalar type conversion by template parameter</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method forces a discrete update on the system given a <code>context</code>, and the updated discrete state is stored in <code>discrete_state</code>. </p>
-<p>The discrete update event will have a trigger type of kForced, with no attribute or custom callback. </p>
+<p>(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#ae5fb4376d5f80e2fbaecae478c2ab10b" title="(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger type kForced.">CalcForcedDiscreteVariableUpdate()</a> </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000039">Deprecated:</a></b></dt><dd>Use CalcForcedDiscreteVariableUpdate() instead <br />
+ This will be removed from Drake on or after 2023-03-01.</dd></dl>
+
+</div>
+</div>
+<a id="ae5fb4376d5f80e2fbaecae478c2ab10b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fb4376d5f80e2fbaecae478c2ab10b">&#9670;&nbsp;</a></span>CalcForcedDiscreteVariableUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcForcedDiscreteVariableUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>discrete_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> that has trigger type kForced. </p>
+<p>Invokes the discrete event dispatcher on this System with the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> providing the initial values for the discrete variables. The updated values of the discrete variables are written to the <code>discrete_state</code> output argument; no change is made to the Context.</p>
+<p>The default dispatcher will invoke the handlers (if any) associated with each force-triggered event.</p>
+<dl class="section note"><dt>Note</dt><dd>There will always be at least one force-triggered event, though with no associated handler. By default that will do nothing when triggered, but that behavior can be changed by overriding the dispatcher (not recommended).</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a38e86af4aa006febb699db0433d434da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e86af4aa006febb699db0433d434da">&#9670;&nbsp;</a></span>CalcForcedUnrestrictedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcForcedUnrestrictedUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> that has trigger type kForced. </p>
+<p>Invokes the unrestricted event dispatcher on this System with the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> providing the initial values for the state variables. The updated values of the state variables are written to the <code>state</code> output argument; no change is made to the Context.</p>
+<p>The default dispatcher will invoke the handlers (if any) associated with each force-triggered event.</p>
+<dl class="section note"><dt>Note</dt><dd>There will always be at least one force-triggered event, though with no associated handler. By default that will do nothing when triggered, but that behavior can be changed by overriding the dispatcher (not recommended).</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> </dd></dl>
 
 </div>
 </div>
@@ -2130,7 +2249,7 @@ Scalar type conversion by template parameter</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This method is the public entry point for dispatching all unrestricted update event handlers. </p>
-<p>Using all the unrestricted update handers in <code>events</code>, it updates <em>any</em> state variables in the <code>context</code>, and outputs the results to <code>state</code>. It does not allow the dimensionality of the state variables to change. See the documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#affb56df9a1e83ab8cef21c9b122d6346" title="This function dispatches all unrestricted update events to the appropriate handlers.">DispatchUnrestrictedUpdateHandler()</a> for more details.</p>
+<p>Using all the unrestricted update handlers in <code>events</code>, it updates <em>any</em> state variables in the <code>context</code>, and outputs the results to <code>state</code>. It does not allow the dimensionality of the state variables to change. See the documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#affb56df9a1e83ab8cef21c9b122d6346" title="This function dispatches all unrestricted update events to the appropriate handlers.">DispatchUnrestrictedUpdateHandler()</a> for more details.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the dimensionality of the state variables changes in the callback. </td></tr>
@@ -2166,9 +2285,9 @@ Scalar type conversion by template parameter</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method forces an unrestricted update on the system given a <code>context</code>, and the updated state is stored in <code>state</code>. </p>
-<p>The unrestricted update event will have a trigger type of kForced, with no additional data, attribute or custom callback.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate</a>(const Context&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection</a>&lt;UnrestrictedUpdateEvent&lt;T&gt;&gt;*, State&lt;T&gt;* state) for more information. </dd></dl>
+<p>(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a> </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000040">Deprecated:</a></b></dt><dd>Use CalcForcedUnrestrictedUpdate() instead <br />
+ This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>
@@ -2982,7 +3101,7 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 <p>This method is called only from the public non-virtual <a class="el" href="classdrake_1_1systems_1_1_system.html#af2677f8773e90a538483eedd80a81a9f" title="Calculates the time derivatives ẋ꜀ of the continuous state x꜀ into a given output argument.">CalcTimeDerivatives()</a> which will already have error-checked the parameters so you don't have to. In particular, implementations may assume that the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> is valid for this System; that the <code>derivatives</code> pointer is non-null, and that the referenced object has the same constituent structure as was produced by <a class="el" href="classdrake_1_1systems_1_1_system.html#ab543fa724bbe93efd19a42f5e9e65c72" title="Returns a ContinuousState of the same size as the continuous_state allocated in CreateDefaultContext.">AllocateTimeDerivatives()</a>.</p>
 <p>The default implementation does nothing if the <code>derivatives</code> vector is size zero and aborts otherwise. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_spring_mass_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_spring_mass_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a18737529bba0537a9fa06a649378b1a8">PidController&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#a021b8135deba8c945c9deea3cb4ce7a0">VectorSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassDamperSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#a18737529bba0537a9fa06a649378b1a8">TimeVaryingAffineSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassDamperSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#a18737529bba0537a9fa06a649378b1a8">TimeVaryingAffineSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a6871d1ec516e871e07ee4fa7a114a43d">StiffDoubleMassSpringSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a6871d1ec516e871e07ee4fa7a114a43d">StiffDoubleMassSpringSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#a1bc8cb95205200ee126e919ab36c979e">PleidesSystem</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">DiscontinuousSpringMassDamperSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">DiscontinuousSpringMassDamperSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html#a6871d1ec516e871e07ee4fa7a114a43d">RobertsonSystem&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1analysis__test_1_1_stationary_system.html#a101967cc8e1a7b44c367aa9463cbaf43">StationarySystem&lt; T &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_spring_mass_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_spring_mass_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a18737529bba0537a9fa06a649378b1a8">PidController&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#a021b8135deba8c945c9deea3cb4ce7a0">VectorSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#a18737529bba0537a9fa06a649378b1a8">TimeVaryingAffineSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#a18737529bba0537a9fa06a649378b1a8">TimeVaryingAffineSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassDamperSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">SpringMassDamperSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a6871d1ec516e871e07ee4fa7a114a43d">StiffDoubleMassSpringSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a6871d1ec516e871e07ee4fa7a114a43d">StiffDoubleMassSpringSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#a1bc8cb95205200ee126e919ab36c979e">PleidesSystem</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">DiscontinuousSpringMassDamperSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8">DiscontinuousSpringMassDamperSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html#a6871d1ec516e871e07ee4fa7a114a43d">RobertsonSystem&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1analysis__test_1_1_stationary_system.html#a101967cc8e1a7b44c367aa9463cbaf43">StationarySystem&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -3741,6 +3860,31 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59e69babd4887d33fc65c02fa7d0aafb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e69babd4887d33fc65c02fa7d0aafb">&#9670;&nbsp;</a></span>ForcedPublish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ForcedPublish </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> that has trigger type kForced. </p>
+<p>Invokes the publish event dispatcher on this System with the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>.</p>
+<p>The default dispatcher will invoke the handlers (if any) associated with each force-triggered event.</p>
+<dl class="section note"><dt>Note</dt><dd>There will always be at least one force-triggered event, though with no associated handler. By default that will do nothing when triggered, but that behavior can be changed by overriding the dispatcher DoPublish() (not recommended).</dd></dl>
+<p>The <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> can be configured to call this in <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> and at the start of each continuous integration step. See the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> API for more details.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#ae5fb4376d5f80e2fbaecae478c2ab10b" title="(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger type kForced.">CalcForcedDiscreteVariableUpdate()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a> </dd></dl>
 
 </div>
 </div>
@@ -4592,7 +4736,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#acfe09b96124f37f4df06d393d14af352" title="Maps all periodic triggered events for a System, organized by timing.">MapPeriodicEventsByTiming()</a>. </p>
-<p>If you are looking for the <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection</a> of periodic events (analogous to <a class="el" href="classdrake_1_1systems_1_1_system.html#ad8a24b8f910f9d990db8e59bf2bae6d0" title="This method is called by Simulator::Initialize() to gather all update and publish events that are to ...">GetPerStepEvents()</a> and <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>), see GetPeriodicEvents(Context, EventCollection). (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
+<p>If you are looking for the <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection</a> of periodic events (analogous to <a class="el" href="classdrake_1_1systems_1_1_system.html#ad8a24b8f910f9d990db8e59bf2bae6d0" title="This method is called by Simulator::Initialize() to gather all update and publish events that are to ...">GetPerStepEvents()</a> and <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>), see GetPeriodicEvents(Context, EventCollection). (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated:</a></b></dt><dd>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
  This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
@@ -5432,8 +5576,9 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Forces a publish on the system, given a <code>context</code>. </p>
-<p>The publish event will have a trigger type of kForced, with no additional data, attribute or custom callback. The <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> can be configured to call this in <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> and at the start of each continuous integration step (not recommended). See the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> API for more details. </p>
+<p>(Deprecated) See <a class="el" href="classdrake_1_1systems_1_1_system.html#a59e69babd4887d33fc65c02fa7d0aafb" title="(Advanced) Manually triggers any PublishEvent that has trigger type kForced.">ForcedPublish()</a> </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated:</a></b></dt><dd>Use ForcedPublish() instead <br />
+ This will be removed from Drake on or after 2023-03-01.</dd></dl>
 
 </div>
 </div>
@@ -5639,7 +5784,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 <p>Assigns default values to all elements of the state. </p>
 <p>Overrides must not change the number of state variables. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#ac920e22e905b83dbc0abaaa57d2c0251">TimeVaryingAffineSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#ac920e22e905b83dbc0abaaa57d2c0251">TimeVaryingAffineSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#adf649a06493386bc4cad194332aec62f">StiffDoubleMassSpringSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#adf649a06493386bc4cad194332aec62f">StiffDoubleMassSpringSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#ac920e22e905b83dbc0abaaa57d2c0251">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#ac920e22e905b83dbc0abaaa57d2c0251">Diagram&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; AutoDiffXd &gt;</a>, <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a7789ceec4890d514053228892f2048d3">RobotPlanInterpolator</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html#ac920e22e905b83dbc0abaaa57d2c0251">RobertsonSystem&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#ae89331a37e538b4513a857ac02b64366">PleidesSystem</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#ac920e22e905b83dbc0abaaa57d2c0251">TimeVaryingAffineSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#ac920e22e905b83dbc0abaaa57d2c0251">TimeVaryingAffineSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#adf649a06493386bc4cad194332aec62f">StiffDoubleMassSpringSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#adf649a06493386bc4cad194332aec62f">StiffDoubleMassSpringSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#ac920e22e905b83dbc0abaaa57d2c0251">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#ac920e22e905b83dbc0abaaa57d2c0251">Diagram&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251">LeafSystem&lt; AutoDiffXd &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html#ac920e22e905b83dbc0abaaa57d2c0251">RobertsonSystem&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#ae89331a37e538b4513a857ac02b64366">PleidesSystem</a>.</p>
 
 </div>
 </div>

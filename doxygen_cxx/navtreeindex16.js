@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad5f8f5a00b12a48cf5bd4f5a55ba1133":[1,4,2,3,5],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ae4ab2d64e1aa8207be5be089fc9d6a61":[1,4,2,3,11],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,3,8],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html":[1,1,0,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a06b2aa94973b357511d0702cf1901dd0":[3,0,0,9,0,2,0,6],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a0d402be2ee9c3cf08973fc59ad961b4e":[3,0,0,9,0,2,0,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a722b8e19a396259de4990b566f07dc6b":[3,0,0,9,0,2,0,2],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a765c17a1b88356c2d9d9b20659d4292d":[3,0,0,9,0,2,0,1],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a8fcedd77201a6ff4ee603c107277a650":[3,0,0,9,0,2,0,4]
+"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a765c17a1b88356c2d9d9b20659d4292d":[3,0,0,9,0,2,0,1]
 };

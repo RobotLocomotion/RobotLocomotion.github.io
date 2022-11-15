@@ -1,5 +1,13 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#adddc16fb008fab4bdbc6c83e00033c0a":[1,2,4,4,0],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0":[1,2,4,4,10],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html":[1,4,2,6],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a167c6e03556d42ea16011cb93061104e":[1,4,2,6,7],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a395b5067b1fffc57a604f7d5ff6b6df4":[1,4,2,6,2],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4af045674d7737ba9da18fbe2b604743":[1,4,2,6,5],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e0d5526b3c774c0c2d0b743e896078e":[1,4,2,6,6],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[1,4,2,6,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[1,4,2,6,4],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[1,4,2,6,3],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[1,4,2,6,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99":[3,0,0,18,3,50],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afe3341f2b051ca0d1d376d1da25574b9":[3,0,0,18,3,19],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html":[3,0,0,18,4],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a0738d795ce884dad03ad5ff5184d886b":[3,0,0,18,4,9],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,18,4,17],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a220c40e5653537ed8456542adcb14b89":[3,0,0,18,4,11],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057":[3,0,0,18,4,2],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04":[3,0,0,18,4,15],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a5200b41e6c52f4bc8cbc0c0e75cb4d79":[3,0,0,18,4,13],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a5e7be149ba17c2caee73b6823184fd2e":[3,0,0,18,4,10],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a6002daeeb77b73b37291f8b8ef9d36c5":[3,0,0,18,4,8],
-"classdrake_1_1trajectories_1_1_piecewise_pose.html#a74d1cebdafb3c05487e3c59e2502d3fd":[3,0,0,18,4,0]
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a0738d795ce884dad03ad5ff5184d886b":[3,0,0,18,4,9]
 };
