@@ -1058,9 +1058,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>. </p>
+<p>For convex and mesh geometries, the algorithm only supports ".obj" files and only produces meaningful results for "closed" shapes.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the derived type hasn't overloaded this implementation (yet). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the derived type hasn't overloaded this implementation (yet), if a filetype is unsupported, or if a referenced file cannot be opened. </td></tr>
   </table>
   </dd>
 </dl>

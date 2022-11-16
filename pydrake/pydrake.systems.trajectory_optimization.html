@@ -457,6 +457,15 @@ for the optimization.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddAccelerationBounds">
+<code class="descname">AddAccelerationBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddAccelerationBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds generic (nonlinear) constraints to enforce the upper and lower
+bounds to the acceleration trajectory, q̈(t). These constraints will
+be respected at all times. Note that this does NOT directly constrain
+r̈(s).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationConstraint">
 <code class="descname">AddDurationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: Optional[float], ub: Optional[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds upper and lower bounds on the duration of the trajectory.</p>
@@ -466,6 +475,15 @@ for the optimization.</p>
 <dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationCost">
 <code class="descname">AddDurationCost</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em>, <em>weight: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a linear cost on the duration of the trajectory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddJerkBounds">
+<code class="descname">AddJerkBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddJerkBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds generic (nonlinear) constraints to enforce the upper and lower
+bounds to the jerk trajectory, d³qdt³(t). These constraints will be
+respected at all times. Note that this does NOT directly constrain
+d³rds³(s).</p>
 </dd></dl>
 
 <dl class="method">
@@ -529,17 +547,36 @@ as if it is bound with variables corresponding to <code class="docutils literal 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPositionBounds">
 <code class="descname">AddPositionBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPositionBounds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds upper and lower bounds on the positions trajectory, q(t). These
-bounds will be respected at all times, t∈[0,T]. This also implies the
-constraints are satisfied for r(s), for all s∈[0,1].</p>
+<dd><p>Adds bounding box constraints to enforce upper and lower bounds on the
+positions trajectory, q(t). These bounds will be respected at all
+times, t∈[0,T]. This also implies the constraints are satisfied for
+r(s), for all s∈[0,1].</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityBounds">
 <code class="descname">AddVelocityBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityBounds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds upper and lower bounds on the velocity trajectory, q̇(t). These
-bounds will be respected at all times. Note this does NOT directly
-constrain ṙ(s).</p>
+<dd><p>Adds linear constraints to enforce upper and lower bounds on the
+velocity trajectory, q̇(t). These bounds will be respected at all
+times. Note this does NOT directly constrain ṙ(s).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime">
+<code class="descname">AddVelocityConstraintAtNormalizedTime</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization</em>, <em>constraint: pydrake.solvers.Constraint</em>, <em>s: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a (generic) constraint on trajectory velocity <code class="docutils literal notranslate"><span class="pre">q̇(t)</span></code>,
+evaluated at <code class="docutils literal notranslate"><span class="pre">s</span></code>. The constraint will be evaluated as if it is bound
+with variables corresponding to <code class="docutils literal notranslate"><span class="pre">[q(T*s),</span> <span class="pre">q̇(T*s)]</span></code>.</p>
+<p>This is a potentially confusing mix of <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>, but it is
+important in practice. For instance if you want to constrain the true
+(trajectory) velocity at the final time, one would naturally want to
+write AddVelocityConstraint(constraint, s=1).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>constraint.num_vars() == num_positions()</dd>
+<dt>Precondition:</dt>
+<dd>0 &lt;= <code class="docutils literal notranslate"><span class="pre">s</span></code> &lt;= 1.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

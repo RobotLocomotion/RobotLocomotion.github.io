@@ -1,5 +1,8 @@
 var NAVTREEINDEX41 =
 {
+"cost_8h.html":[4,0,0,11,10],
+"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,10,2],
+"cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,10,0],
 "cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,11,10,1],
 "coulomb__friction_8h.html":[4,0,0,8,10,9],
 "coulomb__friction_8h.html#aada1fb90629198ff0ee920969d517335":[4,0,0,8,10,9,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX41 =
 "distance__to__point__callback_8h.html":[4,0,0,4,2,13],
 "distance__to__shape__callback_8h.html":[4,0,0,4,2,14],
 "door__hinge_8h.html":[4,0,0,8,14,9],
-"double__overloads_8h.html":[4,0,0,1,16],
-"double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
-"doxygen_8h.html":[4,0,0,2,0,0],
-"doxygen__cxx_8h.html":[4,0,0,1,17]
+"double__overloads_8h.html":[4,0,0,1,16]
 };

@@ -440,14 +440,17 @@ respectively.</p>
 <dl class="function">
 <dt id="pydrake.geometry.CalcVolume">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">CalcVolume</code><span class="sig-paren">(</span><em>shape: pydrake.geometry.Shape</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.CalcVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates the volume (in meters^3) for the Shape.</p>
+<dd><p>Calculates the volume (in meters^3) for the Shape. For convex and mesh
+geometries, the algorithm only supports “.obj” files and only produces
+meaningful results for “closed” shapes.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the derived type hasn’t overloaded this</li>
-<li>implementation (yet).</li>
+<li>implementation (yet), if a filetype is unsupported, or if a</li>
+<li>referenced file cannot be opened.</li>
 </ul>
 </td>
 </tr>

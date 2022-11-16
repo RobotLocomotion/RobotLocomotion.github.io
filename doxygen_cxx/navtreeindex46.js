@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"indeterminate_8h.html#a91ed74a4ca04549f64c547dfba0724d5":[4,0,0,11,26,4],
+"indeterminate_8h.html#ac0943cc7cf2cc9bf7db6facfe53a8568":[4,0,0,11,26,3],
+"indeterminate_8h.html#ac27bca68509bbb001ab8073089b48031":[4,0,0,11,26,0],
 "indeterminate_8h.html#aca547471b139de0956139286cbfe5f10":[4,0,0,11,26,5],
 "index.html":[],
 "initial__value__problem_8h.html":[4,0,0,12,0,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "meshcat__point__cloud__visualizer_8h.html":[4,0,0,4,29],
 "meshcat__point__cloud__visualizer_8h.html#a13b4d36d0491327603af75e4f6d0c52a":[4,0,0,4,29,2],
 "meshcat__types_8h.html":[4,0,0,4,30],
-"meshcat__types_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,30,0],
-"meshcat__visualizer_8h.html":[4,0,0,4,31],
-"meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,31,2],
-"meshcat__visualizer__params_8h.html":[4,0,0,4,32]
+"meshcat__types_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,30,0]
 };
