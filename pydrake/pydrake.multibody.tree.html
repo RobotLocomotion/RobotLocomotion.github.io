@@ -15695,24 +15695,24 @@ SpatialInertia.</p>
 <dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
 expressed in B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
 without modifying I_BBo_B (B’s rotational inertia about Bo,
 expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -15726,23 +15726,23 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
 <dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
 scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -15758,16 +15758,14 @@ scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 expressed in B. M_Bo_B contains properties related to B’s mass,
 the position vector from Bo to Bcm (B’s center of mass), and
 G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
 </tr>
 </tbody>
 </table>
@@ -15934,24 +15932,24 @@ SpatialInertia.</p>
 <dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
 expressed in B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
 without modifying I_BBo_B (B’s rotational inertia about Bo,
 expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -15965,23 +15963,23 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
 <dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
 scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -15997,16 +15995,14 @@ scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 expressed in B. M_Bo_B contains properties related to B’s mass,
 the position vector from Bo to Bcm (B’s center of mass), and
 G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
 </tr>
 </tbody>
 </table>
@@ -16171,24 +16167,24 @@ SpatialInertia.</p>
 <dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
 expressed in B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
 without modifying I_BBo_B (B’s rotational inertia about Bo,
 expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -16202,23 +16198,23 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
 <dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
 scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -16234,16 +16230,14 @@ scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 expressed in B. M_Bo_B contains properties related to B’s mass,
 the position vector from Bo to Bcm (B’s center of mass), and
 G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
 </tr>
 </tbody>
 </table>
@@ -16408,24 +16402,24 @@ SpatialInertia.</p>
 <dd>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
 expressed in B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
 without modifying I_BBo_B (B’s rotational inertia about Bo,
 expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -16439,23 +16433,23 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt>
 <dd>mass of <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s mass and appropriately
 scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 </div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -16471,16 +16465,14 @@ scales I_BBo_B (B’s rotational inertia about Bo, expressed in B).</p>
 expressed in B. M_Bo_B contains properties related to B’s mass,
 the position vector from Bo to Bcm (B’s center of mass), and
 G_Bo_B (B’s unit inertia about Bo expressed in B).</dd>
+<dt>Precondition:</dt>
+<dd>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody is not owned by a</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">MultibodyPlant.</span></code></li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context is null.</td>
 </tr>
 </tbody>
 </table>
