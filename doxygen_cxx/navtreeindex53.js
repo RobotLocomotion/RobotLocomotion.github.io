@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,14,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,14,0,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[3,0,0,14,0,3],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[3,0,0,14,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ae776c7f36f23b580fc8353cc6764445a":[3,0,0,16,8,2,0,5],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html":[3,0,0,16,8,2,1],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a51856e1681bf73dbbc8809ab4f25b8b8":[3,0,0,16,8,2,1,1],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8896c45f8aa4ff195d6cc7e9271026af":[3,0,0,16,8,2,1,0],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,8,2,1,2]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8896c45f8aa4ff195d6cc7e9271026af":[3,0,0,16,8,2,1,0]
 };

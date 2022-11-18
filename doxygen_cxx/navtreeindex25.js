@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1symbolic_1_1_expression_sin.html":[3,0,0,15,29],
 "classdrake_1_1symbolic_1_1_expression_sin.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,15,29,5],
 "classdrake_1_1symbolic_1_1_expression_sin.html#a4d63adf08b5325e905027f6f2c14b433":[3,0,0,15,29,3],
 "classdrake_1_1symbolic_1_1_expression_sin.html#a642cbb3c770fca6bee0ee193beb2d539":[3,0,0,15,29,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_formula_var.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,15,52,1],
 "classdrake_1_1symbolic_1_1_formula_var.html#aeabbbb6c69ba676155d0965880d6c8dd":[3,0,0,15,52,7],
 "classdrake_1_1symbolic_1_1_formula_var.html#af3366a56a2a8c2942ee6fdd6a2d064b1":[3,0,0,15,52,5],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html":[3,0,0,15,53],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a022d7d3ca1bb3ed718db2900c4814c96":[3,0,0,15,53,32]
+"classdrake_1_1symbolic_1_1_generic_polynomial.html":[3,0,0,15,53]
 };

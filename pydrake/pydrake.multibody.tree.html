@@ -21737,6 +21737,27 @@ direction.</p>
 </dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_.UnitInertia_[float].SolidCapsule">
+<em class="property">static </em><code class="descname">SolidCapsule</code><span class="sig-paren">(</span><em>r: float</em>, <em>L: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[float]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_.UnitInertia_[float].SolidCapsule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a uniform density unit-mass capsule C
+whose axis of revolution is along the z-axis.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt>
+<dd>The radius of the cylinder/half-sphere part of the capsule.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
+<dd>The length of the cylindrical part of the capsule.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError - Radius r is negative. - Length L is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.multibody.tree.UnitInertia_.UnitInertia_[float].SolidCube">
 <em class="property">static </em><code class="descname">SolidCube</code><span class="sig-paren">(</span><em>L: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[float]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_.UnitInertia_[float].SolidCube" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the unit inertia for a unit-mass solid cube (a box with
@@ -21800,6 +21821,15 @@ base.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
 <dd>The length of the cylinder.</dd>
 </dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_.UnitInertia_[float].SolidEllipsoid">
+<em class="property">static </em><code class="descname">SolidEllipsoid</code><span class="sig-paren">(</span><em>a: float</em>, <em>b: float</em>, <em>c: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[float]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_.UnitInertia_[float].SolidEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a unit-mass solid ellipsoid of uniform
+density taken about its center. The lengths of the semi-axes of the
+ellipsoid in the principal x,y,z-axes are <code class="docutils literal notranslate"><span class="pre">a</span></code>, <cite>b</cite>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>
+respectively.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -22116,6 +22146,27 @@ direction.</p>
 </dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCapsule">
+<em class="property">static </em><code class="descname">SolidCapsule</code><span class="sig-paren">(</span><em>r: pydrake.autodiffutils.AutoDiffXd</em>, <em>L: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCapsule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a uniform density unit-mass capsule C
+whose axis of revolution is along the z-axis.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt>
+<dd>The radius of the cylinder/half-sphere part of the capsule.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
+<dd>The length of the cylindrical part of the capsule.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError - Radius r is negative. - Length L is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCube">
 <em class="property">static </em><code class="descname">SolidCube</code><span class="sig-paren">(</span><em>L: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCube" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the unit inertia for a unit-mass solid cube (a box with
@@ -22183,6 +22234,15 @@ base.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
 <dd>The length of the cylinder.</dd>
 </dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidEllipsoid">
+<em class="property">static </em><code class="descname">SolidEllipsoid</code><span class="sig-paren">(</span><em>a: pydrake.autodiffutils.AutoDiffXd</em>, <em>b: pydrake.autodiffutils.AutoDiffXd</em>, <em>c: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a unit-mass solid ellipsoid of uniform
+density taken about its center. The lengths of the semi-axes of the
+ellipsoid in the principal x,y,z-axes are <code class="docutils literal notranslate"><span class="pre">a</span></code>, <cite>b</cite>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>
+respectively.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -22497,6 +22557,27 @@ direction.</p>
 </dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCapsule">
+<em class="property">static </em><code class="descname">SolidCapsule</code><span class="sig-paren">(</span><em>r: pydrake.symbolic.Expression</em>, <em>L: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[Expression].SolidCapsule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a uniform density unit-mass capsule C
+whose axis of revolution is along the z-axis.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt>
+<dd>The radius of the cylinder/half-sphere part of the capsule.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
+<dd>The length of the cylindrical part of the capsule.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError - Radius r is negative. - Length L is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCube">
 <em class="property">static </em><code class="descname">SolidCube</code><span class="sig-paren">(</span><em>L: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[Expression].SolidCube" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the unit inertia for a unit-mass solid cube (a box with
@@ -22560,6 +22641,15 @@ base.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
 <dd>The length of the cylinder.</dd>
 </dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_[Expression].SolidEllipsoid">
+<em class="property">static </em><code class="descname">SolidEllipsoid</code><span class="sig-paren">(</span><em>a: pydrake.symbolic.Expression</em>, <em>b: pydrake.symbolic.Expression</em>, <em>c: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[Expression].SolidEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a unit-mass solid ellipsoid of uniform
+density taken about its center. The lengths of the semi-axes of the
+ellipsoid in the principal x,y,z-axes are <code class="docutils literal notranslate"><span class="pre">a</span></code>, <cite>b</cite>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>
+respectively.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -22874,6 +22964,27 @@ direction.</p>
 </dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_[float].SolidCapsule">
+<em class="property">static </em><code class="descname">SolidCapsule</code><span class="sig-paren">(</span><em>r: float</em>, <em>L: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[float]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[float].SolidCapsule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a uniform density unit-mass capsule C
+whose axis of revolution is along the z-axis.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt>
+<dd>The radius of the cylinder/half-sphere part of the capsule.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
+<dd>The length of the cylindrical part of the capsule.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError - Radius r is negative. - Length L is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.multibody.tree.UnitInertia_[float].SolidCube">
 <em class="property">static </em><code class="descname">SolidCube</code><span class="sig-paren">(</span><em>L: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[float]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[float].SolidCube" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the unit inertia for a unit-mass solid cube (a box with
@@ -22937,6 +23048,15 @@ base.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt>
 <dd>The length of the cylinder.</dd>
 </dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.tree.UnitInertia_[float].SolidEllipsoid">
+<em class="property">static </em><code class="descname">SolidEllipsoid</code><span class="sig-paren">(</span><em>a: float</em>, <em>b: float</em>, <em>c: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.UnitInertia_[float]<a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_[float].SolidEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the unit inertia for a unit-mass solid ellipsoid of uniform
+density taken about its center. The lengths of the semi-axes of the
+ellipsoid in the principal x,y,z-axes are <code class="docutils literal notranslate"><span class="pre">a</span></code>, <cite>b</cite>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>
+respectively.</p>
 </dd></dl>
 
 <dl class="staticmethod">

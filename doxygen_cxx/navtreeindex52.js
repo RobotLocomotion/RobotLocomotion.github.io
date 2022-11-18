@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"structdrake_1_1multibody_1_1_contact_wrench.html":[3,0,0,9,20],
 "structdrake_1_1multibody_1_1_contact_wrench.html#a14e3dc8d6619faa42a65d6ff9d05f61a":[3,0,0,9,20,0],
 "structdrake_1_1multibody_1_1_contact_wrench.html#a30a12e215eabee7e1bdf08f0eb358fe0":[3,0,0,9,20,2],
 "structdrake_1_1multibody_1_1_contact_wrench.html#a8bddb42a04b7847df2ab1e08cde5b0b8":[3,0,0,9,20,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a5a4b1a9b42c67f7c1adcc7630c6f6d2d":[3,0,0,13,6,3,2],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,13,6,3,5],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,13,6,3,3],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,13,6,3,1],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,14,0]
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,13,6,3,1]
 };

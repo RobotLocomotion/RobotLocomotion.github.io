@@ -191,6 +191,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a466a23330391176d84dbb60a03db8a39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a466a23330391176d84dbb60a03db8a39">RegisterDeformableBody</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a> &gt; geometry_instance, const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html">fem::DeformableBodyConfig</a>&lt; T &gt; &amp;config, <a class="el" href="classdouble.html">double</a> resolution_hint)</td></tr>
 <tr class="memdesc:a466a23330391176d84dbb60a03db8a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a deformable body in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> with the given GeometryInstance.  <a href="#a466a23330391176d84dbb60a03db8a39">More...</a><br /></td></tr>
 <tr class="separator:a466a23330391176d84dbb60a03db8a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4f2d02a025433b059374ae0023881c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a8e4f2d02a025433b059374ae0023881c">SetWallBoundaryCondition</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;n_W)</td></tr>
+<tr class="memdesc:a8e4f2d02a025433b059374ae0023881c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wall boundary conditions for the body with the given <code>id</code>.  <a href="#a8e4f2d02a025433b059374ae0023881c">More...</a><br /></td></tr>
+<tr class="separator:a8e4f2d02a025433b059374ae0023881c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4938896f6f6f3967f754e3941aa4b445"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4938896f6f6f3967f754e3941aa4b445">GetDiscreteStateIndex</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a4938896f6f6f3967f754e3941aa4b445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the discrete state index of the deformable body identified by the given <code>id</code>.  <a href="#a4938896f6f6f3967f754e3941aa4b445">More...</a><br /></td></tr>
 <tr class="separator:a4938896f6f6f3967f754e3941aa4b445"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -608,6 +611,58 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if Finalize() has been called on the multibody plant owning this deformable model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e4f2d02a025433b059374ae0023881c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4f2d02a025433b059374ae0023881c">&#9670;&nbsp;</a></span>SetWallBoundaryCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetWallBoundaryCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_WQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>n_W</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets wall boundary conditions for the body with the given <code>id</code>. </p>
+<p>All vertices of the mesh of the deformable body whose reference positions are inside the prescribed open half space are put under zero displacement boundary conditions. The open half space is defined by a plane with outward normal n_W. A vertex V is considered to be subject to the boundary condition if n̂ ⋅ p_QV &lt; 0 where Q is a point on the plane and n̂ is normalized n_W. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The body to be put under boundary condition. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_WQ</td><td>The position of a point Q on the plane in the world frame. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n_W</td><td>Outward normal to the half space expressed in the world frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>n_W.norm() &gt; 1e-10. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Be aware of round-off errors in floating computations when placing a vertex very close to the plane defining the half space. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if Finalize() has been called on the multibody plant owning this deformable model or if no deformable body with the given <code>id</code> has been registered in this model. </td></tr>
   </table>
   </dd>
 </dl>

@@ -14,5 +14,6 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "operator=", "classdrake_1_1multibody_1_1_deformable_model.html#a68fd2d05f3e8b6982ddb2ab108275688", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_deformable_model.html#a6f045b3a39c4d8397fc55b2cb4e48f01", null ],
     [ "RegisterDeformableBody", "classdrake_1_1multibody_1_1_deformable_model.html#a466a23330391176d84dbb60a03db8a39", null ],
+    [ "SetWallBoundaryCondition", "classdrake_1_1multibody_1_1_deformable_model.html#a8e4f2d02a025433b059374ae0023881c", null ],
     [ "vertex_positions_port", "classdrake_1_1multibody_1_1_deformable_model.html#afac56d6fb777c0514c4be690ebd2d743", null ]
 ];
