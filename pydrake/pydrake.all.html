@@ -223,12 +223,19 @@ otherwise, <cite>all</cite> would emit noisy deprecation warnings, or if they ar
 suppressed, subseqeuent imports of those deprecated modules will not trigger
 warnings.</li>
 </ul>
+<p>To see example usages, please see <cite>doc/python_bindings.rst</cite>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Import order matters! If there is a name conflict, the last one imported
-wins.</p>
+wins. See “Preferred Ordering” section below.</p>
 </div>
-<p>To see example usages, please see <cite>doc/python_bindings.rst</cite>.</p>
+<p><strong>Preferred Ordering</strong>: In service of maintaining convenient spellings, we have
+a “preferred ordering” section in this top-level module. Please note that this
+ordering is subject to change without notice. If you desire stability, please
+<strong>do not use</strong> <code class="docutils literal notranslate"><span class="pre">pydrake.all</span></code>. If you have a preferred ordering, please submit
+a PR that will be subject to discussion and review. If you wish to debug
+collisions, please run <code class="docutils literal notranslate"><span class="pre">bazel</span> <span class="pre">run</span> <span class="pre">//bindings/pydrake:print_symbol_collision</span></code>
+from the Drake source tree.</p>
 </div>
 
 
