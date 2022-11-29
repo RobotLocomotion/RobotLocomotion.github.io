@@ -30,6 +30,7 @@ var searchData=
   ['angleaxis',['AngleAxis',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html',1,'drake::schema::Rotation']]],
   ['anglebetweenvectorsconstraint',['AngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html',1,'drake::multibody']]],
   ['anglebetweenvectorscost',['AngleBetweenVectorsCost',['../classdrake_1_1multibody_1_1_angle_between_vectors_cost.html',1,'drake::multibody']]],
+  ['angularvelocitybounds',['AngularVelocityBounds',['../structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html',1,'drake::multibody::SpatialVelocityConstraint']]],
   ['antiderivativefunction',['AntiderivativeFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html',1,'drake::systems']]],
   ['articulatedbodyinertia',['ArticulatedBodyInertia',['../classdrake_1_1multibody_1_1_articulated_body_inertia.html',1,'drake::multibody']]],
   ['augmentedlagrangiannonsmooth',['AugmentedLagrangianNonsmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html',1,'drake::solvers']]],

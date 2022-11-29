@@ -820,6 +820,7 @@ var searchData=
   ['getvelocity',['GetVelocity',['../classdrake_1_1trajectories_1_1_piecewise_pose.html#a5e7be149ba17c2caee73b6823184fd2e',1,'drake::trajectories::PiecewisePose']]],
   ['getvelocitylowerlimits',['GetVelocityLowerLimits',['../classdrake_1_1multibody_1_1_multibody_plant.html#a9f34d1e0732d72d601b3a17c54c8de5e',1,'drake::multibody::MultibodyPlant']]],
   ['getvelocityupperlimits',['GetVelocityUpperLimits',['../classdrake_1_1multibody_1_1_multibody_plant.html#ab7cbd4d7b77f1021660c007125c88ece',1,'drake::multibody::MultibodyPlant']]],
+  ['getvertices',['GetVertices',['../namespacedrake_1_1geometry_1_1optimization.html#a6616542d5536b0f2522beb473f437a06',1,'drake::geometry::optimization']]],
   ['getvisualgeometriesforbody',['GetVisualGeometriesForBody',['../classdrake_1_1multibody_1_1_multibody_plant.html#ad289f0686c9d29d3f5b4ca360947c6f1',1,'drake::multibody::MultibodyPlant']]],
   ['getweights',['GetWeights',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#ac90a385e6af29fc97d05c5e5aa781d85',1,'drake::systems::MultilayerPerceptron::GetWeights(const Context&lt; T &gt; &amp;context, int layer) const'],['../classdrake_1_1systems_1_1_multilayer_perceptron.html#ac683d527cf42ddf2d44f6cf35d64152a',1,'drake::systems::MultilayerPerceptron::GetWeights(const Eigen::Ref&lt; const VectorX&lt; T &gt;&gt; &amp;params, int layer) const']]],
   ['getwitnessfunctions',['GetWitnessFunctions',['../classdrake_1_1systems_1_1_system.html#ab9f777bd94a7d9188a905ac6ecfff577',1,'drake::systems::System']]],

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['magnitude_5flower',['magnitude_lower',['../structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#ad80deba1b41ca9286207d17a40d730ea',1,'drake::multibody::SpatialVelocityConstraint::AngularVelocityBounds']]],
+  ['magnitude_5fupper',['magnitude_upper',['../structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a088a818f46f6f0e30da3349601732784',1,'drake::multibody::SpatialVelocityConstraint::AngularVelocityBounds']]],
   ['max',['max',['../classdrake_1_1schema_1_1_uniform.html#a0b0ede69e8156eb97acc579b88e883de',1,'drake::schema::Uniform::max()'],['../classdrake_1_1schema_1_1_uniform_vector.html#a9331a33bd1ab934693ecdb1c096ee385',1,'drake::schema::UniformVector::max()']]],
   ['max_5ferr',['max_err',['../structdrake_1_1multibody_1_1_calc_grid_points_options.html#a4895028b237386dd36645a9b8f0f30f4',1,'drake::multibody::CalcGridPointsOptions']]],
   ['max_5fiter',['max_iter',['../structdrake_1_1multibody_1_1_calc_grid_points_options.html#a53380b3b14c20bdfcb3bc9970c421231',1,'drake::multibody::CalcGridPointsOptions']]],

@@ -88,6 +88,7 @@ var searchData=
   ['spatial_5fmomentum_2eh',['spatial_momentum.h',['../spatial__momentum_8h.html',1,'']]],
   ['spatial_5fvector_2eh',['spatial_vector.h',['../spatial__vector_8h.html',1,'']]],
   ['spatial_5fvelocity_2eh',['spatial_velocity.h',['../spatial__velocity_8h.html',1,'']]],
+  ['spatial_5fvelocity_5fconstraint_2eh',['spatial_velocity_constraint.h',['../spatial__velocity__constraint_8h.html',1,'']]],
   ['spong_5fcontroller_2eh',['spong_controller.h',['../spong__controller_8h.html',1,'']]],
   ['spring_5fmass_5fdamper_5fsystem_2eh',['spring_mass_damper_system.h',['../spring__mass__damper__system_8h.html',1,'']]],
   ['spring_5fmass_5fsystem_2eh',['spring_mass_system.h',['../spring__mass__system_8h.html',1,'']]],

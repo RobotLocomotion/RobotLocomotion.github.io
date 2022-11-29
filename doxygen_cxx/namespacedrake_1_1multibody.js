@@ -79,6 +79,7 @@ var namespacedrake_1_1multibody =
     [ "SpatialMomentum", "classdrake_1_1multibody_1_1_spatial_momentum.html", "classdrake_1_1multibody_1_1_spatial_momentum" ],
     [ "SpatialVector", "classdrake_1_1multibody_1_1_spatial_vector.html", "classdrake_1_1multibody_1_1_spatial_vector" ],
     [ "SpatialVelocity", "classdrake_1_1multibody_1_1_spatial_velocity.html", "classdrake_1_1multibody_1_1_spatial_velocity" ],
+    [ "SpatialVelocityConstraint", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html", "classdrake_1_1multibody_1_1_spatial_velocity_constraint" ],
     [ "StaticEquilibriumConstraint", "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html", "classdrake_1_1multibody_1_1_static_equilibrium_constraint" ],
     [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html", "classdrake_1_1multibody_1_1_static_equilibrium_problem" ],
     [ "StaticFrictionConeConstraint", "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html", "classdrake_1_1multibody_1_1_static_friction_cone_constraint" ],

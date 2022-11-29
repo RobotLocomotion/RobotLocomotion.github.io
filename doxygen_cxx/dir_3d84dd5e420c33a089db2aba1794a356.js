@@ -14,5 +14,5 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     [ "minkowski_sum.h", "minkowski__sum_8h.html", null ],
     [ "point.h", "point_8h.html", null ],
     [ "test_utilities.h", "test__utilities_8h.html", null ],
-    [ "vpolytope.h", "vpolytope_8h.html", null ]
+    [ "vpolytope.h", "vpolytope_8h.html", "vpolytope_8h" ]
 ];

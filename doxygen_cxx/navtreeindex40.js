@@ -1,5 +1,13 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[3,0,0,18,3,2],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad838f10606e844eac52b6553ba5acfd0":[3,0,0,18,3,37],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,3,12],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae4fce930000d6d534df56d2f94212298":[3,0,0,18,3,40],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae9172b5dec49b4fdc1a94684a25677d2":[3,0,0,18,3,22],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aed61fed2b1bff79c2fb7b083d159a61b":[3,0,0,18,3,20],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af9607087f0b9ae63e285094756e4ac1c":[3,0,0,18,3,39],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af99a17f5dcb1100c81ee61a088a69db0":[3,0,0,18,3,30],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99":[3,0,0,18,3,50],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afe3341f2b051ca0d1d376d1da25574b9":[3,0,0,18,3,19],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html":[3,0,0,18,4],
@@ -179,7 +187,7 @@ var NAVTREEINDEX40 =
 "compass__gait_8h.html":[4,0,0,3,4,0],
 "compass__gait__geometry_8h.html":[4,0,0,3,4,1],
 "compliant__contact__manager_8h.html":[4,0,0,8,10,1],
-"compliant__contact__manager_8h.html#aae47cefb23deac8f4c80e3b2f26281a1":[4,0,0,8,10,1,0],
+"compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577":[4,0,0,8,10,1,0],
 "compute__numerical__gradient_8h.html":[4,0,0,7,4],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400a":[4,0,0,7,4,1],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa39209ccaab9620e08ec04483c22a7eda":[4,0,0,7,4,1,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX40 =
 "continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,5,0],
 "continuous__lyapunov__equation_8h.html":[4,0,0,7,6],
 "continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0],
-"continuous__state_8h.html":[4,0,0,12,3,9],
-"controlled__spring__mass__system_8h.html":[4,0,0,12,0,0,0],
-"convert__time__derivative_8h.html":[4,0,0,7,7],
-"convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,7,0],
-"convex__set_8h.html":[4,0,0,4,1,1],
-"convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,1,0],
-"convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,1,1],
-"copyable__unique__ptr_8h.html":[4,0,0,1,13],
-"corotated__model_8h.html":[4,0,0,8,3,3]
+"continuous__state_8h.html":[4,0,0,12,3,9]
 };

@@ -440,9 +440,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23f1475b0c301d9d78814fce265fd6ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a23f1475b0c301d9d78814fce265fd6ea">num_constraints</a> () const</td></tr>
 <tr class="memdesc:a23f1475b0c301d9d78814fce265fd6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of constraints specified by the user.  <a href="#a23f1475b0c301d9d78814fce265fd6ea">More...</a><br /></td></tr>
 <tr class="separator:a23f1475b0c301d9d78814fce265fd6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af210b695a902e645fabe0420cf819ebe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af210b695a902e645fabe0420cf819ebe">AddCouplerConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint0, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint1, const T &amp;gear_ratio, const T &amp;offset=0.0)</td></tr>
-<tr class="memdesc:af210b695a902e645fabe0420cf819ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a holonomic constraint between two single-dof joints <code>joint0</code> and <code>joint1</code> with positions q₀ and q₁, respectively, such that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed offset.  <a href="#af210b695a902e645fabe0420cf819ebe">More...</a><br /></td></tr>
-<tr class="separator:af210b695a902e645fabe0420cf819ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b7c4d7b4af1c97bb6f7dae906d1088"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a71b7c4d7b4af1c97bb6f7dae906d1088">AddCouplerConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint0, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint1, <a class="el" href="classdouble.html">double</a> gear_ratio, <a class="el" href="classdouble.html">double</a> offset=0.0)</td></tr>
+<tr class="memdesc:a71b7c4d7b4af1c97bb6f7dae906d1088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a holonomic constraint between two single-dof joints <code>joint0</code> and <code>joint1</code> with positions q₀ and q₁, respectively, such that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed offset.  <a href="#a71b7c4d7b4af1c97bb6f7dae906d1088">More...</a><br /></td></tr>
+<tr class="separator:a71b7c4d7b4af1c97bb6f7dae906d1088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5baf71bbc3927afda0ba46f554cc339"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:aa5baf71bbc3927afda0ba46f554cc339"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa5baf71bbc3927afda0ba46f554cc339">AddCouplerConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; U &gt; &amp;joint0, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; U &gt; &amp;joint1, const U &amp;gear_ratio, const U &amp;offset=0.0)</td></tr>
+<tr class="memdesc:aa5baf71bbc3927afda0ba46f554cc339"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aa5baf71bbc3927afda0ba46f554cc339">More...</a><br /></td></tr>
+<tr class="separator:aa5baf71bbc3927afda0ba46f554cc339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometry</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_geometry"></a></p>
 <p>The following geometry methods provide a convenient means for associating geometries with bodies. Ultimately, the geometries are owned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>. These methods do the work of registering the requested geometries with SceneGraph and maintaining a mapping between the body and the registered data. Particularly, SceneGraph knows nothing about the concepts inherent in the MultibodyPlant. These methods account for those differences as documented below.</p>
@@ -1229,8 +1233,8 @@ Contact modeling</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af210b695a902e645fabe0420cf819ebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af210b695a902e645fabe0420cf819ebe">&#9670;&nbsp;</a></span>AddCouplerConstraint()</h2>
+<a id="a71b7c4d7b4af1c97bb6f7dae906d1088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b7c4d7b4af1c97bb6f7dae906d1088">&#9670;&nbsp;</a></span>AddCouplerConstraint() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1250,13 +1254,13 @@ Contact modeling</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>gear_ratio</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>offset</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
@@ -1279,6 +1283,50 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa5baf71bbc3927afda0ba46f554cc339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5baf71bbc3927afda0ba46f554cc339">&#9670;&nbsp;</a></span>AddCouplerConstraint() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a> AddCouplerConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>joint0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>joint1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;&#160;</td>
+          <td class="paramname"><em>gear_ratio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Only gear_ratio and offset of type double are supported. <br />
+ This will be removed from Drake on or after 2023-03-01.</dd></dl>
 
 </div>
 </div>

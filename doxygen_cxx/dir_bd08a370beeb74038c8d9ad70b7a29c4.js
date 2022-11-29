@@ -11,6 +11,9 @@ var dir_bd08a370beeb74038c8d9ad70b7a29c4 =
     [ "manipulator_equation_constraint.h", "manipulator__equation__constraint_8h.html", null ],
     [ "quaternion_integration_constraint.h", "quaternion__integration__constraint_8h.html", null ],
     [ "sliding_friction_complementarity_constraint.h", "sliding__friction__complementarity__constraint_8h.html", "sliding__friction__complementarity__constraint_8h" ],
+    [ "spatial_velocity_constraint.h", "spatial__velocity__constraint_8h.html", [
+      [ "AngularVelocityBounds", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds" ]
+    ] ],
     [ "static_equilibrium_constraint.h", "static__equilibrium__constraint_8h.html", null ],
     [ "static_equilibrium_problem.h", "static__equilibrium__problem_8h.html", null ],
     [ "static_friction_cone_complementarity_constraint.h", "static__friction__cone__complementarity__constraint_8h.html", "static__friction__cone__complementarity__constraint_8h" ],

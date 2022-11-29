@@ -155,6 +155,20 @@ var group__solver__evaluators =
       [ "operator=", "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a4cd5167497057db0453e21b6ccbdd32a", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#adce48ce3c022e95b6e2bb0f6b3575a47", null ]
     ] ],
+    [ "SpatialVelocityConstraint", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html", [
+      [ "AngularVelocityBounds", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html", [
+        [ "magnitude_lower", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#ad80deba1b41ca9286207d17a40d730ea", null ],
+        [ "magnitude_upper", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a088a818f46f6f0e30da3349601732784", null ],
+        [ "reference_direction", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f", null ],
+        [ "theta_bound", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a67f516717a02d33ceb6885dc70206b28", null ]
+      ] ],
+      [ "SpatialVelocityConstraint", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#ac190c0b9a023e5263b7330c61652df93", null ],
+      [ "SpatialVelocityConstraint", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#a25669f7a49e8d0ba3ce3ce06a5cf8543", null ],
+      [ "SpatialVelocityConstraint", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#a5dc0fc20090448751e63483f516fc0f6", null ],
+      [ "~SpatialVelocityConstraint", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#abc3a5832c60c022fe7df7ce732b1dc17", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#a8019c54e42710ad531a145a47007af01", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#a93d63859c36971d73c1925c9191ecca2", null ]
+    ] ],
     [ "StaticEquilibriumConstraint", "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html", [
       [ "StaticEquilibriumConstraint", "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#aa13072338e36fdded332af90b57bd477", null ],
       [ "StaticEquilibriumConstraint", "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a067072a2d1a33d106edc9fd2580731f1", null ],

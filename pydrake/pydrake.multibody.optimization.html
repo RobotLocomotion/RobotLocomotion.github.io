@@ -420,6 +420,156 @@ optimization anyway).</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">SpatialVelocityConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>Constrains the spatial velocity of a frame C, rigidly attached to a
+frame B, measured and expressed in frame A. It should be bound with
+decision variables corresponding to the multibody state x=[q,v] of the
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> passed to the constructor.</p>
+<dl class="method">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.SpatialVelocityConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], v_AC_lower: numpy.ndarray[numpy.float64[3, 1]], v_AC_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BCo: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd], w_AC_bounds: Optional[drake::multibody::SpatialVelocityConstraint::AngularVelocityBounds] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs SpatialVelocityConstraint object.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame in which frame C’s spatial velocity is measured and
+expressed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_lower</span></code>:</dt>
+<dd>The lower bound on the translational velocity of C, expressed in
+frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_upper</span></code>:</dt>
+<dd>The upper bound on the translational velocity of C, expressed in
+frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which frame C is rigidly attached.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BCo</span></code>:</dt>
+<dd>The position of the origin of frame C, rigidly attached to frame
+B, expressed in frame B. We take R_BC to be the identity rotation.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AC_bounds</span></code>:</dt>
+<dd>If provided, then the number of constraints will be 5: 3 for
+translational velocities and then two more for the angular
+velocity magnitude and angle.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">frameA</span></code> and <code class="docutils literal notranslate"><span class="pre">frameB</span></code> must belong to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>v_AC_lower(i) &lt;= v_AC_upper(i) for i = 1, 2, 3.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if invalid w_AC_bounds are provided.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds">
+<em class="property">class </em><code class="descname">AngularVelocityBounds</code><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parametrizes bounds on the magnitude and direction of the angular
+velocity vector.</p>
+<dl class="method">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs SpatialVelocityConstraint object.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame in which frame C’s spatial velocity is measured and
+expressed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_lower</span></code>:</dt>
+<dd>The lower bound on the translational velocity of C, expressed in
+frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_upper</span></code>:</dt>
+<dd>The upper bound on the translational velocity of C, expressed in
+frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which frame C is rigidly attached.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BCo</span></code>:</dt>
+<dd>The position of the origin of frame C, rigidly attached to frame
+B, expressed in frame B. We take R_BC to be the identity rotation.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AC_bounds</span></code>:</dt>
+<dd>If provided, then the number of constraints will be 5: 3 for
+translational velocities and then two more for the angular
+velocity magnitude and angle.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">frameA</span></code> and <code class="docutils literal notranslate"><span class="pre">frameB</span></code> must belong to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>v_AC_lower(i) &lt;= v_AC_upper(i) for i = 1, 2, 3.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if invalid w_AC_bounds are provided.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_lower">
+<code class="descname">magnitude_lower</code><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_lower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower bound on the magnitude of the angular velocity vector. Must be
+non-negative. The actual constraint will be implemented as a
+constraint on the squared magnitude.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_upper">
+<code class="descname">magnitude_upper</code><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_upper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper bound on the magnitude of the angular velocity vector. Must be ≥
+magnitude_lower. The actual constraint will be implemented as a
+constraint on the squared magnitude.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.reference_direction">
+<code class="descname">reference_direction</code><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.reference_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference direction of the angular velocity vector. (Only the
+direction matters, the magnitude does not).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.theta_bound">
+<code class="descname">theta_bound</code><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.theta_bound" title="Permalink to this definition">¶</a></dt>
+<dd><p>The angle difference between w_AC and reference_direction will be
+constrained to θ ∈ [0,π] ≤ θ_bound. Must be nonnegative. The actual
+constraint will be implemented as cos(θ_bound) ≤ cos(θ) ≤ 1. When the
+norm of w_AC is very close to zero, we add a small number to the norm
+to avoid numerical difficulties.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.optimization.StaticEquilibriumProblem">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">StaticEquilibriumProblem</code><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the static equilibrium pose of a multibody system through

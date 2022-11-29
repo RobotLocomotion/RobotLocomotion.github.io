@@ -16,6 +16,7 @@ var hierarchy =
     [ "AddWeld", "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html", null ],
     [ "AllegroHandMotionState", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html", null ],
     [ "Rotation::AngleAxis", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html", null ],
+    [ "SpatialVelocityConstraint::AngularVelocityBounds", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html", null ],
     [ "AntiderivativeFunction< T >", "classdrake_1_1systems_1_1_antiderivative_function.html", null ],
     [ "ArticulatedBodyInertia< T >", "classdrake_1_1multibody_1_1_articulated_body_inertia.html", null ],
     [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", null ],
@@ -193,6 +194,7 @@ var hierarchy =
         [ "PolyhedronConstraint", "classdrake_1_1multibody_1_1_polyhedron_constraint.html", null ],
         [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html", null ],
         [ "QuaternionEulerIntegrationConstraint", "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html", null ],
+        [ "SpatialVelocityConstraint", "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html", null ],
         [ "StaticEquilibriumConstraint", "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html", null ],
         [ "StaticFrictionConeConstraint", "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html", null ],
         [ "UnitQuaternionConstraint", "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html", null ],
@@ -578,8 +580,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]

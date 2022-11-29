@@ -68,6 +68,7 @@ var searchData=
   ['spatialvector_3c_20spatialmomentum_2c_20t_20_3e',['SpatialVector&lt; SpatialMomentum, T &gt;',['../classdrake_1_1multibody_1_1_spatial_vector.html',1,'drake::multibody']]],
   ['spatialvector_3c_20spatialvelocity_2c_20t_20_3e',['SpatialVector&lt; SpatialVelocity, T &gt;',['../classdrake_1_1multibody_1_1_spatial_vector.html',1,'drake::multibody']]],
   ['spatialvelocity',['SpatialVelocity',['../classdrake_1_1multibody_1_1_spatial_velocity.html',1,'drake::multibody']]],
+  ['spatialvelocityconstraint',['SpatialVelocityConstraint',['../classdrake_1_1multibody_1_1_spatial_velocity_constraint.html',1,'drake::multibody']]],
   ['sphere',['Sphere',['../classdrake_1_1geometry_1_1_sphere.html',1,'drake::geometry']]],
   ['springmassdampersystem',['SpringMassDamperSystem',['../classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html',1,'drake::systems::implicit_integrator_test']]],
   ['springmassdampersystem_3c_20double_20_3e',['SpringMassDamperSystem&lt; double &gt;',['../classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html',1,'drake::systems::implicit_integrator_test']]],
