@@ -35,7 +35,9 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     ] ],
     [ "multibody_plant_config_functions.h", "multibody__plant__config__functions_8h.html", "multibody__plant__config__functions_8h" ],
     [ "multibody_plant_discrete_update_manager_attorney.h", "multibody__plant__discrete__update__manager__attorney_8h.html", null ],
-    [ "multibody_plant_model_attorney.h", "multibody__plant__model__attorney_8h.html", null ],
+    [ "multibody_plant_model_attorney.h", "multibody__plant__model__attorney_8h.html", [
+      [ "PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html", "classdrake_1_1multibody_1_1_physical_model" ]
+    ] ],
     [ "physical_model.h", "physical__model_8h.html", "physical__model_8h" ],
     [ "point_pair_contact_info.h", "point__pair__contact__info_8h.html", [
       [ "PointPairContactInfo", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", "classdrake_1_1multibody_1_1_point_pair_contact_info" ]

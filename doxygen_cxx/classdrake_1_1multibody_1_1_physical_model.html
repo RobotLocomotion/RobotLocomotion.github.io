@@ -1,0 +1,941 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: PhysicalModel&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_physical_model.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1_physical_model-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">PhysicalModel&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class drake::multibody::PhysicalModel&lt; T &gt;</h3>
+
+<p>(Internal) <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> provides the functionalities to extend the type of physical model of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
+<p>Developers can derive from this <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> to incorporate additional model elements coupled with the rigid body dynamics. For instance, simulation of deformable objects requires additional state and ports to interact with externals systems such as visualization.</p>
+<p>Similar to the routine of adding multiple model elements in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>, users should add all the model elements they wish to add to a <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> before the owning <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> calls <code>Finalize()</code>. When <code>Finalize()</code> is invoked, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> will allocate the system level context resources for each <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> it owns. After the system resources are allocated, model mutation in the PhysicalModels owned by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> is not allowed.</p>
+<p>This class is for internal use only. Use derived concrete models (e.g. <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a>) instead.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/multibody/plant/physical_model.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2ce68b7c0d6553d11c8ced7a36fd9fba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2ce68b7c0d6553d11c8ced7a36fd9fba">PhysicalModel</a> ()=default</td></tr>
+<tr class="separator:a2ce68b7c0d6553d11c8ced7a36fd9fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a6a3375b5f40468f7eb8254490f85b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ab5a6a3375b5f40468f7eb8254490f85b">~PhysicalModel</a> () override=default</td></tr>
+<tr class="separator:ab5a6a3375b5f40468f7eb8254490f85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea1e5e512bd1acbc4565fccd89a4760"><td class="memTemplParams" colspan="2">template&lt;typename ScalarType &gt; </td></tr>
+<tr class="memitem:a9ea1e5e512bd1acbc4565fccd89a4760"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; ScalarType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a9ea1e5e512bd1acbc4565fccd89a4760">CloneToScalar</a> () const</td></tr>
+<tr class="memdesc:a9ea1e5e512bd1acbc4565fccd89a4760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a clone of the concrete <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> object with the scalar type <code>ScalarType</code>.  <a href="#a9ea1e5e512bd1acbc4565fccd89a4760">More...</a><br /></td></tr>
+<tr class="separator:a9ea1e5e512bd1acbc4565fccd89a4760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af99e858849720a1a5e4de720afd4dc8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#af99e858849720a1a5e4de720afd4dc8c">is_cloneable_to_double</a> () const override</td></tr>
+<tr class="memdesc:af99e858849720a1a5e4de720afd4dc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults to false.  <a href="#af99e858849720a1a5e4de720afd4dc8c">More...</a><br /></td></tr>
+<tr class="separator:af99e858849720a1a5e4de720afd4dc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae35d40fe8d90ce1882cd412a0af29ce5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ae35d40fe8d90ce1882cd412a0af29ce5">is_cloneable_to_autodiff</a> () const override</td></tr>
+<tr class="memdesc:ae35d40fe8d90ce1882cd412a0af29ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults to false.  <a href="#ae35d40fe8d90ce1882cd412a0af29ce5">More...</a><br /></td></tr>
+<tr class="separator:ae35d40fe8d90ce1882cd412a0af29ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9fa2421a4abeb0bd2ffaa935e984c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#adc9fa2421a4abeb0bd2ffaa935e984c8">is_cloneable_to_symbolic</a> () const override</td></tr>
+<tr class="memdesc:adc9fa2421a4abeb0bd2ffaa935e984c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults to false.  <a href="#adc9fa2421a4abeb0bd2ffaa935e984c8">More...</a><br /></td></tr>
+<tr class="separator:adc9fa2421a4abeb0bd2ffaa935e984c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48489c4506f24067b600db16e9225ecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a48489c4506f24067b600db16e9225ecd">DeclareSystemResources</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant)</td></tr>
+<tr class="memdesc:a48489c4506f24067b600db16e9225ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> calls this from within Finalize() to declare additional system resources.  <a href="#a48489c4506f24067b600db16e9225ecd">More...</a><br /></td></tr>
+<tr class="separator:a48489c4506f24067b600db16e9225ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5ebecfc441ca76e53598e424761b9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c">ToPhysicalModelPointerVariant</a> () const</td></tr>
+<tr class="memdesc:a2a5ebecfc441ca76e53598e424761b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns (a const pointer to) the specific model variant of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a>.  <a href="#a2a5ebecfc441ca76e53598e424761b9c">More...</a><br /></td></tr>
+<tr class="separator:a2a5ebecfc441ca76e53598e424761b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a6e7dbc75c04706cda4b36798cfc60297"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a6e7dbc75c04706cda4b36798cfc60297">PhysicalModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;)=delete</td></tr>
+<tr class="separator:a6e7dbc75c04706cda4b36798cfc60297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacadf3b446b21a270ea303c3ae675ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aeacadf3b446b21a270ea303c3ae675ac">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;)=delete</td></tr>
+<tr class="separator:aeacadf3b446b21a270ea303c3ae675ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4316068204e6e84b318f7399374bb3ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4316068204e6e84b318f7399374bb3ca">PhysicalModel</a> (<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a4316068204e6e84b318f7399374bb3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51234009d59ed832d580c9ac84d9c519"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a51234009d59ed832d580c9ac84d9c519">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a51234009d59ed832d580c9ac84d9c519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a37d274f571a48f8e1d9c85f4373763e1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a37d274f571a48f8e1d9c85f4373763e1">DoToPhysicalModelPointerVariant</a> () const =0</td></tr>
+<tr class="separator:a37d274f571a48f8e1d9c85f4373763e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424f55dc5be656154afe8d32d933e255"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a424f55dc5be656154afe8d32d933e255">CloneToDouble</a> () const</td></tr>
+<tr class="separator:a424f55dc5be656154afe8d32d933e255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e18cd19456d32d0edbe64dec4d1ea4f"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2e18cd19456d32d0edbe64dec4d1ea4f">CloneToAutoDiffXd</a> () const</td></tr>
+<tr class="separator:a2e18cd19456d32d0edbe64dec4d1ea4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3249c6b844c240ffedc2a60298bbdca9"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a3249c6b844c240ffedc2a60298bbdca9">CloneToSymbolic</a> () const</td></tr>
+<tr class="separator:a3249c6b844c240ffedc2a60298bbdca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae686572a438102967e4f098acd25d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aeae686572a438102967e4f098acd25d7">DoDeclareSystemResources</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant)=0</td></tr>
+<tr class="separator:aeae686572a438102967e4f098acd25d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a9cf37dfb788cbd20d4d1556694cbf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4a9cf37dfb788cbd20d4d1556694cbf5">ThrowIfSystemResourcesDeclared</a> (const char *source_method) const</td></tr>
+<tr class="separator:a4a9cf37dfb788cbd20d4d1556694cbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46458558dea45d33178eeb97b892243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac46458558dea45d33178eeb97b892243">ThrowIfSystemResourcesNotDeclared</a> (const char *source_method) const</td></tr>
+<tr class="separator:ac46458558dea45d33178eeb97b892243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949dd156450f782b8ef0d1c32a1169ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a949dd156450f782b8ef0d1c32a1169ec">mutable_scene_graph</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant)</td></tr>
+<tr class="separator:a949dd156450f782b8ef0d1c32a1169ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:aef0b9cfa4ac98147ad5a1b67e110db63"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aef0b9cfa4ac98147ad5a1b67e110db63">DeclareDiscreteState</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;model_value)</td></tr>
+<tr class="separator:aef0b9cfa4ac98147ad5a1b67e110db63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc5df9ed156d42d1867b0770f01f2ce"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a3fc5df9ed156d42d1867b0770f01f2ce">DeclareAbstractOutputPort</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, std::string name, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::AllocCallback alloc_function, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcCallback calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
+<tr class="separator:a3fc5df9ed156d42d1867b0770f01f2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0527266b4dc5bd0b9d4e44f9005c647"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac0527266b4dc5bd0b9d4e44f9005c647">DeclareVectorOutputPort</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, std::string name, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcVectorCallback vector_calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
+<tr class="separator:ac0527266b4dc5bd0b9d4e44f9005c647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6e7dbc75c04706cda4b36798cfc60297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7dbc75c04706cda4b36798cfc60297">&#9670;&nbsp;</a></span>PhysicalModel() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4316068204e6e84b318f7399374bb3ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4316068204e6e84b318f7399374bb3ca">&#9670;&nbsp;</a></span>PhysicalModel() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ce68b7c0d6553d11c8ced7a36fd9fba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce68b7c0d6553d11c8ced7a36fd9fba">&#9670;&nbsp;</a></span>PhysicalModel() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5a6a3375b5f40468f7eb8254490f85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a6a3375b5f40468f7eb8254490f85b">&#9670;&nbsp;</a></span>~PhysicalModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2e18cd19456d32d0edbe64dec4d1ea4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e18cd19456d32d0edbe64dec4d1ea4f">&#9670;&nbsp;</a></span>CloneToAutoDiffXd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt; &gt; CloneToAutoDiffXd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a424f55dc5be656154afe8d32d933e255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424f55dc5be656154afe8d32d933e255">&#9670;&nbsp;</a></span>CloneToDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; CloneToDouble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ea1e5e512bd1acbc4565fccd89a4760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea1e5e512bd1acbc4565fccd89a4760">&#9670;&nbsp;</a></span>CloneToScalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt;ScalarType&gt; &gt; CloneToScalar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a clone of the concrete <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> object with the scalar type <code>ScalarType</code>. </p>
+<p>The clone should be a deep copy of the original <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> with the exception of members overwritten in <code><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a48489c4506f24067b600db16e9225ecd" title="MultibodyPlant calls this from within Finalize() to declare additional system resources.">DeclareSystemResources()</a></code>. This method is meant to be called by the scalar-converting copy constructor of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> only. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3249c6b844c240ffedc2a60298bbdca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3249c6b844c240ffedc2a60298bbdca9">&#9670;&nbsp;</a></span>CloneToSymbolic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt; &gt; CloneToSymbolic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fc5df9ed156d42d1867b0770f01f2ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc5df9ed156d42d1867b0770f01f2ce">&#9670;&nbsp;</a></span>DeclareAbstractOutputPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt;T&gt;&amp; DeclareAbstractOutputPort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::AllocCallback&#160;</td>
+          <td class="paramname"><em>alloc_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcCallback&#160;</td>
+          <td class="paramname"><em>calc_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt;&#160;</td>
+          <td class="paramname"><em>prerequisites_of_calc</em> = <code>{&#160;<a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt;&#160;T&#160;&gt;::all_sources_ticket()}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef0b9cfa4ac98147ad5a1b67e110db63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0b9cfa4ac98147ad5a1b67e110db63">&#9670;&nbsp;</a></span>DeclareDiscreteState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a> DeclareDiscreteState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48489c4506f24067b600db16e9225ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48489c4506f24067b600db16e9225ecd">&#9670;&nbsp;</a></span>DeclareSystemResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeclareSystemResources </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> calls this from within Finalize() to declare additional system resources. </p>
+<p>This method is only meant to be called by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. We pass in a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> pointer so that derived PhysicalModels can use specific <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> cache tickets. </p><dl class="section pre"><dt>Precondition</dt><dd>plant != nullptr. </dd></dl>
+
+</div>
+</div>
+<a id="ac0527266b4dc5bd0b9d4e44f9005c647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0527266b4dc5bd0b9d4e44f9005c647">&#9670;&nbsp;</a></span>DeclareVectorOutputPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt;T&gt;&amp; DeclareVectorOutputPort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcVectorCallback&#160;</td>
+          <td class="paramname"><em>vector_calc_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt;&#160;</td>
+          <td class="paramname"><em>prerequisites_of_calc</em> = <code>{&#160;<a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt;&#160;T&#160;&gt;::all_sources_ticket()}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeae686572a438102967e4f098acd25d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae686572a438102967e4f098acd25d7">&#9670;&nbsp;</a></span>DoDeclareSystemResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoDeclareSystemResources </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37d274f571a48f8e1d9c85f4373763e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d274f571a48f8e1d9c85f4373763e1">&#9670;&nbsp;</a></span>DoToPhysicalModelPointerVariant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt;T&gt; DoToPhysicalModelPointerVariant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae35d40fe8d90ce1882cd412a0af29ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae35d40fe8d90ce1882cd412a0af29ce5">&#9670;&nbsp;</a></span>is_cloneable_to_autodiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_cloneable_to_autodiff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defaults to false. </p>
+<p>Derived classes that support making a clone that uses AutoDiffXd as a scalar type must override this to return true. </p>
+
+</div>
+</div>
+<a id="af99e858849720a1a5e4de720afd4dc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99e858849720a1a5e4de720afd4dc8c">&#9670;&nbsp;</a></span>is_cloneable_to_double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_cloneable_to_double </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defaults to false. </p>
+<p>Derived classes that support making a clone that uses double as a scalar type must override this to return true. </p>
+
+</div>
+</div>
+<a id="adc9fa2421a4abeb0bd2ffaa935e984c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc9fa2421a4abeb0bd2ffaa935e984c8">&#9670;&nbsp;</a></span>is_cloneable_to_symbolic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_cloneable_to_symbolic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defaults to false. </p>
+<p>Derived classes that support making a clone that uses <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> as a scalar type must override this to return true. </p>
+
+</div>
+</div>
+<a id="a949dd156450f782b8ef0d1c32a1169ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949dd156450f782b8ef0d1c32a1169ec">&#9670;&nbsp;</a></span>mutable_scene_graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt;T&gt;&amp; mutable_scene_graph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51234009d59ed832d580c9ac84d9c519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51234009d59ed832d580c9ac84d9c519">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeacadf3b446b21a270ea303c3ae675ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacadf3b446b21a270ea303c3ae675ac">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a9cf37dfb788cbd20d4d1556694cbf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a9cf37dfb788cbd20d4d1556694cbf5">&#9670;&nbsp;</a></span>ThrowIfSystemResourcesDeclared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThrowIfSystemResourcesDeclared </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>source_method</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac46458558dea45d33178eeb97b892243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46458558dea45d33178eeb97b892243">&#9670;&nbsp;</a></span>ThrowIfSystemResourcesNotDeclared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThrowIfSystemResourcesNotDeclared </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>source_method</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a5ebecfc441ca76e53598e424761b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5ebecfc441ca76e53598e424761b9c">&#9670;&nbsp;</a></span>ToPhysicalModelPointerVariant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt;T&gt; ToPhysicalModelPointerVariant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns (a const pointer to) the specific model variant of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a>. </p>
+<p>Note that the variant contains a pointer to the concrete model and therefore should not persist longer than the lifespan of this model. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>drake/multibody/plant/<a class="el" href="multibody__plant__model__attorney_8h.html">multibody_plant_model_attorney.h</a></li>
+<li>drake/multibody/plant/<a class="el" href="physical__model_8h.html">physical_model.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

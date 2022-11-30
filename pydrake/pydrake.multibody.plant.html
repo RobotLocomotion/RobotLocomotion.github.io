@@ -1285,6 +1285,211 @@ given surface.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.multibody.plant.DeformableBodyId">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.plant.</code><code class="descname">DeformableBodyId</code><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uniquely identifies a deformable body. It is valid before and after
+Finalize().</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.DeformableBodyId.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.plant.DeformableBodyId.get_new_id">
+<em class="property">static </em><code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.DeformableBodyId<a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableBodyId.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableBodyId</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableBodyId.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableBodyId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.plant.DeformableModel">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.plant.</code><code class="descname">DeformableModel</code><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.plant.PhysicalModel" title="pydrake.multibody.plant.PhysicalModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.plant.PhysicalModel</span></code></a></p>
+<p>DeformableModel implements the interface in PhysicalModel and provides
+the functionalities to specify deformable bodies. Unlike rigid bodies,
+the shape of deformable bodies can change in a simulation. Each
+deformable body is modeled as a volumetric mesh with persisting
+topology, changing vertex positions, and an approximated signed
+distance field. A finite element model is built for each registered
+deformable body that is used to evaluate the dynamics of the body.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em>, <em>arg0: drake::multibody::MultibodyPlant&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a DeformableModel to be owned by the given MultibodyPlant.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>plant != nullptr.</dd>
+<dt>Precondition:</dt>
+<dd>Finalize() has not been called on <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.GetBodyId">
+<code class="descname">GetBodyId</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em>, <em>geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; drake::Identifier&lt;drake::multibody::DeformableBodyTag&gt;<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the DeformableBodyId associated with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not correspond to a</li>
+<li>deformable body registered with this model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.GetDiscreteStateIndex">
+<code class="descname">GetDiscreteStateIndex</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em>, <em>id: drake::Identifier&lt;drake::multibody::DeformableBodyTag&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DiscreteStateIndex<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetDiscreteStateIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the discrete state index of the deformable body identified by
+the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if MultibodyPlant::Finalize() has not been called</li>
+<li>yet. or if no deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code> has been</li>
+<li>registered in this model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.GetGeometryId">
+<code class="descname">GetGeometryId</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em>, <em>id: drake::Identifier&lt;drake::multibody::DeformableBodyTag&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetGeometryId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the GeometryId of the geometry associated with the body with
+the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if no body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code> has been registered.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.GetReferencePositions">
+<code class="descname">GetReferencePositions</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em>, <em>id: drake::Identifier&lt;drake::multibody::DeformableBodyTag&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetReferencePositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reference positions of the vertices of the deformable body
+identified by the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. The reference positions are
+represented as a VectorX with 3N values where N is the number of
+vertices. The x-, y-, and z-positions (measured and expressed in the
+world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the
+VectorX.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if no deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code> has been</li>
+<li>registered in this model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.num_bodies">
+<code class="descname">num_bodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.num_bodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of deformable bodies registered with this
+DeformableModel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.RegisterDeformableBody">
+<code class="descname">RegisterDeformableBody</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em>, <em>geometry_instance: pydrake.geometry.GeometryInstance</em>, <em>config: drake::multibody::fem::DeformableBodyConfig&lt;double&gt;</em>, <em>resolution_hint: float</em><span class="sig-paren">)</span> &#x2192; drake::Identifier&lt;drake::multibody::DeformableBodyTag&gt;<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.RegisterDeformableBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a deformable body in <code class="docutils literal notranslate"><span class="pre">this</span></code> DeformableModel with the given
+GeometryInstance. The body is represented in the world frame and
+simulated with FEM with linear elements and a first order quadrature
+rule that integrates linear functions exactly. See FemModel for
+details. Returns a unique identifier for the added geometry.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>:</dt>
+<dd>The geometry to be registered with the model.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt>
+<dd>The physical properties of deformable body.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code>:</dt>
+<dd>The parameter that guides the level of mesh refinement of the
+deformable geometry. It has length units (in meters) and roughly
+corresponds to a typical edge length in the resulting mesh for a
+primitive shape.</dd>
+<dt>Precondition:</dt>
+<dd>resolution_hint &gt; 0.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if Finalize() has been called on the multibody plant</li>
+<li>owning this deformable model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.DeformableModel.vertex_positions_port">
+<code class="descname">vertex_positions_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.DeformableModel</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.vertex_positions_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port of the vertex positions for all registered
+deformable bodies.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if MultibodyPlant::Finalize() has not been called</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">yet.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.plant.DiscreteContactSolver">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.plant.</code><code class="descname">DiscreteContactSolver</code><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the contact solver used for a discrete MultibodyPlant
@@ -2302,6 +2507,43 @@ instance.</p>
 same name already exists in the model. See
 HasModelInstanceNamed().</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].AddPhysicalModel">
+<code class="descname">AddPhysicalModel</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model: pydrake.multibody.plant.PhysicalModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].AddPhysicalModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>For use only by advanced developers wanting to try out their new
+physical models.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<p>With this method MultibodyPlant takes ownership of <code class="docutils literal notranslate"><span class="pre">model</span></code> and calls
+its DeclareSystemResources() method at Finalize(), giving specific
+physical model implementations a chance to declare the system
+resources it needs. Each type of PhysicalModel can be added at most
+once.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt>
+<dd>After this call the model is owned by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</dd>
+<dt>Precondition:</dt>
+<dd>model != nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called post-finalize. See Finalize().</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant will no longer support scalar conversion
+to or from symbolic::Expression after a call to this method.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -5579,6 +5821,19 @@ instance i.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].physical_models">
+<code class="descname">physical_models</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.plant.PhysicalModel]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].physical_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of pointers to all physical models registered with
+this MultibodyPlant. For use only by advanced developers.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].RegisterAsSourceForSceneGraph">
 <code class="descname">RegisterAsSourceForSceneGraph</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], scene_graph: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].RegisterAsSourceForSceneGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers <code class="docutils literal notranslate"><span class="pre">this</span></code> plant to serve as a source for an instance of
@@ -6719,6 +6974,43 @@ instance.</p>
 same name already exists in the model. See
 HasModelInstanceNamed().</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddPhysicalModel">
+<code class="descname">AddPhysicalModel</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model: drake::multibody::PhysicalModel&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddPhysicalModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>For use only by advanced developers wanting to try out their new
+physical models.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<p>With this method MultibodyPlant takes ownership of <code class="docutils literal notranslate"><span class="pre">model</span></code> and calls
+its DeclareSystemResources() method at Finalize(), giving specific
+physical model implementations a chance to declare the system
+resources it needs. Each type of PhysicalModel can be added at most
+once.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt>
+<dd>After this call the model is owned by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</dd>
+<dt>Precondition:</dt>
+<dd>model != nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called post-finalize. See Finalize().</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant will no longer support scalar conversion
+to or from symbolic::Expression after a call to this method.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -9996,6 +10288,19 @@ instance i.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].physical_models">
+<code class="descname">physical_models</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[drake::multibody::PhysicalModel&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].physical_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of pointers to all physical models registered with
+this MultibodyPlant. For use only by advanced developers.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RegisterAsSourceForSceneGraph">
 <code class="descname">RegisterAsSourceForSceneGraph</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RegisterAsSourceForSceneGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers <code class="docutils literal notranslate"><span class="pre">this</span></code> plant to serve as a source for an instance of
@@ -11134,6 +11439,43 @@ instance.</p>
 same name already exists in the model. See
 HasModelInstanceNamed().</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddPhysicalModel">
+<code class="descname">AddPhysicalModel</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model: drake::multibody::PhysicalModel&lt;drake::symbolic::Expression&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].AddPhysicalModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>For use only by advanced developers wanting to try out their new
+physical models.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<p>With this method MultibodyPlant takes ownership of <code class="docutils literal notranslate"><span class="pre">model</span></code> and calls
+its DeclareSystemResources() method at Finalize(), giving specific
+physical model implementations a chance to declare the system
+resources it needs. Each type of PhysicalModel can be added at most
+once.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt>
+<dd>After this call the model is owned by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</dd>
+<dt>Precondition:</dt>
+<dd>model != nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called post-finalize. See Finalize().</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant will no longer support scalar conversion
+to or from symbolic::Expression after a call to this method.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -14411,6 +14753,19 @@ instance i.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].physical_models">
+<code class="descname">physical_models</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; List[drake::multibody::PhysicalModel&lt;drake::symbolic::Expression&gt;]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].physical_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of pointers to all physical models registered with
+this MultibodyPlant. For use only by advanced developers.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterAsSourceForSceneGraph">
 <code class="descname">RegisterAsSourceForSceneGraph</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], scene_graph: pydrake.geometry.SceneGraph_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterAsSourceForSceneGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers <code class="docutils literal notranslate"><span class="pre">this</span></code> plant to serve as a source for an instance of
@@ -15536,6 +15891,43 @@ instance.</p>
 same name already exists in the model. See
 HasModelInstanceNamed().</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].AddPhysicalModel">
+<code class="descname">AddPhysicalModel</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model: pydrake.multibody.plant.PhysicalModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].AddPhysicalModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>For use only by advanced developers wanting to try out their new
+physical models.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<p>With this method MultibodyPlant takes ownership of <code class="docutils literal notranslate"><span class="pre">model</span></code> and calls
+its DeclareSystemResources() method at Finalize(), giving specific
+physical model implementations a chance to declare the system
+resources it needs. Each type of PhysicalModel can be added at most
+once.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt>
+<dd>After this call the model is owned by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</dd>
+<dt>Precondition:</dt>
+<dd>model != nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called post-finalize. See Finalize().</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant will no longer support scalar conversion
+to or from symbolic::Expression after a call to this method.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -18813,6 +19205,19 @@ instance i.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].physical_models">
+<code class="descname">physical_models</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.plant.PhysicalModel]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].physical_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of pointers to all physical models registered with
+this MultibodyPlant. For use only by advanced developers.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].RegisterAsSourceForSceneGraph">
 <code class="descname">RegisterAsSourceForSceneGraph</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], scene_graph: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].RegisterAsSourceForSceneGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers <code class="docutils literal notranslate"><span class="pre">this</span></code> plant to serve as a source for an instance of
@@ -19433,6 +19838,32 @@ are: - “tamsi” - “sap”</p>
 here we choose a nominal value (a discrete system, with a 1ms periodic
 update) as a reasonably conservative estimate that works in many
 cases.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.plant.PhysicalModel">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.plant.</code><code class="descname">PhysicalModel</code><a class="headerlink" href="#pydrake.multibody.plant.PhysicalModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Internal) PhysicalModel provides the functionalities to extend the
+type of physical model of MultibodyPlant. Developers can derive from
+this PhysicalModel to incorporate additional model elements coupled
+with the rigid body dynamics. For instance, simulation of deformable
+objects requires additional state and ports to interact with externals
+systems such as visualization.</p>
+<p>Similar to the routine of adding multiple model elements in
+MultibodyPlant, users should add all the model elements they wish to
+add to a PhysicalModel before the owning MultibodyPlant calls
+<code class="docutils literal notranslate"><span class="pre">Finalize()</span></code>. When <code class="docutils literal notranslate"><span class="pre">Finalize()</span></code> is invoked, MultibodyPlant will
+allocate the system level context resources for each PhysicalModel it
+owns. After the system resources are allocated, model mutation in the
+PhysicalModels owned by MultibodyPlant is not allowed.</p>
+<p>This class is for internal use only. Use derived concrete models (e.g.
+DeformableModel) instead.</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.PhysicalModel.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.plant.PhysicalModel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 </dd></dl>

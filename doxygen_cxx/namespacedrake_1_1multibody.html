@@ -242,7 +242,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for Coulomb's Law of Friction, namely:  <a href="classdrake_1_1multibody_1_1_coulomb_friction.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> implements the interface in PhysicalModel and provides the functionalities to specify deformable bodies.  <a href="classdrake_1_1multibody_1_1_deformable_model.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> implements the interface in <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> and provides the functionalities to specify deformable bodies.  <a href="classdrake_1_1multibody_1_1_deformable_model.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_distance_constraint.html">DistanceConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains the distance between a pair of geometries to be within a range [distance_lower, distance_upper].  <a href="classdrake_1_1multibody_1_1_distance_constraint.html#details">More...</a><br /></td></tr>
@@ -332,6 +332,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses model description input into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and (optionally) a SceneGraph.  <a href="classdrake_1_1multibody_1_1_parser.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> provides the functionalities to extend the type of physical model of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="classdrake_1_1multibody_1_1_physical_model.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_planar_joint.html">PlanarJoint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This joint models a planar joint allowing two bodies to translate and rotate relative to one another in a plane with three degrees of freedom.  <a href="classdrake_1_1multibody_1_1_planar_joint.html#details">More...</a><br /></td></tr>
@@ -461,6 +464,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ad6f28f9f3c7b71cc803442f421b26352"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class DeformableBodyTag &gt;</td></tr>
 <tr class="memdesc:ad6f28f9f3c7b71cc803442f421b26352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internally indexes deformable bodies, only used after Finalize().  <a href="#ad6f28f9f3c7b71cc803442f421b26352">More...</a><br /></td></tr>
 <tr class="separator:ad6f28f9f3c7b71cc803442f421b26352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a> = std::variant&lt; const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; *, std::monostate &gt;</td></tr>
+<tr class="separator:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class FrameTag &gt;</td></tr>
 <tr class="memdesc:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify frames by index in a multibody tree system.  <a href="#a51c69848adb64ae45eebc1e5af5dbaa6">More...</a><br /></td></tr>
 <tr class="separator:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -763,6 +769,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type used to identify model instances by index within a multibody tree system. </p>
+
+</div>
+</div>
+<a id="adb169d7f3b447c98cbd02015fba0d6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb169d7f3b447c98cbd02015fba0d6f9">&#9670;&nbsp;</a></span>PhysicalModelPointerVariant</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a> =  std::variant&lt;const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt;T&gt;*, std::monostate&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

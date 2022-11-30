@@ -209,6 +209,12 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 <li>ThrowIfOutputIsEmpty()
 : <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a0777eec1660efea46221dbc4108ac66d">DenseOutput&lt; T &gt;</a>
 </li>
+<li>ThrowIfSystemResourcesDeclared()
+: <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4a9cf37dfb788cbd20d4d1556694cbf5">PhysicalModel&lt; T &gt;</a>
+</li>
+<li>ThrowIfSystemResourcesNotDeclared()
+: <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac46458558dea45d33178eeb97b892243">PhysicalModel&lt; T &gt;</a>
+</li>
 <li>ThrowIfTimeIsInvalid()
 : <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a29bc9d8d68b2e354d7b63aa6f6637c9e">DenseOutput&lt; T &gt;</a>
 </li>
@@ -293,7 +299,7 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#aeaa7d3bfd14c5adbae7c1575781b945b">TimeVaryingAffineSystem&lt; T &gt;</a>
 </li>
 <li>TimeVaryingLinearSystem()
-: <a class="el" href="classdrake_1_1systems_1_1_time_varying_linear_system.html#ae71a02e204947f866d7a37f931db855a">TimeVaryingLinearSystem&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_time_varying_linear_system.html#a0700d256125405a936cdb7e9948e4e7f">TimeVaryingLinearSystem&lt; T &gt;</a>
 </li>
 <li>to_pyobject()
 : <a class="el" href="classdrake_1_1pydrake_1_1_object.html#ae70939546b3b8732417876a4a1c6a534">Object</a>
@@ -333,6 +339,9 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 </li>
 <li>ToMatrix3ViaRotationMatrix()
 : <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#ac2e90f950cf82b43f98374677889547a">RollPitchYaw&lt; T &gt;</a>
+</li>
+<li>ToPhysicalModelPointerVariant()
+: <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c">PhysicalModel&lt; T &gt;</a>
 </li>
 <li>ToPolynomial()
 : <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a03a72be3355e6291a8ace9016df45bbd">ChebyshevPolynomial</a>
@@ -405,13 +414,13 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_dependency_graph.html#aad6131b11c2a73592ad9f9cb19918e6d">DependencyGraph</a>
 </li>
 <li>Trajectory()
-: <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249">Trajectory&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b">Trajectory&lt; T &gt;</a>
 </li>
 <li>TrajectoryAffineSystem()
-: <a class="el" href="classdrake_1_1systems_1_1_trajectory_affine_system.html#a390e76eeefc1417c5bdeccddeebbcc00">TrajectoryAffineSystem&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_trajectory_affine_system.html#ada7073062c5b60ebaea25d97ac20305b">TrajectoryAffineSystem&lt; T &gt;</a>
 </li>
 <li>TrajectoryLinearSystem()
-: <a class="el" href="classdrake_1_1systems_1_1_trajectory_linear_system.html#a8f1a2051c444973c346eab2655143b32">TrajectoryLinearSystem&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_trajectory_linear_system.html#a3ddfe4411a4acd3b65bae5cbce4a1be8">TrajectoryLinearSystem&lt; T &gt;</a>
 </li>
 <li>TrajectorySource()
 : <a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html#a6952a6c969661b00d9438c3533e1ca09">TrajectorySource&lt; T &gt;</a>
@@ -423,7 +432,7 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 : <a class="el" href="classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a169a325cc6868687039f73d62a6bba63">SpatialKinematicsPVA&lt; T &gt;</a>
 </li>
 <li>Transform()
-: <a class="el" href="classdrake_1_1schema_1_1_transform.html#adb5885c69082fc10bacf2919c7f6a8be">Transform</a>
+: <a class="el" href="classdrake_1_1schema_1_1_transform.html#ae4b25dc5adde3aa9969caffd3525b661">Transform</a>
 </li>
 <li>TransformDampingToDissipationAboutDeformation()
 : <a class="el" href="classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#afd52d017d96a78a7e0c4584ac764a188">Rod2D&lt; T &gt;</a>
@@ -443,7 +452,7 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 : <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#af6693bdd8cd7c223b8ac7b6015dd2ab4">PrismaticJoint&lt; T &gt;</a>
 </li>
 <li>translational()
-: <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9d56e1315fbb0f8a59a83c948fcded20">SpatialVector&lt; SV, T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a520e7186918c44e7d3f5971ee87ceee6">SpatialVector&lt; SV, T &gt;</a>
 </li>
 <li>translational_acceleration()
 : <a class="el" href="classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a48c6257e6d4c4d2955b5788872dc9c1c">SpatialKinematicsPVA&lt; T &gt;</a>
@@ -467,13 +476,13 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 : <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4">ContactSurface&lt; T &gt;</a>
 </li>
 <li>TriangleQuadratureRule()
-: <a class="el" href="classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a97c4388a09a5a153905340812d256d2a">TriangleQuadratureRule</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a8a3a4c92ec269f8a9bb5100cf1e9820b">TriangleQuadratureRule</a>
 </li>
 <li>triangles()
 : <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a013fda545d50a041a8494d61e1a0323c">TriangleSurfaceMesh&lt; T &gt;</a>
 </li>
 <li>TriangleSurfaceMesh()
-: <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ad09929d4b2d9f92c554b9688be2f6b7b">TriangleSurfaceMesh&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ad7c9094c5a3e33edbdc61e5d72af8fcf">TriangleSurfaceMesh&lt; T &gt;</a>
 </li>
 <li>TriaxiallySymmetric()
 : <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a96949d335bfe501c62587705d47ce6ad">RotationalInertia&lt; T &gt;</a>
@@ -504,7 +513,7 @@ $(document).ready(function(){initNavTree('functions_func_t.html','');});
 , <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">WeldJoint&lt; T &gt;</a>
 </li>
 <li>TypeSafeIndex()
-: <a class="el" href="classdrake_1_1_type_safe_index.html#a77070525c55f8391d7a487cf40611ad1">TypeSafeIndex&lt; Tag &gt;</a>
+: <a class="el" href="classdrake_1_1_type_safe_index.html#ab8fe25221514a74ab8eacfd4901b095d">TypeSafeIndex&lt; Tag &gt;</a>
 </li>
 <li>TypeToId()
 : <a class="el" href="classdrake_1_1solvers_1_1_solver_type_converter.html#afeb1b9ee30b99a9874507c4168fb3729">SolverTypeConverter</a>

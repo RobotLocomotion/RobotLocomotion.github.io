@@ -161,6 +161,7 @@ $(document).ready(function(){initNavTree('physical__model_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">physical_model.h File Reference</div>  </div>
@@ -193,7 +194,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MultibodyPlant is a Drake system framework representation (see <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">systems::System</a>) for the model of a physical system consisting of a collection of interconnected bodies.  <a href="classdrake_1_1multibody_1_1_multibody_plant.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> implements the interface in PhysicalModel and provides the functionalities to specify deformable bodies.  <a href="classdrake_1_1multibody_1_1_deformable_model.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> implements the interface in <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> and provides the functionalities to specify deformable bodies.  <a href="classdrake_1_1multibody_1_1_deformable_model.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> provides the functionalities to extend the type of physical model of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="classdrake_1_1multibody_1_1_physical_model.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -203,14 +207,20 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a> = std::variant&lt; const DeformableModel&lt; T &gt; *, std::monostate &gt;</td></tr>
+<tr class="separator:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a252eacc71d278a438cfa99c3befcda79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="physical__model_8h.html#a252eacc71d278a438cfa99c3befcda79">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</a> (class ::drake::multibody::internal::PhysicalModel)</td></tr>
-<tr class="separator:a252eacc71d278a438cfa99c3befcda79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e7ddad0af94f5e5c14b6c648491a2ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="physical__model_8h.html#a5e7ddad0af94f5e5c14b6c648491a2ba">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</a> (class ::<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">drake::multibody::PhysicalModel</a>)</td></tr>
+<tr class="separator:a5e7ddad0af94f5e5c14b6c648491a2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a252eacc71d278a438cfa99c3befcda79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a252eacc71d278a438cfa99c3befcda79">&#9670;&nbsp;</a></span>DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS()</h2>
+<a id="a5e7ddad0af94f5e5c14b6c648491a2ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e7ddad0af94f5e5c14b6c648491a2ba">&#9670;&nbsp;</a></span>DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +228,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS </td>
           <td>(</td>
-          <td class="paramtype">class ::drake::multibody::internal::PhysicalModel&#160;</td>
+          <td class="paramtype">class ::<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">drake::multibody::PhysicalModel</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

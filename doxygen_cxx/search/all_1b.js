@@ -136,6 +136,7 @@ var searchData=
   ['_7ependulumgeometry',['~PendulumGeometry',['../classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html#ac0da79a61df2f45ca2cc7c0aed5978ec',1,'drake::examples::pendulum::PendulumGeometry']]],
   ['_7ependulumplant',['~PendulumPlant',['../classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#af0d40b13b2ae42e721ca8859357038c7',1,'drake::examples::pendulum::PendulumPlant']]],
   ['_7eperspectivequadraticcost',['~PerspectiveQuadraticCost',['../classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a0aa38833bde962effcfb1899c772d40b',1,'drake::solvers::PerspectiveQuadraticCost']]],
+  ['_7ephysicalmodel',['~PhysicalModel',['../classdrake_1_1multibody_1_1_physical_model.html#ab5a6a3375b5f40468f7eb8254490f85b',1,'drake::multibody::PhysicalModel']]],
   ['_7epidcontrolledspringmasssystem',['~PidControlledSpringMassSystem',['../classdrake_1_1systems_1_1_pid_controlled_spring_mass_system.html#af281b7a5e5920d625947cc5896cb87fa',1,'drake::systems::PidControlledSpringMassSystem']]],
   ['_7epidcontrolledsystem',['~PidControlledSystem',['../classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a510ef5819faf7dbd367d7bd569a9a9c8',1,'drake::systems::controllers::PidControlledSystem']]],
   ['_7epiecewisepolynomial',['~PiecewisePolynomial',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5dc4d107b331f4e33f2893826c44be27',1,'drake::trajectories::PiecewisePolynomial']]],

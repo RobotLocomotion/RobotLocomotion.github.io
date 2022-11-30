@@ -10845,6 +10845,22 @@ geometric queries.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].get_source_configuration_port">
+<code class="descname">get_source_configuration_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float], arg0: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].get_source_configuration_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a valid source <code class="docutils literal notranslate"><span class="pre">id</span></code>, returns a <em>configuration</em> input port
+associated with that <code class="docutils literal notranslate"><span class="pre">id</span></code>. This port is used to communicate
+configuration data for registered deformable geometries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the source_id is <em>not</em> recognized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].get_source_pose_port">
 <code class="descname">get_source_pose_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float], arg0: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].get_source_pose_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a valid source <code class="docutils literal notranslate"><span class="pre">id</span></code>, returns a <em>pose</em> input port associated
@@ -11556,6 +11572,22 @@ model*.</p>
 <code class="descname">get_query_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].get_query_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the QueryObject for performing
 geometric queries.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].get_source_configuration_port">
+<code class="descname">get_source_configuration_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[AutoDiffXd], arg0: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].get_source_configuration_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a valid source <code class="docutils literal notranslate"><span class="pre">id</span></code>, returns a <em>configuration</em> input port
+associated with that <code class="docutils literal notranslate"><span class="pre">id</span></code>. This port is used to communicate
+configuration data for registered deformable geometries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the source_id is <em>not</em> recognized.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -12271,6 +12303,22 @@ geometric queries.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[Expression].get_source_configuration_port">
+<code class="descname">get_source_configuration_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[Expression], arg0: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[Expression].get_source_configuration_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a valid source <code class="docutils literal notranslate"><span class="pre">id</span></code>, returns a <em>configuration</em> input port
+associated with that <code class="docutils literal notranslate"><span class="pre">id</span></code>. This port is used to communicate
+configuration data for registered deformable geometries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the source_id is <em>not</em> recognized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_[Expression].get_source_pose_port">
 <code class="descname">get_source_pose_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[Expression], arg0: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[Expression].get_source_pose_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a valid source <code class="docutils literal notranslate"><span class="pre">id</span></code>, returns a <em>pose</em> input port associated
@@ -12980,6 +13028,22 @@ model*.</p>
 <code class="descname">get_query_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].get_query_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the QueryObject for performing
 geometric queries.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[float].get_source_configuration_port">
+<code class="descname">get_source_configuration_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float], arg0: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].get_source_configuration_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a valid source <code class="docutils literal notranslate"><span class="pre">id</span></code>, returns a <em>configuration</em> input port
+associated with that <code class="docutils literal notranslate"><span class="pre">id</span></code>. This port is used to communicate
+configuration data for registered deformable geometries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the source_id is <em>not</em> recognized.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

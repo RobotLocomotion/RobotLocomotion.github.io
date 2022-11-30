@@ -644,9 +644,15 @@ var hierarchy =
     [ "Rotation::Rpy", "structdrake_1_1schema_1_1_rotation_1_1_rpy.html", null ],
     [ "scalar_predicate< T >", "structdrake_1_1scalar__predicate.html", null ],
     [ "ScalarConvertibleComponent< T >", null, [
-      [ "PhysicalModel< T >", null, [
+      [ "PhysicalModel< T >", "classdrake_1_1multibody_1_1_physical_model.html", [
         [ "DeformableModel< T >", "classdrake_1_1multibody_1_1_deformable_model.html", null ]
       ] ]
+    ] ],
+    [ "ScalarConvertibleComponent< AutoDiffXd >", null, [
+      [ "PhysicalModel< AutoDiffXd >", "classdrake_1_1multibody_1_1_physical_model.html", null ]
+    ] ],
+    [ "ScalarConvertibleComponent< double >", null, [
+      [ "PhysicalModel< double >", "classdrake_1_1multibody_1_1_physical_model.html", null ]
     ] ],
     [ "ScalarInitialValueProblem< T >", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", null ],
     [ "SceneGraphInspector< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
