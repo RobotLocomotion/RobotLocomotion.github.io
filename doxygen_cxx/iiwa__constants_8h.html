@@ -160,13 +160,17 @@ $(document).ready(function(){initNavTree('iiwa__constants_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">iiwa_constants.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for iiwa_constants.h:</div>
 <div class="dyncontent">
@@ -189,11 +193,29 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake_1_1manipulation_1_1kuka__iiwa"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html">drake::manipulation::kuka_iiwa</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a9928d513b6bc1764162c83859fe70ad5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5">IiwaControlMode</a> { <a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5aa3cad6375c1e6bdd5243a20d8cabc101">kPositionOnly</a>, 
+<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a3abd96d221135991e355a9a62726638c">kTorqueOnly</a>, 
+<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d">kPositionAndTorque</a>
+ }</td></tr>
+<tr class="memdesc:a9928d513b6bc1764162c83859fe70ad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for control modes.  <a href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5">More...</a><br /></td></tr>
+<tr class="separator:a9928d513b6bc1764162c83859fe70ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa604a09fa622f05945317405b3bb6b79"><td class="memItemLeft" align="right" valign="top">VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#aa604a09fa622f05945317405b3bb6b79">get_iiwa_max_joint_velocities</a> ()</td></tr>
-<tr class="memdesc:aa604a09fa622f05945317405b3bb6b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum joint velocities provided by Kuka.  <a href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#aa604a09fa622f05945317405b3bb6b79">More...</a><br /></td></tr>
+<tr class="memdesc:aa604a09fa622f05945317405b3bb6b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum joint velocities (rad/s) provided by Kuka.  <a href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#aa604a09fa622f05945317405b3bb6b79">More...</a><br /></td></tr>
 <tr class="separator:aa604a09fa622f05945317405b3bb6b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a3f93ca025dcc7d20ac0638a1be452"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a79a3f93ca025dcc7d20ac0638a1be452">position_enabled</a> (IiwaControlMode control_mode)</td></tr>
+<tr class="memdesc:a79a3f93ca025dcc7d20ac0638a1be452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the given control <code>mode</code> includes positions.  <a href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a79a3f93ca025dcc7d20ac0638a1be452">More...</a><br /></td></tr>
+<tr class="separator:a79a3f93ca025dcc7d20ac0638a1be452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5758b8a5ccb2514426434630787295d"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ad5758b8a5ccb2514426434630787295d">torque_enabled</a> (IiwaControlMode control_mode)</td></tr>
+<tr class="memdesc:ad5758b8a5ccb2514426434630787295d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the given control <code>mode</code> includes torques.  <a href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ad5758b8a5ccb2514426434630787295d">More...</a><br /></td></tr>
+<tr class="separator:ad5758b8a5ccb2514426434630787295d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1e13341c307aa0491ec2aa0b5747fc"><td class="memItemLeft" align="right" valign="top">IiwaControlMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a6d1e13341c307aa0491ec2aa0b5747fc">ParseIiwaControlMode</a> (const std::string &amp;control_mode)</td></tr>
+<tr class="memdesc:a6d1e13341c307aa0491ec2aa0b5747fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses control mode with the following mapping:  <a href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a6d1e13341c307aa0491ec2aa0b5747fc">More...</a><br /></td></tr>
+<tr class="separator:a6d1e13341c307aa0491ec2aa0b5747fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>

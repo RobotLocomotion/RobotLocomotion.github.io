@@ -1,5 +1,12 @@
 var NAVTREEINDEX49 =
 {
+"polynomial_8h.html#ab0a2621977171e1d2d5b64c55141b9b2":[4,0,0,1,43,4],
+"polynomial_8h.html#ad2b506cc6aeddf8e5f52b327382d0b13":[4,0,0,1,43,6],
+"polynomial__basis_8h.html":[4,0,0,1,3,12],
+"polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,3,12,0],
+"polynomial__basis__element_8h.html":[4,0,0,1,3,13],
+"polynomial__types__pybind_8h.html":[4,0,0,0,0,7],
+"polynomial__types__pybind_8h.html#a699f47bb3a3ec60f5fcebb3176dfd77e":[4,0,0,0,0,7,1],
 "polynomial__types__pybind_8h.html#ac7b6b5b20eb590175ba270d5735844f9":[4,0,0,0,0,7,2],
 "polynomial__types__pybind_8h.html#adbc17196068f19a5cd168e56d49d9231":[4,0,0,0,0,7,0],
 "populate__ball__plant_8h.html":[4,0,0,3,11,1,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX49 =
 "rpc__pipe__temp__directory_8h.html#a650cbe453cd80d0752cc0c91e857789a":[4,0,0,1,1,1,0],
 "runge__kutta2__integrator_8h.html":[4,0,0,12,0,15],
 "runge__kutta3__integrator_8h.html":[4,0,0,12,0,16],
-"runge__kutta5__integrator_8h.html":[4,0,0,12,0,17],
-"sap__constraint_8h.html":[4,0,0,8,2,0,2],
-"sap__constraint__bundle_8h.html":[4,0,0,8,2,0,3],
-"sap__contact__problem_8h.html":[4,0,0,8,2,0,4],
-"sap__driver_8h.html":[4,0,0,8,10,29],
-"sap__friction__cone__constraint_8h.html":[4,0,0,8,2,0,5],
-"sap__holonomic__constraint_8h.html":[4,0,0,8,2,0,6],
-"sap__limit__constraint_8h.html":[4,0,0,8,2,0,7]
+"runge__kutta5__integrator_8h.html":[4,0,0,12,0,17]
 };

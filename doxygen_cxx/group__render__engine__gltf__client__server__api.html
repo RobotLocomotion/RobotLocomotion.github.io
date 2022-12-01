@@ -242,7 +242,8 @@ $(document).ready(function(){initNavTree('group__render__engine__gltf__client__s
 </ul>
 </li>
 <li>When <code>image_type="label"</code>, the server may return:<ul>
-<li>A single channel unsigned short PNG image.</li>
+<li>An RGB (3 channel) unsigned char PNG image. The client will interpret this rendering as a colored label image and convert to the final label image.</li>
+<li>An RGBA (4 channel) unsigned char PNG image. The client will interpret this rendering as a colored label image and convert to the final label image.</li>
 </ul>
 </li>
 </ul>
