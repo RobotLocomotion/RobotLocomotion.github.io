@@ -393,9 +393,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a29cbe17adde3122d72d7d573152b04c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8">has_implementation</a> () const</td></tr>
 <tr class="memdesc:a29cbe17adde3122d72d7d573152b04c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <code>this</code> joint owns a particular implementation.  <a href="#a29cbe17adde3122d72d7d573152b04c8">More...</a><br /></td></tr>
 <tr class="separator:a29cbe17adde3122d72d7d573152b04c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system) override</td></tr>
-<tr class="memdesc:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">More...</a><br /></td></tr>
-<tr class="separator:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Clones this Joint (templated on T) to a joint templated on <code>double</code>.</p>
 </div></td></tr>
@@ -422,6 +419,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb">SetTopology</a> (const internal::MultibodyTreeTopology &amp;tree)</td></tr>
 <tr class="memdesc:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree::Finalize() is invoked.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb">More...</a><br /></td></tr>
 <tr class="separator:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
+<tr class="memdesc:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">More...</a><br /></td></tr>
+<tr class="separator:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df">systems::NumericParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">DeclareNumericParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
 <tr class="memdesc:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">More...</a><br /></td></tr>
 <tr class="separator:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1146,7 +1146,7 @@ Friends</h2></td></tr>
 <p>Adds into <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system.">MultibodyForces</a> the forces due to damping within <code>this</code> joint. </p>
 <p>How forces are added to a MultibodyTree model depends on the underlying implementation of a particular joint (for instance, mobilizer vs. constraint) and therefore specific Joint subclasses must provide a definition for this method. The default implementation is a no-op for joints with no damping. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">RevoluteJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">PrismaticJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">BallRpyJoint&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">UniversalJoint&lt; T &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">QuaternionFloatingJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">RevoluteJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">PrismaticJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">BallRpyJoint&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">UniversalJoint&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1199,7 @@ Friends</h2></td></tr>
 <p>Adds into <code>forces</code> a force along the one of the joint's degrees of freedom given by <code>joint_dof</code>. </p>
 <p>How forces are added to a MultibodyTree model depends on the underlying implementation of a particular joint and therefore specific Joint subclasses must provide a definition for this method. For instance, a revolute joint could be modeled with a single generalized coordinate for the angular rotation (implemented through a RevoluteMobilizer) or it could be modeled using a constraint that only allows rotation about the joint's axis but that constrains the motion in the other five degrees of freedom. This method is only called by the public NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a942f6233f066e3e1efaef4168b40585b" title="Adds into forces a force along the one of the joint&#39;s degrees of freedom indicated by index joint_dof...">AddInOneForce()</a> and therefore input arguments were checked to be valid. </p><dl class="section see"><dt>See also</dt><dd>The public NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a942f6233f066e3e1efaef4168b40585b" title="Adds into forces a force along the one of the joint&#39;s degrees of freedom indicated by index joint_dof...">AddInOneForce()</a> for details. </dd></dl>
 
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#ab3c16872b1d7ca25be9f833acd33264b">RevoluteJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a4acdcbc3dc24b7ee11c38403b7101996">PrismaticJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#a83a06d8a7b5e79c67b09f98583b0d807">BallRpyJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#ab3c16872b1d7ca25be9f833acd33264b">UniversalJoint&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a83a06d8a7b5e79c67b09f98583b0d807">WeldJoint&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a83a06d8a7b5e79c67b09f98583b0d807">QuaternionFloatingJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#ab3c16872b1d7ca25be9f833acd33264b">RevoluteJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a4acdcbc3dc24b7ee11c38403b7101996">PrismaticJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#a83a06d8a7b5e79c67b09f98583b0d807">BallRpyJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#ab3c16872b1d7ca25be9f833acd33264b">UniversalJoint&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a83a06d8a7b5e79c67b09f98583b0d807">WeldJoint&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1280,37 +1280,6 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a522410fdf7fa3aaaeebf2bf5e66b5d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">&#9670;&nbsp;</a></span>DoDeclareParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DoDeclareParameters </td>
-          <td>(</td>
-          <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>. </p>
-<p>MultibodyElement-derived objects must override to declare their specific parameters. If an object is not a direct descendent of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html" title="A class representing an element (subcomponent) of a MultibodyPlant or (internally) a MultibodyTree.">MultibodyElement</a>, it must invoke its parent classes' <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a> before declaring its own parameters. </p>
-
-<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">MultibodyElement&lt; Joint, T, JointIndex &gt;</a>.</p>
 
 </div>
 </div>
@@ -2017,7 +1986,7 @@ Friends</h2></td></tr>
 
 <p>Returns a string identifying the type of <code>this</code> joint, such as "revolute" or "prismatic". </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ae4fa9c904accccf5900c63c3e65ca277">ScrewJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">RevoluteJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">UniversalJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_planar_joint.html#ae4fa9c904accccf5900c63c3e65ca277">PlanarJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">BallRpyJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">PrismaticJoint&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">WeldJoint&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ae4fa9c904accccf5900c63c3e65ca277">ScrewJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">RevoluteJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">QuaternionFloatingJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">UniversalJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_planar_joint.html#ae4fa9c904accccf5900c63c3e65ca277">PlanarJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">BallRpyJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">PrismaticJoint&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">WeldJoint&lt; T &gt;</a>.</p>
 
 </div>
 </div>

@@ -28,7 +28,6 @@ var classdrake_1_1multibody_1_1_joint =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_joint.html#a8ed5ee2256ac8372e493caa547cbeb1e", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_joint.html#a016d32cb724a4dbc9a9aff7b2c75855b", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_joint.html#a5740b4874654b9fcd8f8324184b3ce98", null ],
-    [ "DoDeclareParameters", "classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e", null ],
     [ "DoGetOnePosition", "classdrake_1_1multibody_1_1_joint.html#a55fbeff7bf8dcabddc072a224f42a8ac", null ],
     [ "DoGetOneVelocity", "classdrake_1_1multibody_1_1_joint.html#a1f44aa73e129b6182670288ecc436e2c", null ],
     [ "DoSetTopology", "classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551", null ],

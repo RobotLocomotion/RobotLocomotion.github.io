@@ -44,7 +44,6 @@ var searchData=
   ['type_5fvisit_5fwith_5fdefault',['type_visit_with_default',['../structdrake_1_1type__visit__with__default.html',1,'drake']]],
   ['type_5fvisit_5fwith_5ftag',['type_visit_with_tag',['../structdrake_1_1type__visit__with__tag.html',1,'drake']]],
   ['typesafeindex',['TypeSafeIndex',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
-  ['typesafeindex_3c_20class_20abstractparametertag_20_3e',['TypeSafeIndex&lt; class AbstractParameterTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20abstractstatetag_20_3e',['TypeSafeIndex&lt; class AbstractStateTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20bodytag_20_3e',['TypeSafeIndex&lt; class BodyTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20cachetag_20_3e',['TypeSafeIndex&lt; class CacheTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],

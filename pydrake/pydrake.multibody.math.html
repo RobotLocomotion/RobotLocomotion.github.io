@@ -302,15 +302,17 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration">
 <code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
-acceleration relative to frame B, returns frame C’s acceleration in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial acceleration (measured in some frame M) with
+the spatial acceleration of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s
+spatial acceleration in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial
+acceleration of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame
+is designated C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
-<dd>which is the position vector p_BoCo_E from Bo (frame B’s origin)
-to Co (frame C’s origin), expressed in frame E. p_BoCo_E must have
-the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
-A_MB_E (frame B’s spatial acceleration measured in M, expressed in
-E).</dd>
+<dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
+frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
+same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is A_MB_E
+(frame B’s spatial acceleration measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_velocity_of_this_frame</span></code>:</dt>
 <dd>which is ω_MB_E, frame B’s angular velocity measured in frame W
 and expressed in frame E.</dd>
@@ -606,15 +608,17 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].ComposeWithMovingFrameAcceleration">
 <code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd], position_of_moving_frame: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
-acceleration relative to frame B, returns frame C’s acceleration in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial acceleration (measured in some frame M) with
+the spatial acceleration of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s
+spatial acceleration in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial
+acceleration of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame
+is designated C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
-<dd>which is the position vector p_BoCo_E from Bo (frame B’s origin)
-to Co (frame C’s origin), expressed in frame E. p_BoCo_E must have
-the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
-A_MB_E (frame B’s spatial acceleration measured in M, expressed in
-E).</dd>
+<dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
+frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
+same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is A_MB_E
+(frame B’s spatial acceleration measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_velocity_of_this_frame</span></code>:</dt>
 <dd>which is ω_MB_E, frame B’s angular velocity measured in frame W
 and expressed in frame E.</dd>
@@ -908,15 +912,17 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[Expression].ComposeWithMovingFrameAcceleration">
 <code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[Expression], position_of_moving_frame: numpy.ndarray[object[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[Expression], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[Expression]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[Expression].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
-acceleration relative to frame B, returns frame C’s acceleration in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial acceleration (measured in some frame M) with
+the spatial acceleration of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s
+spatial acceleration in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial
+acceleration of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame
+is designated C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
-<dd>which is the position vector p_BoCo_E from Bo (frame B’s origin)
-to Co (frame C’s origin), expressed in frame E. p_BoCo_E must have
-the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
-A_MB_E (frame B’s spatial acceleration measured in M, expressed in
-E).</dd>
+<dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
+frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
+same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is A_MB_E
+(frame B’s spatial acceleration measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_velocity_of_this_frame</span></code>:</dt>
 <dd>which is ω_MB_E, frame B’s angular velocity measured in frame W
 and expressed in frame E.</dd>
@@ -1210,15 +1216,17 @@ Eigen expressions or at run-time for dynamic sized Eigen expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration">
 <code class="descname">ComposeWithMovingFrameAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialAcceleration_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], angular_velocity_of_this_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float], acceleration_of_moving_frame: pydrake.multibody.math.SpatialAcceleration_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_[float].ComposeWithMovingFrameAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame B’s acceleration measured in a frame M and a frame C’s
-acceleration relative to frame B, returns frame C’s acceleration in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial acceleration (measured in some frame M) with
+the spatial acceleration of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s
+spatial acceleration in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial
+acceleration of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame
+is designated C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
-<dd>which is the position vector p_BoCo_E from Bo (frame B’s origin)
-to Co (frame C’s origin), expressed in frame E. p_BoCo_E must have
-the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
-A_MB_E (frame B’s spatial acceleration measured in M, expressed in
-E).</dd>
+<dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
+frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
+same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is A_MB_E
+(frame B’s spatial acceleration measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_velocity_of_this_frame</span></code>:</dt>
 <dd>which is ω_MB_E, frame B’s angular velocity measured in frame W
 and expressed in frame E.</dd>
@@ -2989,16 +2997,20 @@ expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialVelocity_.SpatialVelocity_[float].ComposeWithMovingFrameVelocity">
 <code class="descname">ComposeWithMovingFrameVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialVelocity_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_.SpatialVelocity_[float].ComposeWithMovingFrameVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame C’s velocity relative to a frame B, and frame B’s
-velocity measured in a frame M, returns C’s velocity in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial velocity (measured in some frame M) with the
+spatial velocity of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s spatial
+velocity measured in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial velocity
+of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame is designated
+C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
 <dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
-frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
-same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+frame C’s origin Co), expressed in a frame E. p_BoCo_E must have
+the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
+V_MB_E (frame B’s spatial velocity measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">velocity_of_moving_frame</span></code>:</dt>
 <dd>which is V_BC_E, frame C’s spatial velocity measured in frame B,
-expressed in the same frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+expressed in frame E.</dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">V_MC_E</span></code>:</dt>
 <dd>frame C’s spatial velocity measured in frame M, expressed in frame
 E.</dd>
@@ -3243,16 +3255,20 @@ expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialVelocity_[AutoDiffXd].ComposeWithMovingFrameVelocity">
 <code class="descname">ComposeWithMovingFrameVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd], position_of_moving_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_[AutoDiffXd].ComposeWithMovingFrameVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame C’s velocity relative to a frame B, and frame B’s
-velocity measured in a frame M, returns C’s velocity in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial velocity (measured in some frame M) with the
+spatial velocity of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s spatial
+velocity measured in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial velocity
+of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame is designated
+C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
 <dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
-frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
-same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+frame C’s origin Co), expressed in a frame E. p_BoCo_E must have
+the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
+V_MB_E (frame B’s spatial velocity measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">velocity_of_moving_frame</span></code>:</dt>
 <dd>which is V_BC_E, frame C’s spatial velocity measured in frame B,
-expressed in the same frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+expressed in frame E.</dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">V_MC_E</span></code>:</dt>
 <dd>frame C’s spatial velocity measured in frame M, expressed in frame
 E.</dd>
@@ -3495,16 +3511,20 @@ expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialVelocity_[Expression].ComposeWithMovingFrameVelocity">
 <code class="descname">ComposeWithMovingFrameVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialVelocity_[Expression], position_of_moving_frame: numpy.ndarray[object[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[Expression]<a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_[Expression].ComposeWithMovingFrameVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame C’s velocity relative to a frame B, and frame B’s
-velocity measured in a frame M, returns C’s velocity in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial velocity (measured in some frame M) with the
+spatial velocity of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s spatial
+velocity measured in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial velocity
+of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame is designated
+C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
 <dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
-frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
-same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+frame C’s origin Co), expressed in a frame E. p_BoCo_E must have
+the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
+V_MB_E (frame B’s spatial velocity measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">velocity_of_moving_frame</span></code>:</dt>
 <dd>which is V_BC_E, frame C’s spatial velocity measured in frame B,
-expressed in the same frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+expressed in frame E.</dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">V_MC_E</span></code>:</dt>
 <dd>frame C’s spatial velocity measured in frame M, expressed in frame
 E.</dd>
@@ -3747,16 +3767,20 @@ expressions.</p>
 <dl class="method">
 <dt id="pydrake.multibody.math.SpatialVelocity_[float].ComposeWithMovingFrameVelocity">
 <code class="descname">ComposeWithMovingFrameVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.math.SpatialVelocity_[float], position_of_moving_frame: numpy.ndarray[numpy.float64[3, 1]], velocity_of_moving_frame: pydrake.multibody.math.SpatialVelocity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[float]<a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_[float].ComposeWithMovingFrameVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame C’s velocity relative to a frame B, and frame B’s
-velocity measured in a frame M, returns C’s velocity in M.</p>
+<dd><p>Compose <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial velocity (measured in some frame M) with the
+spatial velocity of another frame to form the 𝐨𝐭𝐡𝐞𝐫 frame’s spatial
+velocity measured in frame M. Herein, <code class="docutils literal notranslate"><span class="pre">this</span></code> is the spatial velocity
+of a frame (designated B) in frame M and the 𝐨𝐭𝐡𝐞𝐫 frame is designated
+C.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_of_moving_frame</span></code>:</dt>
 <dd>which is the position vector p_BoCo_E (from frame B’s origin Bo to
-frame C’s origin Co), expressed in frame E. p_BoCo_E must have the
-same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+frame C’s origin Co), expressed in a frame E. p_BoCo_E must have
+the same expressed-in frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code>, where <code class="docutils literal notranslate"><span class="pre">this</span></code> is
+V_MB_E (frame B’s spatial velocity measured in M, expressed in E).</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">velocity_of_moving_frame</span></code>:</dt>
 <dd>which is V_BC_E, frame C’s spatial velocity measured in frame B,
-expressed in the same frame E as <code class="docutils literal notranslate"><span class="pre">this</span></code> = V_MB_E.</dd>
+expressed in frame E.</dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">V_MC_E</span></code>:</dt>
 <dd>frame C’s spatial velocity measured in frame M, expressed in frame
 E.</dd>

@@ -1307,7 +1307,8 @@ quaternion floating mobilizer. By implication, is_floating() is also
 <dt id="pydrake.multibody.tree.Body_.Body_[float].is_floating">
 <code class="descname">is_floating</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].is_floating" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> body is granted 6-dofs by a
-Mobilizer.</p>
+Mobilizer and the parent body of this body’s associated 6-dof joint is
+<code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A floating body is not necessarily modeled with a quaternion
@@ -1344,7 +1345,7 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_.Body_[float].Lock">
 <code class="descname">Lock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].Lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, lock its implicit inboard joint. Its generalized
+<dd><p>For a floating body, lock its inboard joint. Its generalized
 velocities will be 0 until it is unlocked. Locking is not yet
 supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1376,8 +1377,8 @@ be empty.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_.Body_[float].Unlock">
 <code class="descname">Unlock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].Unlock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, unlock its implicit inboard joint. Unlocking is
-not yet supported for continuous-mode systems.</p>
+<dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
+supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1689,7 +1690,8 @@ quaternion floating mobilizer. By implication, is_floating() is also
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].is_floating">
 <code class="descname">is_floating</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].is_floating" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> body is granted 6-dofs by a
-Mobilizer.</p>
+Mobilizer and the parent body of this body’s associated 6-dof joint is
+<code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A floating body is not necessarily modeled with a quaternion
@@ -1726,7 +1728,7 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].Lock">
 <code class="descname">Lock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].Lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, lock its implicit inboard joint. Its generalized
+<dd><p>For a floating body, lock its inboard joint. Its generalized
 velocities will be 0 until it is unlocked. Locking is not yet
 supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1758,8 +1760,8 @@ be empty.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].Unlock">
 <code class="descname">Unlock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].Unlock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, unlock its implicit inboard joint. Unlocking is
-not yet supported for continuous-mode systems.</p>
+<dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
+supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2069,7 +2071,8 @@ quaternion floating mobilizer. By implication, is_floating() is also
 <dt id="pydrake.multibody.tree.Body_[Expression].is_floating">
 <code class="descname">is_floating</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].is_floating" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> body is granted 6-dofs by a
-Mobilizer.</p>
+Mobilizer and the parent body of this body’s associated 6-dof joint is
+<code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A floating body is not necessarily modeled with a quaternion
@@ -2106,7 +2109,7 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[Expression].Lock">
 <code class="descname">Lock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].Lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, lock its implicit inboard joint. Its generalized
+<dd><p>For a floating body, lock its inboard joint. Its generalized
 velocities will be 0 until it is unlocked. Locking is not yet
 supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2138,8 +2141,8 @@ be empty.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[Expression].Unlock">
 <code class="descname">Unlock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].Unlock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, unlock its implicit inboard joint. Unlocking is
-not yet supported for continuous-mode systems.</p>
+<dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
+supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2449,7 +2452,8 @@ quaternion floating mobilizer. By implication, is_floating() is also
 <dt id="pydrake.multibody.tree.Body_[float].is_floating">
 <code class="descname">is_floating</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].is_floating" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> body is granted 6-dofs by a
-Mobilizer.</p>
+Mobilizer and the parent body of this body’s associated 6-dof joint is
+<code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A floating body is not necessarily modeled with a quaternion
@@ -2486,7 +2490,7 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[float].Lock">
 <code class="descname">Lock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].Lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, lock its implicit inboard joint. Its generalized
+<dd><p>For a floating body, lock its inboard joint. Its generalized
 velocities will be 0 until it is unlocked. Locking is not yet
 supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2518,8 +2522,8 @@ be empty.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.Body_[float].Unlock">
 <code class="descname">Unlock</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].Unlock" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a floating body, unlock its implicit inboard joint. Unlocking is
-not yet supported for continuous-mode systems.</p>
+<dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
+supported for continuous-mode systems.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

@@ -198,10 +198,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae594f732e1f00317aeb8c6cd83591db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the associated <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html" title="A BodyFrame is a material Frame that serves as the unique reference frame for a Body.">BodyFrame</a>.  <a href="#ae594f732e1f00317aeb8c6cd83591db5">More...</a><br /></td></tr>
 <tr class="separator:ae594f732e1f00317aeb8c6cd83591db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50c7f850050d4a94641ed72dd2d1968f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a50c7f850050d4a94641ed72dd2d1968f">Lock</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a50c7f850050d4a94641ed72dd2d1968f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a floating body, lock its implicit inboard joint.  <a href="#a50c7f850050d4a94641ed72dd2d1968f">More...</a><br /></td></tr>
+<tr class="memdesc:a50c7f850050d4a94641ed72dd2d1968f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a floating body, lock its inboard joint.  <a href="#a50c7f850050d4a94641ed72dd2d1968f">More...</a><br /></td></tr>
 <tr class="separator:a50c7f850050d4a94641ed72dd2d1968f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a154263b43696322ad958ee8565d960ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a154263b43696322ad958ee8565d960ff">Unlock</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a154263b43696322ad958ee8565d960ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a floating body, unlock its implicit inboard joint.  <a href="#a154263b43696322ad958ee8565d960ff">More...</a><br /></td></tr>
+<tr class="memdesc:a154263b43696322ad958ee8565d960ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a floating body, unlock its inboard joint.  <a href="#a154263b43696322ad958ee8565d960ff">More...</a><br /></td></tr>
 <tr class="separator:a154263b43696322ad958ee8565d960ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c0fd3c2e27243de55385f4f9695fc0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a0c0fd3c2e27243de55385f4f9695fc0e">is_locked</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="separator:a0c0fd3c2e27243de55385f4f9695fc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,16 +209,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a57367ee577b21dc678509209435858ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the index of the node in the underlying tree structure of the parent MultibodyTree to which this body belongs.  <a href="#a57367ee577b21dc678509209435858ec">More...</a><br /></td></tr>
 <tr class="separator:a57367ee577b21dc678509209435858ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df065349a370f3007ee52c6ede868d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0">is_floating</a> () const</td></tr>
-<tr class="memdesc:a7df065349a370f3007ee52c6ede868d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns <code>true</code> if <code>this</code> body is granted 6-dofs by a Mobilizer.  <a href="#a7df065349a370f3007ee52c6ede868d0">More...</a><br /></td></tr>
+<tr class="memdesc:a7df065349a370f3007ee52c6ede868d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns <code>true</code> if <code>this</code> body is granted 6-dofs by a Mobilizer and the parent body of this body's associated 6-dof joint is <code>world</code>.  <a href="#a7df065349a370f3007ee52c6ede868d0">More...</a><br /></td></tr>
 <tr class="separator:a7df065349a370f3007ee52c6ede868d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6cb65d33b350a9ae5f21211c48a9b31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31">has_quaternion_dofs</a> () const</td></tr>
 <tr class="memdesc:ad6cb65d33b350a9ae5f21211c48a9b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) If <code>true</code>, this body is a floating body modeled with a quaternion floating mobilizer.  <a href="#ad6cb65d33b350a9ae5f21211c48a9b31">More...</a><br /></td></tr>
 <tr class="separator:ad6cb65d33b350a9ae5f21211c48a9b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a8e98e34e5da5ecfc7e03086b70cf5489">floating_positions_start</a> () const</td></tr>
-<tr class="memdesc:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a>) this method returns the index of the first generalized position in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a8e98e34e5da5ecfc7e03086b70cf5489">More...</a><br /></td></tr>
+<tr class="memdesc:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of the first generalized position in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a8e98e34e5da5ecfc7e03086b70cf5489">More...</a><br /></td></tr>
 <tr class="separator:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc1bbbf124d24c628bb23796cfa5c594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594">floating_velocities_start</a> () const</td></tr>
-<tr class="memdesc:adc1bbbf124d24c628bb23796cfa5c594"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a>) this method returns the index of the first generalized velocity in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#adc1bbbf124d24c628bb23796cfa5c594">More...</a><br /></td></tr>
+<tr class="memdesc:adc1bbbf124d24c628bb23796cfa5c594"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of the first generalized velocity in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#adc1bbbf124d24c628bb23796cfa5c594">More...</a><br /></td></tr>
 <tr class="separator:adc1bbbf124d24c628bb23796cfa5c594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a160c046a3ba58d0ba931096b6bd38b2a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a160c046a3ba58d0ba931096b6bd38b2a">floating_position_suffix</a> (<a class="el" href="classint.html">int</a> position_index_in_body) const</td></tr>
 <tr class="memdesc:a160c046a3ba58d0ba931096b6bd38b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#a160c046a3ba58d0ba931096b6bd38b2a">More...</a><br /></td></tr>
@@ -304,9 +304,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a815485876dc2105848e1ddc80eafcc98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a815485876dc2105848e1ddc80eafcc98">Body</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
 <tr class="memdesc:a815485876dc2105848e1ddc80eafcc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Body named <code>name</code> in model instance <code>model_instance</code>.  <a href="#a815485876dc2105848e1ddc80eafcc98">More...</a><br /></td></tr>
 <tr class="separator:a815485876dc2105848e1ddc80eafcc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system) override</td></tr>
-<tr class="memdesc:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">More...</a><br /></td></tr>
-<tr class="separator:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods are meant to be called by MultibodyTree::CloneToScalar() when making a clone of the entire tree or a new instance templated on a different scalar type.</p>
 <p>The only const argument to these methods is the new MultibodyTree clone under construction. Specific Body subclasses might specify a number of prerequisites on the cloned tree and therefore require it to be at a given state of cloning (for instance requiring that the cloned tree already contains all the frames in the world as in the original tree.) See MultibodyTree::CloneToScalar() for a list of prerequisites that are guaranteed to be satisfied during the cloning process. </p>
@@ -336,6 +333,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb">SetTopology</a> (const internal::MultibodyTreeTopology &amp;tree)</td></tr>
 <tr class="memdesc:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree::Finalize() is invoked.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb">More...</a><br /></td></tr>
 <tr class="separator:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
+<tr class="memdesc:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">More...</a><br /></td></tr>
+<tr class="separator:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df">systems::NumericParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">DeclareNumericParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
 <tr class="memdesc:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">More...</a><br /></td></tr>
 <tr class="separator:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -839,39 +839,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a522410fdf7fa3aaaeebf2bf5e66b5d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">&#9670;&nbsp;</a></span>DoDeclareParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DoDeclareParameters </td>
-          <td>(</td>
-          <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>. </p>
-<p>MultibodyElement-derived objects must override to declare their specific parameters. If an object is not a direct descendent of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html" title="A class representing an element (subcomponent) of a MultibodyPlant or (internally) a MultibodyTree.">MultibodyElement</a>, it must invoke its parent classes' <a class="el" href="classdrake_1_1multibody_1_1_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a> before declaring its own parameters. </p>
-
-<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">MultibodyElement&lt; Body, T, BodyIndex &gt;</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">RigidBody&lt; T &gt;</a>.</p>
-
-</div>
-</div>
 <a id="adb15f7a08a083af61068735632ada406"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb15f7a08a083af61068735632ada406">&#9670;&nbsp;</a></span>EvalPoseInWorld()</h2>
 
@@ -976,7 +943,7 @@ Friends</h2></td></tr>
 <p>Returns a string suffix (e.g. </p>
 <p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body. The name will never be empty.">name()</a>) to identify the <code>k</code>th position in the floating base. <code>position_index_in_body</code> must be in [0, 7) if <code><a class="el" href="classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body is a floating body modeled with a quaternion floating mobilizer.">has_quaternion_dofs()</a></code> is true, otherwise in [0, 6). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a> is false. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a> is false. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
   </table>
   </dd>
@@ -999,7 +966,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a>) this method returns the index of the first generalized position in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
+<p>(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of the first generalized position in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
 <p>Positions for this body are then contiguous starting at this index. When a floating body is modeled with a quaternion mobilizer (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body is a floating body modeled with a quaternion floating mobilizer.">has_quaternion_dofs()</a>), the four consecutive entries in the state starting at this index correspond to the quaternion that parametrizes this body's orientation. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
@@ -1024,7 +991,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a>) this method returns the index of the first generalized velocity in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
+<p>(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of the first generalized velocity in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
 <p>Velocities for this body are then contiguous starting at this index. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
@@ -1053,7 +1020,7 @@ Friends</h2></td></tr>
 <p>Returns a string suffix (e.g. </p>
 <p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body. The name will never be empty.">name()</a>) to identify the <code>k</code>th velocity in the floating base. <code>velocity_index_in_body</code> must be in [0,6). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a> is false. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a> is false. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
   </table>
   </dd>
@@ -1197,7 +1164,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Advanced) If <code>true</code>, this body is a floating body modeled with a quaternion floating mobilizer. </p>
-<p>By implication, <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a> is also <code>true</code>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_body.html#a8e98e34e5da5ecfc7e03086b70cf5489" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of the first general...">floating_positions_start()</a>, <a class="el" href="classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of the first general...">floating_velocities_start()</a>. </dd></dl>
+<p>By implication, <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a> is also <code>true</code>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_body.html#a8e98e34e5da5ecfc7e03086b70cf5489" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of the first general...">floating_positions_start()</a>, <a class="el" href="classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of the first general...">floating_velocities_start()</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
@@ -1222,7 +1189,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Returns <code>true</code> if <code>this</code> body is granted 6-dofs by a Mobilizer. </p>
+<p>(Advanced) Returns <code>true</code> if <code>this</code> body is granted 6-dofs by a Mobilizer and the parent body of this body's associated 6-dof joint is <code>world</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>A floating body is not necessarily modeled with a quaternion mobilizer, see <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body is a floating body modeled with a quaternion floating mobilizer.">has_quaternion_dofs()</a>. Alternative options include a space XYZ parametrization of rotations, see SpaceXYZMobilizer. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -1268,7 +1235,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>For a floating body, lock its implicit inboard joint. </p>
+<p>For a floating body, lock its inboard joint. </p>
 <p>Its generalized velocities will be 0 until it is unlocked. Locking is not yet supported for continuous-mode systems. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if this body is not a floating body, or if the parent model uses continuous state. </td></tr>
@@ -1316,8 +1283,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a20f1ef3c39eacf3b33b85fa8a5cef621"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20f1ef3c39eacf3b33b85fa8a5cef621">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a2d29729c246c174fc4dcf96b7d2c5ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d29729c246c174fc4dcf96b7d2c5ade">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1328,7 +1295,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1342,8 +1309,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d29729c246c174fc4dcf96b7d2c5ade"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d29729c246c174fc4dcf96b7d2c5ade">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a20f1ef3c39eacf3b33b85fa8a5cef621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f1ef3c39eacf3b33b85fa8a5cef621">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1354,7 +1321,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1384,7 +1351,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>For a floating body, unlock its implicit inboard joint. </p>
+<p>For a floating body, unlock its inboard joint. </p>
 <p>Unlocking is not yet supported for continuous-mode systems. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if this body is not a floating body, or if the parent model uses continuous state. </td></tr>
