@@ -2750,6 +2750,66 @@ that doesn’t throw an exception in Debug builds.</p>
 
 </dd></dl>
 
+<dl class="function">
+<dt id="pydrake.multibody.tree.CalcSpatialInertia">
+<code class="descclassname">pydrake.multibody.tree.</code><code class="descname">CalcSpatialInertia</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.CalcSpatialInertia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CalcSpatialInertia(shape: pydrake.geometry.Shape, density: float) -&gt; drake::multibody::SpatialInertia&lt;double&gt;</li>
+</ol>
+<p>Computes the SpatialInertia of a body made up of a homogeneous
+material (of given <code class="docutils literal notranslate"><span class="pre">density</span></code> in kg/m³) uniformly distributed in the
+volume of the given <code class="docutils literal notranslate"><span class="pre">shape</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">shape</span></code> is defined in its canonical frame S and the body in
+frame B. The two frames are coincident and aligned (i.e., X_SB = I).</p>
+<p>Most shapes are defined such that their center of mass is coincident
+with So (and, therefore, Bo). These are the shapes that have symmetry
+across So along each of the axes Sx, Sy, Sz (e.g., geometry::Box,
+geometry::Sphere, etc.) For meshes, it depends on how the mesh is
+defined. For more discussion on the nuances of geometry::Mesh and
+geometry::Convex calculations CalcSpatialInertia(const
+geometry::TriangleSurfaceMesh&lt;double&gt;&amp;,double) “see below”.</p>
+<p>Note: Spatial inertia calculations for the geometry::Convex type do
+not currently require that the underlying mesh actually be convex.
+Although certain collision calculations involving geometry::Convex may
+use the mesh’s convex hull, this function uses the <em>actual</em> mesh.</p>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt>
+<dd>The spatial inertia of the hypothetical body implied by the given
+<code class="docutils literal notranslate"><span class="pre">shape</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">shape</span></code> is an instance of geometry::HalfSpace or</li>
+<li>geometry::MeshcatCone.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>CalcSpatialInertia(mesh: pydrake.geometry.TriangleSurfaceMesh_[float], density: float) -&gt; drake::multibody::SpatialInertia&lt;double&gt;</li>
+</ol>
+<p>Computes the SpatialInertia of a body made up of a homogeneous
+material (of given <code class="docutils literal notranslate"><span class="pre">density</span></code> in kg/m³) uniformly distributed in the
+volume of the given <code class="docutils literal notranslate"><span class="pre">mesh</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">mesh</span></code> is defined in its canonical frame M and the body in frame
+B. The two frames are coincident and aligned (i.e., X_MB = I).</p>
+<p>For the resultant spatial inertia to be meaningful, the <code class="docutils literal notranslate"><span class="pre">mesh</span></code> must
+satisfy certain requirements:</p>
+<ul class="simple">
+<li>The mesh must <em>fully</em> enclose a volume (no cracks, no open manifolds,</li>
+</ul>
+<p>etc.)
+- All triangles must be “wound” such that their normals point outward
+(according to the right-hand rule based on vertex winding).</p>
+<p>If these requirements are not met, a value <em>will</em> be returned, but its
+value is meaningless.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.multibody.tree.ConstraintIndex">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">ConstraintIndex</code><a class="headerlink" href="#pydrake.multibody.tree.ConstraintIndex" title="Permalink to this definition">¶</a></dt>
@@ -16842,7 +16902,7 @@ is NaN. Otherwise returns <code class="docutils literal notranslate"><span class
 <dl class="method">
 <dt id="pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float].IsNearlyEqualTo">
 <code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RotationalInertia_[float], other: pydrake.multibody.tree.RotationalInertia_[float], precision: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotional inertia
+<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotational inertia
 within the specified <code class="docutils literal notranslate"><span class="pre">precision</span></code> (which is a dimensionless number
 specifying the relative precision to which the comparison is
 performed). Denoting <code class="docutils literal notranslate"><span class="pre">I_maxA</span></code> as the largest element value that can
@@ -17407,7 +17467,7 @@ is NaN. Otherwise returns <code class="docutils literal notranslate"><span class
 <dl class="method">
 <dt id="pydrake.multibody.tree.RotationalInertia_[AutoDiffXd].IsNearlyEqualTo">
 <code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RotationalInertia_[AutoDiffXd], other: pydrake.multibody.tree.RotationalInertia_[AutoDiffXd], precision: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_[AutoDiffXd].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotional inertia
+<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotational inertia
 within the specified <code class="docutils literal notranslate"><span class="pre">precision</span></code> (which is a dimensionless number
 specifying the relative precision to which the comparison is
 performed). Denoting <code class="docutils literal notranslate"><span class="pre">I_maxA</span></code> as the largest element value that can
@@ -17970,7 +18030,7 @@ is NaN. Otherwise returns <code class="docutils literal notranslate"><span class
 <dl class="method">
 <dt id="pydrake.multibody.tree.RotationalInertia_[Expression].IsNearlyEqualTo">
 <code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RotationalInertia_[Expression], other: pydrake.multibody.tree.RotationalInertia_[Expression], precision: float</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_[Expression].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotional inertia
+<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotational inertia
 within the specified <code class="docutils literal notranslate"><span class="pre">precision</span></code> (which is a dimensionless number
 specifying the relative precision to which the comparison is
 performed). Denoting <code class="docutils literal notranslate"><span class="pre">I_maxA</span></code> as the largest element value that can
@@ -18533,7 +18593,7 @@ is NaN. Otherwise returns <code class="docutils literal notranslate"><span class
 <dl class="method">
 <dt id="pydrake.multibody.tree.RotationalInertia_[float].IsNearlyEqualTo">
 <code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.RotationalInertia_[float], other: pydrake.multibody.tree.RotationalInertia_[float], precision: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_[float].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotional inertia
+<dd><p>Compares <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia to <code class="docutils literal notranslate"><span class="pre">other</span></code> rotational inertia
 within the specified <code class="docutils literal notranslate"><span class="pre">precision</span></code> (which is a dimensionless number
 specifying the relative precision to which the comparison is
 performed). Denoting <code class="docutils literal notranslate"><span class="pre">I_maxA</span></code> as the largest element value that can

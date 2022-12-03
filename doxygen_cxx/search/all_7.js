@@ -51,6 +51,7 @@ var searchData=
   ['geometry_5fset_2eh',['geometry_set.h',['../geometry__set_8h.html',1,'']]],
   ['geometry_5fset_5ftester_2eh',['geometry_set_tester.h',['../geometry__set__tester_8h.html',1,'']]],
   ['geometry_5fsource_5fis_5fregistered',['geometry_source_is_registered',['../classdrake_1_1multibody_1_1_multibody_plant.html#afad783d7e7e513feb7a73384c8080041',1,'drake::multibody::MultibodyPlant']]],
+  ['geometry_5fspatial_5finertia_2eh',['geometry_spatial_inertia.h',['../geometry__spatial__inertia_8h.html',1,'']]],
   ['geometry_5fstate_2eh',['geometry_state.h',['../geometry__state_8h.html',1,'']]],
   ['geometry_5fversion',['geometry_version',['../classdrake_1_1geometry_1_1_geometry_state.html#a4511806a62573c4a6050af3a3f0b3d38',1,'drake::geometry::GeometryState::geometry_version()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a4511806a62573c4a6050af3a3f0b3d38',1,'drake::geometry::SceneGraphInspector::geometry_version()']]],
   ['geometry_5fversion_2eh',['geometry_version.h',['../geometry__version_8h.html',1,'']]],

@@ -36,6 +36,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "frame_base.h", "frame__base_8h.html", [
       [ "FrameBase", "classdrake_1_1multibody_1_1_frame_base.html", "classdrake_1_1multibody_1_1_frame_base" ]
     ] ],
+    [ "geometry_spatial_inertia.h", "geometry__spatial__inertia_8h.html", "geometry__spatial__inertia_8h" ],
     [ "joint.h", "joint_8h.html", [
       [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ],
       [ "BluePrint", "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html", "structdrake_1_1multibody_1_1_joint_1_1_blue_print" ],

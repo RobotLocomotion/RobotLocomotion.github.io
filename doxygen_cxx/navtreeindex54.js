@@ -1,5 +1,8 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,16,2,1,5],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,16,2,1,7],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a29017aee3204b230b5884faaf2fac289":[3,0,0,16,2,1,0],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4c74c519e42f88117207f1fffef290c7":[3,0,0,16,2,1,2],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a6734a991d96eb572b943a06ce7f5188c":[3,0,0,16,2,1,8],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a7e7b9b98008f565a28fa06c3e4d04b6e":[3,0,0,16,2,1,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX54 =
 "symbolic_2polynomial_8h.html":[4,0,0,1,3,11],
 "symbolic_2polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd":[4,0,0,1,3,11,34],
 "symbolic_2polynomial_8h.html#a0e4fa4bbef7ce58efc247dd1717a2ded":[4,0,0,1,3,11,30],
-"symbolic_2polynomial_8h.html#a14031f45c6c7d6bfde87bb3455963fc3":[4,0,0,1,3,11,2],
-"symbolic_2polynomial_8h.html#a1a0eab276a88883d8e2607630cb93bc5":[4,0,0,1,3,11,12],
-"symbolic_2polynomial_8h.html#a1aa3f21ab39b7fb01be90ed9255df5f9":[4,0,0,1,3,11,26],
-"symbolic_2polynomial_8h.html#a2508a6626d1a63a77670c760e4a2241e":[4,0,0,1,3,11,3]
+"symbolic_2polynomial_8h.html#a14031f45c6c7d6bfde87bb3455963fc3":[4,0,0,1,3,11,2]
 };

@@ -556,6 +556,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c">AddMultibodyPlant</a> (const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
 <tr class="memdesc:a7e468aa35ef6a84196ac20a13065ca0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>.  <a href="#a7e468aa35ef6a84196ac20a13065ca0c">More...</a><br /></td></tr>
 <tr class="separator:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23055924c0c775334973d978ac3c1f54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a23055924c0c775334973d978ac3c1f54">CalcSpatialInertia</a> (const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, <a class="el" href="classdouble.html">double</a> density)</td></tr>
+<tr class="memdesc:a23055924c0c775334973d978ac3c1f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of a body made up of a homogeneous material (of given <code>density</code> in kg/m³) uniformly distributed in the volume of the given <code>shape</code>.  <a href="#a23055924c0c775334973d978ac3c1f54">More...</a><br /></td></tr>
+<tr class="separator:a23055924c0c775334973d978ac3c1f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986ab8f45373e38b18f7ac2a03491b76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a986ab8f45373e38b18f7ac2a03491b76">CalcSpatialInertia</a> (const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">geometry::TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;mesh, <a class="el" href="classdouble.html">double</a> density=1.0)</td></tr>
+<tr class="memdesc:a986ab8f45373e38b18f7ac2a03491b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of a body made up of a homogeneous material (of given <code>density</code> in kg/m³) uniformly distributed in the volume of the given <code>mesh</code>.  <a href="#a986ab8f45373e38b18f7ac2a03491b76">More...</a><br /></td></tr>
+<tr class="separator:a986ab8f45373e38b18f7ac2a03491b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ac5ea10f28d336caaced34735b6dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad1ac5ea10f28d336caaced34735b6dc9">world_index</a> ()</td></tr>
 <tr class="memdesc:ad1ac5ea10f28d336caaced34735b6dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For every <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> the <b>world</b> body <em>always</em> has this unique index and it is always zero.  <a href="#ad1ac5ea10f28d336caaced34735b6dc9">More...</a><br /></td></tr>
 <tr class="separator:ad1ac5ea10f28d336caaced34735b6dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1123,6 +1129,88 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a23055924c0c775334973d978ac3c1f54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23055924c0c775334973d978ac3c1f54">&#9670;&nbsp;</a></span>CalcSpatialInertia() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; drake::multibody::CalcSpatialInertia </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>density</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of a body made up of a homogeneous material (of given <code>density</code> in kg/m³) uniformly distributed in the volume of the given <code>shape</code>. </p>
+<p>The <code>shape</code> is defined in its canonical frame S and the body in frame B. The two frames are coincident and aligned (i.e., X_SB = I).</p>
+<p>Most shapes are defined such that their center of mass is coincident with So (and, therefore, Bo). These are the shapes that have symmetry across So along each of the axes Sx, Sy, Sz (e.g., <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">geometry::Box</a>, <a class="el" href="classdrake_1_1geometry_1_1_sphere.html" title="Definition of sphere.">geometry::Sphere</a>, etc.) For meshes, it depends on how the mesh is defined. For more discussion on the nuances of <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">geometry::Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">geometry::Convex</a> calculations <a class="el" href="namespacedrake_1_1multibody.html#a986ab8f45373e38b18f7ac2a03491b76">see below</a>.</p>
+<p>Note: Spatial inertia calculations for the <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">geometry::Convex</a> type do not currently require that the underlying mesh actually be convex. Although certain collision calculations involving <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">geometry::Convex</a> may use the mesh's convex hull, this function uses the <em>actual</em> mesh.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BBo_B</td><td>The spatial inertia of the hypothetical body implied by the given <code>shape</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>shape</code> is an instance of <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">geometry::HalfSpace</a> or <a class="el" href="classdrake_1_1geometry_1_1_meshcat_cone.html" title="Definition of a cone.">geometry::MeshcatCone</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a986ab8f45373e38b18f7ac2a03491b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986ab8f45373e38b18f7ac2a03491b76">&#9670;&nbsp;</a></span>CalcSpatialInertia() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; drake::multibody::CalcSpatialInertia </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">geometry::TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>density</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of a body made up of a homogeneous material (of given <code>density</code> in kg/m³) uniformly distributed in the volume of the given <code>mesh</code>. </p>
+<p>The <code>mesh</code> is defined in its canonical frame M and the body in frame B. The two frames are coincident and aligned (i.e., X_MB = I).</p>
+<p>For the resultant spatial inertia to be meaningful, the <code>mesh</code> must satisfy certain requirements:</p>
+<ul>
+<li>The mesh must <em>fully</em> enclose a volume (no cracks, no open manifolds, etc.)</li>
+<li>All triangles must be "wound" such that their normals point outward (according to the right-hand rule based on vertex winding).</li>
+</ul>
+<p>If these requirements are not met, a value <em>will</em> be returned, but its value is meaningless. </p>
 
 </div>
 </div>

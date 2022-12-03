@@ -15,6 +15,7 @@ var searchData=
   ['geometry_5froles_2eh',['geometry_roles.h',['../geometry__roles_8h.html',1,'']]],
   ['geometry_5fset_2eh',['geometry_set.h',['../geometry__set_8h.html',1,'']]],
   ['geometry_5fset_5ftester_2eh',['geometry_set_tester.h',['../geometry__set__tester_8h.html',1,'']]],
+  ['geometry_5fspatial_5finertia_2eh',['geometry_spatial_inertia.h',['../geometry__spatial__inertia_8h.html',1,'']]],
   ['geometry_5fstate_2eh',['geometry_state.h',['../geometry__state_8h.html',1,'']]],
   ['geometry_5fversion_2eh',['geometry_version.h',['../geometry__version_8h.html',1,'']]],
   ['get_5fprogram_5ftype_2eh',['get_program_type.h',['../get__program__type_8h.html',1,'']]],
