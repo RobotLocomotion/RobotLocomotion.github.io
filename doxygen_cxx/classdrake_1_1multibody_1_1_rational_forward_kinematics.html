@@ -204,6 +204,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5001e433b72f3005d744a7b9b71cc529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851ee363d02555f11f4d45d8056b072a"><td class="memItemLeft" align="right" valign="top">Eigen::Map&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s</a> () const</td></tr>
 <tr class="separator:a851ee363d02555f11f4d45d8056b072a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8069d8a262731933b1bd421ed0adbf"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a0b8069d8a262731933b1bd421ed0adbf">map_mobilizer_to_s_index</a> () const</td></tr>
+<tr class="memdesc:a0b8069d8a262731933b1bd421ed0adbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">map_mobilizer_to_s_index_[mobilizer_index] returns the starting index of the mobilizer's variable in s_ (the variable will be contiguous in s for the same mobilizer).  <a href="#a0b8069d8a262731933b1bd421ed0adbf">More...</a><br /></td></tr>
+<tr class="separator:a0b8069d8a262731933b1bd421ed0adbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ae2f64cf4a62743cda2f74fff57f1c224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224">RationalForwardKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;)=delete</td></tr>
 <tr class="separator:ae2f64cf4a62743cda2f74fff57f1c224"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -392,6 +395,26 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s()</a>. </p>
+
+</div>
+</div>
+<a id="a0b8069d8a262731933b1bd421ed0adbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8069d8a262731933b1bd421ed0adbf">&#9670;&nbsp;</a></span>map_mobilizer_to_s_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="classint.html">int</a>&gt; map_mobilizer_to_s_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>map_mobilizer_to_s_index_[mobilizer_index] returns the starting index of the mobilizer's variable in s_ (the variable will be contiguous in s for the same mobilizer). </p>
+<p>If this mobilizer doesn't have a variable in s_ (like the weld joint), then the s index is set to -1. </p>
 
 </div>
 </div>

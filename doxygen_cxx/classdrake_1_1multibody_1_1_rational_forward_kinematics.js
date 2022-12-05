@@ -7,6 +7,7 @@ var classdrake_1_1multibody_1_1_rational_forward_kinematics =
     [ "CalcBodyPoseAsMultilinearPolynomial", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b", null ],
     [ "ComputeSValue", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a47ae675822fc6ab4016c0fe093346bb8", null ],
     [ "ConvertMultilinearPolynomialToRationalFunction", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3", null ],
+    [ "map_mobilizer_to_s_index", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a0b8069d8a262731933b1bd421ed0adbf", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ac73a5a06e9d73c1e5c761e7accee6265", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af561a8c971a66f869986c5e4429352c3", null ],
     [ "plant", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529", null ],

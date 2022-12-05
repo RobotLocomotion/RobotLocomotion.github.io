@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_spatial_vector.html#a737b765a7a5d6b950a2c70193c0af642":[3,0,0,9,79,34],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a73f248b5cef3cf345c59fe794472fc4c":[3,0,0,9,79,32],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a7519ac8ffeab83f9f99992265b5f5db7":[3,0,0,9,79,5],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a7ef3ca98bf83a4e8ee30147de1ce201d":[3,0,0,9,79,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#ac244fbd782e3bc4db5acfccb27b3d51c":[3,0,0,9,0,4,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#ac9b10929ce69ac9ec5abc5d839443f85":[3,0,0,9,0,4,8],
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#aee34af453a02ada1c86408437aa305de":[3,0,0,9,0,4,9],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#aee7457510064eba5e950bce13800e4ad":[3,0,0,9,0,4,11],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html":[3,0,0,9,0,5]
+"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#aee7457510064eba5e950bce13800e4ad":[3,0,0,9,0,4,11]
 };

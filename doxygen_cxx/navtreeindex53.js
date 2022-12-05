@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,2,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html":[3,0,0,9,4,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a4e550ebb9a213be8a3939f0c6ad4816b":[3,0,0,9,4,3,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,3,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,16,2,0,0,2],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,16,2,0,0,3],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,16,2,1],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,16,2,1,1],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,16,2,1,3]
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,16,2,1,1]
 };

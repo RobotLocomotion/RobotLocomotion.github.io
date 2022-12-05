@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#abbe04f8c2fd40cf6b8f22298bdca05f1":[3,0,0,18,2,9],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,2,5],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,18,2,11],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aeaf76c3b69e479e70c002c9e35085f4b":[3,0,0,18,2,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa39209ccaab9620e08ec04483c22a7eda":[4,0,0,7,4,1,2],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa5cc7cc1518100eae9e3f2d83673a74ed":[4,0,0,7,4,1,1],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aae7c3602dce09c755e09250077a601a51":[4,0,0,7,4,1,0],
-"compute__numerical__gradient_8h.html#a8b9faaffd818a335e485c9c38fe67f0e":[4,0,0,7,4,2],
-"compute__torque_8h.html":[4,0,0,12,1,0,0]
+"compute__numerical__gradient_8h.html#a8b9faaffd818a335e485c9c38fe67f0e":[4,0,0,7,4,2]
 };

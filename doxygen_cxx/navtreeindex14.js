@@ -245,9 +245,9 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aee2fe7aa0851c239e3194454e8a2ea1b":[3,0,0,9,67,2],
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aff371642af0c8e5d3502c3bda6e2c02a":[3,0,0,9,67,25],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html":[3,0,0,9,68],
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a0b8069d8a262731933b1bd421ed0adbf":[3,0,0,9,68,7],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3":[3,0,0,9,68,6],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a377a632079f13b90b216530b0f5767b4":[3,0,0,9,68,2],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b":[3,0,0,9,68,4],
-"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a47ae675822fc6ab4016c0fe093346bb8":[3,0,0,9,68,5],
-"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529":[3,0,0,9,68,9]
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a47ae675822fc6ab4016c0fe093346bb8":[3,0,0,9,68,5]
 };

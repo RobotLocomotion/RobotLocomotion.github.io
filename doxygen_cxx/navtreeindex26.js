@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1symbolic_1_1_formula_isnan.html#afa3b24fc1f39862b6a5bc72658307c51":[3,0,0,15,44,4],
 "classdrake_1_1symbolic_1_1_formula_leq.html":[3,0,0,15,45],
 "classdrake_1_1symbolic_1_1_formula_leq.html#a187e996f061e3e56460d2afa3ae0c7df":[3,0,0,15,45,0],
 "classdrake_1_1symbolic_1_1_formula_leq.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[3,0,0,15,45,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1symbolic_1_1_rational_function.html#a0d8f4baa55bf5619803ddd06e884af67":[3,0,0,15,60,12],
 "classdrake_1_1symbolic_1_1_rational_function.html#a0f1defa4e2086478f387311bbf307450":[3,0,0,15,60,6],
 "classdrake_1_1symbolic_1_1_rational_function.html#a135b849a2bc0c2db6d3a6ce1f3f36c68":[3,0,0,15,60,9],
-"classdrake_1_1symbolic_1_1_rational_function.html#a16de6605de8120d3b8222006f3702bc7":[3,0,0,15,60,7],
-"classdrake_1_1symbolic_1_1_rational_function.html#a201c9c37872826103eefaffb11efaa7f":[3,0,0,15,60,16]
+"classdrake_1_1symbolic_1_1_rational_function.html#a16de6605de8120d3b8222006f3702bc7":[3,0,0,15,60,7]
 };

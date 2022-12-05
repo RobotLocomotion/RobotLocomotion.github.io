@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1_zero_order_hold.html#a5ae4ab5e2ebbb46c574d1f0531d86d66":[1,2,1,28,9],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a5fd85a9651ee5246cc2e24cebe853e7e":[1,2,1,28,6],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a60f9f8ef37a7bab7cce2d0600de116f8":[1,2,1,28,4],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a709c0abe05f56d7498c71bbcb4279b97":[1,2,1,28,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae24da0d2f02398a5736a6d30e7fc7816":[1,4,2,5,26],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae2ae07d986ada1331a7c587b18f35454":[1,4,2,5,19],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae41c5a002b84ba0ef89cb2c3022a2368":[1,4,2,5,12],
-"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#aee66491db467d41bd5a9f765c106c15d":[1,4,2,5,2],
-"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#af6a6dfd04b282d5703c7b6d357621085":[1,4,2,5,1]
+"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#aee66491db467d41bd5a9f765c106c15d":[1,4,2,5,2]
 };
