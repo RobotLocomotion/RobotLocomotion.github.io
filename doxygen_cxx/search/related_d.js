@@ -8,5 +8,6 @@ var searchData=
   ['pow',['pow',['../classdrake_1_1_polynomial.html#a2144bf3acf165a2a921d7df87ac4eafe',1,'drake::Polynomial::pow()'],['../classdrake_1_1symbolic_1_1_expression.html#aa57efef61100945c693ecb05dadf6dcf',1,'drake::symbolic::Expression::pow()'],['../classdrake_1_1symbolic_1_1_expression_pow.html#aa57efef61100945c693ecb05dadf6dcf',1,'drake::symbolic::ExpressionPow::pow()']]],
   ['preprocessshortestpathtest',['PreprocessShortestPathTest',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aa29be4bfd3f94bc063b98bd605ea0893',1,'drake::geometry::optimization::GraphOfConvexSets']]],
   ['prismaticjoint',['PrismaticJoint',['../classdrake_1_1multibody_1_1_prismatic_joint.html#a7960ec53eaed268e954d64f34f05255d',1,'drake::multibody::PrismaticJoint']]],
+  ['prismaticspring',['PrismaticSpring',['../classdrake_1_1multibody_1_1_prismatic_spring.html#a92dfd7d053dfa0e282432186c76c391c',1,'drake::multibody::PrismaticSpring']]],
   ['propeller',['Propeller',['../classdrake_1_1multibody_1_1_propeller.html#a9801eccb2da5c84c2cd116033e674524',1,'drake::multibody::Propeller']]]
 ];

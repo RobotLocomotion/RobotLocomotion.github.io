@@ -82,6 +82,10 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html", "classdrake_1_1multibody_1_1_prismatic_joint" ]
     ] ],
     [ "prismatic_mobilizer.h", "prismatic__mobilizer_8h.html", null ],
+    [ "prismatic_spring.h", "prismatic__spring_8h.html", [
+      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
+      [ "PrismaticSpring", "classdrake_1_1multibody_1_1_prismatic_spring.html", "classdrake_1_1multibody_1_1_prismatic_spring" ]
+    ] ],
     [ "quaternion_floating_joint.h", "quaternion__floating__joint_8h.html", [
       [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html", "classdrake_1_1multibody_1_1_quaternion_floating_joint" ]
     ] ],

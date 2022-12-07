@@ -85,6 +85,7 @@ var group__systems =
       [ "CalcCenterOfMassTranslationalVelocityInWorld", "classdrake_1_1multibody_1_1_multibody_plant.html#a2026c5b7ca4f16add5577e474600be34", null ],
       [ "CalcCenterOfMassTranslationalVelocityInWorld", "classdrake_1_1multibody_1_1_multibody_plant.html#a16fc1c385cc07dda2780f12ce664fcbb", null ],
       [ "CalcForceElementsContribution", "classdrake_1_1multibody_1_1_multibody_plant.html#ae1b54c8562f107e4d6e11b4b0f8d53c5", null ],
+      [ "CalcGeneralizedForces", "classdrake_1_1multibody_1_1_multibody_plant.html#a05d83f939cc098d1c25eabecf41ff588", null ],
       [ "CalcGravityGeneralizedForces", "classdrake_1_1multibody_1_1_multibody_plant.html#ad877d988ac4cd1942aa84e91e3c5d49a", null ],
       [ "CalcImplicitTimeDerivativesResidual", "classdrake_1_1multibody_1_1_multibody_plant.html#aba4403ae1b096297581cb24957ede9aa", null ],
       [ "CalcInverseDynamics", "classdrake_1_1multibody_1_1_multibody_plant.html#afcb4de9b58cb375d056da7e8ec30937a", null ],

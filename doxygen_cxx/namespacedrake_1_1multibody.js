@@ -64,6 +64,7 @@ var namespacedrake_1_1multibody =
     [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html", "classdrake_1_1multibody_1_1_position_constraint" ],
     [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html", "classdrake_1_1multibody_1_1_position_cost" ],
     [ "PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html", "classdrake_1_1multibody_1_1_prismatic_joint" ],
+    [ "PrismaticSpring", "classdrake_1_1multibody_1_1_prismatic_spring.html", "classdrake_1_1multibody_1_1_prismatic_spring" ],
     [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html", "classdrake_1_1multibody_1_1_propeller" ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", "structdrake_1_1multibody_1_1_propeller_info" ],
     [ "QuaternionEulerIntegrationConstraint", "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html", "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint" ],

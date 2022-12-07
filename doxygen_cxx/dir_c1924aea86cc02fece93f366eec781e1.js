@@ -1,5 +1,6 @@
 var dir_c1924aea86cc02fece93f366eec781e1 =
 [
+    [ "robot_collision_type.h", "robot__collision__type_8h.html", "robot__collision__type_8h" ],
     [ "robot_diagram.h", "robot__diagram_8h.html", [
       [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html", "classdrake_1_1planning_1_1_robot_diagram" ]
     ] ],

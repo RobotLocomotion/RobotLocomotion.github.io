@@ -30,6 +30,7 @@ var searchData=
   ['nloptsolver',['NloptSolver',['../classdrake_1_1solvers_1_1_nlopt_solver.html#a286cc15cf90013e9202cac5dfebe8c86',1,'drake::solvers::NloptSolver::NloptSolver(const NloptSolver &amp;)=delete'],['../classdrake_1_1solvers_1_1_nlopt_solver.html#a45cf3293eb8560011ac5402bf8b7d60f',1,'drake::solvers::NloptSolver::NloptSolver(NloptSolver &amp;&amp;)=delete'],['../classdrake_1_1solvers_1_1_nlopt_solver.html#a51a55844b4ec741e8f3bdef3d2c43ed0',1,'drake::solvers::NloptSolver::NloptSolver()']]],
   ['node_5findex',['node_index',['../classdrake_1_1multibody_1_1_body.html#a57367ee577b21dc678509209435858ec',1,'drake::multibody::Body']]],
   ['nominal_5fangle',['nominal_angle',['../classdrake_1_1multibody_1_1_revolute_spring.html#a6b8142c37ce3b3ebc067d2de28ce88a0',1,'drake::multibody::RevoluteSpring']]],
+  ['nominal_5fposition',['nominal_position',['../classdrake_1_1multibody_1_1_prismatic_spring.html#a00881d5c03e5b231d26752f1f236fdc9',1,'drake::multibody::PrismaticSpring']]],
   ['none',['none',['../namespacedrake.html#a01aa931c5cbfd4b09d847cc4d7b4c699',1,'drake']]],
   ['none_5fof',['none_of',['../namespacedrake.html#ab4011b0ee72e60112bfd3aee950765e8',1,'drake']]],
   ['noopcalc',['NoopCalc',['../classdrake_1_1systems_1_1_value_producer.html#aaa1f990d2cddf9817497f55e2c560479',1,'drake::systems::ValueProducer']]],

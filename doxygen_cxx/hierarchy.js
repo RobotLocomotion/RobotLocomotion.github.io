@@ -491,6 +491,7 @@ var hierarchy =
         [ "DoorHinge< T >", "classdrake_1_1multibody_1_1_door_hinge.html", null ],
         [ "LinearBushingRollPitchYaw< T >", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html", null ],
         [ "LinearSpringDamper< T >", "classdrake_1_1multibody_1_1_linear_spring_damper.html", null ],
+        [ "PrismaticSpring< T >", "classdrake_1_1multibody_1_1_prismatic_spring.html", null ],
         [ "RevoluteSpring< T >", "classdrake_1_1multibody_1_1_revolute_spring.html", null ],
         [ "UniformGravityFieldElement< T >", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html", null ]
       ] ]
@@ -581,8 +582,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]

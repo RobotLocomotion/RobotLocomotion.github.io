@@ -14281,6 +14281,250 @@ second.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.multibody.tree.PrismaticSpring">
+<code class="descclassname">pydrake.multibody.tree.</code><code class="descname">PrismaticSpring</code><a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.multibody.tree.PrismaticSpring_[float]" title="pydrake.multibody.tree.PrismaticSpring_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.PrismaticSpring_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.multibody.tree.PrismaticSpring_">
+<em class="property">template </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">PrismaticSpring_</code><a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.multibody.tree.PrismaticSpring_[float]" title="pydrake.multibody.tree.PrismaticSpring_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrismaticSpring_[float]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd]" title="pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrismaticSpring_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.tree.PrismaticSpring_[Expression]" title="pydrake.multibody.tree.PrismaticSpring_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrismaticSpring_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float]">
+<em class="property">class </em><code class="descname">PrismaticSpring_[float]</code><a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.ForceElement_[float]" title="pydrake.multibody.tree.ForceElement_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceElement_[float]</span></code></a></p>
+<p>This ForceElement models a linear spring attached to a PrismaticJoint
+and applies a force to that joint according to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>f = -k⋅(x - x₀)
+</pre></div>
+</div>
+<p>where x₀ is the nominal (zero spring force) position in meters, x is
+the joint position in meters, f is the spring force in Newtons and k
+is the spring constant in N/m. Note that joint damping exists within
+the PrismaticJoint itself, and so is not included here.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is different from the LinearSpringDamper: this
+PrismaticSpring is associated with a joint, while the
+LinearSpringDamper connects two bodies.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float], joint: pydrake.multibody.tree.PrismaticJoint_[float], nominal_position: float, stiffness: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a linear spring attached to the given prismatic joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nominal_position</span></code>:</dt>
+<dd>The nominal position of the spring x₀, in meters, at which the
+spring applies no force. This is measured the same way as the
+generalized position of the prismatic joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt>
+<dd>The stiffness k of the spring in N/m.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> is (strictly) negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].joint">
+<code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.PrismaticJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].joint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].nominal_position">
+<code class="descname">nominal_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].nominal_position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].stiffness">
+<code class="descname">stiffness</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_.PrismaticSpring_[float].stiffness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">PrismaticSpring_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.ForceElement_[AutoDiffXd]" title="pydrake.multibody.tree.ForceElement_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceElement_[AutoDiffXd]</span></code></a></p>
+<p>This ForceElement models a linear spring attached to a PrismaticJoint
+and applies a force to that joint according to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>f = -k⋅(x - x₀)
+</pre></div>
+</div>
+<p>where x₀ is the nominal (zero spring force) position in meters, x is
+the joint position in meters, f is the spring force in Newtons and k
+is the spring constant in N/m. Note that joint damping exists within
+the PrismaticJoint itself, and so is not included here.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is different from the LinearSpringDamper: this
+PrismaticSpring is associated with a joint, while the
+LinearSpringDamper connects two bodies.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd], joint: pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd], nominal_position: float, stiffness: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a linear spring attached to the given prismatic joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nominal_position</span></code>:</dt>
+<dd>The nominal position of the spring x₀, in meters, at which the
+spring applies no force. This is measured the same way as the
+generalized position of the prismatic joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt>
+<dd>The stiffness k of the spring in N/m.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> is (strictly) negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].joint">
+<code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].joint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].nominal_position">
+<code class="descname">nominal_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].nominal_position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].stiffness">
+<code class="descname">stiffness</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd].stiffness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">PrismaticSpring_[Expression]</code><a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.ForceElement_[Expression]" title="pydrake.multibody.tree.ForceElement_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceElement_[Expression]</span></code></a></p>
+<p>This ForceElement models a linear spring attached to a PrismaticJoint
+and applies a force to that joint according to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>f = -k⋅(x - x₀)
+</pre></div>
+</div>
+<p>where x₀ is the nominal (zero spring force) position in meters, x is
+the joint position in meters, f is the spring force in Newtons and k
+is the spring constant in N/m. Note that joint damping exists within
+the PrismaticJoint itself, and so is not included here.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is different from the LinearSpringDamper: this
+PrismaticSpring is associated with a joint, while the
+LinearSpringDamper connects two bodies.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[Expression], joint: pydrake.multibody.tree.PrismaticJoint_[Expression], nominal_position: float, stiffness: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a linear spring attached to the given prismatic joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nominal_position</span></code>:</dt>
+<dd>The nominal position of the spring x₀, in meters, at which the
+spring applies no force. This is measured the same way as the
+generalized position of the prismatic joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt>
+<dd>The stiffness k of the spring in N/m.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> is (strictly) negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[Expression].joint">
+<code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.PrismaticJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[Expression].joint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[Expression].nominal_position">
+<code class="descname">nominal_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[Expression].nominal_position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[Expression].stiffness">
+<code class="descname">stiffness</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[Expression].stiffness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">PrismaticSpring_[float]</code><a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.ForceElement_[float]" title="pydrake.multibody.tree.ForceElement_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceElement_[float]</span></code></a></p>
+<p>This ForceElement models a linear spring attached to a PrismaticJoint
+and applies a force to that joint according to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>f = -k⋅(x - x₀)
+</pre></div>
+</div>
+<p>where x₀ is the nominal (zero spring force) position in meters, x is
+the joint position in meters, f is the spring force in Newtons and k
+is the spring constant in N/m. Note that joint damping exists within
+the PrismaticJoint itself, and so is not included here.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is different from the LinearSpringDamper: this
+PrismaticSpring is associated with a joint, while the
+LinearSpringDamper connects two bodies.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float], joint: pydrake.multibody.tree.PrismaticJoint_[float], nominal_position: float, stiffness: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a linear spring attached to the given prismatic joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nominal_position</span></code>:</dt>
+<dd>The nominal position of the spring x₀, in meters, at which the
+spring applies no force. This is measured the same way as the
+generalized position of the prismatic joint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt>
+<dd>The stiffness k of the spring in N/m.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> is (strictly) negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[float].joint">
+<code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.PrismaticJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[float].joint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[float].nominal_position">
+<code class="descname">nominal_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[float].nominal_position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.PrismaticSpring_[float].stiffness">
+<code class="descname">stiffness</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.PrismaticSpring_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.PrismaticSpring_[float].stiffness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.multibody.tree.RevoluteJoint">
 <code class="descclassname">pydrake.multibody.tree.</code><code class="descname">RevoluteJoint</code><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_[float]" title="pydrake.multibody.tree.RevoluteJoint_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.RevoluteJoint_[float]</span></code></a></p>

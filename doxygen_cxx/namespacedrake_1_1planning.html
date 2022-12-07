@@ -159,7 +159,9 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1planning.html','');}
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::planning Namespace Reference</div>  </div>
 </div><!--header-->
@@ -173,7 +175,118 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html">RobotDiagramBuilder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage for a combined diagram builder, plant, and scene graph.  <a href="classdrake_1_1planning_1_1_robot_diagram_builder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a6e884b3a7afc04b1a0c132ce264c14b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> : uint8_t { <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c">kNoCollision</a> = 0x00, 
+<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f">kEnvironmentCollision</a> = 0x01, 
+<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e">kSelfCollision</a> = 0x02, 
+<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f">kEnvironmentAndSelfCollision</a> = kEnvironmentCollision | kSelfCollision
+ }</td></tr>
+<tr class="memdesc:a6e884b3a7afc04b1a0c132ce264c14b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates these predicates (and their combinations):  <a href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">More...</a><br /></td></tr>
+<tr class="separator:a6e884b3a7afc04b1a0c132ce264c14b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad65f73fdac346846cbc24ebae63c60be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad65f73fdac346846cbc24ebae63c60be">SetInEnvironmentCollision</a> (<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_environment_collision)</td></tr>
+<tr class="separator:ad65f73fdac346846cbc24ebae63c60be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad0291e1222f1f88c5e1b5f4bac4abd10">SetInSelfCollision</a> (<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_self_collision)</td></tr>
+<tr class="separator:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a6e884b3a7afc04b1a0c132ce264c14b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e884b3a7afc04b1a0c132ce264c14b7">&#9670;&nbsp;</a></span>RobotCollisionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enumerates these predicates (and their combinations): </p>
+<ul>
+<li>is the robot in collision with itself?</li>
+<li>is the robot in collision with something in the environment? </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c"></a>kNoCollision&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f"></a>kEnvironmentCollision&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e"></a>kSelfCollision&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f"></a>kEnvironmentAndSelfCollision&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad65f73fdac346846cbc24ebae63c60be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65f73fdac346846cbc24ebae63c60be">&#9670;&nbsp;</a></span>SetInEnvironmentCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> drake::planning::SetInEnvironmentCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td>
+          <td class="paramname"><em>collision_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>in_environment_collision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a RobotCollisionType where the environment-collision value is that asserted by <code>in_environment_collision</code>, and the self-collision value is that asserted by <code>collision_type</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ad0291e1222f1f88c5e1b5f4bac4abd10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0291e1222f1f88c5e1b5f4bac4abd10">&#9670;&nbsp;</a></span>SetInSelfCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> drake::planning::SetInSelfCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td>
+          <td class="paramname"><em>collision_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>in_self_collision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a RobotCollisionType where the self-collision value is that asserted by <code>in_self_collision</code>, and the environment-collision value is that asserted by <code>collision_type</code>. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
