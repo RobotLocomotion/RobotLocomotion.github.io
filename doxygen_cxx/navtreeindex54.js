@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a30adb6d6693854cc7960d38461bbaf1d":[3,0,0,16,1,2,3],
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a7cac66374092242d495c2d0716281a9b":[3,0,0,16,1,2,0],
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7":[3,0,0,16,1,2,4],
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ad8b2d6d03c5f48ff4e9f2b5607386d2d":[3,0,0,16,1,2,2],
@@ -216,14 +217,16 @@ var NAVTREEINDEX54 =
 "structdrake_1_1uhash.html#ac98906b29c4381d0121f715fac155440":[3,0,0,61,1],
 "structdrake_1_1uhash.html#aec09227295d6a2c005ec578d42120039":[3,0,0,61,0],
 "structdrake_1_1visualization_1_1_visualization_config.html":[3,0,0,19,0],
-"structdrake_1_1visualization_1_1_visualization_config.html#a2c434dc8a30fc66fa14527eca76f38b5":[3,0,0,19,0,7],
-"structdrake_1_1visualization_1_1_visualization_config.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,19,0,6],
+"structdrake_1_1visualization_1_1_visualization_config.html#a2c434dc8a30fc66fa14527eca76f38b5":[3,0,0,19,0,9],
+"structdrake_1_1visualization_1_1_visualization_config.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,19,0,8],
+"structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862":[3,0,0,19,0,4],
 "structdrake_1_1visualization_1_1_visualization_config.html#a7c5955d58750f444fbad0c39fb6f7672":[3,0,0,19,0,1],
-"structdrake_1_1visualization_1_1_visualization_config.html#a8de496c6a641ed6fd4fa5d78bfcb73a9":[3,0,0,19,0,5],
+"structdrake_1_1visualization_1_1_visualization_config.html#a8de496c6a641ed6fd4fa5d78bfcb73a9":[3,0,0,19,0,7],
 "structdrake_1_1visualization_1_1_visualization_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,19,0,0],
-"structdrake_1_1visualization_1_1_visualization_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,19,0,3],
+"structdrake_1_1visualization_1_1_visualization_config.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,19,0,3],
+"structdrake_1_1visualization_1_1_visualization_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,19,0,5],
 "structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7":[3,0,0,19,0,2],
-"structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995":[3,0,0,19,0,4],
+"structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995":[3,0,0,19,0,6],
 "structdrake_1_1yaml_1_1_load_yaml_options.html":[3,0,0,20,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,20,0,3],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a41075284801afdfd502cd4c5f73f363d":[3,0,0,20,0,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX54 =
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,1,10],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,1,11],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,12],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,13],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,1,14],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,1,15],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,16]
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,13]
 };

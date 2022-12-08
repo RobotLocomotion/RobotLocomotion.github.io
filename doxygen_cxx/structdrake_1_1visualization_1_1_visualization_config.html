@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1visualization_1_1_visua
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Settings for what MultibodyPlant and SceneGraph should send to meldis and/or drake_visualizer. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. The exact configuration details (names and types) are subject to change as we polish this new feature.</dd></dl>
-<p>See <a class="el" href="namespacedrake_1_1visualization.html#a14a227e3510a26bcb2413a2d17cb176d" title="Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.">ApplyVisualizationConfig()</a> for how to enact this configuration. </p>
+<p>See <a class="el" href="namespacedrake_1_1visualization.html#a5edb34c75a79eac5f068c664d89dd952" title="Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.">ApplyVisualizationConfig()</a> for how to enact this configuration. </p>
 </div>
 <p><code>#include &lt;drake/visualization/visualization_config.h&gt;</code></p>
 <table class="memberdecls">
@@ -202,6 +202,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ae5544a2db38abe64cf9742dea94b1995"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995">publish_contacts</a> {true}</td></tr>
 <tr class="memdesc:ae5544a2db38abe64cf9742dea94b1995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show contact forces.  <a href="#ae5544a2db38abe64cf9742dea94b1995">More...</a><br /></td></tr>
 <tr class="separator:ae5544a2db38abe64cf9742dea94b1995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc253079efa6db9739c1cea2ded8862"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862">enable_meshcat_creation</a> {true}</td></tr>
+<tr class="memdesc:a6cc253079efa6db9739c1cea2ded8862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to create a Meshcat object if needed.  <a href="#a6cc253079efa6db9739c1cea2ded8862">More...</a><br /></td></tr>
+<tr class="separator:a6cc253079efa6db9739c1cea2ded8862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa320d63d28f6de621da0a93f91d6ed9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#aa320d63d28f6de621da0a93f91d6ed9f">delete_on_initialization_event</a> {true}</td></tr>
+<tr class="memdesc:aa320d63d28f6de621da0a93f91d6ed9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether to send a Meshcat::Delete() messages to the Meshcat object (if any) on an initialization event to remove any visualizations, e.g., from a previous simulation, to .  <a href="#aa320d63d28f6de621da0a93f91d6ed9f">More...</a><br /></td></tr>
+<tr class="separator:aa320d63d28f6de621da0a93f91d6ed9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -254,6 +260,38 @@ Public Attributes</h2></td></tr>
 
 <p>The color to apply to any proximity geometry that hasn't defined one. </p>
 <p>The vector must be of size three (rgb) or four (rgba). </p>
+
+</div>
+</div>
+<a id="aa320d63d28f6de621da0a93f91d6ed9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa320d63d28f6de621da0a93f91d6ed9f">&#9670;&nbsp;</a></span>delete_on_initialization_event</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool delete_on_initialization_event {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether to send a Meshcat::Delete() messages to the Meshcat object (if any) on an initialization event to remove any visualizations, e.g., from a previous simulation, to . </p>
+
+</div>
+</div>
+<a id="a6cc253079efa6db9739c1cea2ded8862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cc253079efa6db9739c1cea2ded8862">&#9670;&nbsp;</a></span>enable_meshcat_creation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool enable_meshcat_creation {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to create a Meshcat object if needed. </p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"rigid__body_8h.html":[4,0,0,8,14,41],
 "rigid__transform_8h.html":[4,0,0,7,28],
 "rimless__wheel_8h.html":[4,0,0,3,15,0],
 "rimless__wheel__geometry_8h.html":[4,0,0,3,15,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "spatial__momentum_8h.html":[4,0,0,8,6,3],
 "spatial__vector_8h.html":[4,0,0,8,6,4],
 "spatial__velocity_8h.html":[4,0,0,8,6,5],
-"spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
-"spong__controller_8h.html":[4,0,0,3,0,3]
+"spatial__velocity__constraint_8h.html":[4,0,0,8,8,6]
 };

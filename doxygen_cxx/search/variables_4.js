@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['enable_5fmeshcat_5fcreation',['enable_meshcat_creation',['../structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862',1,'drake::visualization::VisualizationConfig']]],
   ['error',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
   ['error_5fcode',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
   ['explored_5fnode_5fcount',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],

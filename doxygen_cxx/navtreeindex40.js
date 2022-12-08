@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ae7aaaebd7e27434069ba5af047713628":[3,0,0,18,1,12],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#aee0d01536c69b892fb45553cf4b67bb7":[3,0,0,18,1,2],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afb48be114e596b51430d94200ca3b821":[3,0,0,18,1,4],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19":[3,0,0,18,1,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "com__in__polyhedron__constraint_8h.html":[4,0,0,8,5,2],
 "com__position__constraint_8h.html":[4,0,0,8,5,3],
 "common_2autodiff_8h.html":[4,0,0,1,7],
-"common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[4,0,0,1,7,0],
-"common__solver__option_8h.html":[4,0,0,11,8]
+"common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[4,0,0,1,7,0]
 };

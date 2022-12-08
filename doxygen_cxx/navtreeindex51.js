@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"spong__controller_8h.html":[4,0,0,3,0,3],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
 "spring__mass__system_8h.html":[4,0,0,12,0,0,15],
 "stacked__trajectory_8h.html":[4,0,0,1,5,8],
@@ -245,9 +246,8 @@ var NAVTREEINDEX51 =
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa705e1cce16e5f276d9f1ff95851698e":[3,0,0,4,0,3,8],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#abb7b16d4d092f7b7572de4c058b30d96":[3,0,0,4,0,3,6],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ac584721f13a52d5e19df707b30f95ece":[3,0,0,4,0,3,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,4,6],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,6,2],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,6,2],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,6,10]
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,6,2]
 };

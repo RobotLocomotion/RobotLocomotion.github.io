@@ -6,6 +6,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "MultibodyPlant", "classdrake_1_1multibody_1_1_multibody_plant.html#a912adb84c4940893eb4634155e6e7e8b", null ],
     [ "AddCouplerConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#a71b7c4d7b4af1c97bb6f7dae906d1088", null ],
     [ "AddCouplerConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#aa5baf71bbc3927afda0ba46f554cc339", null ],
+    [ "AddDistanceConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#a8f29f6aa01dd68ee2babe09ace936ebf", null ],
     [ "AddForceElement", "classdrake_1_1multibody_1_1_multibody_plant.html#a48009c793b01c5a6dd079d33265435a3", null ],
     [ "AddFrame", "classdrake_1_1multibody_1_1_multibody_plant.html#a474c90a0b3e4f9349533207026413186", null ],
     [ "AddJoint", "classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7", null ],

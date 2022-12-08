@@ -259,7 +259,7 @@ as in <code class="docutils literal notranslate"><span class="pre">plant.Finaliz
 
 <dl class="function">
 <dt id="pydrake.visualization.ApplyVisualizationConfig">
-<code class="descclassname">pydrake.visualization.</code><code class="descname">ApplyVisualizationConfig</code><span class="sig-paren">(</span><em>config: pydrake.visualization.VisualizationConfig, builder: pydrake.systems.framework.DiagramBuilder_[float], lcm_buses: pydrake.systems.lcm.LcmBuses = None, plant: pydrake.multibody.plant.MultibodyPlant_[float] = None, scene_graph: pydrake.geometry.SceneGraph_[float] = None, lcm: pydrake.lcm.DrakeLcmInterface = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.visualization.ApplyVisualizationConfig" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.visualization.</code><code class="descname">ApplyVisualizationConfig</code><span class="sig-paren">(</span><em>config: pydrake.visualization.VisualizationConfig, builder: pydrake.systems.framework.DiagramBuilder_[float], lcm_buses: pydrake.systems.lcm.LcmBuses = None, plant: pydrake.multibody.plant.MultibodyPlant_[float] = None, scene_graph: pydrake.geometry.SceneGraph_[float] = None, meshcat: pydrake.geometry.Meshcat = None, lcm: pydrake.lcm.DrakeLcmInterface = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.visualization.ApplyVisualizationConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds LCM visualization publishers to communicate to drake_visualizer
 and/or meldis.</p>
 <div class="admonition warning">
@@ -316,6 +316,10 @@ value (nullptr) here is suitable and generally should be
 preferred. When provided, it must be a System that’s been added to
 the the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, visualizes the
 system named “scene_graph” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt>
+<dd>(Optional) A Meshcat object for visualization message publication.
+When not provided, a Meshcat object will be created unless
+<code class="docutils literal notranslate"><span class="pre">config.enable_meshcat_creation</span></code> is set to false.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt>
 <dd>(Optional) The LCM interface used for visualization message
 publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> value
@@ -816,6 +820,20 @@ one. The vector must be of size three (rgb) or four (rgba).</p>
 <code class="descname">default_proximity_color</code><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.default_proximity_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>The color to apply to any proximity geometry that hasn’t defined one.
 The vector must be of size three (rgb) or four (rgba).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizationConfig.delete_on_initialization_event">
+<code class="descname">delete_on_initialization_event</code><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.delete_on_initialization_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether to send a Meshcat::Delete() messages to the Meshcat
+object (if any) on an initialization event to remove any
+visualizations, e.g., from a previous simulation, to .</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.visualization.VisualizationConfig.enable_meshcat_creation">
+<code class="descname">enable_meshcat_creation</code><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.enable_meshcat_creation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to create a Meshcat object if needed.</p>
 </dd></dl>
 
 <dl class="attribute">

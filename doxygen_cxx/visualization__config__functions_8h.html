@@ -165,8 +165,11 @@ $(document).ready(function(){initNavTree('visualization__config__functions_8h.ht
 <div class="title">visualization_config_functions.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__visualizer__params_8h.html">drake/geometry/drake_visualizer_params.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="meshcat_8h.html">drake/geometry/meshcat.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="meshcat__visualizer__params_8h.html">drake/geometry/meshcat_visualizer_params.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
@@ -188,9 +191,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a14a227e3510a26bcb2413a2d17cb176d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a14a227e3510a26bcb2413a2d17cb176d">ApplyVisualizationConfig</a> (const VisualizationConfig &amp;config, systems::DiagramBuilder&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const systems::lcm::LcmBuses *lcm_buses=nullptr, const multibody::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, const geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
-<tr class="memdesc:a14a227e3510a26bcb2413a2d17cb176d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.  <a href="namespacedrake_1_1visualization.html#a14a227e3510a26bcb2413a2d17cb176d">More...</a><br /></td></tr>
-<tr class="separator:a14a227e3510a26bcb2413a2d17cb176d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5edb34c75a79eac5f068c664d89dd952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a5edb34c75a79eac5f068c664d89dd952">ApplyVisualizationConfig</a> (const VisualizationConfig &amp;config, systems::DiagramBuilder&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const systems::lcm::LcmBuses *lcm_buses=nullptr, const multibody::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, const geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, std::shared_ptr&lt; geometry::Meshcat &gt; meshcat=nullptr, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
+<tr class="memdesc:a5edb34c75a79eac5f068c664d89dd952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.  <a href="namespacedrake_1_1visualization.html#a5edb34c75a79eac5f068c664d89dd952">More...</a><br /></td></tr>
+<tr class="separator:a5edb34c75a79eac5f068c664d89dd952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c1e790d0738fd19d648423c5ce3c65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a11c1e790d0738fd19d648423c5ce3c65">AddDefaultVisualization</a> (systems::DiagramBuilder&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
 <tr class="memdesc:a11c1e790d0738fd19d648423c5ce3c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis, using all of the default configuration settings.  <a href="namespacedrake_1_1visualization.html#a11c1e790d0738fd19d648423c5ce3c65">More...</a><br /></td></tr>
 <tr class="separator:a11c1e790d0738fd19d648423c5ce3c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
