@@ -32,6 +32,7 @@ var searchData=
   ['rimless_5fwheel_2eh',['rimless_wheel.h',['../rimless__wheel_8h.html',1,'']]],
   ['rimless_5fwheel_5fgeometry_2eh',['rimless_wheel_geometry.h',['../rimless__wheel__geometry_8h.html',1,'']]],
   ['robertson_5fsystem_2eh',['robertson_system.h',['../robertson__system_8h.html',1,'']]],
+  ['robot_5fclearance_2eh',['robot_clearance.h',['../robot__clearance_8h.html',1,'']]],
   ['robot_5fcollision_5ftype_2eh',['robot_collision_type.h',['../robot__collision__type_8h.html',1,'']]],
   ['robot_5fdiagram_2eh',['robot_diagram.h',['../robot__diagram_8h.html',1,'']]],
   ['robot_5fdiagram_5fbuilder_2eh',['robot_diagram_builder.h',['../robot__diagram__builder_8h.html',1,'']]],

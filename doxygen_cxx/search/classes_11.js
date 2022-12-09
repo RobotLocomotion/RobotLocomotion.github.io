@@ -37,6 +37,7 @@ var searchData=
   ['rimlesswheelgeometry',['RimlessWheelGeometry',['../classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html',1,'drake::examples::rimless_wheel']]],
   ['rlocationorerror',['RlocationOrError',['../structdrake_1_1_rlocation_or_error.html',1,'drake']]],
   ['robertsonsystem',['RobertsonSystem',['../classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html',1,'drake::systems::analysis::test']]],
+  ['robotclearance',['RobotClearance',['../classdrake_1_1planning_1_1_robot_clearance.html',1,'drake::planning']]],
   ['robotdiagram',['RobotDiagram',['../classdrake_1_1planning_1_1_robot_diagram.html',1,'drake::planning']]],
   ['robotdiagrambuilder',['RobotDiagramBuilder',['../classdrake_1_1planning_1_1_robot_diagram_builder.html',1,'drake::planning']]],
   ['robotplaninterpolator',['RobotPlanInterpolator',['../classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html',1,'drake::manipulation::planner']]],

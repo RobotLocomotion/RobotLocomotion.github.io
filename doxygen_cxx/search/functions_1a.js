@@ -165,6 +165,7 @@ var searchData=
   ['_7erewritingrule',['~RewritingRule',['../classdrake_1_1symbolic_1_1_rewriting_rule.html#a07e1ce22402070bc1c7fe07795c0956f',1,'drake::symbolic::RewritingRule']]],
   ['_7ergbdsensor',['~RgbdSensor',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a3fb071bc0c53a418967bb936b59a9f9e',1,'drake::systems::sensors::RgbdSensor']]],
   ['_7erimlesswheelgeometry',['~RimlessWheelGeometry',['../classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html#a9a9ecbabf91ef8c0ef422ce7f56a1cbc',1,'drake::examples::rimless_wheel::RimlessWheelGeometry']]],
+  ['_7erobotclearance',['~RobotClearance',['../classdrake_1_1planning_1_1_robot_clearance.html#a729e9cd587db14316836a7480f6a3ef9',1,'drake::planning::RobotClearance']]],
   ['_7erobotdiagram',['~RobotDiagram',['../classdrake_1_1planning_1_1_robot_diagram.html#ac6630002da2673605a0d159870caa1d4',1,'drake::planning::RobotDiagram']]],
   ['_7erobotdiagrambuilder',['~RobotDiagramBuilder',['../classdrake_1_1planning_1_1_robot_diagram_builder.html#afcfb0c4d2f26618363069032bc873d00',1,'drake::planning::RobotDiagramBuilder']]],
   ['_7erobotplaninterpolator',['~RobotPlanInterpolator',['../classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a8216fa2eb3a37a841236728ab6c0ee87',1,'drake::manipulation::planner::RobotPlanInterpolator']]],

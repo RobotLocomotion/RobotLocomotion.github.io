@@ -472,8 +472,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
+    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -632,6 +632,7 @@ var hierarchy =
     [ "RigidTransform< T >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RigidTransform< double >", "classdrake_1_1math_1_1_rigid_transform.html", null ],
     [ "RlocationOrError", "structdrake_1_1_rlocation_or_error.html", null ],
+    [ "RobotClearance", "classdrake_1_1planning_1_1_robot_clearance.html", null ],
     [ "RobotDiagramBuilder< T >", "classdrake_1_1planning_1_1_robot_diagram_builder.html", null ],
     [ "RollPitchYaw< T >", "classdrake_1_1math_1_1_roll_pitch_yaw.html", null ],
     [ "Rotation", "classdrake_1_1schema_1_1_rotation.html", null ],

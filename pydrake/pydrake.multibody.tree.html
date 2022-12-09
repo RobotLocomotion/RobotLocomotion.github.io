@@ -14525,6 +14525,1586 @@ generalized position of the prismatic joint.</dd>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint">
+<code class="descclassname">pydrake.multibody.tree.</code><code class="descname">QuaternionFloatingJoint</code><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float]" title="pydrake.multibody.tree.QuaternionFloatingJoint_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_">
+<em class="property">template </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">QuaternionFloatingJoint_</code><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float]" title="pydrake.multibody.tree.QuaternionFloatingJoint_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuaternionFloatingJoint_[float]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]" title="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuaternionFloatingJoint_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]" title="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuaternionFloatingJoint_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float]">
+<em class="property">class </em><code class="descname">QuaternionFloatingJoint_[float]</code><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_[float]" title="pydrake.multibody.tree.Joint_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[float]</span></code></a></p>
+<p>This Joint allows two bodies to move freely relatively to one another.
+That is, given a frame F attached to the parent body P and a frame M
+attached to the child body B (see the Joint class’s documentation),
+this Joint allows frame M to translate and rotate freely with respect
+to F, introducing six degrees of freedom. This Joint introduces four
+generalized positions to describe the orientation <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> of frame M
+in F with a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>, and three generalized positions to
+describe the position of frame M’s origin in F with a position vector
+<code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. As generalized velocities, this Joint introduces the angular
+velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of
+frame M’s origin in frame F.</p>
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], angular_damping: float = 0, translational_damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a QuaternionFloatingJoint granting six degrees of
+freedom to an outboard frame M attached to the child body B with
+respect to an inboard frame F attached to the parent body P. The
+orientation of frame M in F is represented by a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>
+while the position of F in M is given by a position vector <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>
+expressed in frame F. See this class’s documentation for further
+details on the definition of these frames, get_quaternion() and
+get_position() for an explanation of the configuration of this joint,
+and get_angular_velocity() and get_translational_velocity() for an
+explanation of the generalized velocities.</p>
+<p>This constructor signature creates a joint with no joint limits, i.e.
+the joint position, velocity and acceleration limits are the pair
+<code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint methods
+set_position_limits(), set_velocity_limits() and
+set_acceleration_limits().</p>
+<p>The first three arguments to this constructor are those of the Joint
+class constructor. See the Joint class’s documentation for details.
+The additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅m⋅s for the angular component of
+this joint’s velocity, used to model losses within the joint. See
+documentation of angular_damping() for details on modelling of the
+damping force.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">translational_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅s/m for the translational
+component of this joint’s velocity, used to model losses within
+the joint. See documentation of translational_damping() for
+details on modelling of the damping force.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if angular_damping is negative.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if translational_damping is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].angular_damping">
+<code class="descname">angular_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].angular_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s angular damping constant in N⋅m⋅s. The
+damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>, i.e.
+opposing motion, with ω the angular velocity of frame M in F (see
+get_angular_velocity()) and τ the torque on child body B (to which M
+is rigidly attached).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_angular_velocity">
+<code class="descname">get_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the angular velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of the child
+frame M in the parent frame F, expressed in F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_default_pose">
+<code class="descname">get_default_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_default_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_default_position">
+<code class="descname">get_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_default_quaternion">
+<code class="descname">get_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_pose">
+<code class="descname">get_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of the outboard frame M as measured and
+expressed in the inboard frame F. Refer to the documetation for this
+class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The pose of frame M in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_position">
+<code class="descname">get_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of the outboard frame M’s origin as
+measured and expressed in the inboard frame F. Refer to the
+documentation for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The position vector of frame M’s origin in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_quaternion">
+<code class="descname">get_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> that represents the orientation of
+outboard frame M in the inboard frame F. Refer to the documentation
+for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The quaternion representing the orientation of frame M in F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_translational_velocity">
+<code class="descname">get_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].get_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the translational velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of the
+child frame M’s origin as measured and expressed in the parent frame
+F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the origin of
+child frame M in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_angular_velocity">
+<code class="descname">set_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], w_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the angular
+velocity of the child frame M in the parent frame F is <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_default_position">
+<code class="descname">set_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], p_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired default position of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_default_quaternion">
+<code class="descname">set_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], q_FM: pydrake.common.eigen_geometry.Quaternion_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired default quaternion of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_pose">
+<code class="descname">set_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> the pose of frame M measured and
+expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired pose of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], p_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of frame M’s origin
+<code class="docutils literal notranslate"><span class="pre">Mo</span></code> measured and expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired position of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_quaternion">
+<code class="descname">set_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], q_FM: pydrake.common.eigen_geometry.Quaternion_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> so that the orientation of frame M in F is given by
+the input quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired orientation of M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_random_position_distribution">
+<code class="descname">set_random_position_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], p_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_random_position_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution that positions of this joint will be
+randomly sampled from. See get_position() for details on the position
+representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_random_quaternion_distribution">
+<code class="descname">set_random_quaternion_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], q_FM: pydrake.common.eigen_geometry.Quaternion_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_random_quaternion_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Sets the random distribution that the orientation of this
+joint will be randomly sampled from. See get_quaternion() for details
+on the orientation representation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use caution when setting a quaternion distribution. A naive
+uniform sampling of each component will not lead to a uniform
+sampling of the unit sphere. See
+<code class="docutils literal notranslate"><span class="pre">set_random_quaternion_distribution_to_uniform()</span></code> for the most
+common case of uniformly sampling rotations.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_random_quaternion_distribution_to_uniform">
+<code class="descname">set_random_quaternion_distribution_to_uniform</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_random_quaternion_distribution_to_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution such that the orientation of this joint
+will be randomly sampled using uniformly sampled rotations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_translational_velocity">
+<code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], v_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the
+translational velocity of the child frame M’s origin in the parent
+frame F is <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the child frame
+M’s origin in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].SetDefaultPose">
+<code class="descname">SetDefaultPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].SetDefaultPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired default pose of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].SetFromRotationMatrix">
+<code class="descname">SetFromRotationMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], R_FM: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].SetFromRotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].translational_damping">
+<code class="descname">translational_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_.QuaternionFloatingJoint_[float].translational_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s translational damping constant in N⋅s/m. The
+damping force (in N) is modeled as <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">-damping⋅v</span></code> i.e. opposing
+motion, with v the translational velocity of frame M in F (see
+get_translational_velocity()) and f the force on child body B at Mo.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">QuaternionFloatingJoint_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_[AutoDiffXd]" title="pydrake.multibody.tree.Joint_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[AutoDiffXd]</span></code></a></p>
+<p>This Joint allows two bodies to move freely relatively to one another.
+That is, given a frame F attached to the parent body P and a frame M
+attached to the child body B (see the Joint class’s documentation),
+this Joint allows frame M to translate and rotate freely with respect
+to F, introducing six degrees of freedom. This Joint introduces four
+generalized positions to describe the orientation <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> of frame M
+in F with a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>, and three generalized positions to
+describe the position of frame M’s origin in F with a position vector
+<code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. As generalized velocities, this Joint introduces the angular
+velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of
+frame M’s origin in frame F.</p>
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], angular_damping: float = 0, translational_damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a QuaternionFloatingJoint granting six degrees of
+freedom to an outboard frame M attached to the child body B with
+respect to an inboard frame F attached to the parent body P. The
+orientation of frame M in F is represented by a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>
+while the position of F in M is given by a position vector <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>
+expressed in frame F. See this class’s documentation for further
+details on the definition of these frames, get_quaternion() and
+get_position() for an explanation of the configuration of this joint,
+and get_angular_velocity() and get_translational_velocity() for an
+explanation of the generalized velocities.</p>
+<p>This constructor signature creates a joint with no joint limits, i.e.
+the joint position, velocity and acceleration limits are the pair
+<code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint methods
+set_position_limits(), set_velocity_limits() and
+set_acceleration_limits().</p>
+<p>The first three arguments to this constructor are those of the Joint
+class constructor. See the Joint class’s documentation for details.
+The additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅m⋅s for the angular component of
+this joint’s velocity, used to model losses within the joint. See
+documentation of angular_damping() for details on modelling of the
+damping force.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">translational_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅s/m for the translational
+component of this joint’s velocity, used to model losses within
+the joint. See documentation of translational_damping() for
+details on modelling of the damping force.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if angular_damping is negative.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if translational_damping is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].angular_damping">
+<code class="descname">angular_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].angular_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s angular damping constant in N⋅m⋅s. The
+damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>, i.e.
+opposing motion, with ω the angular velocity of frame M in F (see
+get_angular_velocity()) and τ the torque on child body B (to which M
+is rigidly attached).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_angular_velocity">
+<code class="descname">get_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the angular velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of the child
+frame M in the parent frame F, expressed in F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_pose">
+<code class="descname">get_default_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_position">
+<code class="descname">get_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_quaternion">
+<code class="descname">get_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_pose">
+<code class="descname">get_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of the outboard frame M as measured and
+expressed in the inboard frame F. Refer to the documetation for this
+class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The pose of frame M in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_position">
+<code class="descname">get_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of the outboard frame M’s origin as
+measured and expressed in the inboard frame F. Refer to the
+documentation for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The position vector of frame M’s origin in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_quaternion">
+<code class="descname">get_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> that represents the orientation of
+outboard frame M in the inboard frame F. Refer to the documentation
+for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The quaternion representing the orientation of frame M in F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_translational_velocity">
+<code class="descname">get_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the translational velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of the
+child frame M’s origin as measured and expressed in the parent frame
+F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the origin of
+child frame M in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_angular_velocity">
+<code class="descname">set_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], w_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the angular
+velocity of the child frame M in the parent frame F is <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_default_position">
+<code class="descname">set_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], p_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired default position of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_default_quaternion">
+<code class="descname">set_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], q_FM: pydrake.common.eigen_geometry.Quaternion_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired default quaternion of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_pose">
+<code class="descname">set_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X_FM: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> the pose of frame M measured and
+expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired pose of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], p_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of frame M’s origin
+<code class="docutils literal notranslate"><span class="pre">Mo</span></code> measured and expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired position of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_quaternion">
+<code class="descname">set_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], q_FM: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> so that the orientation of frame M in F is given by
+the input quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired orientation of M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_random_position_distribution">
+<code class="descname">set_random_position_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], p_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_random_position_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution that positions of this joint will be
+randomly sampled from. See get_position() for details on the position
+representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_random_quaternion_distribution">
+<code class="descname">set_random_quaternion_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], q_FM: pydrake.common.eigen_geometry.Quaternion_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_random_quaternion_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Sets the random distribution that the orientation of this
+joint will be randomly sampled from. See get_quaternion() for details
+on the orientation representation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use caution when setting a quaternion distribution. A naive
+uniform sampling of each component will not lead to a uniform
+sampling of the unit sphere. See
+<code class="docutils literal notranslate"><span class="pre">set_random_quaternion_distribution_to_uniform()</span></code> for the most
+common case of uniformly sampling rotations.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_random_quaternion_distribution_to_uniform">
+<code class="descname">set_random_quaternion_distribution_to_uniform</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_random_quaternion_distribution_to_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution such that the orientation of this joint
+will be randomly sampled using uniformly sampled rotations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_translational_velocity">
+<code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], v_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the
+translational velocity of the child frame M’s origin in the parent
+frame F is <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the child frame
+M’s origin in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].SetDefaultPose">
+<code class="descname">SetDefaultPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].SetDefaultPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired default pose of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].SetFromRotationMatrix">
+<code class="descname">SetFromRotationMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], R_FM: pydrake.math.RotationMatrix_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].SetFromRotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].translational_damping">
+<code class="descname">translational_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].translational_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s translational damping constant in N⋅s/m. The
+damping force (in N) is modeled as <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">-damping⋅v</span></code> i.e. opposing
+motion, with v the translational velocity of frame M in F (see
+get_translational_velocity()) and f the force on child body B at Mo.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">QuaternionFloatingJoint_[Expression]</code><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_[Expression]" title="pydrake.multibody.tree.Joint_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[Expression]</span></code></a></p>
+<p>This Joint allows two bodies to move freely relatively to one another.
+That is, given a frame F attached to the parent body P and a frame M
+attached to the child body B (see the Joint class’s documentation),
+this Joint allows frame M to translate and rotate freely with respect
+to F, introducing six degrees of freedom. This Joint introduces four
+generalized positions to describe the orientation <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> of frame M
+in F with a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>, and three generalized positions to
+describe the position of frame M’s origin in F with a position vector
+<code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. As generalized velocities, this Joint introduces the angular
+velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of
+frame M’s origin in frame F.</p>
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], angular_damping: float = 0, translational_damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a QuaternionFloatingJoint granting six degrees of
+freedom to an outboard frame M attached to the child body B with
+respect to an inboard frame F attached to the parent body P. The
+orientation of frame M in F is represented by a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>
+while the position of F in M is given by a position vector <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>
+expressed in frame F. See this class’s documentation for further
+details on the definition of these frames, get_quaternion() and
+get_position() for an explanation of the configuration of this joint,
+and get_angular_velocity() and get_translational_velocity() for an
+explanation of the generalized velocities.</p>
+<p>This constructor signature creates a joint with no joint limits, i.e.
+the joint position, velocity and acceleration limits are the pair
+<code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint methods
+set_position_limits(), set_velocity_limits() and
+set_acceleration_limits().</p>
+<p>The first three arguments to this constructor are those of the Joint
+class constructor. See the Joint class’s documentation for details.
+The additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅m⋅s for the angular component of
+this joint’s velocity, used to model losses within the joint. See
+documentation of angular_damping() for details on modelling of the
+damping force.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">translational_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅s/m for the translational
+component of this joint’s velocity, used to model losses within
+the joint. See documentation of translational_damping() for
+details on modelling of the damping force.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if angular_damping is negative.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if translational_damping is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].angular_damping">
+<code class="descname">angular_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].angular_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s angular damping constant in N⋅m⋅s. The
+damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>, i.e.
+opposing motion, with ω the angular velocity of frame M in F (see
+get_angular_velocity()) and τ the torque on child body B (to which M
+is rigidly attached).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_angular_velocity">
+<code class="descname">get_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the angular velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of the child
+frame M in the parent frame F, expressed in F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_pose">
+<code class="descname">get_default_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_position">
+<code class="descname">get_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_quaternion">
+<code class="descname">get_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_pose">
+<code class="descname">get_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of the outboard frame M as measured and
+expressed in the inboard frame F. Refer to the documetation for this
+class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The pose of frame M in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_position">
+<code class="descname">get_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of the outboard frame M’s origin as
+measured and expressed in the inboard frame F. Refer to the
+documentation for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The position vector of frame M’s origin in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_quaternion">
+<code class="descname">get_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> that represents the orientation of
+outboard frame M in the inboard frame F. Refer to the documentation
+for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The quaternion representing the orientation of frame M in F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_translational_velocity">
+<code class="descname">get_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the translational velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of the
+child frame M’s origin as measured and expressed in the parent frame
+F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the origin of
+child frame M in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_angular_velocity">
+<code class="descname">set_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression], w_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the angular
+velocity of the child frame M in the parent frame F is <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_default_position">
+<code class="descname">set_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], p_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired default position of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_default_quaternion">
+<code class="descname">set_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], q_FM: pydrake.common.eigen_geometry.Quaternion_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired default quaternion of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_pose">
+<code class="descname">set_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression], X_FM: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> the pose of frame M measured and
+expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired pose of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression], p_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of frame M’s origin
+<code class="docutils literal notranslate"><span class="pre">Mo</span></code> measured and expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired position of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_quaternion">
+<code class="descname">set_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression], q_FM: pydrake.common.eigen_geometry.Quaternion_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> so that the orientation of frame M in F is given by
+the input quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired orientation of M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_random_position_distribution">
+<code class="descname">set_random_position_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], p_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_random_position_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution that positions of this joint will be
+randomly sampled from. See get_position() for details on the position
+representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_random_quaternion_distribution">
+<code class="descname">set_random_quaternion_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], q_FM: pydrake.common.eigen_geometry.Quaternion_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_random_quaternion_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Sets the random distribution that the orientation of this
+joint will be randomly sampled from. See get_quaternion() for details
+on the orientation representation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use caution when setting a quaternion distribution. A naive
+uniform sampling of each component will not lead to a uniform
+sampling of the unit sphere. See
+<code class="docutils literal notranslate"><span class="pre">set_random_quaternion_distribution_to_uniform()</span></code> for the most
+common case of uniformly sampling rotations.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_random_quaternion_distribution_to_uniform">
+<code class="descname">set_random_quaternion_distribution_to_uniform</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_random_quaternion_distribution_to_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution such that the orientation of this joint
+will be randomly sampled using uniformly sampled rotations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_translational_velocity">
+<code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression], v_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the
+translational velocity of the child frame M’s origin in the parent
+frame F is <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the child frame
+M’s origin in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].SetDefaultPose">
+<code class="descname">SetDefaultPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].SetDefaultPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired default pose of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].SetFromRotationMatrix">
+<code class="descname">SetFromRotationMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression], context: pydrake.systems.framework.Context_[Expression], R_FM: pydrake.math.RotationMatrix_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].SetFromRotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].translational_damping">
+<code class="descname">translational_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].translational_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s translational damping constant in N⋅s/m. The
+damping force (in N) is modeled as <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">-damping⋅v</span></code> i.e. opposing
+motion, with v the translational velocity of frame M in F (see
+get_translational_velocity()) and f the force on child body B at Mo.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.tree.</code><code class="descname">QuaternionFloatingJoint_[float]</code><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_[float]" title="pydrake.multibody.tree.Joint_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[float]</span></code></a></p>
+<p>This Joint allows two bodies to move freely relatively to one another.
+That is, given a frame F attached to the parent body P and a frame M
+attached to the child body B (see the Joint class’s documentation),
+this Joint allows frame M to translate and rotate freely with respect
+to F, introducing six degrees of freedom. This Joint introduces four
+generalized positions to describe the orientation <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> of frame M
+in F with a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>, and three generalized positions to
+describe the position of frame M’s origin in F with a position vector
+<code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. As generalized velocities, this Joint introduces the angular
+velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of
+frame M’s origin in frame F.</p>
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], angular_damping: float = 0, translational_damping: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a QuaternionFloatingJoint granting six degrees of
+freedom to an outboard frame M attached to the child body B with
+respect to an inboard frame F attached to the parent body P. The
+orientation of frame M in F is represented by a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>
+while the position of F in M is given by a position vector <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>
+expressed in frame F. See this class’s documentation for further
+details on the definition of these frames, get_quaternion() and
+get_position() for an explanation of the configuration of this joint,
+and get_angular_velocity() and get_translational_velocity() for an
+explanation of the generalized velocities.</p>
+<p>This constructor signature creates a joint with no joint limits, i.e.
+the joint position, velocity and acceleration limits are the pair
+<code class="docutils literal notranslate"><span class="pre">(-∞,</span> <span class="pre">∞)</span></code>. These can be set using the Joint methods
+set_position_limits(), set_velocity_limits() and
+set_acceleration_limits().</p>
+<p>The first three arguments to this constructor are those of the Joint
+class constructor. See the Joint class’s documentation for details.
+The additional parameters are:</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angular_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅m⋅s for the angular component of
+this joint’s velocity, used to model losses within the joint. See
+documentation of angular_damping() for details on modelling of the
+damping force.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">translational_damping</span></code>:</dt>
+<dd>Viscous damping coefficient in N⋅s/m for the translational
+component of this joint’s velocity, used to model losses within
+the joint. See documentation of translational_damping() for
+details on modelling of the damping force.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if angular_damping is negative.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if translational_damping is negative.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].angular_damping">
+<code class="descname">angular_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].angular_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s angular damping constant in N⋅m⋅s. The
+damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span> <span class="pre">-damping⋅ω</span></code>, i.e.
+opposing motion, with ω the angular velocity of frame M in F (see
+get_angular_velocity()) and τ the torque on child body B (to which M
+is rigidly attached).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_angular_velocity">
+<code class="descname">get_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the angular velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of the child
+frame M in the parent frame F, expressed in F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_default_pose">
+<code class="descname">get_default_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_default_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_default_position">
+<code class="descname">get_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_default_quaternion">
+<code class="descname">get_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_pose">
+<code class="descname">get_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of the outboard frame M as measured and
+expressed in the inboard frame F. Refer to the documetation for this
+class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The pose of frame M in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_position">
+<code class="descname">get_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of the outboard frame M’s origin as
+measured and expressed in the inboard frame F. Refer to the
+documentation for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The position vector of frame M’s origin in frame F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_quaternion">
+<code class="descname">get_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> that represents the orientation of
+outboard frame M in the inboard frame F. Refer to the documentation
+for this class for details.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The quaternion representing the orientation of frame M in F.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_translational_velocity">
+<code class="descname">get_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].get_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves from <code class="docutils literal notranslate"><span class="pre">context</span></code> the translational velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of the
+child frame M’s origin as measured and expressed in the parent frame
+F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the origin of
+child frame M in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_angular_velocity">
+<code class="descname">set_angular_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], w_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the angular
+velocity of the child frame M in the parent frame F is <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the angular velocity of the child frame M in
+the parent frame F, expressed in F. Refer to this class’s
+documentation for further details and definitions of these frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_default_position">
+<code class="descname">set_default_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], p_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_default_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired default position of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_default_quaternion">
+<code class="descname">set_default_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], q_FM: pydrake.common.eigen_geometry.Quaternion_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_default_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired default quaternion of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_pose">
+<code class="descname">set_pose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> the pose of frame M measured and
+expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired pose of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], p_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the position <code class="docutils literal notranslate"><span class="pre">p_FM</span></code> of frame M’s origin
+<code class="docutils literal notranslate"><span class="pre">Mo</span></code> measured and expressed in frame F.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt>
+<dd>The desired position of frame M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_quaternion">
+<code class="descname">set_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], q_FM: pydrake.common.eigen_geometry.Quaternion_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> so that the orientation of frame M in F is given by
+the input quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt>
+<dd>The desired orientation of M in F to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_random_position_distribution">
+<code class="descname">set_random_position_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], p_FM: numpy.ndarray[object[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_random_position_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution that positions of this joint will be
+randomly sampled from. See get_position() for details on the position
+representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_random_quaternion_distribution">
+<code class="descname">set_random_quaternion_distribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], q_FM: pydrake.common.eigen_geometry.Quaternion_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_random_quaternion_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Sets the random distribution that the orientation of this
+joint will be randomly sampled from. See get_quaternion() for details
+on the orientation representation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use caution when setting a quaternion distribution. A naive
+uniform sampling of each component will not lead to a uniform
+sampling of the unit sphere. See
+<code class="docutils literal notranslate"><span class="pre">set_random_quaternion_distribution_to_uniform()</span></code> for the most
+common case of uniformly sampling rotations.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_random_quaternion_distribution_to_uniform">
+<code class="descname">set_random_quaternion_distribution_to_uniform</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_random_quaternion_distribution_to_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random distribution such that the orientation of this joint
+will be randomly sampled using uniformly sampled rotations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_translational_velocity">
+<code class="descname">set_translational_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], v_FM: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].set_translational_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint so that the
+translational velocity of the child frame M’s origin in the parent
+frame F is <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context of the model this joint belongs to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt>
+<dd>A vector in ℝ³ with the translational velocity of the child frame
+M’s origin in the parent frame F, expressed in F. Refer to this
+class’s documentation for further details and definitions of these
+frames.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].SetDefaultPose">
+<code class="descname">SetDefaultPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].SetDefaultPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> of this joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>:</dt>
+<dd>The desired default pose of the joint.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].SetFromRotationMatrix">
+<code class="descname">SetFromRotationMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float], context: pydrake.systems.framework.Context_[float], R_FM: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.QuaternionFloatingJoint_[float]<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].SetFromRotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.QuaternionFloatingJoint_[float].translational_damping">
+<code class="descname">translational_damping</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.QuaternionFloatingJoint_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_[float].translational_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">this</span></code> joint’s translational damping constant in N⋅s/m. The
+damping force (in N) is modeled as <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">-damping⋅v</span></code> i.e. opposing
+motion, with v the translational velocity of frame M in F (see
+get_translational_velocity()) and f the force on child body B at Mo.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.multibody.tree.RevoluteJoint">
 <code class="descclassname">pydrake.multibody.tree.</code><code class="descname">RevoluteJoint</code><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_[float]" title="pydrake.multibody.tree.RevoluteJoint_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.RevoluteJoint_[float]</span></code></a></p>
