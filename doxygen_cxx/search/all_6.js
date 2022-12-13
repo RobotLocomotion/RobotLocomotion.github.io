@@ -68,6 +68,7 @@ var searchData=
   ['findmutablelog',['FindMutableLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c',1,'drake::systems::VectorLogSink']]],
   ['findnonconvexquadraticcost',['FindNonconvexQuadraticCost',['../namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb',1,'drake::solvers']]],
   ['findorcreatelcmbus',['FindOrCreateLcmBus',['../namespacedrake_1_1systems_1_1lcm.html#ae1e2532c4eb20c358ac867c245ae817e',1,'drake::systems::lcm']]],
+  ['findredundant',['FindRedundant',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a89f4027e84df413eb25359332513c464',1,'drake::geometry::optimization::HPolyhedron']]],
   ['findresource',['FindResource',['../namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb',1,'drake']]],
   ['findresourceorthrow',['FindResourceOrThrow',['../namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6',1,'drake']]],
   ['findresourceresult',['FindResourceResult',['../classdrake_1_1_find_resource_result.html',1,'FindResourceResult'],['../classdrake_1_1_find_resource_result.html#abc10476ea4826c86c6b9f940c9206bd9',1,'drake::FindResourceResult::FindResourceResult(const FindResourceResult &amp;)=default'],['../classdrake_1_1_find_resource_result.html#a98da321acd317fd87def222ebc979f3c',1,'drake::FindResourceResult::FindResourceResult(FindResourceResult &amp;&amp;)=default']]],

@@ -838,7 +838,7 @@ graph.</p>
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f81178c69f0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f940bf32fb0&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -872,7 +872,7 @@ set.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f81178c3330&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;pydrake.solvers.SolverOptions object at 0x7f940b8c2970&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>
@@ -1349,6 +1349,19 @@ value is, the more relaxation we add to the containment. If tol is
 negative, then we check if a shrinked <code class="docutils literal notranslate"><span class="pre">other</span></code> contains this
 polyheron.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.FindRedundant">
+<code class="descname">FindRedundant</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>tol: float = 1e-09</em><span class="sig-paren">)</span> &#x2192; Set[int]<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.FindRedundant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the redundant inequalities in this polyhedron. Returns a set ℑ,
+such that if we remove the rows of A * x &lt;= b in ℑ, the remaining
+inequalities still define the same polyhedron, namely {x | A*x&lt;=b} =
+{x | A.row(i)*x&lt;=b(i), ∀i ∉ ℑ}. This function solves a series of
+linear programs. We say the jᵗʰ row A.row(j)*x &lt;= b(j) is redundant,
+if {x | A.row(i) * x &lt;= b(i), ∀i ∉ ℑ} implies that A.row(j) * x &lt;=
+b(j) + tol. Note that we do NOT guarantee that we find all the
+redundant rows.</p>
 </dd></dl>
 
 <dl class="method">

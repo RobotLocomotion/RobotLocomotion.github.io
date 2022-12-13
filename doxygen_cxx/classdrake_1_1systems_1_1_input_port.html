@@ -194,6 +194,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5536b94a4642fa4cf47164437dc66ae8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port.html#a5536b94a4642fa4cf47164437dc66ae8">HasValue</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a5536b94a4642fa4cf47164437dc66ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this port is connected or has had a fixed value provided in the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>.  <a href="#a5536b94a4642fa4cf47164437dc66ae8">More...</a><br /></td></tr>
 <tr class="separator:a5536b94a4642fa4cf47164437dc66ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efe26650e3867a83766c7da14260ef5"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port.html#a2efe26650e3867a83766c7da14260ef5">Allocate</a> () const</td></tr>
+<tr class="memdesc:a2efe26650e3867a83766c7da14260ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates an abstract value in the same fashion as <a class="el" href="classdrake_1_1systems_1_1_output_port.html#a2efe26650e3867a83766c7da14260ef5" title="Allocates a concrete object suitable for holding the value to be exposed by this output port,...">OutputPort::Allocate()</a>.  <a href="#a2efe26650e3867a83766c7da14260ef5">More...</a><br /></td></tr>
+<tr class="separator:a2efe26650e3867a83766c7da14260ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c403016877fd5f6291208aeb9a8063c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port.html#a5c403016877fd5f6291208aeb9a8063c">get_system</a> () const</td></tr>
 <tr class="memdesc:a5c403016877fd5f6291208aeb9a8063c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that owns this input port.  <a href="#a5c403016877fd5f6291208aeb9a8063c">More...</a><br /></td></tr>
 <tr class="separator:a5c403016877fd5f6291208aeb9a8063c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -415,6 +418,25 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2efe26650e3867a83766c7da14260ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2efe26650e3867a83766c7da14260ef5">&#9670;&nbsp;</a></span>Allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>&gt; Allocate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocates an abstract value in the same fashion as <a class="el" href="classdrake_1_1systems_1_1_output_port.html#a2efe26650e3867a83766c7da14260ef5" title="Allocates a concrete object suitable for holding the value to be exposed by this output port,...">OutputPort::Allocate()</a>. </p>
+
+</div>
+</div>
 <a id="abab8fb340a13be101704b48e46c12724"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abab8fb340a13be101704b48e46c12724">&#9670;&nbsp;</a></span>Eval()</h2>
 
@@ -643,8 +665,8 @@ The input port is of type ValueType (when ValueType is provided). </dd></dl>
 
 </div>
 </div>
-<a id="a4081baf966b639f96dc74ad3cd0f97fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4081baf966b639f96dc74ad3cd0f97fe">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a180f7870931d1450b2b2bfa4b92ecc6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180f7870931d1450b2b2bfa4b92ecc6f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -655,7 +677,7 @@ The input port is of type ValueType (when ValueType is provided). </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -669,8 +691,8 @@ The input port is of type ValueType (when ValueType is provided). </dd></dl>
 
 </div>
 </div>
-<a id="a180f7870931d1450b2b2bfa4b92ecc6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a180f7870931d1450b2b2bfa4b92ecc6f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a4081baf966b639f96dc74ad3cd0f97fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4081baf966b639f96dc74ad3cd0f97fe">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -681,7 +703,7 @@ The input port is of type ValueType (when ValueType is provided). </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

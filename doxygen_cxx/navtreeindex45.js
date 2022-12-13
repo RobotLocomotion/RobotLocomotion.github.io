@@ -1,5 +1,9 @@
 var NAVTREEINDEX45 =
 {
+"generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e":[4,0,0,1,3,6,5],
+"generic__polynomial_8h.html#a2176f7eb786ddec5cd9ea0683a019482":[4,0,0,1,3,6,15],
+"generic__polynomial_8h.html#a21d8313aa6cdb78da3f2cd6d84b92e39":[4,0,0,1,3,6,21],
+"generic__polynomial_8h.html#a2296b14ee573d8deafe90b3615281e68":[4,0,0,1,3,6,14],
 "generic__polynomial_8h.html#a34397d7d032b5c4214a92123e3c6752d":[4,0,0,1,3,6,19],
 "generic__polynomial_8h.html#a434f1953d9800d1c40dc223609904ecf":[4,0,0,1,3,6,18],
 "generic__polynomial_8h.html#a46745f049faa36c24020902f121e900c":[4,0,0,1,3,6,6],
@@ -151,8 +155,8 @@ var NAVTREEINDEX45 =
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__discrete__systems.html":[1,2,9],
@@ -172,8 +176,8 @@ var NAVTREEINDEX45 =
 "group__geometry__infrastructure.html":[1,5,0],
 "group__geometry__optimization.html":[1,5,4],
 "group__geometry__optimization.html":[1,1,1],
-"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,11],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,4,11],
+"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,11],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,4,12],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,12],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,10],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "group__templates.html":[1,6,5],
 "group__terminology__and__notation.html":[1,0],
 "group__visualization.html":[1,2,11],
-"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,4],
-"group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,5],
-"group__yaml__serialization.html":[1,6,4],
-"gurobi__solver_8h.html":[4,0,0,11,23],
-"gyroscope_8h.html":[4,0,0,12,8,6]
+"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,4]
 };

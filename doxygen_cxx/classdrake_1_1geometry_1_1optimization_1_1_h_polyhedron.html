@@ -197,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25459319f3911a56071855a34a38e1c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a25459319f3911a56071855a34a38e1c9">Intersection</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other, bool check_for_redundancy=false, <a class="el" href="classdouble.html">double</a> tol=1E-9) const</td></tr>
 <tr class="memdesc:a25459319f3911a56071855a34a38e1c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the intersection of two <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> by adding the rows of inequalities from <code>other</code>.  <a href="#a25459319f3911a56071855a34a38e1c9">More...</a><br /></td></tr>
 <tr class="separator:a25459319f3911a56071855a34a38e1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f4027e84df413eb25359332513c464"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a89f4027e84df413eb25359332513c464">FindRedundant</a> (<a class="el" href="classdouble.html">double</a> tol=1E-9) const</td></tr>
+<tr class="memdesc:a89f4027e84df413eb25359332513c464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the redundant inequalities in this polyhedron.  <a href="#a89f4027e84df413eb25359332513c464">More...</a><br /></td></tr>
+<tr class="separator:a89f4027e84df413eb25359332513c464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb">ReduceInequalities</a> (<a class="el" href="classdouble.html">double</a> tol=1E-9) const</td></tr>
 <tr class="memdesc:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces some (not necessarily all) redundant inequalities in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>.  <a href="#aff86786a71b7a4f6a0d8c8ad8c9f1eeb">More...</a><br /></td></tr>
 <tr class="separator:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -653,6 +656,27 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a89f4027e84df413eb25359332513c464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f4027e84df413eb25359332513c464">&#9670;&nbsp;</a></span>FindRedundant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="classint.html">int</a>&gt; FindRedundant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1E-9</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the redundant inequalities in this polyhedron. </p>
+<p>Returns a set ℑ, such that if we remove the rows of A * x &lt;= b in ℑ, the remaining inequalities still define the same polyhedron, namely {x | A*x&lt;=b} = {x | A.row(i)*x&lt;=b(i), ∀i ∉ ℑ}. This function solves a series of linear programs. We say the jᵗʰ row A.row(j)*x &lt;= b(j) is redundant, if {x | A.row(i) * x &lt;= b(i), ∀i ∉ ℑ} implies that A.row(j) * x &lt;= b(j) + tol. Note that we do NOT guarantee that we find all the redundant rows. </p>
 
 </div>
 </div>

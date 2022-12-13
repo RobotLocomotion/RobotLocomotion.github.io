@@ -84,7 +84,7 @@ var searchData=
   ['body_5fname',['body_name',['../classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a2fc0796487ccc0c7d24e9aa289e4be14',1,'drake::multibody::benchmarks::pendulum::PendulumParameters']]],
   ['body_5fnode_2eh',['body_node.h',['../body__node_8h.html',1,'']]],
   ['body_5fnode_5fimpl_2eh',['body_node_impl.h',['../body__node__impl_8h.html',1,'']]],
-  ['body_5fnode_5fwelded_2eh',['body_node_welded.h',['../body__node__welded_8h.html',1,'']]],
+  ['body_5fnode_5fworld_2eh',['body_node_world.h',['../body__node__world_8h.html',1,'']]],
   ['body_5fpose_5fin_5fworld_5foutput_5fport',['body_pose_in_world_output_port',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#aff74e4980084b28c29f132bd18606031',1,'drake::systems::sensors::RgbdSensor::body_pose_in_world_output_port()'],['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aff74e4980084b28c29f132bd18606031',1,'drake::systems::sensors::RgbdSensorDiscrete::body_pose_in_world_output_port()']]],
   ['body_5fposition',['body_position',['../classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a6cde631adfd94e6c518134b3bde8352b',1,'drake::multibody::GlobalInverseKinematics']]],
   ['body_5frotation_5fmatrix',['body_rotation_matrix',['../classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a74b87ef32b6e8aeeb68d6423454c932f',1,'drake::multibody::GlobalInverseKinematics']]],

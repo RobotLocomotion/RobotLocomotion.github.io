@@ -257,13 +257,55 @@
 <dd><p>Generates all the monomials of <code class="docutils literal notranslate"><span class="pre">x</span></code>, such that the degree for x(i) is
 no larger than 1 for every x(i) in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt>
 <dd>The variables whose monomials are generated.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">sort_monomial</span></code>:</dt>
 <dd>If true, the returned monomials are sorted in the graded reverse
 lexicographic order. For example if x = (x₀, x₁) with x₀&lt; x₁, then
 this function returns [x₀x₁, x₁, x₀, 1]. If sort_monomial=false,
 then we return the monomials in an arbitrary order.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.symbolic.CalcPolynomialWLowerTriangularPart">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">CalcPolynomialWLowerTriangularPart</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.CalcPolynomialWLowerTriangularPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CalcPolynomialWLowerTriangularPart(monomial_basis: numpy.ndarray[object[m, 1]], gram_lower: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.symbolic.Polynomial</li>
+</ol>
+<p>Returns the polynomial m(x)ᵀ * Q * m(x), where m(x) is the monomial
+basis, and Q is the Gram matrix.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">monomial_basis</span></code>:</dt>
+<dd>m(x) in the documentation. A vector of monomials.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gram_lower</span></code>:</dt>
+<dd>The lower triangular entries in Q, stacked columnwise into a
+vector.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>CalcPolynomialWLowerTriangularPart(monomial_basis: numpy.ndarray[object[m, 1]], gram_lower: numpy.ndarray[object[m, 1]]) -&gt; pydrake.symbolic.Polynomial</li>
+</ol>
+<p>Returns the polynomial m(x)ᵀ * Q * m(x), where m(x) is the monomial
+basis, and Q is the Gram matrix.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">monomial_basis</span></code>:</dt>
+<dd>m(x) in the documentation. A vector of monomials.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gram_lower</span></code>:</dt>
+<dd>The lower triangular entries in Q, stacked columnwise into a
+vector.</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li>CalcPolynomialWLowerTriangularPart(monomial_basis: numpy.ndarray[object[m, 1]], gram_lower: numpy.ndarray[object[m, 1]]) -&gt; pydrake.symbolic.Polynomial</li>
+</ol>
+<p>Returns the polynomial m(x)ᵀ * Q * m(x), where m(x) is the monomial
+basis, and Q is the Gram matrix.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">monomial_basis</span></code>:</dt>
+<dd>m(x) in the documentation. A vector of monomials.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gram_lower</span></code>:</dt>
+<dd>The lower triangular entries in Q, stacked columnwise into a
+vector.</dd>
 </dl>
 </dd></dl>
 

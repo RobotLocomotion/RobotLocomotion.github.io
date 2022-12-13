@@ -16,7 +16,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     ] ],
     [ "body_node.h", "body__node_8h.html", null ],
     [ "body_node_impl.h", "body__node__impl_8h.html", null ],
-    [ "body_node_welded.h", "body__node__welded_8h.html", null ],
+    [ "body_node_world.h", "body__node__world_8h.html", null ],
     [ "door_hinge.h", "door__hinge_8h.html", [
       [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", "structdrake_1_1multibody_1_1_door_hinge_config" ],
       [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html", "classdrake_1_1multibody_1_1_door_hinge" ]

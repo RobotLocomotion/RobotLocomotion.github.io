@@ -169,13 +169,13 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_trajectory_s
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::systems::TrajectorySource&lt; T &gt;</h3>
 
-<p>A source block that generates the value of a Trajectory for a given time. </p>
-<p>The output is vector values, and may vary with the time (as reflected in the context) at which the output is evaluated.</p>
+<p>Given a Trajectory, this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> provides an output port with the value of the trajectory evaluated at the current time. </p>
+<p>If the particular Trajectory is not available at the time the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> / <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> is being constructed, one can create a <a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html" title="Given a Trajectory, this System provides an output port with the value of the trajectory evaluated at...">TrajectorySource</a> with a placeholder trajectory (e.g. PiecewisePolynomimal(Eigen::VectorXd)) with the correct number of rows, and then use <a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html#a909c9c40fb0e9ce5cbcc455e3516a473" title="Updates the stored trajectory.">UpdateTrajectory()</a>.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 </table>
-</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html" title="A source block that generates the value of a Trajectory for a given time.">TrajectorySource</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html" title="Given a Trajectory, this System provides an output port with the value of the trajectory evaluated at...">TrajectorySource</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
 </table>
@@ -196,6 +196,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a751e3f6c76a8c1a3b1c6b4335a558a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcab3d9212b96a4542cfc263963fc06c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html#afcab3d9212b96a4542cfc263963fc06c">~TrajectorySource</a> () final=default</td></tr>
 <tr class="separator:afcab3d9212b96a4542cfc263963fc06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909c9c40fb0e9ce5cbcc455e3516a473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html#a909c9c40fb0e9ce5cbcc455e3516a473">UpdateTrajectory</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">trajectories::Trajectory</a>&lt; T &gt; &amp;trajectory)</td></tr>
+<tr class="memdesc:a909c9c40fb0e9ce5cbcc455e3516a473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the stored trajectory.  <a href="#a909c9c40fb0e9ce5cbcc455e3516a473">More...</a><br /></td></tr>
+<tr class="separator:a909c9c40fb0e9ce5cbcc455e3516a473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a6952a6c969661b00d9438c3533e1ca09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html#a6952a6c969661b00d9438c3533e1ca09">TrajectorySource</a> (const <a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html">TrajectorySource</a> &amp;)=delete</td></tr>
 <tr class="separator:a6952a6c969661b00d9438c3533e1ca09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1483,6 +1486,27 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a909c9c40fb0e9ce5cbcc455e3516a473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a909c9c40fb0e9ce5cbcc455e3516a473">&#9670;&nbsp;</a></span>UpdateTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">trajectories::Trajectory</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>trajectory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the stored trajectory. </p>
+<p><code>trajectory</code> must have the same number of rows as the trajectory passed to the constructor. </p>
 
 </div>
 </div>

@@ -7087,6 +7087,13 @@ is connected, or a fixed value set in a Context.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.InputPort_.InputPort_[float].Allocate">
+<code class="descname">Allocate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.InputPort_.InputPort_[float].Allocate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocates an abstract value in the same fashion as
+OutputPort::Allocate().</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.InputPort_.InputPort_[float].Eval">
 <code class="descname">Eval</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[float], arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.framework.InputPort_.InputPort_[float].Eval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -7293,6 +7300,13 @@ is connected, or a fixed value set in a Context.</p>
 <dt id="pydrake.systems.framework.InputPort_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.InputPort_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.InputPort_[AutoDiffXd].Allocate">
+<code class="descname">Allocate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.InputPort_[AutoDiffXd].Allocate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocates an abstract value in the same fashion as
+OutputPort::Allocate().</p>
 </dd></dl>
 
 <dl class="method">
@@ -7503,6 +7517,13 @@ is connected, or a fixed value set in a Context.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.InputPort_[Expression].Allocate">
+<code class="descname">Allocate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.InputPort_[Expression].Allocate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocates an abstract value in the same fashion as
+OutputPort::Allocate().</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.InputPort_[Expression].Eval">
 <code class="descname">Eval</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[Expression], arg0: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.framework.InputPort_[Expression].Eval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -7707,6 +7728,13 @@ is connected, or a fixed value set in a Context.</p>
 <dt id="pydrake.systems.framework.InputPort_[float].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.InputPort_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.InputPort_[float].Allocate">
+<code class="descname">Allocate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.InputPort_[float].Allocate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocates an abstract value in the same fashion as
+OutputPort::Allocate().</p>
 </dd></dl>
 
 <dl class="method">
@@ -13765,6 +13793,20 @@ vector.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].AllocateInputAbstract">
+<code class="descname">AllocateInputAbstract</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], input_port: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].AllocateInputAbstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the abstract storage. The
+<code class="docutils literal notranslate"><span class="pre">input_port</span></code> must match a port declared via DeclareInputPort.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].AllocateInputVector">
+<code class="descname">AllocateInputVector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], input_port: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].AllocateInputVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the vector storage. The <code class="docutils literal notranslate"><span class="pre">input_port</span></code>
+must match a port declared via DeclareInputPort.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_.System_[float].AllocateOutput">
 <code class="descname">AllocateOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.SystemOutput_[float]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].AllocateOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a container that can hold the values of all of this System’s
@@ -14911,6 +14953,20 @@ will have size implicit_time_derivatives_residual_size() with the
 elements uninitialized. This is just a convenience method – you are
 free to use any properly-sized mutable Eigen object as the residual
 vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[AutoDiffXd].AllocateInputAbstract">
+<code class="descname">AllocateInputAbstract</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd], input_port: pydrake.systems.framework.InputPort_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].AllocateInputAbstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the abstract storage. The
+<code class="docutils literal notranslate"><span class="pre">input_port</span></code> must match a port declared via DeclareInputPort.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[AutoDiffXd].AllocateInputVector">
+<code class="descname">AllocateInputVector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd], input_port: pydrake.systems.framework.InputPort_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].AllocateInputVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the vector storage. The <code class="docutils literal notranslate"><span class="pre">input_port</span></code>
+must match a port declared via DeclareInputPort.</p>
 </dd></dl>
 
 <dl class="method">
@@ -16061,6 +16117,20 @@ vector.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[Expression].AllocateInputAbstract">
+<code class="descname">AllocateInputAbstract</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression], input_port: pydrake.systems.framework.InputPort_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].AllocateInputAbstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the abstract storage. The
+<code class="docutils literal notranslate"><span class="pre">input_port</span></code> must match a port declared via DeclareInputPort.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[Expression].AllocateInputVector">
+<code class="descname">AllocateInputVector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression], input_port: pydrake.systems.framework.InputPort_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[Expression]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].AllocateInputVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the vector storage. The <code class="docutils literal notranslate"><span class="pre">input_port</span></code>
+must match a port declared via DeclareInputPort.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[Expression].AllocateOutput">
 <code class="descname">AllocateOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.SystemOutput_[Expression]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].AllocateOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a container that can hold the values of all of this System’s
@@ -17205,6 +17275,20 @@ will have size implicit_time_derivatives_residual_size() with the
 elements uninitialized. This is just a convenience method – you are
 free to use any properly-sized mutable Eigen object as the residual
 vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[float].AllocateInputAbstract">
+<code class="descname">AllocateInputAbstract</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], input_port: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.value.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.System_[float].AllocateInputAbstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the abstract storage. The
+<code class="docutils literal notranslate"><span class="pre">input_port</span></code> must match a port declared via DeclareInputPort.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[float].AllocateInputVector">
+<code class="descname">AllocateInputVector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], input_port: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.System_[float].AllocateInputVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input port, allocates the vector storage. The <code class="docutils literal notranslate"><span class="pre">input_port</span></code>
+must match a port declared via DeclareInputPort.</p>
 </dd></dl>
 
 <dl class="method">

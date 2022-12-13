@@ -2030,14 +2030,16 @@ modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]:</p>
 <span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">=</span> <span class="n">τ</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system, <code class="docutils literal notranslate"><span class="pre">C(q,</span>
-<span class="pre">v)v</span></code> contains Coriolis, centripetal, and gyroscopic terms and
-<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix describing the relationship
-between q̇ (the time derivatives of the generalized positions) and the
-generalized velocities v, [Seth 2010]. <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code>
-matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
-the system’s generalized forces. These incorporate gravity, springs,
-externally applied body forces, constraint forces, and contact forces.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system (including
+rigid body mass properties and reflected_inertia “reflected
+inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> contains Coriolis, centripetal, and
+gyroscopic terms and <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix
+describing the relationship between q̇ (the time derivatives of the
+generalized positions) and the generalized velocities v, [Seth 2010].
+<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code> matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right
+hand side of Eq. (1) is the system’s generalized forces. These
+incorporate gravity, springs, externally applied body forces,
+constraint forces, and contact forces.</p>
 <p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
@@ -2755,12 +2757,13 @@ and gyroscopic effects in the multibody equations of motion:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M(q) v̇ + C(q, v) v = tau_app + ∑ (Jv_V_WBᵀ(q) ⋅ Fapp_Bo_W)
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is
-a vector of generalized forces. The last term is a summation over all
-bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> (applied spatial force on
-body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s spatial Jacobian in world W
-with respect to generalized velocities v). Note: B’s spatial velocity
-in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix (including rigid
+body mass properties and reflected_inertia “reflected inertias”) and
+<code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is a vector of applied generalized forces. The last term
+is a summation over all bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code>
+(applied spatial force on body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s
+spatial Jacobian in world W with respect to generalized velocities v).
+Note: B’s spatial velocity in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model. It stores the
@@ -2999,25 +3002,26 @@ method computes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tau = M(q)v̇ + C(q, v)v - tau_app - ∑ J_WBᵀ(q) Fapp_Bo_W
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix, <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias
-term containing Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix (including rigid body mass
+properties and reflected_inertia “reflected inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code>
+is the bias term for Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
 consists of a vector applied generalized forces. The last term is a
 summation over all bodies in the model where <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> is an
 applied spatial force on body B at <code class="docutils literal notranslate"><span class="pre">Bo</span></code> which gets projected into
 the space of generalized forces with the transpose of <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code>
 (where <code class="docutils literal notranslate"><span class="pre">Jv_V_WB</span></code> is B’s spatial velocity Jacobian in W with respect
 to generalized velocities v). Note: B’s spatial velocity in W can be
-written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>. This method does not compute
-explicit expressions for the mass matrix nor for the bias term, which
-would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> complexity, but it implements an
-<code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive algorithm, where n is the number of
-bodies in the model. The explicit formation of the mass matrix
-<code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while
-explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code> could require up to
-<code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987, §4]), depending on the
-implementation. The recursive Newton-Euler algorithm is the most
-efficient currently known general method for solving inverse dynamics
-[Featherstone 2008].</p>
+written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>This method does not compute explicit expressions for the mass matrix
+nor for the bias term, which would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code>
+complexity, but it implements an <code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive
+algorithm, where n is the number of bodies in the model. The explicit
+formation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of
+<code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code>
+could require up to <code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987,
+§4]), depending on the implementation. The recursive Newton-Euler
+algorithm is the most efficient currently known general method for
+solving inverse dynamics [Featherstone 2008].</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model.</dd>
@@ -3392,43 +3396,55 @@ respect to q.</p>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrix">
 <code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model, as
-a function of the generalized positions q stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>. This
-method employs the Composite Body Algorithm, which is known to be the
-fastest O(n²) algorithm to compute the mass matrix of a multibody
-system.</p>
+<dd><p>Efficiently computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model. The
+generalized positions q are taken from the given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M
+includes the mass properties of rigid bodies and reflected_inertia
+“reflected inertias” as provided with JointActuator specifications.</p>
+<p>This method employs the Composite Body Algorithm, which we believe to
+be the fastest O(n²) algorithm to compute the mass matrix of a
+multibody system.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if M is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
 </div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrixViaInverseDynamics() (slower)</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model
-using inverse dynamics, where the generalized positions q are stored
-in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<dd><p>Computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model using a slow method
+(inverse dynamics). The generalized positions q are taken from the
+given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M includes the mass properties of rigid bodies and
+reflected_inertia “reflected inertias” as provided with JointActuator
+specifications.</p>
 <p>Use CalcMassMatrix() for a faster implementation using the Composite
 Body Algorithm.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if H is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <p>The algorithm used to build <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> consists in computing one column
 of <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
@@ -3451,6 +3467,10 @@ the number of generalized velocities. We write this as:</p>
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrix(), CalcInverseDynamics()</p>
 </div>
 </dd></dl>
 
@@ -6484,14 +6504,16 @@ modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]:</p>
 <span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">=</span> <span class="n">τ</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system, <code class="docutils literal notranslate"><span class="pre">C(q,</span>
-<span class="pre">v)v</span></code> contains Coriolis, centripetal, and gyroscopic terms and
-<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix describing the relationship
-between q̇ (the time derivatives of the generalized positions) and the
-generalized velocities v, [Seth 2010]. <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code>
-matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
-the system’s generalized forces. These incorporate gravity, springs,
-externally applied body forces, constraint forces, and contact forces.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system (including
+rigid body mass properties and reflected_inertia “reflected
+inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> contains Coriolis, centripetal, and
+gyroscopic terms and <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix
+describing the relationship between q̇ (the time derivatives of the
+generalized positions) and the generalized velocities v, [Seth 2010].
+<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code> matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right
+hand side of Eq. (1) is the system’s generalized forces. These
+incorporate gravity, springs, externally applied body forces,
+constraint forces, and contact forces.</p>
 <p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
@@ -7222,12 +7244,13 @@ and gyroscopic effects in the multibody equations of motion:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M(q) v̇ + C(q, v) v = tau_app + ∑ (Jv_V_WBᵀ(q) ⋅ Fapp_Bo_W)
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is
-a vector of generalized forces. The last term is a summation over all
-bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> (applied spatial force on
-body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s spatial Jacobian in world W
-with respect to generalized velocities v). Note: B’s spatial velocity
-in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix (including rigid
+body mass properties and reflected_inertia “reflected inertias”) and
+<code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is a vector of applied generalized forces. The last term
+is a summation over all bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code>
+(applied spatial force on body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s
+spatial Jacobian in world W with respect to generalized velocities v).
+Note: B’s spatial velocity in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model. It stores the
@@ -7466,25 +7489,26 @@ method computes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tau = M(q)v̇ + C(q, v)v - tau_app - ∑ J_WBᵀ(q) Fapp_Bo_W
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix, <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias
-term containing Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix (including rigid body mass
+properties and reflected_inertia “reflected inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code>
+is the bias term for Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
 consists of a vector applied generalized forces. The last term is a
 summation over all bodies in the model where <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> is an
 applied spatial force on body B at <code class="docutils literal notranslate"><span class="pre">Bo</span></code> which gets projected into
 the space of generalized forces with the transpose of <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code>
 (where <code class="docutils literal notranslate"><span class="pre">Jv_V_WB</span></code> is B’s spatial velocity Jacobian in W with respect
 to generalized velocities v). Note: B’s spatial velocity in W can be
-written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>. This method does not compute
-explicit expressions for the mass matrix nor for the bias term, which
-would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> complexity, but it implements an
-<code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive algorithm, where n is the number of
-bodies in the model. The explicit formation of the mass matrix
-<code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while
-explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code> could require up to
-<code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987, §4]), depending on the
-implementation. The recursive Newton-Euler algorithm is the most
-efficient currently known general method for solving inverse dynamics
-[Featherstone 2008].</p>
+written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>This method does not compute explicit expressions for the mass matrix
+nor for the bias term, which would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code>
+complexity, but it implements an <code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive
+algorithm, where n is the number of bodies in the model. The explicit
+formation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of
+<code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code>
+could require up to <code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987,
+§4]), depending on the implementation. The recursive Newton-Euler
+algorithm is the most efficient currently known general method for
+solving inverse dynamics [Featherstone 2008].</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model.</dd>
@@ -7859,43 +7883,55 @@ respect to q.</p>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrix">
 <code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model, as
-a function of the generalized positions q stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>. This
-method employs the Composite Body Algorithm, which is known to be the
-fastest O(n²) algorithm to compute the mass matrix of a multibody
-system.</p>
+<dd><p>Efficiently computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model. The
+generalized positions q are taken from the given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M
+includes the mass properties of rigid bodies and reflected_inertia
+“reflected inertias” as provided with JointActuator specifications.</p>
+<p>This method employs the Composite Body Algorithm, which we believe to
+be the fastest O(n²) algorithm to compute the mass matrix of a
+multibody system.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if M is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
 </div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrixViaInverseDynamics() (slower)</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model
-using inverse dynamics, where the generalized positions q are stored
-in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<dd><p>Computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model using a slow method
+(inverse dynamics). The generalized positions q are taken from the
+given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M includes the mass properties of rigid bodies and
+reflected_inertia “reflected inertias” as provided with JointActuator
+specifications.</p>
 <p>Use CalcMassMatrix() for a faster implementation using the Composite
 Body Algorithm.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if H is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <p>The algorithm used to build <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> consists in computing one column
 of <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
@@ -7918,6 +7954,10 @@ the number of generalized velocities. We write this as:</p>
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrix(), CalcInverseDynamics()</p>
 </div>
 </dd></dl>
 
@@ -10949,14 +10989,16 @@ modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]:</p>
 <span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">=</span> <span class="n">τ</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system, <code class="docutils literal notranslate"><span class="pre">C(q,</span>
-<span class="pre">v)v</span></code> contains Coriolis, centripetal, and gyroscopic terms and
-<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix describing the relationship
-between q̇ (the time derivatives of the generalized positions) and the
-generalized velocities v, [Seth 2010]. <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code>
-matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
-the system’s generalized forces. These incorporate gravity, springs,
-externally applied body forces, constraint forces, and contact forces.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system (including
+rigid body mass properties and reflected_inertia “reflected
+inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> contains Coriolis, centripetal, and
+gyroscopic terms and <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix
+describing the relationship between q̇ (the time derivatives of the
+generalized positions) and the generalized velocities v, [Seth 2010].
+<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code> matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right
+hand side of Eq. (1) is the system’s generalized forces. These
+incorporate gravity, springs, externally applied body forces,
+constraint forces, and contact forces.</p>
 <p><a href="#id61"><span class="problematic" id="id62">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
@@ -11687,12 +11729,13 @@ and gyroscopic effects in the multibody equations of motion:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M(q) v̇ + C(q, v) v = tau_app + ∑ (Jv_V_WBᵀ(q) ⋅ Fapp_Bo_W)
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is
-a vector of generalized forces. The last term is a summation over all
-bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> (applied spatial force on
-body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s spatial Jacobian in world W
-with respect to generalized velocities v). Note: B’s spatial velocity
-in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix (including rigid
+body mass properties and reflected_inertia “reflected inertias”) and
+<code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is a vector of applied generalized forces. The last term
+is a summation over all bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code>
+(applied spatial force on body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s
+spatial Jacobian in world W with respect to generalized velocities v).
+Note: B’s spatial velocity in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model. It stores the
@@ -11931,25 +11974,26 @@ method computes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tau = M(q)v̇ + C(q, v)v - tau_app - ∑ J_WBᵀ(q) Fapp_Bo_W
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix, <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias
-term containing Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix (including rigid body mass
+properties and reflected_inertia “reflected inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code>
+is the bias term for Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
 consists of a vector applied generalized forces. The last term is a
 summation over all bodies in the model where <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> is an
 applied spatial force on body B at <code class="docutils literal notranslate"><span class="pre">Bo</span></code> which gets projected into
 the space of generalized forces with the transpose of <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code>
 (where <code class="docutils literal notranslate"><span class="pre">Jv_V_WB</span></code> is B’s spatial velocity Jacobian in W with respect
 to generalized velocities v). Note: B’s spatial velocity in W can be
-written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>. This method does not compute
-explicit expressions for the mass matrix nor for the bias term, which
-would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> complexity, but it implements an
-<code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive algorithm, where n is the number of
-bodies in the model. The explicit formation of the mass matrix
-<code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while
-explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code> could require up to
-<code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987, §4]), depending on the
-implementation. The recursive Newton-Euler algorithm is the most
-efficient currently known general method for solving inverse dynamics
-[Featherstone 2008].</p>
+written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>This method does not compute explicit expressions for the mass matrix
+nor for the bias term, which would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code>
+complexity, but it implements an <code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive
+algorithm, where n is the number of bodies in the model. The explicit
+formation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of
+<code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code>
+could require up to <code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987,
+§4]), depending on the implementation. The recursive Newton-Euler
+algorithm is the most efficient currently known general method for
+solving inverse dynamics [Featherstone 2008].</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model.</dd>
@@ -12324,43 +12368,55 @@ respect to q.</p>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrix">
 <code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model, as
-a function of the generalized positions q stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>. This
-method employs the Composite Body Algorithm, which is known to be the
-fastest O(n²) algorithm to compute the mass matrix of a multibody
-system.</p>
+<dd><p>Efficiently computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model. The
+generalized positions q are taken from the given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M
+includes the mass properties of rigid bodies and reflected_inertia
+“reflected inertias” as provided with JointActuator specifications.</p>
+<p>This method employs the Composite Body Algorithm, which we believe to
+be the fastest O(n²) algorithm to compute the mass matrix of a
+multibody system.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if M is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
 </div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrixViaInverseDynamics() (slower)</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model
-using inverse dynamics, where the generalized positions q are stored
-in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<dd><p>Computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model using a slow method
+(inverse dynamics). The generalized positions q are taken from the
+given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M includes the mass properties of rigid bodies and
+reflected_inertia “reflected inertias” as provided with JointActuator
+specifications.</p>
 <p>Use CalcMassMatrix() for a faster implementation using the Composite
 Body Algorithm.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if H is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <p>The algorithm used to build <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> consists in computing one column
 of <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
@@ -12383,6 +12439,10 @@ the number of generalized velocities. We write this as:</p>
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrix(), CalcInverseDynamics()</p>
 </div>
 </dd></dl>
 
@@ -15414,14 +15474,16 @@ modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]:</p>
 <span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">=</span> <span class="n">τ</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system, <code class="docutils literal notranslate"><span class="pre">C(q,</span>
-<span class="pre">v)v</span></code> contains Coriolis, centripetal, and gyroscopic terms and
-<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix describing the relationship
-between q̇ (the time derivatives of the generalized positions) and the
-generalized velocities v, [Seth 2010]. <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code>
-matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
-the system’s generalized forces. These incorporate gravity, springs,
-externally applied body forces, constraint forces, and contact forces.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system (including
+rigid body mass properties and reflected_inertia “reflected
+inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> contains Coriolis, centripetal, and
+gyroscopic terms and <code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is the kinematic coupling matrix
+describing the relationship between q̇ (the time derivatives of the
+generalized positions) and the generalized velocities v, [Seth 2010].
+<code class="docutils literal notranslate"><span class="pre">N(q)</span></code> is an <code class="docutils literal notranslate"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code> matrix. The vector <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right
+hand side of Eq. (1) is the system’s generalized forces. These
+incorporate gravity, springs, externally applied body forces,
+constraint forces, and contact forces.</p>
 <p><a href="#id89"><span class="problematic" id="id90">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
@@ -16139,12 +16201,13 @@ and gyroscopic effects in the multibody equations of motion:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M(q) v̇ + C(q, v) v = tau_app + ∑ (Jv_V_WBᵀ(q) ⋅ Fapp_Bo_W)
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is
-a vector of generalized forces. The last term is a summation over all
-bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> (applied spatial force on
-body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s spatial Jacobian in world W
-with respect to generalized velocities v). Note: B’s spatial velocity
-in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the multibody model’s mass matrix (including rigid
+body mass properties and reflected_inertia “reflected inertias”) and
+<code class="docutils literal notranslate"><span class="pre">tau_app</span></code> is a vector of applied generalized forces. The last term
+is a summation over all bodies of the dot-product of <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code>
+(applied spatial force on body B at Bo) with <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code> (B’s
+spatial Jacobian in world W with respect to generalized velocities v).
+Note: B’s spatial velocity in W can be written <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model. It stores the
@@ -16383,25 +16446,26 @@ method computes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tau = M(q)v̇ + C(q, v)v - tau_app - ∑ J_WBᵀ(q) Fapp_Bo_W
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix, <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias
-term containing Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the model’s mass matrix (including rigid body mass
+properties and reflected_inertia “reflected inertias”), <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code>
+is the bias term for Coriolis and gyroscopic effects and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code>
 consists of a vector applied generalized forces. The last term is a
 summation over all bodies in the model where <code class="docutils literal notranslate"><span class="pre">Fapp_Bo_W</span></code> is an
 applied spatial force on body B at <code class="docutils literal notranslate"><span class="pre">Bo</span></code> which gets projected into
 the space of generalized forces with the transpose of <code class="docutils literal notranslate"><span class="pre">Jv_V_WB(q)</span></code>
 (where <code class="docutils literal notranslate"><span class="pre">Jv_V_WB</span></code> is B’s spatial velocity Jacobian in W with respect
 to generalized velocities v). Note: B’s spatial velocity in W can be
-written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>. This method does not compute
-explicit expressions for the mass matrix nor for the bias term, which
-would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> complexity, but it implements an
-<code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive algorithm, where n is the number of
-bodies in the model. The explicit formation of the mass matrix
-<code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while
-explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code> could require up to
-<code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987, §4]), depending on the
-implementation. The recursive Newton-Euler algorithm is the most
-efficient currently known general method for solving inverse dynamics
-[Featherstone 2008].</p>
+written as <code class="docutils literal notranslate"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">Jv_V_WB</span> <span class="pre">*</span> <span class="pre">v</span></code>.</p>
+<p>This method does not compute explicit expressions for the mass matrix
+nor for the bias term, which would be of at least <code class="docutils literal notranslate"><span class="pre">O(n²)</span></code>
+complexity, but it implements an <code class="docutils literal notranslate"><span class="pre">O(n)</span></code> Newton-Euler recursive
+algorithm, where n is the number of bodies in the model. The explicit
+formation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> would require the calculation of
+<code class="docutils literal notranslate"><span class="pre">O(n²)</span></code> entries while explicitly forming the product <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code>
+could require up to <code class="docutils literal notranslate"><span class="pre">O(n³)</span></code> operations (see [Featherstone 1987,
+§4]), depending on the implementation. The recursive Newton-Euler
+algorithm is the most efficient currently known general method for
+solving inverse dynamics [Featherstone 2008].</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The context containing the state of the model.</dd>
@@ -16776,43 +16840,55 @@ respect to q.</p>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrix">
 <code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model, as
-a function of the generalized positions q stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>. This
-method employs the Composite Body Algorithm, which is known to be the
-fastest O(n²) algorithm to compute the mass matrix of a multibody
-system.</p>
+<dd><p>Efficiently computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model. The
+generalized positions q are taken from the given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M
+includes the mass properties of rigid bodies and reflected_inertia
+“reflected inertias” as provided with JointActuator specifications.</p>
+<p>This method employs the Composite Body Algorithm, which we believe to
+be the fastest O(n²) algorithm to compute the mass matrix of a
+multibody system.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if M is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
 </div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrixViaInverseDynamics() (slower)</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the computation of the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model
-using inverse dynamics, where the generalized positions q are stored
-in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<dd><p>Computes the mass matrix <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> of the model using a slow method
+(inverse dynamics). The generalized positions q are taken from the
+given <code class="docutils literal notranslate"><span class="pre">context</span></code>. M includes the mass properties of rigid bodies and
+reflected_inertia “reflected inertias” as provided with JointActuator
+specifications.</p>
 <p>Use CalcMassMatrix() for a faster implementation using the Composite
 Body Algorithm.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model.</dd>
+<dd>The Context containing the state of the model from which
+generalized coordinates q are extracted.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M</span></code>:</dt>
-<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n
-the number of generalized velocities (num_velocities()) of the
-model. This method aborts if H is nullptr or if it does not have
-the proper size.</dd>
+<dd>A pointer to a square matrix in <code class="docutils literal notranslate"><span class="pre">ℛⁿˣⁿ</span></code> with n the number of
+generalized velocities (num_velocities()) of the model. Although
+symmetric, the matrix is filled in completely on return.</dd>
+<dt>Precondition:</dt>
+<dd>M is non-null and has the right size.</dd>
 </dl>
 <p>The algorithm used to build <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> consists in computing one column
 of <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
@@ -16835,6 +16911,10 @@ the number of generalized velocities. We write this as:</p>
 <p class="first admonition-title">Warning</p>
 <p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
 mass matrix whenever possible.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcMassMatrix(), CalcInverseDynamics()</p>
 </div>
 </dd></dl>
 

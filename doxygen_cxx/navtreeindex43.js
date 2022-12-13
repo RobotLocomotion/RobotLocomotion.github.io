@@ -1,5 +1,9 @@
 var NAVTREEINDEX43 =
 {
+"explicit__error__controlled__integrator__test_8h.html#afad80830ebb314cc10d44158a26e0baf":[4,0,0,12,0,0,3,13],
+"explicit__euler__integrator_8h.html":[4,0,0,12,0,4],
+"exponential__plus__piecewise__polynomial_8h.html":[4,0,0,1,5,2],
+"expression_2expression_8h.html":[4,0,0,1,3,0,3],
 "expression_2expression_8h.html#a03d536a13db7de62414f5279c60148aa":[4,0,0,1,3,0,3,16],
 "expression_2expression_8h.html#a055ee6da4d8e60549bf8bd3e6995235b":[4,0,0,1,3,0,3,85],
 "expression_2expression_8h.html#a0a84ca31e769b94d1adcc69789826934":[4,0,0,1,3,0,3,62],
@@ -245,9 +249,5 @@ var NAVTREEINDEX43 =
 "formula_8h.html#a52479ecb229048e750782273796768c2":[4,0,0,1,3,0,7,57],
 "formula_8h.html#a528367e2321df46235c2fed21eb0d433":[4,0,0,1,3,0,7,53],
 "formula_8h.html#a571adc7bcdc056eec761a657f9354cd7":[4,0,0,1,3,0,7,32],
-"formula_8h.html#a5a12a5db3a9b2e8520e002e437354717":[4,0,0,1,3,0,7,66],
-"formula_8h.html#a5aaadf953e1753ea5c2ff78a3bb030ec":[4,0,0,1,3,0,7,36],
-"formula_8h.html#a600c585cf975dd9a8dd94b118f0bd161":[4,0,0,1,3,0,7,76],
-"formula_8h.html#a6035c678aac2dd9201f9e8e294ece8d6":[4,0,0,1,3,0,7,68],
-"formula_8h.html#a642d11dbe47e027614a5a3bcfe12d34e":[4,0,0,1,3,0,7,71]
+"formula_8h.html#a5a12a5db3a9b2e8520e002e437354717":[4,0,0,1,3,0,7,66]
 };

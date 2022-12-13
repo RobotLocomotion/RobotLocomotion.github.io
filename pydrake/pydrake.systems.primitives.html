@@ -7204,9 +7204,12 @@ positive semi-definite.</p>
 <dt id="pydrake.systems.primitives.TrajectorySource">
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">TrajectorySource</code><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
-<p>A source block that generates the value of a Trajectory for a given
-time. The output is vector values, and may vary with the time (as
-reflected in the context) at which the output is evaluated.</p>
+<p>Given a Trajectory, this System provides an output port with the value
+of the trajectory evaluated at the current time.</p>
+<p>If the particular Trajectory is not available at the time the System /
+Diagram is being constructed, one can create a TrajectorySource with a
+placeholder trajectory (e.g. PiecewisePolynomimal(Eigen::VectorXd))
+with the correct number of rows, and then use UpdateTrajectory().</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectorySource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectorySource.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectorySource, trajectory: pydrake.trajectories.Trajectory_[float], output_derivative_order: int = 0, zero_derivatives_beyond_limits: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource.__init__" title="Permalink to this definition">¶</a></dt>
@@ -7223,6 +7226,13 @@ end time of <code class="docutils literal notranslate"><span class="pre">traject
 <dd>The value of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> is a column vector. More precisely,
 trajectory.cols() == 1.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectorySource.UpdateTrajectory">
+<code class="descname">UpdateTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectorySource, trajectory: pydrake.trajectories.Trajectory_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource.UpdateTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the stored trajectory. <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> must have the same
+number of rows as the trajectory passed to the constructor.</p>
 </dd></dl>
 
 </dd></dl>

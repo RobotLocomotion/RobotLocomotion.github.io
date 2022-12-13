@@ -3,6 +3,7 @@ var symbolic_2polynomial_8h =
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", "classdrake_1_1symbolic_1_1_polynomial" ],
     [ "hash< drake::symbolic::Polynomial >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "DRAKE_COMMON_SYMBOLIC_POLYNOMIAL_H", "symbolic_2polynomial_8h.html#a14031f45c6c7d6bfde87bb3455963fc3", null ],
+    [ "CalcPolynomialWLowerTriangularPart", "symbolic_2polynomial_8h.html#a1b2eee496b130c9d1acbff60e3fd3eb1", null ],
     [ "Evaluate", "symbolic_2polynomial_8h.html#a2508a6626d1a63a77670c760e4a2241e", null ],
     [ "Jacobian", "symbolic_2polynomial_8h.html#a5e355d7c9eb6bff11199a94c16ed5c8a", null ],
     [ "operator *", "symbolic_2polynomial_8h.html#ae3b6eea79253234902bbcf4643e34d81", null ],

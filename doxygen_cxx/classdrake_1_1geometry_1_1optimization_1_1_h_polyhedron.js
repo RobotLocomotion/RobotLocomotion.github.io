@@ -12,6 +12,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron =
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a41dbe3e953c0721ed00d5e74e0280b31", null ],
     [ "ChebyshevCenter", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1", null ],
     [ "ContainedIn", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aacc2366f3e031a58db12d6b57d911e37", null ],
+    [ "FindRedundant", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a89f4027e84df413eb25359332513c464", null ],
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a25459319f3911a56071855a34a38e1c9", null ],
     [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65", null ],
     [ "IsEmpty", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8e12342fc420701fbffd97025421575a", null ],
