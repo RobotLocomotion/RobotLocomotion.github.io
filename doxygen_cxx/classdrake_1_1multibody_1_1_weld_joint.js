@@ -9,7 +9,6 @@ var classdrake_1_1multibody_1_1_weld_joint =
     [ "operator=", "classdrake_1_1multibody_1_1_weld_joint.html#aec0ff8efa446e5e97baa611baca985e7", null ],
     [ "type_name", "classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524", null ],
     [ "X_FM", "classdrake_1_1multibody_1_1_weld_joint.html#afeb8c8bfec14a1952a54971827058949", null ],
-    [ "X_PC", "classdrake_1_1multibody_1_1_weld_joint.html#a4374412fa825a46abdc4b2484b9c1630", null ],
     [ "WeldJoint", "classdrake_1_1multibody_1_1_weld_joint.html#a4d111c4fc2a82d94fe15a244da576424", null ],
     [ "kTypeName", "classdrake_1_1multibody_1_1_weld_joint.html#a503af5e7b7477b89d8920f5ec29582e1", null ]
 ];

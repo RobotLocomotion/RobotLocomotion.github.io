@@ -3,7 +3,6 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#afca86f5b938f1658a60abbc2c83a3428", null ],
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#a3fb9d377594ec373e512901b23cab9ef", null ],
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#a217875f885ddfab306102f74f6a112d9", null ],
-    [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#ac65b91a4e295172543170ac6c12a415b", null ],
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#adaae712fe773dbd38f1c06c787ac4207", null ],
     [ "CalcCenterOfMassInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#a81fb9f7ed7007416abf06be86a73d815", null ],
     [ "CalcCenterOfMassTranslationalVelocityInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#af393d4c5502568178a9c057ac96ce2a6", null ],

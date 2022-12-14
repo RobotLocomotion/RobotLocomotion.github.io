@@ -3392,15 +3392,6 @@ the value (as a RigidTransform&lt;double&gt;) is provided.</dd>
 will use P.body().model_instance().</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], P: pydrake.multibody.tree.Frame_[float], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The name parameter to the FixedOffsetFrame constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], name: str, bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
 <p>Creates a material Frame F whose pose is fixed with respect to the
@@ -3414,15 +3405,6 @@ for more information.</p>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
 <dd>The transform giving the pose of F in B.</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>FixedOffsetFrame must always have name This will be removed from
-Drake on or after 2022-12-01.</dd>
 </dl>
 </dd></dl>
 
@@ -3507,15 +3489,6 @@ the value (as a RigidTransform&lt;double&gt;) is provided.</dd>
 will use P.body().model_instance().</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], P: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The name parameter to the FixedOffsetFrame constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], name: str, bodyB: drake::multibody::Body&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
 <p>Creates a material Frame F whose pose is fixed with respect to the
@@ -3529,15 +3502,6 @@ for more information.</p>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
 <dd>The transform giving the pose of F in B.</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], bodyB: drake::multibody::Body&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>FixedOffsetFrame must always have name This will be removed from
-Drake on or after 2022-12-01.</dd>
 </dl>
 </dd></dl>
 
@@ -3620,15 +3584,6 @@ the value (as a RigidTransform&lt;double&gt;) is provided.</dd>
 will use P.body().model_instance().</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], P: pydrake.multibody.tree.Frame_[Expression], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The name parameter to the FixedOffsetFrame constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], name: str, bodyB: drake::multibody::Body&lt;drake::symbolic::Expression&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
 <p>Creates a material Frame F whose pose is fixed with respect to the
@@ -3642,15 +3597,6 @@ for more information.</p>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
 <dd>The transform giving the pose of F in B.</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], bodyB: drake::multibody::Body&lt;drake::symbolic::Expression&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>FixedOffsetFrame must always have name This will be removed from
-Drake on or after 2022-12-01.</dd>
 </dl>
 </dd></dl>
 
@@ -3733,15 +3679,6 @@ the value (as a RigidTransform&lt;double&gt;) is provided.</dd>
 will use P.body().model_instance().</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], P: pydrake.multibody.tree.Frame_[float], X_PF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The name parameter to the FixedOffsetFrame constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], name: str, bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
 <p>Creates a material Frame F whose pose is fixed with respect to the
@@ -3755,15 +3692,6 @@ for more information.</p>
 <dd>The body whose BodyFrame B is to be F’s parent frame.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>:</dt>
 <dd>The transform giving the pose of F in B.</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], bodyB: drake::multibody::Body&lt;double&gt;, X_BF: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>FixedOffsetFrame must always have name This will be removed from
-Drake on or after 2022-12-01.</dd>
 </dl>
 </dd></dl>
 
@@ -17460,15 +17388,6 @@ more degrees of freedom.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_.RigidBody_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.RigidBody_[float], M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The body_name parameter to the RigidBody constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], body_name: str, M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -17485,7 +17404,7 @@ and expressed in the body frame B.</dd>
 <p class="last">See multibody_spatial_inertia for details on the monogram notation
 used for spatial inertia quantities.</p>
 </div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -17697,15 +17616,6 @@ more degrees of freedom.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The body_name parameter to the RigidBody constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -17722,7 +17632,7 @@ and expressed in the body frame B.</dd>
 <p class="last">See multibody_spatial_inertia for details on the monogram notation
 used for spatial inertia quantities.</p>
 </div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -17932,15 +17842,6 @@ more degrees of freedom.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The body_name parameter to the RigidBody constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -17957,7 +17858,7 @@ and expressed in the body frame B.</dd>
 <p class="last">See multibody_spatial_inertia for details on the monogram notation
 used for spatial inertia quantities.</p>
 </div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia_[float]) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -18167,15 +18068,6 @@ more degrees of freedom.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.RigidBody_[float], M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The body_name parameter to the RigidBody constructor is now
-required. This will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], body_name: str, M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -18192,7 +18084,7 @@ and expressed in the body frame B.</dd>
 <p class="last">See multibody_spatial_inertia for details on the monogram notation
 used for spatial inertia quantities.</p>
 </div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.multibody.tree.RigidBody_[float], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: drake::multibody::SpatialInertia&lt;double&gt;) -&gt; None</li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
@@ -25802,38 +25694,16 @@ definition of the angles.</p>
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
 <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> so that their relative pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use the constructor that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].X_FM">
 <code class="descname">X_FM</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].X_FM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose X_FM of frame M in F.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].X_PC">
-<code class="descname">X_PC</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].X_PC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the pose X_PC of frame C in P. (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use <code class="docutils literal notranslate"><span class="pre">X_FM()</span></code> instead. This
-will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -25848,38 +25718,16 @@ will be removed from Drake on or after 2022-12-01.</dd>
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_M: pydrake.multibody.tree.Frame_[AutoDiffXd], X_FM: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_M: pydrake.multibody.tree.Frame_[AutoDiffXd], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
 <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> so that their relative pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_C: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use the constructor that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[AutoDiffXd].X_FM">
 <code class="descname">X_FM</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[AutoDiffXd].X_FM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose X_FM of frame M in F.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.tree.WeldJoint_[AutoDiffXd].X_PC">
-<code class="descname">X_PC</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[AutoDiffXd].X_PC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the pose X_PC of frame C in P. (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use <code class="docutils literal notranslate"><span class="pre">X_FM()</span></code> instead. This
-will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -25892,38 +25740,16 @@ will be removed from Drake on or after 2022-12-01.</dd>
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[Expression].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[Expression], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[Expression], frame_on_child_M: pydrake.multibody.tree.Frame_[Expression], X_FM: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[Expression], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[Expression], frame_on_child_M: pydrake.multibody.tree.Frame_[Expression], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
 <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> so that their relative pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[Expression], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[Expression], frame_on_child_C: pydrake.multibody.tree.Frame_[Expression], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use the constructor that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[Expression].X_FM">
 <code class="descname">X_FM</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[Expression].X_FM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose X_FM of frame M in F.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.tree.WeldJoint_[Expression].X_PC">
-<code class="descname">X_PC</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[Expression].X_PC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the pose X_PC of frame C in P. (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use <code class="docutils literal notranslate"><span class="pre">X_FM()</span></code> instead. This
-will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -25936,38 +25762,16 @@ will be removed from Drake on or after 2022-12-01.</dd>
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and a
 <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> so that their relative pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use the constructor that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[float].X_FM">
 <code class="descname">X_FM</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[float].X_FM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pose X_FM of frame M in F.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.tree.WeldJoint_[float].X_PC">
-<code class="descname">X_PC</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[float].X_PC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the pose X_PC of frame C in P. (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>WeldJoint frame notation has changed. Use <code class="docutils literal notranslate"><span class="pre">X_FM()</span></code> instead. This
-will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>

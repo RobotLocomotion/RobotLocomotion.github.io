@@ -42,7 +42,6 @@ var searchData=
   ['best_5flower_5fbound',['best_lower_bound',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0725fe3bca9f45b63acf89684785f742',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['best_5fobjective',['best_objective',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#acee912d9ade4dfc099e98629d832127e',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
   ['best_5fupper_5fbound',['best_upper_bound',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ace6f433c7211d34645537b436f8ce2ef',1,'drake::solvers::MixedIntegerBranchAndBound']]],
-  ['bilinear_5fproduct_5futil_2eh',['bilinear_product_util.h',['../bilinear__product__util_8h.html',1,'']]],
   ['binary',['BINARY',['../classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7a98ad0e8750ae10ad556ed7a62affb452',1,'drake::symbolic::Variable']]],
   ['binaryexpressioncell',['BinaryExpressionCell',['../classdrake_1_1symbolic_1_1_binary_expression_cell.html',1,'BinaryExpressionCell'],['../classdrake_1_1symbolic_1_1_binary_expression_cell.html#a43abe8b5ecec7cde1c6805a9b3e434aa',1,'drake::symbolic::BinaryExpressionCell::BinaryExpressionCell()']]],
   ['bind',['bind',['../structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb',1,'drake::type_pack']]],

@@ -19,12 +19,13 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#ab0efcd599640dacc6ef37cf640143fdc", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#acc3f6e6102f427a8624f86758eb536fd", null ],
     [ "operator+=", "classdrake_1_1multibody_1_1_spatial_inertia.html#a7124bb702e0614d7b4874c09e4b0c649", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_spatial_inertia.html#a2d612851b1578071428ec79f7da1047a", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_spatial_inertia.html#aa43ccc9d77b74b64c25cfcaf3deeaf0b", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_spatial_inertia.html#a2d612851b1578071428ec79f7da1047a", null ],
     [ "ReExpress", "classdrake_1_1multibody_1_1_spatial_inertia.html#a87068d58ff4a71b1d3d9795e9fed4aa6", null ],
     [ "ReExpressInPlace", "classdrake_1_1multibody_1_1_spatial_inertia.html#a6cc865a1da3d8d740ee1e7534e467d57", null ],
     [ "SetNaN", "classdrake_1_1multibody_1_1_spatial_inertia.html#a09b2415a4b0787515507518d9c0dd4e5", null ],
     [ "Shift", "classdrake_1_1multibody_1_1_spatial_inertia.html#aa0eb83927e03cc49eb573ea200767cee", null ],
     [ "ShiftInPlace", "classdrake_1_1multibody_1_1_spatial_inertia.html#afd8c5e6a454900028bca003bd5cc9539", null ],
+    [ "SolidBoxWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#a18329f60198911cb11b38659531ae32e", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504", null ]
 ];

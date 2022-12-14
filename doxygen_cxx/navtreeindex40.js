@@ -1,15 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,18,0,21],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#aa60dd7fd9939516ab657b3ad5a305e63":[3,0,0,18,0,14],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#aba5bc39050417dea169199678e0273c5":[3,0,0,18,0,1],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#ac9bec40ee20228e889951338227f5db7":[3,0,0,18,0,0],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#acbd23484e581d27a21f383141f164980":[3,0,0,18,0,3],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#acc1fbdce99e21637c6739f65cdb081c7":[3,0,0,18,0,19],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,0,8],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,18,0,23],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#afb31b9e4198667d6209f223d4da81d6e":[3,0,0,18,0,12],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#aff77c2afe03fcd56388b20d75726e9fe":[3,0,0,18,0,16],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html":[3,0,0,18,1],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,18,1,13],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a1b0dc2e082a27d735c084f0c39c47bad":[3,0,0,18,1,10],
@@ -249,5 +239,15 @@ var NAVTREEINDEX40 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,1,31,10],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab128d4795c1161bafae531dd5c37e4f1":[3,0,1,31,12],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,1,31,1],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,1,31,8]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,1,31,8],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,1,31,14],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee364209a9c4b4b23c7cb32c9d0119b6":[3,0,1,31,2],
+"cloth__spring__model_8h.html":[4,0,0,3,10,0],
+"cloth__spring__model__geometry_8h.html":[4,0,0,3,10,1],
+"clp__solver_8h.html":[4,0,0,11,6],
+"codegen_8h.html":[4,0,0,1,3,3],
+"codegen_8h.html#ga141de7c1e3ce45784c62e57a034a71ac":[4,0,0,1,3,3,2],
+"codegen_8h.html#ga2d07751d060ddf51dad4702d441f651a":[4,0,0,1,3,3,1],
+"codegen_8h.html#gada538db5c08eaa47546d2df1c6f442cb":[4,0,0,1,3,3,3],
+"collision__filter_8h.html":[4,0,0,4,2,5]
 };

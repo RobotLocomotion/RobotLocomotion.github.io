@@ -6350,21 +6350,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
 <p>Welds <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> with relative
 pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>. That is, the pose of frame M in frame F is fixed, with
@@ -6382,24 +6380,6 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Frame notation for <cite>WeldFrames</cite> has changed. Use the version that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -10837,21 +10817,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame_on_parent_F: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_M: pydrake.multibody.tree.Frame_[AutoDiffXd], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame_on_parent_F: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_M: pydrake.multibody.tree.Frame_[AutoDiffXd], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</p>
 <p>Welds <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> with relative
 pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>. That is, the pose of frame M in frame F is fixed, with
@@ -10869,24 +10847,6 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame_on_parent_P: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_C: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Frame notation for <cite>WeldFrames</cite> has changed. Use the version that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -15322,21 +15282,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], frame_on_parent_F: pydrake.multibody.tree.Frame_[Expression], frame_on_child_M: pydrake.multibody.tree.Frame_[Expression], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], frame_on_parent_F: pydrake.multibody.tree.Frame_[Expression], frame_on_child_M: pydrake.multibody.tree.Frame_[Expression], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[Expression]</p>
 <p>Welds <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> with relative
 pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>. That is, the pose of frame M in frame F is fixed, with
@@ -15354,24 +15312,6 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], frame_on_parent_P: pydrake.multibody.tree.Frame_[Expression], frame_on_child_C: pydrake.multibody.tree.Frame_[Expression], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[Expression]</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Frame notation for <cite>WeldFrames</cite> has changed. Use the version that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -19794,21 +19734,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_F: pydrake.multibody.tree.Frame_[float], frame_on_child_M: pydrake.multibody.tree.Frame_[float], X_FM: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
 <p>Welds <code class="docutils literal notranslate"><span class="pre">frame_on_parent_F</span></code> and <code class="docutils literal notranslate"><span class="pre">frame_on_child_M</span></code> with relative
 pose <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>. That is, the pose of frame M in frame F is fixed, with
@@ -19826,24 +19764,6 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Frame notation for <cite>WeldFrames</cite> has changed. Use the version that uses <cite>frame_on_parent_F</cite>, <cite>frame_on_child_M</cite>, and <cite>X_FM</cite>. The deprecated code will be removed from Drake on or after 2022-12-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">

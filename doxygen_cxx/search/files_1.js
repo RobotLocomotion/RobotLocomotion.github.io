@@ -6,7 +6,6 @@ var searchData=
   ['basic_5fvector_2eh',['basic_vector.h',['../basic__vector_8h.html',1,'']]],
   ['bead_5fon_5fa_5fwire_2eh',['bead_on_a_wire.h',['../bead__on__a__wire_8h.html',1,'']]],
   ['beam_5fmodel_2eh',['beam_model.h',['../beam__model_8h.html',1,'']]],
-  ['bilinear_5fproduct_5futil_2eh',['bilinear_product_util.h',['../bilinear__product__util_8h.html',1,'']]],
   ['binding_2eh',['binding.h',['../binding_8h.html',1,'']]],
   ['bit_5fcast_2eh',['bit_cast.h',['../bit__cast_8h.html',1,'']]],
   ['block_5fsparse_5flinear_5foperator_2eh',['block_sparse_linear_operator.h',['../block__sparse__linear__operator_8h.html',1,'']]],

@@ -1,15 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a59afbd430a82f1add5f0cd09bf34f444":[3,0,0,9,6,0,5],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a6b11517643a27a1b5633e5c017881f3f":[3,0,0,9,6,0,14],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a96c7c25771960765e62faa13efcce1bc":[3,0,0,9,6,0,9],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#aa31802748296a2a9f3c8ab04a3ab58b0":[3,0,0,9,6,0,4],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#abf1e3c89af40ff48fe33cbffe3f3c025":[3,0,0,9,6,0,8],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae8047523b382903ae29b5187e30cab7b":[3,0,0,9,6,0,1],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae855057ba808cde3b3615c5e1c4938be":[3,0,0,9,6,0,0],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af0ac2e6d285796a38d337ebfe9372ef2":[3,0,0,9,6,0,10],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af7cb053bcbc42d09974cebcd7a1f4c48":[3,0,0,9,6,0,3],
-"classdrake_1_1never__destroyed.html":[3,0,0,41],
 "classdrake_1_1never__destroyed.html#a1928fdb6c0c2253e0aa891b213721673":[3,0,0,41,1],
 "classdrake_1_1never__destroyed.html#a27fa859355b10542c0cdbf991a8c3a66":[3,0,0,41,3],
 "classdrake_1_1never__destroyed.html#a353748e7c29acb90be31f9866a212e89":[3,0,0,41,7],
@@ -249,5 +239,15 @@ var NAVTREEINDEX18 =
 "classdrake_1_1schema_1_1_distribution_vector.html#ab3de9dee6ae7b9e5eab7ea60911553ca":[3,0,0,13,3,6],
 "classdrake_1_1schema_1_1_distribution_vector.html#ac55f9292f1e0f747e75526151ae869bc":[3,0,0,13,3,1],
 "classdrake_1_1schema_1_1_distribution_vector.html#ad3bfe7c8dd211e654d170fa8c3874e41":[3,0,0,13,3,5],
-"classdrake_1_1schema_1_1_gaussian.html":[3,0,0,13,4]
+"classdrake_1_1schema_1_1_gaussian.html":[3,0,0,13,4],
+"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[3,0,0,13,4,1],
+"classdrake_1_1schema_1_1_gaussian.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,13,4,5],
+"classdrake_1_1schema_1_1_gaussian.html#a2478dc7e6f618e8717c9506950468987":[3,0,0,13,4,4],
+"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,13,4,8],
+"classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608":[3,0,0,13,4,12],
+"classdrake_1_1schema_1_1_gaussian.html#a71ae8677d96cf723f1e7977c02372744":[3,0,0,13,4,3],
+"classdrake_1_1schema_1_1_gaussian.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,4,9],
+"classdrake_1_1schema_1_1_gaussian.html#aa4cd1241f20f836cbf5facbf2d8379e4":[3,0,0,13,4,2],
+"classdrake_1_1schema_1_1_gaussian.html#aa5c75cdae385741a33c63dcfdc89b4be":[3,0,0,13,4,6],
+"classdrake_1_1schema_1_1_gaussian.html#aa77a831a9989407ffea0304416c7ae5c":[3,0,0,13,4,10]
 };

@@ -305,9 +305,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8a0a86b14a720059603e2529def64353"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a8a0a86b14a720059603e2529def64353">Frame</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766">body</a>, std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>={})</td></tr>
 <tr class="memdesc:a8a0a86b14a720059603e2529def64353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only derived classes can use this constructor.  <a href="#a8a0a86b14a720059603e2529def64353">More...</a><br /></td></tr>
 <tr class="separator:a8a0a86b14a720059603e2529def64353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a930d3e9d3ee5044dde9f4aaaec16b78a">Frame</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766">body</a>)</td></tr>
-<tr class="memdesc:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a930d3e9d3ee5044dde9f4aaaec16b78a">More...</a><br /></td></tr>
-<tr class="separator:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods are meant to be called by MultibodyTree::CloneToScalar() when making a clone of the entire tree or a new instance templated on a different scalar type.</p>
 <p>The only const argument to these methods is the new MultibodyTree clone under construction. Specific Frame subclasses might specify a number of prerequisites on the cloned tree and therefore require it to be at a given state of cloning. See MultibodyTree::CloneToScalar() for a list of prerequisites that are guaranteed to be satisfied during the cloning process. </p>
@@ -351,7 +348,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a921f7998dbc51e8b4298b1fbb2369686"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a921f7998dbc51e8b4298b1fbb2369686">&#9670;&nbsp;</a></span>Frame() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a921f7998dbc51e8b4298b1fbb2369686">&#9670;&nbsp;</a></span>Frame() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,7 +374,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aced939d5919bf90594d6821ab9bf0fb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aced939d5919bf90594d6821ab9bf0fb8">&#9670;&nbsp;</a></span>Frame() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aced939d5919bf90594d6821ab9bf0fb8">&#9670;&nbsp;</a></span>Frame() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +400,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a8a0a86b14a720059603e2529def64353"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a0a86b14a720059603e2529def64353">&#9670;&nbsp;</a></span>Frame() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0a86b14a720059603e2529def64353">&#9670;&nbsp;</a></span>Frame() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -444,36 +441,6 @@ Protected Member Functions</h2></td></tr>
 
 <p>Only derived classes can use this constructor. </p>
 <p>It creates a Frame object attached to <code>body</code> and puts the frame in the body's model instance. </p>
-
-</div>
-</div>
-<a id="a930d3e9d3ee5044dde9f4aaaec16b78a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a930d3e9d3ee5044dde9f4aaaec16b78a">&#9670;&nbsp;</a></span>Frame() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>body</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>The name parameter to the Frame constructor is now required. <br />
- This will be removed from Drake on or after 2022-12-01.</dd></dl>
 
 </div>
 </div>
@@ -688,7 +655,7 @@ Protected Member Functions</h2></td></tr>
 <p>Returns the pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame. </p>
 <p>In particular, if <code>this</code> <b>is</b> the body frame B, this method directly returns the identity transformation. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a9f65e5386fde2dfee6fd8e3991143dd0">FixedOffsetFrame&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; double &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a9f65e5386fde2dfee6fd8e3991143dd0">FixedOffsetFrame&lt; T &gt;</a>.</p>
 
 </div>
 </div>

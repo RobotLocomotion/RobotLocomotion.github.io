@@ -1,15 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,49,9],
-"sorted__pair__pybind_8h.html":[4,0,0,0,0,0,9],
-"sorted__triplet_8h.html":[4,0,0,4,2,51],
-"sos__basis__generator_8h.html":[4,0,0,11,57],
-"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,57,0],
-"space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,45],
-"space__xyz__mobilizer_8h.html":[4,0,0,8,14,46],
-"sparse__and__dense__matrix_8h.html":[4,0,0,11,58],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,10],
-"spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
 "spatial__derivative_8h.html":[4,0,0,8,12,2],
@@ -249,5 +239,15 @@ var NAVTREEINDEX51 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,4,48,12],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,4,49],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,4,49,9],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,49,6]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,49,6],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a626901b6c287f89574769a9297dcee45":[3,0,0,4,49,4],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[3,0,0,4,49,7],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a7fa789c84df3efe720c9070acd56c1ce":[3,0,0,4,49,5],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,4,49,2],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,49,8],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,4,49,0],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,49,1],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,4,49,3],
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html":[3,0,0,4,0,3],
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1717b842ef7560038a1ee8f5076d7721":[3,0,0,4,0,3,7]
 };

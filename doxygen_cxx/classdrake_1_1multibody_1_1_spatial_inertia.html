@@ -283,6 +283,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f022e7b3f0771715149a808b11343fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a1f022e7b3f0771715149a808b11343fd">MakeUnitary</a> ()</td></tr>
 <tr class="memdesc:a1f022e7b3f0771715149a808b11343fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates a spatial inertia whose mass is 1, position vector to center of mass is zero, and whose rotational inertia has moments of inertia of 1 and products of inertia of 0.  <a href="#a1f022e7b3f0771715149a808b11343fd">More...</a><br /></td></tr>
 <tr class="separator:a1f022e7b3f0771715149a808b11343fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18329f60198911cb11b38659531ae32e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a18329f60198911cb11b38659531ae32e">SolidBoxWithDensity</a> (const T &amp;density, const T &amp;lx, const T &amp;ly, const T &amp;lz)</td></tr>
+<tr class="memdesc:a18329f60198911cb11b38659531ae32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates a spatial inertia for a solid box B of uniform density about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#a18329f60198911cb11b38659531ae32e">More...</a><br /></td></tr>
+<tr class="separator:a18329f60198911cb11b38659531ae32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -809,8 +812,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d612851b1578071428ec79f7da1047a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d612851b1578071428ec79f7da1047a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aa43ccc9d77b74b64c25cfcaf3deeaf0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43ccc9d77b74b64c25cfcaf3deeaf0b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,7 +824,7 @@ Related Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -835,8 +838,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa43ccc9d77b74b64c25cfcaf3deeaf0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa43ccc9d77b74b64c25cfcaf3deeaf0b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a2d612851b1578071428ec79f7da1047a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d612851b1578071428ec79f7da1047a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -847,7 +850,7 @@ Related Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1000,6 +1003,77 @@ Related Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> spatial inertia for body or composite body S but now computed about a new point Q. </dd></dl>
+
+</div>
+</div>
+<a id="a18329f60198911cb11b38659531ae32e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18329f60198911cb11b38659531ae32e">&#9670;&nbsp;</a></span>SolidBoxWithDensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; SolidBoxWithDensity </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>density</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>lx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>ly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>lz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Creates a spatial inertia for a solid box B of uniform density about its geometric center Bo (which is coincident with B's center of mass Bcm). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">density</td><td>mass per volume (kg/m³). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lx</td><td>The length of the box edge in the Bx direction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ly</td><td>The length of the box edge in the By direction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lz</td><td>The length of the box edge in the Bz direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BBo_B</td><td>B's spatial inertia about Bo, expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of lx, ly, lz are negative. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
