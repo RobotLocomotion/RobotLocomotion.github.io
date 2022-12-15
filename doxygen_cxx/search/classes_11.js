@@ -39,6 +39,7 @@ var searchData=
   ['robertsonsystem',['RobertsonSystem',['../classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html',1,'drake::systems::analysis::test']]],
   ['robotclearance',['RobotClearance',['../classdrake_1_1planning_1_1_robot_clearance.html',1,'drake::planning']]],
   ['robotdiagram',['RobotDiagram',['../classdrake_1_1planning_1_1_robot_diagram.html',1,'drake::planning']]],
+  ['robotdiagram_3c_20double_20_3e',['RobotDiagram&lt; double &gt;',['../classdrake_1_1planning_1_1_robot_diagram.html',1,'drake::planning']]],
   ['robotdiagrambuilder',['RobotDiagramBuilder',['../classdrake_1_1planning_1_1_robot_diagram_builder.html',1,'drake::planning']]],
   ['robotplaninterpolator',['RobotPlanInterpolator',['../classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html',1,'drake::manipulation::planner']]],
   ['rod2d',['Rod2D',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html',1,'drake::examples::rod2d']]],

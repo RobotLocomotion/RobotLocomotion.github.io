@@ -1,5 +1,8 @@
 var dir_c1924aea86cc02fece93f366eec781e1 =
 [
+    [ "collision_checker_context.h", "collision__checker__context_8h.html", [
+      [ "CollisionCheckerContext", "classdrake_1_1planning_1_1_collision_checker_context.html", "classdrake_1_1planning_1_1_collision_checker_context" ]
+    ] ],
     [ "robot_clearance.h", "robot__clearance_8h.html", [
       [ "RobotClearance", "classdrake_1_1planning_1_1_robot_clearance.html", "classdrake_1_1planning_1_1_robot_clearance" ]
     ] ],
