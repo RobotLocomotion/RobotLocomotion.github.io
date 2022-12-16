@@ -169,6 +169,9 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1planning.html','');}
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">BodyShapeDescription captures all the information necessary to describe a SceneGraph collision shape associated with a MultibodyPlant Body: a shape S, the MultibodyPlant body B (identified by model instance and body names), and the rigid pose of the shape S relative to the body B, X_BS.  <a href="classdrake_1_1planning_1_1_body_shape_description.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents the data necessary for CollisionChecker to operate safely across multiple threads in its <code>const</code> API.  <a href="classdrake_1_1planning_1_1_collision_checker_context.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +197,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a85bb1b7b473700a759d1eb836fb6e536"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#a85bb1b7b473700a759d1eb836fb6e536">MakeBodyShapeDescription</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant_context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &amp;geometry_id)</td></tr>
+<tr class="memdesc:a85bb1b7b473700a759d1eb836fb6e536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html" title="BodyShapeDescription captures all the information necessary to describe a SceneGraph collision shape ...">BodyShapeDescription</a> by extracting the shape, pose, and names associated with the provided geometry_id.  <a href="#a85bb1b7b473700a759d1eb836fb6e536">More...</a><br /></td></tr>
+<tr class="separator:a85bb1b7b473700a759d1eb836fb6e536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad65f73fdac346846cbc24ebae63c60be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad65f73fdac346846cbc24ebae63c60be">SetInEnvironmentCollision</a> (<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_environment_collision)</td></tr>
 <tr class="separator:ad65f73fdac346846cbc24ebae63c60be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad0291e1222f1f88c5e1b5f4bac4abd10">SetInSelfCollision</a> (<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_self_collision)</td></tr>
@@ -235,6 +241,47 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a85bb1b7b473700a759d1eb836fb6e536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85bb1b7b473700a759d1eb836fb6e536">&#9670;&nbsp;</a></span>MakeBodyShapeDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a> drake::planning::MakeBodyShapeDescription </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant_context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &amp;&#160;</td>
+          <td class="paramname"><em>geometry_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html" title="BodyShapeDescription captures all the information necessary to describe a SceneGraph collision shape ...">BodyShapeDescription</a> by extracting the shape, pose, and names associated with the provided geometry_id. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>plant_context</code> is compatible with <code>plant</code>. </dd>
+<dd>
+<code>plant</code> is connected to a scene graph. </dd>
+<dd>
+<code>geometry_id</code> refers to a geometry rigidly affixed to a body of <code>plant</code>. </dd></dl>
+
+</div>
+</div>
 <a id="ad65f73fdac346846cbc24ebae63c60be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad65f73fdac346846cbc24ebae63c60be">&#9670;&nbsp;</a></span>SetInEnvironmentCollision()</h2>
 

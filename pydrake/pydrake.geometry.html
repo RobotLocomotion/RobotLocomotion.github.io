@@ -5493,7 +5493,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizer_.MeshcatVisualizer_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix='visualizer', delete_on_initialization_event=True, enable_alpha_sliders=True)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_.MeshcatVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix='visualizer', delete_on_initialization_event=True)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_.MeshcatVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt>
@@ -5519,16 +5519,16 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_.MeshcatVisualizer_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_sliders=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
 </ol>
 <p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_sliders=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
 </ol>
-<p>Adds a MeshcatVisualizer and connects it to the given
+<p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
@@ -5646,7 +5646,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizer_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix='visualizer', delete_on_initialization_event=True, enable_alpha_sliders=True)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizer_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix='visualizer', delete_on_initialization_event=True)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt>
@@ -5672,16 +5672,16 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_sliders=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_sliders=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</li>
 </ol>
-<p>Adds a MeshcatVisualizer and connects it to the given
+<p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
@@ -5797,7 +5797,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizer_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix='visualizer', delete_on_initialization_event=True, enable_alpha_sliders=True)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix='visualizer', delete_on_initialization_event=True)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt>
@@ -5823,16 +5823,16 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_sliders=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
 </ol>
 <p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_sliders=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[float]</li>
 </ol>
-<p>Adds a MeshcatVisualizer and connects it to the given
+<p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
@@ -5948,12 +5948,6 @@ not add frames to the animation.</p>
 initialization event to remove any visualizations e.g. from a previous
 simulation. See declare_initialization_events “Declare initialization
 events” for more information.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.geometry.MeshcatVisualizerParams.enable_alpha_sliders">
-<code class="descname">enable_alpha_sliders</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.enable_alpha_sliders" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determines whether to enable alpha sliders for geometry display.</p>
 </dd></dl>
 
 <dl class="attribute">

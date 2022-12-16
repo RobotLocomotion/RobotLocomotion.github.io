@@ -34,6 +34,7 @@ var searchData=
   ['body_3c_20double_20_3e',['Body&lt; double &gt;',['../classdrake_1_1multibody_1_1_body.html',1,'drake::multibody']]],
   ['bodyframe',['BodyFrame',['../classdrake_1_1multibody_1_1_body_frame.html',1,'drake::multibody']]],
   ['bodyframe_3c_20double_20_3e',['BodyFrame&lt; double &gt;',['../classdrake_1_1multibody_1_1_body_frame.html',1,'drake::multibody']]],
+  ['bodyshapedescription',['BodyShapeDescription',['../classdrake_1_1planning_1_1_body_shape_description.html',1,'drake::planning']]],
   ['bogackishampine3integrator',['BogackiShampine3Integrator',['../classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html',1,'drake::systems']]],
   ['bouncingball',['BouncingBall',['../classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html',1,'drake::examples::bouncing_ball']]],
   ['bouncingballplant',['BouncingBallPlant',['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html',1,'drake::examples::scene_graph::bouncing_ball']]],

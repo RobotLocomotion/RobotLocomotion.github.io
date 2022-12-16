@@ -72,6 +72,8 @@ var NAVTREEINDEX0 =
 "body__node_8h.html":[4,0,0,8,14,6],
 "body__node__impl_8h.html":[4,0,0,8,14,7],
 "body__node__world_8h.html":[4,0,0,8,14,8],
+"body__shape__description_8h.html":[4,0,0,10,0],
+"body__shape__description_8h.html#a85bb1b7b473700a759d1eb836fb6e536":[4,0,0,10,0,1],
 "bogacki__shampine3__integrator_8h.html":[4,0,0,12,0,2],
 "bouncing__ball_8h.html":[4,0,0,3,3,0],
 "bouncing__ball__plant_8h.html":[4,0,0,3,17,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#ab2d984c6a3f814a0cfe120febe762139":[3,0,0,43,14],
 "classdrake_1_1_polynomial.html#ab30704361ad1820a0a54f5127830d92a":[3,0,0,43,45],
 "classdrake_1_1_polynomial.html#abe5f08c6ad942153599928b9c7f9d0fa":[3,0,0,43,43],
-"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5],
-"classdrake_1_1_polynomial.html#ac86fb56fd075f1c1442883c77f200792":[3,0,0,43,40],
-"classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4":[3,0,0,43,29]
+"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5]
 };

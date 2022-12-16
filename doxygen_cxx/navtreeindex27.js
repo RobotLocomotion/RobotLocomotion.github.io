@@ -1,5 +1,17 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#a9529d30cb91325a367a10559fd88b06a":[3,0,0,15,58,33],
+"classdrake_1_1symbolic_1_1_polynomial.html#a9cdee394fc34d52f16a1b62681df409d":[3,0,0,15,58,20],
+"classdrake_1_1symbolic_1_1_polynomial.html#a9e30f757e2228393f0b85c6c772d537e":[3,0,0,15,58,23],
+"classdrake_1_1symbolic_1_1_polynomial.html#a9f10739665bdaf945e9565d83073228a":[3,0,0,15,58,40],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa280c0fba0d2e78def19c2d4827f6733":[3,0,0,15,58,3],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa49a7f8176f9d9693aac96f527b3afa2":[3,0,0,15,58,45],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa49ccd6f205331c326e9576893889ba2":[3,0,0,15,58,32],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa7d9f98657cb3e7d81648c9b244806e6":[3,0,0,15,58,14],
+"classdrake_1_1symbolic_1_1_polynomial.html#aad36fd0f6f1b0c934bc5268657117e15":[3,0,0,15,58,37],
+"classdrake_1_1symbolic_1_1_polynomial.html#aae1961fc948aba3ce3816dcf712140ca":[3,0,0,15,58,17],
+"classdrake_1_1symbolic_1_1_polynomial.html#aaf2a77325f716479b2f8c5b17729a5c6":[3,0,0,15,58,47],
+"classdrake_1_1symbolic_1_1_polynomial.html#ab168243ddedae6540dc7fe18e0fd6f53":[3,0,0,15,58,41],
 "classdrake_1_1symbolic_1_1_polynomial.html#ab3a790dc3e4b639bd6e958b6e220904f":[3,0,0,15,58,7],
 "classdrake_1_1symbolic_1_1_polynomial.html#ab548898f3e47ba517d0513f8ef974da7":[3,0,0,15,58,25],
 "classdrake_1_1symbolic_1_1_polynomial.html#acaa87c27bae38b0daed338c482de9a0e":[3,0,0,15,58,15],
@@ -237,17 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1systems_1_1_barycentric_mesh_system.html#af4d972c908246c2b4f672048ae7c3b2a":[3,0,0,16,14,6],
 "classdrake_1_1systems_1_1_basic_vector.html":[3,0,0,16,15],
 "classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4":[3,0,0,16,15,25],
-"classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0":[3,0,0,16,15,7],
-"classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70":[3,0,0,16,15,23],
-"classdrake_1_1systems_1_1_basic_vector.html#a1054df427ab86f0c7b1de898f26acca4":[3,0,0,16,15,27],
-"classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f":[3,0,0,16,15,24],
-"classdrake_1_1systems_1_1_basic_vector.html#a1b0db2779927764099fa8878ccaea85e":[3,0,0,16,15,13],
-"classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90":[3,0,0,16,15,9],
-"classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0":[3,0,0,16,15,21],
-"classdrake_1_1systems_1_1_basic_vector.html#a3af2a9627832a75b332069b2b4d3ed0b":[3,0,0,16,15,8],
-"classdrake_1_1systems_1_1_basic_vector.html#a4d33aecde019e5f62d662aa2ef142b34":[3,0,0,16,15,14],
-"classdrake_1_1systems_1_1_basic_vector.html#a4d5c1dbf38d4dbac58fa767531c56f3c":[3,0,0,16,15,4],
-"classdrake_1_1systems_1_1_basic_vector.html#a507b47abedbb153bf6181e04f74fbb2f":[3,0,0,16,15,2],
-"classdrake_1_1systems_1_1_basic_vector.html#a68ceb363c7e5f7fc11b5bbfb4540fb4d":[3,0,0,16,15,1],
-"classdrake_1_1systems_1_1_basic_vector.html#a80e395d80129f9b68a6b4aa76e962db4":[3,0,0,16,15,18]
+"classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0":[3,0,0,16,15,7]
 };

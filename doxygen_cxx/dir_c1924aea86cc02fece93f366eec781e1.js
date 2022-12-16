@@ -1,5 +1,6 @@
 var dir_c1924aea86cc02fece93f366eec781e1 =
 [
+    [ "body_shape_description.h", "body__shape__description_8h.html", "body__shape__description_8h" ],
     [ "collision_checker_context.h", "collision__checker__context_8h.html", [
       [ "CollisionCheckerContext", "classdrake_1_1planning_1_1_collision_checker_context.html", "classdrake_1_1planning_1_1_collision_checker_context" ]
     ] ],
