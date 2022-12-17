@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f":[3,0,0,16,93,2],
 "structdrake_1_1systems_1_1_simulator_config.html#a6e55b938786bd86846860397d25c10bd":[3,0,0,16,93,1],
 "structdrake_1_1systems_1_1_simulator_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,93,0],
 "structdrake_1_1systems_1_1_simulator_config.html#a952be0fb54cfff1d4d56de3caf4b3d31":[3,0,0,16,93,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,56,1],
 "structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,56,0],
 "structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,56,2],
-"structdrake_1_1type__tag.html":[3,0,0,57],
-"structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,57,0]
+"structdrake_1_1type__tag.html":[3,0,0,57]
 };

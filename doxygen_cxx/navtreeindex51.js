@@ -225,12 +225,13 @@ var NAVTREEINDEX51 =
 "structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def":[3,0,0,4,28,3],
 "structdrake_1_1geometry_1_1_meshcat_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,28,0],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[3,0,0,4,31],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,31,5],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,31,4],
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,31,6],
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,31,5],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,4,31,1],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,4,31,3],
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,4,31,4],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,31,0],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,4,31,2],
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aafe5692abc5edf40d59b37edb67c4571":[3,0,0,4,31,3],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[3,0,0,4,33],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[3,0,0,4,33,6],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,33,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6":[3,0,0,4,39,3],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html":[3,0,0,4,40],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[3,0,0,4,40,1],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,40,0],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,4,40,2]
+"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,40,0]
 };
