@@ -2623,10 +2623,12 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 <dl class="section return"><dt>Returns</dt><dd>A unique identifier for the added geometry. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, b) the <code>geometry_id</code> doesn't belong to the source, c) the <code>geometry</code> is equal to <code>nullptr</code>, or d) the geometry's name doesn't satisfy the requirements outlined in <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, b) the <code>geometry_id</code> doesn't belong to the source, c) the <code>geometry</code> is equal to <code>nullptr</code>, or d) the geometry's name doesn't satisfy the requirements outlined in <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a>. (Deprecated.) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries; use RegisterGeometry(frame_id) instead. <br />
+ This will be removed from Drake on or after 2023-04-01.</dd></dl>
 
 </div>
 </div>
@@ -2669,7 +2671,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4" title="Registers a new rigid geometry G for this source.">RegisterGeometry()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context.(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames. <br />
+ This will be removed from Drake on or after 2023-04-01.</dd></dl>
 
 </div>
 </div>

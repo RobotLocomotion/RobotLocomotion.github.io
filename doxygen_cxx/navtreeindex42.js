@@ -32,6 +32,7 @@ var NAVTREEINDEX42 =
 "dir_5fa915364d7caf39d2fac1314fb2fd74.html":[4,0,0,3,16],
 "dir_646ca0e8f46938429d8373c5298698fa.html":[4,0,0,13],
 "dir_64eb7e16d7e9848cfd92d3316c4eb5e4.html":[4,0,0,3,14],
+"dir_652567ca0f7e786d5ffa3ef8ea9e7fa7.html":[4,0,0,8,10,0],
 "dir_656f7d340c0f5b4ecaf881820f2aea38.html":[4,0,0,8,10],
 "dir_66d630ac47407fe11bcb76d9e7e25510.html":[4,0,0,1,3],
 "dir_68f515a9ecea1af7d296cc4b56524b28.html":[4,0,0,3,15],
@@ -103,7 +104,7 @@ var NAVTREEINDEX42 =
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,10],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,10,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,10,1],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,12],
+"discrete__contact__pair_8h.html":[4,0,0,8,10,13],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
@@ -111,8 +112,8 @@ var NAVTREEINDEX42 =
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,1],
-"discrete__update__manager_8h.html":[4,0,0,8,10,13],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,13,0],
+"discrete__update__manager_8h.html":[4,0,0,8,10,14],
+"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,14,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
 "distance__constraint_8h.html":[4,0,0,8,5,4],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "expect__no__throw_8h.html#ae8eedd9e4d5d0114603862cd217cb469":[4,0,0,1,4,1,2],
 "expect__throws__message_8h.html":[4,0,0,1,4,2],
 "expect__throws__message_8h.html#a3032825862f840191f81ddc8ca53072e":[4,0,0,1,4,2,2],
-"expect__throws__message_8h.html#abe6fd77a193e735aab16e277f20ab7d1":[4,0,0,1,4,2,3],
-"expect__throws__message_8h.html#addaacd0e2cef16ba6d550d85f6e16463":[4,0,0,1,4,2,0]
+"expect__throws__message_8h.html#abe6fd77a193e735aab16e277f20ab7d1":[4,0,0,1,4,2,3]
 };

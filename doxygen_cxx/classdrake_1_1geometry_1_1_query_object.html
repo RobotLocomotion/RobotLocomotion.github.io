@@ -917,7 +917,8 @@ For a convex object, outside the object at positive distance from the boundary, 
 </div><div class="memdoc">
 
 <p>Reports the position of the frame indicated by <code>frame_id</code> relative to its parent frame. </p>
-<p>If the frame was registered with the world frame as its parent frame, this value will be identical to that returned by <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99" title="Reports the position of the frame indicated by frame_id relative to the world frame.">GetPoseInWorld()</a>. </p><dl class="section note"><dt>Note</dt><dd>This is analogous to but distinct from <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55" title="Reports the pose of the geometry G with the given geometry_id in its registered topological parent P,...">SceneGraphInspector::GetPoseInParent()</a>. In this case, the pose will <em>always</em> be relative to another frame. </dd></dl>
+<p>If the frame was registered with the world frame as its parent frame, this value will be identical to that returned by <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99" title="Reports the position of the frame indicated by frame_id relative to the world frame.">GetPoseInWorld()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>This is analogous to but distinct from <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55" title="Reports the pose of the geometry G with the given geometry_id in its registered topological parent P,...">SceneGraphInspector::GetPoseInParent()</a>. In this case, the pose will <em>always</em> be relative to another frame. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the frame <code>frame_id</code> is not valid. </td></tr>

@@ -11016,52 +11016,28 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new rigid geometry G for this source. This hangs geometry
-G on a previously registered geometry P (indicated by
-<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
-relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
-is effectively rigidly affixed to the frame that P is affixed to.
-Returns the corresponding unique geometry id.</p>
-<p>Roles will be assigned to the registered geometry if the corresponding
-GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
-<p>This method modifies the underlying model and requires a new Context
-to be allocated. Potentially modifies proximity, perception, and
-illustration versions based on the roles assigned to the geometry (see
-scene_graph_versioning).</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
-<dd>The id for the source registering the geometry.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
-<dd>The id for the parent geometry P.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry</span></code>:</dt>
-<dd>The geometry G to add.</dd>
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries;
+use RegisterGeometry(frame_id) instead. This will be removed from
+Drake on or after 2023-04-01.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A unique identifier for the added geometry.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
-<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> doesn’t belong to the</li>
-<li>source, c) the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>, or d) the</li>
-<li>geometry’s name doesn’t satisfy the requirements outlined in</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeometryInstance.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <ol class="arabic simple" start="3">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
 in the provided context.</p>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames. This will be removed from Drake on or after
+2023-04-01.</dd>
+</dl>
 <ol class="arabic simple" start="4">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
@@ -11746,52 +11722,28 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new rigid geometry G for this source. This hangs geometry
-G on a previously registered geometry P (indicated by
-<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
-relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
-is effectively rigidly affixed to the frame that P is affixed to.
-Returns the corresponding unique geometry id.</p>
-<p>Roles will be assigned to the registered geometry if the corresponding
-GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
-<p>This method modifies the underlying model and requires a new Context
-to be allocated. Potentially modifies proximity, perception, and
-illustration versions based on the roles assigned to the geometry (see
-scene_graph_versioning).</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
-<dd>The id for the source registering the geometry.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
-<dd>The id for the parent geometry P.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry</span></code>:</dt>
-<dd>The geometry G to add.</dd>
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries;
+use RegisterGeometry(frame_id) instead. This will be removed from
+Drake on or after 2023-04-01.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A unique identifier for the added geometry.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
-<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> doesn’t belong to the</li>
-<li>source, c) the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>, or d) the</li>
-<li>geometry’s name doesn’t satisfy the requirements outlined in</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeometryInstance.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <ol class="arabic simple" start="3">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
 in the provided context.</p>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames. This will be removed from Drake on or after
+2023-04-01.</dd>
+</dl>
 <ol class="arabic simple" start="4">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
@@ -12474,52 +12426,28 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new rigid geometry G for this source. This hangs geometry
-G on a previously registered geometry P (indicated by
-<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
-relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
-is effectively rigidly affixed to the frame that P is affixed to.
-Returns the corresponding unique geometry id.</p>
-<p>Roles will be assigned to the registered geometry if the corresponding
-GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
-<p>This method modifies the underlying model and requires a new Context
-to be allocated. Potentially modifies proximity, perception, and
-illustration versions based on the roles assigned to the geometry (see
-scene_graph_versioning).</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
-<dd>The id for the source registering the geometry.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
-<dd>The id for the parent geometry P.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry</span></code>:</dt>
-<dd>The geometry G to add.</dd>
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries;
+use RegisterGeometry(frame_id) instead. This will be removed from
+Drake on or after 2023-04-01.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A unique identifier for the added geometry.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
-<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> doesn’t belong to the</li>
-<li>source, c) the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>, or d) the</li>
-<li>geometry’s name doesn’t satisfy the requirements outlined in</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeometryInstance.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <ol class="arabic simple" start="3">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
 in the provided context.</p>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames. This will be removed from Drake on or after
+2023-04-01.</dd>
+</dl>
 <ol class="arabic simple" start="4">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
@@ -13202,52 +13130,28 @@ scene_graph_versioning).</p>
 <ol class="arabic simple" start="2">
 <li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>Registers a new rigid geometry G for this source. This hangs geometry
-G on a previously registered geometry P (indicated by
-<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>). The pose of the geometry is defined in a fixed pose
-relative to geometry P (i.e., <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>). By induction, this geometry
-is effectively rigidly affixed to the frame that P is affixed to.
-Returns the corresponding unique geometry id.</p>
-<p>Roles will be assigned to the registered geometry if the corresponding
-GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
-<p>This method modifies the underlying model and requires a new Context
-to be allocated. Potentially modifies proximity, perception, and
-illustration versions based on the roles assigned to the geometry (see
-scene_graph_versioning).</p>
+<p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt>
-<dd>The id for the source registering the geometry.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt>
-<dd>The id for the parent geometry P.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry</span></code>:</dt>
-<dd>The geometry G to add.</dd>
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries;
+use RegisterGeometry(frame_id) instead. This will be removed from
+Drake on or after 2023-04-01.</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A unique identifier for the added geometry.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if a) the <code class="docutils literal notranslate"><span class="pre">source_id</span></code> does <em>not</em> map to a</li>
-<li>registered source, b) the <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> doesn’t belong to the</li>
-<li>source, c) the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>, or d) the</li>
-<li>geometry’s name doesn’t satisfy the requirements outlined in</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">GeometryInstance.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <ol class="arabic simple" start="3">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
 in the provided context.</p>
+<p>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames. This will be removed from Drake on or after
+2023-04-01.</dd>
+</dl>
 <ol class="arabic simple" start="4">
-<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
+<li>RegisterGeometry(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
@@ -13884,31 +13788,13 @@ mesh.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetPoseInParent">
 <code class="descname">GetPoseInParent</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetPoseInParent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the pose of the geometry G with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in
-its registered <em>topological parent</em> P, <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>. That topological
-parent may be a frame F or another geometry. If the geometry was
-registered directly to F, then <code class="docutils literal notranslate"><span class="pre">X_PG</span> <span class="pre">=</span> <span class="pre">X_FG</span></code>.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetPoseInFrame()</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For deformable geometries, this returns the pose of the reference
-mesh.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames; use GetPoseInFrame(). This will be removed from Drake
+on or after 2023-04-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -14621,31 +14507,13 @@ mesh.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetPoseInParent">
 <code class="descname">GetPoseInParent</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[AutoDiffXd], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetPoseInParent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the pose of the geometry G with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in
-its registered <em>topological parent</em> P, <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>. That topological
-parent may be a frame F or another geometry. If the geometry was
-registered directly to F, then <code class="docutils literal notranslate"><span class="pre">X_PG</span> <span class="pre">=</span> <span class="pre">X_FG</span></code>.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetPoseInFrame()</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For deformable geometries, this returns the pose of the reference
-mesh.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames; use GetPoseInFrame(). This will be removed from Drake
+on or after 2023-04-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -15356,31 +15224,13 @@ mesh.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[Expression].GetPoseInParent">
 <code class="descname">GetPoseInParent</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[Expression], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[Expression].GetPoseInParent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the pose of the geometry G with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in
-its registered <em>topological parent</em> P, <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>. That topological
-parent may be a frame F or another geometry. If the geometry was
-registered directly to F, then <code class="docutils literal notranslate"><span class="pre">X_PG</span> <span class="pre">=</span> <span class="pre">X_FG</span></code>.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetPoseInFrame()</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For deformable geometries, this returns the pose of the reference
-mesh.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames; use GetPoseInFrame(). This will be removed from Drake
+on or after 2023-04-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -16091,31 +15941,13 @@ mesh.</p>
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[float].GetPoseInParent">
 <code class="descname">GetPoseInParent</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].GetPoseInParent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports the pose of the geometry G with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in
-its registered <em>topological parent</em> P, <code class="docutils literal notranslate"><span class="pre">X_PG</span></code>. That topological
-parent may be a frame F or another geometry. If the geometry was
-registered directly to F, then <code class="docutils literal notranslate"><span class="pre">X_PG</span> <span class="pre">=</span> <span class="pre">X_FG</span></code>.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">GetPoseInFrame()</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For deformable geometries, this returns the pose of the reference
-mesh.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> does not map to a registered</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">geometry.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Geometries are no longer posed with respect to other geometries –
+only frames; use GetPoseInFrame(). This will be removed from Drake
+on or after 2023-04-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
