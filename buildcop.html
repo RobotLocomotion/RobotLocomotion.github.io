@@ -305,10 +305,14 @@ to confirm that the latest commit has a green circle, not a red x.</p>
 
 <h2 id="monitor-the-cache-servers">Monitor the Cache Servers</h2>
 
-<p>Check once per week that caching is still enabled, by opening one Mac and
-one Ubuntu (non-unprovisioned)
-<a href="https://drake-jenkins.csail.mit.edu/view/Continuous%20Production/">Continuous Production</a>
-build log and searching for one of two messages:</p>
+<p>Check once per week that caching is still enabled, there are currently two cache
+servers that need to be confirmed.  Open each of the following jobs and search
+for <code class="highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a value:</p>
+
+<ul>
+  <li><a href="https://drake-jenkins.csail.mit.edu/job/linux-focal-clang-bazel-continuous-release/lastBuild/consoleFull">https://drake-jenkins.csail.mit.edu/job/linux-focal-clang-bazel-continuous-release/lastBuild/consoleFull</a></li>
+  <li><a href="https://drake-jenkins.csail.mit.edu/job/mac-x86-monterey-clang-bazel-continuous-release/lastBuild/consoleFull">https://drake-jenkins.csail.mit.edu/job/mac-x86-monterey-clang-bazel-continuous-release/lastBuild/consoleFull</a></li>
+</ul>
 
 <p>Message indicating a problem:</p>
 

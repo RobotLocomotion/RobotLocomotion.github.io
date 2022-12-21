@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['edge_5fstep_5fsize',['edge_step_size',['../structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884',1,'drake::planning::CollisionCheckerParams']]],
   ['enable_5falpha_5fslider',['enable_alpha_slider',['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aafe5692abc5edf40d59b37edb67c4571',1,'drake::geometry::MeshcatVisualizerParams']]],
   ['enable_5falpha_5fsliders',['enable_alpha_sliders',['../structdrake_1_1visualization_1_1_visualization_config.html#a5d44e8cac1128d4f529473b3cd0526cf',1,'drake::visualization::VisualizationConfig']]],
   ['enable_5fmeshcat_5fcreation',['enable_meshcat_creation',['../structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862',1,'drake::visualization::VisualizationConfig']]],
+  ['env_5fcollision_5fpadding',['env_collision_padding',['../structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226',1,'drake::planning::CollisionCheckerParams']]],
   ['error',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
   ['error_5fcode',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
   ['explored_5fnode_5fcount',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],

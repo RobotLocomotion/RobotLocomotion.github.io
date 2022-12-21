@@ -1,0 +1,334 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: CollisionCheckerParams Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1planning_1_1_collision_checker_params.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1planning_1_1_collision_checker_params-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CollisionCheckerParams Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A set of common constructor parameters for a CollisionChecker. </p>
+<p>Not all subclasses of CollisionChecker will necessarily support this configuration struct, but many do so. </p>
+</div>
+<p><code>#include &lt;drake/planning/collision_checker_params.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2c29aca77709a64d537303e01282e71f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f">model</a></td></tr>
+<tr class="memdesc:a2c29aca77709a64d537303e01282e71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a> model of the robot and environment.  <a href="#a2c29aca77709a64d537303e01282e71f">More...</a><br /></td></tr>
+<tr class="separator:a2c29aca77709a64d537303e01282e71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6dd7347da1885477cd5b895b47ce9a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">drake::multibody::ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a">robot_model_instances</a></td></tr>
+<tr class="memdesc:a9e6dd7347da1885477cd5b895b47ce9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of model instance indices that identify which model instances belong to the robot.  <a href="#a9e6dd7347da1885477cd5b895b47ce9a">More...</a><br /></td></tr>
+<tr class="separator:a9e6dd7347da1885477cd5b895b47ce9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35dcc56f9ad09e0a13d0bbb111554f32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32">configuration_distance_function</a></td></tr>
+<tr class="memdesc:a35dcc56f9ad09e0a13d0bbb111554f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration (probably weighted) distance function.  <a href="#a35dcc56f9ad09e0a13d0bbb111554f32">More...</a><br /></td></tr>
+<tr class="separator:a35dcc56f9ad09e0a13d0bbb111554f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669492214e210900f93b70a27be26884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884">edge_step_size</a> {}</td></tr>
+<tr class="memdesc:a669492214e210900f93b70a27be26884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Step size for edge checking; in units compatible with the configuration distance function.  <a href="#a669492214e210900f93b70a27be26884">More...</a><br /></td></tr>
+<tr class="separator:a669492214e210900f93b70a27be26884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8ff17381c2ecbb2add791b7c97c226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226">env_collision_padding</a> {}</td></tr>
+<tr class="memdesc:aba8ff17381c2ecbb2add791b7c97c226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional padding to apply to all robot-environment collision queries.  <a href="#aba8ff17381c2ecbb2add791b7c97c226">More...</a><br /></td></tr>
+<tr class="separator:aba8ff17381c2ecbb2add791b7c97c226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a158076de3363e9927786d4732f3197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#a3a158076de3363e9927786d4732f3197">self_collision_padding</a> {}</td></tr>
+<tr class="memdesc:a3a158076de3363e9927786d4732f3197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional padding to apply to all robot-robot self collision queries.  <a href="#a3a158076de3363e9927786d4732f3197">More...</a><br /></td></tr>
+<tr class="separator:a3a158076de3363e9927786d4732f3197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a35dcc56f9ad09e0a13d0bbb111554f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35dcc56f9ad09e0a13d0bbb111554f32">&#9670;&nbsp;</a></span>configuration_distance_function</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a> configuration_distance_function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration (probably weighted) distance function. </p>
+<dl class="section note"><dt>Note</dt><dd>the <code>configuration_distance_function</code> object will be copied and retained by a collision checker, so if the function has any lambda-captured data then that data must outlive the collision checker. </dd></dl>
+
+</div>
+</div>
+<a id="a669492214e210900f93b70a27be26884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669492214e210900f93b70a27be26884">&#9670;&nbsp;</a></span>edge_step_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> edge_step_size {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Step size for edge checking; in units compatible with the configuration distance function. </p>
+<p>Collision checking of edges q1-&gt;q2 is performed by interpolating from q1 to q2 at edge_step_size steps and checking the interpolated configuration for collision. The value must be positive. </p>
+
+</div>
+</div>
+<a id="aba8ff17381c2ecbb2add791b7c97c226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba8ff17381c2ecbb2add791b7c97c226">&#9670;&nbsp;</a></span>env_collision_padding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> env_collision_padding {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Additional padding to apply to all robot-environment collision queries. </p>
+<p>If distance between robot and environment is less than padding, the checker reports a collision. </p>
+
+</div>
+</div>
+<a id="a2c29aca77709a64d537303e01282e71f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c29aca77709a64d537303e01282e71f">&#9670;&nbsp;</a></span>model</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; model</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a> model of the robot and environment. </p>
+<p>Must not be nullptr. </p>
+
+</div>
+</div>
+<a id="a9e6dd7347da1885477cd5b895b47ce9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6dd7347da1885477cd5b895b47ce9a">&#9670;&nbsp;</a></span>robot_model_instances</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">drake::multibody::ModelInstanceIndex</a>&gt; robot_model_instances</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A vector of model instance indices that identify which model instances belong to the robot. </p>
+<p>The list must be non-empty and must not include the world model instance. </p>
+
+</div>
+</div>
+<a id="a3a158076de3363e9927786d4732f3197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a158076de3363e9927786d4732f3197">&#9670;&nbsp;</a></span>self_collision_padding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> self_collision_padding {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Additional padding to apply to all robot-robot self collision queries. </p>
+<p>If distance between robot and itself is less than padding, the checker reports a collision. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/planning/<a class="el" href="collision__checker__params_8h.html">collision_checker_params.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html">CollisionCheckerParams</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

@@ -18,6 +18,7 @@ var searchData=
   ['clpsolverdetails',['ClpSolverDetails',['../structdrake_1_1solvers_1_1_clp_solver_details.html',1,'drake::solvers']]],
   ['codegenvisitor',['CodeGenVisitor',['../classdrake_1_1symbolic_1_1_code_gen_visitor.html',1,'drake::symbolic']]],
   ['collisioncheckercontext',['CollisionCheckerContext',['../classdrake_1_1planning_1_1_collision_checker_context.html',1,'drake::planning']]],
+  ['collisioncheckerparams',['CollisionCheckerParams',['../structdrake_1_1planning_1_1_collision_checker_params.html',1,'drake::planning']]],
   ['collisionfilterdeclaration',['CollisionFilterDeclaration',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html',1,'drake::geometry']]],
   ['collisionfiltermanager',['CollisionFilterManager',['../classdrake_1_1geometry_1_1_collision_filter_manager.html',1,'drake::geometry']]],
   ['color',['Color',['../structdrake_1_1systems_1_1sensors_1_1_color.html',1,'drake::systems::sensors']]],

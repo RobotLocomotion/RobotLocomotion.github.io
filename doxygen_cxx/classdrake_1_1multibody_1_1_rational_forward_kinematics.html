@@ -197,9 +197,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d7bf899c5b65ecbc2169089be5086f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3">ConvertMultilinearPolynomialToRationalFunction</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;e) const</td></tr>
 <tr class="memdesc:a1d7bf899c5b65ecbc2169089be5086f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a polynomial whose indeterminates are cos_delta() and sin_delta() (typically this polynomial is obtained from calling <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b" title="Computes the pose X_AB as a multilinear polynomial function.">CalcBodyPoseAsMultilinearPolynomial()</a>), converts this polynomial to a rational function with indeterminates <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s()</a>.  <a href="#a1d7bf899c5b65ecbc2169089be5086f3">More...</a><br /></td></tr>
 <tr class="separator:a1d7bf899c5b65ecbc2169089be5086f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47ae675822fc6ab4016c0fe093346bb8"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a47ae675822fc6ab4016c0fe093346bb8">ComputeSValue</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_val, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star_val) const</td></tr>
-<tr class="memdesc:a47ae675822fc6ab4016c0fe093346bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes values of s from q_val and q_star_val, while handling the index matching between q and s (we don't guarantee that s(i) is computed from q(i)).  <a href="#a47ae675822fc6ab4016c0fe093346bb8">More...</a><br /></td></tr>
-<tr class="separator:a47ae675822fc6ab4016c0fe093346bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7612c3b51d4712c669eb4a2e95a43d"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a2d7612c3b51d4712c669eb4a2e95a43d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_vector</a>&lt; Derived &gt;::value, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; typename Derived::Scalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a2d7612c3b51d4712c669eb4a2e95a43d">ComputeSValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;q_val, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star_val) const</td></tr>
+<tr class="memdesc:a2d7612c3b51d4712c669eb4a2e95a43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes values of s from q_val and q_star_val, while handling the index matching between q and s (we don't guarantee that s(i) is computed from q(i)).  <a href="#a2d7612c3b51d4712c669eb4a2e95a43d">More...</a><br /></td></tr>
+<tr class="separator:a2d7612c3b51d4712c669eb4a2e95a43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2714a9f2454037cce36e1bb67f763c"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a6d2714a9f2454037cce36e1bb67f763c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_vector</a>&lt; Derived &gt;::value, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; typename Derived::Scalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a6d2714a9f2454037cce36e1bb67f763c">ComputeQValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;s_val, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star_val) const</td></tr>
+<tr class="memdesc:a6d2714a9f2454037cce36e1bb67f763c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes values of q from s_val and q_star_val, while handling the index matching between q and s (we don't guarantee that s(i) is computed from q(i)).  <a href="#a6d2714a9f2454037cce36e1bb67f763c">More...</a><br /></td></tr>
+<tr class="separator:a6d2714a9f2454037cce36e1bb67f763c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5001e433b72f3005d744a7b9b71cc529"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529">plant</a> () const</td></tr>
 <tr class="separator:a5001e433b72f3005d744a7b9b71cc529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851ee363d02555f11f4d45d8056b072a"><td class="memItemLeft" align="right" valign="top">Eigen::Map&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a">s</a> () const</td></tr>
@@ -348,16 +353,46 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a47ae675822fc6ab4016c0fe093346bb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47ae675822fc6ab4016c0fe093346bb8">&#9670;&nbsp;</a></span>ComputeSValue()</h2>
+<a id="a6d2714a9f2454037cce36e1bb67f763c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2714a9f2454037cce36e1bb67f763c">&#9670;&nbsp;</a></span>ComputeQValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd ComputeSValue </td>
+          <td class="memname">std::enable_if_t&lt;<a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_vector</a>&lt;Derived&gt;::value, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;typename Derived::Scalar&gt; &gt; ComputeQValue </td>
           <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>s_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_star_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes values of q from s_val and q_star_val, while handling the index matching between q and s (we don't guarantee that s(i) is computed from q(i)). </p>
+
+</div>
+</div>
+<a id="a2d7612c3b51d4712c669eb4a2e95a43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d7612c3b51d4712c669eb4a2e95a43d">&#9670;&nbsp;</a></span>ComputeSValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;<a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_vector</a>&lt;Derived&gt;::value, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;typename Derived::Scalar&gt; &gt; ComputeSValue </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>q_val</em>, </td>
         </tr>
         <tr>
@@ -418,8 +453,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac73a5a06e9d73c1e5c761e7accee6265"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac73a5a06e9d73c1e5c761e7accee6265">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af561a8c971a66f869986c5e4429352c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af561a8c971a66f869986c5e4429352c3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,7 +465,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -444,8 +479,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af561a8c971a66f869986c5e4429352c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af561a8c971a66f869986c5e4429352c3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ac73a5a06e9d73c1e5c761e7accee6265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73a5a06e9d73c1e5c761e7accee6265">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,7 +491,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">RationalForwardKinematics</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

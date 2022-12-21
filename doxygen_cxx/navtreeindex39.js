@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a881f5c187422f03f5159f7e515899ede":[1,2,4,2,3],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a9138e7b7ef3459968b28c912cc953aba":[1,2,4,2,9],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#aaa70f40798dfe5ff556290a55d8e708d":[1,2,4,2,2],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#aacf63e458daa370f3a050109aebc14fb":[1,2,4,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1test_1_1_limit_malloc.html#a5f80b3400acbfba343cc4c39c0770ebc":[3,0,0,17,0,8],
 "classdrake_1_1test_1_1_limit_malloc.html#a6c0c47e1e5af49b346ab24c53aaa6ded":[3,0,0,17,0,4],
 "classdrake_1_1test_1_1_limit_malloc.html#a8b0b677bcfc5aadb02adacc95d993b95":[3,0,0,17,0,2],
-"classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,17,0,3],
-"classdrake_1_1test_1_1_limit_malloc.html#aab5411a4588acfe4e13675e9234adedf":[3,0,0,17,0,7]
+"classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,17,0,3]
 };

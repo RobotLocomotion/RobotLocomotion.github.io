@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1planning.html','');}
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -175,6 +176,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents the data necessary for CollisionChecker to operate safely across multiple threads in its <code>const</code> API.  <a href="classdrake_1_1planning_1_1_collision_checker_context.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html">CollisionCheckerParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set of common constructor parameters for a CollisionChecker.  <a href="structdrake_1_1planning_1_1_collision_checker_params.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A summary of the clearance &ndash; a collection of distance measurements &ndash; between the robot and everything in the world.  <a href="classdrake_1_1planning_1_1_robot_clearance.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +188,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html">RobotDiagramBuilder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage for a combined diagram builder, plant, and scene graph.  <a href="classdrake_1_1planning_1_1_robot_diagram_builder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1d0e3bfc71b80ae77e21ca5752dbaca4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a> = std::function&lt; <a class="el" href="classdouble.html">double</a>(const Eigen::VectorXd &amp;, const Eigen::VectorXd &amp;)&gt;</td></tr>
+<tr class="memdesc:a1d0e3bfc71b80ae77e21ca5752dbaca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration distance takes two configurations of the robot, q1 and q2, both as Eigen::VectorXd, and returns (potentially weighted) C-space distance as a double.  <a href="#a1d0e3bfc71b80ae77e21ca5752dbaca4">More...</a><br /></td></tr>
+<tr class="separator:a1d0e3bfc71b80ae77e21ca5752dbaca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d00a46d4a0685ffa20482705e7e8e7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#a75d00a46d4a0685ffa20482705e7e8e7">ConfigurationInterpolationFunction</a> = std::function&lt; Eigen::VectorXd(const Eigen::VectorXd &amp;, const Eigen::VectorXd &amp;, <a class="el" href="classdouble.html">double</a>)&gt;</td></tr>
+<tr class="memdesc:a75d00a46d4a0685ffa20482705e7e8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration interpolation function takes two configurations of the robot, q1, and q2, both as Eigen::VectorXd, plus a ratio, r, in [0, 1] and returns the interpolated configuration.  <a href="#a75d00a46d4a0685ffa20482705e7e8e7">More...</a><br /></td></tr>
+<tr class="separator:a75d00a46d4a0685ffa20482705e7e8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -205,6 +218,51 @@ Functions</h2></td></tr>
 <tr class="memitem:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad0291e1222f1f88c5e1b5f4bac4abd10">SetInSelfCollision</a> (<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_self_collision)</td></tr>
 <tr class="separator:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a1d0e3bfc71b80ae77e21ca5752dbaca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0e3bfc71b80ae77e21ca5752dbaca4">&#9670;&nbsp;</a></span>ConfigurationDistanceFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a> =  std::function&lt;<a class="el" href="classdouble.html">double</a>(const Eigen::VectorXd&amp;, const Eigen::VectorXd&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration distance takes two configurations of the robot, q1 and q2, both as Eigen::VectorXd, and returns (potentially weighted) C-space distance as a double. </p>
+<p>The returned distance will be strictly non-negative.</p>
+<p>To be valid, the function must satisfy the following condition:</p>
+<ul>
+<li>dist(q, q) ≡ 0 </li>
+</ul>
+
+</div>
+</div>
+<a id="a75d00a46d4a0685ffa20482705e7e8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d00a46d4a0685ffa20482705e7e8e7">&#9670;&nbsp;</a></span>ConfigurationInterpolationFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1planning.html#a75d00a46d4a0685ffa20482705e7e8e7">ConfigurationInterpolationFunction</a> =  std::function&lt;Eigen::VectorXd( const Eigen::VectorXd&amp;, const Eigen::VectorXd&amp;, <a class="el" href="classdouble.html">double</a>)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration interpolation function takes two configurations of the robot, q1, and q2, both as Eigen::VectorXd, plus a ratio, r, in [0, 1] and returns the interpolated configuration. </p>
+<p>Behavior of the function for values of r outside of the range [0,1] is undefined.</p>
+<p>To be valid, the function must satisfy the following conditions:</p>
+<ul>
+<li>interpolate(q1, q2, 0) ≡ q1</li>
+<li>interpolate(q1, q2, 1) ≡ q2</li>
+<li>interpolate(q, q, r) ≡ q, for all r in [0, 1] </li>
+</ul>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a6e884b3a7afc04b1a0c132ce264c14b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e884b3a7afc04b1a0c132ce264c14b7">&#9670;&nbsp;</a></span>RobotCollisionType</h2>

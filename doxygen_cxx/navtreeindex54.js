@@ -1,5 +1,16 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,15,63,7],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,15,63,5],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a1c36ee4d69b2b1e95ea82cc4fff7fad6":[3,0,0,15,63,6],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a1c615a950f134b68ee764a6b9d765e73":[3,0,0,15,63,3],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360":[3,0,0,15,63,0],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a919d5819ace24054ded2f7899e67ff54":[3,0,0,15,63,2],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a998dc5eab25095b0f2c481bdc575a430":[3,0,0,15,63,4],
+"structdrake_1_1symbolic_1_1_sin_cos.html#acc45493e97e5176d748160a80140ecb2":[3,0,0,15,63,1],
+"structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2],
+"structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[1,4,0,2,1],
+"structdrake_1_1systems_1_1_initialize_params.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,0,2,0],
 "structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[3,0,0,16,76],
 "structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,16,76,0],
 "structdrake_1_1systems_1_1_simulator_config.html":[3,0,0,16,93],
@@ -238,16 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,37,0],
 "structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,16,9,6],
 "structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,16,9,6,0],
-"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,16,9,6,1],
-"structdrake_1_1template__single__tag.html":[3,0,0,52],
-"structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,52,0],
-"structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,17,1],
-"structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,17,1,1],
-"structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2":[3,0,0,17,1,0],
-"structdrake_1_1test_1_1_limit_malloc_params.html#a7febc78e5aba3a9f8f0b9a89f4537b25":[3,0,0,17,1,2],
-"structdrake_1_1type__at.html":[3,0,0,54],
-"structdrake_1_1type__at.html#ae186135b13d8acdaf385d1ff052f0d82":[3,0,0,54,0],
-"structdrake_1_1type__check__different__from.html":[3,0,0,55],
-"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,55,0],
-"structdrake_1_1type__pack.html":[3,0,0,56]
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,16,9,6,1]
 };

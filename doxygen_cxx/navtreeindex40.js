@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1test_1_1_limit_malloc.html#aab5411a4588acfe4e13675e9234adedf":[3,0,0,17,0,7],
 "classdrake_1_1test_1_1_limit_malloc.html#afcdbfd967bf9091f3554dc4b5609c288":[3,0,0,17,0,5],
 "classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,17,0,1],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html":[3,0,0,18,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a712a1f7906452472e1632ce23eb9b0fc":[3,0,1,27,11],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a98e915e5de715722814bc0902b76edd4":[3,0,1,27,12],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,1,27,9],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aafee06a6c686706c82602adea8bd5343":[3,0,1,27,5],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,1,27,1]
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aafee06a6c686706c82602adea8bd5343":[3,0,1,27,5]
 };
