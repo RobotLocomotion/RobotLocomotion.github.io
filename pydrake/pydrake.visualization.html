@@ -601,7 +601,7 @@ loop until the user quits.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>position</strong> – an ndarray-like list of slider positions for the model(s);
 must match the number of positions in all model(s), including the
 7 positions corresponding to any model bases that aren’t welded to
@@ -609,6 +609,34 @@ the world.</li>
 <li><strong>loop_once</strong> – a flag that exits the evaluation loop after one pass.</li>
 </ul>
 </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A RunResult code indicating why the method stopped.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.visualization.ModelVisualizer.RunWithReload">
+<code class="descname">RunWithReload</code><span class="sig-paren">(</span><em>position=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.RunWithReload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the model with an option to reload.
+Neither Finalize() nor Run() may be called before this method.</p>
+<p>Will iterate until the user clicks the Stop Running button. All model
+files will be reloaded and meshcat will be reset if the reload button
+is clicked. If pyplot is being used, clicking reload will create a
+new pyplot window.</p>
+<p>Only models added using AddModels() will be properly reloaded.
+If the parser() was accessed to add models directly to the parser
+then those models will not be properly reloaded by this method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> – an ndarray-like list of slider positions for the model(s);
+must match the number of positions in all model(s), including the
+7 positions corresponding to any model bases that aren’t welded to
+the world.</td>
 </tr>
 </tbody>
 </table>
