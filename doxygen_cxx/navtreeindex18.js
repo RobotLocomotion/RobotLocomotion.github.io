@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae8047523b382903ae29b5187e30cab7b":[3,0,0,9,6,0,1],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae855057ba808cde3b3615c5e1c4938be":[3,0,0,9,6,0,0],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af0ac2e6d285796a38d337ebfe9372ef2":[3,0,0,9,6,0,10],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af7cb053bcbc42d09974cebcd7a1f4c48":[3,0,0,9,6,0,3],
 "classdrake_1_1never__destroyed.html":[3,0,0,41],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1schema_1_1_deterministic_vector.html#aad4b968e35b277b170084310566c8b8b":[3,0,0,13,1,8],
 "classdrake_1_1schema_1_1_deterministic_vector.html#acc2130db61a9c21eb8e43884b9af7643":[3,0,0,13,1,0],
 "classdrake_1_1schema_1_1_deterministic_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,13,1,10],
-"classdrake_1_1schema_1_1_deterministic_vector.html#aec0e78d5da059c9e2d3ba21faa02709b":[3,0,0,13,1,2],
-"classdrake_1_1schema_1_1_distribution.html":[3,0,0,13,2],
-"classdrake_1_1schema_1_1_distribution.html#a392b7d292d59a91db801b2d024238145":[3,0,0,13,2,8]
+"classdrake_1_1schema_1_1_deterministic_vector.html#aec0e78d5da059c9e2d3ba21faa02709b":[3,0,0,13,1,2]
 };

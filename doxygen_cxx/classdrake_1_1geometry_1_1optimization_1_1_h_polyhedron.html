@@ -183,6 +183,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5008da472eebd4caf252f33f394bb131"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a5008da472eebd4caf252f33f394bb131">HPolyhedron</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;query_object, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
 <tr class="memdesc:a5008da472eebd4caf252f33f394bb131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry and pose in the <code>reference_frame</code> frame, obtained via the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="#a5008da472eebd4caf252f33f394bb131">More...</a><br /></td></tr>
 <tr class="separator:a5008da472eebd4caf252f33f394bb131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142640e17e10a68f9c2ffcd3df6b67a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a142640e17e10a68f9c2ffcd3df6b67a8">HPolyhedron</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html">VPolytope</a> &amp;vpoly)</td></tr>
+<tr class="memdesc:a142640e17e10a68f9c2ffcd3df6b67a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new HPolyedron from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> object.  <a href="#a142640e17e10a68f9c2ffcd3df6b67a8">More...</a><br /></td></tr>
+<tr class="separator:a142640e17e10a68f9c2ffcd3df6b67a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15f9b02bca9548dd4497de6693fa3a51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a15f9b02bca9548dd4497de6693fa3a51">~HPolyhedron</a> () final</td></tr>
 <tr class="separator:a15f9b02bca9548dd4497de6693fa3a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace583a472a3bdc1b67f05d6a6571a903"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ace583a472a3bdc1b67f05d6a6571a903">A</a> () const</td></tr>
@@ -342,7 +345,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a849b5ec6e368282a2416294dc6f0863a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a849b5ec6e368282a2416294dc6f0863a">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a849b5ec6e368282a2416294dc6f0863a">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -368,7 +371,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a49baca0390a3ae23b173c34429982fcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49baca0390a3ae23b173c34429982fcc">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49baca0390a3ae23b173c34429982fcc">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a437b46a004ab322e1e2d23b90e8e9239"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a437b46a004ab322e1e2d23b90e8e9239">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a437b46a004ab322e1e2d23b90e8e9239">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,7 +416,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="addeb00deb2fcdb452b7c6f7c416fec36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addeb00deb2fcdb452b7c6f7c416fec36">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#addeb00deb2fcdb452b7c6f7c416fec36">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -444,7 +447,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a5008da472eebd4caf252f33f394bb131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5008da472eebd4caf252f33f394bb131">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5008da472eebd4caf252f33f394bb131">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,6 +486,35 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a142640e17e10a68f9c2ffcd3df6b67a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a142640e17e10a68f9c2ffcd3df6b67a8">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html">VPolytope</a> &amp;&#160;</td>
+          <td class="paramname"><em>vpoly</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a new HPolyedron from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> object. </p>
+<p>This function will use qhull. </p>
 
 </div>
 </div>
