@@ -167,7 +167,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_body_shape_
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BodyShapeDescription captures all the information necessary to describe a SceneGraph collision shape associated with a MultibodyPlant Body: a shape S, the MultibodyPlant body B (identified by model instance and body names), and the rigid pose of the shape S relative to the body B, X_BS. </p>
-<p>Most clients should use the factory method <a class="el" href="namespacedrake_1_1planning.html#a85bb1b7b473700a759d1eb836fb6e536" title="Constructs a BodyShapeDescription by extracting the shape, pose, and names associated with the provid...">MakeBodyShapeDescription()</a> to construct a valid BodyShapeDescription; it will extract and verify the correct information from a multibody plant and its context. </p>
+<p>Most clients should use the factory method <a class="el" href="namespacedrake_1_1planning.html#a85bb1b7b473700a759d1eb836fb6e536" title="Constructs a BodyShapeDescription by extracting the shape, pose, and names associated with the provid...">MakeBodyShapeDescription()</a> to construct a valid BodyShapeDescription; it will extract and verify the correct information from a multibody plant and its context.</p>
+<p>When moved-from, this object models a "null" description and all of the getter functions will throw. </p>
 </div>
 <p><code>#include &lt;drake/planning/body_shape_description.h&gt;</code></p>
 <table class="memberdecls">
@@ -417,12 +418,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the shape passed at construction. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if this instance has been moved from. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
