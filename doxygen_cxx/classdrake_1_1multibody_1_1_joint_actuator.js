@@ -11,6 +11,7 @@ var classdrake_1_1multibody_1_1_joint_actuator =
     [ "effort_limit", "classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb", null ],
     [ "gear_ratio", "classdrake_1_1multibody_1_1_joint_actuator.html#a544e5bac743e6b9fa43ce300a4386f21", null ],
     [ "get_actuation_vector", "classdrake_1_1multibody_1_1_joint_actuator.html#a7f583cc35433f57b5096490cbc45f55a", null ],
+    [ "index", "classdrake_1_1multibody_1_1_joint_actuator.html#a0da0b00b025a7bb19e574feabb91668f", null ],
     [ "input_start", "classdrake_1_1multibody_1_1_joint_actuator.html#a42d883dde11e65819319f8060b0843b4", null ],
     [ "joint", "classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86", null ],
     [ "name", "classdrake_1_1multibody_1_1_joint_actuator.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],

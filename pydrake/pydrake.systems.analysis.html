@@ -243,24 +243,6 @@ and the simulator.</dd>
 for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given <code class="docutils literal notranslate"><span class="pre">config</span></code>.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>ApplySimulatorConfig(simulator: pydrake.systems.analysis.Simulator_[float], config: pydrake.systems.analysis.SimulatorConfig) -&gt; None</li>
-</ol>
-<p>(Deprecated.) Modifies the <code class="docutils literal notranslate"><span class="pre">simulator</span></code> to use the given config.
-(Always replaces the Integrator with a new one; be careful not to keep
-old references around.)</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
-<dd>On input, a valid pointer to a Simulator. On output the integrator
-for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given <code class="docutils literal notranslate"><span class="pre">config</span></code>.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt>
-<dd>Configuration to be used. Contains values for both the integrator
-and the simulator.  <a href="#id1"><span class="problematic" id="id2">*</span></a>/
-(Deprecated.)</dd>
-<dt>Deprecated:</dt>
-<dd>Call ApplySimulatorConfig with the config parameter first. This
-will be removed from Drake on or after 2022-11-01.</dd>
-</dl>
-<ol class="arabic simple" start="3">
 <li>ApplySimulatorConfig(config: pydrake.systems.analysis.SimulatorConfig, simulator: pydrake.systems.analysis.Simulator_[AutoDiffXd]) -&gt; None</li>
 </ol>
 <p>Modifies the <code class="docutils literal notranslate"><span class="pre">simulator</span></code> based on the given <code class="docutils literal notranslate"><span class="pre">config</span></code>. (Always
@@ -273,24 +255,6 @@ and the simulator.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
 <dd>On input, a valid pointer to a Simulator. On output the integrator
 for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given <code class="docutils literal notranslate"><span class="pre">config</span></code>.</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li>ApplySimulatorConfig(simulator: pydrake.systems.analysis.Simulator_[AutoDiffXd], config: pydrake.systems.analysis.SimulatorConfig) -&gt; None</li>
-</ol>
-<p>(Deprecated.) Modifies the <code class="docutils literal notranslate"><span class="pre">simulator</span></code> to use the given config.
-(Always replaces the Integrator with a new one; be careful not to keep
-old references around.)</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
-<dd>On input, a valid pointer to a Simulator. On output the integrator
-for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given <code class="docutils literal notranslate"><span class="pre">config</span></code>.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt>
-<dd>Configuration to be used. Contains values for both the integrator
-and the simulator.  <a href="#id3"><span class="problematic" id="id4">*</span></a>/
-(Deprecated.)</dd>
-<dt>Deprecated:</dt>
-<dd>Call ApplySimulatorConfig with the config parameter first. This
-will be removed from Drake on or after 2022-11-01.</dd>
 </dl>
 </dd></dl>
 

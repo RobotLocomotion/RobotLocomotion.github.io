@@ -13,8 +13,8 @@ var classdrake_1_1systems_1_1_input_port =
     [ "GetFullDescription", "classdrake_1_1systems_1_1_input_port.html#aec11c25e1727cfb34267f023c55523b8", null ],
     [ "HasValue", "classdrake_1_1systems_1_1_input_port.html#a5536b94a4642fa4cf47164437dc66ae8", null ],
     [ "is_random", "classdrake_1_1systems_1_1_input_port.html#ae977b5e71b96f702adfb99b4f862df43", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_input_port.html#a180f7870931d1450b2b2bfa4b92ecc6f", null ],
     [ "operator=", "classdrake_1_1systems_1_1_input_port.html#a4081baf966b639f96dc74ad3cd0f97fe", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_input_port.html#a180f7870931d1450b2b2bfa4b92ecc6f", null ],
     [ "size", "classdrake_1_1systems_1_1_input_port.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
     [ "ticket", "classdrake_1_1systems_1_1_input_port.html#a65af7fcc4d673554e5fa127b1cf1382b", null ],
     [ "internal::FrameworkFactory", "classdrake_1_1systems_1_1_input_port.html#aec09700393c1247c681b270e72729bce", null ]

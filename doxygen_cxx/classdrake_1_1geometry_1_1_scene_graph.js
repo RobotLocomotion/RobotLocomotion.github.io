@@ -12,6 +12,8 @@ var classdrake_1_1geometry_1_1_scene_graph =
     [ "AssignRole", "classdrake_1_1geometry_1_1_scene_graph.html#aabf46b9415c83a4ce1f5664a1256692b", null ],
     [ "AssignRole", "classdrake_1_1geometry_1_1_scene_graph.html#ae9920620aaba3e23332077039c74a964", null ],
     [ "AssignRole", "classdrake_1_1geometry_1_1_scene_graph.html#ae60eb701c73b18f11f1880ef7010f406", null ],
+    [ "ChangeShape", "classdrake_1_1geometry_1_1_scene_graph.html#a852ca088c611009c3be6f10e91b88e1c", null ],
+    [ "ChangeShape", "classdrake_1_1geometry_1_1_scene_graph.html#ada3afe0b04bb8168fde905b8701ceb5d", null ],
     [ "collision_filter_manager", "classdrake_1_1geometry_1_1_scene_graph.html#a76a5871dd4432de7e8225f334765729f", null ],
     [ "collision_filter_manager", "classdrake_1_1geometry_1_1_scene_graph.html#a3d5bf882337dfed524c1da91fb96f618", null ],
     [ "get_query_output_port", "classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4", null ],

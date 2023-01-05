@@ -27,6 +27,7 @@ var classdrake_1_1multibody_1_1_body =
     [ "get_num_flexible_velocities", "classdrake_1_1multibody_1_1_body.html#a686c86e06e668050d80c096e1200fe5a", null ],
     [ "GetForceInWorld", "classdrake_1_1multibody_1_1_body.html#ace24ab6283a1ad4f7585fa3aabc79f12", null ],
     [ "has_quaternion_dofs", "classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31", null ],
+    [ "index", "classdrake_1_1multibody_1_1_body.html#afa64a237a5acb010f896154c45bc5407", null ],
     [ "is_floating", "classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0", null ],
     [ "is_locked", "classdrake_1_1multibody_1_1_body.html#a0c0fd3c2e27243de55385f4f9695fc0e", null ],
     [ "Lock", "classdrake_1_1multibody_1_1_body.html#a50c7f850050d4a94641ed72dd2d1968f", null ],

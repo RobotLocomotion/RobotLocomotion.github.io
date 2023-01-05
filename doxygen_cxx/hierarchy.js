@@ -480,16 +480,11 @@ var hierarchy =
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
-    [ "MultibodyElement< T, ElementIndexType >", "classdrake_1_1multibody_1_1_multibody_element.html", [
-      [ "Body< double >", "classdrake_1_1multibody_1_1_body.html", null ]
-    ] ],
-    [ "MultibodyElement< T, BodyIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", [
+    [ "MultibodyElement< T >", "classdrake_1_1multibody_1_1_multibody_element.html", [
+      [ "Body< double >", "classdrake_1_1multibody_1_1_body.html", null ],
       [ "Body< T >", "classdrake_1_1multibody_1_1_body.html", [
         [ "RigidBody< T >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
-      ] ]
-    ] ],
-    [ "MultibodyElement< T, BodyNodeIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", null ],
-    [ "MultibodyElement< T, ForceElementIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", [
+      ] ],
       [ "ForceElement< T >", "classdrake_1_1multibody_1_1_force_element.html", [
         [ "DoorHinge< T >", "classdrake_1_1multibody_1_1_door_hinge.html", null ],
         [ "LinearBushingRollPitchYaw< T >", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html", null ],
@@ -497,9 +492,7 @@ var hierarchy =
         [ "PrismaticSpring< T >", "classdrake_1_1multibody_1_1_prismatic_spring.html", null ],
         [ "RevoluteSpring< T >", "classdrake_1_1multibody_1_1_revolute_spring.html", null ],
         [ "UniformGravityFieldElement< T >", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html", null ]
-      ] ]
-    ] ],
-    [ "MultibodyElement< T, FrameIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", [
+      ] ],
       [ "FrameBase< T >", "classdrake_1_1multibody_1_1_frame_base.html", [
         [ "Frame< T >", "classdrake_1_1multibody_1_1_frame.html", [
           [ "BodyFrame< T >", "classdrake_1_1multibody_1_1_body_frame.html", null ],
@@ -508,12 +501,7 @@ var hierarchy =
         [ "Frame< double >", "classdrake_1_1multibody_1_1_frame.html", [
           [ "BodyFrame< double >", "classdrake_1_1multibody_1_1_body_frame.html", null ]
         ] ]
-      ] ]
-    ] ],
-    [ "MultibodyElement< T, JointActuatorIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", [
-      [ "JointActuator< T >", "classdrake_1_1multibody_1_1_joint_actuator.html", null ]
-    ] ],
-    [ "MultibodyElement< T, JointIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", [
+      ] ],
       [ "Joint< T >", "classdrake_1_1multibody_1_1_joint.html", [
         [ "BallRpyJoint< T >", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", null ],
         [ "PlanarJoint< T >", "classdrake_1_1multibody_1_1_planar_joint.html", null ],
@@ -523,10 +511,9 @@ var hierarchy =
         [ "ScrewJoint< T >", "classdrake_1_1multibody_1_1_screw_joint.html", null ],
         [ "UniversalJoint< T >", "classdrake_1_1multibody_1_1_universal_joint.html", null ],
         [ "WeldJoint< T >", "classdrake_1_1multibody_1_1_weld_joint.html", null ]
-      ] ]
+      ] ],
+      [ "JointActuator< T >", "classdrake_1_1multibody_1_1_joint_actuator.html", null ]
     ] ],
-    [ "MultibodyElement< T, MobilizerIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", null ],
-    [ "MultibodyElement< T, ModelInstanceIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", null ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
     [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", null ],
     [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", null ],

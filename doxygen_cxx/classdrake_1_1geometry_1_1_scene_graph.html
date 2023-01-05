@@ -352,6 +352,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2537f13bfc667186f077bc400165133"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae2537f13bfc667186f077bc400165133">RegisterDeformableGeometry</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt; geometry, <a class="el" href="classdouble.html">double</a> resolution_hint) const</td></tr>
 <tr class="memdesc:ae2537f13bfc667186f077bc400165133"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab671140650fb6a01e915a200e9aaa3bf" title="Registers a new deformable geometry G for this source.">RegisterDeformableGeometry()</a>.  <a href="#ae2537f13bfc667186f077bc400165133">More...</a><br /></td></tr>
 <tr class="separator:ae2537f13bfc667186f077bc400165133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a852ca088c611009c3be6f10e91b88e1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a852ca088c611009c3be6f10e91b88e1c">ChangeShape</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; X_FG=std::nullopt)</td></tr>
+<tr class="memdesc:a852ca088c611009c3be6f10e91b88e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the <code>shape</code> of the geometry indicated by the given <code>geometry_id</code>.  <a href="#a852ca088c611009c3be6f10e91b88e1c">More...</a><br /></td></tr>
+<tr class="separator:a852ca088c611009c3be6f10e91b88e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3afe0b04bb8168fde905b8701ceb5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ada3afe0b04bb8168fde905b8701ceb5d">ChangeShape</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; X_FG=std::nullopt)</td></tr>
+<tr class="memdesc:ada3afe0b04bb8168fde905b8701ceb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a852ca088c611009c3be6f10e91b88e1c" title="Changes the shape of the geometry indicated by the given geometry_id.">ChangeShape()</a>.  <a href="#ada3afe0b04bb8168fde905b8701ceb5d">More...</a><br /></td></tr>
+<tr class="separator:ada3afe0b04bb8168fde905b8701ceb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd98b48bb76635a3f5055f418908912d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#afd98b48bb76635a3f5055f418908912d">RemoveGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id)</td></tr>
 <tr class="memdesc:afd98b48bb76635a3f5055f418908912d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the given geometry G (indicated by <code>geometry_id</code>) from the given source's registered geometries.  <a href="#afd98b48bb76635a3f5055f418908912d">More...</a><br /></td></tr>
 <tr class="separator:afd98b48bb76635a3f5055f418908912d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1976,6 +1982,114 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>When changing illustration properties (<code>assign = <a class="el" href="namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3a8ba1782ca7c04c255b3d69d6d2411d90" title="Replace the existing role properties completely.">RoleAssign::kReplace</a></code>), there is no guarantee that these changes will affect the visualization. The visualizer needs to be able to "initialize" itself after changes to properties that will affect how a geometry appears. If changing a geometry's illustration properties doesn't seem to be affecting the visualization, retrigger its initialization action.</dd>
 <dd>
 Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues/13597">#13597</a>), changing the illustration roles or properties in a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a> will not have any apparent effect in, at least, drake_visualizer. Please change the illustration role in the model prior to allocating the context. </dd></dl>
+
+</div>
+</div>
+<a id="a852ca088c611009c3be6f10e91b88e1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852ca088c611009c3be6f10e91b88e1c">&#9670;&nbsp;</a></span>ChangeShape() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChangeShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a>&#160;</td>
+          <td class="paramname"><em>source_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>X_FG</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the <code>shape</code> of the geometry indicated by the given <code>geometry_id</code>. </p>
+<p>The geometry is otherwise unchanged &ndash; same geometry_id, same assigned roles, same pose with respect to the parent (unless a new value for <code>X_FG</code> is given).</p>
+<p>This method modifies the underlying model and requires a new Context to be allocated. Potentially modifies proximity, perception, and illustration versions based on the roles assigned to the geometry (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_id</td><td>The id for the source modifying the geometry. </td></tr>
+    <tr><td class="paramname">geometry_id</td><td>The id for the geometry whose shape is being modified. </td></tr>
+    <tr><td class="paramname">shape</td><td>The new shape to use. </td></tr>
+    <tr><td class="paramname">X_FG</td><td>The (optional) new pose of the geometry in its frame. If omitted, the old pose is used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a) the <code>source_id</code> does <em>not</em> map to a registered source, b) the <code>geometry_id</code> does not map to a valid geometry, c) the <code>geometry_id</code> maps to a geometry that does not belong to the indicated source, or d) the geometry is deformable. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada3afe0b04bb8168fde905b8701ceb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3afe0b04bb8168fde905b8701ceb5d">&#9670;&nbsp;</a></span>ChangeShape() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChangeShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a>&#160;</td>
+          <td class="paramname"><em>source_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>X_FG</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a852ca088c611009c3be6f10e91b88e1c" title="Changes the shape of the geometry indicated by the given geometry_id.">ChangeShape()</a>. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
 
 </div>
 </div>

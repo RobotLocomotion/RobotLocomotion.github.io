@@ -13,10 +13,10 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "get_parent_tree", "classdrake_1_1multibody_1_1_multibody_element.html#acf452ebe0b6b98c3ee73e04b6963feba", null ],
     [ "GetParentPlant", "classdrake_1_1multibody_1_1_multibody_element.html#a310da1a776ff08627f2f658ff2a6da11", null ],
     [ "GetParentTreeSystem", "classdrake_1_1multibody_1_1_multibody_element.html#a3df812307c45b93543b2cef9fec2c3be", null ],
-    [ "index", "classdrake_1_1multibody_1_1_multibody_element.html#aab10b1c612e1455976fc9e71c4ba7df6", null ],
+    [ "index_impl", "classdrake_1_1multibody_1_1_multibody_element.html#aded9a9cca94a35fc5ab0eb794ecfb6f9", null ],
     [ "model_instance", "classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_multibody_element.html#a47e4f9cb97baf94b1cdc26585e2e1e3c", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_multibody_element.html#ac7d3ff54398a47f3c1e9ce9b4fb2e120", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_multibody_element.html#a47e4f9cb97baf94b1cdc26585e2e1e3c", null ],
     [ "SetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb", null ],
     [ "internal::MultibodyTree< T >", "classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d", null ],
     [ "MultibodyElementTester", "classdrake_1_1multibody_1_1_multibody_element.html#a59cf1173a305d4864320bf9e1bf60f35", null ]

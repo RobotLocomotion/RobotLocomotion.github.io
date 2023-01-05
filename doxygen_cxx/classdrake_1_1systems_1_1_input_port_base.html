@@ -187,6 +187,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc91200b03493b30470dba23fff30a72"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#adc91200b03493b30470dba23fff30a72">get_random_type</a> () const</td></tr>
 <tr class="memdesc:adc91200b03493b30470dba23fff30a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the RandomDistribution if this is a random port.  <a href="#adc91200b03493b30470dba23fff30a72">More...</a><br /></td></tr>
 <tr class="separator:adc91200b03493b30470dba23fff30a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efe26650e3867a83766c7da14260ef5"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#a2efe26650e3867a83766c7da14260ef5">Allocate</a> () const</td></tr>
+<tr class="memdesc:a2efe26650e3867a83766c7da14260ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a concrete object suitable for holding the value to be provided by this input port, and returns that as an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>.  <a href="#a2efe26650e3867a83766c7da14260ef5">More...</a><br /></td></tr>
+<tr class="separator:a2efe26650e3867a83766c7da14260ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea1591b1773209f55ccc85356efb639a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#aea1591b1773209f55ccc85356efb639a">get_name</a> () const</td></tr>
 <tr class="memdesc:aea1591b1773209f55ccc85356efb639a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get port name.  <a href="#aea1591b1773209f55ccc85356efb639a">More...</a><br /></td></tr>
 <tr class="separator:aea1591b1773209f55ccc85356efb639a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,9 +255,9 @@ Protected Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a141d408cf4695fe3727784ac88c3a501"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#a141d408cf4695fe3727784ac88c3a501">InputPortBase</a> (internal::SystemMessageInterface *owning_system, internal::SystemId owning_system_id, std::string name, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, <a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> data_type, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a>, const std::optional&lt; <a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> &gt; &amp;random_type, <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#a7f8954776b80d1be380b0ef18b39fcae">EvalAbstractCallback</a> eval)</td></tr>
-<tr class="memdesc:a141d408cf4695fe3727784ac88c3a501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides derived classes the ability to set the base class members at construction.  <a href="#a141d408cf4695fe3727784ac88c3a501">More...</a><br /></td></tr>
-<tr class="separator:a141d408cf4695fe3727784ac88c3a501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cae86fafb2e6488084da52a8d57bdc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#a7cae86fafb2e6488084da52a8d57bdc1">InputPortBase</a> (internal::SystemMessageInterface *owning_system, internal::SystemId owning_system_id, std::string name, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, <a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> data_type, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a>, const std::optional&lt; <a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> &gt; &amp;random_type, <a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#a7f8954776b80d1be380b0ef18b39fcae">EvalAbstractCallback</a> eval, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">ValueProducer::AllocateCallback</a> alloc)</td></tr>
+<tr class="memdesc:a7cae86fafb2e6488084da52a8d57bdc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Provides derived classes the ability to set the base class members at construction.  <a href="#a7cae86fafb2e6488084da52a8d57bdc1">More...</a><br /></td></tr>
+<tr class="separator:a7cae86fafb2e6488084da52a8d57bdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe6bb4b3df7bb5a5f2415827f7098fdc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#abe6bb4b3df7bb5a5f2415827f7098fdc">DoEvalRequired</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;context) const</td></tr>
 <tr class="memdesc:abe6bb4b3df7bb5a5f2415827f7098fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate this port; throws an exception if the port is not connected.  <a href="#abe6bb4b3df7bb5a5f2415827f7098fdc">More...</a><br /></td></tr>
 <tr class="separator:abe6bb4b3df7bb5a5f2415827f7098fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -407,8 +410,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a141d408cf4695fe3727784ac88c3a501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a141d408cf4695fe3727784ac88c3a501">&#9670;&nbsp;</a></span>InputPortBase() <span class="overload">[3/3]</span></h2>
+<a id="a7cae86fafb2e6488084da52a8d57bdc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cae86fafb2e6488084da52a8d57bdc1">&#9670;&nbsp;</a></span>InputPortBase() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,7 +471,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_input_port_base.html#a7f8954776b80d1be380b0ef18b39fcae">EvalAbstractCallback</a>&#160;</td>
-          <td class="paramname"><em>eval</em>&#160;</td>
+          <td class="paramname"><em>eval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">ValueProducer::AllocateCallback</a>&#160;</td>
+          <td class="paramname"><em>alloc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -483,7 +492,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Provides derived classes the ability to set the base class members at construction. </p>
+<p>(Internal use only) Provides derived classes the ability to set the base class members at construction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">owning_system</td><td>The <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that owns this input port. </td></tr>
@@ -501,6 +510,26 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2efe26650e3867a83766c7da14260ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2efe26650e3867a83766c7da14260ef5">&#9670;&nbsp;</a></span>Allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>&gt; Allocate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocates a concrete object suitable for holding the value to be provided by this input port, and returns that as an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>. </p>
+<p>The returned object will never be null. </p>
+
+</div>
+</div>
 <a id="af6dca4e6beb6a40b56f25911cf6261db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af6dca4e6beb6a40b56f25911cf6261db">&#9670;&nbsp;</a></span>DoEvalOptional()</h2>
 

@@ -190,11 +190,8 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#a74fae4346c33bfaf11326fcd6a85bd7e">drake::symbolic::SubstituteStereographicProjection</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, const std::unordered_map&lt; symbolic::Variable, symbolic::Variable &gt; &amp;subs)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use the other SubstituteStereographicProjection which passes  e as a symbolic::Polynomial <br />
  This will be removed from Drake on or after 2023-02-01. </dd>
-<dt>Member <a class="el" href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">drake::systems::ApplySimulatorConfig</a>  (drake::systems::Simulator&lt; T &gt; *simulator, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html" title="The set of all configurable properties on a Simulator and IntegratorBase.">SimulatorConfig</a> &amp;config)</dt>
-<dd><a class="anchor" id="_deprecated000031"></a>Call ApplySimulatorConfig with the config parameter first. <br />
- This will be removed from Drake on or after 2022-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16">drake::systems::sensors::ApplyCameraConfig</a>  (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html" title="Configuration of a camera.">CameraConfig</a> &amp;config, multibody::MultibodyPlant&lt; double &gt; *plant, DiagramBuilder&lt; double &gt; *builder, geometry::SceneGraph&lt; double &gt; *scene_graph, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> *lcm)</dt>
-<dd><a class="anchor" id="_deprecated000040"></a>Use the LcmBuses-related overload instead. <br />
+<dd><a class="anchor" id="_deprecated000039"></a>Use the LcmBuses-related overload instead. <br />
  This will be removed from Drake on or after 2023-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html#ad1cea2fd3744277d8b9e7a39bccdbdef">DrealSolver::CheckSatisfiability</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">symbolic::Formula</a> &amp;f, double delta)</dt>
 <dd><a class="anchor" id="_deprecated000020"></a>dReal support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
@@ -242,13 +239,13 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000030"></a>IBEX support is being withdrawn from Drake; for details, see  https://github.com/RobotLocomotion/drake/pull/18156 <br />
  This will be removed from Drake on or after 2023-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a262f71637a37127840acefca3bda8897">LeafSystem&lt; T &gt;::DeclarePeriodicDiscreteUpdate</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000033"></a>Use DeclarePeriodicDiscreteUpdateNoHandler() instead <br />
+<dd><a class="anchor" id="_deprecated000032"></a>Use DeclarePeriodicDiscreteUpdateNoHandler() instead <br />
  This will be removed from Drake on or after 2023-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a1adf7020dee795fd1b34b023c447eb6f">LeafSystem&lt; T &gt;::DeclarePeriodicPublish</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000032"></a>Use DeclarePeriodicPublishNoHandler() instead <br />
+<dd><a class="anchor" id="_deprecated000031"></a>Use DeclarePeriodicPublishNoHandler() instead <br />
  This will be removed from Drake on or after 2023-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a17d2dbe47bcb217706226101ed7218bc">LeafSystem&lt; T &gt;::DeclarePeriodicUnrestrictedUpdate</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000034"></a>Use DeclarePeriodicUnrestrictedUpdateNoHandler() instead <br />
+<dd><a class="anchor" id="_deprecated000033"></a>Use DeclarePeriodicUnrestrictedUpdateNoHandler() instead <br />
  This will be removed from Drake on or after 2023-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa5baf71bbc3927afda0ba46f554cc339">MultibodyPlant&lt; T &gt;::AddCouplerConstraint</a>  (const Joint&lt; U &gt; &amp;joint0, const Joint&lt; U &gt; &amp;joint1, const U &amp;gear_ratio, const U &amp;offset=0.0)</dt>
 <dd><a class="anchor" id="_deprecated000017"></a>Only gear_ratio and offset of type double are supported. <br />
@@ -259,29 +256,29 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5076a155bf5d04598cd9bf7ec40b0ddf">PiecewisePolynomial&lt; T &gt;::Cubic</a>  (const Eigen::Ref&lt; const VectorX&lt; T &gt;&gt; &amp;breaks, const Eigen::Ref&lt; const MatrixX&lt; T &gt;&gt; &amp;samples, bool periodic_end_condition=false)</dt>
 <dd><a class="anchor" id="_deprecated000002"></a>Please use CubicWithContinuousSecondDerivatives instead. <br />
  This will be removed from Drake on or after 2023-03-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af480c8384feee126c982074141ee1f96">SceneGraph&lt; T &gt;::RegisterGeometry</a>  (systems::Context&lt; T &gt; *context, SourceId source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> geometry_id, std::unique_ptr&lt; GeometryInstance &gt; geometry) const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Geometries are no longer posed with respect to other  geometries -- only frames. <br />
- This will be removed from Drake on or after 2023-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2df3f40eab6477f4a8bf544d73908e15">SceneGraph&lt; T &gt;::RegisterGeometry</a>  (SourceId source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> geometry_id, std::unique_ptr&lt; GeometryInstance &gt; geometry)</dt>
 <dd><a class="anchor" id="_deprecated000005"></a>Geometries are no longer posed with respect to other  geometries; use RegisterGeometry(frame_id) instead. <br />
+ This will be removed from Drake on or after 2023-04-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af480c8384feee126c982074141ee1f96">SceneGraph&lt; T &gt;::RegisterGeometry</a>  (systems::Context&lt; T &gt; *context, SourceId source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> geometry_id, std::unique_ptr&lt; GeometryInstance &gt; geometry) const</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Geometries are no longer posed with respect to other  geometries -- only frames. <br />
  This will be removed from Drake on or after 2023-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55">SceneGraphInspector&lt; T &gt;::GetPoseInParent</a>  (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> geometry_id) const</dt>
 <dd><a class="anchor" id="_deprecated000007"></a>Geometries are no longer posed with respect to other  geometries -- only frames; use GetPoseInFrame(). <br />
  This will be removed from Drake on or after 2023-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a054ef0e9e578c5abc57fd4dc8b12bd84">System&lt; T &gt;::CalcDiscreteVariableUpdates</a>  (const Context&lt; T &gt; &amp;context, DiscreteValues&lt; T &gt; *discrete_state) const</dt>
-<dd><a class="anchor" id="_deprecated000037"></a>Use CalcForcedDiscreteVariableUpdate() instead <br />
+<dd><a class="anchor" id="_deprecated000036"></a>Use CalcForcedDiscreteVariableUpdate() instead <br />
  This will be removed from Drake on or after 2023-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a2b4b5edfcccb98a87f958bc9b6b626bd">System&lt; T &gt;::CalcDiscreteVariableUpdates</a>  (const Context&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection</a>&lt; DiscreteUpdateEvent&lt; T &gt;&gt; &amp;events, DiscreteValues&lt; T &gt; *discrete_state) const</dt>
-<dd><a class="anchor" id="_deprecated000036"></a>Use CalcDiscreteVariableUpdate() (no final 's') instead <br />
+<dd><a class="anchor" id="_deprecated000035"></a>Use CalcDiscreteVariableUpdate() (no final 's') instead <br />
  This will be removed from Drake on or after 2023-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a25f04e429745ae7a16600c4dfda0f931">System&lt; T &gt;::CalcUnrestrictedUpdate</a>  (const Context&lt; T &gt; &amp;context, State&lt; T &gt; *state) const</dt>
-<dd><a class="anchor" id="_deprecated000038"></a>Use CalcForcedUnrestrictedUpdate() instead <br />
+<dd><a class="anchor" id="_deprecated000037"></a>Use CalcForcedUnrestrictedUpdate() instead <br />
  This will be removed from Drake on or after 2023-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#acdd73a23410d860ee73dc021663ec99f">System&lt; T &gt;::GetPeriodicEvents</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000039"></a>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
+<dd><a class="anchor" id="_deprecated000038"></a>Use MapPeriodicEventsByTiming() or  GetPeriodicEvents(Context, EventCollection) instead <br />
  This will be removed from Drake on or after 2023-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aafa5fa6fa51aaa8f987abb101e341739">System&lt; T &gt;::Publish</a>  (const Context&lt; T &gt; &amp;context) const</dt>
-<dd><a class="anchor" id="_deprecated000035"></a>Use ForcedPublish() instead <br />
+<dd><a class="anchor" id="_deprecated000034"></a>Use ForcedPublish() instead <br />
  This will be removed from Drake on or after 2023-03-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

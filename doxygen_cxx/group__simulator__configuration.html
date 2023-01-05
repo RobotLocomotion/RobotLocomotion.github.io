@@ -180,10 +180,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6875fa2f1e9eb22cee800a29b0ca61b9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga6875fa2f1e9eb22cee800a29b0ca61b9">ApplySimulatorConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *simulator)</td></tr>
 <tr class="memdesc:ga6875fa2f1e9eb22cee800a29b0ca61b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>simulator</code> based on the given <code>config</code>.  <a href="group__simulator__configuration.html#ga6875fa2f1e9eb22cee800a29b0ca61b9">More...</a><br /></td></tr>
 <tr class="separator:ga6875fa2f1e9eb22cee800a29b0ca61b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">ApplySimulatorConfig</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *simulator, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;config)</td></tr>
-<tr class="memdesc:ga9aad0aa8b134eb63118bc3b38821977f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.) Modifies the <code>simulator</code> to use the given config.  <a href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">More...</a><br /></td></tr>
-<tr class="separator:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga00b67f54aba155c982e8a1038278eed6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga00b67f54aba155c982e8a1038278eed6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">ExtractSimulatorConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; &amp;simulator)</td></tr>
 <tr class="memdesc:ga00b67f54aba155c982e8a1038278eed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the simulator's current configuration, including the configuration of the integrator.  <a href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">More...</a><br /></td></tr>
@@ -191,7 +187,7 @@ Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga6875fa2f1e9eb22cee800a29b0ca61b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6875fa2f1e9eb22cee800a29b0ca61b9">&#9670;&nbsp;</a></span>ApplySimulatorConfig() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6875fa2f1e9eb22cee800a29b0ca61b9">&#9670;&nbsp;</a></span>ApplySimulatorConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,52 +227,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ga9aad0aa8b134eb63118bc3b38821977f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9aad0aa8b134eb63118bc3b38821977f">&#9670;&nbsp;</a></span>ApplySimulatorConfig() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::systems::ApplySimulatorConfig </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>simulator</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) Modifies the <code>simulator</code> to use the given config. </p>
-<p>(Always replaces the <a class="el" href="classdrake_1_1systems_1_1_integrator.html" title="An integrator for a continuous vector input.">Integrator</a> with a new one; be careful not to keep old references around.)</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">simulator</td><td>On input, a valid pointer to a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. On output the integrator for <code>simulator</code> is reset according to the given <code>config</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>Configuration to be used. Contains values for both the integrator and the simulator. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>.(Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Call ApplySimulatorConfig with the config parameter first. <br />
- This will be removed from Drake on or after 2022-11-01.</dd></dl>
 
 </div>
 </div>
