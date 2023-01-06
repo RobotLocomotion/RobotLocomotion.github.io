@@ -1780,14 +1780,20 @@ parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Convex.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Convex</em>, <em>absolute_filename: str</em>, <em>scale: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Convex.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a convex shape specification from the file located at the
-given <em>absolute</em> file path. Optionally uniformly scaled by the given
-scale factor.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Convex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Convex, filename: str, scale: float = 1.0) -&gt; None</li>
+</ol>
+<p>Constructs a convex shape specification from the file located at the
+given file path. Optionally uniformly scaled by the given scale
+factor.</p>
+<p>We only support an .obj file with only one polyhedron. We assume that
+the polyhedron is convex.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">absolute_filename</span></code>:</dt>
-<dd>The file name with absolute path. We only support an .obj file
-with only one polyhedron. We assume that the polyhedron is convex.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt>
+<dd>The file name; if it is not absolute, it will be interpreted
+relative to the current working directory.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt>
 <dd>An optional scale to coordinates.</dd>
 </dl>
@@ -1814,6 +1820,10 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Convex, absolute_filename: str, scale: float = 1.0) -&gt; None</li>
+</ol>
+<p>Convex(absolute_filename=…) is deprecated, and will be removed on or around 2023-05-01.  Please use Convex(filename=…) instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4025,10 +4035,15 @@ parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Mesh.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Mesh</em>, <em>absolute_filename: str</em>, <em>scale: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a mesh specification from the mesh file located at the
-given <em>absolute</em> file path. Optionally uniformly scaled by the given
-scale factor.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Mesh, filename: str, scale: float = 1.0) -&gt; None</li>
+</ol>
+<p>Constructs a mesh specification from the mesh file located at the
+given file path; if the path is not absolute, it will be interpreted
+relative to the current working directory. Optionally uniformly scaled
+by the given scale factor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4044,6 +4059,10 @@ scale factor.</p>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Mesh, absolute_filename: str, scale: float = 1.0) -&gt; None</li>
+</ol>
+<p>Mesh(absolute_filename=…) is deprecated, and will be removed on or around 2023-05-01.  Please use Mesh(filename=…) instead.</p>
 </dd></dl>
 
 <dl class="method">

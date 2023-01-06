@@ -174,9 +174,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_mesh.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afd9fee7ce06e836b6d9bb456da77a211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#afd9fee7ce06e836b6d9bb456da77a211">Mesh</a> (const std::string &amp;absolute_filename, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
-<tr class="memdesc:afd9fee7ce06e836b6d9bb456da77a211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a mesh specification from the mesh file located at the given <em>absolute</em> file path.  <a href="#afd9fee7ce06e836b6d9bb456da77a211">More...</a><br /></td></tr>
-<tr class="separator:afd9fee7ce06e836b6d9bb456da77a211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7cd6a852d0208f008381395f4a7dd9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#ab7cd6a852d0208f008381395f4a7dd9d">Mesh</a> (const std::string &amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a64b4c300fe95c104df48d1328b1d381e">filename</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
+<tr class="memdesc:ab7cd6a852d0208f008381395f4a7dd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a mesh specification from the mesh file located at the given file path; if the path is not absolute, it will be interpreted relative to the current working directory.  <a href="#ab7cd6a852d0208f008381395f4a7dd9d">More...</a><br /></td></tr>
+<tr class="separator:ab7cd6a852d0208f008381395f4a7dd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b4c300fe95c104df48d1328b1d381e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a64b4c300fe95c104df48d1328b1d381e">filename</a> () const</td></tr>
 <tr class="separator:a64b4c300fe95c104df48d1328b1d381e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a> () const</td></tr>
@@ -269,8 +269,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="afd9fee7ce06e836b6d9bb456da77a211"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd9fee7ce06e836b6d9bb456da77a211">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[3/3]</span></h2>
+<a id="ab7cd6a852d0208f008381395f4a7dd9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7cd6a852d0208f008381395f4a7dd9d">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>absolute_filename</em>, </td>
+          <td class="paramname"><em>filename</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -303,7 +303,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a mesh specification from the mesh file located at the given <em>absolute</em> file path. </p>
+<p>Constructs a mesh specification from the mesh file located at the given file path; if the path is not absolute, it will be interpreted relative to the current working directory. </p>
 <p>Optionally uniformly scaled by the given scale factor. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if |scale| &lt; 1e-8. Note that a negative scale is considered valid. We want to preclude scales near zero but recognise that scale is a convenience tool for "tweaking" models. 8 orders of magnitude should be plenty without considering revisiting the model itself. </td></tr>

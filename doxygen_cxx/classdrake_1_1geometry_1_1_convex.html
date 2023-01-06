@@ -173,9 +173,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_convex.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5495e14ece9a4e05494e288dac232304"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a5495e14ece9a4e05494e288dac232304">Convex</a> (const std::string &amp;absolute_filename, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
-<tr class="memdesc:a5495e14ece9a4e05494e288dac232304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a convex shape specification from the file located at the given <em>absolute</em> file path.  <a href="#a5495e14ece9a4e05494e288dac232304">More...</a><br /></td></tr>
-<tr class="separator:a5495e14ece9a4e05494e288dac232304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0835d42bc864d8d9d8323e4f157803f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a0835d42bc864d8d9d8323e4f157803f3">Convex</a> (const std::string &amp;<a class="el" href="classdrake_1_1geometry_1_1_convex.html#a64b4c300fe95c104df48d1328b1d381e">filename</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
+<tr class="memdesc:a0835d42bc864d8d9d8323e4f157803f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a convex shape specification from the file located at the given file path.  <a href="#a0835d42bc864d8d9d8323e4f157803f3">More...</a><br /></td></tr>
+<tr class="separator:a0835d42bc864d8d9d8323e4f157803f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b4c300fe95c104df48d1328b1d381e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a64b4c300fe95c104df48d1328b1d381e">filename</a> () const</td></tr>
 <tr class="separator:a64b4c300fe95c104df48d1328b1d381e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a> () const</td></tr>
@@ -268,8 +268,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5495e14ece9a4e05494e288dac232304"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5495e14ece9a4e05494e288dac232304">&#9670;&nbsp;</a></span>Convex() <span class="overload">[3/3]</span></h2>
+<a id="a0835d42bc864d8d9d8323e4f157803f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0835d42bc864d8d9d8323e4f157803f3">&#9670;&nbsp;</a></span>Convex() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,7 +281,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>absolute_filename</em>, </td>
+          <td class="paramname"><em>filename</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -302,10 +302,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a convex shape specification from the file located at the given <em>absolute</em> file path. </p>
-<p>Optionally uniformly scaled by the given scale factor. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Constructs a convex shape specification from the file located at the given file path. </p>
+<p>Optionally uniformly scaled by the given scale factor.</p>
+<p>We only support an .obj file with only one polyhedron. We assume that the polyhedron is convex.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">absolute_filename</td><td>The file name with absolute path. We only support an .obj file with only one polyhedron. We assume that the polyhedron is convex. </td></tr>
+    <tr><td class="paramname">filename</td><td>The file name; if it is not absolute, it will be interpreted relative to the current working directory. </td></tr>
     <tr><td class="paramname">scale</td><td>An optional scale to coordinates.</td></tr>
   </table>
   </dd>
