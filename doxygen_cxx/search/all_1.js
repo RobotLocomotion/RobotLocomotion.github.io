@@ -254,6 +254,7 @@ var searchData=
   ['aggregateduplicatevariables',['AggregateDuplicateVariables',['../namespacedrake_1_1solvers.html#a5999ff5df38e426f3e6c4a69aeec4305',1,'drake::solvers']]],
   ['aggregatelinearcosts',['AggregateLinearCosts',['../namespacedrake_1_1solvers.html#a38b2721b2175272485def57c7a8b9c6a',1,'drake::solvers']]],
   ['aggregatequadraticandlinearcosts',['AggregateQuadraticAndLinearCosts',['../namespacedrake_1_1solvers.html#afd9e7d960a7e287ea283ffa9aee89d41',1,'drake::solvers']]],
+  ['algorithmname',['AlgorithmName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#a0546ca719971d5defbb174ec5c7ee528',1,'drake::solvers::NloptSolver']]],
   ['algorithms',['Algorithms',['../group__algorithms.html',1,'']]],
   ['all',['all',['../namespacedrake.html#adcc2d90ce6051e150effadd72fac548c',1,'drake']]],
   ['all_2eh',['all.h',['../all_8h.html',1,'']]],

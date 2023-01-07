@@ -6142,9 +6142,39 @@ meaning on the solution status.</p>
 <dd></dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.solvers.NloptSolver.AlgorithmName">
+<em class="property">static </em><code class="descname">AlgorithmName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.solvers.NloptSolver.AlgorithmName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key name for the string-valued algorithm.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.solvers.NloptSolver.ConstraintToleranceName">
+<em class="property">static </em><code class="descname">ConstraintToleranceName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.solvers.NloptSolver.ConstraintToleranceName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key name for the double-valued constraint tolerance.</p>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.solvers.NloptSolver.id">
 <em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.SolverId<a class="headerlink" href="#pydrake.solvers.NloptSolver.id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.solvers.NloptSolver.MaxEvalName">
+<em class="property">static </em><code class="descname">MaxEvalName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.solvers.NloptSolver.MaxEvalName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key name for int-valued maximum number of evaluations.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.solvers.NloptSolver.XAbsoluteToleranceName">
+<em class="property">static </em><code class="descname">XAbsoluteToleranceName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.solvers.NloptSolver.XAbsoluteToleranceName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key name for double-valued x absolute tolerance.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.solvers.NloptSolver.XRelativeToleranceName">
+<em class="property">static </em><code class="descname">XRelativeToleranceName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.solvers.NloptSolver.XRelativeToleranceName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key name for double-valued x relative tolerance.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -7221,6 +7251,15 @@ obtained from <a class="reference external" href="https://web.stanford.edu/group
 <p>“IPOPT” – Parameter names and values as specified in IPOPT users
 guide section “Options Reference”
 <a class="reference external" href="http://www.coin-or.org/Ipopt/documentation/node40.html">http://www.coin-or.org/Ipopt/documentation/node40.html</a></p>
+<p>“NLOPT” – Parameter names and values are specifed in
+<a class="reference external" href="https://nlopt.readthedocs.io/en/latest/NLopt_C-plus-plus_Reference/">https://nlopt.readthedocs.io/en/latest/NLopt_C-plus-plus_Reference/</a>
+(in the Stopping criteria section). Besides these parameters, the user
+can specify “algorithm” using a string of the algorithm name. The
+complete set of algorithms is listed in “nlopt_algorithm_to_string()”
+function in github.com/stevengj/nlopt/blob/master/src/api/general.c.
+If you would like to use certain algorithm, for example
+NLOPT_LD_SLSQP, call <code class="docutils literal notranslate"><span class="pre">SetOption(NloptSolver::id(),</span>
+<span class="pre">NloptSolver::AlgorithmName(),</span> <span class="pre">&quot;LD_SLSQP&quot;);</span></code></p>
 <p>“GUROBI” – Parameter name and values as specified in Gurobi Reference
 Manual, section 10.2 “Parameter Descriptions”
 <a class="reference external" href="https://www.gurobi.com/documentation/9.5/refman/parameters.html">https://www.gurobi.com/documentation/9.5/refman/parameters.html</a></p>

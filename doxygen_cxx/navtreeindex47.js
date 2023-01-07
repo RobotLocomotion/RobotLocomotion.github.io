@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"latex_8h.html#a50f946a2d656be1b946c8f2f6bf00810":[4,0,0,1,3,7,0],
 "latex_8h.html#aa14d755813030ea14c7207a4e0e71f9f":[4,0,0,1,3,7,3],
 "latex_8h.html#accb78ec8e49199eaff087d9637301041":[4,0,0,1,3,7,1],
 "lcm__buses_8h.html":[4,0,0,12,4,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "multibody__tree__indexes_8h.html#add80e949328b179d78312d1455319868":[4,0,0,8,14,26,2],
 "multibody__tree__indexes_8h.html#af65439a17091283a89eb12f1955c6db0":[4,0,0,8,14,26,6],
 "multibody__tree__system_8h.html":[4,0,0,8,14,27],
-"multibody__tree__topology_8h.html":[4,0,0,8,14,28],
-"multilayer__perceptron_8h.html":[4,0,0,12,6,14]
+"multibody__tree__topology_8h.html":[4,0,0,8,14,28]
 };

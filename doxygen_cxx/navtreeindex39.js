@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a30b949f7ebb9c29f2c4aa6bfed03111a":[3,0,0,16,8,5,5],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a34e05e16a9d48f75b5ec30d10befd800":[3,0,0,16,8,5,3],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a410f02cf1142eae8eb8101aa24389b35":[3,0,0,16,8,5,2],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a4eaba3244f893af6b6cf6863832a9041":[3,0,0,16,8,5,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8a8a3244e3e70007474108a9b024d50":[1,4,2,8,48],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8e11a2faf65c8a8e01c6558fde16a7c":[1,4,2,8,12],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#aed75c6e52b003291a450cf15e43bd1f9":[1,4,2,8,40],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af0902a117906bfadcd656e87f7822782":[1,4,2,8,9],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af334d3331e06b30983a8c1aff483e16e":[1,4,2,8,47]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af0902a117906bfadcd656e87f7822782":[1,4,2,8,9]
 };

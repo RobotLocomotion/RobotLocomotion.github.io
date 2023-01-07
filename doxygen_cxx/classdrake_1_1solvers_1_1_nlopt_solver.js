@@ -5,6 +5,7 @@ var classdrake_1_1solvers_1_1_nlopt_solver =
     [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html#a45cf3293eb8560011ac5402bf8b7d60f", null ],
     [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html#a51a55844b4ec741e8f3bdef3d2c43ed0", null ],
     [ "~NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html#a50f7ff079b9a17c786c55fd5c77e54e4", null ],
+    [ "AlgorithmName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a0546ca719971d5defbb174ec5c7ee528", null ],
     [ "ConstraintToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#af7e7a32291496d94bf1055cf4d3d1757", null ],
     [ "id", "classdrake_1_1solvers_1_1_nlopt_solver.html#a4dc451b7db72a168d9f0da1746011b45", null ],
     [ "is_available", "classdrake_1_1solvers_1_1_nlopt_solver.html#a277134785588d69bb461a4a402877e7a", null ],

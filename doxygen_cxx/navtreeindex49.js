@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"orientation__cost_8h.html":[4,0,0,8,5,12],
 "osqp__solver_8h.html":[4,0,0,11,42],
 "output__port_8h.html":[4,0,0,12,3,30],
 "output__port__base_8h.html":[4,0,0,12,3,31],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "rational__forward__kinematics__internal_8h.html":[4,0,0,8,11,1],
 "rational__function_8h.html":[4,0,0,1,3,14],
 "rational__function_8h.html#a0dc08ea95543252bcf2b31fdfe723d26":[4,0,0,1,3,14,15],
-"rational__function_8h.html#a0ec6e83953a4663403fcb08592e16b01":[4,0,0,1,3,14,17],
-"rational__function_8h.html#a1611c62700b00b9861c339879899a121":[4,0,0,1,3,14,4]
+"rational__function_8h.html#a0ec6e83953a4663403fcb08592e16b01":[4,0,0,1,3,14,17]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ab570fd55bc553b29ac6c7b7d5fdd083e":[1,2,2,5,8],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#acc730c554b00093275d508db2e162811":[1,2,2,5,10],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ad6b5fa29bdb989a329452732e99e33cc":[1,2,2,5,16],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ae26ddd47fd25a35c40bbd44645688e9e":[1,2,2,5,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[3,0,0,16,8,3,6],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html":[3,0,0,16,8,5],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a08b99a946df9e7c6adf92fb670168f99":[3,0,0,16,8,5,4],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a1737d43eea136c062b45f5011cbaf4e3":[3,0,0,16,8,5,1],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a30b949f7ebb9c29f2c4aa6bfed03111a":[3,0,0,16,8,5,5]
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a1737d43eea136c062b45f5011cbaf4e3":[3,0,0,16,8,5,1]
 };
