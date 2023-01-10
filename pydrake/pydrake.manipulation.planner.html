@@ -309,12 +309,8 @@ position commands to match the initial positions of the robot.</p>
 <dd><p>Contains parameters for differential inverse kinematics.</p>
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, num_positions: int, num_velocities: int = None) -&gt; None</li>
-</ol>
-<p>Constructor. Initializes the nominal joint position to zeros of size
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>num_positions: int</em>, <em>num_velocities: int = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor. Initializes the nominal joint position to zeros of size
 <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>. The time step is initialized to 1. The end effector
 flags are initialized to True. The joint centering gains are
 initialized to zero. All constraints are initialized to nullopt.</p>
@@ -330,16 +326,6 @@ num_positions).</dd>
 <p class="last">Currently DoDifferentialInverseKinematics requires that
 num_positions == num_velocities.</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; None</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>num_positions is now a mandatory argument for the constructor.
-This default constructor sets num_positions = 1. This will be
-removed from Drake on or after 2023-01-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -356,18 +342,6 @@ removed from Drake on or after 2023-01-01.</dd>
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_flag">
 <code class="descname">get_end_effector_velocity_flag</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[bool[6, 1]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_flag" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_gain">
-<code class="descname">get_end_effector_velocity_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[6, 1]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_gain" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use get_end_effector_velocity_flag instead. (The gains before were
-actually only acting as a flag). This will be removed from Drake
-on or after 2023-01-01.</dd>
-</dl>
-</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_acceleration_limits">
@@ -412,30 +386,7 @@ on or after 2023-01-01.</dd>
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_time_step">
 <code class="descname">get_time_step</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_time_step" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_timestep">
-<code class="descname">get_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_timestep" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;name Getters. (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use get_time_step() instead of get_timestep(). This will be
-removed from Drake on or after 2023-01-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_unconstrained_degrees_of_freedom_velocity_limit">
-<code class="descname">get_unconstrained_degrees_of_freedom_velocity_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[float]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_unconstrained_degrees_of_freedom_velocity_limit" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The unconstrained_degrees_of_freedom_velocity_limit is no longer
-used in the differential IK formulation and will be removed from
-this parameters class. This will be removed from Drake on or after
-2023-01-01.</dd>
-</dl>
+<dd><p>&#64;name Getters.</p>
 </dd></dl>
 
 <dl class="method">
@@ -459,18 +410,6 @@ end-effector pose, this sets limits on the translational velocity.</p>
 <dd><p>Sets the end effector flags in the body frame. If a spatial velocity
 flag is set to false, it will not be included in the differential IK
 formulation.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_gain">
-<code class="descname">set_end_effector_velocity_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: numpy.ndarray[numpy.float64[6, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_gain" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use set_end_effector_velocity_flag instead. (The gains before were
-actually only acting as a flag). This will be removed from Drake
-on or after 2023-01-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -593,39 +532,6 @@ commanded.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep">
-<code class="descname">set_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use set_time_step() instead of set_timestep(). This will be
-removed from Drake on or after 2023-01-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit">
-<code class="descname">set_unconstrained_degrees_of_freedom_velocity_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the max magnitude of the velocity in the unconstrained degree of
-freedom to <code class="docutils literal notranslate"><span class="pre">limit</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if limit &lt; 0. / (Deprecated.)</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>The unconstrained_degrees_of_freedom_velocity_limit is no longer
-used in the differential IK formulation and will be removed from
-this parameters class. This will be removed from Drake on or after
-2023-01-01.</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>

@@ -1,12 +1,5 @@
 var NAVTREEINDEX10 =
 {
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a0bc37e80cd39e4c23a263a345d5fc244":[3,0,0,7,4,0,3],
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a487c366fa52b064dbf0c29627e7aba03":[3,0,0,7,4,0,7],
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a6c3225dd9dee1bc94666ddbf82162d3b":[3,0,0,7,4,0,4],
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a7426149695dc6d09303cb351b3d84201":[3,0,0,7,4,0,8],
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a744c267b9b8a615aacbee9a2465f2487":[3,0,0,7,4,0,5],
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a94898fb3a7e7671c93cc3c30c1ce5ecb":[3,0,0,7,4,0,6],
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a9b1a09bc42df4609b7ecb3260985869f":[3,0,0,7,4,0,10],
 "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#ac37b985c1ea77de8d4b7403e2ce70b9a":[3,0,0,7,4,0,1],
 "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#aebe42489a5df58b6dbaf688e460d8e7b":[3,0,0,7,4,0,9],
 "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html":[3,0,0,7,4,1],
@@ -249,5 +242,12 @@ var NAVTREEINDEX10 =
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#adedfd4b2433e1fa289f02ca9dc2d50e0":[3,0,0,9,10,12],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#aea774becb012c524dbd2b9d56b095c04":[3,0,0,9,10,18],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#af8b25c3b08abdc24e4de1e63ab09ef04":[3,0,0,9,10,17],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html":[3,0,0,9,11]
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html":[3,0,0,9,11],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a05ce551fdf49e69a409cdc13d5d1e595":[3,0,0,9,11,10],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a0d678037778e0c4670e555685adfb15a":[3,0,0,9,11,11],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a240bba62591e40cdf7c52398d1217489":[3,0,0,9,11,13],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a28c50134f42cc652878abd18032d88dc":[3,0,0,9,11,15],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a414c753dc2f8b0d6c6bee12f6738eed4":[3,0,0,9,11,12],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a503af5e7b7477b89d8920f5ec29582e1":[3,0,0,9,11,18],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a5372f8878091a3347783982aef46d3f3":[3,0,0,9,11,9]
 };

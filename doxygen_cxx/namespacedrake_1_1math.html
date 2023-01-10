@@ -503,10 +503,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ab095ea87a1517bb9bae78d221f5d34da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab095ea87a1517bb9bae78d221f5d34da">ProjectMatToRotMatWithAxis</a> (const Eigen::Matrix3d &amp;M, const Eigen::Vector3d &amp;axis, <a class="el" href="classdouble.html">double</a> angle_lb, <a class="el" href="classdouble.html">double</a> angle_ub)</td></tr>
 <tr class="memdesc:ab095ea87a1517bb9bae78d221f5d34da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects an approximate 3 x 3 rotation matrix M onto an orthonormal matrix R so that R is a rotation matrix associated with a angle-axis rotation by an angle θ about a vector direction <code>axis</code>, with <code>angle_lb &lt;= θ &lt;= angle_ub</code>.  <a href="#ab095ea87a1517bb9bae78d221f5d34da">More...</a><br /></td></tr>
 <tr class="separator:ab095ea87a1517bb9bae78d221f5d34da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adecdf6a7ef606861457807da4b56e7ff"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 , class T3 &gt; </td></tr>
-<tr class="memitem:adecdf6a7ef606861457807da4b56e7ff"><td class="memTemplItemLeft" align="right" valign="top">T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#adecdf6a7ef606861457807da4b56e7ff">saturate</a> (const T1 &amp;value, const T2 &amp;low, const T3 &amp;high)</td></tr>
-<tr class="memdesc:adecdf6a7ef606861457807da4b56e7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#adecdf6a7ef606861457807da4b56e7ff">More...</a><br /></td></tr>
-<tr class="separator:adecdf6a7ef606861457807da4b56e7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64bd1ea33cbb7fd030ff6bf3061eb3fe"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
 <tr class="memitem:a64bd1ea33cbb7fd030ff6bf3061eb3fe"><td class="memTemplItemLeft" align="right" valign="top">T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a64bd1ea33cbb7fd030ff6bf3061eb3fe">wrap_to</a> (const T1 &amp;value, const T2 &amp;low, const T2 &amp;high)</td></tr>
 <tr class="memdesc:a64bd1ea33cbb7fd030ff6bf3061eb3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">For variables that are meant to be periodic, (e.g.  <a href="#a64bd1ea33cbb7fd030ff6bf3061eb3fe">More...</a><br /></td></tr>
@@ -3146,44 +3142,6 @@ else
 <p>[1] Barraud, A.Y., "A numerical algorithm to solve AᵀXA - X = Q," IEEE® Trans. Auto. Contr., AC-22, pp. 883-885, 1977.</p>
 <p>[2] <a href="http://slicot.org/objects/software/shared/doc/SB03MD.html">http://slicot.org/objects/software/shared/doc/SB03MD.html</a></p>
 <p>[3] <a href="https://www.mathworks.com/help/control/ref/dlyap.html">https://www.mathworks.com/help/control/ref/dlyap.html</a> </p>
-
-</div>
-</div>
-<a id="adecdf6a7ef606861457807da4b56e7ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adecdf6a7ef606861457807da4b56e7ff">&#9670;&nbsp;</a></span>saturate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T1 drake::math::saturate </td>
-          <td>(</td>
-          <td class="paramtype">const T1 &amp;&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T2 &amp;&#160;</td>
-          <td class="paramname"><em>low</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T3 &amp;&#160;</td>
-          <td class="paramname"><em>high</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Use C++17's std::clamp instead <br />
- This will be removed from Drake on or after 2023-01-01.</dd></dl>
 
 </div>
 </div>

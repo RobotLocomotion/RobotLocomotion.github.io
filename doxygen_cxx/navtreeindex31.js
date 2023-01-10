@@ -1,12 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classdrake_1_1systems_1_1_fixed_input_port_value.html#ae932b27dd2aa7cde81dc1fd09113c98d":[3,0,0,16,49,5],
-"classdrake_1_1systems_1_1_gain.html":[1,2,1,10],
-"classdrake_1_1systems_1_1_gain.html#a17e23771b3533be49532ff5300c68ca6":[1,2,1,10,6],
-"classdrake_1_1systems_1_1_gain.html#a502392b4db76ae3cbc434199c49e3ba0":[1,2,1,10,7],
-"classdrake_1_1systems_1_1_gain.html#a640bea4c20e9dc45768055372d5da6c3":[1,2,1,10,4],
-"classdrake_1_1systems_1_1_gain.html#a6547634a042d97bba458c79581eda396":[1,2,1,10,5],
-"classdrake_1_1systems_1_1_gain.html#aa5a644d2798feb7f617066a2499b654d":[1,2,1,10,3],
 "classdrake_1_1systems_1_1_gain.html#ac4a653e320ed14d98e4a262b67e513b8":[1,2,1,10,0],
 "classdrake_1_1systems_1_1_gain.html#ad451a734b0dd8c8da2f97e6b81672c14":[1,2,1,10,2],
 "classdrake_1_1systems_1_1_gain.html#ae72c1c5d25a0f010bba3e798f8a9ca9b":[1,2,1,10,1],
@@ -249,5 +242,12 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_integrator_base.html#ae1949ad54a9dc1dc95f632a066aa12e6":[1,4,0,0,3,9],
 "classdrake_1_1systems_1_1_integrator_base.html#ae35b01e013bbfa64d9cdccfa01f034fe":[1,4,0,0,3,21],
 "classdrake_1_1systems_1_1_integrator_base.html#ae878ce4cdab7a01165423d8a902df452":[1,4,0,0,3,62],
-"classdrake_1_1systems_1_1_integrator_base.html#ae9ec42d998ad39014c3dc64c50cfbc4d":[1,4,0,0,3,55]
+"classdrake_1_1systems_1_1_integrator_base.html#ae9ec42d998ad39014c3dc64c50cfbc4d":[1,4,0,0,3,55],
+"classdrake_1_1systems_1_1_integrator_base.html#af5801cb8f02c7ae4aaffff94972ad324":[1,4,0,0,3,69],
+"classdrake_1_1systems_1_1_integrator_base.html#af88b1b96e061ad4e07a71561bf95fad4":[1,4,0,0,3,4],
+"classdrake_1_1systems_1_1_integrator_base.html#afa1597c69b7f633624a3693142ad3f04":[1,4,0,0,3,37],
+"classdrake_1_1systems_1_1_integrator_base.html#afa5f6af023ede03e36fd44a079f7440d":[1,4,0,0,3,58],
+"classdrake_1_1systems_1_1_leaf_composite_event_collection.html":[3,0,0,16,60],
+"classdrake_1_1systems_1_1_leaf_composite_event_collection.html#a0f1f7a88a60fabeaaf96726324627def":[3,0,0,16,60,1],
+"classdrake_1_1systems_1_1_leaf_composite_event_collection.html#a2f52b7f3e576e98e14635802882983ad":[3,0,0,16,60,2]
 };

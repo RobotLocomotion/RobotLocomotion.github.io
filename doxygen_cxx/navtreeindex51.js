@@ -1,14 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,11,51,4],
-"solver__interface_8h.html":[4,0,0,11,52],
-"solver__options_8h.html":[4,0,0,11,53],
-"solver__options_8h.html#a16445fc3b260d8c58ea9082a3594f85f":[4,0,0,11,53,2],
-"solver__options_8h.html#ad58cede9876421e050ac44deee7804ff":[4,0,0,11,53,1],
-"solver__type_8h.html":[4,0,0,11,54],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,11,54,0],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6":[4,0,0,11,54,0,12],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca18bc9cbd9bb764958e636263b1b53a9d":[4,0,0,11,54,0,7],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7":[4,0,0,11,54,0,8],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca65fbd0baf8ecc955767af55707dbd36d":[4,0,0,11,54,0,13],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4":[4,0,0,11,54,0,10],
@@ -249,5 +240,14 @@ var NAVTREEINDEX51 =
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,4,31,2],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aafe5692abc5edf40d59b37edb67c4571":[3,0,0,4,31,3],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[3,0,0,4,33],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[3,0,0,4,33,6]
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[3,0,0,4,33,6],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,33,0],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a403021311aaf56bf9bec819dbbc08932":[3,0,0,4,33,2],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08":[3,0,0,4,33,4],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a8fb4865476844d3b6243bed405bf44a9":[3,0,0,4,33,1],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#aa439b0d89e38b17d00d217c56b047737":[3,0,0,4,33,3],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#af9a4b1783a2afea62e90cec7c0364a16":[3,0,0,4,33,5],
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[3,0,0,4,39],
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[3,0,0,4,39,0],
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,39,4]
 };
