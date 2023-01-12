@@ -149,8 +149,8 @@ reports.</p>
 
 <h1 id="installation">Installation</h1>
 
-<p>Install <code class="highlighter-rouge">valgrind</code>, <code class="highlighter-rouge">kcachegrind</code>, and <code class="highlighter-rouge">graphviz</code>. For example on Ubuntu:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install valgrind kcachegrind graphviz
+<p>Install <code class="language-plaintext highlighter-rouge">valgrind</code>, <code class="language-plaintext highlighter-rouge">kcachegrind</code>, and <code class="language-plaintext highlighter-rouge">graphviz</code>. For example on Ubuntu:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install valgrind kcachegrind graphviz
 </code></pre></div></div>
 
 <h1 id="compiling-your-example-program">Compiling your example program</h1>
@@ -158,50 +158,50 @@ reports.</p>
 <p>When profiling, you should use a representative example program.</p>
 
 <p>Compile your example program with debug symbols (line numbers) enabled, but
-still in optimized mode (<code class="highlighter-rouge">-O2</code>). That will allow you to drill down into
+still in optimized mode (<code class="language-plaintext highlighter-rouge">-O2</code>). That will allow you to drill down into
 line-by-line performance costs, while maintainaing representative
 performance. These builds are usually termed as “release with debug info”.
 This is different than “debug builds” which typically have compiler
-optimizations disabled (<code class="highlighter-rouge">-O0</code>).</p>
+optimizations disabled (<code class="language-plaintext highlighter-rouge">-O0</code>).</p>
 
 <p>In Bazel, build like this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel build -c opt --copt=-g //foo/bar:example
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel build -c opt --copt=-g //foo/bar:example
 </code></pre></div></div>
 
 <p>In CMake, configure like this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo
 </code></pre></div></div>
 
 <h1 id="capturing-a-trace">Capturing a trace</h1>
 
-<p>Run <code class="highlighter-rouge">valgrind</code> with <code class="highlighter-rouge">callgrind</code> to get profiling data. For example:</p>
+<p>Run <code class="language-plaintext highlighter-rouge">valgrind</code> with <code class="language-plaintext highlighter-rouge">callgrind</code> to get profiling data. For example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>valgrind --tool=callgrind bazel-bin/foo/bar/example
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>valgrind --tool=callgrind bazel-bin/foo/bar/example
 </code></pre></div></div>
 
 <p>Each time this is run, it will create an output file file named
-<code class="highlighter-rouge">callgrind.out.${PID}</code>. Typically you’d capture just one trace and inspect it
+<code class="language-plaintext highlighter-rouge">callgrind.out.${PID}</code>. Typically you’d capture just one trace and inspect it
 on its own, but in advanced uses you can combine multiple traces.</p>
 
 <p>Oftentimes the call patterns in Drake will be difficult to view under the
 default instrumentation settings, so we recommend running with extra flags.
 These flags will slow down data collection, but are usually worth it:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>valgrind --tool=callgrind \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>valgrind --tool=callgrind \
   --separate-callers=10 \
    bazel-bin/foo/bar/example
 </code></pre></div></div>
 
-<p>If you’re trying to micro-optimize a function, use <code class="highlighter-rouge">--dump-instr=yes</code> to see
+<p>If you’re trying to micro-optimize a function, use <code class="language-plaintext highlighter-rouge">--dump-instr=yes</code> to see
 per-instruction costs in the object code disassembly.</p>
 
 <h1 id="viewing-the-trace">Viewing the trace</h1>
 
-<p>Run <code class="highlighter-rouge">kcachegrind</code> to analyze profiling data. For example:</p>
+<p>Run <code class="language-plaintext highlighter-rouge">kcachegrind</code> to analyze profiling data. For example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kcachegrind callgrind.out.19482
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kcachegrind callgrind.out.19482
 </code></pre></div></div>
 
 <h1 id="profiling-google-benchmark-executables">Profiling Google Benchmark executables</h1>
@@ -214,21 +214,21 @@ benchmark</a>.</p>
 
 <h1 id="debugging-and-profiling-on-macos">Debugging and profiling on macOS</h1>
 
-<p>On macOS, DWARF debug symbols are emitted to a <code class="highlighter-rouge">.dSYM</code> file.  The Bazel
-<code class="highlighter-rouge">cc_binary</code> and <code class="highlighter-rouge">cc_test</code> rules do not natively generate or expose this
-file, so we have implemented a workaround in Drake, <code class="highlighter-rouge">--config=apple_debug</code>.
-This config turns off sandboxing, which allows a <code class="highlighter-rouge">genrule</code> to access the
-<code class="highlighter-rouge">.o</code> files and process them into a <code class="highlighter-rouge">.dSYM</code>.  Use as follows:</p>
+<p>On macOS, DWARF debug symbols are emitted to a <code class="language-plaintext highlighter-rouge">.dSYM</code> file.  The Bazel
+<code class="language-plaintext highlighter-rouge">cc_binary</code> and <code class="language-plaintext highlighter-rouge">cc_test</code> rules do not natively generate or expose this
+file, so we have implemented a workaround in Drake, <code class="language-plaintext highlighter-rouge">--config=apple_debug</code>.
+This config turns off sandboxing, which allows a <code class="language-plaintext highlighter-rouge">genrule</code> to access the
+<code class="language-plaintext highlighter-rouge">.o</code> files and process them into a <code class="language-plaintext highlighter-rouge">.dSYM</code>.  Use as follows:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel build --config=apple_debug path/to/my:binary_or_test_dsym
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel build --config=apple_debug path/to/my:binary_or_test_dsym
 lldb ./bazel-bin/path/to/my/binary_or_test
 </code></pre></div></div>
 
 <p>Profiling on macOS can be done by building with the debug symbols and then running</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcrun xctrace record -t "Time Profiler" --launch ./bazel-bin/path/to/my/binary_or_test
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcrun xctrace record -t "Time Profiler" --launch ./bazel-bin/path/to/my/binary_or_test
 </code></pre></div></div>
-<p>This will generate a <code class="highlighter-rouge">.trace</code> file that can be opened in the Instruments app:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open -a Instruments myfile.trace
+<p>This will generate a <code class="language-plaintext highlighter-rouge">.trace</code> file that can be opened in the Instruments app:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open -a Instruments myfile.trace
 </code></pre></div></div>
 
       </article>

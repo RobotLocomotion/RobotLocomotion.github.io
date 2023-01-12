@@ -156,7 +156,7 @@ analysis.
 <ul>
   <li>MultibodyPlant SetPositions(.), SetVelocities(.) etc. take an Eigen::Ref rather than a VectorX (<a href="https://github.com/RobotLocomotion/drake/pull/15561">#15561</a>)
     <ul>
-      <li>This change is unlikely to impact most users. Some methods which used to accept a <code class="highlighter-rouge">VectorX&lt;Variable&gt;</code> must now have their arguments explicitly cast to <code class="highlighter-rouge">VectorX&lt;Expression&gt;</code> (e.g. with <code class="highlighter-rouge">x.cast&lt;symbolic::Expression&gt;()</code>). See (<a href="https://github.com/RobotLocomotion/drake/pull/15560">#15560</a>) for some discussion.</li>
+      <li>This change is unlikely to impact most users. Some methods which used to accept a <code class="language-plaintext highlighter-rouge">VectorX&lt;Variable&gt;</code> must now have their arguments explicitly cast to <code class="language-plaintext highlighter-rouge">VectorX&lt;Expression&gt;</code> (e.g. with <code class="language-plaintext highlighter-rouge">x.cast&lt;symbolic::Expression&gt;()</code>). See (<a href="https://github.com/RobotLocomotion/drake/pull/15560">#15560</a>) for some discussion.</li>
     </ul>
   </li>
   <li>The build system removes all uses of pycps (<a href="https://github.com/RobotLocomotion/drake/pull/15756">#15756</a>), with these breaking changes:
@@ -360,7 +360,7 @@ analysis.
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.34.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20210915-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20210915-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

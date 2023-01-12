@@ -144,12 +144,12 @@ analysis.
         <h1 id="announcements">Announcements</h1>
 
 <p>This release includes a number of translations of consumers of the legacy
-<code class="highlighter-rouge">RigidBodyTree</code> simulator to the newer <code class="highlighter-rouge">MultibodyPlant</code>, including every
+<code class="language-plaintext highlighter-rouge">RigidBodyTree</code> simulator to the newer <code class="language-plaintext highlighter-rouge">MultibodyPlant</code>, including every
 example used by our MIT users.</p>
 
 <p>A number of substitutes for what are now C++ standard library mechanisms have
 completed their voyage through the deprecation pipeline; we bid farewell to
-<code class="highlighter-rouge">drake_optional</code>, <code class="highlighter-rouge">drake_variant</code>, and the Spruce filesystem library in this
+<code class="language-plaintext highlighter-rouge">drake_optional</code>, <code class="language-plaintext highlighter-rouge">drake_variant</code>, and the Spruce filesystem library in this
 release.</p>
 
 <h1 id="breaking-changes">Breaking Changes</h1>
@@ -159,12 +159,12 @@ release.</p>
 <ul>
   <li>Removed some hydroelastic property setter methods:
     <ul>
-      <li>Remove <code class="highlighter-rouge">MultibodyPlant::set_elastic_modulus</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12596">#12596</a>)</li>
-      <li>Remove <code class="highlighter-rouge">MultibodyPlant::set_hunt_crossley_dissipation</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12596">#12596</a>)</li>
+      <li>Remove <code class="language-plaintext highlighter-rouge">MultibodyPlant::set_elastic_modulus</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12596">#12596</a>)</li>
+      <li>Remove <code class="language-plaintext highlighter-rouge">MultibodyPlant::set_hunt_crossley_dissipation</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12596">#12596</a>)</li>
       <li>We believe this API, although public, has no downstream users.</li>
     </ul>
   </li>
-  <li>Hide <code class="highlighter-rouge">filesystem.h</code> from downstreams (<a href="https://github.com/RobotLocomotion/drake/pull/12686">#12686</a>)
+  <li>Hide <code class="language-plaintext highlighter-rouge">filesystem.h</code> from downstreams (<a href="https://github.com/RobotLocomotion/drake/pull/12686">#12686</a>)
     <ul>
       <li>We believe this API, although public, has no downstream users.</li>
     </ul>
@@ -183,9 +183,9 @@ although wrong, was relied on by some downstream code.</li>
 
 <ul>
   <li>Support Gaussian initial conditions in Affine/Linear systems (<a href="https://github.com/RobotLocomotion/drake/pull/12637">#12637</a>)</li>
-  <li>Enable <code class="highlighter-rouge">math::ComputeNumericalGradient()</code> for scalar types <code class="highlighter-rouge">T != double</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12629">#12629</a>)</li>
-  <li>Add <code class="highlighter-rouge">System::IsDifferenceEquationSystem</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12579">#12579</a>)</li>
-  <li>Added a new utility, <code class="highlighter-rouge">MakeSimulatorFromGflags</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12527">#12527</a>)</li>
+  <li>Enable <code class="language-plaintext highlighter-rouge">math::ComputeNumericalGradient()</code> for scalar types <code class="language-plaintext highlighter-rouge">T != double</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12629">#12629</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">System::IsDifferenceEquationSystem</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12579">#12579</a>)</li>
+  <li>Added a new utility, <code class="language-plaintext highlighter-rouge">MakeSimulatorFromGflags</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12527">#12527</a>)</li>
   <li>All vector-gen sources are switched to yaml format (<a href="https://github.com/RobotLocomotion/drake/pull/12684">#12684</a>)</li>
 </ul>
 
@@ -193,7 +193,7 @@ although wrong, was relied on by some downstream code.</li>
 
 <ul>
   <li>Refactor the convergence check of Newton-Raphson iterations (<a href="https://github.com/RobotLocomotion/drake/pull/12599">#12599</a>)</li>
-  <li>In <code class="highlighter-rouge">AffineSystem</code> do not add D*u to output if D==0 (<a href="https://github.com/RobotLocomotion/drake/pull/12712">#12712</a>)</li>
+  <li>In <code class="language-plaintext highlighter-rouge">AffineSystem</code> do not add D*u to output if D==0 (<a href="https://github.com/RobotLocomotion/drake/pull/12712">#12712</a>)</li>
 </ul>
 
 <h1 id="mathematical-program">Mathematical Program</h1>
@@ -202,7 +202,7 @@ although wrong, was relied on by some downstream code.</li>
 
 <ul>
   <li>Ability to scale decision variables (SNOPT only) (<a href="https://github.com/RobotLocomotion/drake/pull/12576">#12576</a>)</li>
-  <li>Ability to stringify <code class="highlighter-rouge">solvers::Binding</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12693">#12693</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12700">#12700</a>)</li>
+  <li>Ability to stringify <code class="language-plaintext highlighter-rouge">solvers::Binding</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12693">#12693</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12700">#12700</a>)</li>
 </ul>
 
 <p>#####Multibody Dynamics</p>
@@ -218,38 +218,38 @@ although wrong, was relied on by some downstream code.</li>
     </ul>
   </li>
   <li>Benchmark vtk and ospray render engines and add documentation (<a href="https://github.com/RobotLocomotion/drake/pull/12440">#12440</a>)</li>
-  <li><code class="highlighter-rouge">MultibodyPositionToGeometryPose</code> can now:
+  <li><code class="language-plaintext highlighter-rouge">MultibodyPositionToGeometryPose</code> can now:
     <ul>
       <li>own its own MultibodyPlant (<a href="https://github.com/RobotLocomotion/drake/pull/12588">#12588</a>)</li>
       <li>use an input vector the size of the entire state (<a href="https://github.com/RobotLocomotion/drake/pull/12602">#12602</a>)</li>
     </ul>
   </li>
   <li>Add utility for setting contact material properties generally (<a href="https://github.com/RobotLocomotion/drake/pull/12595">#12595</a>)</li>
-  <li>Allow <code class="highlighter-rouge">SceneGraph::AssignRole</code> to update proximity properties (<a href="https://github.com/RobotLocomotion/drake/pull/12585">#12585</a>)</li>
+  <li>Allow <code class="language-plaintext highlighter-rouge">SceneGraph::AssignRole</code> to update proximity properties (<a href="https://github.com/RobotLocomotion/drake/pull/12585">#12585</a>)</li>
   <li>Signed distance to capsule calculations with Autodiff support (<a href="https://github.com/RobotLocomotion/drake/pull/12617">#12617</a>)</li>
   <li>Faster, finalization-free MultibodyPlant body -&gt; SceneGraph
 Frame registration (<a href="https://github.com/RobotLocomotion/drake/pull/12690">#12690</a>)</li>
-  <li>Improve rotation matrix methods in <code class="highlighter-rouge">Frame</code> and <code class="highlighter-rouge">MultibodyTree</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12683">#12683</a>)</li>
+  <li>Improve rotation matrix methods in <code class="language-plaintext highlighter-rouge">Frame</code> and <code class="language-plaintext highlighter-rouge">MultibodyTree</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12683">#12683</a>)</li>
 </ul>
 
 <p>Fixes</p>
 
 <ul>
-  <li>Exclude z from <code class="highlighter-rouge">MultibodyPlant::get_state_output_port()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12619">#12619</a>)</li>
+  <li>Exclude z from <code class="language-plaintext highlighter-rouge">MultibodyPlant::get_state_output_port()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12619">#12619</a>)</li>
 </ul>
 
 <h1 id="examples">Examples</h1>
 
 <ul>
-  <li>Support default parameters for <code class="highlighter-rouge">AcrobotGeometry</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12601">#12601</a>)</li>
-  <li>Remove <code class="highlighter-rouge">controlled_kuka</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12663">#12663</a>)</li>
-  <li>Remove <code class="highlighter-rouge">contact_model</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12719">#12719</a>)</li>
-  <li>Several examples moved off of <code class="highlighter-rouge">RigidBodyTree</code>:
+  <li>Support default parameters for <code class="language-plaintext highlighter-rouge">AcrobotGeometry</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12601">#12601</a>)</li>
+  <li>Remove <code class="language-plaintext highlighter-rouge">controlled_kuka</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12663">#12663</a>)</li>
+  <li>Remove <code class="language-plaintext highlighter-rouge">contact_model</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12719">#12719</a>)</li>
+  <li>Several examples moved off of <code class="language-plaintext highlighter-rouge">RigidBodyTree</code>:
     <ul>
-      <li><code class="highlighter-rouge">rimless_wheel</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12607">#12607</a>)</li>
-      <li><code class="highlighter-rouge">compass_gait</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12618">#12618</a>)</li>
-      <li><code class="highlighter-rouge">kuka_simulation</code> (and dependencies) (<a href="https://github.com/RobotLocomotion/drake/pull/12688">#12688</a>)</li>
-      <li><code class="highlighter-rouge">particles</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12715">#12715</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">rimless_wheel</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12607">#12607</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">compass_gait</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12618">#12618</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">kuka_simulation</code> (and dependencies) (<a href="https://github.com/RobotLocomotion/drake/pull/12688">#12688</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">particles</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12715">#12715</a>)</li>
     </ul>
   </li>
 </ul>
@@ -284,13 +284,13 @@ Frame registration (<a href="https://github.com/RobotLocomotion/drake/pull/12690
 
 <ul>
   <li>Improved package top-level docstring (<a href="https://github.com/RobotLocomotion/drake/pull/12671">#12671</a>)</li>
-  <li><code class="highlighter-rouge">pydrake.solvers.mathematicalprogram::LinearCost</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12651">#12651</a>)</li>
-  <li><code class="highlighter-rouge">pydrake.solvers.mathematicalprogram::QuadraticCost</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12651">#12651</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">pydrake.solvers.mathematicalprogram::LinearCost</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12651">#12651</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">pydrake.solvers.mathematicalprogram::QuadraticCost</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12651">#12651</a>)</li>
   <li>Class docstrings for py
     <ul>
-      <li><code class="highlighter-rouge">drake::examples::manipulation_station::IiwaCollisionModel</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12675">#12675</a>)</li>
-      <li><code class="highlighter-rouge">drake::examples::manipulation_station::ManipulationStation</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12675">#12675</a>)</li>
-      <li><code class="highlighter-rouge">drake::examples::manipulation_station::ManipulationStationHardwareInterface</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12675">#12675</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">drake::examples::manipulation_station::IiwaCollisionModel</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12675">#12675</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">drake::examples::manipulation_station::ManipulationStation</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12675">#12675</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">drake::examples::manipulation_station::ManipulationStationHardwareInterface</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12675">#12675</a>)</li>
     </ul>
   </li>
   <li>The upgrade of pybind11 to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/12641">#12641</a>, below) fixes a
@@ -317,17 +317,17 @@ bug that caused false cache hits for overloads (<a href="https://github.com/Robo
 <ul>
   <li>APIs:
     <ul>
-      <li>Legacy (“attic”) <code class="highlighter-rouge">manipulation/util</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12679">#12679</a>)</li>
-      <li><code class="highlighter-rouge">geometry::Identifier</code> (moved to <code class="highlighter-rouge">common::Identifier</code>) (<a href="https://github.com/RobotLocomotion/drake/pull/12621">#12621</a>)</li>
-      <li>Some methods of <code class="highlighter-rouge">geometry::SceneGraphInspector</code> and
-<code class="highlighter-rouge">geometry::GeometryState</code> were renamed and their old spellings deprecated
+      <li>Legacy (“attic”) <code class="language-plaintext highlighter-rouge">manipulation/util</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12679">#12679</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">geometry::Identifier</code> (moved to <code class="language-plaintext highlighter-rouge">common::Identifier</code>) (<a href="https://github.com/RobotLocomotion/drake/pull/12621">#12621</a>)</li>
+      <li>Some methods of <code class="language-plaintext highlighter-rouge">geometry::SceneGraphInspector</code> and
+<code class="language-plaintext highlighter-rouge">geometry::GeometryState</code> were renamed and their old spellings deprecated
 (<a href="https://github.com/RobotLocomotion/drake/pull/12626">#12626</a>)
         <ul>
-          <li><code class="highlighter-rouge">geometry::SceneGraphInspector::GetNumDynamicGeometries</code> becomes
-<code class="highlighter-rouge">geometry::SceneGraphInspector::NumDynamicGeometries</code></li>
-          <li><code class="highlighter-rouge">geometry::SceneGraphInspector::GetNumAnchoredGeometries</code> becomes
-<code class="highlighter-rouge">geometry::SceneGraphInspector::NumAnchoredGeometries</code></li>
-          <li>A large number of items within <code class="highlighter-rouge">geometry::GeometryState</code>; however
+          <li><code class="language-plaintext highlighter-rouge">geometry::SceneGraphInspector::GetNumDynamicGeometries</code> becomes
+<code class="language-plaintext highlighter-rouge">geometry::SceneGraphInspector::NumDynamicGeometries</code></li>
+          <li><code class="language-plaintext highlighter-rouge">geometry::SceneGraphInspector::GetNumAnchoredGeometries</code> becomes
+<code class="language-plaintext highlighter-rouge">geometry::SceneGraphInspector::NumAnchoredGeometries</code></li>
+          <li>A large number of items within <code class="language-plaintext highlighter-rouge">geometry::GeometryState</code>; however
 although this class is public it is internal and should not be called.</li>
         </ul>
       </li>
@@ -335,7 +335,7 @@ although this class is public it is internal and should not be called.</li>
   </li>
   <li>Dependencies
     <ul>
-      <li><code class="highlighter-rouge">nlohmann/json</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12666">#12666</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">nlohmann/json</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12666">#12666</a>)</li>
     </ul>
   </li>
 </ul>
@@ -347,30 +347,30 @@ although this class is public it is internal and should not be called.</li>
     <ul>
       <li>Removing deprecated (“attic”) legacy support of:
         <ul>
-          <li><code class="highlighter-rouge">drake::manipulation::dev::RemoteTreeViewerWrapper</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12666">#12666</a>)</li>
-          <li><code class="highlighter-rouge">drake::manipulation::sensors::Xtion</code> and its URDF models (<a href="https://github.com/RobotLocomotion/drake/pull/12665">#12665</a>)</li>
+          <li><code class="language-plaintext highlighter-rouge">drake::manipulation::dev::RemoteTreeViewerWrapper</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12666">#12666</a>)</li>
+          <li><code class="language-plaintext highlighter-rouge">drake::manipulation::sensors::Xtion</code> and its URDF models (<a href="https://github.com/RobotLocomotion/drake/pull/12665">#12665</a>)</li>
           <li>Legacy manipulation and its perception and related systems: (<a href="https://github.com/RobotLocomotion/drake/pull/12677">#12677</a>)
             <ul>
-              <li><code class="highlighter-rouge">drake::manipulation::scene_generation::RandomClutterGenerator</code></li>
-              <li><code class="highlighter-rouge">drake::manipulation::scene_generation::SimulatePlantToRest</code></li>
-              <li><code class="highlighter-rouge">drake::manipulation::util::FramePoseTracker</code></li>
-              <li><code class="highlighter-rouge">drake::manipulation::util::SimpleTreeVisualizer</code></li>
-              <li><code class="highlighter-rouge">drake::perception::estimators::ArticulatedIcpErrorSet</code></li>
-              <li><code class="highlighter-rouge">drake::perception::estimators::ArticulatedIcpErrorCost</code></li>
-              <li><code class="highlighter-rouge">drake::perception::estimators::ArticulatedIcpErrorNormCost</code></li>
-              <li><code class="highlighter-rouge">drake::perception::estimators::ArticulatedIcpLinearizedNormCost</code></li>
-              <li><code class="highlighter-rouge">drake::perception::estimators::ArticulatedIcpBodyPoints</code></li>
-              <li><code class="highlighter-rouge">drake::perception::estimators::PointCorrespondence</code></li>
-              <li><code class="highlighter-rouge">drake::perception::estimators::ArticulatedBodyInfluence</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::manipulation::scene_generation::RandomClutterGenerator</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::manipulation::scene_generation::SimulatePlantToRest</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::manipulation::util::FramePoseTracker</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::manipulation::util::SimpleTreeVisualizer</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::perception::estimators::ArticulatedIcpErrorSet</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::perception::estimators::ArticulatedIcpErrorCost</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::perception::estimators::ArticulatedIcpErrorNormCost</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::perception::estimators::ArticulatedIcpLinearizedNormCost</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::perception::estimators::ArticulatedIcpBodyPoints</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::perception::estimators::PointCorrespondence</code></li>
+              <li><code class="language-plaintext highlighter-rouge">drake::perception::estimators::ArticulatedBodyInfluence</code></li>
             </ul>
           </li>
         </ul>
       </li>
-      <li><code class="highlighter-rouge">CalcFrameGeometricJacobianExpressedInWorld</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12685">#12685</a>)</li>
-      <li><code class="highlighter-rouge">SnoptSolver::is_thread_safe</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12685">#12685</a>)</li>
-      <li><code class="highlighter-rouge">drake_optional</code> and <code class="highlighter-rouge">drake_variant</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12682">#12682</a>)</li>
-      <li><code class="highlighter-rouge">text_logging_gflags</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12680">#12680</a>)</li>
-      <li><code class="highlighter-rouge">MakeFileInputStreamOrThrow</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12689">#12689</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">CalcFrameGeometricJacobianExpressedInWorld</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12685">#12685</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">SnoptSolver::is_thread_safe</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12685">#12685</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">drake_optional</code> and <code class="language-plaintext highlighter-rouge">drake_variant</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12682">#12682</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">text_logging_gflags</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12680">#12680</a>)</li>
+      <li><code class="language-plaintext highlighter-rouge">MakeFileInputStreamOrThrow</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12689">#12689</a>)</li>
     </ul>
   </li>
   <li>Dependencies:
@@ -389,7 +389,7 @@ although this class is public it is internal and should not be called.</li>
 
 <p>This release provides
 <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.15.0">pre-compiled binaries</a>
-named <code class="highlighter-rouge">drake-20200212-{bionic|mac}.tar.gz</code>. See
+named <code class="language-plaintext highlighter-rouge">drake-20200212-{bionic|mac}.tar.gz</code>. See
 <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of

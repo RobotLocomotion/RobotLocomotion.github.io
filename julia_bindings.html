@@ -137,15 +137,15 @@ analysis.
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <p><a href="http://julialang.org/">Julia</a> is a relatively new, high-level language designed for fast scientific computing. There are two ways to access Drake’s functions from Julia: <code class="highlighter-rouge">PyCall.jl</code> and <code class="highlighter-rouge">Cxx.jl</code>.</p>
+        <p><a href="http://julialang.org/">Julia</a> is a relatively new, high-level language designed for fast scientific computing. There are two ways to access Drake’s functions from Julia: <code class="language-plaintext highlighter-rouge">PyCall.jl</code> and <code class="language-plaintext highlighter-rouge">Cxx.jl</code>.</p>
 
-<h1 id="with-pycalljl">With <code class="highlighter-rouge">PyCall.jl</code></h1>
+<h1 id="with-pycalljl">With <code class="language-plaintext highlighter-rouge">PyCall.jl</code></h1>
 
-<p>The <a href="https://github.com/JuliaPy/PyCall.jl">PyCall.jl</a> package makes it easy to call Python code from Julia, including translation of basic data types like numbers, strings, and arrays to their Python equivalents. Using <code class="highlighter-rouge">PyCall.jl</code>, you can run all of the Drake functions which are exposed in the <a href="/python_bindings.html">Drake Python bindings</a>. For a demonstration of this method, see <a href="https://github.com/rdeits/pydrake-julia/blob/master/pydrake_in_julia.ipynb">this example notebook</a>.</p>
+<p>The <a href="https://github.com/JuliaPy/PyCall.jl">PyCall.jl</a> package makes it easy to call Python code from Julia, including translation of basic data types like numbers, strings, and arrays to their Python equivalents. Using <code class="language-plaintext highlighter-rouge">PyCall.jl</code>, you can run all of the Drake functions which are exposed in the <a href="/python_bindings.html">Drake Python bindings</a>. For a demonstration of this method, see <a href="https://github.com/rdeits/pydrake-julia/blob/master/pydrake_in_julia.ipynb">this example notebook</a>.</p>
 
-<h1 id="with-cxxjl">With <code class="highlighter-rouge">Cxx.jl</code></h1>
+<h1 id="with-cxxjl">With <code class="language-plaintext highlighter-rouge">Cxx.jl</code></h1>
 
-<p>The <a href="https://github.com/Keno/Cxx.jl">Cxx.jl</a> package allows Julia to call C++ code directly, and even allows Julia to compile new C++ functions on the fly. Since this method allows direct access to the Drake C++ interface, all of Drake’s features are available. However, setting up <code class="highlighter-rouge">Cxx.jl</code> may be more complicated than most Julia packages, and careless programming can easily lead to segmentation faults or other undefined behavior, as with any C++ code. For an example of usage, see <a href="https://github.com/tkoolen/drake/wiki/Running-Drake-code-from-Julia%27s-REPL">this wiki entry by Twan Koolen</a>.</p>
+<p>The <a href="https://github.com/Keno/Cxx.jl">Cxx.jl</a> package allows Julia to call C++ code directly, and even allows Julia to compile new C++ functions on the fly. Since this method allows direct access to the Drake C++ interface, all of Drake’s features are available. However, setting up <code class="language-plaintext highlighter-rouge">Cxx.jl</code> may be more complicated than most Julia packages, and careless programming can easily lead to segmentation faults or other undefined behavior, as with any C++ code. For an example of usage, see <a href="https://github.com/tkoolen/drake/wiki/Running-Drake-code-from-Julia%27s-REPL">this wiki entry by Twan Koolen</a>.</p>
 
       </article>
     </div>

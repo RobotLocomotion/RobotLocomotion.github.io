@@ -170,7 +170,7 @@ analysis.
     <ul>
       <li>Add LinearizeDynamics (<a href="https://github.com/RobotLocomotion/drake/pull/12466">#12466</a>)</li>
       <li>Add dynamics_for_variable (<a href="https://github.com/RobotLocomotion/drake/pull/12421">#12421</a>)</li>
-      <li>The setters for state, input, parameter, dynamics, and output offer a std::vector overload, so that a user can write <code class="highlighter-rouge">.dynamics({-x_[1], -x_[0] + 3})</code>  (<a href="https://github.com/RobotLocomotion/drake/pull/12421">#12421</a>)</li>
+      <li>The setters for state, input, parameter, dynamics, and output offer a std::vector overload, so that a user can write <code class="language-plaintext highlighter-rouge">.dynamics({-x_[1], -x_[0] + 3})</code>  (<a href="https://github.com/RobotLocomotion/drake/pull/12421">#12421</a>)</li>
     </ul>
   </li>
 </ul>
@@ -260,7 +260,7 @@ analysis.
   <li>Fix pydrake.geometry submodules are part of .all (<a href="https://github.com/RobotLocomotion/drake/pull/12383">#12383</a>)</li>
   <li>Fix pydrake.manipulation.simple_ui window resizing (<a href="https://github.com/RobotLocomotion/drake/pull/12486">#12486</a>)</li>
   <li>Fix System name preservation during scalar conversion (<a href="https://github.com/RobotLocomotion/drake/pull/12429">#12429</a>)</li>
-  <li>Fix Sphinx <code class="highlighter-rouge">__init__</code> documentation in Python 3 (<a href="https://github.com/RobotLocomotion/drake/pull/12452">#12452</a>)</li>
+  <li>Fix Sphinx <code class="language-plaintext highlighter-rouge">__init__</code> documentation in Python 3 (<a href="https://github.com/RobotLocomotion/drake/pull/12452">#12452</a>)</li>
 </ul>
 
 <p>Newly bound</p>
@@ -317,7 +317,7 @@ analysis.
   <li>Upgrade fmt to latest release 6.1.2 (<a href="https://github.com/RobotLocomotion/drake/pull/12426">#12426</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12487">#12487</a>)</li>
   <li>Upgrade supported Bazel version to 1.2 (<a href="https://github.com/RobotLocomotion/drake/pull/12396">#12396</a>)
     <ul>
-      <li>Users who compile Drake from source as a bazel external (as in the <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/master/drake_bazel_external">drake_bazel_external</a> pattern) should no longer set <code class="highlighter-rouge">build --incompatible_remove_legacy_whole_archive=false</code> in their project’s <code class="highlighter-rouge">.bazelrc</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12262">#12262</a>)</li>
+      <li>Users who compile Drake from source as a bazel external (as in the <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/master/drake_bazel_external">drake_bazel_external</a> pattern) should no longer set <code class="language-plaintext highlighter-rouge">build --incompatible_remove_legacy_whole_archive=false</code> in their project’s <code class="language-plaintext highlighter-rouge">.bazelrc</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12262">#12262</a>)</li>
     </ul>
   </li>
   <li>Upgrade supported macOS CMake version to 3.16  (<a href="https://github.com/RobotLocomotion/drake/pull/12396">#12396</a>)</li>
@@ -372,7 +372,7 @@ analysis.
   </li>
   <li>drake::math::RigidTransform::FromMatrix4 (<a href="https://github.com/RobotLocomotion/drake/pull/12431">#12431</a>)
     <ul>
-      <li>Use the <code class="highlighter-rouge">pose=</code> constructor instead.</li>
+      <li>Use the <code class="language-plaintext highlighter-rouge">pose=</code> constructor instead.</li>
     </ul>
   </li>
   <li>drake::geometry::ContactSurface::mesh (<a href="https://github.com/RobotLocomotion/drake/pull/12431">#12431</a>)
@@ -395,16 +395,16 @@ analysis.
       <li>Use point_pair_contact_info instead.</li>
     </ul>
   </li>
-  <li>pydrake Eigen.Quaternion.multiply with <code class="highlighter-rouge">position=</code> kwargs (<a href="https://github.com/RobotLocomotion/drake/pull/12431">#12431</a>)
+  <li>pydrake Eigen.Quaternion.multiply with <code class="language-plaintext highlighter-rouge">position=</code> kwargs (<a href="https://github.com/RobotLocomotion/drake/pull/12431">#12431</a>)
     <ul>
-      <li>Use <code class="highlighter-rouge">vector=</code> instead of <code class="highlighter-rouge">position=</code>.</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">vector=</code> instead of <code class="language-plaintext highlighter-rouge">position=</code>.</li>
     </ul>
   </li>
 </ul>
 
 <p>This release provides
 <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.13.0">pre-compiled binaries</a>
-named <code class="highlighter-rouge">drake-20191217-{bionic|mac}.tar.gz</code>. See
+named <code class="language-plaintext highlighter-rouge">drake-20191217-{bionic|mac}.tar.gz</code>. See
 <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of

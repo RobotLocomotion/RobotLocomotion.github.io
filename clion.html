@@ -155,7 +155,7 @@ Read carefully, and do not skip anything.</p>
 <a href="/bazel.html">the Drake Bazel instructions</a>.</p>
 
 <p>To use Drake with CLion, your Drake source directory (or git 
-clone) <strong>must</strong> be named <code class="highlighter-rouge">drake</code>.</p>
+clone) <strong>must</strong> be named <code class="language-plaintext highlighter-rouge">drake</code>.</p>
 
 <h2 id="installing-clion">Installing CLion</h2>
 
@@ -190,17 +190,17 @@ working with Drake.</p>
 
 <ol>
   <li>To have your Unity launcher CLion icon point to the correct version,
-run <code class="highlighter-rouge">locate jetbrains-clion.desktop</code> and edit the located file. If more
+run <code class="language-plaintext highlighter-rouge">locate jetbrains-clion.desktop</code> and edit the located file. If more
 than one file is located, you may want to consolidate to a single launch file
-in your user directory, typically <code class="highlighter-rouge">~/.local/share/applications</code>.</li>
+in your user directory, typically <code class="language-plaintext highlighter-rouge">~/.local/share/applications</code>.</li>
   <li>Uninstall the previous version of the Bazel plugin and update to the version
 above (or the most recent version compatible with the CLion version you
 are upgrading to).
 See <a href="#installing-the-bazel-plugin">Installing the Bazel Plugin</a>.</li>
   <li>In CLion, select
-<code class="highlighter-rouge">Bazel-&gt;Sync-&gt;Non-incrementally Sync Project with BUILD Files</code></li>
-  <li>You may need to delete cached data in <code class="highlighter-rouge">~/.cache/bazel</code> and
-<code class="highlighter-rouge">~/.cache/JetBrains/CLion2021.2/caches</code> if you get error messages
+<code class="language-plaintext highlighter-rouge">Bazel-&gt;Sync-&gt;Non-incrementally Sync Project with BUILD Files</code></li>
+  <li>You may need to delete cached data in <code class="language-plaintext highlighter-rouge">~/.cache/bazel</code> and
+<code class="language-plaintext highlighter-rouge">~/.cache/JetBrains/CLion2021.2/caches</code> if you get error messages
 complaining about old files in the cache (substitute the right version
 number).</li>
 </ol>
@@ -211,14 +211,14 @@ Overwriting the old project is appropriate.</p>
 <h2 id="installing-the-bazel-plugin">Installing the Bazel Plugin</h2>
 
 <p>To use Bazel in CLion, you <strong>must</strong> install a plugin supplied by Google.  To
-install the plugin, open <code class="highlighter-rouge">Settings</code> (either <code class="highlighter-rouge">Welcome &gt; Configure &gt;
-Settings</code> or <code class="highlighter-rouge">File &gt; Settings</code>), select <code class="highlighter-rouge">Plugins</code>, then choose the
-<code class="highlighter-rouge">Marketplace</code> tab.  Locate and install the <code class="highlighter-rouge">Bazel</code> plugin. You will be
+install the plugin, open <code class="language-plaintext highlighter-rouge">Settings</code> (either <code class="language-plaintext highlighter-rouge">Welcome &gt; Configure &gt;
+Settings</code> or <code class="language-plaintext highlighter-rouge">File &gt; Settings</code>), select <code class="language-plaintext highlighter-rouge">Plugins</code>, then choose the
+<code class="language-plaintext highlighter-rouge">Marketplace</code> tab.  Locate and install the <code class="language-plaintext highlighter-rouge">Bazel</code> plugin. You will be
 prompted to restart CLion.</p>
 
 <p>To use Drake in CLion you <strong>must</strong> use Drake’s bazel wrapper.
-Open <code class="highlighter-rouge">Settings &gt; Bazel Settings</code>.  For <code class="highlighter-rouge">Bazel binary location</code> select the
-path to <code class="highlighter-rouge">drake/tools/clion/bazel_wrapper</code> from any recent Drake source tree
+Open <code class="language-plaintext highlighter-rouge">Settings &gt; Bazel Settings</code>.  For <code class="language-plaintext highlighter-rouge">Bazel binary location</code> select the
+path to <code class="language-plaintext highlighter-rouge">drake/tools/clion/bazel_wrapper</code> from any recent Drake source tree
 (it doesn’t have to match the current project open in CLion).</p>
 
 <h2 id="setting-up-drake-in-clion">Setting up Drake in CLion</h2>
@@ -227,13 +227,13 @@ path to <code class="highlighter-rouge">drake/tools/clion/bazel_wrapper</code> f
 specified in the WORKSPACE file.</p>
 
 <ol>
-  <li><code class="highlighter-rouge">File &gt; Import Bazel Project</code></li>
+  <li><code class="language-plaintext highlighter-rouge">File &gt; Import Bazel Project</code></li>
   <li>Select Workspace: Use an existing Bazel workspace, and provide the path to
-your <code class="highlighter-rouge">drake</code> directory.</li>
+your <code class="language-plaintext highlighter-rouge">drake</code> directory.</li>
   <li>Select Project View: choose “Import project view file”, and
-select the file <code class="highlighter-rouge">drake/.bazelproject</code></li>
-  <li>Project View: Pick a <code class="highlighter-rouge">project data directory</code> of your choice for the
-CLion project files. It must not be a subdirectory of <code class="highlighter-rouge">drake</code>.</li>
+select the file <code class="language-plaintext highlighter-rouge">drake/.bazelproject</code></li>
+  <li>Project View: Pick a <code class="language-plaintext highlighter-rouge">project data directory</code> of your choice for the
+CLion project files. It must not be a subdirectory of <code class="language-plaintext highlighter-rouge">drake</code>.</li>
   <li>(Advanced) Project View: If you only wish to develop a subset of Drake,
 you can specify only those files and targets in the project view file.
 Most users should leave it as-is.</li>
@@ -244,38 +244,38 @@ symbols, and compiling Drake. This will take several minutes.</li>
 <h2 id="building-and-running-targets">Building and Running Targets</h2>
 
 <p>To build all of Drake with default Bazel options, select
-<code class="highlighter-rouge">Bazel &gt; Build &gt; Compile Project</code>.</p>
+<code class="language-plaintext highlighter-rouge">Bazel &gt; Build &gt; Compile Project</code>.</p>
 
-<p>To build or run a specific target go to <code class="highlighter-rouge">Run &gt; Edit Configurations</code>. Click
-<code class="highlighter-rouge">+</code> to create a new Bazel command.  Specify the configuration name and Bazel
-options. The <code class="highlighter-rouge">Target expression</code> specifies the actual code (library, binary,
+<p>To build or run a specific target go to <code class="language-plaintext highlighter-rouge">Run &gt; Edit Configurations</code>. Click
+<code class="language-plaintext highlighter-rouge">+</code> to create a new Bazel command.  Specify the configuration name and Bazel
+options. The <code class="language-plaintext highlighter-rouge">Target expression</code> specifies the actual code (library, binary,
 and/or test) that you want to run. To learn more about target expressions, see
 <a href="https://docs.bazel.build/versions/master/user-manual.html#target-patterns">the Bazel manual</a>.
-Once you’ve created a configuration, you can launch it from the <code class="highlighter-rouge">Run</code> menu.</p>
+Once you’ve created a configuration, you can launch it from the <code class="language-plaintext highlighter-rouge">Run</code> menu.</p>
 
 <p>To run a specific target in the debugger, create a configuration as above,
-using the <code class="highlighter-rouge">bazel run</code> command. Then launch it from <code class="highlighter-rouge">Run &gt; Debug</code>.</p>
+using the <code class="language-plaintext highlighter-rouge">bazel run</code> command. Then launch it from <code class="language-plaintext highlighter-rouge">Run &gt; Debug</code>.</p>
 
 <h2 id="keeping-clion-up-to-date-with-the-bazel-build">Keeping CLion Up-to-Date with the Bazel Build</h2>
 
 <p>Changes to BUILD files can add or remove source files from the Bazel build.
 To propagate those changes into the CLion project structure, select
-<code class="highlighter-rouge">Bazel &gt; Sync Project With BUILD Files</code>.</p>
+<code class="language-plaintext highlighter-rouge">Bazel &gt; Sync Project With BUILD Files</code>.</p>
 
 <h2 id="git-integration">Git Integration</h2>
 
-<p>CLion provides a user interface for Git, which you can enable in the <code class="highlighter-rouge">VCS</code>
+<p>CLion provides a user interface for Git, which you can enable in the <code class="language-plaintext highlighter-rouge">VCS</code>
 menu.  It automatically detects all Git roots within the workspace. This will
-include <code class="highlighter-rouge">bazel-drake</code>, which is a Bazel-internal detail. Bazel edits
+include <code class="language-plaintext highlighter-rouge">bazel-drake</code>, which is a Bazel-internal detail. Bazel edits
 the contents of that directory for its own purposes, and those changes will
 spuriously appear in the CLion UI as changes that need to be committed. To make
-CLion ignore <code class="highlighter-rouge">bazel-drake</code>, enable Git integration under the <code class="highlighter-rouge">VCS</code>
-tab, then go to <code class="highlighter-rouge">File &gt; Settings</code>. Select the <code class="highlighter-rouge">Version Control</code> menu item
+CLion ignore <code class="language-plaintext highlighter-rouge">bazel-drake</code>, enable Git integration under the <code class="language-plaintext highlighter-rouge">VCS</code>
+tab, then go to <code class="language-plaintext highlighter-rouge">File &gt; Settings</code>. Select the <code class="language-plaintext highlighter-rouge">Version Control</code> menu item
 directly (not one of the subtopics displayed when that item is expanded). You
-will see a list of all the Git root directories. Look for <code class="highlighter-rouge">bazel-drake</code>
-on that list and select it. On the right hand side are <code class="highlighter-rouge">+</code> and <code class="highlighter-rouge">-</code> buttons;
-click <code class="highlighter-rouge">-</code> to remove the spurious root directory. After that you should be
-able to go to <code class="highlighter-rouge">VCS &gt; Commit Changes</code> and there should be no changes seen.</p>
+will see a list of all the Git root directories. Look for <code class="language-plaintext highlighter-rouge">bazel-drake</code>
+on that list and select it. On the right hand side are <code class="language-plaintext highlighter-rouge">+</code> and <code class="language-plaintext highlighter-rouge">-</code> buttons;
+click <code class="language-plaintext highlighter-rouge">-</code> to remove the spurious root directory. After that you should be
+able to go to <code class="language-plaintext highlighter-rouge">VCS &gt; Commit Changes</code> and there should be no changes seen.</p>
 
 <h1 id="integrating-external-tools-with-clion">Integrating External Tools with CLion</h1>
 
@@ -288,20 +288,20 @@ per-tool details below. The GUI description applies to version 2018.1.6 and
 may be slightly different in previous versions.</p>
 
 <ol>
-  <li>Open the Settings dialog (<code class="highlighter-rouge">File</code> &gt; <code class="highlighter-rouge">Settings</code>) or <code class="highlighter-rouge">Alt+Ctrl+S</code>.</li>
-  <li>Navigate to <code class="highlighter-rouge">Tools</code> &gt; <code class="highlighter-rouge">External Tools</code>.</li>
+  <li>Open the Settings dialog (<code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Settings</code>) or <code class="language-plaintext highlighter-rouge">Alt+Ctrl+S</code>.</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Tools</code> &gt; <code class="language-plaintext highlighter-rouge">External Tools</code>.</li>
   <li>Click the <font color="green">+</font> sign to add a new
 tool.</li>
-  <li>Set the appropriate fields in the <code class="highlighter-rouge">Edit Tool</code>. See the following tools for
+  <li>Set the appropriate fields in the <code class="language-plaintext highlighter-rouge">Edit Tool</code>. See the following tools for
 details.</li>
-  <li>Click <code class="highlighter-rouge">Ok</code>.</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Ok</code>.</li>
 </ol>
 
 <p>There are several ways to use an <em>External Tool</em>. One is to right-click on a
-file and select <code class="highlighter-rouge">External Tools</code> &gt; <code class="highlighter-rouge">Tool Name</code>. Another is to select
-<code class="highlighter-rouge">Tools</code> &gt; <code class="highlighter-rouge">External Tools</code> &gt; <code class="highlighter-rouge">Tool Name</code>. For tools that operate on a
+file and select <code class="language-plaintext highlighter-rouge">External Tools</code> &gt; <code class="language-plaintext highlighter-rouge">Tool Name</code>. Another is to select
+<code class="language-plaintext highlighter-rouge">Tools</code> &gt; <code class="language-plaintext highlighter-rouge">External Tools</code> &gt; <code class="language-plaintext highlighter-rouge">Tool Name</code>. For tools that operate on a
 selected file, make sure that file is “active” by clicking on it. The
-<code class="highlighter-rouge">Tool Name</code> will be the value set in the <code class="highlighter-rouge">Name</code> field outlined below.</p>
+<code class="language-plaintext highlighter-rouge">Tool Name</code> will be the value set in the <code class="language-plaintext highlighter-rouge">Name</code> field outlined below.</p>
 
 <h2 id="formatting-files">Formatting files</h2>
 
@@ -311,7 +311,7 @@ introduce three variants:</p>
 <ul>
   <li>Apply clang-format to a whole file.</li>
   <li>Apply clang-format to selected lines.</li>
-  <li>Apply clang-format to correct <code class="highlighter-rouge">#include</code> ordering.</li>
+  <li>Apply clang-format to correct <code class="language-plaintext highlighter-rouge">#include</code> ordering.</li>
 </ul>
 
 <p>These tools modify the selected file. There is a synchronization issue with
@@ -319,54 +319,54 @@ CLion such that the modification may not be immediately apparent. When in doubt,
 select away from the target file and back; this will cause the file to refresh
 and you can confirm that the file has been modified as expected.</p>
 
-<p>First, make sure you have installed <code class="highlighter-rouge">clang-format-12</code>
+<p>First, make sure you have installed <code class="language-plaintext highlighter-rouge">clang-format-12</code>
 (see <a href="/code_style_tools.html">Tools for Code Style Compliance</a>).</p>
 
 <h3 id="clang-format-selected-file">Clang format selected file</h3>
 
-<p>Open the <code class="highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
 following values for the fields:</p>
 
 <ul>
-  <li><strong>Name:</strong> <code class="highlighter-rouge">Clang Format Full File</code></li>
-  <li><strong>Description:</strong> <code class="highlighter-rouge">Apply clang-format to the active file</code></li>
-  <li><strong>Program:</strong> <code class="highlighter-rouge">clang-format-12</code></li>
-  <li><strong>Arguments:</strong> <code class="highlighter-rouge">-i $FileName$</code></li>
-  <li><strong>Working directory:</strong> <code class="highlighter-rouge">$FileDir$</code></li>
-  <li><strong>Advanced Options:</strong> Uncheck <code class="highlighter-rouge">Open console for tool output</code></li>
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Full File</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply clang-format to the active file</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">clang-format-12</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">-i $FileName$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$FileDir$</code></li>
+  <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
 </ul>
 
 <p>Leave the checkbox options in their default state.</p>
 
 <h3 id="clang-format-selected-lines">Clang format selected lines</h3>
 
-<p>Open the <code class="highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
 following values for the fields:</p>
 
 <ul>
-  <li><strong>Name:</strong> <code class="highlighter-rouge">Clang Format Selected Lines</code></li>
-  <li><strong>Description:</strong> <code class="highlighter-rouge">Apply clang-format to the selected lines</code></li>
-  <li><strong>Program:</strong> <code class="highlighter-rouge">clang-format-12</code></li>
-  <li><strong>Arguments:</strong> <code class="highlighter-rouge">-lines $SelectionStartLine$:$SelectionEndLine$ -i $FileName$</code></li>
-  <li><strong>Working directory:</strong> <code class="highlighter-rouge">$FileDir$</code></li>
-  <li><strong>Advanced Options:</strong> Uncheck <code class="highlighter-rouge">Open console for tool output</code></li>
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Selected Lines</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply clang-format to the selected lines</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">clang-format-12</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">-lines $SelectionStartLine$:$SelectionEndLine$ -i $FileName$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$FileDir$</code></li>
+  <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
 </ul>
 
 <p>Leave the checkbox options in their default state.</p>
 
 <h3 id="correct-include-ordering">Correct #include ordering</h3>
 
-<p>Open the <code class="highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
 following values for the fields:</p>
 
 <ul>
-  <li><strong>Name:</strong> <code class="highlighter-rouge">Clang Format Include Ordering</code></li>
-  <li><strong>Description:</strong> <code class="highlighter-rouge">Runs the clang format for correcting includes on the current
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Include Ordering</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Runs the clang format for correcting includes on the current
                 file</code></li>
-  <li><strong>Program:</strong> <code class="highlighter-rouge">bazel</code></li>
-  <li><strong>Arguments:</strong> <code class="highlighter-rouge">run //tools/lint:clang-format-includes -- $FilePath$</code></li>
-  <li><strong>Working directory:</strong> <code class="highlighter-rouge">$Projectpath$</code></li>
-  <li><strong>Advanced Options:</strong> Uncheck <code class="highlighter-rouge">Open console for tool output</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format-includes -- $FilePath$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
+  <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
 </ul>
 
 <p>Leave the checkbox options in their default state.</p>
@@ -381,7 +381,7 @@ find such issues. We’ll define two tools:</p>
   <li>General linting (via cpplint) which captures most of the Drake style guide.</li>
   <li>Drake extended linting which captures aspects of the Drake style guide <em>not</em>
 captured by the general linting tool. This includes detecting out-of-order
-<code class="highlighter-rouge">#include</code> directives.</li>
+<code class="language-plaintext highlighter-rouge">#include</code> directives.</li>
 </ul>
 
 <p>These tools produce reports. In some cases, the reports can be automatically
@@ -392,58 +392,58 @@ include the details of how to configure these clickable links.</p>
 <p>You can also set the general coding style for CLion through the following steps</p>
 
 <ol>
-  <li>Go to <code class="highlighter-rouge">File</code> &gt; <code class="highlighter-rouge">Settings</code> &gt; <code class="highlighter-rouge">Editor</code> &gt; <code class="highlighter-rouge">Code Style</code></li>
-  <li>On the right panel, Go to <code class="highlighter-rouge">Default Options</code> &gt; <code class="highlighter-rouge">Right margin (columns)</code>:
+  <li>Go to <code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Settings</code> &gt; <code class="language-plaintext highlighter-rouge">Editor</code> &gt; <code class="language-plaintext highlighter-rouge">Code Style</code></li>
+  <li>On the right panel, Go to <code class="language-plaintext highlighter-rouge">Default Options</code> &gt; <code class="language-plaintext highlighter-rouge">Right margin (columns)</code>:
 Set it to 80</li>
-  <li>Go to <code class="highlighter-rouge">File</code> &gt; <code class="highlighter-rouge">Settings</code> &gt; <code class="highlighter-rouge">Editor</code> &gt; <code class="highlighter-rouge">Code Style</code> &gt; <code class="highlighter-rouge">C/C++</code></li>
-  <li>On the right panel, choose <code class="highlighter-rouge">Set from</code> &gt; <code class="highlighter-rouge">Predefined Style</code> &gt; <code class="highlighter-rouge">Google</code></li>
+  <li>Go to <code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Settings</code> &gt; <code class="language-plaintext highlighter-rouge">Editor</code> &gt; <code class="language-plaintext highlighter-rouge">Code Style</code> &gt; <code class="language-plaintext highlighter-rouge">C/C++</code></li>
+  <li>On the right panel, choose <code class="language-plaintext highlighter-rouge">Set from</code> &gt; <code class="language-plaintext highlighter-rouge">Predefined Style</code> &gt; <code class="language-plaintext highlighter-rouge">Google</code></li>
 </ol>
 
 <h3 id="lint-selected-file-for-google-style-guide">Lint selected file for google style guide</h3>
 
-<p>Open the <code class="highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
 following values for the fields:</p>
 
 <ul>
-  <li><strong>Name:</strong> <code class="highlighter-rouge">Cpplint File</code></li>
-  <li><strong>Description:</strong> <code class="highlighter-rouge">Apply cpplint to the current file</code></li>
-  <li><strong>Program:</strong> <code class="highlighter-rouge">bazel</code></li>
-  <li><strong>Arguments:</strong> <code class="highlighter-rouge">run @styleguide//:cpplint -- --output=eclipse
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Cpplint File</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply cpplint to the current file</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run @styleguide//:cpplint -- --output=eclipse
                $FilePath$</code></li>
-  <li><strong>Working directory:</strong> <code class="highlighter-rouge">$Projectpath$</code></li>
-  <li><strong>Advanced Options:</strong> Confirm <code class="highlighter-rouge">Open console for tool output</code> is checked</li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
+  <li><strong>Advanced Options:</strong> Confirm <code class="language-plaintext highlighter-rouge">Open console for tool output</code> is checked</li>
 </ul>
 
-<p>To configure the clickable links, enter the following string in the <code class="highlighter-rouge">Advanced
-Options</code> &gt; <code class="highlighter-rouge">Output filters</code> window:</p>
+<p>To configure the clickable links, enter the following string in the <code class="language-plaintext highlighter-rouge">Advanced
+Options</code> &gt; <code class="language-plaintext highlighter-rouge">Output filters</code> window:</p>
 
 <p>   
-<code class="highlighter-rouge">$FILE_PATH$:$LINE$</code></p>
+<code class="language-plaintext highlighter-rouge">$FILE_PATH$:$LINE$</code></p>
 
 <h3 id="lint-selected-file-for-drake-style-addenda">Lint selected file for Drake style addenda</h3>
 
 <p>This tool is a supplement to the google style cpplint. It tests for additional
 style requirements which are otherwise missed by the general tool. The primary
-reason to run this is to confirm that the order of the <code class="highlighter-rouge">#include</code> statements
+reason to run this is to confirm that the order of the <code class="language-plaintext highlighter-rouge">#include</code> statements
 is correct.</p>
 
-<p>Open the <code class="highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
 following values for the fields:</p>
 
 <ul>
-  <li><strong>Name:</strong> <code class="highlighter-rouge">Drake Lint File</code></li>
-  <li><strong>Description:</strong> <code class="highlighter-rouge">Apply drake lint to the current file</code></li>
-  <li><strong>Program:</strong> <code class="highlighter-rouge">bazel</code></li>
-  <li><strong>Arguments:</strong> <code class="highlighter-rouge">run //tools/lint:drakelint -- $FilePath$</code></li>
-  <li><strong>Working directory:</strong> <code class="highlighter-rouge">$Projectpath$</code></li>
-  <li><strong>Advanced Options:</strong> Confirm <code class="highlighter-rouge">Open console for tool output</code> is checked</li>
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Drake Lint File</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply drake lint to the current file</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:drakelint -- $FilePath$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
+  <li><strong>Advanced Options:</strong> Confirm <code class="language-plaintext highlighter-rouge">Open console for tool output</code> is checked</li>
 </ul>
 
 <p>In the event of finding a lint problem (e.g., out-of-order include files), the
 CLion output will contain a <em>single</em> clickable link. This link is only the
 <em>first</em> error encountered in the include section; there may be more. The link
 merely provides a hint to the developer to see the problem area. Rather than
-fixing by hand, we strongly recommend executing the <code class="highlighter-rouge">Clang Format Include
+fixing by hand, we strongly recommend executing the <code class="language-plaintext highlighter-rouge">Clang Format Include
 Ordering</code> external tool on the file.</p>
 
 <h3 id="alternative-linting-configuration">Alternative linting configuration</h3>
@@ -467,26 +467,26 @@ linting tools to be able to lint and compile simultaneously.</p>
 <p>Change the following fields in the instructions given above:</p>
 
 <ul>
-  <li><strong>Program:</strong> <code class="highlighter-rouge">bazel-bin/external/styleguide/cpplint_binary</code></li>
-  <li><strong>Arguments:</strong> <code class="highlighter-rouge">--output=eclipse $FilePath$</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel-bin/external/styleguide/cpplint_binary</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">--output=eclipse $FilePath$</code></li>
 </ul>
 
 <p>Building the google styleguide lint tool:</p>
 
-<p><code class="highlighter-rouge">bazel build @styleguide//:cpplint</code></p>
+<p><code class="language-plaintext highlighter-rouge">bazel build @styleguide//:cpplint</code></p>
 
 <p><strong>Drake style addenda</strong></p>
 
 <p>Change the following fields in the instructions given above:</p>
 
 <ul>
-  <li><strong>Program:</strong> <code class="highlighter-rouge">bazel-bin/tools/lint/drakelint</code></li>
-  <li><strong>Arguments:</strong> <code class="highlighter-rouge">$FilePath$</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel-bin/tools/lint/drakelint</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">$FilePath$</code></li>
 </ul>
 
 <p>Building the drake addenda lint tool:</p>
 
-<p><code class="highlighter-rouge">bazel build //tools/lint:drakelint</code></p>
+<p><code class="language-plaintext highlighter-rouge">bazel build //tools/lint:drakelint</code></p>
 
 <h1 id="debugging-an-arbitrary-program-in-drake-with-clion">Debugging an arbitrary program in Drake with CLion</h1>
 

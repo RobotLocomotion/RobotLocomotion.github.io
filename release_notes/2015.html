@@ -146,7 +146,7 @@ reference.</p>
 
 <p>Download the appropriate binary release (v0.9.x) for your platform
 <a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a>.
-Simply extract the archive file into a folder of your choice (mine is called <code class="highlighter-rouge">drake-distro</code>).</p>
+Simply extract the archive file into a folder of your choice (mine is called <code class="language-plaintext highlighter-rouge">drake-distro</code>).</p>
 
 <p>To view the original MATLAB implementation, you may use the tag
 <a href="https://github.com/RobotLocomotion/drake/tree/last_sha_with_original_matlab">last_sha_with_original_matlab </a>.
@@ -156,36 +156,36 @@ provide support for this.</p>
 
 <h1 id="running-matlab-examples">Running MATLAB examples</h1>
 
-<p>To run the MATLAB examples, change directories (in MATLAB) into the <code class="highlighter-rouge">drake-distro/drake</code> folder and at the MATLAB prompt do:</p>
+<p>To run the MATLAB examples, change directories (in MATLAB) into the <code class="language-plaintext highlighter-rouge">drake-distro/drake</code> folder and at the MATLAB prompt do:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>addpath_drake
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>addpath_drake
 </code></pre></div></div>
 
-<p>Then <code class="highlighter-rouge">cd</code> into the examples directories and try some things out.  Here are a few fun ones to get you started:</p>
+<p>Then <code class="language-plaintext highlighter-rouge">cd</code> into the examples directories and try some things out.  Here are a few fun ones to get you started:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">runLQR</code> in the <code class="highlighter-rouge">examples/CartPole</code> directory</li>
-  <li><code class="highlighter-rouge">runLQR</code> in the <code class="highlighter-rouge">examples/Quadrotor2D</code> directory</li>
-  <li><code class="highlighter-rouge">RimlessWheelPlant.run()</code> in the <code class="highlighter-rouge">examples/RimlessWheel</code> directory</li>
-  <li><code class="highlighter-rouge">StateMachineControl.run()</code> in the <code class="highlighter-rouge">examples/PlanarMonopodHopper</code> directory</li>
+  <li><code class="language-plaintext highlighter-rouge">runLQR</code> in the <code class="language-plaintext highlighter-rouge">examples/CartPole</code> directory</li>
+  <li><code class="language-plaintext highlighter-rouge">runLQR</code> in the <code class="language-plaintext highlighter-rouge">examples/Quadrotor2D</code> directory</li>
+  <li><code class="language-plaintext highlighter-rouge">RimlessWheelPlant.run()</code> in the <code class="language-plaintext highlighter-rouge">examples/RimlessWheel</code> directory</li>
+  <li><code class="language-plaintext highlighter-rouge">StateMachineControl.run()</code> in the <code class="language-plaintext highlighter-rouge">examples/PlanarMonopodHopper</code> directory</li>
 </ul>
 
-<p>Please note that you will have to run <code class="highlighter-rouge">addpath_drake</code> each time you start MATLAB, or <a href="http://www.mathworks.com/help/matlab/ref/startup.html">add it to your startup.m</a>.</p>
+<p>Please note that you will have to run <code class="language-plaintext highlighter-rouge">addpath_drake</code> each time you start MATLAB, or <a href="http://www.mathworks.com/help/matlab/ref/startup.html">add it to your startup.m</a>.</p>
 
 <h1 id="linux-specific">Linux Specific</h1>
 
-<p>The version of the standard C++ libraries that are shipped with the Linux distribution of MATLAB is severely outdated and can cause problems when running mex files that are built against a newer version of the standard.  The typical error message in this case reports <code class="highlighter-rouge">Invalid MEX-Files</code>.</p>
+<p>The version of the standard C++ libraries that are shipped with the Linux distribution of MATLAB is severely outdated and can cause problems when running mex files that are built against a newer version of the standard.  The typical error message in this case reports <code class="language-plaintext highlighter-rouge">Invalid MEX-Files</code>.</p>
 
 <p>To work around this issue, the symbolic link for the standard C++ library provided by MATLAB must be redirected to point to a more up-to-date version.</p>
 
 <p>First, make sure that a suitable version of the standard library is installed:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install g++-4.4
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install g++-4.4
 </code></pre></div></div>
 
-<p>Now, the symbolic link in MATLAB must be updated to point to the version that was just installed in <code class="highlighter-rouge">/usr/lib</code>.  An example for MATLAB R2014a is shown below:</p>
+<p>Now, the symbolic link in MATLAB must be updated to point to the version that was just installed in <code class="language-plaintext highlighter-rouge">/usr/lib</code>.  An example for MATLAB R2014a is shown below:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/local/MATLAB/R2014a/sys/os/glnxa64
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/local/MATLAB/R2014a/sys/os/glnxa64
 sudo rm libstdc++.so.6
 sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/4.4/libstdc++.so libstdc++.so.6
 </code></pre></div></div>

@@ -218,23 +218,23 @@ account.</p>
 
 <p>Now run:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:RobotLocomotion/drake.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:RobotLocomotion/drake.git
 </code></pre></div></div>
 
-<p>Note: we suggest you keep the default clone directory name (<code class="highlighter-rouge">drake</code>) and not
-rename it (such as <code class="highlighter-rouge">drake2</code>).  The CLion integration will suffer if the
-checkout directory is not named <code class="highlighter-rouge">drake</code>.  (See <a href="clion.html">CLion IDE setup</a> for details.)</p>
+<p>Note: we suggest you keep the default clone directory name (<code class="language-plaintext highlighter-rouge">drake</code>) and not
+rename it (such as <code class="language-plaintext highlighter-rouge">drake2</code>).  The CLion integration will suffer if the
+checkout directory is not named <code class="language-plaintext highlighter-rouge">drake</code>.  (See <a href="clion.html">CLion IDE setup</a> for details.)</p>
 
 <p>Note: the build process may encounter problems if you have unusual characters
 like parentheses in the absolute path to the drake directory
 (see <a href="https://github.com/RobotLocomotion/drake/issues/394">#394</a>).</p>
 
-<p>The above <code class="highlighter-rouge">git clone</code> command will configure Drake’s primary repository as a
-remote called <code class="highlighter-rouge">origin</code>. We recommend that you configure your fork of Drake’s
-primary repository as the <code class="highlighter-rouge">origin</code> remote and Drake’s primary repository as
-the <code class="highlighter-rouge">upstream</code> remote. This can be done by executing the following commands:</p>
+<p>The above <code class="language-plaintext highlighter-rouge">git clone</code> command will configure Drake’s primary repository as a
+remote called <code class="language-plaintext highlighter-rouge">origin</code>. We recommend that you configure your fork of Drake’s
+primary repository as the <code class="language-plaintext highlighter-rouge">origin</code> remote and Drake’s primary repository as
+the <code class="language-plaintext highlighter-rouge">upstream</code> remote. This can be done by executing the following commands:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd drake
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd drake
 git remote set-url origin git@github.com:[your github user name]/drake.git
 git remote add upstream git@github.com:RobotLocomotion/drake.git
 git remote set-url --push upstream no_push
@@ -276,7 +276,7 @@ cmake ../drake
 make <span class="nt">-j</span>
 </code></pre></div></div>
 
-<p>Note that a concurrency limit passed to <code class="highlighter-rouge">make</code> (e.g., <code class="highlighter-rouge">make -j 2</code>) has almost no
+<p>Note that a concurrency limit passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) has almost no
 effect on the Drake build. You might need to add a bazel configuration dotfile
 to your home directory if your build is running out of memory. See the
 <a href="/troubleshooting.html#build-oom">troubleshooting</a> page for details.</p>
@@ -284,19 +284,19 @@ to your home directory if your build is running out of memory. See the
 <p>Please note the additional CMake options which affect the Python bindings:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">-DWITH_GUROBI={ON, [OFF]}</code> - Build with Gurobi enabled.</li>
-  <li><code class="highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK<a href="/tm.html">™</a> enabled.</li>
-  <li><code class="highlighter-rouge">-DWITH_SNOPT={ON, [OFF]}</code> - Build with SNOPT enabled.</li>
+  <li><code class="language-plaintext highlighter-rouge">-DWITH_GUROBI={ON, [OFF]}</code> - Build with Gurobi enabled.</li>
+  <li><code class="language-plaintext highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK<a href="/tm.html">™</a> enabled.</li>
+  <li><code class="language-plaintext highlighter-rouge">-DWITH_SNOPT={ON, [OFF]}</code> - Build with SNOPT enabled.</li>
 </ul>
 
-<p><code class="highlighter-rouge">{...}</code> means a list of options, and the option surrounded by <code class="highlighter-rouge">[...]</code> is
-the default option. An example of building <code class="highlighter-rouge">pydrake</code> with both Gurobi and
+<p><code class="language-plaintext highlighter-rouge">{...}</code> means a list of options, and the option surrounded by <code class="language-plaintext highlighter-rouge">[...]</code> is
+the default option. An example of building <code class="language-plaintext highlighter-rouge">pydrake</code> with both Gurobi and
 MOSEK<a href="/tm.html">™</a>, without building tests:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-DWITH_GUROBI</span><span class="o">=</span>ON <span class="nt">-DWITH_MOSEK</span><span class="o">=</span>ON ../drake
 </code></pre></div></div>
 
-<p>You will also need to have your <code class="highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
+<p>You will also need to have your <code class="language-plaintext highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
 
 <p><em>Ubuntu 20.04 (Focal):</em></p>
 

@@ -152,15 +152,15 @@ analysis.
 <ul>
   <li>DrakeVisualizer class is now templatized (<a href="https://github.com/RobotLocomotion/drake/pull/14569">#14569</a>)
     <ul>
-      <li>We offer a C++ alias <code class="highlighter-rouge">drake::geometry::DrakeVisualizerd</code> (i.e., with a
-<code class="highlighter-rouge">d</code> suffix) that matches the current uses of the <code class="highlighter-rouge">double</code> system.</li>
+      <li>We offer a C++ alias <code class="language-plaintext highlighter-rouge">drake::geometry::DrakeVisualizerd</code> (i.e., with a
+<code class="language-plaintext highlighter-rouge">d</code> suffix) that matches the current uses of the <code class="language-plaintext highlighter-rouge">double</code> system.</li>
       <li>Python users do not need to make any changes. The new template
 argument will not disturb pydrake.</li>
       <li>Certain compilers may not be able to infer the template argument (e.g.,
 when referring to static methods).</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">end_effector_teleop_sliders</code> is no longer supported on macOS (<a href="https://github.com/RobotLocomotion/drake/pull/14632">#14632</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">end_effector_teleop_sliders</code> is no longer supported on macOS (<a href="https://github.com/RobotLocomotion/drake/pull/14632">#14632</a>)</li>
 </ul>
 
 <h1 id="changes-since-v0260">Changes since v0.26.0</h1>
@@ -178,7 +178,7 @@ when referring to static methods).</li>
 <p>Fixes</p>
 
 <ul>
-  <li>Promote some ASSERT to DEMAND in <code class="highlighter-rouge">systems/primitives</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14615">#14615</a>)</li>
+  <li>Promote some ASSERT to DEMAND in <code class="language-plaintext highlighter-rouge">systems/primitives</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14615">#14615</a>)</li>
 </ul>
 
 <h2 id="mathematical-program">Mathematical Program</h2>
@@ -221,9 +221,9 @@ when referring to static methods).</li>
 
 <ul>
   <li>Provide a complete end-to-end demonstration, using the stochastic schema mechanisms, of how Monte Carlo scenarios can be used to optimize the parameters for a controller (<a href="https://github.com/RobotLocomotion/drake/pull/14541">#14541</a>)</li>
-  <li>Fix <code class="highlighter-rouge">acrobot</code> Spong controller LCM communication to actually work (<a href="https://github.com/RobotLocomotion/drake/pull/14525">#14525</a>)</li>
-  <li><code class="highlighter-rouge">end_effector_teleop_sliders</code> is no longer supported on macOS (<a href="https://github.com/RobotLocomotion/drake/pull/14632">#14632</a>)</li>
-  <li>Fix output port index for <code class="highlighter-rouge">kuka_simulation</code> example (<a href="https://github.com/RobotLocomotion/drake/pull/14631">#14631</a>)</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">acrobot</code> Spong controller LCM communication to actually work (<a href="https://github.com/RobotLocomotion/drake/pull/14525">#14525</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">end_effector_teleop_sliders</code> is no longer supported on macOS (<a href="https://github.com/RobotLocomotion/drake/pull/14632">#14632</a>)</li>
+  <li>Fix output port index for <code class="language-plaintext highlighter-rouge">kuka_simulation</code> example (<a href="https://github.com/RobotLocomotion/drake/pull/14631">#14631</a>)</li>
 </ul>
 
 <h2 id="miscellaneous-features-and-fixes">Miscellaneous features and fixes</h2>
@@ -232,7 +232,7 @@ when referring to static methods).</li>
 
 <ul>
   <li>Expose PiecewiseQuaternionSlerp’s orientation getters (<a href="https://github.com/RobotLocomotion/drake/pull/14585">#14585</a>)</li>
-  <li>Allow <code class="highlighter-rouge">yaml</code> to operate on non-default MaxRows or MaxCols storage (<a href="https://github.com/RobotLocomotion/drake/pull/14618">#14618</a>)</li>
+  <li>Allow <code class="language-plaintext highlighter-rouge">yaml</code> to operate on non-default MaxRows or MaxCols storage (<a href="https://github.com/RobotLocomotion/drake/pull/14618">#14618</a>)</li>
 </ul>
 
 <!---
@@ -261,7 +261,7 @@ Not installed:
 <p>Newly bound</p>
 
 <ul>
-  <li><code class="highlighter-rouge">pydrake.solvers.mathematicalprogram.MathematicalProgram.NewNonnegativePolynomial</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14627">#14627</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">pydrake.solvers.mathematicalprogram.MathematicalProgram.NewNonnegativePolynomial</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14627">#14627</a>)</li>
 </ul>
 
 <h2 id="build-system-and-dependencies">Build system and dependencies</h2>
@@ -272,7 +272,7 @@ Not installed:
   <li>Add support for macOS Big Sur 11.x (<a href="https://github.com/RobotLocomotion/drake/pull/14632">#14632</a>, <a href="https://github.com/RobotLocomotion/drake/pull/14608">#14608</a>, <a href="https://github.com/RobotLocomotion/drake/pull/14608">#14608</a>, <a href="https://github.com/RobotLocomotion/drake/pull/14608">#14608</a>)</li>
   <li>Upgrade fcl to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/14620">#14620</a>)</li>
   <li>Upgrade voxelized_geometry_tools to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/14600">#14600</a>)</li>
-  <li>Fix <code class="highlighter-rouge">pathutils.bzl</code> globbing vs double-star matching (<a href="https://github.com/RobotLocomotion/drake/pull/14564">#14564</a>)</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">pathutils.bzl</code> globbing vs double-star matching (<a href="https://github.com/RobotLocomotion/drake/pull/14564">#14564</a>)</li>
   <li>Add retry to apt-get/brew update calls and add flag to skip update altogether (<a href="https://github.com/RobotLocomotion/drake/pull/14492">#14492</a>)</li>
   <li>Add lint check for unguarded OpenMP uses (<a href="https://github.com/RobotLocomotion/drake/pull/14472">#14472</a>)</li>
   <li>Distinguish test_rule_tags vs tags (<a href="https://github.com/RobotLocomotion/drake/pull/14581">#14581</a>)</li>
@@ -294,7 +294,7 @@ Not installed:
 <p>LCM messages</p>
 
 <ul>
-  <li><code class="highlighter-rouge">lcmtypes/lcmt_robot_state.lcm</code> is no longer deprecated (<a href="https://github.com/RobotLocomotion/drake/pull/14539">#14539</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">lcmtypes/lcmt_robot_state.lcm</code> is no longer deprecated (<a href="https://github.com/RobotLocomotion/drake/pull/14539">#14539</a>)</li>
 </ul>
 
 <h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
@@ -302,15 +302,15 @@ Not installed:
 <p>C++</p>
 
 <ul>
-  <li><code class="highlighter-rouge">drake::multibody::MultibodyPlant::CalcCenterOfMassPosition -&gt; CalcCenterOfMassPositionInWorld</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14538">#14538</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">drake::multibody::MultibodyPlant::CalcCenterOfMassPosition -&gt; CalcCenterOfMassPositionInWorld</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14538">#14538</a>)</li>
 </ul>
 
 <p>Python</p>
 
 <ul>
-  <li><code class="highlighter-rouge">pydrake.multibody.plant.MultibodyPlant.CalcCenterOfMassPosition -&gt; CalcCenterOfMassPositionInWorld</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14538">#14538</a>)</li>
-  <li><code class="highlighter-rouge">pydrake.common.ToleranceType.absolute -&gt; kAbsolute</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14592">#14592</a>)</li>
-  <li><code class="highlighter-rouge">pydrake.common.ToleranceType.relative -&gt; kRelative</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14592">#14592</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">pydrake.multibody.plant.MultibodyPlant.CalcCenterOfMassPosition -&gt; CalcCenterOfMassPositionInWorld</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14538">#14538</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">pydrake.common.ToleranceType.absolute -&gt; kAbsolute</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14592">#14592</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">pydrake.common.ToleranceType.relative -&gt; kRelative</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14592">#14592</a>)</li>
 </ul>
 
 <h2 id="removal-of-deprecated-items">Removal of deprecated items</h2>
@@ -318,15 +318,15 @@ Not installed:
 <p>C++</p>
 
 <ul>
-  <li><code class="highlighter-rouge">systems/sensors/accelerometer_sensor.h</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14607">#14607</a>)</li>
-  <li><code class="highlighter-rouge">systems/sensors/gyroscope_sensor.h</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14607">#14607</a>)</li>
-  <li><code class="highlighter-rouge">drake::multibody::SpatialVector::ScalarType</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14607">#14607</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">systems/sensors/accelerometer_sensor.h</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14607">#14607</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">systems/sensors/gyroscope_sensor.h</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14607">#14607</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">drake::multibody::SpatialVector::ScalarType</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14607">#14607</a>)</li>
 </ul>
 
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.27.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20210216-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20210216-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

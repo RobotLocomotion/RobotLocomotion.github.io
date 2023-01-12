@@ -161,7 +161,7 @@ nor
       <li>Drake’s compiled messages from those repositories are deprecated and will
 no longer be incorporated into our releases after 2021-08-01.</li>
       <li>We have provided compatibility aliases for some of these message at
-<code class="highlighter-rouge">#include &lt;drake/systems/sensors/robotlocomotion_compat.h&gt;</code> but
+<code class="language-plaintext highlighter-rouge">#include &lt;drake/systems/sensors/robotlocomotion_compat.h&gt;</code> but
 the aliasing (especially in pydrake) is incomplete, so this may be a
 breaking change, depending on how your calling code is written.</li>
     </ul>
@@ -171,7 +171,7 @@ breaking change, depending on how your calling code is written.</li>
 to public visibility.  As part of our ongoing website improvements, we are
 reworking those rules, and have marked all of them as private.  Downstream
 software should not depend on Drake’s documentation (the files under
-<code class="highlighter-rouge">drake/doc</code>).</p>
+<code class="language-plaintext highlighter-rouge">drake/doc</code>).</p>
   </li>
 </ul>
 
@@ -379,7 +379,7 @@ software should not depend on Drake’s documentation (the files under
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.29.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20210418-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20210418-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

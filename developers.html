@@ -213,7 +213,7 @@ several hours depending on your machine.</p>
 
   <p>We would like to hear about your success stories if you’ve used Drake in your
 own projects.  Please consider contributing to our <a href="gallery.html">Drake Gallery</a> by editing
-<code class="highlighter-rouge">doc/gallery.rst</code> and submitting a pull request with the update!</p>
+<code class="language-plaintext highlighter-rouge">doc/gallery.rst</code> and submitting a pull request with the update!</p>
 
   <h1 id="licensing">Licensing</h1>
 
@@ -243,13 +243,13 @@ of artifacts distributed with this website.</p>
   <p>The indicated versions for build systems and languages are recorded after
 having been tested on Continuous Integration.</p>
 
-  <p>Due to how the Debian <code class="highlighter-rouge">apt</code> and Homebrew package managers work, you may not
+  <p>Due to how the Debian <code class="language-plaintext highlighter-rouge">apt</code> and Homebrew package managers work, you may not
 have these exact versions on your system when (re)running
-<code class="highlighter-rouge">install_prereqs.sh</code>. In general, later minor versions for more stable
+<code class="language-plaintext highlighter-rouge">install_prereqs.sh</code>. In general, later minor versions for more stable
 packages (e.g. CMake, compilers) should not prove to be too much of an issue.</p>
 
   <p>For less stable packages, such as Bazel, later minor versions may cause
-breakages. If you are on Ubuntu, please rerun <code class="highlighter-rouge">install_prereqs.sh</code> as it can
+breakages. If you are on Ubuntu, please rerun <code class="language-plaintext highlighter-rouge">install_prereqs.sh</code> as it can
 downgrade Bazel. If on Mac, there is no easy mechanism to downgrade with
 Homebrew; however, we generally try to stay on top of Bazel versions.</p>
 
@@ -283,7 +283,7 @@ they need to review your change effectively. If a reviewer asks you for more
 information, that is a sign you should add more documentation to your PR.</p>
 
   <p>A PR generally <em>should not</em> include more than 750 added or changed lines (the
-green <code class="highlighter-rouge">+###</code> number as reported by github), and <em>must not</em> include more than
+green <code class="language-plaintext highlighter-rouge">+###</code> number as reported by github), and <em>must not</em> include more than
 1500 lines, with the following exemptions:</p>
   <ul>
     <li>Data files do not count towards the line limit.</li>
@@ -295,25 +295,25 @@ do not count towards the line limit.</li>
 (listed below).</li>
   </ul>
 
-  <p>The utility <code class="highlighter-rouge">tools/prstat</code> will report the total added or changed
+  <p>The utility <code class="language-plaintext highlighter-rouge">tools/prstat</code> will report the total added or changed
 lines, excluding files that are easily identified to meet the exemptions above.</p>
 
   <p>We use <a href="https://reviewable.io/">https://reviewable.io</a> for code reviews. You can sign in for free with
 your GitHub identity. Before your first code review, please take a look at
 <a href="/reviewable.html">Tips for Participating In Drake Code Reviews using reviewable.io</a>.</p>
 
-  <p>If you have an expected pace for your review, please add a <code class="highlighter-rouge">priority</code> label
+  <p>If you have an expected pace for your review, please add a <code class="language-plaintext highlighter-rouge">priority</code> label
 (which have different meanings for PRs and
 <a href="/issues.html#priority">for issues</a>). The response expectations, for both the
 author and reviewer:</p>
 
   <ul>
-    <li><code class="highlighter-rouge">priority: emergency</code> - Very quick response time, nominally reserved for
+    <li><code class="language-plaintext highlighter-rouge">priority: emergency</code> - Very quick response time, nominally reserved for
 build cop.</li>
-    <li><code class="highlighter-rouge">priority: high</code> - Some urgency, quick response time.</li>
-    <li><code class="highlighter-rouge">priority: medium</code> - (Default) Normal response time.</li>
-    <li><code class="highlighter-rouge">priority: low</code> - No rush.</li>
-    <li><code class="highlighter-rouge">priority: backlog</code> - Give priority to all other PRs on your plate.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: high</code> - Some urgency, quick response time.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: medium</code> - (Default) Normal response time.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: low</code> - No rush.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: backlog</code> - Give priority to all other PRs on your plate.</li>
   </ul>
 
   <p>If you are an external contributor, you will need to request that a priority be
@@ -389,7 +389,7 @@ new link on the GitHub issue, and close the issue.</p>
 
   <h2 id="handling-user-stackoverflow-questions">Handling User StackOverflow Questions</h2>
 
-  <p>Please subscribe to the <code class="highlighter-rouge">drake</code> tag by following these instructions:</p>
+  <p>Please subscribe to the <code class="language-plaintext highlighter-rouge">drake</code> tag by following these instructions:</p>
 
   <ul>
     <li><a href="/stackoverflow_notifications.html">How to get notifications for drake-tagged Stackoverflow questions</a></li>
@@ -397,7 +397,7 @@ new link on the GitHub issue, and close the issue.</p>
 
   <p>Please also monitor for <a href="https://stackoverflow.com/unanswered/tagged/drake?tab=noanswers">unanswered StackOverflow posts</a>
 once per day. If there are unanswered questions that you are unsure of the
-answer, consider posting on the Slack <code class="highlighter-rouge">#onramp</code> channel to see if someone
+answer, consider posting on the Slack <code class="language-plaintext highlighter-rouge">#onramp</code> channel to see if someone
 can look into the question.</p>
 
   <h1 id="continuous-integration-notes">Continuous Integration Notes</h1>

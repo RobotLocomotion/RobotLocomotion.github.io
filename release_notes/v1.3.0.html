@@ -154,7 +154,7 @@ or unsupported input (<a href="https://github.com/RobotLocomotion/drake/pull/169
     <ul>
       <li>In SDFormat, some syntax problems which used to warn now issue errors.</li>
       <li>In addition, parser warnings can be optionally promoted to errors; see
-<code class="highlighter-rouge">Parser::SetStrictParsing</code>.</li>
+<code class="language-plaintext highlighter-rouge">Parser::SetStrictParsing</code>.</li>
     </ul>
   </li>
   <li>Drake’s parsing for some mathematical programs is now much faster, including
@@ -226,12 +226,12 @@ on API changes.</p>
   </li>
   <li>Geometry
     <ul>
-      <li>Exclude edges with <code class="highlighter-rouge">phi=0</code> constraint from optimization (<a href="https://github.com/RobotLocomotion/drake/pull/17046">#17046</a>)</li>
+      <li>Exclude edges with <code class="language-plaintext highlighter-rouge">phi=0</code> constraint from optimization (<a href="https://github.com/RobotLocomotion/drake/pull/17046">#17046</a>)</li>
       <li>Add PontryaginDifference to HPolyhedron (<a href="https://github.com/RobotLocomotion/drake/pull/17056">#17056</a>)</li>
-      <li>Make <code class="highlighter-rouge">IrisOptions.enable_ibex = false</code> by default (<a href="https://github.com/RobotLocomotion/drake/pull/17198">#17198</a>)</li>
-      <li>Clean up vertex labels formatting in <code class="highlighter-rouge">GraphOfConvexSets::GetGraphvizString</code> and add missing
-default for <code class="highlighter-rouge">result</code> in the python binding (<a href="https://github.com/RobotLocomotion/drake/pull/17190">#17190</a>)</li>
-      <li>Fix GetSolution for <code class="highlighter-rouge">x_v</code> in GraphOfConvexSets (<a href="https://github.com/RobotLocomotion/drake/pull/17199">#17199</a>)</li>
+      <li>Make <code class="language-plaintext highlighter-rouge">IrisOptions.enable_ibex = false</code> by default (<a href="https://github.com/RobotLocomotion/drake/pull/17198">#17198</a>)</li>
+      <li>Clean up vertex labels formatting in <code class="language-plaintext highlighter-rouge">GraphOfConvexSets::GetGraphvizString</code> and add missing
+default for <code class="language-plaintext highlighter-rouge">result</code> in the python binding (<a href="https://github.com/RobotLocomotion/drake/pull/17190">#17190</a>)</li>
+      <li>Fix GetSolution for <code class="language-plaintext highlighter-rouge">x_v</code> in GraphOfConvexSets (<a href="https://github.com/RobotLocomotion/drake/pull/17199">#17199</a>)</li>
     </ul>
   </li>
 </ul>
@@ -246,9 +246,9 @@ default for <code class="highlighter-rouge">result</code> in the python binding 
   <li>Add hydroelastic force and moment vector visualization (<a href="https://github.com/RobotLocomotion/drake/pull/16913">#16913</a>)</li>
   <li>Add API to set strict parsing (<a href="https://github.com/RobotLocomotion/drake/pull/17017">#17017</a>)</li>
   <li>Add APIs to set the default joint damping (<a href="https://github.com/RobotLocomotion/drake/pull/17151">#17151</a>)</li>
-  <li>Add <code class="highlighter-rouge">Joint</code> API to retrieve viscous damping (<a href="https://github.com/RobotLocomotion/drake/pull/17019">#17019</a>)</li>
-  <li>Implement a <code class="highlighter-rouge">Wing</code> class to provide basic aerodynamics (<a href="https://github.com/RobotLocomotion/drake/pull/17027">#17027</a>, <a href="https://github.com/RobotLocomotion/drake/pull/17127">#17127</a>)</li>
-  <li>Move <code class="highlighter-rouge">DifferentiableNorm</code> function to <code class="highlighter-rouge">math</code> (<a href="https://github.com/RobotLocomotion/drake/pull/17127">#17127</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">Joint</code> API to retrieve viscous damping (<a href="https://github.com/RobotLocomotion/drake/pull/17019">#17019</a>)</li>
+  <li>Implement a <code class="language-plaintext highlighter-rouge">Wing</code> class to provide basic aerodynamics (<a href="https://github.com/RobotLocomotion/drake/pull/17027">#17027</a>, <a href="https://github.com/RobotLocomotion/drake/pull/17127">#17127</a>)</li>
+  <li>Move <code class="language-plaintext highlighter-rouge">DifferentiableNorm</code> function to <code class="language-plaintext highlighter-rouge">math</code> (<a href="https://github.com/RobotLocomotion/drake/pull/17127">#17127</a>)</li>
   <li>Create methods for relative spatial acceleration to parallel spatial velocity (<a href="https://github.com/RobotLocomotion/drake/pull/17117">#17117</a>)</li>
 </ul>
 
@@ -302,7 +302,7 @@ default for <code class="highlighter-rouge">result</code> in the python binding 
 <p>Fixes</p>
 
 <ul>
-  <li>Add missing <code class="highlighter-rouge">py::return_value_policy::copy</code> on various bound attributes (<a href="https://github.com/RobotLocomotion/drake/pull/17126">#17126</a>)</li>
+  <li>Add missing <code class="language-plaintext highlighter-rouge">py::return_value_policy::copy</code> on various bound attributes (<a href="https://github.com/RobotLocomotion/drake/pull/17126">#17126</a>)</li>
   <li>Changing Python logging level also changes C++ level (<a href="https://github.com/RobotLocomotion/drake/pull/17069">#17069</a>)</li>
   <li>When using nicely formatted logging, emit “TRACE” not “Level 5” (<a href="https://github.com/RobotLocomotion/drake/pull/17069">#17069</a>)</li>
 </ul>
@@ -383,7 +383,7 @@ default for <code class="highlighter-rouge">result</code> in the python binding 
   <li>drake::yaml::YamlWriteArchive (<a href="https://github.com/RobotLocomotion/drake/pull/17084">#17084</a>)</li>
   <li>drake::symbolic::Polynomial::EqualToAfterExpansion (<a href="https://github.com/RobotLocomotion/drake/pull/17202">#17202</a>)
     <ul>
-      <li>Use <code class="highlighter-rouge">my_polynomial.Expand().EqualTo(other_polynomial.Expand())</code> instead.</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">my_polynomial.Expand().EqualTo(other_polynomial.Expand())</code> instead.</li>
     </ul>
   </li>
 </ul>
@@ -404,7 +404,7 @@ default for <code class="highlighter-rouge">result</code> in the python binding 
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.3.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20220517-{focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20220517-{focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

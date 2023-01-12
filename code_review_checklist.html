@@ -164,17 +164,17 @@ of migrating all call sites immediately.
 <a href="https://drake.mit.edu/doxygen_cxx/drake__deprecated_8h.html">DRAKE_DEPRECATED</a> for C++
 and <a href="https://drake.mit.edu/doxygen_cxx/group__python__bindings.html#PydrakeDeprecation">pydrake deprecation</a> for Python.</li>
           <li>To search for previous examples of C++ deprecations, please use a
-<code class="highlighter-rouge">git log</code> search such as:
-            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd drake
+<code class="language-plaintext highlighter-rouge">git log</code> search such as:
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd drake
 $ git log -S DRAKE_DEPRECATED
 </code></pre></div>            </div>
             <p>To constrain the search to effects in Python bindings, you can also use a
 search such as:</p>
-            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd drake
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd drake
 $ git log -S Wdeprecated-declarations -- ./bindings/
 </code></pre></div>            </div>
             <p>These searches will provide you with commits that you should then inspect
-using your favorite git UI (i.e. GitHub, <code class="highlighter-rouge">gitk</code>, etc.).</p>
+using your favorite git UI (i.e. GitHub, <code class="language-plaintext highlighter-rouge">gitk</code>, etc.).</p>
           </li>
         </ul>
       </li>
@@ -203,28 +203,28 @@ discover your typos.</li>
 <h1 id="are-your-classes-methods-arguments-and-fields-correctly-named">Are your classes, methods, arguments, and fields correctly named?</h1>
 
 <ul>
-  <li>Classes are <code class="highlighter-rouge">UppercaseStyle</code> and nouns or noun-phrases.</li>
-  <li>Methods are <code class="highlighter-rouge">UppercaseStyle</code> and verbs or verb-phrases, except for
+  <li>Classes are <code class="language-plaintext highlighter-rouge">UppercaseStyle</code> and nouns or noun-phrases.</li>
+  <li>Methods are <code class="language-plaintext highlighter-rouge">UppercaseStyle</code> and verbs or verb-phrases, except for
 trivial getters and setters.</li>
-  <li>Inexpensive or trivial methods are <code class="highlighter-rouge">lowercase_style</code> verb-phrases.</li>
-  <li>Arguments are <code class="highlighter-rouge">lowercase_style</code> and nouns, and are single-letter only
+  <li>Inexpensive or trivial methods are <code class="language-plaintext highlighter-rouge">lowercase_style</code> verb-phrases.</li>
+  <li>Arguments are <code class="language-plaintext highlighter-rouge">lowercase_style</code> and nouns, and are single-letter only
 when they have a clear and documented meaning.  (Yes, this includes
-single greek letters!  A <code class="highlighter-rouge">theta</code> argument must still be clearly
+single greek letters!  A <code class="language-plaintext highlighter-rouge">theta</code> argument must still be clearly
 documented, even though it’s longer than one letter.)</li>
-  <li>Member fields are <code class="highlighter-rouge">lowercase_style_with_trailing_underscore_</code>.</li>
+  <li>Member fields are <code class="language-plaintext highlighter-rouge">lowercase_style_with_trailing_underscore_</code>.</li>
 </ul>
 
 <h1 id="are-you-using-pointers-well">Are you using pointers well?</h1>
 
 <ul>
-  <li><code class="highlighter-rouge">shared_ptr&lt;&gt;</code> usually means you haven’t thought through
+  <li><code class="language-plaintext highlighter-rouge">shared_ptr&lt;&gt;</code> usually means you haven’t thought through
 ownerships and lifespans.</li>
-  <li><code class="highlighter-rouge">unique_ptr&lt;&gt;</code> and const reference should cover 95% of all your
+  <li><code class="language-plaintext highlighter-rouge">unique_ptr&lt;&gt;</code> and const reference should cover 95% of all your
 use cases.</li>
   <li>Bare pointers are a common source of mistakes; if you see one,
 consider if it is what you want (e.g., this is a mutable
 pass-by-reference) and if so ensure that any nontrivial lifetime
-guarantee is documented and you checked for <code class="highlighter-rouge">nullptr</code>.</li>
+guarantee is documented and you checked for <code class="language-plaintext highlighter-rouge">nullptr</code>.</li>
 </ul>
 
 <h1 id="did-you-document-your-api--did-you-comment-your-complexity">Did you document your API?  Did you comment your complexity?</h1>
@@ -235,9 +235,9 @@ comment.</li>
   <li>If you are uncertain of your formatting, consider
 <a href="documentation_instructions.html">generating the Doxygen</a>
 and checking how it looks in a browser.</li>
-  <li>Only use Doxygen comments (<code class="highlighter-rouge">///</code> or <code class="highlighter-rouge">/** */</code>) on published APIs (public
+  <li>Only use Doxygen comments (<code class="language-plaintext highlighter-rouge">///</code> or <code class="language-plaintext highlighter-rouge">/** */</code>) on published APIs (public
 or protected classes and methods).  Code with private access or declared in
-<code class="highlighter-rouge">.cc</code> files should <em>not</em> use the Doxygen format.</li>
+<code class="language-plaintext highlighter-rouge">.cc</code> files should <em>not</em> use the Doxygen format.</li>
   <li>Most private methods with multiple callers should have a
 documentation comment (but not phrased as a Doxygen comment).</li>
   <li>Anything in your code that confuses you or makes you read it twice
@@ -253,13 +253,13 @@ it, punctuate it, and re-read it to make sure it parses!</li>
 run it?</li>
 </ul>
 
-<h1 id="did-you-use-const-where-you-could">Did you use <code class="highlighter-rouge">const</code> where you could?</h1>
+<h1 id="did-you-use-const-where-you-could">Did you use <code class="language-plaintext highlighter-rouge">const</code> where you could?</h1>
 
 <ul>
   <li>A large majority of arguments and locals and a significant fraction
-of methods and fields can be made <code class="highlighter-rouge">const</code>.  This improves
+of methods and fields can be made <code class="language-plaintext highlighter-rouge">const</code>.  This improves
 compile-time error checking.</li>
-  <li>Do all “plain old data” member fields have <code class="highlighter-rouge">{}</code>?
+  <li>Do all “plain old data” member fields have <code class="language-plaintext highlighter-rouge">{}</code>?
     <ul>
       <li>See <a href="https://drake.mit.edu/styleguide/cppguide.html#Variable_and_Array_Initialization">our style guide</a>
 citing “in-class member initialization.”</li>
@@ -270,11 +270,11 @@ citing “in-class member initialization.”</li>
 <h1 id="did-you-use-a-c-style-cast-by-accident">Did you use a C-style cast by accident?</h1>
 
 <ul>
-  <li>You usually want <code class="highlighter-rouge">static_cast&lt;To&gt;(from)</code>.</li>
-  <li>To cast to superclasses or subclasses, <code class="highlighter-rouge">dynamic_cast&lt;To&gt;(from)</code>;
-however if <code class="highlighter-rouge">To</code> is a pointer type then you must always check for
-<code class="highlighter-rouge">nullptr</code>.</li>
-  <li>You very, very rarely want <code class="highlighter-rouge">reinterpret_cast</code>.  Use with great
+  <li>You usually want <code class="language-plaintext highlighter-rouge">static_cast&lt;To&gt;(from)</code>.</li>
+  <li>To cast to superclasses or subclasses, <code class="language-plaintext highlighter-rouge">dynamic_cast&lt;To&gt;(from)</code>;
+however if <code class="language-plaintext highlighter-rouge">To</code> is a pointer type then you must always check for
+<code class="language-plaintext highlighter-rouge">nullptr</code>.</li>
+  <li>You very, very rarely want <code class="language-plaintext highlighter-rouge">reinterpret_cast</code>.  Use with great
 caution.</li>
 </ul>
 
@@ -288,7 +288,7 @@ changes, be sure to opt-in to a pre-merge macOS build.</p>
 flavor, for example:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">@drake-jenkins-bot mac-x86-monterey-clang-bazel-experimental-everything-release please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-x86-monterey-clang-bazel-experimental-everything-release please</code></li>
 </ul>
 
 <h1 id="have-you-run-linting-tools">Have you run linting tools?</h1>
@@ -300,8 +300,8 @@ flavor, for example:</p>
 <h1 id="is-your-code-deterministic">Is your code deterministic?</h1>
 
 <ul>
-  <li>Do not use <code class="highlighter-rouge">Eigen::Random</code>, <code class="highlighter-rouge">libc rand</code>, or anything like it.
-You can use <code class="highlighter-rouge">libstdc++</code>’s new random generators, as long as you
+  <li>Do not use <code class="language-plaintext highlighter-rouge">Eigen::Random</code>, <code class="language-plaintext highlighter-rouge">libc rand</code>, or anything like it.
+You can use <code class="language-plaintext highlighter-rouge">libstdc++</code>’s new random generators, as long as you
 call them using a local instance (no global state), and seed it with
 a hard-coded value for repeatability.  This includes test code.</li>
 </ul>

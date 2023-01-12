@@ -146,7 +146,7 @@ analysis.
 <ul>
   <li>Drake’s binary release now incorporate the MOSEK<a href="/tm.html">™</a> solver (<a href="https://github.com/RobotLocomotion/drake/pull/16927">#16927</a>).
     <ul>
-      <li>Users must supply their own <code class="highlighter-rouge">MOSEKLM_LICENSE_FILE</code> license environment
+      <li>Users must supply their own <code class="language-plaintext highlighter-rouge">MOSEKLM_LICENSE_FILE</code> license environment
 in order to use the solver, but no longer need to build Drake from source
 to do so.</li>
     </ul>
@@ -157,7 +157,7 @@ to do so.</li>
     <ul>
       <li>Instead, Drake now offers a meshcat display server named
 <a href="https://drake.mit.edu/pydrake/pydrake.visualization.meldis.html">meldis</a>
-that speaks the same protocol as <code class="highlighter-rouge">drake_visualizer</code> (<a href="https://github.com/RobotLocomotion/drake/pull/16263">#16263</a>).</li>
+that speaks the same protocol as <code class="language-plaintext highlighter-rouge">drake_visualizer</code> (<a href="https://github.com/RobotLocomotion/drake/pull/16263">#16263</a>).</li>
     </ul>
   </li>
 </ul>
@@ -168,7 +168,7 @@ that speaks the same protocol as <code class="highlighter-rouge">drake_visualize
   <li>None</li>
 </ul>
 
-<p>Note that <code class="highlighter-rouge">drake::trajectories::PiecewiseQuaternionSlerp::value()</code> now returns
+<p>Note that <code class="language-plaintext highlighter-rouge">drake::trajectories::PiecewiseQuaternionSlerp::value()</code> now returns
 a quaternion, instead of a rotation matrix (<a href="https://github.com/RobotLocomotion/drake/pull/16914">#16914</a>). This is not a
 breaking change (because the documentation promised a quaternion), but we note
 it here in case anyone was depending on the prior behavior.</p>
@@ -305,8 +305,8 @@ on API changes.</p>
   <li>drake::manipulation::kinova_jaco::JacoStatusReceiver::get_torque_output_port (<a href="https://github.com/RobotLocomotion/drake/pull/16863">#16863</a>)</li>
   <li>drake::manipulation::kinova_jaco::JacoStatusSender::get_state_input_port (<a href="https://github.com/RobotLocomotion/drake/pull/16863">#16863</a>)</li>
   <li>drake::solvers::LinearConstraint::A() (<a href="https://github.com/RobotLocomotion/drake/pull/16976">#16976</a>)</li>
-  <li>pydrake.multibody.math.SpatialForce.Shift named kwarg <code class="highlighter-rouge">p_BqBq_E</code> is now named <code class="highlighter-rouge">offset</code> (<a href="https://github.com/RobotLocomotion/drake/pull/16851">#16851</a>)</li>
-  <li>pydrake.multibody.math.SpatialMomentum.Shift named kwarg <code class="highlighter-rouge">p_BqBq_E</code> is now named <code class="highlighter-rouge">offset</code>  (<a href="https://github.com/RobotLocomotion/drake/pull/16844">#16844</a>)</li>
+  <li>pydrake.multibody.math.SpatialForce.Shift named kwarg <code class="language-plaintext highlighter-rouge">p_BqBq_E</code> is now named <code class="language-plaintext highlighter-rouge">offset</code> (<a href="https://github.com/RobotLocomotion/drake/pull/16851">#16851</a>)</li>
+  <li>pydrake.multibody.math.SpatialMomentum.Shift named kwarg <code class="language-plaintext highlighter-rouge">p_BqBq_E</code> is now named <code class="language-plaintext highlighter-rouge">offset</code>  (<a href="https://github.com/RobotLocomotion/drake/pull/16844">#16844</a>)</li>
   <li>The superflous install_prereqs option –with-kcov (<a href="https://github.com/RobotLocomotion/drake/pull/16938">#16938</a>)</li>
   <li>The @pygame_py repository (<a href="https://github.com/RobotLocomotion/drake/pull/16959">#16959</a>)</li>
 </ul>
@@ -322,7 +322,7 @@ on API changes.</p>
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.2.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20220420-{focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20220420-{focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

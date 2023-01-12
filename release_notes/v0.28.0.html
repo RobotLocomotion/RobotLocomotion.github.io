@@ -163,9 +163,9 @@ how we can keep making it even better in the future!</p>
       <li>With this change they will no longer miss those time steps, which may appear to the user as a performance regression or small behaviour change.</li>
     </ul>
   </li>
-  <li>The upgrade to libsdformat 10.3.0  (<a href="https://github.com/RobotLocomotion/drake/pull/14705">#14705</a>) means that malformed <code class="highlighter-rouge">&lt;pose/&gt;</code> elements will now throw an error rather than having erroneous values replaced with zero (e.g. you only specify 5 floats instead of the required 6, or you use <code class="highlighter-rouge">${pi / 4}</code> which is not valid in raw SDFormat).
+  <li>The upgrade to libsdformat 10.3.0  (<a href="https://github.com/RobotLocomotion/drake/pull/14705">#14705</a>) means that malformed <code class="language-plaintext highlighter-rouge">&lt;pose/&gt;</code> elements will now throw an error rather than having erroneous values replaced with zero (e.g. you only specify 5 floats instead of the required 6, or you use <code class="language-plaintext highlighter-rouge">${pi / 4}</code> which is not valid in raw SDFormat).
     <ul>
-      <li>You will need to ensure that any malformed <code class="highlighter-rouge">&lt;pose/&gt;</code> elements are fixed.</li>
+      <li>You will need to ensure that any malformed <code class="language-plaintext highlighter-rouge">&lt;pose/&gt;</code> elements are fixed.</li>
     </ul>
   </li>
 </ul>
@@ -222,7 +222,7 @@ how we can keep making it even better in the future!</p>
 <ul>
   <li>Give better error when a joint has multiple mobilizers (typically caused by a user typo when creating the joint) (<a href="https://github.com/RobotLocomotion/drake/pull/14655">#14655</a>)</li>
   <li>Give better error for unconnected input ports (<a href="https://github.com/RobotLocomotion/drake/pull/14773">#14773</a>)</li>
-  <li>All <code class="highlighter-rouge">systems::multibody::MultibodyPlant</code> APIs that previously took <code class="highlighter-rouge">const std::string&amp;</code> now use <code class="highlighter-rouge">std::string_view</code> instead.  This does not require any changes to callers, as the types convert transparently. (<a href="https://github.com/RobotLocomotion/drake/pull/14719">#14719</a>)</li>
+  <li>All <code class="language-plaintext highlighter-rouge">systems::multibody::MultibodyPlant</code> APIs that previously took <code class="language-plaintext highlighter-rouge">const std::string&amp;</code> now use <code class="language-plaintext highlighter-rouge">std::string_view</code> instead.  This does not require any changes to callers, as the types convert transparently. (<a href="https://github.com/RobotLocomotion/drake/pull/14719">#14719</a>)</li>
 </ul>
 
 <h2 id="tutorials-and-examples">Tutorials and examples</h2>
@@ -231,8 +231,8 @@ how we can keep making it even better in the future!</p>
 
 <ul>
   <li>Add missing tutorials to build file (<a href="https://github.com/RobotLocomotion/drake/pull/14722">#14722</a>)</li>
-  <li>Add LCM period argument to <code class="highlighter-rouge">AllegroCommandReceiver</code>’s constructor (<a href="https://github.com/RobotLocomotion/drake/pull/14732">#14732</a>)</li>
-  <li>Do not use <code class="highlighter-rouge">yaml.CLoader</code> in acrobot example (<a href="https://github.com/RobotLocomotion/drake/pull/14750">#14750</a>)</li>
+  <li>Add LCM period argument to <code class="language-plaintext highlighter-rouge">AllegroCommandReceiver</code>’s constructor (<a href="https://github.com/RobotLocomotion/drake/pull/14732">#14732</a>)</li>
+  <li>Do not use <code class="language-plaintext highlighter-rouge">yaml.CLoader</code> in acrobot example (<a href="https://github.com/RobotLocomotion/drake/pull/14750">#14750</a>)</li>
 </ul>
 
 <h2 id="miscellaneous-features-and-fixes">Miscellaneous features and fixes</h2>
@@ -241,7 +241,7 @@ how we can keep making it even better in the future!</p>
 
 <ul>
   <li>Fix C++20 compatibility (<a href="https://github.com/RobotLocomotion/drake/pull/14648">#14648</a>)</li>
-  <li>Improve <code class="highlighter-rouge">AbstractValue</code> error message suggestions (<a href="https://github.com/RobotLocomotion/drake/pull/14709">#14709</a>)</li>
+  <li>Improve <code class="language-plaintext highlighter-rouge">AbstractValue</code> error message suggestions (<a href="https://github.com/RobotLocomotion/drake/pull/14709">#14709</a>)</li>
 </ul>
 
 <h2 id="pydrake-bindings">pydrake bindings</h2>
@@ -257,7 +257,7 @@ how we can keep making it even better in the future!</p>
 <p>Fixes</p>
 
 <ul>
-  <li>Fix the jupyter <code class="highlighter-rouge">runAll</code> mechanism when using <code class="highlighter-rouge">process_ipywidget_events</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14742">#14742</a>)</li>
+  <li>Fix the jupyter <code class="language-plaintext highlighter-rouge">runAll</code> mechanism when using <code class="language-plaintext highlighter-rouge">process_ipywidget_events</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14742">#14742</a>)</li>
 </ul>
 
 <p>Newly bound</p>
@@ -272,7 +272,7 @@ how we can keep making it even better in the future!</p>
 
 <ul>
   <li>Switch to Python 3.9 on macOS (<a href="https://github.com/RobotLocomotion/drake/pull/14605">#14605</a>)</li>
-  <li>Allow users to build object code using <code class="highlighter-rouge">-std=c++20</code> mode without angering libclang (<a href="https://github.com/RobotLocomotion/drake/pull/14669">#14669</a>)</li>
+  <li>Allow users to build object code using <code class="language-plaintext highlighter-rouge">-std=c++20</code> mode without angering libclang (<a href="https://github.com/RobotLocomotion/drake/pull/14669">#14669</a>)</li>
   <li>Use correct suffix for Python C extensions (<a href="https://github.com/RobotLocomotion/drake/pull/14730">#14730</a>)</li>
 </ul>
 
@@ -298,7 +298,7 @@ how we can keep making it even better in the future!</p>
 <h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
 
 <ul>
-  <li>The <code class="highlighter-rouge">@tinyxml</code> external is being removed from Drake on or after 2021-07-01.  Downstream projects should add it to their own WORKSPACE if needed. (<a href="https://github.com/RobotLocomotion/drake/pull/14705">#14705</a>)</li>
+  <li>The <code class="language-plaintext highlighter-rouge">@tinyxml</code> external is being removed from Drake on or after 2021-07-01.  Downstream projects should add it to their own WORKSPACE if needed. (<a href="https://github.com/RobotLocomotion/drake/pull/14705">#14705</a>)</li>
 </ul>
 
 <h2 id="removal-of-deprecated-items">Removal of deprecated items</h2>
@@ -310,7 +310,7 @@ how we can keep making it even better in the future!</p>
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.28.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20210315-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20210315-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

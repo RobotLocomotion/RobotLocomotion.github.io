@@ -150,7 +150,7 @@ analysis.
 <h1 id="breaking-changes-since-v1100">Breaking changes since v1.10.0</h1>
 
 <ul>
-  <li>A QuaternionFloatingJoint is added for each free body. MultibodyPlant::num_joints() will change in all existing plants that had previously declared at least one free body. <code class="highlighter-rouge">is_floating</code> is explicitly declared to mean: is outboard to a 6-dof joint AND the parent body of the joint is world. (<a href="https://github.com/RobotLocomotion/drake/pull/18390">#18390</a>)
+  <li>A QuaternionFloatingJoint is added for each free body. MultibodyPlant::num_joints() will change in all existing plants that had previously declared at least one free body. <code class="language-plaintext highlighter-rouge">is_floating</code> is explicitly declared to mean: is outboard to a 6-dof joint AND the parent body of the joint is world. (<a href="https://github.com/RobotLocomotion/drake/pull/18390">#18390</a>)
     <ul>
       <li>If your code loops through all joints in the plant, you may need to update your code to explicitly check if the child of a joint is floating and ignore those joints (if they break your current analysis).</li>
       <li>Free body APIs that MultibodyPlant provides (SetFreeBodyPose(), SetFreeBodySpatialVelocity(), etc.) still exist and are equivalent alternatives to the corresponding QuaternionFloatingJoint APIs that affect a given body. If you wrote code that had separate logic for handling dofs corresponding to bodies with explicitly created joints using Joint APIs and dofs corresponding to floating bodies using plant’s free body API, you might be doing some duplicate work.</li>
@@ -158,12 +158,12 @@ analysis.
   </li>
   <li>Allow for torque-only mode for KUKA IIWA (<a href="https://github.com/RobotLocomotion/drake/pull/18295">#18295</a>)
     <ul>
-      <li>The contract for <code class="highlighter-rouge">lcmt_iiwa_command</code> has changed. It can now have zero-size positions when its control mode does not have positions enabled.</li>
-      <li>BuildIiwaControl and BuildSimplifiedIiwaControl no longer accept <code class="highlighter-rouge">bool enable_feedforward_torque</code>, but instead accept <code class="highlighter-rouge">IiwaControlMode control_mode</code>.</li>
-      <li>IiwaControlPorts::<code class="highlighter-rouge">commanded_feedforward_torque</code> is now renamed to <code class="highlighter-rouge">IiwaControlPorts::commanded_torque</code>.</li>
+      <li>The contract for <code class="language-plaintext highlighter-rouge">lcmt_iiwa_command</code> has changed. It can now have zero-size positions when its control mode does not have positions enabled.</li>
+      <li>BuildIiwaControl and BuildSimplifiedIiwaControl no longer accept <code class="language-plaintext highlighter-rouge">bool enable_feedforward_torque</code>, but instead accept <code class="language-plaintext highlighter-rouge">IiwaControlMode control_mode</code>.</li>
+      <li>IiwaControlPorts::<code class="language-plaintext highlighter-rouge">commanded_feedforward_torque</code> is now renamed to <code class="language-plaintext highlighter-rouge">IiwaControlPorts::commanded_torque</code>.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">optitrack</code>’s LCM type is changed. Existing LCM logs will not decode using the new definitions. However, the changes to the existing types were only to add new fields, the existing fields have no behavioral changes so users who don’t care about the additional data shouldn’t have to change any code. (<a href="https://github.com/RobotLocomotion/drake/pull/18330">#18330</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">optitrack</code>’s LCM type is changed. Existing LCM logs will not decode using the new definitions. However, the changes to the existing types were only to add new fields, the existing fields have no behavioral changes so users who don’t care about the additional data shouldn’t have to change any code. (<a href="https://github.com/RobotLocomotion/drake/pull/18330">#18330</a>)</li>
 </ul>
 
 <p>Refer to our <a href="/stable.html">Drake Stability Guidelines</a> for our policy
@@ -219,7 +219,7 @@ on API changes.</p>
 
 <ul>
   <li>Add a new 6-dof joint type: QuaternionFloatingJoint (<a href="https://github.com/RobotLocomotion/drake/pull/18279">#18279</a>)</li>
-  <li>Add SDFormat support for weld-type <code class="highlighter-rouge">//world/joint</code> (<a href="https://github.com/RobotLocomotion/drake/pull/18322">#18322</a>)</li>
+  <li>Add SDFormat support for weld-type <code class="language-plaintext highlighter-rouge">//world/joint</code> (<a href="https://github.com/RobotLocomotion/drake/pull/18322">#18322</a>)</li>
   <li>Calculate SpatialInertia from Shape and TriangleSurfaceMesh (<a href="https://github.com/RobotLocomotion/drake/pull/18345">#18345</a>)</li>
   <li>Add a QuaternionFloatingJoint for each free body (<a href="https://github.com/RobotLocomotion/drake/pull/18390">#18390</a>)</li>
   <li>Compute generalized forces resulting from MultibodyForce (<a href="https://github.com/RobotLocomotion/drake/pull/18406">#18406</a>)</li>
@@ -351,10 +351,10 @@ on API changes.</p>
   <li>The @libcurl external (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
   <li>The build target drake::solvers::bilinear_product_util, the function drake::solvers::ReplaceBilinearTerms, and the corresponding file (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
   <li>drake::multibody::WeldJoint::X_PC (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
-  <li>drake::geometry::optimization::GraphOfConvexSets::SolveShortestPath overloads that directly pass the bool <code class="highlighter-rouge">convex_relaxation</code> and <code class="highlighter-rouge">const solvers::SolverInterface*</code> solver parameters (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
-  <li>drake::multibody::FixedOffsetFrame ctor without the <code class="highlighter-rouge">name</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
-  <li>drake::multibody::Frame ctor without the <code class="highlighter-rouge">name</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
-  <li>drake::multibody::RigidBody ctor without the <code class="highlighter-rouge">body_name</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
+  <li>drake::geometry::optimization::GraphOfConvexSets::SolveShortestPath overloads that directly pass the bool <code class="language-plaintext highlighter-rouge">convex_relaxation</code> and <code class="language-plaintext highlighter-rouge">const solvers::SolverInterface*</code> solver parameters (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
+  <li>drake::multibody::FixedOffsetFrame ctor without the <code class="language-plaintext highlighter-rouge">name</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
+  <li>drake::multibody::Frame ctor without the <code class="language-plaintext highlighter-rouge">name</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
+  <li>drake::multibody::RigidBody ctor without the <code class="language-plaintext highlighter-rouge">body_name</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
   <li>pydrake.geometry.PolygonSurfaceMesh.TransformVertices (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
   <li>pydrake.geometry.PolygonSurfaceMesh.ReverseFaceWinding (<a href="https://github.com/RobotLocomotion/drake/pull/18441">#18441</a>)</li>
 </ul>
@@ -362,7 +362,7 @@ on API changes.</p>
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.11.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20221214-{focal|jammy|mac|mac-arm64}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20221214-{focal|jammy|mac|mac-arm64}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

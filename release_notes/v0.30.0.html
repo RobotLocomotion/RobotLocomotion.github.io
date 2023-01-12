@@ -160,7 +160,7 @@ intrinsics, i.e., the Intel’s “Broadwell” microarchitecture or newer
   <li>
     <p>Drake now enforces stricter validation of SDFormat input data, so bad files
 that previously parsed without complaint now generate errors. For example,
-the <code class="highlighter-rouge">&lt;pose&gt;</code> element now has additional syntax checking (<a href="https://github.com/RobotLocomotion/drake/pull/14852">#14852</a>).</p>
+the <code class="language-plaintext highlighter-rouge">&lt;pose&gt;</code> element now has additional syntax checking (<a href="https://github.com/RobotLocomotion/drake/pull/14852">#14852</a>).</p>
   </li>
   <li>
     <p>Several methods on drake::systems::Diagram that were erroneously public have
@@ -176,9 +176,9 @@ have changed. All now require a reference to the owning system as the first
 argument (<a href="https://github.com/RobotLocomotion/drake/pull/14969">#14969</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15032">#15032</a>).</p>
   </li>
   <li>
-    <p>Drake no longer supports SDFormat’s <code class="highlighter-rouge">&lt;include&gt;</code> elements. In the future, this
+    <p>Drake no longer supports SDFormat’s <code class="language-plaintext highlighter-rouge">&lt;include&gt;</code> elements. In the future, this
 feature will be restored with revised semantics. If you encounter issues with
-<code class="highlighter-rouge">&lt;include&gt;</code> elements in the interim, please notify Eric Cousineau.</p>
+<code class="language-plaintext highlighter-rouge">&lt;include&gt;</code> elements in the interim, please notify Eric Cousineau.</p>
   </li>
 </ul>
 
@@ -333,7 +333,7 @@ feature will be restored with revised semantics. If you encounter issues with
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.30.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20210517-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20210517-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

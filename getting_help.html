@@ -158,7 +158,7 @@ to see if your issue has been encountered by someone else before.</p>
 how to apply Drake to specific purposes (e.g., tutorials or a brief example),
 then please
 <a href="https://stackoverflow.com/questions/ask?tags=drake">post a question on StackOverflow</a>
-with the <code class="highlighter-rouge">drake</code> tag.</p>
+with the <code class="language-plaintext highlighter-rouge">drake</code> tag.</p>
 
 <p>If you are actively developing with Drake and may need more active discussions
 than what StackOverflow and GitHub may offer, consider asking for access to the
@@ -172,7 +172,7 @@ them access if you invite them directly via Slack.)</p>
 <h1 id="helpful-information">Helpful Information</h1>
 
 <p>When reporting an issue, please consider providing the following information
-(<code class="highlighter-rouge">helper command in monospace</code>):</p>
+(<code class="language-plaintext highlighter-rouge">helper command in monospace</code>):</p>
 
 <ul>
   <li>Operating system (e.g., Ubuntu Focal 20.04 or macOS Monterey)</li>
@@ -197,13 +197,13 @@ rebuilding from source)</li>
     <ul>
       <li>Build system (Bazel or CMake)
         <ul>
-          <li>Bazel version (<code class="highlighter-rouge">which bazel; bazel version</code>)</li>
-          <li>Bazel C++ compiler (<code class="highlighter-rouge">bazel run @drake//common:print_host_settings</code>)</li>
-          <li>CMake version (<code class="highlighter-rouge">which cmake; cmake --version</code>)</li>
-          <li>CMake C++ compiler (<code class="highlighter-rouge">cmake -LA &lt;path_to_source_dir&gt; | grep 'CMAKE_.*_COMPILER'</code>)</li>
+          <li>Bazel version (<code class="language-plaintext highlighter-rouge">which bazel; bazel version</code>)</li>
+          <li>Bazel C++ compiler (<code class="language-plaintext highlighter-rouge">bazel run @drake//common:print_host_settings</code>)</li>
+          <li>CMake version (<code class="language-plaintext highlighter-rouge">which cmake; cmake --version</code>)</li>
+          <li>CMake C++ compiler (<code class="language-plaintext highlighter-rouge">cmake -LA &lt;path_to_source_dir&gt; | grep 'CMAKE_.*_COMPILER'</code>)</li>
         </ul>
       </li>
-      <li>Git revision (<code class="highlighter-rouge">git rev-parse --short HEAD</code>)</li>
+      <li>Git revision (<code class="language-plaintext highlighter-rouge">git rev-parse --short HEAD</code>)</li>
       <li><a href="/from_source.html">Building Drake from source</a> vs. downstream project
   (like <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/master/drake_bazel_external">drake_bazel_external</a>, <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/master/drake_cmake_external">drake_cmake_external</a>)</li>
     </ul>
@@ -211,7 +211,7 @@ rebuilding from source)</li>
   <li>If using binary release:
     <ul>
       <li>Download URL</li>
-      <li>Contents of <code class="highlighter-rouge">drake/share/doc/drake/VERSION.TXT</code></li>
+      <li>Contents of <code class="language-plaintext highlighter-rouge">drake/share/doc/drake/VERSION.TXT</code></li>
       <li>Building downstream project (<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/master/drake_cmake_installed">drake_cmake_installed</a>)</li>
     </ul>
   </li>
@@ -221,13 +221,13 @@ rebuilding from source)</li>
 re-visiting your URL in a private browsing window. (You can add
 notebooks to public GitHub Gists.)</li>
       <li>
-        <p>The version of <code class="highlighter-rouge">pydrake</code> you are using. To obtain the version
+        <p>The version of <code class="language-plaintext highlighter-rouge">pydrake</code> you are using. To obtain the version
 information it, please add the following code to a cell and execute it:</p>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!cat /opt/drake/share/doc/drake/VERSION.TXT
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!cat /opt/drake/share/doc/drake/VERSION.TXT
 </code></pre></div>        </div>
 
-        <p>The output should look something like <code class="highlighter-rouge">YYYYMMDDHHMMSS &lt;git-sha&gt;</code>.</p>
+        <p>The output should look something like <code class="language-plaintext highlighter-rouge">YYYYMMDDHHMMSS &lt;git-sha&gt;</code>.</p>
       </li>
     </ul>
   </li>

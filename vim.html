@@ -142,7 +142,7 @@ analysis.
 <p>This page contains notes on ways to use <a href="https://www.vim.org/">Vim</a> or
 <a href="https://neovim.io/">Neovim</a> with Drake. Wherever there are differences
 between the two the Neovim value will be given in curly braces after the Vim
-value (e.g. <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">.config/nvim/init.vim</code>}).</p>
+value (e.g. <code class="language-plaintext highlighter-rouge">.vimrc</code> {<code class="language-plaintext highlighter-rouge">.config/nvim/init.vim</code>}).</p>
 
 <h1 id="installing-neovim">Installing Neovim</h1>
 
@@ -153,15 +153,15 @@ Ubuntu users should make sure that they install the Python modules as well.</p>
 
 <h1 id="configuration-files">Configuration Files</h1>
 
-<p><code class="highlighter-rouge">sample_vimrc</code> (<a href="/sample_vimrc">download</a>) provides a sample
+<p><code class="language-plaintext highlighter-rouge">sample_vimrc</code> (<a href="/sample_vimrc">download</a>) provides a sample
 configuration file that sets up some plugins and key-mappings that users may
 find useful for working with Drake. It should work out of the box if copied
-to <code class="highlighter-rouge">~/.vimrc</code> {<code class="highlighter-rouge">~/.config/nvim/init.vim</code>}. Be sure to back up any existing
-<code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>} before copying! Users with existing Vim
+to <code class="language-plaintext highlighter-rouge">~/.vimrc</code> {<code class="language-plaintext highlighter-rouge">~/.config/nvim/init.vim</code>}. Be sure to back up any existing
+<code class="language-plaintext highlighter-rouge">.vimrc</code> {<code class="language-plaintext highlighter-rouge">init.vim</code>} before copying! Users with existing Vim
 configurations are, of course, free to cherry-pick whatever portions of
-<code class="highlighter-rouge">sample_vimrc</code> they’d like.</p>
+<code class="language-plaintext highlighter-rouge">sample_vimrc</code> they’d like.</p>
 
-<p>If you do copy <code class="highlighter-rouge">sample_vimrc</code> to <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>}, your next step
+<p>If you do copy <code class="language-plaintext highlighter-rouge">sample_vimrc</code> to <code class="language-plaintext highlighter-rouge">.vimrc</code> {<code class="language-plaintext highlighter-rouge">init.vim</code>}, your next step
 is to install the plugins that it specifies.</p>
 
 <ol>
@@ -169,14 +169,14 @@ is to install the plugins that it specifies.</p>
 (<a href="https://github.com/junegunn/vim-plug">vim-plug</a>) will be automatically
 installed (to disable this behavior, delete the four lines following the
 comment “Remove these lines …”).</li>
-  <li>In Vim, type <code class="highlighter-rouge">:PlugInstall</code> and press “Enter”. vim-plug will download
+  <li>In Vim, type <code class="language-plaintext highlighter-rouge">:PlugInstall</code> and press “Enter”. vim-plug will download
 the specified plugins from GitHub. If you later decide to stop using
 vim-plug, you can remove it along with the plugins it installs by
 deleting the following
     <ul>
-      <li><code class="highlighter-rouge">~/.vim/autoload/plug.vim</code>
- {<code class="highlighter-rouge">~/.local/share/nvim/site/autoload/plug.vim</code>}</li>
-      <li><code class="highlighter-rouge">~/.vim/plugged</code> {<code class="highlighter-rouge">~/.local/share/nvim/plugged</code>}</li>
+      <li><code class="language-plaintext highlighter-rouge">~/.vim/autoload/plug.vim</code>
+ {<code class="language-plaintext highlighter-rouge">~/.local/share/nvim/site/autoload/plug.vim</code>}</li>
+      <li><code class="language-plaintext highlighter-rouge">~/.vim/plugged</code> {<code class="language-plaintext highlighter-rouge">~/.local/share/nvim/plugged</code>}</li>
     </ul>
   </li>
 </ol>
@@ -188,12 +188,12 @@ provides real-time linting + jump-to-declaration functionality. It has a
 compiled component, which needs to be built before the plugin can be used.</p>
 
 <ol>
-  <li>Let <code class="highlighter-rouge">&lt;YouCompleteMe-location&gt;</code> be the directory in which the plugin is
-  located. If you’re using the provided <code class="highlighter-rouge">sample_vimrc</code>, you can determine
-  <code class="highlighter-rouge">&lt;YouCompleteMe-location&gt;</code> by running <code class="highlighter-rouge">:echo g:plug_home</code> in Vim and
-  appending <code class="highlighter-rouge">/YouCompleteMe</code> to the result.</li>
+  <li>Let <code class="language-plaintext highlighter-rouge">&lt;YouCompleteMe-location&gt;</code> be the directory in which the plugin is
+  located. If you’re using the provided <code class="language-plaintext highlighter-rouge">sample_vimrc</code>, you can determine
+  <code class="language-plaintext highlighter-rouge">&lt;YouCompleteMe-location&gt;</code> by running <code class="language-plaintext highlighter-rouge">:echo g:plug_home</code> in Vim and
+  appending <code class="language-plaintext highlighter-rouge">/YouCompleteMe</code> to the result.</li>
   <li>In a terminal, run
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;YouCompleteMe-location&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;YouCompleteMe-location&gt;
 git submodule update --init --recursive
 ./install.py --clang-completer
 </code></pre></div>    </div>
@@ -210,32 +210,32 @@ following steps should get this working in Drake:</p>
   <li>Download the bazel-compilation-database 0.2.2
   <a href="https://github.com/grailbio/bazel-compilation-database/archive/0.2.2.tar.gz">tarball</a>.</li>
   <li>Extract the contents of the tarball to some directory. We will refer to
-  this directory as <code class="highlighter-rouge">&lt;bcd-location&gt;</code>.</li>
+  this directory as <code class="language-plaintext highlighter-rouge">&lt;bcd-location&gt;</code>.</li>
   <li>From the root of your Drake repository run:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir bazel
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir bazel
 ln -s &lt;bcd-location&gt; bazel/compilation_database
 </code></pre></div>    </div>
   </li>
-  <li>Add the following line to your <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>}:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:ycm_global_ycm_extra_conf = '&lt;bcd-location&gt;/.ycm_extra_conf.py'
+  <li>Add the following line to your <code class="language-plaintext highlighter-rouge">.vimrc</code> {<code class="language-plaintext highlighter-rouge">init.vim</code>}:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:ycm_global_ycm_extra_conf = '&lt;bcd-location&gt;/.ycm_extra_conf.py'
 </code></pre></div>    </div>
   </li>
 </ol>
 
 <p>Now, when you open a Drake C++ file, you should get real-time linting and
-completion, as well as jump-to functionality (through the <code class="highlighter-rouge">:YcmCompeter GoTo</code>
-command). If it appears not to be working, try running <code class="highlighter-rouge">:YcmDiags</code> to force
+completion, as well as jump-to functionality (through the <code class="language-plaintext highlighter-rouge">:YcmCompeter GoTo</code>
+command). If it appears not to be working, try running <code class="language-plaintext highlighter-rouge">:YcmDiags</code> to force
 YouCompleteMe to compile the current file. Note that for YouCompleteMe to see
 a given Drake header file, the corresponding Bazel target must have been built.
 See also, <a href="#linting-and-jump-to-declaration-mappings">Linting and Jump-to-Declaration Mappings</a>.</p>
 
 <h1 id="additional-mappings">Additional Mappings</h1>
 
-<p>The aforementioned <code class="highlighter-rouge">sample_vimrc</code> file pulls in several plugins and defines
+<p>The aforementioned <code class="language-plaintext highlighter-rouge">sample_vimrc</code> file pulls in several plugins and defines
 mappings for working with them. It also defines some general-purpose mappings.
-Here are some highlights. A lot of these start with <code class="highlighter-rouge">&lt;leader&gt;</code>, which in the
-attached file is mapped to <code class="highlighter-rouge">;</code> (so <code class="highlighter-rouge">&lt;leader&gt;gv</code> becomes <code class="highlighter-rouge">;gv</code>). You can, of course,
-change <code class="highlighter-rouge">&lt;leader&gt;</code> to whatever you prefer in your <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>} file.</p>
+Here are some highlights. A lot of these start with <code class="language-plaintext highlighter-rouge">&lt;leader&gt;</code>, which in the
+attached file is mapped to <code class="language-plaintext highlighter-rouge">;</code> (so <code class="language-plaintext highlighter-rouge">&lt;leader&gt;gv</code> becomes <code class="language-plaintext highlighter-rouge">;gv</code>). You can, of course,
+change <code class="language-plaintext highlighter-rouge">&lt;leader&gt;</code> to whatever you prefer in your <code class="language-plaintext highlighter-rouge">.vimrc</code> {<code class="language-plaintext highlighter-rouge">init.vim</code>} file.</p>
 
 <h2 id="git-mappings">Git Mappings</h2>
 
@@ -243,12 +243,12 @@ change <code class="highlighter-rouge">&lt;leader&gt;</code> to whatever you pre
 <a href="https://github.com/gregsexton/gitv">Gitv</a> to perform Git-related tasks.</p>
 
 <ul>
-  <li><code class="highlighter-rouge">&lt;leader&gt;gd</code> shows the git diff for the current file. You can move hunks into
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;gd</code> shows the git diff for the current file. You can move hunks into
  the index using Vim’s diff commands.</li>
-  <li><code class="highlighter-rouge">&lt;leader&gt;gs</code> shows the current git status using fugitive.git.You can stage
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;gs</code> shows the current git status using fugitive.git.You can stage
  files by moving the cursor to the line and pressing “-“. Press cc to start
  editing the commit message. Save and exit in the commit message to commit.</li>
-  <li><code class="highlighter-rouge">&lt;leader&gt;gv</code> launches gitv, a Gitk clone for Vim. You can use this to inspect
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;gv</code> launches gitv, a Gitk clone for Vim. You can use this to inspect
  commits, switch branches, cherry-pick, and more</li>
 </ul>
 
@@ -258,11 +258,11 @@ change <code class="highlighter-rouge">&lt;leader&gt;</code> to whatever you pre
 and <a href="https://github.com/Valloric/ListToggle">ListToggle</a>.</p>
 
 <ul>
-  <li><code class="highlighter-rouge">&lt;leader&gt;gg</code> jumps to the declaration of the class/function under the cursor
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;gg</code> jumps to the declaration of the class/function under the cursor
  (mnemonic “go go!”). Use the standard jump command Ctrl+o to go back.</li>
-  <li><code class="highlighter-rouge">&lt;leader&gt;fi</code> applies the “fix-it” action listed at the bottom of the buffer
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;fi</code> applies the “fix-it” action listed at the bottom of the buffer
  (mnemonic “fix it!”).</li>
-  <li><code class="highlighter-rouge">&lt;leader&gt;lo</code> toggles the Location List on and off (mnemonic “LOcation”). All
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;lo</code> toggles the Location List on and off (mnemonic “LOcation”). All
  errors found by YouCompleteMe are listed in the location list, which can
  make it easy to go from one to the next.</li>
 </ul>
@@ -273,9 +273,9 @@ and <a href="https://github.com/Valloric/ListToggle">ListToggle</a>.</p>
 provide a file tree explorer in Vim.</p>
 
 <ul>
-  <li><code class="highlighter-rouge">&lt;leader&gt;nt</code> launches NERDTree for the current working directory</li>
-  <li><code class="highlighter-rouge">&lt;leader&gt;nf</code> launches NERDTree with the current file selected. This is
- particularly useful for getting to the appropriate <code class="highlighter-rouge">BUILD.bazel</code> file for a
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;nt</code> launches NERDTree for the current working directory</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;nf</code> launches NERDTree with the current file selected. This is
+ particularly useful for getting to the appropriate <code class="language-plaintext highlighter-rouge">BUILD.bazel</code> file for a
  given source file.</li>
 </ul>
 
@@ -285,7 +285,7 @@ provide a file tree explorer in Vim.</p>
 provide fuzzy file lookup in Vim.</p>
 
 <ul>
-  <li><code class="highlighter-rouge">&lt;leader&gt;ff</code> launches CtrlP in file mode (mnemonic “find file”). Start typing
+  <li><code class="language-plaintext highlighter-rouge">&lt;leader&gt;ff</code> launches CtrlP in file mode (mnemonic “find file”). Start typing
  any portions of the file path (they don’t have to be contiguous!) and select
  the file you want once the choices are narrowed down sufficiently.</li>
 </ul>

@@ -191,14 +191,14 @@ ready to merge, the author of a PR has three choices for how to proceed:</p>
 If time is of the essence, post a reminder to the PR.</li>
   <li>Locally (rebase and) squash the PR down to a single commit, and force-push
 that commit into the PR.</li>
-  <li>Apply the label <code class="highlighter-rouge">status: squashing now</code> and then immediately use the “squash
+  <li>Apply the label <code class="language-plaintext highlighter-rouge">status: squashing now</code> and then immediately use the “squash
 and merge” button to merge the PR, being careful to tweak the commit message
 in the web page’s edit box to be a sensible description of the change.</li>
 </ul>
 
 <p>On the other hand, some PR authors carefully curate their commits so that each
 individual commit on a PR meets the acceptance criteria on its own.  In that
-case, the author should apply the label <code class="highlighter-rouge">status: commits are properly
+case, the author should apply the label <code class="language-plaintext highlighter-rouge">status: commits are properly
 curated</code>, which removes the single-commit requirement.  PRs with this label
 should be merged to master using the “Create a merge commit” option, not
 “Squash and merge” option.</p>
@@ -219,7 +219,7 @@ release notes label added:</p>
 
 <p>Commits that do not meaningfully affect the release will be manually culled from
 the release notes during editing.  To aid the human editor in making that
-determination, you may add the tag <code class="highlighter-rouge">release notes: none</code> to the PR and the
+determination, you may add the tag <code class="language-plaintext highlighter-rouge">release notes: none</code> to the PR and the
 commit will be omitted.  For example, you should apply that tag to any PRs that
 only fix code style problems, or only affect tests or documentation.</p>
 
@@ -227,7 +227,7 @@ only fix code style problems, or only affect tests or documentation.</p>
 
 <p>Commits that contain breaking changes receive special attention in the release
 notes.  To aid the human editor in making that determination, you must add the
-tag <code class="highlighter-rouge">release notes: breaking change</code> to any PR that makes a breaking change
+tag <code class="language-plaintext highlighter-rouge">release notes: breaking change</code> to any PR that makes a breaking change
 to a <a href="/stable.html#stable-api">Stable API</a> without a deprecation period.</p>
 
 <p><strong>release notes: newly deprecated</strong><br />
@@ -236,32 +236,32 @@ to a <a href="/stable.html#stable-api">Stable API</a> without a deprecation peri
 
 <p>Commits that change deprecations receive special attention in the release notes.
 To aid the human editor in making that determination, you must add the tag
-<code class="highlighter-rouge">release notes: newly deprecated</code> to any PR that adds new deprecations, or
-<code class="highlighter-rouge">release notes: removal of deprecated</code> to any PR that removes deprecated
+<code class="language-plaintext highlighter-rouge">release notes: newly deprecated</code> to any PR that adds new deprecations, or
+<code class="language-plaintext highlighter-rouge">release notes: removal of deprecated</code> to any PR that removes deprecated
 code whose date has passed.  Removing deprecated code is not considered to be a
-breaking change, so do not add <code class="highlighter-rouge">release notes: breaking change</code>.</p>
+breaking change, so do not add <code class="language-plaintext highlighter-rouge">release notes: breaking change</code>.</p>
 
 <p><strong>release notes: feature</strong><br />
  or<br />
 <strong>release notes: fix</strong></p>
 
 <p>Commits that implement a feature or a fix must be labeled with the
-corresponding tag, either <code class="highlighter-rouge">release notes: feature</code> or <code class="highlighter-rouge">release notes: fix</code>
+corresponding tag, either <code class="language-plaintext highlighter-rouge">release notes: feature</code> or <code class="language-plaintext highlighter-rouge">release notes: fix</code>
 but never both at once; choose whichever one is the best match.</p>
 
 <p>Commits that merely add missing pydrake bindings should be marked
-<code class="highlighter-rouge">release notes: fix</code>.</p>
+<code class="language-plaintext highlighter-rouge">release notes: fix</code>.</p>
 
 <p><strong>When combining release notes labels:</strong></p>
 
 <ul>
-  <li><code class="highlighter-rouge">none</code> must not be combined with any other label.</li>
-  <li><code class="highlighter-rouge">breaking change</code> must be combined with either <code class="highlighter-rouge">feature</code> or <code class="highlighter-rouge">fix</code>.
+  <li><code class="language-plaintext highlighter-rouge">none</code> must not be combined with any other label.</li>
+  <li><code class="language-plaintext highlighter-rouge">breaking change</code> must be combined with either <code class="language-plaintext highlighter-rouge">feature</code> or <code class="language-plaintext highlighter-rouge">fix</code>.
 If there were changes to deprecations, those labels should also be added.</li>
-  <li><code class="highlighter-rouge">newly deprecated</code> will usually be combined with <code class="highlighter-rouge">feature</code> or <code class="highlighter-rouge">fix</code>,
+  <li><code class="language-plaintext highlighter-rouge">newly deprecated</code> will usually be combined with <code class="language-plaintext highlighter-rouge">feature</code> or <code class="language-plaintext highlighter-rouge">fix</code>,
 because usually the deprecation is concurrent with the addition of its
 replacement or due to some other new change. Only if the deprecation is the
-<em>sole</em> content of the commit will <code class="highlighter-rouge">newly deprecated</code> be the only label.</li>
+<em>sole</em> content of the commit will <code class="language-plaintext highlighter-rouge">newly deprecated</code> be the only label.</li>
 </ul>
 
 <h1 id="joint-feature-and-platform-review">Joint Feature and Platform review</h1>
@@ -271,7 +271,7 @@ must be completed (see <a href="/developers.html#review-process">Review Process<
 
 <p>Therefore, our reviewable settings require at least two assigned reviewers.  In
 cases where the platform reviewer decides to double-count as feature review,
-the reviewer should apply the label <code class="highlighter-rouge">status: single reviewer ok</code> to note this
+the reviewer should apply the label <code class="language-plaintext highlighter-rouge">status: single reviewer ok</code> to note this
 condition, which removes the two-assignee requirement.</p>
 
       </article>

@@ -166,10 +166,10 @@ pull requests during times when the build cop is on duty. Nightly and weekly
 build failures will be addressed the following weekday morning.</p>
 
 <p>When a CI build failure occurs, the build cop will be notified by email.
-Notifications are sent to <code class="highlighter-rouge">drake-alerts+jenkins@tri.global</code> and
-<code class="highlighter-rouge">drake-developers+build-cop@kitware.com</code>. To receive these notifications,
-subscribe to the <code class="highlighter-rouge">drake-alerts</code> Google Group at TRI or the
-<code class="highlighter-rouge">drake-developers</code> Google Group at Kitware. The build cop will triage the
+Notifications are sent to <code class="language-plaintext highlighter-rouge">drake-alerts+jenkins@tri.global</code> and
+<code class="language-plaintext highlighter-rouge">drake-developers+build-cop@kitware.com</code>. To receive these notifications,
+subscribe to the <code class="language-plaintext highlighter-rouge">drake-alerts</code> Google Group at TRI or the
+<code class="language-plaintext highlighter-rouge">drake-developers</code> Google Group at Kitware. The build cop will triage the
 failure by identifying the recent commits or other problem that caused the CI
 build to fail.</p>
 
@@ -183,18 +183,18 @@ fix the failure within 60 minutes, the build cop will merge the pull request to
 revert the commits and verify that the continuous builds triggered by that merge
 pass.</p>
 
-<p>In the case of failures in a <code class="highlighter-rouge">dev</code> directory, the build cop should disable the
+<p>In the case of failures in a <code class="language-plaintext highlighter-rouge">dev</code> directory, the build cop should disable the
 failing test instead of reverting the entire commit. To disable the test, add a
-<code class="highlighter-rouge">tags = []</code> attribute to its BUILD rule. If it only fails in certain
-configurations, you can add tags for just those, e.g., <code class="highlighter-rouge">"no_asan"</code>. If it fails in
+<code class="language-plaintext highlighter-rouge">tags = []</code> attribute to its BUILD rule. If it only fails in certain
+configurations, you can add tags for just those, e.g., <code class="language-plaintext highlighter-rouge">"no_asan"</code>. If it fails in
 the default configuration or in too many configurations to list one by one, use
 the tag “manual” to disable the test under all configurations.</p>
 
 <p>In the case of intermittent failures of unclear origin or which cannot
 reasonably be prevented (for example, network failures of remotely hosted
 build machines), the build cop should file a drake issue (or add a comment
-to an existing issue) and apply the <code class="highlighter-rouge">component: continuous integration</code> and
-<code class="highlighter-rouge">type: bug</code> labels.  The first time an unexplained failure occurs, close the
+to an existing issue) and apply the <code class="language-plaintext highlighter-rouge">component: continuous integration</code> and
+<code class="language-plaintext highlighter-rouge">type: bug</code> labels.  The first time an unexplained failure occurs, close the
 issue immediately – there is not much value in keeping an open issue for a
 failure that only ever happened once.  If the issue occurs a second time,
 reopen it.</p>
@@ -222,7 +222,7 @@ notify the next build cop on the <a href="https://drakedevelopers.slack.com/mess
 <p>When creating a revert PR, the build cop will assign that PR to the original
 author, and include the following template in the PR description.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
  Dear $AUTHOR,
 
  The on-call build cop, $BUILD_COP, believes that your PR $NUMBER may have
@@ -266,7 +266,7 @@ author, and include the following template in the PR description.</p>
 <p>Here’s one workflow:</p>
 
 <ol>
-  <li>Create a new development branch based off of the <code class="highlighter-rouge">HEAD</code> of master.</li>
+  <li>Create a new development branch based off of the <code class="language-plaintext highlighter-rouge">HEAD</code> of master.</li>
   <li><a href="https://git-scm.com/docs/git-revert">Revert</a> the revert of your
 originally-merged PR to get your changes back.</li>
   <li>Debug the problem. This may require you to
@@ -307,7 +307,7 @@ to confirm that the latest commit has a green circle, not a red x.</p>
 
 <p>Check once per week that caching is still enabled, there are currently two cache
 servers that need to be confirmed.  Open each of the following jobs and search
-for <code class="highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a value:</p>
+for <code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a value:</p>
 
 <ul>
   <li><a href="https://drake-jenkins.csail.mit.edu/job/linux-focal-clang-bazel-continuous-release/lastBuild/consoleFull">https://drake-jenkins.csail.mit.edu/job/linux-focal-clang-bazel-continuous-release/lastBuild/consoleFull</a></li>
@@ -316,17 +316,17 @@ for <code class="highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a
 
 <p>Message indicating a problem:</p>
 
-<p><code class="highlighter-rouge">REMOTE_CACHE_KEY =</code></p>
+<p><code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY =</code></p>
 
 <p>Message indicating success:</p>
 
-<p><code class="highlighter-rouge">REMOTE_CACHE_KEY = 3a677c9194643f253d3eb3fcd6b09ee370f663da30bf1f43fb547edc6851e339</code></p>
+<p><code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY = 3a677c9194643f253d3eb3fcd6b09ee370f663da30bf1f43fb547edc6851e339</code></p>
 
 <p>The exact key hash is not important, it’s just important that it’s non-empty.</p>
 
 <p>If there is an issue with either cache server, post the details on the
 <a href="https://drakedevelopers.slack.com/messages/buildcop/details/">#buildcop</a>
-channel on Slack, ensuring that <code class="highlighter-rouge">@betsymcphail</code> is mentioned in the message.</p>
+channel on Slack, ensuring that <code class="language-plaintext highlighter-rouge">@betsymcphail</code> is mentioned in the message.</p>
 
 <h2 id="respond-to-breakage">Respond to Breakage</h2>
 
@@ -437,7 +437,7 @@ any code change. The most common infrastructure flakes include:</p>
 an infrastructure flake, run the build manually at HEAD. If it passes, you are
 definitely looking at an infrastructure flake, and no further action is
 required. If you believe the rate of a particular infrastructure flake has
-increased, alert Kitware by assigning a GitHub issue to <code class="highlighter-rouge">@BetsyMcPhail</code>.</p>
+increased, alert Kitware by assigning a GitHub issue to <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code>.</p>
 
 <p>Note that “slow read” warnings during Bazel builds are due to the relative
 slowness of the remote storage used by the CI infrastructure when compared to
@@ -455,7 +455,7 @@ could crash or become wedged.  During infrastructure collapses, lots of builds
 will turn red and stay red.</p>
 
 <p>Attempt to figure out what infrastructure collapsed. If it’s under our control,
-alert Kitware by assigning a GitHub issue to <code class="highlighter-rouge">@BetsyMcPhail</code>. If it’s under a
+alert Kitware by assigning a GitHub issue to <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code>. If it’s under a
 vendor’s control, spread the news and simply wait it out.</p>
 
 <h2 id="drake-external-examples">Drake External Examples</h2>
@@ -463,7 +463,7 @@ vendor’s control, spread the news and simply wait it out.</p>
 <p>Details of failures in the <a href="https://github.com/RobotLocomotion/drake-external-examples/">drake-external-examples</a>
 repository, which may be denoted by red “build failing” icons at the top of the build
 dashboard on Jenkins, should be posted to the <a href="https://drakedevelopers.slack.com/messages/buildcop/details/">#buildcop</a>
-channel on Slack, ensuring that <code class="highlighter-rouge">@betsymcphail</code> is mentioned in the message.</p>
+channel on Slack, ensuring that <code class="language-plaintext highlighter-rouge">@betsymcphail</code> is mentioned in the message.</p>
 
 <h2 id="documentation-repo-failures">Documentation Repo Failures</h2>
 <p>If the <a href="https://github.com/RobotLocomotion/RobotLocomotion.github.io/commits/master">automatically generated documentation repo</a>

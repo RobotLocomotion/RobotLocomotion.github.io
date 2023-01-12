@@ -146,13 +146,13 @@ analysis.
 <ul>
   <li>Drake’s website API documentation now offers improved search boxes (<a href="https://github.com/RobotLocomotion/drake/pull/16473">#16473</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16491">#16491</a>).</li>
   <li>Drake now offers a meshcat display server named “meldis” that speaks the same
-protocol as <code class="highlighter-rouge">drake_visualizer</code> (<a href="https://github.com/RobotLocomotion/drake/pull/16263">#16263</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16436">#16436</a>,
+protocol as <code class="language-plaintext highlighter-rouge">drake_visualizer</code> (<a href="https://github.com/RobotLocomotion/drake/pull/16263">#16263</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16436">#16436</a>,
 <a href="https://github.com/RobotLocomotion/drake/pull/16445">#16445</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16452">#16452</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16454">#16454</a>).
     <ul>
       <li>This enables users whose code is hard-coded to publish visualizations to
-<code class="highlighter-rouge">drake_visualizer</code> to run <code class="highlighter-rouge">meldis</code> instead of <code class="highlighter-rouge">drake_visualizer</code>
+<code class="language-plaintext highlighter-rouge">drake_visualizer</code> to run <code class="language-plaintext highlighter-rouge">meldis</code> instead of <code class="language-plaintext highlighter-rouge">drake_visualizer</code>
 to see the visualization, which might be useful especially on OS versions
-where <code class="highlighter-rouge">drake_visualizer</code> is deprecated.</li>
+where <code class="language-plaintext highlighter-rouge">drake_visualizer</code> is deprecated.</li>
       <li>Refer to the
 <a href="https://github.com/RobotLocomotion/drake/blob/master/examples/acrobot/README.md">acrobot README</a>
 for an example use, or the
@@ -161,9 +161,9 @@ for an example use, or the
   </li>
   <li>Drake now uses VTK 9.0 (<a href="https://github.com/RobotLocomotion/drake/pull/16132">#16132</a>).
     <ul>
-      <li>Note that <code class="highlighter-rouge">drake_visualizer</code> continues to use VTK 8.0.
+      <li>Note that <code class="language-plaintext highlighter-rouge">drake_visualizer</code> continues to use VTK 8.0.
         <ul>
-          <li>Importing <code class="highlighter-rouge">pydrake</code> from inside of <code class="highlighter-rouge">drake_visualizer</code> is not
+          <li>Importing <code class="language-plaintext highlighter-rouge">pydrake</code> from inside of <code class="language-plaintext highlighter-rouge">drake_visualizer</code> is not
 supported.</li>
         </ul>
       </li>
@@ -175,9 +175,9 @@ supported.</li>
 
 <ul>
   <li>Drake’s manipulation/models/iiwa_description files now specify acceleration limits (<a href="https://github.com/RobotLocomotion/drake/pull/16377">#16377</a>).</li>
-  <li>The symbols <code class="highlighter-rouge">pydrake.multibody.plant.ContactResultsToMeshcat</code> and <code class="highlighter-rouge">pydrake.multibody.plant.ContactResultsToMeshcatParams</code> are now factory functions instead of classnames (<a href="https://github.com/RobotLocomotion/drake/pull/16437">#16437</a>).
+  <li>The symbols <code class="language-plaintext highlighter-rouge">pydrake.multibody.plant.ContactResultsToMeshcat</code> and <code class="language-plaintext highlighter-rouge">pydrake.multibody.plant.ContactResultsToMeshcatParams</code> are now factory functions instead of classnames (<a href="https://github.com/RobotLocomotion/drake/pull/16437">#16437</a>).
     <ul>
-      <li>Most users will be unaffected, but specific use of <code class="highlighter-rouge">isinstance()</code> checks would notice.</li>
+      <li>Most users will be unaffected, but specific use of <code class="language-plaintext highlighter-rouge">isinstance()</code> checks would notice.</li>
     </ul>
   </li>
 </ul>
@@ -328,11 +328,11 @@ supported.</li>
 <h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
 
 <ul>
-  <li>The use of <code class="highlighter-rouge">drake-visualizer</code> on macOS is deprecated and will be removed
+  <li>The use of <code class="language-plaintext highlighter-rouge">drake-visualizer</code> on macOS is deprecated and will be removed
 from Drake on or after April 1st, 2022 (<a href="https://github.com/RobotLocomotion/drake/pull/16386">#16386</a>).
     <ul>
-      <li>On Ubuntu 20.04, support of <code class="highlighter-rouge">drake-visualizer</code> remains intact.</li>
-      <li>On Ubuntu 18.04, support of <code class="highlighter-rouge">drake-visualizer</code> will remain intact as
+      <li>On Ubuntu 20.04, support of <code class="language-plaintext highlighter-rouge">drake-visualizer</code> remains intact.</li>
+      <li>On Ubuntu 18.04, support of <code class="language-plaintext highlighter-rouge">drake-visualizer</code> will remain intact as
 long as our overall support of 18.04 (which ends on April 1st, 2022).</li>
     </ul>
   </li>
@@ -373,7 +373,7 @@ long as our overall support of 18.04 (which ends on April 1st, 2022).</li>
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.39.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20220209-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20220209-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

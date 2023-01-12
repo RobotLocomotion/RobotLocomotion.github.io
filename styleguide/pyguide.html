@@ -1957,7 +1957,7 @@ inline comments.</p>
 <p><span class="drake">
 In general, the semantic rules outlined below should be enforced by reviewers.
 However, the formatting (e.g. indentations, lines, etc.) will be enforced by
-automated lint tooling (e.g. <code class="highlighter-rouge">pycodestyle</code>), and should not be remarked upon by
+automated lint tooling (e.g. <code class="language-plaintext highlighter-rouge">pycodestyle</code>), and should not be remarked upon by
 reviewers.
 </span></p>
 
@@ -1970,10 +1970,10 @@ reviewers.
 
 <p>Python uses <em>docstrings</em> to document code. A docstring is a string that is the
 first statement in a package, module, class or function. These strings can be
-extracted automatically through the <code class="highlighter-rouge">__doc__</code> member of the object and are used
-by <code class="highlighter-rouge">pydoc</code>.
-(Try running <code class="highlighter-rouge">pydoc</code> on your module to see how it looks.) Always use the three
-double-quote <code class="highlighter-rouge">"""</code> format for docstrings (per
+extracted automatically through the <code class="language-plaintext highlighter-rouge">__doc__</code> member of the object and are used
+by <code class="language-plaintext highlighter-rouge">pydoc</code>.
+(Try running <code class="language-plaintext highlighter-rouge">pydoc</code> on your module to see how it looks.) Always use the three
+double-quote <code class="language-plaintext highlighter-rouge">"""</code> format for docstrings (per
 <a href="https://www.google.com/url?sa=D&amp;q=http://www.python.org/dev/peps/pep-0257/">PEP 257</a>).
 <span class="nondrake">
 A docstring should be organized as a summary line (one physical line not
@@ -1994,13 +1994,13 @@ N.B. We use //br because 2+ line breaks will make Markdown break the continuity
 across the //span element.
 -->
 <p><span class="drake">
-<code class="highlighter-rouge">pydrake</code> documentation uses Sphinx to generate documentation
+<code class="language-plaintext highlighter-rouge">pydrake</code> documentation uses Sphinx to generate documentation
 (see Drake’s <a href="https://drake.mit.edu/documentation_instructions.html">Documentation Generation Instructions</a>),
 and uses the Sphinx Napoleon plugin to process Google-style docstrings.
 <br />
 This guide itself does not have comprehensive documentation on all directives
 available, but the Sphinx Napoleon documentation does:
-<a href="https://www.sphinx-doc.org/en/1.6.7/ext/napoleon.html"><code class="highlighter-rouge">sphinx.ext.napoleon</code> docs</a>
+<a href="https://www.sphinx-doc.org/en/1.6.7/ext/napoleon.html"><code class="language-plaintext highlighter-rouge">sphinx.ext.napoleon</code> docs</a>
 </span></p>
 
 <p><a id="s3.8.2-comments-in-modules"></a>
@@ -2065,15 +2065,15 @@ details of a function’s implementation that are not relevant to the caller are
 better expressed as comments alongside the code than within the function’s
 docstring.</p>
 
-<p>The docstring should be descriptive-style (<code class="highlighter-rouge">"""Fetches rows from a
-Bigtable."""</code>) rather than imperative-style (<code class="highlighter-rouge">"""Fetch rows from a
-Bigtable."""</code>). The docstring for a <code class="highlighter-rouge">@property</code> data descriptor should use the
+<p>The docstring should be descriptive-style (<code class="language-plaintext highlighter-rouge">"""Fetches rows from a
+Bigtable."""</code>) rather than imperative-style (<code class="language-plaintext highlighter-rouge">"""Fetch rows from a
+Bigtable."""</code>). The docstring for a <code class="language-plaintext highlighter-rouge">@property</code> data descriptor should use the
 same style as the docstring for an attribute or a
-<a href="#doc-function-args">function argument</a> (<code class="highlighter-rouge">"""The Bigtable path."""</code>,
-rather than <code class="highlighter-rouge">"""Returns the Bigtable path."""</code>).</p>
+<a href="#doc-function-args">function argument</a> (<code class="language-plaintext highlighter-rouge">"""The Bigtable path."""</code>,
+rather than <code class="language-plaintext highlighter-rouge">"""Returns the Bigtable path."""</code>).</p>
 
 <p>A method that overrides a method from a base class may have a simple docstring
-sending the reader to its overridden method’s docstring, such as <code class="highlighter-rouge">"""See base
+sending the reader to its overridden method’s docstring, such as <code class="language-plaintext highlighter-rouge">"""See base
 class."""</code>. The rationale is that there is no need to repeat in many places
 documentation that is already present in the base method’s docstring. However,
 if the overriding method’s behavior is substantially different from the
@@ -2100,8 +2100,8 @@ line, use a hanging
 indent of 2 or 4 spaces more than the parameter name (be consistent with the
 rest of the docstrings in the file). The description should include required
 type(s) if the code does not contain a corresponding type annotation. If a
-function accepts <code class="highlighter-rouge">*foo</code> (variable length argument lists) and/or <code class="highlighter-rouge">**bar</code>
-(arbitrary keyword arguments), they should be listed as <code class="highlighter-rouge">*foo</code> and <code class="highlighter-rouge">**bar</code>.
+function accepts <code class="language-plaintext highlighter-rouge">*foo</code> (variable length argument lists) and/or <code class="language-plaintext highlighter-rouge">**bar</code>
+(arbitrary keyword arguments), they should be listed as <code class="language-plaintext highlighter-rouge">*foo</code> and <code class="language-plaintext highlighter-rouge">**bar</code>.
 
     <p><span class="drake">Obvious parameters do not need to be documented.</span></p>
 
@@ -2111,7 +2111,7 @@ function accepts <code class="highlighter-rouge">*foo</code> (variable length ar
   <dt><a href="#doc-function-returns"><em>Returns:</em> (or <em>Yields:</em> for generators)</a></dt>
   <dd>Describe the type and semantics of the return value. If the function only
 returns None, this section is not required. It may also be omitted if the
-docstring starts with Returns or Yields (e.g. <code class="highlighter-rouge">"""Returns row from Bigtable
+docstring starts with Returns or Yields (e.g. <code class="language-plaintext highlighter-rouge">"""Returns row from Bigtable
 as a tuple of strings."""</code>) and the opening sentence is sufficient to
 describe the return value. Do not imitate ‘NumPy style’
 (<a href="http://numpy.org/doc/stable/reference/generated/numpy.linalg.qr.html">example</a>),
@@ -2131,10 +2131,10 @@ exceptions that get raised if the API specified in the docstring is violated
 part of the API).</dd>
 </dl>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fetch_smalltable_rows</span><span class="p">(</span><span class="n">table_handle</span><span class="p">:</span> <span class="n">smalltable</span><span class="o">.</span><span class="n">Table</span><span class="p">,</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fetch_smalltable_rows</span><span class="p">(</span><span class="n">table_handle</span><span class="p">:</span> <span class="n">smalltable</span><span class="p">.</span><span class="n">Table</span><span class="p">,</span>
                           <span class="n">keys</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
                           <span class="n">require_all_keys</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="p">...]]:</span>
     <span class="s">"""Fetches rows from a Smalltable.
 
     Retrieves rows pertaining to the given keys from the Table instance
@@ -2165,12 +2165,12 @@ part of the API).</dd>
     """</span>
 </code></pre></div></div>
 
-<p>Similarly, this variation on <code class="highlighter-rouge">Args:</code> with a line break is also allowed:</p>
+<p>Similarly, this variation on <code class="language-plaintext highlighter-rouge">Args:</code> with a line break is also allowed:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fetch_smalltable_rows</span><span class="p">(</span><span class="n">table_handle</span><span class="p">:</span> <span class="n">smalltable</span><span class="o">.</span><span class="n">Table</span><span class="p">,</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fetch_smalltable_rows</span><span class="p">(</span><span class="n">table_handle</span><span class="p">:</span> <span class="n">smalltable</span><span class="p">.</span><span class="n">Table</span><span class="p">,</span>
                           <span class="n">keys</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
                           <span class="n">require_all_keys</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="p">...]]:</span>
     <span class="s">"""Fetches rows from a Smalltable.
 
     Retrieves rows pertaining to the given keys from the Table instance
@@ -2220,8 +2220,8 @@ If your class has public attributes, they
 <span class="nondrake">should</span>
 <span class="drake">may</span>
 be documented here in an
-<code class="highlighter-rouge">Attributes</code> section and follow the same formatting as a
-<a href="#doc-function-args">function’s <code class="highlighter-rouge">Args</code></a> section.</p>
+<code class="language-plaintext highlighter-rouge">Attributes</code> section and follow the same formatting as a
+<a href="#doc-function-args">function’s <code class="language-plaintext highlighter-rouge">Args</code></a> section.</p>
 
 <p><span class="drake">Attributes are not always documented for classes.</span></p>
 
@@ -2238,15 +2238,15 @@ be documented here in an
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">likes_spam</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
         <span class="s">"""Inits SampleClass with blah."""</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">likes_spam</span> <span class="o">=</span> <span class="n">likes_spam</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">eggs</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">likes_spam</span> <span class="o">=</span> <span class="n">likes_spam</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">eggs</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="nf">public_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s">"""Performs operation blah."""</span>
 </code></pre></div></div>
 
 <p>All class docstrings should start with a one-line summary that describes what
-the class instance represents. This implies that subclasses of <code class="highlighter-rouge">Exception</code>
+the class instance represents. This implies that subclasses of <code class="language-plaintext highlighter-rouge">Exception</code>
 should also describe what the exception represents, and not the context in which
 it might occur. The class docstring should not repeat unnecessary information,
 such as that the class is a class.</p>
@@ -3319,7 +3319,7 @@ long:
 
 <!-- Annotate below with `typing.TypeAlias` for 3.10. -->
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">_ShortName</span> <span class="o">=</span> <span class="n">module_with_long_name</span><span class="o">.</span><span class="n">TypeWithLongName</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">_ShortName</span> <span class="o">=</span> <span class="n">module_with_long_name</span><span class="p">.</span><span class="n">TypeWithLongName</span>
 <span class="n">ComplexMap</span> <span class="o">=</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]</span>
 </code></pre></div></div>
 
@@ -3333,10 +3333,10 @@ function (as a tuple).</p>
 <p><a id="typing-ignore"></a></p>
 <h4 id="3197-ignoring-types">3.19.7 Ignoring Types</h4>
 
-<p>You can disable type checking on a line with the special comment <code class="highlighter-rouge"># type:
+<p>You can disable type checking on a line with the special comment <code class="language-plaintext highlighter-rouge"># type:
 ignore</code>.</p>
 
-<p><code class="highlighter-rouge">pytype</code> has a disable option for specific errors (similar to lint):</p>
+<p><code class="language-plaintext highlighter-rouge">pytype</code> has a disable option for specific errors (similar to lint):</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># pytype: disable=attribute-error
 </span></code></pre></div></div>
@@ -3362,7 +3362,7 @@ that have a default value):
   <dt><a id="type-comments"></a></dt>
   <dt><a href="#type-comments"><em>Type Comments</em></a></dt>
   <dd>Though you may see them remaining in the codebase (they were necessary
-before Python 3.6), do not add any more uses of a <code class="highlighter-rouge"># type: &lt;type name&gt;</code>
+before Python 3.6), do not add any more uses of a <code class="language-plaintext highlighter-rouge"># type: &lt;type name&gt;</code>
 comment on the end of the line:
 
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="n">SomeUndecoratedFunction</span><span class="p">()</span>  <span class="c1"># type: Foo
@@ -3382,7 +3382,7 @@ have a single repeated type or a set number of elements with different types.
 The latter is commonly used as the return type from a function.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">b</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="p">...]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">c</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -3396,15 +3396,15 @@ The latter is commonly used as the return type from a function.</p>
 
 <p>The Python type system has
 <a href="https://www.python.org/dev/peps/pep-0484/#generics">generics</a>. The factory
-function <code class="highlighter-rouge">TypeVar</code> is a common way to use them.</p>
+function <code class="language-plaintext highlighter-rouge">TypeVar</code> is a common way to use them.</p>
 
 <p>Example:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span>
 <span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"_T"</span><span class="p">)</span>
-<span class="o">...</span>
+<span class="p">...</span>
 <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="n">l</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">_T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
-  <span class="k">return</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+  <span class="k">return</span> <span class="n">l</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>A TypeVar can be constrained:</p>
@@ -3414,8 +3414,8 @@ function <code class="highlighter-rouge">TypeVar</code> is a common way to use t
   <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div></div>
 
-<p>A common predefined type variable in the <code class="highlighter-rouge">typing</code> module is <code class="highlighter-rouge">AnyStr</code>. Use it for
-multiple annotations that can be <code class="highlighter-rouge">bytes</code> or <code class="highlighter-rouge">str</code> and must all be the same type.</p>
+<p>A common predefined type variable in the <code class="language-plaintext highlighter-rouge">typing</code> module is <code class="language-plaintext highlighter-rouge">AnyStr</code>. Use it for
+multiple annotations that can be <code class="language-plaintext highlighter-rouge">bytes</code> or <code class="language-plaintext highlighter-rouge">str</code> and must all be the same type.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">AnyStr</span>
 <span class="k">def</span> <span class="nf">check_length</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">AnyStr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AnyStr</span><span class="p">:</span>
@@ -3452,16 +3452,16 @@ criteria:</p>
 <h4 id="31911-string-types">3.19.11 String types</h4>
 
 <blockquote>
-  <p>Do not use <code class="highlighter-rouge">typing.Text</code> in new code. It’s only for Python 2/3 compatibility.</p>
+  <p>Do not use <code class="language-plaintext highlighter-rouge">typing.Text</code> in new code. It’s only for Python 2/3 compatibility.</p>
 </blockquote>
 
-<p>Use <code class="highlighter-rouge">str</code> for string/text data. For code that deals with binary data, use
-<code class="highlighter-rouge">bytes</code>.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">str</code> for string/text data. For code that deals with binary data, use
+<code class="language-plaintext highlighter-rouge">bytes</code>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">deals_with_text_data</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-  <span class="o">...</span>
+  <span class="p">...</span>
 <span class="k">def</span> <span class="nf">deals_with_binary_data</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
-  <span class="o">...</span>
+  <span class="p">...</span>
 </code></pre></div></div>
 
 <p>If all the string types of a function are always the same, for example if the
@@ -3475,20 +3475,20 @@ return type is the same as the argument type in the code above, use
 <p><a id="typing-imports"></a></p>
 <h4 id="31912-imports-for-typing">3.19.12 Imports For Typing</h4>
 
-<p>For symbols from the <code class="highlighter-rouge">typing</code> and <code class="highlighter-rouge">collections.abc</code> modules used to support
+<p>For symbols from the <code class="language-plaintext highlighter-rouge">typing</code> and <code class="language-plaintext highlighter-rouge">collections.abc</code> modules used to support
 static analysis and type checking, always import the symbol itself. This keeps
 common annotations more concise and matches typing practices used around the
 world. You are explicitly allowed to import multiple specific classes on one
-line from the <code class="highlighter-rouge">typing</code> and <code class="highlighter-rouge">collections.abc</code> modules. Ex:</p>
+line from the <code class="language-plaintext highlighter-rouge">typing</code> and <code class="language-plaintext highlighter-rouge">collections.abc</code> modules. Ex:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span>
 </code></pre></div></div>
 
 <p>Given that this way of importing adds items to the local namespace, names in
-<code class="highlighter-rouge">typing</code> or <code class="highlighter-rouge">collections.abc</code> should be treated similarly to keywords, and not
+<code class="language-plaintext highlighter-rouge">typing</code> or <code class="language-plaintext highlighter-rouge">collections.abc</code> should be treated similarly to keywords, and not
 be defined in your Python code, typed or not. If there is a collision between a
-type and an existing name in a module, import it using <code class="highlighter-rouge">import x as y</code>.</p>
+type and an existing name in a module, import it using <code class="language-plaintext highlighter-rouge">import x as y</code>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span> <span class="k">as</span> <span class="n">AnyType</span>
 </code></pre></div></div>
@@ -3504,7 +3504,7 @@ needed for type checking must be avoided at runtime. This pattern is
 discouraged; alternatives such as refactoring the code to allow top level
 imports should be preferred.</p>
 
-<p>Imports that are needed only for type annotations can be placed within an <code class="highlighter-rouge">if
+<p>Imports that are needed only for type annotations can be placed within an <code class="language-plaintext highlighter-rouge">if
 TYPE_CHECKING:</code> block.</p>
 
 <ul>
@@ -3518,9 +3518,9 @@ not be imported at runtime.</li>
   <li>There should be no empty lines in the typing imports list.</li>
   <li>Sort this list as if it were a regular imports list.
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">typing</span>
-<span class="k">if</span> <span class="n">typing</span><span class="o">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">typing</span><span class="p">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>
   <span class="kn">import</span> <span class="nn">sketch</span>
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="s">"sketch.Sketch"</span><span class="p">):</span> <span class="o">...</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="s">"sketch.Sketch"</span><span class="p">):</span> <span class="p">...</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -3537,7 +3537,7 @@ good candidate for refactoring. Although technically it is possible to keep
 circular dependencies, various build systems will not let you do so
 because each module has to depend on the other.</p>
 
-<p>Replace modules that create circular dependency imports with <code class="highlighter-rouge">Any</code>. Set an
+<p>Replace modules that create circular dependency imports with <code class="language-plaintext highlighter-rouge">Any</code>. Set an
 <a href="#typing-aliases">alias</a> with a meaningful name, and use the real type name from
 this module (any attribute of Any is Any). Alias definitions should be separated
 from the last import by one line.</p>
@@ -3545,10 +3545,10 @@ from the last import by one line.</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 
 <span class="n">some_mod</span> <span class="o">=</span> <span class="n">Any</span>  <span class="c1"># some_mod.py imports this module.
-</span><span class="o">...</span>
+</span><span class="p">...</span>
 
 <span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">:</span> <span class="s">"some_mod.SomeType"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
-  <span class="o">...</span>
+  <span class="p">...</span>
 </code></pre></div></div>
 
 <p><a id="typing-generics"></a>
@@ -3559,22 +3559,22 @@ from the last import by one line.</p>
 <h4 id="31915-generics">3.19.15 Generics</h4>
 
 <p>When annotating, prefer to specify type parameters for generic types; otherwise,
-<a href="https://www.python.org/dev/peps/pep-0484/#the-any-type">the generics’ parameters will be assumed to be <code class="highlighter-rouge">Any</code></a>.</p>
+<a href="https://www.python.org/dev/peps/pep-0484/#the-any-type">the generics’ parameters will be assumed to be <code class="language-plaintext highlighter-rouge">Any</code></a>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-  <span class="o">...</span>
+  <span class="p">...</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># These are both interpreted as get_names(employee_ids: list[Any]) -&gt; dict[Any, Any]
 </span><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-  <span class="o">...</span>
+  <span class="p">...</span>
 
 <span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-  <span class="o">...</span>
+  <span class="p">...</span>
 </code></pre></div></div>
 
-<p>If the best type parameter for a generic is <code class="highlighter-rouge">Any</code>, make it explicit, but
-remember that in many cases <a href="#typing-type-var"><code class="highlighter-rouge">TypeVar</code></a> might be more
+<p>If the best type parameter for a generic is <code class="language-plaintext highlighter-rouge">Any</code>, make it explicit, but
+remember that in many cases <a href="#typing-type-var"><code class="language-plaintext highlighter-rouge">TypeVar</code></a> might be more
 appropriate:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>

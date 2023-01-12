@@ -152,7 +152,7 @@ analysis.
 <ul>
   <li>New <a href="https://nbviewer.jupyter.org/github/RobotLocomotion/drake/blob/master/tutorials/dynamical_systems.ipynb">tutorial for systems framework</a> (<a href="https://github.com/RobotLocomotion/drake/pull/12009">#12009</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12045">#12045</a>)</li>
   <li>Implicit Euler integrator improves convergence speed (<a href="https://github.com/RobotLocomotion/drake/pull/12018">#12018</a>)</li>
-  <li><code class="highlighter-rouge">SymbolicVectorSystem</code> adds parameters and accessors (<a href="https://github.com/RobotLocomotion/drake/pull/12012">#12012</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12048">#12048</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">SymbolicVectorSystem</code> adds parameters and accessors (<a href="https://github.com/RobotLocomotion/drake/pull/12012">#12012</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12048">#12048</a>)</li>
   <li>Fix: Graphviz output for diagram port names (<a href="https://github.com/RobotLocomotion/drake/pull/12060">#12060</a>)</li>
 </ul>
 
@@ -160,9 +160,9 @@ analysis.
 
 <ul>
   <li>New <a href="https://nbviewer.jupyter.org/github/RobotLocomotion/drake/blob/master/tutorials/mathematical_program.ipynb">tutorial for mathematical program</a> (<a href="https://github.com/RobotLocomotion/drake/pull/12023">#12023</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12032">#12032</a>)</li>
-  <li>Developers can now implement <code class="highlighter-rouge">SolverInterface</code> subclasses in pydrake (<a href="https://github.com/RobotLocomotion/drake/pull/12056">#12056</a>)</li>
-  <li>Add constructors of <code class="highlighter-rouge">MultipleShooting</code> that accept placeholders (<a href="https://github.com/RobotLocomotion/drake/pull/12051">#12051</a>)</li>
-  <li>Add alias <code class="highlighter-rouge">solvers::DecisionVariable</code> for <code class="highlighter-rouge">symbolic::Variable</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12051">#12051</a>)</li>
+  <li>Developers can now implement <code class="language-plaintext highlighter-rouge">SolverInterface</code> subclasses in pydrake (<a href="https://github.com/RobotLocomotion/drake/pull/12056">#12056</a>)</li>
+  <li>Add constructors of <code class="language-plaintext highlighter-rouge">MultipleShooting</code> that accept placeholders (<a href="https://github.com/RobotLocomotion/drake/pull/12051">#12051</a>)</li>
+  <li>Add alias <code class="language-plaintext highlighter-rouge">solvers::DecisionVariable</code> for <code class="language-plaintext highlighter-rouge">symbolic::Variable</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12051">#12051</a>)</li>
   <li>Improve SNOPT citations and credits (<a href="https://github.com/RobotLocomotion/drake/pull/12062">#12062</a>)</li>
 </ul>
 
@@ -172,11 +172,11 @@ analysis.
   <li>New hydroelastic contact model in progress (<a href="https://github.com/RobotLocomotion/drake/pull/11924">#11924</a>, <a href="https://github.com/RobotLocomotion/drake/pull/11928">#11928</a>, <a href="https://github.com/RobotLocomotion/drake/pull/11986">#11986</a>, <a href="https://github.com/RobotLocomotion/drake/pull/11996">#11996</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12029">#12029</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12036">#12036</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12082">#12082</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12083">#12083</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12085">#12085</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12093">#12093</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12094">#12094</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12096">#12096</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12100">#12100</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12101">#12101</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12103">#12103</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12112">#12112</a>)
     <ul>
       <li>This is experimental and will change in the near future! (And it will not be used by default.)</li>
-      <li>Hydroelastics only supports soft-hard contact with spheres; see demo at <code class="highlighter-rouge">examples/multibody/rolling_sphere</code>.</li>
+      <li>Hydroelastics only supports soft-hard contact with spheres; see demo at <code class="language-plaintext highlighter-rouge">examples/multibody/rolling_sphere</code>.</li>
       <li>For more information, see Elandt, et al. “A pressure field model for fast, robust approximation of net contact force and moment between nominally rigid objects” to appear in IROS 2019. <a href="https://arxiv.org/abs/1904.11433">ArXiv pre-print</a>.</li>
     </ul>
   </li>
-  <li>Add <code class="highlighter-rouge">ContactResults</code> output for continuous plant (previously, only discrete) (<a href="https://github.com/RobotLocomotion/drake/pull/12067">#12067</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">ContactResults</code> output for continuous plant (previously, only discrete) (<a href="https://github.com/RobotLocomotion/drake/pull/12067">#12067</a>)</li>
   <li>Fix: Gravity generalized forces must ignore velocity terms (<a href="https://github.com/RobotLocomotion/drake/pull/12065">#12065</a>)</li>
   <li>Fix: Contact force direction appears to be incorrect (<a href="https://github.com/RobotLocomotion/drake/pull/12067">#12067</a>)</li>
   <li>Fix: Crash when there are no degrees of freedom (<a href="https://github.com/RobotLocomotion/drake/pull/12070">#12070</a>)</li>
@@ -186,42 +186,42 @@ analysis.
 <h2 id="pydrake-bindings">pydrake bindings</h2>
 
 <ul>
-  <li><code class="highlighter-rouge">multibody.LinearSpringDamper</code> (<a href="https://github.com/RobotLocomotion/drake/pull/11987">#11987</a>)</li>
-  <li><code class="highlighter-rouge">solvers.mathematicalprogram.MathematicalProgram.AddIndeterminates</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12017">#12017</a>)</li>
-  <li><code class="highlighter-rouge">solvers.mathematicalprogram.MathematicalProgram.AddDecisionVariables</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12017">#12017</a>)</li>
-  <li><code class="highlighter-rouge">solvers.mathematicalprogram.SolverInterface</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12056">#12056</a>)</li>
-  <li><code class="highlighter-rouge">systems.controllers.PidController</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12020">#12020</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12030">#12030</a>)</li>
-  <li><code class="highlighter-rouge">systems.controllers.PidControlledSystem</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12020">#12020</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12030">#12030</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">multibody.LinearSpringDamper</code> (<a href="https://github.com/RobotLocomotion/drake/pull/11987">#11987</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">solvers.mathematicalprogram.MathematicalProgram.AddIndeterminates</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12017">#12017</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">solvers.mathematicalprogram.MathematicalProgram.AddDecisionVariables</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12017">#12017</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">solvers.mathematicalprogram.SolverInterface</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12056">#12056</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">systems.controllers.PidController</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12020">#12020</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12030">#12030</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">systems.controllers.PidControlledSystem</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12020">#12020</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12030">#12030</a>)</li>
 </ul>
 
 <h2 id="build-system">Build system</h2>
 
 <ul>
   <li>Suggest Bionic as our preference (not Xenial) (<a href="https://github.com/RobotLocomotion/drake/pull/12074">#12074</a>)</li>
-  <li>Remove <code class="highlighter-rouge">snopt</code> support for upstream BUILD files (<a href="https://github.com/RobotLocomotion/drake/pull/12098">#12098</a>)</li>
-  <li>Add warning about <code class="highlighter-rouge">pytorch</code>’s use of <code class="highlighter-rouge">RTLD_GLOBAL</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12108">#12108</a>)</li>
-  <li>Fix: <code class="highlighter-rouge">libstdc++6-7-dbg</code> dependency typo in Ubuntu 18.04 (<a href="https://github.com/RobotLocomotion/drake/pull/12013">#12013</a>)</li>
+  <li>Remove <code class="language-plaintext highlighter-rouge">snopt</code> support for upstream BUILD files (<a href="https://github.com/RobotLocomotion/drake/pull/12098">#12098</a>)</li>
+  <li>Add warning about <code class="language-plaintext highlighter-rouge">pytorch</code>’s use of <code class="language-plaintext highlighter-rouge">RTLD_GLOBAL</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12108">#12108</a>)</li>
+  <li>Fix: <code class="language-plaintext highlighter-rouge">libstdc++6-7-dbg</code> dependency typo in Ubuntu 18.04 (<a href="https://github.com/RobotLocomotion/drake/pull/12013">#12013</a>)</li>
   <li>Fix: Suppress “self-assign-overloaded” warnings for Apple LLVM &gt;= 10.0.1 (<a href="https://github.com/RobotLocomotion/drake/pull/12092">#12092</a>)</li>
-  <li>Permit downstream projects to use <code class="highlighter-rouge">ExecuteExtraPythonCode</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12000">#12000</a>)</li>
+  <li>Permit downstream projects to use <code class="language-plaintext highlighter-rouge">ExecuteExtraPythonCode</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12000">#12000</a>)</li>
 </ul>
 
 <h3 id="dependencies">Dependencies</h3>
 
 <ul>
-  <li>Add <code class="highlighter-rouge">ghc::filesystem</code> as a new dependency (<a href="https://github.com/RobotLocomotion/drake/pull/12106">#12106</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12116">#12116</a>)</li>
-  <li>Add <code class="highlighter-rouge">suitesparse</code> as a new dependency (<a href="https://github.com/RobotLocomotion/drake/pull/12071">#12071</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12072">#12072</a>)</li>
-  <li>Expand <code class="highlighter-rouge">jupyter</code> dependency to add <code class="highlighter-rouge">jupyter-notebook</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12043">#12043</a>)</li>
-  <li>Update <code class="highlighter-rouge">buildifier</code> to latest release 0.29.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
-  <li>Update <code class="highlighter-rouge">fcl</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/12054">#12054</a>)</li>
-  <li>Update <code class="highlighter-rouge">fmt</code> to latest release 6.0.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
-  <li>Update <code class="highlighter-rouge">ignition_math</code> to latest release 6.4.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
-  <li>Update <code class="highlighter-rouge">meshcat</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
-  <li>Update <code class="highlighter-rouge">osqp</code> to latest release 0.6.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12047">#12047</a>)</li>
-  <li>Update <code class="highlighter-rouge">qdldl</code> to latest release 0.1.4 (<a href="https://github.com/RobotLocomotion/drake/pull/12047">#12047</a>)</li>
-  <li>Update <code class="highlighter-rouge">semantic_version</code> to latest version 2.8.2 (<a href="https://github.com/RobotLocomotion/drake/pull/12041">#12041</a>)</li>
-  <li>Update <code class="highlighter-rouge">scs</code> to latest release 2.1.1 (<a href="https://github.com/RobotLocomotion/drake/pull/12084">#12084</a>)</li>
-  <li>Update <code class="highlighter-rouge">stx</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
-  <li>Remove unused <code class="highlighter-rouge">ignition_rndf</code> dependency (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12024">#12024</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">ghc::filesystem</code> as a new dependency (<a href="https://github.com/RobotLocomotion/drake/pull/12106">#12106</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12116">#12116</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">suitesparse</code> as a new dependency (<a href="https://github.com/RobotLocomotion/drake/pull/12071">#12071</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12072">#12072</a>)</li>
+  <li>Expand <code class="language-plaintext highlighter-rouge">jupyter</code> dependency to add <code class="language-plaintext highlighter-rouge">jupyter-notebook</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12043">#12043</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">buildifier</code> to latest release 0.29.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">fcl</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/12054">#12054</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">fmt</code> to latest release 6.0.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">ignition_math</code> to latest release 6.4.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">meshcat</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">osqp</code> to latest release 0.6.0 (<a href="https://github.com/RobotLocomotion/drake/pull/12047">#12047</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">qdldl</code> to latest release 0.1.4 (<a href="https://github.com/RobotLocomotion/drake/pull/12047">#12047</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">semantic_version</code> to latest version 2.8.2 (<a href="https://github.com/RobotLocomotion/drake/pull/12041">#12041</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">scs</code> to latest release 2.1.1 (<a href="https://github.com/RobotLocomotion/drake/pull/12084">#12084</a>)</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">stx</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>)</li>
+  <li>Remove unused <code class="language-plaintext highlighter-rouge">ignition_rndf</code> dependency (<a href="https://github.com/RobotLocomotion/drake/pull/12014">#12014</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12024">#12024</a>)</li>
 </ul>
 
 <h2 id="other">Other</h2>
@@ -234,9 +234,9 @@ analysis.
 <h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
 
 <ul>
-  <li><code class="highlighter-rouge">Simulator::StepTo</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12008">#12008</a>)
+  <li><code class="language-plaintext highlighter-rouge">Simulator::StepTo</code> (<a href="https://github.com/RobotLocomotion/drake/pull/12008">#12008</a>)
     <ul>
-      <li>Use <code class="highlighter-rouge">Simulator::AdvanceTo</code>.</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">Simulator::AdvanceTo</code>.</li>
     </ul>
   </li>
 </ul>
@@ -244,13 +244,13 @@ analysis.
 <p>Removal of deprecated APIs</p>
 
 <ul>
-  <li><code class="highlighter-rouge">MultibodyPlant::AddForceElement&lt;UniformGravityFieldElement&gt;</code> (<a href="https://github.com/RobotLocomotion/drake/pull/11987">#11987</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">MultibodyPlant::AddForceElement&lt;UniformGravityFieldElement&gt;</code> (<a href="https://github.com/RobotLocomotion/drake/pull/11987">#11987</a>)</li>
 </ul>
 
 <h2 id="binaries">Binaries</h2>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.11.0">pre-compiled binaries</a>
-named <code class="highlighter-rouge">drake-20191002-{bionic|xenial|mac}.tar.gz</code>. See
+named <code class="language-plaintext highlighter-rouge">drake-20191002-{bionic|xenial|mac}.tar.gz</code>. See
 <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a>  as part of the <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>

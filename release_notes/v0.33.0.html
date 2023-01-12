@@ -154,19 +154,19 @@ analysis.
 <h1 id="breaking-changes-since-v0320">Breaking changes since v0.32.0</h1>
 
 <ul>
-  <li>The <code class="highlighter-rouge">drake/examples/pendulum/Pendulum.urdf</code> now includes a weld joint (<a href="https://github.com/RobotLocomotion/drake/pull/15426">#15426</a>).
+  <li>The <code class="language-plaintext highlighter-rouge">drake/examples/pendulum/Pendulum.urdf</code> now includes a weld joint (<a href="https://github.com/RobotLocomotion/drake/pull/15426">#15426</a>).
     <ul>
       <li>Users who were adding the weld by hand and should remove their weld.</li>
     </ul>
   </li>
-  <li>The <code class="highlighter-rouge">drake::systems::lcm::SerializerInterface</code> has a new pure-virtual method for <code class="highlighter-rouge">Clone</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15394">#15394</a>).
+  <li>The <code class="language-plaintext highlighter-rouge">drake::systems::lcm::SerializerInterface</code> has a new pure-virtual method for <code class="language-plaintext highlighter-rouge">Clone</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15394">#15394</a>).
     <ul>
-      <li>Users who were extending it directly (rather than using the concrete <code class="highlighter-rouge">Serializer</code> class) should to implement the new method.</li>
+      <li>Users who were extending it directly (rather than using the concrete <code class="language-plaintext highlighter-rouge">Serializer</code> class) should to implement the new method.</li>
     </ul>
   </li>
-  <li>The <code class="highlighter-rouge">drake::geometry::GeometryState</code> class no longer offers <code class="highlighter-rouge">ExcludeCollisionsWithin</code> and <code class="highlighter-rouge">ExcludeCollisionBetween</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15348">#15348</a>).
+  <li>The <code class="language-plaintext highlighter-rouge">drake::geometry::GeometryState</code> class no longer offers <code class="language-plaintext highlighter-rouge">ExcludeCollisionsWithin</code> and <code class="language-plaintext highlighter-rouge">ExcludeCollisionBetween</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15348">#15348</a>).
     <ul>
-      <li>This class (though not in an <code class="highlighter-rouge">internal</code> namespace yet) is documented to be for Drake’s internal use only.</li>
+      <li>This class (though not in an <code class="language-plaintext highlighter-rouge">internal</code> namespace yet) is documented to be for Drake’s internal use only.</li>
     </ul>
   </li>
 </ul>
@@ -395,7 +395,7 @@ analysis.
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.33.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20210811-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20210811-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

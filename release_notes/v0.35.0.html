@@ -149,10 +149,10 @@ Reachability Analysis</a> (TOPPRA)
 has been added to Drake C++ and Python (<a href="https://github.com/RobotLocomotion/drake/pull/15731">#15731</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15799">#15799</a>)</li>
   <li>SDFormat 1.9 supported (<a href="https://github.com/RobotLocomotion/drake/pull/15852">#15852</a>)
     <ul>
-      <li>Provides <code class="highlighter-rouge">//pose[@rotation_format]</code> attribute to choose between Euler RPY
+      <li>Provides <code class="language-plaintext highlighter-rouge">//pose[@rotation_format]</code> attribute to choose between Euler RPY
   or Quaternions for the rotation component. Angles can now be expressed in
-  degrees using the <code class="highlighter-rouge">//pose[@degrees = true]</code> attribute when using Euler RPY.</li>
-      <li>Add a new attribute <code class="highlighter-rouge">//include[@merge]</code> that allows including nested
+  degrees using the <code class="language-plaintext highlighter-rouge">//pose[@degrees = true]</code> attribute when using Euler RPY.</li>
+      <li>Add a new attribute <code class="language-plaintext highlighter-rouge">//include[@merge]</code> that allows including nested
   models without introducing new scopes (the contents of the included model
   are moved without any modification to the parent model). (<em>Note</em>: This
   currently does not support URDFs parsed via SDFormat composition.)</li>
@@ -255,7 +255,7 @@ has been added to Drake C++ and Python (<a href="https://github.com/RobotLocomot
 <ul>
   <li>Clean up Drake-owned URDF files (<a href="https://github.com/RobotLocomotion/drake/pull/15783">#15783</a>)</li>
   <li>Use a smaller time step in Atlas example to avoid discrete solver errors (<a href="https://github.com/RobotLocomotion/drake/pull/15814">#15814</a>)</li>
-  <li>Fix camera + robot positioning for <code class="highlighter-rouge">rendering_multibody_plant</code> notebook (<a href="https://github.com/RobotLocomotion/drake/pull/15841">#15841</a>)</li>
+  <li>Fix camera + robot positioning for <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> notebook (<a href="https://github.com/RobotLocomotion/drake/pull/15841">#15841</a>)</li>
   <li>Ensure a SceneGraph is connected for contact visualization (<a href="https://github.com/RobotLocomotion/drake/pull/15849">#15849</a>)</li>
   <li>Ensure AcrobotPlant::get_mutable_parameters are actually mutable (removes spurious const) (<a href="https://github.com/RobotLocomotion/drake/pull/15812">#15812</a>)</li>
 </ul>
@@ -266,7 +266,7 @@ has been added to Drake C++ and Python (<a href="https://github.com/RobotLocomot
 
 <ul>
   <li>Fix DoMakeDerivative for derivatives of order higher than basis degree (<a href="https://github.com/RobotLocomotion/drake/pull/15939">#15939</a>)</li>
-  <li>Allow <code class="highlighter-rouge">copyable_unique_ptr</code> to be usable on forward-declared types (<a href="https://github.com/RobotLocomotion/drake/pull/15906">#15906</a>)</li>
+  <li>Allow <code class="language-plaintext highlighter-rouge">copyable_unique_ptr</code> to be usable on forward-declared types (<a href="https://github.com/RobotLocomotion/drake/pull/15906">#15906</a>)</li>
   <li>Ensure show_model only reads the top-level package_path (<a href="https://github.com/RobotLocomotion/drake/pull/15801">#15801</a>)</li>
   <li>Add LinearSolver class (<a href="https://github.com/RobotLocomotion/drake/pull/15818">#15818</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15790">#15790</a>)</li>
   <li>Clean up PiecewisePose and add python bindings (<a href="https://github.com/RobotLocomotion/drake/pull/15786">#15786</a>)</li>
@@ -287,7 +287,7 @@ has been added to Drake C++ and Python (<a href="https://github.com/RobotLocomot
 <p>New features</p>
 
 <ul>
-  <li>Expose <code class="highlighter-rouge">pydrake.common.deprecation.deprecated_callable</code> as decorator (<a href="https://github.com/RobotLocomotion/drake/pull/15877">#15877</a>)</li>
+  <li>Expose <code class="language-plaintext highlighter-rouge">pydrake.common.deprecation.deprecated_callable</code> as decorator (<a href="https://github.com/RobotLocomotion/drake/pull/15877">#15877</a>)</li>
 </ul>
 
 <p>Fixes</p>
@@ -317,7 +317,7 @@ has been added to Drake C++ and Python (<a href="https://github.com/RobotLocomot
 <!-- <relnotes for cmake,doc,setup,third_party,tools go here> -->
 
 <ul>
-  <li>Offer a <code class="highlighter-rouge">-y</code> option for Ubuntu <code class="highlighter-rouge">install_prereqs</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15819">#15819</a>)</li>
+  <li>Offer a <code class="language-plaintext highlighter-rouge">-y</code> option for Ubuntu <code class="language-plaintext highlighter-rouge">install_prereqs</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15819">#15819</a>)</li>
   <li>Fix ODR violations in get_new_id bindings (<a href="https://github.com/RobotLocomotion/drake/pull/15857">#15857</a>)</li>
   <li>Ensure Drake compiles with XCode 13 on macOS (Apple clang 13) (<a href="https://github.com/RobotLocomotion/drake/pull/15838">#15838</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15839">#15839</a>)</li>
 </ul>
@@ -380,7 +380,7 @@ has been added to Drake C++ and Python (<a href="https://github.com/RobotLocomot
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.35.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20211021-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20211021-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

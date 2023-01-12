@@ -151,7 +151,7 @@ analysis.
 
 <ul>
   <li>Use dynamic (not static) friction coefficient while computing point contact, i.e., the static coefficient of friction is ignored from both URDF/SDF files when using a discrete MultibodyPlant model with point contact (<a href="https://github.com/RobotLocomotion/drake/pull/12109">#12109</a>).</li>
-  <li>Previously, in <code class="highlighter-rouge">*.sdf</code> files a <code class="highlighter-rouge">&lt;static&gt;</code> element within a <code class="highlighter-rouge">&lt;model&gt;</code> was ignored, but is now being parsed. Users with invalid <code class="highlighter-rouge">*.sdf</code> files might receive error messages. The correct solution is to remove the tag (if everything is already welded to the world), or remove any redundant welds (<a href="https://github.com/RobotLocomotion/drake/pull/12226">#12226</a>).</li>
+  <li>Previously, in <code class="language-plaintext highlighter-rouge">*.sdf</code> files a <code class="language-plaintext highlighter-rouge">&lt;static&gt;</code> element within a <code class="language-plaintext highlighter-rouge">&lt;model&gt;</code> was ignored, but is now being parsed. Users with invalid <code class="language-plaintext highlighter-rouge">*.sdf</code> files might receive error messages. The correct solution is to remove the tag (if everything is already welded to the world), or remove any redundant welds (<a href="https://github.com/RobotLocomotion/drake/pull/12226">#12226</a>).</li>
   <li>drake::multibody::ContactResults methods AddContactInfo and Clear are removed (<a href="https://github.com/RobotLocomotion/drake/pull/12249">#12249</a>).</li>
   <li>Rename ImplicitStribeck to Tamsi to match notation in arXiv paper (<a href="https://github.com/RobotLocomotion/drake/pull/12053">#12053</a>):
     <ul>
@@ -160,7 +160,7 @@ analysis.
       <li>drake::multibody::ImplicitStribeckSolverResults is now named TamsiSolverResults</li>
     </ul>
   </li>
-  <li>Users who compile Drake from source as a bazel external (as in the <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/master/drake_bazel_external">drake_bazel_external</a> pattern) must set <code class="highlighter-rouge">build --incompatible_remove_legacy_whole_archive=false</code> in their project’s <code class="highlighter-rouge">.bazelrc</code> for now (<a href="https://github.com/RobotLocomotion/drake/pull/12150">#12150</a>).</li>
+  <li>Users who compile Drake from source as a bazel external (as in the <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/master/drake_bazel_external">drake_bazel_external</a> pattern) must set <code class="language-plaintext highlighter-rouge">build --incompatible_remove_legacy_whole_archive=false</code> in their project’s <code class="language-plaintext highlighter-rouge">.bazelrc</code> for now (<a href="https://github.com/RobotLocomotion/drake/pull/12150">#12150</a>).</li>
   <li>Remove installed stx headers and stx-config.cmake; Drake no longer provides stx (<a href="https://github.com/RobotLocomotion/drake/pull/12246">#12246</a>).</li>
 </ul>
 
@@ -197,8 +197,8 @@ analysis.
   <li>Add MultibodyPlant generalized_contact_forces output port support when using continuous time (<a href="https://github.com/RobotLocomotion/drake/pull/12162">#12162</a>)</li>
   <li>Add MultibodyPlant method GetActutationFromArray (<a href="https://github.com/RobotLocomotion/drake/pull/12011">#12011</a>)</li>
   <li>Add SceneGraph boolean query HasCollisions (<a href="https://github.com/RobotLocomotion/drake/pull/12211">#12211</a>)</li>
-  <li>Add multibody <code class="highlighter-rouge">*.sdf</code> parsing support for link initial poses during CreateDefaultContext (<a href="https://github.com/RobotLocomotion/drake/pull/12226">#12226</a>)</li>
-  <li>Add multibody <code class="highlighter-rouge">*.sdf</code> parser support for the <code class="highlighter-rouge">&lt;static&gt;</code> element within a <code class="highlighter-rouge">&lt;model&gt;</code>; note that “freezing” articulated joints is not supported (<a href="https://github.com/RobotLocomotion/drake/pull/12226">#12226</a>)</li>
+  <li>Add multibody <code class="language-plaintext highlighter-rouge">*.sdf</code> parsing support for link initial poses during CreateDefaultContext (<a href="https://github.com/RobotLocomotion/drake/pull/12226">#12226</a>)</li>
+  <li>Add multibody <code class="language-plaintext highlighter-rouge">*.sdf</code> parser support for the <code class="language-plaintext highlighter-rouge">&lt;static&gt;</code> element within a <code class="language-plaintext highlighter-rouge">&lt;model&gt;</code>; note that “freezing” articulated joints is not supported (<a href="https://github.com/RobotLocomotion/drake/pull/12226">#12226</a>)</li>
   <li>Add partial multibody geometry support for the capsule primitive, including urdf parsing (<a href="https://github.com/RobotLocomotion/drake/pull/12254">#12254</a>), sdf parsing with custom drake:capsule tag (<a href="https://github.com/RobotLocomotion/drake/pull/12258">#12258</a>), visualization (<a href="https://github.com/RobotLocomotion/drake/pull/12235">#12235</a>), and vtk and ospray sensor rendering (<a href="https://github.com/RobotLocomotion/drake/pull/12293">#12293</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12305">#12305</a>)</li>
   <li>Add partial multibody geometry support for the ellipsoid primitive (<a href="https://github.com/RobotLocomotion/drake/pull/12256">#12256</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12323">#12323</a>)</li>
 </ul>
@@ -214,7 +214,7 @@ analysis.
 
 <ul>
   <li>This is experimental and will change in the near future! (And it will not be used by default.)</li>
-  <li>Hydroelastics only supports soft-hard contact with spheres; see demo at <code class="highlighter-rouge">examples/multibody/rolling_sphere</code>.</li>
+  <li>Hydroelastics only supports soft-hard contact with spheres; see demo at <code class="language-plaintext highlighter-rouge">examples/multibody/rolling_sphere</code>.</li>
   <li>For more information, see Elandt, et al. “A pressure field model for fast, robust approximation of net contact force and moment between nominally rigid objects” to appear in IROS 2019. `ArXiv pre-print &lt;https://arxiv.org/abs/1904.11433.</li>
 </ul>
 
@@ -292,7 +292,7 @@ analysis.
   <li>Remove support for Ubuntu Xenial (16.04) (<a href="https://github.com/RobotLocomotion/drake/pull/12238">#12238</a>)</li>
   <li>Remove support for Python 2 (<a href="https://github.com/RobotLocomotion/drake/pull/12126">#12126</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12138">#12138</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12146">#12146</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12147">#12147</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12243">#12243</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12155">#12155</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12296">#12296</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12320">#12320</a>).
     <ul>
-      <li>Notably, the Drake-specific bazel command line options <code class="highlighter-rouge">bazel build --config python2</code> and <code class="highlighter-rouge">bazel build --config python3</code> are removed.</li>
+      <li>Notably, the Drake-specific bazel command line options <code class="language-plaintext highlighter-rouge">bazel build --config python2</code> and <code class="language-plaintext highlighter-rouge">bazel build --config python3</code> are removed.</li>
     </ul>
   </li>
 </ul>
@@ -314,7 +314,7 @@ analysis.
   <li>Everything under attic/systems/controllers, e.g., InstantaneousQPController (<a href="https://github.com/RobotLocomotion/drake/pull/12291">#12291</a>)</li>
   <li>Everything under examples/valkyrie (<a href="https://github.com/RobotLocomotion/drake/pull/12170">#12170</a>)</li>
   <li>drake:MakeFileInputStreamOrThrow for protobufs (<a href="https://github.com/RobotLocomotion/drake/pull/12220">#12220</a>)</li>
-  <li>vector_gen <code class="highlighter-rouge">*.named_vector</code> protobuf input format (<a href="https://github.com/RobotLocomotion/drake/pull/12228">#12228</a>)</li>
+  <li>vector_gen <code class="language-plaintext highlighter-rouge">*.named_vector</code> protobuf input format (<a href="https://github.com/RobotLocomotion/drake/pull/12228">#12228</a>)</li>
   <li>//bindings/pydrake/common:drake_optional_pybind BUILD label (<a href="https://github.com/RobotLocomotion/drake/pull/12246">#12246</a>)</li>
   <li>//bindings/pydrake/common:drake_variant_pybind BUILD label (<a href="https://github.com/RobotLocomotion/drake/pull/12246">#12246</a>)</li>
   <li>//solvers:mathematical_program_lite BUILD label (<a href="https://github.com/RobotLocomotion/drake/pull/12142">#12142</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12149">#12149</a>)</li>
@@ -560,8 +560,8 @@ analysis.
       <li>Use the //attic/multibody labels instead.</li>
     </ul>
   </li>
-  <li>Remove F2C build flavor of SNOPT solver, i.e., <code class="highlighter-rouge">-DWITH_SNOPT=F2C</code> in CMake
-or <code class="highlighter-rouge">--config snopt_f2c</code> in Bazel (<a href="https://github.com/RobotLocomotion/drake/pull/12299">#12299</a>)
+  <li>Remove F2C build flavor of SNOPT solver, i.e., <code class="language-plaintext highlighter-rouge">-DWITH_SNOPT=F2C</code> in CMake
+or <code class="language-plaintext highlighter-rouge">--config snopt_f2c</code> in Bazel (<a href="https://github.com/RobotLocomotion/drake/pull/12299">#12299</a>)
     <ul>
       <li>Only the Fortran build flavor is supported from now on.</li>
     </ul>
@@ -572,7 +572,7 @@ or <code class="highlighter-rouge">--config snopt_f2c</code> in Bazel (<a href="
 
 <p>This release provides
 <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.12.0">pre-compiled binaries</a>
-named <code class="highlighter-rouge">drake-20191108-{bionic|mac}.tar.gz</code>. See
+named <code class="language-plaintext highlighter-rouge">drake-20191108-{bionic|mac}.tar.gz</code>. See
 <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>

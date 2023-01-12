@@ -139,15 +139,15 @@ analysis.
       <article class="markdown-body">
         <p>Drake uses <a href="https://github.com/RobotLocomotion/drake/issues">GitHub issues</a>
 to coordinate bug resolution and feature development. We organize issues using
-labels.  Each label uses the format <code class="highlighter-rouge">group: value</code>, where <code class="highlighter-rouge">group</code> is one
+labels.  Each label uses the format <code class="language-plaintext highlighter-rouge">group: value</code>, where <code class="language-plaintext highlighter-rouge">group</code> is one
 of the following:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">component</code>: Indicates the primary affected feature area.</li>
-  <li><code class="highlighter-rouge">type</code>: Indicates the nature of the issue.</li>
-  <li><code class="highlighter-rouge">priority</code>: Indicates the urgency of resolution.</li>
-  <li><code class="highlighter-rouge">configuration</code>: The supported configurations affected, if applicable.</li>
-  <li><code class="highlighter-rouge">status</code>: PRs only.  Indicates the status of the PR.</li>
+  <li><code class="language-plaintext highlighter-rouge">component</code>: Indicates the primary affected feature area.</li>
+  <li><code class="language-plaintext highlighter-rouge">type</code>: Indicates the nature of the issue.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority</code>: Indicates the urgency of resolution.</li>
+  <li><code class="language-plaintext highlighter-rouge">configuration</code>: The supported configurations affected, if applicable.</li>
+  <li><code class="language-plaintext highlighter-rouge">status</code>: PRs only.  Indicates the status of the PR.</li>
 </ul>
 
 <p>Please only assign labels if you are reasonably confident they are correct.
@@ -159,8 +159,8 @@ The Drake development team will apply appropriate labels later as needed.</p>
 
 <h1 id="component">Component</h1>
 
-<p>Every issue must at least one <code class="highlighter-rouge">component</code> label assigned. Our preference is
-to have exactly one <code class="highlighter-rouge">component</code> per issue, but we allow multiple in case
+<p>Every issue must at least one <code class="language-plaintext highlighter-rouge">component</code> label assigned. Our preference is
+to have exactly one <code class="language-plaintext highlighter-rouge">component</code> per issue, but we allow multiple in case
 several components are equally relevant.</p>
 
 <p>The components are:</p>
@@ -376,23 +376,23 @@ delegate the work to others.</p>
 
 <h1 id="priority">Priority</h1>
 
-<p>The <code class="highlighter-rouge">emergency</code> priority indicates that the involved parties should not work
+<p>The <code class="language-plaintext highlighter-rouge">emergency</code> priority indicates that the involved parties should not work
 on anything else until the issue is resolved.</p>
 
 <p>The other priorities are determined by the lead of the assigned component. The
 following rules of thumb may be useful for issues:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">priority: high</code> - planned to receive attention within the month.</li>
-  <li><code class="highlighter-rouge">priority: medium</code> - planned to receive attention within the quarter.</li>
-  <li><code class="highlighter-rouge">priority: low</code> - planned for a subsequent quarter.</li>
-  <li><code class="highlighter-rouge">priority: backlog</code> - will be handled on an ad-hoc basis, as time permits.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority: high</code> - planned to receive attention within the month.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority: medium</code> - planned to receive attention within the quarter.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority: low</code> - planned for a subsequent quarter.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority: backlog</code> - will be handled on an ad-hoc basis, as time permits.</li>
 </ul>
 
 <h1 id="configuration">Configuration</h1>
 
-<p>An issue may have configuration label(s) such as <code class="highlighter-rouge">linux</code>, <code class="highlighter-rouge">mac</code>,
-<code class="highlighter-rouge">python</code>, etc.  If no <code class="highlighter-rouge">configuration</code> label is present, the issue is
+<p>An issue may have configuration label(s) such as <code class="language-plaintext highlighter-rouge">linux</code>, <code class="language-plaintext highlighter-rouge">mac</code>,
+<code class="language-plaintext highlighter-rouge">python</code>, etc.  If no <code class="language-plaintext highlighter-rouge">configuration</code> label is present, the issue is
 assumed to affect all configurations.</p>
 
 <h1 id="status">Status</h1>
@@ -402,12 +402,12 @@ Status labels are optional, but Drake developers managing the PR queue
 will respect them.</p>
 
 <ul>
-  <li><code class="highlighter-rouge">do not review</code>: Use this status to indicate you do not want anyone to
+  <li><code class="language-plaintext highlighter-rouge">do not review</code>: Use this status to indicate you do not want anyone to
 review your PR right now. This is useful if you created the PR to trigger
 CI and plan to iterate on the results. Even if this flag is absent, you
-are responsible for finding reviewers, as documented in <code class="highlighter-rouge">developers</code>.
+are responsible for finding reviewers, as documented in <code class="language-plaintext highlighter-rouge">developers</code>.
 This flag simply protects you from unsolicited review.</li>
-  <li><code class="highlighter-rouge">do not merge</code>: Use this status to indicate you do not want anyone to
+  <li><code class="language-plaintext highlighter-rouge">do not merge</code>: Use this status to indicate you do not want anyone to
 merge your PR right now, even if it passes all pre-merge checks. This is
 useful if you have minor post-LGTM changes to make, or if you need to
 coordinate the precise timing of the merge. If pre-merge checks are green

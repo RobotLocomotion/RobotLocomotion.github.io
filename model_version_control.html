@@ -147,8 +147,8 @@ may add them directly to Git in a PR to master.</p>
 
 <p>Otherwise, you should add the large files to
 <a href="https://github.com/RobotLocomotion/models">RobotLocomotion/models</a>. Please do
-not commit files that are generally small, like <code class="highlighter-rouge">*.sdf</code> or <code class="highlighter-rouge">*.urdf</code> files,
-in <code class="highlighter-rouge">RobotLocomotion/models</code>; instead, please commit those directly.</p>
+not commit files that are generally small, like <code class="language-plaintext highlighter-rouge">*.sdf</code> or <code class="language-plaintext highlighter-rouge">*.urdf</code> files,
+in <code class="language-plaintext highlighter-rouge">RobotLocomotion/models</code>; instead, please commit those directly.</p>
 
 <p>Before you decide to submit models, please ensure that you have tests that
 will need them. Do not submit a PR that adds models but has zero intent to use
@@ -159,39 +159,39 @@ them, as Drake is not a model repository.</p>
 <h2 id="develop-changes-locally">Develop Changes Locally</h2>
 
 <ol>
-  <li>Clone <code class="highlighter-rouge">RobotLocomotion/models</code> locally</li>
-  <li>Create a Git branch in your local checkouts of <em>both</em> <code class="highlighter-rouge">models</code> and
-<code class="highlighter-rouge">drake</code>.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to point to your
-<code class="highlighter-rouge">models</code> checkout using
-<code class="highlighter-rouge">github_archive(..., local_repository_override = &lt;path&gt;)</code>.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/files.bzl</code> to incorporate the models
+  <li>Clone <code class="language-plaintext highlighter-rouge">RobotLocomotion/models</code> locally</li>
+  <li>Create a Git branch in your local checkouts of <em>both</em> <code class="language-plaintext highlighter-rouge">models</code> and
+<code class="language-plaintext highlighter-rouge">drake</code>.</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to point to your
+<code class="language-plaintext highlighter-rouge">models</code> checkout using
+<code class="language-plaintext highlighter-rouge">github_archive(..., local_repository_override = &lt;path&gt;)</code>.</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/models_internal/files.bzl</code> to incorporate the models
 you want.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/package.BUILD.bazel</code> to export the
+  <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/models_internal/package.BUILD.bazel</code> to export the
 models.</li>
-  <li>Ensure that you use <code class="highlighter-rouge">forward_files</code> to make the files available inside
+  <li>Ensure that you use <code class="language-plaintext highlighter-rouge">forward_files</code> to make the files available inside
 the Drake bazel workspace. For an example, see
 <a href="https://github.com/RobotLocomotion/drake/blob/master/manipulation/models/ycb/BUILD.bazel">drake/manipulation/models/ycb/BUILD.bazel</a>.</li>
-  <li>Ensure your tests pass under <code class="highlighter-rouge">bazel test</code>.</li>
+  <li>Ensure your tests pass under <code class="language-plaintext highlighter-rouge">bazel test</code>.</li>
 </ol>
 
 <h2 id="submit-changes-in-a-pull-request">Submit Changes in a Pull Request</h2>
 
 <ol>
-  <li>Push your changes to your fork of <code class="highlighter-rouge">RobotLocomotion/models</code>. Make a PR.</li>
-  <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to use the
+  <li>Push your changes to your fork of <code class="language-plaintext highlighter-rouge">RobotLocomotion/models</code>. Make a PR.</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to use the
 commit you pushed.</li>
   <li>Submit a PR to Drake, and add a self-blocking discussion thread, such as
-<code class="highlighter-rouge">"Working temporary SHA1 until the models PR &lt;LINK&gt; is merged."</code>,
-where <code class="highlighter-rouge">&lt;LINK&gt;</code> references your <code class="highlighter-rouge">models</code> PR.</li>
+<code class="language-plaintext highlighter-rouge">"Working temporary SHA1 until the models PR &lt;LINK&gt; is merged."</code>,
+where <code class="language-plaintext highlighter-rouge">&lt;LINK&gt;</code> references your <code class="language-plaintext highlighter-rouge">models</code> PR.</li>
   <li>Get review on your Drake PR first. Once it is generally approved, then
-request review for your <code class="highlighter-rouge">models</code> PR.</li>
+request review for your <code class="language-plaintext highlighter-rouge">models</code> PR.</li>
   <li>Once both PRs are approved:
     <ol>
-      <li>Merge your <code class="highlighter-rouge">models</code> PR.</li>
-      <li>Update <code class="highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to the latest
-merge commit on <code class="highlighter-rouge">master</code> for <code class="highlighter-rouge">RobotLocomotion/models</code>.</li>
-      <li>Merge your <code class="highlighter-rouge">drake</code> PR.</li>
+      <li>Merge your <code class="language-plaintext highlighter-rouge">models</code> PR.</li>
+      <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/models_internal/repository.bzl</code> to the latest
+merge commit on <code class="language-plaintext highlighter-rouge">master</code> for <code class="language-plaintext highlighter-rouge">RobotLocomotion/models</code>.</li>
+      <li>Merge your <code class="language-plaintext highlighter-rouge">drake</code> PR.</li>
     </ol>
   </li>
 </ol>

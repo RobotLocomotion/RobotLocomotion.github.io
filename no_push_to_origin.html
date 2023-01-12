@@ -148,27 +148,27 @@ analysis.
 
 <h1 id="a-convention">A Convention</h1>
 
-<p>To make the notion of <code class="highlighter-rouge">origin</code> consistent with the idea of the one repository you work with, we agree in the following convention:</p>
+<p>To make the notion of <code class="language-plaintext highlighter-rouge">origin</code> consistent with the idea of the one repository you work with, we agree in the following convention:</p>
 
 <ul>
   <li>“upstream”  = RobotLocomotion/drake</li>
   <li>“origin” = my fork</li>
 </ul>
 
-<p>so that a simple <code class="highlighter-rouge">git push</code> will push changes into a developer’s fork. This still does not prevent you from pushing into <code class="highlighter-rouge">upstream</code>. To protect developers from making this simple mistake the following solution is proposed.</p>
+<p>so that a simple <code class="language-plaintext highlighter-rouge">git push</code> will push changes into a developer’s fork. This still does not prevent you from pushing into <code class="language-plaintext highlighter-rouge">upstream</code>. To protect developers from making this simple mistake the following solution is proposed.</p>
 
 <h1 id="a-solution">A Solution</h1>
 
 <p>A way to avoid pushing into a repository is providing a dummy url address to the repository. This is accomplished by issuing the git command:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote set-url --push upstream no_push
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote set-url --push upstream no_push
 </code></pre></div></div>
 
-<p>where <code class="highlighter-rouge">no_push</code> is the dummy url and <code class="highlighter-rouge">upstream</code> points to RobotLocomotion/drake (recall the convention is to call your fork <code class="highlighter-rouge">origin</code>).</p>
+<p>where <code class="language-plaintext highlighter-rouge">no_push</code> is the dummy url and <code class="language-plaintext highlighter-rouge">upstream</code> points to RobotLocomotion/drake (recall the convention is to call your fork <code class="language-plaintext highlighter-rouge">origin</code>).</p>
 
-<p>If a push to the master repository is attempted issuing a <code class="highlighter-rouge">git push upstream my_branch</code>, git will return the following error message:</p>
+<p>If a push to the master repository is attempted issuing a <code class="language-plaintext highlighter-rouge">git push upstream my_branch</code>, git will return the following error message:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal: 'no_push' does not appear to be a git repository
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal: 'no_push' does not appear to be a git repository
 fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights

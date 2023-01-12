@@ -153,8 +153,8 @@ visualization.</li>
 <h1 id="breaking-changes-since-v0300">Breaking changes since v0.30.0</h1>
 
 <ul>
-  <li>Any direct subclasses of <code class="highlighter-rouge">SolverInterface</code> need to implement the new
-<code class="highlighter-rouge">ExplainUnsatisfiedProgramAttributes</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15028">#15028</a>)</li>
+  <li>Any direct subclasses of <code class="language-plaintext highlighter-rouge">SolverInterface</code> need to implement the new
+<code class="language-plaintext highlighter-rouge">ExplainUnsatisfiedProgramAttributes</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15028">#15028</a>)</li>
   <li>Systems now check their Contexts (<a href="https://github.com/RobotLocomotion/drake/pull/15030">#15030</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15102">#15102</a>,
 <a href="https://github.com/RobotLocomotion/drake/pull/15098">#15098</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15181">#15181</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15129">#15129</a>)
     <ul>
@@ -168,9 +168,9 @@ Although this is formally a breaking change without deprecation, we do not expec
   </li>
   <li>SDFormat 1.8 (<a href="https://github.com/RobotLocomotion/drake/pull/15099">#15099</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15208">#15208</a>):
     <ul>
-      <li>Models nested via the <code class="highlighter-rouge">&lt;include&gt;</code> tag are no longer flattened,
+      <li>Models nested via the <code class="language-plaintext highlighter-rouge">&lt;include&gt;</code> tag are no longer flattened,
 which means each included model will have its own model instance.</li>
-      <li><code class="highlighter-rouge">drake::multibody::Parser::AddAllModelsFromFile</code> now returns all added models including nested models Note: This does not use a custom parser for URDFs via libsdformat’s Interface API, and thus may incur unexpected behavior when including URDF files from SDFormat pending the full resolution of <a href="https://github.com/RobotLocomotion/drake/issues/14295">#14295</a>.</li>
+      <li><code class="language-plaintext highlighter-rouge">drake::multibody::Parser::AddAllModelsFromFile</code> now returns all added models including nested models Note: This does not use a custom parser for URDFs via libsdformat’s Interface API, and thus may incur unexpected behavior when including URDF files from SDFormat pending the full resolution of <a href="https://github.com/RobotLocomotion/drake/issues/14295">#14295</a>.</li>
     </ul>
   </li>
 </ul>
@@ -184,11 +184,11 @@ which means each included model will have its own model instance.</li>
 <p>New features</p>
 
 <ul>
-  <li>Added compatibility checks between <code class="highlighter-rouge">System</code>s and their <code class="highlighter-rouge">Context</code> (and constituent elements) (<a href="https://github.com/RobotLocomotion/drake/pull/15030">#15030</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15102">#15102</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15098">#15098</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15181">#15181</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15129">#15129</a>)</li>
-  <li>Add <code class="highlighter-rouge">DiagramBuilder::IsConnectedOrExported</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15096">#15096</a>)</li>
-  <li>Add preliminary <code class="highlighter-rouge">AutoDiffXd</code> support to <code class="highlighter-rouge">RandomSource</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15092">#15092</a>)</li>
-  <li>Add <code class="highlighter-rouge">LinearTransformDensity</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15116">#15116</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15189">#15189</a>)</li>
-  <li>Add <code class="highlighter-rouge">SystemScalarConverter::Remove()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15159">#15159</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15211">#15211</a>)</li>
+  <li>Added compatibility checks between <code class="language-plaintext highlighter-rouge">System</code>s and their <code class="language-plaintext highlighter-rouge">Context</code> (and constituent elements) (<a href="https://github.com/RobotLocomotion/drake/pull/15030">#15030</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15102">#15102</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15098">#15098</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15181">#15181</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15129">#15129</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">DiagramBuilder::IsConnectedOrExported</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15096">#15096</a>)</li>
+  <li>Add preliminary <code class="language-plaintext highlighter-rouge">AutoDiffXd</code> support to <code class="language-plaintext highlighter-rouge">RandomSource</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15092">#15092</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">LinearTransformDensity</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15116">#15116</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15189">#15189</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">SystemScalarConverter::Remove()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15159">#15159</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15211">#15211</a>)</li>
 </ul>
 
 <p>Fixes</p>
@@ -205,17 +205,17 @@ which means each included model will have its own model instance.</li>
 <p>New features</p>
 
 <ul>
-  <li>Add virtual <code class="highlighter-rouge">SolverInterface::ExplainUnsatisfiedProgramAttributes</code> for more detailed error messages (<a href="https://github.com/RobotLocomotion/drake/pull/15028">#15028</a>)</li>
-  <li>Add <code class="highlighter-rouge">is_convex</code> flag for constructing QuadraticCost (<a href="https://github.com/RobotLocomotion/drake/pull/15043">#15043</a>)</li>
+  <li>Add virtual <code class="language-plaintext highlighter-rouge">SolverInterface::ExplainUnsatisfiedProgramAttributes</code> for more detailed error messages (<a href="https://github.com/RobotLocomotion/drake/pull/15028">#15028</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">is_convex</code> flag for constructing QuadraticCost (<a href="https://github.com/RobotLocomotion/drake/pull/15043">#15043</a>)</li>
   <li>Enable Solver error messages to indicate which cost is non-convex (<a href="https://github.com/RobotLocomotion/drake/pull/15059">#15059</a>)</li>
-  <li>Rename <code class="highlighter-rouge">AddL2NormCost</code> to <code class="highlighter-rouge">Add2NormSquaredCost</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15134">#15134</a>)</li>
+  <li>Rename <code class="language-plaintext highlighter-rouge">AddL2NormCost</code> to <code class="language-plaintext highlighter-rouge">Add2NormSquaredCost</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15134">#15134</a>)</li>
 </ul>
 
 <p>Fixes</p>
 
 <ul>
-  <li>Improve documentation of <code class="highlighter-rouge">available()</code> vs <code class="highlighter-rouge">enabled()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15114">#15114</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15152">#15152</a>)</li>
-  <li>Ensure that <code class="highlighter-rouge">GetAllConstraints()</code> includes exponential cone constraints; before, they were excluded (<a href="https://github.com/RobotLocomotion/drake/pull/15180">#15180</a>)</li>
+  <li>Improve documentation of <code class="language-plaintext highlighter-rouge">available()</code> vs <code class="language-plaintext highlighter-rouge">enabled()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15114">#15114</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15152">#15152</a>)</li>
+  <li>Ensure that <code class="language-plaintext highlighter-rouge">GetAllConstraints()</code> includes exponential cone constraints; before, they were excluded (<a href="https://github.com/RobotLocomotion/drake/pull/15180">#15180</a>)</li>
 </ul>
 
 <h2 id="multibody-dynamics">Multibody Dynamics</h2>
@@ -225,17 +225,17 @@ which means each included model will have its own model instance.</li>
 <p>New features</p>
 
 <ul>
-  <li>Make <code class="highlighter-rouge">PackageMap</code> copy/move/assignable, allow registering duplicate <code class="highlighter-rouge">(package, path)</code> pairs, admit composition via <code class="highlighter-rouge">PackageMap::AddMap</code>, add <code class="highlighter-rouge">PackageMap::GetPackageNames</code> to enumerate registered package names (<a href="https://github.com/RobotLocomotion/drake/pull/15064">#15064</a>)</li>
-  <li>Make documentation and implementation of <code class="highlighter-rouge">CalcCenterOfMassPositionInWorld()</code> and <code class="highlighter-rouge">CalcCenterOfMassTranslationalVelocityInWorld()</code> consistent with <code class="highlighter-rouge">CalcTotalMass()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15054">#15054</a>)</li>
+  <li>Make <code class="language-plaintext highlighter-rouge">PackageMap</code> copy/move/assignable, allow registering duplicate <code class="language-plaintext highlighter-rouge">(package, path)</code> pairs, admit composition via <code class="language-plaintext highlighter-rouge">PackageMap::AddMap</code>, add <code class="language-plaintext highlighter-rouge">PackageMap::GetPackageNames</code> to enumerate registered package names (<a href="https://github.com/RobotLocomotion/drake/pull/15064">#15064</a>)</li>
+  <li>Make documentation and implementation of <code class="language-plaintext highlighter-rouge">CalcCenterOfMassPositionInWorld()</code> and <code class="language-plaintext highlighter-rouge">CalcCenterOfMassTranslationalVelocityInWorld()</code> consistent with <code class="language-plaintext highlighter-rouge">CalcTotalMass()</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15054">#15054</a>)</li>
   <li>Add support for parsing acceleration limits for some joints in URDF and SDFormat (<a href="https://github.com/RobotLocomotion/drake/pull/15122">#15122</a>)</li>
   <li>Add support for SDFormat 1.8 model composition (<a href="https://github.com/RobotLocomotion/drake/pull/15099">#15099</a>, <a href="https://github.com/RobotLocomotion/drake/pull/15208">#15208</a>)</li>
-  <li>Implement <code class="highlighter-rouge">DoCalcImplicitTimeDerivativesResidual</code> for <code class="highlighter-rouge">MultibodyPlant</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15048">#15048</a>)</li>
+  <li>Implement <code class="language-plaintext highlighter-rouge">DoCalcImplicitTimeDerivativesResidual</code> for <code class="language-plaintext highlighter-rouge">MultibodyPlant</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15048">#15048</a>)</li>
 </ul>
 
 <p>Fixes</p>
 
 <ul>
-  <li>Improve error messages on <code class="highlighter-rouge">MultibodyPlant</code> element lookups (<a href="https://github.com/RobotLocomotion/drake/pull/15083">#15083</a>)</li>
+  <li>Improve error messages on <code class="language-plaintext highlighter-rouge">MultibodyPlant</code> element lookups (<a href="https://github.com/RobotLocomotion/drake/pull/15083">#15083</a>)</li>
 </ul>
 
 <h2 id="tutorials-and-examples">Tutorials and examples</h2>
@@ -247,14 +247,14 @@ which means each included model will have its own model instance.</li>
 <ul>
   <li>Add tutorial showing derivatives of basic MultibodyPlant computations w.r.t.
 mass (<a href="https://github.com/RobotLocomotion/drake/pull/15103">#15103</a>)</li>
-  <li>Optionally publish point clouds in <code class="highlighter-rouge">manipulation_station</code> simulation (<a href="https://github.com/RobotLocomotion/drake/pull/14991">#14991</a>)</li>
+  <li>Optionally publish point clouds in <code class="language-plaintext highlighter-rouge">manipulation_station</code> simulation (<a href="https://github.com/RobotLocomotion/drake/pull/14991">#14991</a>)</li>
 </ul>
 
 <p>Fixes</p>
 
 <ul>
-  <li>In <code class="highlighter-rouge">quadratic_program</code> tutorial, mention <code class="highlighter-rouge">is_convex</code> flag (<a href="https://github.com/RobotLocomotion/drake/pull/15077">#15077</a>)</li>
-  <li>Remove uses of <code class="highlighter-rouge">SolverType</code> in examples (<a href="https://github.com/RobotLocomotion/drake/pull/15214">#15214</a>)</li>
+  <li>In <code class="language-plaintext highlighter-rouge">quadratic_program</code> tutorial, mention <code class="language-plaintext highlighter-rouge">is_convex</code> flag (<a href="https://github.com/RobotLocomotion/drake/pull/15077">#15077</a>)</li>
+  <li>Remove uses of <code class="language-plaintext highlighter-rouge">SolverType</code> in examples (<a href="https://github.com/RobotLocomotion/drake/pull/15214">#15214</a>)</li>
   <li>Fix the Jaco example to work on real hardware (not just sim) (<a href="https://github.com/RobotLocomotion/drake/pull/15203">#15203</a>)</li>
 </ul>
 
@@ -263,10 +263,10 @@ mass (<a href="https://github.com/RobotLocomotion/drake/pull/15103">#15103</a>)<
 <!-- <relnotes for common,math,lcm,lcmtypes,manipulation,perception go here> -->
 
 <ul>
-  <li>Add <code class="highlighter-rouge">AbstractValue::Make&lt;T&gt;()</code> overload for default construction (<a href="https://github.com/RobotLocomotion/drake/pull/15209">#15209</a>)</li>
-  <li>Add <code class="highlighter-rouge">Vector6d&lt;T&gt;</code> to <code class="highlighter-rouge">eigen_types</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15192">#15192</a>)</li>
-  <li>Add <code class="highlighter-rouge">ostream&lt;&lt;</code> operator for <code class="highlighter-rouge">RollPitchYaw</code> and <code class="highlighter-rouge">RigidTransform</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14910">#14910</a>)</li>
-  <li>Add template specializations for several <code class="highlighter-rouge">Eigen::numext</code> functions (<a href="https://github.com/RobotLocomotion/drake/pull/15065">#15065</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">AbstractValue::Make&lt;T&gt;()</code> overload for default construction (<a href="https://github.com/RobotLocomotion/drake/pull/15209">#15209</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">Vector6d&lt;T&gt;</code> to <code class="language-plaintext highlighter-rouge">eigen_types</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15192">#15192</a>)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">ostream&lt;&lt;</code> operator for <code class="language-plaintext highlighter-rouge">RollPitchYaw</code> and <code class="language-plaintext highlighter-rouge">RigidTransform</code> (<a href="https://github.com/RobotLocomotion/drake/pull/14910">#14910</a>)</li>
+  <li>Add template specializations for several <code class="language-plaintext highlighter-rouge">Eigen::numext</code> functions (<a href="https://github.com/RobotLocomotion/drake/pull/15065">#15065</a>)</li>
   <li>Add AVX support for inverse-rotation matrix times rotation matrix (<a href="https://github.com/RobotLocomotion/drake/pull/15073">#15073</a>)</li>
   <li>Add AVX functions for transform composition (<a href="https://github.com/RobotLocomotion/drake/pull/15119">#15119</a>)</li>
   <li>Add PointCloudToLcm system (<a href="https://github.com/RobotLocomotion/drake/pull/14990">#14990</a>)</li>
@@ -300,8 +300,8 @@ mass (<a href="https://github.com/RobotLocomotion/drake/pull/15103">#15103</a>)<
   <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.Clone (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
   <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.FindIndeterminateIndex (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
   <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.NewEvenDegreeNonnegativePolynomial (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
-  <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.<code class="highlighter-rouge">__copy__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
-  <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.<code class="highlighter-rouge">__deepcopy__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
+  <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.<code class="language-plaintext highlighter-rouge">__copy__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
+  <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.<code class="language-plaintext highlighter-rouge">__deepcopy__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
   <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.decision_variable(i) (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
   <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_complementarity_constraints (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
   <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_matrix_inequality_constraints.exponential_cone_constraints (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
@@ -311,7 +311,7 @@ mass (<a href="https://github.com/RobotLocomotion/drake/pull/15103">#15103</a>)<
   <li>pydrake.solvers.mathematicalprogram.MathematicalProgram.rotated_lorentz_cone_constraints (<a href="https://github.com/RobotLocomotion/drake/pull/15167">#15167</a>)</li>
   <li>pydrake.solvers.mathematicalprogram.SolverInterface.enabled (<a href="https://github.com/RobotLocomotion/drake/pull/15107">#15107</a>)</li>
   <li>pydrake.symbolic.Monomial * float, float * pydrake.symbolic.Monomial (<a href="https://github.com/RobotLocomotion/drake/pull/15138">#15138</a>)</li>
-  <li>pydrake.symbolic.Monomial.<code class="highlighter-rouge">__init__</code>() (<a href="https://github.com/RobotLocomotion/drake/pull/15136">#15136</a>)</li>
+  <li>pydrake.symbolic.Monomial.<code class="language-plaintext highlighter-rouge">__init__</code>() (<a href="https://github.com/RobotLocomotion/drake/pull/15136">#15136</a>)</li>
   <li>pydrake.symbolic.TaylorExpand (<a href="https://github.com/RobotLocomotion/drake/pull/15185">#15185</a>)</li>
   <li>pydrake.symbolic.dreal.DrealSolver (<a href="https://github.com/RobotLocomotion/drake/pull/15215">#15215</a>)</li>
   <li>pydrake.systems.primitives.LinearTransformDensity (<a href="https://github.com/RobotLocomotion/drake/pull/15166">#15166</a>)</li>
@@ -322,13 +322,13 @@ mass (<a href="https://github.com/RobotLocomotion/drake/pull/15103">#15103</a>)<
 <!-- <relnotes for cmake,doc,setup,third_party,tools go here> -->
 
 <ul>
-  <li>When using <code class="highlighter-rouge">setup_drake_colab</code>, the <code class="highlighter-rouge">build=</code> argument is now required
+  <li>When using <code class="language-plaintext highlighter-rouge">setup_drake_colab</code>, the <code class="language-plaintext highlighter-rouge">build=</code> argument is now required
 (<a href="https://github.com/RobotLocomotion/drake/pull/14482">#14482</a>)</li>
   <li>Add more documentation about using releases (<a href="https://github.com/RobotLocomotion/drake/pull/14482">#14482</a>)</li>
   <li>Remove compiled Python files when building VTK binaries (<a href="https://github.com/RobotLocomotion/drake/pull/15171">#15171</a>)</li>
   <li>Document Drake’s dependence on AVX2 and FMA instructions (<a href="https://github.com/RobotLocomotion/drake/pull/15165">#15165</a>)</li>
-  <li>Allow <code class="highlighter-rouge">robotlocomotion/director</code> brew tap to change default branch name to main (<a href="https://github.com/RobotLocomotion/drake/pull/15202">#15202</a>)</li>
-  <li>Stop installing <code class="highlighter-rouge">geometry</code> headers that depended on non-installed third-party header files (<code class="highlighter-rouge">fcl</code>) (<a href="https://github.com/RobotLocomotion/drake/pull/15070">#15070</a>)</li>
+  <li>Allow <code class="language-plaintext highlighter-rouge">robotlocomotion/director</code> brew tap to change default branch name to main (<a href="https://github.com/RobotLocomotion/drake/pull/15202">#15202</a>)</li>
+  <li>Stop installing <code class="language-plaintext highlighter-rouge">geometry</code> headers that depended on non-installed third-party header files (<code class="language-plaintext highlighter-rouge">fcl</code>) (<a href="https://github.com/RobotLocomotion/drake/pull/15070">#15070</a>)</li>
 </ul>
 
 <h2 id="build-dependencies">Build dependencies</h2>
@@ -337,20 +337,20 @@ mass (<a href="https://github.com/RobotLocomotion/drake/pull/15103">#15103</a>)<
 
 <ul>
   <li>Upgrade recommended Bazel version to 4.1 (<a href="https://github.com/RobotLocomotion/drake/pull/15086">#15086</a>)</li>
-  <li>Upgrade <code class="highlighter-rouge">dreal</code> to latest release 4.21.06.2 (<a href="https://github.com/RobotLocomotion/drake/pull/15212">#15212</a>)</li>
-  <li>Upgrade <code class="highlighter-rouge">ghc_filesystem</code> to latest release 1.5.6 (<a href="https://github.com/RobotLocomotion/drake/pull/15109">#15109</a>)</li>
-  <li>Upgrade <code class="highlighter-rouge">googlebenchmark</code> to latest release 1.5.4 (<a href="https://github.com/RobotLocomotion/drake/pull/15110">#15110</a>)</li>
-  <li>Upgrade <code class="highlighter-rouge">intel_realsense_ros</code> to latest release 2.3.0 (<a href="https://github.com/RobotLocomotion/drake/pull/15113">#15113</a>)</li>
-  <li>Upgrade <code class="highlighter-rouge">ros_xacro</code> to latest release 1.13.11 (<a href="https://github.com/RobotLocomotion/drake/pull/15111">#15111</a>)</li>
-  <li>Upgrade <code class="highlighter-rouge">tinyobjloader</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/15112">#15112</a>)</li>
+  <li>Upgrade <code class="language-plaintext highlighter-rouge">dreal</code> to latest release 4.21.06.2 (<a href="https://github.com/RobotLocomotion/drake/pull/15212">#15212</a>)</li>
+  <li>Upgrade <code class="language-plaintext highlighter-rouge">ghc_filesystem</code> to latest release 1.5.6 (<a href="https://github.com/RobotLocomotion/drake/pull/15109">#15109</a>)</li>
+  <li>Upgrade <code class="language-plaintext highlighter-rouge">googlebenchmark</code> to latest release 1.5.4 (<a href="https://github.com/RobotLocomotion/drake/pull/15110">#15110</a>)</li>
+  <li>Upgrade <code class="language-plaintext highlighter-rouge">intel_realsense_ros</code> to latest release 2.3.0 (<a href="https://github.com/RobotLocomotion/drake/pull/15113">#15113</a>)</li>
+  <li>Upgrade <code class="language-plaintext highlighter-rouge">ros_xacro</code> to latest release 1.13.11 (<a href="https://github.com/RobotLocomotion/drake/pull/15111">#15111</a>)</li>
+  <li>Upgrade <code class="language-plaintext highlighter-rouge">tinyobjloader</code> to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/15112">#15112</a>)</li>
 </ul>
 
 <h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
 
 <ul>
   <li>Any LeafSystem port declaration overloads that do not specify a name
-(<code class="highlighter-rouge">drake::systems::LeafSystem::Declare*Port</code>,
-<code class="highlighter-rouge">pydrake.systems.LeafSystem.Declare*Port</code>) (<a href="https://github.com/RobotLocomotion/drake/pull/15179">#15179</a>,
+(<code class="language-plaintext highlighter-rouge">drake::systems::LeafSystem::Declare*Port</code>,
+<code class="language-plaintext highlighter-rouge">pydrake.systems.LeafSystem.Declare*Port</code>) (<a href="https://github.com/RobotLocomotion/drake/pull/15179">#15179</a>,
 <a href="https://github.com/RobotLocomotion/drake/pull/15182">#15182</a>)</li>
   <li>drake::math::ComputeBasisFromAxis (<a href="https://github.com/RobotLocomotion/drake/pull/15154">#15154</a>)</li>
   <li>drake::solvers::MathematicalProgram::AddL2NormCost (<a href="https://github.com/RobotLocomotion/drake/pull/15134">#15134</a>)</li>
@@ -374,7 +374,7 @@ mass (<a href="https://github.com/RobotLocomotion/drake/pull/15103">#15103</a>)<
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.31.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20210623-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20210623-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

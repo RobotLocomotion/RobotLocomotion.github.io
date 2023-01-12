@@ -176,11 +176,11 @@ time (in order to switch to Python 3.8 or Python 3.9).</li>
       <li>macOS users already use Python 3.9, so will not be affected.</li>
     </ul>
   </li>
-  <li>Reminder: The use of <code class="highlighter-rouge">drake-visualizer</code> on macOS is deprecated and will be
+  <li>Reminder: The use of <code class="language-plaintext highlighter-rouge">drake-visualizer</code> on macOS is deprecated and will be
 removed from Drake on or after April 1st, 2022 (<a href="https://github.com/RobotLocomotion/drake/pull/16386">#16386</a>).
     <ul>
-      <li>On Ubuntu 20.04, support of <code class="highlighter-rouge">drake-visualizer</code> remains intact.</li>
-      <li>On Ubuntu 18.04, support of <code class="highlighter-rouge">drake-visualizer</code> will remain intact as
+      <li>On Ubuntu 20.04, support of <code class="language-plaintext highlighter-rouge">drake-visualizer</code> remains intact.</li>
+      <li>On Ubuntu 18.04, support of <code class="language-plaintext highlighter-rouge">drake-visualizer</code> will remain intact as
 long as our overall support of 18.04 (which ends on April 1st, 2022).</li>
     </ul>
   </li>
@@ -256,7 +256,7 @@ on API changes.</p>
 <p>Fixes</p>
 
 <ul>
-  <li>Fix mis-parse of <code class="highlighter-rouge">drake:ignored_collision_filter_group</code> xml input (<a href="https://github.com/RobotLocomotion/drake/pull/16594">#16594</a>)</li>
+  <li>Fix mis-parse of <code class="language-plaintext highlighter-rouge">drake:ignored_collision_filter_group</code> xml input (<a href="https://github.com/RobotLocomotion/drake/pull/16594">#16594</a>)</li>
   <li>Add cleanup logic for unexpected websocket thread exit (<a href="https://github.com/RobotLocomotion/drake/pull/16670">#16670</a>)</li>
 </ul>
 
@@ -356,19 +356,19 @@ on API changes.</p>
 <h2 id="removal-of-deprecated-items">Removal of deprecated items</h2>
 
 <ul>
-  <li>drake::geometry::optimization::IrisInConfigurationSpace with a <code class="highlighter-rouge">sample</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/16037">#16037</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16678">#16678</a>)</li>
+  <li>drake::geometry::optimization::IrisInConfigurationSpace with a <code class="language-plaintext highlighter-rouge">sample</code> argument (<a href="https://github.com/RobotLocomotion/drake/pull/16037">#16037</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16678">#16678</a>)</li>
   <li>drake::lcm::DrakeMockLcm (<a href="https://github.com/RobotLocomotion/drake/pull/16078">#16078</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16678">#16678</a>)</li>
   <li>drake::systems::framework::System::EvalEigenVectorInput (<a href="https://github.com/RobotLocomotion/drake/pull/16042">#16042</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16678">#16678</a>)</li>
   <li>drake::yaml::YamlReadArchive constructors that accept a YAML::Node (<a href="https://github.com/RobotLocomotion/drake/pull/16057">#16057</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16673">#16673</a>)</li>
   <li>The colab installer helper script (<a href="https://github.com/RobotLocomotion/drake/pull/16073">#16073</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16678">#16678</a>)</li>
-  <li>The use of package URIs other than <code class="highlighter-rouge">package://drake/...</code> to refer to Drake resources (<a href="https://github.com/RobotLocomotion/drake/pull/15947">#15947</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16674">#16674</a>)</li>
+  <li>The use of package URIs other than <code class="language-plaintext highlighter-rouge">package://drake/...</code> to refer to Drake resources (<a href="https://github.com/RobotLocomotion/drake/pull/15947">#15947</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16674">#16674</a>)</li>
   <li>The use of uncommon primitive types during yaml::YamlReadArchive (<a href="https://github.com/RobotLocomotion/drake/pull/16057">#16057</a>, <a href="https://github.com/RobotLocomotion/drake/pull/16673">#16673</a>)</li>
 </ul>
 
 <h1 id="notes">Notes</h1>
 
 <p>This release provides <a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.0.0">pre-compiled binaries</a> named
-<code class="highlighter-rouge">drake-20220303-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<code class="language-plaintext highlighter-rouge">drake-20220303-{bionic|focal|mac}.tar.gz</code>. See <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>. Thanks to

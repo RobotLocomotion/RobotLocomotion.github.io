@@ -144,32 +144,32 @@ components, (2) limit dependencies, and (3) prevent circular dependencies.</p>
 
 <p>All code in Drake must adhere to the code standards described in the notes
 <a href="/developers.html#developer-notes">For Developers</a> and must be covered by
-tests, unless the code lives in a subdirectory named <code class="highlighter-rouge">dev</code>.</p>
+tests, unless the code lives in a subdirectory named <code class="language-plaintext highlighter-rouge">dev</code>.</p>
 
 <p>To promote rapid development of research ideas, experimental code may be placed
-in a subdirectory named <code class="highlighter-rouge">dev</code>.  We do not enforce code standards nor test
-coverage within <code class="highlighter-rouge">dev</code> directories.  For pull requests that affect only
-<code class="highlighter-rouge">dev</code> directories, one feature review is sufficient; platform review is not
-required.  If build or test targets in <code class="highlighter-rouge">dev</code> directories break, the response
+in a subdirectory named <code class="language-plaintext highlighter-rouge">dev</code>.  We do not enforce code standards nor test
+coverage within <code class="language-plaintext highlighter-rouge">dev</code> directories.  For pull requests that affect only
+<code class="language-plaintext highlighter-rouge">dev</code> directories, one feature review is sufficient; platform review is not
+required.  If build or test targets in <code class="language-plaintext highlighter-rouge">dev</code> directories break, the response
 from the on-call build cop will be to disable the offending targets.</p>
 
-<p>The <code class="highlighter-rouge">BUILD.bazel</code> file for <code class="highlighter-rouge">dev</code> directories must live within the directory
-itself, not a parent directory.  (For example, <code class="highlighter-rouge">foo/BUILD.bazel</code> must <strong>not</strong>
-say <code class="highlighter-rouge">srcs = ["dev/bar.cc"],</code>; instead, <code class="highlighter-rouge">foo/dev/BUILD.bazel</code> must exist and
-must say <code class="highlighter-rouge">srcs = ["bar.cc"],</code>.)  This ensures that all <code class="highlighter-rouge">dev</code> code has a
-package name (<code class="highlighter-rouge">//foo/dev</code>) that clearly denotes it as such.</p>
+<p>The <code class="language-plaintext highlighter-rouge">BUILD.bazel</code> file for <code class="language-plaintext highlighter-rouge">dev</code> directories must live within the directory
+itself, not a parent directory.  (For example, <code class="language-plaintext highlighter-rouge">foo/BUILD.bazel</code> must <strong>not</strong>
+say <code class="language-plaintext highlighter-rouge">srcs = ["dev/bar.cc"],</code>; instead, <code class="language-plaintext highlighter-rouge">foo/dev/BUILD.bazel</code> must exist and
+must say <code class="language-plaintext highlighter-rouge">srcs = ["bar.cc"],</code>.)  This ensures that all <code class="language-plaintext highlighter-rouge">dev</code> code has a
+package name (<code class="language-plaintext highlighter-rouge">//foo/dev</code>) that clearly denotes it as such.</p>
 
 <h1 id="controlling-dependencies">Controlling Dependencies</h1>
 
 <p>We would like to avoid circular dependencies in the source code tree.  For
-example, some code in <code class="highlighter-rouge">drake/systems</code> depends on code in <code class="highlighter-rouge">drake/solvers</code>, so
-code in <code class="highlighter-rouge">drake/solvers</code> should <em>not</em> depend on <code class="highlighter-rouge">drake/systems</code>.</p>
+example, some code in <code class="language-plaintext highlighter-rouge">drake/systems</code> depends on code in <code class="language-plaintext highlighter-rouge">drake/solvers</code>, so
+code in <code class="language-plaintext highlighter-rouge">drake/solvers</code> should <em>not</em> depend on <code class="language-plaintext highlighter-rouge">drake/systems</code>.</p>
 
-<p>The <code class="highlighter-rouge">drake/examples</code> directories are logically after all of the core libraries
-in <code class="highlighter-rouge">drake</code>.  <code class="highlighter-rouge">test</code> directories located throughout the code are logically
+<p>The <code class="language-plaintext highlighter-rouge">drake/examples</code> directories are logically after all of the core libraries
+in <code class="language-plaintext highlighter-rouge">drake</code>.  <code class="language-plaintext highlighter-rouge">test</code> directories located throughout the code are logically
 last in the dependency tree – they are allowed to depend on any of the other
-directories.  For example, <code class="highlighter-rouge">test</code> code <strong>is</strong> allowed to use models/code from
-the <code class="highlighter-rouge">examples</code> directories to test core functionality, as long as that
+directories.  For example, <code class="language-plaintext highlighter-rouge">test</code> code <strong>is</strong> allowed to use models/code from
+the <code class="language-plaintext highlighter-rouge">examples</code> directories to test core functionality, as long as that
 dependency is explicitly declared in the build system rules for that test.</p>
 
       </article>

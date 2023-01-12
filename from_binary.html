@@ -139,7 +139,7 @@ analysis.
       <article class="markdown-body">
         <h1 id="binary-packages">Binary Packages</h1>
 
-<p>Drake publishes pre-compiled binaries as binary downloads (<code class="highlighter-rouge">*.tar.gz</code>)
+<p>Drake publishes pre-compiled binaries as binary downloads (<code class="language-plaintext highlighter-rouge">*.tar.gz</code>)
 for all supported operating systems.  Refer to
 <a href="/installation.html#supported-configurations">Supported Configurations</a>
 for compatibility details.</p>
@@ -166,25 +166,25 @@ Mac are available to download as attachments from Drake’s GitHub
 <a href="https://github.com/RobotLocomotion/drake/releases">releases</a> page.</p>
 
 <p>The most recent release is
-<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.11.0">v1.11.0</a>:</p>
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.12.0">v1.12.0</a>:</p>
 
 <ul>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-focal.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-focal.tar.gz</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-jammy.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-jammy.tar.gz</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-mac.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-mac.tar.gz</a> (for x86_64)</li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-mac-arm64.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-mac-arm64.tar.gz</a> (for arm64)</li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-focal.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-focal.tar.gz</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-jammy.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-jammy.tar.gz</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-mac.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-mac.tar.gz</a> (for x86_64)</li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-mac-arm64.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v1.12.0/drake-20230112-mac-arm64.tar.gz</a> (for arm64)</li>
 </ul>
 
-<p>Users of macOS must download using a command-line tool such as <code class="highlighter-rouge">curl</code> instead
+<p>Users of macOS must download using a command-line tool such as <code class="language-plaintext highlighter-rouge">curl</code> instead
 of using a web browser, to avoid hassles from Gatekeeper checks for malicious
 software. For example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSLO https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-mac-arm64.tar.gz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSLO https://github.com/RobotLocomotion/drake/releases/download/v1.11.0/drake-20221214-mac-arm64.tar.gz
 </code></pre></div></div>
 
 <h3 id="use-as-a-c-library">Use as a C++ library</h3>
 
-<p>For an example of using a Drake <code class="highlighter-rouge">*.tar.gz</code> image from a CMake project, refer
+<p>For an example of using a Drake <code class="language-plaintext highlighter-rouge">*.tar.gz</code> image from a CMake project, refer
 to the
 <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed">drake_cmake_installed</a>
 example.</p>
@@ -197,11 +197,11 @@ on macOS arm64 or if you need both
 C++ and Python API support, then pip will not work.  This section shows
 how to incorporate a manual download into a
 <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">virtual environment</a>
-directory.  In the example below, we will name that directory <code class="highlighter-rouge">env</code>, but you
+directory.  In the example below, we will name that directory <code class="language-plaintext highlighter-rouge">env</code>, but you
 can choose any name.</p>
 
-<p>Download the binary release <code class="highlighter-rouge">*.tar.gz</code> file, using one of the links above.
-In the example below, we’ll use <code class="highlighter-rouge">drake.tar.gz</code> to refer to it, but your
+<p>Download the binary release <code class="language-plaintext highlighter-rouge">*.tar.gz</code> file, using one of the links above.
+In the example below, we’ll use <code class="language-plaintext highlighter-rouge">drake.tar.gz</code> to refer to it, but your
 download will have a more version-specific filename.</p>
 
 <p>Create and activate the envionment:</p>
@@ -217,7 +217,7 @@ python3 <span class="nt">-m</span> venv <span class="nb">env</span> <span class=
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">env</span>/share/drake/setup/install_prereqs
 </code></pre></div></div>
 
-<p>(On Ubuntu, the script might ask to be run under <code class="highlighter-rouge">sudo</code>.)</p>
+<p>(On Ubuntu, the script might ask to be run under <code class="language-plaintext highlighter-rouge">sudo</code>.)</p>
 
 <p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
 
@@ -233,14 +233,14 @@ Mac are generated nightly and are available to download at:</p>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac-arm64.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac-arm64.tar.gz</a> (for arm64)</li>
 </ul>
 
-<p>Older packages for specific dates are available by replacing <code class="highlighter-rouge">latest</code> with an
-8-digit date, e.g., <code class="highlighter-rouge">20221205</code> for December 5th, 2022.</p>
+<p>Older packages for specific dates are available by replacing <code class="language-plaintext highlighter-rouge">latest</code> with an
+8-digit date, e.g., <code class="language-plaintext highlighter-rouge">20230112</code> for January 12th, 2023.</p>
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-focal.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-jammy.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-mac.tar.gz</a> (for x86_64)</li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-mac-arm64.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20221205-mac-arm64.tar.gz</a> (for arm64)</li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-focal.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-jammy.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-mac.tar.gz</a> (for x86_64)</li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-mac-arm64.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20230112-mac-arm64.tar.gz</a> (for arm64)</li>
 </ul>
 
 <p>Nightly archives are retained for 56 days from their date of creation.</p>
@@ -248,7 +248,7 @@ Mac are generated nightly and are available to download at:</p>
 <p>The installation instructions are identical to stable releases as shown above.</p>
 
 <p>As with stable releases, users of macOS must download using a command-line tool
-such as <code class="highlighter-rouge">curl</code> instead of using a web browser, to avoid hassles from
+such as <code class="language-plaintext highlighter-rouge">curl</code> instead of using a web browser, to avoid hassles from
 Gatekeeper checks for malicious software.</p>
 
       </article>

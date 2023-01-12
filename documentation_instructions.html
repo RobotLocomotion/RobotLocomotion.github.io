@@ -154,14 +154,14 @@ analysis.
 supported on Ubuntu <strong>20.04</strong> only.</p>
 
 <p>Before getting started, install Drake’s prerequisites with the additional
-<code class="highlighter-rouge">--with-doc-only</code> command line option, i.e.:</p>
+<code class="language-plaintext highlighter-rouge">--with-doc-only</code> command line option, i.e.:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>setup/ubuntu/install_prereqs.sh <span class="nt">--with-doc-only</span>
 </code></pre></div></div>
 
 <h1 id="previewing-changes">Previewing changes</h1>
 
-<p>To easily preview your changes, run the <code class="highlighter-rouge">//doc:build --serve</code> command.</p>
+<p>To easily preview your changes, run the <code class="language-plaintext highlighter-rouge">//doc:build --serve</code> command.</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Read the usage message.</span>
 <span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--help</span>
@@ -187,32 +187,32 @@ supported on Ubuntu <strong>20.04</strong> only.</p>
 <p>To preview using a local branch of the styleguide instead of our pinned
 revision, be sure to set the
 <a href="https://github.com/RobotLocomotion/drake/blob/master/tools/workspace/README.md#exploring-github_archive-changes-from-a-local-clone">local_repository_override</a>
-option in <code class="highlighter-rouge">drake/tools/workspace/styleguide/repository.bzl</code> before running
+option in <code class="language-plaintext highlighter-rouge">drake/tools/workspace/styleguide/repository.bzl</code> before running
 the preview command.</p>
 
 <h1 id="testing-locally">Testing locally</h1>
 
 <p>The website is not part of Drake’s default local build nor tests, because it
-requires heavy prerequisites to be installed (see <code class="highlighter-rouge">--with-doc-only</code> above).
-Therefore, a simple <code class="highlighter-rouge">bazel test //...</code> will not provide any feedback about
+requires heavy prerequisites to be installed (see <code class="language-plaintext highlighter-rouge">--with-doc-only</code> above).
+Therefore, a simple <code class="language-plaintext highlighter-rouge">bazel test //...</code> will not provide any feedback about
 local documentation edits.</p>
 
 <p>To check locally that documentation changes pass all build and test rules, run:</p>
 
 <!-- Don't use "sh" literal mode here; it mis-colors the "test" non-keyword. -->
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bazel test //doc/... //doc:manual_tests
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bazel test //doc/... //doc:manual_tests
 </code></pre></div></div>
 
 <h1 id="testing-in-ci">Testing in CI</h1>
 
-<p>Only the Jenkins builds whose name ends with <code class="highlighter-rouge">-documentation</code> will run the
+<p>Only the Jenkins builds whose name ends with <code class="language-plaintext highlighter-rouge">-documentation</code> will run the
 documentation build steps and related tests.  By default, those builds run on
 the Continuous (i.e., post-merge) and Nightly schedules, not on pull requests.
 If you would like to check Jenkins results on a pull request, you need to
 <a href="/jenkins.html#scheduling-an-on-demand-build">schedule an on-demand build</a>
 by posting a comment</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-documentation please
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-documentation please
 </code></pre></div></div>
 
 <h1 id="advanced-building">Advanced Building</h1>
@@ -241,7 +241,7 @@ automated website deployment pipeline uses the former; most developers will use
 the latter.</p>
 
 <p>Each build command has a corresponding test defined as part of the
-<code class="highlighter-rouge">//doc:manual_tests</code> test suite.</p>
+<code class="language-plaintext highlighter-rouge">//doc:manual_tests</code> test suite.</p>
 
       </article>
     </div>

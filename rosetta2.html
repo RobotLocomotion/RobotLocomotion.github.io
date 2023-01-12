@@ -154,18 +154,18 @@ instead.</p>
 you must do all of your work in an x86_64 shell:</p>
 
 <ol>
-  <li>Use <code class="highlighter-rouge">arch -x86_64 /bin/bash</code> to obtain a shell.</li>
-  <li>In that shell, run <code class="highlighter-rouge">arch</code> (with no arguments).
+  <li>Use <code class="language-plaintext highlighter-rouge">arch -x86_64 /bin/bash</code> to obtain a shell.</li>
+  <li>In that shell, run <code class="language-plaintext highlighter-rouge">arch</code> (with no arguments).
     <ul>
-      <li>Expect to see <code class="highlighter-rouge">i386</code> as the output, which confirms that the shell is
+      <li>Expect to see <code class="language-plaintext highlighter-rouge">i386</code> as the output, which confirms that the shell is
 running as x86_64.</li>
     </ul>
   </li>
   <li>Make sure there is not an ARM version of brew
-(i.e., <code class="highlighter-rouge">/opt/homebrew/bin/brew</code>) in your <code class="highlighter-rouge">$PATH</code>.
+(i.e., <code class="language-plaintext highlighter-rouge">/opt/homebrew/bin/brew</code>) in your <code class="language-plaintext highlighter-rouge">$PATH</code>.
     <ul>
-      <li>You can use <code class="highlighter-rouge">echo $PATH</code> to see what’s there.</li>
-      <li>You can use <code class="highlighter-rouge">which -a brew</code> to check which brew will be run.</li>
+      <li>You can use <code class="language-plaintext highlighter-rouge">echo $PATH</code> to see what’s there.</li>
+      <li>You can use <code class="language-plaintext highlighter-rouge">which -a brew</code> to check which brew will be run.</li>
     </ul>
   </li>
   <li>Install Homebrew as usual from the x86_64 shell.</li>
@@ -174,17 +174,17 @@ running as x86_64.</li>
 
 <h1 id="additional-information">Additional information</h1>
 
-<p>The <code class="highlighter-rouge">arch</code> command serves two purposes; to report the “active” architecture
+<p>The <code class="language-plaintext highlighter-rouge">arch</code> command serves two purposes; to report the “active” architecture
 (when given no arguments), or to run a selected architecture of a universal
-binary (e.g., <code class="highlighter-rouge">/bin/bash</code>, <code class="highlighter-rouge">/usr/bin/python</code>).</p>
+binary (e.g., <code class="language-plaintext highlighter-rouge">/bin/bash</code>, <code class="language-plaintext highlighter-rouge">/usr/bin/python</code>).</p>
 
 <p>While the “active” architecture defaults to ARM, having any x86_64 process as
 an ancestor appears sufficient to change the “active” architecture, so long as
-<code class="highlighter-rouge">arch -arm64</code> is not used. Many programs will respect the reported
-architecture, but <code class="highlighter-rouge">brew</code> is an exception, and will always attempt to install
-software for the architecture of the <code class="highlighter-rouge">brew</code> executable that is executed; this
-is why it is important to ensure that <code class="highlighter-rouge">/opt/homebrew/bin</code> is not in your
-<code class="highlighter-rouge">$PATH</code> when attempting to install or run Drake using x86_64 emulation on
+<code class="language-plaintext highlighter-rouge">arch -arm64</code> is not used. Many programs will respect the reported
+architecture, but <code class="language-plaintext highlighter-rouge">brew</code> is an exception, and will always attempt to install
+software for the architecture of the <code class="language-plaintext highlighter-rouge">brew</code> executable that is executed; this
+is why it is important to ensure that <code class="language-plaintext highlighter-rouge">/opt/homebrew/bin</code> is not in your
+<code class="language-plaintext highlighter-rouge">$PATH</code> when attempting to install or run Drake using x86_64 emulation on
 ARM. Otherwise, once in x86_64 mode, things will tend to stay that way, such
 that accidentally switching back to ARM mode should be rare.</p>
 

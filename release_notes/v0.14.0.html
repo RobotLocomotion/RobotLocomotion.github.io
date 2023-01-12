@@ -228,7 +228,7 @@ MultibodyPlant::DoCalcTimeDerivatives() (<a href="https://github.com/RobotLocomo
 (<a href="https://github.com/RobotLocomotion/drake/pull/12556">#12556</a>)</li>
   <li>Support ellipsoid rendering (<a href="https://github.com/RobotLocomotion/drake/pull/12547">#12547</a>)</li>
   <li>Add graphviz visualization of multibodyplant topology (<a href="https://github.com/RobotLocomotion/drake/pull/12485">#12485</a>)</li>
-  <li>Support parsing SDFormat 1.7 (<a href="https://github.com/RobotLocomotion/drake/pull/12505">#12505</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12533">#12533</a>), incorporating the <code class="highlighter-rouge">pose
+  <li>Support parsing SDFormat 1.7 (<a href="https://github.com/RobotLocomotion/drake/pull/12505">#12505</a>, <a href="https://github.com/RobotLocomotion/drake/pull/12533">#12533</a>), incorporating the <code class="language-plaintext highlighter-rouge">pose
 frame semantics &lt;https://bit.ly/2ZSl1kH&gt;</code>_ proposal</li>
   <li>Support textures for primitive objects, not just meshes (<a href="https://github.com/RobotLocomotion/drake/pull/12423">#12423</a>); this
 only applies to rendering (RenderEngine*)</li>
@@ -350,7 +350,7 @@ instead.</li>
   </li>
   <li>DRAKE_NODISCARD in common/drake_nodiscard.h (<a href="https://github.com/RobotLocomotion/drake/pull/12539">#12539</a>)
     <ul>
-      <li>Use <code class="highlighter-rouge">[[nodiscard]]</code> directly.</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">[[nodiscard]]</code> directly.</li>
     </ul>
   </li>
   <li>drake/examples/kuka_iiwa/iiwa_wsg_simulation will be removed from Drake
@@ -379,13 +379,13 @@ instead.</li>
       <li>Use drake::systems::Simulator::AdvanceTo instead.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">drake::systems::Simulator::reset_integrator(std::unique_ptr&lt;U&gt;)</code>
+  <li><code class="language-plaintext highlighter-rouge">drake::systems::Simulator::reset_integrator(std::unique_ptr&lt;U&gt;)</code>
 (<a href="https://github.com/RobotLocomotion/drake/pull/12520">#12520</a>)
     <ul>
       <li>Use void or max-step-size version of reset_integrator() instead.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">drake::systems::Simulator::reset_integrator(Args&amp;&amp;...)</code>
+  <li><code class="language-plaintext highlighter-rouge">drake::systems::Simulator::reset_integrator(Args&amp;&amp;...)</code>
 (<a href="https://github.com/RobotLocomotion/drake/pull/12520">#12520</a>)
     <ul>
       <li>Use void or max-step-size version of reset_integrator() instead.</li>
@@ -498,7 +498,7 @@ instead.</li>
           <li>Use RigidBodyTree::get_frames and RigidBodyTree::addFrame instead.</li>
         </ul>
       </li>
-      <li><code class="highlighter-rouge">InverseDynamics(const RigidBodyTree&lt;T&gt;*, bool)</code>
+      <li><code class="language-plaintext highlighter-rouge">InverseDynamics(const RigidBodyTree&lt;T&gt;*, bool)</code>
         <ul>
           <li>Use constructor with InverseDynamicsType instead.</li>
         </ul>
@@ -519,7 +519,7 @@ instead.</li>
 
 <p>This release provides
 <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.14.0">pre-compiled binaries</a>
-named <code class="highlighter-rouge">drake-20200116-{bionic|mac}.tar.gz</code>. See
+named <code class="language-plaintext highlighter-rouge">drake-20200116-{bionic|mac}.tar.gz</code>. See
 <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of

@@ -149,7 +149,7 @@ analysis.
 
   <p>When paths are set incorrectly, you will see an error such as this:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ImportError: Python version mismatch: module was compiled for Python 3.8,
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ImportError: Python version mismatch: module was compiled for Python 3.8,
 but the interpreter version is incompatible: 3.7.7
 </code></pre></div>  </div>
 </div>
@@ -180,7 +180,7 @@ to pass the Options explicitly.</li>
       <li>Users must import pydrake.attic.all to use them now.</li>
     </ul>
   </li>
-  <li>Remove the incorrect <code class="highlighter-rouge">drakeURDF.[xpr|xsd]</code> files (<a href="https://github.com/RobotLocomotion/drake/pull/13326">#13326</a>)
+  <li>Remove the incorrect <code class="language-plaintext highlighter-rouge">drakeURDF.[xpr|xsd]</code> files (<a href="https://github.com/RobotLocomotion/drake/pull/13326">#13326</a>)
     <ul>
       <li>The schema defined in drakeURDF.xsd is significantly out of date. For now,
 we remove it so as to avoid the suggestion that it is reliable.</li>
@@ -296,7 +296,7 @@ we remove it so as to avoid the suggestion that it is reliable.</li>
 <p>New features</p>
 
 <ul>
-  <li>Bind C++ <code class="highlighter-rouge">Value&lt;vector&lt;T&gt;&gt;</code> to Python Value[List[T]] (<a href="https://github.com/RobotLocomotion/drake/pull/13359">#13359</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13407">#13407</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13408">#13408</a>)</li>
+  <li>Bind C++ <code class="language-plaintext highlighter-rouge">Value&lt;vector&lt;T&gt;&gt;</code> to Python Value[List[T]] (<a href="https://github.com/RobotLocomotion/drake/pull/13359">#13359</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13407">#13407</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13408">#13408</a>)</li>
 </ul>
 
 <p>Fixes</p>
@@ -344,8 +344,8 @@ we remove it so as to avoid the suggestion that it is reliable.</li>
   <li>pydrake.multibody.tree.SpatialInertia.ReExpress (<a href="https://github.com/RobotLocomotion/drake/pull/13478">#13478</a>)</li>
   <li>pydrake.multibody.tree.SpatialInertia.SetNaN (<a href="https://github.com/RobotLocomotion/drake/pull/13478">#13478</a>)</li>
   <li>pydrake.multibody.tree.SpatialInertia.Shift (<a href="https://github.com/RobotLocomotion/drake/pull/13478">#13478</a>)</li>
-  <li><code class="highlighter-rouge">pydrake.multibody.tree.SpatialInertia.__add__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/13478">#13478</a>)
-*<code class="highlighter-rouge"> pydrake.multibody.tree.SpatialInertia.__mul__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/13478">#13478</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">pydrake.multibody.tree.SpatialInertia.__add__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/13478">#13478</a>)
+*<code class="language-plaintext highlighter-rouge"> pydrake.multibody.tree.SpatialInertia.__mul__</code> (<a href="https://github.com/RobotLocomotion/drake/pull/13478">#13478</a>)</li>
   <li>pydrake.multibody.tree.SpatialInertia.get_com (<a href="https://github.com/RobotLocomotion/drake/pull/13415">#13415</a>)</li>
   <li>pydrake.multibody.tree.SpatialInertia.get_mass (<a href="https://github.com/RobotLocomotion/drake/pull/13415">#13415</a>)</li>
   <li>pydrake.multibody.tree.SpatialInertia.get_unit_inertia (<a href="https://github.com/RobotLocomotion/drake/pull/13415">#13415</a>)</li>
@@ -560,7 +560,7 @@ timeline, and let us know if this will cause a problem.</p>
 
 <p>This release provides
 <a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.19.0">pre-compiled binaries</a>
-named <code class="highlighter-rouge">drake-20200615-{bionic|focal|mac}.tar.gz</code>. See
+named <code class="language-plaintext highlighter-rouge">drake-20200615-{bionic|focal|mac}.tar.gz</code>. See
 <a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of

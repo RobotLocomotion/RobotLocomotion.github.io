@@ -145,14 +145,14 @@ to learn about them. Please document your trick and submit a pull request!</p>
 
 <h1 id="automated-style-checks">Automated style checks</h1>
 
-<p>Code style tests are run by default during <code class="highlighter-rouge">bazel test</code> and the results are
+<p>Code style tests are run by default during <code class="language-plaintext highlighter-rouge">bazel test</code> and the results are
 cached so that only edited files are re-checked.  In other words, no special
 action is required by a developer.</p>
 
 <p>However, you may still invoke code style checks directly if desired, as
 follows:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
 bazel test --config lint //...         # Only run style checks; don't build or test anything else.
 bazel test --config lint //common/...  # Check common/ and its child subdirectories.
 </code></pre></div></div>
@@ -160,16 +160,16 @@ bazel test --config lint //common/...  # Check common/ and its child subdirector
 <p>User manuals for the style-checking tools are as follows:</p>
 
 <ul>
-  <li>C/C++: See the cpplint <code class="highlighter-rouge">USAGE</code> string at
+  <li>C/C++: See the cpplint <code class="language-plaintext highlighter-rouge">USAGE</code> string at
 <a href="https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py</a>.
     <ul>
-      <li>In particular, note the <code class="highlighter-rouge">// NOLINT(foo/bar)</code> syntax to disable a warning.</li>
+      <li>In particular, note the <code class="language-plaintext highlighter-rouge">// NOLINT(foo/bar)</code> syntax to disable a warning.</li>
     </ul>
   </li>
   <li>Python: See the pycodestyle manual at
 <a href="http://pycodestyle.readthedocs.io/en/latest/intro.html">http://pycodestyle.readthedocs.io/en/latest/intro.html</a>.
     <ul>
-      <li>The syntax <code class="highlighter-rouge"># noqa</code> can be used to quiet the warning about an overly-long
+      <li>The syntax <code class="language-plaintext highlighter-rouge"># noqa</code> can be used to quiet the warning about an overly-long
 line.</li>
     </ul>
   </li>
@@ -182,19 +182,19 @@ described in <a href="/bazel.html#updating-build-files">Updating BUILD files</a>
 <h2 id="cc-clang-format">C/C++: Clang-Format</h2>
 
 <p>The <a href="/from_source.html#mandatory-platform-specific-instructions">Mandatory platform-specific instructions</a>
-install Drake’s required version of <code class="highlighter-rouge">clang-format</code>, depending on the platform
+install Drake’s required version of <code class="language-plaintext highlighter-rouge">clang-format</code>, depending on the platform
 (macOS or Ubuntu).</p>
 
-<p>To run <code class="highlighter-rouge">clang-format</code>:</p>
+<p>To run <code class="language-plaintext highlighter-rouge">clang-format</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang-format-12 -i -style=file [file name]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang-format-12 -i -style=file [file name]
 </code></pre></div></div>
 
-<p>Using <code class="highlighter-rouge">clang-format</code> will modify the entire file that is specified. As an
-alternative, you can use <code class="highlighter-rouge">git clang-format</code> on Ubuntu to change only the
-portions of a file that you have modified. To run <code class="highlighter-rouge">git clang-format</code>:</p>
+<p>Using <code class="language-plaintext highlighter-rouge">clang-format</code> will modify the entire file that is specified. As an
+alternative, you can use <code class="language-plaintext highlighter-rouge">git clang-format</code> on Ubuntu to change only the
+portions of a file that you have modified. To run <code class="language-plaintext highlighter-rouge">git clang-format</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For development on Ubuntu: format a file that has been staged in git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For development on Ubuntu: format a file that has been staged in git
 git clang-format-12 --binary=/usr/bin/clang-format-12 -- [file name]
 
 # For development on Ubuntu: format a file that has been modified but not staged
