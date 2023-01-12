@@ -235,18 +235,24 @@ re-expressing the same tagged data.</p>
 specified) and returns the value as a yaml object.</p>
 <p>This is sugar for calling either yaml_load_data or yaml_load_file;
 refer to those functions for additional details.</p>
+<p>This function returns the raw, untyped data (dict, list, str, float, etc.)
+without any schema checking nor default values. To load with respect to
+a schema with defaults, see <code class="docutils literal notranslate"><span class="pre">yaml_load_typed()</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydrake.common.yaml.yaml_load_data">
 <code class="descclassname">pydrake.common.yaml.</code><code class="descname">yaml_load_data</code><span class="sig-paren">(</span><em>data</em>, <em>*</em>, <em>private=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads and returns the given <cite>data</cite> str as a yaml object, while also
-accounting for variant-like type tags.  The known variant yaml tags
-are reported as an extra “_tag” field in the returned dictionary.</p>
+accounting for variant-like type tags.  Any tags are reported as an
+extra “_tag” field in the returned dictionary.</p>
 <p>(Alternatively, <cite>data</cite> may be a file-like stream instead of a str.)</p>
 <p>By default, removes any root-level keys that begin with an underscore, so
 that yaml anchors and templates are invisibly easy to use.  Callers that
 wish to receive the private data may pass <cite>private=True</cite>.</p>
+<p>This function returns the raw, untyped data (dict, list, str, float, etc.)
+without any schema checking nor default values. To load with respect to
+a schema with defaults, see <code class="docutils literal notranslate"><span class="pre">yaml_load_typed()</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -256,6 +262,49 @@ wish to receive the private data may pass <cite>private=True</cite>.</p>
 accounting for variant-like type tags.</p>
 <p>See yaml_load_data for full details; this function differs only by reading
 the yaml data from a file instead of memory.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.yaml.yaml_load_typed">
+<code class="descclassname">pydrake.common.yaml.</code><code class="descname">yaml_load_typed</code><span class="sig-paren">(</span><em>*</em>, <em>schema</em>, <em>data=None</em>, <em>filename=None</em>, <em>child_name=None</em>, <em>defaults=None</em>, <em>allow_yaml_with_no_schema=False</em>, <em>allow_schema_with_no_yaml=True</em>, <em>retain_map_defaults=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_typed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads either a <code class="docutils literal notranslate"><span class="pre">data</span></code> str or a <code class="docutils literal notranslate"><span class="pre">filename</span></code> against the given
+<code class="docutils literal notranslate"><span class="pre">schema</span></code> type and returns an instance of that type.</p>
+<p>This mimics the C++ function <code class="docutils literal notranslate"><span class="pre">drake::common::yaml::LoadYamlFile</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>schema</strong> – The type to load. Must be a <code class="docutils literal notranslate"><span class="pre">dataclass</span></code>. (Adding support for
+more type classes is future work.)</li>
+<li><strong>data</strong> – The string of YAML data to be loaded. Exactly one of either
+<code class="docutils literal notranslate"><span class="pre">data</span></code> or <code class="docutils literal notranslate"><span class="pre">filename</span></code> must be provided.</li>
+<li><strong>filename</strong> – The filename of YAML data to be loaded. Exactly one of either
+<code class="docutils literal notranslate"><span class="pre">data</span></code> or <code class="docutils literal notranslate"><span class="pre">filename</span></code> must be provided.</li>
+<li><strong>child_name</strong> – If provided, loads data from given-named child of the
+document’s root instead of the root itself.</li>
+<li><strong>defaults</strong> – If provided, then the object being read into will be
+initialized using this value instead of the schema’s default
+constructor.</li>
+<li><strong>allow_yaml_with_no_schema</strong> – Allows yaml Maps to have extra key-value
+pairs that are specified by the schema being parsed into. In other
+words, the schema argument provides only an incomplete schema for
+the YAML data. This allows for parsing only a subset of the YAML
+data.</li>
+<li><strong>allow_schema_with_no_yaml</strong> – Allows the schema to provide more key-value
+pairs than are present in the YAML data. In other words, objects
+can have default values that are left intact unless the YAML data
+provides a value.</li>
+<li><strong>retain_map_defaults</strong> – If set to true, when parsing a Mapping the loader
+will merge the YAML data into the destination, instead of replacing
+the dict contents entirely. In other words, a Mapping field in a
+schema can have default values that are left intact unless the YAML
+data provides a value <em>for that specific key</em>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
