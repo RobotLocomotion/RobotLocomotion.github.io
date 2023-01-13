@@ -1,11 +1,13 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#ae68336f6101d2c47cee1a1eb7dc926f6":[1,1,1,5,4],
+"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#ae68336f6101d2c47cee1a1eb7dc926f6":[1,5,4,5,4],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#aecaa71c6fa73805192424c08eed6db2b":[1,1,1,5,0],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#aecaa71c6fa73805192424c08eed6db2b":[1,5,4,5,0],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,1,1,7],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,5,4,7],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,1,1,7,10],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,5,4,7,10],
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,1,1,7,10],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b":[1,1,1,7,6],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b":[1,5,4,7,6],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a939869561d2b6d2a404bf1f48d513d5f":[1,1,1,7,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1lcm_1_1_drake_subscription_interface.html":[3,0,0,5,4],
 "classdrake_1_1lcm_1_1_drake_subscription_interface.html#a31bf0737f9be1e68b248d94bbef552b7":[3,0,0,5,4,7],
 "classdrake_1_1lcm_1_1_drake_subscription_interface.html#a6c89817b6b29de75f3118f09c72ea9d8":[3,0,0,5,4,4],
-"classdrake_1_1lcm_1_1_drake_subscription_interface.html#a7d375ca189e3abd3c4dcba5d578a31ea":[3,0,0,5,4,5],
-"classdrake_1_1lcm_1_1_drake_subscription_interface.html#a81cd7606d39abebb4d8722b17db1365e":[3,0,0,5,4,1],
-"classdrake_1_1lcm_1_1_drake_subscription_interface.html#a8aa75f93131067cc81f13ad0754f03cd":[3,0,0,5,4,6]
+"classdrake_1_1lcm_1_1_drake_subscription_interface.html#a7d375ca189e3abd3c4dcba5d578a31ea":[3,0,0,5,4,5]
 };

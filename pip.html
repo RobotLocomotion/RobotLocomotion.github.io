@@ -163,15 +163,6 @@ in <a href="/from_source.html">Source Installation</a>.</p>
 <h2 id="stable-releases">Stable Releases</h2>
 
 <div class="warning">
-  <p>For users running on Apple’s newer arm64 hardware, Drake does not yet provide
-native pypi wheels (follow
-<a href="https://github.com/RobotLocomotion/drake/issues/17906">issue #17906</a>
-for updates). In the meantime, we recommend that you install from a
-<a href="/from_binary.html#stable-releases">Direct Download</a> that includes both Python
-and C++ support, using a dedicated virtual environment.</p>
-</div>
-
-<div class="warning">
   <p>Drake does not support the Python environment supplied by Anaconda. Before
 installing or using Drake, please <code class="language-plaintext highlighter-rouge">conda deactivate</code> (repeatedly, until even
 the conda base environment has been deactivated) such that none of the paths
@@ -194,37 +185,14 @@ for more choices.</p>
 directory.  In the example below, we will name that directory <code class="language-plaintext highlighter-rouge">env</code>, but you
 can choose any name.</p>
 
-<p>(1) Create a virtual environment and install Drake:</p>
+<p>For macOS, ensure that you’re using Homebrew Python (not Apple’s system Python).</p>
+
+<p>Create a virtual environment, install Drake, and activate the environment:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
 env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
 <span class="nb">env</span>/bin/pip <span class="nb">install </span>drake
-</code></pre></div></div>
-
-<p>(2) Drake requires certain basic runtime libraries
-from the host Linux distribution.</p>
-
-<!-- TODO(mwoehlke-kitware)
-On or after 2022-12-01 (once Drake 1.10.0 is released),
-remove these instructions and point to INSTALLATION instead.
--->
-
-<p>For Ubuntu 20.04, install these additional libraries:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
-  libpython3.8 libx11-6 libsm6 libxt6 libglib2.0-0
-</code></pre></div></div>
-
-<p>For Ubuntu 22.04, install these additional libraries:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
-  libx11-6 libsm6 libglib2.0-0
-</code></pre></div></div>
-
-<p>For macOS, ensure that you’re using Homebrew Python (not Apple’s system Python).</p>
-
-<p>(3) Activate the virtual environment:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source env</span>/bin/activate
+<span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
 
 <p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
@@ -232,7 +200,7 @@ remove these instructions and point to INSTALLATION instead.
 <h2 id="nightly-releases">Nightly Releases</h2>
 
 <p>Binary packages of Drake for Ubuntu 20.04 (Focal), Ubuntu 22.04 (Jammy), and
-Mac x86_64 are generated nightly and are available to download at:</p>
+macOS are generated nightly and are available to download at:</p>
 
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp38-cp38-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp38-cp38-manylinux_2_31_x86_64.whl</a></li>
@@ -260,13 +228,12 @@ replace <code class="language-plaintext highlighter-rouge">latest</code> with fo
 
 <p>To install nightly wheel, install from the URL directly:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># Example for python 3.8 (cp38-cp38).</span>
-  python3 <span class="nt">-m</span> venv <span class="nb">env
-  env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
-  <span class="nb">env</span>/bin/pip <span class="nb">install </span>https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp38-cp38-manylinux_2_31_x86_64.whl
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example for python 3.8 (cp38-cp38).</span>
+python3 <span class="nt">-m</span> venv <span class="nb">env
+env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="nb">env</span>/bin/pip <span class="nb">install </span>https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp38-cp38-manylinux_2_31_x86_64.whl
+<span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
-
-<p>Make sure you have the required runtime libraries described above.</p>
 
       </article>
     </div>

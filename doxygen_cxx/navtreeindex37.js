@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1_vector_system.html#a4addfc6da584da16d318282783b47492":[3,0,0,16,127,1],
+"classdrake_1_1systems_1_1_vector_system.html#a59b22b8d8013611322b590f8e5e42077":[3,0,0,16,127,6],
 "classdrake_1_1systems_1_1_vector_system.html#a64e5065f46589c0dcafcf358366af0ff":[3,0,0,16,127,13],
 "classdrake_1_1systems_1_1_vector_system.html#a83f65743d03c576df8bd30d5d3d8e482":[3,0,0,16,127,8],
 "classdrake_1_1systems_1_1_vector_system.html#aa01ce50ca94cf9450f14b3bd674e2617":[3,0,0,16,127,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#acc730c554b00093275d508db2e162811":[1,2,2,5,10],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ad6b5fa29bdb989a329452732e99e33cc":[1,2,2,5,16],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ae26ddd47fd25a35c40bbd44645688e9e":[1,2,2,5,9],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ae9cff84eb45694f21f7ae47845feda97":[1,2,2,5,13],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#af691e7d9a50b9962186e28c7ba632868":[1,2,2,5,2],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#af95989258d9fda0b966b9aa840d82532":[1,2,2,5,6]
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ae9cff84eb45694f21f7ae47845feda97":[1,2,2,5,13]
 };

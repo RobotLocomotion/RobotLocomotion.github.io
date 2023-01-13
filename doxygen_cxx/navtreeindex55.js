@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,16,9,6],
+"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,16,9,6,0],
 "structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,16,9,6,1],
 "structdrake_1_1template__single__tag.html":[3,0,0,52],
 "structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,52,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "unit__inertia_8h.html":[4,0,0,8,14,50],
 "unit__quaternion__constraint_8h.html":[4,0,0,8,5,17],
 "unit__quaternion__constraint_8h.html#a4a29f222bbff1590d2fa6ecb35f87492":[4,0,0,8,5,17,0],
-"universal__joint_8h.html":[4,0,0,8,14,51],
-"universal__mobilizer_8h.html":[4,0,0,8,14,52],
-"unrevised__lemke__solver_8h.html":[4,0,0,11,58]
+"universal__joint_8h.html":[4,0,0,8,14,51]
 };

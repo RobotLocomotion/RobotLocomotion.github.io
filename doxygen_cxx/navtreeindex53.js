@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html":[3,0,0,9,1,0],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a09f8d0da960e3eed8859508f7efdb421":[3,0,0,9,1,0,0],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06":[3,0,0,9,1,0,7],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a148f4adaece02fe36243c84bafd8d467":[3,0,0,9,1,0,2],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09":[3,0,0,9,1,0,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a7263cb2847210d145fcb11838abe81b5":[3,0,0,14,65,1],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab":[3,0,0,14,65,3],
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html":[3,0,0,15,0],
-"structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,15,0,0],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[3,0,0,15,54],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,15,54,0]
+"structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,15,0,0]
 };
