@@ -356,6 +356,73 @@ that SceneGraph, rendering in multiple threads may exhibit issues.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.geometry.render.MakeRenderEngineGltfClient">
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.render.</span></span><span class="sig-name descname"><span class="pre">MakeRenderEngineGltfClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.render.RenderEngineGltfClientParams" title="pydrake.geometry.render.RenderEngineGltfClientParams"><span class="pre">pydrake.geometry.render.RenderEngineGltfClientParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RenderEngineGltfClientParams(base_url='http://127.0.0.1:8000',</span> <span class="pre">render_endpoint='render',</span> <span class="pre">default_label=None,</span> <span class="pre">verbose=False,</span> <span class="pre">cleanup=True)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.render.RenderEngine" title="pydrake.geometry.render.RenderEngine"><span class="pre">pydrake.geometry.render.RenderEngine</span></a></span></span><a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGltfClient" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a RenderEngine implementation which generates &lt;a
+href=”<a class="reference external" href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html">https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html</a>”&gt;glTF
+&lt;/a&gt; files to upload to a render server, and retrieves renderings from
+said server by copying image data back into drake
+systems::sensors::Image buffers. The server url and endpoint are
+provided through the specified RenderEngineGltfClientParams. The
+returned RenderEngine implements the client side of the
+render_engine_gltf_client_server_api. The rules for supported
+geometries and textures are the same as for the VTK-based engine and
+are described in MakeRenderEngineVtk().</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The underlying RenderEngine utilizes [libcurl][libcurl] to
+communicate with a server. Static curl initialization must be
+performed once per process, and the operation is [<strong>not</strong>
+thread-safe][libcurl_threadsafe]! Instantiating this RenderEngine
+automatically initializes curl with the default
+[<cite>curl_global_init(CURL_GLOBAL_ALL |
+CURL_GLOBAL_ACK_EINTR)</cite>][libcurl_init], the implication for
+consuming applications being:</p>
+</div>
+<p>Note:
+1. If you intend to have your rendering take place in a threaded context,
+you <strong>must</strong> instantiate this RenderEngine via MakeRenderEngineGltfClient
+from the main thread <strong>before</strong> spawning your threaded workers.  As soon
+as one of these RenderEngine instances has been constructed, libcurl will
+have been initialized.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Setup</span> <span class="n">your</span> <span class="n">server</span> <span class="n">information</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">the</span> <span class="n">RenderEngine</span><span class="o">.</span>  <span class="n">This</span> <span class="n">must</span>
+<span class="o">//</span> <span class="n">be</span> <span class="n">done</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">non</span><span class="o">-</span><span class="n">threaded</span> <span class="n">context</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">at</span> <span class="n">the</span> <span class="n">program</span> <span class="n">start</span><span class="p">)</span><span class="o">.</span>
+<span class="n">RenderEngineGltfClientParams</span> <span class="n">params</span><span class="p">;</span>
+<span class="n">params</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;http://some-server.url&quot;</span><span class="p">;</span>
+<span class="n">auto</span> <span class="n">render_engine</span> <span class="o">=</span> <span class="n">MakeRenderEngineGltfClient</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">After</span> <span class="n">MakeRenderEngineGltfClient</span><span class="p">()</span> <span class="n">function</span> <span class="n">call</span><span class="p">,</span> <span class="n">libcurl</span> <span class="n">has</span> <span class="n">been</span>
+<span class="o">//</span> <span class="n">initialized</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">may</span> <span class="n">now</span> <span class="n">create</span> <span class="n">threads</span> <span class="k">if</span> <span class="n">desired</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>2. If you need to use a different initialization strategy for libcurl in your
+application, you should first create the RenderEngine using
+MakeRenderEngineGltfClient, then manually call
+[<cite>curl_global_cleanup()</cite>][libcurl_cleanup], followed by manually calling
+[<cite>curl_global_init(…)</cite>][libcurl_init] with your desired flags. In
+general, this scenario is <strong>atypical</strong> and you should not need to worry
+about this.  Applications with specialized libcurl needs, though, must
+understand the construction and initialization order to be able to modify
+the behavior to suit their needs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Follow</span> <span class="n">the</span> <span class="n">steps</span> <span class="n">above</span> <span class="n">to</span> <span class="n">construct</span> <span class="n">the</span> <span class="n">RenderEngine</span> <span class="n">given</span> <span class="n">the</span>
+<span class="o">//</span> <span class="n">specified</span> <span class="n">RenderEngineGltfClientParams</span><span class="o">.</span>
+
+<span class="o">//</span> <span class="n">Libcurl</span> <span class="n">has</span> <span class="n">been</span> <span class="n">initialized</span> <span class="n">at</span> <span class="n">this</span> <span class="n">point</span><span class="p">,</span> <span class="n">so</span> <span class="n">your</span> <span class="n">application</span> <span class="n">needs</span>
+<span class="o">//</span> <span class="n">to</span> <span class="n">reset</span> <span class="ow">and</span> <span class="n">re</span><span class="o">-</span><span class="n">initialize</span> <span class="n">curl</span> <span class="n">again</span><span class="o">.</span>
+<span class="n">curl_global_cleanup</span><span class="p">();</span>
+<span class="n">curl_global_init</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>  <span class="o">//</span> <span class="o">&lt;&lt;&lt;</span> <span class="n">your</span> <span class="n">custom</span> <span class="n">flags</span> <span class="n">here</span>
+
+<span class="o">//</span> <span class="n">Now</span> <span class="n">that</span> <span class="n">libcurl</span> <span class="n">has</span> <span class="n">been</span> <span class="n">re</span><span class="o">-</span><span class="n">initialized</span> <span class="n">to</span> <span class="n">suit</span> <span class="n">your</span> <span class="n">application</span><span class="s1">&#39;s</span>
+<span class="o">//</span> <span class="n">needs</span><span class="p">,</span> <span class="n">you</span> <span class="n">may</span> <span class="n">now</span> <span class="n">create</span> <span class="n">threads</span> <span class="k">if</span> <span class="n">desired</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>[libcurl]: <a class="reference external" href="https://curl.se/libcurl/">https://curl.se/libcurl/</a> [libcurl_threadsafe]:
+<a class="reference external" href="https://curl.se/libcurl/c/threadsafe.html">https://curl.se/libcurl/c/threadsafe.html</a> [libcurl_init]:
+<a class="reference external" href="https://curl.se/libcurl/c/curl_global_init.html">https://curl.se/libcurl/c/curl_global_init.html</a> [libcurl_cleanup]:
+<a class="reference external" href="https://curl.se/libcurl/c/curl_global_cleanup.html">https://curl.se/libcurl/c/curl_global_cleanup.html</a></p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.geometry.render.MakeRenderEngineVtk">
 <span class="sig-prename descclassname"><span class="pre">pydrake.geometry.render.</span></span><span class="sig-name descname"><span class="pre">MakeRenderEngineVtk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.render.RenderEngineVtkParams" title="pydrake.geometry.render.RenderEngineVtkParams"><span class="pre">pydrake.geometry.render.RenderEngineVtkParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.render.RenderEngine" title="pydrake.geometry.render.RenderEngine"><span class="pre">pydrake.geometry.render.RenderEngine</span></a></span></span><a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineVtk" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a VTK-based OpenGL
@@ -735,6 +802,67 @@ specified in the (phong, diffuse) property.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_label</span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGlParams.default_label" title="Permalink to this definition"></a></dt>
 <dd><p>Default render label to apply to a geometry when none is otherwise
 specified.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.render.RenderEngineGltfClientParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.render.</span></span><span class="sig-name descname"><span class="pre">RenderEngineGltfClientParams</span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGltfClientParams" title="Permalink to this definition"></a></dt>
+<dd><p>Construction parameters for the MakeRenderEngineGltfClient() to create
+a client as part of the render_engine_gltf_client_server_api.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.render.RenderEngineGltfClientParams.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.render.RenderEngineGltfClientParams" title="pydrake.geometry.render.RenderEngineGltfClientParams"><span class="pre">pydrake.geometry.render.RenderEngineGltfClientParams</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGltfClientParams.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.render.RenderEngineGltfClientParams.base_url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base_url</span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGltfClientParams.base_url" title="Permalink to this definition"></a></dt>
+<dd><p>The base url of the server communicate with. See GetUrl() for details.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.render.RenderEngineGltfClientParams.cleanup">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cleanup</span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGltfClientParams.cleanup" title="Permalink to this definition"></a></dt>
+<dd><p>Whether or not the client should cleanup files generated / retrieved
+from the server. By default (<code class="docutils literal notranslate"><span class="pre">cleanup=true</span></code>), after a server image
+response has been loaded into the client’s memory, the glTF scene file
+and images will be deleted. To keep the generated scene files or
+server response images for inspection purposes, set <code class="docutils literal notranslate"><span class="pre">cleanup=false</span></code>
+instead. During the construction process a number of copies and clones
+are created, when <code class="docutils literal notranslate"><span class="pre">cleanup=false</span></code> there will be more than one empty
+temporary directory created that will not be deleted. The path to the
+temporary directory can be observed by setting
+RenderEngineGltfClientParams::verbose to <code class="docutils literal notranslate"><span class="pre">True</span></code>, or inspecting the
+parent directory described by drake::temp_directory().</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.render.RenderEngineGltfClientParams.default_label">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_label</span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGltfClientParams.default_label" title="Permalink to this definition"></a></dt>
+<dd><p>The (optional) label to apply when none is otherwise specified.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.render.RenderEngineGltfClientParams.render_endpoint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">render_endpoint</span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGltfClientParams.render_endpoint" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) The server endpoint to retrieve renderings from. See
+GetUrl() for details.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.render.RenderEngineGltfClientParams.verbose">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#pydrake.geometry.render.RenderEngineGltfClientParams.verbose" title="Permalink to this definition"></a></dt>
+<dd><p>Whether or not the client should log information about which files are
+being generated, as well as any information about HTTP communications
+between the client and server such as HTTP header information, url and
+port, etc. Information is logged at the debug level, so your
+application will need to logging::set_log_level() to <code class="docutils literal notranslate"><span class="pre">&quot;debug&quot;</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>drake/common/text_logging.h</p>
+</div>
 </dd></dl>
 
 </dd></dl>

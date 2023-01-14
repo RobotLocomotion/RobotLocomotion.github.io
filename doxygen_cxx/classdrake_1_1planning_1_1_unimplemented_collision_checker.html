@@ -1,0 +1,913 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: UnimplementedCollisionChecker Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_unimplemented_collision_checker.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classdrake_1_1planning_1_1_unimplemented_collision_checker-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">UnimplementedCollisionChecker Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A concrete collision checker implementation that throws an exception for every virtual function hook. </p>
+<p>This might be useful for unit testing or for deriving your own collision checker without providing for the full suite of operations. </p>
+</div>
+<p><code>#include &lt;drake/planning/unimplemented_collision_checker.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9b16fd2e763f0314ad31c6920c49ddc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a9b16fd2e763f0314ad31c6920c49ddc3">UnimplementedCollisionChecker</a> (<a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html">CollisionCheckerParams</a> params, bool supports_parallel_checking)</td></tr>
+<tr class="separator:a9b16fd2e763f0314ad31c6920c49ddc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba4e83b127c08c04186340de335284c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#aba4e83b127c08c04186340de335284c9">~UnimplementedCollisionChecker</a> ()</td></tr>
+<tr class="separator:aba4e83b127c08c04186340de335284c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment.</div></td></tr>
+<tr class="memitem:acb9fbab01708ff8ee9728c36cc01f3f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#acb9fbab01708ff8ee9728c36cc01f3f6">UnimplementedCollisionChecker</a> (<a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:acb9fbab01708ff8ee9728c36cc01f3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae199346d6aac6d2c6ad2621e0e49ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#aaae199346d6aac6d2c6ad2621e0e49ec">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;)=delete</td></tr>
+<tr class="separator:aaae199346d6aac6d2c6ad2621e0e49ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20b221930b8cf266cc3cfe261af1a72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ac20b221930b8cf266cc3cfe261af1a72">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ac20b221930b8cf266cc3cfe261af1a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1planning_1_1_collision_checker"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1planning_1_1_collision_checker')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a></td></tr>
+<tr class="memitem:a9f469a8ba4f8fbd62921ff2f18590ce5 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9f469a8ba4f8fbd62921ff2f18590ce5">~CollisionChecker</a> ()</td></tr>
+<tr class="separator:a9f469a8ba4f8fbd62921ff2f18590ce5 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208522fd8609e0a9376f52e291aa28e9 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a208522fd8609e0a9376f52e291aa28e9">Clone</a> () const</td></tr>
+<tr class="separator:a208522fd8609e0a9376f52e291aa28e9 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6831872639ff530b78810ef26115bb26 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26">SupportsParallelChecking</a> () const</td></tr>
+<tr class="memdesc:a6831872639ff530b78810ef26115bb26 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the collision checker support true parallel collision checks?  <a href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26">More...</a><br /></td></tr>
+<tr class="separator:a6831872639ff530b78810ef26115bb26 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236e58ced4f42c22e7395000ecaaeb7b inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a236e58ced4f42c22e7395000ecaaeb7b">CollisionChecker</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a236e58ced4f42c22e7395000ecaaeb7b inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af290abddd23e4ccd6cfed2ee8c69ae78 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af290abddd23e4ccd6cfed2ee8c69ae78">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;)=delete</td></tr>
+<tr class="separator:af290abddd23e4ccd6cfed2ee8c69ae78 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcee2c070450238e843747bccb921795 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#abcee2c070450238e843747bccb921795">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:abcee2c070450238e843747bccb921795 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d0936571662d4a306fb0a1153ccae4 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a15d0936571662d4a306fb0a1153ccae4">model</a> () const</td></tr>
+<tr class="separator:a15d0936571662d4a306fb0a1153ccae4 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7426149695dc6d09303cb351b3d84201 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a7426149695dc6d09303cb351b3d84201">plant</a> () const</td></tr>
+<tr class="separator:a7426149695dc6d09303cb351b3d84201 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ebf64a0503672b17907178242458218 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a0ebf64a0503672b17907178242458218">get_body</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index) const</td></tr>
+<tr class="separator:a0ebf64a0503672b17907178242458218 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2321a66698e800884f3ff0496160860c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2321a66698e800884f3ff0496160860c">GetScopedName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame) const</td></tr>
+<tr class="memdesc:a2321a66698e800884f3ff0496160860c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the scoped name for a frame within the full model.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a2321a66698e800884f3ff0496160860c">More...</a><br /></td></tr>
+<tr class="separator:a2321a66698e800884f3ff0496160860c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcb3747eeb77c4aa20776b0cc145c56 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aebcb3747eeb77c4aa20776b0cc145c56">GetScopedName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;body) const</td></tr>
+<tr class="memdesc:aebcb3747eeb77c4aa20776b0cc145c56 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the scoped name for a body within the full model.  <a href="classdrake_1_1planning_1_1_collision_checker.html#aebcb3747eeb77c4aa20776b0cc145c56">More...</a><br /></td></tr>
+<tr class="separator:aebcb3747eeb77c4aa20776b0cc145c56 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9938c30a0a5d9a51996a163b111c883a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9938c30a0a5d9a51996a163b111c883a">robot_model_instances</a> () const</td></tr>
+<tr class="memdesc:a9938c30a0a5d9a51996a163b111c883a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the set of model instances belonging to the robot.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a9938c30a0a5d9a51996a163b111c883a">More...</a><br /></td></tr>
+<tr class="separator:a9938c30a0a5d9a51996a163b111c883a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a9ea993d0d5dee17d7d26f610fff32 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a87a9ea993d0d5dee17d7d26f610fff32">IsPartOfRobot</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;body) const</td></tr>
+<tr class="separator:a87a9ea993d0d5dee17d7d26f610fff32 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcd7c9ea7d36219c6790fe017d41578 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a0dcd7c9ea7d36219c6790fe017d41578">IsPartOfRobot</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index) const</td></tr>
+<tr class="separator:a0dcd7c9ea7d36219c6790fe017d41578 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f67c9b2ea339cc9f20902bed41428f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a32f67c9b2ea339cc9f20902bed41428f">GetZeroConfiguration</a> () const</td></tr>
+<tr class="separator:a32f67c9b2ea339cc9f20902bed41428f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db04299a725f279a9c49df91dc0deb2 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1db04299a725f279a9c49df91dc0deb2">num_allocated_contexts</a> () const</td></tr>
+<tr class="separator:a1db04299a725f279a9c49df91dc0deb2 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c84d0251fa9fa71f687ea3fbb549cf7 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a> () const</td></tr>
+<tr class="separator:a8c84d0251fa9fa71f687ea3fbb549cf7 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7d2a81568c26350b120a592e55e174 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1e7d2a81568c26350b120a592e55e174">plant_context</a> () const</td></tr>
+<tr class="separator:a1e7d2a81568c26350b120a592e55e174 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c230b8ef6206e88617656df3cc7d30 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a81c230b8ef6206e88617656df3cc7d30">UpdatePositions</a> (const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:a81c230b8ef6206e88617656df3cc7d30 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the generalized positions <code>q</code> in the current thread's associated context, and returns a reference to the MultibodyPlant's now-updated context.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a81c230b8ef6206e88617656df3cc7d30">More...</a><br /></td></tr>
+<tr class="separator:a81c230b8ef6206e88617656df3cc7d30 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8138de22d2de848cc6603ab263bc09b7 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8138de22d2de848cc6603ab263bc09b7">UpdateContextPositions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:a8138de22d2de848cc6603ab263bc09b7 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a81c230b8ef6206e88617656df3cc7d30" title="Updates the generalized positions q in the current thread&#39;s associated context, and returns a referen...">UpdatePositions()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a8138de22d2de848cc6603ab263bc09b7">More...</a><br /></td></tr>
+<tr class="separator:a8138de22d2de848cc6603ab263bc09b7 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa782a122b868c688b6c7bce870a7c93 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93">MakeStandaloneModelContext</a> () const</td></tr>
+<tr class="memdesc:afa782a122b868c688b6c7bce870a7c93 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make and track a <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html" title="This class represents the data necessary for CollisionChecker to operate safely across multiple threa...">CollisionCheckerContext</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93">More...</a><br /></td></tr>
+<tr class="separator:afa782a122b868c688b6c7bce870a7c93 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07edeec959f087dcc1812af16b19b02c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a07edeec959f087dcc1812af16b19b02c">PerformOperationAgainstAllModelContexts</a> (const std::function&lt; void(const <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;, <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *)&gt; &amp;operation)</td></tr>
+<tr class="memdesc:a07edeec959f087dcc1812af16b19b02c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows externally-provided operations that must be performed against all contexts in the per-thread context pool, and any standalone contexts made with <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93" title="Make and track a CollisionCheckerContext.">MakeStandaloneModelContext()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a07edeec959f087dcc1812af16b19b02c">More...</a><br /></td></tr>
+<tr class="separator:a07edeec959f087dcc1812af16b19b02c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36952e978a6e386dc832b1dfe957c990 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a36952e978a6e386dc832b1dfe957c990">AddCollisionShape</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a> &amp;description)</td></tr>
+<tr class="memdesc:a36952e978a6e386dc832b1dfe957c990 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of a shape to a body, both given in <code>description</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a36952e978a6e386dc832b1dfe957c990">More...</a><br /></td></tr>
+<tr class="separator:a36952e978a6e386dc832b1dfe957c990 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67bf182abc9d41aeb581fad57585a7fc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a67bf182abc9d41aeb581fad57585a7fc">AddCollisionShapes</a> (const std::string &amp;group_name, const std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a> &gt; &amp;descriptions)</td></tr>
+<tr class="memdesc:a67bf182abc9d41aeb581fad57585a7fc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of N shapes to N bodies, each given in the set of <code>descriptions</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a67bf182abc9d41aeb581fad57585a7fc">More...</a><br /></td></tr>
+<tr class="separator:a67bf182abc9d41aeb581fad57585a7fc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d99f31b1894f7f17615015ac449c62 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a09d99f31b1894f7f17615015ac449c62">AddCollisionShapes</a> (const std::map&lt; std::string, std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a> &gt;&gt; &amp;geometry_groups)</td></tr>
+<tr class="memdesc:a09d99f31b1894f7f17615015ac449c62 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of a collection of shapes to bodies across multiple geometry groups.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a09d99f31b1894f7f17615015ac449c62">More...</a><br /></td></tr>
+<tr class="separator:a09d99f31b1894f7f17615015ac449c62 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d11d679e9525d2a51454c2c1fffad72 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a5d11d679e9525d2a51454c2c1fffad72">AddCollisionShapeToFrame</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frameA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)</td></tr>
+<tr class="memdesc:a5d11d679e9525d2a51454c2c1fffad72 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of <code>shape</code> to the frame A in the checker's model.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a5d11d679e9525d2a51454c2c1fffad72">More...</a><br /></td></tr>
+<tr class="separator:a5d11d679e9525d2a51454c2c1fffad72 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa9b0966d6d70d4f84418f04a1f2c39 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4fa9b0966d6d70d4f84418f04a1f2c39">AddCollisionShapeToBody</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)</td></tr>
+<tr class="memdesc:a4fa9b0966d6d70d4f84418f04a1f2c39 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of <code>shape</code> to the body A in the checker's model The added <code>shape</code> will belong to the named geometry group.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a4fa9b0966d6d70d4f84418f04a1f2c39">More...</a><br /></td></tr>
+<tr class="separator:a4fa9b0966d6d70d4f84418f04a1f2c39 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30d147b58ed54165a9a11dac4e8f0c0 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad30d147b58ed54165a9a11dac4e8f0c0">GetAllAddedCollisionShapes</a> () const</td></tr>
+<tr class="memdesc:ad30d147b58ed54165a9a11dac4e8f0c0 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets all checker geometries currently added across the whole checker.  <a href="classdrake_1_1planning_1_1_collision_checker.html#ad30d147b58ed54165a9a11dac4e8f0c0">More...</a><br /></td></tr>
+<tr class="separator:ad30d147b58ed54165a9a11dac4e8f0c0 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c936a3e9f8ae2750cb5ce8c18985d0a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a5c936a3e9f8ae2750cb5ce8c18985d0a">RemoveAllAddedCollisionShapes</a> (const std::string &amp;group_name)</td></tr>
+<tr class="memdesc:a5c936a3e9f8ae2750cb5ce8c18985d0a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all added checker geometries which belong to the named group.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a5c936a3e9f8ae2750cb5ce8c18985d0a">More...</a><br /></td></tr>
+<tr class="separator:a5c936a3e9f8ae2750cb5ce8c18985d0a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1190d81eb661b4151d32b844e86fc5a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af1190d81eb661b4151d32b844e86fc5a">RemoveAllAddedCollisionShapes</a> ()</td></tr>
+<tr class="memdesc:af1190d81eb661b4151d32b844e86fc5a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all added checker geometries from all geometry groups.  <a href="classdrake_1_1planning_1_1_collision_checker.html#af1190d81eb661b4151d32b844e86fc5a">More...</a><br /></td></tr>
+<tr class="separator:af1190d81eb661b4151d32b844e86fc5a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18483c3b6b1db8aba3b0b0803f3831a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aa18483c3b6b1db8aba3b0b0803f3831a">MaybeGetUniformRobotEnvironmentPadding</a> () const</td></tr>
+<tr class="memdesc:aa18483c3b6b1db8aba3b0b0803f3831a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the padding between all robot bodies and environment bodies is the same, returns the common padding value.  <a href="classdrake_1_1planning_1_1_collision_checker.html#aa18483c3b6b1db8aba3b0b0803f3831a">More...</a><br /></td></tr>
+<tr class="separator:aa18483c3b6b1db8aba3b0b0803f3831a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe50f03a06f61840b6c7bb3572290f8a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#abe50f03a06f61840b6c7bb3572290f8a">MaybeGetUniformRobotRobotPadding</a> () const</td></tr>
+<tr class="memdesc:abe50f03a06f61840b6c7bb3572290f8a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the padding between all pairs of robot bodies is the same, returns the common padding value.  <a href="classdrake_1_1planning_1_1_collision_checker.html#abe50f03a06f61840b6c7bb3572290f8a">More...</a><br /></td></tr>
+<tr class="separator:abe50f03a06f61840b6c7bb3572290f8a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642639c3ef89987db37c8ba232f0f494 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a642639c3ef89987db37c8ba232f0f494">GetPaddingBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index) const</td></tr>
+<tr class="memdesc:a642639c3ef89987db37c8ba232f0f494 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the padding value for the pair of bodies specified.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a642639c3ef89987db37c8ba232f0f494">More...</a><br /></td></tr>
+<tr class="separator:a642639c3ef89987db37c8ba232f0f494 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c03d02cc94803a222f42da8032fb8e8 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a7c03d02cc94803a222f42da8032fb8e8">GetPaddingBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB) const</td></tr>
+<tr class="memdesc:a7c03d02cc94803a222f42da8032fb8e8 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a7c03d02cc94803a222f42da8032fb8e8">More...</a><br /></td></tr>
+<tr class="separator:a7c03d02cc94803a222f42da8032fb8e8 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2abd1ef467638caa52681db77bd8ea18 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2abd1ef467638caa52681db77bd8ea18">SetPaddingBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index, <a class="el" href="classdouble.html">double</a> padding)</td></tr>
+<tr class="memdesc:a2abd1ef467638caa52681db77bd8ea18 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the padding value for the pair of bodies specified.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a2abd1ef467638caa52681db77bd8ea18">More...</a><br /></td></tr>
+<tr class="separator:a2abd1ef467638caa52681db77bd8ea18 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b98205b8c73532fa5db66f6d10b3b1d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b98205b8c73532fa5db66f6d10b3b1d">SetPaddingBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB, <a class="el" href="classdouble.html">double</a> padding)</td></tr>
+<tr class="memdesc:a2b98205b8c73532fa5db66f6d10b3b1d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a2b98205b8c73532fa5db66f6d10b3b1d">More...</a><br /></td></tr>
+<tr class="separator:a2b98205b8c73532fa5db66f6d10b3b1d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf8617f3f3e43613b77a61b303035b7a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aaf8617f3f3e43613b77a61b303035b7a">GetPaddingMatrix</a> () const</td></tr>
+<tr class="memdesc:aaf8617f3f3e43613b77a61b303035b7a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the collision padding matrix.  <a href="classdrake_1_1planning_1_1_collision_checker.html#aaf8617f3f3e43613b77a61b303035b7a">More...</a><br /></td></tr>
+<tr class="separator:aaf8617f3f3e43613b77a61b303035b7a inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5073981822b962bcc7ca569b399b3db inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ae5073981822b962bcc7ca569b399b3db">SetPaddingMatrix</a> (const Eigen::MatrixXd &amp;collision_padding)</td></tr>
+<tr class="memdesc:ae5073981822b962bcc7ca569b399b3db inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the collision padding matrix.  <a href="classdrake_1_1planning_1_1_collision_checker.html#ae5073981822b962bcc7ca569b399b3db">More...</a><br /></td></tr>
+<tr class="separator:ae5073981822b962bcc7ca569b399b3db inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe38491db7dbc7136d180ed55698538 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#abbe38491db7dbc7136d180ed55698538">GetLargestPadding</a> () const</td></tr>
+<tr class="memdesc:abbe38491db7dbc7136d180ed55698538 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current largest collision padding across all (robot, *) body pairs.  <a href="classdrake_1_1planning_1_1_collision_checker.html#abbe38491db7dbc7136d180ed55698538">More...</a><br /></td></tr>
+<tr class="separator:abbe38491db7dbc7136d180ed55698538 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963ab30a4085cd7704496f7c5289c7df inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a963ab30a4085cd7704496f7c5289c7df">SetPaddingOneRobotBodyAllEnvironmentPairs</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index, <a class="el" href="classdouble.html">double</a> padding)</td></tr>
+<tr class="memdesc:a963ab30a4085cd7704496f7c5289c7df inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the environment collision padding for the provided robot body with respect to all environment bodies.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a963ab30a4085cd7704496f7c5289c7df">More...</a><br /></td></tr>
+<tr class="separator:a963ab30a4085cd7704496f7c5289c7df inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9df46cf7a999edaee7b5461a38a8e0d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af9df46cf7a999edaee7b5461a38a8e0d">SetPaddingAllRobotEnvironmentPairs</a> (<a class="el" href="classdouble.html">double</a> padding)</td></tr>
+<tr class="memdesc:af9df46cf7a999edaee7b5461a38a8e0d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the padding for all (robot, environement) pairs.  <a href="classdrake_1_1planning_1_1_collision_checker.html#af9df46cf7a999edaee7b5461a38a8e0d">More...</a><br /></td></tr>
+<tr class="separator:af9df46cf7a999edaee7b5461a38a8e0d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8423473a4d7b2c2b37c7f9c8108c7a3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af8423473a4d7b2c2b37c7f9c8108c7a3">SetPaddingAllRobotRobotPairs</a> (<a class="el" href="classdouble.html">double</a> padding)</td></tr>
+<tr class="memdesc:af8423473a4d7b2c2b37c7f9c8108c7a3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the padding for all (robot, robot) pairs.  <a href="classdrake_1_1planning_1_1_collision_checker.html#af8423473a4d7b2c2b37c7f9c8108c7a3">More...</a><br /></td></tr>
+<tr class="separator:af8423473a4d7b2c2b37c7f9c8108c7a3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add86c374f69f86b7ac9feafb127b0738 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXi &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#add86c374f69f86b7ac9feafb127b0738">GetNominalFilteredCollisionMatrix</a> () const</td></tr>
+<tr class="memdesc:add86c374f69f86b7ac9feafb127b0738 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the "nominal" collision filter matrix.  <a href="classdrake_1_1planning_1_1_collision_checker.html#add86c374f69f86b7ac9feafb127b0738">More...</a><br /></td></tr>
+<tr class="separator:add86c374f69f86b7ac9feafb127b0738 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c642c972f6a793e2cf315cc53cf0e1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXi &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a53c642c972f6a793e2cf315cc53cf0e1">GetFilteredCollisionMatrix</a> () const</td></tr>
+<tr class="memdesc:a53c642c972f6a793e2cf315cc53cf0e1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the "active" collision filter matrix.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a53c642c972f6a793e2cf315cc53cf0e1">More...</a><br /></td></tr>
+<tr class="separator:a53c642c972f6a793e2cf315cc53cf0e1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5741d217236e45f7aed61d7a28c23d39 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a5741d217236e45f7aed61d7a28c23d39">SetCollisionFilterMatrix</a> (const Eigen::MatrixXi &amp;filter_matrix)</td></tr>
+<tr class="memdesc:a5741d217236e45f7aed61d7a28c23d39 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "active" collision filter matrix.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a5741d217236e45f7aed61d7a28c23d39">More...</a><br /></td></tr>
+<tr class="separator:a5741d217236e45f7aed61d7a28c23d39 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c482d9dc344b97944de8b61dc41911f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4c482d9dc344b97944de8b61dc41911f">IsCollisionFilteredBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index) const</td></tr>
+<tr class="memdesc:a4c482d9dc344b97944de8b61dc41911f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if collision is filtered between the two bodies specified.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a4c482d9dc344b97944de8b61dc41911f">More...</a><br /></td></tr>
+<tr class="separator:a4c482d9dc344b97944de8b61dc41911f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b02078235ad1f00d2991a5cbbfdc6f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a92b02078235ad1f00d2991a5cbbfdc6f">IsCollisionFilteredBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB) const</td></tr>
+<tr class="memdesc:a92b02078235ad1f00d2991a5cbbfdc6f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a92b02078235ad1f00d2991a5cbbfdc6f">More...</a><br /></td></tr>
+<tr class="separator:a92b02078235ad1f00d2991a5cbbfdc6f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a9e6f72e628e92db913a5f9aa64d3c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a87a9e6f72e628e92db913a5f9aa64d3c">SetCollisionFilteredBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index, bool filter_collision)</td></tr>
+<tr class="memdesc:a87a9e6f72e628e92db913a5f9aa64d3c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the body pair (bodyA, bodyB) to be filtered (or not) based on <code>filter_collision</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a87a9e6f72e628e92db913a5f9aa64d3c">More...</a><br /></td></tr>
+<tr class="separator:a87a9e6f72e628e92db913a5f9aa64d3c inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f74df49477ffe7943e9dab284d1bb0 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a21f74df49477ffe7943e9dab284d1bb0">SetCollisionFilteredBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB, bool filter_collision)</td></tr>
+<tr class="memdesc:a21f74df49477ffe7943e9dab284d1bb0 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a21f74df49477ffe7943e9dab284d1bb0">More...</a><br /></td></tr>
+<tr class="separator:a21f74df49477ffe7943e9dab284d1bb0 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc935f824f1b4601d04346c0cebac63 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adbc935f824f1b4601d04346c0cebac63">SetCollisionFilteredWithAllBodies</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index)</td></tr>
+<tr class="memdesc:adbc935f824f1b4601d04346c0cebac63 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that body pair (B, O) is filtered (for all bodies O in this checker's plant).  <a href="classdrake_1_1planning_1_1_collision_checker.html#adbc935f824f1b4601d04346c0cebac63">More...</a><br /></td></tr>
+<tr class="separator:adbc935f824f1b4601d04346c0cebac63 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27a4faa38ce0e53514ae506061dd987 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aa27a4faa38ce0e53514ae506061dd987">CheckConfigCollisionFree</a> (const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:aa27a4faa38ce0e53514ae506061dd987 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration for collision using the current thread's associated context.  <a href="classdrake_1_1planning_1_1_collision_checker.html#aa27a4faa38ce0e53514ae506061dd987">More...</a><br /></td></tr>
+<tr class="separator:aa27a4faa38ce0e53514ae506061dd987 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6b89337adab829567d9be3fe350517 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acc6b89337adab829567d9be3fe350517">CheckContextConfigCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:acc6b89337adab829567d9be3fe350517 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aa27a4faa38ce0e53514ae506061dd987" title="Checks a single configuration for collision using the current thread&#39;s associated context.">CheckConfigCollisionFree()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#acc6b89337adab829567d9be3fe350517">More...</a><br /></td></tr>
+<tr class="separator:acc6b89337adab829567d9be3fe350517 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8322ee81a1e43e99e39d36997d79fe44 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8322ee81a1e43e99e39d36997d79fe44">CheckConfigsCollisionFree</a> (const std::vector&lt; Eigen::VectorXd &gt; &amp;configs, bool parallelize=true) const</td></tr>
+<tr class="memdesc:a8322ee81a1e43e99e39d36997d79fe44 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a vector of configurations for collision, evaluating in parallel when supported and enabled by <code>parallelize</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a8322ee81a1e43e99e39d36997d79fe44">More...</a><br /></td></tr>
+<tr class="separator:a8322ee81a1e43e99e39d36997d79fe44 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad399081b57b1becb847d9a6f77928903 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903">SetConfigurationDistanceFunction</a> (const <a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a> &amp;distance_function)</td></tr>
+<tr class="memdesc:ad399081b57b1becb847d9a6f77928903 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration distance function to <code>distance_function</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903">More...</a><br /></td></tr>
+<tr class="separator:ad399081b57b1becb847d9a6f77928903 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a0387b7c63685b76f74f4af25bf335 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a54a0387b7c63685b76f74f4af25bf335">ComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;q_1, const Eigen::VectorXd &amp;q_2) const</td></tr>
+<tr class="memdesc:a54a0387b7c63685b76f74f4af25bf335 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes configuration-space distance between the provided configurations <code>q_1</code> and <code>q_2</code>, using the distance function configured at construction- time or via <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a54a0387b7c63685b76f74f4af25bf335">More...</a><br /></td></tr>
+<tr class="separator:a54a0387b7c63685b76f74f4af25bf335 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57903558264bcd6cb91e68f8e49d20a1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a57903558264bcd6cb91e68f8e49d20a1">MakeStandaloneConfigurationDistanceFunction</a> () const</td></tr>
+<tr class="separator:a57903558264bcd6cb91e68f8e49d20a1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf58f4817df47ff85f1e4f3de824382 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382">SetConfigurationInterpolationFunction</a> (const <a class="el" href="namespacedrake_1_1planning.html#a75d00a46d4a0685ffa20482705e7e8e7">ConfigurationInterpolationFunction</a> &amp;interpolation_function)</td></tr>
+<tr class="memdesc:aebf58f4817df47ff85f1e4f3de824382 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration interpolation function to <code>interpolation_function</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382">More...</a><br /></td></tr>
+<tr class="separator:aebf58f4817df47ff85f1e4f3de824382 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a1eb2882f14ed4882fc8d51e00b917 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a38a1eb2882f14ed4882fc8d51e00b917">InterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;q_1, const Eigen::VectorXd &amp;q_2, <a class="el" href="classdouble.html">double</a> ratio) const</td></tr>
+<tr class="memdesc:a38a1eb2882f14ed4882fc8d51e00b917 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolates between provided configurations <code>q_1</code> and <code>q_2</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a38a1eb2882f14ed4882fc8d51e00b917">More...</a><br /></td></tr>
+<tr class="separator:a38a1eb2882f14ed4882fc8d51e00b917 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07431eb14eaf038162e550c13e1373dc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a75d00a46d4a0685ffa20482705e7e8e7">ConfigurationInterpolationFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a07431eb14eaf038162e550c13e1373dc">MakeStandaloneConfigurationInterpolationFunction</a> () const</td></tr>
+<tr class="separator:a07431eb14eaf038162e550c13e1373dc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa8d8cac0c3193bc48a6fb8229b85e8 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8">edge_step_size</a> () const</td></tr>
+<tr class="memdesc:adaa8d8cac0c3193bc48a6fb8229b85e8 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current edge step size.  <a href="classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8">More...</a><br /></td></tr>
+<tr class="separator:adaa8d8cac0c3193bc48a6fb8229b85e8 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285e992424a4197669a43d70f1208474 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a285e992424a4197669a43d70f1208474">set_edge_step_size</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8">edge_step_size</a>)</td></tr>
+<tr class="memdesc:a285e992424a4197669a43d70f1208474 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge step size to <code>edge_step_size</code>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a285e992424a4197669a43d70f1208474">More...</a><br /></td></tr>
+<tr class="separator:a285e992424a4197669a43d70f1208474 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce2242b3fa411baff810a88cf59fa13 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acce2242b3fa411baff810a88cf59fa13">CheckEdgeCollisionFree</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:acce2242b3fa411baff810a88cf59fa13 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision, using the current thread's associated context.  <a href="classdrake_1_1planning_1_1_collision_checker.html#acce2242b3fa411baff810a88cf59fa13">More...</a><br /></td></tr>
+<tr class="separator:acce2242b3fa411baff810a88cf59fa13 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab530c2f1db69b7fcb503447c63ef8f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2ab530c2f1db69b7fcb503447c63ef8f">CheckContextEdgeCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:a2ab530c2f1db69b7fcb503447c63ef8f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acce2242b3fa411baff810a88cf59fa13" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">CheckEdgeCollisionFree()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a2ab530c2f1db69b7fcb503447c63ef8f">More...</a><br /></td></tr>
+<tr class="separator:a2ab530c2f1db69b7fcb503447c63ef8f inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f045c9f1561be7764ed7c776a127d51 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9f045c9f1561be7764ed7c776a127d51">CheckEdgeCollisionFreeParallel</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:a9f045c9f1561be7764ed7c776a127d51 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a9f045c9f1561be7764ed7c776a127d51">More...</a><br /></td></tr>
+<tr class="separator:a9f045c9f1561be7764ed7c776a127d51 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fc6e4ab8e9d2d13ace057b381c2a8b inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a71fc6e4ab8e9d2d13ace057b381c2a8b">CheckEdgesCollisionFree</a> (const std::vector&lt; std::pair&lt; Eigen::VectorXd, Eigen::VectorXd &gt;&gt; &amp;edges, bool parallelize=true) const</td></tr>
+<tr class="memdesc:a71fc6e4ab8e9d2d13ace057b381c2a8b inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks multiple configuration-to-configuration edges for collision.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a71fc6e4ab8e9d2d13ace057b381c2a8b">More...</a><br /></td></tr>
+<tr class="separator:a71fc6e4ab8e9d2d13ace057b381c2a8b inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a0dd68196093bebd763380def4a1bd inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab1a0dd68196093bebd763380def4a1bd">MeasureEdgeCollisionFree</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:ab1a0dd68196093bebd763380def4a1bd inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision, using the current thread's associated context.  <a href="classdrake_1_1planning_1_1_collision_checker.html#ab1a0dd68196093bebd763380def4a1bd">More...</a><br /></td></tr>
+<tr class="separator:ab1a0dd68196093bebd763380def4a1bd inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769397ad377b0ff40c67cc3e373ee8a1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a769397ad377b0ff40c67cc3e373ee8a1">MeasureContextEdgeCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:a769397ad377b0ff40c67cc3e373ee8a1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab1a0dd68196093bebd763380def4a1bd" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">MeasureEdgeCollisionFree()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a769397ad377b0ff40c67cc3e373ee8a1">More...</a><br /></td></tr>
+<tr class="separator:a769397ad377b0ff40c67cc3e373ee8a1 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019e3fae3f3ecc6d599345bca9480fcb inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a019e3fae3f3ecc6d599345bca9480fcb">MeasureEdgeCollisionFreeParallel</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:a019e3fae3f3ecc6d599345bca9480fcb inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a019e3fae3f3ecc6d599345bca9480fcb">More...</a><br /></td></tr>
+<tr class="separator:a019e3fae3f3ecc6d599345bca9480fcb inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83a3cbdf60eb07937a81f0dd8d458c9 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab83a3cbdf60eb07937a81f0dd8d458c9">MeasureEdgesCollisionFree</a> (const std::vector&lt; std::pair&lt; Eigen::VectorXd, Eigen::VectorXd &gt;&gt; &amp;edges, bool parallelize=true) const</td></tr>
+<tr class="memdesc:ab83a3cbdf60eb07937a81f0dd8d458c9 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks multiple configuration-to-configuration edge for collision.  <a href="classdrake_1_1planning_1_1_collision_checker.html#ab83a3cbdf60eb07937a81f0dd8d458c9">More...</a><br /></td></tr>
+<tr class="separator:ab83a3cbdf60eb07937a81f0dd8d458c9 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678d1e0c7b171295455bea0b60ab85d3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3">CalcRobotClearance</a> (const Eigen::VectorXd &amp;q, <a class="el" href="classdouble.html">double</a> influence_distance) const</td></tr>
+<tr class="memdesc:a678d1e0c7b171295455bea0b60ab85d3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance is less than <code>influence_distance</code>, using the current thread's associated context.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3">More...</a><br /></td></tr>
+<tr class="separator:a678d1e0c7b171295455bea0b60ab85d3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087708be5fd97325b70c6da77de44eae inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a087708be5fd97325b70c6da77de44eae">CalcContextRobotClearance</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q, <a class="el" href="classdouble.html">double</a> influence_distance) const</td></tr>
+<tr class="memdesc:a087708be5fd97325b70c6da77de44eae inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a087708be5fd97325b70c6da77de44eae">More...</a><br /></td></tr>
+<tr class="separator:a087708be5fd97325b70c6da77de44eae inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0eb0fde313a6653e5692173c759145 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145">MaxNumDistances</a> () const</td></tr>
+<tr class="memdesc:a4f0eb0fde313a6653e5692173c759145 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an upper bound on the number of distances returned by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, using the current thread's associated context.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145">More...</a><br /></td></tr>
+<tr class="separator:a4f0eb0fde313a6653e5692173c759145 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23bcd057122f2a90fd8e673a51e9bcd3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a23bcd057122f2a90fd8e673a51e9bcd3">MaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const</td></tr>
+<tr class="memdesc:a23bcd057122f2a90fd8e673a51e9bcd3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a23bcd057122f2a90fd8e673a51e9bcd3">More...</a><br /></td></tr>
+<tr class="separator:a23bcd057122f2a90fd8e673a51e9bcd3 inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512a6232b122ea6cc6cd51ba39d1adfc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc">ClassifyBodyCollisions</a> (const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:a512a6232b122ea6cc6cd51ba39d1adfc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classifies which robot bodies are in collision (and which type of collision) for the provided configuration <code>q</code>, using the current thread's associated context.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc">More...</a><br /></td></tr>
+<tr class="separator:a512a6232b122ea6cc6cd51ba39d1adfc inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc9fdc559c30373b006561750b65e1d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9dc9fdc559c30373b006561750b65e1d">ClassifyContextBodyCollisions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:a9dc9fdc559c30373b006561750b65e1d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a9dc9fdc559c30373b006561750b65e1d">More...</a><br /></td></tr>
+<tr class="separator:a9dc9fdc559c30373b006561750b65e1d inherit pub_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a29028c3dc973289f85e358b6f12879ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a29028c3dc973289f85e358b6f12879ea">UnimplementedCollisionChecker</a> (const <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;)</td></tr>
+<tr class="separator:a29028c3dc973289f85e358b6f12879ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bef4e4b9ca5ec3100ca88157a945b3d"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a9bef4e4b9ca5ec3100ca88157a945b3d">DoClone</a> () const override</td></tr>
+<tr class="memdesc:a9bef4e4b9ca5ec3100ca88157a945b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers implement can make use of the protected copy constructor to implement <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a9bef4e4b9ca5ec3100ca88157a945b3d" title="Derived collision checkers implement can make use of the protected copy constructor to implement DoCl...">DoClone()</a>.  <a href="#a9bef4e4b9ca5ec3100ca88157a945b3d">More...</a><br /></td></tr>
+<tr class="separator:a9bef4e4b9ca5ec3100ca88157a945b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5785657320b67a48e969d427e1ff9995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a5785657320b67a48e969d427e1ff9995">DoUpdateContextPositions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const override</td></tr>
+<tr class="memdesc:a5785657320b67a48e969d427e1ff9995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers can do further work in this function in response to updates to the MultibodyPlant positions.  <a href="#a5785657320b67a48e969d427e1ff9995">More...</a><br /></td></tr>
+<tr class="separator:a5785657320b67a48e969d427e1ff9995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bc3e678132547a0fb97d486067c0e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ad2bc3e678132547a0fb97d486067c0e5">DoCheckContextConfigCollisionFree</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;) const override</td></tr>
+<tr class="memdesc:ad2bc3e678132547a0fb97d486067c0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for reporting the collision status of the configuration.  <a href="#ad2bc3e678132547a0fb97d486067c0e5">More...</a><br /></td></tr>
+<tr class="separator:ad2bc3e678132547a0fb97d486067c0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901932565723e65013ddeaa939320979"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a901932565723e65013ddeaa939320979">DoAddCollisionShapeToBody</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG) override</td></tr>
+<tr class="memdesc:a901932565723e65013ddeaa939320979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the work of adding a shape to be rigidly affixed to the body.  <a href="#a901932565723e65013ddeaa939320979">More...</a><br /></td></tr>
+<tr class="separator:a901932565723e65013ddeaa939320979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b824a2b91a8afbaea561529c286a44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a75b824a2b91a8afbaea561529c286a44">DoRemoveAddedGeometries</a> (const std::vector&lt; <a class="el" href="structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html">CollisionChecker::AddedShape</a> &gt; &amp;shapes) override</td></tr>
+<tr class="memdesc:a75b824a2b91a8afbaea561529c286a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all of the given added shapes (if they exist) from the checker.  <a href="#a75b824a2b91a8afbaea561529c286a44">More...</a><br /></td></tr>
+<tr class="separator:a75b824a2b91a8afbaea561529c286a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749f14f28d5f317e2bbcf99590ae78d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a749f14f28d5f317e2bbcf99590ae78d4">DoCalcContextRobotClearance</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;, <a class="el" href="classdouble.html">double</a>) const override</td></tr>
+<tr class="memdesc:a749f14f28d5f317e2bbcf99590ae78d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for defining the reported measurements.  <a href="#a749f14f28d5f317e2bbcf99590ae78d4">More...</a><br /></td></tr>
+<tr class="separator:a749f14f28d5f317e2bbcf99590ae78d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d9753491d6c358074117984a7a01b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ab8d9753491d6c358074117984a7a01b3">DoClassifyContextBodyCollisions</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;) const override</td></tr>
+<tr class="memdesc:ab8d9753491d6c358074117984a7a01b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for choosing a collision type for each of the robot bodies.  <a href="#ab8d9753491d6c358074117984a7a01b3">More...</a><br /></td></tr>
+<tr class="separator:ab8d9753491d6c358074117984a7a01b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d31a213a240c881150cd1a6980cfef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a0d31a213a240c881150cd1a6980cfef9">DoMaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;) const override</td></tr>
+<tr class="memdesc:a0d31a213a240c881150cd1a6980cfef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers must implement the semantics documented for MaxNumDistances.  <a href="#a0d31a213a240c881150cd1a6980cfef9">More...</a><br /></td></tr>
+<tr class="separator:a0d31a213a240c881150cd1a6980cfef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1planning_1_1_collision_checker"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1planning_1_1_collision_checker')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a></td></tr>
+<tr class="memitem:abf9f38d4551063f5871e7d88d1b4f449 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#abf9f38d4551063f5871e7d88d1b4f449">CollisionChecker</a> (<a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html">CollisionCheckerParams</a> params, bool supports_parallel_checking)</td></tr>
+<tr class="memdesc:abf9f38d4551063f5871e7d88d1b4f449 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes declare upon construction whether they support parallel checking (see <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26" title="Does the collision checker support true parallel collision checks?">SupportsParallelChecking()</a>).  <a href="classdrake_1_1planning_1_1_collision_checker.html#abf9f38d4551063f5871e7d88d1b4f449">More...</a><br /></td></tr>
+<tr class="separator:abf9f38d4551063f5871e7d88d1b4f449 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e0515b70f3d7475edac30d4f60aee3 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a39e0515b70f3d7475edac30d4f60aee3">CollisionChecker</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;)</td></tr>
+<tr class="memdesc:a39e0515b70f3d7475edac30d4f60aee3 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">To support <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a208522fd8609e0a9376f52e291aa28e9">Clone()</a>, allow copying (but not move nor assign).  <a href="classdrake_1_1planning_1_1_collision_checker.html#a39e0515b70f3d7475edac30d4f60aee3">More...</a><br /></td></tr>
+<tr class="separator:a39e0515b70f3d7475edac30d4f60aee3 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381697ea7e2a890f5cd018d7c6dc8bc2 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2">AllocateContexts</a> ()</td></tr>
+<tr class="memdesc:a381697ea7e2a890f5cd018d7c6dc8bc2 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the per-thread context pool, and discontinue mutable access to the robot model.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2">More...</a><br /></td></tr>
+<tr class="separator:a381697ea7e2a890f5cd018d7c6dc8bc2 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7835992cd1ce72dcf315fee54b6f64fe inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a7835992cd1ce72dcf315fee54b6f64fe">CreatePrototypeContext</a> () const</td></tr>
+<tr class="memdesc:a7835992cd1ce72dcf315fee54b6f64fe inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision checkers that use derived context types can override this implementation to allocate their context type instead.  <a href="classdrake_1_1planning_1_1_collision_checker.html#a7835992cd1ce72dcf315fee54b6f64fe">More...</a><br /></td></tr>
+<tr class="separator:a7835992cd1ce72dcf315fee54b6f64fe inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28eccaff2de74330a76a1e48c0368c5 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aa28eccaff2de74330a76a1e48c0368c5">IsInitialSetup</a> () const</td></tr>
+<tr class="separator:aa28eccaff2de74330a76a1e48c0368c5 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada50f47e85f4e372c1e75873731a4c7d inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ada50f47e85f4e372c1e75873731a4c7d">GetMutableSetupModel</a> ()</td></tr>
+<tr class="separator:ada50f47e85f4e372c1e75873731a4c7d inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a55cd16a37b3e35a8a870dd867257f1 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1a55cd16a37b3e35a8a870dd867257f1">CanEvaluateInParallel</a> () const</td></tr>
+<tr class="separator:a1a55cd16a37b3e35a8a870dd867257f1 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9406112c93e430d27b84744b6f5fa77 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77">CriticizePaddingMatrix</a> () const</td></tr>
+<tr class="separator:ad9406112c93e430d27b84744b6f5fa77 inherit pro_methods_classdrake_1_1planning_1_1_collision_checker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9b16fd2e763f0314ad31c6920c49ddc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b16fd2e763f0314ad31c6920c49ddc3">&#9670;&nbsp;</a></span>UnimplementedCollisionChecker() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html">CollisionCheckerParams</a>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>supports_parallel_checking</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb9fbab01708ff8ee9728c36cc01f3f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9fbab01708ff8ee9728c36cc01f3f6">&#9670;&nbsp;</a></span>UnimplementedCollisionChecker() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba4e83b127c08c04186340de335284c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba4e83b127c08c04186340de335284c9">&#9670;&nbsp;</a></span>~UnimplementedCollisionChecker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29028c3dc973289f85e358b6f12879ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29028c3dc973289f85e358b6f12879ea">&#9670;&nbsp;</a></span>UnimplementedCollisionChecker() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a901932565723e65013ddeaa939320979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a901932565723e65013ddeaa939320979">&#9670;&nbsp;</a></span>DoAddCollisionShapeToBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a>&gt; DoAddCollisionShapeToBody </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>group_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bodyA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_AG</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Does the work of adding a shape to be rigidly affixed to the body. </p>
+<p>Derived checkers can choose to ignore the request, but must return <code>nullopt</code> if they do so. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ac5e58c1024da16deb5af098bb798bbd9">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="a749f14f28d5f317e2bbcf99590ae78d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749f14f28d5f317e2bbcf99590ae78d4">&#9670;&nbsp;</a></span>DoCalcContextRobotClearance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a> DoCalcContextRobotClearance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>model_context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>influence_distance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived collision checkers are responsible for defining the reported measurements. </p>
+<p>But they must adhere to the characteristics documented on <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html" title="A summary of the clearance – a collection of distance measurements – between the robot and everything...">RobotClearance</a>, e.g., one measurement per row. <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> guarantees that <code>influence_distance</code> is finite and non-negative. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8393e34359ae424d80b7975551234652">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="ad2bc3e678132547a0fb97d486067c0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bc3e678132547a0fb97d486067c0e5">&#9670;&nbsp;</a></span>DoCheckContextConfigCollisionFree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DoCheckContextConfigCollisionFree </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>model_context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived collision checkers are responsible for reporting the collision status of the configuration. </p>
+<p><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> guarantees that the passed <code>model_context</code> has been updated with the configuration <code>q</code> supplied to the public method. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a751ed5a04cd06853f43ab40f1ac5dde6">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="ab8d9753491d6c358074117984a7a01b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d9753491d6c358074117984a7a01b3">&#9670;&nbsp;</a></span>DoClassifyContextBodyCollisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; DoClassifyContextBodyCollisions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>model_context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived collision checkers are responsible for choosing a collision type for each of the robot bodies. </p>
+<p>They should adhere to the semantics documented for ClassifyBodyCollisions. <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> guarantees that the passed <code>model_context</code> has been updated with the configuration <code>q</code> supplied to the public method. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a737510aa5fca00749a068c6e4a621feb">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="a9bef4e4b9ca5ec3100ca88157a945b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bef4e4b9ca5ec3100ca88157a945b3d">&#9670;&nbsp;</a></span>DoClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a>&gt; DoClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived collision checkers implement can make use of the protected copy constructor to implement <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a9bef4e4b9ca5ec3100ca88157a945b3d" title="Derived collision checkers implement can make use of the protected copy constructor to implement DoCl...">DoClone()</a>. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af43a938ad38ceb4d96258db6bbe668e5">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="a0d31a213a240c881150cd1a6980cfef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d31a213a240c881150cd1a6980cfef9">&#9670;&nbsp;</a></span>DoMaxContextNumDistances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> DoMaxContextNumDistances </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>model_context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived collision checkers must implement the semantics documented for MaxNumDistances. </p>
+<p><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> does nothing; it just calls this method. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a145c8a89488c119f22a13557dd2376b9">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="a75b824a2b91a8afbaea561529c286a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b824a2b91a8afbaea561529c286a44">&#9670;&nbsp;</a></span>DoRemoveAddedGeometries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoRemoveAddedGeometries </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html">CollisionChecker::AddedShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shapes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes all of the given added shapes (if they exist) from the checker. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4551a7c0c234457a4c6457b84b05a2ef">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="a5785657320b67a48e969d427e1ff9995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5785657320b67a48e969d427e1ff9995">&#9670;&nbsp;</a></span>DoUpdateContextPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoUpdateContextPositions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *&#160;</td>
+          <td class="paramname"><em>model_context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived collision checkers can do further work in this function in response to updates to the MultibodyPlant positions. </p>
+<p><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> guarantees that <code>model_context</code> will not be nullptr and that the new positions are present in model_context-&gt;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1e7d2a81568c26350b120a592e55e174">plant_context()</a>. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af4a3f7ae74cf3f31e5f3a3b840d111a5">CollisionChecker</a>.</p>
+
+</div>
+</div>
+<a id="aaae199346d6aac6d2c6ad2621e0e49ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae199346d6aac6d2c6ad2621e0e49ec">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac20b221930b8cf266cc3cfe261af1a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac20b221930b8cf266cc3cfe261af1a72">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/planning/<a class="el" href="unimplemented__collision__checker_8h.html">unimplemented_collision_checker.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

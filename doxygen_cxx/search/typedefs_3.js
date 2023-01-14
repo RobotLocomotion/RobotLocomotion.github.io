@@ -12,7 +12,7 @@ var searchData=
   ['discretestateindex',['DiscreteStateIndex',['../namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7',1,'drake::systems']]],
   ['discreteupdatecallback',['DiscreteUpdateCallback',['../classdrake_1_1systems_1_1_discrete_update_event.html#a23625c08032a7d524544f45d76b66e77',1,'drake::systems::DiscreteUpdateEvent']]],
   ['distributionvariant',['DistributionVariant',['../namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53',1,'drake::schema']]],
-  ['distributionvectorvariant',['DistributionVectorVariant',['../namespacedrake_1_1schema.html#a8b9d55ffdd90faf10f12f1e79f3c13a1',1,'drake::schema']]],
+  ['distributionvectorvariant',['DistributionVectorVariant',['../namespacedrake_1_1schema.html#ad0be9949c22ccf3d9bd836e204fc8523',1,'drake::schema']]],
   ['distributionvectorvariantx',['DistributionVectorVariantX',['../namespacedrake_1_1schema.html#a57f6c7970d805c54498388c6e47113fa',1,'drake::schema']]],
   ['drakevisualizerd',['DrakeVisualizerd',['../namespacedrake_1_1geometry.html#acbab8995daa433cebfc335ffe8ae8fd0',1,'drake::geometry']]]
 ];

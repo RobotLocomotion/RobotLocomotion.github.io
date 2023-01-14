@@ -8,6 +8,7 @@ var hierarchy =
     [ "AcrobotParameters", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html", null ],
     [ "AddCollisionFilterGroup", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html", null ],
     [ "AddDirectives", "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html", null ],
+    [ "CollisionChecker::AddedShape", "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html", null ],
     [ "AddFrame", "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html", null ],
     [ "AddModel", "structdrake_1_1multibody_1_1parsing_1_1_add_model.html", null ],
     [ "AddModelInstance", "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html", null ],
@@ -66,6 +67,9 @@ var hierarchy =
     [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", null ],
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
+    [ "CollisionChecker", "classdrake_1_1planning_1_1_collision_checker.html", [
+      [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", null ]
+    ] ],
     [ "CollisionCheckerContext", "classdrake_1_1planning_1_1_collision_checker_context.html", null ],
     [ "CollisionCheckerParams", "structdrake_1_1planning_1_1_collision_checker_params.html", null ],
     [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", null ],
@@ -169,6 +173,7 @@ var hierarchy =
     [ "dummy_value< symbolic::Expression >", "structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html", null ],
     [ "DynamicProgrammingOptions", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html", null ],
     [ "GraphOfConvexSets::Edge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html", null ],
+    [ "EdgeMeasure", "classdrake_1_1planning_1_1_edge_measure.html", null ],
     [ "EigenPtr< PlainObjectType >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const MatrixX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const VectorX< T > >", "classdrake_1_1_eigen_ptr.html", null ],

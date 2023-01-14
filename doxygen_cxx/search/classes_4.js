@@ -1,6 +1,7 @@
 var searchData=
 [
   ['edge',['Edge',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html',1,'drake::geometry::optimization::GraphOfConvexSets']]],
+  ['edgemeasure',['EdgeMeasure',['../classdrake_1_1planning_1_1_edge_measure.html',1,'drake::planning']]],
   ['eigenptr',['EigenPtr',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],
   ['eigenptr_3c_20const_20matrixx_3c_20t_20_3e_20_3e',['EigenPtr&lt; const MatrixX&lt; T &gt; &gt;',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],
   ['eigenptr_3c_20const_20vectorx_3c_20t_20_3e_20_3e',['EigenPtr&lt; const VectorX&lt; T &gt; &gt;',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],

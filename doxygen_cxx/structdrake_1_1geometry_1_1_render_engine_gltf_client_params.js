@@ -1,6 +1,7 @@
 var structdrake_1_1geometry_1_1_render_engine_gltf_client_params =
 [
     [ "GetUrl", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d", null ],
+    [ "Serialize", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "base_url", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0", null ],
     [ "cleanup", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6d9b7b7aeb7996e8469a93c3dd4ee5ef", null ],
     [ "default_label", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6", null ],

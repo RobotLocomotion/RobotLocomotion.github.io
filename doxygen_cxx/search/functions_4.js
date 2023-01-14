@@ -2,6 +2,8 @@ var searchData=
 [
   ['e',['E',['../classdrake_1_1symbolic_1_1_expression.html#ac154b6ee53f396c27f78ad3fd97b2641',1,'drake::symbolic::Expression']]],
   ['edge',['Edge',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aca1e9f642a2e6fd9aa518f67e0b5fa1b',1,'drake::geometry::optimization::GraphOfConvexSets::Edge::Edge(const Edge &amp;)=delete'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a49ed7ec6ced8b7f67fabe7142184290c',1,'drake::geometry::optimization::GraphOfConvexSets::Edge::Edge(Edge &amp;&amp;)=delete']]],
+  ['edge_5fstep_5fsize',['edge_step_size',['../classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8',1,'drake::planning::CollisionChecker']]],
+  ['edgemeasure',['EdgeMeasure',['../classdrake_1_1planning_1_1_edge_measure.html#a7be58a593532bd473d5bb9705c59e258',1,'drake::planning::EdgeMeasure']]],
   ['edges',['Edges',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ac4e8d040d8171719e0225a8067634429',1,'drake::geometry::optimization::GraphOfConvexSets::Edges()'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a22d9ed4306dc8b33178c4ba7255fbeca',1,'drake::geometry::optimization::GraphOfConvexSets::Edges() const']]],
   ['effort_5flimit',['effort_limit',['../classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb',1,'drake::multibody::JointActuator']]],
   ['eigen_5flinear_5fsolver',['eigen_linear_solver',['../classdrake_1_1math_1_1_linear_solver.html#a3f298f8ed8740b28588228e7fa0f236d',1,'drake::math::LinearSolver']]],

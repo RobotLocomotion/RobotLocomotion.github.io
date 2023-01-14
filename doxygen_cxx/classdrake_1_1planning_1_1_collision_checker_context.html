@@ -167,11 +167,11 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_collision_c
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class represents the data necessary for CollisionChecker to operate safely across multiple threads in its <code>const</code> API. </p>
-<p>Instances of this class are owned and managed by a particular CollisionChecker.</p>
-<p>If using OMP to perform parallel const queries on a CollisionChecker, it will never be necessary to interact with CollisionCheckerContext instances. Only if using some other threading paradigm will it be necessary to work with "stand
-alone" instances. See CollisionChecker's documentation for more details.</p>
-<p>In all cases, modifying context should happen through CollisionChecker::PerformOperationAgainstAllModelContexts(). Modifying the contained Drake Contexts directly is generally erroneous. </p>
+<div class="textblock"><p>This class represents the data necessary for <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> to operate safely across multiple threads in its <code>const</code> API. </p>
+<p>Instances of this class are owned and managed by a particular <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a>.</p>
+<p>If using OMP to perform parallel const queries on a <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a>, it will never be necessary to interact with CollisionCheckerContext instances. Only if using some other threading paradigm will it be necessary to work with "stand
+alone" instances. See <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a>'s documentation for more details.</p>
+<p>In all cases, modifying context should happen through <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a07edeec959f087dcc1812af16b19b02c" title="Allows externally-provided operations that must be performed against all contexts in the per-thread c...">CollisionChecker::PerformOperationAgainstAllModelContexts()</a>. Modifying the contained Drake Contexts directly is generally erroneous. </p>
 </div>
 <p><code>#include &lt;drake/planning/collision_checker_context.h&gt;</code></p>
 <table class="memberdecls">
