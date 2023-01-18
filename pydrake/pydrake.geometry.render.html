@@ -437,7 +437,7 @@ when registering visual geometry, categorized by rendered image type.</p>
 :————-: | :——————- | | phong | diffuse | no¹ |
 Eigen::Vector4d | The rgba value of the object surface. | | phong |
 diffuse_map | no² | std::string | The path to a texture to apply to
-the geometry.³ |</p>
+the geometry.³⁴ |</p>
 <p>¹ If no diffuse value is given, a default rgba value will be applied.
 The default color is a bright orange. This default value can be
 changed to a different value at construction.</p>
@@ -448,7 +448,9 @@ with <em>meshes</em>. If <em>no</em> <code class="docutils literal notranslate">
 (or it refers to a file that doesn’t exist), for a mesh named
 <code class="docutils literal notranslate"><span class="pre">/path/to/mesh.obj</span></code>, RenderEngineVtk will search for a file
 <code class="docutils literal notranslate"><span class="pre">/path/to/mesh.png</span></code> (replacing “obj” with “png”). If that image
-exists, it will be used as a texture on the mesh object.</p>
+exists, it will be used as a texture on the mesh object. ⁴ The render
+engine consumes pngs with uchar channels. Pngs with a different bit
+depth, e.g., uint16 channels, will be converted to that.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>RenderEngineVtk does not support the OBJ format <code class="docutils literal notranslate"><span class="pre">usemtl</span></code>

@@ -203,8 +203,35 @@ hug_properties.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.geometry.AddContactMaterial">
-<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">AddContactMaterial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dissipation:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_stiffness:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">friction:</span> <span class="pre">Optional[drake::multibody::CoulombFriction&lt;double&gt;]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties:</span> <span class="pre">pydrake.geometry.ProximityProperties</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.AddContactMaterial" title="Permalink to this definition"></a></dt>
-<dd><p>AddContactMaterial() adds general contact material properties to the
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">AddContactMaterial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.AddContactMaterial" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddContactMaterial(dissipation: Optional[float], point_stiffness: Optional[float], friction: Optional[drake::multibody::CoulombFriction&lt;double&gt;], properties: pydrake.geometry.ProximityProperties) -&gt; None</p></li>
+</ol>
+<p>AddContactMaterial() adds general contact material properties to the
+given set of proximity <code class="docutils literal notranslate"><span class="pre">properties</span></code>. These are the properties
+required by the default point contact model. However, other contact
+models can opt to use these properties as well. Only the parameters
+that carry values will be added to the given set of <code class="docutils literal notranslate"><span class="pre">properties</span></code>; no
+default values will be provided. Downstream consumers of the contact
+materials can optionally provide defaults for missing properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if dissipation is negative</strong><strong>, </strong><strong>point_stiffness</strong> – </p></li>
+<li><p><strong>is not positive</strong><strong>, </strong><strong>of any of the contact material properties have</strong> – </p></li>
+<li><p><strong>already been defined in ``properties`.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> is not nullptr.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>AddContactMaterial(properties: pydrake.geometry.ProximityProperties, dissipation: Optional[float] = None, point_stiffness: Optional[float] = None, friction: Optional[drake::multibody::CoulombFriction&lt;double&gt;] = None) -&gt; None</p></li>
+</ol>
+<p>AddContactMaterial() adds general contact material properties to the
 given set of proximity <code class="docutils literal notranslate"><span class="pre">properties</span></code>. These are the properties
 required by the default point contact model. However, other contact
 models can opt to use these properties as well. Only the parameters
@@ -593,7 +620,7 @@ any filter identifiers are rendered invalid.</p>
 <p>This example workflow above illustrates some key ideas in using
 transient declarations.</p>
 <ul class="simple">
-<li><p><a href="#id3"><span class="problematic" id="id4">**</span></a>The persistent configuration can only be modified when there is no</p></li>
+<li><p><a href="#id5"><span class="problematic" id="id6">**</span></a>The persistent configuration can only be modified when there is no</p></li>
 </ul>
 <p>transient history.** Applying a filter declaration should have the effect
 of realizing that declaration. If a pair is <em>declared</em> to be in C, the
@@ -2418,7 +2445,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id9"><span class="problematic" id="id10">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id11"><span class="problematic" id="id12">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2551,7 +2578,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id11"><span class="problematic" id="id12">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id13"><span class="problematic" id="id14">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2682,7 +2709,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id13"><span class="problematic" id="id14">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id15"><span class="problematic" id="id16">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2813,7 +2840,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id15"><span class="problematic" id="id16">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id17"><span class="problematic" id="id18">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -6011,7 +6038,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id17"><span class="problematic" id="id18">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id19"><span class="problematic" id="id20">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -6197,7 +6224,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id19"><span class="problematic" id="id20">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id21"><span class="problematic" id="id22">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -6381,7 +6408,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id21"><span class="problematic" id="id22">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id23"><span class="problematic" id="id24">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -7322,7 +7349,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id23"><span class="problematic" id="id24">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id25"><span class="problematic" id="id26">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -7332,7 +7359,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id25"><span class="problematic" id="id26">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id27"><span class="problematic" id="id28">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -7470,8 +7497,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id27"><span class="problematic" id="id28">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id29"><span class="problematic" id="id30">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id29"><span class="problematic" id="id30">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id31"><span class="problematic" id="id32">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -8052,7 +8079,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id31"><span class="problematic" id="id32">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id33"><span class="problematic" id="id34">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -8062,7 +8089,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id33"><span class="problematic" id="id34">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id35"><span class="problematic" id="id36">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -8200,8 +8227,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id35"><span class="problematic" id="id36">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id37"><span class="problematic" id="id38">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id37"><span class="problematic" id="id38">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id39"><span class="problematic" id="id40">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -8672,7 +8699,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id39"><span class="problematic" id="id40">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id41"><span class="problematic" id="id42">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -8682,7 +8709,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id41"><span class="problematic" id="id42">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id43"><span class="problematic" id="id44">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -8820,8 +8847,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id43"><span class="problematic" id="id44">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id45"><span class="problematic" id="id46">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id45"><span class="problematic" id="id46">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id47"><span class="problematic" id="id48">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -9400,7 +9427,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id47"><span class="problematic" id="id48">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id49"><span class="problematic" id="id50">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -9410,7 +9437,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id49"><span class="problematic" id="id50">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id51"><span class="problematic" id="id52">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -9548,8 +9575,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id51"><span class="problematic" id="id52">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id53"><span class="problematic" id="id54">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id53"><span class="problematic" id="id54">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id55"><span class="problematic" id="id56">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -9796,7 +9823,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id63"><span class="problematic" id="id64">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id65"><span class="problematic" id="id66">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt><dd><p>A valid file name with absolute path or relative path.</p>
 </dd>
@@ -15648,7 +15675,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id55"><span class="problematic" id="id56">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id57"><span class="problematic" id="id58">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -15735,7 +15762,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id57"><span class="problematic" id="id58">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id59"><span class="problematic" id="id60">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -15820,7 +15847,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id59"><span class="problematic" id="id60">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id61"><span class="problematic" id="id62">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -15905,7 +15932,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id61"><span class="problematic" id="id62">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id63"><span class="problematic" id="id64">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result

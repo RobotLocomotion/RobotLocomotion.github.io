@@ -877,9 +877,10 @@ representation.</p>
 <dd><p>%Body provides the general abstraction of a body with an API that
 makes no assumption about whether a body is rigid or deformable and
 neither does it make any assumptions about the underlying physical
-model or approximation. As an element or component of a MultibodyTree,
-a body is a MultibodyElement, and therefore it has a unique index of
-type BodyIndex within the multibody tree it belongs to.</p>
+model or approximation. As an element or component of a
+MultibodyPlant, a body is a MultibodyElement, and therefore it has a
+unique index of type BodyIndex within the multibody plant it belongs
+to.</p>
 <p>A Body contains a unique BodyFrame; see BodyFrame class documentation
 for more information.</p>
 <dl class="py method">
@@ -1011,13 +1012,17 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1032,12 +1037,17 @@ entries in the state starting at this index correspond to the
 quaternion that parametrizes this body’s orientation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1049,29 +1059,38 @@ MultibodyPlant model. Velocities for this body are then contiguous
 starting at this index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_.Body_-float-.floating_velocity_suffix">
 <span id="pydrake.multibody.tree.Body_.Body_[float].floating_velocity_suffix"></span><span class="sig-name descname"><span class="pre">floating_velocity_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_-float-.floating_velocity_suffix" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a string suffix (e.g. to be appended to the name()) to
-identify the <cite>k`th velocity in the floating base.
-``velocity_index_in_body`</cite> must be in [0,6).</p>
+identify the <code class="docutils literal notranslate"><span class="pre">k`th</span> <span class="pre">velocity</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``velocity_index_in_body</span></code> must be in [0,6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><cite>this`</cite> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1083,15 +1102,17 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_.Body_-float-.get_num_flexible_positions">
 <span id="pydrake.multibody.tree.Body_.Body_[float].get_num_flexible_positions"></span><span class="sig-name descname"><span class="pre">get_num_flexible_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_-float-.get_num_flexible_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized positions q describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized positions q
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_.Body_-float-.get_num_flexible_velocities">
 <span id="pydrake.multibody.tree.Body_.Body_[float].get_num_flexible_velocities"></span><span class="sig-name descname"><span class="pre">get_num_flexible_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_-float-.get_num_flexible_velocities" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized velocities v describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized velocities v
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1109,21 +1130,20 @@ applied at body B’s origin Bo and expressed in world frame W.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_.Body_-float-.has_quaternion_dofs">
 <span id="pydrake.multibody.tree.Body_.Body_[float].has_quaternion_dofs"></span><span class="sig-name descname"><span class="pre">has_quaternion_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_-float-.has_quaternion_dofs" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body is a floating body modeled with a
-quaternion floating mobilizer. By implication, is_floating() is also
-<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>floating_positions_start(), floating_velocities_start().</p>
-</div>
+<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body’s generalized position coordinates q
+include a quaternion, which occupies the first four elements of q.
+Note that this does not imply that the body is floating since it may
+have fewer than 6 dofs or its inboard body could be something other
+than World.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1145,18 +1165,22 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>,</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_.Body_-float-.is_locked">
 <span id="pydrake.multibody.tree.Body_.Body_[float].is_locked"></span><span class="sig-name descname"><span class="pre">is_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_-float-.is_locked" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Determines whether this Body is currently locked to its inboard
+(parent) Body. This is not limited to floating bodies but generally
+Joint::is_locked() is preferable otherwise.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>true if the body is locked, false otherwise.</p>
 </dd>
@@ -1216,9 +1240,10 @@ supported for continuous-mode systems.</p>
 <dd><p>%Body provides the general abstraction of a body with an API that
 makes no assumption about whether a body is rigid or deformable and
 neither does it make any assumptions about the underlying physical
-model or approximation. As an element or component of a MultibodyTree,
-a body is a MultibodyElement, and therefore it has a unique index of
-type BodyIndex within the multibody tree it belongs to.</p>
+model or approximation. As an element or component of a
+MultibodyPlant, a body is a MultibodyElement, and therefore it has a
+unique index of type BodyIndex within the multibody plant it belongs
+to.</p>
 <p>A Body contains a unique BodyFrame; see BodyFrame class documentation
 for more information.</p>
 <dl class="py method">
@@ -1350,13 +1375,17 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1371,12 +1400,17 @@ entries in the state starting at this index correspond to the
 quaternion that parametrizes this body’s orientation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1388,29 +1422,38 @@ MultibodyPlant model. Velocities for this body are then contiguous
 starting at this index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.floating_velocity_suffix">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].floating_velocity_suffix"></span><span class="sig-name descname"><span class="pre">floating_velocity_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.floating_velocity_suffix" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a string suffix (e.g. to be appended to the name()) to
-identify the <cite>k`th velocity in the floating base.
-``velocity_index_in_body`</cite> must be in [0,6).</p>
+identify the <code class="docutils literal notranslate"><span class="pre">k`th</span> <span class="pre">velocity</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``velocity_index_in_body</span></code> must be in [0,6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><cite>this`</cite> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1422,15 +1465,17 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_positions">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].get_num_flexible_positions"></span><span class="sig-name descname"><span class="pre">get_num_flexible_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized positions q describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized positions q
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_velocities">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].get_num_flexible_velocities"></span><span class="sig-name descname"><span class="pre">get_num_flexible_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_velocities" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized velocities v describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized velocities v
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1448,21 +1493,20 @@ applied at body B’s origin Bo and expressed in world frame W.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.has_quaternion_dofs">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].has_quaternion_dofs"></span><span class="sig-name descname"><span class="pre">has_quaternion_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.has_quaternion_dofs" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body is a floating body modeled with a
-quaternion floating mobilizer. By implication, is_floating() is also
-<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>floating_positions_start(), floating_velocities_start().</p>
-</div>
+<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body’s generalized position coordinates q
+include a quaternion, which occupies the first four elements of q.
+Note that this does not imply that the body is floating since it may
+have fewer than 6 dofs or its inboard body could be something other
+than World.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1484,18 +1528,22 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>,</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.is_locked">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].is_locked"></span><span class="sig-name descname"><span class="pre">is_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.is_locked" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Determines whether this Body is currently locked to its inboard
+(parent) Body. This is not limited to floating bodies but generally
+Joint::is_locked() is preferable otherwise.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>true if the body is locked, false otherwise.</p>
 </dd>
@@ -1553,9 +1601,10 @@ supported for continuous-mode systems.</p>
 <dd><p>%Body provides the general abstraction of a body with an API that
 makes no assumption about whether a body is rigid or deformable and
 neither does it make any assumptions about the underlying physical
-model or approximation. As an element or component of a MultibodyTree,
-a body is a MultibodyElement, and therefore it has a unique index of
-type BodyIndex within the multibody tree it belongs to.</p>
+model or approximation. As an element or component of a
+MultibodyPlant, a body is a MultibodyElement, and therefore it has a
+unique index of type BodyIndex within the multibody plant it belongs
+to.</p>
 <p>A Body contains a unique BodyFrame; see BodyFrame class documentation
 for more information.</p>
 <dl class="py method">
@@ -1687,13 +1736,17 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1708,12 +1761,17 @@ entries in the state starting at this index correspond to the
 quaternion that parametrizes this body’s orientation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1725,29 +1783,38 @@ MultibodyPlant model. Velocities for this body are then contiguous
 starting at this index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.floating_velocity_suffix">
 <span id="pydrake.multibody.tree.Body_[Expression].floating_velocity_suffix"></span><span class="sig-name descname"><span class="pre">floating_velocity_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.floating_velocity_suffix" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a string suffix (e.g. to be appended to the name()) to
-identify the <cite>k`th velocity in the floating base.
-``velocity_index_in_body`</cite> must be in [0,6).</p>
+identify the <code class="docutils literal notranslate"><span class="pre">k`th</span> <span class="pre">velocity</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``velocity_index_in_body</span></code> must be in [0,6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><cite>this`</cite> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1759,15 +1826,17 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.get_num_flexible_positions">
 <span id="pydrake.multibody.tree.Body_[Expression].get_num_flexible_positions"></span><span class="sig-name descname"><span class="pre">get_num_flexible_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.get_num_flexible_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized positions q describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized positions q
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.get_num_flexible_velocities">
 <span id="pydrake.multibody.tree.Body_[Expression].get_num_flexible_velocities"></span><span class="sig-name descname"><span class="pre">get_num_flexible_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.get_num_flexible_velocities" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized velocities v describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized velocities v
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1785,21 +1854,20 @@ applied at body B’s origin Bo and expressed in world frame W.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.has_quaternion_dofs">
 <span id="pydrake.multibody.tree.Body_[Expression].has_quaternion_dofs"></span><span class="sig-name descname"><span class="pre">has_quaternion_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.has_quaternion_dofs" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body is a floating body modeled with a
-quaternion floating mobilizer. By implication, is_floating() is also
-<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>floating_positions_start(), floating_velocities_start().</p>
-</div>
+<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body’s generalized position coordinates q
+include a quaternion, which occupies the first four elements of q.
+Note that this does not imply that the body is floating since it may
+have fewer than 6 dofs or its inboard body could be something other
+than World.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1821,18 +1889,22 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>,</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.is_locked">
 <span id="pydrake.multibody.tree.Body_[Expression].is_locked"></span><span class="sig-name descname"><span class="pre">is_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.is_locked" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Determines whether this Body is currently locked to its inboard
+(parent) Body. This is not limited to floating bodies but generally
+Joint::is_locked() is preferable otherwise.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>true if the body is locked, false otherwise.</p>
 </dd>
@@ -1890,9 +1962,10 @@ supported for continuous-mode systems.</p>
 <dd><p>%Body provides the general abstraction of a body with an API that
 makes no assumption about whether a body is rigid or deformable and
 neither does it make any assumptions about the underlying physical
-model or approximation. As an element or component of a MultibodyTree,
-a body is a MultibodyElement, and therefore it has a unique index of
-type BodyIndex within the multibody tree it belongs to.</p>
+model or approximation. As an element or component of a
+MultibodyPlant, a body is a MultibodyElement, and therefore it has a
+unique index of type BodyIndex within the multibody plant it belongs
+to.</p>
 <p>A Body contains a unique BodyFrame; see BodyFrame class documentation
 for more information.</p>
 <dl class="py method">
@@ -2024,13 +2097,17 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2045,12 +2122,17 @@ entries in the state starting at this index correspond to the
 quaternion that parametrizes this body’s orientation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2062,29 +2144,38 @@ MultibodyPlant model. Velocities for this body are then contiguous
 starting at this index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-float-.floating_velocity_suffix">
 <span id="pydrake.multibody.tree.Body_[float].floating_velocity_suffix"></span><span class="sig-name descname"><span class="pre">floating_velocity_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-float-.floating_velocity_suffix" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a string suffix (e.g. to be appended to the name()) to
-identify the <cite>k`th velocity in the floating base.
-``velocity_index_in_body`</cite> must be in [0,6).</p>
+identify the <code class="docutils literal notranslate"><span class="pre">k`th</span> <span class="pre">velocity</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``velocity_index_in_body</span></code> must be in [0,6).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if is_floating</strong><strong>(</strong><strong>) </strong><strong>is false.</strong> – </p></li>
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><cite>this`</cite> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2096,15 +2187,17 @@ identify the <cite>k`th velocity in the floating base.
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-float-.get_num_flexible_positions">
 <span id="pydrake.multibody.tree.Body_[float].get_num_flexible_positions"></span><span class="sig-name descname"><span class="pre">get_num_flexible_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-float-.get_num_flexible_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized positions q describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized positions q
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-float-.get_num_flexible_velocities">
 <span id="pydrake.multibody.tree.Body_[float].get_num_flexible_velocities"></span><span class="sig-name descname"><span class="pre">get_num_flexible_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-float-.get_num_flexible_velocities" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the number of generalized velocities v describing flexible
-deformations for this body. A rigid body will therefore return zero.</p>
+<dd><p>(Not implemented) Returns the number of generalized velocities v
+describing flexible deformations for this body. A rigid body will
+therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2122,21 +2215,20 @@ applied at body B’s origin Bo and expressed in world frame W.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-float-.has_quaternion_dofs">
 <span id="pydrake.multibody.tree.Body_[float].has_quaternion_dofs"></span><span class="sig-name descname"><span class="pre">has_quaternion_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-float-.has_quaternion_dofs" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body is a floating body modeled with a
-quaternion floating mobilizer. By implication, is_floating() is also
-<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>floating_positions_start(), floating_velocities_start().</p>
-</div>
+<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body’s generalized position coordinates q
+include a quaternion, which occupies the first four elements of q.
+Note that this does not imply that the body is floating since it may
+have fewer than 6 dofs or its inboard body could be something other
+than World.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>is_floating(), MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2158,18 +2250,22 @@ a space XYZ parametrization of rotations, see SpaceXYZMobilizer.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>,</strong> – </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MultibodyPlant::Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-float-.is_locked">
 <span id="pydrake.multibody.tree.Body_[float].is_locked"></span><span class="sig-name descname"><span class="pre">is_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-float-.is_locked" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Determines whether this Body is currently locked to its inboard
+(parent) Body. This is not limited to floating bodies but generally
+Joint::is_locked() is preferable otherwise.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>true if the body is locked, false otherwise.</p>
 </dd>
@@ -2444,8 +2540,7 @@ with So (and, therefore, Bo). These are the shapes that have symmetry
 across So along each of the axes Sx, Sy, Sz (e.g., geometry::Box,
 geometry::Sphere, etc.) For meshes, it depends on how the mesh is
 defined. For more discussion on the nuances of geometry::Mesh and
-geometry::Convex calculations CalcSpatialInertia(const
-geometry::TriangleSurfaceMesh&lt;double&gt;&amp;,double) “see below”.</p>
+geometry::Convex calculations refer to the <code class="docutils literal notranslate"><span class="pre">mesh</span></code> overload, below.</p>
 <p>Note: Spatial inertia calculations for the geometry::Convex type do
 not currently require that the underlying mesh actually be convex.
 Although certain collision calculations involving geometry::Convex may
@@ -2457,10 +2552,7 @@ use the mesh’s convex hull, this function uses the <em>actual</em> mesh.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if shape is an instance of geometry::HalfSpace or</strong> – </p></li>
-<li><p><strong>geometry::MeshcatCone.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if shape is not supported</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>a half space</strong><strong>)</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">

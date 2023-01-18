@@ -2223,9 +2223,9 @@ is positive-semidefinte if xᵀ m x ≥ 0 for all vector x ∈ ℝⁿ.</p>
 <p class="admonition-title">Note</p>
 <p>This method checks if <code class="docutils literal notranslate"><span class="pre">m</span></code> is symmetric, which can be costly. If
 you want to avoid it, please consider using
-<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Lower&gt;())</span></code> or
-<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Upper&gt;())</span></code>
-instead of <code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m)</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;...&gt;())</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m)</span></code>, where <code class="docutils literal notranslate"><span class="pre">...</span></code> is either
+<code class="docutils literal notranslate"><span class="pre">Eigen::Lower</span></code> or <code class="docutils literal notranslate"><span class="pre">Eigen::Upper</span></code>.</p>
 </div>
 </dd></dl>
 

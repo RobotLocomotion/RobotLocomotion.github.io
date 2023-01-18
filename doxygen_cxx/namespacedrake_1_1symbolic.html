@@ -11967,7 +11967,7 @@ we do not provide operator*= function for this class, since operator*= would ret
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This method checks if <code>m</code> is symmetric, which can be costly. If you want to avoid it, please consider using <code>positive_semidefinite(m.triangularView&lt;Eigen::Lower&gt;())</code> or <code>positive_semidefinite(m.triangularView&lt;Eigen::Upper&gt;())</code> instead of <code>positive_semidefinite(m)</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method checks if <code>m</code> is symmetric, which can be costly. If you want to avoid it, please consider using <code>positive_semidefinite(m.triangularView&lt;...&gt;())</code> instead of <code>positive_semidefinite(m)</code>, where <code>...</code> is either <code>Eigen::Lower</code> or <code>Eigen::Upper</code>. </dd></dl>
 
 </div>
 </div>
