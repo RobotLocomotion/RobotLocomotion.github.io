@@ -24,7 +24,7 @@ var classdrake_1_1multibody_1_1_unit_inertia =
     [ "ShiftToCenterOfMass", "classdrake_1_1multibody_1_1_unit_inertia.html#a15446b478364a5bd0a74419bd7a0b719", null ],
     [ "ShiftToCenterOfMassInPlace", "classdrake_1_1multibody_1_1_unit_inertia.html#a63b39c6656200a848579b87b986f6965", null ],
     [ "SolidBox", "classdrake_1_1multibody_1_1_unit_inertia.html#a508911b2ad53d5a156259e5b4690278a", null ],
-    [ "SolidCapsule", "classdrake_1_1multibody_1_1_unit_inertia.html#aed68ed5145171fc5505a5c7c848bfae5", null ],
+    [ "SolidCapsule", "classdrake_1_1multibody_1_1_unit_inertia.html#a069e5dcab9f2119cc2c4eadb6e91abab", null ],
     [ "SolidCube", "classdrake_1_1multibody_1_1_unit_inertia.html#a224f50a8d9351914db96e47ddb5767fb", null ],
     [ "SolidCylinder", "classdrake_1_1multibody_1_1_unit_inertia.html#aa752eb88a4a3eb76242ccb373b81ccf3", null ],
     [ "SolidCylinderAboutEnd", "classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62", null ],
