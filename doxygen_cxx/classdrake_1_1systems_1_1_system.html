@@ -3634,7 +3634,7 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a> cache space in <code>context</code> containing the result of applying the discrete update event handlers to the current discrete variable values.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The referenced cache entry is recalcuated if anything in the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> has changed since last calculation. Subsequent calls just return the already-calculated value.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The referenced cache entry is recalculated if anything in the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> has changed since last calculation. Subsequent calls just return the already-calculated value.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if there is not exactly one periodic timing in this System (which may be a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>) that triggers discrete update events.</td></tr>

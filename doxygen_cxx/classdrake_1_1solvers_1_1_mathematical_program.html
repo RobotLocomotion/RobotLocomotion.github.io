@@ -4060,7 +4060,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div><div class="memdoc">
 
 <p>Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a rotated Lorentz cone constraint [rᵀx+s, 1, Px+q] is in the rotated Lorentz cone. </p>
-<p>When solving the optimization problem using conic solvers (like Mosek, Gurobi, SCS, etc), it is numerically preferrable to impose the convex quadratic constraint as rotated Lorentz cone constraint. See <a href="https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation</a> </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>When solving the optimization problem using conic solvers (like Mosek, Gurobi, SCS, etc), it is numerically preferable to impose the convex quadratic constraint as rotated Lorentz cone constraint. See <a href="https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation</a> </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">exception</td><td>if this quadratic constraint is not convex (Q is not positive semidefinite) </td></tr>
   </table>
@@ -4503,7 +4503,7 @@ x+y &gt;= 0
 <p> where \( A\in\mathbb{R}^{n\times m}, b\in\mathbb{R}^n\) are given matrices. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>A matrix whose number of columns equals to the size of the decision variables. </td></tr>
-    <tr><td class="paramname">b</td><td>A vector whose number of rows equals to the size fo the decision variables. </td></tr>
+    <tr><td class="paramname">b</td><td>A vector whose number of rows equals to the size of the decision variables. </td></tr>
     <tr><td class="paramname">vars</td><td>The decision variables on which the constraint is imposed. </td></tr>
   </table>
   </dd>
@@ -4551,7 +4551,7 @@ x+y &gt;= 0
 <p> where \( A\in\mathbb{R}^{n\times m}, b\in\mathbb{R}^n\) are given matrices. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>A matrix whose number of columns equals to the size of the decision variables. </td></tr>
-    <tr><td class="paramname">b</td><td>A vector whose number of rows equals to the size fo the decision variables. </td></tr>
+    <tr><td class="paramname">b</td><td>A vector whose number of rows equals to the size of the decision variables. </td></tr>
     <tr><td class="paramname">vars</td><td>The decision variables on which the constraint is imposed. </td></tr>
   </table>
   </dd>

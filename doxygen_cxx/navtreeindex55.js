@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,16,7,14,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,16,7,15],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,16,7,15,1],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,16,7,15,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "symbolic_2polynomial_8h.html#af04dff9a90e39ac9985d520d3e66f5c3":[4,0,0,1,3,11,19],
 "symbolic_2polynomial_8h.html#af38134e3394d8c40a7a91490154de2b3":[4,0,0,1,3,11,8],
 "symbolic_2polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0":[4,0,0,1,3,11,16],
-"symbolic__py__unapply_8h.html":[4,0,0,0,0,10],
-"symbolic__test__util_8h.html":[4,0,0,1,4,8]
+"symbolic__py__unapply_8h.html":[4,0,0,0,0,10]
 };

@@ -184,7 +184,7 @@ SDFormat model composition</h2>
 <p>An important feature of SDFormat model composition is the ability to cross-reference features of other models. Cross-references are denoted by using scoped names.</p>
 <h3><a class="anchor" id="scoped_names"></a>
 Scoped names</h3>
-<p>Scoped names allow referring to an element of a model nested within the current model. They take the form of some number of nested model names, plus the element name, all joined by the delimiter <code>::</code>. Names not using the <code>::</code> delimeter are not considered scoped names; they are used to define or refer to elements of the current model. For example, suppose that model A contains model B, which in turn contains model C. Here are some valid scoped names:</p>
+<p>Scoped names allow referring to an element of a model nested within the current model. They take the form of some number of nested model names, plus the element name, all joined by the delimiter <code>::</code>. Names not using the <code>::</code> delimiter are not considered scoped names; they are used to define or refer to elements of the current model. For example, suppose that model A contains model B, which in turn contains model C. Here are some valid scoped names:</p>
 <ul>
 <li>within A:<ul>
 <li><code>some_frame_in_A</code></li>
@@ -212,7 +212,7 @@ URDF Support</h1>
 URDF not supported by Drake</h2>
 <p>Drake's parser does not implement all of the features of URDF. Here is a list of known URDF features that Drake does not use. For each, the parser applies one of several treaments:</p>
 <ul>
-<li>Issue a warning that the tag is unsued.</li>
+<li>Issue a warning that the tag is unused.</li>
 <li>Ignore silently, as documented below.</li>
 <li>Apply special treatment, as documented below.</li>
 </ul>

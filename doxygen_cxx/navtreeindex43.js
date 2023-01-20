@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"door__hinge_8h.html":[4,0,0,8,14,9],
 "double__overloads_8h.html":[4,0,0,1,16],
 "double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
 "doxygen_8h.html":[4,0,0,2,0,0],
@@ -46,7 +47,7 @@ var NAVTREEINDEX43 =
 "dynamic__programming_8h.html":[4,0,0,12,1,1],
 "dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,12,1,1,2],
 "dynamic__programming_8h.html#gae068476fdb8f21578acb538f70ec3e14":[4,0,0,12,1,1,3],
-"edge__measure_8h.html":[4,0,0,10,4],
+"edge__measure_8h.html":[4,0,0,10,5],
 "eigen__autodiff__types_8h.html":[4,0,0,1,27],
 "eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[4,0,0,1,27,3],
 "eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,27,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "expression_2expression_8h.html#acfe3f1787c60c08adf6af1e1f29ff6cf":[4,0,0,1,3,0,3,71],
 "expression_2expression_8h.html#acffaee70b54f60b4d1b9f1771f78ddf7":[4,0,0,1,3,0,3,30],
 "expression_2expression_8h.html#ad0f56048cec3e53d98346a36df54a006":[4,0,0,1,3,0,3,78],
-"expression_2expression_8h.html#adac78e96efaa07849f158591192b2dca":[4,0,0,1,3,0,3,90],
-"expression_2expression_8h.html#ae0f809da2a5c679df2b90aadedde5350":[4,0,0,1,3,0,3,53]
+"expression_2expression_8h.html#adac78e96efaa07849f158591192b2dca":[4,0,0,1,3,0,3,90]
 };

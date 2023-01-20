@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kuka__ii
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates and outputs lcmt_iiwa_status messages. </p>
 <p>Note that this system does not actually send the message an LCM channel. To send the message, the output of this system should be connected to a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ad52e88e4200c2cf0a094a08faff8583c" title="A factory method that returns an LcmPublisherSystem that takes Value&lt;LcmMessage&gt; message objects on i...">systems::lcm::LcmPublisherSystem::Make&lt;lcmt_iiwa_status&gt;()</a>.</p>
-<p>This system has many vector-valued input ports, most of which have exactly num_joints elements. The exception is <code>time_measured</code> which is the one-dimensional time in seconds to set as the message timestamp (i.e. the time inputed will be converted to microseconds and sent to the hardware). It is optional and if unset, the context time is used.</p>
+<p>This system has many vector-valued input ports, most of which have exactly num_joints elements. The exception is <code>time_measured</code> which is the one-dimensional time in seconds to set as the message timestamp (i.e. the time inputted will be converted to microseconds and sent to the hardware). It is optional and if unset, the context time is used.</p>
 <ul>
 <li><code>position_commanded</code>: the most recently received position command.</li>
 <li><code>position_measured</code>: the plant's current position.</li>

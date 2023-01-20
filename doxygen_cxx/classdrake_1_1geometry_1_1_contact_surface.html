@@ -190,7 +190,7 @@ and moment between nominally rigid objects. IROS 2019: 8238-8245.
 <p>Notice that the domain of eₘₙ is the two-dimensional surface 𝕊ₘₙ, while the domain of ∇hₘₙ is the three-dimensional compact set 𝕄 ∩ ℕ. Even though eₘₙ and ∇hₘₙ are defined on different domains (𝕊ₘₙ and 𝕄 ∩ ℕ), our implementation only represents them on their common domain, i.e., 𝕊ₘₙ.</p>
 <p><a class="anchor" id="contact_surface_discrete_representation"></a></p><h2>Discrete Representation </h2>
 <p>In practice, hydroelastic geometries themselves have a discrete representation: either a triangular surface mesh for rigid geometries or a tetrahedral volume mesh for compliant geometry. This discretization leads to contact surfaces that are likewise discrete.</p>
-<p>Intersection between triangles and tetrahedra (or tetrahedra and tetrahedra) can produce polygons with up to eight sides. A ContactSurface can represent the resulting surface as a mesh of such polygons, or as a mesh of tesselated triangles. The domains of the two representations are identical. The triangular version admits for simple, high-order integration over the domain. Every element is a triangle, and triangles will only disappear and reappear as their areas go to zero. However, this increases the total number of faces in the mesh by more than a factor of three over the polygonal mesh. The polygonal representation produces fewer faces, but high order integration over polygons is problematic. We recommend choosing the cheapest representation that nevertheless supports your required fidelity (see <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">QueryObject::ComputeContactSurfaces()</a>).</p>
+<p>Intersection between triangles and tetrahedra (or tetrahedra and tetrahedra) can produce polygons with up to eight sides. A ContactSurface can represent the resulting surface as a mesh of such polygons, or as a mesh of tessellated triangles. The domains of the two representations are identical. The triangular version admits for simple, high-order integration over the domain. Every element is a triangle, and triangles will only disappear and reappear as their areas go to zero. However, this increases the total number of faces in the mesh by more than a factor of three over the polygonal mesh. The polygonal representation produces fewer faces, but high order integration over polygons is problematic. We recommend choosing the cheapest representation that nevertheless supports your required fidelity (see <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">QueryObject::ComputeContactSurfaces()</a>).</p>
 <p>The representation of any ContactSurface instance can be reported by calling <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a96d488ade2f4cdc251cfb36601fa8652" title="Reports the representation mode of this contact surface.">representation()</a>. If it returns <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1">HydroelasticContactRepresentation::kTriangle</a>, then the mesh and pressure field can be accessed via <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4" title="Returns a reference to the triangular surface mesh whose vertex positions are measured and expressed ...">tri_mesh_W()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a7737bf2804d3747dc021a1ea3c4c509e" title="Returns a reference to the scalar field eₘₙ for the triangle mesh.">tri_e_MN()</a>, respectively. If it returns <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb">HydroelasticContactRepresentation::kPolygon</a>, then use <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a485044c2b55a4ca39c50c13455d9337c" title="Returns a reference to the polygonal surface mesh whose vertex positions are measured and expressed i...">poly_mesh_W()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aedec78ea13a9aaf9a3e3b2f3beed70d6" title="Returns a reference to the scalar field eₘₙ for the polygonal mesh.">poly_e_MN()</a>.</p>
 <p>Regardless of representation (polygon or triangle), the normal for each mesh face is guaranteed to point "out of" N and "into" M. They can be accessed via the mesh, e.g., <code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4" title="Returns a reference to the triangular surface mesh whose vertex positions are measured and expressed ...">tri_mesh_W()</a>.face_normal(face_index)</code>. By definition, the normals of the mesh are discontinuous at triangle boundaries.</p>
 <p>The pressure values on the contact surface are represented as a continuous, piecewise-linear function, accessed via <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a7737bf2804d3747dc021a1ea3c4c509e" title="Returns a reference to the scalar field eₘₙ for the triangle mesh.">tri_e_MN()</a> or <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aedec78ea13a9aaf9a3e3b2f3beed70d6" title="Returns a reference to the scalar field eₘₙ for the polygonal mesh.">poly_e_MN()</a>.</p>
@@ -276,7 +276,7 @@ If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many en
 <tr><td colspan="2"><div class="groupText"><p>These functions provide insight into what representation the ContactSurface instance uses, and provide access to the representation-dependent quantities: mesh and field.</p>
 </div></td></tr>
 <tr class="memitem:ac1777d06cb15879ee1356176db3c77f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1">is_triangle</a> () const</td></tr>
-<tr class="memdesc:ac1777d06cb15879ee1356176db3c77f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpley reports if this contact surface's mesh representation is triangle.  <a href="#ac1777d06cb15879ee1356176db3c77f1">More...</a><br /></td></tr>
+<tr class="memdesc:ac1777d06cb15879ee1356176db3c77f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply reports if this contact surface's mesh representation is triangle.  <a href="#ac1777d06cb15879ee1356176db3c77f1">More...</a><br /></td></tr>
 <tr class="separator:ac1777d06cb15879ee1356176db3c77f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96d488ade2f4cdc251cfb36601fa8652"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a96d488ade2f4cdc251cfb36601fa8652">representation</a> () const</td></tr>
 <tr class="memdesc:a96d488ade2f4cdc251cfb36601fa8652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the representation mode of this contact surface.  <a href="#a96d488ade2f4cdc251cfb36601fa8652">More...</a><br /></td></tr>
@@ -712,7 +712,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Simpley reports if this contact surface's mesh representation is triangle. </p>
+<p>Simply reports if this contact surface's mesh representation is triangle. </p>
 <p>Equivalent to: </p><pre class="fragment">representation() == HydroelasticContactRepresentation::kTriangle
 </pre><p>and offered as convenient sugar. </p>
 
@@ -812,7 +812,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reference to the scalar field eₘₙ for the <em>polygonal</em> mesh. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>false</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simply reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>false</code>. </dd></dl>
 
 </div>
 </div>
@@ -832,7 +832,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex positions are measured and expressed in the world frame. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>false</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simply reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>false</code>. </dd></dl>
 
 </div>
 </div>
@@ -889,7 +889,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reference to the scalar field eₘₙ for the <em>triangle</em> mesh. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>true</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simply reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>true</code>. </dd></dl>
 
 </div>
 </div>
@@ -909,7 +909,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reference to the <em>triangular</em> surface mesh whose vertex positions are measured and expressed in the world frame. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>true</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simply reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>true</code>. </dd></dl>
 
 </div>
 </div>

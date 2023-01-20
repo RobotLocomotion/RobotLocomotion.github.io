@@ -271,7 +271,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>When both A and b are Eigen matrix of double, this function is almost as fast as calling linear_solver.solve(b) directly; when either A or b contains AutoDiffScalar, this function is a lot faster than first instantiating the linear solver of AutoDiffScalar, and then solving the equation with this autodiffable linear solver. </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">LinearSolverType</td><td>The type of linear solver, for example Eigen::LLT. Notice that this is just specifies the solver type (such as Eigen::LLT), not the matrix type (like Eigen::LLT&lt;Eigen::Matrix2d&gt;). All Eigen solvers we care about are templated on the matrix type. Some are further templated on configuration ints. The int... will acount for zero or more of these ints, providing a common interface for both types of solvers. </td></tr>
+    <tr><td class="paramname">LinearSolverType</td><td>The type of linear solver, for example Eigen::LLT. Notice that this is just specifies the solver type (such as Eigen::LLT), not the matrix type (like Eigen::LLT&lt;Eigen::Matrix2d&gt;). All Eigen solvers we care about are templated on the matrix type. Some are further templated on configuration ints. The int... will account for zero or more of these ints, providing a common interface for both types of solvers. </td></tr>
     <tr><td class="paramname">DerivedA</td><td>An Eigen Matrix. </td></tr>
     <tr><td class="paramname">DerivedB</td><td>An Eigen Vector. </td></tr>
   </table>

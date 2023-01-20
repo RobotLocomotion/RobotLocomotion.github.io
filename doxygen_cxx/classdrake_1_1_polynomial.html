@@ -175,7 +175,7 @@ class drake::Polynomial&lt; T &gt;</h3>
 
 <p>A scalar multi-variate polynomial, modeled after the msspoly in spotless. </p>
 <p><a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> represents a list of additive Monomials, each one of which is a product of a constant coefficient (of T, which by default is double) and any number of distinct Terms (variables raised to positive integer powers).</p>
-<p>Variables are identified by integer indices rather than symbolic names, but an automatic facility is provided to covert variable names up to four characters into unique integers, provided those variables are named using only lowercase letters and the "@#_." characters followed by a number. For example, valid names include "dx4" and "m_x".</p>
+<p>Variables are identified by integer indices rather than symbolic names, but an automatic facility is provided to convert variable names up to four characters into unique integers, provided those variables are named using only lowercase letters and the "@#_." characters followed by a number. For example, valid names include "dx4" and "m_x".</p>
 <p>Monomials which have the same variables and powers may be constructed but will be automatically combined: (3 * a * b * a) + (1.5 * b * a**2) will be reduced to (4.5 * b * a**2) internally after construction.</p>
 <p>Polynomials can be added, subtracted, and multiplied. They may only be divided by scalars (of T) because Polynomials are not closed under division.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>

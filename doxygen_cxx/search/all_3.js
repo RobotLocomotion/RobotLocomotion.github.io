@@ -264,6 +264,7 @@ var searchData=
   ['coeffseigentype',['CoeffsEigenType',['../classdrake_1_1multibody_1_1_spatial_vector.html#a5783654d7b96144dd0f50344fbfc909d',1,'drake::multibody::SpatialVector']]],
   ['col',['col',['../classdrake_1_1math_1_1_rotation_matrix.html#a7af450eebe5d5ac5cf5ee49aab783609',1,'drake::math::RotationMatrix']]],
   ['collectregisteredgeometries',['CollectRegisteredGeometries',['../classdrake_1_1multibody_1_1_multibody_plant.html#a830e17ff113f70e86e1c6a8b1b60d662',1,'drake::multibody::MultibodyPlant']]],
+  ['collision_5favoidance_2eh',['collision_avoidance.h',['../collision__avoidance_8h.html',1,'']]],
   ['collision_5fchecker_2eh',['collision_checker.h',['../collision__checker_8h.html',1,'']]],
   ['collision_5fchecker_5fcontext_2eh',['collision_checker_context.h',['../collision__checker__context_8h.html',1,'']]],
   ['collision_5fchecker_5fparams_2eh',['collision_checker_params.h',['../collision__checker__params_8h.html',1,'']]],

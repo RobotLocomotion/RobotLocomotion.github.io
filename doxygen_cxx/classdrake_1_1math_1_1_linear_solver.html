@@ -224,7 +224,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The return type of <a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a029d532ff52b767fd930b12a8d8021ca" title="Solves system A*x = b.">Solve()</a> function. </p>
-<p>When both A and B contain the same scalar, and that scalar type is double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, then the return type is Eigen::Solve&lt;Decomposition, DerivedB&gt;, same as the return type of Decomposition::solve() function in Eigen. This avoids unnecessary copies and heap memory allocations if we were to evaluate Eigen::Solve&lt;Decomposition, DerivedB&gt; to a concrete Eigen::Matrix type. Othewise we return an Eigen::Matrix with the same size as DerivedB and proper scalar type. </p>
+<p>When both A and B contain the same scalar, and that scalar type is double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, then the return type is Eigen::Solve&lt;Decomposition, DerivedB&gt;, same as the return type of Decomposition::solve() function in Eigen. This avoids unnecessary copies and heap memory allocations if we were to evaluate Eigen::Solve&lt;Decomposition, DerivedB&gt; to a concrete Eigen::Matrix type. Otherwise we return an Eigen::Matrix with the same size as DerivedB and proper scalar type. </p>
 
 </div>
 </div>

@@ -188,7 +188,7 @@ variables are [q;v;h_WC]. If <code class="docutils literal notranslate"><span cl
 constraint CentroidalAngularMomentum(q, v) - k_WC = 0 where
 CentroidalAngularMomentum(q, v) computes the angular momentum of the
 robot about its center-of-mass, expressed in the world frame. The
-decision varaibles are [q; v; k_WC]</p>
+decision variables are [q; v; k_WC]</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently, we can only construct this constraint using
@@ -758,7 +758,7 @@ has the same start time as the original path’s starting break.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">ToppraDiscretization</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization" title="Permalink to this definition"></a></dt>
 <dd><p>Selects how linear constraints are enforced for TOPPRA’s optimization.
 kCollocation - enforces constraints only at each gridpoint.
-kInterpolation - enforces constrants at each gridpoint and at the
+kInterpolation - enforces constraints at each gridpoint and at the
 following gridpoint using forward integration. Yields higher accuracy
 at minor computational cost.</p>
 <p>Members:</p>

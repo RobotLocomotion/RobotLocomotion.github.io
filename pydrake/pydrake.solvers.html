@@ -3574,7 +3574,7 @@ The user could call</p>
 <dd><p>Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a
 rotated Lorentz cone constraint [rᵀx+s, 1, Px+q] is in the rotated
 Lorentz cone. When solving the optimization problem using conic
-solvers (like Mosek, Gurobi, SCS, etc), it is numerically preferrable
+solvers (like Mosek, Gurobi, SCS, etc), it is numerically preferable
 to impose the convex quadratic constraint as rotated Lorentz cone
 constraint. See
 <a class="reference external" href="https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation</a></p>
@@ -3768,7 +3768,7 @@ matrices.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt><dd><p>A matrix whose number of columns equals to the size of the
 decision variables.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>A vector whose number of rows equals to the size fo the decision
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>A vector whose number of rows equals to the size of the decision
 variables.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>The decision variables on which the constraint is imposed.</p>
@@ -5955,7 +5955,7 @@ linear inequality first, and then linear equality constraints.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">PerspectiveQuadraticCost</span></span><a class="headerlink" href="#pydrake.solvers.PerspectiveQuadraticCost" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
 <p>If z = Ax + b, implements a cost of the form: (z_1^2 + z_2^2 + … +
-z_{n-1}^2) / z_0. Note that this cost is convex when we additonally
+z_{n-1}^2) / z_0. Note that this cost is convex when we additionally
 constrain z_0 &gt; 0. It is treated as a generic nonlinear objective by
 most solvers.</p>
 <dl class="py method">
@@ -6914,7 +6914,7 @@ obtained from <a class="reference external" href="https://web.stanford.edu/group
 <p>“IPOPT” – Parameter names and values as specified in IPOPT users
 guide section “Options Reference”
 <a class="reference external" href="http://www.coin-or.org/Ipopt/documentation/node40.html">http://www.coin-or.org/Ipopt/documentation/node40.html</a></p>
-<p>“NLOPT” – Parameter names and values are specifed in
+<p>“NLOPT” – Parameter names and values are specified in
 <a class="reference external" href="https://nlopt.readthedocs.io/en/latest/NLopt_C-plus-plus_Reference/">https://nlopt.readthedocs.io/en/latest/NLopt_C-plus-plus_Reference/</a>
 (in the Stopping criteria section). Besides these parameters, the user
 can specify “algorithm” using a string of the algorithm name. The
@@ -7013,7 +7013,7 @@ doesn’t support the option, the option is ignored.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.SolverType">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">SolverType</span></span><a class="headerlink" href="#pydrake.solvers.SolverType" title="Permalink to this definition"></a></dt>
-<dd><p>This type only exists for backwards compatiblity, and should not be
+<dd><p>This type only exists for backwards compatibility, and should not be
 used in new code.</p>
 <p>Members:</p>
 <blockquote>
