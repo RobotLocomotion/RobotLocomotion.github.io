@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"standard__operations_8h.html#af22ca444ff5532fc15e431d516313590":[4,0,0,1,0,0,1,57],
+"standard__operations_8h.html#af2afb4760e5c5ef40db8af9479db1cee":[4,0,0,1,0,0,1,4],
 "standard__operations_8h.html#af581ee768c19ce4a3dfb29e66a786097":[4,0,0,1,0,0,1,23],
 "standard__operations_8h.html#af58fefa0bc73a348e5bed3f39e58827b":[4,0,0,1,0,0,1,69],
 "standard__operations_8h.html#afb32ad0c5b67af845de755dce6767dc8":[4,0,0,1,0,0,1,47],
@@ -169,8 +171,8 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa705e1cce16e5f276d9f1ff95851698e":[3,0,0,4,0,3,8],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#abb7b16d4d092f7b7572de4c058b30d96":[3,0,0,4,0,3,6],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ac584721f13a52d5e19df707b30f95ece":[3,0,0,4,0,3,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,4,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,6],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,4,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,4,6,10],
@@ -181,16 +183,16 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,5,4,6,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,6,8],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,4,6,8],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,5,4,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,1,1,6,5],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,5,4,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75":[1,5,4,6,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75":[1,1,1,6,4],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,5,4,6,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,1,1,6,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,5,4,6,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,1,1,6,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,5,4,6,0],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,1,1,6,0],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,5,4,6,0],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[1,5,4,6,7],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[1,1,1,6,7],
 "structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,4,36],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aaf6a8034fc68445c84db4f8d0fcabc79":[3,0,0,7,2,3,1],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html":[3,0,0,7,3,4],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,7,3,4,0],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad2d9c7d6abd602591381050367ed506e":[3,0,0,7,3,4,2],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,7,3,4,1],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[3,0,0,8,2]
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad2d9c7d6abd602591381050367ed506e":[3,0,0,7,3,4,2]
 };

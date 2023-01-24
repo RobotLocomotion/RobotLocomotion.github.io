@@ -4682,6 +4682,14 @@ names within the diagram.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_-float-.already_built">
+<span id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].already_built"></span><span class="sig-name descname"><span class="pre">already_built</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_-float-.already_built" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff Build() or BuildInto() has been called on this
+Builder, in which case it’s an error to call any member function other
+than the the destructor.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_-float-.Build">
 <span id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].Build"></span><span class="sig-name descname"><span class="pre">Build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::systems::Diagram&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_-float-.Build" title="Permalink to this definition"></a></dt>
 <dd><p>Builds the Diagram that has been described by the calls to Connect,
@@ -4904,6 +4912,14 @@ returned by get_name().</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_-float-.IsConnectedOrExported">
+<span id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].IsConnectedOrExported"></span><span class="sig-name descname"><span class="pre">IsConnectedOrExported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder_[float],</span> <span class="pre">port:</span> <span class="pre">drake::systems::InputPort&lt;double&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_-float-.IsConnectedOrExported" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the given input <code class="docutils literal notranslate"><span class="pre">port</span></code> of a constituent system is
+either connected to another constituent system or exported as a
+diagram input.</p>
+</dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -4982,6 +4998,14 @@ names within the diagram.</p>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.already_built">
+<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].already_built"></span><span class="sig-name descname"><span class="pre">already_built</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.already_built" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff Build() or BuildInto() has been called on this
+Builder, in which case it’s an error to call any member function other
+than the the destructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5207,6 +5231,14 @@ returned by get_name().</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.IsConnectedOrExported">
+<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].IsConnectedOrExported"></span><span class="sig-name descname"><span class="pre">IsConnectedOrExported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder_[AutoDiffXd],</span> <span class="pre">port:</span> <span class="pre">drake::systems::InputPort&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.IsConnectedOrExported" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the given input <code class="docutils literal notranslate"><span class="pre">port</span></code> of a constituent system is
+either connected to another constituent system or exported as a
+diagram input.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -5283,6 +5315,14 @@ names within the diagram.</p>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.already_built">
+<span id="pydrake.systems.framework.DiagramBuilder_[Expression].already_built"></span><span class="sig-name descname"><span class="pre">already_built</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.already_built" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff Build() or BuildInto() has been called on this
+Builder, in which case it’s an error to call any member function other
+than the the destructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5508,6 +5548,14 @@ returned by get_name().</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.IsConnectedOrExported">
+<span id="pydrake.systems.framework.DiagramBuilder_[Expression].IsConnectedOrExported"></span><span class="sig-name descname"><span class="pre">IsConnectedOrExported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder_[Expression],</span> <span class="pre">port:</span> <span class="pre">drake::systems::InputPort&lt;drake::symbolic::Expression&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.IsConnectedOrExported" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the given input <code class="docutils literal notranslate"><span class="pre">port</span></code> of a constituent system is
+either connected to another constituent system or exported as a
+diagram input.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -5584,6 +5632,14 @@ names within the diagram.</p>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-float-.already_built">
+<span id="pydrake.systems.framework.DiagramBuilder_[float].already_built"></span><span class="sig-name descname"><span class="pre">already_built</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-float-.already_built" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff Build() or BuildInto() has been called on this
+Builder, in which case it’s an error to call any member function other
+than the the destructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5807,6 +5863,14 @@ returned by get_name().</p>
 <p class="admonition-title">See also</p>
 <p>GetMutableSystems()</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-float-.IsConnectedOrExported">
+<span id="pydrake.systems.framework.DiagramBuilder_[float].IsConnectedOrExported"></span><span class="sig-name descname"><span class="pre">IsConnectedOrExported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder_[float],</span> <span class="pre">port:</span> <span class="pre">drake::systems::InputPort&lt;double&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-float-.IsConnectedOrExported" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the given input <code class="docutils literal notranslate"><span class="pre">port</span></code> of a constituent system is
+either connected to another constituent system or exported as a
+diagram input.</p>
 </dd></dl>
 
 </dd></dl>

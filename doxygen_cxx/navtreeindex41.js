@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,18,4,17],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a220c40e5653537ed8456542adcb14b89":[3,0,0,18,4,11],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057":[3,0,0,18,4,2],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04":[3,0,0,18,4,15],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a5200b41e6c52f4bc8cbc0c0e75cb4d79":[3,0,0,18,4,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,7,0],
 "convex__set_8h.html":[4,0,0,4,1,1],
 "convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,1,0],
-"convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,1,1],
-"copyable__unique__ptr_8h.html":[4,0,0,1,13],
-"corotated__model_8h.html":[4,0,0,8,3,3]
+"convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,1,1]
 };

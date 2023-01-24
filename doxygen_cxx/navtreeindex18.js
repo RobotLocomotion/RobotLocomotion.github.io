@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a18062ca4103bfc791af0188cf4f56b88":[3,0,0,9,6,0,11],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a48c6257e6d4c4d2955b5788872dc9c1c":[3,0,0,9,6,0,13],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a49d1289e44d7151e5ce4c175dae0817e":[3,0,0,9,6,0,2],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a5648d641e62c97c3d8bb555a49443839":[3,0,0,9,6,0,7],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a59afbd430a82f1add5f0cd09bf34f444":[3,0,0,9,6,0,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1planning_1_1_edge_measure.html#af2a7f93a2f9ab704e82849ba600da879":[3,0,0,11,4,5],
 "classdrake_1_1planning_1_1_robot_clearance.html":[3,0,0,11,5],
 "classdrake_1_1planning_1_1_robot_clearance.html#a06281900a335995918a2f8da41e8b3d5":[3,0,0,11,5,2],
-"classdrake_1_1planning_1_1_robot_clearance.html#a0cff3fa19ca93e4b0eee8b906fc5a3c8":[3,0,0,11,5,14],
-"classdrake_1_1planning_1_1_robot_clearance.html#a13139e0691600bda976989de532df649":[3,0,0,11,5,11],
-"classdrake_1_1planning_1_1_robot_clearance.html#a401263b97aa91720fbc1869951c62ddc":[3,0,0,11,5,0]
+"classdrake_1_1planning_1_1_robot_clearance.html#a0cff3fa19ca93e4b0eee8b906fc5a3c8":[3,0,0,11,5,14]
 };

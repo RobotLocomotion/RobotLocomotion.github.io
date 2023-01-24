@@ -3,6 +3,8 @@ var classdrake_1_1multibody_1_1_parser =
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a3810ac2e7a2b5afd4e5d05667a7fa08d", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a2a3870fb0f175a5841b63b621acf15d5", null ],
+    [ "Parser", "classdrake_1_1multibody_1_1_parser.html#ab6df00db6c08588caacfdcbd37116fe6", null ],
+    [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a1b8bf396f9f7a335098ea5eb96e525d1", null ],
     [ "AddAllModelsFromFile", "classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2", null ],
     [ "AddModelFromFile", "classdrake_1_1multibody_1_1_parser.html#a2bc82a9937f1710e5da413dcad7a3ded", null ],
     [ "AddModelFromString", "classdrake_1_1multibody_1_1_parser.html#a818199bfa51f6b3d5e9a8660bc4e486c", null ],
