@@ -450,6 +450,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f29f6aa01dd68ee2babe09ace936ebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8f29f6aa01dd68ee2babe09ace936ebf">AddDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_A, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_AP, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_BQ, <a class="el" href="classdouble.html">double</a> distance, <a class="el" href="classdouble.html">double</a> stiffness=std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::infinity(), <a class="el" href="classdouble.html">double</a> damping=0.0)</td></tr>
 <tr class="memdesc:a8f29f6aa01dd68ee2babe09ace936ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a distance constraint between a point P on a body A and a point Q on a body B.  <a href="#a8f29f6aa01dd68ee2babe09ace936ebf">More...</a><br /></td></tr>
 <tr class="separator:a8f29f6aa01dd68ee2babe09ace936ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0572ce9897e3727ccdfd5fbb34e6512a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0572ce9897e3727ccdfd5fbb34e6512a">AddBallConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_A, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_AP, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_BQ)</td></tr>
+<tr class="memdesc:a0572ce9897e3727ccdfd5fbb34e6512a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a constraint such that point P affixed to body A is coincident at all times with point Q affixed to body B, effectively modeling a ball-and-socket joint.  <a href="#a0572ce9897e3727ccdfd5fbb34e6512a">More...</a><br /></td></tr>
+<tr class="separator:a0572ce9897e3727ccdfd5fbb34e6512a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometry</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_geometry"></a></p>
 <p>The following geometry methods provide a convenient means for associating geometries with bodies. Ultimately, the geometries are owned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>. These methods do the work of registering the requested geometries with SceneGraph and maintaining a mapping between the body and the registered data. Particularly, SceneGraph knows nothing about the concepts inherent in the MultibodyPlant. These methods account for those differences as documented below.</p>
@@ -1240,6 +1243,65 @@ Contact modeling</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0572ce9897e3727ccdfd5fbb34e6512a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0572ce9897e3727ccdfd5fbb34e6512a">&#9670;&nbsp;</a></span>AddBallConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a> AddBallConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>body_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_AP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>body_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_BQ</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a constraint such that point P affixed to body A is coincident at all times with point Q affixed to body B, effectively modeling a ball-and-socket joint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">body_A</td><td><a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> to which point P is rigidly attached. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_AP</td><td>Position of point P in body A's frame. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body_B</td><td><a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> to which point Q is rigidly attached. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_BQ</td><td>Position of point Q in body B's frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the index to the newly added constraint.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if bodies A and B are the same body. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a71b7c4d7b4af1c97bb6f7dae906d1088"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71b7c4d7b4af1c97bb6f7dae906d1088">&#9670;&nbsp;</a></span>AddCouplerConstraint() <span class="overload">[1/2]</span></h2>
 

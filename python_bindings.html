@@ -342,29 +342,36 @@ use <code class="language-plaintext highlighter-rouge">Adder_[T]</code>.</p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pydrake.systems.primitives</span> <span class="kn">import</span> <span class="n">Adder</span><span class="p">,</span> <span class="n">Adder_</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">Adder</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span><span class="s">'&gt;
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="s">'&gt;
 &gt;&gt;&gt; print(Adder_)
 &lt;TemplateClass pydrake.systems.primitives.Adder_&gt;
 &gt;&gt;&gt; from pydrake.autodiffutils import AutoDiffXd
 &gt;&gt;&gt; from pydrake.symbolic import Expression
 &gt;&gt;&gt; print(Adder_[float])
-&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span><span class="s">'&gt;
+&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="s">'&gt;
 &gt;&gt;&gt; print(Adder_[AutoDiffXd])
-&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">AutoDiffXd</span><span class="p">]</span><span class="s">'&gt;
+&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣AutoDiffXd𝓤</span><span class="s">'&gt;
 &gt;&gt;&gt; print(Adder_[Expression])
-&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">Expression</span><span class="p">]</span><span class="s">'&gt;
+&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣Expression𝓤</span><span class="s">'&gt;
 </span></code></pre></div>  </div>
+
+  <p>In debugging output like the class <code class="language-plaintext highlighter-rouge">repr</code> shown above, you might encounter the
+unicode letters 𝓣 and 𝓤. These are used for “name mangling” of template types;
+we need to use “name mangling” to obey Python’s class and function naming rules.
+If you see a mangled name, you can read it using the following legend: a <code class="language-plaintext highlighter-rouge">𝓣</code>
+stands for an open bracket (<code class="language-plaintext highlighter-rouge">[</code>), a <code class="language-plaintext highlighter-rouge">𝓤</code> stands for a close bracket (<code class="language-plaintext highlighter-rouge">]</code>),
+a <code class="language-plaintext highlighter-rouge">𝓬</code> stands for a comma (<code class="language-plaintext highlighter-rouge">,</code>), and a <code class="language-plaintext highlighter-rouge">𝓹</code> stands for a dot (<code class="language-plaintext highlighter-rouge">.</code>).</p>
 
   <p>Additionally, you may convert an instance (if the conversion is available) using
 <code class="language-plaintext highlighter-rouge">System_[T].ToAutoDiffXd</code> and <code class="language-plaintext highlighter-rouge">System_[T].ToSymbolic</code>:</p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adder</span> <span class="o">=</span> <span class="n">Adder</span><span class="p">(</span><span class="n">num_inputs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="n">ToAutoDiffXd</span><span class="p">())</span>
-<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">AutoDiffXd</span><span class="p">]</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣AutoDiffXd𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="n">ToSymbolic</span><span class="p">())</span>
-<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">Expression</span><span class="p">]</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣Expression𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
 </code></pre></div>  </div>
 
   <h2 id="c-function-and-method-template-instantiations-in-python">C++ Function and Method Template Instantiations in Python</h2>

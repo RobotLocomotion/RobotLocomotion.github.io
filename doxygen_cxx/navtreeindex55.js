@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,16,7,8],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,16,7,11],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,16,7,14],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,16,7,14,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "symbolic_2polynomial_8h.html#ae3b6eea79253234902bbcf4643e34d81":[4,0,0,1,3,11,6],
 "symbolic_2polynomial_8h.html#ae9423440606bd13d4767c72dd97ec6a2":[4,0,0,1,3,11,37],
 "symbolic_2polynomial_8h.html#aece6b8e4e48de49ed447c6d62b81ce88":[4,0,0,1,3,11,15],
-"symbolic_2polynomial_8h.html#af04dff9a90e39ac9985d520d3e66f5c3":[4,0,0,1,3,11,19],
-"symbolic_2polynomial_8h.html#af38134e3394d8c40a7a91490154de2b3":[4,0,0,1,3,11,8]
+"symbolic_2polynomial_8h.html#af04dff9a90e39ac9985d520d3e66f5c3":[4,0,0,1,3,11,19]
 };

@@ -226,6 +226,19 @@ only exists for legacy compatibility reasons, and might eventually be
 removed.</p>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.pretty_class_name">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">pretty_class_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qualname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.pretty_class_name" title="Permalink to this definition"></a></dt>
+<dd><p>Given a class, returns its <code class="docutils literal notranslate"><span class="pre">cls.__name__</span></code> respelled to be suitable for
+display to a user, in particular by respelling C++ template arguments using
+their conventional <code class="docutils literal notranslate"><span class="pre">FooBar_[AutoDiffXd]</span></code> expression spelling instead of
+the mangled unicode name. Note that the returned name might not be a valid
+Python identifier, though it should still be a valid Python expression.</p>
+<p>If the class is not a template, simply returns <code class="docutils literal notranslate"><span class="pre">cls.__name__</span></code> unchanged.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">use_qualname</span></code> is true, uses <code class="docutils literal notranslate"><span class="pre">cls.__qualname__</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">cls.__name__</span></code>.</p>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.common.RandomDistribution">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">RandomDistribution</span></span><a class="headerlink" href="#pydrake.common.RandomDistribution" title="Permalink to this definition"></a></dt>

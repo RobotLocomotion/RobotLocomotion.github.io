@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a014b8b7fc8146c90c55cba26137d04e7":[1,2,6,1,3],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a07b0cd6338cce59ac34ac8293f8741c3":[1,2,6,1,5],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a0ce12746baa534e50bbaf7d77c309247":[1,2,6,1,12],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a1077eb1563da1c05132a34b33e1ffb82":[1,2,6,1,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#aab9f68ba747ce2d23132a1348d1604e7":[1,2,4,4,7],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ad59feb45c891897205200a1a186b86f1":[1,2,4,4,2],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#adddc16fb008fab4bdbc6c83e00033c0a":[1,2,4,4,0],
-"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0":[1,2,4,4,10],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html":[1,4,2,6]
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0":[1,2,4,4,10]
 };

@@ -4651,6 +4651,10 @@ matrix.</p>
 </ol>
 <p>Overloads NewSosPolynomial, except the Gramian matrix Q is an input
 instead of an output.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gramian</span></code> is a symmetric matrix.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li><p>NewSosPolynomial(self: pydrake.solvers.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: pydrake.solvers.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 1&gt;, gram_name: str = ‘S’) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</p></li>
 </ol>

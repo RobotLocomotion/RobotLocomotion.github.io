@@ -218,9 +218,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4790743839a4b041b37dc3820e2475ae"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a4790743839a4b041b37dc3820e2475ae">TemporaryClassName</a> (const std::string &amp;name=&quot;TemporaryName&quot;)</td></tr>
 <tr class="memdesc:a4790743839a4b041b37dc3820e2475ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a temporary, unique name for a class instantiation that will be passed to <code>AddTemplateClass</code>.  <a href="#a4790743839a4b041b37dc3820e2475ae">More...</a><br /></td></tr>
 <tr class="separator:a4790743839a4b041b37dc3820e2475ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ed2ec474b72c29e46e599da52c385dc"><td class="memItemLeft" align="right" valign="top">py::object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a0ed2ec474b72c29e46e599da52c385dc">AddTemplateClass</a> (py::handle scope, const std::string &amp;name, py::handle py_class, py::tuple param)</td></tr>
-<tr class="memdesc:a0ed2ec474b72c29e46e599da52c385dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a template class instantiation.  <a href="#a0ed2ec474b72c29e46e599da52c385dc">More...</a><br /></td></tr>
-<tr class="separator:a0ed2ec474b72c29e46e599da52c385dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb81ce5ef11f69d94cd88c7c70ac3598"><td class="memItemLeft" align="right" valign="top">py::object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#afb81ce5ef11f69d94cd88c7c70ac3598">AddTemplateClass</a> (py::handle scope, const std::string &amp;template_name, py::handle py_class, py::tuple param)</td></tr>
+<tr class="memdesc:afb81ce5ef11f69d94cd88c7c70ac3598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a template class instantiation.  <a href="#afb81ce5ef11f69d94cd88c7c70ac3598">More...</a><br /></td></tr>
+<tr class="separator:afb81ce5ef11f69d94cd88c7c70ac3598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8504fe03e622fa78dbbd4e7ce19fdb6"><td class="memTemplParams" colspan="2">template&lt;typename Class , typename... Options&gt; </td></tr>
 <tr class="memitem:ab8504fe03e622fa78dbbd4e7ce19fdb6"><td class="memTemplItemLeft" align="right" valign="top">py::class_&lt; Class, Options... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#ab8504fe03e622fa78dbbd4e7ce19fdb6">DefineTemplateClassWithDefault</a> (py::handle scope, const std::string &amp;default_name, py::tuple param, const char *doc_string=&quot;&quot;, const std::string &amp;template_suffix=&quot;_&quot;)</td></tr>
 <tr class="memdesc:ab8504fe03e622fa78dbbd4e7ce19fdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a convenience wrapper for defining a template class instantiation and a default instantiation (if not already defined).  <a href="#ab8504fe03e622fa78dbbd4e7ce19fdb6">More...</a><br /></td></tr>
@@ -454,8 +454,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0ed2ec474b72c29e46e599da52c385dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ed2ec474b72c29e46e599da52c385dc">&#9670;&nbsp;</a></span>AddTemplateClass()</h2>
+<a id="afb81ce5ef11f69d94cd88c7c70ac3598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb81ce5ef11f69d94cd88c7c70ac3598">&#9670;&nbsp;</a></span>AddTemplateClass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -470,7 +470,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramname"><em>template_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -496,7 +496,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scope</td><td>Parent scope of the template. </td></tr>
-    <tr><td class="paramname">name</td><td>Name of the template. </td></tr>
+    <tr><td class="paramname">template_name</td><td>Name of the template. </td></tr>
     <tr><td class="paramname">py_class</td><td>Class instantiation to be added. </td></tr>
   </table>
   </dd>

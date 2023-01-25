@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,1,1],
 "copyable__unique__ptr_8h.html":[4,0,0,1,13],
 "corotated__model_8h.html":[4,0,0,8,3,3],
 "corotated__model__data_8h.html":[4,0,0,8,3,4],
@@ -13,11 +14,11 @@ var NAVTREEINDEX42 =
 "cpp__param__pybind_8h.html":[4,0,0,0,0,0,0],
 "cpp__param__pybind_8h.html#a2274d953c5404b3021085ef6c9891603":[4,0,0,0,0,0,0,1],
 "cpp__template__pybind_8h.html":[4,0,0,0,0,0,1],
-"cpp__template__pybind_8h.html#a0ed2ec474b72c29e46e599da52c385dc":[4,0,0,0,0,0,1,0],
 "cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,0,1,4],
 "cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,0,1,1],
 "cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,0,1,2],
 "cpp__template__pybind_8h.html#ab8504fe03e622fa78dbbd4e7ce19fdb6":[4,0,0,0,0,0,1,3],
+"cpp__template__pybind_8h.html#afb81ce5ef11f69d94cd88c7c70ac3598":[4,0,0,0,0,0,1,0],
 "create__constraint_8h.html":[4,0,0,11,10],
 "create__cost_8h.html":[4,0,0,11,11],
 "cross__product_8h.html":[4,0,0,7,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "discrete__update__manager_8h.html":[4,0,0,8,10,14],
 "discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,14,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
-"distance__constraint_8h.html":[4,0,0,8,5,4],
-"distance__constraint__utilities_8h.html":[4,0,0,8,5,5]
+"distance__constraint_8h.html":[4,0,0,8,5,4]
 };

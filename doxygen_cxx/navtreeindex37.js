@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#a8f1a2051c444973c346eab2655143b32":[1,2,1,24,0],
 "classdrake_1_1systems_1_1_trajectory_linear_system.html#ac3dd84e89cbb005dcf07931c7bc53c72":[1,2,1,24,3],
 "classdrake_1_1systems_1_1_trajectory_linear_system.html#ad7fc22ae04b6001b46cfd40df9fe9bc7":[1,2,1,24,7],
 "classdrake_1_1systems_1_1_trajectory_linear_system.html#ae891720eef58705ac98ec471d639ad5c":[1,2,1,24,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#acd98bde0684fe392cc2df981a03a71f4":[3,0,0,16,1,3,14],
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#ad4604ab6e7f9dedec8849e268b9f2eab":[3,0,0,16,1,3,1],
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#ad4cfdfb631916b8af2948d863e7596b3":[3,0,0,16,1,3,19],
-"classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#ad5f7520c949d2785ec3695b363126a6a":[3,0,0,16,1,3,3],
-"classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#ad76490f2039260db61153875a56737a1":[3,0,0,16,1,3,0]
+"classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#ad5f7520c949d2785ec3695b363126a6a":[3,0,0,16,1,3,3]
 };
