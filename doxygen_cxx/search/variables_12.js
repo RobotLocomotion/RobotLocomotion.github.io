@@ -7,6 +7,7 @@ var searchData=
   ['scs_5fsolve_5ftime',['scs_solve_time',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a4f04309606118f6deab8739e9496d6c6',1,'drake::solvers::ScsSolverDetails']]],
   ['scs_5fstatus',['scs_status',['../structdrake_1_1solvers_1_1_scs_solver_details.html#ab14ffec13ba48949eb5344938b168ec0',1,'drake::solvers::ScsSolverDetails']]],
   ['self_5fcollision_5fpadding',['self_collision_padding',['../structdrake_1_1planning_1_1_collision_checker_params.html#a3a158076de3363e9927786d4732f3197',1,'drake::planning::CollisionCheckerParams']]],
+  ['self_5fpadding',['self_padding',['../structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a4b33e20bd1e6ff4f9068837d5cfc8837',1,'drake::planning::test::CollisionCheckerConstructionParams']]],
   ['setup_5ftime',['setup_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb',1,'drake::solvers::OsqpSolverDetails']]],
   ['show_5fhydroelastic',['show_hydroelastic',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::DrakeVisualizerParams']]],
   ['show_5frgb',['show_rgb',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3',1,'drake::systems::sensors::CameraConfig']]],
@@ -34,6 +35,7 @@ var searchData=
   ['stddev',['stddev',['../classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608',1,'drake::schema::Gaussian::stddev()'],['../classdrake_1_1schema_1_1_gaussian_vector.html#aad76eefa2c3b5000ba443edb351e4ed7',1,'drake::schema::GaussianVector::stddev()']]],
   ['stiction_5ftolerance',['stiction_tolerance',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2',1,'drake::multibody::MultibodyPlantConfig::stiction_tolerance()'],['../structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2',1,'drake::multibody::TamsiSolverParameters::stiction_tolerance()']]],
   ['stiff_5fdouble_5fsystem_5f',['stiff_double_system_',['../classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#a9a20c04ffbaf83b7d10a0362a5211014',1,'drake::systems::analysis_test::ImplicitIntegratorTest']]],
+  ['supports_5fadded_5fworld_5fobstacles',['supports_added_world_obstacles',['../structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#af56dfbe73c981c12fcb2e03b27c0df26',1,'drake::planning::test::CollisionCheckerTestParams']]],
   ['suppress_5finitialization_5fevents',['suppress_initialization_events',['../structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa',1,'drake::systems::InitializeParams']]],
   ['sx',['sx',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a96666d29f27b318e44d0f2fc3e5382cd',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult']]]
 ];

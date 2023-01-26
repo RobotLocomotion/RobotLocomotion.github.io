@@ -68,7 +68,7 @@ var searchData=
   ['solvers',['solvers',['../namespacedrake_1_1solvers.html',1,'drake']]],
   ['symbolic',['symbolic',['../namespacedrake_1_1symbolic.html',1,'drake']]],
   ['systems',['systems',['../namespacedrake_1_1systems.html',1,'drake']]],
-  ['test',['test',['../namespacedrake_1_1common_1_1test.html',1,'drake::common::test'],['../namespacedrake_1_1multibody_1_1test.html',1,'drake::multibody::test'],['../namespacedrake_1_1solvers_1_1test.html',1,'drake::solvers::test'],['../namespacedrake_1_1symbolic_1_1test.html',1,'drake::symbolic::test'],['../namespacedrake_1_1systems_1_1analysis_1_1test.html',1,'drake::systems::analysis::test'],['../namespacedrake_1_1systems_1_1test.html',1,'drake::systems::test'],['../namespacedrake_1_1test.html',1,'drake::test']]],
+  ['test',['test',['../namespacedrake_1_1common_1_1test.html',1,'drake::common::test'],['../namespacedrake_1_1multibody_1_1test.html',1,'drake::multibody::test'],['../namespacedrake_1_1planning_1_1test.html',1,'drake::planning::test'],['../namespacedrake_1_1solvers_1_1test.html',1,'drake::solvers::test'],['../namespacedrake_1_1symbolic_1_1test.html',1,'drake::symbolic::test'],['../namespacedrake_1_1systems_1_1analysis_1_1test.html',1,'drake::systems::analysis::test'],['../namespacedrake_1_1systems_1_1test.html',1,'drake::systems::test'],['../namespacedrake_1_1test.html',1,'drake::test']]],
   ['test_5futilities',['test_utilities',['../namespacedrake_1_1multibody_1_1test__utilities.html',1,'drake::multibody']]],
   ['trajectories',['trajectories',['../namespacedrake_1_1trajectories.html',1,'drake']]],
   ['trajectory_5foptimization',['trajectory_optimization',['../namespacedrake_1_1systems_1_1trajectory__optimization.html',1,'drake::systems']]],

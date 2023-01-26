@@ -8,6 +8,7 @@ var searchData=
   ['scenegraph',['SceneGraph',['../classdrake_1_1geometry_1_1_scene_graph.html',1,'drake::geometry']]],
   ['scenegraph_3c_20autodiffxd_20_3e',['SceneGraph&lt; AutoDiffXd &gt;',['../classdrake_1_1geometry_1_1_scene_graph.html',1,'drake::geometry']]],
   ['scenegraph_3c_20double_20_3e',['SceneGraph&lt; double &gt;',['../classdrake_1_1geometry_1_1_scene_graph.html',1,'drake::geometry']]],
+  ['scenegraphcollisionchecker',['SceneGraphCollisionChecker',['../classdrake_1_1planning_1_1_scene_graph_collision_checker.html',1,'drake::planning']]],
   ['scenegraphinspector',['SceneGraphInspector',['../classdrake_1_1geometry_1_1_scene_graph_inspector.html',1,'drake::geometry']]],
   ['scenegraphinspector_3c_20autodiffxd_20_3e',['SceneGraphInspector&lt; AutoDiffXd &gt;',['../classdrake_1_1geometry_1_1_scene_graph_inspector.html',1,'drake::geometry']]],
   ['scenegraphinspector_3c_20double_20_3e',['SceneGraphInspector&lt; double &gt;',['../classdrake_1_1geometry_1_1_scene_graph_inspector.html',1,'drake::geometry']]],

@@ -68,10 +68,14 @@ var hierarchy =
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
     [ "CollisionChecker", "classdrake_1_1planning_1_1_collision_checker.html", [
+      [ "SceneGraphCollisionChecker", "classdrake_1_1planning_1_1_scene_graph_collision_checker.html", null ],
       [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", null ]
     ] ],
+    [ "CollisionCheckerConstructionParams", "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html", null ],
     [ "CollisionCheckerContext", "classdrake_1_1planning_1_1_collision_checker_context.html", null ],
     [ "CollisionCheckerParams", "structdrake_1_1planning_1_1_collision_checker_params.html", null ],
+    [ "CollisionCheckerTestConfigurationData", "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html", null ],
+    [ "CollisionCheckerTestParams", "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html", null ],
     [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", null ],
     [ "CollisionFilterManager", "classdrake_1_1geometry_1_1_collision_filter_manager.html", null ],
     [ "Color< T >", "structdrake_1_1systems_1_1sensors_1_1_color.html", null ],
@@ -984,6 +988,9 @@ var hierarchy =
       [ "GenericIntegratorTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html", null ],
       [ "ImplicitIntegratorTest< IntegratorType >", "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html", null ],
       [ "PleidesTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html", null ]
+    ] ],
+    [ "TestWithParam", null, [
+      [ "CollisionCheckerAbstractTestSuite", "classdrake_1_1planning_1_1test_1_1_collision_checker_abstract_test_suite.html", null ]
     ] ],
     [ "Timer", "classdrake_1_1_timer.html", [
       [ "SteadyTimer", "classdrake_1_1_steady_timer.html", null ]

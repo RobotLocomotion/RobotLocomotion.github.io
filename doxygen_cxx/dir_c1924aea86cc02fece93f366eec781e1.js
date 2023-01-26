@@ -1,5 +1,6 @@
 var dir_c1924aea86cc02fece93f366eec781e1 =
 [
+    [ "test_utilities", "dir_6902f0bfef501365a3845194d27e0ad3.html", "dir_6902f0bfef501365a3845194d27e0ad3" ],
     [ "body_shape_description.h", "body__shape__description_8h.html", "body__shape__description_8h" ],
     [ "collision_avoidance.h", "collision__avoidance_8h.html", null ],
     [ "collision_checker.h", "collision__checker_8h.html", [
@@ -22,6 +23,9 @@ var dir_c1924aea86cc02fece93f366eec781e1 =
     ] ],
     [ "robot_diagram_builder.h", "robot__diagram__builder_8h.html", [
       [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html", "classdrake_1_1planning_1_1_robot_diagram_builder" ]
+    ] ],
+    [ "scene_graph_collision_checker.h", "scene__graph__collision__checker_8h.html", [
+      [ "SceneGraphCollisionChecker", "classdrake_1_1planning_1_1_scene_graph_collision_checker.html", "classdrake_1_1planning_1_1_scene_graph_collision_checker" ]
     ] ],
     [ "unimplemented_collision_checker.h", "unimplemented__collision__checker_8h.html", [
       [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", "classdrake_1_1planning_1_1_unimplemented_collision_checker" ]
