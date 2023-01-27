@@ -1,5 +1,11 @@
 var NAVTREEINDEX43 =
 {
+"discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
+"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,10],
+"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,10,0],
+"discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,10,1],
+"discrete__contact__pair_8h.html":[4,0,0,8,10,13],
+"discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,11],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,11,0],
 "discrete__systems_8h.html":[4,0,0,12,10],
@@ -243,11 +249,5 @@ var NAVTREEINDEX43 =
 "expression_2expression_8h.html#ab5beb575f1104a060ab02a89544fef1d":[4,0,0,1,3,0,3,15],
 "expression_2expression_8h.html#ab6702577f951bca3006ab02f3313484e":[4,0,0,1,3,0,3,80],
 "expression_2expression_8h.html#ab6c97ad4e8b82b5c045695eb76fc1256":[4,0,0,1,3,0,3,75],
-"expression_2expression_8h.html#ab8d3a7da7b3275333a0f2d67d649ead8":[4,0,0,1,3,0,3,100],
-"expression_2expression_8h.html#ab9900f71e1c1ceb9d59553adfa2db2b5":[4,0,0,1,3,0,3,117],
-"expression_2expression_8h.html#abc7a6656f58842adedcc8024b14bc06c":[4,0,0,1,3,0,3,59],
-"expression_2expression_8h.html#abd312bc518c0dd20a656021aef3e3c37":[4,0,0,1,3,0,3,39],
-"expression_2expression_8h.html#ac2290181dcc7f444dcd6d7fa5ad6a99e":[4,0,0,1,3,0,3,23],
-"expression_2expression_8h.html#ac2fcf1da78e47a4afb20e0a4e85ac7dd":[4,0,0,1,3,0,3,47],
-"expression_2expression_8h.html#ac306b9a9b7ace256330ae3ab8deaafef":[4,0,0,1,3,0,3,102]
+"expression_2expression_8h.html#ab8d3a7da7b3275333a0f2d67d649ead8":[4,0,0,1,3,0,3,100]
 };

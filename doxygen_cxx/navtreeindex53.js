@@ -1,5 +1,12 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a0ad7eb248a5efdb50a33623eb9c84435":[3,0,0,7,1,2,3],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a64757f7b61980665cf6b5cd1efe1eb5b":[3,0,0,7,1,2,0],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d":[3,0,0,7,1,2,2],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#af62d3b14337abc57cf36b03723d2724c":[3,0,0,7,1,2,1],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[3,0,0,7,1,3],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,7,1,3,0],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200":[3,0,0,7,1,3,2],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,7,1,3,4],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#ad60094399cbb136de80929f28b04b752":[3,0,0,7,1,3,1],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#af735af20e44916b94f485b352c97b308":[3,0,0,7,1,3,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3":[3,0,0,9,4,6,3],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43":[3,0,0,9,4,6,5],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,6,0],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[3,0,0,9,4,7],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a21a8a03c07311e67bcc453bb4fb65f27":[3,0,0,9,4,7,2],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,7,1],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,7,0],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html":[3,0,0,9,4,8],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a0f773326ce535b58f3616669dcfa68c1":[3,0,0,9,4,8,1],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b":[3,0,0,9,4,8,5],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4a688dfea2f967b460be1a7c89f4412e":[3,0,0,9,4,8,4]
+"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[3,0,0,9,4,7]
 };

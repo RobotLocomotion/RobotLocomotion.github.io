@@ -1,5 +1,9 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[3,0,0,18,3,2],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad838f10606e844eac52b6553ba5acfd0":[3,0,0,18,3,37],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,3,12],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae4fce930000d6d534df56d2f94212298":[3,0,0,18,3,40],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae9172b5dec49b4fdc1a94684a25677d2":[3,0,0,18,3,22],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aed61fed2b1bff79c2fb7b083d159a61b":[3,0,0,18,3,20],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af9607087f0b9ae63e285094756e4ac1c":[3,0,0,18,3,39],
@@ -166,6 +170,7 @@ var NAVTREEINDEX41 =
 "collision__avoidance_8h.html":[4,0,0,10,2],
 "collision__checker_8h.html":[4,0,0,10,3],
 "collision__checker__abstract__test__suite_8h.html":[4,0,0,10,0,0],
+"collision__checker__abstract__test__suite_8h.html#a59728e43537c3e540d128389b655d34e":[4,0,0,10,0,0,5],
 "collision__checker__abstract__test__suite_8h.html#a89d20b273f6010f4e2eec8d63cc627f5":[4,0,0,10,0,0,4],
 "collision__checker__context_8h.html":[4,0,0,10,4],
 "collision__checker__params_8h.html":[4,0,0,10,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX41 =
 "contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,1],
 "contact__visualizer__params_8h.html":[4,0,0,8,7,1],
 "contact__wrench_8h.html":[4,0,0,8,8,1],
-"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2],
-"context_8h.html":[4,0,0,12,3,7],
-"context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,12,3,7,1],
-"context__base_8h.html":[4,0,0,12,3,8],
-"continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,5],
-"continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,5,1]
+"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2]
 };
