@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"rotation__matrix_8h.html#ab095ea87a1517bb9bae78d221f5d34da":[4,0,0,7,31,1],
 "rotational__inertia_8h.html":[4,0,0,8,14,42],
 "rpc__pipe__temp__directory_8h.html":[4,0,0,1,1,1],
 "rpc__pipe__temp__directory_8h.html#a650cbe453cd80d0752cc0c91e857789a":[4,0,0,1,1,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "standard__operations_8h.html#aacbd555db2d620085ff5f044cd0f2e90":[4,0,0,1,0,0,1,50],
 "standard__operations_8h.html#aada179add840ec8de0a6e702f247137a":[4,0,0,1,0,0,1,48],
 "standard__operations_8h.html#ab2d5e3ed0dae87a3a9a3ab7671a99021":[4,0,0,1,0,0,1,45],
-"standard__operations_8h.html#ab65f189066e79d8823e1c199ea5f3bf5":[4,0,0,1,0,0,1,29],
-"standard__operations_8h.html#abcb482ba19c98dc61ad2ba12ae9671be":[4,0,0,1,0,0,1,41]
+"standard__operations_8h.html#ab65f189066e79d8823e1c199ea5f3bf5":[4,0,0,1,0,0,1,29]
 };

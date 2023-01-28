@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"formula__cell_8h.html#a726023da52d6033c2565368b6def1e16":[4,0,0,1,3,0,8,25],
 "formula__cell_8h.html#a7488de67ca4d6bc69cec3bb0f67ae4c3":[4,0,0,1,3,0,8,42],
 "formula__cell_8h.html#a788e2bbb344403337e7b77edf2bd92fa":[4,0,0,1,3,0,8,24],
 "formula__cell_8h.html#a7c587017789ff28f462e87ba0a44872d":[4,0,0,1,3,0,8,38],
@@ -51,8 +52,8 @@ var NAVTREEINDEX45 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,4,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,11,20],
-"functions.html":[3,3,0,0],
 "functions.html":[3,3,0],
+"functions.html":[3,3,0,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "globals_func.html":[4,1,1],
 "gradient_8h.html":[4,0,0,7,16],
 "gradient__util_8h.html":[4,0,0,7,17],
-"gradient__util_8h.html#a20c21cde851510ab3ae5a7527ed62d22":[4,0,0,7,17,13],
-"gradient__util_8h.html#a259ed4f41a444e8eed6a2a30998af53f":[4,0,0,7,17,6]
+"gradient__util_8h.html#a20c21cde851510ab3ae5a7527ed62d22":[4,0,0,7,17,13]
 };

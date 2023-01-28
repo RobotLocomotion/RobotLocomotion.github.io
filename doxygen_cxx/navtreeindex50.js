@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"polynomial__types__pybind_8h.html":[4,0,0,0,0,8],
 "polynomial__types__pybind_8h.html#a699f47bb3a3ec60f5fcebb3176dfd77e":[4,0,0,0,0,8,1],
 "polynomial__types__pybind_8h.html#ac7b6b5b20eb590175ba270d5735844f9":[4,0,0,0,0,8,2],
 "polynomial__types__pybind_8h.html#adbc17196068f19a5cd168e56d49d9231":[4,0,0,0,0,8,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "rotation__conversion__gradient_8h.html#a00f832c0837ee2ac76c713ed23440e8e":[4,0,0,7,30,0],
 "rotation__conversion__gradient_8h.html#aa02d13e3a0cbc27e905be533959b8d2a":[4,0,0,7,30,1],
 "rotation__conversion__gradient_8h.html#adee0d3618f370d3b31682a8ca479376e":[4,0,0,7,30,2],
-"rotation__matrix_8h.html":[4,0,0,7,31],
-"rotation__matrix_8h.html#ab095ea87a1517bb9bae78d221f5d34da":[4,0,0,7,31,1]
+"rotation__matrix_8h.html":[4,0,0,7,31]
 };

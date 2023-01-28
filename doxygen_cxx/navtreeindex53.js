@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html":[3,0,0,7,1,2],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a0ad7eb248a5efdb50a33623eb9c84435":[3,0,0,7,1,2,3],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a64757f7b61980665cf6b5cd1efe1eb5b":[3,0,0,7,1,2,0],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d":[3,0,0,7,1,2,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,6,1],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3":[3,0,0,9,4,6,3],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43":[3,0,0,9,4,6,5],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,6,0],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[3,0,0,9,4,7]
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,6,0]
 };

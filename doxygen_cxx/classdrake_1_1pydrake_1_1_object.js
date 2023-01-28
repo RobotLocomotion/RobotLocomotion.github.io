@@ -5,6 +5,7 @@ var classdrake_1_1pydrake_1_1_object =
     [ "Object", "classdrake_1_1pydrake_1_1_object.html#a10c9c721becb9258cc70cd2ad039e653", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html#a6b2ca30633c352c35ee83d66bf3fe474", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html#a9885038a667f7bdbbfb4bccd9d9863e5", null ],
+    [ "Clone", "classdrake_1_1pydrake_1_1_object.html#a2dfeedf3890f6c46f911d9466c5dfb8d", null ],
     [ "from_pyobject", "classdrake_1_1pydrake_1_1_object.html#a20b167c073ba22d5e93817f3669785de", null ],
     [ "operator=", "classdrake_1_1pydrake_1_1_object.html#a3efab0ebe76d7a9134a862c6ef6c4894", null ],
     [ "operator=", "classdrake_1_1pydrake_1_1_object.html#a1191c49f416bc97af24dc08e356756ed", null ],
