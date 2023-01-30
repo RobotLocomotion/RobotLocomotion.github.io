@@ -68,7 +68,7 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html#af0b90dcd88ab2c3113f9a042446c9fce":[3,0,0,3,6,0,0],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html":[3,0,0,3,6,1],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#a636804b6c40e538d83d5c2dfefb7929e":[3,0,0,3,6,1,5],
-"classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#ac6feda9728ea4640ef3a895757e77e2c":[3,0,0,3,6,1,0],
+"classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#a764a8d3002e067213b693b04ed5b5e66":[3,0,0,3,6,1,0],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#ad0f91cbcf54b0f6e03928871016a3ca9":[3,0,0,3,6,1,1],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#adc262ed08e03cd3b36cc231c674da6e3":[3,0,0,3,6,1,3],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#ae3e0defc5b279b8b6393cd33158794ef":[3,0,0,3,6,1,4],

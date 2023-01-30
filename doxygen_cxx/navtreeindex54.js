@@ -1,5 +1,8 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3":[3,0,0,9,4,6,3],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43":[3,0,0,9,4,6,5],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,6,0],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[3,0,0,9,4,7],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a21a8a03c07311e67bcc453bb4fb65f27":[3,0,0,9,4,7,2],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,7,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,16,2,0,0],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,16,2,0,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,16,2,0,0,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,16,2,0,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,16,2,0,0,3],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,16,2,1],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,16,2,1,1]
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,16,2,0,0,2]
 };

@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1manipulation_1_1plan
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -169,9 +170,6 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1manipulation_1_1plan
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper class around the IK planner.  <a href="classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html">DifferentialInverseKinematicsIntegrator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A LeafSystem which uses DoDifferentialInverseKinematics to produce joint position commands.  <a href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,9 +178,15 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html">RobotPlanInterpolator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class implements a source of joint positions for a robot.  <a href="classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a25d05fa68d971afbb05b92c5a46a05ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a25d05fa68d971afbb05b92c5a46a05ec">ConstraintRelaxingIk</a> = <a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">drake::multibody::ConstraintRelaxingIk</a></td></tr>
+<tr class="separator:a25d05fa68d971afbb05b92c5a46a05ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81c4eb20724da02287254032a1cf31c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab81c4eb20724da02287254032a1cf31c">RobotPlanInterpolator</a> = <a class="el" href="classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html">drake::manipulation::util::RobotPlanInterpolator</a></td></tr>
+<tr class="separator:ab81c4eb20724da02287254032a1cf31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8916baae73f1e9c24490b1a23868254c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a8916baae73f1e9c24490b1a23868254c">InterpolatorType</a> = <a class="el" href="namespacedrake_1_1manipulation_1_1util.html#ab43604da4098c31437718f710e587e4f">drake::manipulation::util::InterpolatorType</a></td></tr>
+<tr class="separator:a8916baae73f1e9c24490b1a23868254c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -191,13 +195,6 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3">kStuck</a>
  }</td></tr>
 <tr class="separator:a3e26d472253fc2fe452f8b4bb2d1bcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43604da4098c31437718f710e587e4f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab43604da4098c31437718f710e587e4f">InterpolatorType</a> { <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab43604da4098c31437718f710e587e4fa8232d35debc647f3ab20f0c31e9beb8c">ZeroOrderHold</a>, 
-<a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab43604da4098c31437718f710e587e4faf7818672b5e4fdec82007e1c24eac71b">FirstOrderHold</a>, 
-<a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab43604da4098c31437718f710e587e4fa97b119ae7959071f7cc25b5ce4332c1e">Pchip</a>, 
-<a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab43604da4098c31437718f710e587e4faec6b5414eb175379ff9efc9b3eef5814">Cubic</a>
- }</td></tr>
-<tr class="memdesc:ab43604da4098c31437718f710e587e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enum specifies the type of interpolator to use in constructing the piece-wise polynomial.  <a href="namespacedrake_1_1manipulation_1_1planner.html#ab43604da4098c31437718f710e587e4f">More...</a><br /></td></tr>
-<tr class="separator:ab43604da4098c31437718f710e587e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -216,6 +213,49 @@ Functions</h2></td></tr>
 <tr class="memdesc:gae10cdb111b55cc12914467fecbe82234"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_WE_desired, frame_E, params) that tracks frame E's pose in the world frame.  <a href="group__planning.html#gae10cdb111b55cc12914467fecbe82234">More...</a><br /></td></tr>
 <tr class="separator:gae10cdb111b55cc12914467fecbe82234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a25d05fa68d971afbb05b92c5a46a05ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d05fa68d971afbb05b92c5a46a05ec">&#9670;&nbsp;</a></span>ConstraintRelaxingIk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a25d05fa68d971afbb05b92c5a46a05ec">ConstraintRelaxingIk</a> =  <a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">drake::multibody::ConstraintRelaxingIk</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8916baae73f1e9c24490b1a23868254c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8916baae73f1e9c24490b1a23868254c">&#9670;&nbsp;</a></span>InterpolatorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1manipulation_1_1util.html#ab43604da4098c31437718f710e587e4f">InterpolatorType</a> =  <a class="el" href="namespacedrake_1_1manipulation_1_1util.html#ab43604da4098c31437718f710e587e4f">drake::manipulation::util::InterpolatorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab81c4eb20724da02287254032a1cf31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81c4eb20724da02287254032a1cf31c">&#9670;&nbsp;</a></span>RobotPlanInterpolator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab81c4eb20724da02287254032a1cf31c">RobotPlanInterpolator</a> =  <a class="el" href="classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html">drake::manipulation::util::RobotPlanInterpolator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a3e26d472253fc2fe452f8b4bb2d1bcdc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsStatus</h2>
@@ -243,36 +283,6 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3"></a>kStuck&#160;</td><td class="fielddoc"><p>Unable to follow the desired velocity direction likely due to constraints. </p>
 </td></tr>
-</table>
-
-</div>
-</div>
-<a id="ab43604da4098c31437718f710e587e4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab43604da4098c31437718f710e587e4f">&#9670;&nbsp;</a></span>InterpolatorType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ab43604da4098c31437718f710e587e4f">InterpolatorType</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This enum specifies the type of interpolator to use in constructing the piece-wise polynomial. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab43604da4098c31437718f710e587e4fa8232d35debc647f3ab20f0c31e9beb8c"></a>ZeroOrderHold&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab43604da4098c31437718f710e587e4faf7818672b5e4fdec82007e1c24eac71b"></a>FirstOrderHold&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab43604da4098c31437718f710e587e4fa97b119ae7959071f7cc25b5ce4332c1e"></a>Pchip&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab43604da4098c31437718f710e587e4faec6b5414eb175379ff9efc9b3eef5814"></a>Cubic&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

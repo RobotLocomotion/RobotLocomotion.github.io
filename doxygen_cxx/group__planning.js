@@ -1,19 +1,19 @@
 var group__planning =
 [
-    [ "ConstraintRelaxingIk", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html", [
-      [ "IkCartesianWaypoint", "structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html", [
-        [ "constrain_orientation", "structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a063aefa11fdbf773814f73dbf1fabd64", null ],
-        [ "pos_tol", "structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26", null ],
-        [ "pose", "structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#ae01adb7e45a3f63fccccf9f06a9eea2f", null ],
-        [ "rot_tol", "structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3", null ]
+    [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html", [
+      [ "IkCartesianWaypoint", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html", [
+        [ "constrain_orientation", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a063aefa11fdbf773814f73dbf1fabd64", null ],
+        [ "pos_tol", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26", null ],
+        [ "pose", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#ae01adb7e45a3f63fccccf9f06a9eea2f", null ],
+        [ "rot_tol", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3", null ]
       ] ],
-      [ "ConstraintRelaxingIk", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#ab9d39322cf14f89933ec5d2242954caf", null ],
-      [ "ConstraintRelaxingIk", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#ac7cc87bab55e667b8983af5b53cd738e", null ],
-      [ "ConstraintRelaxingIk", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#a02ef92c01b29b71c01552f25c65f27c8", null ],
-      [ "operator=", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#ac67009538c552962f51823f97ace3d8c", null ],
-      [ "operator=", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#a927f2857f831405143c3a4b733fb057d", null ],
-      [ "PlanSequentialTrajectory", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#a9c39efd12001fcd97f505ef1f4df5421", null ],
-      [ "SetEndEffector", "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#a551202a20cbfbac429580010b512f09d", null ]
+      [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#ab9d39322cf14f89933ec5d2242954caf", null ],
+      [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#ac7cc87bab55e667b8983af5b53cd738e", null ],
+      [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a02ef92c01b29b71c01552f25c65f27c8", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#ac67009538c552962f51823f97ace3d8c", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a927f2857f831405143c3a4b733fb057d", null ],
+      [ "PlanSequentialTrajectory", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a9c39efd12001fcd97f505ef1f4df5421", null ],
+      [ "SetEndEffector", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a551202a20cbfbac429580010b512f09d", null ]
     ] ],
     [ "GlobalInverseKinematics", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html", [
       [ "Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", [

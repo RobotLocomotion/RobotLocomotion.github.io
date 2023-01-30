@@ -11,20 +11,6 @@ var group__manipulation__systems =
       [ "operator=", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#aeb6a061fd038bef7ddf9ebb7883da7e3", null ],
       [ "SetPositions", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#a7e19cbe0d0e26536ec4e025d06e7337a", null ]
     ] ],
-    [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html", [
-      [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a1ba9e59fed168c02473ee4b1b760b374", null ],
-      [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a5272382471553a1552daf97d5f9bee20", null ],
-      [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#aa7a61acc92b498de0e80c438b746aa5d", null ],
-      [ "~RobotPlanInterpolator", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a8216fa2eb3a37a841236728ab6c0ee87", null ],
-      [ "get_acceleration_output_port", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a94882bab05431d3eb692bccbb62708ac", null ],
-      [ "get_plan_input_port", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a404e1a2327bd744b60eb7b8e6bb313cc", null ],
-      [ "get_state_output_port", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a73f2e11fb9478740a01361a4a2277465", null ],
-      [ "Initialize", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a08a9cb7bb8fa7a078e173c9db6669b32", null ],
-      [ "operator=", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#af96830d0376a1a95977ab7745fc1f072", null ],
-      [ "operator=", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#acd1379f9d258beca963b75d32b3c8ac3", null ],
-      [ "plant", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a4fc1b8e6bb1875eb36d4668b7b7e983e", null ],
-      [ "UpdatePlan", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#af1b9467a4df25faf1350eee618f9a1e3", null ]
-    ] ],
     [ "MultibodyForceToWsgForceSystem", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html", [
       [ "MultibodyForceToWsgForceSystem", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html#a33c631ca5c7a05b49c59821d76eaf4e5", null ],
       [ "MultibodyForceToWsgForceSystem", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html#ac32c726355096b5f016b76b1361ce18c", null ],
@@ -114,6 +100,20 @@ var group__manipulation__systems =
       [ "get_max_force_output_port", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a27b4919892ae615cefad15ffc586636d", null ],
       [ "get_state_input_port", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a71ec23b5b9d1a45e490c54d445c78d94", null ],
       [ "get_target_output_port", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#af1e27f1e0a9e963e3a5cdf52fdcb6450", null ]
+    ] ],
+    [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html", [
+      [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a1ba9e59fed168c02473ee4b1b760b374", null ],
+      [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a5272382471553a1552daf97d5f9bee20", null ],
+      [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#aa7a61acc92b498de0e80c438b746aa5d", null ],
+      [ "~RobotPlanInterpolator", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a8216fa2eb3a37a841236728ab6c0ee87", null ],
+      [ "get_acceleration_output_port", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a94882bab05431d3eb692bccbb62708ac", null ],
+      [ "get_plan_input_port", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a404e1a2327bd744b60eb7b8e6bb313cc", null ],
+      [ "get_state_output_port", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a73f2e11fb9478740a01361a4a2277465", null ],
+      [ "Initialize", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a08a9cb7bb8fa7a078e173c9db6669b32", null ],
+      [ "operator=", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#af96830d0376a1a95977ab7745fc1f072", null ],
+      [ "operator=", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#acd1379f9d258beca963b75d32b3c8ac3", null ],
+      [ "plant", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a4fc1b8e6bb1875eb36d4668b7b7e983e", null ],
+      [ "UpdatePlan", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#af1b9467a4df25faf1350eee618f9a1e3", null ]
     ] ],
     [ "MakeMultibodyForceToWsgForceSystem", "group__manipulation__systems.html#ga9d4acc482bc52a69383e884679887402", null ],
     [ "MakeMultibodyStateToWsgStateSystem", "group__manipulation__systems.html#ga4466f959f6516ddf231455e01f6ce3df", null ]

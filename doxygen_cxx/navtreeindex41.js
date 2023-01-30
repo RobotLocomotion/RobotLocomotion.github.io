@@ -225,7 +225,6 @@ var NAVTREEINDEX41 =
 "constraint_8h.html":[4,0,0,11,8],
 "constraint__doxygen_8h.html":[4,0,0,8,1,0],
 "constraint__problem__data_8h.html":[4,0,0,8,1,1],
-"constraint__relaxing__ik_8h.html":[4,0,0,6,2,0],
 "constraint__solver_8h.html":[4,0,0,8,1,2],
 "constraint__specs_8h.html":[4,0,0,8,10,3],
 "contact__jacobians_8h.html":[4,0,0,8,10,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX41 =
 "contact__visualizer_8h.html":[4,0,0,8,7,0],
 "contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,1],
 "contact__visualizer__params_8h.html":[4,0,0,8,7,1],
-"contact__wrench_8h.html":[4,0,0,8,8,1]
+"contact__wrench_8h.html":[4,0,0,8,8,1],
+"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2]
 };

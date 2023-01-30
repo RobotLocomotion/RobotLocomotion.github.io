@@ -101,6 +101,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
@@ -2540,7 +2541,8 @@ with So (and, therefore, Bo). These are the shapes that have symmetry
 across So along each of the axes Sx, Sy, Sz (e.g., geometry::Box,
 geometry::Sphere, etc.) For meshes, it depends on how the mesh is
 defined. For more discussion on the nuances of geometry::Mesh and
-geometry::Convex calculations refer to the <code class="docutils literal notranslate"><span class="pre">mesh</span></code> overload, below.</p>
+geometry::Convex calculations CalcSpatialInertia(const
+geometry::TriangleSurfaceMesh&lt;double&gt;&amp;,double) “see below”.</p>
 <p>Note: Spatial inertia calculations for the geometry::Convex type do
 not currently require that the underlying mesh actually be convex.
 Although certain collision calculations involving geometry::Convex may
@@ -2552,7 +2554,10 @@ use the mesh’s convex hull, this function uses the <em>actual</em> mesh.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if shape is not supported</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>a half space</strong><strong>)</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if shape is an instance of geometry::HalfSpace or</strong> – </p></li>
+<li><p><strong>geometry::MeshcatCone.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">

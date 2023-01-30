@@ -170,7 +170,7 @@ var searchData=
   ['_7erobotclearance',['~RobotClearance',['../classdrake_1_1planning_1_1_robot_clearance.html#a729e9cd587db14316836a7480f6a3ef9',1,'drake::planning::RobotClearance']]],
   ['_7erobotdiagram',['~RobotDiagram',['../classdrake_1_1planning_1_1_robot_diagram.html#ac6630002da2673605a0d159870caa1d4',1,'drake::planning::RobotDiagram']]],
   ['_7erobotdiagrambuilder',['~RobotDiagramBuilder',['../classdrake_1_1planning_1_1_robot_diagram_builder.html#afcfb0c4d2f26618363069032bc873d00',1,'drake::planning::RobotDiagramBuilder']]],
-  ['_7erobotplaninterpolator',['~RobotPlanInterpolator',['../classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a8216fa2eb3a37a841236728ab6c0ee87',1,'drake::manipulation::planner::RobotPlanInterpolator']]],
+  ['_7erobotplaninterpolator',['~RobotPlanInterpolator',['../classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a8216fa2eb3a37a841236728ab6c0ee87',1,'drake::manipulation::util::RobotPlanInterpolator']]],
   ['_7erod2d',['~Rod2D',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a51310633dfb0da91deb07a64ec22d9fe',1,'drake::examples::rod2d::Rod2D']]],
   ['_7erod2dgeometry',['~Rod2dGeometry',['../classdrake_1_1examples_1_1rod2d_1_1_rod2d_geometry.html#ac58d1445c90b8b748f0a16c86ea584af',1,'drake::examples::rod2d::Rod2dGeometry']]],
   ['_7erotatedlorentzconeconstraint',['~RotatedLorentzConeConstraint',['../classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a5afb75bb7c4f86306f91f1152f867caf',1,'drake::solvers::RotatedLorentzConeConstraint']]],

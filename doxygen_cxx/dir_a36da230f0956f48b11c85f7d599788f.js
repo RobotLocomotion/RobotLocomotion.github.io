@@ -25,6 +25,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "drake_bool.h", "drake__bool_8h.html", "drake__bool_8h" ],
     [ "drake_copyable.h", "drake__copyable_8h.html", "drake__copyable_8h" ],
     [ "drake_deprecated.h", "drake__deprecated_8h.html", "drake__deprecated_8h" ],
+    [ "drake_export.h", "drake__export_8h.html", "drake__export_8h" ],
     [ "drake_marker.h", "drake__marker_8h.html", null ],
     [ "drake_path.h", "drake__path_8h.html", "drake__path_8h" ],
     [ "drake_throw.h", "drake__throw_8h.html", "drake__throw_8h" ],

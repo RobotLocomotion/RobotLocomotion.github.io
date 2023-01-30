@@ -18,6 +18,7 @@ var namespacedrake_1_1multibody =
     [ "CentroidalMomentumConstraint", "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html", "classdrake_1_1multibody_1_1_centroidal_momentum_constraint" ],
     [ "ComInPolyhedronConstraint", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint" ],
     [ "ComPositionConstraint", "classdrake_1_1multibody_1_1_com_position_constraint.html", "classdrake_1_1multibody_1_1_com_position_constraint" ],
+    [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html", "classdrake_1_1multibody_1_1_constraint_relaxing_ik" ],
     [ "ContactResults", "classdrake_1_1multibody_1_1_contact_results.html", "classdrake_1_1multibody_1_1_contact_results" ],
     [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system" ],
     [ "ContactWrench", "structdrake_1_1multibody_1_1_contact_wrench.html", "structdrake_1_1multibody_1_1_contact_wrench" ],

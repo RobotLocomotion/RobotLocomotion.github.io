@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="pydrake.systems" href="pydrake.systems.html" />
-    <link rel="prev" title="pydrake.solvers.snopt" href="pydrake.solvers.snopt.html" /> 
+    <link rel="prev" title="pydrake.solvers" href="pydrake.solvers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,6 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.symbolic</a></li>
@@ -2223,9 +2224,9 @@ is positive-semidefinte if xᵀ m x ≥ 0 for all vector x ∈ ℝⁿ.</p>
 <p class="admonition-title">Note</p>
 <p>This method checks if <code class="docutils literal notranslate"><span class="pre">m</span></code> is symmetric, which can be costly. If
 you want to avoid it, please consider using
-<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;...&gt;())</span></code> instead of
-<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m)</span></code>, where <code class="docutils literal notranslate"><span class="pre">...</span></code> is either
-<code class="docutils literal notranslate"><span class="pre">Eigen::Lower</span></code> or <code class="docutils literal notranslate"><span class="pre">Eigen::Upper</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Lower&gt;())</span></code> or
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Upper&gt;())</span></code>
+instead of <code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m)</span></code>.</p>
 </div>
 </dd></dl>
 
@@ -3052,7 +3053,7 @@ elements ([0, vars.size()]).</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pydrake.solvers.snopt.html" class="btn btn-neutral float-left" title="pydrake.solvers.snopt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.solvers.html" class="btn btn-neutral float-left" title="pydrake.solvers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="pydrake.systems.html" class="btn btn-neutral float-right" title="pydrake.systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

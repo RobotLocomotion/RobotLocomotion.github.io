@@ -43,7 +43,7 @@ var searchData=
   ['constantvectorsource',['ConstantVectorSource',['../classdrake_1_1systems_1_1_constant_vector_source.html',1,'drake::systems']]],
   ['constraint',['Constraint',['../classdrake_1_1solvers_1_1_constraint.html',1,'drake::solvers']]],
   ['constraintaccelproblemdata',['ConstraintAccelProblemData',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html',1,'drake::multibody::constraint']]],
-  ['constraintrelaxingik',['ConstraintRelaxingIk',['../classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html',1,'drake::manipulation::planner']]],
+  ['constraintrelaxingik',['ConstraintRelaxingIk',['../classdrake_1_1multibody_1_1_constraint_relaxing_ik.html',1,'drake::multibody']]],
   ['constraintsolver',['ConstraintSolver',['../classdrake_1_1multibody_1_1constraint_1_1_constraint_solver.html',1,'drake::multibody::constraint']]],
   ['constraintvelproblemdata',['ConstraintVelProblemData',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html',1,'drake::multibody::constraint']]],
   ['contactresults',['ContactResults',['../classdrake_1_1multibody_1_1_contact_results.html',1,'drake::multibody']]],

@@ -9,6 +9,7 @@ var searchData=
   ['reverse_5fiterator',['reverse_iterator',['../classdrake_1_1symbolic_1_1_variables.html#a6928219d2e4dc0a77815a0d1b8225ae3',1,'drake::symbolic::Variables']]],
   ['rewriter',['Rewriter',['../namespacedrake_1_1symbolic.html#a134e54042165751a5e5369b4631c90eb',1,'drake::symbolic']]],
   ['rigidtransformd',['RigidTransformd',['../classdrake_1_1math_1_1_rigid_transform.html#afdc48b2f77bba9b5873dc56ec1b7248d',1,'drake::math::RigidTransform']]],
+  ['robotplaninterpolator',['RobotPlanInterpolator',['../namespacedrake_1_1manipulation_1_1planner.html#ab81c4eb20724da02287254032a1cf31c',1,'drake::manipulation::planner']]],
   ['rollpitchyawd',['RollPitchYawd',['../classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe',1,'drake::math::RollPitchYaw']]],
   ['rollpitchyawlimits',['RollPitchYawLimits',['../namespacedrake_1_1solvers.html#a55b1b3c88fe94fd28d7564b90f50a00f',1,'drake::solvers']]],
   ['rootstype',['RootsType',['../classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060',1,'drake::Polynomial']]],

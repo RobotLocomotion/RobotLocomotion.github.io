@@ -17,7 +17,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pydrake.solvers.all" href="pydrake.solvers.all.html" />
+    <link rel="next" title="pydrake.symbolic" href="pydrake.symbolic.html" />
     <link rel="prev" title="pydrake.polynomial" href="pydrake.polynomial.html" /> 
 </head>
 
@@ -88,27 +88,9 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.solvers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.all.html">pydrake.solvers.all</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.augmented_lagrangian.html">pydrake.solvers.augmented_lagrangian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.branch_and_bound.html">pydrake.solvers.branch_and_bound</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.clp.html">pydrake.solvers.clp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.csdp.html">pydrake.solvers.csdp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.dreal.html">pydrake.solvers.dreal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.gurobi.html">pydrake.solvers.gurobi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.ipopt.html">pydrake.solvers.ipopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mathematicalprogram.html">pydrake.solvers.mathematicalprogram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_optimization_util.html">pydrake.solvers.mixed_integer_optimization_util</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_rotation_constraint.html">pydrake.solvers.mixed_integer_rotation_constraint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mosek.html">pydrake.solvers.mosek</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.nlopt.html">pydrake.solvers.nlopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.osqp.html">pydrake.solvers.osqp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.scs.html">pydrake.solvers.scs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.sdpa_free_format.html">pydrake.solvers.sdpa_free_format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.snopt.html">pydrake.solvers.snopt</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
@@ -139,30 +121,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="pydrake-solvers">
-<h1>pydrake.solvers<a class="headerlink" href="#pydrake-solvers" title="Permalink to this headline"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.all.html">pydrake.solvers.all</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.augmented_lagrangian.html">pydrake.solvers.augmented_lagrangian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.branch_and_bound.html">pydrake.solvers.branch_and_bound</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.clp.html">pydrake.solvers.clp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.csdp.html">pydrake.solvers.csdp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.dreal.html">pydrake.solvers.dreal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.gurobi.html">pydrake.solvers.gurobi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.ipopt.html">pydrake.solvers.ipopt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.mathematicalprogram.html">pydrake.solvers.mathematicalprogram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.mixed_integer_optimization_util.html">pydrake.solvers.mixed_integer_optimization_util</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.mixed_integer_rotation_constraint.html">pydrake.solvers.mixed_integer_rotation_constraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.mosek.html">pydrake.solvers.mosek</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.nlopt.html">pydrake.solvers.nlopt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.osqp.html">pydrake.solvers.osqp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.scs.html">pydrake.solvers.scs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.sdpa_free_format.html">pydrake.solvers.sdpa_free_format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.snopt.html">pydrake.solvers.snopt</a></li>
-</ul>
-</div>
-<span class="target" id="module-pydrake.solvers"></span><p>Bindings for Solving Mathematical Programs.</p>
+  <section id="module-pydrake.solvers">
+<span id="pydrake-solvers"></span><h1>pydrake.solvers<a class="headerlink" href="#module-pydrake.solvers" title="Permalink to this headline"></a></h1>
+<p>Bindings for Solving Mathematical Programs.</p>
 <p>If you are formulating constraints using symbolic formulas, please review the
 top-level documentation for <a class="reference internal" href="pydrake.math.html#module-pydrake.math" title="pydrake.math"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydrake.math</span></code></a>.</p>
 <dl class="py function">
@@ -7141,7 +7102,7 @@ it).</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pydrake.polynomial.html" class="btn btn-neutral float-left" title="pydrake.polynomial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pydrake.solvers.all.html" class="btn btn-neutral float-right" title="pydrake.solvers.all" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pydrake.symbolic.html" class="btn btn-neutral float-right" title="pydrake.symbolic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,455 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ConstraintRelaxingIk Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_constraint_relaxing_ik.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1_constraint_relaxing_ik-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ConstraintRelaxingIk Class Reference<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A wrapper class around the IK planner. </p>
+<p>This class improves IK's usability by handling constraint relaxing and multiple initial guesses internally. </p>
+</div>
+<p><code>#include &lt;drake/multibody/inverse_kinematics/constraint_relaxing_ik.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html">IkCartesianWaypoint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian waypoint.  <a href="structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a02ef92c01b29b71c01552f25c65f27c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a02ef92c01b29b71c01552f25c65f27c8">ConstraintRelaxingIk</a> (const std::string &amp;model_path, const std::string &amp;end_effector_link_name)</td></tr>
+<tr class="memdesc:a02ef92c01b29b71c01552f25c65f27c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a02ef92c01b29b71c01552f25c65f27c8">More...</a><br /></td></tr>
+<tr class="separator:a02ef92c01b29b71c01552f25c65f27c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551202a20cbfbac429580010b512f09d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a551202a20cbfbac429580010b512f09d">SetEndEffector</a> (const std::string &amp;link_name)</td></tr>
+<tr class="memdesc:a551202a20cbfbac429580010b512f09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets end effector to <code>link_name</code>.  <a href="#a551202a20cbfbac429580010b512f09d">More...</a><br /></td></tr>
+<tr class="separator:a551202a20cbfbac429580010b512f09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c39efd12001fcd97f505ef1f4df5421"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a9c39efd12001fcd97f505ef1f4df5421">PlanSequentialTrajectory</a> (const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html">IkCartesianWaypoint</a> &gt; &amp;waypoints, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q_current, std::vector&lt; Eigen::VectorXd &gt; *q_sol, const std::function&lt; bool(<a class="el" href="classint.html">int</a>)&gt; &amp;keep_going={})</td></tr>
+<tr class="memdesc:a9c39efd12001fcd97f505ef1f4df5421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates IK solutions for each waypoint sequentially.  <a href="#a9c39efd12001fcd97f505ef1f4df5421">More...</a><br /></td></tr>
+<tr class="separator:a9c39efd12001fcd97f505ef1f4df5421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:ab9d39322cf14f89933ec5d2242954caf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#ab9d39322cf14f89933ec5d2242954caf">ConstraintRelaxingIk</a> (const <a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;)=delete</td></tr>
+<tr class="separator:ab9d39322cf14f89933ec5d2242954caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67009538c552962f51823f97ace3d8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#ac67009538c552962f51823f97ace3d8c">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;)=delete</td></tr>
+<tr class="separator:ac67009538c552962f51823f97ace3d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cc87bab55e667b8983af5b53cd738e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#ac7cc87bab55e667b8983af5b53cd738e">ConstraintRelaxingIk</a> (<a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ac7cc87bab55e667b8983af5b53cd738e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927f2857f831405143c3a4b733fb057d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a927f2857f831405143c3a4b733fb057d">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a927f2857f831405143c3a4b733fb057d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab9d39322cf14f89933ec5d2242954caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d39322cf14f89933ec5d2242954caf">&#9670;&nbsp;</a></span>ConstraintRelaxingIk() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7cc87bab55e667b8983af5b53cd738e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cc87bab55e667b8983af5b53cd738e">&#9670;&nbsp;</a></span>ConstraintRelaxingIk() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02ef92c01b29b71c01552f25c65f27c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ef92c01b29b71c01552f25c65f27c8">&#9670;&nbsp;</a></span>ConstraintRelaxingIk() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>model_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>end_effector_link_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Instantiates an internal <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> from <code>model_path</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model_path</td><td>Path to the model file. </td></tr>
+    <tr><td class="paramname">end_effector_link_name</td><td>Link name of the end effector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac67009538c552962f51823f97ace3d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67009538c552962f51823f97ace3d8c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a927f2857f831405143c3a4b733fb057d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927f2857f831405143c3a4b733fb057d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c39efd12001fcd97f505ef1f4df5421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c39efd12001fcd97f505ef1f4df5421">&#9670;&nbsp;</a></span>PlanSequentialTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlanSequentialTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html">IkCartesianWaypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>waypoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; Eigen::VectorXd &gt; *&#160;</td>
+          <td class="paramname"><em>q_sol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; bool(<a class="el" href="classint.html">int</a>)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>keep_going</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates IK solutions for each waypoint sequentially. </p>
+<p>For waypoint wp_i, the IK tries to solve q_i that satisfies the end effector constraints in wp_i and minimizes the squared difference to q_{i-1}, where q_{i-1} is the solution to the previous wp_{i-1}. q_{i-1} = <code>q_current</code> when i = 0. This function internally does constraint relaxing and initial condition guessing if necessary.</p>
+<p>Note that <code>q_current</code> is inserted at the beginning of <code>q_sol</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">waypoints</td><td>A sequence of desired waypoints. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">q_current</td><td>The initial generalized position. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">q_sol</td><td>Results. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">keep_going</td><td>Optional callback to allow for cancellation. When given, this function will be called prior to every IK solve; if it returns false, the PlanSequentialTrajectory will stop and return false. The function is passed the index of the waypoint currently being solved. This can be used to enable timeouts for difficult plans. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if solved successfully. </dd></dl>
+
+</div>
+</div>
+<a id="a551202a20cbfbac429580010b512f09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a551202a20cbfbac429580010b512f09d">&#9670;&nbsp;</a></span>SetEndEffector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetEndEffector </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>link_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets end effector to <code>link_name</code>. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/inverse_kinematics/<a class="el" href="multibody_2inverse__kinematics_2constraint__relaxing__ik_8h.html">constraint_relaxing_ik.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>
