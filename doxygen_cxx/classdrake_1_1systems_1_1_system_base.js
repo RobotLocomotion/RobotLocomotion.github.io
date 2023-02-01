@@ -78,6 +78,7 @@ var classdrake_1_1systems_1_1_system_base =
     [ "pn_ticket", "classdrake_1_1systems_1_1_system_base.html#aaeae092662e78f50416eb6dc01ad3ddb", null ],
     [ "pnc_ticket", "classdrake_1_1systems_1_1_system_base.html#a0afc9712c887706c12039e871476f30c", null ],
     [ "q_ticket", "classdrake_1_1systems_1_1_system_base.html#a41d3cdadf7d6b62b055993148b82df19", null ],
+    [ "ResetSystemId", "classdrake_1_1systems_1_1_system_base.html#a0eb4af07bc8d4b9cb860f869e3e742db", null ],
     [ "set_implicit_time_derivatives_residual_size", "classdrake_1_1systems_1_1_system_base.html#a67f200e6184921996fcce55fcb18fba6", null ],
     [ "set_name", "classdrake_1_1systems_1_1_system_base.html#ad5260b9627048b854b45d05ed34adc22", null ],
     [ "set_parent_service", "classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab", null ],

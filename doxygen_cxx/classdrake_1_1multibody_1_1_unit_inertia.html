@@ -396,6 +396,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af26c23e707688c5fe5f0c71f22fbee62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62">SolidCylinderAboutEnd</a> (const T &amp;r, const T &amp;L)</td></tr>
 <tr class="memdesc:af26c23e707688c5fe5f0c71f22fbee62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass cylinder of uniform density oriented along the z-axis computed about a point at the center of its base.  <a href="#af26c23e707688c5fe5f0c71f22fbee62">More...</a><br /></td></tr>
 <tr class="separator:af26c23e707688c5fe5f0c71f22fbee62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35de1b8809ae9b9e665394ddb0607aa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac35de1b8809ae9b9e665394ddb0607aa">SolidTetrahedronAboutPoint</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p0, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p1, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p2, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p3)</td></tr>
+<tr class="memdesc:ac35de1b8809ae9b9e665394ddb0607aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unit inertia for a unit-mass uniform density solid tetrahedron B about a point A, from which position vectors to B's 4 vertices B0, B1, B2, B3 are measured (position vectors are all expressed in a common frame E).  <a href="#ac35de1b8809ae9b9e665394ddb0607aa">More...</a><br /></td></tr>
+<tr class="separator:ac35de1b8809ae9b9e665394ddb0607aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2e286c361e5b64ae13f179c20b8dc8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a6e2e286c361e5b64ae13f179c20b8dc8">SolidTetrahedronAboutVertex</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p1, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p2, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p3)</td></tr>
+<tr class="memdesc:a6e2e286c361e5b64ae13f179c20b8dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a unit inertia for a unit-mass uniform density solid tetrahedron B about its vertex B0, from which position vectors to B's other 3 vertices B1, B2, B3 are measured (vectors are all expressed in a common frame E).  <a href="#a6e2e286c361e5b64ae13f179c20b8dc8">More...</a><br /></td></tr>
+<tr class="separator:a6e2e286c361e5b64ae13f179c20b8dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66b55a2788b7027b92ef7434da5569b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aa66b55a2788b7027b92ef7434da5569b">AxiallySymmetric</a> (const T &amp;J, const T &amp;K, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;b_E)</td></tr>
 <tr class="memdesc:aa66b55a2788b7027b92ef7434da5569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unit inertia for a unit-mass body B for which there exists a line L passing through the body's center of mass <code>Bcm</code> having the property that the body's moment of inertia about all lines perpendicular to L are equal.  <a href="#aa66b55a2788b7027b92ef7434da5569b">More...</a><br /></td></tr>
 <tr class="separator:aa66b55a2788b7027b92ef7434da5569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -617,7 +623,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a UnitInertia from a <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a>. </p>
-<p>This constructor has no way to verify that the input rotational inertia actually is a unit inertia. But the construction will nevertheless succeed, and the values of the input rotational inertia will henceforth be considered a valid unit inertia. It is the responsibility of the user to pass a valid unit inertia. </p>
+<p>This constructor has no way to verify that the input rotational inertia actually is a unit inertia. But the construction will nevertheless succeed, and the values of the input rotational inertia will henceforth be considered a valid unit inertia. </p><dl class="section pre"><dt>Precondition</dt><dd>The user is responsible for passing a valid rotational inertia. </dd></dl>
 
 </div>
 </div>
@@ -855,8 +861,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a329d230352494812d0e1662fb73f4ff8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a329d230352494812d0e1662fb73f4ff8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0e321b3b8489b5519c9bc079ad3b521a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e321b3b8489b5519c9bc079ad3b521a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -867,7 +873,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -881,8 +887,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e321b3b8489b5519c9bc079ad3b521a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e321b3b8489b5519c9bc079ad3b521a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a329d230352494812d0e1662fb73f4ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329d230352494812d0e1662fb73f4ff8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -893,7 +899,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1481,6 +1487,132 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Computes the unit inertia for a unit-mass solid sphere of uniform density and radius <code>r</code> taken about its center. </p>
+
+</div>
+</div>
+<a id="ac35de1b8809ae9b9e665394ddb0607aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35de1b8809ae9b9e665394ddb0607aa">&#9670;&nbsp;</a></span>SolidTetrahedronAboutPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; SolidTetrahedronAboutPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a unit inertia for a unit-mass uniform density solid tetrahedron B about a point A, from which position vectors to B's 4 vertices B0, B1, B2, B3 are measured (position vectors are all expressed in a common frame E). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">density</td><td>mass per volume (kg/m³). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p0</td><td>position vector p_AB0_E from point A to B0, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>position vector p_AB1_E from point A to B1, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>position vector p_AB2_E from point A to B2, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>position vector p_AB3_E from point A to B3, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">G_BA_E</td><td>B's unit inertia about point A, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a6e2e286c361e5b64ae13f179c20b8dc8" title="(Advanced) Creates a unit inertia for a unit-mass uniform density solid tetrahedron B about its verte...">SolidTetrahedronAboutVertex()</a> to efficiently calculate a unit inertia about a vertex of B. </dd></dl>
+
+</div>
+</div>
+<a id="a6e2e286c361e5b64ae13f179c20b8dc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2e286c361e5b64ae13f179c20b8dc8">&#9670;&nbsp;</a></span>SolidTetrahedronAboutVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; SolidTetrahedronAboutVertex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Creates a unit inertia for a unit-mass uniform density solid tetrahedron B about its vertex B0, from which position vectors to B's other 3 vertices B1, B2, B3 are measured (vectors are all expressed in a common frame E). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>position vector p_B0B1_E from B0 to B1, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>position vector p_B0B2_E from B0 to B2, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>position vector p_B0B3_E from B0 to B3, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">G_BB0_E</td><td>B's unit inertia about its vertex B0, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac35de1b8809ae9b9e665394ddb0607aa" title="Creates a unit inertia for a unit-mass uniform density solid tetrahedron B about a point A,...">SolidTetrahedronAboutPoint()</a> to calculate a unit inertia about an arbitrary point. </dd></dl>
 
 </div>
 </div>

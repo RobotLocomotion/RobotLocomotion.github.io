@@ -348,9 +348,6 @@ Functions</h2></td></tr>
 <tr class="memitem:aa3ab5841aed63bd66db330dc9486be95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95">ApplyCameraConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses=nullptr, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
 <tr class="memdesc:aa3ab5841aed63bd66db330dc9486be95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a simulated camera sensor (rgbd sensor and publishing systems) within <code>builder</code>.  <a href="#aa3ab5841aed63bd66db330dc9486be95">More...</a><br /></td></tr>
 <tr class="separator:aa3ab5841aed63bd66db330dc9486be95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a995afeb23f063180d03cac4de9bfbf16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a995afeb23f063180d03cac4de9bfbf16">ApplyCameraConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;config, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm)</td></tr>
-<tr class="memdesc:a995afeb23f063180d03cac4de9bfbf16"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a995afeb23f063180d03cac4de9bfbf16">More...</a><br /></td></tr>
-<tr class="separator:a995afeb23f063180d03cac4de9bfbf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a30f975f4523ec7683dd1e04a2291095b">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt; T &gt; &amp;color)</td></tr>
 <tr class="separator:a30f975f4523ec7683dd1e04a2291095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -641,7 +638,7 @@ Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aa3ab5841aed63bd66db330dc9486be95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3ab5841aed63bd66db330dc9486be95">&#9670;&nbsp;</a></span>ApplyCameraConfig() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3ab5841aed63bd66db330dc9486be95">&#9670;&nbsp;</a></span>ApplyCameraConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -719,56 +716,6 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">drake::multibody::AddMultibodyPlant()</a> </dd>
 <dd>
 <a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a727199867bdc2433a7269c76dd7f3973" title="Given LCM bus names and parameters, adds an LcmInterfaceSystem for each bus within the given diagram ...">drake::systems::lcm::ApplyLcmBusConfig()</a> </dd></dl>
-
-</div>
-</div>
-<a id="a995afeb23f063180d03cac4de9bfbf16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a995afeb23f063180d03cac4de9bfbf16">&#9670;&nbsp;</a></span>ApplyCameraConfig() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::systems::sensors::ApplyCameraConfig </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>builder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>scene_graph</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *&#160;</td>
-          <td class="paramname"><em>lcm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Use the LcmBuses-related overload instead. <br />
- This will be removed from Drake on or after 2023-02-01.</dd></dl>
 
 </div>
 </div>

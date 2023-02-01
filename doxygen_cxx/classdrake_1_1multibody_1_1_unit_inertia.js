@@ -13,8 +13,8 @@ var classdrake_1_1multibody_1_1_unit_inertia =
     [ "operator+=", "classdrake_1_1multibody_1_1_unit_inertia.html#aa16a9cdf1bf2f4e7f59af88fb90ea4f8", null ],
     [ "operator-=", "classdrake_1_1multibody_1_1_unit_inertia.html#ad9a91ea3d4a5c586d46ba46000f12541", null ],
     [ "operator/=", "classdrake_1_1multibody_1_1_unit_inertia.html#af82325138e40aa8b7ecb26c7d8ef3aa6", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_unit_inertia.html#a329d230352494812d0e1662fb73f4ff8", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_unit_inertia.html#a0e321b3b8489b5519c9bc079ad3b521a", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_unit_inertia.html#a329d230352494812d0e1662fb73f4ff8", null ],
     [ "PointMass", "classdrake_1_1multibody_1_1_unit_inertia.html#ae6f93bf07bd55dd7ab860b0c321713c0", null ],
     [ "ReExpress", "classdrake_1_1multibody_1_1_unit_inertia.html#ac728662c9f74b89201beb8f9a693c66a", null ],
     [ "ReExpressInPlace", "classdrake_1_1multibody_1_1_unit_inertia.html#a43654f1a4db4b783a4fbed3e8bc17532", null ],
@@ -30,6 +30,8 @@ var classdrake_1_1multibody_1_1_unit_inertia =
     [ "SolidCylinderAboutEnd", "classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62", null ],
     [ "SolidEllipsoid", "classdrake_1_1multibody_1_1_unit_inertia.html#a899b4cbf351386105263110c57276122", null ],
     [ "SolidSphere", "classdrake_1_1multibody_1_1_unit_inertia.html#adf3d4bf1e85ad1942c12478e5e3aa906", null ],
+    [ "SolidTetrahedronAboutPoint", "classdrake_1_1multibody_1_1_unit_inertia.html#ac35de1b8809ae9b9e665394ddb0607aa", null ],
+    [ "SolidTetrahedronAboutVertex", "classdrake_1_1multibody_1_1_unit_inertia.html#a6e2e286c361e5b64ae13f179c20b8dc8", null ],
     [ "StraightLine", "classdrake_1_1multibody_1_1_unit_inertia.html#aa7e6f8e48b01a027112221c2e59ddbad", null ],
     [ "ThinRod", "classdrake_1_1multibody_1_1_unit_inertia.html#a902f33de7ecd8ef964190051ee56588c", null ],
     [ "TriaxiallySymmetric", "classdrake_1_1multibody_1_1_unit_inertia.html#a870636b327cc9cd813547c32c45a06c1", null ]

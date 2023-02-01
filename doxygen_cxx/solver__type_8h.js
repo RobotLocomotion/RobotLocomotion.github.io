@@ -13,8 +13,6 @@ var solver__type_8h =
       [ "kOsqp", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6e645ae8d30d672d9800a422f4be4c9d", null ],
       [ "kSnopt", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4", null ],
       [ "kScs", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c", null ],
-      [ "kUnrevisedLemke", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6", null ],
-      [ "kDReal", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca65fbd0baf8ecc955767af55707dbd36d", null ],
-      [ "kIbex", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaf25185ee32a5e7a033b139d8b7c6ed57", null ]
+      [ "kUnrevisedLemke", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6", null ]
     ] ]
 ];

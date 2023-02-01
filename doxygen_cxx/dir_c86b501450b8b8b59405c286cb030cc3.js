@@ -29,10 +29,6 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "csdp_solver_error_handling.h", "csdp__solver__error__handling_8h.html", null ],
     [ "csdp_solver_internal.h", "csdp__solver__internal_8h.html", null ],
     [ "decision_variable.h", "decision__variable_8h.html", "decision__variable_8h" ],
-    [ "dreal_solver.h", "dreal__solver_8h.html", [
-      [ "DrealSolver", "classdrake_1_1solvers_1_1_dreal_solver.html", "classdrake_1_1solvers_1_1_dreal_solver" ],
-      [ "Interval", "classdrake_1_1solvers_1_1_dreal_solver_1_1_interval.html", "classdrake_1_1solvers_1_1_dreal_solver_1_1_interval" ]
-    ] ],
     [ "equality_constrained_qp_solver.h", "equality__constrained__qp__solver_8h.html", [
       [ "EqualityConstrainedQPSolver", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver" ]
     ] ],
@@ -43,10 +39,6 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "GurobiSolverDetails", "structdrake_1_1solvers_1_1_gurobi_solver_details.html", "structdrake_1_1solvers_1_1_gurobi_solver_details" ],
       [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", "classdrake_1_1solvers_1_1_gurobi_solver" ],
       [ "SolveStatusInfo", "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html", "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info" ]
-    ] ],
-    [ "ibex_converter.h", "ibex__converter_8h.html", null ],
-    [ "ibex_solver.h", "ibex__solver_8h.html", [
-      [ "IbexSolver", "classdrake_1_1solvers_1_1_ibex_solver.html", "classdrake_1_1solvers_1_1_ibex_solver" ]
     ] ],
     [ "indeterminate.h", "indeterminate_8h.html", "indeterminate_8h" ],
     [ "integer_inequality_solver.h", "integer__inequality__solver_8h.html", "integer__inequality__solver_8h" ],

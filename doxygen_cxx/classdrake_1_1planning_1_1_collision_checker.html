@@ -429,17 +429,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad399081b57b1becb847d9a6f77928903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903">SetConfigurationDistanceFunction</a> (const <a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a> &amp;distance_function)</td></tr>
 <tr class="memdesc:ad399081b57b1becb847d9a6f77928903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration distance function to <code>distance_function</code>.  <a href="#ad399081b57b1becb847d9a6f77928903">More...</a><br /></td></tr>
 <tr class="separator:ad399081b57b1becb847d9a6f77928903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a0387b7c63685b76f74f4af25bf335"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a54a0387b7c63685b76f74f4af25bf335">ComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;q_1, const Eigen::VectorXd &amp;q_2) const</td></tr>
-<tr class="memdesc:a54a0387b7c63685b76f74f4af25bf335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes configuration-space distance between the provided configurations <code>q_1</code> and <code>q_2</code>, using the distance function configured at construction- time or via <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a>.  <a href="#a54a0387b7c63685b76f74f4af25bf335">More...</a><br /></td></tr>
-<tr class="separator:a54a0387b7c63685b76f74f4af25bf335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76ac66c1677433ebe8cff135f77af58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58">ComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:ae76ac66c1677433ebe8cff135f77af58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes configuration-space distance between the provided configurations <code>q1</code> and <code>q2</code>, using the distance function configured at construction- time or via <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a>.  <a href="#ae76ac66c1677433ebe8cff135f77af58">More...</a><br /></td></tr>
+<tr class="separator:ae76ac66c1677433ebe8cff135f77af58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57903558264bcd6cb91e68f8e49d20a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a57903558264bcd6cb91e68f8e49d20a1">MakeStandaloneConfigurationDistanceFunction</a> () const</td></tr>
 <tr class="separator:a57903558264bcd6cb91e68f8e49d20a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebf58f4817df47ff85f1e4f3de824382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382">SetConfigurationInterpolationFunction</a> (const <a class="el" href="namespacedrake_1_1planning.html#a75d00a46d4a0685ffa20482705e7e8e7">ConfigurationInterpolationFunction</a> &amp;interpolation_function)</td></tr>
 <tr class="memdesc:aebf58f4817df47ff85f1e4f3de824382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration interpolation function to <code>interpolation_function</code>.  <a href="#aebf58f4817df47ff85f1e4f3de824382">More...</a><br /></td></tr>
 <tr class="separator:aebf58f4817df47ff85f1e4f3de824382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38a1eb2882f14ed4882fc8d51e00b917"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a38a1eb2882f14ed4882fc8d51e00b917">InterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;q_1, const Eigen::VectorXd &amp;q_2, <a class="el" href="classdouble.html">double</a> ratio) const</td></tr>
-<tr class="memdesc:a38a1eb2882f14ed4882fc8d51e00b917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolates between provided configurations <code>q_1</code> and <code>q_2</code>.  <a href="#a38a1eb2882f14ed4882fc8d51e00b917">More...</a><br /></td></tr>
-<tr class="separator:a38a1eb2882f14ed4882fc8d51e00b917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d96471a621cda128cdbc959b4f96c9"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a15d96471a621cda128cdbc959b4f96c9">InterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2, <a class="el" href="classdouble.html">double</a> ratio) const</td></tr>
+<tr class="memdesc:a15d96471a621cda128cdbc959b4f96c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolates between provided configurations <code>q1</code> and <code>q2</code>.  <a href="#a15d96471a621cda128cdbc959b4f96c9">More...</a><br /></td></tr>
+<tr class="separator:a15d96471a621cda128cdbc959b4f96c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07431eb14eaf038162e550c13e1373dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#a75d00a46d4a0685ffa20482705e7e8e7">ConfigurationInterpolationFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a07431eb14eaf038162e550c13e1373dc">MakeStandaloneConfigurationInterpolationFunction</a> () const</td></tr>
 <tr class="separator:a07431eb14eaf038162e550c13e1373dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaa8d8cac0c3193bc48a6fb8229b85e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8">edge_step_size</a> () const</td></tr>
@@ -1354,8 +1354,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a54a0387b7c63685b76f74f4af25bf335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a0387b7c63685b76f74f4af25bf335">&#9670;&nbsp;</a></span>ComputeConfigurationDistance()</h2>
+<a id="ae76ac66c1677433ebe8cff135f77af58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76ac66c1677433ebe8cff135f77af58">&#9670;&nbsp;</a></span>ComputeConfigurationDistance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1364,13 +1364,13 @@ Protected Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdouble.html">double</a> ComputeConfigurationDistance </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q_1</em>, </td>
+          <td class="paramname"><em>q1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q_2</em>&#160;</td>
+          <td class="paramname"><em>q2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1380,7 +1380,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Computes configuration-space distance between the provided configurations <code>q_1</code> and <code>q_2</code>, using the distance function configured at construction- time or via <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a>. </p>
+<p>Computes configuration-space distance between the provided configurations <code>q1</code> and <code>q2</code>, using the distance function configured at construction- time or via <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a>. </p>
 
 </div>
 </div>
@@ -2012,8 +2012,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a38a1eb2882f14ed4882fc8d51e00b917"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38a1eb2882f14ed4882fc8d51e00b917">&#9670;&nbsp;</a></span>InterpolateBetweenConfigurations()</h2>
+<a id="a15d96471a621cda128cdbc959b4f96c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d96471a621cda128cdbc959b4f96c9">&#9670;&nbsp;</a></span>InterpolateBetweenConfigurations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2022,13 +2022,13 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">Eigen::VectorXd InterpolateBetweenConfigurations </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q_1</em>, </td>
+          <td class="paramname"><em>q1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q_2</em>, </td>
+          <td class="paramname"><em>q2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2044,7 +2044,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Interpolates between provided configurations <code>q_1</code> and <code>q_2</code>. </p>
+<p>Interpolates between provided configurations <code>q1</code> and <code>q2</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ratio</td><td>Interpolation ratio. </td></tr>
@@ -2206,7 +2206,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>a functor that captures this object, so it can be used like a free function. The returned functor is only valid during the lifetime of this object. The math of the function is equivalent to <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a54a0387b7c63685b76f74f4af25bf335" title="Computes configuration-space distance between the provided configurations q_1 and q_2,...">ComputeConfigurationDistance()</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a functor that captures this object, so it can be used like a free function. The returned functor is only valid during the lifetime of this object. The math of the function is equivalent to <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58" title="Computes configuration-space distance between the provided configurations q1 and q2,...">ComputeConfigurationDistance()</a>. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>do not pass this standalone function back into <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a> function; doing so would create an infinite loop. </dd></dl>
 
 </div>
@@ -2225,7 +2225,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>a functor that captures this object, so it can be used like a free function. The returned functor is only valid during the lifetime of this object. The math of the function is equivalent to <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a38a1eb2882f14ed4882fc8d51e00b917" title="Interpolates between provided configurations q_1 and q_2.">InterpolateBetweenConfigurations()</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a functor that captures this object, so it can be used like a free function. The returned functor is only valid during the lifetime of this object. The math of the function is equivalent to <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a15d96471a621cda128cdbc959b4f96c9" title="Interpolates between provided configurations q1 and q2.">InterpolateBetweenConfigurations()</a>. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>do not pass this standalone function back into our <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382" title="Sets the configuration interpolation function to interpolation_function.">SetConfigurationInterpolationFunction()</a> function; doing so would create an infinite loop. </dd></dl>
 
 </div>

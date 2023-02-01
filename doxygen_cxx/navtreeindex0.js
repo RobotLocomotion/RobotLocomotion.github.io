@@ -105,7 +105,6 @@ var NAVTREEINDEX0 =
 "call__python_8h.html#ae2e692a250b25ee6892bd538b071a88d":[4,0,0,1,1,0,1],
 "camera__config_8h.html":[4,0,0,12,8,2],
 "camera__config__functions_8h.html":[4,0,0,12,8,3],
-"camera__config__functions_8h.html#a995afeb23f063180d03cac4de9bfbf16":[4,0,0,12,8,3,1],
 "camera__config__functions_8h.html#aa3ab5841aed63bd66db330dc9486be95":[4,0,0,12,8,3,0],
 "camera__info_8h.html":[4,0,0,12,8,4],
 "cartesian__product_8h.html":[4,0,0,4,1,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#ab2d984c6a3f814a0cfe120febe762139":[3,0,0,43,14],
 "classdrake_1_1_polynomial.html#ab30704361ad1820a0a54f5127830d92a":[3,0,0,43,45],
 "classdrake_1_1_polynomial.html#abe5f08c6ad942153599928b9c7f9d0fa":[3,0,0,43,43],
-"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5]
+"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,43,5],
+"classdrake_1_1_polynomial.html#ac86fb56fd075f1c1442883c77f200792":[3,0,0,43,40]
 };

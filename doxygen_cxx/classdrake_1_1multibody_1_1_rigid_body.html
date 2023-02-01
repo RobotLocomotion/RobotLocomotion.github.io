@@ -229,8 +229,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> rigid body B, sets its mass stored in <code>context</code> to <code>mass</code>.  <a href="#ad850c57d3a08a7992a9f22cc30e69ef9">More...</a><br /></td></tr>
 <tr class="separator:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac79f50a47ba934e2c771f3384aae108f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ac79f50a47ba934e2c771f3384aae108f">SetCenterOfMassInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;com) const</td></tr>
-<tr class="memdesc:ac79f50a47ba934e2c771f3384aae108f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> rigid body B, sets its center of mass position stored in <code>context</code> to <code>com</code>.  <a href="#ac79f50a47ba934e2c771f3384aae108f">More...</a><br /></td></tr>
+<tr class="memdesc:ac79f50a47ba934e2c771f3384aae108f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Sets this body's center of mass position while preserving its inertia about its body origin.  <a href="#ac79f50a47ba934e2c771f3384aae108f">More...</a><br /></td></tr>
 <tr class="separator:ac79f50a47ba934e2c771f3384aae108f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dde4f37f65bd86c368688b9ba5a8e0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a1dde4f37f65bd86c368688b9ba5a8e0e">SetCenterOfMassInBodyFrameAndPreserveCentralInertia</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;center_of_mass_position) const</td></tr>
+<tr class="memdesc:a1dde4f37f65bd86c368688b9ba5a8e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this body's center of mass position while preserving its inertia about its center of mass.  <a href="#a1dde4f37f65bd86c368688b9ba5a8e0e">More...</a><br /></td></tr>
+<tr class="separator:a1dde4f37f65bd86c368688b9ba5a8e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e83508afc2db2bda9a1f25ed5201918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918">SetSpatialInertiaInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M_Bo_B) const</td></tr>
 <tr class="memdesc:a2e83508afc2db2bda9a1f25ed5201918"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> rigid body B, sets its spatial inertia that is stored in <code>context</code> to <code>M_Bo_B</code>.  <a href="#a2e83508afc2db2bda9a1f25ed5201918">More...</a><br /></td></tr>
 <tr class="separator:a2e83508afc2db2bda9a1f25ed5201918"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1398,15 +1401,61 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>For <code>this</code> rigid body B, sets its center of mass position stored in <code>context</code> to <code>com</code>. </p>
+<p>(Advanced) Sets this body's center of mass position while preserving its inertia about its body origin. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">com</td><td>position vector from Bo (B's origin) to Bcm (B's center of mass), expressed in B. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>contains the state of the multibody system. It is modified to store the updated com (center of mass position). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">com</td><td>position vector from Bo (this body B's origin) to Bcm (B's center of mass), expressed in B. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This function changes <code>this</code> body B's center of mass position without modifying I_BBo_B (B's rotational inertia about Bo, expressed in B). If needed, use <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918" title="For this rigid body B, sets its spatial inertia that is stored in context to M_Bo_B.">SetSpatialInertiaInBodyFrame()</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function changes B's center of mass position <b>without</b> modifying G_BBo_B (B's unit inertia about Bo, expressed in B). Since this use case is very unlikely, consider using <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918" title="For this rigid body B, sets its spatial inertia that is stored in context to M_Bo_B.">SetSpatialInertiaInBodyFrame()</a> or <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a1dde4f37f65bd86c368688b9ba5a8e0e" title="Sets this body&#39;s center of mass position while preserving its inertia about its center of mass.">SetCenterOfMassInBodyFrameAndPreserveCentralInertia()</a>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Do not use this function unless it is needed (think twice). </dd></dl>
+
+</div>
+</div>
+<a id="a1dde4f37f65bd86c368688b9ba5a8e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dde4f37f65bd86c368688b9ba5a8e0e">&#9670;&nbsp;</a></span>SetCenterOfMassInBodyFrameAndPreserveCentralInertia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCenterOfMassInBodyFrameAndPreserveCentralInertia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>center_of_mass_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets this body's center of mass position while preserving its inertia about its center of mass. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>contains the state of the multibody system. It is modified to store the updated center_of_mass_position and the updated G_BBo_B (this body B's unit inertia about B's origin Bo, expressed in B). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">center_of_mass_position</td><td>position vector from Bo to Bcm (B's center of mass), expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>G_BBo_B is modified to ensure B's inertia about Bcm is unchanged. Although this function can work well when B's mass is concentrated at (or mostly near) a single point, it has <b>questionable</b> utility to generally account for inertia changes due to arbitrary center of mass changes. Consider using <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918" title="For this rigid body B, sets its spatial inertia that is stored in context to M_Bo_B.">SetSpatialInertiaInBodyFrame()</a> instead. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">

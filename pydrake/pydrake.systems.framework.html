@@ -13756,6 +13756,28 @@ from Drake on or after 2023-03-01.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_.System_-float-.Clone">
+<span id="pydrake.systems.framework.System_.System_[float].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_.System_-float-.Clone" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a deep copy of this system.</p>
+<p>Even though the cloned system is functionally identical, any contexts
+created for this system are not compatible with the cloned system, and
+vice versa.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Context::SetTimeStateAndParametersFrom() for how to copy context
+data between clones.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This implementation is somewhat incomplete at the moment. Many
+systems will not be able to be cloned, and will throw an exception
+instead. To be cloned, at minimum a system must support scalar
+conversion. See system_scalar_conversion.</p>
+</div>
+<p>The result is never nullptr.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_.System_-float-.CreateDefaultContext">
 <span id="pydrake.systems.framework.System_.System_[float].CreateDefaultContext"></span><span class="sig-name descname"><span class="pre">CreateDefaultContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_.System_-float-.CreateDefaultContext" title="Permalink to this definition"></a></dt>
 <dd><p>This convenience method allocates a context using AllocateContext()
@@ -14865,6 +14887,28 @@ these equations.</p>
 from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.Clone">
+<span id="pydrake.systems.framework.System_[AutoDiffXd].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.Clone" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a deep copy of this system.</p>
+<p>Even though the cloned system is functionally identical, any contexts
+created for this system are not compatible with the cloned system, and
+vice versa.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Context::SetTimeStateAndParametersFrom() for how to copy context
+data between clones.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This implementation is somewhat incomplete at the moment. Many
+systems will not be able to be cloned, and will throw an exception
+instead. To be cloned, at minimum a system must support scalar
+conversion. See system_scalar_conversion.</p>
+</div>
+<p>The result is never nullptr.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -15978,6 +16022,28 @@ from Drake on or after 2023-03-01.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.Clone">
+<span id="pydrake.systems.framework.System_[Expression].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.Clone" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a deep copy of this system.</p>
+<p>Even though the cloned system is functionally identical, any contexts
+created for this system are not compatible with the cloned system, and
+vice versa.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Context::SetTimeStateAndParametersFrom() for how to copy context
+data between clones.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This implementation is somewhat incomplete at the moment. Many
+systems will not be able to be cloned, and will throw an exception
+instead. To be cloned, at minimum a system must support scalar
+conversion. See system_scalar_conversion.</p>
+</div>
+<p>The result is never nullptr.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.CreateDefaultContext">
 <span id="pydrake.systems.framework.System_[Expression].CreateDefaultContext"></span><span class="sig-name descname"><span class="pre">CreateDefaultContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.CreateDefaultContext" title="Permalink to this definition"></a></dt>
 <dd><p>This convenience method allocates a context using AllocateContext()
@@ -17085,6 +17151,28 @@ these equations.</p>
 from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-float-.Clone">
+<span id="pydrake.systems.framework.System_[float].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-float-.Clone" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a deep copy of this system.</p>
+<p>Even though the cloned system is functionally identical, any contexts
+created for this system are not compatible with the cloned system, and
+vice versa.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Context::SetTimeStateAndParametersFrom() for how to copy context
+data between clones.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This implementation is somewhat incomplete at the moment. Many
+systems will not be able to be cloned, and will throw an exception
+instead. To be cloned, at minimum a system must support scalar
+conversion. See system_scalar_conversion.</p>
+</div>
+<p>The result is never nullptr.</p>
 </dd></dl>
 
 <dl class="py method">

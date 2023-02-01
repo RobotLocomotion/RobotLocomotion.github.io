@@ -16323,20 +16323,23 @@ SpatialInertia.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_.RigidBody_-float-.SetCenterOfMassInBodyFrame">
 <span id="pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetCenterOfMassInBodyFrame"></span><span class="sig-name descname"><span class="pre">SetCenterOfMassInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">com</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_.RigidBody_-float-.SetCenterOfMassInBodyFrame" title="Permalink to this definition"></a></dt>
-<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
-<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dd><p>(Advanced) Sets this body’s center of mass position while preserving
+its inertia about its body origin.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody system.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context contains the state of the multibody system. It is
+modified to store the updated com (center of mass position).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
-expressed in B.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (this body B’s origin) to Bcm (B’s center
+of mass), expressed in B.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
-without modifying I_BBo_B (B’s rotational inertia about Bo,
-expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+<p>This function changes B’s center of mass position <strong>without</strong>
+modifying G_BBo_B (B’s unit inertia about Bo, expressed in B).
+Since this use case is very unlikely, consider using
+SetSpatialInertiaInBodyFrame() or
+SetCenterOfMassInBodyFrameAndPreserveCentralInertia().</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</p>
@@ -16347,6 +16350,10 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dd class="field-odd"><p><strong>RuntimeError if context is null.</strong> – </p>
 </dd>
 </dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function unless it is needed (think twice).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -16542,20 +16549,23 @@ SpatialInertia.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.SetCenterOfMassInBodyFrame">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].SetCenterOfMassInBodyFrame"></span><span class="sig-name descname"><span class="pre">SetCenterOfMassInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">com</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.SetCenterOfMassInBodyFrame" title="Permalink to this definition"></a></dt>
-<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
-<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dd><p>(Advanced) Sets this body’s center of mass position while preserving
+its inertia about its body origin.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody system.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context contains the state of the multibody system. It is
+modified to store the updated com (center of mass position).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
-expressed in B.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (this body B’s origin) to Bcm (B’s center
+of mass), expressed in B.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
-without modifying I_BBo_B (B’s rotational inertia about Bo,
-expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+<p>This function changes B’s center of mass position <strong>without</strong>
+modifying G_BBo_B (B’s unit inertia about Bo, expressed in B).
+Since this use case is very unlikely, consider using
+SetSpatialInertiaInBodyFrame() or
+SetCenterOfMassInBodyFrameAndPreserveCentralInertia().</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</p>
@@ -16566,6 +16576,10 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dd class="field-odd"><p><strong>RuntimeError if context is null.</strong> – </p>
 </dd>
 </dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function unless it is needed (think twice).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -16759,20 +16773,23 @@ SpatialInertia.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.SetCenterOfMassInBodyFrame">
 <span id="pydrake.multibody.tree.RigidBody_[Expression].SetCenterOfMassInBodyFrame"></span><span class="sig-name descname"><span class="pre">SetCenterOfMassInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">com</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.SetCenterOfMassInBodyFrame" title="Permalink to this definition"></a></dt>
-<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
-<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dd><p>(Advanced) Sets this body’s center of mass position while preserving
+its inertia about its body origin.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody system.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context contains the state of the multibody system. It is
+modified to store the updated com (center of mass position).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
-expressed in B.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (this body B’s origin) to Bcm (B’s center
+of mass), expressed in B.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
-without modifying I_BBo_B (B’s rotational inertia about Bo,
-expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+<p>This function changes B’s center of mass position <strong>without</strong>
+modifying G_BBo_B (B’s unit inertia about Bo, expressed in B).
+Since this use case is very unlikely, consider using
+SetSpatialInertiaInBodyFrame() or
+SetCenterOfMassInBodyFrameAndPreserveCentralInertia().</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</p>
@@ -16783,6 +16800,10 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dd class="field-odd"><p><strong>RuntimeError if context is null.</strong> – </p>
 </dd>
 </dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function unless it is needed (think twice).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -16976,20 +16997,23 @@ SpatialInertia.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-float-.SetCenterOfMassInBodyFrame">
 <span id="pydrake.multibody.tree.RigidBody_[float].SetCenterOfMassInBodyFrame"></span><span class="sig-name descname"><span class="pre">SetCenterOfMassInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">com</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-float-.SetCenterOfMassInBodyFrame" title="Permalink to this definition"></a></dt>
-<dd><p>For <code class="docutils literal notranslate"><span class="pre">this</span></code> rigid body B, sets its center of mass position stored in
-<code class="docutils literal notranslate"><span class="pre">context</span></code> to <code class="docutils literal notranslate"><span class="pre">com</span></code>.</p>
+<dd><p>(Advanced) Sets this body’s center of mass position while preserving
+its inertia about its body origin.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody system.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context contains the state of the multibody system. It is
+modified to store the updated com (center of mass position).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (B’s origin) to Bcm (B’s center of mass),
-expressed in B.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">com</span></code>:</dt><dd><p>position vector from Bo (this body B’s origin) to Bcm (B’s center
+of mass), expressed in B.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This function changes <code class="docutils literal notranslate"><span class="pre">this</span></code> body B’s center of mass position
-without modifying I_BBo_B (B’s rotational inertia about Bo,
-expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
+<p>This function changes B’s center of mass position <strong>without</strong>
+modifying G_BBo_B (B’s unit inertia about Bo, expressed in B).
+Since this use case is very unlikely, consider using
+SetSpatialInertiaInBodyFrame() or
+SetCenterOfMassInBodyFrameAndPreserveCentralInertia().</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the context makes sense for use by <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidBody.</p>
@@ -17000,6 +17024,10 @@ expressed in B). If needed, use SetSpatialInertiaInBodyFrame().</p>
 <dd class="field-odd"><p><strong>RuntimeError if context is null.</strong> – </p>
 </dd>
 </dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function unless it is needed (think twice).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -19206,7 +19234,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <span id="pydrake.multibody.tree.ScrewJoint_.ScrewJoint_[float].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_.ScrewJoint_-float-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -19236,7 +19264,6 @@ details on modelling of the damping torque.</p>
 <dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
 </dd>
 </dl>
-<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
@@ -19494,7 +19521,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <span id="pydrake.multibody.tree.ScrewJoint_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -19524,7 +19551,6 @@ details on modelling of the damping torque.</p>
 <dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
 </dd>
 </dl>
-<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
@@ -19780,7 +19806,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <span id="pydrake.multibody.tree.ScrewJoint_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -19810,7 +19836,6 @@ details on modelling of the damping torque.</p>
 <dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
 </dd>
 </dl>
-<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
@@ -20066,7 +20091,7 @@ in the direction of the <code class="docutils literal notranslate"><span class="
 <span id="pydrake.multibody.tree.ScrewJoint_[float].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScrewJoint_-float-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: Optional[float] = None, damping: Optional[float] = None) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a screw joint between two bodies so that frame F
 attached to the parent body P and frame M attached to the child body B
@@ -20096,7 +20121,6 @@ details on modelling of the damping torque.</p>
 <dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
 </dd>
 </dl>
-<p>The defaults values for screw_pitch and damping are deprecated and will removed on 2023-02-01.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.tree.ScrewJoint_[float], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[float], frame_on_child: pydrake.multibody.tree.Frame_[float], axis: numpy.ndarray[numpy.float64[3, 1]], screw_pitch: float, damping: float) -&gt; None</p></li>
 </ol>
@@ -21883,8 +21907,11 @@ these arguments violates RotationalInertia::CouldBePhysicallyValid().</p>
 has no way to verify that the input rotational inertia actually is a
 unit inertia. But the construction will nevertheless succeed, and the
 values of the input rotational inertia will henceforth be considered a
-valid unit inertia. It is the responsibility of the user to pass a
 valid unit inertia.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The user is responsible for passing a valid rotational inertia.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -22284,8 +22311,11 @@ these arguments violates RotationalInertia::CouldBePhysicallyValid().</p>
 has no way to verify that the input rotational inertia actually is a
 unit inertia. But the construction will nevertheless succeed, and the
 values of the input rotational inertia will henceforth be considered a
-valid unit inertia. It is the responsibility of the user to pass a
 valid unit inertia.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The user is responsible for passing a valid rotational inertia.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -22691,8 +22721,11 @@ these arguments violates RotationalInertia::CouldBePhysicallyValid().</p>
 has no way to verify that the input rotational inertia actually is a
 unit inertia. But the construction will nevertheless succeed, and the
 values of the input rotational inertia will henceforth be considered a
-valid unit inertia. It is the responsibility of the user to pass a
 valid unit inertia.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The user is responsible for passing a valid rotational inertia.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -23090,8 +23123,11 @@ these arguments violates RotationalInertia::CouldBePhysicallyValid().</p>
 has no way to verify that the input rotational inertia actually is a
 unit inertia. But the construction will nevertheless succeed, and the
 values of the input rotational inertia will henceforth be considered a
-valid unit inertia. It is the responsibility of the user to pass a
 valid unit inertia.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The user is responsible for passing a valid rotational inertia.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

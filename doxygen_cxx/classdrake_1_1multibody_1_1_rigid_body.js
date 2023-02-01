@@ -31,6 +31,7 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "operator=", "classdrake_1_1multibody_1_1_rigid_body.html#a8e89cbac803b2c194fdf2df13d53804f", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_rigid_body.html#abaa244e80c13ef3c744373f3bcaec801", null ],
     [ "SetCenterOfMassInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#ac79f50a47ba934e2c771f3384aae108f", null ],
+    [ "SetCenterOfMassInBodyFrameAndPreserveCentralInertia", "classdrake_1_1multibody_1_1_rigid_body.html#a1dde4f37f65bd86c368688b9ba5a8e0e", null ],
     [ "SetMass", "classdrake_1_1multibody_1_1_rigid_body.html#ad850c57d3a08a7992a9f22cc30e69ef9", null ],
     [ "SetSpatialInertiaInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918", null ]
 ];

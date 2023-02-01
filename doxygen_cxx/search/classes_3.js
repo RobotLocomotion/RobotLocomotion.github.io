@@ -55,7 +55,6 @@ var searchData=
   ['drakevisualizer',['DrakeVisualizer',['../classdrake_1_1geometry_1_1_drake_visualizer.html',1,'drake::geometry']]],
   ['drakevisualizerparams',['DrakeVisualizerParams',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html',1,'drake::geometry']]],
   ['drakevisualizertest',['DrakeVisualizerTest',['../classdrake_1_1geometry_1_1_drake_visualizer_test.html',1,'drake::geometry']]],
-  ['drealsolver',['DrealSolver',['../classdrake_1_1solvers_1_1_dreal_solver.html',1,'drake::solvers']]],
   ['dummy_5fvalue',['dummy_value',['../structdrake_1_1dummy__value.html',1,'drake']]],
   ['dummy_5fvalue_3c_20int_20_3e',['dummy_value&lt; int &gt;',['../structdrake_1_1dummy__value_3_01int_01_4.html',1,'drake']]],
   ['dummy_5fvalue_3c_20symbolic_3a_3aexpression_20_3e',['dummy_value&lt; symbolic::Expression &gt;',['../structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html',1,'drake']]],

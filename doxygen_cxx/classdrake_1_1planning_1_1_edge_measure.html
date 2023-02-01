@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_edge_measur
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The measure of the distance of the edge from q1 to q2 and the portion of that is collision free. </p>
-<p>Distance is that produced by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a54a0387b7c63685b76f74f4af25bf335" title="Computes configuration-space distance between the provided configurations q_1 and q_2,...">CollisionChecker::ComputeConfigurationDistance()</a> for the entire edge between q1 and q2.</p>
+<p>Distance is that produced by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58" title="Computes configuration-space distance between the provided configurations q1 and q2,...">CollisionChecker::ComputeConfigurationDistance()</a> for the entire edge between q1 and q2.</p>
 <p>The portion of the edge between q1 and q2 that is collision free is encoded as the value α with the following semantics:</p>
 <ul>
 <li>α = 1: No collisions were detected. The full edge can be considered collision free. This is the <em>only</em> time <a class="el" href="classdrake_1_1planning_1_1_edge_measure.html#a45f315d76b75857667d9ebb503323e7d" title="Reports true if all samples were collision free.">completely_free()</a> reports <code>true</code>.</li>
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_edge_measur
 </ul>
 <dl class="section note"><dt>Note</dt><dd>The length of the collision-free edge can be computed via distance * α. To simplify comparisons between a number of edges, some of which may not have a defined α, the function alpha_or(default_value) is provided. This is equivalent to <code>edge.partially_free() ? edge.alpha() : default_value</code>.</dd>
 <dd>
-For α to be meaningful, the caller is obliged to make sure that they use the same interpolating function as the <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> did when generating the measure. Calling <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a38a1eb2882f14ed4882fc8d51e00b917" title="Interpolates between provided configurations q_1 and q_2.">CollisionChecker::InterpolateBetweenConfigurations()</a> on the same checker instance would satisfy that requirement. </dd></dl>
+For α to be meaningful, the caller is obliged to make sure that they use the same interpolating function as the <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> did when generating the measure. Calling <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a15d96471a621cda128cdbc959b4f96c9" title="Interpolates between provided configurations q1 and q2.">CollisionChecker::InterpolateBetweenConfigurations()</a> on the same checker instance would satisfy that requirement. </dd></dl>
 </div>
 <p><code>#include &lt;drake/planning/edge_measure.h&gt;</code></p>
 <table class="memberdecls">

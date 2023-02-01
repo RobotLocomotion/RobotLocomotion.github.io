@@ -212,9 +212,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_csdp_solver_details.html">CsdpSolverDetails</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CSDP solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_csdp_solver_details.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_dreal_solver.html">DrealSolver</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.) dReal support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>.  <a href="classdrake_1_1solvers_1_1_dreal_solver.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html">EqualityConstrainedQPSolver</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a quadratic program with equality constraint.  <a href="classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,9 +238,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_gurobi_solver_details.html">GurobiSolverDetails</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Gurobi solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_gurobi_solver_details.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html">IbexSolver</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.) IBEX support is being withdrawn from Drake; for details, see <a href="https://github.com/RobotLocomotion/drake/pull/18156">https://github.com/RobotLocomotion/drake/pull/18156</a>.  <a href="classdrake_1_1solvers_1_1_ibex_solver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html">IpoptSolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -556,9 +550,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4">kSnopt</a>, 
 <a class="el" href="namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c">kScs</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6">kUnrevisedLemke</a>, 
-<a class="el" href="namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca65fbd0baf8ecc955767af55707dbd36d">kDReal</a>, 
-<a class="el" href="namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaf25185ee32a5e7a033b139d8b7c6ed57">kIbex</a>
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6">kUnrevisedLemke</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a8b06041d7c1fb05f379714f4312306ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This type only exists for backwards compatibility, and should not be used in new code.  <a href="namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ec">More...</a><br /></td></tr>
@@ -1316,8 +1308,6 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 <tr><td class="fieldname"><a id="a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4"></a>kSnopt&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c"></a>kScs&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6"></a>kUnrevisedLemke&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8b06041d7c1fb05f379714f4312306eca65fbd0baf8ecc955767af55707dbd36d"></a>kDReal&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8b06041d7c1fb05f379714f4312306ecaf25185ee32a5e7a033b139d8b7c6ed57"></a>kIbex&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

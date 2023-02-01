@@ -240,21 +240,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a09b2415a4b0787515507518d9c0dd4e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a09b2415a4b0787515507518d9c0dd4e5">SetNaN</a> ()</td></tr>
 <tr class="memdesc:a09b2415a4b0787515507518d9c0dd4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>this</code> spatial inertia to have NaN entries.  <a href="#a09b2415a4b0787515507518d9c0dd4e5">More...</a><br /></td></tr>
 <tr class="separator:a09b2415a4b0787515507518d9c0dd4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7124bb702e0614d7b4874c09e4b0c649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a7124bb702e0614d7b4874c09e4b0c649">operator+=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M_BP_E)</td></tr>
-<tr class="memdesc:a7124bb702e0614d7b4874c09e4b0c649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds in a spatial inertia to <code>this</code> spatial inertia.  <a href="#a7124bb702e0614d7b4874c09e4b0c649">More...</a><br /></td></tr>
-<tr class="separator:a7124bb702e0614d7b4874c09e4b0c649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc865a1da3d8d740ee1e7534e467d57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6cc865a1da3d8d740ee1e7534e467d57">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
-<tr class="memdesc:a6cc865a1da3d8d740ee1e7534e467d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A.  <a href="#a6cc865a1da3d8d740ee1e7534e467d57">More...</a><br /></td></tr>
-<tr class="separator:a6cc865a1da3d8d740ee1e7534e467d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87068d58ff4a71b1d3d9795e9fed4aa6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a87068d58ff4a71b1d3d9795e9fed4aa6">ReExpress</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE) const</td></tr>
-<tr class="memdesc:a87068d58ff4a71b1d3d9795e9fed4aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A.  <a href="#a87068d58ff4a71b1d3d9795e9fed4aa6">More...</a><br /></td></tr>
-<tr class="separator:a87068d58ff4a71b1d3d9795e9fed4aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd8c5e6a454900028bca003bd5cc9539"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#afd8c5e6a454900028bca003bd5cc9539">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E)</td></tr>
-<tr class="memdesc:afd8c5e6a454900028bca003bd5cc9539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q.  <a href="#afd8c5e6a454900028bca003bd5cc9539">More...</a><br /></td></tr>
-<tr class="separator:afd8c5e6a454900028bca003bd5cc9539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0eb83927e03cc49eb573ea200767cee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aa0eb83927e03cc49eb573ea200767cee">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E) const</td></tr>
-<tr class="memdesc:aa0eb83927e03cc49eb573ea200767cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q.  <a href="#aa0eb83927e03cc49eb573ea200767cee">More...</a><br /></td></tr>
-<tr class="separator:aa0eb83927e03cc49eb573ea200767cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09dd10c733d7fcef47041dc724f31ff9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a09dd10c733d7fcef47041dc724f31ff9">operator+=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M_BP_E)</td></tr>
+<tr class="memdesc:a09dd10c733d7fcef47041dc724f31ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds in a spatial inertia to <code>this</code> spatial inertia.  <a href="#a09dd10c733d7fcef47041dc724f31ff9">More...</a><br /></td></tr>
+<tr class="separator:a09dd10c733d7fcef47041dc724f31ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b415756d74ade2ad71be5d4693182a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a49b415756d74ade2ad71be5d4693182a">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
+<tr class="memdesc:a49b415756d74ade2ad71be5d4693182a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A.  <a href="#a49b415756d74ade2ad71be5d4693182a">More...</a><br /></td></tr>
+<tr class="separator:a49b415756d74ade2ad71be5d4693182a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45bbc7d0e5521d0d91579645636b7ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aa45bbc7d0e5521d0d91579645636b7ed">ReExpress</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE) const</td></tr>
+<tr class="memdesc:aa45bbc7d0e5521d0d91579645636b7ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A.  <a href="#aa45bbc7d0e5521d0d91579645636b7ed">More...</a><br /></td></tr>
+<tr class="separator:aa45bbc7d0e5521d0d91579645636b7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66defbdba0b2894045b1f6ffe31c46bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a66defbdba0b2894045b1f6ffe31c46bc">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E)</td></tr>
+<tr class="memdesc:a66defbdba0b2894045b1f6ffe31c46bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q.  <a href="#a66defbdba0b2894045b1f6ffe31c46bc">More...</a><br /></td></tr>
+<tr class="separator:a66defbdba0b2894045b1f6ffe31c46bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f8142e184c3d2f68a4c7f342a6c549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ae7f8142e184c3d2f68a4c7f342a6c549">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E) const</td></tr>
+<tr class="memdesc:ae7f8142e184c3d2f68a4c7f342a6c549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q.  <a href="#ae7f8142e184c3d2f68a4c7f342a6c549">More...</a><br /></td></tr>
+<tr class="separator:ae7f8142e184c3d2f68a4c7f342a6c549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0afd330ef98eb2418ae915e3a1b024"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024">operator *</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt; &amp;A_WB_E) const</td></tr>
 <tr class="memdesc:acd0afd330ef98eb2418ae915e3a1b024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies <code>this</code> spatial inertia <code>M_Bo_E</code> of a body B about its frame origin <code>Bo</code> by the spatial acceleration of the body frame B in a frame W.  <a href="#acd0afd330ef98eb2418ae915e3a1b024">More...</a><br /></td></tr>
 <tr class="separator:acd0afd330ef98eb2418ae915e3a1b024"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,9 +277,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c36e3056b0d3fcc88d8c972df267a0e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a3c36e3056b0d3fcc88d8c972df267a0e">MakeFromCentralInertia</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PScm_E, const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I_SScm_E)</td></tr>
-<tr class="memdesc:a3c36e3056b0d3fcc88d8c972df267a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a physical body or composite body S about a point P from a given mass, center of mass, and central rotational inertia.  <a href="#a3c36e3056b0d3fcc88d8c972df267a0e">More...</a><br /></td></tr>
-<tr class="separator:a3c36e3056b0d3fcc88d8c972df267a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122ea28cb0d9cc88f61b03765076e349"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a122ea28cb0d9cc88f61b03765076e349">MakeFromCentralInertia</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PScm_E, const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I_SScm_E)</td></tr>
+<tr class="memdesc:a122ea28cb0d9cc88f61b03765076e349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a physical body or composite body S about a point P from a given mass, center of mass, and central rotational inertia.  <a href="#a122ea28cb0d9cc88f61b03765076e349">More...</a><br /></td></tr>
+<tr class="separator:a122ea28cb0d9cc88f61b03765076e349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f022e7b3f0771715149a808b11343fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a1f022e7b3f0771715149a808b11343fd">MakeUnitary</a> ()</td></tr>
 <tr class="memdesc:a1f022e7b3f0771715149a808b11343fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates a spatial inertia whose mass is 1, position vector to center of mass is zero, and whose rotational inertia has moments of inertia of 1 and products of inertia of 0.  <a href="#a1f022e7b3f0771715149a808b11343fd">More...</a><br /></td></tr>
 <tr class="separator:a1f022e7b3f0771715149a808b11343fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -298,6 +298,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1bae5f36f05cc66fdbe1a1d18232515"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ad1bae5f36f05cc66fdbe1a1d18232515">SolidSphereWithDensity</a> (const T &amp;density, const T &amp;r)</td></tr>
 <tr class="memdesc:ad1bae5f36f05cc66fdbe1a1d18232515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid sphere B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#ad1bae5f36f05cc66fdbe1a1d18232515">More...</a><br /></td></tr>
 <tr class="separator:ad1bae5f36f05cc66fdbe1a1d18232515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24310926c4f3a0604b4ebb341deca84"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84">SolidTetrahedronAboutPointWithDensity</a> (const T &amp;density, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p0, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p1, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p2, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p3)</td></tr>
+<tr class="memdesc:af24310926c4f3a0604b4ebb341deca84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid tetrahedron B about a point A, from which position vectors to B's 4 vertices B0, B1, B2, B3 are measured (position vectors are all expressed in a common frame E).  <a href="#af24310926c4f3a0604b4ebb341deca84">More...</a><br /></td></tr>
+<tr class="separator:af24310926c4f3a0604b4ebb341deca84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0407ec30127d1a3d4fcb355453485c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a8d0407ec30127d1a3d4fcb355453485c">SolidTetrahedronAboutVertexWithDensity</a> (const T &amp;density, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p1, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p2, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p3)</td></tr>
+<tr class="memdesc:a8d0407ec30127d1a3d4fcb355453485c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a spatial inertia for a uniform density solid tetrahedron B about its vertex B0, from which position vectors to B's other 3 vertices B1, B2, B3 are measured (position vectors are all expressed in a common frame E).  <a href="#a8d0407ec30127d1a3d4fcb355453485c">More...</a><br /></td></tr>
+<tr class="separator:a8d0407ec30127d1a3d4fcb355453485c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -421,7 +427,7 @@ Related Functions</h2></td></tr>
 <p>Constructs a spatial inertia for a physical body or composite body S about a point P from a given mass, center of mass and rotational inertia. </p>
 <p>The center of mass is specified by the position vector <code>p_PScm_E</code> from point P to the center of mass point <code>Scm</code>, expressed in a frame E. The rotational inertia is provided as the <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html" title="This class is used to represent rotational inertias for unit mass bodies.">UnitInertia</a> <code>G_SP_E</code> of the body or composite body S computed about point P and expressed in frame E.</p>
 <dl class="section note"><dt>Note</dt><dd>The third argument of this constructor is unusual in that it is an <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html" title="This class is used to represent rotational inertias for unit mass bodies.">UnitInertia</a> (not a traditional <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a>) and its inertia is about the arbitrary point P (not Scm &ndash; S's center of mass). </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a3c36e3056b0d3fcc88d8c972df267a0e" title="Creates a spatial inertia for a physical body or composite body S about a point P from a given mass,...">MakeFromCentralInertia</a> a factory method with traditional utility.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a122ea28cb0d9cc88f61b03765076e349" title="Creates a spatial inertia for a physical body or composite body S about a point P from a given mass,...">MakeFromCentralInertia</a> a factory method with traditional utility.</dd></dl>
 <p>This constructor checks for the physical validity of the resulting SpatialInertia with <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084" title="Performs a number of checks to verify that this is a physically valid spatial inertia.">IsPhysicallyValid()</a> and throws a std::runtime_error exception in the event the provided input parameters lead to non-physically viable spatial inertia. Since this check has non-negligable runtime costs, it can be disabled by setting the optional argument <code>skip_validity_check</code> to <code>true</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -631,8 +637,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3c36e3056b0d3fcc88d8c972df267a0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c36e3056b0d3fcc88d8c972df267a0e">&#9670;&nbsp;</a></span>MakeFromCentralInertia()</h2>
+<a id="a122ea28cb0d9cc88f61b03765076e349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122ea28cb0d9cc88f61b03765076e349">&#9670;&nbsp;</a></span>MakeFromCentralInertia()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -641,7 +647,7 @@ Related Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> MakeFromCentralInertia </td>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; MakeFromCentralInertia </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>mass</em>, </td>
@@ -795,14 +801,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7124bb702e0614d7b4874c09e4b0c649"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7124bb702e0614d7b4874c09e4b0c649">&#9670;&nbsp;</a></span>operator+=()</h2>
+<a id="a09dd10c733d7fcef47041dc724f31ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09dd10c733d7fcef47041dc724f31ff9">&#9670;&nbsp;</a></span>operator+=()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&amp; operator+= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt;&amp; operator+= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>M_BP_E</em></td><td>)</td>
@@ -876,14 +882,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a87068d58ff4a71b1d3d9795e9fed4aa6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87068d58ff4a71b1d3d9795e9fed4aa6">&#9670;&nbsp;</a></span>ReExpress()</h2>
+<a id="aa45bbc7d0e5521d0d91579645636b7ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45bbc7d0e5521d0d91579645636b7ed">&#9670;&nbsp;</a></span>ReExpress()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> ReExpress </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; ReExpress </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>R_AE</em></td><td>)</td>
@@ -905,18 +911,18 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6cc865a1da3d8d740ee1e7534e467d57" title="Given this spatial inertia M_SP_E for some body or composite body S, taken about a point P and expres...">ReExpressInPlace()</a> for details. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a49b415756d74ade2ad71be5d4693182a" title="Given this spatial inertia M_SP_E for some body or composite body S, taken about a point P and expres...">ReExpressInPlace()</a> for details. </dd></dl>
 
 </div>
 </div>
-<a id="a6cc865a1da3d8d740ee1e7534e467d57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cc865a1da3d8d740ee1e7534e467d57">&#9670;&nbsp;</a></span>ReExpressInPlace()</h2>
+<a id="a49b415756d74ade2ad71be5d4693182a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b415756d74ade2ad71be5d4693182a">&#9670;&nbsp;</a></span>ReExpressInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&amp; ReExpressInPlace </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt;&amp; ReExpressInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>R_AE</em></td><td>)</td>
@@ -956,14 +962,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0eb83927e03cc49eb573ea200767cee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0eb83927e03cc49eb573ea200767cee">&#9670;&nbsp;</a></span>Shift()</h2>
+<a id="ae7f8142e184c3d2f68a4c7f342a6c549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f8142e184c3d2f68a4c7f342a6c549">&#9670;&nbsp;</a></span>Shift()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> Shift </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; Shift </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>p_PQ_E</em></td><td>)</td>
@@ -973,7 +979,7 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q. </p>
-<p>The result still is expressed in frame E. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#afd8c5e6a454900028bca003bd5cc9539" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">ShiftInPlace()</a> for more details.</dd></dl>
+<p>The result still is expressed in frame E. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a66defbdba0b2894045b1f6ffe31c46bc" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">ShiftInPlace()</a> for more details.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p_PQ_E</td><td>Vector from the original about point P to the new about point Q, expressed in the same frame E <code>this</code> spatial inertia is expressed in. </td></tr>
@@ -989,14 +995,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afd8c5e6a454900028bca003bd5cc9539"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd8c5e6a454900028bca003bd5cc9539">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
+<a id="a66defbdba0b2894045b1f6ffe31c46bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66defbdba0b2894045b1f6ffe31c46bc">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&amp; ShiftInPlace </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt;&amp; ShiftInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>p_PQ_E</em></td><td>)</td>
@@ -1006,11 +1012,11 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q. </p>
-<p>The result still is expressed in frame E. This operation is performed in-place modifying the original object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aa0eb83927e03cc49eb573ea200767cee" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">Shift()</a> which does not modify this object.</dd></dl>
+<p>The result still is expressed in frame E. This operation is performed in-place modifying the original object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ae7f8142e184c3d2f68a4c7f342a6c549" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">Shift()</a> which does not modify this object.</dd></dl>
 <p>For details see Section 2.1.2, p. 20 of [Jain 2010].</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_PQ_E</td><td>Vector from the original about point P to the new about point Q, expressed in the same frame E <code>this</code> spatial inertia is expressed in. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_PQ_E</td><td>position vector from the original about-point P to the new about-point Q, expressed in the same frame E that <code>this</code> spatial inertia is expressed in. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1361,6 +1367,150 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af24310926c4f3a0604b4ebb341deca84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24310926c4f3a0604b4ebb341deca84">&#9670;&nbsp;</a></span>SolidTetrahedronAboutPointWithDensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; SolidTetrahedronAboutPointWithDensity </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>density</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a spatial inertia for a uniform density solid tetrahedron B about a point A, from which position vectors to B's 4 vertices B0, B1, B2, B3 are measured (position vectors are all expressed in a common frame E). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">density</td><td>mass per volume (kg/m³). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p0</td><td>position vector p_AB0_E from point A to B0, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>position vector p_AB1_E from point A to B1, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>position vector p_AB2_E from point A to B2, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>position vector p_AB3_E from point A to B3, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BA_E</td><td>B's spatial inertia about point A, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>In the common case, point A is Eo (the origin of the expressed-in frame E). The example below has point A as Wo (origin of world frame W). </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>density ≥ 0. <div class="fragment"><div class="line"><span class="keywordtype">double</span> density = 1000;</div><div class="line">Vector3&lt;double&gt; p_WoB0_W(1, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB1_W(2, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB2_W(1, 1, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB3_W(1, 0, 1);</div><div class="line">SpatialInertia&lt;double&gt; M_BWo_W =</div><div class="line">    <a class="code" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84">SpatialInertia&lt;double&gt;::SolidTetrahedronAboutPointWithDensity</a>(</div><div class="line">        density, p_WoB0_W, p_WoB1_W, p_WoB2_W, p_WoB3_W);</div></div><!-- fragment --> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A positive volume (and mass) occurs if vertices B0, B1, B2 define a triangle with its right-handed normal pointing inward (toward vertex B3). A zero volume means B is a triangle, line, or point (not a tetrahedron). A negative volume occurs if the triangle defined by B0, B1, B2 has its right-handed normal pointing outward (away from vertex B3). </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a8d0407ec30127d1a3d4fcb355453485c" title="(Advanced) Creates a spatial inertia for a uniform density solid tetrahedron B about its vertex B0,...">SolidTetrahedronAboutVertexWithDensity()</a> to efficiently calculate a spatial inertia about a vertex of B. </dd></dl>
+
+</div>
+</div>
+<a id="a8d0407ec30127d1a3d4fcb355453485c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0407ec30127d1a3d4fcb355453485c">&#9670;&nbsp;</a></span>SolidTetrahedronAboutVertexWithDensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; SolidTetrahedronAboutVertexWithDensity </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>density</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Creates a spatial inertia for a uniform density solid tetrahedron B about its vertex B0, from which position vectors to B's other 3 vertices B1, B2, B3 are measured (position vectors are all expressed in a common frame E). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">density</td><td>mass per volume (kg/m³). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>position vector p_B0B1_E from B0 to B1, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>position vector p_B0B2_E from B0 to B2, expressed in E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>position vector p_B0B3_E from B0 to B3, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BB0_E</td><td>B's spatial inertia about its vertex B0, expressed in E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>density ≥ 0. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A positive volume (and mass) occurs if vertices B0, B1, B2 define a triangle with its right-handed normal pointing inward (toward vertex B3). In other words the volume is positive if p1.cross(p2).dot(p3) &gt; 0. A zero volume means B is a triangle, line, or point (not a tetrahedron). In other words the volume is zero if p1.cross(p2).dot(p3) = 0. A negative volume occurs if the triangle defined by B0, B1, B2 has its right-handed normal pointing outward (away from vertex B3). In other words the volume is negative if p1.cross(p2).dot(p3) &lt; 0. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84" title="Creates a spatial inertia for a uniform density solid tetrahedron B about a point A,...">SolidTetrahedronAboutPointWithDensity()</a> to calculate a spatial inertia about an arbitrary point. </dd></dl>
 
 </div>
 </div>

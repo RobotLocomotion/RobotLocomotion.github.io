@@ -422,7 +422,6 @@ var hierarchy =
     ] ],
     [ "IntegratorBase< AutoDiffXd >", "classdrake_1_1systems_1_1_integrator_base.html", null ],
     [ "IntegratorBase< double >", "classdrake_1_1systems_1_1_integrator_base.html", null ],
-    [ "DrealSolver::Interval", "classdrake_1_1solvers_1_1_dreal_solver_1_1_interval.html", null ],
     [ "InverseKinematics", "classdrake_1_1multibody_1_1_inverse_kinematics.html", null ],
     [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", null ],
     [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", null ],
@@ -707,10 +706,8 @@ var hierarchy =
       [ "SolverBase", "classdrake_1_1solvers_1_1_solver_base.html", [
         [ "ClpSolver", "classdrake_1_1solvers_1_1_clp_solver.html", null ],
         [ "CsdpSolver", "classdrake_1_1solvers_1_1_csdp_solver.html", null ],
-        [ "DrealSolver", "classdrake_1_1solvers_1_1_dreal_solver.html", null ],
         [ "EqualityConstrainedQPSolver", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html", null ],
         [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", null ],
-        [ "IbexSolver", "classdrake_1_1solvers_1_1_ibex_solver.html", null ],
         [ "IpoptSolver", "classdrake_1_1solvers_1_1_ipopt_solver.html", null ],
         [ "LinearSystemSolver", "classdrake_1_1solvers_1_1_linear_system_solver.html", null ],
         [ "MobyLCPSolver< T >", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html", null ],
@@ -774,7 +771,6 @@ var hierarchy =
           [ "Diagram< T >", "classdrake_1_1systems_1_1_diagram.html", [
             [ "AcrobotWEncoder< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", null ],
             [ "KukaTorqueController< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html", null ],
-            [ "ManipulationStation< T >", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html", null ],
             [ "RobotDiagram< T >", "classdrake_1_1planning_1_1_robot_diagram.html", null ],
             [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", null ],
             [ "PidControlledSystem< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", null ],

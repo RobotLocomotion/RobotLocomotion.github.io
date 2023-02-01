@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ibexsolver',['IbexSolver',['../classdrake_1_1solvers_1_1_ibex_solver.html',1,'drake::solvers']]],
   ['identifier',['Identifier',['../classdrake_1_1_identifier.html',1,'drake']]],
   ['identifier_3c_20class_20frametag_20_3e',['Identifier&lt; class FrameTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],
   ['identifier_3c_20class_20geometrytag_20_3e',['Identifier&lt; class GeometryTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],
@@ -44,7 +43,6 @@ var searchData=
   ['integratorbase_3c_20autodiffxd_20_3e',['IntegratorBase&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_integrator_base.html',1,'drake::systems']]],
   ['integratorbase_3c_20double_20_3e',['IntegratorBase&lt; double &gt;',['../classdrake_1_1systems_1_1_integrator_base.html',1,'drake::systems']]],
   ['intersection',['Intersection',['../classdrake_1_1geometry_1_1optimization_1_1_intersection.html',1,'drake::geometry::optimization']]],
-  ['interval',['Interval',['../classdrake_1_1solvers_1_1_dreal_solver_1_1_interval.html',1,'drake::solvers::DrealSolver']]],
   ['inversedynamics',['InverseDynamics',['../classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html',1,'drake::systems::controllers']]],
   ['inversedynamicscontroller',['InverseDynamicsController',['../classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html',1,'drake::systems::controllers']]],
   ['inversekinematics',['InverseKinematics',['../classdrake_1_1multibody_1_1_inverse_kinematics.html',1,'drake::multibody']]],

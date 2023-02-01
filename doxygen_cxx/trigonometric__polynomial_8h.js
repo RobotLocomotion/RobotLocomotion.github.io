@@ -9,6 +9,5 @@ var trigonometric__polynomial_8h =
     ] ],
     [ "Substitute", "trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62", null ],
     [ "Substitute", "trigonometric__polynomial_8h.html#a1db53e224c37b630f7ec9d1615215449", null ],
-    [ "SubstituteStereographicProjection", "trigonometric__polynomial_8h.html#ad88f58019962d307b9da7ebc9d32ec87", null ],
-    [ "SubstituteStereographicProjection", "trigonometric__polynomial_8h.html#a74fae4346c33bfaf11326fcd6a85bd7e", null ]
+    [ "SubstituteStereographicProjection", "trigonometric__polynomial_8h.html#ad88f58019962d307b9da7ebc9d32ec87", null ]
 ];
