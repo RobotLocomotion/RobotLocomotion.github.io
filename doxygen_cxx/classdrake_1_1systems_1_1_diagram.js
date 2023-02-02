@@ -8,6 +8,7 @@ var classdrake_1_1systems_1_1_diagram =
     [ "~Diagram", "classdrake_1_1systems_1_1_diagram.html#a2b600f10c3305457a26470df68f859ee", null ],
     [ "Diagram", "classdrake_1_1systems_1_1_diagram.html#a628bfe0e8835a0144d79b2a38424420d", null ],
     [ "Diagram", "classdrake_1_1systems_1_1_diagram.html#ad64960b7eb885a8a74a59378892edb6f", null ],
+    [ "Diagram", "classdrake_1_1systems_1_1_diagram.html#a37818ffe5f15ecbc0f2539c99a3ed500", null ],
     [ "Accept", "classdrake_1_1systems_1_1_diagram.html#af1ae7c5586621d54d7b87de44171beb4", null ],
     [ "AddTriggeredWitnessFunctionToCompositeEventCollection", "classdrake_1_1systems_1_1_diagram.html#af3167bd30bfa014aa61d55fb50ed36f9", null ],
     [ "AllocateDiscreteVariables", "classdrake_1_1systems_1_1_diagram.html#a5c607a69c3cfbf0a75e4745a908d6b1c", null ],

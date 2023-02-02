@@ -88,7 +88,7 @@ var classdrake_1_1geometry_1_1_geometry_state =
     [ "RendererCount", "classdrake_1_1geometry_1_1_geometry_state.html#ae614976e788b66b5ceed6df5fa7fba5e", null ],
     [ "RenderLabelImage", "classdrake_1_1geometry_1_1_geometry_state.html#aba077b59ee3574bbe9a0a602c14293c3", null ],
     [ "SourceIsRegistered", "classdrake_1_1geometry_1_1_geometry_state.html#ab7bb60e8005dd347c7df107f334b166b", null ],
-    [ "ToAutoDiffXd", "classdrake_1_1geometry_1_1_geometry_state.html#a6fb330d5f15f3831a5fd8f712dc66245", null ],
+    [ "ToAutoDiffXd", "classdrake_1_1geometry_1_1_geometry_state.html#aef8bd10a70a30fc4fd3150b9b332696e", null ],
     [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html#acc1754da53dee9bbe4755e63d8a55f5a", null ],
     [ "GeometryStateTester", "classdrake_1_1geometry_1_1_geometry_state.html#a2553ea91626ff1359a16055e30cc2e70", null ],
     [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_geometry_state.html#a09e32deb354fd5ca0cc04c6f6110bcb7", null ]

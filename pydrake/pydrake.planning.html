@@ -2145,6 +2145,15 @@ to understand <code class="docutils literal notranslate"><span class="pre">root_
 <p>This class is a convenient syntactic sugar to help build a robot
 diagram, especially in C++ code where it simplifies object lifetime
 tracking and downcasting of the plant and scene graph references.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The C++ class defines pairs of sibling methods, e.g.,
+parser() vs mutable_parser(). Since Python does not use
+const-ness, we only provide one of the two siblings here,
+using the shorter method name but still allowing mutation,
+e.g., parser() returns a Parser that <em>does</em> allow loading
+models and changing package paths.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.__init__">
 <span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.__init__" title="Permalink to this definition"></a></dt>
@@ -2167,7 +2176,8 @@ unless it’s already been finalized.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.builder">
 <span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].builder"></span><span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (readonly).</p>
+<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
+the return value; instead, call BuildDiagram() on this.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2204,54 +2214,9 @@ unless it’s already been finalized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_builder">
-<span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].mutable_builder"></span><span class="sig-name descname"><span class="pre">mutable_builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
-the return value; instead, call BuildDiagram() on this.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_parser">
-<span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].mutable_parser"></span><span class="sig-name descname"><span class="pre">mutable_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_parser" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained Parser (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_plant">
-<span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].mutable_plant"></span><span class="sig-name descname"><span class="pre">mutable_plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_scene_graph">
-<span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].mutable_scene_graph"></span><span class="sig-name descname"><span class="pre">mutable_scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.mutable_scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.parser">
 <span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].parser"></span><span class="sig-name descname"><span class="pre">parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.parser" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained Parser (readonly).</p>
+<dd><p>Gets the contained Parser (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2262,7 +2227,7 @@ the return value; instead, call BuildDiagram() on this.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.plant">
 <span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].plant"></span><span class="sig-name descname"><span class="pre">plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (readonly).</p>
+<dd><p>Gets the contained plant (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2273,7 +2238,7 @@ the return value; instead, call BuildDiagram() on this.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.scene_graph">
 <span id="pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_[float].scene_graph"></span><span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_.RobotDiagramBuilder_-float-.scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (readonly).</p>
+<dd><p>Gets the contained scene graph (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2293,6 +2258,15 @@ the return value; instead, call BuildDiagram() on this.</p>
 <p>This class is a convenient syntactic sugar to help build a robot
 diagram, especially in C++ code where it simplifies object lifetime
 tracking and downcasting of the plant and scene graph references.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The C++ class defines pairs of sibling methods, e.g.,
+parser() vs mutable_parser(). Since Python does not use
+const-ness, we only provide one of the two siblings here,
+using the shorter method name but still allowing mutation,
+e.g., parser() returns a Parser that <em>does</em> allow loading
+models and changing package paths.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.__init__">
 <span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -2315,7 +2289,8 @@ unless it’s already been finalized.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.builder">
 <span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].builder"></span><span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (readonly).</p>
+<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
+the return value; instead, call BuildDiagram() on this.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2352,43 +2327,9 @@ unless it’s already been finalized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.mutable_builder">
-<span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].mutable_builder"></span><span class="sig-name descname"><span class="pre">mutable_builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.mutable_builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
-the return value; instead, call BuildDiagram() on this.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.mutable_plant">
-<span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].mutable_plant"></span><span class="sig-name descname"><span class="pre">mutable_plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.mutable_plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.mutable_scene_graph">
-<span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].mutable_scene_graph"></span><span class="sig-name descname"><span class="pre">mutable_scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.mutable_scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.plant">
 <span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].plant"></span><span class="sig-name descname"><span class="pre">plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (readonly).</p>
+<dd><p>Gets the contained plant (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2399,7 +2340,7 @@ the return value; instead, call BuildDiagram() on this.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.scene_graph">
 <span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].scene_graph"></span><span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (readonly).</p>
+<dd><p>Gets the contained scene graph (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2417,6 +2358,15 @@ the return value; instead, call BuildDiagram() on this.</p>
 <p>This class is a convenient syntactic sugar to help build a robot
 diagram, especially in C++ code where it simplifies object lifetime
 tracking and downcasting of the plant and scene graph references.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The C++ class defines pairs of sibling methods, e.g.,
+parser() vs mutable_parser(). Since Python does not use
+const-ness, we only provide one of the two siblings here,
+using the shorter method name but still allowing mutation,
+e.g., parser() returns a Parser that <em>does</em> allow loading
+models and changing package paths.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.__init__">
 <span id="pydrake.planning.RobotDiagramBuilder_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.__init__" title="Permalink to this definition"></a></dt>
@@ -2439,7 +2389,8 @@ unless it’s already been finalized.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.builder">
 <span id="pydrake.planning.RobotDiagramBuilder_[Expression].builder"></span><span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (readonly).</p>
+<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
+the return value; instead, call BuildDiagram() on this.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2476,43 +2427,9 @@ unless it’s already been finalized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.mutable_builder">
-<span id="pydrake.planning.RobotDiagramBuilder_[Expression].mutable_builder"></span><span class="sig-name descname"><span class="pre">mutable_builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.mutable_builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
-the return value; instead, call BuildDiagram() on this.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.mutable_plant">
-<span id="pydrake.planning.RobotDiagramBuilder_[Expression].mutable_plant"></span><span class="sig-name descname"><span class="pre">mutable_plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.mutable_plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.mutable_scene_graph">
-<span id="pydrake.planning.RobotDiagramBuilder_[Expression].mutable_scene_graph"></span><span class="sig-name descname"><span class="pre">mutable_scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.mutable_scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.plant">
 <span id="pydrake.planning.RobotDiagramBuilder_[Expression].plant"></span><span class="sig-name descname"><span class="pre">plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (readonly).</p>
+<dd><p>Gets the contained plant (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2523,7 +2440,7 @@ the return value; instead, call BuildDiagram() on this.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.scene_graph">
 <span id="pydrake.planning.RobotDiagramBuilder_[Expression].scene_graph"></span><span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (readonly).</p>
+<dd><p>Gets the contained scene graph (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2541,6 +2458,15 @@ the return value; instead, call BuildDiagram() on this.</p>
 <p>This class is a convenient syntactic sugar to help build a robot
 diagram, especially in C++ code where it simplifies object lifetime
 tracking and downcasting of the plant and scene graph references.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The C++ class defines pairs of sibling methods, e.g.,
+parser() vs mutable_parser(). Since Python does not use
+const-ness, we only provide one of the two siblings here,
+using the shorter method name but still allowing mutation,
+e.g., parser() returns a Parser that <em>does</em> allow loading
+models and changing package paths.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.__init__">
 <span id="pydrake.planning.RobotDiagramBuilder_[float].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.__init__" title="Permalink to this definition"></a></dt>
@@ -2563,7 +2489,8 @@ unless it’s already been finalized.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.builder">
 <span id="pydrake.planning.RobotDiagramBuilder_[float].builder"></span><span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (readonly).</p>
+<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
+the return value; instead, call BuildDiagram() on this.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2600,54 +2527,9 @@ unless it’s already been finalized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.mutable_builder">
-<span id="pydrake.planning.RobotDiagramBuilder_[float].mutable_builder"></span><span class="sig-name descname"><span class="pre">mutable_builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.mutable_builder" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
-the return value; instead, call BuildDiagram() on this.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.mutable_parser">
-<span id="pydrake.planning.RobotDiagramBuilder_[float].mutable_parser"></span><span class="sig-name descname"><span class="pre">mutable_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.mutable_parser" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained Parser (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.mutable_plant">
-<span id="pydrake.planning.RobotDiagramBuilder_[float].mutable_plant"></span><span class="sig-name descname"><span class="pre">mutable_plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.mutable_plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.mutable_scene_graph">
-<span id="pydrake.planning.RobotDiagramBuilder_[float].mutable_scene_graph"></span><span class="sig-name descname"><span class="pre">mutable_scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.mutable_scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (mutable).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.parser">
 <span id="pydrake.planning.RobotDiagramBuilder_[float].parser"></span><span class="sig-name descname"><span class="pre">parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.parser" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained Parser (readonly).</p>
+<dd><p>Gets the contained Parser (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2658,7 +2540,7 @@ the return value; instead, call BuildDiagram() on this.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.plant">
 <span id="pydrake.planning.RobotDiagramBuilder_[float].plant"></span><span class="sig-name descname"><span class="pre">plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.plant" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained plant (readonly).</p>
+<dd><p>Gets the contained plant (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>
@@ -2669,7 +2551,7 @@ the return value; instead, call BuildDiagram() on this.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-float-.scene_graph">
 <span id="pydrake.planning.RobotDiagramBuilder_[float].scene_graph"></span><span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-float-.scene_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the contained scene graph (readonly).</p>
+<dd><p>Gets the contained scene graph (mutable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>exception when IsDiagramBuilt</strong><strong>(</strong><strong>) </strong><strong>already.</strong> – </p>

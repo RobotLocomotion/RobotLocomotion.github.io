@@ -705,6 +705,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad64960b7eb885a8a74a59378892edb6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#ad64960b7eb885a8a74a59378892edb6f">Diagram</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> converter)</td></tr>
 <tr class="memdesc:ad64960b7eb885a8a74a59378892edb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructs an uninitialized <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>.  <a href="#ad64960b7eb885a8a74a59378892edb6f">More...</a><br /></td></tr>
 <tr class="separator:ad64960b7eb885a8a74a59378892edb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37818ffe5f15ecbc0f2539c99a3ed500"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a37818ffe5f15ecbc0f2539c99a3ed500"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37818ffe5f15ecbc0f2539c99a3ed500">Diagram</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> converter, const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="memdesc:a37818ffe5f15ecbc0f2539c99a3ed500"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Scalar-converting constructor, for used by derived classes that are performing a conversion and also need to supply a <code>converter</code> that preserves subtypes for additional conversions.  <a href="#a37818ffe5f15ecbc0f2539c99a3ed500">More...</a><br /></td></tr>
+<tr class="separator:a37818ffe5f15ecbc0f2539c99a3ed500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1f1eff5e4fd7f55d152a1b3b9d4bcd1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#ae1f1eff5e4fd7f55d152a1b3b9d4bcd1">DoCalcWitnessValue</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_witness_function.html">WitnessFunction</a>&lt; T &gt; &amp;witness_func) const final</td></tr>
 <tr class="memdesc:ae1f1eff5e4fd7f55d152a1b3b9d4bcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the subsystem associated with <code>witness_func</code>, gets its subcontext from <code>context</code>, passes the subcontext to <code>witness_func'</code> Evaluate method and returns the result.  <a href="#ae1f1eff5e4fd7f55d152a1b3b9d4bcd1">More...</a><br /></td></tr>
 <tr class="separator:ae1f1eff5e4fd7f55d152a1b3b9d4bcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1120,7 +1124,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a89b57241cc3b1acb02d8b85797d6bebc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89b57241cc3b1acb02d8b85797d6bebc">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b57241cc3b1acb02d8b85797d6bebc">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1146,7 +1150,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a4073a2ae64c63d29775c5e5bad80cb0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4073a2ae64c63d29775c5e5bad80cb0e">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4073a2ae64c63d29775c5e5bad80cb0e">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1172,7 +1176,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a08dce9f3e9a6a92a7f7a1e6cd95005a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08dce9f3e9a6a92a7f7a1e6cd95005a2">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a08dce9f3e9a6a92a7f7a1e6cd95005a2">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1225,7 +1229,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a628bfe0e8835a0144d79b2a38424420d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a628bfe0e8835a0144d79b2a38424420d">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a628bfe0e8835a0144d79b2a38424420d">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1253,7 +1257,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="ad64960b7eb885a8a74a59378892edb6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad64960b7eb885a8a74a59378892edb6f">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad64960b7eb885a8a74a59378892edb6f">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1279,6 +1283,45 @@ Additional Inherited Members</h2></td></tr>
 <p>(Advanced) Constructs an uninitialized <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>. </p>
 <p>Subclasses that use this constructor are obligated to call DiagramBuilder::BuildInto(this).</p>
 <p>Declares scalar-type conversion support using <code>converter</code>. Support for a given pair of types <code>T, U</code> to convert from and to will be enabled only if every contained subsystem supports that pair.</p>
+<p>See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a> for detailed background and examples related to scalar-type conversion support. </p>
+
+</div>
+</div>
+<a id="a37818ffe5f15ecbc0f2539c99a3ed500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37818ffe5f15ecbc0f2539c99a3ed500">&#9670;&nbsp;</a></span>Diagram() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a>&#160;</td>
+          <td class="paramname"><em>converter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Scalar-converting constructor, for used by derived classes that are performing a conversion and also need to supply a <code>converter</code> that preserves subtypes for additional conversions. </p>
 <p>See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a> for detailed background and examples related to scalar-type conversion support. </p>
 
 </div>

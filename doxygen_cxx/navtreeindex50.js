@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,10,6],
 "quadratic__form_8h.html":[4,0,0,7,25],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,25,1],
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,25,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "signed__distance__to__point_8h.html":[4,0,0,4,3,4],
 "sim__rgbd__sensor_8h.html":[4,0,0,12,8,17],
 "simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,26],
-"simplification_8h.html":[4,0,0,1,3,16],
-"simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,16,2]
+"simplification_8h.html":[4,0,0,1,3,16]
 };
