@@ -11,7 +11,7 @@ var searchData=
   ['x_5fpc',['X_PC',['../structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a6651775aae5fef2c3cc30dd91b7018ff',1,'drake::multibody::parsing::AddWeld::X_PC()'],['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b',1,'drake::multibody::parsing::ModelInstanceInfo::X_PC()']]],
   ['x_5fpf',['X_PF',['../structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a636ceb2573c5bf8b0d3a1e978717dc94',1,'drake::multibody::parsing::AddFrame']]],
   ['x_5fup',['x_up',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a1c89886a59dfaa4862b55712c37b876b',1,'drake::solvers::AugmentedLagrangianNonsmooth::x_up()'],['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#a1c89886a59dfaa4862b55712c37b876b',1,'drake::solvers::AugmentedLagrangianSmooth::x_up()']]],
-  ['x_5fvars',['x_vars',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a2bba238b83d8a4a8cfc34e763937a0b7',1,'drake::systems::trajectory_optimization::MultipleShooting']]],
+  ['x_5fvars',['x_vars',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a2bba238b83d8a4a8cfc34e763937a0b7',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
   ['x_5fwgripper',['X_WGripper',['../namespacedrake_1_1examples_1_1planar__gripper.html#aac827d36be5bbdcf57001c67fde0c969',1,'drake::examples::planar_gripper']]],
   ['xa_5fticket',['xa_ticket',['../classdrake_1_1systems_1_1_system_base.html#a19842775d11b50e5ae56abcc6d38ccc4',1,'drake::systems::SystemBase']]],
   ['xabsolutetolerancename',['XAbsoluteToleranceName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#abc5ac406da08694840aacd7b374b127a',1,'drake::solvers::NloptSolver']]],

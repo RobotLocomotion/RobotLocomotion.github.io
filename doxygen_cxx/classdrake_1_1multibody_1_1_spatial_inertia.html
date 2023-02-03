@@ -1441,7 +1441,6 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>In the common case, point A is Eo (the origin of the expressed-in frame E). The example below has point A as Wo (origin of world frame W). </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>density ≥ 0. <div class="fragment"><div class="line"><span class="keywordtype">double</span> density = 1000;</div><div class="line">Vector3&lt;double&gt; p_WoB0_W(1, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB1_W(2, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB2_W(1, 1, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB3_W(1, 0, 1);</div><div class="line">SpatialInertia&lt;double&gt; M_BWo_W =</div><div class="line">    <a class="code" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84">SpatialInertia&lt;double&gt;::SolidTetrahedronAboutPointWithDensity</a>(</div><div class="line">        density, p_WoB0_W, p_WoB1_W, p_WoB2_W, p_WoB3_W);</div></div><!-- fragment --> </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>A positive volume (and mass) occurs if vertices B0, B1, B2 define a triangle with its right-handed normal pointing inward (toward vertex B3). A zero volume means B is a triangle, line, or point (not a tetrahedron). A negative volume occurs if the triangle defined by B0, B1, B2 has its right-handed normal pointing outward (away from vertex B3). </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a8d0407ec30127d1a3d4fcb355453485c" title="(Advanced) Creates a spatial inertia for a uniform density solid tetrahedron B about its vertex B0,...">SolidTetrahedronAboutVertexWithDensity()</a> to efficiently calculate a spatial inertia about a vertex of B. </dd></dl>
 
 </div>
@@ -1509,7 +1508,6 @@ Related Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>density ≥ 0. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>A positive volume (and mass) occurs if vertices B0, B1, B2 define a triangle with its right-handed normal pointing inward (toward vertex B3). In other words the volume is positive if p1.cross(p2).dot(p3) &gt; 0. A zero volume means B is a triangle, line, or point (not a tetrahedron). In other words the volume is zero if p1.cross(p2).dot(p3) = 0. A negative volume occurs if the triangle defined by B0, B1, B2 has its right-handed normal pointing outward (away from vertex B3). In other words the volume is negative if p1.cross(p2).dot(p3) &lt; 0. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84" title="Creates a spatial inertia for a uniform density solid tetrahedron B about a point A,...">SolidTetrahedronAboutPointWithDensity()</a> to calculate a spatial inertia about an arbitrary point. </dd></dl>
 
 </div>

@@ -10,7 +10,7 @@ var searchData=
   ['colord',['ColorD',['../namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87',1,'drake::systems::sensors']]],
   ['colori',['ColorI',['../namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58',1,'drake::systems::sensors']]],
   ['commonscalarpack',['CommonScalarPack',['../namespacedrake_1_1pydrake.html#a52292ed585da63084b8914356a744d04',1,'drake::pydrake']]],
-  ['completetrajectorycallback',['CompleteTrajectoryCallback',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ac1e9e3e110151e83db01f19f0dd99f46',1,'drake::systems::trajectory_optimization::MultipleShooting']]],
+  ['completetrajectorycallback',['CompleteTrajectoryCallback',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac1e9e3e110151e83db01f19f0dd99f46',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
   ['configurationdistancefunction',['ConfigurationDistanceFunction',['../namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4',1,'drake::planning']]],
   ['configurationinterpolationfunction',['ConfigurationInterpolationFunction',['../namespacedrake_1_1planning.html#a75d00a46d4a0685ffa20482705e7e8e7',1,'drake::planning']]],
   ['const_5fiterator',['const_iterator',['../classdrake_1_1symbolic_1_1_environment.html#a773ced7f47990ff0ab85f94b676470e7',1,'drake::symbolic::Environment::const_iterator()'],['../classdrake_1_1symbolic_1_1_variables.html#a74034f831fa20a67ade35109b2ce4936',1,'drake::symbolic::Variables::const_iterator()']]],

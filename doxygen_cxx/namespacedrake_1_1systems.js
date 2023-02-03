@@ -9,7 +9,6 @@ var namespacedrake_1_1systems =
     [ "rendering", "namespacedrake_1_1systems_1_1rendering.html", "namespacedrake_1_1systems_1_1rendering" ],
     [ "scalar_conversion", "namespacedrake_1_1systems_1_1scalar__conversion.html", "namespacedrake_1_1systems_1_1scalar__conversion" ],
     [ "sensors", "namespacedrake_1_1systems_1_1sensors.html", "namespacedrake_1_1systems_1_1sensors" ],
-    [ "trajectory_optimization", "namespacedrake_1_1systems_1_1trajectory__optimization.html", "namespacedrake_1_1systems_1_1trajectory__optimization" ],
     [ "AbstractValues", "classdrake_1_1systems_1_1_abstract_values.html", "classdrake_1_1systems_1_1_abstract_values" ],
     [ "Adder", "classdrake_1_1systems_1_1_adder.html", "classdrake_1_1systems_1_1_adder" ],
     [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html", "classdrake_1_1systems_1_1_affine_system" ],

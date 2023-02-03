@@ -85,7 +85,7 @@ var searchData=
   ['multibody_5ftree_5fsystem_2eh',['multibody_tree_system.h',['../multibody__tree__system_8h.html',1,'']]],
   ['multibody_5ftree_5ftopology_2eh',['multibody_tree_topology.h',['../multibody__tree__topology_8h.html',1,'']]],
   ['multilayer_5fperceptron_2eh',['multilayer_perceptron.h',['../multilayer__perceptron_8h.html',1,'']]],
-  ['multiple_5fshooting_2eh',['multiple_shooting.h',['../multiple__shooting_8h.html',1,'']]],
+  ['multiple_5fshooting_2eh',['multiple_shooting.h',['../planning_2trajectory__optimization_2multiple__shooting_8h.html',1,'(Global Namespace)'],['../systems_2trajectory__optimization_2stub_2multiple__shooting_8h.html',1,'(Global Namespace)']]],
   ['multiplexer_2eh',['multiplexer.h',['../multiplexer_8h.html',1,'']]],
   ['my_5fspring_5fmass_5fsystem_2eh',['my_spring_mass_system.h',['../my__spring__mass__system_8h.html',1,'']]],
   ['my_5fvector_2eh',['my_vector.h',['../my__vector_8h.html',1,'']]]

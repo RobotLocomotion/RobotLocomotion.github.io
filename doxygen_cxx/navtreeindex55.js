@@ -1,5 +1,11 @@
 var NAVTREEINDEX55 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#ae776c7f36f23b580fc8353cc6764445a":[3,0,0,16,8,2,1,5],
+"structdrake_1_1systems_1_1sensors_1_1_color.html":[3,0,0,16,8,4],
+"structdrake_1_1systems_1_1sensors_1_1_color.html#a3ff0123200292ec4b7e3e6319d048fa0":[3,0,0,16,8,4,4],
+"structdrake_1_1systems_1_1sensors_1_1_color.html#a70aa3ccb6edfa3c0c478e50922c4a428":[3,0,0,16,8,4,3],
+"structdrake_1_1systems_1_1sensors_1_1_color.html#a7ba8c548fb8d75d2964aecfcaa190cf7":[3,0,0,16,8,4,0],
+"structdrake_1_1systems_1_1sensors_1_1_color.html#ab193f6df4384bd52ec983795719e707c":[3,0,0,16,8,4,1],
 "structdrake_1_1systems_1_1sensors_1_1_color.html#adab634951eeadcd5a7c8840eefbf780f":[3,0,0,16,8,4,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits.html":[3,0,0,16,8,9],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html":[3,0,0,16,8,10],
@@ -74,9 +80,6 @@ var NAVTREEINDEX55 =
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,36,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html":[3,0,0,16,8,37],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,37,0],
-"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,16,9,6],
-"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,16,9,6,0],
-"structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,16,9,6,1],
 "structdrake_1_1template__single__tag.html":[3,0,0,52],
 "structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,52,0],
 "structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,17,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX55 =
 "system__constraint__adapter_8h.html":[4,0,0,12,5,0],
 "system__constraint__wrapper_8h.html":[4,0,0,12,5,1],
 "system__constraint__wrapper_8h.html#aa012f2e77f3c419bf4b10632f6eb6507":[4,0,0,12,5,1,1],
-"system__dynamics__data_8h.html":[4,0,0,8,2,12],
-"system__html_8h.html":[4,0,0,12,3,43],
-"system__html_8h.html#ga3e4e6a211dd145828511de57c117c5aa":[4,0,0,12,3,43,0],
-"system__output_8h.html":[4,0,0,12,3,44]
+"system__dynamics__data_8h.html":[4,0,0,8,2,12]
 };

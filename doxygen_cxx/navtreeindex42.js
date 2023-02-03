@@ -135,6 +135,7 @@ var NAVTREEINDEX42 =
 "dir_a36da230f0956f48b11c85f7d599788f.html":[4,0,0,1],
 "dir_a475b9d7562d90f72dfa4821e049558f.html":[4,0,0,1,6],
 "dir_a8013f4957f3230075674e48512c1ba8.html":[4,0,0,0],
+"dir_af8ef3a05745bcad3befc5f44a74bc6b.html":[4,0,0,12,9,0],
 "dir_b001a274ea8b6b5c370fedfcc7a1b81c.html":[4,0,0,12,4],
 "dir_b54e51ce690a91bb5edb8aefc17ffc16.html":[4,0,0,8,0,2],
 "dir_b7a0e33b407baa23d8a077e33033c988.html":[4,0,0,12],
@@ -154,6 +155,7 @@ var NAVTREEINDEX42 =
 "dir_d0d5bed5913df116d7ad8f512e215287.html":[4,0,0,2],
 "dir_d3878caba3bf16757758386412eac594.html":[4,0,0,3,7,0],
 "dir_d3895d447a0b4ed0132fd543feb284e9.html":[4,0,0,12,3,0],
+"dir_d3b9c8c863d1cf0f0e483ccaf53b793e.html":[4,0,0,10,1],
 "dir_d42ade6542543a8b520c5d5191846d08.html":[4,0,0,3,8],
 "dir_d739e095b49d8b72164589d00310017d.html":[4,0,0,4],
 "dir_d8973131f51b66669fc427ecaef4c4db.html":[4,0,0,12,0,0],
@@ -169,9 +171,6 @@ var NAVTREEINDEX42 =
 "dir_fc0178d6978c9fa2cad6ef3e048a60a7.html":[4,0,0,7],
 "dir_fd5a8b80375bde94b1137be9b3ceb9fd.html":[4,0,0,0,0,4],
 "dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
-"direct__collocation_8h.html":[4,0,0,12,9,0],
-"direct__collocation_8h.html#a7892807b1bff07e1d38eab480b35880c":[4,0,0,12,9,0,0],
-"direct__transcription_8h.html":[4,0,0,12,9,1],
 "dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8],
 "dirichlet__boundary__condition_8h.html#ae2a9fef64ae955d7fad6cbef266f2d68":[4,0,0,8,3,8,0],
 "discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
@@ -241,7 +240,7 @@ var NAVTREEINDEX42 =
 "dynamic__programming_8h.html":[4,0,0,12,1,1],
 "dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,12,1,1,2],
 "dynamic__programming_8h.html#gae068476fdb8f21578acb538f70ec3e14":[4,0,0,12,1,1,3],
-"edge__measure_8h.html":[4,0,0,10,6],
+"edge__measure_8h.html":[4,0,0,10,7],
 "eigen__autodiff__types_8h.html":[4,0,0,1,28],
 "eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[4,0,0,1,28,3],
 "eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,28,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX42 =
 "eigen__autodiff__types_8h.html#a7b13142534d668d5d490b829b917fa16":[4,0,0,1,28,2],
 "eigen__geometry__pybind_8h.html":[4,0,0,0,0,0,4],
 "eigen__matrix__compare_8h.html":[4,0,0,1,4,0],
-"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2":[4,0,0,1,4,0,0]
+"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2":[4,0,0,1,4,0,0],
+"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2a99c483e1d11b1a279a2a1a3960528487":[4,0,0,1,4,0,0,1]
 };

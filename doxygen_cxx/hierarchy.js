@@ -210,6 +210,8 @@ var hierarchy =
         [ "StaticEquilibriumConstraint", "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html", null ],
         [ "StaticFrictionConeConstraint", "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html", null ],
         [ "UnitQuaternionConstraint", "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html", null ],
+        [ "DirectCollocationConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html", null ],
+        [ "MidPointIntegrationConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html", null ],
         [ "EvaluatorConstraint< EvaluatorType >", "classdrake_1_1solvers_1_1_evaluator_constraint.html", null ],
         [ "ExponentialConeConstraint", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html", null ],
         [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html", null ],
@@ -225,8 +227,6 @@ var hierarchy =
         [ "QuadraticConstraint", "classdrake_1_1solvers_1_1_quadratic_constraint.html", null ],
         [ "RotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html", null ],
         [ "SystemConstraintWrapper", "classdrake_1_1systems_1_1_system_constraint_wrapper.html", null ],
-        [ "DirectCollocationConstraint", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html", null ],
-        [ "MidPointIntegrationConstraint", "classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html", null ],
         [ "EvaluatorConstraint< PolynomialEvaluator >", "classdrake_1_1solvers_1_1_evaluator_constraint.html", [
           [ "PolynomialConstraint", "classdrake_1_1solvers_1_1_polynomial_constraint.html", null ]
         ] ]
@@ -432,7 +432,7 @@ var hierarchy =
     [ "JointImpedanceController", "classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html", null ],
     [ "Joint< T >::JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", null ],
     [ "KinematicsVector< Id, KinematicsValue >", "classdrake_1_1geometry_1_1_kinematics_vector.html", null ],
-    [ "KinematicTrajectoryOptimization", "classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html", null ],
+    [ "KinematicTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html", null ],
     [ "KukaRobotJointReactionForces< T >", "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html", null ],
     [ "LcmBuses", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html", null ],
     [ "LcmImageTraits< PixelType >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html", null ],
@@ -525,9 +525,9 @@ var hierarchy =
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
     [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", null ],
     [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", null ],
-    [ "MultipleShooting", "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html", [
-      [ "DirectCollocation", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html", null ],
-      [ "DirectTranscription", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html", null ]
+    [ "MultipleShooting", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html", [
+      [ "DirectCollocation", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html", null ],
+      [ "DirectTranscription", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html", null ]
     ] ],
     [ "MultiplyEigenSizes< a, b >", "structdrake_1_1_multiply_eigen_sizes.html", null ],
     [ "NameValue< T >", "classdrake_1_1_name_value.html", null ],
@@ -991,7 +991,7 @@ var hierarchy =
     [ "Timer", "classdrake_1_1_timer.html", [
       [ "SteadyTimer", "classdrake_1_1_steady_timer.html", null ]
     ] ],
-    [ "TimeStep", "structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html", null ],
+    [ "TimeStep", "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [

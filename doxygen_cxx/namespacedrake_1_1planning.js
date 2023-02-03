@@ -1,6 +1,7 @@
 var namespacedrake_1_1planning =
 [
     [ "test", "namespacedrake_1_1planning_1_1test.html", "namespacedrake_1_1planning_1_1test" ],
+    [ "trajectory_optimization", "namespacedrake_1_1planning_1_1trajectory__optimization.html", "namespacedrake_1_1planning_1_1trajectory__optimization" ],
     [ "BodyShapeDescription", "classdrake_1_1planning_1_1_body_shape_description.html", "classdrake_1_1planning_1_1_body_shape_description" ],
     [ "CollisionChecker", "classdrake_1_1planning_1_1_collision_checker.html", "classdrake_1_1planning_1_1_collision_checker" ],
     [ "CollisionCheckerContext", "classdrake_1_1planning_1_1_collision_checker_context.html", "classdrake_1_1planning_1_1_collision_checker_context" ],

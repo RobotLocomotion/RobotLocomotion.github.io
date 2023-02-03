@@ -1,7 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"internal__vtk__util_8h.html#abdb94acdad86ca639785432a868abbd0":[4,0,0,4,7,3,1],
-"internal__vtk__util_8h.html#abfb696bdfb8aca5a7cec2ab0e167c889":[4,0,0,4,7,3,3],
 "intersection_8h.html":[4,0,0,4,1,5],
 "inverse__dynamics_8h.html":[4,0,0,12,1,3],
 "inverse__dynamics__controller_8h.html":[4,0,0,12,1,4],
@@ -46,7 +44,6 @@ var NAVTREEINDEX47 =
 "kalman__filter_8h.html#ga483f8a39c210ad058dfc19ae26d93e16":[4,0,0,12,2,0,0],
 "kalman__filter_8h.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,12,2,0,2],
 "kinematic__evaluator__utilities_8h.html":[4,0,0,8,5,10],
-"kinematic__trajectory__optimization_8h.html":[4,0,0,12,9,3],
 "kinematics__vector_8h.html":[4,0,0,4,25],
 "kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,25,1],
 "kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,25,2],
@@ -249,5 +246,8 @@ var NAVTREEINDEX47 =
 "monomial__util_8h.html#aff00cd9261b602f7ce7708286d2dae05":[4,0,0,1,3,10,2],
 "monostate__pybind_8h.html":[4,0,0,0,0,0,7],
 "monte__carlo_8h.html":[4,0,0,12,0,12],
-"monte__carlo_8h.html#a093baffca68144967ca38da942917459":[4,0,0,12,0,12,2]
+"monte__carlo_8h.html#a093baffca68144967ca38da942917459":[4,0,0,12,0,12,2],
+"monte__carlo_8h.html#a2df45efdced327ad20c26403412fb37f":[4,0,0,12,0,12,6],
+"monte__carlo_8h.html#acba2b2630b11f7f987c6924bcdba3c8e":[4,0,0,12,0,12,1],
+"monte__carlo_8h.html#acbf0cc4b5c52b3cb6a6c113450610e3b":[4,0,0,12,0,12,5]
 };

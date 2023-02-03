@@ -25,7 +25,7 @@ var searchData=
   ['instantaneous_5frealtime_5frate_5fcalculator_2eh',['instantaneous_realtime_rate_calculator.h',['../instantaneous__realtime__rate__calculator_8h.html',1,'']]],
   ['integer_5finequality_5fsolver_2eh',['integer_inequality_solver.h',['../integer__inequality__solver_8h.html',1,'']]],
   ['integer_5foptimization_5futil_2eh',['integer_optimization_util.h',['../integer__optimization__util_8h.html',1,'']]],
-  ['integration_5fconstraint_2eh',['integration_constraint.h',['../integration__constraint_8h.html',1,'']]],
+  ['integration_5fconstraint_2eh',['integration_constraint.h',['../planning_2trajectory__optimization_2integration__constraint_8h.html',1,'(Global Namespace)'],['../systems_2trajectory__optimization_2stub_2integration__constraint_8h.html',1,'(Global Namespace)']]],
   ['integrator_2eh',['integrator.h',['../integrator_8h.html',1,'']]],
   ['integrator_5fbase_2eh',['integrator_base.h',['../integrator__base_8h.html',1,'']]],
   ['internal_5fbuffer_5fdim_2eh',['internal_buffer_dim.h',['../internal__buffer__dim_8h.html',1,'']]],

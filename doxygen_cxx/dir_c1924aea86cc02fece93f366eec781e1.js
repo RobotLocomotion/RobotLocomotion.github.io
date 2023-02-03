@@ -1,6 +1,7 @@
 var dir_c1924aea86cc02fece93f366eec781e1 =
 [
     [ "test_utilities", "dir_6902f0bfef501365a3845194d27e0ad3.html", "dir_6902f0bfef501365a3845194d27e0ad3" ],
+    [ "trajectory_optimization", "dir_d3b9c8c863d1cf0f0e483ccaf53b793e.html", "dir_d3b9c8c863d1cf0f0e483ccaf53b793e" ],
     [ "body_shape_description.h", "body__shape__description_8h.html", "body__shape__description_8h" ],
     [ "collision_avoidance.h", "collision__avoidance_8h.html", null ],
     [ "collision_checker.h", "collision__checker_8h.html", [

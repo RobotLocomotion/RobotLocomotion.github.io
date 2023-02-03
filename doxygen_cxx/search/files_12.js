@@ -38,7 +38,7 @@ var searchData=
   ['scs_5fsolver_2eh',['scs_solver.h',['../scs__solver_8h.html',1,'']]],
   ['sdpa_5ffree_5fformat_2eh',['sdpa_free_format.h',['../sdpa__free__format_8h.html',1,'']]],
   ['semi_5fexplicit_5feuler_5fintegrator_2eh',['semi_explicit_euler_integrator.h',['../semi__explicit__euler__integrator_8h.html',1,'']]],
-  ['sequential_5fexpression_5fmanager_2eh',['sequential_expression_manager.h',['../sequential__expression__manager_8h.html',1,'']]],
+  ['sequential_5fexpression_5fmanager_2eh',['sequential_expression_manager.h',['../planning_2trajectory__optimization_2sequential__expression__manager_8h.html',1,'(Global Namespace)'],['../systems_2trajectory__optimization_2stub_2sequential__expression__manager_8h.html',1,'(Global Namespace)']]],
   ['serialize_5fpybind_2eh',['serialize_pybind.h',['../serialize__pybind_8h.html',1,'']]],
   ['serializer_2eh',['serializer.h',['../serializer_8h.html',1,'']]],
   ['shape_5fspecification_2eh',['shape_specification.h',['../shape__specification_8h.html',1,'']]],

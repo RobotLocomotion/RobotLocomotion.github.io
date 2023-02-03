@@ -71,7 +71,7 @@ var searchData=
   ['test',['test',['../namespacedrake_1_1common_1_1test.html',1,'drake::common::test'],['../namespacedrake_1_1multibody_1_1test.html',1,'drake::multibody::test'],['../namespacedrake_1_1planning_1_1test.html',1,'drake::planning::test'],['../namespacedrake_1_1solvers_1_1test.html',1,'drake::solvers::test'],['../namespacedrake_1_1symbolic_1_1test.html',1,'drake::symbolic::test'],['../namespacedrake_1_1systems_1_1analysis_1_1test.html',1,'drake::systems::analysis::test'],['../namespacedrake_1_1systems_1_1test.html',1,'drake::systems::test'],['../namespacedrake_1_1test.html',1,'drake::test']]],
   ['test_5futilities',['test_utilities',['../namespacedrake_1_1multibody_1_1test__utilities.html',1,'drake::multibody']]],
   ['trajectories',['trajectories',['../namespacedrake_1_1trajectories.html',1,'drake']]],
-  ['trajectory_5foptimization',['trajectory_optimization',['../namespacedrake_1_1systems_1_1trajectory__optimization.html',1,'drake::systems']]],
+  ['trajectory_5foptimization',['trajectory_optimization',['../namespacedrake_1_1planning_1_1trajectory__optimization.html',1,'drake::planning::trajectory_optimization'],['../namespacedrake_1_1systems_1_1trajectory__optimization.html',1,'drake::systems::trajectory_optimization']]],
   ['util',['util',['../namespacedrake_1_1manipulation_1_1util.html',1,'drake::manipulation']]],
   ['van_5fder_5fpol',['van_der_pol',['../namespacedrake_1_1examples_1_1van__der__pol.html',1,'drake::examples']]],
   ['visualization',['visualization',['../namespacedrake_1_1visualization.html',1,'drake']]],

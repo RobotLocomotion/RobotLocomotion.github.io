@@ -159,100 +159,125 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1systems_1_1trajector
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">drake::systems::trajectory_optimization Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html">DirectCollocation</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html" title="DirectCollocation implements the approach to trajectory optimization as described in C.">DirectCollocation</a> implements the approach to trajectory optimization as described in C.  <a href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">DirectCollocationConstraint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the direct collocation constraints for a first-order hold on the input and a cubic polynomial representation of the state trajectories.  <a href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html">DirectTranscription</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html" title="DirectTranscription is perhaps the simplest implementation of a multiple shooting method,...">DirectTranscription</a> is perhaps the simplest implementation of a multiple shooting method, where we have decision variables representing the control and input at every sample time in the trajectory, and one-step of numerical integration provides the dynamic constraints between those decision variables.  <a href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html">KinematicTrajectoryOptimization</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimizes a trajectory, q(t) subject to costs and constraints on the trajectory and its derivatives.  <a href="classdrake_1_1systems_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html">MidPointIntegrationConstraint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the midpoint integration.  <a href="classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html">MultipleShooting</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> is an abstract class for trajectory optimization that creates decision variables for inputs, states, and (optionally) sample times along the trajectory, then provides a number of methods for working with those decision variables.  <a href="classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html">TimeStep</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a7892807b1bff07e1d38eab480b35880c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a7892807b1bff07e1d38eab480b35880c">AddDirectCollocationConstraint</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">DirectCollocationConstraint</a> &gt; constraint, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;timestep, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;state, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;next_state, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;input, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;next_input, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog)</td></tr>
-<tr class="memdesc:a7892807b1bff07e1d38eab480b35880c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method to add a <a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html" title="Implements the direct collocation constraints for a first-order hold on the input and a cubic polynom...">DirectCollocationConstraint</a> to the <code>prog</code>, ensuring that the order of variables in the binding matches the order expected by the constraint.  <a href="#a7892807b1bff07e1d38eab480b35880c">More...</a><br /></td></tr>
-<tr class="separator:a7892807b1bff07e1d38eab480b35880c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1573905be40605eb94c2ceccf226abad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a1573905be40605eb94c2ceccf226abad">DirectCollocation</a> = <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html">drake::planning::trajectory_optimization::DirectCollocation</a></td></tr>
+<tr class="separator:a1573905be40605eb94c2ceccf226abad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64946368f2d8191f1719b92d5dabf47d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a64946368f2d8191f1719b92d5dabf47d">DirectCollocationConstraint</a> = <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">drake::planning::trajectory_optimization::DirectCollocationConstraint</a></td></tr>
+<tr class="separator:a64946368f2d8191f1719b92d5dabf47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ec3332c42316d47f65b952a9753fd9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a21ec3332c42316d47f65b952a9753fd9">TimeStep</a> = <a class="el" href="structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html">drake::planning::trajectory_optimization::TimeStep</a></td></tr>
+<tr class="separator:a21ec3332c42316d47f65b952a9753fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac037bd9c0e69d2636fb6f759c2f6be94"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#ac037bd9c0e69d2636fb6f759c2f6be94">DirectTranscription</a> = <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html">drake::planning::trajectory_optimization::DirectTranscription</a></td></tr>
+<tr class="separator:ac037bd9c0e69d2636fb6f759c2f6be94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40332cacec47e48e60a675bb38d01b8e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a40332cacec47e48e60a675bb38d01b8e">MidPointIntegrationConstraint</a> = <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html">drake::planning::trajectory_optimization::MidPointIntegrationConstraint</a></td></tr>
+<tr class="separator:a40332cacec47e48e60a675bb38d01b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d7bf11ec88a054ff595a4a95a472bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#af1d7bf11ec88a054ff595a4a95a472bb">KinematicTrajectoryOptimization</a> = <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html">drake::planning::trajectory_optimization::KinematicTrajectoryOptimization</a></td></tr>
+<tr class="separator:af1d7bf11ec88a054ff595a4a95a472bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbf0e9679105b402b44b3d40a7e97e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a3fbf0e9679105b402b44b3d40a7e97e1">MultipleShooting</a> = <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html">drake::planning::trajectory_optimization::MultipleShooting</a></td></tr>
+<tr class="separator:a3fbf0e9679105b402b44b3d40a7e97e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a7892807b1bff07e1d38eab480b35880c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7892807b1bff07e1d38eab480b35880c">&#9670;&nbsp;</a></span>AddDirectCollocationConstraint()</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a1573905be40605eb94c2ceccf226abad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1573905be40605eb94c2ceccf226abad">&#9670;&nbsp;</a></span>DirectCollocation</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; drake::systems::trajectory_optimization::AddDirectCollocationConstraint </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">DirectCollocationConstraint</a> &gt;&#160;</td>
-          <td class="paramname"><em>constraint</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>timestep</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>next_state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>input</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>next_input</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
-          <td class="paramname"><em>prog</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a1573905be40605eb94c2ceccf226abad">DirectCollocation</a> =  <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html">drake::planning::trajectory_optimization::DirectCollocation</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Helper method to add a <a class="el" href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html" title="Implements the direct collocation constraints for a first-order hold on the input and a cubic polynom...">DirectCollocationConstraint</a> to the <code>prog</code>, ensuring that the order of variables in the binding matches the order expected by the constraint. </p>
+</div>
+</div>
+<a id="a64946368f2d8191f1719b92d5dabf47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64946368f2d8191f1719b92d5dabf47d">&#9670;&nbsp;</a></span>DirectCollocationConstraint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a64946368f2d8191f1719b92d5dabf47d">DirectCollocationConstraint</a> =  <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">drake::planning::trajectory_optimization::DirectCollocationConstraint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac037bd9c0e69d2636fb6f759c2f6be94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac037bd9c0e69d2636fb6f759c2f6be94">&#9670;&nbsp;</a></span>DirectTranscription</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#ac037bd9c0e69d2636fb6f759c2f6be94">DirectTranscription</a> =  <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html">drake::planning::trajectory_optimization::DirectTranscription</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1d7bf11ec88a054ff595a4a95a472bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d7bf11ec88a054ff595a4a95a472bb">&#9670;&nbsp;</a></span>KinematicTrajectoryOptimization</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#af1d7bf11ec88a054ff595a4a95a472bb">KinematicTrajectoryOptimization</a> =  <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html">drake::planning::trajectory_optimization::KinematicTrajectoryOptimization</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40332cacec47e48e60a675bb38d01b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40332cacec47e48e60a675bb38d01b8e">&#9670;&nbsp;</a></span>MidPointIntegrationConstraint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a40332cacec47e48e60a675bb38d01b8e">MidPointIntegrationConstraint</a> =  <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html">drake::planning::trajectory_optimization::MidPointIntegrationConstraint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fbf0e9679105b402b44b3d40a7e97e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fbf0e9679105b402b44b3d40a7e97e1">&#9670;&nbsp;</a></span>MultipleShooting</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a3fbf0e9679105b402b44b3d40a7e97e1">MultipleShooting</a> =  <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html">drake::planning::trajectory_optimization::MultipleShooting</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21ec3332c42316d47f65b952a9753fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ec3332c42316d47f65b952a9753fd9">&#9670;&nbsp;</a></span>TimeStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1trajectory__optimization.html#a21ec3332c42316d47f65b952a9753fd9">TimeStep</a> =  <a class="el" href="structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html">drake::planning::trajectory_optimization::TimeStep</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

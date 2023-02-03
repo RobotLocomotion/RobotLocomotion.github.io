@@ -1330,7 +1330,19 @@
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.CollisionCheckerParams.__init__">(pydrake.planning.CollisionCheckerParams method)</a>
 </li>
+        <li><a href="pydrake.planning.html#pydrake.planning.DirectCollocation.__init__">(pydrake.planning.DirectCollocation method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.DirectCollocationConstraint.__init__">(pydrake.planning.DirectCollocationConstraint method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.DirectTranscription.__init__">(pydrake.planning.DirectTranscription method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.DirectTranscription.TimeStep.__init__">(pydrake.planning.DirectTranscription.TimeStep method)</a>
+</li>
         <li><a href="pydrake.planning.html#pydrake.planning.EdgeMeasure.__init__">(pydrake.planning.EdgeMeasure method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.__init__">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.__init__">(pydrake.planning.MultipleShooting method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.RobotClearance.__init__">(pydrake.planning.RobotClearance method)</a>
 </li>
@@ -2156,18 +2168,6 @@
 </li>
         <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.RgbdSensorDiscrete.__init__">(pydrake.systems.sensors.RgbdSensorDiscrete method)</a>
 </li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectCollocation.__init__">(pydrake.systems.trajectory_optimization.DirectCollocation method)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectCollocationConstraint.__init__">(pydrake.systems.trajectory_optimization.DirectCollocationConstraint method)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectTranscription.__init__">(pydrake.systems.trajectory_optimization.DirectTranscription method)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.__init__">(pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.__init__">(pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.TimeStep.__init__">(pydrake.systems.trajectory_optimization.TimeStep method)</a>
-</li>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_-float-.__init__">(pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_[float] method)</a>
 </li>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.__init__">(pydrake.trajectories.BsplineTrajectory_[AutoDiffXd] method)</a>
@@ -2475,7 +2475,7 @@
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirective.add_weld">add_weld (pydrake.multibody.parsing.ModelDirective property)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddAccelerationBounds">AddAccelerationBounds() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddAccelerationBounds">AddAccelerationBounds() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.Parser.AddAllModelsFromFile">AddAllModelsFromFile() (pydrake.multibody.parsing.Parser method)</a>
 </li>
@@ -2499,7 +2499,7 @@
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.AddCollisionShapeToFrame">AddCollisionShapeToFrame() (pydrake.planning.CollisionChecker method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddCompleteTrajectoryCallback">AddCompleteTrajectoryCallback() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddCompleteTrajectoryCallback">AddCompleteTrajectoryCallback() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.AddCompliantHydroelasticProperties">AddCompliantHydroelasticProperties() (in module pydrake.geometry)</a>
 </li>
@@ -2513,7 +2513,7 @@
         <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddConstraint">(pydrake.solvers.MathematicalProgram method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints">AddConstraintToAllKnotPoints() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddConstraintToAllKnotPoints">AddConstraintToAllKnotPoints() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.AddContactMaterial">AddContactMaterial() (in module pydrake.geometry)</a>
 </li>
@@ -2549,23 +2549,23 @@
 </li>
       <li><a href="pydrake.visualization.html#pydrake.visualization.AddDefaultVisualization">AddDefaultVisualization() (in module pydrake.visualization)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint">AddDirectCollocationConstraint() (in module pydrake.systems.trajectory_optimization)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.AddDirectCollocationConstraint">AddDirectCollocationConstraint() (in module pydrake.planning)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.AddDirectives">AddDirectives (class in pydrake.multibody.parsing)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddDistanceConstraint">AddDistanceConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddDurationBounds">AddDurationBounds() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddDurationBounds">AddDurationBounds() (pydrake.planning.MultipleShooting method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationConstraint">AddDurationConstraint() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddDurationConstraint">AddDurationConstraint() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddDurationCost">AddDurationCost() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddDurationCost">AddDurationCost() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.AddEdge">AddEdge() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddEqualityConstraintBetweenPolynomials">AddEqualityConstraintBetweenPolynomials() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualTimeIntervalsConstraints">AddEqualTimeIntervalsConstraints() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddEqualTimeIntervalsConstraints">AddEqualTimeIntervalsConstraints() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.Adder">Adder (in module pydrake.systems.primitives)</a>
 </li>
@@ -2579,7 +2579,7 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddExponentialConeConstraint">AddExponentialConeConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddFinalCost">AddFinalCost() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddFinalCost">AddFinalCost() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.AddForceElement">AddForceElement() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
 
@@ -2663,9 +2663,9 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_-float-.AddInOneForce">(pydrake.multibody.tree.Joint_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddInputTrajectoryCallback">AddInputTrajectoryCallback() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddInputTrajectoryCallback">AddInputTrajectoryCallback() (pydrake.planning.MultipleShooting method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddJerkBounds">AddJerkBounds() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddJerkBounds">AddJerkBounds() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.AddJoint">AddJoint() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
 
@@ -2773,13 +2773,13 @@
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.PackageMap.AddPackageXml">AddPackageXml() (pydrake.multibody.parsing.PackageMap method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathAccelerationConstraint">AddPathAccelerationConstraint() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddPathAccelerationConstraint">AddPathAccelerationConstraint() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathLengthCost">AddPathLengthCost() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost">AddPathLengthCost() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathPositionConstraint">AddPathPositionConstraint() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddPathPositionConstraint">AddPathPositionConstraint() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPathVelocityConstraint">AddPathVelocityConstraint() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddPathVelocityConstraint">AddPathVelocityConstraint() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddPhiConstraint">AddPhiConstraint() (pydrake.geometry.optimization.GraphOfConvexSets.Edge method)</a>
 </li>
@@ -2801,7 +2801,7 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPolyhedronConstraint">AddPolyhedronConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddPositionBounds">AddPositionBounds() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddPositionBounds">AddPositionBounds() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">AddPositionConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
@@ -2851,7 +2851,7 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddRotatedLorentzConeConstraint">AddRotatedLorentzConeConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddRunningCost">AddRunningCost() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddRunningCost">AddRunningCost() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddScaledDiagonallyDominantMatrixConstraint">AddScaledDiagonallyDominantMatrixConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
@@ -2861,7 +2861,7 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddSosConstraint">AddSosConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddStateTrajectoryCallback">AddStateTrajectoryCallback() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddStateTrajectoryCallback">AddStateTrajectoryCallback() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_-float-.AddSystem">AddSystem() (pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float] method)</a>
 
@@ -2873,7 +2873,7 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_-float-.AddSystem">(pydrake.systems.framework.DiagramBuilder_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddTimeIntervalBounds">AddTimeIntervalBounds() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddTimeIntervalBounds">AddTimeIntervalBounds() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.examples.html#pydrake.examples.AcrobotGeometry.AddToBuilder">AddToBuilder() (pydrake.examples.AcrobotGeometry static method)</a>
 
@@ -2929,9 +2929,9 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.AddUnitQuaternionConstraintOnPlant">AddUnitQuaternionConstraintOnPlant() (in module pydrake.multibody.inverse_kinematics)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityBounds">AddVelocityBounds() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddVelocityBounds">AddVelocityBounds() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime">AddVelocityConstraintAtNormalizedTime() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime">AddVelocityConstraintAtNormalizedTime() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.AddVertex">AddVertex() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
 </li>
@@ -3509,7 +3509,7 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_-float">BasicVector_[float] (class in pydrake.systems.framework)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.basis">basis() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.basis">basis() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 
       <ul>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_-float-.basis">(pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_[float] method)</a>
@@ -5527,7 +5527,7 @@
 </li>
       <li><a href="pydrake.manipulation.kuka_iiwa.html#pydrake.manipulation.kuka_iiwa.IiwaDriver.control_mode">control_mode (pydrake.manipulation.kuka_iiwa.IiwaDriver property)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.control_points">control_points() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.control_points">control_points() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 
       <ul>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_-float-.control_points">(pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_[float] method)</a>
@@ -6525,13 +6525,15 @@
         <li><a href="pydrake.symbolic.html#pydrake.symbolic.Polynomial.Differentiate">(pydrake.symbolic.Polynomial method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectCollocation">DirectCollocation (class in pydrake.systems.trajectory_optimization)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.DirectCollocation">DirectCollocation (class in pydrake.planning)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectCollocationConstraint">DirectCollocationConstraint (class in pydrake.systems.trajectory_optimization)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.DirectCollocationConstraint">DirectCollocationConstraint (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelDirectives.directives">directives (pydrake.multibody.parsing.ModelDirectives property)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.DirectTranscription">DirectTranscription (class in pydrake.systems.trajectory_optimization)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.DirectTranscription">DirectTranscription (class in pydrake.planning)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.DirectTranscription.TimeStep">DirectTranscription.TimeStep (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.LeafOutputPort_.LeafOutputPort_-float-.disable_caching_by_default">disable_caching_by_default() (pydrake.systems.framework.LeafOutputPort_.LeafOutputPort_[float] method)</a>
 
@@ -6747,7 +6749,7 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ScsSolverDetails.duality_gap">duality_gap (pydrake.solvers.ScsSolverDetails property)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.duration">duration() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.duration">duration() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 
       <ul>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewiseTrajectory_.PiecewiseTrajectory_-float-.duration">(pydrake.trajectories.PiecewiseTrajectory_.PiecewiseTrajectory_[float] method)</a>
@@ -7527,7 +7529,7 @@
         <li><a href="pydrake.math.html#pydrake.math.BsplineBasis_-float-.final_parameter_value">(pydrake.math.BsplineBasis_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.final_state">final_state() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.final_state">final_state() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.examples.html#pydrake.examples.ManipulationStation.Finalize">Finalize() (pydrake.examples.ManipulationStation method)</a>
 
@@ -7661,7 +7663,7 @@
         <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.LinearTransformDensity_-float-.FixConstantB">(pydrake.systems.primitives.LinearTransformDensity_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.fixed_timestep">fixed_timestep() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.fixed_timestep">fixed_timestep() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.FixedInputPortValue">FixedInputPortValue (class in pydrake.systems.framework)</a>
 </li>
@@ -9268,7 +9270,7 @@
 </li>
         <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog">(pydrake.multibody.optimization.StaticEquilibriumProblem method)</a>
 </li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.get_mutable_prog">(pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+        <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.get_mutable_prog">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatVisualizer_.MeshcatVisualizer_-float-.get_mutable_recording">get_mutable_recording() (pydrake.geometry.MeshcatVisualizer_.MeshcatVisualizer_[float] method)</a>
@@ -11117,7 +11119,7 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_-float-.GetInputPortLocators">(pydrake.systems.framework.Diagram_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.GetInputSamples">GetInputSamples() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.GetInputSamples">GetInputSamples() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.GetIntegrationSchemes">GetIntegrationSchemes() (in module pydrake.systems.analysis)</a>
 </li>
@@ -11641,7 +11643,7 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-float-.GetRigidBodyByName">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.GetSampleTimes">GetSampleTimes() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.GetSampleTimes">GetSampleTimes() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.manipulation.schunk_wsg.html#pydrake.manipulation.schunk_wsg.GetSchunkWsgOpenPosition">GetSchunkWsgOpenPosition() (in module pydrake.manipulation.schunk_wsg)</a>
 </li>
@@ -11661,9 +11663,9 @@
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial_-float-.getSegmentPolynomialDegree">(pydrake.trajectories.PiecewisePolynomial_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableAtIndex">GetSequentialVariableAtIndex() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.GetSequentialVariableAtIndex">GetSequentialVariableAtIndex() (pydrake.planning.MultipleShooting method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableSamples">GetSequentialVariableSamples() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.GetSequentialVariableSamples">GetSequentialVariableSamples() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_-float-.GetShape">GetShape() (pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float] method)</a>
 
@@ -11697,7 +11699,7 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.GetSolverOptions">GetSolverOptions() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.GetStateSamples">GetStateSamples() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.GetStateSamples">GetStateSamples() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.examples.html#pydrake.examples.ManipulationStation.GetStaticCameraPosesInWorld">GetStaticCameraPosesInWorld() (pydrake.examples.ManipulationStation method)</a>
 </li>
@@ -12529,7 +12531,7 @@
         <li><a href="pydrake.math.html#pydrake.math.BsplineBasis_-float-.initial_parameter_value">(pydrake.math.BsplineBasis_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.initial_state">initial_state() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.initial_state">initial_state() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_-float-.Initialize">Initialize() (pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float] method)</a>
 
@@ -12563,7 +12565,7 @@
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.BsplineTrajectory_-float-.InitialValue">(pydrake.trajectories.BsplineTrajectory_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.input">input() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.input">input() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.DynamicProgrammingOptions.input_port_index">input_port_index (pydrake.systems.controllers.DynamicProgrammingOptions property)</a>
 
@@ -13437,7 +13439,7 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.kinematics_ticket">kinematics_ticket() (pydrake.systems.framework.SystemBase static method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization">KinematicTrajectoryOptimization (class in pydrake.systems.trajectory_optimization)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization">KinematicTrajectoryOptimization (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.SolutionResult.kInfeasibleConstraints">kInfeasibleConstraints (pydrake.solvers.SolutionResult attribute)</a>
 </li>
@@ -14717,8 +14719,6 @@
 </li>
         <li><a href="pydrake.systems.sensors.html#module-pydrake.systems.sensors">pydrake.systems.sensors</a>
 </li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#module-pydrake.systems.trajectory_optimization">pydrake.systems.trajectory_optimization</a>
-</li>
         <li><a href="pydrake.trajectories.html#module-pydrake.trajectories">pydrake.trajectories</a>
 </li>
         <li><a href="pydrake.tutorials.html#module-pydrake.tutorials">pydrake.tutorials</a>
@@ -14790,7 +14790,7 @@
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.MultilayerPerceptron_-float">MultilayerPerceptron_[float] (class in pydrake.systems.primitives)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting">MultipleShooting (class in pydrake.systems.trajectory_optimization)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting">MultipleShooting (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.Multiplexer">Multiplexer (in module pydrake.systems.primitives)</a>
 </li>
@@ -15112,7 +15112,7 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.NewOddDegreeFreePolynomial">NewOddDegreeFreePolynomial() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.NewSequentialVariable">NewSequentialVariable() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.NewSequentialVariable">NewSequentialVariable() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.NewSosPolynomial">NewSosPolynomial() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
@@ -15296,7 +15296,7 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.num_continuous_states">(pydrake.systems.framework.SystemBase method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.num_control_points">num_control_points() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.num_control_points">num_control_points() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 
       <ul>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_-float-.num_control_points">(pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_[float] method)</a>
@@ -15553,9 +15553,9 @@
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_-float-.num_positions">(pydrake.multibody.tree.Joint_[float] method)</a>
 </li>
-        <li><a href="pydrake.planning.html#pydrake.planning.RobotClearance.num_positions">(pydrake.planning.RobotClearance method)</a>
+        <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.num_positions">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.num_positions">(pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+        <li><a href="pydrake.planning.html#pydrake.planning.RobotClearance.num_positions">(pydrake.planning.RobotClearance method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.Propeller_.Propeller_-float-.num_propellers">num_propellers() (pydrake.multibody.plant.Propeller_.Propeller_[float] method)</a>
@@ -16539,13 +16539,13 @@
 </li>
         <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.StaticEquilibriumProblem.prog">(pydrake.multibody.optimization.StaticEquilibriumProblem method)</a>
 </li>
+        <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.prog">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.prog">(pydrake.planning.MultipleShooting method)</a>
+</li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.AugmentedLagrangianNonsmooth.prog">(pydrake.solvers.AugmentedLagrangianNonsmooth method)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.AugmentedLagrangianSmooth.prog">(pydrake.solvers.AugmentedLagrangianSmooth method)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.prog">(pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.prog">(pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.IrisOptions.prog_with_additional_constraints">prog_with_additional_constraints (pydrake.geometry.optimization.IrisOptions property)</a>
@@ -17061,13 +17061,6 @@
 </li>
       </ul></li>
       <li>
-    pydrake.systems.trajectory_optimization
-
-      <ul>
-        <li><a href="pydrake.systems.trajectory_optimization.html#module-pydrake.systems.trajectory_optimization">module</a>
-</li>
-      </ul></li>
-      <li>
     pydrake.trajectories
 
       <ul>
@@ -17274,11 +17267,11 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.ReconstructGeneralizedPositionSolution">ReconstructGeneralizedPositionSolution() (pydrake.multibody.inverse_kinematics.GlobalInverseKinematics method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructInputTrajectory">ReconstructInputTrajectory() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.ReconstructInputTrajectory">ReconstructInputTrajectory() (pydrake.planning.MultipleShooting method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructStateTrajectory">ReconstructStateTrajectory() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.ReconstructStateTrajectory">ReconstructStateTrajectory() (pydrake.planning.MultipleShooting method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.ReconstructTrajectory">ReconstructTrajectory() (pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.ReconstructTrajectory">ReconstructTrajectory() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron.ReduceInequalities">ReduceInequalities() (pydrake.geometry.optimization.HPolyhedron method)</a>
 </li>
@@ -19717,14 +19710,14 @@
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.SetInitialGuess">SetInitialGuess() (pydrake.multibody.inverse_kinematics.GlobalInverseKinematics method)</a>
 
       <ul>
-        <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.SetInitialGuess">(pydrake.solvers.MathematicalProgram method)</a>
+        <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.SetInitialGuess">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization.SetInitialGuess">(pydrake.systems.trajectory_optimization.KinematicTrajectoryOptimization method)</a>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.SetInitialGuess">(pydrake.solvers.MathematicalProgram method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.SetInitialGuessForAllVariables">SetInitialGuessForAllVariables() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialTrajectory">SetInitialTrajectory() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.SetInitialTrajectory">SetInitialTrajectory() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.multibody.benchmarks.html#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.SetInitialValue">SetInitialValue() (pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution method)</a>
 </li>
@@ -20658,7 +20651,7 @@
       </ul></li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.State">State (in module pydrake.systems.framework)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.state">state() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.state">state() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.State_.State_-float">State_.State_[float] (class in pydrake.systems.framework)</a>
 </li>
@@ -21044,7 +21037,7 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_-float-.ticket">(pydrake.systems.framework.InputPort_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.time">time() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.time">time() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.AffineSystem_.AffineSystem_-float-.time_period">time_period() (pydrake.systems.primitives.AffineSystem_.AffineSystem_[float] method)</a>
 
@@ -21100,9 +21093,7 @@
       </ul></li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.time_ticket">time_ticket() (pydrake.systems.framework.SystemBase static method)</a>
 </li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.TimeStep">TimeStep (class in pydrake.systems.trajectory_optimization)</a>
-</li>
-      <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.timestep">timestep() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
+      <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.timestep">timestep() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Expression.to_string">to_string() (pydrake.symbolic.Expression method)</a>
 
@@ -21839,6 +21830,8 @@
 </li>
         <li><a href="pydrake.perception.html#pydrake.perception.BaseField.value">(pydrake.perception.BaseField property)</a>
 </li>
+        <li><a href="pydrake.planning.html#pydrake.planning.DirectTranscription.TimeStep.value">(pydrake.planning.DirectTranscription.TimeStep property)</a>
+</li>
         <li><a href="pydrake.planning.html#pydrake.planning.RobotCollisionType.value">(pydrake.planning.RobotCollisionType property)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.CommonSolverOption.value">(pydrake.solvers.CommonSolverOption property)</a>
@@ -21888,8 +21881,6 @@
         <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.PixelFormat.value">(pydrake.systems.sensors.PixelFormat property)</a>
 </li>
         <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.PixelType.value">(pydrake.systems.sensors.PixelType property)</a>
-</li>
-        <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.TimeStep.value">(pydrake.systems.trajectory_optimization.TimeStep property)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd.value">value() (pydrake.autodiffutils.AutoDiffXd method)</a>

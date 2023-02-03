@@ -1,8 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"namespacemembers_func_m.html":[2,1,1,12],
-"namespacemembers_func_n.html":[2,1,1,13],
-"namespacemembers_func_o.html":[2,1,1,14],
 "namespacemembers_func_p.html":[2,1,1,15],
 "namespacemembers_func_q.html":[2,1,1,16],
 "namespacemembers_func_r.html":[2,1,1,17],
@@ -125,6 +122,13 @@ var NAVTREEINDEX49 =
 "planner_2stub_2robot__plan__interpolator_8h.html":[4,0,0,6,2,0,1],
 "planner_2stub_2robot__plan__interpolator_8h.html#a8916baae73f1e9c24490b1a23868254c":[4,0,0,6,2,0,1,0],
 "planner_2stub_2robot__plan__interpolator_8h.html#ab81c4eb20724da02287254032a1cf31c":[4,0,0,6,2,0,1,1],
+"planning_2trajectory__optimization_2direct__collocation_8h.html":[4,0,0,10,1,0],
+"planning_2trajectory__optimization_2direct__collocation_8h.html#a5a33c78a3166fd84c3b1d5818c6e8275":[4,0,0,10,1,0,0],
+"planning_2trajectory__optimization_2direct__transcription_8h.html":[4,0,0,10,1,1],
+"planning_2trajectory__optimization_2integration__constraint_8h.html":[4,0,0,10,1,2],
+"planning_2trajectory__optimization_2kinematic__trajectory__optimization_8h.html":[4,0,0,10,1,3],
+"planning_2trajectory__optimization_2multiple__shooting_8h.html":[4,0,0,10,1,4],
+"planning_2trajectory__optimization_2sequential__expression__manager_8h.html":[4,0,0,10,1,5],
 "planning__py_8h.html":[4,0,0,0,0,3,0],
 "pleides__system_8h.html":[4,0,0,12,0,0,9],
 "pleides__system_8h.html#a322dbcada3667894a629fe3f1a476f2a":[4,0,0,12,0,0,9,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,10,7],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,10,9],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,10,4],
-"pydrake__pybind_8h.html#a6e587c4c8d044dd6eee74dad65c203ed":[4,0,0,0,0,10,2],
-"pydrake__pybind_8h.html#a75d1338abedddf0c87cdcfb43ac0b7e8":[4,0,0,0,0,10,8],
-"pydrake__pybind_8h.html#aa8cec9d64f8d0017db630acd8740021e":[4,0,0,0,0,10,5],
-"pydrake__pybind_8h.html#abae292352a6ccb4d07b1aa13d4c7f143":[4,0,0,0,0,10,1],
-"pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4":[4,0,0,0,0,10,3]
+"pydrake__pybind_8h.html#a6e587c4c8d044dd6eee74dad65c203ed":[4,0,0,0,0,10,2]
 };

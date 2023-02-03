@@ -399,160 +399,160 @@
 <!-- Node22 -->
 <g id="node23" class="node">
 <title>Node22</title>
-<g id="a_node23"><a xlink:href="classdrake_1_1solvers_1_1_evaluator_constraint.html" target="_top" xlink:title="A constraint that may be specified using another (potentially nonlinear) evaluator.">
-<polygon fill="white" stroke="black" points="330.5,-986.5 330.5,-1016.5 443.5,-1016.5 443.5,-986.5 330.5,-986.5"/>
-<text text-anchor="start" x="338.5" y="-1004.5" font-family="Helvetica,sans-Serif" font-size="10.00">EvaluatorConstraint</text>
-<text text-anchor="middle" x="387" y="-993.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; EvaluatorType &gt;</text>
+<g id="a_node23"><a xlink:href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html" target="_top" xlink:title="Implements the direct collocation constraints for a first&#45;order hold on the input and a cubic polynom...">
+<polygon fill="white" stroke="black" points="311.5,-998 311.5,-1017 462.5,-1017 462.5,-998 311.5,-998"/>
+<text text-anchor="middle" x="387" y="-1005" font-family="Helvetica,sans-Serif" font-size="10.00">DirectCollocationConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node22 -->
 <g id="edge22" class="edge">
 <title>Node3&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M226.33,-1051.29C246.44,-1043.64 272.51,-1034.06 296,-1026.5 306.96,-1022.97 318.76,-1019.48 330.1,-1016.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="225.07,-1048.03 216.98,-1054.88 227.57,-1054.57 225.07,-1048.03"/>
+<path fill="none" stroke="midnightblue" d="M224.97,-1051.21C245.17,-1043.29 271.81,-1033.45 296,-1026.5 308.28,-1022.97 321.67,-1019.79 334.28,-1017.09"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="223.62,-1047.98 215.61,-1054.93 226.2,-1054.49 223.62,-1047.98"/>
 </g>
 <!-- Node23 -->
 <g id="node24" class="node">
 <title>Node23</title>
-<g id="a_node24"><a xlink:href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html" target="_top" xlink:title="An exponential cone constraint is a special type of convex cone constraint.">
-<polygon fill="white" stroke="black" points="312.5,-948 312.5,-967 461.5,-967 461.5,-948 312.5,-948"/>
-<text text-anchor="middle" x="387" y="-955" font-family="Helvetica,sans-Serif" font-size="10.00">ExponentialConeConstraint</text>
+<g id="a_node24"><a xlink:href="classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html" target="_top" xlink:title="Implements the midpoint integration.">
+<polygon fill="white" stroke="black" points="305.5,-960 305.5,-979 468.5,-979 468.5,-960 305.5,-960"/>
+<text text-anchor="middle" x="387" y="-967" font-family="Helvetica,sans-Serif" font-size="10.00">MidPointIntegrationConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node23 -->
 <g id="edge23" class="edge">
 <title>Node3&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M207.7,-1047.5C226.47,-1027.6 260.3,-995.14 296,-977.5 304.75,-973.18 314.45,-969.78 324.13,-967.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="205.05,-1045.21 200.84,-1054.93 210.19,-1049.96 205.05,-1045.21"/>
+<path fill="none" stroke="midnightblue" d="M209.89,-1048.05C229.34,-1030.59 262.53,-1003.48 296,-988.5 304.6,-984.65 314.02,-981.57 323.42,-979.1"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="207.44,-1045.55 202.43,-1054.88 212.17,-1050.71 207.44,-1045.55"/>
 </g>
 <!-- Node24 -->
 <g id="node25" class="node">
 <title>Node24</title>
-<g id="a_node25"><a xlink:href="classdrake_1_1solvers_1_1_expression_constraint.html" target="_top" xlink:title="Impose a generic (potentially nonlinear) constraint represented as a vector of symbolic Expression.">
-<polygon fill="white" stroke="black" points="327,-910 327,-929 447,-929 447,-910 327,-910"/>
-<text text-anchor="middle" x="387" y="-917" font-family="Helvetica,sans-Serif" font-size="10.00">ExpressionConstraint</text>
+<g id="a_node25"><a xlink:href="classdrake_1_1solvers_1_1_evaluator_constraint.html" target="_top" xlink:title="A constraint that may be specified using another (potentially nonlinear) evaluator.">
+<polygon fill="white" stroke="black" points="330.5,-910.5 330.5,-940.5 443.5,-940.5 443.5,-910.5 330.5,-910.5"/>
+<text text-anchor="start" x="338.5" y="-928.5" font-family="Helvetica,sans-Serif" font-size="10.00">EvaluatorConstraint</text>
+<text text-anchor="middle" x="387" y="-917.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; EvaluatorType &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node24 -->
 <g id="edge24" class="edge">
 <title>Node3&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M202.28,-1045.93C218.05,-1017.92 251.84,-965.31 296,-938.5 305.28,-932.86 315.98,-928.88 326.7,-926.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="199.19,-1044.27 197.47,-1054.73 205.34,-1047.63 199.19,-1044.27"/>
+<path fill="none" stroke="midnightblue" d="M204.12,-1046.25C221.19,-1020.94 255.44,-975.5 296,-950.5 306.35,-944.12 318.37,-939.33 330.18,-935.75"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="201.02,-1044.6 198.45,-1054.88 206.87,-1048.45 201.02,-1044.6"/>
 </g>
 <!-- Node25 -->
 <g id="node26" class="node">
 <title>Node25</title>
-<g id="a_node26"><a xlink:href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html" target="_top" xlink:title="Implements a constraint of the form:">
-<polygon fill="white" stroke="black" points="296,-872 296,-891 478,-891 478,-872 296,-872"/>
-<text text-anchor="middle" x="387" y="-879" font-family="Helvetica,sans-Serif" font-size="10.00">LinearComplementarityConstraint</text>
+<g id="a_node26"><a xlink:href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html" target="_top" xlink:title="An exponential cone constraint is a special type of convex cone constraint.">
+<polygon fill="white" stroke="black" points="312.5,-872 312.5,-891 461.5,-891 461.5,-872 312.5,-872"/>
+<text text-anchor="middle" x="387" y="-879" font-family="Helvetica,sans-Serif" font-size="10.00">ExponentialConeConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node25 -->
 <g id="edge25" class="edge">
 <title>Node3&#45;&gt;Node25</title>
-<path fill="none" stroke="midnightblue" d="M198.88,-1045.37C211.51,-1010.61 243.16,-937.27 296,-900.5 301.51,-896.67 307.63,-893.58 314.01,-891.1"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="195.56,-1044.25 195.56,-1054.84 202.17,-1046.56 195.56,-1044.25"/>
+<path fill="none" stroke="midnightblue" d="M199.11,-1045.09C211.97,-1010.45 243.76,-938.16 296,-901.5 302.16,-897.18 309.09,-893.77 316.3,-891.08"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="195.67,-1044.33 195.6,-1054.93 202.26,-1046.69 195.67,-1044.33"/>
 </g>
 <!-- Node26 -->
 <g id="node27" class="node">
 <title>Node26</title>
-<g id="a_node27"><a xlink:href="classdrake_1_1solvers_1_1_linear_constraint.html" target="_top" xlink:title="Implements a constraint of the form .">
-<polygon fill="white" stroke="black" points="338.5,-834 338.5,-853 435.5,-853 435.5,-834 338.5,-834"/>
-<text text-anchor="middle" x="387" y="-841" font-family="Helvetica,sans-Serif" font-size="10.00">LinearConstraint</text>
+<g id="a_node27"><a xlink:href="classdrake_1_1solvers_1_1_expression_constraint.html" target="_top" xlink:title="Impose a generic (potentially nonlinear) constraint represented as a vector of symbolic Expression.">
+<polygon fill="white" stroke="black" points="327,-834 327,-853 447,-853 447,-834 327,-834"/>
+<text text-anchor="middle" x="387" y="-841" font-family="Helvetica,sans-Serif" font-size="10.00">ExpressionConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node26 -->
 <g id="edge26" class="edge">
 <title>Node3&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M196.64,-1044.73C206.3,-1003.8 234.35,-909.63 296,-862.5 308.05,-853.29 323.55,-848.29 338.28,-845.66"/>
+<path fill="none" stroke="midnightblue" d="M196.64,-1044.73C206.3,-1003.8 234.35,-909.63 296,-862.5 304.88,-855.71 315.63,-851.21 326.57,-848.26"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="193.21,-1044.05 194.43,-1054.57 200.04,-1045.58 193.21,-1044.05"/>
 </g>
-<!-- Node29 -->
-<g id="node30" class="node">
-<title>Node29</title>
-<g id="a_node30"><a xlink:href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html" target="_top" xlink:title="Impose the matrix inequality constraint on variable x where p.s.d stands for positive semidefinite.">
-<polygon fill="white" stroke="black" points="298.5,-796 298.5,-815 475.5,-815 475.5,-796 298.5,-796"/>
-<text text-anchor="middle" x="387" y="-803" font-family="Helvetica,sans-Serif" font-size="10.00">LinearMatrixInequalityConstraint</text>
+<!-- Node27 -->
+<g id="node28" class="node">
+<title>Node27</title>
+<g id="a_node28"><a xlink:href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html" target="_top" xlink:title="Implements a constraint of the form:">
+<polygon fill="white" stroke="black" points="296,-796 296,-815 478,-815 478,-796 296,-796"/>
+<text text-anchor="middle" x="387" y="-803" font-family="Helvetica,sans-Serif" font-size="10.00">LinearComplementarityConstraint</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node29 -->
-<g id="edge29" class="edge">
-<title>Node3&#45;&gt;Node29</title>
+<!-- Node3&#45;&gt;Node27 -->
+<g id="edge27" class="edge">
+<title>Node3&#45;&gt;Node27</title>
 <path fill="none" stroke="midnightblue" d="M194.87,-1044.94C201.56,-998.78 224.95,-882.64 296,-824.5 300.7,-820.66 305.98,-817.54 311.58,-815.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="191.4,-1044.48 193.54,-1054.85 198.34,-1045.41 191.4,-1044.48"/>
 </g>
-<!-- Node30 -->
-<g id="node31" class="node">
-<title>Node30</title>
-<g id="a_node31"><a xlink:href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html" target="_top" xlink:title="Constraining the linear expression &#160;lies within the Lorentz cone.">
-<polygon fill="white" stroke="black" points="323,-758 323,-777 451,-777 451,-758 323,-758"/>
-<text text-anchor="middle" x="387" y="-765" font-family="Helvetica,sans-Serif" font-size="10.00">LorentzConeConstraint</text>
+<!-- Node28 -->
+<g id="node29" class="node">
+<title>Node28</title>
+<g id="a_node29"><a xlink:href="classdrake_1_1solvers_1_1_linear_constraint.html" target="_top" xlink:title="Implements a constraint of the form .">
+<polygon fill="white" stroke="black" points="338.5,-758 338.5,-777 435.5,-777 435.5,-758 338.5,-758"/>
+<text text-anchor="middle" x="387" y="-765" font-family="Helvetica,sans-Serif" font-size="10.00">LinearConstraint</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node30 -->
-<g id="edge30" class="edge">
-<title>Node3&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M193.61,-1044.7C197.6,-993.46 215.66,-855.73 296,-786.5 303.62,-779.93 312.94,-775.45 322.66,-772.42"/>
+<!-- Node3&#45;&gt;Node28 -->
+<g id="edge28" class="edge">
+<title>Node3&#45;&gt;Node28</title>
+<path fill="none" stroke="midnightblue" d="M193.61,-1044.7C197.6,-993.46 215.66,-855.73 296,-786.5 307.61,-776.49 323.17,-771.32 338.09,-768.76"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="190.11,-1044.56 192.92,-1054.77 197.09,-1045.03 190.11,-1044.56"/>
 </g>
 <!-- Node31 -->
 <g id="node32" class="node">
 <title>Node31</title>
-<g id="a_node32"><a xlink:href="classdrake_1_1solvers_1_1_minimum_value_constraint.html" target="_top" xlink:title="Constrain all elements of the vector returned by the user&#45;provided function to be no smaller than a s...">
-<polygon fill="white" stroke="black" points="317,-720 317,-739 457,-739 457,-720 317,-720"/>
-<text text-anchor="middle" x="387" y="-727" font-family="Helvetica,sans-Serif" font-size="10.00">MinimumValueConstraint</text>
+<g id="a_node32"><a xlink:href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html" target="_top" xlink:title="Impose the matrix inequality constraint on variable x where p.s.d stands for positive semidefinite.">
+<polygon fill="white" stroke="black" points="298.5,-720 298.5,-739 475.5,-739 475.5,-720 298.5,-720"/>
+<text text-anchor="middle" x="387" y="-727" font-family="Helvetica,sans-Serif" font-size="10.00">LinearMatrixInequalityConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node31 -->
 <g id="edge31" class="edge">
 <title>Node3&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M192.6,-1044.7C194.02,-988.89 206.13,-829.11 296,-748.5 302.06,-743.06 309.28,-739.04 316.96,-736.08"/>
+<path fill="none" stroke="midnightblue" d="M192.6,-1044.7C194.02,-988.89 206.13,-829.11 296,-748.5 300.16,-744.77 304.87,-741.7 309.89,-739.19"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="189.1,-1044.91 192.44,-1054.97 196.1,-1045.03 189.1,-1044.91"/>
 </g>
 <!-- Node32 -->
 <g id="node33" class="node">
 <title>Node32</title>
-<g id="a_node33"><a xlink:href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html" target="_top" xlink:title="Implements a positive semidefinite constraint on a symmetric matrix S &#160;namely, all eigen values of S ...">
-<polygon fill="white" stroke="black" points="303.5,-682 303.5,-701 470.5,-701 470.5,-682 303.5,-682"/>
-<text text-anchor="middle" x="387" y="-689" font-family="Helvetica,sans-Serif" font-size="10.00">PositiveSemidefiniteConstraint</text>
+<g id="a_node33"><a xlink:href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html" target="_top" xlink:title="Constraining the linear expression &#160;lies within the Lorentz cone.">
+<polygon fill="white" stroke="black" points="323,-682 323,-701 451,-701 451,-682 323,-682"/>
+<text text-anchor="middle" x="387" y="-689" font-family="Helvetica,sans-Serif" font-size="10.00">LorentzConeConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node32 -->
 <g id="edge32" class="edge">
 <title>Node3&#45;&gt;Node32</title>
-<path fill="none" stroke="midnightblue" d="M191.79,-1044.77C190.8,-984.72 196.49,-802.69 296,-710.5 300.1,-706.7 304.76,-703.59 309.75,-701.04"/>
+<path fill="none" stroke="midnightblue" d="M191.79,-1044.77C190.8,-984.72 196.49,-802.69 296,-710.5 303.5,-703.55 312.87,-698.89 322.71,-695.81"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="188.3,-1044.89 192.05,-1054.8 195.29,-1044.72 188.3,-1044.89"/>
 </g>
 <!-- Node33 -->
 <g id="node34" class="node">
 <title>Node33</title>
-<g id="a_node34"><a xlink:href="classdrake_1_1solvers_1_1_quadratic_constraint.html" target="_top" xlink:title="lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a symmetric matrix Q.">
-<polygon fill="white" stroke="black" points="330,-644 330,-663 444,-663 444,-644 330,-644"/>
-<text text-anchor="middle" x="387" y="-651" font-family="Helvetica,sans-Serif" font-size="10.00">QuadraticConstraint</text>
+<g id="a_node34"><a xlink:href="classdrake_1_1solvers_1_1_minimum_value_constraint.html" target="_top" xlink:title="Constrain all elements of the vector returned by the user&#45;provided function to be no smaller than a s...">
+<polygon fill="white" stroke="black" points="317,-644 317,-663 457,-663 457,-644 317,-644"/>
+<text text-anchor="middle" x="387" y="-651" font-family="Helvetica,sans-Serif" font-size="10.00">MinimumValueConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node33 -->
 <g id="edge33" class="edge">
 <title>Node3&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M194.95,-1044.96C204.34,-973.19 240.33,-725.45 296,-672.5 305.14,-663.81 317.21,-658.67 329.53,-655.72"/>
+<path fill="none" stroke="midnightblue" d="M194.95,-1044.96C204.34,-973.19 240.33,-725.45 296,-672.5 301.9,-666.89 309.02,-662.76 316.65,-659.74"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="191.47,-1044.55 193.67,-1054.92 198.42,-1045.44 191.47,-1044.55"/>
 </g>
 <!-- Node34 -->
 <g id="node35" class="node">
 <title>Node34</title>
-<g id="a_node35"><a xlink:href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html" target="_top" xlink:title="Constraining that the linear expression &#160;lies within rotated Lorentz cone.">
-<polygon fill="white" stroke="black" points="304,-606 304,-625 470,-625 470,-606 304,-606"/>
-<text text-anchor="middle" x="387" y="-613" font-family="Helvetica,sans-Serif" font-size="10.00">RotatedLorentzConeConstraint</text>
+<g id="a_node35"><a xlink:href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html" target="_top" xlink:title="Implements a positive semidefinite constraint on a symmetric matrix S &#160;namely, all eigen values of S ...">
+<polygon fill="white" stroke="black" points="303.5,-606 303.5,-625 470.5,-625 470.5,-606 303.5,-606"/>
+<text text-anchor="middle" x="387" y="-613" font-family="Helvetica,sans-Serif" font-size="10.00">PositiveSemidefiniteConstraint</text>
 </a>
 </g>
 </g>
@@ -565,46 +565,46 @@
 <!-- Node35 -->
 <g id="node36" class="node">
 <title>Node35</title>
-<g id="a_node36"><a xlink:href="classdrake_1_1systems_1_1_system_constraint_wrapper.html" target="_top" xlink:title="This wrapper class wraps a SystemConstraint object to the format of solvers::Constraint.">
-<polygon fill="white" stroke="black" points="314.5,-568 314.5,-587 459.5,-587 459.5,-568 314.5,-568"/>
-<text text-anchor="middle" x="387" y="-575" font-family="Helvetica,sans-Serif" font-size="10.00">SystemConstraintWrapper</text>
+<g id="a_node36"><a xlink:href="classdrake_1_1solvers_1_1_quadratic_constraint.html" target="_top" xlink:title="lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a symmetric matrix Q.">
+<polygon fill="white" stroke="black" points="330,-568 330,-587 444,-587 444,-568 330,-568"/>
+<text text-anchor="middle" x="387" y="-575" font-family="Helvetica,sans-Serif" font-size="10.00">QuadraticConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node35 -->
 <g id="edge35" class="edge">
 <title>Node3&#45;&gt;Node35</title>
-<path fill="none" stroke="midnightblue" d="M194.1,-1044.41C200.97,-963.31 230.63,-661.24 296,-596.5 301.22,-591.33 307.47,-587.41 314.21,-584.44"/>
+<path fill="none" stroke="midnightblue" d="M194.1,-1044.41C200.97,-963.31 230.63,-661.24 296,-596.5 305.08,-587.51 317.27,-582.28 329.74,-579.35"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="190.58,-1044.47 193.25,-1054.72 197.56,-1045.04 190.58,-1044.47"/>
 </g>
 <!-- Node36 -->
 <g id="node37" class="node">
 <title>Node36</title>
-<g id="a_node37"><a xlink:href="classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html" target="_top" xlink:title="Implements the direct collocation constraints for a first&#45;order hold on the input and a cubic polynom...">
-<polygon fill="white" stroke="black" points="311.5,-530 311.5,-549 462.5,-549 462.5,-530 311.5,-530"/>
-<text text-anchor="middle" x="387" y="-537" font-family="Helvetica,sans-Serif" font-size="10.00">DirectCollocationConstraint</text>
+<g id="a_node37"><a xlink:href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html" target="_top" xlink:title="Constraining that the linear expression &#160;lies within rotated Lorentz cone.">
+<polygon fill="white" stroke="black" points="304,-530 304,-549 470,-549 470,-530 304,-530"/>
+<text text-anchor="middle" x="387" y="-537" font-family="Helvetica,sans-Serif" font-size="10.00">RotatedLorentzConeConstraint</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node36 -->
 <g id="edge36" class="edge">
 <title>Node3&#45;&gt;Node36</title>
-<path fill="none" stroke="midnightblue" d="M193.72,-1044.71C199.35,-960.03 225.6,-629.34 296,-558.5 300.39,-554.08 305.53,-550.57 311.09,-547.79"/>
+<path fill="none" stroke="midnightblue" d="M193.72,-1044.71C199.35,-960.03 225.6,-629.34 296,-558.5 299.71,-554.76 303.97,-551.67 308.56,-549.12"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="190.22,-1044.57 193.07,-1054.78 197.21,-1045.02 190.22,-1044.57"/>
 </g>
 <!-- Node37 -->
 <g id="node38" class="node">
 <title>Node37</title>
-<g id="a_node38"><a xlink:href="classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html" target="_top" xlink:title="Implements the midpoint integration.">
-<polygon fill="white" stroke="black" points="305.5,-492 305.5,-511 468.5,-511 468.5,-492 305.5,-492"/>
-<text text-anchor="middle" x="387" y="-499" font-family="Helvetica,sans-Serif" font-size="10.00">MidPointIntegrationConstraint</text>
+<g id="a_node38"><a xlink:href="classdrake_1_1systems_1_1_system_constraint_wrapper.html" target="_top" xlink:title="This wrapper class wraps a SystemConstraint object to the format of solvers::Constraint.">
+<polygon fill="white" stroke="black" points="314.5,-492 314.5,-511 459.5,-511 459.5,-492 314.5,-492"/>
+<text text-anchor="middle" x="387" y="-499" font-family="Helvetica,sans-Serif" font-size="10.00">SystemConstraintWrapper</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node37 -->
 <g id="edge37" class="edge">
 <title>Node3&#45;&gt;Node37</title>
-<path fill="none" stroke="midnightblue" d="M193.42,-1044.66C197.93,-956.05 220.65,-597.38 296,-520.5 299.69,-516.74 303.92,-513.63 308.5,-511.07"/>
+<path fill="none" stroke="midnightblue" d="M193.42,-1044.66C197.93,-956.05 220.65,-597.38 296,-520.5 301.25,-515.14 307.61,-511.11 314.49,-508.1"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="189.91,-1044.76 192.92,-1054.92 196.9,-1045.1 189.91,-1044.76"/>
 </g>
 <!-- Node38 -->
@@ -623,35 +623,35 @@
 <path fill="none" stroke="midnightblue" d="M193.27,-1044.58C197.26,-952.37 218.37,-567.88 296,-482.5 301.78,-476.14 309.03,-471.34 316.88,-467.73"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="189.77,-1044.62 192.85,-1054.76 196.76,-1044.91 189.77,-1044.62"/>
 </g>
-<!-- Node27 -->
-<g id="node28" class="node">
-<title>Node27</title>
-<g id="a_node28"><a xlink:href="classdrake_1_1solvers_1_1_bounding_box_constraint.html" target="_top" xlink:title="Implements a constraint of the form .">
-<polygon fill="white" stroke="black" points="517,-853 517,-872 648,-872 648,-853 517,-853"/>
-<text text-anchor="middle" x="582.5" y="-860" font-family="Helvetica,sans-Serif" font-size="10.00">BoundingBoxConstraint</text>
+<!-- Node29 -->
+<g id="node30" class="node">
+<title>Node29</title>
+<g id="a_node30"><a xlink:href="classdrake_1_1solvers_1_1_bounding_box_constraint.html" target="_top" xlink:title="Implements a constraint of the form .">
+<polygon fill="white" stroke="black" points="517,-777 517,-796 648,-796 648,-777 517,-777"/>
+<text text-anchor="middle" x="582.5" y="-784" font-family="Helvetica,sans-Serif" font-size="10.00">BoundingBoxConstraint</text>
 </a>
 </g>
 </g>
-<!-- Node26&#45;&gt;Node27 -->
-<g id="edge27" class="edge">
-<title>Node26&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M445.83,-849.18C468.14,-851.37 493.77,-853.89 516.7,-856.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="446.13,-845.69 435.83,-848.2 445.44,-852.66 446.13,-845.69"/>
+<!-- Node28&#45;&gt;Node29 -->
+<g id="edge29" class="edge">
+<title>Node28&#45;&gt;Node29</title>
+<path fill="none" stroke="midnightblue" d="M445.83,-773.18C468.14,-775.37 493.77,-777.89 516.7,-780.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="446.13,-769.69 435.83,-772.2 445.44,-776.66 446.13,-769.69"/>
 </g>
-<!-- Node28 -->
-<g id="node29" class="node">
-<title>Node28</title>
-<g id="a_node29"><a xlink:href="classdrake_1_1solvers_1_1_linear_equality_constraint.html" target="_top" xlink:title="Implements a constraint of the form .">
-<polygon fill="white" stroke="black" points="514,-815 514,-834 651,-834 651,-815 514,-815"/>
-<text text-anchor="middle" x="582.5" y="-822" font-family="Helvetica,sans-Serif" font-size="10.00">LinearEqualityConstraint</text>
+<!-- Node30 -->
+<g id="node31" class="node">
+<title>Node30</title>
+<g id="a_node31"><a xlink:href="classdrake_1_1solvers_1_1_linear_equality_constraint.html" target="_top" xlink:title="Implements a constraint of the form .">
+<polygon fill="white" stroke="black" points="514,-739 514,-758 651,-758 651,-739 514,-739"/>
+<text text-anchor="middle" x="582.5" y="-746" font-family="Helvetica,sans-Serif" font-size="10.00">LinearEqualityConstraint</text>
 </a>
 </g>
 </g>
-<!-- Node26&#45;&gt;Node28 -->
-<g id="edge28" class="edge">
-<title>Node26&#45;&gt;Node28</title>
-<path fill="none" stroke="midnightblue" d="M446.03,-837.8C467.35,-835.71 491.68,-833.32 513.78,-831.15"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="445.44,-834.34 435.83,-838.8 446.13,-841.31 445.44,-834.34"/>
+<!-- Node28&#45;&gt;Node30 -->
+<g id="edge30" class="edge">
+<title>Node28&#45;&gt;Node30</title>
+<path fill="none" stroke="midnightblue" d="M446.03,-761.8C467.35,-759.71 491.68,-757.32 513.78,-755.15"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="445.44,-758.34 435.83,-762.8 446.13,-765.31 445.44,-758.34"/>
 </g>
 <!-- Node39 -->
 <g id="node40" class="node">
