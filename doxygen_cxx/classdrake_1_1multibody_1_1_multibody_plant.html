@@ -1090,6 +1090,12 @@ Contact modeling</h2></td></tr>
 <tr class="memitem:a2b82332abfb08a94d367659c3f566e21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2b82332abfb08a94d367659c3f566e21">get_contact_surface_representation</a> () const</td></tr>
 <tr class="memdesc:a2b82332abfb08a94d367659c3f566e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current representation of contact surfaces used by <code>this</code> MultibodyPlant.  <a href="#a2b82332abfb08a94d367659c3f566e21">More...</a><br /></td></tr>
 <tr class="separator:a2b82332abfb08a94d367659c3f566e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6a17fc10f55293cc507b583220f8d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ada6a17fc10f55293cc507b583220f8d7">set_adjacent_bodies_collision_filters</a> (bool value)</td></tr>
+<tr class="memdesc:ada6a17fc10f55293cc507b583220f8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to apply collision filters to topologically adjacent bodies at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> time.  <a href="#ada6a17fc10f55293cc507b583220f8d7">More...</a><br /></td></tr>
+<tr class="separator:ada6a17fc10f55293cc507b583220f8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ad3e6c2aa8d6de728ee3552260f428"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a14ad3e6c2aa8d6de728ee3552260f428">get_adjacent_bodies_collision_filters</a> () const</td></tr>
+<tr class="memdesc:a14ad3e6c2aa8d6de728ee3552260f428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether to apply collision filters to topologically adjacent bodies at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> time.  <a href="#a14ad3e6c2aa8d6de728ee3552260f428">More...</a><br /></td></tr>
+<tr class="separator:a14ad3e6c2aa8d6de728ee3552260f428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca600d62fcd45c7fabf7f2ea5c9524f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aca600d62fcd45c7fabf7f2ea5c9524f6">SetDiscreteUpdateManager</a> (std::unique_ptr&lt; internal::DiscreteUpdateManager&lt; T &gt;&gt; manager)</td></tr>
 <tr class="memdesc:aca600d62fcd45c7fabf7f2ea5c9524f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use only by advanced developers wanting to try out their custom time stepping strategies, including contact resolution.  <a href="#aca600d62fcd45c7fabf7f2ea5c9524f6">More...</a><br /></td></tr>
 <tr class="separator:aca600d62fcd45c7fabf7f2ea5c9524f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3894,6 +3900,25 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a14ad3e6c2aa8d6de728ee3552260f428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ad3e6c2aa8d6de728ee3552260f428">&#9670;&nbsp;</a></span>get_adjacent_bodies_collision_filters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool get_adjacent_bodies_collision_filters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether to apply collision filters to topologically adjacent bodies at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> time. </p>
 
 </div>
 </div>
@@ -7148,8 +7173,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7160,7 +7185,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7174,8 +7199,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7186,7 +7211,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7522,6 +7547,32 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Overload for visual geometry registration; it relies on the downstream <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role.">geometry::IllustrationProperties</a> <em>consumer</em> to provide default parameter values (see <a class="el" href="group__geometry__roles.html">Geometry Queries and Roles</a> for details). </p>
+
+</div>
+</div>
+<a id="ada6a17fc10f55293cc507b583220f8d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6a17fc10f55293cc507b583220f8d7">&#9670;&nbsp;</a></span>set_adjacent_bodies_collision_filters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_adjacent_bodies_collision_filters </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets whether to apply collision filters to topologically adjacent bodies at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> time. </p>
+<p>Filters are applied when there exists a joint between bodies, except in the case of 6-dof joints or joints in which the parent body is <code>world</code>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>iff called post-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

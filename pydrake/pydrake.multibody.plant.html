@@ -3638,6 +3638,13 @@ port, which can be set with JointActuator::set_actuation_vector().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.get_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">get_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.get_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether to apply collision filters to topologically adjacent
+bodies at Finalize() time.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.get_applied_generalized_force_input_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_applied_generalized_force_input_port"></span><span class="sig-name descname"><span class="pre">get_applied_generalized_force_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.get_applied_generalized_force_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the vector-valued input port for
@@ -5426,6 +5433,20 @@ property of type CoulombFriction&lt;double&gt;.</p>
 <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.set_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].set_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">set_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_-float-.set_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Sets whether to apply collision filters to topologically adjacent
+bodies at Finalize() time. Filters are applied when there exists a
+joint between bodies, except in the case of 6-dof joints or joints in
+which the parent body is <code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -7689,6 +7710,13 @@ port, which can be set with JointActuator::set_actuation_vector().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">get_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether to apply collision filters to topologically adjacent
+bodies at Finalize() time.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_applied_generalized_force_input_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_applied_generalized_force_input_port"></span><span class="sig-name descname"><span class="pre">get_applied_generalized_force_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_applied_generalized_force_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the vector-valued input port for
@@ -9477,6 +9505,20 @@ property of type CoulombFriction&lt;double&gt;.</p>
 <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">set_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Sets whether to apply collision filters to topologically adjacent
+bodies at Finalize() time. Filters are applied when there exists a
+joint between bodies, except in the case of 6-dof joints or joints in
+which the parent body is <code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -11738,6 +11780,13 @@ port, which can be set with JointActuator::set_actuation_vector().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">get_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether to apply collision filters to topologically adjacent
+bodies at Finalize() time.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_applied_generalized_force_input_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_applied_generalized_force_input_port"></span><span class="sig-name descname"><span class="pre">get_applied_generalized_force_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_applied_generalized_force_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the vector-valued input port for
@@ -13526,6 +13575,20 @@ property of type CoulombFriction&lt;double&gt;.</p>
 <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">set_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Sets whether to apply collision filters to topologically adjacent
+bodies at Finalize() time. Filters are applied when there exists a
+joint between bodies, except in the case of 6-dof joints or joints in
+which the parent body is <code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15774,6 +15837,13 @@ port, which can be set with JointActuator::set_actuation_vector().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-float-.get_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_[float].get_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">get_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-float-.get_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether to apply collision filters to topologically adjacent
+bodies at Finalize() time.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-float-.get_applied_generalized_force_input_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[float].get_applied_generalized_force_input_port"></span><span class="sig-name descname"><span class="pre">get_applied_generalized_force_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-float-.get_applied_generalized_force_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the vector-valued input port for
@@ -17565,6 +17635,20 @@ geometry::IllustrationProperties.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-float-.set_adjacent_bodies_collision_filters">
+<span id="pydrake.multibody.plant.MultibodyPlant_[float].set_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">set_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-float-.set_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Sets whether to apply collision filters to topologically adjacent
+bodies at Finalize() time. Filters are applied when there exists a
+joint between bodies, except in the case of 6-dof joints or joints in
+which the parent body is <code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-float-.set_contact_model">
 <span id="pydrake.multibody.plant.MultibodyPlant_[float].set_contact_model"></span><span class="sig-name descname"><span class="pre">set_contact_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactModel" title="pydrake.multibody.plant.ContactModel"><span class="pre">pydrake.multibody.plant.ContactModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-float-.set_contact_model" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the contact model to be used by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant, see
@@ -17975,6 +18059,13 @@ exactly, with the exception of time_step.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlantConfig" title="pydrake.multibody.plant.MultibodyPlantConfig"><span class="pre">pydrake.multibody.plant.MultibodyPlantConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.adjacent_bodies_collision_filters">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">adjacent_bodies_collision_filters</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
+<dd><p>Configures the
+MultibodyPlant::set_adjacent_bodies_collision_filters().</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.contact_model">

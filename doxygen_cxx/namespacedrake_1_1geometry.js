@@ -1,5 +1,6 @@
 var namespacedrake_1_1geometry =
 [
+    [ "DRAKE_NO_EXPORT", "namespacedrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t.html", "namespacedrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t" ],
     [ "optimization", "namespacedrake_1_1geometry_1_1optimization.html", "namespacedrake_1_1geometry_1_1optimization" ],
     [ "render", "namespacedrake_1_1geometry_1_1render.html", "namespacedrake_1_1geometry_1_1render" ],
     [ "Box", "classdrake_1_1geometry_1_1_box.html", "classdrake_1_1geometry_1_1_box" ],

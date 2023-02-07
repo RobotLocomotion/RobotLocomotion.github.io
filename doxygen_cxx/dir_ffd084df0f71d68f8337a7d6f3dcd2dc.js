@@ -56,7 +56,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "polygon_surface_mesh_field.h", "polygon__surface__mesh__field_8h.html", "polygon__surface__mesh__field_8h" ],
     [ "posed_half_space.h", "posed__half__space_8h.html", null ],
     [ "proximity_doxygen.h", "proximity__doxygen_8h.html", null ],
-    [ "proximity_utilities.h", "proximity__utilities_8h.html", null ],
+    [ "proximity_utilities.h", "proximity__utilities_8h.html", "proximity__utilities_8h" ],
     [ "sorted_triplet.h", "sorted__triplet_8h.html", null ],
     [ "tessellation_strategy.h", "tessellation__strategy_8h.html", null ],
     [ "triangle_surface_mesh.h", "triangle__surface__mesh_8h.html", [

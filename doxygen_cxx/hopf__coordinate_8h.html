@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 <tr class="separator:a82d0a7052d08481add2e9086b98144dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab948fdacb210871495edea82aa001473"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab948fdacb210871495edea82aa001473"><td class="memTemplItemLeft" align="right" valign="top">Vector3&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab948fdacb210871495edea82aa001473">QuaternionToHopfCoordinate</a> (const Eigen::Quaternion&lt; T &gt; &amp;quaternion)</td></tr>
-<tr class="memdesc:ab948fdacb210871495edea82aa001473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a unit-length quaternion (w, x, y, z) to Hopf coordinate as if w &gt;= 0 ψ = 2*atan2(x, w) else ψ = 2*atan2(-x, -w) φ = mod(atan2(z, y) - ψ/2, 2pi) θ = 2*atan2(√(y²+z²), √(w²+x²)) ψ is in the range of [-pi, pi].  <a href="namespacedrake_1_1math.html#ab948fdacb210871495edea82aa001473">More...</a><br /></td></tr>
+<tr class="memdesc:ab948fdacb210871495edea82aa001473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a unit-length quaternion (w, x, y, z) (with the requirement w &gt;= 0) to Hopf coordinate as ψ = 2*atan2(x, w) φ = mod(atan2(z, y) - ψ/2, 2pi) θ = 2*atan2(√(y²+z²), √(w²+x²)) ψ is in the range of [-pi, pi].  <a href="namespacedrake_1_1math.html#ab948fdacb210871495edea82aa001473">More...</a><br /></td></tr>
 <tr class="separator:ab948fdacb210871495edea82aa001473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

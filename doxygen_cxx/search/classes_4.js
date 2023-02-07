@@ -8,6 +8,7 @@ var searchData=
   ['eigensizeminpreferdynamic',['EigenSizeMinPreferDynamic',['../structdrake_1_1_eigen_size_min_prefer_dynamic.html',1,'drake']]],
   ['eigensizeminpreferfixed',['EigenSizeMinPreferFixed',['../structdrake_1_1_eigen_size_min_prefer_fixed.html',1,'drake']]],
   ['ellipsoid',['Ellipsoid',['../classdrake_1_1geometry_1_1_ellipsoid.html',1,'drake::geometry']]],
+  ['encodeddata',['EncodedData',['../classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html',1,'drake::geometry::DRAKE_NO_EXPORT']]],
   ['environment',['Environment',['../classdrake_1_1symbolic_1_1_environment.html',1,'drake::symbolic']]],
   ['equal_5fto_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['equal_to&lt; drake::symbolic::Expression &gt;',['../structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html',1,'std']]],
   ['equal_5fto_3c_20drake_3a_3asymbolic_3a_3aformula_20_3e',['equal_to&lt; drake::symbolic::Formula &gt;',['../structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html',1,'std']]],
