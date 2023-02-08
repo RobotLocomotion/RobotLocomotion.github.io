@@ -92,13 +92,13 @@
   Drake C++ Documentation
  </div>
  <div id="DDGSearch">
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search C++ API only…">
-   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
   </form>
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search all of Drake…">
-   <input type="hidden" name="sites" value="drake.mit.edu">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
   </form>
  </div>
  <div id="MSearchBoxContainer">
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1_find_resource_result.ht
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Models the outcome of <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="Attempts to locate a Drake resource named by the given resource_path.">drake::FindResource</a>. </p>
+<div class="textblock"><p>Models the outcome of <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="(Advanced) Attempts to locate a Drake resource named by the given resource_path.">drake::FindResource</a>. </p>
 <p>After a call to FindResource, typical calling code would use <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">get_absolute_path_or_throw()</a>. Alternatively, <a class="el" href="classdrake_1_1_find_resource_result.html#acea1f8238d8dd21eb2ea68259c75edbd" title="Returns the absolute path to the resource, iff the resource was found.">get_absolute_path()</a> will return an <code>optional&lt;string&gt;</code>, which can be manually checked to contain a value before using the path. If the resource was not found, <a class="el" href="classdrake_1_1_find_resource_result.html#a7f98c09abf3dd4f0b70a50f26eb01ef6" title="Returns the error message, iff the resource was not found.">get_error_message()</a> will contain an error message.</p>
 <p>For a given <a class="el" href="classdrake_1_1_find_resource_result.html" title="Models the outcome of drake::FindResource.">FindResourceResult</a> instance, exactly one of <a class="el" href="classdrake_1_1_find_resource_result.html#acea1f8238d8dd21eb2ea68259c75edbd" title="Returns the absolute path to the resource, iff the resource was found.">get_absolute_path()</a> or <a class="el" href="classdrake_1_1_find_resource_result.html#a7f98c09abf3dd4f0b70a50f26eb01ef6" title="Returns the error message, iff the resource was not found.">get_error_message()</a> will contain a value. (Similarly, exactly one of them will not contain a value.) </p>
 </div>

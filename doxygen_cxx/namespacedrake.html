@@ -92,13 +92,13 @@
   Drake C++ Documentation
  </div>
  <div id="DDGSearch">
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search C++ API only…">
-   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
   </form>
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search all of Drake…">
-   <input type="hidden" name="sites" value="drake.mit.edu">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
   </form>
  </div>
  <div id="MSearchBoxContainer">
@@ -248,7 +248,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structdrake_1_1_eigen_size_min_prefer_fixed.html" title="EigenSizeMinPreferFixed is a variant of EigenSizeMinPreferDynamic.">EigenSizeMinPreferFixed</a> is a variant of <a class="el" href="structdrake_1_1_eigen_size_min_prefer_dynamic.html" title="EigenSizeMinPreferDynamic&lt;a, b&gt;::value gives the min between compile-time sizes a and b.">EigenSizeMinPreferDynamic</a>.  <a href="structdrake_1_1_eigen_size_min_prefer_fixed.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_find_resource_result.html">FindResourceResult</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Models the outcome of <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="Attempts to locate a Drake resource named by the given resource_path.">drake::FindResource</a>.  <a href="classdrake_1_1_find_resource_result.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Models the outcome of <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="(Advanced) Attempts to locate a Drake resource named by the given resource_path.">drake::FindResource</a>.  <a href="classdrake_1_1_find_resource_result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_identifier.html">Identifier</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple identifier class.  <a href="classdrake_1_1_identifier.html#details">More...</a><br /></td></tr>
@@ -621,10 +621,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:adba0205c520f270cd638f7fb39fb5576"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the absolute path of the library with the name <code>library_name</code> if that library was loaded in the current running process.  <a href="#adba0205c520f270cd638f7fb39fb5576">More...</a><br /></td></tr>
 <tr class="separator:adba0205c520f270cd638f7fb39fb5576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a535bb41fc091d96d7de06b87e68c9afb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_find_resource_result.html">FindResourceResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb">FindResource</a> (const std::string &amp;resource_path)</td></tr>
-<tr class="memdesc:a535bb41fc091d96d7de06b87e68c9afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to locate a Drake resource named by the given <code>resource_path</code>.  <a href="#a535bb41fc091d96d7de06b87e68c9afb">More...</a><br /></td></tr>
+<tr class="memdesc:a535bb41fc091d96d7de06b87e68c9afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Attempts to locate a Drake resource named by the given <code>resource_path</code>.  <a href="#a535bb41fc091d96d7de06b87e68c9afb">More...</a><br /></td></tr>
 <tr class="separator:a535bb41fc091d96d7de06b87e68c9afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6">FindResourceOrThrow</a> (const std::string &amp;resource_path)</td></tr>
-<tr class="memdesc:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>.  <a href="#ac72eb43ba982b5a4d188c85aa14e0cc6">More...</a><br /></td></tr>
+<tr class="memdesc:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>.  <a href="#ac72eb43ba982b5a4d188c85aa14e0cc6">More...</a><br /></td></tr>
 <tr class="separator:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bdf00a0f32970352a90afbae0f4114a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a">HasRunfiles</a> ()</td></tr>
 <tr class="memdesc:a9bdf00a0f32970352a90afbae0f4114a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns true iff this process has Bazel runfiles available.  <a href="#a9bdf00a0f32970352a90afbae0f4114a">More...</a><br /></td></tr>
@@ -2281,7 +2281,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Attempts to locate a Drake resource named by the given <code>resource_path</code>. </p>
+<p>(Advanced) Attempts to locate a Drake resource named by the given <code>resource_path</code>. </p>
 <p>The <code>resource_path</code> refers to the relative path within the Drake source repository, prepended with <code>drake/</code>. For example, to find the source file <code>examples/pendulum/Pendulum.urdf</code>, the <code>resource_path</code> would be <code>drake/examples/pendulum/Pendulum.urdf</code>. Paths that do not start with <code>drake/</code> will return an error result. The <code>resource_path</code> must refer to a file (not a directory).</p>
 <p>The search scans for the resource in the following resource roots and in the following order:</p>
 <ol type="1">
@@ -2309,7 +2309,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>. </p>
+<p>(Advanced) Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>. </p>
+<p>The primary purpose of this function is for Drake's software internals to locate Drake resources (e.g., config files) within Drake's build system. In most cases, end users should not need to use it.</p>
+<p>Do NOT use this function to feed into a drake::multibody::parsing::Parser. Instead, use parser.AddModelsFromUrl() in coordination with the parser's PackageMap. </p>
 
 </div>
 </div>
@@ -3109,7 +3111,7 @@ Variables</h2></td></tr>
 
 <p>(Advanced) Returns the fully-qualified path to the first folder containing Drake resources as located by FindResource, or nullopt if none is found. </p>
 <p>For example <code>${result}/examples/pendulum/Pendulum.urdf</code> would be the path to the Pendulum example's URDF resource.</p>
-<p>Most users should prefer <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="Attempts to locate a Drake resource named by the given resource_path.">FindResource()</a> or <a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6" title="Convenient wrapper for querying FindResource(resource_path) followed by FindResourceResult::get_absol...">FindResourceOrThrow()</a> to locate Drake resources for a specific resource filename. This method only exists for legacy compatibility reasons, and might eventually be removed. </p>
+<p>Most users should prefer <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="(Advanced) Attempts to locate a Drake resource named by the given resource_path.">FindResource()</a> or <a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6" title="(Advanced) Convenient wrapper for querying FindResource(resource_path) followed by FindResourceResult...">FindResourceOrThrow()</a> to locate Drake resources for a specific resource filename. This method only exists for legacy compatibility reasons, and might eventually be removed. </p>
 
 </div>
 </div>
@@ -3820,7 +3822,7 @@ Variables</h2></td></tr>
 <p>The name of the environment variable that provides the first place where FindResource attempts to look. </p>
 <p>The environment variable is allowed to be unset or empty; in that case, FindResource will attempt to use other locations without complaint.</p>
 <p>The value is guaranteed to be "DRAKE_RESOURCE_ROOT". (For some users, it may be easier to hard-code a value than refer to this constant.)</p>
-<p>When the environment variable is set, resources are sought in relation to it by appending the <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="Attempts to locate a Drake resource named by the given resource_path.">FindResource()</a> <code>resource_path</code> to the environment variable (with an intermediate <code>/</code> as appropriate). For example, if the <code>resource_path</code> is <code>drake/examples/pendulum/Pendulum.urdf</code> and the <code>DRAKE_RESOURCE_ROOT</code> is set to <code>/home/someuser/foo</code> then the resource will be sought at <code>/home/someuser/foo/drake/examples/pendulum/Pendulum.urdf</code>.</p>
+<p>When the environment variable is set, resources are sought in relation to it by appending the <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="(Advanced) Attempts to locate a Drake resource named by the given resource_path.">FindResource()</a> <code>resource_path</code> to the environment variable (with an intermediate <code>/</code> as appropriate). For example, if the <code>resource_path</code> is <code>drake/examples/pendulum/Pendulum.urdf</code> and the <code>DRAKE_RESOURCE_ROOT</code> is set to <code>/home/someuser/foo</code> then the resource will be sought at <code>/home/someuser/foo/drake/examples/pendulum/Pendulum.urdf</code>.</p>
 <p>The intended use of this variable is to seek resources from an installed copy of Drake, in case other methods have failed. </p>
 
 </div>

@@ -92,13 +92,13 @@
   Drake C++ Documentation
  </div>
  <div id="DDGSearch">
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search C++ API only…">
-   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
   </form>
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search all of Drake…">
-   <input type="hidden" name="sites" value="drake.mit.edu">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
   </form>
  </div>
  <div id="MSearchBoxContainer">
@@ -216,6 +216,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#ad3bec3a31ebbe841c05773d4f5cb1791">AddModels</a> (const std::filesystem::path &amp;file_name)</td></tr>
 <tr class="memdesc:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#ad3bec3a31ebbe841c05773d4f5cb1791">More...</a><br /></td></tr>
 <tr class="separator:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ecd936860fa30a7c3d248fb75353c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a42ecd936860fa30a7c3d248fb75353c0">AddModelsFromUrl</a> (const std::string &amp;url)</td></tr>
+<tr class="memdesc:a42ecd936860fa30a7c3d248fb75353c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>url</code> and adds all of its model(s) to <code>plant</code>.  <a href="#a42ecd936860fa30a7c3d248fb75353c0">More...</a><br /></td></tr>
+<tr class="separator:a42ecd936860fa30a7c3d248fb75353c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2">AddAllModelsFromFile</a> (const std::string &amp;file_name)</td></tr>
 <tr class="memdesc:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy spelling of AddModels.  <a href="#a9b40bb492d33e373b3bfcf5d440a36c2">More...</a><br /></td></tr>
 <tr class="separator:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -595,6 +598,40 @@ Friends</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">file_contents</td><td>The model data to be parsed. </td></tr>
     <tr><td class="paramname">file_type</td><td>The data format; must be one of the filename suffixes listed above, <em>without</em> the leading dot (.). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The set of model instance indices for the newly added models, including nested models. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in case of errors. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42ecd936860fa30a7c3d248fb75353c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ecd936860fa30a7c3d248fb75353c0">&#9670;&nbsp;</a></span>AddModelsFromUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&gt; AddModelsFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses the input file named in <code>url</code> and adds all of its model(s) to <code>plant</code>. </p>
+<p>The allowed URL schemes are either <code><a href="file://">file://</a></code> for local files or <code>package://</code> (or <code>model://</code>) to use this <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a>'s <code><a class="el" href="classdrake_1_1multibody_1_1_parser.html#afb031b4b56411c477d6f19f9f1dc65f0" title="Gets a mutable reference to the PackageMap used by this parser.">package_map()</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>The file to be parsed. The file type will be inferred from the extension. </td></tr>
   </table>
   </dd>
 </dl>

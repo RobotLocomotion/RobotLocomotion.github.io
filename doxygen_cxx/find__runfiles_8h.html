@@ -92,13 +92,13 @@
   Drake C++ Documentation
  </div>
  <div id="DDGSearch">
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search C++ API only…">
-   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
   </form>
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
    <input type="text" name="q" placeholder="Search all of Drake…">
-   <input type="hidden" name="sites" value="drake.mit.edu">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
   </form>
  </div>
  <div id="MSearchBoxContainer">
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('find__runfiles_8h.html','');});
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains helpers to work with Bazel-declared runfiles &ndash; declared data dependencies used by C++ code. </p>
 <p>The functions in this file only succeed when used within a Bazel build.</p>
-<p>All source code within Drake should use <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="Attempts to locate a Drake resource named by the given resource_path.">FindResource()</a> or <a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6" title="Convenient wrapper for querying FindResource(resource_path) followed by FindResourceResult::get_absol...">FindResourceOrThrow()</a> instead of these Runfiles routines, because FindResource will operate correctly in pre-compiled / installed builds of Drake whereas FindRunfile will not.</p>
+<p>All source code within Drake should use <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="(Advanced) Attempts to locate a Drake resource named by the given resource_path.">FindResource()</a> or <a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6" title="(Advanced) Convenient wrapper for querying FindResource(resource_path) followed by FindResourceResult...">FindResourceOrThrow()</a> instead of these Runfiles routines, because FindResource will operate correctly in pre-compiled / installed builds of Drake whereas FindRunfile will not.</p>
 <p>These runfiles-related helpers are intended for use by downstream Bazel projects that use Drake as a library, so that those projects can reuse the relatively complicated logic within these routines during source builds. </p>
 </div><div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">

@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html":[3,0,0,9,29],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa16e72abb129f3fdc036799c6888d06":[3,0,0,9,29,1],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa431e4aae58cdaabaca8b4a4117a20c":[3,0,0,9,29,2],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,9,29,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,13,6,0,6],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,13,6,0,0],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,6,0,5],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,13,6,1],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[3,0,0,13,6,1,2]
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,13,6,1]
 };

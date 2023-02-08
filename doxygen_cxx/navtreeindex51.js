@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,22,2],
 "scoped__singleton_8h.html":[4,0,0,1,49],
 "screw__joint_8h.html":[4,0,0,8,14,43],
 "screw__mobilizer_8h.html":[4,0,0,8,14,44],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "structdrake_1_1_eigen_size_min_prefer_dynamic.html":[3,0,0,28],
 "structdrake_1_1_eigen_size_min_prefer_dynamic.html#adfbd84e9619cf3366fb744d3f70c8c23":[3,0,0,28,0],
 "structdrake_1_1_eigen_size_min_prefer_fixed.html":[3,0,0,29],
-"structdrake_1_1_eigen_size_min_prefer_fixed.html#adfbd84e9619cf3366fb744d3f70c8c23":[3,0,0,29,0],
-"structdrake_1_1_multiply_eigen_sizes.html":[3,0,0,39]
+"structdrake_1_1_eigen_size_min_prefer_fixed.html#adfbd84e9619cf3366fb744d3f70c8c23":[3,0,0,29,0]
 };

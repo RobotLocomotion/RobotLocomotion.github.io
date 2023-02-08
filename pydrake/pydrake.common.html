@@ -68,9 +68,9 @@
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
     <input type="text" name="q" placeholder="Search all of Drake…" />
-    <input type="hidden" name="sites" value="drake.mit.edu" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
   </form>
 </div>
 
@@ -209,8 +209,15 @@ have called <code class="docutils literal notranslate"><span class="pre">configu
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.common.FindResourceOrThrow">
 <span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">FindResourceOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.FindResourceOrThrow" title="Permalink to this definition"></a></dt>
-<dd><p>Convenient wrapper for querying FindResource(resource_path) followed
-by FindResourceResult::get_absolute_path_or_throw().</p>
+<dd><p>(Advanced) Convenient wrapper for querying FindResource(resource_path)
+followed by FindResourceResult::get_absolute_path_or_throw().</p>
+<p>The primary purpose of this function is for Drake’s software internals
+to locate Drake resources (e.g., config files) within Drake’s build
+system. In most cases, end users should not need to use it.</p>
+<p>Do NOT use this function to feed into a
+drake::multibody::parsing::Parser. Instead, use
+parser.AddModelsFromUrl() in coordination with the parser’s
+PackageMap.</p>
 </dd></dl>
 
 <dl class="py function">

@@ -68,9 +68,9 @@
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
-  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
     <input type="text" name="q" placeholder="Search all of Drake…" />
-    <input type="hidden" name="sites" value="drake.mit.edu" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
   </form>
 </div>
 
@@ -746,12 +746,59 @@ on or after 2023-04-01.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModels">
-<span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModels" title="Permalink to this definition"></a></dt>
-<dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all of its
+<span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModels" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddModels(self: pydrake.multibody.parsing.Parser, file_name: str) -&gt; List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
+</ol>
+<p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all of its
 model(s) to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_name</span></code>:</dt><dd><p>The name of the file to be parsed. The file type will be inferred
 from the extension.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The set of model instance indices for the newly added models,
+including nested models.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>AddModels(self: pydrake.multibody.parsing.Parser, <a href="#id3"><span class="problematic" id="id4">*</span></a>, url: str) -&gt; List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
+</ol>
+<p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">url</span></code> and adds all of its model(s) to
+<code class="docutils literal notranslate"><span class="pre">plant</span></code>. The allowed URL schemes are either <code class="docutils literal notranslate"><span class="pre">file://</span></code> for local
+files or <code class="docutils literal notranslate"><span class="pre">package://</span></code> (or <code class="docutils literal notranslate"><span class="pre">model://</span></code>) to use this Parser’s
+<code class="docutils literal notranslate"><span class="pre">package_map()</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">url</span></code>:</dt><dd><p>The file to be parsed. The file type will be inferred from the
+extension.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The set of model instance indices for the newly added models,
+including nested models.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>AddModels(self: pydrake.multibody.parsing.Parser, <a href="#id5"><span class="problematic" id="id6">*</span></a>, file_contents: str, file_type: str) -&gt; List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
+</ol>
+<p>Provides same functionality as AddModels, but instead parses the model
+description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with format dictated by
+<code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_contents</span></code>:</dt><dd><p>The model data to be parsed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_type</span></code>:</dt><dd><p>The data format; must be one of the filename suffixes listed
+above, <em>without</em> the leading dot (.).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -776,6 +823,29 @@ description text data via <code class="docutils literal notranslate"><span class
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_type</span></code>:</dt><dd><p>The data format; must be one of the filename suffixes listed
 above, <em>without</em> the leading dot (.).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The set of model instance indices for the newly added models,
+including nested models.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModelsFromUrl">
+<span class="sig-name descname"><span class="pre">AddModelsFromUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromUrl" title="Permalink to this definition"></a></dt>
+<dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">url</span></code> and adds all of its model(s) to
+<code class="docutils literal notranslate"><span class="pre">plant</span></code>. The allowed URL schemes are either <code class="docutils literal notranslate"><span class="pre">file://</span></code> for local
+files or <code class="docutils literal notranslate"><span class="pre">package://</span></code> (or <code class="docutils literal notranslate"><span class="pre">model://</span></code>) to use this Parser’s
+<code class="docutils literal notranslate"><span class="pre">package_map()</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">url</span></code>:</dt><dd><p>The file to be parsed. The file type will be inferred from the
+extension.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
