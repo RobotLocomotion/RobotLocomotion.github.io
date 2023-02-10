@@ -1,5 +1,12 @@
 var NAVTREEINDEX51 =
 {
+"scope__exit_8h.html":[4,0,0,1,48],
+"scoped__names_8h.html":[4,0,0,8,9,22],
+"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,22,5],
+"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,9,22,6],
+"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,22,3],
+"scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,9,22,4],
+"scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,9,22,1],
 "scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,22,2],
 "scoped__singleton_8h.html":[4,0,0,1,49],
 "screw__joint_8h.html":[4,0,0,8,14,43],
@@ -95,9 +102,9 @@ var NAVTREEINDEX51 =
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81":[4,0,0,11,51,0,1],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[4,0,0,11,51,0,5],
 "solver__type__converter_8h.html":[4,0,0,11,52],
-"solvers__py_8h.html":[4,0,0,0,0,4,0],
-"solvers__pybind_8h.html":[4,0,0,0,0,4,1],
-"solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,4,1,0],
+"solvers__py_8h.html":[4,0,0,0,0,5,0],
+"solvers__pybind_8h.html":[4,0,0,0,0,5,1],
+"solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,5,1,0],
 "sorted__pair_8h.html":[4,0,0,1,50],
 "sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,50,10],
 "sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,50,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX51 =
 "stochastic_8h.html#af9a9a11adf4beb57a9f7b959e190ed3d":[4,0,0,1,2,1,16],
 "stochastic__systems_8h.html":[4,0,0,12,11],
 "string__view__map__key_8h.html":[4,0,0,8,14,48],
-"structdrake_1_1_delegating_hasher.html":[3,0,0,23],
-"structdrake_1_1_delegating_hasher.html#a2f06de017c348e04061971db98125a4e":[3,0,0,23,1],
-"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,23,0],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[3,0,0,23,2],
-"structdrake_1_1_eigen_size_min_prefer_dynamic.html":[3,0,0,28],
-"structdrake_1_1_eigen_size_min_prefer_dynamic.html#adfbd84e9619cf3366fb744d3f70c8c23":[3,0,0,28,0],
-"structdrake_1_1_eigen_size_min_prefer_fixed.html":[3,0,0,29],
-"structdrake_1_1_eigen_size_min_prefer_fixed.html#adfbd84e9619cf3366fb744d3f70c8c23":[3,0,0,29,0]
+"structdrake_1_1_delegating_hasher.html":[3,0,0,23]
 };

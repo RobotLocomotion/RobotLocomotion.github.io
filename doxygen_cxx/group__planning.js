@@ -212,7 +212,7 @@ var group__planning =
       [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#a843327db4cd0e33bd095156022372941", null ],
       [ "Plan", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#ae24da0d2f02398a5736a6d30e7fc7816", null ]
     ] ],
-    [ "DoDifferentialInverseKinematics", "group__planning.html#gab53fd2e1578db60ceb43b754671ae539", null ],
-    [ "DoDifferentialInverseKinematics", "group__planning.html#ga6106c9d0180a87d59f7a36709f7d6785", null ],
-    [ "DoDifferentialInverseKinematics", "group__planning.html#gae10cdb111b55cc12914467fecbe82234", null ]
+    [ "DoDifferentialInverseKinematics", "group__planning.html#gac36361db531cfc7f707ef52db81375e9", null ],
+    [ "DoDifferentialInverseKinematics", "group__planning.html#ga6e3a66e37411b9d8358efc00ec510a33", null ],
+    [ "DoDifferentialInverseKinematics", "group__planning.html#gafd57fd1045276e8221f6f0a4fac36c82", null ]
 ];

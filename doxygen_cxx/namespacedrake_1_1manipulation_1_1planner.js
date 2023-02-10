@@ -1,6 +1,0 @@
-var namespacedrake_1_1manipulation_1_1planner =
-[
-    [ "DifferentialInverseKinematicsIntegrator", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator" ],
-    [ "DifferentialInverseKinematicsParameters", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters" ],
-    [ "DifferentialInverseKinematicsResult", "structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html", "structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result" ]
-];

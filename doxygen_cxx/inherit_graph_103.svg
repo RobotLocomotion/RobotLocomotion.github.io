@@ -2174,123 +2174,123 @@
 <!-- Node276 -->
 <g id="node142" class="node">
 <title>Node276</title>
-<g id="a_node142"><a xlink:href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html" target="_top" xlink:title="A LeafSystem which uses DoDifferentialInverseKinematics to produce joint position commands.">
-<polygon fill="white" stroke="black" points="754.5,-3217 754.5,-3247 916.5,-3247 916.5,-3217 754.5,-3217"/>
-<text text-anchor="start" x="762.5" y="-3235" font-family="Helvetica,sans-Serif" font-size="10.00">DifferentialInverseKinematics</text>
-<text text-anchor="middle" x="835.5" y="-3224" font-family="Helvetica,sans-Serif" font-size="10.00">Integrator</text>
+<g id="a_node142"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html" target="_top" xlink:title="Handles the command for the Schunk WSG gripper from a LcmSubscriberSystem.">
+<polygon fill="white" stroke="black" points="752.5,-3228.5 752.5,-3247.5 918.5,-3247.5 918.5,-3228.5 752.5,-3228.5"/>
+<text text-anchor="middle" x="835.5" y="-3235.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgCommandReceiver</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node276 -->
 <g id="edge142" class="edge">
 <title>Node247&#45;&gt;Node276</title>
-<path fill="none" stroke="midnightblue" d="M603.03,-3427.71C621.18,-3388.96 667.51,-3301.58 734,-3257 740.27,-3252.79 747.19,-3249.3 754.38,-3246.39"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="599.63,-3426.72 598.66,-3437.27 606,-3429.63 599.63,-3426.72"/>
+<path fill="none" stroke="midnightblue" d="M602.59,-3427.89C620.21,-3388.82 665.98,-3299.85 734,-3257 740.08,-3253.17 746.76,-3250.07 753.69,-3247.57"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="599.36,-3426.54 598.55,-3437.1 605.77,-3429.36 599.36,-3426.54"/>
 </g>
 <!-- Node277 -->
 <g id="node143" class="node">
 <title>Node277</title>
-<g id="a_node143"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html" target="_top" xlink:title="Handles the command for the Schunk WSG gripper from a LcmSubscriberSystem.">
-<polygon fill="white" stroke="black" points="752.5,-3178.5 752.5,-3197.5 918.5,-3197.5 918.5,-3178.5 752.5,-3178.5"/>
-<text text-anchor="middle" x="835.5" y="-3185.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgCommandReceiver</text>
+<g id="a_node143"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html" target="_top" xlink:title="Send lcmt_schunk_wsg_command messages for a Schunk WSG gripper.">
+<polygon fill="white" stroke="black" points="757,-3190.5 757,-3209.5 914,-3209.5 914,-3190.5 757,-3190.5"/>
+<text text-anchor="middle" x="835.5" y="-3197.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgCommandSender</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node277 -->
 <g id="edge143" class="edge">
 <title>Node247&#45;&gt;Node277</title>
-<path fill="none" stroke="midnightblue" d="M599.65,-3427.81C613.12,-3381.55 654.04,-3263.55 734,-3207 739.65,-3203 745.92,-3199.78 752.47,-3197.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="596.27,-3426.91 596.93,-3437.48 603.01,-3428.8 596.27,-3426.91"/>
+<path fill="none" stroke="midnightblue" d="M600.34,-3427.55C614.86,-3382.76 657.09,-3272.1 734,-3219 740.94,-3214.21 748.77,-3210.54 756.91,-3207.74"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="596.96,-3426.63 597.31,-3437.22 603.64,-3428.72 596.96,-3426.63"/>
 </g>
 <!-- Node278 -->
 <g id="node144" class="node">
 <title>Node278</title>
-<g id="a_node144"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html" target="_top" xlink:title="Send lcmt_schunk_wsg_command messages for a Schunk WSG gripper.">
-<polygon fill="white" stroke="black" points="757,-3140.5 757,-3159.5 914,-3159.5 914,-3140.5 757,-3140.5"/>
-<text text-anchor="middle" x="835.5" y="-3147.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgCommandSender</text>
+<g id="a_node144"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_pd_controller.html" target="_top" xlink:title="This class implements a controller for a Schunk WSG gripper in position control mode.">
+<polygon fill="white" stroke="black" points="769,-3152.5 769,-3171.5 902,-3171.5 902,-3152.5 769,-3152.5"/>
+<text text-anchor="middle" x="835.5" y="-3159.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgPdController</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node278 -->
 <g id="edge144" class="edge">
 <title>Node247&#45;&gt;Node278</title>
-<path fill="none" stroke="midnightblue" d="M598.16,-3427.29C608.84,-3375.71 645.03,-3236.12 734,-3169 740.8,-3163.87 748.59,-3159.99 756.75,-3157.08"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="594.67,-3426.92 596.16,-3437.41 601.53,-3428.28 594.67,-3426.92"/>
+<path fill="none" stroke="midnightblue" d="M598.6,-3427.45C610.14,-3377.51 647.89,-3244.75 734,-3181 744.13,-3173.5 756.38,-3168.7 768.78,-3165.67"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="595.16,-3426.77 596.42,-3437.29 602,-3428.28 595.16,-3426.77"/>
 </g>
 <!-- Node279 -->
 <g id="node145" class="node">
 <title>Node279</title>
-<g id="a_node145"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_pd_controller.html" target="_top" xlink:title="This class implements a controller for a Schunk WSG gripper in position control mode.">
-<polygon fill="white" stroke="black" points="769,-3102.5 769,-3121.5 902,-3121.5 902,-3102.5 769,-3102.5"/>
-<text text-anchor="middle" x="835.5" y="-3109.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgPdController</text>
+<g id="a_node145"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html" target="_top" xlink:title="Handles lcmt_schunk_wsg_status messages from a LcmSubscriberSystem.">
+<polygon fill="white" stroke="black" points="762.5,-3114.5 762.5,-3133.5 908.5,-3133.5 908.5,-3114.5 762.5,-3114.5"/>
+<text text-anchor="middle" x="835.5" y="-3121.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgStatusReceiver</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node279 -->
 <g id="edge145" class="edge">
 <title>Node247&#45;&gt;Node279</title>
-<path fill="none" stroke="midnightblue" d="M596.89,-3427.29C604.81,-3371.1 635.57,-3209.14 734,-3131 744.01,-3123.05 756.34,-3118.07 768.9,-3115.02"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="593.4,-3426.96 595.56,-3437.34 600.34,-3427.88 593.4,-3426.96"/>
+<path fill="none" stroke="midnightblue" d="M597.26,-3427.31C606.02,-3372.57 638.56,-3217.64 734,-3143 742.32,-3136.49 752.21,-3131.98 762.47,-3128.89"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="593.76,-3427 595.73,-3437.41 600.68,-3428.05 593.76,-3427"/>
 </g>
 <!-- Node280 -->
 <g id="node146" class="node">
 <title>Node280</title>
-<g id="a_node146"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html" target="_top" xlink:title="Handles lcmt_schunk_wsg_status messages from a LcmSubscriberSystem.">
-<polygon fill="white" stroke="black" points="762.5,-3064.5 762.5,-3083.5 908.5,-3083.5 908.5,-3064.5 762.5,-3064.5"/>
-<text text-anchor="middle" x="835.5" y="-3071.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgStatusReceiver</text>
+<g id="a_node146"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html" target="_top" xlink:title="Sends lcmt_schunk_wsg_status messages for a Schunk WSG.">
+<polygon fill="white" stroke="black" points="767,-3076.5 767,-3095.5 904,-3095.5 904,-3076.5 767,-3076.5"/>
+<text text-anchor="middle" x="835.5" y="-3083.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgStatusSender</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node280 -->
 <g id="edge146" class="edge">
 <title>Node247&#45;&gt;Node280</title>
-<path fill="none" stroke="midnightblue" d="M595.86,-3427.4C601.17,-3367 625.93,-3182.4 734,-3093 742.21,-3086.21 752.09,-3081.56 762.41,-3078.42"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="592.36,-3427.23 595.06,-3437.48 599.34,-3427.78 592.36,-3427.23"/>
+<path fill="none" stroke="midnightblue" d="M596.17,-3427.29C602.3,-3368.12 629.03,-3190.79 734,-3105 743.42,-3097.3 754.99,-3092.36 766.89,-3089.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="592.66,-3427.2 595.2,-3437.49 599.63,-3427.87 592.66,-3427.2"/>
 </g>
 <!-- Node281 -->
 <g id="node147" class="node">
 <title>Node281</title>
-<g id="a_node147"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html" target="_top" xlink:title="Sends lcmt_schunk_wsg_status messages for a Schunk WSG.">
-<polygon fill="white" stroke="black" points="767,-3026.5 767,-3045.5 904,-3045.5 904,-3026.5 767,-3026.5"/>
-<text text-anchor="middle" x="835.5" y="-3033.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgStatusSender</text>
+<g id="a_node147"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html" target="_top" xlink:title="This system defines input ports for the desired finger position represented as the desired distance b...">
+<polygon fill="white" stroke="black" points="750.5,-3038.5 750.5,-3057.5 920.5,-3057.5 920.5,-3038.5 750.5,-3038.5"/>
+<text text-anchor="middle" x="835.5" y="-3045.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgTrajectoryGenerator</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node281 -->
 <g id="edge147" class="edge">
 <title>Node247&#45;&gt;Node281</title>
-<path fill="none" stroke="midnightblue" d="M595.02,-3427.48C597.88,-3363.09 616.22,-3155.8 734,-3055 743.31,-3047.03 754.9,-3041.98 766.87,-3038.85"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="591.53,-3427.36 594.66,-3437.48 598.52,-3427.61 591.53,-3427.36"/>
+<path fill="none" stroke="midnightblue" d="M595.28,-3427.26C598.93,-3363.88 619.42,-3164.08 734,-3067 738.88,-3062.87 744.37,-3059.52 750.21,-3056.82"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="591.78,-3427.29 594.78,-3437.45 598.77,-3427.63 591.78,-3427.29"/>
 </g>
 <!-- Node282 -->
 <g id="node148" class="node">
 <title>Node282</title>
-<g id="a_node148"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html" target="_top" xlink:title="This system defines input ports for the desired finger position represented as the desired distance b...">
-<polygon fill="white" stroke="black" points="750.5,-2988.5 750.5,-3007.5 920.5,-3007.5 920.5,-2988.5 750.5,-2988.5"/>
-<text text-anchor="middle" x="835.5" y="-2995.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgTrajectoryGenerator</text>
+<g id="a_node148"><a xlink:href="classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html" target="_top" xlink:title="This class implements a source of joint positions for a robot.">
+<polygon fill="white" stroke="black" points="774,-3000.5 774,-3019.5 897,-3019.5 897,-3000.5 774,-3000.5"/>
+<text text-anchor="middle" x="835.5" y="-3007.5" font-family="Helvetica,sans-Serif" font-size="10.00">RobotPlanInterpolator</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node282 -->
 <g id="edge148" class="edge">
 <title>Node247&#45;&gt;Node282</title>
-<path fill="none" stroke="midnightblue" d="M594.33,-3427C594.93,-3358.14 606.77,-3129.03 734,-3017 738.8,-3012.78 744.23,-3009.36 750.03,-3006.62"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="590.83,-3427.28 594.32,-3437.28 597.83,-3427.29 590.83,-3427.28"/>
+<path fill="none" stroke="midnightblue" d="M594.54,-3427.1C595.85,-3359.58 609.79,-3137.45 734,-3029 745.04,-3019.36 759.4,-3013.97 773.79,-3011.08"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="591.04,-3427.17 594.43,-3437.21 598.04,-3427.25 591.04,-3427.17"/>
 </g>
 <!-- Node283 -->
 <g id="node149" class="node">
 <title>Node283</title>
-<g id="a_node149"><a xlink:href="classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html" target="_top" xlink:title="This class implements a source of joint positions for a robot.">
-<polygon fill="white" stroke="black" points="774,-2950.5 774,-2969.5 897,-2969.5 897,-2950.5 774,-2950.5"/>
-<text text-anchor="middle" x="835.5" y="-2957.5" font-family="Helvetica,sans-Serif" font-size="10.00">RobotPlanInterpolator</text>
+<g id="a_node149"><a xlink:href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html" target="_top" xlink:title="A LeafSystem which uses DoDifferentialInverseKinematics to produce joint position commands.">
+<polygon fill="white" stroke="black" points="754.5,-2951 754.5,-2981 916.5,-2981 916.5,-2951 754.5,-2951"/>
+<text text-anchor="start" x="762.5" y="-2969" font-family="Helvetica,sans-Serif" font-size="10.00">DifferentialInverseKinematics</text>
+<text text-anchor="middle" x="835.5" y="-2958" font-family="Helvetica,sans-Serif" font-size="10.00">Integrator</text>
 </a>
 </g>
 </g>
 <!-- Node247&#45;&gt;Node283 -->
 <g id="edge149" class="edge">
 <title>Node247&#45;&gt;Node283</title>
-<path fill="none" stroke="midnightblue" d="M593.73,-3427.16C592.1,-3354.77 596.86,-3102.71 734,-2979 744.94,-2969.13 759.36,-2963.66 773.84,-2960.78"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="590.24,-3427.29 594.03,-3437.18 597.23,-3427.08 590.24,-3427.29"/>
+<path fill="none" stroke="midnightblue" d="M594.15,-3427.01C594.05,-3356.14 603.69,-3114.57 734,-2991 739.87,-2985.43 746.78,-2981.05 754.19,-2977.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="590.65,-3427.24 594.24,-3437.21 597.65,-3427.18 590.65,-3427.24"/>
 </g>
 <!-- Node284 -->
 <g id="node150" class="node">

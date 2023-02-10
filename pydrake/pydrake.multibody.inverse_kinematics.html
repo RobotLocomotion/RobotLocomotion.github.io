@@ -402,6 +402,370 @@ and Context&lt;AutoDiffXd&gt;, then use this constructor.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsIntegrator</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-float" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A LeafSystem which uses DoDifferentialInverseKinematics to produce
+joint position commands.</p>
+<p>Rather than calling DoDifferentialInverseKinematics on the current
+measured positions of the robot, this System maintains its own
+internal state and integrates successive velocity commands open loop.
+If DoDifferentialInverseKinematics returns kNoSolution, then the
+integrator will hold the integrated position (with zero velocity); on
+kStuck the integration will continue (though “kStuck” implies that the
+achieved spatial velocity will be much smaller than what was
+commanded).</p>
+<p>The optional boolean (abstract-)valued input port <code class="docutils literal notranslate"><span class="pre">use_robot_state</span></code>
+can be used to reset the integrated state to the value obtained from
+the <code class="docutils literal notranslate"><span class="pre">robot_state</span></code> input (which must also be connected). Note: Using
+measured joint positions in a feedback loop can lead to undamped
+oscillations in the redundant joints; we hope to resolve this and are
+tracking it in #9773.</p>
+<p>Note: It is highly recommended that the user calls <code class="docutils literal notranslate"><span class="pre">SetPosition()</span></code>
+once to initialize the position commands to match the initial
+positions of the robot. Alternatively, one can connect the optional
+<code class="docutils literal notranslate"><span class="pre">robot_state</span></code> input port – which is only used at Initialization,
+and simply sets the positions to the positions on this input port (the
+port accepts the state vector with positions and velocities for easy
+of use with MultibodyPlant, but only the positions are used).</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">X_WE_desired&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">robot_state (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">use_robot_state (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DifferentialInverseKinematicsIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; joint_positions</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_only_when_result_state_changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the system.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant describing the robot.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End-effector frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>the discrete time step of the (Euler) integration.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.
+The <code class="docutils literal notranslate"><span class="pre">timestep</span></code> parameter will be set to <code class="docutils literal notranslate"><span class="pre">time_step</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot_context</span></code>:</dt><dd><p>Optional Context of the MultibodyPlant. The position values of
+this context will be overwritten during integration; you only need
+to pass this in if the robot has any non-default parameters.
+$*Default:* <code class="docutils literal notranslate"><span class="pre">robot.CreateDefaultContext()</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">log_only_when_result_state_changes</span></code>:</dt><dd><p>is a boolean that determines whether the system will log on every
+differential IK failure, or only when the failure state changes.
+When the value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, it will cause the system to have an
+additional discrete state variable to store the most recent
+DifferentialInverseKinematicsStatus. Set this to <code class="docutils literal notranslate"><span class="pre">False</span></code> if you
+want IsDifferenceEquationSystem() to return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+<p>Note: All references must remain valid for the lifetime of this
+system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.ForwardKinematics">
+<span class="sig-name descname"><span class="pre">ForwardKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.ForwardKinematics" title="Permalink to this definition"></a></dt>
+<dd><p>Provides X_WE as a function of the joint position set in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.get_mutable_parameters">
+<span class="sig-name descname"><span class="pre">get_mutable_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.get_mutable_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the differential IK parameters owned by
+this system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.get_parameters">
+<span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.get_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a const reference to the differential IK parameters owned by
+this system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.SetPositions">
+<span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.SetPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the joint positions, which are stored as state in the context. It
+is recommended that the user calls this method to initialize the
+position commands to match the initial positions of the robot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsParameters</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="Permalink to this definition"></a></dt>
+<dd><p>Contains parameters for differential inverse kinematics.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_velocities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructor. Initializes the nominal joint position to zeros of size
+<code class="docutils literal notranslate"><span class="pre">num_positions</span></code>. The time step is initialized to 1. The end effector
+flags are initialized to True. The joint centering gains are
+initialized to zero. All constraints are initialized to nullopt.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>:</dt><dd><p>Number of generalized positions.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_velocities</span></code>:</dt><dd><p>Number of generalized velocities (by default it will be set to
+num_positions).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently DoDifferentialInverseKinematics requires that
+num_positions == num_velocities.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_end_effector_angular_speed_limit">
+<span class="sig-name descname"><span class="pre">get_end_effector_angular_speed_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_end_effector_angular_speed_limit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_end_effector_translational_velocity_limits">
+<span class="sig-name descname"><span class="pre">get_end_effector_translational_velocity_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_end_effector_translational_velocity_limits" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_end_effector_velocity_flag">
+<span class="sig-name descname"><span class="pre">get_end_effector_velocity_flag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_end_effector_velocity_flag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_acceleration_limits">
+<span class="sig-name descname"><span class="pre">get_joint_acceleration_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_acceleration_limits" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_centering_gain">
+<span class="sig-name descname"><span class="pre">get_joint_centering_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_centering_gain" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_position_limits">
+<span class="sig-name descname"><span class="pre">get_joint_position_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_position_limits" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_velocity_limits">
+<span class="sig-name descname"><span class="pre">get_joint_velocity_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_joint_velocity_limits" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_maximum_scaling_to_report_stuck">
+<span class="sig-name descname"><span class="pre">get_maximum_scaling_to_report_stuck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_maximum_scaling_to_report_stuck" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_nominal_joint_position">
+<span class="sig-name descname"><span class="pre">get_nominal_joint_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_nominal_joint_position" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_num_positions">
+<span class="sig-name descname"><span class="pre">get_num_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_num_positions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_num_velocities">
+<span class="sig-name descname"><span class="pre">get_num_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_num_velocities" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_time_step">
+<span class="sig-name descname"><span class="pre">get_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.get_time_step" title="Permalink to this definition"></a></dt>
+<dd><p>&#64;name Getters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_end_effector_angular_speed_limit">
+<span class="sig-name descname"><span class="pre">set_end_effector_angular_speed_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_end_effector_angular_speed_limit" title="Permalink to this definition"></a></dt>
+<dd><p>When calling DoDifferentialInverseKinematics with a desired
+end-effector pose, this limits the magnitude of the angular velocity
+vector.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_end_effector_translational_velocity_limits">
+<span class="sig-name descname"><span class="pre">set_end_effector_translational_velocity_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_end_effector_translational_velocity_limits" title="Permalink to this definition"></a></dt>
+<dd><p>When calling DoDifferentialInverseKinematics with a desired
+end-effector pose, this sets limits on the translational velocity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_end_effector_velocity_flag">
+<span class="sig-name descname"><span class="pre">set_end_effector_velocity_flag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_end_effector_velocity_flag" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the end effector flags in the body frame. If a spatial velocity
+flag is set to false, it will not be included in the differential IK
+formulation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_acceleration_limits">
+<span class="sig-name descname"><span class="pre">set_joint_acceleration_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_acceleration_limits" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the joint acceleration limits.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt><dd><p>The first element is the lower bound, and the second is the upper
+bound.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the first</strong><strong> or </strong><strong>second element of q_bounds has</strong> – </p></li>
+<li><p><strong>the wrong dimension</strong><strong> or </strong><strong>any element of the second element is</strong> – </p></li>
+<li><p><strong>smaller than its corresponding part in the first element.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_centering_gain">
+<span class="sig-name descname"><span class="pre">set_joint_centering_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_centering_gain" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the joint centering gain, K, so that the joint centering command
+is v_next = K * (q_nominal - q_current).</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>K must be num_velocities x num_positions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_position_limits">
+<span class="sig-name descname"><span class="pre">set_joint_position_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_position_limits" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the joint position limits.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt><dd><p>The first element is the lower bound, and the second is the upper
+bound.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the first</strong><strong> or </strong><strong>second element of q_bounds has</strong> – </p></li>
+<li><p><strong>the wrong dimension</strong><strong> or </strong><strong>any element of the second element is</strong> – </p></li>
+<li><p><strong>smaller than its corresponding part in the first element.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_velocity_limits">
+<span class="sig-name descname"><span class="pre">set_joint_velocity_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_velocity_limits" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the joint velocity limits.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt><dd><p>The first element is the lower bound, and the second is the upper
+bound.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the first</strong><strong> or </strong><strong>second element of q_bounds has</strong> – </p></li>
+<li><p><strong>the wrong dimension</strong><strong> or </strong><strong>any element of the second element is</strong> – </p></li>
+<li><p><strong>smaller than its corresponding part in the first element.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_maximum_scaling_to_report_stuck">
+<span class="sig-name descname"><span class="pre">set_maximum_scaling_to_report_stuck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_maximum_scaling_to_report_stuck" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the threshold for α below which the status returned is
+DifferentialInverseKinematicsStatus::kStuck. α is the scaling of the
+commanded spatial velocity, so when α is small, it means that the
+actual spatial velocity magnitude will be small proportional to the
+commanded.</p>
+<p><em>Default:</em> 0.01.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_nominal_joint_position">
+<span class="sig-name descname"><span class="pre">set_nominal_joint_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_nominal_joint_position" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the nominal joint position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if nominal_joint_position's dimension differs.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_time_step">
+<span class="sig-name descname"><span class="pre">set_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_time_step" title="Permalink to this definition"></a></dt>
+<dd><p>&#64;name Setters. Sets time step to <code class="docutils literal notranslate"><span class="pre">dt</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if dt &lt;= 0.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsResult</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.joint_velocities">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">joint_velocities</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.joint_velocities" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.status">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.status" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsStatus</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus" title="Permalink to this definition"></a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kSolutionFound : Found the optimal solution.</p>
+<p>kNoSolutionFound : Solver unable to find a solution.</p>
+<p>kStuck : Unable to follow the desired velocity direction</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.kNoSolutionFound">
+<span class="sig-name descname"><span class="pre">kNoSolutionFound</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DifferentialInverseKinematicsStatus.kNoSolutionFound:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.kNoSolutionFound" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.kSolutionFound">
+<span class="sig-name descname"><span class="pre">kSolutionFound</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DifferentialInverseKinematicsStatus.kSolutionFound:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.kSolutionFound" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.kStuck">
+<span class="sig-name descname"><span class="pre">kStuck</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DifferentialInverseKinematicsStatus.kStuck:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.kStuck" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DistanceConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DistanceConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
@@ -439,6 +803,127 @@ DistanceConstraint object.</p>
 MultibodyPlant&lt;AutoDiffXd&gt;.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DoDifferentialInverseKinematics">
+<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DoDifferentialInverseKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DoDifferentialInverseKinematics" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>DoDifferentialInverseKinematics(q_current: numpy.ndarray[numpy.float64[m, 1]], v_current: numpy.ndarray[numpy.float64[m, 1]], V: numpy.ndarray[numpy.float64[m, 1]], J: numpy.ndarray[numpy.float64[m, n]], parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
+</ol>
+<p>Computes a generalized velocity v_next, via the following
+MathematicalProgram:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">min_</span><span class="p">{</span><span class="n">v_next</span><span class="p">,</span><span class="n">alpha</span><span class="p">}</span>  <span class="o">-</span><span class="mi">100</span> <span class="o">*</span> <span class="n">alpha</span>
+                        <span class="o">+</span> <span class="o">|</span> <span class="n">P</span> <span class="o">*</span> <span class="p">(</span><span class="n">v_next</span> <span class="o">-</span> <span class="n">K</span> <span class="o">*</span> <span class="p">(</span><span class="n">q_nominal</span> <span class="o">-</span> <span class="n">q_current</span><span class="p">))</span> <span class="o">|^</span><span class="mi">2</span>
+
+  <span class="n">s</span><span class="o">.</span><span class="n">t</span><span class="o">.</span>
+    <span class="n">J</span> <span class="o">*</span> <span class="n">v_next</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">V</span><span class="p">,</span> <span class="o">//</span> <span class="n">J</span> <span class="o">*</span> <span class="n">v_next</span> <span class="n">has</span> <span class="n">the</span> <span class="n">same</span> <span class="n">direction</span> <span class="k">as</span> <span class="n">V</span>
+    <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">alpha</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span>        <span class="o">//</span> <span class="n">Never</span> <span class="n">go</span> <span class="n">faster</span> <span class="n">than</span> <span class="n">V</span>
+    <span class="n">joint_lim_min</span> <span class="o">&lt;=</span> <span class="n">q_current</span> <span class="o">+</span> <span class="n">v_next</span><span class="o">*</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="n">joint_lim_max</span><span class="p">,</span>
+    <span class="n">joint_vel_lim_min</span> <span class="o">&lt;=</span> <span class="n">v_next</span> <span class="o">&lt;=</span> <span class="n">joint_vel_lim_max</span><span class="p">,</span>
+    <span class="n">joint_accel_lim_min</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">v_next</span> <span class="o">-</span> <span class="n">v_current</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="n">joint_accel_lim_max</span><span class="p">,</span>
+    <span class="ow">and</span> <span class="n">additional</span> <span class="n">linear</span> <span class="n">velocity</span> <span class="n">constraints</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>where: - The rows of P form an orthonormal basis for the nullspace of
+J, - J.rows() == V.size(), - J.cols() == v_current.size() ==
+q_current.size() == v_next.size(), - V can have any size, with each
+element representing a constraint on the solution (6 constraints
+specifying an end-effector spatial velocity is typical, but not
+required), - K is the joint_centering_gain, - the “additional linear
+velocity constraints” are added via
+DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
+<p>Intuitively, this finds a v_next such that J*v_next is in the same
+direction as V, and the difference between <a href="#id3"><span class="problematic" id="id4">|V|</span></a> and <a href="#id5"><span class="problematic" id="id6">|J * v_next|</span></a> is
+minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
+well. In the nullspace of this objective, we have a secondary
+objective to minimize <a href="#id7"><span class="problematic" id="id8">|v_next - K * (q_nominal - q_current)|</span></a>.</p>
+<p>For more details, see
+<a class="reference external" href="https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints">https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints</a> .</p>
+<p>If q_current is a feasible point, then v_next = 0 should always be a
+feasible solution. If the problem data is bad (q_current is
+infeasible, and no feasible velocities can restore feasibility in one
+step), then it is possible that the solver cannot find a solution, in
+which case, status will be set to kNoSolution in the returned
+DifferentialInverseKinematicsResult. If the velocity scaling, alpha,
+is very small, then the status will be set to kStuck.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_current</span></code>:</dt><dd><p>The current generalized position.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_current</span></code>:</dt><dd><p>The current generalized position.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>Desired spatial velocity. It must have the same number of rows as
+<code class="docutils literal notranslate"><span class="pre">J</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J</span></code>:</dt><dd><p>Jacobian with respect to generalized velocities v. It must have
+the same number of rows as <code class="docutils literal notranslate"><span class="pre">V</span></code>. J * v need to represent the same
+spatial velocity as <code class="docutils literal notranslate"><span class="pre">V</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>DoDifferentialInverseKinematics(robot: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], V_WE_desired: numpy.ndarray[numpy.float64[6, 1]], frame_E: pydrake.multibody.tree.Frame_[float], parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
+</ol>
+<p>A wrapper over DoDifferentialInverseKinematics(q_current, v_current,
+V, J, params) that tracks frame E’s spatial velocity. q_current and
+v_current are taken from <code class="docutils literal notranslate"><span class="pre">context</span></code>. V and J are expressed in E, and
+only the elements with non-zero gains in <code class="docutils literal notranslate"><span class="pre">parameters</span></code>
+get_end_effector_velocity_gains() are used in the program.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Must be the Context of the MultibodyPlant. Contains the current
+generalized position and velocity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V_WE_desired</span></code>:</dt><dd><p>Desired world frame spatial velocity of <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End effector frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>DoDifferentialInverseKinematics(robot: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], X_WE_desired: pydrake.math.RigidTransform_[float], frame_E: pydrake.multibody.tree.Frame_[float], parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
+</ol>
+<p>A wrapper over DoDifferentialInverseKinematics(robot, context,
+V_WE_desired, frame_E, params) that tracks frame E’s pose in the world
+frame. q_current and v_current are taken from <code class="docutils literal notranslate"><span class="pre">cache</span></code>. V_WE is
+computed by ComputePoseDiffInCommonFrame(X_WE, X_WE_desired) / dt,
+where X_WE is computed from <code class="docutils literal notranslate"><span class="pre">context</span></code>, and dt is taken from
+<code class="docutils literal notranslate"><span class="pre">parameters</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Must be the Context of the MultibodyPlant. Contains the current
+generalized position and velocity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WE_desired</span></code>:</dt><dd><p>Desired pose of <code class="docutils literal notranslate"><span class="pre">frame_E</span></code> in the world frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End effector frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py class">
@@ -551,7 +1036,7 @@ cost</p>
 <p>∑ᵢ body_position_cost(i) * body_position_error(i) +
 body_orientation_cost(i) * body_orientation_error(i) where
 <code class="docutils literal notranslate"><span class="pre">body_position_error(i)</span></code> is computed as the Euclidean distance error
-<a href="#id3"><span class="problematic" id="id4">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
+<a href="#id9"><span class="problematic" id="id10">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
 origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>. - p_WBo_desired(i): position
 of body i’th origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>, computed from the
 desired posture <code class="docutils literal notranslate"><span class="pre">q_desired</span></code>.</p>

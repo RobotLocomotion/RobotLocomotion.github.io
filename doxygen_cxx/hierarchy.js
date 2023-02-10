@@ -141,8 +141,8 @@ var hierarchy =
     [ "DepthRenderCamera", "classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html", null ],
     [ "DescriptorType", "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html", null ],
     [ "DiagramBuilder< T >", "classdrake_1_1systems_1_1_diagram_builder.html", null ],
-    [ "DifferentialInverseKinematicsParameters", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html", null ],
-    [ "DifferentialInverseKinematicsResult", "structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html", null ],
+    [ "DifferentialInverseKinematicsParameters", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html", null ],
+    [ "DifferentialInverseKinematicsResult", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html", null ],
     [ "DiscreteValues< T >", "classdrake_1_1systems_1_1_discrete_values.html", [
       [ "DiagramDiscreteValues< T >", "classdrake_1_1systems_1_1_diagram_discrete_values.html", null ]
     ] ],
@@ -484,8 +484,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
+    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -917,7 +917,6 @@ var hierarchy =
             [ "IiwaCommandSender", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html", null ],
             [ "IiwaStatusReceiver", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_receiver.html", null ],
             [ "IiwaStatusSender", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html", null ],
-            [ "DifferentialInverseKinematicsIntegrator", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html", null ],
             [ "SchunkWsgCommandReceiver", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html", null ],
             [ "SchunkWsgCommandSender", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html", null ],
             [ "SchunkWsgPdController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_pd_controller.html", null ],
@@ -925,6 +924,7 @@ var hierarchy =
             [ "SchunkWsgStatusSender", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html", null ],
             [ "SchunkWsgTrajectoryGenerator", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html", null ],
             [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html", null ],
+            [ "DifferentialInverseKinematicsIntegrator", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html", null ],
             [ "DepthImageToPointCloud", "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html", null ],
             [ "PointCloudToLcm", "classdrake_1_1perception_1_1_point_cloud_to_lcm.html", null ],
             [ "PleidesSystem", "classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html", null ],

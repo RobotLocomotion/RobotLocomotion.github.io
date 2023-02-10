@@ -1,0 +1,966 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: DifferentialInverseKinematicsParameters Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">DifferentialInverseKinematicsParameters Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains parameters for differential inverse kinematics. </p>
+</div>
+<p><code>#include &lt;drake/multibody/inverse_kinematics/differential_inverse_kinematics.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aafa0fe3c681d351227ed84813301574a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#aafa0fe3c681d351227ed84813301574a">DifferentialInverseKinematicsParameters</a> (<a class="el" href="classint.html">int</a> num_positions, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; num_velocities=std::nullopt)</td></tr>
+<tr class="memdesc:aafa0fe3c681d351227ed84813301574a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aafa0fe3c681d351227ed84813301574a">More...</a><br /></td></tr>
+<tr class="separator:aafa0fe3c681d351227ed84813301574a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2580fa0c401dfb2c03b370199e9ebce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ae2580fa0c401dfb2c03b370199e9ebce">AddLinearVelocityConstraint</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; constraint)</td></tr>
+<tr class="memdesc:ae2580fa0c401dfb2c03b370199e9ebce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint.  <a href="#ae2580fa0c401dfb2c03b370199e9ebce">More...</a><br /></td></tr>
+<tr class="separator:ae2580fa0c401dfb2c03b370199e9ebce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba8d81382b049afd07c56852e28f8b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#adba8d81382b049afd07c56852e28f8b9">ClearLinearVelocityConstraints</a> ()</td></tr>
+<tr class="memdesc:adba8d81382b049afd07c56852e28f8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all linear velocity constraints.  <a href="#adba8d81382b049afd07c56852e28f8b9">More...</a><br /></td></tr>
+<tr class="separator:adba8d81382b049afd07c56852e28f8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a95fe98122c0f9611fe9b26d0f578e5f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a95fe98122c0f9611fe9b26d0f578e5f7">DifferentialInverseKinematicsParameters</a> (const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;)=default</td></tr>
+<tr class="separator:a95fe98122c0f9611fe9b26d0f578e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56362ad1d1f2054e99ad7622af1cf324"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a56362ad1d1f2054e99ad7622af1cf324">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;)=default</td></tr>
+<tr class="separator:a56362ad1d1f2054e99ad7622af1cf324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe2315c890f06cae8e10bdc13e4d080"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#abbe2315c890f06cae8e10bdc13e4d080">DifferentialInverseKinematicsParameters</a> (<a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:abbe2315c890f06cae8e10bdc13e4d080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc2ac08f6a99f0d08bc48995294b02c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0fc2ac08f6a99f0d08bc48995294b02c">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a0fc2ac08f6a99f0d08bc48995294b02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Getters.</div></td></tr>
+<tr class="memitem:ae18e6775bcb292507384b2a12b31b38a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ae18e6775bcb292507384b2a12b31b38a">get_time_step</a> () const</td></tr>
+<tr class="separator:ae18e6775bcb292507384b2a12b31b38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30342f766e5b14049b65f710581f4bd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a30342f766e5b14049b65f710581f4bd1">get_num_positions</a> () const</td></tr>
+<tr class="separator:a30342f766e5b14049b65f710581f4bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372731ef06a823324bfeda5c8a8a3ac8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a372731ef06a823324bfeda5c8a8a3ac8">get_num_velocities</a> () const</td></tr>
+<tr class="separator:a372731ef06a823324bfeda5c8a8a3ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade91078e9a324118c271dbf4d071965e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ade91078e9a324118c271dbf4d071965e">get_nominal_joint_position</a> () const</td></tr>
+<tr class="separator:ade91078e9a324118c271dbf4d071965e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a594815684b7e557d47764e0251653097"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a594815684b7e557d47764e0251653097">get_joint_centering_gain</a> () const</td></tr>
+<tr class="separator:a594815684b7e557d47764e0251653097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773af01264ea161b568fc8d13adb692d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; bool &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a773af01264ea161b568fc8d13adb692d">get_end_effector_velocity_flag</a> () const</td></tr>
+<tr class="separator:a773af01264ea161b568fc8d13adb692d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3d0524cca20cb06a142a00b53f0d4e"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a2a3d0524cca20cb06a142a00b53f0d4e">get_joint_position_limits</a> () const</td></tr>
+<tr class="separator:a2a3d0524cca20cb06a142a00b53f0d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad40b3bd0167ae5b1f556834bbea200"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a4ad40b3bd0167ae5b1f556834bbea200">get_joint_velocity_limits</a> () const</td></tr>
+<tr class="separator:a4ad40b3bd0167ae5b1f556834bbea200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c46af77dd4cf21051a8026e1d963e8"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#af0c46af77dd4cf21051a8026e1d963e8">get_joint_acceleration_limits</a> () const</td></tr>
+<tr class="separator:af0c46af77dd4cf21051a8026e1d963e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086654241b97459747ca9210616e4682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a086654241b97459747ca9210616e4682">get_maximum_scaling_to_report_stuck</a> () const</td></tr>
+<tr class="separator:a086654241b97459747ca9210616e4682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0deb2a67ac5f296e9ab5db25c309edc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0deb2a67ac5f296e9ab5db25c309edc3">get_end_effector_angular_speed_limit</a> () const</td></tr>
+<tr class="separator:a0deb2a67ac5f296e9ab5db25c309edc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb95b46de5f097ad53e170a78f566bd"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::pair&lt; Eigen::Vector3d, Eigen::Vector3d &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a7cb95b46de5f097ad53e170a78f566bd">get_end_effector_translational_velocity_limits</a> () const</td></tr>
+<tr class="separator:a7cb95b46de5f097ad53e170a78f566bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858c66fabb526c359788e4fb7e1f0e39"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a858c66fabb526c359788e4fb7e1f0e39">get_linear_velocity_constraints</a> () const</td></tr>
+<tr class="separator:a858c66fabb526c359788e4fb7e1f0e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Setters.</div></td></tr>
+<tr class="memitem:a1cdd0dd0399049d34796b347b13bf902"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a1cdd0dd0399049d34796b347b13bf902">set_time_step</a> (<a class="el" href="classdouble.html">double</a> dt)</td></tr>
+<tr class="memdesc:a1cdd0dd0399049d34796b347b13bf902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets time step to <code>dt</code>.  <a href="#a1cdd0dd0399049d34796b347b13bf902">More...</a><br /></td></tr>
+<tr class="separator:a1cdd0dd0399049d34796b347b13bf902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61182007c1ab1ca5be6b125f8761728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ae61182007c1ab1ca5be6b125f8761728">set_nominal_joint_position</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;nominal_joint_position)</td></tr>
+<tr class="memdesc:ae61182007c1ab1ca5be6b125f8761728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the nominal joint position.  <a href="#ae61182007c1ab1ca5be6b125f8761728">More...</a><br /></td></tr>
+<tr class="separator:ae61182007c1ab1ca5be6b125f8761728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa5c89596926e41d3e5a1fbe98e0df9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0fa5c89596926e41d3e5a1fbe98e0df9">set_end_effector_velocity_flag</a> (const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; bool &gt; &amp;flag_E)</td></tr>
+<tr class="memdesc:a0fa5c89596926e41d3e5a1fbe98e0df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the end effector flags in the body frame.  <a href="#a0fa5c89596926e41d3e5a1fbe98e0df9">More...</a><br /></td></tr>
+<tr class="separator:a0fa5c89596926e41d3e5a1fbe98e0df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29b1f2e4ce3fb1512dd3ca3b860b270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ad29b1f2e4ce3fb1512dd3ca3b860b270">set_joint_centering_gain</a> (const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;K)</td></tr>
+<tr class="memdesc:ad29b1f2e4ce3fb1512dd3ca3b860b270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint centering gain, K, so that the joint centering command is v_next = K * (q_nominal - q_current).  <a href="#ad29b1f2e4ce3fb1512dd3ca3b860b270">More...</a><br /></td></tr>
+<tr class="separator:ad29b1f2e4ce3fb1512dd3ca3b860b270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05c6384d322cfd365f7b4d932a3636d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#af05c6384d322cfd365f7b4d932a3636d">set_joint_position_limits</a> (const std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;q_bounds)</td></tr>
+<tr class="memdesc:af05c6384d322cfd365f7b4d932a3636d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint position limits.  <a href="#af05c6384d322cfd365f7b4d932a3636d">More...</a><br /></td></tr>
+<tr class="separator:af05c6384d322cfd365f7b4d932a3636d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefb3ebc32bd84fe7698dd186e2a583e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#adefb3ebc32bd84fe7698dd186e2a583e">set_joint_velocity_limits</a> (const std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;v_bounds)</td></tr>
+<tr class="memdesc:adefb3ebc32bd84fe7698dd186e2a583e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint velocity limits.  <a href="#adefb3ebc32bd84fe7698dd186e2a583e">More...</a><br /></td></tr>
+<tr class="separator:adefb3ebc32bd84fe7698dd186e2a583e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6075b9914d5f3c6b00ab3140e88aa72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#af6075b9914d5f3c6b00ab3140e88aa72">set_joint_acceleration_limits</a> (const std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;vd_bounds)</td></tr>
+<tr class="memdesc:af6075b9914d5f3c6b00ab3140e88aa72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint acceleration limits.  <a href="#af6075b9914d5f3c6b00ab3140e88aa72">More...</a><br /></td></tr>
+<tr class="separator:af6075b9914d5f3c6b00ab3140e88aa72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28be9756735bb066b56d520fe28ac70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ae28be9756735bb066b56d520fe28ac70">set_maximum_scaling_to_report_stuck</a> (<a class="el" href="classdouble.html">double</a> scaling)</td></tr>
+<tr class="memdesc:ae28be9756735bb066b56d520fe28ac70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the threshold for α below which the status returned is <a class="el" href="namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3" title="Unable to follow the desired velocity direction likely due to constraints.">DifferentialInverseKinematicsStatus::kStuck</a>.  <a href="#ae28be9756735bb066b56d520fe28ac70">More...</a><br /></td></tr>
+<tr class="separator:ae28be9756735bb066b56d520fe28ac70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acada72e30c48f63a1d8a116504124168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#acada72e30c48f63a1d8a116504124168">set_end_effector_angular_speed_limit</a> (<a class="el" href="classdouble.html">double</a> speed)</td></tr>
+<tr class="memdesc:acada72e30c48f63a1d8a116504124168"><td class="mdescLeft">&#160;</td><td class="mdescRight">When calling DoDifferentialInverseKinematics with a desired end-effector pose, this limits the magnitude of the angular velocity vector.  <a href="#acada72e30c48f63a1d8a116504124168">More...</a><br /></td></tr>
+<tr class="separator:acada72e30c48f63a1d8a116504124168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8788820988ccd595c42b7086ccd130a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#aa8788820988ccd595c42b7086ccd130a">set_end_effector_translational_velocity_limits</a> (const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;upper)</td></tr>
+<tr class="memdesc:aa8788820988ccd595c42b7086ccd130a"><td class="mdescLeft">&#160;</td><td class="mdescRight">When calling DoDifferentialInverseKinematics with a desired end-effector pose, this sets limits on the translational velocity.  <a href="#aa8788820988ccd595c42b7086ccd130a">More...</a><br /></td></tr>
+<tr class="separator:aa8788820988ccd595c42b7086ccd130a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a95fe98122c0f9611fe9b26d0f578e5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95fe98122c0f9611fe9b26d0f578e5f7">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsParameters() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbe2315c890f06cae8e10bdc13e4d080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe2315c890f06cae8e10bdc13e4d080">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsParameters() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafa0fe3c681d351227ed84813301574a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa0fe3c681d351227ed84813301574a">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsParameters() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>num_positions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>num_velocities</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Initializes the nominal joint position to zeros of size <code>num_positions</code>. The time step is initialized to 1. The end effector flags are initialized to True. The joint centering gains are initialized to zero. All constraints are initialized to nullopt. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_positions</td><td>Number of generalized positions. </td></tr>
+    <tr><td class="paramname">num_velocities</td><td>Number of generalized velocities (by default it will be set to num_positions).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Currently DoDifferentialInverseKinematics requires that num_positions == num_velocities. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae2580fa0c401dfb2c03b370199e9ebce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2580fa0c401dfb2c03b370199e9ebce">&#9670;&nbsp;</a></span>AddLinearVelocityConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddLinearVelocityConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td>
+          <td class="paramname"><em>constraint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a linear velocity constraint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linear_velocity_constraint</td><td>A linear constraint on joint velocities. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>constraint-&gt;num_vars != this-&gt;<a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a372731ef06a823324bfeda5c8a8a3ac8">get_num_velocities()</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adba8d81382b049afd07c56852e28f8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba8d81382b049afd07c56852e28f8b9">&#9670;&nbsp;</a></span>ClearLinearVelocityConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearLinearVelocityConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all linear velocity constraints. </p>
+
+</div>
+</div>
+<a id="a0deb2a67ac5f296e9ab5db25c309edc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0deb2a67ac5f296e9ab5db25c309edc3">&#9670;&nbsp;</a></span>get_end_effector_angular_speed_limit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> get_end_effector_angular_speed_limit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cb95b46de5f097ad53e170a78f566bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb95b46de5f097ad53e170a78f566bd">&#9670;&nbsp;</a></span>get_end_effector_translational_velocity_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt;std::pair&lt;Eigen::Vector3d, Eigen::Vector3d&gt; &gt;&amp; get_end_effector_translational_velocity_limits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a773af01264ea161b568fc8d13adb692d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a773af01264ea161b568fc8d13adb692d">&#9670;&nbsp;</a></span>get_end_effector_velocity_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt;bool&gt;&amp; get_end_effector_velocity_flag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0c46af77dd4cf21051a8026e1d963e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c46af77dd4cf21051a8026e1d963e8">&#9670;&nbsp;</a></span>get_joint_acceleration_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt;std::pair&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; &gt;&amp; get_joint_acceleration_limits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a594815684b7e557d47764e0251653097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a594815684b7e557d47764e0251653097">&#9670;&nbsp;</a></span>get_joint_centering_gain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_joint_centering_gain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a3d0524cca20cb06a142a00b53f0d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3d0524cca20cb06a142a00b53f0d4e">&#9670;&nbsp;</a></span>get_joint_position_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt;std::pair&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; &gt;&amp; get_joint_position_limits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ad40b3bd0167ae5b1f556834bbea200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad40b3bd0167ae5b1f556834bbea200">&#9670;&nbsp;</a></span>get_joint_velocity_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt;std::pair&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; &gt;&amp; get_joint_velocity_limits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a858c66fabb526c359788e4fb7e1f0e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a858c66fabb526c359788e4fb7e1f0e39">&#9670;&nbsp;</a></span>get_linear_velocity_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;std::shared_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a>&gt; &gt;&amp; get_linear_velocity_constraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a086654241b97459747ca9210616e4682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086654241b97459747ca9210616e4682">&#9670;&nbsp;</a></span>get_maximum_scaling_to_report_stuck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> get_maximum_scaling_to_report_stuck </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade91078e9a324118c271dbf4d071965e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade91078e9a324118c271dbf4d071965e">&#9670;&nbsp;</a></span>get_nominal_joint_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_nominal_joint_position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30342f766e5b14049b65f710581f4bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30342f766e5b14049b65f710581f4bd1">&#9670;&nbsp;</a></span>get_num_positions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> get_num_positions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a372731ef06a823324bfeda5c8a8a3ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372731ef06a823324bfeda5c8a8a3ac8">&#9670;&nbsp;</a></span>get_num_velocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> get_num_velocities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae18e6775bcb292507384b2a12b31b38a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18e6775bcb292507384b2a12b31b38a">&#9670;&nbsp;</a></span>get_time_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> get_time_step </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fc2ac08f6a99f0d08bc48995294b02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc2ac08f6a99f0d08bc48995294b02c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56362ad1d1f2054e99ad7622af1cf324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56362ad1d1f2054e99ad7622af1cf324">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acada72e30c48f63a1d8a116504124168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acada72e30c48f63a1d8a116504124168">&#9670;&nbsp;</a></span>set_end_effector_angular_speed_limit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_end_effector_angular_speed_limit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When calling DoDifferentialInverseKinematics with a desired end-effector pose, this limits the magnitude of the angular velocity vector. </p>
+
+</div>
+</div>
+<a id="aa8788820988ccd595c42b7086ccd130a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8788820988ccd595c42b7086ccd130a">&#9670;&nbsp;</a></span>set_end_effector_translational_velocity_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_end_effector_translational_velocity_limits </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When calling DoDifferentialInverseKinematics with a desired end-effector pose, this sets limits on the translational velocity. </p>
+
+</div>
+</div>
+<a id="a0fa5c89596926e41d3e5a1fbe98e0df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa5c89596926e41d3e5a1fbe98e0df9">&#9670;&nbsp;</a></span>set_end_effector_velocity_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_end_effector_velocity_flag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flag_E</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the end effector flags in the body frame. </p>
+<p>If a spatial velocity flag is set to false, it will not be included in the differential IK formulation. </p>
+
+</div>
+</div>
+<a id="af6075b9914d5f3c6b00ab3140e88aa72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6075b9914d5f3c6b00ab3140e88aa72">&#9670;&nbsp;</a></span>set_joint_acceleration_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_joint_acceleration_limits </td>
+          <td>(</td>
+          <td class="paramtype">const std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>vd_bounds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the joint acceleration limits. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q_bounds</td><td>The first element is the lower bound, and the second is the upper bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the first or second element of <code>q_bounds</code> has the wrong dimension or any element of the second element is smaller than its corresponding part in the first element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad29b1f2e4ce3fb1512dd3ca3b860b270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29b1f2e4ce3fb1512dd3ca3b860b270">&#9670;&nbsp;</a></span>set_joint_centering_gain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_joint_centering_gain </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>K</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the joint centering gain, K, so that the joint centering command is v_next = K * (q_nominal - q_current). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>K must be num_velocities x num_positions. </dd></dl>
+
+</div>
+</div>
+<a id="af05c6384d322cfd365f7b4d932a3636d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af05c6384d322cfd365f7b4d932a3636d">&#9670;&nbsp;</a></span>set_joint_position_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_joint_position_limits </td>
+          <td>(</td>
+          <td class="paramtype">const std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_bounds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the joint position limits. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q_bounds</td><td>The first element is the lower bound, and the second is the upper bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the first or second element of <code>q_bounds</code> has the wrong dimension or any element of the second element is smaller than its corresponding part in the first element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adefb3ebc32bd84fe7698dd186e2a583e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefb3ebc32bd84fe7698dd186e2a583e">&#9670;&nbsp;</a></span>set_joint_velocity_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_joint_velocity_limits </td>
+          <td>(</td>
+          <td class="paramtype">const std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>v_bounds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the joint velocity limits. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q_bounds</td><td>The first element is the lower bound, and the second is the upper bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the first or second element of <code>q_bounds</code> has the wrong dimension or any element of the second element is smaller than its corresponding part in the first element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae28be9756735bb066b56d520fe28ac70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28be9756735bb066b56d520fe28ac70">&#9670;&nbsp;</a></span>set_maximum_scaling_to_report_stuck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_maximum_scaling_to_report_stuck </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>scaling</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the threshold for α below which the status returned is <a class="el" href="namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3" title="Unable to follow the desired velocity direction likely due to constraints.">DifferentialInverseKinematicsStatus::kStuck</a>. </p>
+<p>α is the scaling of the commanded spatial velocity, so when α is small, it means that the actual spatial velocity magnitude will be small proportional to the commanded. <br />
+ <em>Default:</em> 0.01. </p>
+
+</div>
+</div>
+<a id="ae61182007c1ab1ca5be6b125f8761728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61182007c1ab1ca5be6b125f8761728">&#9670;&nbsp;</a></span>set_nominal_joint_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_nominal_joint_position </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>nominal_joint_position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the nominal joint position. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>nominal_joint_position's</code> dimension differs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cdd0dd0399049d34796b347b13bf902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cdd0dd0399049d34796b347b13bf902">&#9670;&nbsp;</a></span>set_time_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_time_step </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets time step to <code>dt</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if dt &lt;= 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/inverse_kinematics/<a class="el" href="multibody_2inverse__kinematics_2differential__inverse__kinematics_8h.html">differential_inverse_kinematics.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>
