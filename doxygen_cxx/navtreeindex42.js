@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,3,4,2],
 "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,4],
 "default__scalars_8h.html":[4,0,0,1,14],
 "default__scalars__pybind_8h.html":[4,0,0,0,0,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "edge__measure_8h.html":[4,0,0,10,7],
 "eigen__autodiff__types_8h.html":[4,0,0,1,28],
 "eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[4,0,0,1,28,3],
-"eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,28,0],
-"eigen__autodiff__types_8h.html#a790a072a62129732864a20e7a4743298":[4,0,0,1,28,1]
+"eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,28,0]
 };

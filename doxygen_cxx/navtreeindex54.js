@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a1924a4300925ddede3f55cfdd30c1625":[3,0,0,13,6,0,3],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a2c94ff5b5ed6f3d8b4d3e782e8a3566b":[3,0,0,13,6,0,2],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,13,6,0,7],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a4932525a5cc773e1fc8e9364a1b6775b":[3,0,0,13,6,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a356749be16e1e3f6d437f215ff3c44e6":[3,0,0,16,8,2,11],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a3c3a47e93d564d08b506d18291d5772a":[3,0,0,16,8,2,13],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a43acbf71f174bb214744379ae39d6ec5":[3,0,0,16,8,2,9],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d":[3,0,0,16,8,2,21],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a51a5f94eea0e5ea757caaddb41c3eb79":[3,0,0,16,8,2,22]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d":[3,0,0,16,8,2,21]
 };

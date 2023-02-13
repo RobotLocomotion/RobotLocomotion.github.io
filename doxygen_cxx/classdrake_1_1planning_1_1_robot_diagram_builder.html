@@ -223,8 +223,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa303012c41b2b6c417fda78c0197f75f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aa303012c41b2b6c417fda78c0197f75f">IsDiagramBuilt</a> () const</td></tr>
 <tr class="memdesc:aa303012c41b2b6c417fda78c0197f75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the diagram has already been built.  <a href="#aa303012c41b2b6c417fda78c0197f75f">More...</a><br /></td></tr>
 <tr class="separator:aa303012c41b2b6c417fda78c0197f75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56bf8e93cf790fb6af96a2052c4069c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c">Build</a> ()</td></tr>
+<tr class="memdesc:ad56bf8e93cf790fb6af96a2052c4069c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the diagram and returns the diagram plus plant and scene graph in a <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a>.  <a href="#ad56bf8e93cf790fb6af96a2052c4069c">More...</a><br /></td></tr>
+<tr class="separator:ad56bf8e93cf790fb6af96a2052c4069c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ece7200f1a08cda985cc4ab68b0ce33"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#a8ece7200f1a08cda985cc4ab68b0ce33">BuildDiagram</a> ()</td></tr>
-<tr class="memdesc:a8ece7200f1a08cda985cc4ab68b0ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the diagram and returns the diagram plus plant and scene graph in a <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a>.  <a href="#a8ece7200f1a08cda985cc4ab68b0ce33">More...</a><br /></td></tr>
+<tr class="memdesc:a8ece7200f1a08cda985cc4ab68b0ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a8ece7200f1a08cda985cc4ab68b0ce33">More...</a><br /></td></tr>
 <tr class="separator:a8ece7200f1a08cda985cc4ab68b0ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:abc40e743c8d48d2158863064885bb1c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#abc40e743c8d48d2158863064885bb1c7">RobotDiagramBuilder</a> (const <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html">RobotDiagramBuilder</a> &amp;)=delete</td></tr>
@@ -335,6 +338,31 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad56bf8e93cf790fb6af96a2052c4069c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56bf8e93cf790fb6af96a2052c4069c">&#9670;&nbsp;</a></span>Build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt;T&gt; &gt; Build </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds the diagram and returns the diagram plus plant and scene graph in a <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a>. </p>
+<p>The plant will be finalized during this function, unless it's already been finalized. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">exception</td><td>when <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aa303012c41b2b6c417fda78c0197f75f" title="Checks if the diagram has already been built.">IsDiagramBuilt()</a> already. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8ece7200f1a08cda985cc4ab68b0ce33"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ece7200f1a08cda985cc4ab68b0ce33">&#9670;&nbsp;</a></span>BuildDiagram()</h2>
 
@@ -350,13 +378,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Builds the diagram and returns the diagram plus plant and scene graph in a <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a>. </p>
-<p>The plant will be finalized during this function, unless it's already been finalized. </p><dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">exception</td><td>when <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aa303012c41b2b6c417fda78c0197f75f" title="Checks if the diagram has already been built.">IsDiagramBuilt()</a> already. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use Build() instead of BuildDiagram(). <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
 
 </div>
 </div>
@@ -470,7 +494,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the contained DiagramBuilder (mutable). </p>
-<p>Do not call Build() on the return value; instead, call <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#a8ece7200f1a08cda985cc4ab68b0ce33" title="Builds the diagram and returns the diagram plus plant and scene graph in a RobotDiagram.">BuildDiagram()</a> on this. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Do not call <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c" title="Builds the diagram and returns the diagram plus plant and scene graph in a RobotDiagram.">Build()</a> on the return value; instead, call <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c" title="Builds the diagram and returns the diagram plus plant and scene graph in a RobotDiagram.">Build()</a> on this. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">exception</td><td>when <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aa303012c41b2b6c417fda78c0197f75f" title="Checks if the diagram has already been built.">IsDiagramBuilt()</a> already. </td></tr>
   </table>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a6a17f667a28ba9785e8cae9c9fdd71ed":[3,0,0,9,31,8],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a727f367eb7b4a0d5d2b9ba7c72bcfb23":[3,0,0,9,31,5],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a8268d3340ff301fdeb101f319116b2ff":[3,0,0,9,31,7],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,31,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,48,0],
 "structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,48,1],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html":[3,0,0,13,6,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a0f99597eaeadb8f1814c0a27746d7dca":[3,0,0,13,6,0,1],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a1924a4300925ddede3f55cfdd30c1625":[3,0,0,13,6,0,3]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a0f99597eaeadb8f1814c0a27746d7dca":[3,0,0,13,6,0,1]
 };

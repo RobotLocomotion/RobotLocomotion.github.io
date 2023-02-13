@@ -4,6 +4,7 @@ var classdrake_1_1planning_1_1_robot_diagram_builder =
     [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad4059f303a9d87f9097f8428fd027a5a", null ],
     [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a9866c32c40cd79bf8d27fc03d7b5cf72", null ],
     [ "~RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#afcfb0c4d2f26618363069032bc873d00", null ],
+    [ "Build", "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c", null ],
     [ "BuildDiagram", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a8ece7200f1a08cda985cc4ab68b0ce33", null ],
     [ "builder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a418f38f35985db362b3a2183e5078901", null ],
     [ "FinalizePlant", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a33a5379092bf470e5e5feb62c10cef4e", null ],
