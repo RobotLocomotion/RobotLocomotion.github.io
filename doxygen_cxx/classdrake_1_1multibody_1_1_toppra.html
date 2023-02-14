@@ -199,9 +199,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5cee3da4435b14492b675df2a473f611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a5cee3da4435b14492b675df2a473f611">AddFrameTranslationalSpeedLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;constraint_frame, const <a class="el" href="classdouble.html">double</a> &amp;upper_limit)</td></tr>
 <tr class="memdesc:a5cee3da4435b14492b675df2a473f611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a limit on the magnitude of the translational velocity of the given frame, measured and expressed in the world frame.  <a href="#a5cee3da4435b14492b675df2a473f611">More...</a><br /></td></tr>
 <tr class="separator:a5cee3da4435b14492b675df2a473f611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe29e25bfa2111f89d91c19a71d618b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#afe29e25bfa2111f89d91c19a71d618b7">AddFrameTranslationalSpeedLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;constraint_frame, const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;upper_limit)</td></tr>
+<tr class="memdesc:afe29e25bfa2111f89d91c19a71d618b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of the frame translational speed limit that uses a trajectory for the limit.  <a href="#afe29e25bfa2111f89d91c19a71d618b7">More...</a><br /></td></tr>
+<tr class="separator:afe29e25bfa2111f89d91c19a71d618b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4439ae2c06e737634078434d897cceaf"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a4439ae2c06e737634078434d897cceaf">AddFrameAccelerationLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;constraint_frame, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;lower_limit, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28">Vector6d</a> &gt; &amp;upper_limit, <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> discretization=<a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">ToppraDiscretization::kInterpolation</a>)</td></tr>
-<tr class="memdesc:a4439ae2c06e737634078434d897cceaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a limit on the elements of the spatial acceleration of the given frame, measured and and expressed in the world frame.  <a href="#a4439ae2c06e737634078434d897cceaf">More...</a><br /></td></tr>
+<tr class="memdesc:a4439ae2c06e737634078434d897cceaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a limit on the elements of the spatial acceleration of the given frame, measured and expressed in the world frame.  <a href="#a4439ae2c06e737634078434d897cceaf">More...</a><br /></td></tr>
 <tr class="separator:a4439ae2c06e737634078434d897cceaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24c8bc5987857a75965a6ffeee1c573"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#af24c8bc5987857a75965a6ffeee1c573">AddFrameAccelerationLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;constraint_frame, const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;lower_limit, const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;upper_limit, <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> discretization=<a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">ToppraDiscretization::kInterpolation</a>)</td></tr>
+<tr class="memdesc:af24c8bc5987857a75965a6ffeee1c573"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of acceleration limit that uses a trajectory for the upper and lower limits.  <a href="#af24c8bc5987857a75965a6ffeee1c573">More...</a><br /></td></tr>
+<tr class="separator:af24c8bc5987857a75965a6ffeee1c573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ac6962da0cfeb19c216cf5920469e7926"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#ac6962da0cfeb19c216cf5920469e7926">Toppra</a> (const <a class="el" href="classdrake_1_1multibody_1_1_toppra.html">Toppra</a> &amp;)=delete</td></tr>
 <tr class="separator:ac6962da0cfeb19c216cf5920469e7926"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -338,7 +344,7 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4439ae2c06e737634078434d897cceaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4439ae2c06e737634078434d897cceaf">&#9670;&nbsp;</a></span>AddFrameAccelerationLimit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4439ae2c06e737634078434d897cceaf">&#9670;&nbsp;</a></span>AddFrameAccelerationLimit() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,8 +381,8 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
       </table>
 </div><div class="memdoc">
 
-<p>Adds a limit on the elements of the spatial acceleration of the given frame, measured and and expressed in the world frame. </p>
-<p>The limits should be given as [α_WF, a_WF], where α_WF is the frame's angular acceleration and v_WF is the frame's translational acceleration. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Adds a limit on the elements of the spatial acceleration of the given frame, measured and expressed in the world frame. </p>
+<p>The limits should be given as [α_WF, a_WF], where α_WF is the frame's angular acceleration and a_WF is the frame's translational acceleration. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">constraint_frame</td><td>The frame to limit the acceleration of. </td></tr>
     <tr><td class="paramname">lower_limit</td><td>The lower acceleration limit for constraint_frame. </td></tr>
@@ -389,8 +395,68 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
 
 </div>
 </div>
+<a id="af24c8bc5987857a75965a6ffeee1c573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24c8bc5987857a75965a6ffeee1c573">&#9670;&nbsp;</a></span>AddFrameAccelerationLimit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a>&gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a>&gt; &gt; AddFrameAccelerationLimit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraint_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lower_limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper_limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a>&#160;</td>
+          <td class="paramname"><em>discretization</em> = <code><a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">ToppraDiscretization::kInterpolation</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A version of acceleration limit that uses a trajectory for the upper and lower limits. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">constraint_frame</td><td>The frame to limit the acceleration of. </td></tr>
+    <tr><td class="paramname">lower_limit</td><td>The lower acceleration limit trajectory for constraint_frame. </td></tr>
+    <tr><td class="paramname">upper_limit</td><td>The upper acceleration limit trajectory for constraint_frame. </td></tr>
+    <tr><td class="paramname">discretization</td><td>The discretization scheme to use for this linear constraint. See ToppraDiscretization for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pair containing the linear constraints that will enforce the frame acceleration limit on the backward pass and forward pass respectively. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Both lower_limit and upper_limit trajectories must have values in ℜ⁶. The six-dimensional column vector is interpreted as [α_WF, a_WF], where α_WF is the frame's angular acceleration and a_WF is the frame's translational acceleration. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>the intervals [upper_limit.start_time(), upper_limit.end_time()] and [lower_limit.start_time(), lower_limit.end_time()] don't overlap with [path.start_time(), path.end_time()]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The constraints are only added in the constraint trajectories domains (where they overlap the path). The rest of the path is <em>not</em> constrained. </dd></dl>
+
+</div>
+</div>
 <a id="a5cee3da4435b14492b675df2a473f611"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cee3da4435b14492b675df2a473f611">&#9670;&nbsp;</a></span>AddFrameTranslationalSpeedLimit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cee3da4435b14492b675df2a473f611">&#9670;&nbsp;</a></span>AddFrameTranslationalSpeedLimit() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,6 +490,52 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The bounding box constraint that will enforce the frame translational speed limit during the backward pass. </dd></dl>
+
+</div>
+</div>
+<a id="afe29e25bfa2111f89d91c19a71d618b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe29e25bfa2111f89d91c19a71d618b7">&#9670;&nbsp;</a></span>AddFrameTranslationalSpeedLimit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a>&gt; AddFrameTranslationalSpeedLimit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraint_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper_limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A version of the frame translational speed limit that uses a trajectory for the limit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">constraint_frame</td><td>The frame to limit the translational speed of. </td></tr>
+    <tr><td class="paramname">upper_limit</td><td>The upper translational speed limit trajectory for constraint_frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>upper_limit must have scalar values (a 1x1 matrix). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The bounding box constraint that will enforce the frame translational speed limit during the backward pass. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>the interval [upper_limit.start_time(), upper_limit.end_time()] doesn't overlap with [path.start_time(), path.end_time()]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The constraints are only added between upper_limit.start_time() and upper_limit.end_time(). The rest of the path is <em>not</em> constrained. </dd></dl>
 
 </div>
 </div>

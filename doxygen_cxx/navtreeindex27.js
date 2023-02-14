@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1symbolic_1_1_formula_isnan.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,15,44,1],
+"classdrake_1_1symbolic_1_1_formula_isnan.html#ad66ef14f5c0b153b91989fccf3a38920":[3,0,0,15,44,8],
+"classdrake_1_1symbolic_1_1_formula_isnan.html#aeabbbb6c69ba676155d0965880d6c8dd":[3,0,0,15,44,7],
+"classdrake_1_1symbolic_1_1_formula_isnan.html#af3366a56a2a8c2942ee6fdd6a2d064b1":[3,0,0,15,44,5],
+"classdrake_1_1symbolic_1_1_formula_isnan.html#afa3b24fc1f39862b6a5bc72658307c51":[3,0,0,15,44,4],
+"classdrake_1_1symbolic_1_1_formula_leq.html":[3,0,0,15,45],
 "classdrake_1_1symbolic_1_1_formula_leq.html#a187e996f061e3e56460d2afa3ae0c7df":[3,0,0,15,45,0],
 "classdrake_1_1symbolic_1_1_formula_leq.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[3,0,0,15,45,2],
 "classdrake_1_1symbolic_1_1_formula_leq.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,15,45,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#afb9774ae5c78a83f1fa0a9319b102aca":[3,0,0,15,59,16],
 "classdrake_1_1symbolic_1_1_rational_function.html":[3,0,0,15,60],
 "classdrake_1_1symbolic_1_1_rational_function.html#a07e43dd6afaaafb0291e1067a4479212":[3,0,0,15,60,33],
-"classdrake_1_1symbolic_1_1_rational_function.html#a0b15347c00cec617c38ab3cb268229dc":[3,0,0,15,60,30],
-"classdrake_1_1symbolic_1_1_rational_function.html#a0d8f4baa55bf5619803ddd06e884af67":[3,0,0,15,60,12],
-"classdrake_1_1symbolic_1_1_rational_function.html#a0f1defa4e2086478f387311bbf307450":[3,0,0,15,60,6],
-"classdrake_1_1symbolic_1_1_rational_function.html#a135b849a2bc0c2db6d3a6ce1f3f36c68":[3,0,0,15,60,9],
-"classdrake_1_1symbolic_1_1_rational_function.html#a16de6605de8120d3b8222006f3702bc7":[3,0,0,15,60,7],
-"classdrake_1_1symbolic_1_1_rational_function.html#a201c9c37872826103eefaffb11efaa7f":[3,0,0,15,60,16],
-"classdrake_1_1symbolic_1_1_rational_function.html#a24355ffc2d632e0b25efd2073c01afdd":[3,0,0,15,60,17]
+"classdrake_1_1symbolic_1_1_rational_function.html#a0b15347c00cec617c38ab3cb268229dc":[3,0,0,15,60,30]
 };

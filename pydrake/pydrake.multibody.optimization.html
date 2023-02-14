@@ -596,11 +596,15 @@ bounded.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit">
-<span class="sig-name descname"><span class="pre">AddFrameAccelerationLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.optimization.Toppra,</span> <span class="pre">constraint_frame:</span> <span class="pre">pydrake.multibody.tree.Frame_[float],</span> <span class="pre">lower_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]],</span> <span class="pre">upper_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]],</span> <span class="pre">discretization:</span> <span class="pre">pydrake.multibody.optimization.ToppraDiscretization</span> <span class="pre">=</span> <span class="pre">&lt;ToppraDiscretization.kInterpolation:</span> <span class="pre">1&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">LinearConstraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">LinearConstraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a limit on the elements of the spatial acceleration of the given
-frame, measured and and expressed in the world frame. The limits
-should be given as [α_WF, a_WF], where α_WF is the frame’s angular
-acceleration and v_WF is the frame’s translational acceleration.</p>
+<span class="sig-name descname"><span class="pre">AddFrameAccelerationLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddFrameAccelerationLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;) -&gt; Tuple[pydrake.solvers.Binding[LinearConstraint], pydrake.solvers.Binding[LinearConstraint]]</p></li>
+</ol>
+<p>Adds a limit on the elements of the spatial acceleration of the given
+frame, measured and expressed in the world frame. The limits should be
+given as [α_WF, a_WF], where α_WF is the frame’s angular acceleration
+and a_WF is the frame’s translational acceleration.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the acceleration of.</p>
 </dd>
@@ -619,12 +623,62 @@ frame acceleration limit on the backward pass and forward pass
 respectively.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>AddFrameAccelerationLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: pydrake.trajectories.Trajectory_[float], upper_limit: pydrake.trajectories.Trajectory_[float], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;) -&gt; Tuple[pydrake.solvers.Binding[LinearConstraint], pydrake.solvers.Binding[LinearConstraint]]</p></li>
+</ol>
+<p>A version of acceleration limit that uses a trajectory for the upper
+and lower limits.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the acceleration of.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>The lower acceleration limit trajectory for constraint_frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper acceleration limit trajectory for constraint_frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt><dd><p>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A pair containing the linear constraints that will enforce the
+frame acceleration limit on the backward pass and forward pass
+respectively.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Both lower_limit and upper_limit trajectories must have values in
+ℜ⁶. The six-dimensional column vector is interpreted as [α_WF,
+a_WF], where α_WF is the frame’s angular acceleration and a_WF is
+the frame’s translational acceleration.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>If the intervals</strong><strong> [</strong><strong>upper_limit.start_time</strong><strong>(</strong><strong>)</strong><strong>,</strong> – </p></li>
+<li><p><strong>upper_limit.end_time</strong><strong>(</strong><strong>)</strong><strong>] </strong><strong>and</strong><strong> [</strong><strong>lower_limit.start_time</strong><strong>(</strong><strong>)</strong><strong>,</strong> – </p></li>
+<li><p><strong>lower_limit.end_time</strong><strong>(</strong><strong>)</strong><strong>] </strong><strong>don't overlap with</strong><strong> [</strong><strong>path.start_time</strong><strong>(</strong><strong>)</strong><strong>,</strong> – </p></li>
+<li><p><strong>path.end_time</strong><strong>(</strong><strong>)</strong><strong>]</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The constraints are only added in the constraint trajectories
+domains (where they overlap the path). The rest of the path is
+<em>not</em> constrained.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit">
-<span class="sig-name descname"><span class="pre">AddFrameTranslationalSpeedLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint_frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">BoundingBoxConstraint</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a limit on the magnitude of the translational velocity of the
+<span class="sig-name descname"><span class="pre">AddFrameTranslationalSpeedLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddFrameTranslationalSpeedLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], upper_limit: float) -&gt; pydrake.solvers.Binding[BoundingBoxConstraint]</p></li>
+</ol>
+<p>Adds a limit on the magnitude of the translational velocity of the
 given frame, measured and expressed in the world frame.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the translational speed of.</p>
@@ -638,6 +692,38 @@ given frame, measured and expressed in the world frame.</p>
 translational speed limit during the backward pass.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>AddFrameTranslationalSpeedLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], upper_limit: pydrake.trajectories.Trajectory_[float]) -&gt; pydrake.solvers.Binding[BoundingBoxConstraint]</p></li>
+</ol>
+<p>A version of the frame translational speed limit that uses a
+trajectory for the limit.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the translational speed of.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper translational speed limit trajectory for
+constraint_frame.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>upper_limit must have scalar values (a 1x1 matrix).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The bounding box constraint that will enforce the frame
+translational speed limit during the backward pass.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>If the interval</strong><strong> [</strong><strong>upper_limit.start_time</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>upper_limit.end_time</strong><strong>(</strong><strong>)</strong><strong>]</strong> – </p></li>
+<li><p><strong>doesn't overlap with</strong><strong> [</strong><strong>path.start_time</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>path.end_time</strong><strong>(</strong><strong>)</strong><strong>]</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The constraints are only added between upper_limit.start_time()
+and upper_limit.end_time(). The rest of the path is <em>not</em>
+constrained.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">

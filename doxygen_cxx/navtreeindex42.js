@@ -1,5 +1,11 @@
 var NAVTREEINDEX42 =
 {
+"decompose_8h.html#a47d95a6b1bc2f740b30a4735cc6dcd3c":[4,0,0,1,3,4,0],
+"decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934":[4,0,0,1,3,4,7],
+"decompose_8h.html#a9d8e94c7598bd59e6a5314ffbc3c7f59":[4,0,0,1,3,4,10],
+"decompose_8h.html#aa6c01361f464b3eae396f7d1a0e92c85":[4,0,0,1,3,4,3],
+"decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc":[4,0,0,1,3,4,8],
+"decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b":[4,0,0,1,3,4,6],
 "decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,3,4,2],
 "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,4],
 "default__scalars_8h.html":[4,0,0,1,14],
@@ -243,11 +249,5 @@ var NAVTREEINDEX42 =
 "drake__visualizer__params_8h.html":[4,0,0,4,12],
 "dummy__render__engine_8h.html":[4,0,0,4,8,0],
 "dummy__value_8h.html":[4,0,0,1,27],
-"dynamic__programming_8h.html":[4,0,0,12,1,1],
-"dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,12,1,1,2],
-"dynamic__programming_8h.html#gae068476fdb8f21578acb538f70ec3e14":[4,0,0,12,1,1,3],
-"edge__measure_8h.html":[4,0,0,10,7],
-"eigen__autodiff__types_8h.html":[4,0,0,1,28],
-"eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[4,0,0,1,28,3],
-"eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,28,0]
+"dynamic__programming_8h.html":[4,0,0,12,1,1]
 };
