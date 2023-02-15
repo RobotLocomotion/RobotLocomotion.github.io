@@ -995,6 +995,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afad783d7e7e513feb7a73384c8080041"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afad783d7e7e513feb7a73384c8080041">geometry_source_is_registered</a> () const</td></tr>
 <tr class="memdesc:afad783d7e7e513feb7a73384c8080041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if <code>this</code> MultibodyPlant was registered with a SceneGraph.  <a href="#afad783d7e7e513feb7a73384c8080041">More...</a><br /></td></tr>
 <tr class="separator:afad783d7e7e513feb7a73384c8080041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f68ce7fc652377b941459c8ec55897"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a39f68ce7fc652377b941459c8ec55897">GetMutableSceneGraphPreFinalize</a> ()</td></tr>
+<tr class="memdesc:a39f68ce7fc652377b941459c8ec55897"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a mutable pointer to the SceneGraph that this plant is registered as a source for.  <a href="#a39f68ce7fc652377b941459c8ec55897">More...</a><br /></td></tr>
+<tr class="separator:a39f68ce7fc652377b941459c8ec55897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -5445,6 +5448,32 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a39f68ce7fc652377b941459c8ec55897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f68ce7fc652377b941459c8ec55897">&#9670;&nbsp;</a></span>GetMutableSceneGraphPreFinalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt;T&gt;* GetMutableSceneGraphPreFinalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns a mutable pointer to the SceneGraph that this plant is registered as a source for. </p>
+<p>This method can only be used pre-Finalize.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840" title="Returns true if this MultibodyPlant was finalized with a call to Finalize().">is_finalized()</a> == true || <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afad783d7e7e513feb7a73384c8080041" title="Returns true if this MultibodyPlant was registered with a SceneGraph.">geometry_source_is_registered()</a> == false </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a7fe7c6fe93604e71b9d277b76fab5932"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7fe7c6fe93604e71b9d277b76fab5932">&#9670;&nbsp;</a></span>GetMutableVelocities() <span class="overload">[1/2]</span></h2>
 
@@ -7173,8 +7202,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7185,7 +7214,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7199,8 +7228,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7211,7 +7240,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

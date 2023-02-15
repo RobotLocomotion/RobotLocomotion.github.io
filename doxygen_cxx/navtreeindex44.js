@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"expression__cell_8h.html#ae4927daffb66b9bd137c174d41d94444":[4,0,0,1,3,0,4,35],
 "expression__cell_8h.html#ae9dfc929a3e771ece5e5d20312e96abd":[4,0,0,1,3,0,4,33],
 "expression__cell_8h.html#aee17d0564b198d4c784811945707ddbf":[4,0,0,1,3,0,4,46],
 "expression__cell_8h.html#af9473fec0f5aba36ac7c89281bf4d524":[4,0,0,1,3,0,4,44],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "functions_f.html":[3,3,0,5],
 "functions_func.html":[3,3,1],
 "functions_func.html":[3,3,1,0],
-"functions_func_b.html":[3,3,1,1],
-"functions_func_c.html":[3,3,1,2]
+"functions_func_b.html":[3,3,1,1]
 };
