@@ -1,6 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a4016969e054ab87c4dea4f2e5dd3441a":[3,0,0,9,16,5],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a425cea2dae1c28a29b4cfa3836620111":[3,0,0,9,16,4],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#aa022aff626b9a3d772eb059ffd62a519":[3,0,0,9,16,2],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#aa402e3a656b34e6ff890110b0e7b0d68":[3,0,0,9,16,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_gaze_target_constraint.html#a0bed703bbca132825b38d9f2fac2464e":[1,1,0,4,4],
 "classdrake_1_1multibody_1_1_gaze_target_constraint.html#a3e7cb23abcd32e7cab230b13a9405f6b":[1,1,0,4,1],
 "classdrake_1_1multibody_1_1_gaze_target_constraint.html#a46eb513c7215f95d5ad2e51d64fa5f52":[1,1,0,4,5],
-"classdrake_1_1multibody_1_1_gaze_target_constraint.html#a7865d4c45cedb324bb5848f3f4cf7733":[1,1,0,4,6]
+"classdrake_1_1multibody_1_1_gaze_target_constraint.html#a7865d4c45cedb324bb5848f3f4cf7733":[1,1,0,4,6],
+"classdrake_1_1multibody_1_1_gaze_target_constraint.html#aa569770bc5b9cd800e8e0b146182f901":[1,1,0,4,0]
 };

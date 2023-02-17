@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "drake", "namespacedrake.html", "namespacedrake" ],
+    [ "fmt", "namespacefmt.html", "namespacefmt" ],
     [ "std", null, [
       [ "equal_to< drake::symbolic::Expression >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4" ],
       [ "equal_to< drake::symbolic::Formula >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4" ],

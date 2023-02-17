@@ -253,6 +253,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55826a916b7c6f12060f7ff4e590813f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a55826a916b7c6f12060f7ff4e590813f">AddProduct</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;coeff, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
 <tr class="memdesc:a55826a916b7c6f12060f7ff4e590813f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code>coeff</code> * <code>m</code> to this polynomial.  <a href="#a55826a916b7c6f12060f7ff4e590813f">More...</a><br /></td></tr>
 <tr class="separator:a55826a916b7c6f12060f7ff4e590813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17082a52464ae500584384bcddb87ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#ac17082a52464ae500584384bcddb87ca">SubstituteAndExpand</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &gt; &amp;indeterminate_substitution, std::optional&lt; std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>, internal::CompareMonomial &gt; * &gt; substitutions_optional=std::nullopt) const</td></tr>
+<tr class="memdesc:ac17082a52464ae500584384bcddb87ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitute the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis.  <a href="#ac17082a52464ae500584384bcddb87ca">More...</a><br /></td></tr>
+<tr class="separator:ac17082a52464ae500584384bcddb87ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cdee394fc34d52f16a1b62681df409d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a9cdee394fc34d52f16a1b62681df409d">Expand</a> () const</td></tr>
 <tr class="memdesc:a9cdee394fc34d52f16a1b62681df409d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands each coefficient expression and returns the expanded polynomial.  <a href="#a9cdee394fc34d52f16a1b62681df409d">More...</a><br /></td></tr>
 <tr class="separator:a9cdee394fc34d52f16a1b62681df409d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1339,8 +1342,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab168243ddedae6540dc7fe18e0fd6f53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab168243ddedae6540dc7fe18e0fd6f53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="adeaa4f722744d397b42ff26f50f443bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeaa4f722744d397b42ff26f50f443bf">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1351,7 +1354,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1365,8 +1368,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adeaa4f722744d397b42ff26f50f443bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeaa4f722744d397b42ff26f50f443bf">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ab168243ddedae6540dc7fe18e0fd6f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab168243ddedae6540dc7fe18e0fd6f53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1377,7 +1380,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1462,6 +1465,50 @@ Friends</h2></td></tr>
 <p>Sets the indeterminates to <code>new_indeterminates</code>. </p>
 <p>Changing the indeterminates would change <code><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a84683ddc5d37c81c0347b9ccf039ad4d" title="Returns the mapping from a Monomial to its corresponding coefficient of this polynomial.">monomial_to_coefficient_map()</a></code>, and also potentially the degree of the polynomial. Here is an example.</p>
 <div class="fragment"><div class="line"><span class="comment">// p is a quadratic polynomial with x being the indeterminates.</span></div><div class="line">symbolic::Polynomial p(a * x * x + b * x + c, {x});</div><div class="line"><span class="comment">// p.monomial_to_coefficient_map() contains {1: c, x: b, x*x:a}.</span></div><div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 2.</span></div><div class="line"><span class="comment">// Now set (a, b, c) to the indeterminates. p becomes a linear</span></div><div class="line"><span class="comment">// polynomial of a, b, c.</span></div><div class="line">p.SetIndeterminates({a, b, c});</div><div class="line"><span class="comment">// p.monomial_to_coefficient_map() now is {a: x * x, b: x, c: 1}.</span></div><div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 1.</span></div></div><!-- fragment --> 
+</div>
+</div>
+<a id="ac17082a52464ae500584384bcddb87ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17082a52464ae500584384bcddb87ca">&#9670;&nbsp;</a></span>SubstituteAndExpand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> SubstituteAndExpand </td>
+          <td>(</td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indeterminate_substitution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>, internal::CompareMonomial &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>substitutions_optional</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Substitute the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis. </p>
+<p>For example, consider the substitution x = a(1-y) into the polynomial x¹⁴ + (x−1)². Repeatedly expanding the powers of x can take a long time using factory methods, so we store intermediate computations in the substitution map to avoid recomputing very high powers. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">indeterminate_substitution</td><td>The substitutions of every indeterminate with the new desired expression. This map must contain each element of <code><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a></code>. For performance reasons, it is recommended that this map contains Expanded polynomials as its values, but this is not necessary. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">substitutions</td><td>A map caching the higher order expansions of the <code>indeterminate_substitutions</code>. Typically, the first time an indeterminate_substitution is performed, substitutions will be either a pointer to an empty map or a nullptr. If the same indeterminate_substitutions is used for multiple polynomials, passing a non nullptr value for substitutions will enable the user to re-use the expansions across multiple calls. For example, suppose we wish to perform the substitution x = a(1-y) into the polynomials p1 = x¹⁴ + (x−1)² and p2 = x⁷. A user map call p1.SubstituteAndExpand({x : a(1-y), substitutions}) where substitutions is a pointer to an empty map. As part of computing the expansion of p1, the expansion of x⁷ may get computed and stored in substitutions, and so a subsequent call of p2.SubstituteAndExpand({x : a(1-y)}, substitutions) would be very fast.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Never reuse substitutions if indeterminate_substitutions changes as this function will then compute in an incorrect result.</p>
+<p>Note that this function is NOT responsible for ensuring that</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">substitutions</td><td>is consistent i.e. this method will not throw an error if substitutions = {x: y, x²: 2y}. To ensure correct results, ensure that the passed substitution map is consistent with indeterminate_substitutions. The easiest way to do this is to pass a pointer to an empty map or nullptr to this function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a07e43dd6afaaafb0291e1067a4479212"></a>

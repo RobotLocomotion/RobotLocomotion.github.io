@@ -22,6 +22,5 @@ var classdrake_1_1copyable__unique__ptr =
     [ "operator=", "classdrake_1_1copyable__unique__ptr.html#af2693139bff4ad445212aa4bb73284ad", null ],
     [ "operator=", "classdrake_1_1copyable__unique__ptr.html#a60fa4971dcefe82f931084653b196a55", null ],
     [ "operator=", "classdrake_1_1copyable__unique__ptr.html#a53f1739bcedb13183285a9995d3b9daf", null ],
-    [ "operator=", "classdrake_1_1copyable__unique__ptr.html#abf98f86aa60c05f0a546ca78c2a2e857", null ],
-    [ "operator<<", "classdrake_1_1copyable__unique__ptr.html#ab5373c9f8caa95d0cdf8d4b7d1066cb3", null ]
+    [ "operator=", "classdrake_1_1copyable__unique__ptr.html#abf98f86aa60c05f0a546ca78c2a2e857", null ]
 ];

@@ -159,7 +159,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1copyable__unique__ptr.ht
 
 <div class="header">
   <div class="summary">
-<a href="#related">Related Functions</a> &#124;
 <a href="classdrake_1_1copyable__unique__ptr-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">copyable_unique_ptr&lt; T &gt; Class Template Reference</div>  </div>
@@ -275,15 +274,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd9f2ee3a1bcd0468bba24f98905b00f"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#acd9f2ee3a1bcd0468bba24f98905b00f">operator *</a> ()</td></tr>
 <tr class="memdesc:acd9f2ee3a1bcd0468bba24f98905b00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a writable reference to the contained object (if T is itself not const).  <a href="#acd9f2ee3a1bcd0468bba24f98905b00f">More...</a><br /></td></tr>
 <tr class="separator:acd9f2ee3a1bcd0468bba24f98905b00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
-Related Functions</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
-</td></tr>
-<tr class="memitem:ab5373c9f8caa95d0cdf8d4b7d1066cb3"><td class="memTemplParams" colspan="2">template&lt;class charT , class traits , class T &gt; </td></tr>
-<tr class="memitem:ab5373c9f8caa95d0cdf8d4b7d1066cb3"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; charT, traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#ab5373c9f8caa95d0cdf8d4b7d1066cb3">operator&lt;&lt;</a> (std::basic_ostream&lt; charT, traits &gt; &amp;os, const <a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&lt; T &gt; &amp;cu_ptr)</td></tr>
-<tr class="memdesc:ab5373c9f8caa95d0cdf8d4b7d1066cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the system-dependent representation of the pointer contained in a <a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a> object.  <a href="#ab5373c9f8caa95d0cdf8d4b7d1066cb3">More...</a><br /></td></tr>
-<tr class="separator:ab5373c9f8caa95d0cdf8d4b7d1066cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a38cdcb23181ad1c554ef0209a29cd768"></a>
@@ -885,46 +875,6 @@ Related Functions</h2></td></tr>
 
 <p>Move assignment replaces the currently-held object by the compatible source object, leaving the source empty. </p>
 <p>The currently-held object (if any) is deleted. The instance is <em>not</em> copied. Nothing happens if the source and destination are the same containers. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="ab5373c9f8caa95d0cdf8d4b7d1066cb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5373c9f8caa95d0cdf8d4b7d1066cb3">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::basic_ostream&lt; charT, traits &gt; &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::basic_ostream&lt; charT, traits &gt; &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>cu_ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">related</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Output the system-dependent representation of the pointer contained in a <a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a> object. </p>
-<p>This is equivalent to <code>os &lt;&lt; p.get();</code>. </p>
 
 </div>
 </div>

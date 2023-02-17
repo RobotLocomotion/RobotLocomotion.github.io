@@ -9,6 +9,7 @@ var searchData=
   ['orthographiccamera',['OrthographicCamera',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html',1,'drake::geometry::Meshcat']]],
   ['osqpsolver',['OsqpSolver',['../classdrake_1_1solvers_1_1_osqp_solver.html',1,'drake::solvers']]],
   ['osqpsolverdetails',['OsqpSolverDetails',['../structdrake_1_1solvers_1_1_osqp_solver_details.html',1,'drake::solvers']]],
+  ['ostream_5fformatter',['ostream_formatter',['../structdrake_1_1ostream__formatter.html',1,'drake']]],
   ['outputport',['OutputPort',['../classdrake_1_1systems_1_1_output_port.html',1,'drake::systems']]],
   ['outputport_3c_20double_20_3e',['OutputPort&lt; double &gt;',['../classdrake_1_1systems_1_1_output_port.html',1,'drake::systems']]],
   ['outputportbase',['OutputPortBase',['../classdrake_1_1systems_1_1_output_port_base.html',1,'drake::systems']]],

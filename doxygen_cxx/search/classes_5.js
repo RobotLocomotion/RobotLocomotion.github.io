@@ -13,6 +13,8 @@ var searchData=
   ['fixedoffsetframe',['FixedOffsetFrame',['../classdrake_1_1multibody_1_1_fixed_offset_frame.html',1,'drake::multibody']]],
   ['focallength',['FocalLength',['../structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html',1,'drake::systems::sensors::CameraConfig']]],
   ['forceelement',['ForceElement',['../classdrake_1_1multibody_1_1_force_element.html',1,'drake::multibody']]],
+  ['formatter_3c_20drake_3a_3amath_3a_3arigidtransform_3c_20t_20_3e_20_3e',['formatter&lt; drake::math::RigidTransform&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html',1,'fmt']]],
+  ['formatter_3c_20drake_3a_3amath_3a_3arollpitchyaw_3c_20t_20_3e_20_3e',['formatter&lt; drake::math::RollPitchYaw&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html',1,'fmt']]],
   ['formula',['Formula',['../classdrake_1_1symbolic_1_1_formula.html',1,'drake::symbolic']]],
   ['formulaand',['FormulaAnd',['../classdrake_1_1symbolic_1_1_formula_and.html',1,'drake::symbolic']]],
   ['formulacell',['FormulaCell',['../classdrake_1_1symbolic_1_1_formula_cell.html',1,'drake::symbolic']]],

@@ -1,0 +1,320 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/fmt.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('fmt_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">fmt.h File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;fmt/format.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for fmt.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="fmt_8h__incl.svg" width="238" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="fmt_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a80dfcf0f454f77a9fb769f3fbeb09e5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmt_8h.html#a80dfcf0f454f77a9fb769f3fbeb09e5b">DRAKE_FMT8_CONST</a>&#160;&#160;&#160;const</td></tr>
+<tr class="memdesc:a80dfcf0f454f77a9fb769f3fbeb09e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is defined to be <code>const</code> to indicate that the <code>fmt::formatter&lt;T&gt;::format(...)</code> function should be object-const.  <a href="#a80dfcf0f454f77a9fb769f3fbeb09e5b">More...</a><br /></td></tr>
+<tr class="separator:a80dfcf0f454f77a9fb769f3fbeb09e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc413f041460d4e1af1c1d647a9912f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmt_8h.html#a4bc413f041460d4e1af1c1d647a9912f">DRAKE_FORMATTER_AS</a>(TEMPLATE_ARGS,  NAMESPACE,  TYPE,  ARG,  EXPR)</td></tr>
+<tr class="memdesc:a4bc413f041460d4e1af1c1d647a9912f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <code>fmt::formatter&lt;NAMESPACE::TYPE&gt;</code> template specialization that formats the <code>TYPE</code> by delegating the formatting using a transformed expression, as if a conversion function like this were interposed during formatting:  <a href="#a4bc413f041460d4e1af1c1d647a9912f">More...</a><br /></td></tr>
+<tr class="separator:a4bc413f041460d4e1af1c1d647a9912f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
+<tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>.  <a href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
+<tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a80dfcf0f454f77a9fb769f3fbeb09e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80dfcf0f454f77a9fb769f3fbeb09e5b">&#9670;&nbsp;</a></span>DRAKE_FMT8_CONST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_FMT8_CONST&#160;&#160;&#160;const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When using fmt &gt;= 8, this is defined to be <code>const</code> to indicate that the <code>fmt::formatter&lt;T&gt;::format(...)</code> function should be object-const. </p>
+<p>When using fmt &lt; 8, the function signature was incorrect (lacking the const), so this macro will be empty. </p>
+
+</div>
+</div>
+<a id="a4bc413f041460d4e1af1c1d647a9912f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc413f041460d4e1af1c1d647a9912f">&#9670;&nbsp;</a></span>DRAKE_FORMATTER_AS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_FORMATTER_AS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TEMPLATE_ARGS, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAMESPACE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">EXPR&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a <code>fmt::formatter&lt;NAMESPACE::TYPE&gt;</code> template specialization that formats the <code>TYPE</code> by delegating the formatting using a transformed expression, as if a conversion function like this were interposed during formatting: </p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;TEMPLATE_ARGS&gt;</div><div class="line"><span class="keyword">auto</span> format_as(<span class="keyword">const</span> NAMESPACE::TYPE&amp; ARG) {</div><div class="line">  <span class="keywordflow">return</span> EXPR;</div><div class="line">}</div></div><!-- fragment --><p>For example, this declaration ...</p>
+<div class="fragment"><div class="line"><a class="code" href="fmt_8h.html#a4bc413f041460d4e1af1c1d647a9912f">DRAKE_FORMATTER_AS</a>(, my_namespace, MyType, x, x.to_string())</div></div><!-- fragment --><p>... changes this code ...</p>
+<div class="fragment"><div class="line">MyType foo;</div><div class="line">fmt::print(foo);</div></div><!-- fragment --><p>... to be equivalent to ...</p>
+<div class="fragment"><div class="line">MyType foo;</div><div class="line">fmt::print(foo.to_string());</div></div><!-- fragment --><p>... allowing user to format <code>my_namespace::MyType</code> objects without manually adding the <code>to_string</code> call every time.</p>
+<p>This provides a convenient mechanism to add formatters for classes that already have a <code>to_string</code> function, or classes that are just thin wrappers over simple types (ints, enums, etc.).</p>
+<p>Always use this macro in the global namespace, and do not use a semicolon (<code>;</code>) afterward.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TEMPLATE_ARGS</td><td>The optional first argument <code>TEMPLATE_ARGS</code> can be used in case the <code>TYPE</code> is templated, e.g., it might commonly be set to <code>typename T</code>. It should be left empty when the TYPE is not templated. In case <code>TYPE</code> has multiple template arguments, note that macros will fight with commas so you should use <code>typename... Ts</code> instead of writing them all out.</td></tr>
+    <tr><td class="paramname">NAMESPACE</td><td>The namespace that encloses the <code>TYPE</code> being formatted. Cannot be empty. For nested namespaces, use intemediate colons, e.g., <code>drake::common</code>. Do not place <em>leading</em> colons on the <code>NAMESPACE</code>.</td></tr>
+    <tr><td class="paramname">TYPE</td><td>The class name (or struct name, or enum name, etc.) being formatted. Do not place <em>leading</em> double-colons on the <code>TYPE</code>. If the type is templated, use the template arguments here, e.g., <code>MyOptional&lt;T&gt;</code> if <code>TEMPLATE_ARGS</code> was chosen as <code>typename T</code>.</td></tr>
+    <tr><td class="paramname">ARG</td><td>A placeholder variable name to use for the value (i.e., object) being formatted within the <code>EXPR</code> expression.</td></tr>
+    <tr><td class="paramname">EXPR</td><td>An expression to <code>return</code> from the format_as function; it can refer to the given <code>ARG</code> name which will be of type <code>const TYPE&amp; ARG</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>In future versions of fmt (perhaps fmt &gt;= 10) there might be an ADL <code>format_as</code> customization point with this feature built-in. If so, then we can update this macro to use that spelling, and eventually deprecate the macro once Drake drops support for earlier version of fmt. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="fmt_8h.html">fmt.h</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

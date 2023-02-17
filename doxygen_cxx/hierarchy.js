@@ -323,6 +323,12 @@ var hierarchy =
     [ "FiniteHorizonLinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html", null ],
     [ "FixedInputPortValue", "classdrake_1_1systems_1_1_fixed_input_port_value.html", null ],
     [ "CameraConfig::FocalLength", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html", null ],
+    [ "formatter", null, [
+      [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
+        [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ]
+      ] ]
+    ] ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html", [
       [ "FormulaFalse", "classdrake_1_1symbolic_1_1_formula_false.html", null ],

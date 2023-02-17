@@ -279,6 +279,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_nice_type_name.html">NiceTypeName</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains canonicalized, platform-independent, human-readable names for arbitrarily-complicated C++ types.  <a href="classdrake_1_1_nice_type_name.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1ostream__formatter.html">ostream_formatter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scalar multi-variate polynomial, modeled after the msspoly in spotless.  <a href="classdrake_1_1_polynomial.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -576,6 +578,10 @@ Functions</h2></td></tr>
 <tr class="memitem:af8c0e9e4214ab7f97568cc8792859e32"><td class="memTemplItemLeft" align="right" valign="top">Eigen::AutoDiffScalar&lt; typename Eigen::internal::remove_all&lt; DerType &gt;::type::PlainObject &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#af8c0e9e4214ab7f97568cc8792859e32">cond</a> (bool f_cond, const Eigen::AutoDiffScalar&lt; DerType &gt; &amp;e_then, Rest... rest)</td></tr>
 <tr class="memdesc:af8c0e9e4214ab7f97568cc8792859e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides special case of cond expression for Eigen::AutoDiffScalar type.  <a href="#af8c0e9e4214ab7f97568cc8792859e32">More...</a><br /></td></tr>
 <tr class="separator:af8c0e9e4214ab7f97568cc8792859e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d4179bf2a7749593bac748a705744c"><td class="memTemplParams" colspan="2">template&lt;class charT , class traits , class T &gt; </td></tr>
+<tr class="memitem:a34d4179bf2a7749593bac748a705744c"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; charT, traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a34d4179bf2a7749593bac748a705744c">operator&lt;&lt;</a> (std::basic_ostream&lt; charT, traits &gt; &amp;os, const <a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&lt; T &gt; &amp;cu_ptr)</td></tr>
+<tr class="memdesc:a34d4179bf2a7749593bac748a705744c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a34d4179bf2a7749593bac748a705744c">More...</a><br /></td></tr>
+<tr class="separator:a34d4179bf2a7749593bac748a705744c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad14dd00683f82b89dc0f08f9adec904e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad14dd00683f82b89dc0f08f9adec904e">if_then_else</a> (bool f_cond, <a class="el" href="classdouble.html">double</a> v_then, <a class="el" href="classdouble.html">double</a> v_else)</td></tr>
 <tr class="memdesc:ad14dd00683f82b89dc0f08f9adec904e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides if-then-else expression for double.  <a href="#ad14dd00683f82b89dc0f08f9adec904e">More...</a><br /></td></tr>
 <tr class="separator:ad14dd00683f82b89dc0f08f9adec904e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -632,6 +638,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ae65839d11c343c02ff41aec068e4ff28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae65839d11c343c02ff41aec068e4ff28">FindRunfile</a> (const std::string &amp;resource_path)</td></tr>
 <tr class="memdesc:ae65839d11c343c02ff41aec068e4ff28"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles, or else an error message when not found.  <a href="#ae65839d11c343c02ff41aec068e4ff28">More...</a><br /></td></tr>
 <tr class="separator:ae65839d11c343c02ff41aec068e4ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
+<tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>.  <a href="#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
+<tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad285f98e4bc5cb78edaeb95800d56726"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad285f98e4bc5cb78edaeb95800d56726"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad285f98e4bc5cb78edaeb95800d56726">fmt_streamed</a> (const T &amp;ref)</td></tr>
+<tr class="memdesc:ad285f98e4bc5cb78edaeb95800d56726"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 9, this is an alias for <a href="https://fmt.dev/latest/api.html#ostream-api">fmt::streamed</a>.  <a href="#ad285f98e4bc5cb78edaeb95800d56726">More...</a><br /></td></tr>
+<tr class="separator:ad285f98e4bc5cb78edaeb95800d56726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace5b5f07e7cce19025b862a56d85e6aa"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
 <tr class="memitem:ace5b5f07e7cce19025b862a56d85e6aa"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ace5b5f07e7cce19025b862a56d85e6aa">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
 <tr class="memdesc:ace5b5f07e7cce19025b862a56d85e6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for integral constants.  <a href="#ace5b5f07e7cce19025b862a56d85e6aa">More...</a><br /></td></tr>
@@ -773,9 +786,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ada20909a7ef482cf1fecbe11bbcf67d4"><td class="memTemplItemLeft" align="right" valign="top">::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ada20909a7ef482cf1fecbe11bbcf67d4">is_dynamic_castable</a> (const std::unique_ptr&lt; FromType &gt; &amp;ptr)</td></tr>
 <tr class="memdesc:ada20909a7ef482cf1fecbe11bbcf67d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>ptr</code>, a shared pointer to <code>FromType</code> class, can be safely converted to a shared pointer to <code>ToType</code> class.  <a href="#ada20909a7ef482cf1fecbe11bbcf67d4">More...</a><br /></td></tr>
 <tr class="separator:ada20909a7ef482cf1fecbe11bbcf67d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
-<tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for fmt::runtime.  <a href="#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
-<tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1logging.html#a9cae370466ffb304c10aebea42eca26b">logging::logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae32fd151ebc2dab30d9546f1dbef0c79">log</a> ()</td></tr>
 <tr class="memdesc:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve an instance of a logger to use for logging; for example:  <a href="#ae32fd151ebc2dab30d9546f1dbef0c79">More...</a><br /></td></tr>
 <tr class="separator:ae32fd151ebc2dab30d9546f1dbef0c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2352,8 +2362,30 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>When using fmt &gt;= 8, this is an alias for fmt::runtime. </p>
+<p>When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>. </p>
 <p>When using fmt &lt; 8, this is a no-op. </p>
+
+</div>
+</div>
+<a id="ad285f98e4bc5cb78edaeb95800d56726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad285f98e4bc5cb78edaeb95800d56726">&#9670;&nbsp;</a></span>fmt_streamed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto drake::fmt_streamed </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>ref</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When using fmt &gt;= 9, this is an alias for <a href="https://fmt.dev/latest/api.html#ostream-api">fmt::streamed</a>. </p>
+<p>When using fmt &lt; 9, this uses a polyfill instead.</p>
+<p>Within Drake, the nominal use for <code>fmt::streamed</code> is when formatting third-party types that provide <code>operator&lt;&lt;</code> support but not <code>fmt::formatter&lt;T&gt;</code> support. Once we stop using <code>FMT_DEPRECATED_OSTREAM=1</code>, compilation errors will help you understand where you are required to use this wrapper. </p>
 
 </div>
 </div>
@@ -3283,7 +3315,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="a9ab1dd8eeeb9910b3755b238fc8907e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ab1dd8eeeb9910b3755b238fc8907e9">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab1dd8eeeb9910b3755b238fc8907e9">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3312,8 +3344,40 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a34d4179bf2a7749593bac748a705744c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d4179bf2a7749593bac748a705744c">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::basic_ostream&lt;charT, traits&gt;&amp; drake::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::basic_ostream&lt; charT, traits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cu_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use fmt or spdlog for logging, not operator&lt;&lt;.  See https://github.com/RobotLocomotion/drake/issues/17742 for details. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
+
+</div>
+</div>
 <a id="ad2b506cc6aeddf8e5f52b327382d0b13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2b506cc6aeddf8e5f52b327382d0b13">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b506cc6aeddf8e5f52b327382d0b13">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

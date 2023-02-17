@@ -15,6 +15,8 @@ var searchData=
   ['drake_5fexpect_5fno_5fthrow',['DRAKE_EXPECT_NO_THROW',['../expect__no__throw_8h.html#ae8eedd9e4d5d0114603862cd217cb469',1,'expect_no_throw.h']]],
   ['drake_5fexpect_5fthrows_5fmessage',['DRAKE_EXPECT_THROWS_MESSAGE',['../expect__throws__message_8h.html#a3032825862f840191f81ddc8ca53072e',1,'expect_throws_message.h']]],
   ['drake_5fexpect_5fthrows_5fmessage_5fif_5farmed',['DRAKE_EXPECT_THROWS_MESSAGE_IF_ARMED',['../expect__throws__message_8h.html#abe6fd77a193e735aab16e277f20ab7d1',1,'expect_throws_message.h']]],
+  ['drake_5ffmt8_5fconst',['DRAKE_FMT8_CONST',['../fmt_8h.html#a80dfcf0f454f77a9fb769f3fbeb09e5b',1,'fmt.h']]],
+  ['drake_5fformatter_5fas',['DRAKE_FORMATTER_AS',['../fmt_8h.html#a4bc413f041460d4e1af1c1d647a9912f',1,'fmt.h']]],
   ['drake_5fno_5fcopy_5fno_5fmove_5fno_5fassign',['DRAKE_NO_COPY_NO_MOVE_NO_ASSIGN',['../drake__copyable_8h.html#a3ee22789c29a46dddd6a7fd2b982731c',1,'drake_copyable.h']]],
   ['drake_5fno_5fexport',['DRAKE_NO_EXPORT',['../drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc',1,'drake_export.h']]],
   ['drake_5fnvp',['DRAKE_NVP',['../name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944',1,'name_value.h']]],

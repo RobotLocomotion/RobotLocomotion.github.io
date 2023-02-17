@@ -13,9 +13,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "bit_cast.h", "bit__cast_8h.html", null ],
     [ "cond.h", "cond_8h.html", "cond_8h" ],
     [ "constants.h", "constants_8h.html", "constants_8h" ],
-    [ "copyable_unique_ptr.h", "copyable__unique__ptr_8h.html", [
-      [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html", "classdrake_1_1copyable__unique__ptr" ]
-    ] ],
+    [ "copyable_unique_ptr.h", "copyable__unique__ptr_8h.html", "copyable__unique__ptr_8h" ],
     [ "default_scalars.h", "default__scalars_8h.html", "default__scalars_8h" ],
     [ "diagnostic_policy.h", "diagnostic__policy_8h.html", null ],
     [ "double_overloads.h", "double__overloads_8h.html", "double__overloads_8h" ],
@@ -39,6 +37,8 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "find_loaded_library.h", "find__loaded__library_8h.html", "find__loaded__library_8h" ],
     [ "find_resource.h", "find__resource_8h.html", "find__resource_8h" ],
     [ "find_runfiles.h", "find__runfiles_8h.html", "find__runfiles_8h" ],
+    [ "fmt.h", "fmt_8h.html", "fmt_8h" ],
+    [ "fmt_ostream.h", "fmt__ostream_8h.html", "fmt__ostream_8h" ],
     [ "hash.h", "hash_8h.html", "hash_8h" ],
     [ "identifier.h", "identifier_8h.html", "identifier_8h" ],
     [ "is_approx_equal_abstol.h", "is__approx__equal__abstol_8h.html", "is__approx__equal__abstol_8h" ],
