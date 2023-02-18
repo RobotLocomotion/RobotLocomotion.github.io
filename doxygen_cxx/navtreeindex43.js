@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"drake__visualizer__params_8h.html":[4,0,0,4,12],
 "dummy__render__engine_8h.html":[4,0,0,4,8,0],
 "dummy__value_8h.html":[4,0,0,1,27],
 "dynamic__programming_8h.html":[4,0,0,12,1,1],
@@ -67,7 +68,7 @@ var NAVTREEINDEX43 =
 "environment_8h.html#af50e3bc4e34ea64ae4d7065ad1fc72ac":[4,0,0,1,3,0,2,1],
 "equality__constrained__qp__solver_8h.html":[4,0,0,11,17],
 "evaluator__base_8h.html":[4,0,0,11,18],
-"evaluator__base_8h.html#a82dddde3ce550bdc321a2240ab12cec0":[4,0,0,11,18,4],
+"evaluator__base_8h.html#a82dddde3ce550bdc321a2240ab12cec0":[4,0,0,11,18,5],
 "evenly__distributed__pts__on__sphere_8h.html":[4,0,0,7,13],
 "evenly__distributed__pts__on__sphere_8h.html#a33baecb77517d26dcea8ab1fb880fcbe":[4,0,0,7,13,0],
 "event_8h.html":[4,0,0,12,3,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "expression__cell_8h.html#ab3f6cc91aa5d1f9133526887cec35cd4":[4,0,0,1,3,0,4,34],
 "expression__cell_8h.html#ab82da118fd73ba6ccc41e3eb2f00125b":[4,0,0,1,3,0,4,37],
 "expression__cell_8h.html#ac06c87629b60cbdc34b8e2a9f715cd41":[4,0,0,1,3,0,4,57],
-"expression__cell_8h.html#ac1eddc430d6a33fc13db8d53a51bdfd3":[4,0,0,1,3,0,4,41],
-"expression__cell_8h.html#ac919050a36dacd7f943da0813c91f400":[4,0,0,1,3,0,4,58]
+"expression__cell_8h.html#ac1eddc430d6a33fc13db8d53a51bdfd3":[4,0,0,1,3,0,4,41]
 };

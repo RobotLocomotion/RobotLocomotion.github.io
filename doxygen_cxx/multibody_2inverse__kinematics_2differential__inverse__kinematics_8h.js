@@ -2,6 +2,7 @@ var multibody_2inverse__kinematics_2differential__inverse__kinematics_8h =
 [
     [ "DifferentialInverseKinematicsResult", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_result" ],
     [ "DifferentialInverseKinematicsParameters", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters" ],
+    [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
     [ "DifferentialInverseKinematicsStatus", "multibody_2inverse__kinematics_2differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdc", [
       [ "kSolutionFound", "multibody_2inverse__kinematics_2differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9", null ],
       [ "kNoSolutionFound", "multibody_2inverse__kinematics_2differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdca7dbb41ec30548b5703863365ae83a5dc", null ],

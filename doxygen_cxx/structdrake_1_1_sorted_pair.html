@@ -210,10 +210,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88eda7bfcc2bb51183a5c71ca7956731"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731">Swap</a> (<a class="el" href="structdrake_1_1_sorted_pair.html">drake::SortedPair</a>&lt; T &gt; &amp;t)</td></tr>
 <tr class="memdesc:a88eda7bfcc2bb51183a5c71ca7956731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps <code>this</code> and <code>t</code>.  <a href="#a88eda7bfcc2bb51183a5c71ca7956731">More...</a><br /></td></tr>
 <tr class="separator:a88eda7bfcc2bb51183a5c71ca7956731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Support for using SortedPair in structured bindings.</div></td></tr>
-<tr class="memitem:a033c34221f2b1b73e55b19cdef241054"><td class="memTemplParams" colspan="2">template&lt;size_t Index&gt; </td></tr>
-<tr class="memitem:a033c34221f2b1b73e55b19cdef241054"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a033c34221f2b1b73e55b19cdef241054">get</a> () const</td></tr>
-<tr class="separator:a033c34221f2b1b73e55b19cdef241054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -221,6 +217,15 @@ Friends</h2></td></tr>
 <tr class="memitem:aa92b10b40f1d60a4dce917bb942db4ce"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;p) noexcept</td></tr>
 <tr class="memdesc:aa92b10b40f1d60a4dce917bb942db4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept.  <a href="#aa92b10b40f1d60a4dce917bb942db4ce">More...</a><br /></td></tr>
 <tr class="separator:aa92b10b40f1d60a4dce917bb942db4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Support for using SortedPair in structured bindings.</h2></td></tr>
+<tr class="memitem:a033c34221f2b1b73e55b19cdef241054"><td class="memTemplParams" colspan="2">template&lt;size_t Index&gt; </td></tr>
+<tr class="memitem:a033c34221f2b1b73e55b19cdef241054"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a033c34221f2b1b73e55b19cdef241054">get</a> () const</td></tr>
+<tr class="separator:a033c34221f2b1b73e55b19cdef241054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e69b204bc59433d6a3374ab602b7dcb"><td class="memTemplParams" colspan="2">template&lt;std::size_t Index&gt; </td></tr>
+<tr class="memitem:a0e69b204bc59433d6a3374ab602b7dcb"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a0e69b204bc59433d6a3374ab602b7dcb">get</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;self)</td></tr>
+<tr class="separator:a0e69b204bc59433d6a3374ab602b7dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="affe80b1feb4483db8575f33f3b23e07d"></a>
@@ -430,6 +435,32 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a0e69b204bc59433d6a3374ab602b7dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e69b204bc59433d6a3374ab602b7dcb">&#9670;&nbsp;</a></span>get</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa92b10b40f1d60a4dce917bb942db4ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa92b10b40f1d60a4dce917bb942db4ce">&#9670;&nbsp;</a></span>hash_append</h2>
 

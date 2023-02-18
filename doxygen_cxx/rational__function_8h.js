@@ -1,6 +1,7 @@
 var rational__function_8h =
 [
     [ "RationalFunction", "classdrake_1_1symbolic_1_1_rational_function.html", "classdrake_1_1symbolic_1_1_rational_function" ],
+    [ "formatter< drake::symbolic::RationalFunction >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html", null ],
     [ "operator *", "rational__function_8h.html#a97671d479c281451e703b58530b17082", null ],
     [ "operator *", "rational__function_8h.html#ad71ee73fb966e97f0de864fa7cdb3692", null ],
     [ "operator *", "rational__function_8h.html#a1c5c62b680b89f6fe992e5bc6b01e6c7", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#ae981d6dfbbbad47f1783dedfd04fa1e0":[3,0,0,11,0,2,1],
+"structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html":[3,0,0,11,0,3],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#ab4fb2b25d0ea5b6cd23f92c34704e7be":[3,0,0,11,0,3,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#adece3fa3587078a7dbf1489538b98ea2":[3,0,0,11,0,3,0],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#af56dfbe73c981c12fcb2e03b27c0df26":[3,0,0,11,0,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html":[3,0,0,16,7,10],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,16,7,12],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,16,7,13],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html":[3,0,0,16,7,3],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[3,0,0,16,7,4],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,16,7,5]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html":[3,0,0,16,7,3]
 };

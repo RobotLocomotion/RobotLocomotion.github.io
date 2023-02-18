@@ -9,5 +9,6 @@ var structdrake_1_1_sorted_pair =
     [ "second", "structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1", null ],
     [ "set", "structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31", null ],
     [ "Swap", "structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731", null ],
+    [ "get", "structdrake_1_1_sorted_pair.html#a0e69b204bc59433d6a3374ab602b7dcb", null ],
     [ "hash_append", "structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce", null ]
 ];

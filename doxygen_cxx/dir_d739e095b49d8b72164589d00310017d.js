@@ -30,7 +30,8 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html", "classdrake_1_1geometry_1_1_geometry_instance" ]
     ] ],
     [ "geometry_properties.h", "geometry__properties_8h.html", [
-      [ "GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html", "classdrake_1_1geometry_1_1_geometry_properties" ]
+      [ "GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html", "classdrake_1_1geometry_1_1_geometry_properties" ],
+      [ "formatter< drake::geometry::GeometryProperties >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html", null ]
     ] ],
     [ "geometry_roles.h", "geometry__roles_8h.html", "geometry__roles_8h" ],
     [ "geometry_set.h", "geometry__set_8h.html", [

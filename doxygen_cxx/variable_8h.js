@@ -4,6 +4,7 @@ var variable_8h =
     [ "hash< drake::symbolic::Variable >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
     [ "less< drake::symbolic::Variable >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4" ],
     [ "equal_to< drake::symbolic::Variable >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4" ],
+    [ "formatter< drake::symbolic::Variable >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
     [ "CheckStructuralEquality", "variable_8h.html#ab16b3f1c2c4dba6f5b0f7d9a76766f7a", null ],
     [ "MakeMatrixBinaryVariable", "variable_8h.html#ab61ece2fbaa79f8aad11313fa4b36150", null ],
     [ "MakeMatrixBinaryVariable", "variable_8h.html#a803dbab92e520549b625dde70f05fe47", null ],

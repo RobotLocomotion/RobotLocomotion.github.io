@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"decompose_8h.html#a0c152941a4e06624bac5926fac2d4e32":[4,0,0,1,3,4,1],
 "decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7":[4,0,0,1,3,4,9],
 "decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,5],
 "decompose_8h.html#a47d95a6b1bc2f740b30a4735cc6dcd3c":[4,0,0,1,3,4,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "drake__throw_8h.html":[4,0,0,1,26],
 "drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca":[4,0,0,1,26,0],
 "drake__visualizer_8h.html":[4,0,0,4,11],
-"drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,11,3],
-"drake__visualizer__params_8h.html":[4,0,0,4,12]
+"drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,11,3]
 };

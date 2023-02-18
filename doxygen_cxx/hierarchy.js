@@ -325,9 +325,45 @@ var hierarchy =
     [ "CameraConfig::FocalLength", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html", null ],
     [ "formatter", null, [
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
+        [ "formatter< drake::geometry::GeometryProperties >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html", null ],
+        [ "formatter< drake::geometry::render::RenderLabel >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html", null ],
+        [ "formatter< drake::geometry::Role >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html", null ],
+        [ "formatter< drake::geometry::ShapeName >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_name_01_4.html", null ],
+        [ "formatter< drake::Identifier< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
         [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
-        [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ]
+        [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
+        [ "formatter< drake::multibody::PackageMap >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ],
+        [ "formatter< drake::multibody::RotationalInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::multibody::SpatialInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::perception::pc_flags::Fields >", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html", null ],
+        [ "formatter< drake::Polynomial< double >::Monomial >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html", null ],
+        [ "formatter< drake::Polynomial< T > >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::solvers::Binding< C > >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html", null ],
+        [ "formatter< drake::solvers::CommonSolverOption >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html", null ],
+        [ "formatter< drake::solvers::MixedIntegerRotationConstraintGenerator::Approach >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html", null ],
+        [ "formatter< drake::solvers::ProgramAttribute >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html", null ],
+        [ "formatter< drake::solvers::ProgramAttributes >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
+        [ "formatter< drake::solvers::ProgramType >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html", null ],
+        [ "formatter< drake::solvers::SolverId >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
+        [ "formatter< drake::solvers::SolverOptions >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html", null ],
+        [ "formatter< drake::symbolic::ChebyshevBasisElement >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html", null ],
+        [ "formatter< drake::symbolic::ChebyshevPolynomial >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html", null ],
+        [ "formatter< drake::symbolic::GenericPolynomial< BasisElement > >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
+        [ "formatter< drake::symbolic::MonomialBasisElement >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html", null ],
+        [ "formatter< drake::symbolic::Polynomial >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
+        [ "formatter< drake::symbolic::RationalFunction >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html", null ],
+        [ "formatter< drake::symbolic::Variable >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+        [ "formatter< drake::systems::sensors::Color< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ],
+        [ "formatter< drake::TypeSafeIndex< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
+        [ "formatter< drake::yaml::LoadYamlOptions >", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ],
+        [ "formatter< T, std::enable_if_t< std::is_base_of_v< drake::solvers::EvaluatorBase, T >, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html", null ]
       ] ]
+    ] ],
+    [ "formatter", "classformatter.html", [
+      [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
     ] ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html", [
