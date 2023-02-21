@@ -12,5 +12,6 @@ var classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system =
     [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#ae100043695ba97ea618cd33b6edc7c6e", null ],
     [ "Publish", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#aa4dffa6c39e0fe80fad31b22514eef69", null ],
     [ "Subscribe", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a66212b58e8a6b5b23b317b08c126e843", null ],
-    [ "SubscribeAllChannels", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a662ec534980a723f60014dc167d560b0", null ]
+    [ "SubscribeAllChannels", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a662ec534980a723f60014dc167d560b0", null ],
+    [ "SubscribeMultichannel", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#ab1e3f5a6b8310b4b0a5e4b51348592ad", null ]
 ];

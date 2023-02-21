@@ -1,5 +1,8 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1multibody_1_1_orientation_cost.html#a826128003751513bc7513bc1d1cb9456":[1,1,0,7,6],
+"classdrake_1_1multibody_1_1_orientation_cost.html#a904d2e0768e7cb0546c213b6f035d2e9":[1,1,0,7,1],
+"classdrake_1_1multibody_1_1_orientation_cost.html#a93da0e85f63174877d0f84a2cdce405a":[1,1,0,7,4],
 "classdrake_1_1multibody_1_1_orientation_cost.html#af9be8815c3a56f599ebdf4fc374891f5":[1,1,0,7,2],
 "classdrake_1_1multibody_1_1_package_map.html":[3,0,0,9,58],
 "classdrake_1_1multibody_1_1_package_map.html#a1a614155f6670766fcb9c11088583ce8":[3,0,0,9,58,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#adda199f0e8784ca13c32d2525af89019":[3,0,0,9,73,3],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224":[3,0,0,9,73,1],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af561a8c971a66f869986c5e4429352c3":[3,0,0,9,73,9],
-"classdrake_1_1multibody_1_1_revolute_joint.html":[3,0,0,9,74],
-"classdrake_1_1multibody_1_1_revolute_joint.html#a1cf746f6557c48732c1c2898f9ed51c2":[3,0,0,9,74,3],
-"classdrake_1_1multibody_1_1_revolute_joint.html#a27e174cbce9d8926ec3eefc7d04e6e7c":[3,0,0,9,74,11],
-"classdrake_1_1multibody_1_1_revolute_joint.html#a29c13dcf8af265098940e45cdc19ba97":[3,0,0,9,74,16]
+"classdrake_1_1multibody_1_1_revolute_joint.html":[3,0,0,9,74]
 };

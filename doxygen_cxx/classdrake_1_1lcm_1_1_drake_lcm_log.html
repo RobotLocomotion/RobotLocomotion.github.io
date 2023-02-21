@@ -184,6 +184,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16db47193b9958a05c3566ab54f01b76"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a16db47193b9958a05c3566ab54f01b76">Subscribe</a> (const std::string &amp;channel, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867">HandlerFunction</a> handler) override</td></tr>
 <tr class="memdesc:a16db47193b9958a05c3566ab54f01b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes <code>handler</code> to <code>channel</code>.  <a href="#a16db47193b9958a05c3566ab54f01b76">More...</a><br /></td></tr>
 <tr class="separator:a16db47193b9958a05c3566ab54f01b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5b34d1c453332ce92aad063a22c1f9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a4a5b34d1c453332ce92aad063a22c1f9">SubscribeMultichannel</a> (std::string_view regex, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf">MultichannelHandlerFunction</a>) override</td></tr>
+<tr class="memdesc:a4a5b34d1c453332ce92aad063a22c1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is not yet supported for LCM logs, and will always throw.  <a href="#a4a5b34d1c453332ce92aad063a22c1f9">More...</a><br /></td></tr>
+<tr class="separator:a4a5b34d1c453332ce92aad063a22c1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85767dac8b9304854190439c7dcdf7b3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a85767dac8b9304854190439c7dcdf7b3">SubscribeAllChannels</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf">MultichannelHandlerFunction</a>) override</td></tr>
 <tr class="memdesc:a85767dac8b9304854190439c7dcdf7b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to all channels; this is useful for logging and redirecting LCM traffic without regard to its content.  <a href="#a85767dac8b9304854190439c7dcdf7b3">More...</a><br /></td></tr>
 <tr class="separator:a85767dac8b9304854190439c7dcdf7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -724,6 +727,46 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>nullptr because this implementation does not support unsubscribe. </dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a46278d4906208da92bc2d8dc88c6f629">DrakeLcmInterface</a>.</p>
+
+</div>
+</div>
+<a id="a4a5b34d1c453332ce92aad063a22c1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a5b34d1c453332ce92aad063a22c1f9">&#9670;&nbsp;</a></span>SubscribeMultichannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a>&gt; SubscribeMultichannel </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>regex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf">MultichannelHandlerFunction</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function is not yet supported for LCM logs, and will always throw. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#ab442e399138d7e396aa536e605f9e7a6">DrakeLcmInterface</a>.</p>
 
 </div>
 </div>

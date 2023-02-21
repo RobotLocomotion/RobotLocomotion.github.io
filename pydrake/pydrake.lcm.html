@@ -147,11 +147,6 @@ as per the no-argument constructor.</p>
 <p>Constructs using the given parameters.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.lcm.DrakeLcm.Subscribe">
-<span class="sig-name descname"><span class="pre">Subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.lcm.DrakeLcm" title="pydrake.lcm.DrakeLcm"><span class="pre">pydrake.lcm.DrakeLcm</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcm.Subscribe" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
@@ -218,6 +213,49 @@ nullopt or a default-constructed optional.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.lcm.DrakeLcmInterface.Subscribe">
+<span class="sig-name descname"><span class="pre">Subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.Subscribe" title="Permalink to this definition"></a></dt>
+<dd><p>Most users should use the drake::lcm::Subscribe() free function or the
+drake::lcm::Subscriber wrapper class, instead of this interface
+method.</p>
+<p>Subscribes to an LCM channel without automatic message decoding. The
+handler will be invoked when a message arrives on channel <code class="docutils literal notranslate"><span class="pre">channel</span></code>.</p>
+<p>The handler should never throw an exception, because it is indirectly
+called from C functions.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The channel to subscribe to. Must not be the empty string. To use
+a regex, see SubscribeMultichannel().</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the object used to manage the subscription if that is supported,
+or else nullptr if not supported. The unsubscribe-on-delete
+default is <code class="docutils literal notranslate"><span class="pre">False</span></code>. Refer to the DrakeSubscriptionInterface
+class overview for details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.lcm.DrakeLcmInterface.SubscribeAllChannels">
+<span class="sig-name descname"><span class="pre">SubscribeAllChannels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.SubscribeAllChannels" title="Permalink to this definition"></a></dt>
+<dd><p>Subscribe to all channels; this is useful for logging and redirecting
+LCM traffic without regard to its content.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.lcm.DrakeLcmInterface.SubscribeMultichannel">
+<span class="sig-name descname"><span class="pre">SubscribeMultichannel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.SubscribeMultichannel" title="Permalink to this definition"></a></dt>
+<dd><p>Subscribes to all channels whose name matches the given regular
+expression. The <code class="docutils literal notranslate"><span class="pre">regex</span></code> is treated as an anchored “match” not a
+“search”, i.e., it must match the entire channel name. The specific
+regular expression grammar is left unspecified, so it’s best to use
+only patterns that have identical semantics in all grammars, e.g.,
+<code class="docutils literal notranslate"><span class="pre">&quot;.*&quot;</span></code>.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -242,9 +280,10 @@ or subscribe.</p>
 using the channel name “FOO_ALT”, and a call to <code class="docutils literal notranslate"><span class="pre">Subscribe(&amp;lcm,</span>
 <span class="pre">&quot;BAR&quot;,</span> <span class="pre">handler)</span></code> will only call the handler for messages received on
 the “BAR_ALT” channel name.</p>
-<p>Simiarly, DrakeLcm::SubscribeAllChannels() only subscribes to network
-messages that end with the suffix. A network message on a non-matching
-channel name (e.g., “QUUX”) will silently discarded. The
+<p>Simiarly, DrakeLcm::SubscribeMultichannel() and
+DrakeLcm::SubscribeAllChannels() only subscribe to network messages
+that end with the suffix. A network message on a non-matching channel
+name (e.g., “QUUX”) will silently discarded. The
 DrakeLcmInterface::MultichannelHandlerFunction callback will be passed
 the <em>unadaorned</em> channel name as its first argument (e.g., “FOO” or
 “BAR”), not “FOO_ALT”, etc.</p>

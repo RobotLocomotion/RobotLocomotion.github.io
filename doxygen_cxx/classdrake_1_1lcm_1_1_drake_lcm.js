@@ -13,5 +13,6 @@ var classdrake_1_1lcm_1_1_drake_lcm =
     [ "operator=", "classdrake_1_1lcm_1_1_drake_lcm.html#a2870ca3b120a6daac46ef83e59fa2f36", null ],
     [ "Publish", "classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991", null ],
     [ "Subscribe", "classdrake_1_1lcm_1_1_drake_lcm.html#a1d46824a3a1490cb7f43e75d01575003", null ],
-    [ "SubscribeAllChannels", "classdrake_1_1lcm_1_1_drake_lcm.html#a85767dac8b9304854190439c7dcdf7b3", null ]
+    [ "SubscribeAllChannels", "classdrake_1_1lcm_1_1_drake_lcm.html#a85767dac8b9304854190439c7dcdf7b3", null ],
+    [ "SubscribeMultichannel", "classdrake_1_1lcm_1_1_drake_lcm.html#a9d709763170b9e1d2744b06799ec768a", null ]
 ];

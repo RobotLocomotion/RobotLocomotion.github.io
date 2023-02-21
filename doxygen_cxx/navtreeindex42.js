@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,16,2],
+"decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,16,5],
+"decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,11,16,1],
+"decompose_8h.html":[4,0,0,1,3,4],
 "decompose_8h.html#a0c152941a4e06624bac5926fac2d4e32":[4,0,0,1,3,4,1],
 "decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7":[4,0,0,1,3,4,9],
 "decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "drake__lcm__params_8h.html":[4,0,0,5,3],
 "drake__marker_8h.html":[4,0,0,1,24],
 "drake__path_8h.html":[4,0,0,1,25],
-"drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,25,0],
-"drake__throw_8h.html":[4,0,0,1,26],
-"drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca":[4,0,0,1,26,0],
-"drake__visualizer_8h.html":[4,0,0,4,11],
-"drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,11,3]
+"drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,25,0]
 };

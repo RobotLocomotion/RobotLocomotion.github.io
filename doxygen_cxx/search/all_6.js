@@ -117,6 +117,8 @@ var searchData=
   ['flush',['Flush',['../classdrake_1_1geometry_1_1_meshcat.html#a548a7b441b7900dcbd5481778c7dec9f',1,'drake::geometry::Meshcat']]],
   ['fmt',['fmt',['../namespacefmt.html',1,'']]],
   ['fmt_2eh',['fmt.h',['../fmt_8h.html',1,'']]],
+  ['fmt_5feigen',['fmt_eigen',['../namespacedrake.html#a0fb0d186143cc761895c310885f3ebe9',1,'drake']]],
+  ['fmt_5feigen_2eh',['fmt_eigen.h',['../fmt__eigen_8h.html',1,'']]],
   ['fmt_5fformat_5fprinter_2eh',['fmt_format_printer.h',['../fmt__format__printer_8h.html',1,'']]],
   ['fmt_5fostream_2eh',['fmt_ostream.h',['../fmt__ostream_8h.html',1,'']]],
   ['fmt_5fruntime',['fmt_runtime',['../namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce',1,'drake']]],

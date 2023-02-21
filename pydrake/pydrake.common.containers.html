@@ -156,15 +156,31 @@
 <dd><p>Creates a class that is a named view with given <code class="docutils literal notranslate"><span class="pre">fields</span></code>. When the class
 is instantiated, it must be given the object that it will be a proxy for.
 Similar to <code class="docutils literal notranslate"><span class="pre">namedtuple</span></code>.</p>
-<dl>
-<dt>Example::</dt><dd><p>MyView = namedview(“MyView”, (‘a’, ‘b’))</p>
-<p>value = np.array([1, 2])
-view = MyView(value)
-view.a = 10  # <cite>value</cite> is now [10, 2]
-value[1] = 100  # <cite>view</cite> is now [10, 100]
-view[:] = 3  # <cite>value</cite> is now [3, 3]</p>
-</dd>
-</dl>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyView</span> <span class="o">=</span> <span class="n">namedview</span><span class="p">(</span><span class="s2">&quot;MyView&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">))</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">MyView</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># `value` is now [10, 2]</span>
+<span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># `view` is now [10, 100]</span>
+<span class="n">view</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># `value` is now [3, 3]</span>
+
+<span class="c1"># Get an array from the view *aliasing* the original vector.</span>
+<span class="n">value_view</span> <span class="o">=</span> <span class="n">view</span><span class="p">[:]</span>
+<span class="c1"># Another way to get an aliased array.</span>
+<span class="n">value_view_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+<span class="c1"># Get an array from the view that is a *copy* of the original</span>
+<span class="c1"># vector.</span>
+<span class="n">value_copy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As illustrated above, if you use <code class="docutils literal notranslate"><span class="pre">np.array(view)</span></code>, then it will
+provide a <em>copied</em> array from the view. If you want an <em>aliased</em> array
+from the view, then use operations like <code class="docutils literal notranslate"><span class="pre">view[:]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">np.asarray(view)</span></code>, or <code class="docutils literal notranslate"><span class="pre">np.array(view,</span> <span class="pre">copy=False)</span></code>.</p>
+</div>
 <p>For more details, see <code class="docutils literal notranslate"><span class="pre">NamedViewBase</span></code>.</p>
 </dd></dl>
 

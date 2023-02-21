@@ -38,6 +38,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "find_resource.h", "find__resource_8h.html", "find__resource_8h" ],
     [ "find_runfiles.h", "find__runfiles_8h.html", "find__runfiles_8h" ],
     [ "fmt.h", "fmt_8h.html", "fmt_8h" ],
+    [ "fmt_eigen.h", "fmt__eigen_8h.html", "fmt__eigen_8h" ],
     [ "fmt_ostream.h", "fmt__ostream_8h.html", "fmt__ostream_8h" ],
     [ "hash.h", "hash_8h.html", "hash_8h" ],
     [ "identifier.h", "identifier_8h.html", "identifier_8h" ],

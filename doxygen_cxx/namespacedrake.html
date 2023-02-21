@@ -641,6 +641,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
 <tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>.  <a href="#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
 <tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb0d186143cc761895c310885f3ebe9"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a0fb0d186143cc761895c310885f3ebe9"><td class="memTemplItemLeft" align="right" valign="top">internal::fmt_eigen_ref&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a0fb0d186143cc761895c310885f3ebe9">fmt_eigen</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:a0fb0d186143cc761895c310885f3ebe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types.  <a href="#a0fb0d186143cc761895c310885f3ebe9">More...</a><br /></td></tr>
+<tr class="separator:a0fb0d186143cc761895c310885f3ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad285f98e4bc5cb78edaeb95800d56726"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad285f98e4bc5cb78edaeb95800d56726"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad285f98e4bc5cb78edaeb95800d56726">fmt_streamed</a> (const T &amp;ref)</td></tr>
 <tr class="memdesc:ad285f98e4bc5cb78edaeb95800d56726"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 9, this is an alias for <a href="https://fmt.dev/latest/api.html#ostream-api">fmt::streamed</a>.  <a href="#ad285f98e4bc5cb78edaeb95800d56726">More...</a><br /></td></tr>
@@ -2343,6 +2347,27 @@ Variables</h2></td></tr>
 
 <p>(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles, or else an error message when not found. </p>
 <p>When <a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a" title="(Advanced.) Returns true iff this process has Bazel runfiles available.">HasRunfiles()</a> is false, returns an error. The <code>resource_path</code> looks like <code>workspace/pkg/subpkg/file.ext</code>, e.g., "drake/common/foo.txt". </p>
+
+</div>
+</div>
+<a id="a0fb0d186143cc761895c310885f3ebe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb0d186143cc761895c310885f3ebe9">&#9670;&nbsp;</a></span>fmt_eigen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::fmt_eigen_ref&lt;Derived&gt; drake::fmt_eigen </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types. </p>
+<dl class="section warning"><dt>Warning</dt><dd>The return value of this function should only ever be used as a temporary object, i.e., in a fmt argument list or a logging statement argument list. Never store it as a local variable, member field, etc. </dd></dl>
 
 </div>
 </div>

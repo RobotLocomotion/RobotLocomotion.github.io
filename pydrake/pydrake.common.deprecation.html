@@ -181,22 +181,18 @@ emitted at <em>import time</em>, as it can easily be used with pure Python
 modules.</p>
 <p>However, if you are dealing with a C++ module (and are writing code inside
 of <cite>_{module}_extra.py</cite>), you should use this approach.</p>
-<p>Example as decorator:</p>
-<blockquote>
-<div><p>&#64;deprecated_callable(“Please use <cite>func_y</cite> instead”, date=”2038-01-19”)
-def func_x():</p>
-<blockquote>
-<div><p>…</p>
-</div></blockquote>
-</div></blockquote>
-<p>Example for alias:</p>
-<blockquote>
-<div><dl class="simple">
-<dt>my_alias = deprecated_callable(</dt><dd><p>“Please use <cite>my_original</cite> instead”, date=”2038-01-19”</p>
-</dd>
-</dl>
-<p>)(my_original)</p>
-</div></blockquote>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># As decorator</span>
+<span class="nd">@deprecated_callable</span><span class="p">(</span><span class="s2">&quot;Please use `func_y` instead&quot;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s2">&quot;2038-01-19&quot;</span><span class="p">)</span>  <span class="c1"># noqa</span>
+<span class="k">def</span> <span class="nf">func_x</span><span class="p">():</span>
+    <span class="o">...</span>
+
+<span class="c1"># As alias</span>
+<span class="n">deprecated_alias</span> <span class="o">=</span> <span class="n">deprecated_callable</span><span class="p">(</span>
+    <span class="s2">&quot;Please use `real_callable` instead&quot;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s2">&quot;2038-01-19&quot;</span>
+<span class="p">)(</span><span class="n">real_callable</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py exception">

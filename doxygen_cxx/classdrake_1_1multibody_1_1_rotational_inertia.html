@@ -180,12 +180,12 @@ class drake::multibody::RotationalInertia&lt; T &gt;</h3>
 I = | Ixy Iyy Iyz |
     | Ixz Iyz Izz |
 </pre><p> The moments of inertia Ixx, Iyy, Izz and products of inertia Ixy, Ixz, Iyz are defined in terms of the mass dm of a differential volume of the body. The position of dm from about-point P is xx̂ + yŷ + zẑ = [x, y, z]_E. </p><pre>
-Ixx = ∫ (y² + z²) dm
-Iyy = ∫ (x² + z²) dm
-Izz = ∫ (x² + y²) dm
-Ixy = - ∫ x y dm
-Ixz = - ∫ x z dm
-Iyz = - ∫ y z dm
+Ixx = ∫ (y² + z²) dm
+Iyy = ∫ (x² + z²) dm
+Izz = ∫ (x² + y²) dm
+Ixy = - ∫ x y dm
+Ixz = - ∫ x z dm
+Iyz = - ∫ y z dm
 </pre><p> We use the negated convention for products of inertia, so that I serves to relate angular velocity ω and angular momentum h via <code>h = I ⋅ ω</code>. Ensure your products of inertia follow this negative sign convention.</p>
 <p>The 3x3 inertia matrix is symmetric and its diagonal elements (moments of inertia) and off-diagonal elements (products of inertia) are associated with a body (or composite body) S, an about-point P, and an expressed-in frame E (𝐱̂, 𝐲̂, 𝐳̂̂). A rotational inertia is ill-defined unless there is a body S, about-point P, and expressed-in frame E. The user of this class is responsible for tracking the body S, about-point P and expressed-in frame E (none of these are stored in this class).</p>
 <dl class="section note"><dt>Note</dt><dd>This class does not store the about-point nor the expressed-in frame, nor does this class help enforce consistency of the about-point or expressed-in frame. To help users of this class track the about-point and expressed-in frame, we strongly recommend the following notation.</dd>

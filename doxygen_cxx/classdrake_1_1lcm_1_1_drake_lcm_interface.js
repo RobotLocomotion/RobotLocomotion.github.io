@@ -13,5 +13,6 @@ var classdrake_1_1lcm_1_1_drake_lcm_interface =
     [ "Publish", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#aa654c10b33c6799f374608cce0352712", null ],
     [ "Subscribe", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a204b8732f3fb2f89d2139ba0f2d0e6c2", null ],
     [ "SubscribeAllChannels", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a46278d4906208da92bc2d8dc88c6f629", null ],
+    [ "SubscribeMultichannel", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#ab442e399138d7e396aa536e605f9e7a6", null ],
     [ "internal::OnHandleSubscriptionsError", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#ada4cdd96fd686bb8c6158d8012ed4245", null ]
 ];
