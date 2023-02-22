@@ -68,7 +68,7 @@ var group__planning =
       [ "AddPositionCost", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a9acab6538a77ceaa44afa858fc1559ad", null ],
       [ "context", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a45a9785ab329b6bc3294b6720a29a167", null ],
       [ "get_mutable_context", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a598885fb0868bd7d67fde74776cc2b9e", null ],
-      [ "get_mutable_prog", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a727804209642a450777a561df6d98d9b", null ],
+      [ "get_mutable_prog", "classdrake_1_1multibody_1_1_inverse_kinematics.html#aeafaa0272a0f44b29697141d2d6f7c50", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a069b08fb67eeeb99c807dfc823ea3154", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_inverse_kinematics.html#acb09a7496a0b0ed1c358fb31a21ab4c1", null ],
       [ "prog", "classdrake_1_1multibody_1_1_inverse_kinematics.html#afcc8c6b2091ff4447ee2951bb7907de8", null ],

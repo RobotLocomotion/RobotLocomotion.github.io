@@ -2,7 +2,7 @@ var classdrake_1_1systems_1_1_affine_system =
 [
     [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#af75a23cc82e2c8e85534f94ffba09203", null ],
     [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#a350b26ee4a2cb1ab86bf27f71491bb41", null ],
-    [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#a17696519693b54419b487259fae62c28", null ],
+    [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#aeec4db7870070b42a051419fcb01a3eb", null ],
     [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#a63f44f28b79a88163ecea4f217fd0707", null ],
     [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#a177faa2c20aa25f40661760c82db7759", null ],
     [ "A", "classdrake_1_1systems_1_1_affine_system.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
