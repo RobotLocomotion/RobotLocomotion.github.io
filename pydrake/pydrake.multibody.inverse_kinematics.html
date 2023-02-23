@@ -1681,6 +1681,33 @@ to Bbar.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToLineDistanceConstraint">
+<span class="sig-name descname"><span class="pre">AddPointToLineDistanceConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="pydrake.multibody.inverse_kinematics.InverseKinematics"><span class="pre">pydrake.multibody.inverse_kinematics.InverseKinematics</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_B1P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_B2Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_B2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_lower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_upper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToLineDistanceConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Add a constraint that the distance between point P attached to
+frame_point (denoted as B1) and a line attached to frame_line (denoted
+as B2) is within the range [distance_lower, distance_upper]. The line
+passes through a point Q with a directional vector n.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_point</span></code>:</dt><dd><p>The frame to which P is attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_B1P</span></code>:</dt><dd><p>The position of P measured and expressed in frame_point.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_line</span></code>:</dt><dd><p>The frame to which the line is attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_B2Q</span></code>:</dt><dd><p>The position of Q measured and expressed in frame_line, the line
+passes through Q.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">n_B2</span></code>:</dt><dd><p>The direction vector of the line measured and expressed in
+frame_line.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance_lower</span></code>:</dt><dd><p>The lower bound on the distance.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance_upper</span></code>:</dt><dd><p>The upper bound on the distance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint">
 <span class="sig-name descname"><span class="pre">AddPointToPointDistanceConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="pydrake.multibody.inverse_kinematics.InverseKinematics"><span class="pre">pydrake.multibody.inverse_kinematics.InverseKinematics</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_B1P1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_B2P2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_lower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_upper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Add a constraint that the distance between point P1 attached to frame
@@ -1717,9 +1744,9 @@ expressed in frame G.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt><dd><p>We impose the constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b.</p>
 </dd>
-<dt>Precondition:</dt><dd><p>A.cols() = 3 * p_GP.cols();</p>
+<dt>Precondition:</dt><dd><p>A.cols() = 3 * p_GP.cols().</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>We impose the constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>We impose the constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2019,6 +2046,65 @@ to Bbar.</p>
 <p>Overloaded constructor. Same as the constructor with the double
 version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the
 gradient of the cost is computed from autodiff.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PointToLineDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>Constrain that the distance between a point P on frame B1 and another
+line L on frame B2 is within a range [distance_lower, distance_upper].</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frame_point: pydrake.multibody.tree.Frame_[float], p_B1P: numpy.ndarray[numpy.float64[3, 1]], frame_line: pydrake.multibody.tree.Frame_[float], p_B2Q: numpy.ndarray[numpy.float64[3, 1]], n_B2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float, plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</p></li>
+</ol>
+<p>Constrain the distance between a point P attached to frame_point
+(denoted as B1) and the line L attached to frame_line (denoted as B2)
+is within the range [distance_lower, distance_upper].</p>
+<p>Mathematically, we impose the constraint distance_lower² &lt;=
+distance(P, L)² &lt;= distance_upper². We impose the constraint on the
+distance square instead of distance directly, because the gradient of
+distance is not well defined at distance=0; on the other hand, the
+gradient of the distance square is well defined everywhere.</p>
+<p>We parameterize the line using a point Q on the line, and a
+directional vector n along the line.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+must be alive during the lifetime of this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_point</span></code>:</dt><dd><p>The frame B1 to which the point P is attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_B1P</span></code>:</dt><dd><p>The position of point P measured and expressed in B1.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_line</span></code>:</dt><dd><p>The frame B2 to which the line is attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_B2Q</span></code>:</dt><dd><p>Q is a point on the line, p_B2Q is the position of this point Q
+measured and expressed in B2.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">n_B2</span></code>:</dt><dd><p>n is the directional vector of the line, n_B2 is this vector
+measured and expressed in B2.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance_lower</span></code>:</dt><dd><p>The lower bound on the distance, must be non-negative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance_upper</span></code>:</dt><dd><p>The upper bound on the distance, must be non-negative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> must be alive during the lifetime of this
+constraint.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame_point: pydrake.multibody.tree.Frame_[AutoDiffXd], p_B1P: numpy.ndarray[numpy.float64[3, 1]], frame_line: pydrake.multibody.tree.Frame_[AutoDiffXd], p_B2Q: numpy.ndarray[numpy.float64[3, 1]], n_B2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Same as the constructor with the double
+version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;), except the
+gradient of the constraint is computed from autodiff.</p>
 </dd></dl>
 
 </dd></dl>

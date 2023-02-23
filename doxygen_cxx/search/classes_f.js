@@ -41,6 +41,7 @@ var searchData=
   ['pointcloud',['PointCloud',['../classdrake_1_1perception_1_1_point_cloud.html',1,'drake::perception']]],
   ['pointcloudtolcm',['PointCloudToLcm',['../classdrake_1_1perception_1_1_point_cloud_to_lcm.html',1,'drake::perception']]],
   ['pointpaircontactinfo',['PointPairContactInfo',['../classdrake_1_1multibody_1_1_point_pair_contact_info.html',1,'drake::multibody']]],
+  ['pointtolinedistanceconstraint',['PointToLineDistanceConstraint',['../classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html',1,'drake::multibody']]],
   ['pointtopointdistanceconstraint',['PointToPointDistanceConstraint',['../classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html',1,'drake::multibody']]],
   ['polygonsurfacemesh',['PolygonSurfaceMesh',['../classdrake_1_1geometry_1_1_polygon_surface_mesh.html',1,'drake::geometry']]],
   ['polyhedronconstraint',['PolyhedronConstraint',['../classdrake_1_1multibody_1_1_polyhedron_constraint.html',1,'drake::multibody']]],

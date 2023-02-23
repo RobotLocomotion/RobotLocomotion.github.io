@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_inverse_ki
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1multibody_1_1_inverse_kinematics-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">InverseKinematics Class Reference<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a></div></div>  </div>
+<div class="title">InverseKinematics Class Reference<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a> &raquo; <a class="el" href="group__planning__configuration.html">Configurations</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -214,6 +214,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae52548b9b4f07c155cb5ecf46d1088ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#ae52548b9b4f07c155cb5ecf46d1088ae">AddPointToPointDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame1, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_B1P1, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame2, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_B2P2, <a class="el" href="classdouble.html">double</a> distance_lower, <a class="el" href="classdouble.html">double</a> distance_upper)</td></tr>
 <tr class="memdesc:ae52548b9b4f07c155cb5ecf46d1088ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a constraint that the distance between point P1 attached to frame 1 and point P2 attached to frame 2 is within the range [distance_lower, distance_upper].  <a href="#ae52548b9b4f07c155cb5ecf46d1088ae">More...</a><br /></td></tr>
 <tr class="separator:ae52548b9b4f07c155cb5ecf46d1088ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990058faa76c8e80bc47a846385415aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a990058faa76c8e80bc47a846385415aa">AddPointToLineDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_point, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_B1P, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_line, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_B2Q, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;n_B2, <a class="el" href="classdouble.html">double</a> distance_lower, <a class="el" href="classdouble.html">double</a> distance_upper)</td></tr>
+<tr class="memdesc:a990058faa76c8e80bc47a846385415aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a constraint that the distance between point P attached to frame_point (denoted as B1) and a line attached to frame_line (denoted as B2) is within the range [distance_lower, distance_upper].  <a href="#a990058faa76c8e80bc47a846385415aa">More...</a><br /></td></tr>
+<tr class="separator:a990058faa76c8e80bc47a846385415aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a345a33c8ee0634d6823501f9495cec66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a345a33c8ee0634d6823501f9495cec66">AddPolyhedronConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frameF, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frameG, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;p_GP, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
 <tr class="memdesc:a345a33c8ee0634d6823501f9495cec66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the position of P1, ..., Pn satisfy A * [p_FP1; p_FP2; ...; p_FPn] &lt;= b.  <a href="#a345a33c8ee0634d6823501f9495cec66">More...</a><br /></td></tr>
 <tr class="separator:a345a33c8ee0634d6823501f9495cec66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -884,6 +887,78 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a990058faa76c8e80bc47a846385415aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990058faa76c8e80bc47a846385415aa">&#9670;&nbsp;</a></span>AddPointToLineDistanceConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; AddPointToLineDistanceConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_B1P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_B2Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>n_B2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>distance_lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>distance_upper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a constraint that the distance between point P attached to frame_point (denoted as B1) and a line attached to frame_line (denoted as B2) is within the range [distance_lower, distance_upper]. </p>
+<p>The line passes through a point Q with a directional vector n. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_point</td><td>The frame to which P is attached. </td></tr>
+    <tr><td class="paramname">p_B1P</td><td>The position of P measured and expressed in frame_point. </td></tr>
+    <tr><td class="paramname">frame_line</td><td>The frame to which the line is attached. </td></tr>
+    <tr><td class="paramname">p_B2Q</td><td>The position of Q measured and expressed in frame_line, the line passes through Q. </td></tr>
+    <tr><td class="paramname">n_B2</td><td>The direction vector of the line measured and expressed in frame_line. </td></tr>
+    <tr><td class="paramname">distance_lower</td><td>The lower bound on the distance. </td></tr>
+    <tr><td class="paramname">distance_upper</td><td>The upper bound on the distance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae52548b9b4f07c155cb5ecf46d1088ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae52548b9b4f07c155cb5ecf46d1088ae">&#9670;&nbsp;</a></span>AddPointToPointDistanceConstraint()</h2>
 
@@ -1003,10 +1078,10 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>A.cols() = 3 * p_GP.cols(); </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>A.cols() = 3 * p_GP.cols(). </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">b</td><td>We impose the constraint A * [p_FP1; p_FP2; ...; p_FPn] &lt;= b </td></tr>
+    <tr><td class="paramname">b</td><td>We impose the constraint A * [p_FP1; p_FP2; ...; p_FPn] &lt;= b. </td></tr>
   </table>
   </dd>
 </dl>

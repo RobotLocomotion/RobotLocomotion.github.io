@@ -161,6 +161,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1optimiza
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry::optimization Namespace Reference</div>  </div>
@@ -171,6 +172,9 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1optimiza
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html">CartesianProduct</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁, x₂, ..., xₙ) | x₁ ∈ X₁, x₂ ∈ X₂, ..., xₙ ∈ Xₙ}.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains the necessary information about the collision geometry used in C-IRIS.  <a href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for defining a convex set.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#details">More...</a><br /></td></tr>
@@ -208,8 +212,25 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the recommended container for passing a collection of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> instances.  <a href="#a3c7f9b75df3ac22becb7bb5cb03bf956">More...</a><br /></td></tr>
 <tr class="separator:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a95690619e9b8d2e9047a607703cfbfff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfff">CIrisGeometryType</a> { <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffaf88bbd242f1721920aa0eb72a18767a4">kSphere</a>, 
+<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffa4373e4d7d76472e0fe9a1430bf5c9787">kPolytope</a>, 
+<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffacafcb896846646f8833912fdbfc5318e">kCylinder</a>, 
+<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffaaaccf255c56ba12dfb6ca40c34de64ef">kCapsule</a>
+ }</td></tr>
+<tr class="memdesc:a95690619e9b8d2e9047a607703cfbfff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The supported type of geometries in C-IRIS.  <a href="namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfff">More...</a><br /></td></tr>
+<tr class="separator:a95690619e9b8d2e9047a607703cfbfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4013454f1b2c236ff18e572d12436fef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fef">PlaneSide</a> { <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefafe449700ac27fbd09863263d74e7735f">kPositive</a>, 
+<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefa25b105cbe0fd4622cdb36360c85e89c3">kNegative</a>
+ }</td></tr>
+<tr class="separator:a4013454f1b2c236ff18e572d12436fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:acb19d1d31dfa7158b5270096dac977a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#acb19d1d31dfa7158b5270096dac977a7">DistanceToHalfspace</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a> &amp;collision_geometry, const Eigen::Vector3d &amp;a, <a class="el" href="classdouble.html">double</a> b, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> expressed_body, <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fef">PlaneSide</a> plane_side, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant_context)</td></tr>
+<tr class="memdesc:acb19d1d31dfa7158b5270096dac977a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the signed distance from <code>collision_geometry</code> to the half space ℋ, where ℋ = {x | aᵀx+b &gt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefafe449700ac27fbd09863263d74e7735f">PlaneSide::kPositive</a>, and ℋ = {x | aᵀx+b &lt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefa25b105cbe0fd4622cdb36360c85e89c3">PlaneSide::kNegative</a>.  <a href="#acb19d1d31dfa7158b5270096dac977a7">More...</a><br /></td></tr>
+<tr class="separator:acb19d1d31dfa7158b5270096dac977a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648b8ba350611eefa73db9327240049b"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a648b8ba350611eefa73db9327240049b"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a648b8ba350611eefa73db9327240049b">ConvexSetCloner</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other)</td></tr>
 <tr class="memdesc:a648b8ba350611eefa73db9327240049b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Implementation helper for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">ConvexSet::Clone</a>.  <a href="#a648b8ba350611eefa73db9327240049b">More...</a><br /></td></tr>
@@ -244,6 +265,63 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a95690619e9b8d2e9047a607703cfbfff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95690619e9b8d2e9047a607703cfbfff">&#9670;&nbsp;</a></span>CIrisGeometryType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfff">CIrisGeometryType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The supported type of geometries in C-IRIS. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a95690619e9b8d2e9047a607703cfbfffaf88bbd242f1721920aa0eb72a18767a4"></a>kSphere&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a95690619e9b8d2e9047a607703cfbfffa4373e4d7d76472e0fe9a1430bf5c9787"></a>kPolytope&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a95690619e9b8d2e9047a607703cfbfffacafcb896846646f8833912fdbfc5318e"></a>kCylinder&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a95690619e9b8d2e9047a607703cfbfffaaaccf255c56ba12dfb6ca40c34de64ef"></a>kCapsule&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4013454f1b2c236ff18e572d12436fef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4013454f1b2c236ff18e572d12436fef">&#9670;&nbsp;</a></span>PlaneSide</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fef">PlaneSide</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4013454f1b2c236ff18e572d12436fefafe449700ac27fbd09863263d74e7735f"></a>kPositive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4013454f1b2c236ff18e572d12436fefa25b105cbe0fd4622cdb36360c85e89c3"></a>kNegative&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a648b8ba350611eefa73db9327240049b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a648b8ba350611eefa73db9327240049b">&#9670;&nbsp;</a></span>ConvexSetCloner()</h2>
@@ -263,6 +341,67 @@ Functions</h2></td></tr>
 
 <p>(Advanced) Implementation helper for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">ConvexSet::Clone</a>. </p>
 <p>Refer to the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet::ConvexSet()</a> constructor documentation for an example. </p>
+
+</div>
+</div>
+<a id="acb19d1d31dfa7158b5270096dac977a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb19d1d31dfa7158b5270096dac977a7">&#9670;&nbsp;</a></span>DistanceToHalfspace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> drake::geometry::optimization::DistanceToHalfspace </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a> &amp;&#160;</td>
+          <td class="paramname"><em>collision_geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a>&#160;</td>
+          <td class="paramname"><em>expressed_body</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fef">PlaneSide</a>&#160;</td>
+          <td class="paramname"><em>plane_side</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant_context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the signed distance from <code>collision_geometry</code> to the half space ℋ, where ℋ = {x | aᵀx+b &gt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefafe449700ac27fbd09863263d74e7735f">PlaneSide::kPositive</a>, and ℋ = {x | aᵀx+b &lt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefa25b105cbe0fd4622cdb36360c85e89c3">PlaneSide::kNegative</a>. </p>
+<p>The half space is measured and expressed in the expressed_body's body frame. This works for both <code>collision_geometry</code> separated from the half space, and <code>collision geometry</code> in penetration with the halfspace. </p><dl class="section note"><dt>Note</dt><dd><code>a</code> does not need to be a unit length vector (but should be non-zero). </dd></dl>
 
 </div>
 </div>

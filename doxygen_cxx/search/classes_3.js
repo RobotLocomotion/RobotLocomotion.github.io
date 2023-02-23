@@ -48,6 +48,7 @@ var searchData=
   ['doorhingeconfig',['DoorHingeConfig',['../structdrake_1_1multibody_1_1_door_hinge_config.html',1,'drake::multibody']]],
   ['drakekukaiiwarobot',['DrakeKukaIIwaRobot',['../classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html',1,'drake::multibody::benchmarks::kuka_iiwa_robot']]],
   ['drakelcm',['DrakeLcm',['../classdrake_1_1lcm_1_1_drake_lcm.html',1,'drake::lcm']]],
+  ['drakelcmbase',['DrakeLcmBase',['../classdrake_1_1lcm_1_1_drake_lcm_base.html',1,'drake::lcm']]],
   ['drakelcminterface',['DrakeLcmInterface',['../classdrake_1_1lcm_1_1_drake_lcm_interface.html',1,'drake::lcm']]],
   ['drakelcmlog',['DrakeLcmLog',['../classdrake_1_1lcm_1_1_drake_lcm_log.html',1,'drake::lcm']]],
   ['drakelcmparams',['DrakeLcmParams',['../structdrake_1_1lcm_1_1_drake_lcm_params.html',1,'drake::lcm']]],

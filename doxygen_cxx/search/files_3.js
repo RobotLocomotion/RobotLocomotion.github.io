@@ -78,6 +78,7 @@ var searchData=
   ['drake_5fexport_2eh',['drake_export.h',['../drake__export_8h.html',1,'']]],
   ['drake_5fkuka_5fiiwa_5frobot_2eh',['drake_kuka_iiwa_robot.h',['../drake__kuka__iiwa__robot_8h.html',1,'']]],
   ['drake_5flcm_2eh',['drake_lcm.h',['../drake__lcm_8h.html',1,'']]],
+  ['drake_5flcm_5fbase_2eh',['drake_lcm_base.h',['../drake__lcm__base_8h.html',1,'']]],
   ['drake_5flcm_5finterface_2eh',['drake_lcm_interface.h',['../drake__lcm__interface_8h.html',1,'']]],
   ['drake_5flcm_5flog_2eh',['drake_lcm_log.h',['../drake__lcm__log_8h.html',1,'']]],
   ['drake_5flcm_5fparams_2eh',['drake_lcm_params.h',['../drake__lcm__params_8h.html',1,'']]],

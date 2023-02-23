@@ -75,6 +75,15 @@ var group__solver__evaluators =
       [ "operator=", "classdrake_1_1multibody_1_1_orientation_cost.html#a0ea8ea2f07e6f0c96d1a60c3d75267dd", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_orientation_cost.html#a826128003751513bc7513bc1d1cb9456", null ]
     ] ],
+    [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html", [
+      [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#aef8a4d8e2766b2ac1ef64f2dc20a66cc", null ],
+      [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#a8ec86fc08824c08a873ab7b4458d9ad4", null ],
+      [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#a1ce09e97404faefced409d6611ebcbfe", null ],
+      [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#add58521b8ab9e4a17fdd485732d171d8", null ],
+      [ "~PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#a360e7ff2337ad6c8143290f06c53942f", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#a1a93018546080caca9496d07e3503064", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#ae71d83a0b2f7be8d0a8de4b2b330a733", null ]
+    ] ],
     [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html", [
       [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a19b58a472f72da80913ea92350878a82", null ],
       [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a7ebf10ed8bc4dc8c999bf13ed006a5d5", null ],
@@ -200,6 +209,11 @@ var group__solver__evaluators =
       [ "num_states", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e", null ],
       [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07", null ],
       [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f", null ]
+    ] ],
+    [ "MidPointIntegrationConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html", [
+      [ "MidPointIntegrationConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c", null ],
+      [ "~MidPointIntegrationConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1", null ],
+      [ "ComposeX", "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a040b81f85b87c2da89ca72d802975d7b", null ]
     ] ],
     [ "Constraint", "classdrake_1_1solvers_1_1_constraint.html", [
       [ "Constraint", "classdrake_1_1solvers_1_1_constraint.html#a79f456fff11c7f63d4229ba41c903b2f", null ],

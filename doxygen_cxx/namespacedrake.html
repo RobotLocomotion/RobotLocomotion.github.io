@@ -2367,7 +2367,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The return value of this function should only ever be used as a temporary object, i.e., in a fmt argument list or a logging statement argument list. Never store it as a local variable, member field, etc. </dd></dl>
+<p>Within Drake, when formatting an Eigen matrix into a string you must wrap the Eigen object as <code>fmt_eigen(M)</code>. This holds true whether it be for logging, error messages, debugging, or etc.</p>
+<p>For example: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!CheckValid(M)) {</div><div class="line">  <span class="keywordflow">throw</span> std::logic_error(fmt::format(<span class="stringliteral">&quot;Invalid M = {}&quot;</span>, <a class="code" href="namespacedrake.html#a0fb0d186143cc761895c310885f3ebe9">fmt_eigen</a>(M)));</div><div class="line">}</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The return value of this function should only ever be used as a temporary object, i.e., in a fmt argument list or a logging statement argument list. Never store it as a local variable, member field, etc.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>To ensure floating-point data is formatted without losing any digits, Drake's code is compiled using -DEIGEN_NO_IO, which enforces that nothing within Drake is allowed to use Eigen's <code>operator&lt;&lt;</code>. Downstream code that calls into Drake is not required to use that option; it is only enforced by Drake's build system, not by Drake's headers. </dd></dl>
 
 </div>
 </div>

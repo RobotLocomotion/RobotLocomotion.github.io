@@ -4,6 +4,7 @@ var searchData=
   ['eigen_5fautodiff_5ftypes_2eh',['eigen_autodiff_types.h',['../eigen__autodiff__types_8h.html',1,'']]],
   ['eigen_5fgeometry_5fpybind_2eh',['eigen_geometry_pybind.h',['../eigen__geometry__pybind_8h.html',1,'']]],
   ['eigen_5fmatrix_5fcompare_2eh',['eigen_matrix_compare.h',['../eigen__matrix__compare_8h.html',1,'']]],
+  ['eigen_5fprinter_2eh',['eigen_printer.h',['../eigen__printer_8h.html',1,'']]],
   ['eigen_5fpybind_2eh',['eigen_pybind.h',['../eigen__pybind_8h.html',1,'']]],
   ['eigen_5fsparse_5ftriplet_2eh',['eigen_sparse_triplet.h',['../eigen__sparse__triplet_8h.html',1,'']]],
   ['eigen_5ftypes_2eh',['eigen_types.h',['../eigen__types_8h.html',1,'']]],

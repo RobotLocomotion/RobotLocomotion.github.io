@@ -1,5 +1,15 @@
 var NAVTREEINDEX1 =
 {
+"classdrake_1_1_polynomial.html#aa2b38df08e0829d532b692c75e955437":[3,0,0,44,46],
+"classdrake_1_1_polynomial.html#aa3b70bcbd72aedf09e5dad6e5e5d8b9f":[3,0,0,44,28],
+"classdrake_1_1_polynomial.html#aaebc4cbcf8fd3bf18645752aaf7ef737":[3,0,0,44,49],
+"classdrake_1_1_polynomial.html#ab0f5130d25206fac74ef07d81bf8ec23":[3,0,0,44,15],
+"classdrake_1_1_polynomial.html#ab168243ddedae6540dc7fe18e0fd6f53":[3,0,0,44,48],
+"classdrake_1_1_polynomial.html#ab2d984c6a3f814a0cfe120febe762139":[3,0,0,44,14],
+"classdrake_1_1_polynomial.html#ab30704361ad1820a0a54f5127830d92a":[3,0,0,44,45],
+"classdrake_1_1_polynomial.html#abe5f08c6ad942153599928b9c7f9d0fa":[3,0,0,44,43],
+"classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060":[3,0,0,44,5],
+"classdrake_1_1_polynomial.html#ac86fb56fd075f1c1442883c77f200792":[3,0,0,44,40],
 "classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4":[3,0,0,44,29],
 "classdrake_1_1_polynomial.html#ac91ac7cbc8938ee546f9db5317b4a479":[3,0,0,44,36],
 "classdrake_1_1_polynomial.html#acf2f5dc8759b0683d649a356e1c23bc8":[3,0,0,44,58],
@@ -239,15 +249,5 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ad396aec45bf850813ade147181f01aae":[3,0,0,3,1,2,6],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ad637caafac245a0ff345f78878f207f0":[3,0,0,3,1,2,7],
 "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html":[3,0,0,3,2,0],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a20b7998562419a53e3486c9914232756":[3,0,0,3,2,0,0],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a22d0f0da40da1f245daf36b461995217":[3,0,0,3,2,0,12],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a23db9d5f72175d2bd12336553c943793":[3,0,0,3,2,0,9],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a3354557be04354641f4041e953c15ab8":[3,0,0,3,2,0,4],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a479b1b606df73eb75e84067848f126e9":[3,0,0,3,2,0,19],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a4bb29a45a948e7ec5ad8cf341d45b70b":[3,0,0,3,2,0,8],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a6d74ab21026544ae7ab61e086885d131":[3,0,0,3,2,0,11],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a75daa8fabd8f79d79f35066e0429968f":[3,0,0,3,2,0,6],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a888a2b1c1ae633d50cfceb0d99b31cbf":[3,0,0,3,2,0,16],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a8eedc9d39ca170084678e5ef28c29b20":[3,0,0,3,2,0,7],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a9bb4bae7c1e4b222c226d8a67b03d1c8":[3,0,0,3,2,0,5]
+"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a20b7998562419a53e3486c9914232756":[3,0,0,3,2,0,0]
 };

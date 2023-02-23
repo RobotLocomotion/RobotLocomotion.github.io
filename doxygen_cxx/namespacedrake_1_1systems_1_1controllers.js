@@ -12,5 +12,5 @@ var namespacedrake_1_1systems_1_1controllers =
     [ "PidControlledSystem", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system" ],
     [ "PidController", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html", "classdrake_1_1systems_1_1controllers_1_1_pid_controller" ],
     [ "StateFeedbackControllerInterface", "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html", "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface" ],
-    [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner" ]
+    [ "ZmpPlanner", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner" ]
 ];

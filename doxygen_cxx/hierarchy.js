@@ -64,6 +64,7 @@ var hierarchy =
     [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", null ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
     [ "ChebyshevPolynomial", "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html", null ],
+    [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", null ],
     [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", null ],
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
@@ -165,6 +166,7 @@ var hierarchy =
     [ "DrakeKukaIIwaRobot< T >", "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html", null ],
     [ "DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html", [
       [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html", null ],
+      [ "DrakeLcmBase", "classdrake_1_1lcm_1_1_drake_lcm_base.html", null ],
       [ "DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html", null ],
       [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html", null ]
     ] ],
@@ -203,6 +205,7 @@ var hierarchy =
         [ "ManipulatorEquationConstraint", "classdrake_1_1multibody_1_1_manipulator_equation_constraint.html", null ],
         [ "MinimumDistanceConstraint", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html", null ],
         [ "OrientationConstraint", "classdrake_1_1multibody_1_1_orientation_constraint.html", null ],
+        [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html", null ],
         [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html", null ],
         [ "PolyhedronConstraint", "classdrake_1_1multibody_1_1_polyhedron_constraint.html", null ],
         [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html", null ],
@@ -1168,7 +1171,7 @@ var hierarchy =
     [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", null ],
     [ "wrap_arg_default< T >", "structdrake_1_1pydrake_1_1wrap__arg__default.html", null ],
     [ "ZeroForceDriver", "structdrake_1_1manipulation_1_1_zero_force_driver.html", null ],
-    [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html", null ],
+    [ "ZmpPlanner", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html", null ],
     [ "const ContextConstraintCalc< double >", "classconst_01_context_constraint_calc_3_01double_01_4.html", null ],
     [ "const ContextConstraintCalc< Element::T >", "classconst_01_context_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "const SystemConstraintCalc< double >", "classconst_01_system_constraint_calc_3_01double_01_4.html", null ],

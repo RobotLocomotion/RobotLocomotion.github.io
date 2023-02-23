@@ -155,7 +155,8 @@ as per the no-argument constructor.</p>
 <dd><p>A pure virtual interface that enables LCM to be mocked.</p>
 <p>Because it must be pure, in general it will receive breaking API
 changes without notice. Users should not subclass this interface
-directly, but rather use one of the existing subclasses instead.</p>
+directly, but rather use one of the existing subclasses such as
+DrakeLcmBase instead.</p>
 <p>Similarly, method arguments will receive breaking API changes without
 notice. Users should not call this interface directly, but rather use
 drake::lcm::Publish() or drake::lcm::Subscribe() instead.</p>

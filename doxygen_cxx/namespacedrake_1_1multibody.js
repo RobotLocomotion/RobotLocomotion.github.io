@@ -63,6 +63,7 @@ var namespacedrake_1_1multibody =
     [ "PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html", "classdrake_1_1multibody_1_1_physical_model" ],
     [ "PlanarJoint", "classdrake_1_1multibody_1_1_planar_joint.html", "classdrake_1_1multibody_1_1_planar_joint" ],
     [ "PointPairContactInfo", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", "classdrake_1_1multibody_1_1_point_pair_contact_info" ],
+    [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint" ],
     [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint" ],
     [ "PolyhedronConstraint", "classdrake_1_1multibody_1_1_polyhedron_constraint.html", "classdrake_1_1multibody_1_1_polyhedron_constraint" ],
     [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html", "classdrake_1_1multibody_1_1_position_constraint" ],

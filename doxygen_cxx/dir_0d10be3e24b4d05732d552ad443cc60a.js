@@ -1,6 +1,7 @@
 var dir_0d10be3e24b4d05732d552ad443cc60a =
 [
     [ "eigen_matrix_compare.h", "eigen__matrix__compare_8h.html", "eigen__matrix__compare_8h" ],
+    [ "eigen_printer.h", "eigen__printer_8h.html", null ],
     [ "expect_no_throw.h", "expect__no__throw_8h.html", "expect__no__throw_8h" ],
     [ "expect_throws_message.h", "expect__throws__message_8h.html", "expect__throws__message_8h" ],
     [ "fmt_format_printer.h", "fmt__format__printer_8h.html", null ],

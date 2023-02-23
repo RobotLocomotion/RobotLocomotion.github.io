@@ -3,6 +3,9 @@ var dir_3c3c25df5132fca4f15a988b4c2efab5 =
     [ "drake_lcm.h", "drake__lcm_8h.html", [
       [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html", "classdrake_1_1lcm_1_1_drake_lcm" ]
     ] ],
+    [ "drake_lcm_base.h", "drake__lcm__base_8h.html", [
+      [ "DrakeLcmBase", "classdrake_1_1lcm_1_1_drake_lcm_base.html", "classdrake_1_1lcm_1_1_drake_lcm_base" ]
+    ] ],
     [ "drake_lcm_interface.h", "drake__lcm__interface_8h.html", "drake__lcm__interface_8h" ],
     [ "drake_lcm_log.h", "drake__lcm__log_8h.html", [
       [ "DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html", "classdrake_1_1lcm_1_1_drake_lcm_log" ]

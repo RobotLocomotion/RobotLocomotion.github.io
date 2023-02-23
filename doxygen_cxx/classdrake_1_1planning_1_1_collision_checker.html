@@ -164,7 +164,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_collision_c
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classdrake_1_1planning_1_1_collision_checker-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">CollisionChecker Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">CollisionChecker Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a> &raquo; <a class="el" href="group__planning__collision__checker.html">Collision checking</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -492,10 +492,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a23bcd057122f2a90fd8e673a51e9bcd3">MaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const</td></tr>
 <tr class="memdesc:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>.  <a href="#a23bcd057122f2a90fd8e673a51e9bcd3">More...</a><br /></td></tr>
 <tr class="separator:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a512a6232b122ea6cc6cd51ba39d1adfc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc">ClassifyBodyCollisions</a> (const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memitem:a512a6232b122ea6cc6cd51ba39d1adfc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc">ClassifyBodyCollisions</a> (const Eigen::VectorXd &amp;q) const</td></tr>
 <tr class="memdesc:a512a6232b122ea6cc6cd51ba39d1adfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classifies which robot bodies are in collision (and which type of collision) for the provided configuration <code>q</code>, using the current thread's associated context.  <a href="#a512a6232b122ea6cc6cd51ba39d1adfc">More...</a><br /></td></tr>
 <tr class="separator:a512a6232b122ea6cc6cd51ba39d1adfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc9fdc559c30373b006561750b65e1d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9dc9fdc559c30373b006561750b65e1d">ClassifyContextBodyCollisions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memitem:a9dc9fdc559c30373b006561750b65e1d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9dc9fdc559c30373b006561750b65e1d">ClassifyContextBodyCollisions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
 <tr class="memdesc:a9dc9fdc559c30373b006561750b65e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>.  <a href="#a9dc9fdc559c30373b006561750b65e1d">More...</a><br /></td></tr>
 <tr class="separator:a9dc9fdc559c30373b006561750b65e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -540,7 +540,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8393e34359ae424d80b7975551234652"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8393e34359ae424d80b7975551234652">DoCalcContextRobotClearance</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, <a class="el" href="classdouble.html">double</a> influence_distance) const =0</td></tr>
 <tr class="memdesc:a8393e34359ae424d80b7975551234652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for defining the reported measurements.  <a href="#a8393e34359ae424d80b7975551234652">More...</a><br /></td></tr>
 <tr class="separator:a8393e34359ae424d80b7975551234652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a737510aa5fca00749a068c6e4a621feb"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a737510aa5fca00749a068c6e4a621feb">DoClassifyContextBodyCollisions</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const =0</td></tr>
+<tr class="memitem:a737510aa5fca00749a068c6e4a621feb"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a737510aa5fca00749a068c6e4a621feb">DoClassifyContextBodyCollisions</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const =0</td></tr>
 <tr class="memdesc:a737510aa5fca00749a068c6e4a621feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for choosing a collision type for each of the robot bodies.  <a href="#a737510aa5fca00749a068c6e4a621feb">More...</a><br /></td></tr>
 <tr class="separator:a737510aa5fca00749a068c6e4a621feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a145c8a89488c119f22a13557dd2376b9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a145c8a89488c119f22a13557dd2376b9">DoMaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const =0</td></tr>
@@ -1285,7 +1285,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; ClassifyBodyCollisions </td>
+          <td class="memname">std::vector&lt;<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; ClassifyBodyCollisions </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
           <td class="paramname"><em>q</em></td><td>)</td>
@@ -1307,7 +1307,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; ClassifyContextBodyCollisions </td>
+          <td class="memname">std::vector&lt;<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; ClassifyContextBodyCollisions </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *&#160;</td>
           <td class="paramname"><em>model_context</em>, </td>
@@ -1571,7 +1571,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::vector&lt;<a class="el" href="namespacedrake_1_1planning.html#a6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; DoClassifyContextBodyCollisions </td>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; DoClassifyContextBodyCollisions </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td>
           <td class="paramname"><em>model_context</em></td><td>)</td>
