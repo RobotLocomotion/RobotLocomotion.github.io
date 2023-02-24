@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['separatingplaneorder',['SeparatingPlaneOrder',['../namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089',1,'drake::geometry::optimization']]],
   ['severity',['Severity',['../classdrake_1_1systems_1_1_event_status.html#a11717da96dc4e4a5f79371318448f82b',1,'drake::systems::EventStatus']]],
   ['sincossubstitutiontype',['SinCosSubstitutionType',['../namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44',1,'drake::symbolic']]],
   ['solutionresult',['SolutionResult',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f',1,'drake::solvers']]],

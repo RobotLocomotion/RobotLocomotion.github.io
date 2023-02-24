@@ -53,7 +53,7 @@ var searchData=
   ['kpixelsize',['kPixelSize',['../classdrake_1_1systems_1_1sensors_1_1_image.html#a9aaff56c2f7f40afea179fc74fab6de4',1,'drake::systems::sensors::Image']]],
   ['kplanarmanipulandstatusperiod',['kPlanarManipulandStatusPeriod',['../namespacedrake_1_1examples_1_1planar__gripper.html#a909c985f8e6897a3936dda06c9648da4',1,'drake::examples::planar_gripper']]],
   ['kquaternionsize',['kQuaternionSize',['../namespacedrake.html#a07869e660ffe730425feca7595de2273',1,'drake']]],
-  ['krotmatsize',['kRotmatSize',['../namespacedrake.html#ace32fe90adc0d2100ad4fc9f4bc6f79a',1,'drake']]],
+  ['krotmatsize',['kRotmatSize',['../namespacedrake.html#ae2e6790d62850a8d3ac14f018b055a96',1,'drake']]],
   ['krpysize',['kRpySize',['../namespacedrake.html#aeab5b0d99cafc2f6ae5812128cea27a3',1,'drake']]],
   ['kschunkwsglcmstatusperiod',['kSchunkWsgLcmStatusPeriod',['../namespacedrake_1_1manipulation_1_1schunk__wsg.html#a2fbb9739d01b7281a1633aa49c419d6e',1,'drake::manipulation::schunk_wsg']]],
   ['kschunkwsgnumactuators',['kSchunkWsgNumActuators',['../namespacedrake_1_1manipulation_1_1schunk__wsg.html#a711e5cc36bb4a36b15f109e28b623d28',1,'drake::manipulation::schunk_wsg']]],

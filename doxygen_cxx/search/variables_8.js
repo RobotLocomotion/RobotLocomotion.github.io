@@ -4,6 +4,7 @@ var searchData=
   ['id_5fb',['id_B',['../structdrake_1_1geometry_1_1_penetration_as_point_pair.html#aa439b0d89e38b17d00d217c56b047737',1,'drake::geometry::PenetrationAsPointPair::id_B()'],['../structdrake_1_1geometry_1_1_signed_distance_pair.html#aa439b0d89e38b17d00d217c56b047737',1,'drake::geometry::SignedDistancePair::id_B()']]],
   ['id_5fg',['id_G',['../structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc',1,'drake::geometry::SignedDistanceToPoint']]],
   ['ignore_5frealloc_5fnoops',['ignore_realloc_noops',['../structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2',1,'drake::test::LimitMallocParams']]],
+  ['ignore_5fredundant_5fc',['ignore_redundant_C',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#ad174bf3a68f2afc5a998eddf1fbbe860',1,'drake::geometry::optimization::CspaceFreePolytope::FindSeparationCertificateGivenPolytopeOptions']]],
   ['ignored_5fcollision_5ffilter_5fgroups',['ignored_collision_filter_groups',['../structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377',1,'drake::multibody::parsing::AddCollisionFilterGroup']]],
   ['index',['index',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9',1,'drake::geometry::Meshcat::Gamepad']]],
   ['info',['info',['../structdrake_1_1solvers_1_1_snopt_solver_details.html#a29045c997670516117cd2d1cac1069ed',1,'drake::solvers::SnoptSolverDetails']]],

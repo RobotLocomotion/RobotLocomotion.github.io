@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"classdrake_1_1_polynomial.html#aa0c1c5c8ea58b29b87ca1a7f240c7664":[3,0,0,44,37],
+"classdrake_1_1_polynomial.html#aa14fcd10f0a5683e9778d1ad46b869a6":[3,0,0,44,57],
+"classdrake_1_1_polynomial.html#aa280c0fba0d2e78def19c2d4827f6733":[3,0,0,44,9],
+"classdrake_1_1_polynomial.html#aa2987c7f3ad9e1181254639ea91939d9":[3,0,0,44,55],
 "classdrake_1_1_polynomial.html#aa2b38df08e0829d532b692c75e955437":[3,0,0,44,46],
 "classdrake_1_1_polynomial.html#aa3b70bcbd72aedf09e5dad6e5e5d8b9f":[3,0,0,44,28],
 "classdrake_1_1_polynomial.html#aaebc4cbcf8fd3bf18645752aaf7ef737":[3,0,0,44,49],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#a71ec23b5b9d1a45e490c54d445c78d94":[3,0,0,3,1,2,5],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ac37f7346acd4e42cac1845e1872f5f97":[3,0,0,3,1,2,2],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#acdd28ee42910e57f87e1ca4f49642436":[3,0,0,3,1,2,1],
-"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#acf286c3d47becb9cb03092b0ef6517c8":[3,0,0,3,1,2,4],
-"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ad396aec45bf850813ade147181f01aae":[3,0,0,3,1,2,6],
-"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ad637caafac245a0ff345f78878f207f0":[3,0,0,3,1,2,7],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html":[3,0,0,3,2,0],
-"classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a20b7998562419a53e3486c9914232756":[3,0,0,3,2,0,0]
+"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#acf286c3d47becb9cb03092b0ef6517c8":[3,0,0,3,1,2,4]
 };

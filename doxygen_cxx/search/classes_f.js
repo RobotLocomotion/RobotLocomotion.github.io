@@ -35,6 +35,7 @@ var searchData=
   ['planarjoint',['PlanarJoint',['../classdrake_1_1multibody_1_1_planar_joint.html',1,'drake::multibody']]],
   ['planarmanipulandstatusdecoder',['PlanarManipulandStatusDecoder',['../classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html',1,'drake::examples::planar_gripper']]],
   ['planarmanipulandstatusencoder',['PlanarManipulandStatusEncoder',['../classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html',1,'drake::examples::planar_gripper']]],
+  ['planeseparatesgeometries',['PlaneSeparatesGeometries',['../structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html',1,'drake::geometry::optimization']]],
   ['pleidessystem',['PleidesSystem',['../classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html',1,'drake::systems::analysis::test']]],
   ['pleidestest',['PleidesTest',['../structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html',1,'drake::systems::analysis_test']]],
   ['point',['Point',['../classdrake_1_1geometry_1_1optimization_1_1_point.html',1,'drake::geometry::optimization']]],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['c_5firis_5fcollision_5fgeometry_2eh',['c_iris_collision_geometry.h',['../c__iris__collision__geometry_8h.html',1,'']]],
+  ['c_5firis_5fseparating_5fplane_2eh',['c_iris_separating_plane.h',['../c__iris__separating__plane_8h.html',1,'']]],
   ['cache_2eh',['cache.h',['../cache_8h.html',1,'']]],
   ['cache_5fdoxygen_2eh',['cache_doxygen.h',['../cache__doxygen_8h.html',1,'']]],
   ['cache_5fentry_2eh',['cache_entry.h',['../cache__entry_8h.html',1,'']]],
@@ -89,5 +90,6 @@ var searchData=
   ['csdp_5fsolver_2eh',['csdp_solver.h',['../csdp__solver_8h.html',1,'']]],
   ['csdp_5fsolver_5ferror_5fhandling_2eh',['csdp_solver_error_handling.h',['../csdp__solver__error__handling_8h.html',1,'']]],
   ['csdp_5fsolver_5finternal_2eh',['csdp_solver_internal.h',['../csdp__solver__internal_8h.html',1,'']]],
+  ['cspace_5ffree_5fpolytope_2eh',['cspace_free_polytope.h',['../cspace__free__polytope_8h.html',1,'']]],
   ['cubic_5fscalar_5fsystem_2eh',['cubic_scalar_system.h',['../cubic__scalar__system_8h.html',1,'']]]
 ];

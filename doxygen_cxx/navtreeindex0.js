@@ -101,6 +101,10 @@ var NAVTREEINDEX0 =
 "c__iris__collision__geometry_8h.html#a95690619e9b8d2e9047a607703cfbfffacafcb896846646f8833912fdbfc5318e":[4,0,0,4,1,0,1,2],
 "c__iris__collision__geometry_8h.html#a95690619e9b8d2e9047a607703cfbfffaf88bbd242f1721920aa0eb72a18767a4":[4,0,0,4,1,0,1,0],
 "c__iris__collision__geometry_8h.html#acb19d1d31dfa7158b5270096dac977a7":[4,0,0,4,1,0,3],
+"c__iris__separating__plane_8h.html":[4,0,0,4,1,1],
+"c__iris__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,1,1],
+"c__iris__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,1,1,0],
+"c__iris__separating__plane_8h.html#abe172ebdad3a3b9dd87435343d6b190c":[4,0,0,4,1,1,2],
 "cache_8h.html":[4,0,0,12,3,4],
 "cache__doxygen_8h.html":[4,0,0,12,3,5],
 "cache__entry_8h.html":[4,0,0,12,3,6],
@@ -117,7 +121,7 @@ var NAVTREEINDEX0 =
 "camera__config__functions_8h.html":[4,0,0,12,8,3],
 "camera__config__functions_8h.html#aa3ab5841aed63bd66db330dc9486be95":[4,0,0,12,8,3,0],
 "camera__info_8h.html":[4,0,0,12,8,4],
-"cartesian__product_8h.html":[4,0,0,4,1,1],
+"cartesian__product_8h.html":[4,0,0,4,1,2],
 "centroidal__momentum__constraint_8h.html":[4,0,0,8,8,0],
 "chebyshev__basis__element_8h.html":[4,0,0,1,3,1],
 "chebyshev__basis__element_8h.html#a76deccd3cd3f64d9b875dd5116792c07":[4,0,0,1,3,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#a9756e806e687de4b2e572193034a9fc1":[3,0,0,44,34],
 "classdrake_1_1_polynomial.html#a981a524ccda4902bff9380c48fd2714a":[3,0,0,44,21],
 "classdrake_1_1_polynomial.html#a9b60c8127846337517b619abdbebb9ab":[3,0,0,44,39],
-"classdrake_1_1_polynomial.html#a9e0839a4ea39ab4780de70e5913107d6":[3,0,0,44,54],
-"classdrake_1_1_polynomial.html#aa0c1c5c8ea58b29b87ca1a7f240c7664":[3,0,0,44,37],
-"classdrake_1_1_polynomial.html#aa14fcd10f0a5683e9778d1ad46b869a6":[3,0,0,44,57],
-"classdrake_1_1_polynomial.html#aa280c0fba0d2e78def19c2d4827f6733":[3,0,0,44,9],
-"classdrake_1_1_polynomial.html#aa2987c7f3ad9e1181254639ea91939d9":[3,0,0,44,55]
+"classdrake_1_1_polynomial.html#a9e0839a4ea39ab4780de70e5913107d6":[3,0,0,44,54]
 };

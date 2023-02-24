@@ -22,6 +22,7 @@ var searchData=
   ['best_5flower_5fbound',['best_lower_bound',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0725fe3bca9f45b63acf89684785f742',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['best_5fupper_5fbound',['best_upper_bound',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ace6f433c7211d34645537b436f8ce2ef',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['binaryexpressioncell',['BinaryExpressionCell',['../classdrake_1_1symbolic_1_1_binary_expression_cell.html#a43abe8b5ecec7cde1c6805a9b3e434aa',1,'drake::symbolic::BinaryExpressionCell']]],
+  ['binarysearch',['BinarySearch',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a19da3edfe4a7542ce54e7ff1d44468f0',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['bindacquirelicense',['BindAcquireLicense',['../namespacedrake_1_1pydrake_1_1pysolvers.html#ab20a1ef3e56f4759c3fae832d66332f0',1,'drake::pydrake::pysolvers']]],
   ['bindcppserializer',['BindCppSerializer',['../namespacedrake_1_1pydrake_1_1pysystems_1_1pylcm.html#a693c3984e0969506fd589ff21f08409b',1,'drake::pydrake::pysystems::pylcm']]],
   ['bindcppserializers',['BindCppSerializers',['../namespacedrake_1_1pydrake_1_1pysystems_1_1pylcm.html#abd25f3ebd433d0bd7632152eb8bcd108',1,'drake::pydrake::pysystems::pylcm']]],

@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['c',['c',['../structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd',1,'drake::symbolic::SinCos']]],
+  ['c',['C',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a92a207b76b9d9f2185204cce6ebfd0f2',1,'drake::geometry::optimization::CspaceFreePolytope::SearchResult::C()'],['../structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd',1,'drake::symbolic::SinCos::c()']]],
   ['catch_5ftorque',['catch_torque',['../structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77',1,'drake::multibody::DoorHingeConfig']]],
   ['catch_5fwidth',['catch_width',['../structdrake_1_1multibody_1_1_door_hinge_config.html#aacf351ea5aed0b77d57004ad6f67c5f1',1,'drake::multibody::DoorHingeConfig']]],
   ['center_5fx',['center_x',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a43acbf71f174bb214744379ae39d6ec5',1,'drake::systems::sensors::CameraConfig']]],
   ['center_5fy',['center_y',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5e46bbec487979696012b53699ab3e17',1,'drake::systems::sensors::CameraConfig']]],
+  ['certificate',['certificate',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6',1,'drake::geometry::optimization::CspaceFreePolytope::SeparationCertificateProgram']]],
+  ['certified_5fpolytope',['certified_polytope',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a58cb3555468b2f1ae8c9e3ac2ee12fb5',1,'drake::geometry::optimization::CspaceFreePolytope::SearchResult']]],
   ['channel_5fsuffix',['channel_suffix',['../structdrake_1_1lcm_1_1_drake_lcm_params.html#aff3cd86f8dad96e5b855989cc6ae05da',1,'drake::lcm::DrakeLcmParams']]],
   ['checker',['checker',['../structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#adece3fa3587078a7dbf1489538b98ea2',1,'drake::planning::test::CollisionCheckerTestParams']]],
   ['child',['child',['../structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a79e9374608093db77a9d533b2af3f11a',1,'drake::multibody::parsing::AddWeld']]],
@@ -29,7 +31,7 @@ var searchData=
   ['context_5f',['context_',['../structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ad8b2d6d03c5f48ff4e9f2b5607386d2d',1,'drake::systems::analysis_test::GenericIntegratorTest']]],
   ['control_5finput_5fport',['control_input_port',['../structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31',1,'drake::systems::controllers::PidControlledSystem::ConnectResult']]],
   ['control_5fmode',['control_mode',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#ad60094399cbb136de80929f28b04b752',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],
-  ['convergence_5ftol',['convergence_tol',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
+  ['convergence_5ftol',['convergence_tol',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6',1,'drake::geometry::optimization::CspaceFreePolytope::BilinearAlternationOptions::convergence_tol()'],['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6',1,'drake::geometry::optimization::CspaceFreePolytope::BinarySearchOptions::convergence_tol()'],['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6',1,'drake::systems::controllers::DynamicProgrammingOptions::convergence_tol()']]],
   ['convex_5frelaxation',['convex_relaxation',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a85c597db40ea9e365e85f617aec19a60',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
   ['crneg',['CRneg',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
   ['crpos',['CRpos',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],

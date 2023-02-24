@@ -2,6 +2,9 @@ var searchData=
 [
   ['edge_5fstep_5fsize',['edge_step_size',['../structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884',1,'drake::planning::CollisionCheckerParams::edge_step_size()'],['../structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a34a4def1d160fae5fda122ba0a5254ea',1,'drake::planning::test::CollisionCheckerConstructionParams::edge_step_size()']]],
   ['edges',['edges',['../structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#abca9b631eac11dd0dd1ad1c69e05bf31',1,'drake::planning::test::CollisionCheckerTestConfigurationData']]],
+  ['ellipsoid_5fmargin_5fcost',['ellipsoid_margin_cost',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a0845096282a9a709315f3fe6cdb0fdfc',1,'drake::geometry::optimization::CspaceFreePolytope::FindPolytopeGivenLagrangianOptions']]],
+  ['ellipsoid_5fmargin_5fepsilon',['ellipsoid_margin_epsilon',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adfbc0ec5326fc2132aa538699f74281a',1,'drake::geometry::optimization::CspaceFreePolytope::FindPolytopeGivenLagrangianOptions']]],
+  ['ellipsoid_5fscaling',['ellipsoid_scaling',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ab7670e23bbf2fbf300a5f0a40a9c6f53',1,'drake::geometry::optimization::CspaceFreePolytope::BilinearAlternationOptions']]],
   ['enable_5falpha_5fslider',['enable_alpha_slider',['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aafe5692abc5edf40d59b37edb67c4571',1,'drake::geometry::MeshcatVisualizerParams']]],
   ['enable_5falpha_5fsliders',['enable_alpha_sliders',['../structdrake_1_1visualization_1_1_visualization_config.html#a5d44e8cac1128d4f529473b3cd0526cf',1,'drake::visualization::VisualizationConfig']]],
   ['enable_5fmeshcat_5fcreation',['enable_meshcat_creation',['../structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862',1,'drake::visualization::VisualizationConfig']]],
@@ -11,6 +14,7 @@ var searchData=
   ['error_5fcode',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
   ['explored_5fnode_5fcount',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
   ['exporter',['exporter',['../structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a6dd823d967d7e56c82631751ed8325c9',1,'drake::geometry::render::RenderEngineVtk::RenderingPipeline']]],
+  ['expressed_5fbody',['expressed_body',['../structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa',1,'drake::geometry::optimization::CIrisSeparatingPlane']]],
   ['ext_5fjoint_5ffilter_5ftau',['ext_joint_filter_tau',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],
   ['external_5ftorque',['external_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]]
 ];

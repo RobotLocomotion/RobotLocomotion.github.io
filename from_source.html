@@ -140,8 +140,7 @@ analysis.
         <h1 id="supported-configurations">Supported Configurations</h1>
 
 <p>The following table shows the configurations and platforms that Drake
-officially supports. Supported configurations are tested in continuous
-integration. Any other configurations are provided on a best-effort basis.</p>
+officially supports:</p>
 
 <!-- The operating system requirements should match those listed in both the
      root CMakeLists.txt and tools/workspace/os.bzl. -->
@@ -151,9 +150,9 @@ integration. Any other configurations are provided on a best-effort basis.</p>
 <table>
   <thead>
     <tr>
-      <th>Operating System ⁽²⁾</th>
+      <th>Operating System ⁽¹⁾</th>
       <th>Architecture</th>
-      <th>Python ⁽¹⁾</th>
+      <th>Python ⁽²⁾</th>
       <th>Bazel</th>
       <th>CMake</th>
       <th>C/C++ Compiler ⁽³⁾</th>
@@ -200,12 +199,21 @@ integration. Any other configurations are provided on a best-effort basis.</p>
   </tbody>
 </table>
 
-<p>⁽¹⁾ CPython is the only Python implementation supported.</p>
+<p>“Official support” means that we have Continuous Integration test coverage to
+notice regressions, so if it doesn’t work for you then please file a bug report.</p>
 
-<p>⁽²⁾ Drake features that perform image rendering (e.g., camera simulation)
-require a working display server.  Most personal computers will have this
+<p>Unofficially, Drake is also likely to be compatible with newer versions of
+Ubuntu or macOS than what are listed, or with Ubuntu 22.04 running on arm64, or
+with other versions of Python or Java. However, these are not supported so if it
+doesn’t work for you then please file a pull request with the fix, not a bug
+report.</p>
+
+<p>⁽¹⁾ Drake features that perform image rendering (e.g., camera simulation)
+require a working display server. Most personal computers will have this
 already built in, but some cloud or docker environments may require extra
 setup steps.</p>
+
+<p>⁽²⁾ CPython is the only Python implementation supported.</p>
 
 <p>⁽³⁾ Drake requires a compiler running in C++17 or C++20 mode.</p>
 

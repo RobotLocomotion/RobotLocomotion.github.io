@@ -9,7 +9,9 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "yaml", "dir_a475b9d7562d90f72dfa4821e049558f.html", "dir_a475b9d7562d90f72dfa4821e049558f" ],
     [ "autodiff.h", "common_2autodiff_8h.html", "common_2autodiff_8h" ],
     [ "autodiff_overloads.h", "autodiff__overloads_8h.html", "autodiff__overloads_8h" ],
-    [ "autodiffxd.h", "autodiffxd_8h.html", null ],
+    [ "autodiffxd.h", "autodiffxd_8h.html", [
+      [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ]
+    ] ],
     [ "bit_cast.h", "bit__cast_8h.html", null ],
     [ "cond.h", "cond_8h.html", "cond_8h" ],
     [ "constants.h", "constants_8h.html", "constants_8h" ],

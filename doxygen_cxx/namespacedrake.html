@@ -169,7 +169,10 @@ $(document).ready(function(){initNavTree('namespacedrake.html','');});
 <div class="title">drake Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file is used in our C-IRIS algorithm, which certifies collision-free region in the configuration space, by finding separating planes for each pair of geometry over all configurations in a C-space region. </p>
+<p>For the detailed algorithm please refer to the paper Certified Polyhedral Decompositions of Collision-Free Configuration Space by Hongkai Dai*, Alexandre Amice*, Peter Werner, Annan Zhang and Russ Tedrake. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake_1_1ad"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html">ad</a></td></tr>
@@ -242,10 +245,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This wrapper class provides a way to write non-template functions taking raw pointers to Eigen objects as parameters while limiting the number of copies, similar to <code>Eigen::Ref</code>.  <a href="classdrake_1_1_eigen_ptr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_eigen_size_min_prefer_dynamic.html">EigenSizeMinPreferDynamic</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structdrake_1_1_eigen_size_min_prefer_dynamic.html#adfbd84e9619cf3366fb744d3f70c8c23">EigenSizeMinPreferDynamic&lt;a, b&gt;::value</a> gives the min between compile-time sizes <code>a</code> and <code>b</code>.  <a href="structdrake_1_1_eigen_size_min_prefer_dynamic.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_eigen_size_min_prefer_fixed.html">EigenSizeMinPreferFixed</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structdrake_1_1_eigen_size_min_prefer_fixed.html" title="EigenSizeMinPreferFixed is a variant of EigenSizeMinPreferDynamic.">EigenSizeMinPreferFixed</a> is a variant of <a class="el" href="structdrake_1_1_eigen_size_min_prefer_dynamic.html" title="EigenSizeMinPreferDynamic&lt;a, b&gt;::value gives the min between compile-time sizes a and b.">EigenSizeMinPreferDynamic</a>.  <a href="structdrake_1_1_eigen_size_min_prefer_fixed.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_find_resource_result.html">FindResourceResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Models the outcome of <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="(Advanced) Attempts to locate a Drake resource named by the given resource_path.">drake::FindResource</a>.  <a href="classdrake_1_1_find_resource_result.html#details">More...</a><br /></td></tr>
@@ -268,7 +269,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_multiply_eigen_sizes.html">MultiplyEigenSizes</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MultiplyEigenSizes&lt;a, b&gt; gives a * b if both of a and b are fixed sizes.  <a href="structdrake_1_1_multiply_eigen_sizes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_name_value.html">NameValue</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A basic implementation of the Name-Value Pair concept as used in the Serialize / Archive pattern.  <a href="classdrake_1_1_name_value.html#details">More...</a><br /></td></tr>
@@ -280,6 +280,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains canonicalized, platform-independent, human-readable names for arbitrarily-complicated C++ types.  <a href="classdrake_1_1_nice_type_name.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1ostream__formatter.html">ostream_formatter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 9, this is an alias for fmt::ostream_formatter.  <a href="structdrake_1_1ostream__formatter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scalar multi-variate polynomial, modeled after the msspoly in spotless.  <a href="classdrake_1_1_polynomial.html#details">More...</a><br /></td></tr>
@@ -498,23 +499,23 @@ Typedefs</h2></td></tr>
 <tr class="separator:a9eb383d64a842ca9002f66b2e10254aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f8d19f395776637448f26e734228f6"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
 <tr class="memitem:a50f8d19f395776637448f26e734228f6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a50f8d19f395776637448f26e734228f6">Translation3</a> = Eigen::Translation&lt; Scalar, 3 &gt;</td></tr>
-<tr class="memdesc:a50f8d19f395776637448f26e734228f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A translation in 3D templated on scalar type.  <a href="#a50f8d19f395776637448f26e734228f6">More...</a><br /></td></tr>
+<tr class="memdesc:a50f8d19f395776637448f26e734228f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a50f8d19f395776637448f26e734228f6">More...</a><br /></td></tr>
 <tr class="separator:a50f8d19f395776637448f26e734228f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbf249fd84580486a877500bed5a0b8e"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
-<tr class="memitem:afbf249fd84580486a877500bed5a0b8e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#afbf249fd84580486a877500bed5a0b8e">TwistVector</a> = Eigen::Matrix&lt; Scalar, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a>, 1 &gt;</td></tr>
-<tr class="memdesc:afbf249fd84580486a877500bed5a0b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A column vector consisting of one twist.  <a href="#afbf249fd84580486a877500bed5a0b8e">More...</a><br /></td></tr>
-<tr class="separator:afbf249fd84580486a877500bed5a0b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af30fe85a821bd0e0ab46f2e165c8e480"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
-<tr class="memitem:af30fe85a821bd0e0ab46f2e165c8e480"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#af30fe85a821bd0e0ab46f2e165c8e480">TwistMatrix</a> = Eigen::Matrix&lt; Scalar, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a>, Eigen::Dynamic &gt;</td></tr>
-<tr class="memdesc:af30fe85a821bd0e0ab46f2e165c8e480"><td class="mdescLeft">&#160;</td><td class="mdescRight">A matrix with one twist per column, and dynamically many columns.  <a href="#af30fe85a821bd0e0ab46f2e165c8e480">More...</a><br /></td></tr>
-<tr class="separator:af30fe85a821bd0e0ab46f2e165c8e480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aa72a15690d6e4db2040ebc8814a74e"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
-<tr class="memitem:a3aa72a15690d6e4db2040ebc8814a74e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a3aa72a15690d6e4db2040ebc8814a74e">SquareTwistMatrix</a> = Eigen::Matrix&lt; Scalar, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a>, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a> &gt;</td></tr>
-<tr class="memdesc:a3aa72a15690d6e4db2040ebc8814a74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A six-by-six matrix.  <a href="#a3aa72a15690d6e4db2040ebc8814a74e">More...</a><br /></td></tr>
-<tr class="separator:a3aa72a15690d6e4db2040ebc8814a74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1523106d56bf869ad35e8d5b51180371"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:a1523106d56bf869ad35e8d5b51180371"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1523106d56bf869ad35e8d5b51180371">TwistVector</a> = Eigen::Matrix&lt; Scalar, 6, 1 &gt;</td></tr>
+<tr class="memdesc:a1523106d56bf869ad35e8d5b51180371"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a1523106d56bf869ad35e8d5b51180371">More...</a><br /></td></tr>
+<tr class="separator:a1523106d56bf869ad35e8d5b51180371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24677f48c6e4381a7ef6a9034af32803"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:a24677f48c6e4381a7ef6a9034af32803"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a24677f48c6e4381a7ef6a9034af32803">TwistMatrix</a> = Eigen::Matrix&lt; Scalar, 6, Eigen::Dynamic &gt;</td></tr>
+<tr class="memdesc:a24677f48c6e4381a7ef6a9034af32803"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a24677f48c6e4381a7ef6a9034af32803">More...</a><br /></td></tr>
+<tr class="separator:a24677f48c6e4381a7ef6a9034af32803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a5a909210d71526c490997aa8c9309"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:ad2a5a909210d71526c490997aa8c9309"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad2a5a909210d71526c490997aa8c9309">SquareTwistMatrix</a> = Eigen::Matrix&lt; Scalar, 6, 6 &gt;</td></tr>
+<tr class="memdesc:ad2a5a909210d71526c490997aa8c9309"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad2a5a909210d71526c490997aa8c9309">More...</a><br /></td></tr>
+<tr class="separator:ad2a5a909210d71526c490997aa8c9309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98fed5f98c376f4d45fff56bb96c8e1"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
 <tr class="memitem:af98fed5f98c376f4d45fff56bb96c8e1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#af98fed5f98c376f4d45fff56bb96c8e1">WrenchVector</a> = Eigen::Matrix&lt; Scalar, 6, 1 &gt;</td></tr>
-<tr class="memdesc:af98fed5f98c376f4d45fff56bb96c8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A column vector consisting of one wrench (spatial force) = <code>[r X f; f]</code>, where f is a force (translational force) applied at a point <code>P</code> and <code>r</code> is the position vector from a point <code>O</code> (called the "moment center") to point <code>P</code>.  <a href="#af98fed5f98c376f4d45fff56bb96c8e1">More...</a><br /></td></tr>
+<tr class="memdesc:af98fed5f98c376f4d45fff56bb96c8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af98fed5f98c376f4d45fff56bb96c8e1">More...</a><br /></td></tr>
 <tr class="separator:af98fed5f98c376f4d45fff56bb96c8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a11519c4c803fc3f2118df94e858e95"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a5a11519c4c803fc3f2118df94e858e95">DefaultHasher</a> = internal::FNV1aHasher</td></tr>
 <tr class="memdesc:a5a11519c4c803fc3f2118df94e858e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default HashAlgorithm concept implementation across Drake.  <a href="#a5a11519c4c803fc3f2118df94e858e95">More...</a><br /></td></tr>
@@ -835,19 +836,23 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a07869e660ffe730425feca7595de2273"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a07869e660ffe730425feca7595de2273">kQuaternionSize</a> = 4</td></tr>
+<tr class="memdesc:a07869e660ffe730425feca7595de2273"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a07869e660ffe730425feca7595de2273">More...</a><br /></td></tr>
 <tr class="separator:a07869e660ffe730425feca7595de2273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af869092c52ed7cc9d2db40ce56050c7c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#af869092c52ed7cc9d2db40ce56050c7c">kSpaceDimension</a> = 3</td></tr>
+<tr class="memdesc:af869092c52ed7cc9d2db40ce56050c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af869092c52ed7cc9d2db40ce56050c7c">More...</a><br /></td></tr>
 <tr class="separator:af869092c52ed7cc9d2db40ce56050c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab5b0d99cafc2f6ae5812128cea27a3"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aeab5b0d99cafc2f6ae5812128cea27a3">kRpySize</a> = 3</td></tr>
+<tr class="memdesc:aeab5b0d99cafc2f6ae5812128cea27a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aeab5b0d99cafc2f6ae5812128cea27a3">More...</a><br /></td></tr>
 <tr class="separator:aeab5b0d99cafc2f6ae5812128cea27a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9ce1d9cce0ad61dd2f5a295c1a10fc8"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a> = 6</td></tr>
-<tr class="memdesc:ac9ce1d9cce0ad61dd2f5a295c1a10fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://en.wikipedia.org/wiki/Screw_theory#Twist">https://en.wikipedia.org/wiki/Screw_theory#Twist</a>  <a href="#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">More...</a><br /></td></tr>
+<tr class="memdesc:ac9ce1d9cce0ad61dd2f5a295c1a10fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">More...</a><br /></td></tr>
 <tr class="separator:ac9ce1d9cce0ad61dd2f5a295c1a10fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63c55e4d8662e0986e79d11486334486"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a63c55e4d8662e0986e79d11486334486">kHomogeneousTransformSize</a> = 16</td></tr>
-<tr class="memdesc:a63c55e4d8662e0986e79d11486334486"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="http://www.euclideanspace.com/maths/geometry/affine/matrix4x4/">http://www.euclideanspace.com/maths/geometry/affine/matrix4x4/</a>  <a href="#a63c55e4d8662e0986e79d11486334486">More...</a><br /></td></tr>
+<tr class="memdesc:a63c55e4d8662e0986e79d11486334486"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a63c55e4d8662e0986e79d11486334486">More...</a><br /></td></tr>
 <tr class="separator:a63c55e4d8662e0986e79d11486334486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace32fe90adc0d2100ad4fc9f4bc6f79a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ace32fe90adc0d2100ad4fc9f4bc6f79a">kRotmatSize</a> = <a class="el" href="namespacedrake.html#af869092c52ed7cc9d2db40ce56050c7c">kSpaceDimension</a> * <a class="el" href="namespacedrake.html#af869092c52ed7cc9d2db40ce56050c7c">kSpaceDimension</a></td></tr>
-<tr class="separator:ace32fe90adc0d2100ad4fc9f4bc6f79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e6790d62850a8d3ac14f018b055a96"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae2e6790d62850a8d3ac14f018b055a96">kRotmatSize</a> = 9</td></tr>
+<tr class="memdesc:ae2e6790d62850a8d3ac14f018b055a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ae2e6790d62850a8d3ac14f018b055a96">More...</a><br /></td></tr>
+<tr class="separator:ae2e6790d62850a8d3ac14f018b055a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa39127b52b1d34b56cf3e6801cf31045"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aa39127b52b1d34b56cf3e6801cf31045">kDrakeResourceRootEnvironmentVariableName</a></td></tr>
 <tr class="memdesc:aa39127b52b1d34b56cf3e6801cf31045"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the environment variable that provides the first place where FindResource attempts to look.  <a href="#aa39127b52b1d34b56cf3e6801cf31045">More...</a><br /></td></tr>
 <tr class="separator:aa39127b52b1d34b56cf3e6801cf31045"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1346,19 +1351,19 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3aa72a15690d6e4db2040ebc8814a74e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aa72a15690d6e4db2040ebc8814a74e">&#9670;&nbsp;</a></span>SquareTwistMatrix</h2>
+<a id="ad2a5a909210d71526c490997aa8c9309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a5a909210d71526c490997aa8c9309">&#9670;&nbsp;</a></span>SquareTwistMatrix</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake.html#a3aa72a15690d6e4db2040ebc8814a74e">SquareTwistMatrix</a> =  Eigen::Matrix&lt;Scalar, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a>, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake.html#ad2a5a909210d71526c490997aa8c9309">SquareTwistMatrix</a> =  Eigen::Matrix&lt;Scalar, 6, 6&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A six-by-six matrix. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
@@ -1374,39 +1379,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A translation in 3D templated on scalar type. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
-<a id="af30fe85a821bd0e0ab46f2e165c8e480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af30fe85a821bd0e0ab46f2e165c8e480">&#9670;&nbsp;</a></span>TwistMatrix</h2>
+<a id="a24677f48c6e4381a7ef6a9034af32803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24677f48c6e4381a7ef6a9034af32803">&#9670;&nbsp;</a></span>TwistMatrix</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake.html#af30fe85a821bd0e0ab46f2e165c8e480">TwistMatrix</a> =  Eigen::Matrix&lt;Scalar, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a>, Eigen::Dynamic&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake.html#a24677f48c6e4381a7ef6a9034af32803">TwistMatrix</a> =  Eigen::Matrix&lt;Scalar, 6, Eigen::Dynamic&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A matrix with one twist per column, and dynamically many columns. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
-<a id="afbf249fd84580486a877500bed5a0b8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbf249fd84580486a877500bed5a0b8e">&#9670;&nbsp;</a></span>TwistVector</h2>
+<a id="a1523106d56bf869ad35e8d5b51180371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1523106d56bf869ad35e8d5b51180371">&#9670;&nbsp;</a></span>TwistVector</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake.html#afbf249fd84580486a877500bed5a0b8e">TwistVector</a> =  Eigen::Matrix&lt;Scalar, <a class="el" href="namespacedrake.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8">kTwistSize</a>, 1&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake.html#a1523106d56bf869ad35e8d5b51180371">TwistVector</a> =  Eigen::Matrix&lt;Scalar, 6, 1&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A column vector consisting of one twist. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
@@ -1646,7 +1651,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A column vector consisting of one wrench (spatial force) = <code>[r X f; f]</code>, where f is a force (translational force) applied at a point <code>P</code> and <code>r</code> is the position vector from a point <code>O</code> (called the "moment center") to point <code>P</code>. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
@@ -3398,7 +3403,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use fmt or spdlog for logging, not operator&lt;&lt;.  See https://github.com/RobotLocomotion/drake/issues/17742 for details. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use fmt or spdlog for logging, not operator&lt;&lt;.  See https://github.com/RobotLocomotion/drake/issues/17742 for details. <br />
  This will be removed from Drake on or after 2023-06-01.</dd></dl>
 
 </div>
@@ -3930,7 +3935,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a href="http://www.euclideanspace.com/maths/geometry/affine/matrix4x4/">http://www.euclideanspace.com/maths/geometry/affine/matrix4x4/</a> </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>This constant is no longer used in Drake. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
 
 </div>
 </div>
@@ -3946,19 +3953,27 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>This constant is no longer used in Drake. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
+
 </div>
 </div>
-<a id="ace32fe90adc0d2100ad4fc9f4bc6f79a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace32fe90adc0d2100ad4fc9f4bc6f79a">&#9670;&nbsp;</a></span>kRotmatSize</h2>
+<a id="ae2e6790d62850a8d3ac14f018b055a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e6790d62850a8d3ac14f018b055a96">&#9670;&nbsp;</a></span>kRotmatSize</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classint.html">int</a> kRotmatSize = <a class="el" href="namespacedrake.html#af869092c52ed7cc9d2db40ce56050c7c">kSpaceDimension</a> * <a class="el" href="namespacedrake.html#af869092c52ed7cc9d2db40ce56050c7c">kSpaceDimension</a></td>
+          <td class="memname">constexpr <a class="el" href="classint.html">int</a> kRotmatSize = 9</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>This constant is no longer used in Drake. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
 
 </div>
 </div>
@@ -3974,6 +3989,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>This constant is no longer used in Drake. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
+
 </div>
 </div>
 <a id="af869092c52ed7cc9d2db40ce56050c7c"></a>
@@ -3987,6 +4006,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>This constant is no longer used in Drake. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
 
 </div>
 </div>
@@ -4002,7 +4025,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a href="https://en.wikipedia.org/wiki/Screw_theory#Twist">https://en.wikipedia.org/wiki/Screw_theory#Twist</a> </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>This constant is no longer used in Drake. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
 
 </div>
 </div>

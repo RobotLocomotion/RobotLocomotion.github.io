@@ -5,7 +5,7 @@ var searchData=
   ['never_5fdestroyed',['never_destroyed',['../classdrake_1_1never__destroyed.html',1,'drake']]],
   ['newsymmetricvariablenames',['NewSymmetricVariableNames',['../structdrake_1_1solvers_1_1_new_symmetric_variable_names.html',1,'drake::solvers']]],
   ['newvariablenames',['NewVariableNames',['../structdrake_1_1solvers_1_1_new_variable_names.html',1,'drake::solvers']]],
-  ['newvariablenames_3c_20multiplyeigensizes_3c_20rows_2c_20cols_20_3e_3a_3avalue_20_3e',['NewVariableNames&lt; MultiplyEigenSizes&lt; Rows, Cols &gt;::value &gt;',['../structdrake_1_1solvers_1_1_new_variable_names.html',1,'drake::solvers']]],
+  ['newvariablenames_3c_20eigen_3a_3amatrix_3c_20double_2c_20rows_2c_20cols_20_3e_3a_3asizeatcompiletime_20_3e',['NewVariableNames&lt; Eigen::Matrix&lt; double, Rows, Cols &gt;::SizeAtCompileTime &gt;',['../structdrake_1_1solvers_1_1_new_variable_names.html',1,'drake::solvers']]],
   ['newvariablenames_3c_20rows_2c_20cols_20_3e',['NewVariableNames&lt; Rows, Cols &gt;',['../structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html',1,'drake::solvers']]],
   ['newvariablenames_3c_20rows_3d_3deigen_3a_3adynamic_20_3f_20eigen_3a_3adynamic_20_3arows_20_2a_28rows_2b1_29_2f2_20_3e',['NewVariableNames&lt; Rows==Eigen::Dynamic ? Eigen::Dynamic :Rows *(Rows+1)/2 &gt;',['../structdrake_1_1solvers_1_1_new_variable_names.html',1,'drake::solvers']]],
   ['newvariablenames_3c_20size_20_3e',['NewVariableNames&lt; Size &gt;',['../structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html',1,'drake::solvers']]],
