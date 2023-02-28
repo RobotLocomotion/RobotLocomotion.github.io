@@ -327,7 +327,7 @@ var searchData=
   ['isallfingersstuck',['IsAllFingersStuck',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#ac3eabc49f382cf9c9a18aa81703c64df',1,'drake::examples::allegro_hand::AllegroHandMotionState']]],
   ['isanchored',['IsAnchored',['../classdrake_1_1multibody_1_1_multibody_plant.html#a4f05c3d8f8284a9d9056a4ae47cc0e18',1,'drake::multibody::MultibodyPlant']]],
   ['isanyhighfingersstuck',['IsAnyHighFingersStuck',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#aab4c9bfe283eaf9156497b3716dacb04',1,'drake::examples::allegro_hand::AllegroHandMotionState']]],
-  ['isapprox',['isApprox',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7',1,'drake::trajectories::PiecewisePolynomial::isApprox()'],['../classdrake_1_1trajectories_1_1_piecewise_pose.html#a220c40e5653537ed8456542adcb14b89',1,'drake::trajectories::PiecewisePose::IsApprox()'],['../classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25',1,'drake::multibody::SpatialVector::IsApprox()']]],
+  ['isapprox',['IsApprox',['../classdrake_1_1trajectories_1_1_piecewise_pose.html#a220c40e5653537ed8456542adcb14b89',1,'drake::trajectories::PiecewisePose::IsApprox()'],['../classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25',1,'drake::multibody::SpatialVector::IsApprox()'],['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7',1,'drake::trajectories::PiecewisePolynomial::isApprox()']]],
   ['isapproxequalabstolwithpermutedcolumns',['IsApproxEqualAbsTolWithPermutedColumns',['../namespacedrake.html#ab8c3f5f0514513155be9f674f2c2cd63',1,'drake']]],
   ['isbadjacobian',['IsBadJacobian',['../classdrake_1_1systems_1_1_implicit_integrator.html#ad5fffcba1f63c3d8ceae80a550558f92',1,'drake::systems::ImplicitIntegrator']]],
   ['isbothquaternionandquaterniondtok',['IsBothQuaternionAndQuaternionDtOK',['../namespacedrake_1_1math.html#a3b38bdfc1e3df8662c8726bc89a08ed0',1,'drake::math']]],
@@ -398,6 +398,7 @@ var searchData=
   ['multibodyplantmodelattorney_3c_20t_20_3e',['MultibodyPlantModelAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html#a7266290642dbb492700e7ebae2e00a20',1,'drake::multibody::MultibodyPlant']]],
   ['multibodytree_3c_20t_20_3e',['MultibodyTree&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d',1,'drake::multibody::MultibodyElement']]],
   ['onhandlesubscriptionserror',['OnHandleSubscriptionsError',['../classdrake_1_1lcm_1_1_drake_lcm_interface.html#ada4cdd96fd686bb8c6158d8012ed4245',1,'drake::lcm::DrakeLcmInterface']]],
+  ['inverse_20kinematics',['Inverse kinematics',['../group__planning__kinematics.html',1,'']]],
   ['portbaseattorney',['PortBaseAttorney',['../classdrake_1_1systems_1_1_port_base.html#ae66dba6ddcaf93db228ac9b10325c519',1,'drake::systems::PortBase']]],
   ['systembasecontextbaseattorney',['SystemBaseContextBaseAttorney',['../classdrake_1_1systems_1_1_context_base.html#afbf57f9a9ba557220adf6f9c6436c548',1,'drake::systems::ContextBase']]]
 ];

@@ -283,6 +283,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f022e7b3f0771715149a808b11343fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a1f022e7b3f0771715149a808b11343fd">MakeUnitary</a> ()</td></tr>
 <tr class="memdesc:a1f022e7b3f0771715149a808b11343fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates a spatial inertia whose mass is 1, position vector to center of mass is zero, and whose rotational inertia has moments of inertia of 1 and products of inertia of 0.  <a href="#a1f022e7b3f0771715149a808b11343fd">More...</a><br /></td></tr>
 <tr class="separator:a1f022e7b3f0771715149a808b11343fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d7153d47fde17ac87697aab19515cf2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a3d7153d47fde17ac87697aab19515cf2">PointMass</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;position)</td></tr>
+<tr class="memdesc:a3d7153d47fde17ac87697aab19515cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the spatial inertia for a particle Q of mass m about a point P.  <a href="#a3d7153d47fde17ac87697aab19515cf2">More...</a><br /></td></tr>
+<tr class="separator:a3d7153d47fde17ac87697aab19515cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18329f60198911cb11b38659531ae32e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a18329f60198911cb11b38659531ae32e">SolidBoxWithDensity</a> (const T &amp;density, const T &amp;lx, const T &amp;ly, const T &amp;lz)</td></tr>
 <tr class="memdesc:a18329f60198911cb11b38659531ae32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid box B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#a18329f60198911cb11b38659531ae32e">More...</a><br /></td></tr>
 <tr class="separator:a18329f60198911cb11b38659531ae32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -298,6 +301,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1bae5f36f05cc66fdbe1a1d18232515"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ad1bae5f36f05cc66fdbe1a1d18232515">SolidSphereWithDensity</a> (const T &amp;density, const T &amp;r)</td></tr>
 <tr class="memdesc:ad1bae5f36f05cc66fdbe1a1d18232515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid sphere B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#ad1bae5f36f05cc66fdbe1a1d18232515">More...</a><br /></td></tr>
 <tr class="separator:ad1bae5f36f05cc66fdbe1a1d18232515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7c7720d33cdfddd9ceb505c12bd389"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a4a7c7720d33cdfddd9ceb505c12bd389">HollowSphereWithDensity</a> (const T &amp;area_density, const T &amp;r)</td></tr>
+<tr class="memdesc:a4a7c7720d33cdfddd9ceb505c12bd389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density thin hollow sphere B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#a4a7c7720d33cdfddd9ceb505c12bd389">More...</a><br /></td></tr>
+<tr class="separator:a4a7c7720d33cdfddd9ceb505c12bd389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af24310926c4f3a0604b4ebb341deca84"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84">SolidTetrahedronAboutPointWithDensity</a> (const T &amp;density, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p0, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p1, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p2, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p3)</td></tr>
 <tr class="memdesc:af24310926c4f3a0604b4ebb341deca84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid tetrahedron B about a point A, from which position vectors to B's 4 vertices B0, B1, B2, B3 are measured (position vectors are all expressed in a common frame E).  <a href="#af24310926c4f3a0604b4ebb341deca84">More...</a><br /></td></tr>
 <tr class="separator:af24310926c4f3a0604b4ebb341deca84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -583,6 +589,64 @@ Related Functions</h2></td></tr>
 
 <p>Get a constant reference to the unit inertia <code>G_SP_E</code> of this spatial inertia, computed about point P and expressed in frame E. </p>
 <p>See the documentation of this class for details. </p>
+
+</div>
+</div>
+<a id="a4a7c7720d33cdfddd9ceb505c12bd389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7c7720d33cdfddd9ceb505c12bd389">&#9670;&nbsp;</a></span>HollowSphereWithDensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; HollowSphereWithDensity </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>area_density</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a spatial inertia for a uniform density thin hollow sphere B about its geometric center Bo (which is coincident with B's center of mass Bcm). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">area_density</td><td>mass per unit area (kg/m²). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>sphere's radius (the hollow sphere is regarded as an infinitesimally thin shell of uniform density). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BBo_B</td><td>B's spatial inertia about Bo, expressed in B. Since B's rotational inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in frame B is equal to M_BBo expressed in an arbitrary frame E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is triaxially symmetric, meaning B has an equal moment of inertia about any line passing through Bo. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if r is zero or negative. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -879,6 +943,63 @@ Related Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d7153d47fde17ac87697aab19515cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d7153d47fde17ac87697aab19515cf2">&#9670;&nbsp;</a></span>PointMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; PointMass </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>mass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the spatial inertia for a particle Q of mass m about a point P. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>mass of the single particle (units of kg). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>vector from point P to Q, expressed in a frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_QP_B</td><td>particle Q's spatial inertia about P, expressed in frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if mass is negative. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

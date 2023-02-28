@@ -307,7 +307,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a specific, known solver type. </p>
-<p>Internally, a hidden identifier is allocated and assigned to this instance; all instances that share an identifier (including copies of this instance) are considered equal. The solver names are not enforced to be unique, though we recommend that they remain so in practice. </p>
+<p>Internally, a hidden integer is allocated and assigned to this instance; all instances that share an integer (including copies of this instance) are considered equal. The solver names are not enforced to be unique, though we recommend that they remain so in practice.</p>
+<p>For best performance, choose a name that is 15 characters or less, so that it fits within the libstdc++ "small string" optimization ("SSO"). </p>
 
 </div>
 </div>

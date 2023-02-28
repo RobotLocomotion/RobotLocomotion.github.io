@@ -11,6 +11,7 @@ var searchData=
   ['basiselementgradedreverselexorder',['BasisElementGradedReverseLexOrder',['../structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html',1,'drake::symbolic']]],
   ['beadonawire',['BeadOnAWire',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html',1,'drake::examples::bead_on_a_wire']]],
   ['beammodel',['BeamModel',['../classdrake_1_1systems_1_1sensors_1_1_beam_model.html',1,'drake::systems::sensors']]],
+  ['beziercurve',['BezierCurve',['../classdrake_1_1trajectories_1_1_bezier_curve.html',1,'drake::trajectories']]],
   ['bilinearalternationoptions',['BilinearAlternationOptions',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['binaryexpressioncell',['BinaryExpressionCell',['../classdrake_1_1symbolic_1_1_binary_expression_cell.html',1,'drake::symbolic']]],
   ['binarysearchoptions',['BinarySearchOptions',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],

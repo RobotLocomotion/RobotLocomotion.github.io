@@ -1,5 +1,8 @@
 var dir_5f7a2023092b91a1e02609fa2c012f50 =
 [
+    [ "bezier_curve.h", "bezier__curve_8h.html", [
+      [ "BezierCurve", "classdrake_1_1trajectories_1_1_bezier_curve.html", "classdrake_1_1trajectories_1_1_bezier_curve" ]
+    ] ],
     [ "bspline_trajectory.h", "bspline__trajectory_8h.html", [
       [ "BsplineTrajectory", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", "classdrake_1_1trajectories_1_1_bspline_trajectory" ]
     ] ],

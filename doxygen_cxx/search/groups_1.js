@@ -10,7 +10,6 @@ var searchData=
   ['contact_20modeling_20in_20drake',['Contact Modeling in Drake',['../group__drake__contacts.html',1,'']]],
   ['contact_20surface',['Contact Surface',['../group__module__contact__surface.html',1,'']]],
   ['collision_20checking',['Collision checking',['../group__planning__collision__checker.html',1,'']]],
-  ['configurations',['Configurations',['../group__planning__configuration.html',1,'']]],
   ['convenience_20classes',['Convenience classes',['../group__planning__infrastructure.html',1,'']]],
   ['configuring_20distributions',['Configuring distributions',['../group__schema__stochastic.html',1,'']]],
   ['configuring_20transforms',['Configuring transforms',['../group__schema__transform.html',1,'']]],

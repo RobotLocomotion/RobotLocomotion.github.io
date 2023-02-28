@@ -1,5 +1,11 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1_vector_log.html#a16f68e98d0fe5d308ee4afee21efce3c":[3,0,0,16,124,7],
+"classdrake_1_1systems_1_1_vector_log.html#a2092a77a3f3f240841ef25c810342769":[3,0,0,16,124,8],
+"classdrake_1_1systems_1_1_vector_log.html#a68d774a585cf94543a4a9930f7e9efc2":[3,0,0,16,124,5],
+"classdrake_1_1systems_1_1_vector_log.html#a8cebbbcba14a806da45600ccc3443095":[3,0,0,16,124,12],
+"classdrake_1_1systems_1_1_vector_log.html#aa71d36872f416feaa853788a7a7a7ef8":[3,0,0,16,124,4],
+"classdrake_1_1systems_1_1_vector_log.html#ab2e824b1c2e43c93e68de2e1c4d930b6":[3,0,0,16,124,1],
 "classdrake_1_1systems_1_1_vector_log.html#abc2c34877cce7a1a0efd7b926a691743":[3,0,0,16,124,0],
 "classdrake_1_1systems_1_1_vector_log.html#ac17a6d8ef67a6ab2df61f14c12651c54":[3,0,0,16,124,2],
 "classdrake_1_1systems_1_1_vector_log.html#accd54be181b898dbf19a7bc0936aa008":[3,0,0,16,124,9],
@@ -243,11 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a4e565ffad315e3a3537ead6663db6203":[1,2,2,2,11],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a58a569e52bd3a03537d3326907f19880":[1,2,2,2,1],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a60e25dc7600f5538ee43c0ae6025d162":[1,2,2,2,10],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a858610accf2d286848a06043538f3c94":[1,2,2,2,4],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aa28328eb9d4bce20371ea403960122fb":[1,2,2,2,6],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aa6d468524ab47bb2e702b6025140c701":[1,2,2,2,12],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ab2ecad3e6703ed991736beb7981884eb":[1,2,2,2,5],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ab4aeebb77f3c69d10583e4e99bc24e17":[1,2,2,2,0],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#adaf897afb1fc6ad957e0f2a7776e5254":[1,2,2,2,3],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ae1296b665521a703cc08e6d98f5b6f64":[1,2,2,2,9]
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a858610accf2d286848a06043538f3c94":[1,2,2,2,4]
 };

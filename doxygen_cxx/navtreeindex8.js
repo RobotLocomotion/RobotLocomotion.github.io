@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87":[1,1,1,4,13],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87":[1,5,4,4,13],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af994292c5b8d256af40b63f7a125c456":[1,1,1,4,1],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af994292c5b8d256af40b63f7a125c456":[1,5,4,4,1],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html":[1,1,1,5],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html":[1,5,4,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1lcm_1_1_drake_lcm_base.html#ab7b430da3e17a859997026f899b93246":[3,0,0,5,1,5],
 "classdrake_1_1lcm_1_1_drake_lcm_base.html#af4995bed4704184adab78bf1e7d7420e":[3,0,0,5,1,6],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html":[3,0,0,5,2],
-"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a204b8732f3fb2f89d2139ba0f2d0e6c2":[3,0,0,5,2,11],
-"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a23173daec9dd236c7275bc4a49f81cd5":[3,0,0,5,2,7],
-"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf":[3,0,0,5,2,1],
-"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867":[3,0,0,5,2,0]
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a204b8732f3fb2f89d2139ba0f2d0e6c2":[3,0,0,5,2,11]
 };

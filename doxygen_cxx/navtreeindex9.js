@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a23173daec9dd236c7275bc4a49f81cd5":[3,0,0,5,2,7],
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf":[3,0,0,5,2,1],
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867":[3,0,0,5,2,0],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a3aff1c5f0fed4b08a332e3edc46cd349":[3,0,0,5,2,4],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a437b788f32af8a9b80c59fe729f75865":[3,0,0,5,2,8],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a46278d4906208da92bc2d8dc88c6f629":[3,0,0,5,2,12],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#aa7a61acc92b498de0e80c438b746aa5d":[1,2,5,10,2],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#acd1379f9d258beca963b75d32b3c8ac3":[1,2,5,10,9],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#af1b9467a4df25faf1350eee618f9a1e3":[1,2,5,10,11],
-"classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#af96830d0376a1a95977ab7745fc1f072":[1,2,5,10,8],
-"classdrake_1_1math_1_1_barycentric_mesh.html":[3,0,0,8,0],
-"classdrake_1_1math_1_1_barycentric_mesh.html#a04d3eead2c004b19dd5d4555b7675c31":[3,0,0,8,0,18],
-"classdrake_1_1math_1_1_barycentric_mesh.html#a1cfc0b35660295a470104fc07d11fbd0":[3,0,0,8,0,15]
+"classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#af96830d0376a1a95977ab7745fc1f072":[1,2,5,10,8]
 };

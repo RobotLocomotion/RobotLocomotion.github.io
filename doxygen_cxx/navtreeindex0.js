@@ -63,8 +63,11 @@ var NAVTREEINDEX0 =
 "basic__vector_8h.html":[4,0,0,12,3,3],
 "bead__on__a__wire_8h.html":[4,0,0,3,2,0],
 "beam__model_8h.html":[4,0,0,12,8,1],
+"bezier__curve_8h.html":[4,0,0,1,5,0],
 "binding_8h.html":[4,0,0,11,3],
 "binding_8h.html#aab097e2ddc8c73cd83a8ae0e801b9071":[4,0,0,11,3,3],
+"binomial__coefficient_8h.html":[4,0,0,7,3],
+"binomial__coefficient_8h.html#ad23280f04f3264b00fe8e359508c89a1":[4,0,0,7,3,0],
 "bit__cast_8h.html":[4,0,0,1,10],
 "block__sparse__linear__operator_8h.html":[4,0,0,8,2,1],
 "block__sparse__matrix_8h.html":[4,0,0,8,2,2],
@@ -82,8 +85,8 @@ var NAVTREEINDEX0 =
 "branch__and__bound_8h.html":[4,0,0,11,4],
 "brick__static__equilibrium__constraint_8h.html":[4,0,0,3,13,0],
 "brick__static__equilibrium__constraint_8h.html#a0e17e8c15421b3bf195f9ef1b724fc14":[4,0,0,3,13,0,1],
-"bspline__basis_8h.html":[4,0,0,7,3],
-"bspline__trajectory_8h.html":[4,0,0,1,5,0],
+"bspline__basis_8h.html":[4,0,0,7,4],
+"bspline__trajectory_8h.html":[4,0,0,1,5,1],
 "build__iiwa__control_8h.html":[4,0,0,6,1,0],
 "build__iiwa__control_8h.html#a4662f54d834653e1b9af1848f753e32c":[4,0,0,6,1,0,2],
 "build__iiwa__control_8h.html#ad3720de284f34533b4dbbaa0710637b4":[4,0,0,6,1,0,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#a93f813cb8ff8e450366e4e2f353bd7e6":[3,0,0,44,41],
 "classdrake_1_1_polynomial.html#a96a10bc725a30f1296033f5d26188af1":[3,0,0,44,30],
 "classdrake_1_1_polynomial.html#a96ba53803e4244c1878ed9ad381854a7":[3,0,0,44,20],
-"classdrake_1_1_polynomial.html#a9756e806e687de4b2e572193034a9fc1":[3,0,0,44,34],
-"classdrake_1_1_polynomial.html#a981a524ccda4902bff9380c48fd2714a":[3,0,0,44,21],
-"classdrake_1_1_polynomial.html#a9b60c8127846337517b619abdbebb9ab":[3,0,0,44,39],
-"classdrake_1_1_polynomial.html#a9e0839a4ea39ab4780de70e5913107d6":[3,0,0,44,54]
+"classdrake_1_1_polynomial.html#a9756e806e687de4b2e572193034a9fc1":[3,0,0,44,34]
 };

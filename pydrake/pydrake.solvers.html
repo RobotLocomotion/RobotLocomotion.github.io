@@ -6560,11 +6560,13 @@ equal to any non-empty ID.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SolverId.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverId.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a specific, known solver type. Internally, a hidden
-identifier is allocated and assigned to this instance; all instances
-that share an identifier (including copies of this instance) are
-considered equal. The solver names are not enforced to be unique,
-though we recommend that they remain so in practice.</p>
+<dd><p>Constructs a specific, known solver type. Internally, a hidden integer
+is allocated and assigned to this instance; all instances that share
+an integer (including copies of this instance) are considered equal.
+The solver names are not enforced to be unique, though we recommend
+that they remain so in practice.</p>
+<p>For best performance, choose a name that is 15 characters or less, so
+that it fits within the libstdc++ “small string” optimization (“SSO”).</p>
 </dd></dl>
 
 <dl class="py method">

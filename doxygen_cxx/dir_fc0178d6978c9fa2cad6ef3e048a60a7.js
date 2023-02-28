@@ -5,6 +5,7 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "barycentric.h", "barycentric_8h.html", [
       [ "BarycentricMesh", "classdrake_1_1math_1_1_barycentric_mesh.html", "classdrake_1_1math_1_1_barycentric_mesh" ]
     ] ],
+    [ "binomial_coefficient.h", "binomial__coefficient_8h.html", "binomial__coefficient_8h" ],
     [ "bspline_basis.h", "bspline__basis_8h.html", [
       [ "BsplineBasis", "classdrake_1_1math_1_1_bspline_basis.html", "classdrake_1_1math_1_1_bspline_basis" ]
     ] ],
