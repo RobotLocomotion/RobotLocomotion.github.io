@@ -225,9 +225,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7239b078735f1096cdf5ae1c8d0f8e69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a7239b078735f1096cdf5ae1c8d0f8e69">num_geometries</a> () const</td></tr>
 <tr class="memdesc:a7239b078735f1096cdf5ae1c8d0f8e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the <em>total</em> number of geometries in the scene graph.  <a href="#a7239b078735f1096cdf5ae1c8d0f8e69">More...</a><br /></td></tr>
 <tr class="separator:a7239b078735f1096cdf5ae1c8d0f8e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1eab0dd8852002b3da5104204c917e8"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#af1eab0dd8852002b3da5104204c917e8">GetAllGeometryIds</a> () const</td></tr>
-<tr class="memdesc:af1eab0dd8852002b3da5104204c917e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of all ids for registered geometries.  <a href="#af1eab0dd8852002b3da5104204c917e8">More...</a><br /></td></tr>
-<tr class="separator:af1eab0dd8852002b3da5104204c917e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4178e43f19b891fde901b16d3e617c8d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a4178e43f19b891fde901b16d3e617c8d">GetAllGeometryIds</a> () const</td></tr>
+<tr class="memdesc:a4178e43f19b891fde901b16d3e617c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of all ids for registered geometries.  <a href="#a4178e43f19b891fde901b16d3e617c8d">More...</a><br /></td></tr>
+<tr class="separator:a4178e43f19b891fde901b16d3e617c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a935d0cab1f8f30e872bf61af609d7622"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a935d0cab1f8f30e872bf61af609d7622">GetGeometryIds</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;geometry_set, const std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> &gt; &amp;role=std::nullopt) const</td></tr>
 <tr class="memdesc:a935d0cab1f8f30e872bf61af609d7622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry ids that are <em>implied</em> by the given <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> and <code>role</code>.  <a href="#a935d0cab1f8f30e872bf61af609d7622">More...</a><br /></td></tr>
 <tr class="separator:a935d0cab1f8f30e872bf61af609d7622"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -619,6 +619,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns all geometry ids that correspond to deformable geometries. </p>
+<p>The order is guaranteed to be stable and consistent. </p>
 
 </div>
 </div>
@@ -638,18 +639,18 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns all of the frame ids in the scene graph. </p>
-<p>The order is not guaranteed; but it will be consistent across invocations as long as there are no changes to the topology. The ids includes the world frame's id. </p>
+<p>The order is guaranteed to be stable and consistent. The ids include the world frame's id. </p>
 
 </div>
 </div>
-<a id="af1eab0dd8852002b3da5104204c917e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1eab0dd8852002b3da5104204c917e8">&#9670;&nbsp;</a></span>GetAllGeometryIds()</h2>
+<a id="a4178e43f19b891fde901b16d3e617c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4178e43f19b891fde901b16d3e617c8d">&#9670;&nbsp;</a></span>GetAllGeometryIds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt; GetAllGeometryIds </td>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt; GetAllGeometryIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -658,7 +659,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the set of all ids for registered geometries. </p>
-<p>The order is <em>not</em> guaranteed to have any particular meaning. But the order is guaranteed to remain fixed until a topological change is made (e.g., removal or addition of geometry/frames). </p>
+<p>The order is guaranteed to be stable and consistent. </p>
 
 </div>
 </div>
@@ -762,7 +763,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns geometry ids that have been registered directly to the frame indicated by <code>frame_id</code>. </p>
-<p>If a <code>role</code> is provided, only geometries with that role assigned will be returned, otherwise all geometries will be returned. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If a <code>role</code> is provided, only geometries with that role assigned will be returned, otherwise all geometries will be returned. The order of the ids is guaranteed to be stable and consistent. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frame_id</td><td>The id of the frame in question. </td></tr>
     <tr><td class="paramname">role</td><td>The requested role; if omitted, all geometries registered to the frame are returned. </td></tr>
@@ -1146,7 +1147,7 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames; use GetPoseInFrame(). <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames; use GetPoseInFrame(). <br />
  This will be removed from Drake on or after 2023-04-01.</dd></dl>
 
 </div>

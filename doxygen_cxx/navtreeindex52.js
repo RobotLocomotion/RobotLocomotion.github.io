@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,53,11],
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,53,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,53,9],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,0,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#aa439b0d89e38b17d00d217c56b047737":[3,0,0,4,49,9],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ab2f3197be7cd4b4cecd2d173e15561fd":[3,0,0,4,49,1],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ac7b001303ef94448442c885d0854f99e":[3,0,0,4,49,2],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,4,49,3],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,4,49,12]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,4,49,3]
 };

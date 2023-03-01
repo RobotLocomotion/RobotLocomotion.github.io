@@ -173,6 +173,7 @@ struct drake::SortedPair&lt; T &gt;</h3>
 <p>This class is similar to the std::pair class. </p>
 <p>However, this class uses a pair of homogeneous types (std::pair can use heterogeneous types) and sorts the first and second values such that the first value is less than or equal to the second one). Note that the sort is a stable one. Thus the <a class="el" href="structdrake_1_1_sorted_pair.html" title="This class is similar to the std::pair class.">SortedPair</a> class is able to be used to generate keys (e.g., for std::map, etc.) from pairs of objects.</p>
 <p>The availability of construction and assignment operations (i.e., default constructor, copy constructor, copy assignment, move constructor, move assignment) is the same as whatever T provides . All comparison operations (including equality, etc.) are always available.</p>
+<p>To format this class for logging, include <code>&lt;fmt/ranges.h&gt;</code> (exactly the same as for <code>std::pair</code>).</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A template type that provides <code>operator&lt;</code>. </td></tr>

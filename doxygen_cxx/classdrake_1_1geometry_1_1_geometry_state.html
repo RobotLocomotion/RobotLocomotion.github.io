@@ -221,7 +221,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abe68c0c5789d461e1d2077774c0d9907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a7239b078735f1096cdf5ae1c8d0f8e69" title="Reports the total number of geometries in the scene graph.">SceneGraphInspector::num_geometries()</a>.  <a href="#abe68c0c5789d461e1d2077774c0d9907">More...</a><br /></td></tr>
 <tr class="separator:abe68c0c5789d461e1d2077774c0d9907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4178e43f19b891fde901b16d3e617c8d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a4178e43f19b891fde901b16d3e617c8d">GetAllGeometryIds</a> () const</td></tr>
-<tr class="memdesc:a4178e43f19b891fde901b16d3e617c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#af1eab0dd8852002b3da5104204c917e8" title="Returns the set of all ids for registered geometries.">SceneGraphInspector::GetAllGeometryIds()</a>.  <a href="#a4178e43f19b891fde901b16d3e617c8d">More...</a><br /></td></tr>
+<tr class="memdesc:a4178e43f19b891fde901b16d3e617c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a4178e43f19b891fde901b16d3e617c8d" title="Returns the set of all ids for registered geometries.">SceneGraphInspector::GetAllGeometryIds()</a>.  <a href="#a4178e43f19b891fde901b16d3e617c8d">More...</a><br /></td></tr>
 <tr class="separator:a4178e43f19b891fde901b16d3e617c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0db7b96ad95d9c4376915337eaba8a99"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a0db7b96ad95d9c4376915337eaba8a99">GetGeometryIds</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;geometry_set, const std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> &gt; &amp;role) const</td></tr>
 <tr class="memdesc:a0db7b96ad95d9c4376915337eaba8a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a935d0cab1f8f30e872bf61af609d7622" title="Returns the geometry ids that are implied by the given GeometrySet and role.">SceneGraphInspector::GetGeometryIds()</a>.  <a href="#a0db7b96ad95d9c4376915337eaba8a99">More...</a><br /></td></tr>
@@ -1310,7 +1310,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#af1eab0dd8852002b3da5104204c917e8" title="Returns the set of all ids for registered geometries.">SceneGraphInspector::GetAllGeometryIds()</a>. </p>
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a4178e43f19b891fde901b16d3e617c8d" title="Returns the set of all ids for registered geometries.">SceneGraphInspector::GetAllGeometryIds()</a>. </p>
 
 </div>
 </div>
@@ -1666,7 +1666,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of SceneGraphInspector::X_PG(). </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames; use GetPoseInFrame(). <br />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames; use GetPoseInFrame(). <br />
  This will be removed from Drake on or after 2023-04-01.</dd></dl>
 
 </div>
@@ -2382,7 +2382,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4">SceneGraph::RegisterGeometry</a>(SourceId,<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a>, std::unique_ptr&lt;GeometryInstance&gt;) "SceneGraph::RegisterGeometry()" with parent <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a>. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames. <br />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames. <br />
  This will be removed from Drake on or after 2023-04-01.</dd></dl>
 
 </div>

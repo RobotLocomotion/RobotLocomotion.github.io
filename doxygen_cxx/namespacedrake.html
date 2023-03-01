@@ -728,7 +728,7 @@ Functions</h2></td></tr>
 <tr class="separator:adc2cd15bd61a427917d479a38a1a3580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9ab1dd8eeeb9910b3755b238fc8907e9">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;pair)</td></tr>
-<tr class="memdesc:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support writing a <a class="el" href="structdrake_1_1_sorted_pair.html" title="This class is similar to the std::pair class.">SortedPair</a> to a stream (conditional on the support of writing the underlying type T to a stream).  <a href="#a9ab1dd8eeeb9910b3755b238fc8907e9">More...</a><br /></td></tr>
+<tr class="memdesc:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a9ab1dd8eeeb9910b3755b238fc8907e9">More...</a><br /></td></tr>
 <tr class="separator:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8b6812b1ccb5ba802e724ef1082569c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:ae8b6812b1ccb5ba802e724ef1082569c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae8b6812b1ccb5ba802e724ef1082569c">operator==</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;x, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;y)</td></tr>
@@ -3369,7 +3369,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support writing a <a class="el" href="structdrake_1_1_sorted_pair.html" title="This class is similar to the std::pair class.">SortedPair</a> to a stream (conditional on the support of writing the underlying type T to a stream). </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use fmt or spdlog for logging, not operator&lt;&lt;.  Add an #include &lt;fmt/ranges.h&gt; to format SortedPair as a range. See https://github.com/RobotLocomotion/drake/issues/17742 for background. <br />
+ This will be removed from Drake on or after 2023-06-01.</dd></dl>
 
 </div>
 </div>

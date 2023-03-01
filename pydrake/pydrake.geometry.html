@@ -13014,9 +13014,8 @@ copied.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_-float-.GetAllFrameIds">
 <span id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetAllFrameIds"></span><span class="sig-name descname"><span class="pre">GetAllFrameIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_-float-.GetAllFrameIds" title="Permalink to this definition"></a></dt>
-<dd><p>Returns all of the frame ids in the scene graph. The order is not
-guaranteed; but it will be consistent across invocations as long as
-there are no changes to the topology. The ids includes the world
+<dd><p>Returns all of the frame ids in the scene graph. The order is
+guaranteed to be stable and consistent. The ids include the world
 frame’s id.</p>
 </dd></dl>
 
@@ -13024,9 +13023,7 @@ frame’s id.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_-float-.GetAllGeometryIds">
 <span id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_-float-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
-<em>not</em> guaranteed to have any particular meaning. But the order is
-guaranteed to remain fixed until a topological change is made (e.g.,
-removal or addition of geometry/frames).</p>
+guaranteed to be stable and consistent.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -13077,7 +13074,8 @@ QueryObject::ComputePointPairPenetration().</p>
 <dd><p>Returns geometry ids that have been registered directly to the frame
 indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>. If a <code class="docutils literal notranslate"><span class="pre">role</span></code> is provided, only geometries
 with that role assigned will be returned, otherwise all geometries
-will be returned.</p>
+will be returned. The order of the ids is guaranteed to be stable and
+consistent.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id of the frame in question.</p>
 </dd>
@@ -13647,9 +13645,8 @@ copied.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllFrameIds">
 <span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllFrameIds"></span><span class="sig-name descname"><span class="pre">GetAllFrameIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllFrameIds" title="Permalink to this definition"></a></dt>
-<dd><p>Returns all of the frame ids in the scene graph. The order is not
-guaranteed; but it will be consistent across invocations as long as
-there are no changes to the topology. The ids includes the world
+<dd><p>Returns all of the frame ids in the scene graph. The order is
+guaranteed to be stable and consistent. The ids include the world
 frame’s id.</p>
 </dd></dl>
 
@@ -13657,9 +13654,7 @@ frame’s id.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllGeometryIds">
 <span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
-<em>not</em> guaranteed to have any particular meaning. But the order is
-guaranteed to remain fixed until a topological change is made (e.g.,
-removal or addition of geometry/frames).</p>
+guaranteed to be stable and consistent.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -13710,7 +13705,8 @@ QueryObject::ComputePointPairPenetration().</p>
 <dd><p>Returns geometry ids that have been registered directly to the frame
 indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>. If a <code class="docutils literal notranslate"><span class="pre">role</span></code> is provided, only geometries
 with that role assigned will be returned, otherwise all geometries
-will be returned.</p>
+will be returned. The order of the ids is guaranteed to be stable and
+consistent.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id of the frame in question.</p>
 </dd>
@@ -14278,9 +14274,8 @@ copied.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetAllFrameIds">
 <span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllFrameIds"></span><span class="sig-name descname"><span class="pre">GetAllFrameIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllFrameIds" title="Permalink to this definition"></a></dt>
-<dd><p>Returns all of the frame ids in the scene graph. The order is not
-guaranteed; but it will be consistent across invocations as long as
-there are no changes to the topology. The ids includes the world
+<dd><p>Returns all of the frame ids in the scene graph. The order is
+guaranteed to be stable and consistent. The ids include the world
 frame’s id.</p>
 </dd></dl>
 
@@ -14288,9 +14283,7 @@ frame’s id.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetAllGeometryIds">
 <span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
-<em>not</em> guaranteed to have any particular meaning. But the order is
-guaranteed to remain fixed until a topological change is made (e.g.,
-removal or addition of geometry/frames).</p>
+guaranteed to be stable and consistent.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14341,7 +14334,8 @@ QueryObject::ComputePointPairPenetration().</p>
 <dd><p>Returns geometry ids that have been registered directly to the frame
 indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>. If a <code class="docutils literal notranslate"><span class="pre">role</span></code> is provided, only geometries
 with that role assigned will be returned, otherwise all geometries
-will be returned.</p>
+will be returned. The order of the ids is guaranteed to be stable and
+consistent.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id of the frame in question.</p>
 </dd>
@@ -14909,9 +14903,8 @@ copied.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-float-.GetAllFrameIds">
 <span id="pydrake.geometry.SceneGraphInspector_[float].GetAllFrameIds"></span><span class="sig-name descname"><span class="pre">GetAllFrameIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-float-.GetAllFrameIds" title="Permalink to this definition"></a></dt>
-<dd><p>Returns all of the frame ids in the scene graph. The order is not
-guaranteed; but it will be consistent across invocations as long as
-there are no changes to the topology. The ids includes the world
+<dd><p>Returns all of the frame ids in the scene graph. The order is
+guaranteed to be stable and consistent. The ids include the world
 frame’s id.</p>
 </dd></dl>
 
@@ -14919,9 +14912,7 @@ frame’s id.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-float-.GetAllGeometryIds">
 <span id="pydrake.geometry.SceneGraphInspector_[float].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-float-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
-<em>not</em> guaranteed to have any particular meaning. But the order is
-guaranteed to remain fixed until a topological change is made (e.g.,
-removal or addition of geometry/frames).</p>
+guaranteed to be stable and consistent.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14972,7 +14963,8 @@ QueryObject::ComputePointPairPenetration().</p>
 <dd><p>Returns geometry ids that have been registered directly to the frame
 indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>. If a <code class="docutils literal notranslate"><span class="pre">role</span></code> is provided, only geometries
 with that role assigned will be returned, otherwise all geometries
-will be returned.</p>
+will be returned. The order of the ids is guaranteed to be stable and
+consistent.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id of the frame in question.</p>
 </dd>

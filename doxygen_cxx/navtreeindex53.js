@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,4,49,12],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,4,50],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,4,50,9],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,50,6],
@@ -103,20 +104,20 @@ var NAVTREEINDEX53 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,4,6,10],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,6,10],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,6,9],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,5,4,6,9],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,5,4,6,1],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,6,9],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,1,1,6,1],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,4,6,8],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,5,4,6,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,6,8],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,4,6,8],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,5,4,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,1,1,6,5],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75":[1,5,4,6,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75":[1,1,1,6,4],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,1,1,6,6],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75":[1,5,4,6,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,5,4,6,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,1,1,6,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,1,1,6,3],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,5,4,6,0],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,1,1,6,0],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[1,5,4,6,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a11f71843ef624fea406723165c067eb0":[3,0,0,9,43,1],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a17306652175cc5f61e86f203b86bd9e4":[3,0,0,9,43,2],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aa84762ad9b2aa7ac13d6c41ae6e135ca":[3,0,0,9,43,0],
-"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aaf34c01d86da78bb1b48beb433506466":[3,0,0,9,43,5],
-"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#ac40878d3fef16be760e6104ad9c13666":[3,0,0,9,43,4]
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aaf34c01d86da78bb1b48beb433506466":[3,0,0,9,43,5]
 };

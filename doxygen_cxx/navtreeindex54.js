@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#ac40878d3fef16be760e6104ad9c13666":[3,0,0,9,43,4],
 "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html":[3,0,0,9,45,0],
 "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html#adf5a86be68f4bd906674590a39f2e98f":[3,0,0,9,45,0,0],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html":[3,0,0,9,45,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,13,6,3,5],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,13,6,3,3],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,13,6,3,1],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,14,0],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,14,0,1]
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,14,0]
 };

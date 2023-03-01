@@ -172,6 +172,7 @@ class drake::planning::RobotDiagram&lt; T &gt;</h3>
 
 <p>Storage for a combined diagram, plant, and scene graph. </p>
 <p>This class is a convenient syntactic sugar, especially in C++ code where it simplifies object lifetime tracking and downcasting of the plant and scene graph references. It's purpose is to serve as planner-specific syntactic sugar for operating on a MultibodyPlant. For other purposes (e.g., simulation), users should generally prefer to just use a Diagram, instead.</p>
+<p>Use <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html" title="Storage for a combined diagram builder, plant, and scene graph.">RobotDiagramBuilder</a> to construct a <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>

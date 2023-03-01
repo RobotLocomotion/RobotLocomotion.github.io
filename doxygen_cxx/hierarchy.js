@@ -333,9 +333,6 @@ var hierarchy =
     [ "FiniteHorizonLinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html", null ],
     [ "FixedInputPortValue", "classdrake_1_1systems_1_1_fixed_input_port_value.html", null ],
     [ "CameraConfig::FocalLength", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html", null ],
-    [ "formatter", "classformatter.html", [
-      [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
-    ] ],
     [ "formatter", null, [
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
@@ -375,7 +372,8 @@ var hierarchy =
         [ "formatter< drake::TypeSafeIndex< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
         [ "formatter< drake::yaml::LoadYamlOptions >", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ],
         [ "formatter< T, std::enable_if_t< std::is_base_of_v< drake::solvers::EvaluatorBase, T >, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html", null ]
-      ] ]
+      ] ],
+      [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
     ] ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html", [
