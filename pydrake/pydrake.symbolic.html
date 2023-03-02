@@ -2196,6 +2196,53 @@ the polynomial. Here is an example.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.SubstituteAndExpand">
+<span class="sig-name descname"><span class="pre">SubstituteAndExpand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.symbolic.Polynomial,</span> <span class="pre">indeterminate_substitution:</span> <span class="pre">Dict[pydrake.symbolic.Variable,</span> <span class="pre">pydrake.symbolic.Polynomial],</span> <span class="pre">substitutions_cached_data:</span> <span class="pre">drake::symbolic::Polynomial::SubstituteAndExpandCacheData</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.SubstituteAndExpand" title="Permalink to this definition"></a></dt>
+<dd><p>Substitute the monomials of this polynomial with new polynomial
+expressions and expand the polynomial to the monomial basis. For
+example, consider the substitution x = a(1-y) into the polynomial x¹⁴
++ (x−1)². Repeatedly expanding the powers of x can take a long time
+using factory methods, so we store intermediate computations in the
+substitution map to avoid recomputing very high powers.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminate_substitution</span></code>:</dt><dd><p>The substitutions of every indeterminate with the new desired
+expression. This map must contain each element of
+<code class="docutils literal notranslate"><span class="pre">indeterminates()</span></code>. For performance reasons, it is recommended
+that this map contains Expanded polynomials as its values, but
+this is not necessary.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">substitutions_cached_data</span></code>:</dt><dd><p>A container caching the higher order expansions of the
+<code class="docutils literal notranslate"><span class="pre">indeterminate_substitutions</span></code>. Typically, the first time an
+indeterminate_substitution is performed, this will be empty. If
+the same indeterminate_substitutions is used for multiple
+polynomials, passing this value will enable the user to re-use the
+expansions across multiple calls. For example, suppose we wish to
+perform the substitution x = a(1-y) into the polynomials p1 = x¹⁴
++ (x−1)² and p2 = x⁷. A user may call p1.SubstituteAndExpand({x :
+a(1-y), substitutions_cached_data}) where
+substitutions_cached_data is a pointer to an empty container. As
+part of computing the expansion of p1, the expansion of x⁷ may get
+computed and stored in substitutions_cached_data, and so a
+subsequent call of p2.SubstituteAndExpand({x : a(1-y)},
+substitutions_cached_data) would be very fast.</p>
+</dd>
+</dl>
+<p>Never reuse substitutions_cached_data if indeterminate_substitutions
+changes as this function will then compute an incorrect result.</p>
+<p>Note that this function is NOT responsible for ensuring that</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">substitutions_cached_data</span></code>:</dt><dd><p>is consistent i.e. this method will not throw an error if
+substitutions_cached_data contains the inconsistent substitutions
+{x: y, x²: 2y}. To ensure correct results, ensure that the passed
+substitutions_cached_data object is consistent with
+indeterminate_substitutions. The easiest way to do this is to pass
+a pointer to an empty substitutions_cached_data or nullopt to this
+function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.ToExpression">
 <span class="sig-name descname"><span class="pre">ToExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.ToExpression" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an equivalent symbolic expression of this polynomial.</p>
@@ -2572,6 +2619,22 @@ computations for robots, for instance:
 <li><p>Substitute(m: numpy.ndarray[object[m, n]], subs: Dict[pydrake.symbolic.Variable, pydrake.symbolic.SinCos]) -&gt; numpy.ndarray[object[m, n]]</p></li>
 </ol>
 <p>Matrix version of sin/cos substitution.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.symbolic.SubstituteAndExpandCacheData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">SubstituteAndExpandCacheData</span></span><a class="headerlink" href="#pydrake.symbolic.SubstituteAndExpandCacheData" title="Permalink to this definition"></a></dt>
+<dd><p>An encapsulated data type for use with the method SubstituteAndExpand.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.symbolic.SubstituteAndExpandCacheData.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.SubstituteAndExpandCacheData" title="pydrake.symbolic.SubstituteAndExpandCacheData"><span class="pre">pydrake.symbolic.SubstituteAndExpandCacheData</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.symbolic.SubstituteAndExpandCacheData.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.symbolic.SubstituteAndExpandCacheData.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.SubstituteAndExpandCacheData" title="pydrake.symbolic.SubstituteAndExpandCacheData"><span class="pre">pydrake.symbolic.SubstituteAndExpandCacheData</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.symbolic.Monomial" title="pydrake.symbolic.Monomial"><span class="pre">pydrake.symbolic.Monomial</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.SubstituteAndExpandCacheData.get_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py function">

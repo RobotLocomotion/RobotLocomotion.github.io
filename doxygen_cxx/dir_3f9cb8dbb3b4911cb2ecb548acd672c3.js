@@ -105,6 +105,9 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html", "classdrake_1_1multibody_1_1_rotational_inertia" ],
       [ "formatter< drake::multibody::RotationalInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ]
     ] ],
+    [ "scoped_name.h", "scoped__name_8h.html", [
+      [ "ScopedName", "classdrake_1_1multibody_1_1_scoped_name.html", "classdrake_1_1multibody_1_1_scoped_name" ]
+    ] ],
     [ "screw_joint.h", "screw__joint_8h.html", [
       [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html", "classdrake_1_1multibody_1_1_screw_joint" ]
     ] ],

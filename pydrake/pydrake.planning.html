@@ -717,11 +717,21 @@ indices are the same, zero will always be returned.</p>
 <ol class="arabic simple">
 <li><p>GetScopedName(self: pydrake.planning.CollisionChecker, frame: pydrake.multibody.tree.Frame_[float]) -&gt; str</p></li>
 </ol>
-<p>Gets the scoped name for a frame within the full model.</p>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use frame.scoped_name() instead. This will be removed from Drake
+on or after 2023-07-01.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>GetScopedName(self: pydrake.planning.CollisionChecker, body: pydrake.multibody.tree.Body_[float]) -&gt; str</p></li>
 </ol>
-<p>Gets the scoped name for a body within the full model.</p>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use body.scoped_name() instead. This will be removed from Drake on
+or after 2023-07-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

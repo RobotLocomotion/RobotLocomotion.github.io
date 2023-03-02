@@ -1,0 +1,675 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ScopedName Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_scoped_name.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1_scoped_name-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ScopedName Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A delimited string name for a multibody element, e.g., "robot1::torso". </p>
+<p>The name is composed of two semantically separate pieces &ndash; the <code>element</code> name is the local name for the element (e.g., a joint, body, frame, etc.) and the <code>namespace</code> name is the location of that element within the tree. For "robot1::torso" the namespace name is "robot1" and the element name is "torso".</p>
+<p>The namespace name typically refers to the model instance name that contains the element. Some temporary scoped names do not use a namespace (e.g., temporary values created during input file parsing), in which case the namespace name can be empty. The namespace name will never start or end with "::".</p>
+<p>The element name is never empty, unless the ScopedName was default-constructed or moved-from. The element name will never contain the delimiter string "::".</p>
+<p>When there is no namespace, the scoped name does not contain a leading "::", e.g., for the element name "box" without any namespace, the scoped name is "box" not "::box".</p>
+<p>The namespace name may contain the "::" delimiter in the middle of the name (possibly multiple times), e.g., for "robot1::left::arm::end_frame" the namespace name is "robot1::left::arm" and the element is name "end_frame".</p>
+<p>This class does not treat a single colon (":") specially. Those can appear in either namespace names or element names. </p>
+</div>
+<p><code>#include &lt;drake/multibody/tree/scoped_name.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a15624ceef6c460ea198e86d8baf7cb14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a15624ceef6c460ea198e86d8baf7cb14">ScopedName</a> ()=default</td></tr>
+<tr class="memdesc:a15624ceef6c460ea198e86d8baf7cb14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty name.  <a href="#a15624ceef6c460ea198e86d8baf7cb14">More...</a><br /></td></tr>
+<tr class="separator:a15624ceef6c460ea198e86d8baf7cb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79138ff473ccca8138ac7ae597a4ccc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#af79138ff473ccca8138ac7ae597a4ccc">ScopedName</a> (std::string_view namespace_name, std::string_view element_name)</td></tr>
+<tr class="memdesc:af79138ff473ccca8138ac7ae597a4ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a ScopedName for the given <code>namespace_name</code> and <code>element_name</code>.  <a href="#af79138ff473ccca8138ac7ae597a4ccc">More...</a><br /></td></tr>
+<tr class="separator:af79138ff473ccca8138ac7ae597a4ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcbefb82c75bce59e00104e2640aff5e"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#afcbefb82c75bce59e00104e2640aff5e">get_namespace</a> () const</td></tr>
+<tr class="memdesc:afcbefb82c75bce59e00104e2640aff5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the namespace portion of this scoped name, e.g., "robot1".  <a href="#afcbefb82c75bce59e00104e2640aff5e">More...</a><br /></td></tr>
+<tr class="separator:afcbefb82c75bce59e00104e2640aff5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302d2517c1b5970dbfa3ab81cb6e32ff"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a302d2517c1b5970dbfa3ab81cb6e32ff">get_element</a> () const</td></tr>
+<tr class="memdesc:a302d2517c1b5970dbfa3ab81cb6e32ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the element portion of this scoped name, e.g., "torso".  <a href="#a302d2517c1b5970dbfa3ab81cb6e32ff">More...</a><br /></td></tr>
+<tr class="separator:a302d2517c1b5970dbfa3ab81cb6e32ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a605a0fbd8a457ee86237edf748f744"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a4a605a0fbd8a457ee86237edf748f744">get_full</a> () const</td></tr>
+<tr class="memdesc:a4a605a0fbd8a457ee86237edf748f744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full ScopedName as a string, e.g., "robot1::torso".  <a href="#a4a605a0fbd8a457ee86237edf748f744">More...</a><br /></td></tr>
+<tr class="separator:a4a605a0fbd8a457ee86237edf748f744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a4a605a0fbd8a457ee86237edf748f744" title="Returns the full ScopedName as a string, e.g., &quot;robot1::torso&quot;.">get_full()</a> as a string value instead of a string_view.  <a href="#aac993ecccd3d88aafefb6b8e3caa1dee">More...</a><br /></td></tr>
+<tr class="separator:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bbc9e89a4d2fe68380bd28e81796e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#ac8bbc9e89a4d2fe68380bd28e81796e2">set_namespace</a> (std::string_view namespace_name)</td></tr>
+<tr class="memdesc:ac8bbc9e89a4d2fe68380bd28e81796e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the namespace name of this object, leaving the element name unchanged.  <a href="#ac8bbc9e89a4d2fe68380bd28e81796e2">More...</a><br /></td></tr>
+<tr class="separator:ac8bbc9e89a4d2fe68380bd28e81796e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8892541437cf5acb6ef7fa8d680afa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a5e8892541437cf5acb6ef7fa8d680afa">set_element</a> (std::string_view element_name)</td></tr>
+<tr class="memdesc:a5e8892541437cf5acb6ef7fa8d680afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the namespace name of this object, leaving the namespace name unchanged.  <a href="#a5e8892541437cf5acb6ef7fa8d680afa">More...</a><br /></td></tr>
+<tr class="separator:a5e8892541437cf5acb6ef7fa8d680afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a719bed9e4c082836fa2e009d8ded1938"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a719bed9e4c082836fa2e009d8ded1938">ScopedName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;)=default</td></tr>
+<tr class="separator:a719bed9e4c082836fa2e009d8ded1938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac22864dc14b9b33d9605e394a70770a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#ac22864dc14b9b33d9605e394a70770a4">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;)=default</td></tr>
+<tr class="separator:ac22864dc14b9b33d9605e394a70770a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afadd18f99d53de2ed72c1b2e83860a6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#afadd18f99d53de2ed72c1b2e83860a6c">ScopedName</a> (<a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afadd18f99d53de2ed72c1b2e83860a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6c835a5fa743c4443e59144dc1a32e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#abc6c835a5fa743c4443e59144dc1a32e">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:abc6c835a5fa743c4443e59144dc1a32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae9ce98f2fb35e789f324f08ac97a87bc"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#ae9ce98f2fb35e789f324f08ac97a87bc">Make</a> (std::string_view namespace_name, std::string_view element_name)</td></tr>
+<tr class="memdesc:ae9ce98f2fb35e789f324f08ac97a87bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a ScopedName for the given <code>namespace_name</code> and <code>element_name</code>.  <a href="#ae9ce98f2fb35e789f324f08ac97a87bc">More...</a><br /></td></tr>
+<tr class="separator:ae9ce98f2fb35e789f324f08ac97a87bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f087a27c97dfc1614454ccacb9949b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a25f087a27c97dfc1614454ccacb9949b">Join</a> (std::string_view name1, std::string_view name2)</td></tr>
+<tr class="memdesc:a25f087a27c97dfc1614454ccacb9949b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a ScopedName for the given <code>name1::name2</code>.  <a href="#a25f087a27c97dfc1614454ccacb9949b">More...</a><br /></td></tr>
+<tr class="separator:a25f087a27c97dfc1614454ccacb9949b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab585f77e98060b755ce5b5342c87c8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a3ab585f77e98060b755ce5b5342c87c8">Parse</a> (std::string scoped_name)</td></tr>
+<tr class="memdesc:a3ab585f77e98060b755ce5b5342c87c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the given <code>scoped_name</code> string.  <a href="#a3ab585f77e98060b755ce5b5342c87c8">More...</a><br /></td></tr>
+<tr class="separator:a3ab585f77e98060b755ce5b5342c87c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a719bed9e4c082836fa2e009d8ded1938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719bed9e4c082836fa2e009d8ded1938">&#9670;&nbsp;</a></span>ScopedName() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afadd18f99d53de2ed72c1b2e83860a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afadd18f99d53de2ed72c1b2e83860a6c">&#9670;&nbsp;</a></span>ScopedName() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15624ceef6c460ea198e86d8baf7cb14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15624ceef6c460ea198e86d8baf7cb14">&#9670;&nbsp;</a></span>ScopedName() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates an empty name. </p>
+
+</div>
+</div>
+<a id="af79138ff473ccca8138ac7ae597a4ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79138ff473ccca8138ac7ae597a4ccc">&#9670;&nbsp;</a></span>ScopedName() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>namespace_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>element_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a ScopedName for the given <code>namespace_name</code> and <code>element_name</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>namespace_name</code> starts or ends with "::". </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>element_name</code> contains "::" or is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#ae9ce98f2fb35e789f324f08ac97a87bc" title="Creates a ScopedName for the given namespace_name and element_name.">ScopedName::Make()</a> to use a null return value instead of exceptions. </dd>
+<dd>
+<a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a25f087a27c97dfc1614454ccacb9949b" title="Creates a ScopedName for the given name1::name2.">ScopedName::Join()</a> for automatic cleanup of "::" tokens. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a302d2517c1b5970dbfa3ab81cb6e32ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302d2517c1b5970dbfa3ab81cb6e32ff">&#9670;&nbsp;</a></span>get_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view get_element </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the element portion of this scoped name, e.g., "torso". </p>
+<p>This is the local name of the joint, body, etc. within the model instance. It is never empty unless this ScopedName was default-constructed or moved-from. </p>
+
+</div>
+</div>
+<a id="a4a605a0fbd8a457ee86237edf748f744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a605a0fbd8a457ee86237edf748f744">&#9670;&nbsp;</a></span>get_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view get_full </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the full ScopedName as a string, e.g., "robot1::torso". </p>
+<p>It is never empty unless this ScopedName was default-constructed or moved-from. </p>
+
+</div>
+</div>
+<a id="afcbefb82c75bce59e00104e2640aff5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcbefb82c75bce59e00104e2640aff5e">&#9670;&nbsp;</a></span>get_namespace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view get_namespace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the namespace portion of this scoped name, e.g., "robot1". </p>
+<p>This is typically the model instance name. This is typically the model instance name but can be empty (see class overview for details). </p>
+
+</div>
+</div>
+<a id="a25f087a27c97dfc1614454ccacb9949b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f087a27c97dfc1614454ccacb9949b">&#9670;&nbsp;</a></span>Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> Join </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a ScopedName for the given <code>name1::name2</code>. </p>
+<p>Unlike the constructor or <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#ae9ce98f2fb35e789f324f08ac97a87bc" title="Creates a ScopedName for the given namespace_name and element_name.">ScopedName::Make()</a>, this function allows "::" in either name. Any leading or trailing "::" on the names are removed before joining. After joining, the final word after all "::"s is the element name, and everything prior is the namespace name. </p>
+
+</div>
+</div>
+<a id="ae9ce98f2fb35e789f324f08ac97a87bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ce98f2fb35e789f324f08ac97a87bc">&#9670;&nbsp;</a></span>Make()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::optional&lt;<a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&gt; Make </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>namespace_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>element_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a ScopedName for the given <code>namespace_name</code> and <code>element_name</code>. </p>
+<p>Returns nullopt if <code>namespace_name</code> starts or ends with "::", or if <code>element_name</code> contains "::" or is empty. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a25f087a27c97dfc1614454ccacb9949b" title="Creates a ScopedName for the given name1::name2.">ScopedName::Join()</a> for automatic coalescing of "::" tokens. </dd></dl>
+
+</div>
+</div>
+<a id="abc6c835a5fa743c4443e59144dc1a32e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6c835a5fa743c4443e59144dc1a32e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac22864dc14b9b33d9605e394a70770a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22864dc14b9b33d9605e394a70770a4">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ab585f77e98060b755ce5b5342c87c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab585f77e98060b755ce5b5342c87c8">&#9670;&nbsp;</a></span>Parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> Parse </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>scoped_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses the given <code>scoped_name</code> string. </p>
+<p>Any leading or trailing "::"s on the name are removed (even multiple copies like "::::" are removed). </p>
+
+</div>
+</div>
+<a id="a5e8892541437cf5acb6ef7fa8d680afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8892541437cf5acb6ef7fa8d680afa">&#9670;&nbsp;</a></span>set_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_element </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>element_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replaces the namespace name of this object, leaving the namespace name unchanged. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>element_name</code> contains "::" or is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac8bbc9e89a4d2fe68380bd28e81796e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bbc9e89a4d2fe68380bd28e81796e2">&#9670;&nbsp;</a></span>set_namespace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_namespace </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>namespace_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replaces the namespace name of this object, leaving the element name unchanged. </p>
+<p>The namespace name is allowed to be empty. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>namespace_name</code> starts or ends with "::". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html#a4a605a0fbd8a457ee86237edf748f744" title="Returns the full ScopedName as a string, e.g., &quot;robot1::torso&quot;.">get_full()</a> as a string value instead of a string_view. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/tree/<a class="el" href="scoped__name_8h.html">scoped_name.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

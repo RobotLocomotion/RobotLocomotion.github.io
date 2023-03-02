@@ -1,6 +1,7 @@
 var symbolic_2polynomial_8h =
 [
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", "classdrake_1_1symbolic_1_1_polynomial" ],
+    [ "SubstituteAndExpandCacheData", "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html", "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data" ],
     [ "hash< drake::symbolic::Polynomial >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "formatter< drake::symbolic::Polynomial >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "DRAKE_COMMON_SYMBOLIC_POLYNOMIAL_H", "symbolic_2polynomial_8h.html#a14031f45c6c7d6bfde87bb3455963fc3", null ],

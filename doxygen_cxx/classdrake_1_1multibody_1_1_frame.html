@@ -197,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this frame. The name will never be empty.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4">scoped_name</a> () const</td></tr>
+<tr class="memdesc:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns scoped name of this frame.  <a href="#a06542e4ec7c6a884bfcd61c9b00221b4">More...</a><br /></td></tr>
+<tr class="separator:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823f61b343f8646b35b8035a6a1ee4a9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a823f61b343f8646b35b8035a6a1ee4a9">CalcPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const =0</td></tr>
 <tr class="memdesc:a823f61b343f8646b35b8035a6a1ee4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame.  <a href="#a823f61b343f8646b35b8035a6a1ee4a9">More...</a><br /></td></tr>
 <tr class="separator:a823f61b343f8646b35b8035a6a1ee4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -661,7 +664,7 @@ Protected Member Functions</h2></td></tr>
 <p>Returns the pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame. </p>
 <p>In particular, if <code>this</code> <b>is</b> the body frame B, this method directly returns the identity transformation. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a9f65e5386fde2dfee6fd8e3991143dd0">FixedOffsetFrame&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; double &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a9f65e5386fde2dfee6fd8e3991143dd0">FixedOffsetFrame&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">BodyFrame&lt; double &gt;</a>.</p>
 
 </div>
 </div>
@@ -1464,8 +1467,34 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
+<a id="a8e197bedf7aa897596ace36baca53361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a486765b5bb3145d29946d6dae95a9332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1490,29 +1519,23 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
-<a id="a8e197bedf7aa897596ace36baca53361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a06542e4ec7c6a884bfcd61c9b00221b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06542e4ec7c6a884bfcd61c9b00221b4">&#9670;&nbsp;</a></span>scoped_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> scoped_name </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Returns scoped name of this frame. </p>
+<p>Neither of the two pieces of the name will be empty (the scope name and the element name). </p>
 
 </div>
 </div>

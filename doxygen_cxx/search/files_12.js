@@ -31,6 +31,7 @@ var searchData=
   ['schunk_5fwsg_5ftrajectory_5fgenerator_2eh',['schunk_wsg_trajectory_generator.h',['../schunk__wsg__trajectory__generator_8h.html',1,'']]],
   ['schur_5fcomplement_2eh',['schur_complement.h',['../schur__complement_8h.html',1,'']]],
   ['scope_5fexit_2eh',['scope_exit.h',['../scope__exit_8h.html',1,'']]],
+  ['scoped_5fname_2eh',['scoped_name.h',['../scoped__name_8h.html',1,'']]],
   ['scoped_5fnames_2eh',['scoped_names.h',['../scoped__names_8h.html',1,'']]],
   ['scoped_5fsingleton_2eh',['scoped_singleton.h',['../scoped__singleton_8h.html',1,'']]],
   ['screw_5fjoint_2eh',['screw_joint.h',['../screw__joint_8h.html',1,'']]],
