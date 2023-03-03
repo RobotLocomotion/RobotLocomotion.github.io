@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1multibody_1_1_fixed_offset_frame.html#a73bf37a30fd5b4f532113079b5a0dd77":[3,0,0,9,34,2],
+"classdrake_1_1multibody_1_1_fixed_offset_frame.html#a85ed93e3f60b6b39558dfcc087442495":[3,0,0,9,34,9],
 "classdrake_1_1multibody_1_1_fixed_offset_frame.html#a9f65e5386fde2dfee6fd8e3991143dd0":[3,0,0,9,34,4],
 "classdrake_1_1multibody_1_1_fixed_offset_frame.html#aab37c950311b422d44019ea551ae5b1e":[3,0,0,9,34,10],
 "classdrake_1_1multibody_1_1_fixed_offset_frame.html#aac483270050f386a8aa0b04de6f228b9":[3,0,0,9,34,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aee1560a6ef6187218f3badf6d1e9226b":[3,0,0,9,47,17],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html":[3,0,0,9,48],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#a0fc55c54d954d864281289c0dead6cce":[3,0,0,9,48,7],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a138e6e888ff71dc31cdc64b33f056e68":[3,0,0,9,48,6],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a189a1cc898965e60756ef7fe82b6c112":[3,0,0,9,48,10],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a1d9140ecb720629803d4b02a6bfaf771":[3,0,0,9,48,16]
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#a138e6e888ff71dc31cdc64b33f056e68":[3,0,0,9,48,6]
 };

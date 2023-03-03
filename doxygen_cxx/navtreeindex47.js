@@ -1,5 +1,10 @@
 var NAVTREEINDEX47 =
 {
+"group__templates.html":[1,6,5],
+"group__terminology__and__notation.html":[1,0],
+"group__visualization.html":[1,2,11],
+"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,4],
+"group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,5],
 "group__yaml__serialization.html":[1,6,4],
 "gurobi__solver_8h.html":[4,0,0,11,21],
 "gyroscope_8h.html":[4,0,0,12,8,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX47 =
 "linear__bushing__roll__pitch__yaw_8h.html":[4,0,0,8,14,17],
 "linear__constitutive__model_8h.html":[4,0,0,8,3,18],
 "linear__constitutive__model__data_8h.html":[4,0,0,8,3,19],
-"linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
-"linear__operator_8h.html":[4,0,0,8,2,6],
-"linear__quadratic__regulator_8h.html":[4,0,0,12,1,7],
-"linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,12,1,7,4],
-"linear__quadratic__regulator_8h.html#ga6506532189adf1c7a42662b597135f70":[4,0,0,12,1,7,2],
-"linear__quadratic__regulator_8h.html#gae7d3c5debca2daa6de88dbc014263f5c":[4,0,0,12,1,7,1]
+"linear__model__predictive__controller_8h.html":[4,0,0,12,1,6]
 };

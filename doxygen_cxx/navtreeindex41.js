@@ -1,5 +1,9 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afb48be114e596b51430d94200ca3b821":[3,0,0,18,2,4],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19":[3,0,0,18,2,8],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html":[3,0,0,18,3],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,18,3,4],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,18,3,13],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1d2630303963dbd6257823c89b4164ce":[3,0,0,18,3,7],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1ffe41e9d9d04dc5cd0b0dd097435ebc":[3,0,0,18,3,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX41 =
 "collision__filter__declaration_8h.html":[4,0,0,4,9],
 "collision__filter__manager_8h.html":[4,0,0,4,10],
 "collisions__exist__callback_8h.html":[4,0,0,4,2,6],
-"color__palette_8h.html":[4,0,0,12,8,5],
-"color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[4,0,0,12,8,5,6],
-"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[4,0,0,12,8,5,5],
-"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[4,0,0,12,8,5,4],
-"com__in__polyhedron__constraint_8h.html":[4,0,0,8,5,2]
+"color__palette_8h.html":[4,0,0,12,8,5]
 };

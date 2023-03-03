@@ -200,7 +200,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_parser.htm
 <dl class="section warning"><dt>Warning</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a0f86ad0f6f34758be876e93e46ec2e79" title="Provides same functionality as AddModels, but instead parses the model description text data via file...">AddModelsFromString()</a> cannot be passed OBJ file contents yet.</dd></dl>
 <p>For more documentation of Drake-specific treatment of these input formats, see <a class="el" href="group__multibody__parsing.html">Parsing Models for Multibody Dynamics</a>.</p>
 <p>When parsing literal quantities, Parser assumes SI units and radians in the absence of units specified by the format itself. This includes the literals in the explicitly specified files as well as referenced files such as OBJ or other data file formats.</p>
-<p><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> requires that model instances have unique names. To support loading multiple instances of the same model file(s) into a plant, <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> offers constructors that take a model name prefix, which gets applied to all models loaded with that <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> instance. The resulting workflow makes multiple parsers to build models for a single plant: </p><div class="fragment"><div class="line"><a class="code" href="classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35">Parser</a> left_parser(<a class="code" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>, <span class="stringliteral">&quot;left&quot;</span>);</div><div class="line"><a class="code" href="classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35">Parser</a> right_parser(<a class="code" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>, <span class="stringliteral">&quot;right&quot;</span>);</div><div class="line">left_parser.AddModels(arm_model);  <span class="comment">// &quot;left::arm&quot;</span></div><div class="line">right_parser.AddModels(arm_model);  <span class="comment">// &quot;right::arm&quot;</span></div><div class="line">left_parser.AddModels(gripper_model);  <span class="comment">// &quot;left::gripper&quot;</span></div><div class="line">right_parser.AddModels(gripper_model);  <span class="comment">// &quot;right::gripper&quot;</span></div></div><!-- fragment --><p>(Advanced) In the rare case where the user is parsing into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph but has created them one at a time instead of using the more convenient <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">AddMultibodyPlant()</a> or <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827" title="Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...">AddMultibodyPlantSceneGraph()</a> functions, the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> constructors accept an optional SceneGraph pointer to specify which SceneGraph to parse into. If it is provided and non-null and the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> is not registered as a source, the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> will perform the SceneGraph registration into the given plant. We describe this option only for completeness; we strongly discourage anyone from taking advantage of this feature. </p>
+<p><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> requires that model instances have unique names. To support loading multiple instances of the same model file(s) into a plant, <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> offers a few different strategies.</p>
+<p><a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> has constructors that take a model name prefix, which gets applied to all models loaded with that <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> instance. The resulting workflow makes multiple parsers to build models for a single plant: </p><div class="fragment"><div class="line"><a class="code" href="classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35">Parser</a> left_parser(<a class="code" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>, <span class="stringliteral">&quot;left&quot;</span>);</div><div class="line"><a class="code" href="classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35">Parser</a> right_parser(<a class="code" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>, <span class="stringliteral">&quot;right&quot;</span>);</div><div class="line">left_parser.AddModels(arm_model);  <span class="comment">// &quot;left::arm&quot;</span></div><div class="line">right_parser.AddModels(arm_model);  <span class="comment">// &quot;right::arm&quot;</span></div><div class="line">left_parser.AddModels(gripper_model);  <span class="comment">// &quot;left::gripper&quot;</span></div><div class="line">right_parser.AddModels(gripper_model);  <span class="comment">// &quot;right::gripper&quot;</span></div></div><!-- fragment --><p>For situations where it is convenient to load a model many times, <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> offers optional auto-renaming. When auto-renaming is enabled, name collisions will be resolved by adding a subscript to the name. </p><div class="fragment"><div class="line"><a class="code" href="classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35">Parser</a> parser(<a class="code" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>);</div><div class="line">parser.SetAutoRenaming(<span class="keyword">true</span>);</div><div class="line"><span class="comment">// Subscripts are compact, and start at 1.</span></div><div class="line">parser.AddModels(rock);  <span class="comment">// &quot;rock&quot;</span></div><div class="line">parser.AddModels(rock);  <span class="comment">// &quot;rock_1&quot;</span></div><div class="line">parser.AddModels(rock);  <span class="comment">// &quot;rock_2&quot;</span></div><div class="line"><span class="comment">// Subscripts of different base names are independent.</span></div><div class="line">parser.AddModels(stone);  <span class="comment">// &quot;stone&quot;</span></div><div class="line">parser.AddModels(stone);  <span class="comment">// &quot;stone_1&quot;</span></div><div class="line">parser.AddModels(stone);  <span class="comment">// &quot;stone_2&quot;</span></div></div><!-- fragment --><p>(Advanced) In the rare case where the user is parsing into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph but has created them one at a time instead of using the more convenient <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">AddMultibodyPlant()</a> or <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827" title="Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...">AddMultibodyPlantSceneGraph()</a> functions, the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> constructors accept an optional SceneGraph pointer to specify which SceneGraph to parse into. If it is provided and non-null and the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> is not registered as a source, the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> will perform the SceneGraph registration into the given plant. We describe this option only for completeness; we strongly discourage anyone from taking advantage of this feature. </p>
 </div>
 <p><code>#include &lt;drake/multibody/parsing/parser.h&gt;</code></p>
 <table class="memberdecls">
@@ -224,6 +225,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a80f0b282c1e0ed11863458fa49b448ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a80f0b282c1e0ed11863458fa49b448ae">SetStrictParsing</a> ()</td></tr>
 <tr class="memdesc:a80f0b282c1e0ed11863458fa49b448ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cause all subsequent Add*Model*() operations to use strict parsing; warnings will be treated as errors.  <a href="#a80f0b282c1e0ed11863458fa49b448ae">More...</a><br /></td></tr>
 <tr class="separator:a80f0b282c1e0ed11863458fa49b448ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47a5df0bd6f07e684133c4183be1b4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#ac47a5df0bd6f07e684133c4183be1b4e">SetAutoRenaming</a> (bool value)</td></tr>
+<tr class="memdesc:ac47a5df0bd6f07e684133c4183be1b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable auto-renaming.  <a href="#ac47a5df0bd6f07e684133c4183be1b4e">More...</a><br /></td></tr>
+<tr class="separator:ac47a5df0bd6f07e684133c4183be1b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5179938bbe0564df009603816008880e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a5179938bbe0564df009603816008880e">GetAutoRenaming</a> () const</td></tr>
+<tr class="memdesc:a5179938bbe0564df009603816008880e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current state of auto-renaming.  <a href="#a5179938bbe0564df009603816008880e">More...</a><br /></td></tr>
+<tr class="separator:a5179938bbe0564df009603816008880e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#ad3bec3a31ebbe841c05773d4f5cb1791">AddModels</a> (const std::filesystem::path &amp;file_name)</td></tr>
 <tr class="memdesc:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#ad3bec3a31ebbe841c05773d4f5cb1791">More...</a><br /></td></tr>
 <tr class="separator:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -656,6 +663,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a5179938bbe0564df009603816008880e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5179938bbe0564df009603816008880e">&#9670;&nbsp;</a></span>GetAutoRenaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetAutoRenaming </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current state of auto-renaming. </p>
+<dl class="section see"><dt>See also</dt><dd>the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> class documentation for more detail. </dd></dl>
+
+</div>
+</div>
 <a id="aeebdf7001a0290c2891454d506c67a74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeebdf7001a0290c2891454d506c67a74">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -743,6 +770,27 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets a mutable reference to the plant that will be modified by this parser. </p>
+
+</div>
+</div>
+<a id="ac47a5df0bd6f07e684133c4183be1b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47a5df0bd6f07e684133c4183be1b4e">&#9670;&nbsp;</a></span>SetAutoRenaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAutoRenaming </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable or disable auto-renaming. </p>
+<p>It is disabled by default. </p><dl class="section see"><dt>See also</dt><dd>the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> class documentation for more detail. </dd></dl>
 
 </div>
 </div>

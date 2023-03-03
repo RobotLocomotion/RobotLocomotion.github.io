@@ -22,6 +22,8 @@ var classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope =
     [ "AddCspacePolytopeContainment", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a44a0b245038e87ad8626f38a15a2f2c1", null ],
     [ "BinarySearch", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a19da3edfe4a7542ce54e7ff1d44468f0", null ],
     [ "FindSeparationCertificateGivenPolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a6ef170719d3fadd87796728deb31d571", null ],
+    [ "get_mutable_plane_geometries", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a0ab4f5cd0286e8f661added8414c7109", null ],
+    [ "get_s_set", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a7f6672428b4160b7b71964b0b651a98e", null ],
     [ "InitializePolytopeSearchProgram", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ac4925f5852f656b5f8c219615d5ffe7c", null ],
     [ "MakeIsGeometrySeparableProgram", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ae417fca5b178312659359521cc8105e7", null ],
     [ "map_geometries_to_separating_planes", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ab4147c044ab36e48cd0befa888aee0d5", null ],

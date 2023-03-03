@@ -1,5 +1,10 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77":[3,0,0,9,31,2],
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html":[3,0,0,9,32],
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa16e72abb129f3fdc036799c6888d06":[3,0,0,9,32,1],
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa431e4aae58cdaabaca8b4a4117a20c":[3,0,0,9,32,2],
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,9,32,0],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html":[3,0,0,9,40],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a686ecfe3314ad57f5e31caf2ff5f69e9":[3,0,0,9,40,0],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a7b9cdbe2581368f7be7b952fff45b58e":[3,0,0,9,40,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a2c94ff5b5ed6f3d8b4d3e782e8a3566b":[3,0,0,13,6,0,2],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,13,6,0,7],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a4932525a5cc773e1fc8e9364a1b6775b":[3,0,0,13,6,0,4],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,13,6,0,6],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,13,6,0,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,6,0,5],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,13,6,1],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[3,0,0,13,6,1,2],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9bdc54ac252b10b78e98378b4b2f5082":[3,0,0,13,6,1,4]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,13,6,0,6]
 };

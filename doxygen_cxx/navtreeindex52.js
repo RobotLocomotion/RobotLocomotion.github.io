@@ -1,5 +1,10 @@
 var NAVTREEINDEX52 =
 {
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,11,51,0],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6":[4,0,0,11,51,0,12],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca18bc9cbd9bb764958e636263b1b53a9d":[4,0,0,11,51,0,7],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7":[4,0,0,11,51,0,8],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4":[4,0,0,11,51,0,10],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6e645ae8d30d672d9800a422f4be4c9d":[4,0,0,11,51,0,9],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca71cedba88b736e372f499099329d5173":[4,0,0,11,51,0,2],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795":[4,0,0,11,51,0,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#aa439b0d89e38b17d00d217c56b047737":[3,0,0,4,34,3],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#af9a4b1783a2afea62e90cec7c0364a16":[3,0,0,4,34,5],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[3,0,0,4,40],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[3,0,0,4,40,0],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,40,5],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0":[3,0,0,4,40,2],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6d9b7b7aeb7996e8469a93c3dd4ee5ef":[3,0,0,4,40,3],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,40,1],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454":[3,0,0,4,40,6]
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[3,0,0,4,40,0]
 };
