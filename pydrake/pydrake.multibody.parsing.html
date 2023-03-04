@@ -466,10 +466,18 @@ is used by the SDF and URDF parsers when parsing files that reference
 ROS packages for resources like mesh files.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>A constructor that initializes a default map containing only the
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.parsing.PackageMap) -&gt; None</p></li>
+</ol>
+<p>A constructor that initializes a default map containing only the
 top-level <code class="docutils literal notranslate"><span class="pre">drake</span></code> manifest. See PackageMap::MakeEmpty() to create an
 empty map.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.parsing.PackageMap, other: pydrake.multibody.parsing.PackageMap) -&gt; None</p></li>
+</ol>
+<p>Copy constructor</p>
 </dd></dl>
 
 <dl class="py method">

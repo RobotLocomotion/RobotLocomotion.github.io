@@ -442,7 +442,7 @@ links.</p></li>
 <li><p><strong>triad_opacity</strong> – the opacity of visualization triads.</p></li>
 <li><p><strong>publish_contacts</strong> – a flag for VisualizationConfig.</p></li>
 <li><p><strong>browser_new</strong> – a flag that will open the MeshCat display in a new
-browser window.</p></li>
+browser window during Run().</p></li>
 <li><p><strong>pyplot</strong> – a flag that will open a pyplot figure for rendering using
 PlanarSceneGraphVisualizer.</p></li>
 <li><p><strong>meshcat</strong> – an existing Meshcat instance to re-use instead of creating
@@ -486,9 +486,21 @@ If none was provided in the constructor, this creates one on demand.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.package_map">
+<span class="sig-name descname"><span class="pre">package_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.package_map" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the PackageMap being used during parsing. Users should add
+entries here to be able to load models from non-Drake packages.</p>
+<p>This method cannot be used after Finalize is called.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.parser">
 <span class="sig-name descname"><span class="pre">parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.parser" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a Parser that will load models into this visualizer.</p>
+<dd><p>(Advanced) Returns a Parser that will load models into this visualizer.</p>
+<p>Prefer to use package_map() and AddModels() to load models, instead of
+this method.</p>
+<p>Calling this method will disable the “Reload” button in the visualizer,
+because we can no longer determine the scope of what to reload.</p>
 <p>This method cannot be used after Finalize is called.</p>
 </dd></dl>
 
@@ -509,32 +521,13 @@ the world.</p></li>
 <li><p><strong>loop_once</strong> – a flag that exits the evaluation loop after one pass.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A RunResult code indicating why the method stopped.</p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.RunWithReload">
-<span class="sig-name descname"><span class="pre">RunWithReload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.RunWithReload" title="Permalink to this definition"></a></dt>
-<dd><p>Runs the model with an option to reload.
-Neither Finalize() nor Run() may be called before this method.</p>
-<p>Will iterate until the user clicks the Stop Running button. All model
-files will be reloaded and meshcat will be reset if the reload button
-is clicked. If pyplot is being used, clicking reload will create a
-new pyplot window.</p>
-<p>Only models added using AddModels() will be properly reloaded.
-If the parser() was accessed to add models directly to the parser
-then those models will not be properly reloaded by this method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>position</strong> – an ndarray-like list of slider positions for the model(s);
-must match the number of positions in all model(s), including the
-7 positions corresponding to any model bases that aren’t welded to
-the world.</p>
-</dd>
-</dl>
+<span class="sig-name descname"><span class="pre">RunWithReload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.RunWithReload" title="Permalink to this definition"></a></dt>
+<dd><p>(Deprecated.) The reload feature is enabled by default during Run().</p>
 </dd></dl>
 
 </dd></dl>
