@@ -1,15 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5e46bbec487979696012b53699ab3e17":[3,0,0,16,8,2,10],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a63da2a617b72a1630998a4d8b4d26cd3":[3,0,0,16,8,2,16],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a7d53e0f5780cb66697932deba3266df8":[3,0,0,16,8,2,12],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a868b65aa60ea2274975c87d28987eb29":[3,0,0,16,8,2,15],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8849fbc03b0aa02c8f3c81272c4694b6":[3,0,0,16,8,2,27],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8cea36e6bf523d90038d2757774e10e0":[3,0,0,16,8,2,4],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,8,2,6],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,16,8,2,19],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3":[3,0,0,16,8,2,23],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,16,8,2,3],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ab3cf1bcc14fdfe348e72ab596466f675":[3,0,0,16,8,2,20],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,16,8,2,7],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad12fc34ce789bce6c8a05d8a17138534":[3,0,0,16,8,2,17],
@@ -249,5 +239,15 @@ var NAVTREEINDEX56 =
 "symbolic_2polynomial_8h.html#a5e355d7c9eb6bff11199a94c16ed5c8a":[4,0,0,1,3,11,7],
 "symbolic_2polynomial_8h.html#a5ee4b0876c4a92c7bd3030b193ce0dbd":[4,0,0,1,3,11,25],
 "symbolic_2polynomial_8h.html#a812892dbfc6443dc1eed055e1915f5e4":[4,0,0,1,3,11,12],
-"symbolic_2polynomial_8h.html#a8dd958cf7990638bdd2576c2ab62ad43":[4,0,0,1,3,11,23]
+"symbolic_2polynomial_8h.html#a8dd958cf7990638bdd2576c2ab62ad43":[4,0,0,1,3,11,23],
+"symbolic_2polynomial_8h.html#a8fa3b0259a14e44faf2d959f540e9446":[4,0,0,1,3,11,41],
+"symbolic_2polynomial_8h.html#a96b091bab8bb06edd276c6b4a420903c":[4,0,0,1,3,11,20],
+"symbolic_2polynomial_8h.html#a9e804fc81cb6d40414b816f559f81a7d":[4,0,0,1,3,11,9],
+"symbolic_2polynomial_8h.html#aa78d0e5127e0fa0fab9f26c075c6ad9d":[4,0,0,1,3,11,14],
+"symbolic_2polynomial_8h.html#aacc89061cd63bf0e4d0d79c57d3b72e4":[4,0,0,1,3,11,30],
+"symbolic_2polynomial_8h.html#ab04739aabb37142340b869a126cc54a1":[4,0,0,1,3,11,11],
+"symbolic_2polynomial_8h.html#ab66975f1892907d118eb8cb98d6465c7":[4,0,0,1,3,11,16],
+"symbolic_2polynomial_8h.html#ab876f48eb96e82b718df0050b9d57d8b":[4,0,0,1,3,11,27],
+"symbolic_2polynomial_8h.html#abe6ad1d11dea0eafbfed0db238957d64":[4,0,0,1,3,11,35],
+"symbolic_2polynomial_8h.html#ad9eb2f0937be3e670ccdca9c4d30c63d":[4,0,0,1,3,11,40]
 };

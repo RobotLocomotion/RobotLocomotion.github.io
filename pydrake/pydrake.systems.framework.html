@@ -8311,17 +8311,6 @@ parameter.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_.LeafSystem_-float-.DeclarePeriodicDiscreteUpdate">
-<span id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicDiscreteUpdate"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_-float-.DeclarePeriodicDiscreteUpdate" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicDiscreteUpdateNoHandler() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_.LeafSystem_-float-.DeclarePeriodicDiscreteUpdateEvent">
 <span id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdateEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.EventStatus" title="pydrake.systems.framework.EventStatus"><span class="pre">pydrake.systems.framework.EventStatus</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_-float-.DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
@@ -8403,17 +8392,6 @@ this call.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPeriodic.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_.LeafSystem_-float-.DeclarePeriodicPublish">
-<span id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicPublish"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_-float-.DeclarePeriodicPublish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicPublishNoHandler() instead This will be removed
-from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9244,17 +9222,6 @@ parameter.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicDiscreteUpdate">
-<span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdate"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicDiscreteUpdate" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicDiscreteUpdateNoHandler() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicDiscreteUpdateEvent">
 <span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdateEvent"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdateEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.EventStatus" title="pydrake.systems.framework.EventStatus"><span class="pre">pydrake.systems.framework.EventStatus</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
@@ -9336,17 +9303,6 @@ this call.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPeriodic.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicPublish">
-<span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicPublish"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicPublish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicPublishNoHandler() instead This will be removed
-from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10175,17 +10131,6 @@ parameter.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicDiscreteUpdate">
-<span id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdate"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicDiscreteUpdate" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicDiscreteUpdateNoHandler() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicDiscreteUpdateEvent">
 <span id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdateEvent"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdateEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.EventStatus" title="pydrake.systems.framework.EventStatus"><span class="pre">pydrake.systems.framework.EventStatus</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
@@ -10267,17 +10212,6 @@ this call.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPeriodic.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicPublish">
-<span id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicPublish"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicPublish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicPublishNoHandler() instead This will be removed
-from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -11106,17 +11040,6 @@ parameter.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-float-.DeclarePeriodicDiscreteUpdate">
-<span id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicDiscreteUpdate"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-float-.DeclarePeriodicDiscreteUpdate" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicDiscreteUpdateNoHandler() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-float-.DeclarePeriodicDiscreteUpdateEvent">
 <span id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdateEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.EventStatus" title="pydrake.systems.framework.EventStatus"><span class="pre">pydrake.systems.framework.EventStatus</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-float-.DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
@@ -11198,17 +11121,6 @@ this call.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPeriodic.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-float-.DeclarePeriodicPublish">
-<span id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicPublish"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-float-.DeclarePeriodicPublish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use DeclarePeriodicPublishNoHandler() instead This will be removed
-from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -13456,18 +13368,6 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_.System_-float-.CalcDiscreteVariableUpdates">
-<span id="pydrake.systems.framework.System_.System_[float].CalcDiscreteVariableUpdates"></span><span class="sig-name descname"><span class="pre">CalcDiscreteVariableUpdates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_.System_-float-.CalcDiscreteVariableUpdates" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedDiscreteVariableUpdate()</dt><dd><p><a href="#id1"><span class="problematic" id="id2">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedDiscreteVariableUpdate() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_.System_-float-.CalcForcedDiscreteVariableUpdate">
 <span id="pydrake.systems.framework.System_.System_[float].CalcForcedDiscreteVariableUpdate"></span><span class="sig-name descname"><span class="pre">CalcForcedDiscreteVariableUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_.System_-float-.CalcForcedDiscreteVariableUpdate" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger
@@ -13740,18 +13640,6 @@ state vector in <code class="docutils literal notranslate"><span class="pre">con
 <p>CalcImplicitTimeDerivativesResidual() for the implicit form of
 these equations.</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_.System_-float-.CalcUnrestrictedUpdate">
-<span id="pydrake.systems.framework.System_.System_[float].CalcUnrestrictedUpdate"></span><span class="sig-name descname"><span class="pre">CalcUnrestrictedUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.State_" title="pydrake.systems.framework.State_"><span class="pre">pydrake.systems.framework.State_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_.System_-float-.CalcUnrestrictedUpdate" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedUnrestrictedUpdate()</dt><dd><p><a href="#id3"><span class="problematic" id="id4">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedUnrestrictedUpdate() instead This will be removed
-from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14287,18 +14175,6 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_.System_-float-.Publish">
-<span id="pydrake.systems.framework.System_.System_[float].Publish"></span><span class="sig-name descname"><span class="pre">Publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_.System_-float-.Publish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated) See ForcedPublish()
-<a href="#id5"><span class="problematic" id="id6">*</span></a>/ (Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use ForcedPublish() instead This will be removed from Drake on or
-after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_.System_-float-.SetDefaultContext">
 <span id="pydrake.systems.framework.System_.System_[float].SetDefaultContext"></span><span class="sig-name descname"><span class="pre">SetDefaultContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_.System_-float-.SetDefaultContext" title="Permalink to this definition"></a></dt>
 <dd><p>Sets Context fields to their default values. User code should not
@@ -14590,18 +14466,6 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.CalcDiscreteVariableUpdates">
-<span id="pydrake.systems.framework.System_[AutoDiffXd].CalcDiscreteVariableUpdates"></span><span class="sig-name descname"><span class="pre">CalcDiscreteVariableUpdates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.CalcDiscreteVariableUpdates" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedDiscreteVariableUpdate()</dt><dd><p><a href="#id7"><span class="problematic" id="id8">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedDiscreteVariableUpdate() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.CalcForcedDiscreteVariableUpdate">
 <span id="pydrake.systems.framework.System_[AutoDiffXd].CalcForcedDiscreteVariableUpdate"></span><span class="sig-name descname"><span class="pre">CalcForcedDiscreteVariableUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.CalcForcedDiscreteVariableUpdate" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger
@@ -14874,18 +14738,6 @@ state vector in <code class="docutils literal notranslate"><span class="pre">con
 <p>CalcImplicitTimeDerivativesResidual() for the implicit form of
 these equations.</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.CalcUnrestrictedUpdate">
-<span id="pydrake.systems.framework.System_[AutoDiffXd].CalcUnrestrictedUpdate"></span><span class="sig-name descname"><span class="pre">CalcUnrestrictedUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.State_" title="pydrake.systems.framework.State_"><span class="pre">pydrake.systems.framework.State_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.CalcUnrestrictedUpdate" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedUnrestrictedUpdate()</dt><dd><p><a href="#id9"><span class="problematic" id="id10">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedUnrestrictedUpdate() instead This will be removed
-from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15421,18 +15273,6 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.Publish">
-<span id="pydrake.systems.framework.System_[AutoDiffXd].Publish"></span><span class="sig-name descname"><span class="pre">Publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.Publish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated) See ForcedPublish()
-<a href="#id11"><span class="problematic" id="id12">*</span></a>/ (Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use ForcedPublish() instead This will be removed from Drake on or
-after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.SetDefaultContext">
 <span id="pydrake.systems.framework.System_[AutoDiffXd].SetDefaultContext"></span><span class="sig-name descname"><span class="pre">SetDefaultContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.SetDefaultContext" title="Permalink to this definition"></a></dt>
 <dd><p>Sets Context fields to their default values. User code should not
@@ -15722,18 +15562,6 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.CalcDiscreteVariableUpdates">
-<span id="pydrake.systems.framework.System_[Expression].CalcDiscreteVariableUpdates"></span><span class="sig-name descname"><span class="pre">CalcDiscreteVariableUpdates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.CalcDiscreteVariableUpdates" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedDiscreteVariableUpdate()</dt><dd><p><a href="#id13"><span class="problematic" id="id14">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedDiscreteVariableUpdate() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.CalcForcedDiscreteVariableUpdate">
 <span id="pydrake.systems.framework.System_[Expression].CalcForcedDiscreteVariableUpdate"></span><span class="sig-name descname"><span class="pre">CalcForcedDiscreteVariableUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.CalcForcedDiscreteVariableUpdate" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger
@@ -16006,18 +15834,6 @@ state vector in <code class="docutils literal notranslate"><span class="pre">con
 <p>CalcImplicitTimeDerivativesResidual() for the implicit form of
 these equations.</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.CalcUnrestrictedUpdate">
-<span id="pydrake.systems.framework.System_[Expression].CalcUnrestrictedUpdate"></span><span class="sig-name descname"><span class="pre">CalcUnrestrictedUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.State_" title="pydrake.systems.framework.State_"><span class="pre">pydrake.systems.framework.State_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.CalcUnrestrictedUpdate" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedUnrestrictedUpdate()</dt><dd><p><a href="#id15"><span class="problematic" id="id16">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedUnrestrictedUpdate() instead This will be removed
-from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -16553,18 +16369,6 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.Publish">
-<span id="pydrake.systems.framework.System_[Expression].Publish"></span><span class="sig-name descname"><span class="pre">Publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.Publish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated) See ForcedPublish()
-<a href="#id17"><span class="problematic" id="id18">*</span></a>/ (Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use ForcedPublish() instead This will be removed from Drake on or
-after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.SetDefaultContext">
 <span id="pydrake.systems.framework.System_[Expression].SetDefaultContext"></span><span class="sig-name descname"><span class="pre">SetDefaultContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.SetDefaultContext" title="Permalink to this definition"></a></dt>
 <dd><p>Sets Context fields to their default values. User code should not
@@ -16854,18 +16658,6 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-float-.CalcDiscreteVariableUpdates">
-<span id="pydrake.systems.framework.System_[float].CalcDiscreteVariableUpdates"></span><span class="sig-name descname"><span class="pre">CalcDiscreteVariableUpdates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-float-.CalcDiscreteVariableUpdates" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedDiscreteVariableUpdate()</dt><dd><p><a href="#id19"><span class="problematic" id="id20">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedDiscreteVariableUpdate() instead This will be
-removed from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-float-.CalcForcedDiscreteVariableUpdate">
 <span id="pydrake.systems.framework.System_[float].CalcForcedDiscreteVariableUpdate"></span><span class="sig-name descname"><span class="pre">CalcForcedDiscreteVariableUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-float-.CalcForcedDiscreteVariableUpdate" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger
@@ -17138,18 +16930,6 @@ state vector in <code class="docutils literal notranslate"><span class="pre">con
 <p>CalcImplicitTimeDerivativesResidual() for the implicit form of
 these equations.</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-float-.CalcUnrestrictedUpdate">
-<span id="pydrake.systems.framework.System_[float].CalcUnrestrictedUpdate"></span><span class="sig-name descname"><span class="pre">CalcUnrestrictedUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.State_" title="pydrake.systems.framework.State_"><span class="pre">pydrake.systems.framework.State_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-float-.CalcUnrestrictedUpdate" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>(Deprecated) See CalcForcedUnrestrictedUpdate()</dt><dd><p><a href="#id21"><span class="problematic" id="id22">*</span></a>/ (Deprecated.)</p>
-</dd>
-<dt>Deprecated:</dt><dd><p>Use CalcForcedUnrestrictedUpdate() instead This will be removed
-from Drake on or after 2023-03-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -17682,18 +17462,6 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 </div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-float-.Publish">
-<span id="pydrake.systems.framework.System_[float].Publish"></span><span class="sig-name descname"><span class="pre">Publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-float-.Publish" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated) See ForcedPublish()
-<a href="#id23"><span class="problematic" id="id24">*</span></a>/ (Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use ForcedPublish() instead This will be removed from Drake on or
-after 2023-03-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

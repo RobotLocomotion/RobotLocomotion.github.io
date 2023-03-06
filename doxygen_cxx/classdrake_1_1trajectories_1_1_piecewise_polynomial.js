@@ -14,7 +14,6 @@ var classdrake_1_1trajectories_1_1_piecewise_polynomial =
     [ "Clone", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41", null ],
     [ "cols", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b", null ],
     [ "ConcatenateInTime", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2", null ],
-    [ "Cubic", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5076a155bf5d04598cd9bf7ec40b0ddf", null ],
     [ "CubicHermite", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5412c17187dde2f8984dcfb3eb67ca1d", null ],
     [ "CubicHermite", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa77d19bf3de0a1c93d54679d0ba86bef", null ],
     [ "CubicShapePreserving", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa360cbd2285db12eb014dc6e34868814", null ],

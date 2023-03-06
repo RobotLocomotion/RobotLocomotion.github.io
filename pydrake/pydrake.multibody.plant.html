@@ -6254,12 +6254,8 @@ must use a discrete MultibodyPlant model.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddCouplerConstraint">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddCouplerConstraint"></span><span class="sig-name descname"><span class="pre">AddCouplerConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddCouplerConstraint" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>AddCouplerConstraint(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], joint0: pydrake.multibody.tree.Joint_[AutoDiffXd], joint1: pydrake.multibody.tree.Joint_[AutoDiffXd], gear_ratio: float, offset: float = 0.0) -&gt; pydrake.multibody.tree.ConstraintIndex</p></li>
-</ol>
-<p>Defines a holonomic constraint between two single-dof joints
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddCouplerConstraint"></span><span class="sig-name descname"><span class="pre">AddCouplerConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gear_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddCouplerConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a holonomic constraint between two single-dof joints
 <code class="docutils literal notranslate"><span class="pre">joint0</span></code> and <code class="docutils literal notranslate"><span class="pre">joint1</span></code> with positions q₀ and q₁, respectively, such
 that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed
 offset. The gear ratio can have units if the units of q₀ and q₁ are
@@ -6284,15 +6280,6 @@ combination therein.</p>
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li><p>AddCouplerConstraint(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], joint0: pydrake.multibody.tree.Joint_[AutoDiffXd], joint1: pydrake.multibody.tree.Joint_[AutoDiffXd], gear_ratio: pydrake.autodiffutils.AutoDiffXd, offset: pydrake.autodiffutils.AutoDiffXd = 0.0) -&gt; pydrake.multibody.tree.ConstraintIndex</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Only gear_ratio and offset of type double are supported. This will
-be removed from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10324,12 +10311,8 @@ must use a discrete MultibodyPlant model.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddCouplerConstraint">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddCouplerConstraint"></span><span class="sig-name descname"><span class="pre">AddCouplerConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddCouplerConstraint" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>AddCouplerConstraint(self: pydrake.multibody.plant.MultibodyPlant_[Expression], joint0: pydrake.multibody.tree.Joint_[Expression], joint1: pydrake.multibody.tree.Joint_[Expression], gear_ratio: float, offset: float = 0.0) -&gt; pydrake.multibody.tree.ConstraintIndex</p></li>
-</ol>
-<p>Defines a holonomic constraint between two single-dof joints
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddCouplerConstraint"></span><span class="sig-name descname"><span class="pre">AddCouplerConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gear_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddCouplerConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a holonomic constraint between two single-dof joints
 <code class="docutils literal notranslate"><span class="pre">joint0</span></code> and <code class="docutils literal notranslate"><span class="pre">joint1</span></code> with positions q₀ and q₁, respectively, such
 that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed
 offset. The gear ratio can have units if the units of q₀ and q₁ are
@@ -10354,15 +10337,6 @@ combination therein.</p>
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li><p>AddCouplerConstraint(self: pydrake.multibody.plant.MultibodyPlant_[Expression], joint0: pydrake.multibody.tree.Joint_[Expression], joint1: pydrake.multibody.tree.Joint_[Expression], gear_ratio: pydrake.symbolic.Expression, offset: pydrake.symbolic.Expression = 0.0) -&gt; pydrake.multibody.tree.ConstraintIndex</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Only gear_ratio and offset of type double are supported. This will
-be removed from Drake on or after 2023-03-01.</p>
 </dd>
 </dl>
 </dd></dl>
