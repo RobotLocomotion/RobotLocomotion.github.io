@@ -301,6 +301,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af67b3136ef4e48d788b0419b3e69c56d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af67b3136ef4e48d788b0419b3e69c56d">SolidCylinderWithDensityAboutEnd</a> (const T &amp;density, const T &amp;radius, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
 <tr class="memdesc:af67b3136ef4e48d788b0419b3e69c56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp (Bp is at the center of one of the cylinder's circular ends).  <a href="#af67b3136ef4e48d788b0419b3e69c56d">More...</a><br /></td></tr>
 <tr class="separator:af67b3136ef4e48d788b0419b3e69c56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5233380acba42c39c9b741b85660beca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a5233380acba42c39c9b741b85660beca">ThinRodWithMass</a> (const T &amp;mass, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
+<tr class="memdesc:a5233380acba42c39c9b741b85660beca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform-density thin rod B about its center of mass Bcm.  <a href="#a5233380acba42c39c9b741b85660beca">More...</a><br /></td></tr>
+<tr class="separator:a5233380acba42c39c9b741b85660beca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb07d17fd701017f4d67815c17fc80a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aeb07d17fd701017f4d67815c17fc80a2">SolidEllipsoidWithDensity</a> (const T &amp;density, const T &amp;a, const T &amp;b, const T &amp;c)</td></tr>
 <tr class="memdesc:aeb07d17fd701017f4d67815c17fc80a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid ellipsoid B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#aeb07d17fd701017f4d67815c17fc80a2">More...</a><br /></td></tr>
 <tr class="separator:aeb07d17fd701017f4d67815c17fc80a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1769,6 +1772,72 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>density ≥ 0. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84" title="Creates a spatial inertia for a uniform density solid tetrahedron B about a point A,...">SolidTetrahedronAboutPointWithDensity()</a> to calculate a spatial inertia about an arbitrary point. </dd></dl>
+
+</div>
+</div>
+<a id="a5233380acba42c39c9b741b85660beca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5233380acba42c39c9b741b85660beca">&#9670;&nbsp;</a></span>ThinRodWithMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; ThinRodWithMass </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>mass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>unit_vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a spatial inertia for a uniform-density thin rod B about its center of mass Bcm. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>mass of the rod (units of kg). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>length of the rod (units of meters). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector defining the rod's axial direction, expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BBcm_B</td><td>B's spatial inertia about Bcm, expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bcm is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bcm and is perpendicular to unit_vector. B has no (zero) rotational inertia about the line that passes through Bcm and is parallel to unit_vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if length is zero or negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>‖unit_vector‖ ≈ 1. </dd></dl>
 
 </div>
 </div>

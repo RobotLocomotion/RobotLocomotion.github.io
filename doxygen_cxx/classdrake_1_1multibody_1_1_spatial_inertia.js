@@ -37,5 +37,6 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "SolidSphereWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#ad1bae5f36f05cc66fdbe1a1d18232515", null ],
     [ "SolidTetrahedronAboutPointWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84", null ],
     [ "SolidTetrahedronAboutVertexWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#a8d0407ec30127d1a3d4fcb355453485c", null ],
+    [ "ThinRodWithMass", "classdrake_1_1multibody_1_1_spatial_inertia.html#a5233380acba42c39c9b741b85660beca", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504", null ]
 ];

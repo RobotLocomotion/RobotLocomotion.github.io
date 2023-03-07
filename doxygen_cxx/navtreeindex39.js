@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a97a3685bc3186e92bfaaab2967b89ba7":[1,2,2,1,11],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a9eaeb325edf73e4d054274da0d684fd1":[1,2,2,1,9],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aad42796928b031670dc843a51e1967c2":[1,2,2,1,10],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab31e6c294928ac7c131675fad3777073":[1,2,2,1,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2a175742b79c5106a497a2f943c55da3":[1,2,4,0,10],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a557f015ddaa0c0fe7db08dd264dbe08e":[1,2,4,0,1],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a5609ecc9abeb6eb02d34938bf4ad7106":[1,2,4,0,9],
-"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a8e45a59ae3d2c66255454b658fbd4011":[1,2,4,0,3],
-"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#abc9352751f9c39de9135dff8a93b1555":[1,2,4,0,12]
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a8e45a59ae3d2c66255454b658fbd4011":[1,2,4,0,3]
 };

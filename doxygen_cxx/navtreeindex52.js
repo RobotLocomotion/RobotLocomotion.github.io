@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa71a8c0a25fe7a3d777fc06d50bada13":[4,0,0,11,51,0,0],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabc8ddfb8a00bb405e68545ce187ac238":[4,0,0,11,51,0,3],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabd0a61a2cf9acec23fccd41c7402ef56":[4,0,0,11,51,0,6],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c":[4,0,0,11,51,0,11],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81":[4,0,0,11,51,0,1],
@@ -8,16 +10,16 @@ var NAVTREEINDEX52 =
 "solvers__py_8h.html":[4,0,0,0,0,5,0],
 "solvers__pybind_8h.html":[4,0,0,0,0,5,1],
 "solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,5,1,0],
-"sorted__pair_8h.html":[4,0,0,1,53],
-"sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,53,10],
-"sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,53,5],
-"sorted__pair_8h.html#a6d76c69274d87b34a742dae799e2177f":[4,0,0,1,53,8],
-"sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,53,4],
-"sorted__pair_8h.html#a98c59bc997ae44eeb4d45bc371b26f0a":[4,0,0,1,53,12],
-"sorted__pair_8h.html#a9ab1dd8eeeb9910b3755b238fc8907e9":[4,0,0,1,53,7],
-"sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,53,11],
-"sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,53,6],
-"sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,53,9],
+"sorted__pair_8h.html":[4,0,0,1,54],
+"sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,54,10],
+"sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,54,5],
+"sorted__pair_8h.html#a6d76c69274d87b34a742dae799e2177f":[4,0,0,1,54,8],
+"sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,54,4],
+"sorted__pair_8h.html#a98c59bc997ae44eeb4d45bc371b26f0a":[4,0,0,1,54,12],
+"sorted__pair_8h.html#a9ab1dd8eeeb9910b3755b238fc8907e9":[4,0,0,1,54,7],
+"sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,54,11],
+"sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,54,6],
+"sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,54,9],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,0,9],
 "sorted__triplet_8h.html":[4,0,0,4,2,51],
 "sos__basis__generator_8h.html":[4,0,0,11,53],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454":[3,0,0,4,40,6],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6":[3,0,0,4,40,4],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html":[3,0,0,4,41],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[3,0,0,4,41,1],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,41,0],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,4,41,2]
+"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[3,0,0,4,41,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#acd63f52880d3aad51f3d675636b4832c":[1,1,0,43,11],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#ace583a472a3bdc1b67f05d6a6571a903":[1,1,0,43,4],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af32fe83b5bd0308ba9deac5a0331b76b":[1,1,0,43,10],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,43,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af43531f645bc3f0d26090c621394a217":[3,0,0,15,2,13],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af7175873a78ceeb2f9618df075522bd3":[3,0,0,15,2,7],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af7f99b595b4e8a78116a3f6dcc6f2a5a":[3,0,0,15,2,5],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html":[3,0,0,15,3],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a02d52040a8c27a93acbf3c6f4438f912":[3,0,0,15,3,5]
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html":[3,0,0,15,3]
 };

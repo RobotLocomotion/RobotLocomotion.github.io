@@ -45,13 +45,14 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a2c763f4ca5a63e74e795ed741b3e6fb8":[3,0,0,9,84,29],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a2d612851b1578071428ec79f7da1047a":[3,0,0,9,84,20],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a3a1c2e2b7b334839c460e022d4686f54":[3,0,0,9,84,4],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504":[3,0,0,9,84,37],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504":[3,0,0,9,84,38],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a3d7153d47fde17ac87697aab19515cf2":[3,0,0,9,84,22],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a413ff91e8caf0498a96e5b1e06da9cd1":[3,0,0,9,84,7],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a423681189f9dd1726b750876f67dafe9":[3,0,0,9,84,1],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a49b415756d74ade2ad71be5d4693182a":[3,0,0,9,84,24],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a4a70f239bc8c7a515ee38b9e26aad808":[3,0,0,9,84,2],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a4a7c7720d33cdfddd9ceb505c12bd389":[3,0,0,9,84,11],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a5233380acba42c39c9b741b85660beca":[3,0,0,9,84,37],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a66defbdba0b2894045b1f6ffe31c46bc":[3,0,0,9,84,27],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084":[3,0,0,9,84,13],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a6d7aa4145ca54c5ab8e45728648f7c5b":[3,0,0,9,84,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad877d988ac4cd1942aa84e91e3c5d49a":[3,0,0,9,98,5],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#adeb7d1c6793c4c1aa997582eb3b65197":[3,0,0,9,98,13],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673":[3,0,0,9,98,15],
-"classdrake_1_1multibody_1_1_unit_inertia.html":[3,0,0,9,99],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a069e5dcab9f2119cc2c4eadb6e91abab":[3,0,0,9,99,24]
+"classdrake_1_1multibody_1_1_unit_inertia.html":[3,0,0,9,99]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX58 =
 {
+"yaml__io_8h.html#a43b0aad3a987a2b97f89a68d934fb982":[4,0,0,1,6,1,0],
+"yaml__io_8h.html#aaf418985a2d3d598d6191b2dc7576e4a":[4,0,0,1,6,1,3],
 "yaml__io_8h.html#ab3b6d04d37236596751e626ed6aa3b5e":[4,0,0,1,6,1,2],
 "yaml__io_8h.html#ad38f7b06115765153b8434cff70a597f":[4,0,0,1,6,1,1],
 "yaml__io__options_8h.html":[4,0,0,1,6,2],
