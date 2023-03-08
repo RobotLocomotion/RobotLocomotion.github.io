@@ -190,6 +190,14 @@ Functions</h2></td></tr>
 <tr class="memitem:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a">SaveYamlString</a> (const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
 <tr class="memdesc:aaf418985a2d3d598d6191b2dc7576e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted string.  <a href="#aaf418985a2d3d598d6191b2dc7576e4a">More...</a><br /></td></tr>
 <tr class="separator:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67b5225cdcfc369f84d1910dbd2313e"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:ac67b5225cdcfc369f84d1910dbd2313e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#ac67b5225cdcfc369f84d1910dbd2313e">SaveJsonFile</a> (const std::string &amp;filename, const Serializable &amp;data)</td></tr>
+<tr class="memdesc:ac67b5225cdcfc369f84d1910dbd2313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a JSON-formatted file.  <a href="#ac67b5225cdcfc369f84d1910dbd2313e">More...</a><br /></td></tr>
+<tr class="separator:ac67b5225cdcfc369f84d1910dbd2313e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75754963d64a398bb7a3c47120559033"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:a75754963d64a398bb7a3c47120559033"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#a75754963d64a398bb7a3c47120559033">SaveJsonString</a> (const Serializable &amp;data)</td></tr>
+<tr class="memdesc:a75754963d64a398bb7a3c47120559033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a JSON-formatted string.  <a href="#a75754963d64a398bb7a3c47120559033">More...</a><br /></td></tr>
+<tr class="separator:a75754963d64a398bb7a3c47120559033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a43b0aad3a987a2b97f89a68d934fb982"></a>
@@ -320,6 +328,86 @@ Functions</h2></td></tr>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__yaml__serialization.html#implementing_serialize">Serialize</a> function and be default constructible. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac67b5225cdcfc369f84d1910dbd2313e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67b5225cdcfc369f84d1910dbd2313e">&#9670;&nbsp;</a></span>SaveJsonFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SaveJsonFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Serializable &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves data as a JSON-formatted file. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background.</p>
+<p>Note that there is no matching <code>LoadJsonFile</code> function, because we haven't found any specific need for it yet in C++.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>User data to be serialized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON data as a string.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__yaml__serialization.html#implementing_serialize">Serialize</a> function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a75754963d64a398bb7a3c47120559033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75754963d64a398bb7a3c47120559033">&#9670;&nbsp;</a></span>SaveJsonString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SaveJsonString </td>
+          <td>(</td>
+          <td class="paramtype">const Serializable &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves data as a JSON-formatted string. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background.</p>
+<p>Note that there is no matching <code>LoadJsonString</code> function, because we haven't found any specific need for it yet in C++.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>User data to be serialized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON data as a string.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__yaml__serialization.html#implementing_serialize">Serialize</a> function. </td></tr>
   </table>
   </dd>
 </dl>

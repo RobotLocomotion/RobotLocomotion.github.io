@@ -167,6 +167,7 @@ $(document).ready(function(){initNavTree('yaml__io_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="yaml__io__options_8h.html">drake/common/yaml/yaml_io_options.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="yaml__read__archive_8h.html">drake/common/yaml/yaml_read_archive.h</a>&quot;</code><br />
@@ -203,6 +204,14 @@ Functions</h2></td></tr>
 <tr class="memitem:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a">SaveYamlString</a> (const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
 <tr class="memdesc:aaf418985a2d3d598d6191b2dc7576e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted string.  <a href="namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a">More...</a><br /></td></tr>
 <tr class="separator:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67b5225cdcfc369f84d1910dbd2313e"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:ac67b5225cdcfc369f84d1910dbd2313e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#ac67b5225cdcfc369f84d1910dbd2313e">SaveJsonFile</a> (const std::string &amp;filename, const Serializable &amp;data)</td></tr>
+<tr class="memdesc:ac67b5225cdcfc369f84d1910dbd2313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a JSON-formatted file.  <a href="namespacedrake_1_1yaml.html#ac67b5225cdcfc369f84d1910dbd2313e">More...</a><br /></td></tr>
+<tr class="separator:ac67b5225cdcfc369f84d1910dbd2313e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75754963d64a398bb7a3c47120559033"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:a75754963d64a398bb7a3c47120559033"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#a75754963d64a398bb7a3c47120559033">SaveJsonString</a> (const Serializable &amp;data)</td></tr>
+<tr class="memdesc:a75754963d64a398bb7a3c47120559033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a JSON-formatted string.  <a href="namespacedrake_1_1yaml.html#a75754963d64a398bb7a3c47120559033">More...</a><br /></td></tr>
+<tr class="separator:a75754963d64a398bb7a3c47120559033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
