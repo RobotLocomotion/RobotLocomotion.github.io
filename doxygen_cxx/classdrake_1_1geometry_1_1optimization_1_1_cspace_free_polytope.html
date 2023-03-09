@@ -193,8 +193,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html">SearchResult</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html">SeparatingPlaneLagrangians</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">When searching for the separating plane, we want to certify that the numerator of a rational is non-negative in the C-space region C*s&lt;=d, s_lower &lt;= s &lt;= s_upper.  <a href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html">SeparatingPlaneLagrangians</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">When searching for the separating plane, we want to certify that the numerator of a rational is non-negative in the C-space region C*s&lt;=d, s_lower &lt;= s &lt;= s_upper.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html">SeparationCertificate</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct stores the necessary information to search for the separating plane for the polytopic C-space region C*s &lt;= d, s_lower &lt;= s &lt;= s_upper.  <a href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#details">More...</a><br /></td></tr>
@@ -431,10 +431,11 @@ Friends</h2></td></tr>
     <tr><td class="paramname">plant</td><td>The plant for which we compute the C-space free polytopes. It must outlive this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html" title="This class tries to find large convex polytopes in the tangential-configuration space,...">CspaceFreePolytope</a> object. </td></tr>
     <tr><td class="paramname">scene_graph</td><td>The scene graph that has been connected with <code>plant</code>. It must outlive this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html" title="This class tries to find large convex polytopes in the tangential-configuration space,...">CspaceFreePolytope</a> object. </td></tr>
     <tr><td class="paramname">plane_order</td><td>The order of the polynomials in the plane to separate a pair of collision geometries. </td></tr>
-    <tr><td class="paramname">q_star</td><td>Refer to RationalForwardKinematics for its meaning. </td></tr>
+    <tr><td class="paramname">q_star</td><td>Refer to RationalForwardKinematics for its meaning.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html" title="This class tries to find large convex polytopes in the tangential-configuration space,...">CspaceFreePolytope</a> knows nothing about contexts. The plant and scene_graph must be fully configured before instantiating this class. </dd></dl>
 
 </div>
 </div>

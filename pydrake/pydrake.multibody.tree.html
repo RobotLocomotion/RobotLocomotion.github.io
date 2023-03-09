@@ -1217,6 +1217,13 @@ be empty.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_.Body_-float-.scoped_name">
+<span id="pydrake.multibody.tree.Body_.Body_[float].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_-float-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_.Body_-float-.Unlock">
 <span id="pydrake.multibody.tree.Body_.Body_[float].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_-float-.Unlock" title="Permalink to this definition"></a></dt>
 <dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
@@ -1577,6 +1584,13 @@ supported for continuous-mode systems.</p>
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].name"></span><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.name" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body. The name will never
 be empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.scoped_name">
+<span id="pydrake.multibody.tree.Body_[AutoDiffXd].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1941,6 +1955,13 @@ be empty.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.scoped_name">
+<span id="pydrake.multibody.tree.Body_[Expression].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.Unlock">
 <span id="pydrake.multibody.tree.Body_[Expression].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.Unlock" title="Permalink to this definition"></a></dt>
 <dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
@@ -2299,6 +2320,13 @@ supported for continuous-mode systems.</p>
 <span id="pydrake.multibody.tree.Body_[float].name"></span><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-float-.name" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> body. The name will never
 be empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-float-.scoped_name">
+<span id="pydrake.multibody.tree.Body_[float].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-float-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4295,6 +4323,13 @@ attached).</p>
 <dd><p>Returns the name of this frame. The name will never be empty.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_.Frame_-float-.scoped_name">
+<span id="pydrake.multibody.tree.Frame_.Frame_[float].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_-float-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
+</dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -4918,6 +4953,13 @@ attached).</p>
 <dd><p>Returns the name of this frame. The name will never be empty.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-AutoDiffXd-.scoped_name">
+<span id="pydrake.multibody.tree.Frame_[AutoDiffXd].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-AutoDiffXd-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -5539,6 +5581,13 @@ attached).</p>
 <dd><p>Returns the name of this frame. The name will never be empty.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-Expression-.scoped_name">
+<span id="pydrake.multibody.tree.Frame_[Expression].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-Expression-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -6158,6 +6207,13 @@ attached).</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-float-.name">
 <span id="pydrake.multibody.tree.Frame_[float].name"></span><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-float-.name" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the name of this frame. The name will never be empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-float-.scoped_name">
+<span id="pydrake.multibody.tree.Frame_[float].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-float-.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
 </dd></dl>
 
 </dd></dl>
@@ -19151,6 +19207,152 @@ rotational inertia.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-float-.TriaxiallySymmetric">
 <span id="pydrake.multibody.tree.RotationalInertia_[float].TriaxiallySymmetric"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TriaxiallySymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">I_triaxial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-float-.TriaxiallySymmetric" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">ScopedName</span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName" title="Permalink to this definition"></a></dt>
+<dd><p>A delimited string name for a multibody element, e.g.,
+“robot1::torso”.</p>
+<p>The name is composed of two semantically separate pieces – the
+<code class="docutils literal notranslate"><span class="pre">element</span></code> name is the local name for the element (e.g., a joint,
+body, frame, etc.) and the <code class="docutils literal notranslate"><span class="pre">namespace</span></code> name is the location of that
+element within the tree. For “robot1::torso” the namespace name is
+“robot1” and the element name is “torso”.</p>
+<p>The namespace name typically refers to the model instance name that
+contains the element. Some temporary scoped names do not use a
+namespace (e.g., temporary values created during input file parsing),
+in which case the namespace name can be empty. The namespace name will
+never start or end with “::”.</p>
+<p>The element name is never empty, unless the ScopedName was
+default-constructed or moved-from. The element name will never contain
+the delimiter string “::”.</p>
+<p>When there is no namespace, the scoped name does not contain a leading
+“::”, e.g., for the element name “box” without any namespace, the
+scoped name is “box” not “::box”.</p>
+<p>The namespace name may contain the “::” delimiter in the middle of the
+name (possibly multiple times), e.g., for
+“robot1::left::arm::end_frame” the namespace name is
+“robot1::left::arm” and the element is name “end_frame”.</p>
+<p>This class does not treat a single colon (“:”) specially. Those can
+appear in either namespace names or element names.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.tree.ScopedName) -&gt; None</p></li>
+</ol>
+<p>Creates an empty name.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.tree.ScopedName, namespace_name: str, element_name: str) -&gt; None</p></li>
+</ol>
+<p>Creates a ScopedName for the given <code class="docutils literal notranslate"><span class="pre">namespace_name</span></code> and
+<code class="docutils literal notranslate"><span class="pre">element_name</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if namespace_name starts</strong><strong> or </strong><strong>ends with &quot;::&quot;.</strong> – </p></li>
+<li><p><strong>RuntimeError if element_name contains &quot;::&quot;</strong><strong> or </strong><strong>is empty.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ScopedName::Make() to use a null return value instead of
+exceptions.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ScopedName::Join() for automatic cleanup of “::” tokens.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.get_element">
+<span class="sig-name descname"><span class="pre">get_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.get_element" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the element portion of this scoped name, e.g., “torso”. This
+is the local name of the joint, body, etc. within the model instance.
+It is never empty unless this ScopedName was default-constructed or
+moved-from.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.get_full">
+<span class="sig-name descname"><span class="pre">get_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.get_full" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the full ScopedName as a string, e.g., “robot1::torso”. It is
+never empty unless this ScopedName was default-constructed or
+moved-from.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.get_namespace">
+<span class="sig-name descname"><span class="pre">get_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.get_namespace" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the namespace portion of this scoped name, e.g., “robot1”.
+This is typically the model instance name. This is typically the model
+instance name but can be empty (see class overview for details).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.Join">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.Join" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a ScopedName for the given <code class="docutils literal notranslate"><span class="pre">name1::name2</span></code>. Unlike the
+constructor or ScopedName::Make(), this function allows “::” in either
+name. Any leading or trailing “::” on the names are removed before
+joining. After joining, the final word after all “::”s is the element
+name, and everything prior is the namespace name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.Make">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.Make" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a ScopedName for the given <code class="docutils literal notranslate"><span class="pre">namespace_name</span></code> and
+<code class="docutils literal notranslate"><span class="pre">element_name</span></code>. Returns nullopt if <code class="docutils literal notranslate"><span class="pre">namespace_name</span></code> starts or ends
+with “::”, or if <code class="docutils literal notranslate"><span class="pre">element_name</span></code> contains “::” or is empty.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ScopedName::Join() for automatic coalescing of “::” tokens.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.Parse">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scoped_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.Parse" title="Permalink to this definition"></a></dt>
+<dd><p>Parses the given <code class="docutils literal notranslate"><span class="pre">scoped_name</span></code> string. Any leading or trailing “::”s
+on the name are removed (even multiple copies like “::::” are
+removed).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.set_element">
+<span class="sig-name descname"><span class="pre">set_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.set_element" title="Permalink to this definition"></a></dt>
+<dd><p>Replaces the namespace name of this object, leaving the namespace name
+unchanged.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if element_name contains &quot;::&quot;</strong><strong> or </strong><strong>is empty.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.set_namespace">
+<span class="sig-name descname"><span class="pre">set_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.set_namespace" title="Permalink to this definition"></a></dt>
+<dd><p>Replaces the namespace name of this object, leaving the element name
+unchanged. The namespace name is allowed to be empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if namespace_name starts</strong><strong> or </strong><strong>ends with &quot;::&quot;.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.ScopedName.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.ScopedName.to_string" title="Permalink to this definition"></a></dt>
+<dd><p>Returns get_full() as a string value instead of a string_view.</p>
+</dd></dl>
 
 </dd></dl>
 

@@ -1,0 +1,400 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: CspaceFreePolytope::SeparatingPlaneLagrangians Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CspaceFreePolytope::SeparatingPlaneLagrangians Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>When searching for the separating plane, we want to certify that the numerator of a rational is non-negative in the C-space region C*s&lt;=d, s_lower &lt;= s &lt;= s_upper. </p>
+<p>Hence for each of the rational we will introduce Lagrangian multipliers for the polytopic constraint d-C*s &gt;= 0, s - s_lower &gt;= 0, s_upper - s &gt;= 0. </p>
+</div>
+<p><code>#include &lt;drake/geometry/optimization/cspace_free_polytope.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:abe9a2b5e93fca6352703e51a3e5f1ffb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#abe9a2b5e93fca6352703e51a3e5f1ffb">SeparatingPlaneLagrangians</a> (<a class="el" href="classint.html">int</a> C_rows, <a class="el" href="classint.html">int</a> s_size)</td></tr>
+<tr class="separator:abe9a2b5e93fca6352703e51a3e5f1ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c7fc9a2359a86bd410d2eb132b3458c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html">SeparatingPlaneLagrangians</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a6c7fc9a2359a86bd410d2eb132b3458c">GetSolution</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:a6c7fc9a2359a86bd410d2eb132b3458c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the decision variables in each Lagrangians with its value in result, returns the substitution result.  <a href="#a6c7fc9a2359a86bd410d2eb132b3458c">More...</a><br /></td></tr>
+<tr class="separator:a6c7fc9a2359a86bd410d2eb132b3458c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153320e91d79f67bf658f610e38129fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a153320e91d79f67bf658f610e38129fc">polytope</a> () const</td></tr>
+<tr class="memdesc:a153320e91d79f67bf658f610e38129fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Lagrangians for d - C*s &gt;= 0.  <a href="#a153320e91d79f67bf658f610e38129fc">More...</a><br /></td></tr>
+<tr class="separator:a153320e91d79f67bf658f610e38129fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae749b792e2cc08726daf18f320dd33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a6ae749b792e2cc08726daf18f320dd33">mutable_polytope</a> ()</td></tr>
+<tr class="memdesc:a6ae749b792e2cc08726daf18f320dd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Lagrangians for d - C*s &gt;= 0.  <a href="#a6ae749b792e2cc08726daf18f320dd33">More...</a><br /></td></tr>
+<tr class="separator:a6ae749b792e2cc08726daf18f320dd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3690734a05bcd7a13afdc61ef4574c52"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a3690734a05bcd7a13afdc61ef4574c52">s_lower</a> () const</td></tr>
+<tr class="memdesc:a3690734a05bcd7a13afdc61ef4574c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Lagrangians for s - s_lower &gt;= 0.  <a href="#a3690734a05bcd7a13afdc61ef4574c52">More...</a><br /></td></tr>
+<tr class="separator:a3690734a05bcd7a13afdc61ef4574c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00934d11ca81bcebaeaa7d1033ef3d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#ac00934d11ca81bcebaeaa7d1033ef3d2">mutable_s_lower</a> ()</td></tr>
+<tr class="memdesc:ac00934d11ca81bcebaeaa7d1033ef3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Lagrangians for s - s_lower &gt;= 0.  <a href="#ac00934d11ca81bcebaeaa7d1033ef3d2">More...</a><br /></td></tr>
+<tr class="separator:ac00934d11ca81bcebaeaa7d1033ef3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdac05b41e49cdd4f456cabdb9ba88f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a6bdac05b41e49cdd4f456cabdb9ba88f">s_upper</a> () const</td></tr>
+<tr class="memdesc:a6bdac05b41e49cdd4f456cabdb9ba88f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Lagrangians for s_upper - s &gt;= 0.  <a href="#a6bdac05b41e49cdd4f456cabdb9ba88f">More...</a><br /></td></tr>
+<tr class="separator:a6bdac05b41e49cdd4f456cabdb9ba88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b56a9b0d124a2afc9d3bd99c8c96bd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a0b56a9b0d124a2afc9d3bd99c8c96bd7">mutable_s_upper</a> ()</td></tr>
+<tr class="memdesc:a0b56a9b0d124a2afc9d3bd99c8c96bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Lagrangians for s_upper - s &gt;= 0.  <a href="#a0b56a9b0d124a2afc9d3bd99c8c96bd7">More...</a><br /></td></tr>
+<tr class="separator:a0b56a9b0d124a2afc9d3bd99c8c96bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abe9a2b5e93fca6352703e51a3e5f1ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9a2b5e93fca6352703e51a3e5f1ffb">&#9670;&nbsp;</a></span>SeparatingPlaneLagrangians()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html">SeparatingPlaneLagrangians</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>C_rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>s_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6c7fc9a2359a86bd410d2eb132b3458c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c7fc9a2359a86bd410d2eb132b3458c">&#9670;&nbsp;</a></span>GetSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html">SeparatingPlaneLagrangians</a> GetSolution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Substitutes the decision variables in each Lagrangians with its value in result, returns the substitution result. </p>
+
+</div>
+</div>
+<a id="a6ae749b792e2cc08726daf18f320dd33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae749b792e2cc08726daf18f320dd33">&#9670;&nbsp;</a></span>mutable_polytope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt;&amp; mutable_polytope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Lagrangians for d - C*s &gt;= 0. </p>
+
+</div>
+</div>
+<a id="ac00934d11ca81bcebaeaa7d1033ef3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac00934d11ca81bcebaeaa7d1033ef3d2">&#9670;&nbsp;</a></span>mutable_s_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt;&amp; mutable_s_lower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Lagrangians for s - s_lower &gt;= 0. </p>
+
+</div>
+</div>
+<a id="a0b56a9b0d124a2afc9d3bd99c8c96bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b56a9b0d124a2afc9d3bd99c8c96bd7">&#9670;&nbsp;</a></span>mutable_s_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt;&amp; mutable_s_upper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Lagrangians for s_upper - s &gt;= 0. </p>
+
+</div>
+</div>
+<a id="a153320e91d79f67bf658f610e38129fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153320e91d79f67bf658f610e38129fc">&#9670;&nbsp;</a></span>polytope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt;&amp; polytope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Lagrangians for d - C*s &gt;= 0. </p>
+
+</div>
+</div>
+<a id="a3690734a05bcd7a13afdc61ef4574c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3690734a05bcd7a13afdc61ef4574c52">&#9670;&nbsp;</a></span>s_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt;&amp; s_lower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Lagrangians for s - s_lower &gt;= 0. </p>
+
+</div>
+</div>
+<a id="a6bdac05b41e49cdd4f456cabdb9ba88f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdac05b41e49cdd4f456cabdb9ba88f">&#9670;&nbsp;</a></span>s_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt;&amp; s_upper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Lagrangians for s_upper - s &gt;= 0. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/optimization/<a class="el" href="cspace__free__polytope_8h.html">cspace_free_polytope.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html">SeparatingPlaneLagrangians</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>
