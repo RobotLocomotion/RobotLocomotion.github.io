@@ -207,7 +207,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a466314c408fa5362f2f1cedcb81365eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a466314c408fa5362f2f1cedcb81365eb">~ContactVisualizer</a> () final</td></tr>
 <tr class="separator:a466314c408fa5362f2f1cedcb81365eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a874939f6aa43e29fc929d223dfb76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a02a874939f6aa43e29fc929d223dfb76">Delete</a> () const</td></tr>
-<tr class="memdesc:a02a874939f6aa43e29fc929d223dfb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8" title="Deletes the object at the given path as well as all of its children.">geometry::Meshcat::Delete(std::string_view path)</a>, with the path set to <code>prefix</code>.  <a href="#a02a874939f6aa43e29fc929d223dfb76">More...</a><br /></td></tr>
+<tr class="memdesc:a02a874939f6aa43e29fc929d223dfb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls geometry::Meshcat::Delete(std::string_view path), with the path set to <code>prefix</code>.  <a href="#a02a874939f6aa43e29fc929d223dfb76">More...</a><br /></td></tr>
 <tr class="separator:a02a874939f6aa43e29fc929d223dfb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6953740727efc515d9bd7be55a7bd00"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aa6953740727efc515d9bd7be55a7bd00">contact_results_input_port</a> () const</td></tr>
 <tr class="memdesc:aa6953740727efc515d9bd7be55a7bd00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">multibody::ContactResults</a>-valued input port.  <a href="#aa6953740727efc515d9bd7be55a7bd00">More...</a><br /></td></tr>
@@ -1636,7 +1636,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calls <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8" title="Deletes the object at the given path as well as all of its children.">geometry::Meshcat::Delete(std::string_view path)</a>, with the path set to <code>prefix</code>. </p>
+<p>Calls geometry::Meshcat::Delete(std::string_view path), with the path set to <code>prefix</code>. </p>
 <p>Since this visualizer will only ever add geometry under this prefix, this will remove all geometry/transforms added by the visualizer, or by a previous instance of this visualizer using the same prefix. Use the <code>delete_on_initialization_event</code> in the parameters to determine whether this should be called on initialization. </p>
 
 </div>

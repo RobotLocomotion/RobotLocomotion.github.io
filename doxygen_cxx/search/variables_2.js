@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c',['C',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a92a207b76b9d9f2185204cce6ebfd0f2',1,'drake::geometry::optimization::CspaceFreePolytope::SearchResult::C()'],['../structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd',1,'drake::symbolic::SinCos::c()']]],
+  ['c',['c',['../structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd',1,'drake::symbolic::SinCos::c()'],['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a92a207b76b9d9f2185204cce6ebfd0f2',1,'drake::geometry::optimization::CspaceFreePolytope::SearchResult::C()']]],
   ['catch_5ftorque',['catch_torque',['../structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77',1,'drake::multibody::DoorHingeConfig']]],
   ['catch_5fwidth',['catch_width',['../structdrake_1_1multibody_1_1_door_hinge_config.html#aacf351ea5aed0b77d57004ad6f67c5f1',1,'drake::multibody::DoorHingeConfig']]],
   ['center_5fx',['center_x',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a43acbf71f174bb214744379ae39d6ec5',1,'drake::systems::sensors::CameraConfig']]],

@@ -6,7 +6,6 @@ var searchData=
   ['optitrackreceiver',['OptitrackReceiver',['../classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html',1,'drake::systems::sensors']]],
   ['orientationconstraint',['OrientationConstraint',['../classdrake_1_1multibody_1_1_orientation_constraint.html',1,'drake::multibody']]],
   ['orientationcost',['OrientationCost',['../classdrake_1_1multibody_1_1_orientation_cost.html',1,'drake::multibody']]],
-  ['orthographiccamera',['OrthographicCamera',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html',1,'drake::geometry::Meshcat']]],
   ['osqpsolver',['OsqpSolver',['../classdrake_1_1solvers_1_1_osqp_solver.html',1,'drake::solvers']]],
   ['osqpsolverdetails',['OsqpSolverDetails',['../structdrake_1_1solvers_1_1_osqp_solver_details.html',1,'drake::solvers']]],
   ['ostream_5fformatter',['ostream_formatter',['../structdrake_1_1ostream__formatter.html',1,'drake']]],

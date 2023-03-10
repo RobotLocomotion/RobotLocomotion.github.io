@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_meshcat_ani
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface for recording/playback animations in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
-<p>Use <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf" title="Sets the MeshcatAnimation, which creates a slider interface element to play/pause/rewind through a se...">Meshcat::SetAnimation</a> to publish a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> to the visualizer.</p>
+<p>Use Meshcat::SetAnimation to publish a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> to the visualizer.</p>
 <p>Currently, an animation consists of (only) transforms and properties that are set at a particular integer frame number. Although we do not support calls to SetObject/Delete in an animation, you can consider using <code>SetProperty(frame, path, "visible", true/false)</code> in your animation to make the object appear or disappear at a particular frame. </p>
 </div>
 <p><code>#include &lt;drake/geometry/meshcat_animation.h&gt;</code></p>
@@ -756,7 +756,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets a single named property of the object at the given <code>path</code> at the specified <code>frame</code> in the animation. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3" title="Sets a single named property of the object at the given path.">Meshcat::SetProperty</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Meshcat::SetProperty. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frame</td><td>a non-negative integer indicating the frame at which this transform is applied. </td></tr>
@@ -814,7 +814,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets a single named property of the object at the given <code>path</code> at the specified <code>frame</code> in the animation. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3" title="Sets a single named property of the object at the given path.">Meshcat::SetProperty</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Meshcat::SetProperty. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frame</td><td>a non-negative integer indicating the frame at which this transform is applied. </td></tr>
@@ -872,7 +872,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets a single named property of the object at the given <code>path</code> at the specified <code>frame</code> in the animation. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3" title="Sets a single named property of the object at the given path.">Meshcat::SetProperty</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Meshcat::SetProperty. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frame</td><td>a non-negative integer indicating the frame at which this transform is applied. </td></tr>
@@ -924,7 +924,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the RigidTransform at <code>frame</code> in the animation for a given <code>path</code> in the the scene tree. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a1e1b021d8e7be408a7d17d39ce459b39" title="Set the RigidTransform for a given path in the scene tree relative to its parent path.">Meshcat::SetTransform</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Meshcat::SetTransform. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frame</td><td>a non-negative integer indicating the frame at which this transform is applied. </td></tr>

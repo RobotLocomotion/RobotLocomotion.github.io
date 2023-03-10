@@ -16,7 +16,6 @@ var searchData=
   ['periodicboundarycondition',['PeriodicBoundaryCondition',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
   ['periodiceventdata',['PeriodicEventData',['../classdrake_1_1systems_1_1_periodic_event_data.html',1,'drake::systems']]],
   ['periodiceventdatacomparator',['PeriodicEventDataComparator',['../structdrake_1_1systems_1_1_periodic_event_data_comparator.html',1,'drake::systems']]],
-  ['perspectivecamera',['PerspectiveCamera',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html',1,'drake::geometry::Meshcat']]],
   ['perspectivequadraticcost',['PerspectiveQuadraticCost',['../classdrake_1_1solvers_1_1_perspective_quadratic_cost.html',1,'drake::solvers']]],
   ['physicalmodel',['PhysicalModel',['../classdrake_1_1multibody_1_1_physical_model.html',1,'drake::multibody']]],
   ['physicalmodel_3c_20autodiffxd_20_3e',['PhysicalModel&lt; AutoDiffXd &gt;',['../classdrake_1_1multibody_1_1_physical_model.html',1,'drake::multibody']]],
