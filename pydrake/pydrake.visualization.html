@@ -420,9 +420,9 @@ any desired options, add any models, and then call Run():</p>
 <span class="n">visualizer</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The class also provides a <cite>parser</cite> property to allow more complex
+<p>The class also provides a <cite>parser()</cite> method to allow more complex
 Parser handling, e.g. adding a model from a string:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visualizer</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">AddModelsFromString</span><span class="p">(</span><span class="n">buffer_containing_model</span><span class="p">,</span> <span class="s1">&#39;sdf&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visualizer</span><span class="o">.</span><span class="n">parser</span><span class="p">()</span><span class="o">.</span><span class="n">AddModelsFromString</span><span class="p">(</span><span class="n">buffer_containing_model</span><span class="p">,</span> <span class="s1">&#39;sdf&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This class may also be run as a standalone command-line tool using the
