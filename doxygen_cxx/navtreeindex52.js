@@ -1,5 +1,14 @@
 var NAVTREEINDEX52 =
 {
+"solvers__py_8h.html":[4,0,0,0,0,6,0],
+"solvers__pybind_8h.html":[4,0,0,0,0,6,1],
+"solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,6,1,0],
+"sorted__pair_8h.html":[4,0,0,1,54],
+"sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,54,10],
+"sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,54,5],
+"sorted__pair_8h.html#a6d76c69274d87b34a742dae799e2177f":[4,0,0,1,54,8],
+"sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,54,4],
+"sorted__pair_8h.html#a98c59bc997ae44eeb4d45bc371b26f0a":[4,0,0,1,54,12],
 "sorted__pair_8h.html#a9ab1dd8eeeb9910b3755b238fc8907e9":[4,0,0,1,54,7],
 "sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,54,11],
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,54,6],
@@ -240,14 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,4,50,2],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,50,8],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,4,50,0],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,50,1],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,4,50,3],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html":[3,0,0,4,1,2],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,1,2,12],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a1762c600d095ebf4fc9c1dc730d2f186":[3,0,0,4,1,2,10],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[3,0,0,4,1,2,7],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a1a6c7a3105d8009b1e4c09aa3d059cba":[3,0,0,4,1,2,0],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a360860154e606cd585943b31bcf46619":[3,0,0,4,1,2,5],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a88ff96bc0a49d38c883dcdf852e970c3":[3,0,0,4,1,2,1],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a9bae89849c60ffcef775b55b000bd872":[3,0,0,4,1,2,3]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,50,1]
 };

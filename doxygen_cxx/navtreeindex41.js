@@ -1,5 +1,11 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a0295b8466f7ead211653b8cddafd8815":[3,0,0,18,4,46],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a06278ca4588ba1adb004b84fdfc62f3c":[3,0,0,18,4,58],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a069eb195b8a30965d09c68e4ab65f4f4":[3,0,0,18,4,27],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a1108c20b0d02730aa202de0115755fb2":[3,0,0,18,4,59],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a16274d0c316c76ded4b85111b38ece15":[3,0,0,18,4,51],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,18,4,57],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a1f629b76cc9d507ef44352c0ca2bfee2":[3,0,0,18,4,30],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a21f99414ab82e5b4bac51523feb0b711":[3,0,0,18,4,35],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a28dc60d1015ae4d2e946898a2eec5692":[3,0,0,18,4,55],
@@ -243,11 +249,5 @@ var NAVTREEINDEX41 =
 "compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577":[4,0,0,8,10,2,0],
 "compute__numerical__gradient_8h.html":[4,0,0,7,5],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400a":[4,0,0,7,5,1],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa39209ccaab9620e08ec04483c22a7eda":[4,0,0,7,5,1,2],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa5cc7cc1518100eae9e3f2d83673a74ed":[4,0,0,7,5,1,1],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aae7c3602dce09c755e09250077a601a51":[4,0,0,7,5,1,0],
-"compute__numerical__gradient_8h.html#a8b9faaffd818a335e485c9c38fe67f0e":[4,0,0,7,5,2],
-"compute__torque_8h.html":[4,0,0,12,1,0,0],
-"compute__torque_8h.html#a66eda6d10bb53572748c1f28aaf5d6ab":[4,0,0,12,1,0,0,0],
-"cond_8h.html":[4,0,0,1,11]
+"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa39209ccaab9620e08ec04483c22a7eda":[4,0,0,7,5,1,2]
 };

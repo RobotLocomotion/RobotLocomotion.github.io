@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_quadratic_co
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classdrake_1_1solvers_1_1_quadratic_constraint-members.html">List of all members</a>  </div>
@@ -172,12 +173,21 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_quadratic_co
 </div>
 <p><code>#include &lt;drake/solvers/constraint.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a604cad5cda14e378ce4a77ab28ee9fd9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a> { <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9a553299cc0662eb779b26fd877f6e9d03">kPositiveSemidefinite</a>, 
+<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9a057a39b74f132b5f1765f1e00bf08787">kNegativeSemidefinite</a>, 
+<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9a9616722afbc24c60abbaead12c5f5977">kIndefinite</a>
+ }</td></tr>
+<tr class="memdesc:a604cad5cda14e378ce4a77ab28ee9fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the Hessian matrix is positive semidefinite, negative semidefinite, or indefinite.  <a href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">More...</a><br /></td></tr>
+<tr class="separator:a604cad5cda14e378ce4a77ab28ee9fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4461b576454d2193c040fa0c8b78e889"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ , typename Derivedb &gt; </td></tr>
-<tr class="memitem:a4461b576454d2193c040fa0c8b78e889"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a4461b576454d2193c040fa0c8b78e889">QuadraticConstraint</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;Q0, const Eigen::MatrixBase&lt; Derivedb &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a0a6cbf2b2482a80c78e51a04f29aefe5">b</a>, <a class="el" href="classdouble.html">double</a> lb, <a class="el" href="classdouble.html">double</a> ub)</td></tr>
-<tr class="memdesc:a4461b576454d2193c040fa0c8b78e889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a quadratic constraint.  <a href="#a4461b576454d2193c040fa0c8b78e889">More...</a><br /></td></tr>
-<tr class="separator:a4461b576454d2193c040fa0c8b78e889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add5bd03a827156d23bf0d84321f7b34a"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ , typename Derivedb &gt; </td></tr>
+<tr class="memitem:add5bd03a827156d23bf0d84321f7b34a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#add5bd03a827156d23bf0d84321f7b34a">QuadraticConstraint</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;Q0, const Eigen::MatrixBase&lt; Derivedb &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a0a6cbf2b2482a80c78e51a04f29aefe5">b</a>, <a class="el" href="classdouble.html">double</a> lb, <a class="el" href="classdouble.html">double</a> ub, std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a> &gt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a789a3025f571efc45276c890a70590df">hessian_type</a>=std::nullopt)</td></tr>
+<tr class="memdesc:add5bd03a827156d23bf0d84321f7b34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a quadratic constraint.  <a href="#add5bd03a827156d23bf0d84321f7b34a">More...</a><br /></td></tr>
+<tr class="separator:add5bd03a827156d23bf0d84321f7b34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c867fcd0ac956fbd69038ac7e9d3da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#ac9c867fcd0ac956fbd69038ac7e9d3da">~QuadraticConstraint</a> () override</td></tr>
 <tr class="separator:ac9c867fcd0ac956fbd69038ac7e9d3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afda94ab7b20b7bf9e787138eb5849172"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#afda94ab7b20b7bf9e787138eb5849172">Q</a> () const</td></tr>
@@ -185,10 +195,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afda94ab7b20b7bf9e787138eb5849172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a6cbf2b2482a80c78e51a04f29aefe5"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a0a6cbf2b2482a80c78e51a04f29aefe5">b</a> () const</td></tr>
 <tr class="separator:a0a6cbf2b2482a80c78e51a04f29aefe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abffb734bfb0fb60306c481f83830d208"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ , typename DerivedB &gt; </td></tr>
-<tr class="memitem:abffb734bfb0fb60306c481f83830d208"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#abffb734bfb0fb60306c481f83830d208">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;new_Q, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;new_b)</td></tr>
-<tr class="memdesc:abffb734bfb0fb60306c481f83830d208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the quadratic and linear term of the constraint.  <a href="#abffb734bfb0fb60306c481f83830d208">More...</a><br /></td></tr>
-<tr class="separator:abffb734bfb0fb60306c481f83830d208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789a3025f571efc45276c890a70590df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a789a3025f571efc45276c890a70590df">hessian_type</a> () const</td></tr>
+<tr class="separator:a789a3025f571efc45276c890a70590df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8542e0956a41902b653789fa2298c960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a8542e0956a41902b653789fa2298c960">is_convex</a> () const</td></tr>
+<tr class="memdesc:a8542e0956a41902b653789fa2298c960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this quadratic constraint is convex.  <a href="#a8542e0956a41902b653789fa2298c960">More...</a><br /></td></tr>
+<tr class="separator:a8542e0956a41902b653789fa2298c960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47841016ee64770e7c9c7874111cefa6"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a47841016ee64770e7c9c7874111cefa6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a47841016ee64770e7c9c7874111cefa6">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;new_Q, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;new_b, std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a> &gt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a789a3025f571efc45276c890a70590df">hessian_type</a>=std::nullopt)</td></tr>
+<tr class="memdesc:a47841016ee64770e7c9c7874111cefa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the quadratic and linear term of the constraint.  <a href="#a47841016ee64770e7c9c7874111cefa6">More...</a><br /></td></tr>
+<tr class="separator:a47841016ee64770e7c9c7874111cefa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ab2eb8c7d446a39f747a66448b24b39f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#ab2eb8c7d446a39f747a66448b24b39f9">QuadraticConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &amp;)=delete</td></tr>
 <tr class="separator:ab2eb8c7d446a39f747a66448b24b39f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,6 +318,36 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a6a5844a758fb9db2cbf63e64cafe833a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6a5844a758fb9db2cbf63e64cafe833a">set_num_outputs</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>)</td></tr>
 <tr class="separator:a6a5844a758fb9db2cbf63e64cafe833a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a604cad5cda14e378ce4a77ab28ee9fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604cad5cda14e378ce4a77ab28ee9fd9">&#9670;&nbsp;</a></span>HessianType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the Hessian matrix is positive semidefinite, negative semidefinite, or indefinite. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a604cad5cda14e378ce4a77ab28ee9fd9a553299cc0662eb779b26fd877f6e9d03"></a>kPositiveSemidefinite&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a604cad5cda14e378ce4a77ab28ee9fd9a057a39b74f132b5f1765f1e00bf08787"></a>kNegativeSemidefinite&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a604cad5cda14e378ce4a77ab28ee9fd9a9616722afbc24c60abbaead12c5f5977"></a>kIndefinite&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab2eb8c7d446a39f747a66448b24b39f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2eb8c7d446a39f747a66448b24b39f9">&#9670;&nbsp;</a></span>QuadraticConstraint() <span class="overload">[1/3]</span></h2>
@@ -356,8 +401,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4461b576454d2193c040fa0c8b78e889"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4461b576454d2193c040fa0c8b78e889">&#9670;&nbsp;</a></span>QuadraticConstraint() <span class="overload">[3/3]</span></h2>
+<a id="add5bd03a827156d23bf0d84321f7b34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add5bd03a827156d23bf0d84321f7b34a">&#9670;&nbsp;</a></span>QuadraticConstraint() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -384,7 +429,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>ub</em>&#160;</td>
+          <td class="paramname"><em>ub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a> &gt;&#160;</td>
+          <td class="paramname"><em>hessian_type</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -408,6 +459,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">b</td><td>The linear coefficient. </td></tr>
     <tr><td class="paramname">lb</td><td>The lower bound. </td></tr>
     <tr><td class="paramname">ub</td><td>The upper bound. </td></tr>
+    <tr><td class="paramname">hessian_type</td><td>(optional) Indicates the type of Hessian matrix Q0. If hessian_type is not std::nullopt, then the user guarantees the type of Q0. If hessian_type=std::nullopt, then <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html" title="lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a symmetric matrix Q.">QuadraticConstraint</a> will check the type of Q0. To speed up the constructor, set hessian_type != std::nullopt if you can. If this type is set incorrectly, then the downstream code (for example the solver) will malfunction. </td></tr>
   </table>
   </dd>
 </dl>
@@ -462,6 +514,42 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a789a3025f571efc45276c890a70590df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a789a3025f571efc45276c890a70590df">&#9670;&nbsp;</a></span>hessian_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a> hessian_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8542e0956a41902b653789fa2298c960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8542e0956a41902b653789fa2298c960">&#9670;&nbsp;</a></span>is_convex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_convex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns if this quadratic constraint is convex. </p>
 
 </div>
 </div>
@@ -544,8 +632,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="abffb734bfb0fb60306c481f83830d208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abffb734bfb0fb60306c481f83830d208">&#9670;&nbsp;</a></span>UpdateCoefficients()</h2>
+<a id="a47841016ee64770e7c9c7874111cefa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47841016ee64770e7c9c7874111cefa6">&#9670;&nbsp;</a></span>UpdateCoefficients()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -560,7 +648,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>new_b</em>&#160;</td>
+          <td class="paramname"><em>new_b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">HessianType</a> &gt;&#160;</td>
+          <td class="paramname"><em>hessian_type</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -575,6 +669,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">new_Q</td><td>new quadratic term </td></tr>
     <tr><td class="paramname">new_b</td><td>new linear term </td></tr>
+    <tr><td class="paramname">hessian_type</td><td>(optional) Indicates the type of Hessian matrix Q0. If hessian_type is not std::nullopt, then the user guarantees the type of Q0. If hessian_type=std::nullopt, then <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html" title="lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a symmetric matrix Q.">QuadraticConstraint</a> will check the type of Q0. To speed up the constructor, set hessian_type != std::nullopt if you can. </td></tr>
   </table>
   </dd>
 </dl>

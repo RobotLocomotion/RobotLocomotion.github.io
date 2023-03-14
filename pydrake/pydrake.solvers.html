@@ -6034,7 +6034,7 @@ Hence we can always convert a non-symmetric matrix Q₀ to a symmetric
 matrix Q.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">pydrake.solvers.QuadraticConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">pydrake.solvers.QuadraticConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hessian_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint.HessianType" title="pydrake.solvers.QuadraticConstraint.HessianType"><span class="pre">pydrake.solvers.QuadraticConstraint.HessianType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct a quadratic constraint.</p>
 <dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">DerivedQ</span></code>:</dt><dd><p>The type for Q.</p>
@@ -6049,6 +6049,14 @@ matrix Q.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>The upper bound.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">hessian_type</span></code>:</dt><dd><p>(optional) Indicates the type of Hessian matrix Q0. If
+hessian_type is not std::nullopt, then the user guarantees the
+type of Q0. If hessian_type=std::nullopt, then QuadraticConstraint
+will check the type of Q0. To speed up the constructor, set
+hessian_type != std::nullopt if you can. If this type is set
+incorrectly, then the downstream code (for example the solver)
+will malfunction.</p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -6058,9 +6066,82 @@ matrix Q.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.hessian_type">
+<span class="sig-name descname"><span class="pre">hessian_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">pydrake.solvers.QuadraticConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint.HessianType" title="pydrake.solvers.QuadraticConstraint.HessianType"><span class="pre">pydrake.solvers.QuadraticConstraint.HessianType</span></a></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.hessian_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HessianType</span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the Hessian matrix is positive semidefinite, negative
+semidefinite, or indefinite.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kPositiveSemidefinite :</p>
+<p>kNegativeSemidefinite :</p>
+<p>kIndefinite :</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint.HessianType" title="pydrake.solvers.QuadraticConstraint.HessianType"><span class="pre">pydrake.solvers.QuadraticConstraint.HessianType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.kIndefinite">
+<span class="sig-name descname"><span class="pre">kIndefinite</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;HessianType.kIndefinite:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.kIndefinite" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.kNegativeSemidefinite">
+<span class="sig-name descname"><span class="pre">kNegativeSemidefinite</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;HessianType.kNegativeSemidefinite:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.kNegativeSemidefinite" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.kPositiveSemidefinite">
+<span class="sig-name descname"><span class="pre">kPositiveSemidefinite</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;HessianType.kPositiveSemidefinite:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.kPositiveSemidefinite" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.is_convex">
+<span class="sig-name descname"><span class="pre">is_convex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">pydrake.solvers.QuadraticConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.is_convex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns if this quadratic constraint is convex.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.Q">
 <span class="sig-name descname"><span class="pre">Q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">pydrake.solvers.QuadraticConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.Q" title="Permalink to this definition"></a></dt>
 <dd><p>The symmetric matrix Q, being the Hessian of this constraint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.UpdateCoefficients">
+<span class="sig-name descname"><span class="pre">UpdateCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">pydrake.solvers.QuadraticConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hessian_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint.HessianType" title="pydrake.solvers.QuadraticConstraint.HessianType"><span class="pre">pydrake.solvers.QuadraticConstraint.HessianType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.UpdateCoefficients" title="Permalink to this definition"></a></dt>
+<dd><p>Updates the quadratic and linear term of the constraint. The new
+matrices need to have the same dimension as before.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_Q</span></code>:</dt><dd><p>new quadratic term</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_b</span></code>:</dt><dd><p>new linear term</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">hessian_type</span></code>:</dt><dd><p>(optional) Indicates the type of Hessian matrix Q0. If
+hessian_type is not std::nullopt, then the user guarantees the
+type of Q0. If hessian_type=std::nullopt, then QuadraticConstraint
+will check the type of Q0. To speed up the constructor, set
+hessian_type != std::nullopt if you can.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

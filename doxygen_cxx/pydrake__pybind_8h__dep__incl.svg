@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 3269;
+var viewWidth = 3663;
 var viewHeight = 418;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,526 +54,514 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/bindings/pydrake/pydrake_pybind.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-414 3265,-414 3265,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-414 3658.66,-414 3658.66,4 -4,4"/>
 <!-- Node3 -->
 <g id="node1" class="node">
 <title>Node3</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="1044,-379.5 1044,-409.5 1174,-409.5 1174,-379.5 1044,-379.5"/>
-<text text-anchor="start" x="1052" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="1109" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">/pydrake_pybind.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="1365.66,-379.5 1365.66,-409.5 1495.66,-409.5 1495.66,-379.5 1365.66,-379.5"/>
+<text text-anchor="start" x="1373.66" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="1430.66" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">/pydrake_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node4 -->
 <g id="node2" class="node">
 <title>Node4</title>
-<g id="a_node2"><a xlink:href="autodiff__types__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="66.5,-156.5 66.5,-186.5 203.5,-186.5 203.5,-156.5 66.5,-156.5"/>
-<text text-anchor="start" x="74.5" y="-174.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="135" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">/autodiff_types_pybind.h</text>
+<g id="a_node2"><a xlink:href="wrap__pybind_8h.html" target="_top" xlink:title="Defines convenience utilities to wrap pybind11 methods and classes.">
+<polygon fill="white" stroke="black" points="460.16,-307 460.16,-337 597.16,-337 597.16,-307 460.16,-307"/>
+<text text-anchor="start" x="468.16" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="528.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/wrap_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge1" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M1033.72,-391.78C818.68,-386.55 214.98,-369.56 182,-343 133.7,-304.09 132.36,-220.43 133.94,-186.86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.88,-395.28 1043.97,-392.03 1034.05,-388.29 1033.88,-395.28"/>
+<path fill="none" stroke="midnightblue" d="M1355.38,-393.24C1210.54,-391.78 883.37,-383.79 611.66,-343 601.69,-341.5 591.16,-339.39 581.08,-337.1"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.46,-396.74 1365.49,-393.34 1355.52,-389.74 1355.46,-396.74"/>
 </g>
 <!-- Node5 -->
 <g id="node3" class="node">
 <title>Node5</title>
-<g id="a_node3"><a xlink:href="default__scalars__pybind_8h.html" target="_top" xlink:title="Helpers for defining scalars and values.">
-<polygon fill="white" stroke="black" points="87,-78.5 87,-119.5 227,-119.5 227,-78.5 87,-78.5"/>
-<text text-anchor="start" x="95" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="start" x="95" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/default_scalars</text>
-<text text-anchor="middle" x="157" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_pybind.h</text>
+<g id="a_node3"><a xlink:href="cpp__param__pybind_8h.html" target="_top" xlink:title="Provides a mechanism to map C++ types to canonical Python types.">
+<polygon fill="white" stroke="black" points="455.16,-229 455.16,-259 622.16,-259 622.16,-229 455.16,-229"/>
+<text text-anchor="start" x="463.16" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="538.66" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">/common/cpp_param_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node5 -->
-<g id="edge16" class="edge">
+<g id="edge12" class="edge">
 <title>Node3&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M1033.84,-393.6C820.86,-393.3 223.85,-388.4 149,-343 69.81,-294.96 10.16,-235.91 57,-156 66.46,-139.86 82.45,-128.03 98.91,-119.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.99,-397.1 1043.99,-393.61 1034,-390.1 1033.99,-397.1"/>
+<path fill="none" stroke="midnightblue" d="M1355.4,-392.42C1131.41,-388.83 482.66,-375.64 451.66,-343 438.8,-329.46 442.72,-317.39 451.66,-301 462.15,-281.76 482.41,-268.14 500.73,-259.15"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.37,-395.92 1365.42,-392.58 1355.48,-388.92 1355.37,-395.92"/>
 </g>
 <!-- Node6 -->
 <g id="node4" class="node">
 <title>Node6</title>
-<g id="a_node4"><a xlink:href="wrap__pybind_8h.html" target="_top" xlink:title="Defines convenience utilities to wrap pybind11 methods and classes.">
-<polygon fill="white" stroke="black" points="574.5,-307 574.5,-337 711.5,-337 711.5,-307 574.5,-307"/>
-<text text-anchor="start" x="582.5" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="643" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/wrap_pybind.h</text>
+<g id="a_node4"><a xlink:href="cpp__template__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="176.16,-156.5 176.16,-186.5 355.16,-186.5 355.16,-156.5 176.16,-156.5"/>
+<text text-anchor="start" x="184.16" y="-174.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="265.66" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/cpp_template_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node6 -->
-<g id="edge3" class="edge">
+<g id="edge13" class="edge">
 <title>Node3&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M1033.8,-385.95C956.31,-377.62 832.18,-362.74 726,-343 716.82,-341.29 707.13,-339.22 697.74,-337.05"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.64,-389.46 1043.95,-387.04 1034.38,-382.5 1033.64,-389.46"/>
+<path fill="none" stroke="midnightblue" d="M1355.13,-393.11C1100.6,-391.44 287.95,-382.96 249.66,-343 208.32,-299.85 241.76,-219.35 258.04,-186.75"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.37,-396.61 1365.39,-393.18 1355.41,-389.61 1355.37,-396.61"/>
 </g>
 <!-- Node7 -->
 <g id="node5" class="node">
 <title>Node7</title>
-<g id="a_node5"><a xlink:href="cpp__param__pybind_8h.html" target="_top" xlink:title="Provides a mechanism to map C++ types to canonical Python types.">
-<polygon fill="white" stroke="black" points="630.5,-229 630.5,-259 797.5,-259 797.5,-229 630.5,-229"/>
-<text text-anchor="start" x="638.5" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="714" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">/common/cpp_param_pybind.h</text>
+<g id="a_node5"><a xlink:href="default__scalars__pybind_8h.html" target="_top" xlink:title="Helpers for defining scalars and values.">
+<polygon fill="white" stroke="black" points="30.66,-78.5 30.66,-119.5 170.66,-119.5 170.66,-78.5 30.66,-78.5"/>
+<text text-anchor="start" x="38.66" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="start" x="38.66" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/default_scalars</text>
+<text text-anchor="middle" x="100.66" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node7 -->
 <g id="edge14" class="edge">
 <title>Node3&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M1033.56,-392C891.76,-388.4 596.87,-376.88 566,-343 553.43,-329.2 555.39,-316.36 566,-301 577.01,-285.06 620.79,-269.69 657.9,-259.1"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.83,-395.51 1043.91,-392.26 1034,-388.51 1033.83,-395.51"/>
+<path fill="none" stroke="midnightblue" d="M1355.06,-392.68C1091.32,-389.52 225.22,-376.61 176.66,-343 102.51,-291.68 98.28,-167.85 99.61,-119.65"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.27,-396.18 1365.31,-392.8 1355.35,-389.18 1355.27,-396.18"/>
 </g>
 <!-- Node8 -->
 <g id="node6" class="node">
 <title>Node8</title>
-<g id="a_node6"><a xlink:href="cpp__template__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="372.5,-156.5 372.5,-186.5 551.5,-186.5 551.5,-156.5 372.5,-156.5"/>
-<text text-anchor="start" x="380.5" y="-174.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="462" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/cpp_template_pybind.h</text>
+<g id="a_node6"><a xlink:href="serialize__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="188.66,-84 188.66,-114 342.66,-114 342.66,-84 188.66,-84"/>
+<text text-anchor="start" x="196.66" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="265.66" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">/common/serialize_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node8 -->
-<g id="edge15" class="edge">
+<g id="edge19" class="edge">
 <title>Node3&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M1033.85,-393.58C864.72,-392.98 465.75,-386.87 425,-343 388.7,-303.92 408.42,-273.69 425,-223 429.53,-209.16 439.45,-195.97 447.89,-186.54"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.91,-397.08 1043.92,-393.61 1033.93,-390.08 1033.91,-397.08"/>
+<path fill="none" stroke="midnightblue" d="M1355.04,-392.6C1098.19,-389.25 272.54,-375.95 226.66,-343 155.76,-292.09 122.68,-231.4 166.66,-156 178.25,-136.13 199.79,-122.75 219.83,-114.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.35,-396.1 1365.39,-392.73 1355.44,-389.1 1355.35,-396.1"/>
 </g>
 <!-- Node9 -->
 <g id="node7" class="node">
 <title>Node9</title>
-<g id="a_node7"><a xlink:href="serialize__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="281,-84 281,-114 435,-114 435,-84 281,-84"/>
-<text text-anchor="start" x="289" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="358" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">/common/serialize_pybind.h</text>
+<g id="a_node7"><a xlink:href="value__pybind_8h.html" target="_top" xlink:title="Helpers for defining instantiations of drake::Value&lt;&gt;.">
+<polygon fill="white" stroke="black" points="508.66,-84 508.66,-114 648.66,-114 648.66,-84 508.66,-84"/>
+<text text-anchor="start" x="516.66" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="578.66" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">/common/value_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node9 -->
-<g id="edge24" class="edge">
+<g id="edge21" class="edge">
 <title>Node3&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M1033.93,-393.11C861.32,-391.53 447.35,-383.5 400,-343 331.19,-284.15 347.41,-156.68 355.13,-114.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.92,-396.61 1043.95,-393.2 1033.98,-389.61 1033.92,-396.61"/>
+<path fill="none" stroke="midnightblue" d="M1355.35,-391.42C1163.32,-385.74 668.75,-368.69 644.66,-343 631.89,-329.38 643.37,-319.62 644.66,-301 645.77,-284.88 648.55,-281.12 649.66,-265 653.01,-216.47 662.47,-198.97 639.66,-156 630.56,-138.86 614.09,-124.22 600.56,-114.22"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.27,-394.92 1365.37,-391.71 1355.47,-387.92 1355.27,-394.92"/>
 </g>
 <!-- Node10 -->
 <g id="node8" class="node">
 <title>Node10</title>
-<g id="a_node8"><a xlink:href="value__pybind_8h.html" target="_top" xlink:title="Helpers for defining instantiations of drake::Value&lt;&gt;.">
-<polygon fill="white" stroke="black" points="644,-84 644,-114 784,-114 784,-84 644,-84"/>
-<text text-anchor="start" x="652" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="714" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">/common/value_pybind.h</text>
+<g id="a_node8"><a xlink:href="type__safe__index__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="217.66,-0.5 217.66,-41.5 363.66,-41.5 363.66,-0.5 217.66,-0.5"/>
+<text text-anchor="start" x="225.66" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="start" x="225.66" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/type_safe_index</text>
+<text text-anchor="middle" x="290.66" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node10 -->
-<g id="edge26" class="edge">
+<g id="edge22" class="edge">
 <title>Node3&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M1033.85,-393.68C941.82,-392.12 793.82,-383.2 759,-343 746.78,-328.89 749.42,-317.02 759,-301 776.35,-271.99 808.65,-294.01 826,-265 835.58,-248.98 828.95,-241.43 826,-223 821.05,-192.05 823.36,-180.65 804,-156 789.45,-137.47 766.95,-123.47 748.09,-114.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.91,-397.18 1043.96,-393.83 1034.01,-390.18 1033.91,-397.18"/>
+<path fill="none" stroke="midnightblue" d="M1355.39,-393.14C1096.23,-391.53 250.51,-383.24 135.66,-343 66.36,-318.72 2.66,-318.42 2.66,-245 2.66,-245 2.66,-245 2.66,-170.5 2.66,-128.53 -7.98,-107.72 21.66,-78 48.69,-50.9 147.56,-35.77 217.57,-28.25"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.43,-396.64 1365.46,-393.2 1355.48,-389.64 1355.43,-396.64"/>
 </g>
 <!-- Node11 -->
 <g id="node9" class="node">
 <title>Node11</title>
-<g id="a_node9"><a xlink:href="type__safe__index__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="284,-0.5 284,-41.5 430,-41.5 430,-0.5 284,-0.5"/>
-<text text-anchor="start" x="292" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="start" x="292" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/type_safe_index</text>
-<text text-anchor="middle" x="357" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_pybind.h</text>
+<g id="a_node9"><a xlink:href="lcm__pybind_8h.html" target="_top" xlink:title="Helpers for defining C++ LCM type serializers.">
+<polygon fill="white" stroke="black" points="360.66,-84 360.66,-114 490.66,-114 490.66,-84 360.66,-84"/>
+<text text-anchor="start" x="368.66" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="425.66" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/lcm_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node11 -->
-<g id="edge27" class="edge">
+<g id="edge36" class="edge">
 <title>Node3&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M1033.75,-393.1C812.22,-391.46 172.59,-383.26 88,-343 35.14,-317.84 0,-303.54 0,-245 0,-245 0,-245 0,-170.5 0,-116.72 31.71,-105.38 78,-78 141.04,-40.71 224.63,-27.83 283.83,-23.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.96,-396.6 1043.98,-393.17 1034.01,-389.6 1033.96,-396.6"/>
+<path fill="none" stroke="midnightblue" d="M1355.23,-392.29C1131.54,-388.36 481.8,-374.36 391.66,-343 323.61,-319.32 243.4,-283.41 282.66,-223 304.13,-189.97 333.15,-211.92 363.66,-187 388.94,-166.35 408.76,-132.97 418.69,-114.13"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.5,-395.8 1365.56,-392.47 1355.62,-388.8 1355.5,-395.8"/>
 </g>
 <!-- Node12 -->
 <g id="node10" class="node">
 <title>Node12</title>
-<g id="a_node10"><a xlink:href="lcm__pybind_8h.html" target="_top" xlink:title="Helpers for defining C++ LCM type serializers.">
-<polygon fill="white" stroke="black" points="468,-84 468,-114 598,-114 598,-84 468,-84"/>
-<text text-anchor="start" x="476" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="533" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/lcm_pybind.h</text>
+<g id="a_node10"><a xlink:href="eigen__geometry__pybind_8h.html" target="_top" xlink:title="Provides pybind11 type_casters for Eigen geometric types.">
+<polygon fill="white" stroke="black" points="292.16,-223.5 292.16,-264.5 437.16,-264.5 437.16,-223.5 292.16,-223.5"/>
+<text text-anchor="start" x="300.16" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="start" x="300.16" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/eigen_geometry</text>
+<text text-anchor="middle" x="364.66" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node12 -->
-<g id="edge38" class="edge">
+<g id="edge16" class="edge">
 <title>Node3&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M1033.67,-393.59C897.74,-392.66 617.53,-385.47 531,-343 475.17,-315.6 423.08,-273.77 459,-223 486.77,-183.76 533.23,-226.24 561,-187 576.95,-164.46 558.28,-132.37 544.69,-114.12"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.97,-397.09 1043.99,-393.65 1034.01,-390.09 1033.97,-397.09"/>
+<path fill="none" stroke="midnightblue" d="M1355.49,-393.31C1138.07,-392.26 518.85,-385.51 438.66,-343 406.45,-325.92 384.25,-287.94 373.06,-264.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.52,-396.81 1365.54,-393.36 1355.55,-389.81 1355.52,-396.81"/>
 </g>
 <!-- Node13 -->
 <g id="node11" class="node">
 <title>Node13</title>
-<g id="a_node11"><a xlink:href="eigen__geometry__pybind_8h.html" target="_top" xlink:title="Provides pybind11 type_casters for Eigen geometric types.">
-<polygon fill="white" stroke="black" points="467.5,-223.5 467.5,-264.5 612.5,-264.5 612.5,-223.5 467.5,-223.5"/>
-<text text-anchor="start" x="475.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="start" x="475.5" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/eigen_geometry</text>
-<text text-anchor="middle" x="540" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">_pybind.h</text>
+<g id="a_node11"><a xlink:href="deprecation__pybind_8h.html" target="_top" xlink:title="Provides access to Python deprecation utilities from C++.">
+<polygon fill="white" stroke="black" points="653.66,-307 653.66,-337 823.66,-337 823.66,-307 653.66,-307"/>
+<text text-anchor="start" x="661.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="738.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/deprecation_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node13 -->
-<g id="edge21" class="edge">
+<g id="edge15" class="edge">
 <title>Node3&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M1033.68,-391.8C889.78,-387.81 586.98,-375.6 553,-343 532.19,-323.04 533.1,-287.07 536.18,-264.7"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.67,-395.3 1043.76,-392.07 1033.86,-388.3 1033.67,-395.3"/>
+<path fill="none" stroke="midnightblue" d="M1355.31,-390.17C1241.59,-384.47 1019.5,-370.65 832.66,-343 821.77,-341.39 810.24,-339.28 799.14,-337.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.15,-393.67 1365.31,-390.67 1355.5,-386.68 1355.15,-393.67"/>
 </g>
 <!-- Node14 -->
 <g id="node12" class="node">
 <title>Node14</title>
-<g id="a_node12"><a xlink:href="symbolic__types__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="191.5,-307 191.5,-337 334.5,-337 334.5,-307 191.5,-307"/>
-<text text-anchor="start" x="199.5" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="263" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/symbolic_types_pybind.h</text>
+<g id="a_node12"><a xlink:href="eigen__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="841.66,-307 841.66,-337 981.66,-337 981.66,-307 841.66,-307"/>
+<text text-anchor="start" x="849.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="911.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/eigen_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node14 -->
 <g id="edge17" class="edge">
 <title>Node3&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M1033.43,-392.53C896.32,-389.86 597.75,-379.94 349,-343 338.69,-341.47 327.79,-339.34 317.34,-337.04"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1033.75,-396.03 1043.81,-392.72 1033.88,-389.03 1033.75,-396.03"/>
+<path fill="none" stroke="midnightblue" d="M1355.24,-387.93C1267.25,-380.72 1117.61,-366.25 990.66,-343 981.61,-341.34 972.07,-339.24 962.86,-337.02"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1355.15,-391.43 1365.4,-388.75 1355.71,-384.46 1355.15,-391.43"/>
+</g>
+<!-- Node15 -->
+<g id="node13" class="node">
+<title>Node15</title>
+<g id="a_node13"><a xlink:href="identifier__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="999.66,-307 999.66,-337 1155.66,-337 1155.66,-307 999.66,-307"/>
+<text text-anchor="start" x="1007.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="1077.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/identifier_pybind.h</text>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node15 -->
+<g id="edge18" class="edge">
+<title>Node3&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M1355.44,-379.89C1302.32,-370.11 1229.51,-356.34 1165.66,-343 1156.76,-341.14 1147.38,-339.1 1138.19,-337.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1354.99,-383.37 1365.46,-381.74 1356.26,-376.49 1354.99,-383.37"/>
 </g>
 <!-- Node16 -->
 <g id="node14" class="node">
 <title>Node16</title>
-<g id="a_node14"><a xlink:href="deprecation__pybind_8h.html" target="_top" xlink:title="Provides access to Python deprecation utilities from C++.">
-<polygon fill="white" stroke="black" points="768,-307 768,-337 938,-337 938,-307 768,-307"/>
-<text text-anchor="start" x="776" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="853" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/deprecation_pybind.h</text>
+<g id="a_node14"><a xlink:href="sorted__pair__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="1174.16,-307 1174.16,-337 1341.16,-337 1341.16,-307 1174.16,-307"/>
+<text text-anchor="start" x="1182.16" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="1257.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/sorted_pair_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node16 -->
 <g id="edge20" class="edge">
 <title>Node3&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M1048.42,-376.82C1004.52,-364.73 945.8,-348.56 904.22,-337.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1047.55,-380.21 1058.12,-379.49 1049.4,-373.46 1047.55,-380.21"/>
+<path fill="none" stroke="midnightblue" d="M1386.49,-375.5C1357.19,-363.56 1319.29,-348.11 1292.19,-337.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1385.48,-378.87 1396.07,-379.4 1388.13,-372.39 1385.48,-378.87"/>
 </g>
 <!-- Node17 -->
 <g id="node15" class="node">
 <title>Node17</title>
-<g id="a_node15"><a xlink:href="eigen__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="956,-307 956,-337 1096,-337 1096,-307 956,-307"/>
-<text text-anchor="start" x="964" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="1026" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/eigen_pybind.h</text>
+<g id="a_node15"><a xlink:href="examples__py_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="1359.16,-307 1359.16,-337 1502.16,-337 1502.16,-307 1359.16,-307"/>
+<text text-anchor="start" x="1367.16" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="1430.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/examples/examples_py.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node17 -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>Node3&#45;&gt;Node17</title>
-<path fill="none" stroke="midnightblue" d="M1084.23,-372.46C1070.74,-361 1054.42,-347.14 1042.49,-337"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1082.32,-375.43 1092.2,-379.23 1086.85,-370.09 1082.32,-375.43"/>
+<path fill="none" stroke="midnightblue" d="M1430.66,-369.23C1430.66,-358.57 1430.66,-346.41 1430.66,-337.25"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1427.16,-369.23 1430.66,-379.23 1434.16,-369.23 1427.16,-369.23"/>
 </g>
 <!-- Node18 -->
 <g id="node16" class="node">
 <title>Node18</title>
-<g id="a_node16"><a xlink:href="identifier__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1114,-307 1114,-337 1270,-337 1270,-307 1114,-307"/>
-<text text-anchor="start" x="1122" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="1192" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/identifier_pybind.h</text>
+<g id="a_node16"><a xlink:href="geometry__py_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="1520.66,-307 1520.66,-337 1662.66,-337 1662.66,-307 1520.66,-307"/>
+<text text-anchor="start" x="1528.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="1591.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/geometry/geometry_py.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node18 -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>Node3&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M1133.77,-372.46C1147.26,-361 1163.58,-347.14 1175.51,-337"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1131.15,-370.09 1125.8,-379.23 1135.68,-375.43 1131.15,-370.09"/>
+<path fill="none" stroke="midnightblue" d="M1472.12,-375.34C1499.34,-363.42 1534.42,-348.07 1559.52,-337.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1470.61,-372.19 1462.85,-379.4 1473.42,-378.6 1470.61,-372.19"/>
 </g>
 <!-- Node19 -->
 <g id="node17" class="node">
 <title>Node19</title>
-<g id="a_node17"><a xlink:href="sorted__pair__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1288.5,-307 1288.5,-337 1455.5,-337 1455.5,-307 1288.5,-307"/>
-<text text-anchor="start" x="1296.5" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="1372" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/common/sorted_pair_pybind.h</text>
+<g id="a_node17"><a xlink:href="manipulation__py_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="1680.66,-307 1680.66,-337 1856.66,-337 1856.66,-307 1680.66,-307"/>
+<text text-anchor="start" x="1688.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="1768.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/manipulation/manipulation_py.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node19 -->
 <g id="edge25" class="edge">
 <title>Node3&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M1170.95,-376.89C1216.09,-364.79 1276.57,-348.58 1319.37,-337.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1170.03,-373.52 1161.27,-379.49 1171.84,-380.28 1170.03,-373.52"/>
+<path fill="none" stroke="midnightblue" d="M1505.76,-377.84C1564.32,-365.62 1644.91,-348.81 1701.38,-337.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1504.9,-374.44 1495.83,-379.91 1506.33,-381.29 1504.9,-374.44"/>
 </g>
 <!-- Node20 -->
 <g id="node18" class="node">
 <title>Node20</title>
-<g id="a_node18"><a xlink:href="examples__py_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1473.5,-307 1473.5,-337 1616.5,-337 1616.5,-307 1473.5,-307"/>
-<text text-anchor="start" x="1481.5" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="1545" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/examples/examples_py.h</text>
+<g id="a_node18"><a xlink:href="math__operators__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="1874.66,-307 1874.66,-337 2018.66,-337 2018.66,-307 1874.66,-307"/>
+<text text-anchor="start" x="1882.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="1946.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/math_operators_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node20 -->
-<g id="edge28" class="edge">
+<g id="edge26" class="edge">
 <title>Node3&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M1184.24,-385.13C1256.55,-376.55 1368.74,-361.81 1465,-343 1473.85,-341.27 1483.19,-339.18 1492.24,-337.01"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1183.82,-381.66 1174.3,-386.3 1184.64,-388.61 1183.82,-381.66"/>
+<path fill="none" stroke="midnightblue" d="M1505.94,-387.67C1593.01,-380.26 1740.44,-365.63 1865.66,-343 1874.78,-341.35 1884.41,-339.28 1893.71,-337.09"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.56,-384.19 1495.89,-388.52 1506.15,-391.17 1505.56,-384.19"/>
 </g>
 <!-- Node21 -->
 <g id="node19" class="node">
 <title>Node21</title>
-<g id="a_node19"><a xlink:href="geometry__py_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1635,-307 1635,-337 1777,-337 1777,-307 1635,-307"/>
-<text text-anchor="start" x="1643" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="1706" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/geometry/geometry_py.h</text>
+<g id="a_node19"><a xlink:href="inverse__kinematics__py_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="2036.66,-307 2036.66,-337 2228.66,-337 2228.66,-307 2036.66,-307"/>
+<text text-anchor="start" x="2044.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="2132.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/multibody/inverse_kinematics_py.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node21 -->
-<g id="edge29" class="edge">
+<g id="edge27" class="edge">
 <title>Node3&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M1184.41,-389.63C1285.5,-383.65 1470.28,-369.92 1626,-343 1635.31,-341.39 1645.14,-339.28 1654.6,-337.04"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.08,-386.14 1174.3,-390.22 1184.48,-393.13 1184.08,-386.14"/>
+<path fill="none" stroke="midnightblue" d="M1506.15,-389.63C1619.7,-383.25 1841.04,-368.6 2027.66,-343 2039.61,-341.36 2052.26,-339.26 2064.49,-337.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.62,-386.16 1495.83,-390.21 1506.01,-393.15 1505.62,-386.16"/>
 </g>
 <!-- Node22 -->
 <g id="node20" class="node">
 <title>Node22</title>
-<g id="a_node20"><a xlink:href="inverse__kinematics__py_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1795,-307 1795,-337 1987,-337 1987,-307 1795,-307"/>
-<text text-anchor="start" x="1803" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="1891" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/multibody/inverse_kinematics_py.h</text>
+<g id="a_node20"><a xlink:href="planning__py_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="2247.16,-307 2247.16,-337 2378.16,-337 2378.16,-307 2247.16,-307"/>
+<text text-anchor="start" x="2255.16" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="2312.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/planning/planning_py.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node22 -->
-<g id="edge30" class="edge">
+<g id="edge28" class="edge">
 <title>Node3&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M1184.38,-390.68C1309.7,-385.36 1568.64,-371.71 1786,-343 1798.14,-341.4 1811,-339.29 1823.4,-337.05"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1183.98,-387.19 1174.13,-391.11 1184.27,-394.19 1183.98,-387.19"/>
+<path fill="none" stroke="midnightblue" d="M1505.74,-393.74C1649.03,-393.12 1970.94,-386.47 2237.66,-343 2246.84,-341.5 2256.52,-339.36 2265.76,-337.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.73,-390.24 1495.74,-393.78 1505.75,-397.24 1505.73,-390.24"/>
 </g>
 <!-- Node23 -->
 <g id="node21" class="node">
 <title>Node23</title>
-<g id="a_node21"><a xlink:href="planning__py_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="2005.5,-307 2005.5,-337 2136.5,-337 2136.5,-307 2005.5,-307"/>
-<text text-anchor="start" x="2013.5" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="2071" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/planning/planning_py.h</text>
+<g id="a_node21"><a xlink:href="polynomial__types__pybind_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="2396.66,-307 2396.66,-337 2550.66,-337 2550.66,-307 2396.66,-307"/>
+<text text-anchor="start" x="2404.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="2473.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/polynomial_types_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node23 -->
-<g id="edge31" class="edge">
+<g id="edge29" class="edge">
 <title>Node3&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M1184.3,-394.36C1337.94,-394.98 1698.24,-390.67 1996,-343 2005.18,-341.53 2014.86,-339.4 2024.11,-337.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.05,-390.86 1174.04,-394.31 1184.02,-397.86 1184.05,-390.86"/>
+<path fill="none" stroke="midnightblue" d="M1506.08,-394.01C1668.24,-394.12 2061.84,-389.12 2387.66,-343 2398.13,-341.52 2409.21,-339.38 2419.8,-337.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.74,-390.51 1495.73,-393.99 1505.73,-397.51 1505.74,-390.51"/>
 </g>
 <!-- Node24 -->
 <g id="node22" class="node">
 <title>Node24</title>
-<g id="a_node22"><a xlink:href="polynomial__types__pybind_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="2155,-307 2155,-337 2309,-337 2309,-307 2155,-307"/>
-<text text-anchor="start" x="2163" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="2232" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/polynomial_types_pybind.h</text>
+<g id="a_node22"><a xlink:href="solvers__py_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="2568.66,-307 2568.66,-337 2698.66,-337 2698.66,-307 2568.66,-307"/>
+<text text-anchor="start" x="2576.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="2633.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/solvers/solvers_py.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node24 -->
-<g id="edge32" class="edge">
+<g id="edge30" class="edge">
 <title>Node3&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M1184.42,-391.59C1390.51,-386.09 1960.13,-368.92 2146,-343 2156.48,-341.54 2167.55,-339.41 2178.14,-337.09"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.2,-388.09 1174.3,-391.86 1184.39,-395.09 1184.2,-388.09"/>
+<path fill="none" stroke="midnightblue" d="M1505.92,-392.28C1724.33,-388.42 2355.7,-374.73 2559.66,-343 2568.86,-341.57 2578.57,-339.42 2587.81,-337.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.77,-388.79 1495.83,-392.46 1505.89,-395.79 1505.77,-388.79"/>
 </g>
 <!-- Node25 -->
 <g id="node23" class="node">
 <title>Node25</title>
-<g id="a_node23"><a xlink:href="solvers__py_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="2327,-307 2327,-337 2457,-337 2457,-307 2327,-307"/>
-<text text-anchor="start" x="2335" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="2392" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/solvers/solvers_py.h</text>
+<g id="a_node23"><a xlink:href="solvers__pybind_8h.html" target="_top" xlink:title="Helper methods for binding solvers.">
+<polygon fill="white" stroke="black" points="2716.66,-307 2716.66,-337 2856.66,-337 2856.66,-307 2716.66,-307"/>
+<text text-anchor="start" x="2724.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="2786.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/solvers/solvers_pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node25 -->
-<g id="edge33" class="edge">
+<g id="edge31" class="edge">
 <title>Node3&#45;&gt;Node25</title>
-<path fill="none" stroke="midnightblue" d="M1184.39,-392.54C1413.28,-389.29 2097.92,-376.9 2318,-343 2327.21,-341.58 2336.91,-339.44 2346.15,-337.09"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.11,-389.05 1174.16,-392.69 1184.21,-396.04 1184.11,-389.05"/>
+<path fill="none" stroke="midnightblue" d="M1506.16,-392.58C1743.65,-389.35 2473.57,-376.88 2707.66,-343 2717.46,-341.58 2727.81,-339.44 2737.67,-337.09"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.85,-389.08 1495.9,-392.72 1505.94,-396.08 1505.85,-389.08"/>
 </g>
 <!-- Node26 -->
 <g id="node24" class="node">
 <title>Node26</title>
-<g id="a_node24"><a xlink:href="solvers__pybind_8h.html" target="_top" xlink:title="Helper methods for binding solvers.">
-<polygon fill="white" stroke="black" points="2475,-307 2475,-337 2615,-337 2615,-307 2475,-307"/>
-<text text-anchor="start" x="2483" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="2545" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/solvers/solvers_pybind.h</text>
+<g id="a_node24"><a xlink:href="symbolic__py__unapply_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="2875.16,-307 2875.16,-337 3008.16,-337 3008.16,-307 2875.16,-307"/>
+<text text-anchor="start" x="2883.16" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="2941.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/symbolic_py_unapply.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node26 -->
-<g id="edge34" class="edge">
+<g id="edge32" class="edge">
 <title>Node3&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M1184.54,-392.78C1431.84,-390.11 2215.67,-378.93 2466,-343 2475.94,-341.57 2486.45,-339.4 2496.44,-337"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.18,-389.29 1174.22,-392.89 1184.26,-396.29 1184.18,-389.29"/>
+<path fill="none" stroke="midnightblue" d="M1506.16,-393.05C1762.69,-391.19 2599.6,-382.19 2865.66,-343 2875.24,-341.59 2885.36,-339.42 2894.97,-337.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.81,-389.56 1495.83,-393.13 1505.86,-396.56 1505.81,-389.56"/>
 </g>
 <!-- Node27 -->
 <g id="node25" class="node">
 <title>Node27</title>
 <g id="a_node25"><a xlink:href="framework__py__semantics_8h.html" target="_top" xlink:title="Provides the semantics portion of Python bindings for the systems framework.">
-<polygon fill="white" stroke="black" points="2633,-301.5 2633,-342.5 2767,-342.5 2767,-301.5 2633,-301.5"/>
-<text text-anchor="start" x="2641" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="start" x="2641" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/framework_py</text>
-<text text-anchor="middle" x="2700" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">_semantics.h</text>
+<polygon fill="white" stroke="black" points="3026.66,-301.5 3026.66,-342.5 3160.66,-342.5 3160.66,-301.5 3026.66,-301.5"/>
+<text text-anchor="start" x="3034.66" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="start" x="3034.66" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/framework_py</text>
+<text text-anchor="middle" x="3093.66" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">_semantics.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node27 -->
-<g id="edge35" class="edge">
+<g id="edge33" class="edge">
 <title>Node3&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M1184.64,-393.22C1450.57,-391.87 2341.67,-384.32 2624,-343 2626.83,-342.59 2629.72,-342.1 2632.62,-341.57"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.3,-389.72 1174.32,-393.27 1184.34,-396.72 1184.3,-389.72"/>
+<path fill="none" stroke="midnightblue" d="M1506.19,-393.35C1780.08,-392.46 2720.56,-386.25 3017.66,-343 3020.49,-342.59 3023.38,-342.11 3026.28,-341.57"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.95,-389.85 1495.96,-393.38 1505.97,-396.85 1505.95,-389.85"/>
 </g>
 <!-- Node28 -->
 <g id="node26" class="node">
 <title>Node28</title>
 <g id="a_node26"><a xlink:href="framework__py__systems_8h.html" target="_top" xlink:title="Provides the Python bindings for the core system classes of the systems framework.">
-<polygon fill="white" stroke="black" points="2785,-301.5 2785,-342.5 2919,-342.5 2919,-301.5 2785,-301.5"/>
-<text text-anchor="start" x="2793" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="start" x="2793" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/framework_py</text>
-<text text-anchor="middle" x="2852" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">_systems.h</text>
+<polygon fill="white" stroke="black" points="3178.66,-301.5 3178.66,-342.5 3312.66,-342.5 3312.66,-301.5 3178.66,-301.5"/>
+<text text-anchor="start" x="3186.66" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="start" x="3186.66" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/framework_py</text>
+<text text-anchor="middle" x="3245.66" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">_systems.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node28 -->
-<g id="edge36" class="edge">
+<g id="edge34" class="edge">
 <title>Node3&#45;&gt;Node28</title>
-<path fill="none" stroke="midnightblue" d="M1184.53,-393.49C1467.2,-393.08 2462.52,-388.39 2776,-343 2778.84,-342.59 2781.72,-342.11 2784.62,-341.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.37,-389.99 1174.38,-393.5 1184.38,-396.99 1184.37,-389.99"/>
+<path fill="none" stroke="midnightblue" d="M1506.05,-393.6C1796.25,-393.62 2841.35,-390.33 3169.66,-343 3172.5,-342.59 3175.38,-342.11 3178.28,-341.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1506.04,-390.1 1496.04,-393.6 1506.04,-397.1 1506.04,-390.1"/>
 </g>
 <!-- Node29 -->
 <g id="node27" class="node">
 <title>Node29</title>
 <g id="a_node27"><a xlink:href="framework__py__values_8h.html" target="_top" xlink:title="Provides the values portion of Python bindings for the systems framework.">
-<polygon fill="white" stroke="black" points="2937,-301.5 2937,-342.5 3071,-342.5 3071,-301.5 2937,-301.5"/>
-<text text-anchor="start" x="2945" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="start" x="2945" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/framework_py</text>
-<text text-anchor="middle" x="3004" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">_values.h</text>
+<polygon fill="white" stroke="black" points="3330.66,-301.5 3330.66,-342.5 3464.66,-342.5 3464.66,-301.5 3330.66,-301.5"/>
+<text text-anchor="start" x="3338.66" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="start" x="3338.66" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">/systems/framework_py</text>
+<text text-anchor="middle" x="3397.66" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">_values.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node29 -->
-<g id="edge37" class="edge">
+<g id="edge35" class="edge">
 <title>Node3&#45;&gt;Node29</title>
-<path fill="none" stroke="midnightblue" d="M1184.3,-393.71C1482.79,-394.19 2583.21,-392.48 2928,-343 2930.84,-342.59 2933.72,-342.12 2936.62,-341.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.03,-390.21 1174.03,-393.69 1184.02,-397.21 1184.03,-390.21"/>
+<path fill="none" stroke="midnightblue" d="M1505.9,-393.8C1811.69,-394.68 2962.03,-394.42 3321.66,-343 3324.5,-342.59 3327.38,-342.12 3330.28,-341.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.82,-390.3 1495.81,-393.77 1505.8,-397.3 1505.82,-390.3"/>
 </g>
 <!-- Node30 -->
 <g id="node28" class="node">
 <title>Node30</title>
 <g id="a_node28"><a xlink:href="visualization__py_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="3089,-307 3089,-337 3261,-337 3261,-307 3089,-307"/>
-<text text-anchor="start" x="3097" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="3175" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/visualization/visualization_py.h</text>
+<polygon fill="white" stroke="black" points="3482.66,-307 3482.66,-337 3654.66,-337 3654.66,-307 3482.66,-307"/>
+<text text-anchor="start" x="3490.66" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
+<text text-anchor="middle" x="3568.66" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00">/visualization/visualization_py.h</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node30 -->
-<g id="edge39" class="edge">
+<g id="edge37" class="edge">
 <title>Node3&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M1184.71,-393.4C1499.11,-392.71 2702.87,-387.16 3080,-343 3091.97,-341.6 3104.66,-339.42 3116.74,-337.01"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1184.34,-389.9 1174.34,-393.42 1184.35,-396.9 1184.34,-389.9"/>
+<path fill="none" stroke="midnightblue" d="M1505.96,-393.48C1826.82,-393.12 3081.46,-388.74 3473.66,-343 3485.63,-341.6 3498.32,-339.43 3510.4,-337.02"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1505.83,-389.98 1495.84,-393.49 1505.84,-396.98 1505.83,-389.98"/>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge2" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M142.47,-146.56C145.21,-137.77 148.28,-127.94 150.89,-119.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="139.09,-145.64 139.45,-156.23 145.77,-147.73 139.09,-145.64"/>
+<path fill="none" stroke="midnightblue" d="M531.87,-296.59C533.49,-284.26 535.41,-269.72 536.79,-259.23"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="528.37,-296.33 530.54,-306.7 535.31,-297.25 528.37,-296.33"/>
+</g>
+<!-- Node4&#45;&gt;Node9 -->
+<g id="edge11" class="edge">
+<title>Node4&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M586.55,-302.8C604.16,-294.25 621.52,-282.06 631.66,-265 661.95,-214.05 614.24,-143.81 590.63,-114.13"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="585.04,-299.64 577.36,-306.95 587.91,-306.02 585.04,-299.64"/>
+</g>
+<!-- Node4&#45;&gt;Node12 -->
+<g id="edge10" class="edge">
+<title>Node4&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M489.07,-302.65C464.27,-291.16 432.32,-276.36 407.01,-264.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="487.65,-305.85 498.2,-306.88 490.6,-299.5 487.65,-305.85"/>
+</g>
+<!-- Node5&#45;&gt;Node6 -->
+<g id="edge3" class="edge">
+<title>Node5&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M474.65,-226.47C427.77,-214.36 364.81,-198.1 320.29,-186.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="473.84,-229.88 484.4,-228.99 475.59,-223.1 473.84,-229.88"/>
+</g>
+<!-- Node5&#45;&gt;Node9 -->
+<g id="edge9" class="edge">
+<title>Node5&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M545.35,-219.09C553.74,-189.1 567.85,-138.66 574.69,-114.18"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="541.96,-218.19 542.64,-228.77 548.71,-220.08 541.96,-218.19"/>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge4" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M663.39,-299.17C675.39,-286.33 690.21,-270.47 700.71,-259.23"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="660.62,-297.01 656.35,-306.7 665.74,-301.79 660.62,-297.01"/>
+<path fill="none" stroke="midnightblue" d="M223.29,-152.4C199.76,-142.34 170.46,-129.83 146.41,-119.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="222.09,-155.69 232.67,-156.4 224.85,-149.26 222.09,-155.69"/>
 </g>
-<!-- Node6&#45;&gt;Node10 -->
-<g id="edge13" class="edge">
-<title>Node6&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M703.48,-304.05C747.53,-291.1 800.57,-273.99 807,-265 844.59,-212.44 769.68,-143.36 732.83,-114.08"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="702.28,-300.75 693.66,-306.91 704.24,-307.47 702.28,-300.75"/>
-</g>
-<!-- Node6&#45;&gt;Node13 -->
-<g id="edge12" class="edge">
-<title>Node6&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M615.2,-300.49C600.12,-289.36 581.57,-275.68 566.67,-264.68"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="613.5,-303.58 623.63,-306.7 617.66,-297.95 613.5,-303.58"/>
-</g>
-<!-- Node7&#45;&gt;Node8 -->
+<!-- Node6&#45;&gt;Node8 -->
 <g id="edge5" class="edge">
-<title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M654.1,-226.24C610.91,-214.16 553.27,-198.03 512.42,-186.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="653.34,-229.66 663.91,-228.99 655.22,-222.92 653.34,-229.66"/>
+<title>Node6&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M265.66,-146.23C265.66,-135.57 265.66,-123.41 265.66,-114.25"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="262.16,-146.23 265.66,-156.23 269.16,-146.23 262.16,-146.23"/>
 </g>
-<!-- Node7&#45;&gt;Node10 -->
-<g id="edge11" class="edge">
-<title>Node7&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M714,-218.69C714,-188.66 714,-138.55 714,-114.18"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="710.5,-218.77 714,-228.77 717.5,-218.77 710.5,-218.77"/>
-</g>
-<!-- Node8&#45;&gt;Node5 -->
+<!-- Node6&#45;&gt;Node9 -->
 <g id="edge6" class="edge">
-<title>Node8&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M391.42,-154.18C342.05,-142.77 276.39,-127.6 227.12,-116.21"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="390.85,-157.65 401.38,-156.49 392.42,-150.82 390.85,-157.65"/>
+<title>Node6&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M343.46,-154.43C389.06,-144.83 447.73,-132.17 499.66,-120 507.65,-118.13 516.07,-116.08 524.32,-114.02"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="342.71,-151.01 333.64,-156.49 344.15,-157.86 342.71,-151.01"/>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge7" class="edge">
-<title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M432.39,-150.43C415.23,-138.79 394.03,-124.42 378.66,-114"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="430.71,-153.52 440.95,-156.23 434.64,-147.73 430.71,-153.52"/>
-</g>
-<!-- Node8&#45;&gt;Node10 -->
+<!-- Node6&#45;&gt;Node11 -->
 <g id="edge8" class="edge">
-<title>Node8&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M521.9,-153.74C565.09,-141.66 622.73,-125.53 663.58,-114.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="520.78,-150.42 512.09,-156.49 522.66,-157.16 520.78,-150.42"/>
+<title>Node6&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M306.87,-152.34C333.92,-140.42 368.77,-125.07 393.72,-114.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="305.39,-149.17 297.65,-156.4 308.22,-155.57 305.39,-149.17"/>
 </g>
-<!-- Node8&#45;&gt;Node12 -->
-<g id="edge10" class="edge">
-<title>Node8&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M483.79,-148.86C495.12,-137.61 508.65,-124.18 518.65,-114.25"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="481,-146.7 476.37,-156.23 485.93,-151.67 481,-146.7"/>
-</g>
-<!-- Node10&#45;&gt;Node11 -->
-<g id="edge9" class="edge">
-<title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M638.09,-81.84C576.71,-68.77 490.84,-50.49 430.2,-37.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="637.6,-85.31 648.1,-83.97 639.05,-78.47 637.6,-85.31"/>
-</g>
-<!-- Node14&#45;&gt;Node5 -->
-<g id="edge18" class="edge">
-<title>Node14&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M225.85,-301.23C212.64,-292.11 199.25,-279.95 192,-265 183.86,-248.2 187.13,-241.02 192,-223 196.83,-205.12 208.17,-204.88 213,-187 216.6,-173.7 218.27,-168.73 213,-156 207.11,-141.77 195.65,-129.28 184.63,-119.72"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="224.14,-304.29 234.44,-306.78 227.94,-298.41 224.14,-304.29"/>
-</g>
-<!-- Node15 -->
-<g id="node13" class="node">
-<title>Node15</title>
-<g id="a_node13"><a xlink:href="symbolic__py__unapply_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="201.5,-229 201.5,-259 334.5,-259 334.5,-229 201.5,-229"/>
-<text text-anchor="start" x="209.5" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">drake/bindings/pydrake</text>
-<text text-anchor="middle" x="268" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">/symbolic_py_unapply.h</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node15 -->
-<g id="edge19" class="edge">
-<title>Node14&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M264.61,-296.59C265.42,-284.26 266.37,-269.72 267.06,-259.23"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="261.1,-296.5 263.94,-306.7 268.09,-296.96 261.1,-296.5"/>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge7" class="edge">
+<title>Node9&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M515.63,-81.37C470.89,-69.56 410.71,-53.68 363.85,-41.32"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="514.94,-84.8 525.5,-83.97 516.72,-78.04 514.94,-84.8"/>
 </g>
 </g>
 </svg>

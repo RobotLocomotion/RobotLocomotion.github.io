@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1symbolic_1_1_formula.html#a701b925b413db520ce348a7b255555b6":[3,0,0,15,36,50],
+"classdrake_1_1symbolic_1_1_formula.html#a70fdb6bef6734fc34b5215e5c7b661df":[3,0,0,15,36,21],
+"classdrake_1_1symbolic_1_1_formula.html#a73ef07e11393268fcdf71d676c552939":[3,0,0,15,36,5],
+"classdrake_1_1symbolic_1_1_formula.html#a75b1751d953407c394e5643f2d1d3f27":[3,0,0,15,36,28],
+"classdrake_1_1symbolic_1_1_formula.html#a7b22d6f9b90847ce4b84be2a5afd1c30":[3,0,0,15,36,32],
+"classdrake_1_1symbolic_1_1_formula.html#a7e2b744a99cf3463103ae8e56cbe3ca6":[3,0,0,15,36,0],
 "classdrake_1_1symbolic_1_1_formula.html#a8be7e60c0c281e458314e7cca539b683":[3,0,0,15,36,46],
 "classdrake_1_1symbolic_1_1_formula.html#a8c07b2aea2c19c00e26628dd1af884f7":[3,0,0,15,36,10],
 "classdrake_1_1symbolic_1_1_formula.html#a8ef1e3ab885669cca0fe9627478652f7":[3,0,0,15,36,44],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac9d0904cd9dd27d23e8b06422689f15c":[3,0,0,15,56,12],
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad068f6a4e70fbc44f9750a6bf95c71e2":[3,0,0,15,56,18],
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad5618187094e03d2752cd35d57953736":[3,0,0,15,56,19],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad68803a52761732ade55fee20a566772":[3,0,0,15,56,2],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#add829eb57111c504b019880ee3a91a46":[3,0,0,15,56,5],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ae5d7b913b75c38b332f0163672ab4fa7":[3,0,0,15,56,8],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#af324ed6f376e80b76707254946bfcc44":[3,0,0,15,56,7],
-"classdrake_1_1symbolic_1_1_nary_formula_cell.html":[3,0,0,15,57],
-"classdrake_1_1symbolic_1_1_nary_formula_cell.html#a354a0cb01b43bbf435b2d32173e6a085":[3,0,0,15,57,1],
-"classdrake_1_1symbolic_1_1_nary_formula_cell.html#a3660c96e65bec4f7831e74691a14c129":[3,0,0,15,57,5]
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad68803a52761732ade55fee20a566772":[3,0,0,15,56,2]
 };
