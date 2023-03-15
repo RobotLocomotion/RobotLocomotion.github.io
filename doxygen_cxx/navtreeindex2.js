@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ac37f7346acd4e42cac1845e1872f5f97":[3,0,0,3,1,2,2],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#acdd28ee42910e57f87e1ca4f49642436":[3,0,0,3,1,2,1],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#acf286c3d47becb9cb03092b0ef6517c8":[3,0,0,3,1,2,4],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ad396aec45bf850813ade147181f01aae":[3,0,0,3,1,2,6],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html":[3,0,0,3,13,1],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html#a1ca4be942662cc68c53b49f9570229db":[3,0,0,3,13,1,4],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html#a86c64a746261d0751d26fe8dcc7b80e3":[3,0,0,3,13,1,0],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html#a8b3f0ba5047823382fad44bac42ffbb6":[3,0,0,3,13,1,1]
+"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html#a8b3f0ba5047823382fad44bac42ffbb6":[3,0,0,3,13,1,1],
+"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html#a9a9ecbabf91ef8c0ef422ce7f56a1cbc":[3,0,0,3,13,1,2]
 };

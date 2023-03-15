@@ -852,6 +852,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7918857fc5c0c9deffef433ca5cb85f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af7918857fc5c0c9deffef433ca5cb85f">GetJointIndices</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:af7918857fc5c0c9deffef433ca5cb85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of joint indices associated with <code>model_instance</code>.  <a href="#af7918857fc5c0c9deffef433ca5cb85f">More...</a><br /></td></tr>
 <tr class="separator:af7918857fc5c0c9deffef433ca5cb85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ebacb6a7d7cc73afb40deb6dc17798"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a78ebacb6a7d7cc73afb40deb6dc17798">GetJointActuatorIndices</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:a78ebacb6a7d7cc73afb40deb6dc17798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of joint actuator indices associated with <code>model_instance</code>.  <a href="#a78ebacb6a7d7cc73afb40deb6dc17798">More...</a><br /></td></tr>
+<tr class="separator:a78ebacb6a7d7cc73afb40deb6dc17798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712cbedf8449d69fc9fce0f15e19808d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a712cbedf8449d69fc9fce0f15e19808d">GetActuatedJointIndices</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:a712cbedf8449d69fc9fce0f15e19808d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of actuated joint indices associated with <code>model_instance</code>.  <a href="#a712cbedf8449d69fc9fce0f15e19808d">More...</a><br /></td></tr>
+<tr class="separator:a712cbedf8449d69fc9fce0f15e19808d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d525055ce3a8974e3529df912c7fef"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class JointType = Joint&gt; </td></tr>
 <tr class="memitem:a23d525055ce3a8974e3529df912c7fef"><td class="memTemplItemLeft" align="right" valign="top">const JointType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a23d525055ce3a8974e3529df912c7fef">GetJointByName</a> (std::string_view name, std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; model_instance=std::nullopt) const</td></tr>
 <tr class="memdesc:a23d525055ce3a8974e3529df912c7fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to a joint that is identified by the string <code>name</code> in <code>this</code> MultibodyPlant.  <a href="#a23d525055ce3a8974e3529df912c7fef">More...</a><br /></td></tr>
@@ -882,6 +888,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8601c026e9807127b4dd41e7585d2cfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc">num_actuators</a> () const</td></tr>
 <tr class="memdesc:a8601c026e9807127b4dd41e7585d2cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of joint actuators in the model.  <a href="#a8601c026e9807127b4dd41e7585d2cfc">More...</a><br /></td></tr>
 <tr class="separator:a8601c026e9807127b4dd41e7585d2cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ced71a0d382b846bf68813aa3ab93d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2ced71a0d382b846bf68813aa3ab93d6">num_actuators</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:a2ced71a0d382b846bf68813aa3ab93d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of actuators for a specific model instance.  <a href="#a2ced71a0d382b846bf68813aa3ab93d6">More...</a><br /></td></tr>
+<tr class="separator:a2ced71a0d382b846bf68813aa3ab93d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3fc8de8de8eaf2d37a24c79d6be8e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae3fc8de8de8eaf2d37a24c79d6be8e97">num_actuated_dofs</a> () const</td></tr>
 <tr class="memdesc:ae3fc8de8de8eaf2d37a24c79d6be8e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of actuated degrees of freedom.  <a href="#ae3fc8de8de8eaf2d37a24c79d6be8e97">More...</a><br /></td></tr>
 <tr class="separator:ae3fc8de8de8eaf2d37a24c79d6be8e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4548,6 +4557,32 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a712cbedf8449d69fc9fce0f15e19808d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712cbedf8449d69fc9fce0f15e19808d">&#9670;&nbsp;</a></span>GetActuatedJointIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a>&gt; GetActuatedJointIndices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of actuated joint indices associated with <code>model_instance</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1fc148ddec26f8c109c233b8b2ec1e2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fc148ddec26f8c109c233b8b2ec1e2d">&#9670;&nbsp;</a></span>GetActuationFromArray()</h2>
 
@@ -5157,6 +5192,32 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7bfcc73831e073c659a3c6503e0e1e6a">HasJointActuatorNamed()</a> to query if there exists an actuator in <code>this</code> MultibodyPlant with a given specified name. </dd></dl>
+
+</div>
+</div>
+<a id="a78ebacb6a7d7cc73afb40deb6dc17798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ebacb6a7d7cc73afb40deb6dc17798">&#9670;&nbsp;</a></span>GetJointActuatorIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a>&gt; GetJointActuatorIndices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of joint actuator indices associated with <code>model_instance</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -6804,7 +6865,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div>
 </div>
 <a id="a8601c026e9807127b4dd41e7585d2cfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8601c026e9807127b4dd41e7585d2cfc">&#9670;&nbsp;</a></span>num_actuators()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8601c026e9807127b4dd41e7585d2cfc">&#9670;&nbsp;</a></span>num_actuators() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6820,6 +6881,32 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 <p>Returns the number of joint actuators in the model. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af528f7747dc75227fdec76aba89e7d2b" title="Creates and adds a JointActuator model for an actuator acting on a given joint.">AddJointActuator()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a2ced71a0d382b846bf68813aa3ab93d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ced71a0d382b846bf68813aa3ab93d6">&#9670;&nbsp;</a></span>num_actuators() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_actuators </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of actuators for a specific model instance. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

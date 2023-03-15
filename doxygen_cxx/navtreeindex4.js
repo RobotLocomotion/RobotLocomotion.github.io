@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"classdrake_1_1geometry_1_1_geometry_instance.html#a57e7c2c36f1fa5e38087cf8856940ae2":[3,0,0,4,16,18],
 "classdrake_1_1geometry_1_1_geometry_instance.html#a58e1fa879e8289f27c769e72bf788228":[3,0,0,4,16,12],
 "classdrake_1_1geometry_1_1_geometry_instance.html#a60b08cbd082bdbf17421d376d03d0b24":[3,0,0,4,16,1],
 "classdrake_1_1geometry_1_1_geometry_instance.html#a621d6c0fd5206b8e30b0dc4011339851":[3,0,0,4,16,9],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "classdrake_1_1geometry_1_1_meshcat.html#aca91c85fa237a8653b1bfaa6a3b16f94":[3,0,0,4,26,16],
 "classdrake_1_1geometry_1_1_meshcat.html#ae822b74ad0f1943ed88145f89b5618de":[3,0,0,4,26,4],
 "classdrake_1_1geometry_1_1_meshcat_animation.html":[3,0,0,4,27],
-"classdrake_1_1geometry_1_1_meshcat_animation.html#a0ab0718e1feac2feea4f31137e03866a":[3,0,0,4,27,12]
+"classdrake_1_1geometry_1_1_meshcat_animation.html#a0ab0718e1feac2feea4f31137e03866a":[3,0,0,4,27,12],
+"classdrake_1_1geometry_1_1_meshcat_animation.html#a1efc50039c93dc5271d939b82d89db25":[3,0,0,4,27,11]
 };

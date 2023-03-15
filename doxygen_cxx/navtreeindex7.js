@@ -1,6 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a0b56a9b0d124a2afc9d3bd99c8c96bd7":[3,0,0,4,1,4,6,4],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a153320e91d79f67bf658f610e38129fc":[3,0,0,4,1,4,6,5],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a3690734a05bcd7a13afdc61ef4574c52":[3,0,0,4,1,4,6,6],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a6ae749b792e2cc08726daf18f320dd33":[3,0,0,4,1,4,6,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a7b576c6ef0a29307ea834724937fef6b":[1,1,1,5,7],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a7b576c6ef0a29307ea834724937fef6b":[1,5,4,5,7],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a975d99900951b2a2cfee5777e32e329c":[1,1,1,5,2],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a975d99900951b2a2cfee5777e32e329c":[1,5,4,5,2]
+"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a975d99900951b2a2cfee5777e32e329c":[1,5,4,5,2],
+"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a98f8a4ac27c2c8008728ae504e8e68bc":[1,1,1,5,6]
 };

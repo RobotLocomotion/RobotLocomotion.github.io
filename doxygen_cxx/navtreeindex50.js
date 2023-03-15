@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"piecewise__polynomial_8h.html":[4,0,0,1,5,5],
+"piecewise__pose_8h.html":[4,0,0,1,5,6],
 "piecewise__quaternion_8h.html":[4,0,0,1,5,7],
 "piecewise__trajectory_8h.html":[4,0,0,1,5,8],
 "pixel__types_8h.html":[4,0,0,12,8,14],
@@ -68,7 +70,7 @@ var NAVTREEINDEX50 =
 "point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afaf7838358503ffc19f4ed15a03804b7f1":[4,0,0,9,2,4,2],
 "point__cloud__flags_8h.html#acff44cbce439811c7213d1bb4e295e4c":[4,0,0,9,2,7],
 "point__cloud__to__lcm_8h.html":[4,0,0,9,3],
-"point__contact__data_8h.html":[4,0,0,8,2,9],
+"point__contact__data_8h.html":[4,0,0,8,2,8],
 "point__contact__visualizer_8h.html":[4,0,0,8,7,4],
 "point__pair__contact__info_8h.html":[4,0,0,8,10,28],
 "point__to__line__distance__constraint_8h.html":[4,0,0,8,5,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "rational__function_8h.html#a347249d56768661c610bf3bafb5ff167":[4,0,0,1,3,14,6],
 "rational__function_8h.html#a3c8b6db1763f8f7a5d98de636b9cd7c9":[4,0,0,1,3,14,24],
 "rational__function_8h.html#a43d86ae3f21714ef199febddf60550fe":[4,0,0,1,3,14,31],
-"rational__function_8h.html#a44a9560b5bbc179968621e3df178742c":[4,0,0,1,3,14,22],
-"rational__function_8h.html#a4a8d6fb5671a17bf0c89c1c5aef9efaf":[4,0,0,1,3,14,25],
-"rational__function_8h.html#a579d06e36f094bf2eebf127dcbb46a1c":[4,0,0,1,3,14,23]
+"rational__function_8h.html#a44a9560b5bbc179968621e3df178742c":[4,0,0,1,3,14,22]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"hash_8h.html#a746d15e267a6399643c2ffe878f4680c":[4,0,0,1,38,8],
+"hash_8h.html#a8ec36c65f95147192214391781b75b08":[4,0,0,1,38,10],
 "hash_8h.html#ace5b5f07e7cce19025b862a56d85e6aa":[4,0,0,1,38,4],
 "hash_8h.html#ae04ca99007a983e597a71955c96c5925":[4,0,0,1,38,6],
 "hash_8h.html#aeacd6804761e9fb9f0fa26a6766f1444":[4,0,0,1,38,5],
@@ -233,7 +235,7 @@ var NAVTREEINDEX47 =
 "linear__constitutive__model_8h.html":[4,0,0,8,3,18],
 "linear__constitutive__model__data_8h.html":[4,0,0,8,3,19],
 "linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
-"linear__operator_8h.html":[4,0,0,8,2,6],
+"linear__operator_8h.html":[4,0,0,8,2,5],
 "linear__quadratic__regulator_8h.html":[4,0,0,12,1,7],
 "linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,12,1,7,4],
 "linear__quadratic__regulator_8h.html#ga6506532189adf1c7a42662b597135f70":[4,0,0,12,1,7,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "linear__solve_8h.html#a2fe42b78445dde235cc217342ba8ab87":[4,0,0,7,23,5],
 "linear__solve_8h.html#a34a14f4ecff0af11999f7d416c3316bf":[4,0,0,7,23,3],
 "linear__solve_8h.html#a579e00c8ae91d6bcdb32eb4d723eba73":[4,0,0,7,23,7],
-"linear__solve_8h.html#a9bfcba20c731dc23e4f48c367e36c9de":[4,0,0,7,23,6],
-"linear__solve_8h.html#ac1ecf90a76392d69deecb8feb29e19a7":[4,0,0,7,23,4],
-"linear__spring__damper_8h.html":[4,0,0,8,14,18]
+"linear__solve_8h.html#a9bfcba20c731dc23e4f48c367e36c9de":[4,0,0,7,23,6]
 };

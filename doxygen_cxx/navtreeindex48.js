@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"linear__solve_8h.html#ac1ecf90a76392d69deecb8feb29e19a7":[4,0,0,7,23,4],
+"linear__spring__damper_8h.html":[4,0,0,8,14,18],
 "linear__system_8h.html":[4,0,0,12,6,11],
 "linear__system_8h.html#ga14e2725af4ae2110baaf69555a49b591":[4,0,0,12,6,11,1],
 "linear__system_8h.html#ga80a6af98e4258a474416aae6ab3abdd8":[4,0,0,12,6,11,4],
@@ -227,15 +229,15 @@ var NAVTREEINDEX48 =
 "name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,43,2],
 "namespacedrake.html":[2,0,0],
 "namespacedrake.html":[3,0,0],
-"namespacedrake_1_1ad.html":[3,0,0,0],
 "namespacedrake_1_1ad.html":[2,0,0,0],
+"namespacedrake_1_1ad.html":[3,0,0,0],
 "namespacedrake_1_1assert.html":[2,0,0,1],
 "namespacedrake_1_1assert.html":[3,0,0,1],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common.html":[3,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
-"namespacedrake_1_1examples.html":[3,0,0,3],
 "namespacedrake_1_1examples.html":[2,0,0,3],
+"namespacedrake_1_1examples.html":[3,0,0,3],
 "namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
 "namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "namespacedrake_1_1examples_1_1bouncing__ball.html":[2,0,0,3,4],
 "namespacedrake_1_1examples_1_1compass__gait.html":[2,0,0,3,5],
 "namespacedrake_1_1examples_1_1compass__gait.html":[3,0,0,3,4],
-"namespacedrake_1_1examples_1_1fibonacci.html":[3,0,0,3,5],
-"namespacedrake_1_1examples_1_1fibonacci.html":[2,0,0,3,6],
-"namespacedrake_1_1examples_1_1kuka__iiwa__arm.html":[2,0,0,3,7]
+"namespacedrake_1_1examples_1_1fibonacci.html":[2,0,0,3,6]
 };

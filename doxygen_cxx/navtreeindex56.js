@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,16,8,10,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,10,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html":[3,0,0,16,8,11],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,11,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,16,8,11,0],
@@ -185,7 +187,7 @@ var NAVTREEINDEX56 =
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a9b731d88a685b1ec76623274cccf7d33":[3,0,2,29,0],
 "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,30],
 "subvector_8h.html":[4,0,0,12,3,37],
-"supernodal__solver_8h.html":[4,0,0,8,2,11],
+"supernodal__solver_8h.html":[4,0,0,8,2,10],
 "supervector_8h.html":[4,0,0,12,3,38],
 "symbolic_2polynomial_8h.html":[4,0,0,1,3,11],
 "symbolic_2polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd":[4,0,0,1,3,11,37],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "symbolic__test__util_8h.html#ac651807ee0ec1298966869ae92a500e7":[4,0,0,1,4,10,3],
 "symbolic__test__util_8h.html#ac8a7cacf437717f7d6c4273e34705279":[4,0,0,1,4,10,21],
 "symbolic__test__util_8h.html#ad4875ef92903b58bec7b32ff6658557c":[4,0,0,1,4,10,10],
-"symbolic__test__util_8h.html#ad7cee2f49aca9d7d87803728389fdfae":[4,0,0,1,4,10,15],
-"symbolic__test__util_8h.html#adb8b893205178f5d6b6d50f7421ec51a":[4,0,0,1,4,10,5],
-"symbolic__test__util_8h.html#ade9bc3fff93c686d4776771a8e0249af":[4,0,0,1,4,10,7]
+"symbolic__test__util_8h.html#ad7cee2f49aca9d7d87803728389fdfae":[4,0,0,1,4,10,15]
 };

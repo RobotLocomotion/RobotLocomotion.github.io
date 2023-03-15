@@ -1,5 +1,7 @@
 var NAVTREEINDEX42 =
 {
+"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400a":[4,0,0,7,5,1],
+"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa39209ccaab9620e08ec04483c22a7eda":[4,0,0,7,5,1,2],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa5cc7cc1518100eae9e3f2d83673a74ed":[4,0,0,7,5,1,1],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aae7c3602dce09c755e09250077a601a51":[4,0,0,7,5,1,0],
 "compute__numerical__gradient_8h.html#a8b9faaffd818a335e485c9c38fe67f0e":[4,0,0,7,5,2],
@@ -35,9 +37,9 @@ var NAVTREEINDEX42 =
 "contact__results__to__lcm_8h.html":[4,0,0,8,10,9],
 "contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,9,0],
 "contact__results__to__lcm_8h.html#ga732349f929601b37e30b15ad557057e7":[4,0,0,8,10,9,1],
-"contact__solver_8h.html":[4,0,0,8,2,3],
-"contact__solver__results_8h.html":[4,0,0,8,2,4],
-"contact__solver__utils_8h.html":[4,0,0,8,2,5],
+"contact__solver_8h.html":[4,0,0,8,2,2],
+"contact__solver__results_8h.html":[4,0,0,8,2,3],
+"contact__solver__utils_8h.html":[4,0,0,8,2,4],
 "contact__surface_8h.html":[4,0,0,4,3,0],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
@@ -80,9 +82,9 @@ var NAVTREEINDEX42 =
 "cpp__template__pybind_8h.html":[4,0,0,0,0,0,1],
 "cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,0,1,4],
 "cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,0,1,1],
+"cpp__template__pybind_8h.html#a85dae944dd94ece7b256c9c46215268d":[4,0,0,0,0,0,1,0],
 "cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,0,1,2],
 "cpp__template__pybind_8h.html#ab8504fe03e622fa78dbbd4e7ce19fdb6":[4,0,0,0,0,0,1,3],
-"cpp__template__pybind_8h.html#afb81ce5ef11f69d94cd88c7c70ac3598":[4,0,0,0,0,0,1,0],
 "create__constraint_8h.html":[4,0,0,11,10],
 "create__cost_8h.html":[4,0,0,11,11],
 "cross__product_8h.html":[4,0,0,7,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX42 =
 "dir_892460009e18f4b08a77d36884a88a01.html":[4,0,0,12,8],
 "dir_8ce7b658333a2b1019abe8473e52e1ec.html":[4,0,0,4,5],
 "dir_8d45261e6a2fc0f4521d25819d2b8e68.html":[4,0,0,6,2],
-"dir_8f847be5c0c53e92edc6178d5e17891e.html":[4,0,0,3,18],
-"dir_90a47678bc0a869c6c11f834a8ae1688.html":[4,0,0,12,9],
-"dir_93440ff1fccc190180d80144c14e3a50.html":[4,0,0,0,0,4]
+"dir_8f847be5c0c53e92edc6178d5e17891e.html":[4,0,0,3,18]
 };

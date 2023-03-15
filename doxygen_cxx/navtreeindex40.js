@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html":[1,2,4,1],
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505":[1,2,4,1,4],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a":[1,2,4,1,0],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a23a62490645a6a4b334b019c6894c597":[1,2,4,1,11],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0":[1,2,4,1,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aa408f130541d6cb0d4142e6a819a8b93":[3,0,0,18,3,8],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#abbe04f8c2fd40cf6b8f22298bdca05f1":[3,0,0,18,3,9],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,3,5],
-"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,18,3,11],
-"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aeaf76c3b69e479e70c002c9e35085f4b":[3,0,0,18,3,12],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html":[3,0,0,18,4]
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,18,3,11]
 };

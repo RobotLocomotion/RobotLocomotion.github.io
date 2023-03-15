@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[4,0,0,11,51,0,5],
+"solver__type__converter_8h.html":[4,0,0,11,52],
 "solvers__py_8h.html":[4,0,0,0,0,6,0],
 "solvers__pybind_8h.html":[4,0,0,0,0,6,1],
 "solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,6,1,0],
@@ -20,7 +22,7 @@ var NAVTREEINDEX52 =
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,46],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,14,47],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,54],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,10],
+"sparse__linear__operator_8h.html":[4,0,0,8,2,9],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[3,0,0,4,50,7],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a7fa789c84df3efe720c9070acd56c1ce":[3,0,0,4,50,5],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,4,50,2],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,50,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,4,50,0],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,50,1]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,50,8]
 };
