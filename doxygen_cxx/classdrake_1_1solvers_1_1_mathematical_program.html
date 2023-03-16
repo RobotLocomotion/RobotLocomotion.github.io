@@ -281,9 +281,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7e4fa58845ca19073b0c532431ac141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a60e13290a9b854b4fee070764f978d22">MatrixXIndeterminate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad7e4fa58845ca19073b0c532431ac141">NewIndeterminates</a> (<a class="el" href="classint.html">int</a> rows, <a class="el" href="classint.html">int</a> cols, const std::string &amp;name=&quot;X&quot;)</td></tr>
 <tr class="memdesc:ad7e4fa58845ca19073b0c532431ac141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminates to this <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>, with default name "X".  <a href="#ad7e4fa58845ca19073b0c532431ac141">More...</a><br /></td></tr>
 <tr class="separator:ad7e4fa58845ca19073b0c532431ac141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e477494394065870c27354060c67ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a33e477494394065870c27354060c67ad">AddIndeterminate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;new_indeterminate)</td></tr>
+<tr class="memdesc:a33e477494394065870c27354060c67ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminate.  <a href="#a33e477494394065870c27354060c67ad">More...</a><br /></td></tr>
+<tr class="separator:a33e477494394065870c27354060c67ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d17877e373279d18488f21836285539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a1d17877e373279d18488f21836285539">AddIndeterminates</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#a60e13290a9b854b4fee070764f978d22">MatrixXIndeterminate</a> &gt; &amp;new_indeterminates)</td></tr>
 <tr class="memdesc:a1d17877e373279d18488f21836285539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminates.  <a href="#a1d17877e373279d18488f21836285539">More...</a><br /></td></tr>
 <tr class="separator:a1d17877e373279d18488f21836285539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b39856ec07e10a4f9f9980dbc33ef98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4b39856ec07e10a4f9f9980dbc33ef98">AddIndeterminates</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &amp;new_indeterminates)</td></tr>
+<tr class="memdesc:a4b39856ec07e10a4f9f9980dbc33ef98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminates.  <a href="#a4b39856ec07e10a4f9f9980dbc33ef98">More...</a><br /></td></tr>
+<tr class="separator:a4b39856ec07e10a4f9f9980dbc33ef98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67626d45d9a119d01e1c046ad89ee556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_visualization_callback.html">VisualizationCallback</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a67626d45d9a119d01e1c046ad89ee556">AddVisualizationCallback</a> (const <a class="el" href="classdrake_1_1solvers_1_1_visualization_callback.html#a84c15b60ba647eabef0aaa2d5dd3943e">VisualizationCallback::CallbackFunction</a> &amp;callback, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
 <tr class="memdesc:a67626d45d9a119d01e1c046ad89ee556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a callback method to visualize intermediate results of the optimization.  <a href="#a67626d45d9a119d01e1c046ad89ee556">More...</a><br /></td></tr>
 <tr class="separator:a67626d45d9a119d01e1c046ad89ee556"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2253,8 +2259,39 @@ Each entry in <code>decision_variables</code> should not be a dummy variable. </
 
 </div>
 </div>
+<a id="a33e477494394065870c27354060c67ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e477494394065870c27354060c67ad">&#9670;&nbsp;</a></span>AddIndeterminate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddIndeterminate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
+          <td class="paramname"><em>new_indeterminate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds indeterminate. </p>
+<p>This method appends an indeterminate to the end of the program's old indeterminates. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_indeterminate</td><td>The indeterminate to be appended to the program's old indeterminates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminate</code> should not intersect with the program's old indeterminates or decision variables. </dd>
+<dd>
+new_indeterminate should not be dummy. </dd>
+<dd>
+new_indeterminate should be of CONTINUOUS type. </dd></dl>
+
+</div>
+</div>
 <a id="a1d17877e373279d18488f21836285539"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d17877e373279d18488f21836285539">&#9670;&nbsp;</a></span>AddIndeterminates()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d17877e373279d18488f21836285539">&#9670;&nbsp;</a></span>AddIndeterminates() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2263,6 +2300,37 @@ Each entry in <code>decision_variables</code> should not be a dummy variable. </
           <td class="memname">void AddIndeterminates </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#a60e13290a9b854b4fee070764f978d22">MatrixXIndeterminate</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_indeterminates</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds indeterminates. </p>
+<p>This method appends some indeterminates to the end of the program's old indeterminates. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_indeterminates</td><td>The indeterminates to be appended to the program's old indeterminates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminates</code> should not intersect with the program's old indeterminates or decision variables. </dd>
+<dd>
+Each entry in new_indeterminates should not be dummy. </dd>
+<dd>
+Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
+
+</div>
+</div>
+<a id="a4b39856ec07e10a4f9f9980dbc33ef98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b39856ec07e10a4f9f9980dbc33ef98">&#9670;&nbsp;</a></span>AddIndeterminates() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddIndeterminates </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &amp;&#160;</td>
           <td class="paramname"><em>new_indeterminates</em></td><td>)</td>
           <td></td>
         </tr>
