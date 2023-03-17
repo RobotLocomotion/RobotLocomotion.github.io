@@ -166,8 +166,8 @@ git cherry-pick 674b84877bc08448b59a2243f3b910a7b6dbab43
   <li>Push that branch and then open a new pull request titled:
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[doc] Add release notes v1.N.0
 </code></pre></div>    </div>
-    <p>Make sure that “Allow edits from maintainers” on the GitHub PR page is
-enabled (the checkbox is checked).</p>
+    <p>Make sure that “Allow edits by maintainers” on the GitHub PR page is
+enabled (the checkbox is checked). Set label <code class="language-plaintext highlighter-rouge">release notes: none</code>.</p>
   </li>
   <li>For release notes, on an ongoing basis, add recent commit messages to the
 release notes draft using the <code class="language-plaintext highlighter-rouge">tools/release_engineering/relnotes</code> tooling.
@@ -245,7 +245,7 @@ were upgraded in the same pull request, they each should get their own
 line in the release notes.</li>
     </ul>
   </li>
-  <li>Some features under development (eg, hydroelastic as of this writing) may
+  <li>Some features under development (eg, deformables as of this writing) may
 have no-release-notes policies, as their APIs although public are not yet
 fully supported.  Be sure to take note of which these are, or ask on
 <code class="language-plaintext highlighter-rouge">#platform_review</code> slack.</li>
@@ -324,7 +324,7 @@ them all.
 the upcoming v1.N.0 and YYYYMMDD.</li>
     </ol>
   </li>
-  <li>Re-enable CI by reverting the commit you added way up above in step 3.</li>
+  <li>Re-enable CI by reverting the commit you added way up above in step 3 of <strong>Prior to release</strong>.</li>
   <li>Wait for the wheel builds to complete, and then download release artifacts:
     <ol>
       <li>Use the
@@ -345,11 +345,11 @@ instructions are atop its source code:
     </ol>
   </li>
   <li>Open <a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a> and choose “Draft
-a new release”.  Note that this page does has neither history nor undo.  Be
+a new release”.  Note that this page has neither history nor undo.  Be
 slow and careful!
     <ol>
       <li>Tag version is: v1.N.0</li>
-      <li>Target is: [the git sha from above]
+      <li>Target is: [the git sha from the <code class="language-plaintext highlighter-rouge">--find-git-sha</code> in step 1.v]
         <ul>
           <li>You should select the commit from Target &gt; Recent Commits. The search
   via commit does not work if you don’t use the correct length.</li>
@@ -369,7 +369,7 @@ them.”, drag and drop the 36 release files from
         <ul>
           <li>12: 4 <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 8 checksums</li>
           <li>6: 2 <code class="language-plaintext highlighter-rouge">.deb</code> + 4 checksums</li>
-          <li>9: 4 linux <code class="language-plaintext highlighter-rouge">.whl</code> + 8 checksums</li>
+          <li>12: 4 linux <code class="language-plaintext highlighter-rouge">.whl</code> + 8 checksums</li>
           <li>3: 1 macOS x86 <code class="language-plaintext highlighter-rouge">.whl</code> + 2 checksums</li>
           <li>3: 1 macOS arm <code class="language-plaintext highlighter-rouge">.whl</code> + 2 checksums</li>
         </ul>
@@ -382,9 +382,9 @@ them.”, drag and drop the 36 release files from
       <li>Check that the link to drake.mit.edu docs from the GitHub release draft
 page actually works.</li>
       <li>Click “Publish release”</li>
-      <li>Notify <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> via a GitHub comment to manually tag docker images
-and upload the releases to S3. Be sure to provide her with the binary
-date, commit SHA, and release tag in the same ping.</li>
+      <li>Notify <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> by creating a GitHub issue asking her to manually 
+tag docker images and upload the releases to S3. Be sure to provide her 
+with the binary date and release tag in the same ping.</li>
       <li>Announce on Drake Slack, <code class="language-plaintext highlighter-rouge">#general</code>.</li>
       <li>Party on, Wayne.</li>
     </ol>
