@@ -4891,6 +4891,36 @@ details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MakeStateSelectorMatrix">
+<span class="sig-name descname"><span class="pre">MakeStateSelectorMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_to_joint_index_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeStateSelectorMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>This method allows users to map the state of <code class="docutils literal notranslate"><span class="pre">this</span></code> model, x, into a
+vector of selected state xₛ with a given preferred ordering. The
+mapping, or selection, is returned in the form of a selector matrix Sx
+such that <code class="docutils literal notranslate"><span class="pre">xₛ</span> <span class="pre">=</span> <span class="pre">Sx⋅x</span></code>. The size nₛ of xₛ is always smaller or equal
+than the size of the full state x. That is, a user might be interested
+in only a given portion of the full state x.</p>
+<p>This selection matrix is particularly useful when adding PID control
+on a portion of the state, see systems::controllers::PidController.</p>
+<p>A user specifies the preferred order in xₛ via
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. The selected state is built such that
+selected positions are followed by selected velocities, as in <code class="docutils literal notranslate"><span class="pre">xₛ</span> <span class="pre">=</span>
+<span class="pre">[qₛ,</span> <span class="pre">vₛ]</span></code>. The positions in qₛ are a concatenation of the positions
+for each joint in the order they appear in
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. That is, the positions for
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map[0]</span></code> are first, followed by the positions
+for <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map[1]</span></code>, etc. Similarly for the selected
+velocities vₛ.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there are repeated indexes in</strong> – </p></li>
+<li><p><strong>user_to_joint_index_map`</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MapQDotToVelocity">
 <span class="sig-name descname"><span class="pre">MapQDotToVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MapQDotToVelocity" title="Permalink to this definition"></a></dt>
 <dd><p>Transforms the time derivative <code class="docutils literal notranslate"><span class="pre">qdot</span></code> of the generalized positions
@@ -8999,6 +9029,36 @@ details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeStateSelectorMatrix">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].MakeStateSelectorMatrix"></span><span class="sig-name descname"><span class="pre">MakeStateSelectorMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_to_joint_index_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeStateSelectorMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>This method allows users to map the state of <code class="docutils literal notranslate"><span class="pre">this</span></code> model, x, into a
+vector of selected state xₛ with a given preferred ordering. The
+mapping, or selection, is returned in the form of a selector matrix Sx
+such that <code class="docutils literal notranslate"><span class="pre">xₛ</span> <span class="pre">=</span> <span class="pre">Sx⋅x</span></code>. The size nₛ of xₛ is always smaller or equal
+than the size of the full state x. That is, a user might be interested
+in only a given portion of the full state x.</p>
+<p>This selection matrix is particularly useful when adding PID control
+on a portion of the state, see systems::controllers::PidController.</p>
+<p>A user specifies the preferred order in xₛ via
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. The selected state is built such that
+selected positions are followed by selected velocities, as in <code class="docutils literal notranslate"><span class="pre">xₛ</span> <span class="pre">=</span>
+<span class="pre">[qₛ,</span> <span class="pre">vₛ]</span></code>. The positions in qₛ are a concatenation of the positions
+for each joint in the order they appear in
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. That is, the positions for
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map[0]</span></code> are first, followed by the positions
+for <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map[1]</span></code>, etc. Similarly for the selected
+velocities vₛ.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there are repeated indexes in</strong> – </p></li>
+<li><p><strong>user_to_joint_index_map`</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MapQDotToVelocity">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].MapQDotToVelocity"></span><span class="sig-name descname"><span class="pre">MapQDotToVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MapQDotToVelocity" title="Permalink to this definition"></a></dt>
 <dd><p>Transforms the time derivative <code class="docutils literal notranslate"><span class="pre">qdot</span></code> of the generalized positions
@@ -13095,6 +13155,36 @@ details.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if any of the joints in user_to_joint_index_map</strong> – </p></li>
 <li><p><strong>does not have an actuator.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.MakeStateSelectorMatrix">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].MakeStateSelectorMatrix"></span><span class="sig-name descname"><span class="pre">MakeStateSelectorMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_to_joint_index_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.MakeStateSelectorMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>This method allows users to map the state of <code class="docutils literal notranslate"><span class="pre">this</span></code> model, x, into a
+vector of selected state xₛ with a given preferred ordering. The
+mapping, or selection, is returned in the form of a selector matrix Sx
+such that <code class="docutils literal notranslate"><span class="pre">xₛ</span> <span class="pre">=</span> <span class="pre">Sx⋅x</span></code>. The size nₛ of xₛ is always smaller or equal
+than the size of the full state x. That is, a user might be interested
+in only a given portion of the full state x.</p>
+<p>This selection matrix is particularly useful when adding PID control
+on a portion of the state, see systems::controllers::PidController.</p>
+<p>A user specifies the preferred order in xₛ via
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. The selected state is built such that
+selected positions are followed by selected velocities, as in <code class="docutils literal notranslate"><span class="pre">xₛ</span> <span class="pre">=</span>
+<span class="pre">[qₛ,</span> <span class="pre">vₛ]</span></code>. The positions in qₛ are a concatenation of the positions
+for each joint in the order they appear in
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. That is, the positions for
+<code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map[0]</span></code> are first, followed by the positions
+for <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map[1]</span></code>, etc. Similarly for the selected
+velocities vₛ.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there are repeated indexes in</strong> – </p></li>
+<li><p><strong>user_to_joint_index_map`</strong> – </p></li>
 </ul>
 </dd>
 </dl>
