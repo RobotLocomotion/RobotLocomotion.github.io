@@ -420,6 +420,9 @@ that yet, then ask for help on slack in the <code class="language-plaintext high
 the email address associated with your github account.</p>
 
 <ol>
+  <li>Post a new slack thread in <code class="language-plaintext highlighter-rouge">#releases</code> saying that you’re beginning the
+tutorials deployment now (so that others are aware of the potentially-
+disruptive changes).</li>
   <li>Open the tutorials <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2FDockerfile">Dockerfile</a>:
     <ol>
       <li>Edit the first line to refer to the YYYYMMDD for this release.
@@ -453,7 +456,7 @@ file should have the following content:
 </code></pre></div>    </div>
   </li>
   <li>For reference (no action required), the initialization notebook at
-<a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Finit.ipynb">init.ipynb</a>
+<a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/Init%20notebook-5fcfe3fc0bd0403899baab3b6cf37a18">init.ipynb</a>
 has this cell added the bottom, as a Drake-specific customization:
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
 /opt/drake/share/drake/setup/deepnote/install_nginx
@@ -467,43 +470,68 @@ For Jammy we also needed to add <code class="language-plaintext highlighter-roug
 (in <code class="language-plaintext highlighter-rouge">/opt/drake/share/drake/tutorials/...</code>) into the Deepnote project
 storage (<code class="language-plaintext highlighter-rouge">~/work/...</code>):
     <ol>
-      <li>Open <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2F.for_maintainers.ipynb">.for_maintainers.ipynb</a>.</li>
+      <li>Open <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/zzz_for_maintainers-fd55235184ab44289133abc40e94a5e0">zzz_for_maintainers.ipynb</a>.</li>
       <li>Run each cell one by one, checking for errors as you go.</li>
+      <li>Note the first cell will take 1-2 minutes to finish because Deepnote
+needs to boot the machine first.</li>
     </ol>
   </li>
-  <li>For almost all other notebooks (excluding the <code class="language-plaintext highlighter-rouge">.for_maintainers</code> notebook
-<strong>and</strong> excluding the <code class="language-plaintext highlighter-rouge">licensed_solvers_deepnote</code> notebook) one by one
-(probably in alphabetical order, for your sanity):
+  <li>Next you’ll copy and run each notebook (in alphabetical order).
+Read all of these instructions before performing any of them.
     <ol>
-      <li>Open the notebook and click “Run notebook”.
+      <li>Caveats for specific notebook names:
         <ol>
+          <li>Do not run <code class="language-plaintext highlighter-rouge">licensed_solvers_deepnote</code>; you don’t have a license.</li>
+          <li>Do not re-run <code class="language-plaintext highlighter-rouge">zzz_for_maintainers</code>; you’ve already done that.</li>
           <li>The <code class="language-plaintext highlighter-rouge">authoring_multibody_simulation</code> notebook will appear to hang on
 one of the middle cells where it uses JointSliders. It is <em>not</em> hung,
 rather it is waiting for user input. Find the “Meshcat URL” link
 earlier in the notebook, click through to open Meshcat in a new tab,
 click “Open Controls”, then click “Stop JointSliders” repeatedly until
 the option vanishes and the notebook completes.</li>
-          <li>Do not try to run the <code class="language-plaintext highlighter-rouge">licensed_solvers_deepnote</code> notebook.
-(You do not have a suitable license key.)</li>
-          <li>If you get an error like “Synchronization of file … failed, your changes are not being saved. You might be running out of disk quota” you may ignore it.</li>
-          <li>In the “rendering multibody plant” tutorial, sometimes the rendering
-step may crash with an interrupted error. In that case, click through
-to the “Environment” gear in the right-hand panel, then into the
-“init.ipynb” notbook and re-run the initialization.</li>
+          <li>The <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> sometimes crashes with an interrupted
+error. In that case, click through to the “Environment” gear in the
+right-hand panel, then into the <code class="language-plaintext highlighter-rouge">init.ipynb</code> notbook and re-run the
+initialization. Then go back to  <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> and try
+again.</li>
         </ol>
       </li>
-      <li>For all markdown cells, quickly skim over the rendered output to check
-that no markup errors have snuck through (e.g., LaTeX syntax errors).</li>
-      <li>For all code cells, examine the output of each cell to check that no
+      <li>To deploy run each of the ~2 dozen notebooks (i.e., do this step for
+<code class="language-plaintext highlighter-rouge">authoring_leaf_system</code> then <code class="language-plaintext highlighter-rouge">authoring_multibody_simulation</code> then
+… etc.):
+        <ol>
+          <li>In the right-hand panel of your screen, take note that each notebook
+appears in two places – in “NOTEBOOKS” near the top and in “FILES”
+near the bottom. The “NOTBOOKS” is the old copy; the “FILES” is the new
+copy. Our goal is to replace the old copy with the new.</li>
+          <li>Scroll down to the “FILES” and choose the top-most name. Right click on
+it and select “Move to notebooks”.</li>
+          <li>Because a notebook of that name already existed in “NOTEBOOKS” (the old
+copy), the moved notebook will be renamed with a <code class="language-plaintext highlighter-rouge">-2</code> suffix.</li>
+          <li>Scroll up to “NOTEBOOKS”. Right click on the old copy (without <code class="language-plaintext highlighter-rouge">-2`)
+and select "Delete" and confirm. Right click on the new notebook (with
+</code>-2<code class="language-plaintext highlighter-rouge">) and select "Rename" and remove the</code>-2`` suffix.</li>
+          <li>Open the (new) notebook and click “Run notebook”. It should succeed.</li>
+          <li>For all code cells, examine the output of each cell to check that no
 exceptions have snuck through (or any other unexpected error text).
-        <ul>
-          <li>The error “‘%matplotlib notebook’ is not supported in Deepnote” is
+            <ul>
+              <li>The error “‘%matplotlib notebook’ is not supported in Deepnote” is
 expected and can be ignored.</li>
-        </ul>
-      </li>
-      <li>Leave the notebook output intact (do not clear the outputs). We want
+            </ul>
+          </li>
+          <li>For all markdown cells, quickly skim over the rendered output to check
+that no markup errors have snuck through (e.g., LaTeX syntax errors).</li>
+          <li>If you get an error like “Synchronization of file … failed, your
+changes are not being saved. You might be running out of disk quota”
+you may ignore it.</li>
+          <li>Leave the notebook output intact (do not clear the outputs). We want
 users to be able to read the outputs on their own, without necessarily
 running the notebook themselves.</li>
+          <li>The moved notebook no longer appears in “FILES”, so you can always
+use the top-most <code class="language-plaintext highlighter-rouge">*.ipynb</code> in “FILES” as your checklist for which
+one to tackle next.</li>
+        </ol>
+      </li>
     </ol>
   </li>
   <li>On the right side, click “Environment” then “Stop Machine”, as a

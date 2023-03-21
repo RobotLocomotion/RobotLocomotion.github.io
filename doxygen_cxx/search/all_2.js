@@ -70,6 +70,7 @@ var searchData=
   ['binding_3c_20drake_3a_3asolvers_3a_3alinearmatrixinequalityconstraint_20_3e',['Binding&lt; drake::solvers::LinearMatrixInequalityConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3alorentzconeconstraint_20_3e',['Binding&lt; drake::solvers::LorentzConeConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3apositivesemidefiniteconstraint_20_3e',['Binding&lt; drake::solvers::PositiveSemidefiniteConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
+  ['binding_3c_20drake_3a_3asolvers_3a_3aquadraticconstraint_20_3e',['Binding&lt; drake::solvers::QuadraticConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3aquadraticcost_20_3e',['Binding&lt; drake::solvers::QuadraticCost &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3arotatedlorentzconeconstraint_20_3e',['Binding&lt; drake::solvers::RotatedLorentzConeConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3avisualizationcallback_20_3e',['Binding&lt; drake::solvers::VisualizationCallback &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],

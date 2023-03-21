@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1perception_1_1_point_clo
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient, synchronized interface to commonly used fields and data types applicable for basic 3D perception. </p>
-<p>This is a mix between the philosophy of PCL (templated interface to provide a compile-time open set, run-time closed set) and VTK (non-templated interface to provide a very free form run-time open set). You may construct one <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient,...">PointCloud</a> which will contain different sets of data, but you cannot change the contained data types after construction. However, you can mutate the data contained within the structure and resize the cloud.</p>
+<p>This is a mix between the philosophy of PCL (templated interface to provide a compile-time open set, run-time closed set) and VTK (non-templated interface to provide a very free form run-time open set).</p>
 <p>Definitions:</p>
 <ul>
 <li>point - An entry in a point cloud (not exclusively an XYZ point).</li>
@@ -183,7 +183,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1perception_1_1_point_clo
 <li>xyz - Cartesian XYZ coordinates (float[3]).</li>
 <li>descriptor - A descriptor that is run-time defined (float[X]).</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>"contiguous" here means contiguous in memory. This was chosen to avoid ambiguity between PCL and Eigen, where in PCL "dense" implies that the point cloud corresponds to a cloud with invalid values, and in Eigen "dense" implies contiguous storage.</dd>
+<dl class="section note"><dt>Note</dt><dd>"contiguous" here means contiguous in memory. This was chosen to avoid ambiguity between PCL and Eigen, where in PCL "dense" implies that the point cloud corresponds to a cloud with only valid values, and in Eigen "dense" implies contiguous storage.</dd>
 <dd>
 The accessors / mutators for the point fields of this class returns references to the original Eigen matrices. This implies that they are invalidated whenever memory is reallocated for the values. Given this, minimize the lifetime of these references to be as short as possible. Additionally, algorithms wanting fast access to values should avoid the single point accessors / mutatotrs (e.g. <code>xyz(i)</code>, <code>mutable_descriptor(i)</code>) to avoid overhead when accessing a single element (either copying or creating a reference).</dd>
 <dd>
@@ -318,6 +318,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a05c7caacbe62c00dba9f7bf755b68f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code>add_size</code> default-initialized points.  <a href="#a05c7caacbe62c00dba9f7bf755b68f0f">More...</a><br /></td></tr>
 <tr class="separator:a05c7caacbe62c00dba9f7bf755b68f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Fields</div></td></tr>
+<tr class="memitem:a772c02e0a01c54fb1e342979b03cc38b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a772c02e0a01c54fb1e342979b03cc38b">SetFields</a> (<a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">pc_flags::Fields</a> new_fields, bool skip_initialize=false)</td></tr>
+<tr class="memdesc:a772c02e0a01c54fb1e342979b03cc38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the point cloud to a given set of fields.  <a href="#a772c02e0a01c54fb1e342979b03cc38b">More...</a><br /></td></tr>
+<tr class="separator:a772c02e0a01c54fb1e342979b03cc38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31299bfa7bfe49933c86a8fb2399669a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a31299bfa7bfe49933c86a8fb2399669a">HasFields</a> (<a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">pc_flags::Fields</a> fields_in) const</td></tr>
 <tr class="memdesc:a31299bfa7bfe49933c86a8fb2399669a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if a point cloud has a given set of fields.  <a href="#a31299bfa7bfe49933c86a8fb2399669a">More...</a><br /></td></tr>
 <tr class="separator:a31299bfa7bfe49933c86a8fb2399669a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1335,6 +1338,43 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a772c02e0a01c54fb1e342979b03cc38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772c02e0a01c54fb1e342979b03cc38b">&#9670;&nbsp;</a></span>SetFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">pc_flags::Fields</a>&#160;</td>
+          <td class="paramname"><em>new_fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skip_initialize</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the point cloud to a given set of fields. </p>
+<p>In the case of introducing a new field, its container will be allocated with the current size and default initialized. The data for all retained fields will remain unchanged. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_fields</td><td>New fields to set to. </td></tr>
+    <tr><td class="paramname">skip_initialize</td><td>Do not default-initialize new values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="acee5db2d53b1b703ab6a50eb836e07b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acee5db2d53b1b703ab6a50eb836e07b9">&#9670;&nbsp;</a></span>SetFrom()</h2>
 
@@ -1371,7 +1411,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td>Other point cloud. </td></tr>
-    <tr><td class="paramname">fields_in</td><td>Fields to copy. If this is <code>kInherit</code>, then both clouds must have the exact same fields. Otherwise, both clouds must support the fields indicated this parameter. </td></tr>
+    <tr><td class="paramname">fields_in</td><td>Fields to copy. If this is <code>kInherit</code>, then <code>other</code>s fields will be copied. Otherwise, both clouds must support the fields indicated this parameter. </td></tr>
     <tr><td class="paramname">allow_resize</td><td>Permit resizing to the other cloud's size. </td></tr>
   </table>
   </dd>

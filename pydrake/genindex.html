@@ -1272,6 +1272,8 @@
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.__init__">(pydrake.solvers.Binding[PositiveSemidefiniteConstraint] method)</a>
 </li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticConstraint-.__init__">(pydrake.solvers.Binding[QuadraticConstraint] method)</a>
+</li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticCost-.__init__">(pydrake.solvers.Binding[QuadraticCost] method)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-RotatedLorentzConeConstraint-.__init__">(pydrake.solvers.Binding[RotatedLorentzConeConstraint] method)</a>
@@ -2479,10 +2481,10 @@
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint">AddPointToPointDistanceConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPolyhedronConstraint">AddPolyhedronConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddPositionBounds">AddPositionBounds() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">AddPositionConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
@@ -2500,6 +2502,8 @@
       <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryProperties.AddProperty">AddProperty() (pydrake.geometry.GeometryProperties method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddQuadraticAsRotatedLorentzConeConstraint">AddQuadraticAsRotatedLorentzConeConstraint() (pydrake.solvers.MathematicalProgram method)</a>
+</li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddQuadraticConstraint">AddQuadraticConstraint() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddQuadraticCost">AddQuadraticCost() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
@@ -3155,9 +3159,11 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PerspectiveQuadraticCost">Binding[PerspectiveQuadraticCost] (class in pydrake.solvers)</a>
 </li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PositiveSemidefiniteConstraint">Binding[PositiveSemidefiniteConstraint] (class in pydrake.solvers)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PositiveSemidefiniteConstraint">Binding[PositiveSemidefiniteConstraint] (class in pydrake.solvers)</a>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticConstraint">Binding[QuadraticConstraint] (class in pydrake.solvers)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticCost">Binding[QuadraticCost] (class in pydrake.solvers)</a>
 </li>
@@ -6127,6 +6133,8 @@
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PerspectiveQuadraticCost-.evaluator">(pydrake.solvers.Binding[PerspectiveQuadraticCost] method)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.evaluator">(pydrake.solvers.Binding[PositiveSemidefiniteConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticConstraint-.evaluator">(pydrake.solvers.Binding[QuadraticConstraint] method)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticCost-.evaluator">(pydrake.solvers.Binding[QuadraticCost] method)</a>
 </li>
@@ -14636,6 +14644,8 @@
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.Qf">Qf (pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions property)</a>
 </li>
+      <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.quadratic_constraints">quadratic_constraints() (pydrake.solvers.MathematicalProgram method)</a>
+</li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.quadratic_costs">quadratic_costs() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.QuadraticConstraint">QuadraticConstraint (class in pydrake.solvers)</a>
@@ -15708,6 +15718,20 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniversalJoint_-Expression-.set_default_angles">(pydrake.multibody.tree.UniversalJoint_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint.set_default_damping">set_default_damping() (pydrake.multibody.tree.PrismaticJoint method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.set_default_damping">(pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint_-Expression-.set_default_damping">(pydrake.multibody.tree.PrismaticJoint_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RevoluteJoint.set_default_damping">(pydrake.multibody.tree.RevoluteJoint method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.set_default_damping">(pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RevoluteJoint_-Expression-.set_default_damping">(pydrake.multibody.tree.RevoluteJoint_[Expression] method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PlanarJoint.set_default_pose">set_default_pose() (pydrake.multibody.tree.PlanarJoint method)</a>
 
       <ul>
@@ -16572,6 +16596,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_-Expression-.SetAbstractState">(pydrake.systems.framework.Context_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context.SetAccuracy">SetAccuracy() (pydrake.systems.framework.Context method)</a>
 
       <ul>
@@ -16580,8 +16606,6 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_-Expression-.SetAccuracy">(pydrake.systems.framework.Context_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.SetActuationInArray">SetActuationInArray() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -16692,6 +16716,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_-Expression-.SetDiscreteState">(pydrake.systems.framework.Context_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.perception.html#pydrake.perception.PointCloud.SetFields">SetFields() (pydrake.perception.PointCloud method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.LinearBushingRollPitchYaw.SetForceDampingConstants">SetForceDampingConstants() (pydrake.multibody.tree.LinearBushingRollPitchYaw method)</a>
 
       <ul>
@@ -18786,10 +18812,10 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-ModelInstanceIndex">Value[ModelInstanceIndex] (class in pydrake.common.value)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-MosekSolverDetails">Value[MosekSolverDetails] (class in pydrake.common.value)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-NloptSolverDetails">Value[NloptSolverDetails] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-NumericParameterIndex">Value[NumericParameterIndex] (class in pydrake.common.value)</a>
@@ -18906,6 +18932,8 @@
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PerspectiveQuadraticCost-.variables">(pydrake.solvers.Binding[PerspectiveQuadraticCost] method)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.variables">(pydrake.solvers.Binding[PositiveSemidefiniteConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticConstraint-.variables">(pydrake.solvers.Binding[QuadraticConstraint] method)</a>
 </li>
         <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticCost-.variables">(pydrake.solvers.Binding[QuadraticCost] method)</a>
 </li>

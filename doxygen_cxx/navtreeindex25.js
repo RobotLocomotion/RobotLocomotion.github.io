@@ -1,5 +1,11 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a02d52040a8c27a93acbf3c6f4438f912":[3,0,0,15,3,5],
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a03a72be3355e6291a8ace9016df45bbd":[3,0,0,15,3,11],
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a12bbd5b99675b3fb5d29f58535dcfb36":[3,0,0,15,3,0],
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a1a9144f1ebdf663cbf084afd81e83923":[3,0,0,15,3,4],
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a28f7f91a7edf412dddfa57c1a479cd4a":[3,0,0,15,3,7],
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a30f25c5bdbe576452e9841887380b79c":[3,0,0,15,3,9],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a387079b52f79c8490fcc3ca011e5b70d":[3,0,0,15,3,10],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a5008d440bf1b5f7e6759e1801ec26f0c":[3,0,0,15,3,12],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a5154e421d79f1dbb1fb2e8be2d330532":[3,0,0,15,3,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_expression_add_factory.html#aa9076c4acb7121f4a9790f1520038d5c":[3,0,0,15,10,10],
 "classdrake_1_1symbolic_1_1_expression_add_factory.html#ae0df3821668c7d207f4b01f457b4de94":[3,0,0,15,10,5],
 "classdrake_1_1symbolic_1_1_expression_add_factory.html#af68eff8236d3a36fee3ea41718074cf0":[3,0,0,15,10,7],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#af8eb5b513875aad241a3d278c34db562":[3,0,0,15,10,4],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#afa4721a3bdc0e5cc68b446cd3275645a":[3,0,0,15,10,2],
-"classdrake_1_1symbolic_1_1_expression_asin.html":[3,0,0,15,11],
-"classdrake_1_1symbolic_1_1_expression_asin.html#a0e07687d55b69dbd85e37446ea1b8810":[3,0,0,15,11,0],
-"classdrake_1_1symbolic_1_1_expression_asin.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,15,11,5],
-"classdrake_1_1symbolic_1_1_expression_asin.html#a4d63adf08b5325e905027f6f2c14b433":[3,0,0,15,11,3],
-"classdrake_1_1symbolic_1_1_expression_asin.html#a66f66b1d5e15bec4b2b7f12ade1b3094":[3,0,0,15,11,6]
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#af8eb5b513875aad241a3d278c34db562":[3,0,0,15,10,4]
 };

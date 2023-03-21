@@ -1,5 +1,11 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,18,3,6],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a6fbaa53b8b33b541654542c8e60c393e":[3,0,0,18,3,3],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a822fbbf4dc76a7f195ce7e2c06579afb":[3,0,0,18,3,1],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,18,3,10],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aa408f130541d6cb0d4142e6a819a8b93":[3,0,0,18,3,8],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#abbe04f8c2fd40cf6b8f22298bdca05f1":[3,0,0,18,3,9],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,18,3,5],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,18,3,11],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aeaf76c3b69e479e70c002c9e35085f4b":[3,0,0,18,3,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX41 =
 "common_2autodiff_8h.html":[4,0,0,1,7],
 "common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[4,0,0,1,7,0],
 "common__solver__option_8h.html":[4,0,0,11,7],
-"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40":[4,0,0,11,7,1],
-"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8":[4,0,0,11,7,1,0],
-"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100":[4,0,0,11,7,1,1],
-"common__solver__option_8h.html#aed794af38e7da9270528fd2185861862":[4,0,0,11,7,2],
-"compass__gait_8h.html":[4,0,0,3,4,0],
-"compass__gait__geometry_8h.html":[4,0,0,3,4,1],
-"compliant__contact__manager_8h.html":[4,0,0,8,10,2]
+"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40":[4,0,0,11,7,1]
 };

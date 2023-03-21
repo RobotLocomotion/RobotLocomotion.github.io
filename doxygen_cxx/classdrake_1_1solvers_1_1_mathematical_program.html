@@ -484,6 +484,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c89b0162a81a051cb90dad57a8e0686"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&amp;Derived::ColsAtCompileTime !=1, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4c89b0162a81a051cb90dad57a8e0686">AddBoundingBoxConstraint</a> (<a class="el" href="classdouble.html">double</a> lb, <a class="el" href="classdouble.html">double</a> ub, const Eigen::MatrixBase&lt; Derived &gt; &amp;vars)</td></tr>
 <tr class="memdesc:a4c89b0162a81a051cb90dad57a8e0686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the same scalar lower and upper bound to every variable in <code>vars</code>.  <a href="#a4c89b0162a81a051cb90dad57a8e0686">More...</a><br /></td></tr>
 <tr class="separator:a4c89b0162a81a051cb90dad57a8e0686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb353e0658840089a5b1cb3c48004235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#afb353e0658840089a5b1cb3c48004235">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt; &amp;binding)</td></tr>
+<tr class="memdesc:afb353e0658840089a5b1cb3c48004235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds quadratic constraint.  <a href="#afb353e0658840089a5b1cb3c48004235">More...</a><br /></td></tr>
+<tr class="separator:afb353e0658840089a5b1cb3c48004235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9c7c53a27e3daa802449b105d51b71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5e9c7c53a27e3daa802449b105d51b71">AddQuadraticConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, <a class="el" href="classdouble.html">double</a> lb, <a class="el" href="classdouble.html">double</a> ub, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars, std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">QuadraticConstraint::HessianType</a> &gt; hessian_type=std::nullopt)</td></tr>
+<tr class="memdesc:a5e9c7c53a27e3daa802449b105d51b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub.  <a href="#a5e9c7c53a27e3daa802449b105d51b71">More...</a><br /></td></tr>
+<tr class="separator:a5e9c7c53a27e3daa802449b105d51b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc247437ed57ce071d93220f28d801f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5dc247437ed57ce071d93220f28d801f">AddQuadraticConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, <a class="el" href="classdouble.html">double</a> lb, <a class="el" href="classdouble.html">double</a> ub, const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;vars, std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">QuadraticConstraint::HessianType</a> &gt; hessian_type=std::nullopt)</td></tr>
+<tr class="memdesc:a5dc247437ed57ce071d93220f28d801f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub.  <a href="#a5dc247437ed57ce071d93220f28d801f">More...</a><br /></td></tr>
+<tr class="separator:a5dc247437ed57ce071d93220f28d801f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac542608c09531142fca3886918e2e914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac542608c09531142fca3886918e2e914">AddQuadraticConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, <a class="el" href="classdouble.html">double</a> lb, <a class="el" href="classdouble.html">double</a> ub, std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">QuadraticConstraint::HessianType</a> &gt; hessian_type=std::nullopt)</td></tr>
+<tr class="memdesc:ac542608c09531142fca3886918e2e914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads AddQuadraticConstraint, impose lb &lt;= e &lt;= ub where <code>e</code> is a quadratic expression.  <a href="#ac542608c09531142fca3886918e2e914">More...</a><br /></td></tr>
+<tr class="separator:ac542608c09531142fca3886918e2e914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12c149981283b0e251f55055c5ea4b40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a12c149981283b0e251f55055c5ea4b40">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:a12c149981283b0e251f55055c5ea4b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Lorentz cone constraint referencing potentially a subset of the decision variables.  <a href="#a12c149981283b0e251f55055c5ea4b40">More...</a><br /></td></tr>
 <tr class="separator:a12c149981283b0e251f55055c5ea4b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -651,6 +663,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5febe285490e9ce74e824de29f2ecd9f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5febe285490e9ce74e824de29f2ecd9f">linear_constraints</a> () const</td></tr>
 <tr class="memdesc:a5febe285490e9ce74e824de29f2ecd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for linear constraints.  <a href="#a5febe285490e9ce74e824de29f2ecd9f">More...</a><br /></td></tr>
 <tr class="separator:a5febe285490e9ce74e824de29f2ecd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac605b661de3fc03efcdfb8405e29f1c4"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac605b661de3fc03efcdfb8405e29f1c4">quadratic_constraints</a> () const</td></tr>
+<tr class="memdesc:ac605b661de3fc03efcdfb8405e29f1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for quadratic constraints.  <a href="#ac605b661de3fc03efcdfb8405e29f1c4">More...</a><br /></td></tr>
+<tr class="separator:ac605b661de3fc03efcdfb8405e29f1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9af8bd45f4e7aa63918031b0774fed0"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae9af8bd45f4e7aa63918031b0774fed0">lorentz_cone_constraints</a> () const</td></tr>
 <tr class="memdesc:ae9af8bd45f4e7aa63918031b0774fed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for Lorentz cone constraints.  <a href="#ae9af8bd45f4e7aa63918031b0774fed0">More...</a><br /></td></tr>
 <tr class="separator:ae9af8bd45f4e7aa63918031b0774fed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1354,7 +1369,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a13e9e45a96eb6158f483aa0c81d2c7ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13e9e45a96eb6158f483aa0c81d2c7ae">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[1/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e9e45a96eb6158f483aa0c81d2c7ae">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[1/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1376,7 +1391,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ae4c9655545a804d2a37a78e4225d8bde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4c9655545a804d2a37a78e4225d8bde">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[2/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c9655545a804d2a37a78e4225d8bde">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[2/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1431,7 +1446,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="aa9245481a949ae2a1af84809f4d81d30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9245481a949ae2a1af84809f4d81d30">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[3/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9245481a949ae2a1af84809f4d81d30">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[3/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1465,7 +1480,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ae8d9bfe34ef20a9f343e518fccc40bd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8d9bfe34ef20a9f343e518fccc40bd6">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[4/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d9bfe34ef20a9f343e518fccc40bd6">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[4/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1513,7 +1528,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a9cf94f38f3b4c3bbbbb89ce5ef5a66c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cf94f38f3b4c3bbbbb89ce5ef5a66c6">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[5/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf94f38f3b4c3bbbbb89ce5ef5a66c6">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[5/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1531,7 +1546,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a0c28156f900997a8fb1b0079e30fce6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c28156f900997a8fb1b0079e30fce6d">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[6/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c28156f900997a8fb1b0079e30fce6d">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[6/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1562,7 +1577,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a8d26f3d31c9cfba7144b9a0d96aebdd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d26f3d31c9cfba7144b9a0d96aebdd0">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[7/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d26f3d31c9cfba7144b9a0d96aebdd0">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[7/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1593,7 +1608,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ae677a49f65053b49a623e9b99bceff07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae677a49f65053b49a623e9b99bceff07">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[8/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae677a49f65053b49a623e9b99bceff07">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[8/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1613,7 +1628,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ab0884020fd41a68dfd00265226118685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0884020fd41a68dfd00265226118685">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[9/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0884020fd41a68dfd00265226118685">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[9/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1633,7 +1648,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="aadbd3feebe9cd0d5acf67dd4947c7994"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadbd3feebe9cd0d5acf67dd4947c7994">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[10/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbd3feebe9cd0d5acf67dd4947c7994">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[10/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1658,8 +1673,29 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 
 </div>
 </div>
+<a id="afb353e0658840089a5b1cb3c48004235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb353e0658840089a5b1cb3c48004235">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[11/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a>&gt; AddConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>binding</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds quadratic constraint. </p>
+<p>The quadratic constraint is of the form lb ≤ .5 xᵀQx + bᵀx ≤ ub where <code>x</code> might be a subset of the decision variables in this <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. </p>
+
+</div>
+</div>
 <a id="a12c149981283b0e251f55055c5ea4b40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12c149981283b0e251f55055c5ea4b40">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[11/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c149981283b0e251f55055c5ea4b40">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[12/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1683,7 +1719,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a8b16dc5af33d4fd617a189a905d02173"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b16dc5af33d4fd617a189a905d02173">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[12/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b16dc5af33d4fd617a189a905d02173">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[13/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1707,7 +1743,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="af4ce06116cc0cd7c681258befa944240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4ce06116cc0cd7c681258befa944240">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[13/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ce06116cc0cd7c681258befa944240">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[14/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1727,7 +1763,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="aed941c57116fdf9186a3f0ad7f55b5a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed941c57116fdf9186a3f0ad7f55b5a8">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[14/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed941c57116fdf9186a3f0ad7f55b5a8">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[15/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1747,7 +1783,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a46c66d4086096ed5206e2168d8a6fe3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46c66d4086096ed5206e2168d8a6fe3f">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[15/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c66d4086096ed5206e2168d8a6fe3f">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[16/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1777,7 +1813,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a204ca1afa3b89cbcacb88162fb4007d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a204ca1afa3b89cbcacb88162fb4007d7">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[16/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a204ca1afa3b89cbcacb88162fb4007d7">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[17/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1797,7 +1833,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ad3c8d9a4008399136a7f997d8b5be55c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3c8d9a4008399136a7f997d8b5be55c">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[17/17]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c8d9a4008399136a7f997d8b5be55c">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[18/18]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4145,6 +4181,172 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5e9c7c53a27e3daa802449b105d51b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9c7c53a27e3daa802449b105d51b71">&#9670;&nbsp;</a></span>AddQuadraticConstraint() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a>&gt; AddQuadraticConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>ub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">QuadraticConstraint::HessianType</a> &gt;&#160;</td>
+          <td class="paramname"><em>hessian_type</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vars</td><td>x in the documentation above. </td></tr>
+    <tr><td class="paramname">hessian_type</td><td>Whether the Hessian is positive semidefinite, negative semidefinite or indefinite. Drake will check the type if hessian_type=std::nullopt. Specifying the hessian type will speed this method up. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>hessian_type should be correct if it is not std::nullopt, as we will blindly trust it in the downstream code. </dd></dl>
+
+</div>
+</div>
+<a id="a5dc247437ed57ce071d93220f28d801f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dc247437ed57ce071d93220f28d801f">&#9670;&nbsp;</a></span>AddQuadraticConstraint() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a>&gt; AddQuadraticConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>ub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">QuadraticConstraint::HessianType</a> &gt;&#160;</td>
+          <td class="paramname"><em>hessian_type</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vars</td><td>x in the documentation above. </td></tr>
+    <tr><td class="paramname">hessian_type</td><td>Whether the Hessian is positive semidefinite, negative semidefinite or indefinite. Drake will check the type if hessian_type=std::nullopt. Specifying the hessian type will speed this method up. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>hessian_type should be correct if it is not std::nullopt, as we will blindly trust it in the downstream code. </dd></dl>
+
+</div>
+</div>
+<a id="ac542608c09531142fca3886918e2e914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac542608c09531142fca3886918e2e914">&#9670;&nbsp;</a></span>AddQuadraticConstraint() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a>&gt; AddQuadraticConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>ub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9">QuadraticConstraint::HessianType</a> &gt;&#160;</td>
+          <td class="paramname"><em>hessian_type</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads AddQuadraticConstraint, impose lb &lt;= e &lt;= ub where <code>e</code> is a quadratic expression. </p>
 
 </div>
 </div>
@@ -7172,6 +7374,25 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 </div><div class="memdoc">
 
 <p>Getter for positive semidefinite constraints. </p>
+
+</div>
+</div>
+<a id="ac605b661de3fc03efcdfb8405e29f1c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac605b661de3fc03efcdfb8405e29f1c4">&#9670;&nbsp;</a></span>quadratic_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a>&gt; &gt;&amp; quadratic_constraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for quadratic constraints. </p>
 
 </div>
 </div>

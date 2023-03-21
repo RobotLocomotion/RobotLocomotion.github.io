@@ -1,5 +1,11 @@
 var NAVTREEINDEX47 =
 {
+"gyroscope_8h.html":[4,0,0,12,8,6],
+"hash_8h.html":[4,0,0,1,38],
+"hash_8h.html#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b":[4,0,0,1,38,7],
+"hash_8h.html#a177ccf8b6fcfa21a5430a79410638c8c":[4,0,0,1,38,9],
+"hash_8h.html#a323dc8b0cc629c61d4da8feeaa8cd4f5":[4,0,0,1,38,2],
+"hash_8h.html#a337fbf2124183c6555c2d45989b03b15":[4,0,0,1,38,12],
 "hash_8h.html#a33d528c457d14bb52a9b3e53e8cb9999":[4,0,0,1,38,11],
 "hash_8h.html#a5a11519c4c803fc3f2118df94e858e95":[4,0,0,1,38,3],
 "hash_8h.html#a746d15e267a6399643c2ffe878f4680c":[4,0,0,1,38,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX47 =
 "linear__quadratic__regulator_8h.html#ga6506532189adf1c7a42662b597135f70":[4,0,0,12,1,7,2],
 "linear__quadratic__regulator_8h.html#gae7d3c5debca2daa6de88dbc014263f5c":[4,0,0,12,1,7,1],
 "linear__quadratic__regulator_8h.html#gaeaf380f9c445eee90a846b57f8b70ba7":[4,0,0,12,1,7,3],
-"linear__scalar__system_8h.html":[4,0,0,12,0,0,6],
-"linear__simplex__element_8h.html":[4,0,0,8,3,20],
-"linear__solve_8h.html":[4,0,0,7,23],
-"linear__solve_8h.html#a058825f71b44c44e61dd90c3b89ec87d":[4,0,0,7,23,2],
-"linear__solve_8h.html#a145b102b8109265146ea4a0c63596873":[4,0,0,7,23,1],
-"linear__solve_8h.html#a2fe42b78445dde235cc217342ba8ab87":[4,0,0,7,23,5],
-"linear__solve_8h.html#a34a14f4ecff0af11999f7d416c3316bf":[4,0,0,7,23,3]
+"linear__scalar__system_8h.html":[4,0,0,12,0,0,6]
 };

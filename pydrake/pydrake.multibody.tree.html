@@ -9639,6 +9639,21 @@ translation distance (see get_translation()) from <code class="docutils literal 
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint.set_default_damping">
+<span class="sig-name descname"><span class="pre">set_default_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint" title="pydrake.multibody.tree.PrismaticJoint"><span class="pre">pydrake.multibody.tree.PrismaticJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint.set_default_damping" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default value of viscous damping for this joint, in N⋅s/m.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint.set_default_translation">
 <span class="sig-name descname"><span class="pre">set_default_translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint" title="pydrake.multibody.tree.PrismaticJoint"><span class="pre">pydrake.multibody.tree.PrismaticJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint.set_default_translation" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> of this joint (in this case a single
@@ -9856,6 +9871,21 @@ translation distance (see get_translation()) from <code class="docutils literal 
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.set_default_damping">
+<span id="pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd].set_default_damping"></span><span class="sig-name descname"><span class="pre">set_default_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.set_default_damping" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default value of viscous damping for this joint, in N⋅s/m.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.set_default_translation">
 <span id="pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd].set_default_translation"></span><span class="sig-name descname"><span class="pre">set_default_translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.set_default_translation" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> of this joint (in this case a single
@@ -10064,6 +10094,21 @@ translation distance (see get_translation()) from <code class="docutils literal 
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-Expression-.position_upper_limit">
 <span id="pydrake.multibody.tree.PrismaticJoint_[Expression].position_upper_limit"></span><span class="sig-name descname"><span class="pre">position_upper_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-Expression-.position_upper_limit" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the position upper limit for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint in meters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-Expression-.set_default_damping">
+<span id="pydrake.multibody.tree.PrismaticJoint_[Expression].set_default_damping"></span><span class="sig-name descname"><span class="pre">set_default_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-Expression-.set_default_damping" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default value of viscous damping for this joint, in N⋅s/m.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -11637,6 +11682,21 @@ angle).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint.set_default_damping">
+<span class="sig-name descname"><span class="pre">set_default_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint" title="pydrake.multibody.tree.RevoluteJoint"><span class="pre">pydrake.multibody.tree.RevoluteJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint.set_default_damping" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default value of viscous damping for this joint, in N⋅m⋅s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint.set_random_angle_distribution">
 <span class="sig-name descname"><span class="pre">set_random_angle_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint" title="pydrake.multibody.tree.RevoluteJoint"><span class="pre">pydrake.multibody.tree.RevoluteJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint.set_random_angle_distribution" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -11890,6 +11950,21 @@ angle).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.set_default_damping">
+<span id="pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd].set_default_damping"></span><span class="sig-name descname"><span class="pre">set_default_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><span class="pre">pydrake.multibody.tree.RevoluteJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.set_default_damping" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default value of viscous damping for this joint, in N⋅m⋅s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.set_random_angle_distribution">
 <span id="pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd].set_random_angle_distribution"></span><span class="sig-name descname"><span class="pre">set_random_angle_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><span class="pre">pydrake.multibody.tree.RevoluteJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.set_random_angle_distribution" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -12132,6 +12207,21 @@ per second.</p>
 angle).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">angle</span></code>:</dt><dd><p>The desired default angle of the joint</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint_-Expression-.set_default_damping">
+<span id="pydrake.multibody.tree.RevoluteJoint_[Expression].set_default_damping"></span><span class="sig-name descname"><span class="pre">set_default_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><span class="pre">pydrake.multibody.tree.RevoluteJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-Expression-.set_default_damping" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default value of viscous damping for this joint, in N⋅m⋅s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
 </dd>
 </dl>
 </dd></dl>

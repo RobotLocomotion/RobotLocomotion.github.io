@@ -302,10 +302,7 @@ and data types applicable for basic 3D perception.</p>
 <p>This is a mix between the philosophy of PCL (templated interface to
 provide a compile-time open set, run-time closed set) and VTK
 (non-templated interface to provide a very free form run-time open
-set). You may construct one PointCloud which will contain different
-sets of data, but you cannot change the contained data types after
-construction. However, you can mutate the data contained within the
-structure and resize the cloud.</p>
+set).</p>
 <p>Definitions:</p>
 <ul class="simple">
 <li><p>point - An entry in a point cloud (not exclusively an XYZ point).</p></li>
@@ -323,8 +320,8 @@ non-geometric)</p></li>
 <p class="admonition-title">Note</p>
 <p>“contiguous” here means contiguous in memory. This was chosen to
 avoid ambiguity between PCL and Eigen, where in PCL “dense”
-implies that the point cloud corresponds to a cloud with invalid
-values, and in Eigen “dense” implies contiguous storage.</p>
+implies that the point cloud corresponds to a cloud with only
+valid values, and in Eigen “dense” implies contiguous storage.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -605,15 +602,30 @@ then the values will be truncated. If greater than the present
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.perception.PointCloud.SetFields">
+<span class="sig-name descname"><span class="pre">SetFields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.perception.PointCloud" title="pydrake.perception.PointCloud"><span class="pre">pydrake.perception.PointCloud</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.perception.Fields" title="pydrake.perception.Fields"><span class="pre">pydrake.perception.Fields</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_initialize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.perception.PointCloud.SetFields" title="Permalink to this definition"></a></dt>
+<dd><p>Updates the point cloud to a given set of fields. In the case of
+introducing a new field, its container will be allocated with the
+current size and default initialized. The data for all retained fields
+will remain unchanged.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_fields</span></code>:</dt><dd><p>New fields to set to.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">skip_initialize</span></code>:</dt><dd><p>Do not default-initialize new values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.perception.PointCloud.SetFrom">
 <span class="sig-name descname"><span class="pre">SetFrom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.perception.PointCloud" title="pydrake.perception.PointCloud"><span class="pre">pydrake.perception.PointCloud</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.perception.PointCloud" title="pydrake.perception.PointCloud"><span class="pre">pydrake.perception.PointCloud</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.perception.PointCloud.SetFrom" title="Permalink to this definition"></a></dt>
 <dd><p>Copies all points from another point cloud.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt><dd><p>Other point cloud.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fields_in</span></code>:</dt><dd><p>Fields to copy. If this is <code class="docutils literal notranslate"><span class="pre">kInherit</span></code>, then both clouds must
-have the exact same fields. Otherwise, both clouds must support
-the fields indicated this parameter.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fields_in</span></code>:</dt><dd><p>Fields to copy. If this is <code class="docutils literal notranslate"><span class="pre">kInherit</span></code>, then <a href="#id1"><span class="problematic" id="id2">`</span></a>other`s fields will
+be copied. Otherwise, both clouds must support the fields
+indicated this parameter.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">allow_resize</span></code>:</dt><dd><p>Permit resizing to the other cloud’s size.</p>
 </dd>

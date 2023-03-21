@@ -42,6 +42,7 @@ var classdrake_1_1perception_1_1_point_cloud =
     [ "resize", "classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301", null ],
     [ "rgb", "classdrake_1_1perception_1_1_point_cloud.html#abf6c4df4db9fe8623b988f66f4d2ab62", null ],
     [ "rgbs", "classdrake_1_1perception_1_1_point_cloud.html#a437f77a767c147a030abe4a08e31c2c2", null ],
+    [ "SetFields", "classdrake_1_1perception_1_1_point_cloud.html#a772c02e0a01c54fb1e342979b03cc38b", null ],
     [ "SetFrom", "classdrake_1_1perception_1_1_point_cloud.html#acee5db2d53b1b703ab6a50eb836e07b9", null ],
     [ "size", "classdrake_1_1perception_1_1_point_cloud.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
     [ "VoxelizedDownSample", "classdrake_1_1perception_1_1_point_cloud.html#ad1897b2707adb1601f97ba98c53c1f84", null ],

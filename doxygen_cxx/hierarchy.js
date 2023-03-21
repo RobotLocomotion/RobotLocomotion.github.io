@@ -40,6 +40,7 @@ var hierarchy =
     [ "Binding< drake::solvers::LinearMatrixInequalityConstraint >", "classdrake_1_1solvers_1_1_binding.html", null ],
     [ "Binding< drake::solvers::LorentzConeConstraint >", "classdrake_1_1solvers_1_1_binding.html", null ],
     [ "Binding< drake::solvers::PositiveSemidefiniteConstraint >", "classdrake_1_1solvers_1_1_binding.html", null ],
+    [ "Binding< drake::solvers::QuadraticConstraint >", "classdrake_1_1solvers_1_1_binding.html", null ],
     [ "Binding< drake::solvers::QuadraticCost >", "classdrake_1_1solvers_1_1_binding.html", null ],
     [ "Binding< drake::solvers::RotatedLorentzConeConstraint >", "classdrake_1_1solvers_1_1_binding.html", null ],
     [ "Binding< drake::solvers::VisualizationCallback >", "classdrake_1_1solvers_1_1_binding.html", null ],
