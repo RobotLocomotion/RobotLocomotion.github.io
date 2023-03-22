@@ -33,6 +33,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     ] ],
     [ "package_map.h", "package__map_8h.html", [
       [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", "classdrake_1_1multibody_1_1_package_map" ],
+      [ "RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params" ],
       [ "formatter< drake::multibody::PackageMap >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ]
     ] ],
     [ "parser.h", "parser_8h.html", [

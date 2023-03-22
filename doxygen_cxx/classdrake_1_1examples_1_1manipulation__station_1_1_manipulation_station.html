@@ -173,35 +173,68 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 <p>A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka IIWA LWR), one gripper (a Schunk WSG 50), and anything a user might want to load into the model. </p>
 <p>SetupDefaultStation() provides the setup that is used in the MIT Intelligent Robot Manipulation class, which includes the supporting structure for IIWA and several RGBD cameras. Alternative Setup___() methods are provided, as well.</p>
-<p>@system name: <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> input_ports:</p><ul>
-<li>iiwa_position</li>
-<li>iiwa_feedforward_torque (optional)</li>
-<li>wsg_position</li>
-<li>wsg_force_limit (optional)</li>
-<li><b style="color:orange">applied_spatial_force (optional)</b> output_ports:</li>
-<li>iiwa_position_commanded</li>
-<li>iiwa_position_measured</li>
-<li>iiwa_velocity_estimated</li>
-<li>iiwa_state_estimated</li>
-<li>iiwa_torque_commanded</li>
-<li>iiwa_torque_measured</li>
-<li>iiwa_torque_external</li>
-<li>wsg_state_measured</li>
-<li>wsg_force_measured</li>
-<li>camera_[NAME]_rgb_image</li>
-<li>camera_[NAME]_depth_image</li>
-<li><b style="color:orange">camera_[NAME]_label_image</b></li>
-<li><b style="color:orange">camera_[NAME]_point_cloud</b></li>
-<li>...</li>
-<li>camera_[NAME]_rgb_image</li>
-<li>camera_[NAME]_depth_image</li>
-<li><b style="color:orange">camera_[NAME]_label_image</b></li>
-<li><b style="color:orange">camera_[NAME]_point_cloud</b></li>
-<li><b style="color:orange">query_object</b></li>
-<li><b style="color:orange">contact_results</b></li>
-<li><b style="color:orange">plant_continuous_state</b></li>
-<li><b style="color:orange">geometry_poses</b> @endsystem</li>
-</ul>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">iiwa_position&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">iiwa_feedforward_torque (optional)&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">wsg_position&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">wsg_force_limit (optional)&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px"><b style="color:orange">applied_spatial_force (optional)</b>&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; iiwa_position_commanded</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; iiwa_position_measured</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; iiwa_velocity_estimated</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; iiwa_state_estimated</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_commanded</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_measured</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_external</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; wsg_state_measured</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; wsg_force_measured</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_rgb_image</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_depth_image</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; ...</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_rgb_image</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_depth_image</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">query_object</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">contact_results</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">plant_continuous_state</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">geometry_poses</b></td></tr>
+</table>
+</td></tr>
+</table>
 <p>Each pixel in the output image from <code>depth_image</code> is a 16bit unsigned short in millimeters.</p>
 <p>Note that outputs in <b style="color:orange">orange</b> are available in the simulation, but not on the real robot. The distinction between q_measured and v_estimated is because the Kuka FRI reports positions directly, but we have estimated v in our code that wraps the FRI.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The "camera_[NAME]_point_cloud" data currently has registration errors per issue <a href="https://github.com/RobotLocomotion/drake/issues/12125">https://github.com/RobotLocomotion/drake/issues/12125</a>.</dd></dl>

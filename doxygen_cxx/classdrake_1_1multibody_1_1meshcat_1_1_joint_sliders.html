@@ -182,7 +182,7 @@ class drake::multibody::meshcat::JointSliders&lt; T &gt;</h3>
 </td></tr>
 </table>
 <p>The output port is of size <code>plant.num_positions()</code>, and the order of its elements matches <code>plant.GetPositions()</code>.</p>
-<p>At the moment, any positions that are not associated with joints (e.g., floating-base "mobilizers") are held fixed at a nominal value. In the future, this class might add in sliders for a floating base as well.</p>
+<p>Only positions associated with joints get sliders. All other positions are fixed at nominal values.</p>
 <p>Beware that the output port of this system always provides the sliders' current values, even if evaluated by multiple different downstream input ports during a single computation. If you need to have a synchronized view of the slider data, place a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">systems::ZeroOrderHold</a> system between the sliders and downstream calculations.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">

@@ -74,7 +74,6 @@ var searchData=
   ['expressiontanh',['ExpressionTanh',['../classdrake_1_1symbolic_1_1_expression_tanh.html',1,'drake::symbolic']]],
   ['expressionuninterpretedfunction',['ExpressionUninterpretedFunction',['../classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html',1,'drake::symbolic']]],
   ['expressionvar',['ExpressionVar',['../classdrake_1_1symbolic_1_1_expression_var.html',1,'drake::symbolic']]],
-  ['externalgeneralizedforcescomputer',['ExternalGeneralizedForcesComputer',['../classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html',1,'drake::examples::manipulation_station']]],
   ['externallyappliedspatialforce',['ExternallyAppliedSpatialForce',['../structdrake_1_1multibody_1_1_externally_applied_spatial_force.html',1,'drake::multibody']]],
   ['externallyappliedspatialforcemultiplexer',['ExternallyAppliedSpatialForceMultiplexer',['../classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html',1,'drake::multibody']]],
   ['externalsystemconstraint',['ExternalSystemConstraint',['../classdrake_1_1systems_1_1_external_system_constraint.html',1,'drake::systems']]]

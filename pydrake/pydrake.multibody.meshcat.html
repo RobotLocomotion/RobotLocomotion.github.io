@@ -429,10 +429,8 @@ teleoperation demos. The sliders’ current values are available on the
 <code class="docutils literal notranslate"><span class="pre">positions</span></code> output port of this system.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; positions</td></tr></table></td></tr></table><p>The output port is of size <code class="docutils literal notranslate"><span class="pre">plant.num_positions()</span></code>, and the order of
 its elements matches <code class="docutils literal notranslate"><span class="pre">plant.GetPositions()</span></code>.</p>
-<p>At the moment, any positions that are not associated with joints
-(e.g., floating-base “mobilizers”) are held fixed at a nominal value.
-In the future, this class might add in sliders for a floating base as
-well.</p>
+<p>Only positions associated with joints get sliders. All other positions
+are fixed at nominal values.</p>
 <p>Beware that the output port of this system always provides the
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to
@@ -567,10 +565,8 @@ teleoperation demos. The sliders’ current values are available on the
 <code class="docutils literal notranslate"><span class="pre">positions</span></code> output port of this system.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; positions</td></tr></table></td></tr></table><p>The output port is of size <code class="docutils literal notranslate"><span class="pre">plant.num_positions()</span></code>, and the order of
 its elements matches <code class="docutils literal notranslate"><span class="pre">plant.GetPositions()</span></code>.</p>
-<p>At the moment, any positions that are not associated with joints
-(e.g., floating-base “mobilizers”) are held fixed at a nominal value.
-In the future, this class might add in sliders for a floating base as
-well.</p>
+<p>Only positions associated with joints get sliders. All other positions
+are fixed at nominal values.</p>
 <p>Beware that the output port of this system always provides the
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to

@@ -87,12 +87,6 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#adc262ed08e03cd3b36cc231c674da6e3":[3,0,0,3,6,1,3],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#ae3e0defc5b279b8b6393cd33158794ef":[3,0,0,3,6,1,4],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#ae656820e2570c0ddd0d01b9da342c72f":[3,0,0,3,6,1,2],
-"classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html":[3,0,0,3,7,0],
-"classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html#a737c73f7339b2018a3e4ee410d3d2027":[3,0,0,3,7,0,4],
-"classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html#aaa50cfd7a9f35750f6fbea2c5d8567b2":[3,0,0,3,7,0,2],
-"classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html#aab1b4987719009e9f9bc1281ae0d19d3":[3,0,0,3,7,0,1],
-"classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html#ab008aae72b684ceed860a78bfba59e49":[3,0,0,3,7,0,3],
-"classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html#ad8c85050abe7053db45e212b2cd34fae":[3,0,0,3,7,0,0],
 "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html":[1,2,12,1,0],
 "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a134e146c5f122563a2264c278ebb111b":[1,2,12,1,0,26],
 "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5":[1,2,12,1,0,18],
@@ -249,5 +243,11 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html#a87cbfd3fa4c3f2d1dfed7efc4efc1591":[3,0,0,3,11,6,4],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html#af1ed09e388b66b09a9b41527462831c5":[3,0,0,3,11,6,0],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html":[3,0,0,3,11,7],
-"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a198e222b1ab63d7600a01171c45aa24b":[3,0,0,3,11,7,2]
+"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a198e222b1ab63d7600a01171c45aa24b":[3,0,0,3,11,7,2],
+"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a228b3930dbc963e9c93a5b423f3f131c":[3,0,0,3,11,7,0],
+"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a4b66e0d45620d50449fd43991e731bc8":[3,0,0,3,11,7,1],
+"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a79e9a441a7e61b004ba1cca5ac7db434":[3,0,0,3,11,7,3],
+"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#aa67b4c0cd1beed3e9e171c313ca19935":[3,0,0,3,11,7,4],
+"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html":[3,0,0,3,12,0],
+"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html#a3223a0862c11f9920fa637b27a3d2270":[3,0,0,3,12,0,4]
 };

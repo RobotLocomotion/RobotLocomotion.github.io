@@ -1,11 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#a621cd91b0b1662fc5724422257010fb4":[1,1,0,1,1],
-"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ab7520597163a12d24979ac8926bb1ac8":[1,1,0,1,0],
-"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#adba084715ab226cf720bf91c93cb7664":[1,1,0,1,6],
-"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ae3852336466ee945d4185ebeb8180d7b":[1,1,0,1,5],
-"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#aee65c9787c0060ee07bd31b9e1200d16":[1,1,0,1,3],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,9,10],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a05bea6e19974f4c24d747976ada0efef":[3,0,0,9,10,1],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a148bc958b5d02693bd0136917046b68e":[3,0,0,9,10,11],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a413ff91e8caf0498a96e5b1e06da9cd1":[3,0,0,9,10,6],
@@ -249,5 +243,11 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#af6075b9914d5f3c6b00ab3140e88aa72":[3,0,0,9,27,23],
 "classdrake_1_1multibody_1_1_distance_constraint.html":[1,1,0,3],
 "classdrake_1_1multibody_1_1_distance_constraint.html#a02f2f96d46ee05971fdadd0224eee0b4":[1,1,0,3,5],
-"classdrake_1_1multibody_1_1_distance_constraint.html#a08a272efacc4d277535104d1ad96db6a":[1,1,0,3,1]
+"classdrake_1_1multibody_1_1_distance_constraint.html#a08a272efacc4d277535104d1ad96db6a":[1,1,0,3,1],
+"classdrake_1_1multibody_1_1_distance_constraint.html#a15690a925923c183e5657ab400b4c8d5":[1,1,0,3,0],
+"classdrake_1_1multibody_1_1_distance_constraint.html#a6c6edcb36ead3f998b5f2ee32c5fbd66":[1,1,0,3,6],
+"classdrake_1_1multibody_1_1_distance_constraint.html#aa2ac8bf926f4c4b19a02873f753c344c":[1,1,0,3,3],
+"classdrake_1_1multibody_1_1_distance_constraint.html#aad75abb4221bf6e44091ed60c7721241":[1,1,0,3,2],
+"classdrake_1_1multibody_1_1_distance_constraint.html#ad04269b2bfa6bfa65dc5af30515d41a8":[1,1,0,3,4],
+"classdrake_1_1multibody_1_1_door_hinge.html":[3,0,0,9,30]
 };

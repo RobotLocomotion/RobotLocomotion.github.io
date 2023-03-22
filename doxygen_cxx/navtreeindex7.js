@@ -1,11 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa19f9770fdca8fc14ee1dec1cec39710":[1,1,1,1,0],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa19f9770fdca8fc14ee1dec1cec39710":[1,5,4,1,0],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed":[1,1,1,1,19],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed":[1,5,4,1,19],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7c34baf850a5bd037dbed3c3d51b0af":[1,1,1,1,5],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7c34baf850a5bd037dbed3c3d51b0af":[1,5,4,1,5],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaf56e31cd3546020503a8d7b3b359703":[1,1,1,1,17],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaf56e31cd3546020503a8d7b3b359703":[1,5,4,1,17],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#accc952b29c3cc22980f9a3fffe0d23ff":[1,1,1,1,6],
@@ -249,5 +243,11 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696":[1,1,1,3,19],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696":[1,5,4,3,19],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad53e47e943684bee743276ad5027e5a2":[1,1,1,3,27],
-"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad53e47e943684bee743276ad5027e5a2":[1,5,4,3,27]
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad53e47e943684bee743276ad5027e5a2":[1,5,4,3,27],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#addeb00deb2fcdb452b7c6f7c416fec36":[1,1,1,3,3],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#addeb00deb2fcdb452b7c6f7c416fec36":[1,5,4,3,3],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb":[1,1,1,3,24],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb":[1,5,4,3,24],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html":[1,1,1,4],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html":[1,5,4,4]
 };

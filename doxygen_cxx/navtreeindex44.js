@@ -1,10 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"evenly__distributed__pts__on__sphere_8h.html#a33baecb77517d26dcea8ab1fb880fcbe":[4,0,0,7,14,0],
-"event_8h.html":[4,0,0,12,3,19],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9":[4,0,0,12,3,19,14],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a04a6eca450c24af0269212fb90c57d9f":[4,0,0,12,3,19,14,5],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a1800fd44ac807b793ceba2dd9cef1e25":[4,0,0,12,3,19,14,1],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390":[4,0,0,12,3,19,14,0],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a4ee52a6184757eae288c6bfaca2b3cc8":[4,0,0,12,3,19,14,3],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a74e1dac7f98f52df26d510f93c36ae34":[4,0,0,12,3,19,14,6],
@@ -249,5 +244,10 @@ var NAVTREEINDEX44 =
 "find__resource_8h.html#ac72eb43ba982b5a4d188c85aa14e0cc6":[4,0,0,1,33,2],
 "find__runfiles_8h.html":[4,0,0,1,34],
 "find__runfiles_8h.html#a9bdf00a0f32970352a90afbae0f4114a":[4,0,0,1,34,2],
-"find__runfiles_8h.html#ae65839d11c343c02ff41aec068e4ff28":[4,0,0,1,34,1]
+"find__runfiles_8h.html#ae65839d11c343c02ff41aec068e4ff28":[4,0,0,1,34,1],
+"finite__horizon__linear__quadratic__regulator_8h.html":[4,0,0,12,1,2],
+"finite__horizon__linear__quadratic__regulator_8h.html#ga2ebe52e849a0597ad54f37ab6e35df8a":[4,0,0,12,1,2,3],
+"finite__horizon__linear__quadratic__regulator_8h.html#ga58307d2135757a498c434e96d7b99853":[4,0,0,12,1,2,2],
+"first__order__low__pass__filter_8h.html":[4,0,0,12,6,8],
+"fixed__input__port__value_8h.html":[4,0,0,12,3,22]
 };

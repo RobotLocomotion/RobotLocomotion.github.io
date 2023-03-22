@@ -1,11 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#addeb00deb2fcdb452b7c6f7c416fec36":[1,1,1,3,3],
-"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#addeb00deb2fcdb452b7c6f7c416fec36":[1,5,4,3,3],
-"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb":[1,1,1,3,24],
-"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb":[1,5,4,3,24],
-"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html":[1,1,1,4],
-"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html":[1,5,4,4],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a0436b14a80630bf60e18fdc56ce3171e":[1,1,1,4,6],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a0436b14a80630bf60e18fdc56ce3171e":[1,5,4,4,6],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a152cd9dac97b61e35faa07fd4f1d2472":[1,1,1,4,10],
@@ -249,5 +243,11 @@ var NAVTREEINDEX8 =
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#aa773678cbb94f82a77841659bfb4dd6a":[3,0,0,4,2,8,14],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#aadf6998b9f0c89be68f384bc2b7ac308":[3,0,0,4,2,8,6],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#ab552a96bb39383157f123f0c25dfe54a":[3,0,0,4,2,8,0],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html#acc97ab224a192e1347cbd9fd5cf666a2":[3,0,0,4,2,8,3]
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#acc97ab224a192e1347cbd9fd5cf666a2":[3,0,0,4,2,8,3],
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#af63fd9e820f001b3f6bc1a53d24acbeb":[3,0,0,4,2,8,15],
+"classdrake_1_1lcm_1_1_drake_lcm.html":[3,0,0,5,0],
+"classdrake_1_1lcm_1_1_drake_lcm.html#a053aa138ef7646bdd2ad76db0657b13b":[3,0,0,5,0,6],
+"classdrake_1_1lcm_1_1_drake_lcm.html#a15fc920a34211ee4dfe6a9ccd51b8a02":[3,0,0,5,0,8],
+"classdrake_1_1lcm_1_1_drake_lcm.html#a1d46824a3a1490cb7f43e75d01575003":[3,0,0,5,0,12],
+"classdrake_1_1lcm_1_1_drake_lcm.html#a2870ca3b120a6daac46ef83e59fa2f36":[3,0,0,5,0,10]
 };

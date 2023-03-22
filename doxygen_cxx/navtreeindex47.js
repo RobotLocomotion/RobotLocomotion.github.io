@@ -1,10 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"group__multibody__quantities.html":[1,0,1,2],
-"group__multibody__quantities__units.html":[1,0,1,3],
-"group__multibody__spatial__algebra.html":[1,0,1,5],
-"group__multibody__spatial__inertia.html":[1,0,1,5,2],
-"group__multibody__spatial__pose.html":[1,0,1,5,0],
 "group__multibody__spatial__vectors.html":[1,0,1,5,1],
 "group__multibody__systems.html":[1,2,7],
 "group__perception__systems.html":[1,2,8],
@@ -249,5 +244,10 @@ var NAVTREEINDEX47 =
 "jaco__constants_8h.html#aea7ed85292870a6405c353c62f8a2075":[4,0,0,6,0,2,1],
 "jaco__status__receiver_8h.html":[4,0,0,6,0,3],
 "jaco__status__sender_8h.html":[4,0,0,6,0,4],
-"jacobian_8h.html":[4,0,0,7,21]
+"jacobian_8h.html":[4,0,0,7,21],
+"jacobian_8h.html#a57457683becdddf605a55be881c065b4":[4,0,0,7,21,1],
+"jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f":[4,0,0,7,21,0],
+"joint_8h.html":[4,0,0,8,14,15],
+"joint__actuator_8h.html":[4,0,0,8,14,16],
+"joint__sliders_8h.html":[4,0,0,8,7,3]
 };

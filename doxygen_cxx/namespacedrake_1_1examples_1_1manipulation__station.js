@@ -1,6 +1,5 @@
 var namespacedrake_1_1examples_1_1manipulation__station =
 [
-    [ "ExternalGeneralizedForcesComputer", "classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer.html", "classdrake_1_1examples_1_1manipulation__station_1_1_external_generalized_forces_computer" ],
     [ "ManipulationStation", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station" ],
     [ "ManipulationStationHardwareInterface", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface" ]
 ];

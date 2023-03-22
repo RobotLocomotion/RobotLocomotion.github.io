@@ -1,5 +1,8 @@
 var NAVTREEINDEX57 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,2,14],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,2,15],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,2,16],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,2,17],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,18],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html":[3,0,2,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX57 =
 "variables_8h.html#a497331a32f5911a18cef34b07df6c04a":[4,0,0,1,3,0,12,4],
 "variables_8h.html#a50ee50ee4e70ef4393128598d143a2a6":[4,0,0,1,3,0,12,11],
 "variables_8h.html#a668d0a0cca975453784c6cd77d638c56":[4,0,0,1,3,0,12,10],
-"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2],
-"variables_8h.html#aae117a884f72a1a73cc2863ec026c011":[4,0,0,1,3,0,12,5],
-"variables_8h.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a":[4,0,0,1,3,0,12,3],
-"variables_8h.html#ac861cf2992e3fa03746df6ca291c5020":[4,0,0,1,3,0,12,6]
+"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2]
 };

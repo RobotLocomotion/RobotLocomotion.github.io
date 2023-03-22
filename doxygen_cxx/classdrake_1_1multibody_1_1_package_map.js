@@ -1,5 +1,6 @@
 var classdrake_1_1multibody_1_1_package_map =
 [
+    [ "RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params" ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html#a26f6421b2b1971f71b16c808851bf044", null ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html#a473376f1ec8aff24748a7ca879ebca3b", null ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html#aab33cc3508417f648f27a8046abbebb8", null ],
@@ -7,6 +8,7 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "Add", "classdrake_1_1multibody_1_1_package_map.html#ac51ed3119aaced1a4d66bc104c7a8241", null ],
     [ "AddMap", "classdrake_1_1multibody_1_1_package_map.html#a1b6898c14b340f42747bdef9a77abfe3", null ],
     [ "AddPackageXml", "classdrake_1_1multibody_1_1_package_map.html#ab5db13a6fe84a643a043c9347e1bc8d2", null ],
+    [ "AddRemote", "classdrake_1_1multibody_1_1_package_map.html#a315d439afb48490c763ff66f4fc24b86", null ],
     [ "Contains", "classdrake_1_1multibody_1_1_package_map.html#aeba4aacea21458551c23a35911ae42bb", null ],
     [ "GetDeprecated", "classdrake_1_1multibody_1_1_package_map.html#a1a614155f6670766fcb9c11088583ce8", null ],
     [ "GetPackageNames", "classdrake_1_1multibody_1_1_package_map.html#afaa68d5d43369307f840901e3d9fed97", null ],
