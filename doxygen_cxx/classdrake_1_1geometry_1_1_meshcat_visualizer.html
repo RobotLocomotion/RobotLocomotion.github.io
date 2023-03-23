@@ -1599,7 +1599,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object in which the frames will be recorded. </p>
 <p>This pointer can be used to set animation properties (like autoplay, the loop mode, number of repetitions, etc), and can be passed to supporting visualizers (e.g. <a class="el" href="classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html" title="MeshcatPointCloudVisualizer is a systems::LeafSystem that publishes a perception::PointCloud from its...">MeshcatPointCloudVisualizer</a> and MeshcatContactVisualizer) so that they record into the same animation.</p>
-<p>The <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object will only remain valid for the lifetime of <code>this</code> or until <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aa4272f092573240b5824fbc8caa049ce" title="Deletes the current animation holding the recorded frames.">DeleteRecording()</a> is called. </p>
+<p>The <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object will only remain valid for the lifetime of <code>this</code> or until <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aa4272f092573240b5824fbc8caa049ce" title="Deletes the current animation holding the recorded frames.">DeleteRecording()</a> is called.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if meshcat does not have a recording. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

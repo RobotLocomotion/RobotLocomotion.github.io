@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a27b4919892ae615cefad15ffc586636d":[1,2,5,9,3],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a356498b2bd580d7052b0eb6548a06c9c":[1,2,5,9,1],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a71ec23b5b9d1a45e490c54d445c78d94":[1,2,5,9,4],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a81f7b538a90c7ca880c6085b0d386cf1":[1,2,5,9,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ab7520597163a12d24979ac8926bb1ac8":[1,1,0,1,0],
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#adba084715ab226cf720bf91c93cb7664":[1,1,0,1,6],
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ae3852336466ee945d4185ebeb8180d7b":[1,1,0,1,5],
-"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#aee65c9787c0060ee07bd31b9e1200d16":[1,1,0,1,3],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,9,10]
+"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#aee65c9787c0060ee07bd31b9e1200d16":[1,1,0,1,3]
 };

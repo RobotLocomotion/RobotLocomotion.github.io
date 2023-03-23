@@ -1,5 +1,8 @@
 var NAVTREEINDEX51 =
 {
+"proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009":[4,0,0,4,2,50,6],
+"pydrake__doxygen_8h.html":[4,0,0,0,0,12],
+"pydrake__pybind_8h.html":[4,0,0,0,0,13],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,13,7],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,13,9],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,13,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX51 =
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,43,1],
 "semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,21],
 "serialize__pybind_8h.html":[4,0,0,0,0,0,8],
-"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,0,8,0],
-"serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,0,8,1],
-"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,0,8,2],
-"serializer_8h.html":[4,0,0,12,4,7]
+"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,0,8,0]
 };

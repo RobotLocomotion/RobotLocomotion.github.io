@@ -176,6 +176,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1trajectory__
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad27bd6e013f3fee7cbf92d25f00b5bd7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ad27bd6e013f3fee7cbf92d25f00b5bd7">DirectCollocationConstraint</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">systems::InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">systems::InputPortIndex</a> &gt; input_port_index=<a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">systems::InputPortSelection::kUseFirstInputIfItExists</a>, bool assume_non_continuous_states_are_fixed=false)</td></tr>
 <tr class="separator:ad27bd6e013f3fee7cbf92d25f00b5bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8411c6f694362a4520129e1e7bc3b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a4e8411c6f694362a4520129e1e7bc3b4">DirectCollocationConstraint</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;system, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *context_sample, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *context_next_sample, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *context_collocation, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">systems::InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">systems::InputPortIndex</a> &gt; input_port_index=<a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">systems::InputPortSelection::kUseFirstInputIfItExists</a>, bool assume_non_continuous_states_are_fixed=false)</td></tr>
+<tr class="memdesc:a4e8411c6f694362a4520129e1e7bc3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which supports passing different mutable contexts for the different evaluation times.  <a href="#a4e8411c6f694362a4520129e1e7bc3b4">More...</a><br /></td></tr>
+<tr class="separator:a4e8411c6f694362a4520129e1e7bc3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f1c577ee698959014f42a2937d6730"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ae3f1c577ee698959014f42a2937d6730">~DirectCollocationConstraint</a> () override=default</td></tr>
 <tr class="separator:ae3f1c577ee698959014f42a2937d6730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cbd3e24f7648ab7712c803ca8a63f3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e">num_states</a> () const</td></tr>
@@ -268,8 +271,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a5fe45c5d645f61010b4cdea0c4a8756c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5fe45c5d645f61010b4cdea0c4a8756c">DirectCollocationConstraint</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e">num_states</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a>, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">systems::InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">systems::InputPortIndex</a> &gt; input_port_index, bool assume_non_continuous_states_are_fixed)</td></tr>
-<tr class="separator:a5fe45c5d645f61010b4cdea0c4a8756c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809bcc60ce15f0470a72646d4323643c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a809bcc60ce15f0470a72646d4323643c">DirectCollocationConstraint</a> (std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt;, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt;&gt; owned_pair, const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *system, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *context_sample, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *context_next_sample, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *context_collocation, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e">num_states</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a>, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">systems::InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">systems::InputPortIndex</a> &gt; input_port_index, bool assume_non_continuous_states_are_fixed)</td></tr>
+<tr class="separator:a809bcc60ce15f0470a72646d4323643c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a863f7df9d3ee10378794b4c6842a4377"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377">DoEval</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, Eigen::VectorXd *y) const override</td></tr>
 <tr class="memdesc:a863f7df9d3ee10378794b4c6842a4377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements expression evaluation for scalar type double.  <a href="#a863f7df9d3ee10378794b4c6842a4377">More...</a><br /></td></tr>
 <tr class="separator:a863f7df9d3ee10378794b4c6842a4377"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,7 +310,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a643ccb05dea44d65aa2d91b422f20f12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a643ccb05dea44d65aa2d91b422f20f12">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a643ccb05dea44d65aa2d91b422f20f12">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,7 +336,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a6ce6c2bf02e868cb54161dd4d8a26e29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ce6c2bf02e868cb54161dd4d8a26e29">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce6c2bf02e868cb54161dd4d8a26e29">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -359,7 +362,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ad27bd6e013f3fee7cbf92d25f00b5bd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad27bd6e013f3fee7cbf92d25f00b5bd7">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad27bd6e013f3fee7cbf92d25f00b5bd7">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,6 +408,68 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4e8411c6f694362a4520129e1e7bc3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8411c6f694362a4520129e1e7bc3b4">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">DirectCollocationConstraint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context_sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context_next_sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context_collocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">systems::InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">systems::InputPortIndex</a> &gt;&#160;</td>
+          <td class="paramname"><em>input_port_index</em> = <code><a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">systems::InputPortSelection::kUseFirstInputIfItExists</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>assume_non_continuous_states_are_fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor which supports passing different mutable contexts for the different evaluation times. </p>
+<p>This can be used to facilitate caching (for instance, if the <code>context_segment_start</code> of one constraint uses the <code>context_segment_end</code> of the previous constraint).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html" title="DirectCollocation implements the approach to trajectory optimization as described in C.">DirectCollocation</a> constructor for a description of the remaining parameters.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>system</code> is not supported by this direct collocation method. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae3f1c577ee698959014f42a2937d6730"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3f1c577ee698959014f42a2937d6730">&#9670;&nbsp;</a></span>~DirectCollocationConstraint()</h2>
 
@@ -430,8 +495,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5fe45c5d645f61010b4cdea0c4a8756c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fe45c5d645f61010b4cdea0c4a8756c">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[4/4]</span></h2>
+<a id="a809bcc60ce15f0470a72646d4323643c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809bcc60ce15f0470a72646d4323643c">&#9670;&nbsp;</a></span>DirectCollocationConstraint() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,14 +507,32 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">DirectCollocationConstraint</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt;, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt;&gt;&#160;</td>
+          <td class="paramname"><em>owned_pair</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
           <td class="paramname"><em>system</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context_sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context_next_sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context_collocation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

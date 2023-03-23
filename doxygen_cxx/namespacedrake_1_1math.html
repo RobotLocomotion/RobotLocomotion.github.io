@@ -275,6 +275,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classint.html">int</a> &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4360e58bcb10c6b20aa3e28fed7297fb">GetDerivativeSize</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;A)</td></tr>
 <tr class="memdesc:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of AutoDiffScalars, returns the size of the derivatives.  <a href="#a4360e58bcb10c6b20aa3e28fed7297fb">More...</a><br /></td></tr>
 <tr class="separator:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976484fe9828ee6c1a463980cf6a3732"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a976484fe9828ee6c1a463980cf6a3732">AreAutoDiffVecXdEqual</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt; &amp;a, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt; &amp;b)</td></tr>
+<tr class="memdesc:a976484fe9828ee6c1a463980cf6a3732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if a and b are equal.  <a href="#a976484fe9828ee6c1a463980cf6a3732">More...</a><br /></td></tr>
+<tr class="separator:a976484fe9828ee6c1a463980cf6a3732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad23280f04f3264b00fe8e359508c89a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ad23280f04f3264b00fe8e359508c89a1">BinomialCoefficient</a> (<a class="el" href="classint.html">int</a> n, <a class="el" href="classint.html">int</a> k)</td></tr>
 <tr class="memdesc:ad23280f04f3264b00fe8e359508c89a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the binomial coefficient <code>n</code>-choose-<code>k</code> efficiently using a dynamic programming recursion.  <a href="#ad23280f04f3264b00fe8e359508c89a1">More...</a><br /></td></tr>
 <tr class="separator:ad23280f04f3264b00fe8e359508c89a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -682,6 +685,37 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a976484fe9828ee6c1a463980cf6a3732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a976484fe9828ee6c1a463980cf6a3732">&#9670;&nbsp;</a></span>AreAutoDiffVecXdEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool drake::math::AreAutoDiffVecXdEqual </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines if a and b are equal. </p>
+<p>a equals to b if they have the same value and gradients. TODO(hongkai.dai) implement and use std::equal_to&lt;&gt; for comparing Eigen vector of AutoDiffXd. </p>
+
+</div>
+</div>
 <a id="adc96357c54438cadae5c8aefbd16713d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc96357c54438cadae5c8aefbd16713d">&#9670;&nbsp;</a></span>AreQuaternionsEqualForOrientation()</h2>
 

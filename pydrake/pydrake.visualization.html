@@ -135,9 +135,15 @@
 <span class="target" id="module-pydrake.visualization"></span><p>Bindings for Visualization.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.visualization.AddDefaultVisualization">
-<span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">AddDefaultVisualization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.AddDefaultVisualization" title="Permalink to this definition"></a></dt>
-<dd><p>Adds LCM visualization publishers to communicate to drake_visualizer
-and/or meldis, using all of the default configuration settings.</p>
+<span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">AddDefaultVisualization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.AddDefaultVisualization" title="Permalink to this definition"></a></dt>
+<dd><p>Adds LCM visualization publishers to communicate to Meshcat,
+drake_visualizer and/or meldis, using all of the default configuration
+settings.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt><dd><p>An optional existing Meshcat instance. (If nullptr, then a meshcat
+instance will be created.)</p>
+</dd>
+</dl>
 <p><strong>Example</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">builder</span><span class="o">.</span>
 <span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>

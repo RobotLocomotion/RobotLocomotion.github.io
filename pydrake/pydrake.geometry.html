@@ -3443,6 +3443,15 @@ set in the meshcat browser (e.g. for cameras and lights).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.DeleteRecording">
+<span class="sig-name descname"><span class="pre">DeleteRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.DeleteRecording" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes the current animation holding the recorded frames. Animation
+options (autoplay, repetitions, etc) will also be reset, and any
+pointers obtained from get_mutable_recording() will be rendered
+invalid. This does not* currently remove the animation from Meshcat.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.DeleteSlider">
 <span class="sig-name descname"><span class="pre">DeleteSlider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.DeleteSlider" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the slider <code class="docutils literal notranslate"><span class="pre">name</span></code> from the GUI.</p>
@@ -3508,6 +3517,22 @@ then we have not yet received any gamepad status from the Meshcat
 browser.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.get_mutable_recording">
+<span class="sig-name descname"><span class="pre">get_mutable_recording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::MeshcatAnimation</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.get_mutable_recording" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable pointer to this Meshcat’s unique MeshcatAnimation
+object, if it exists, in which the frames will be recorded. This
+pointer can be used to set animation properties (like autoplay, the
+loop mode, number of repetitions, etc).</p>
+<p>The MeshcatAnimation object will only remain valid for the lifetime of
+<code class="docutils literal notranslate"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if meshcat does not have a recording.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -3717,6 +3742,15 @@ and Z is the surface evaluated on each X, Y value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.PublishRecording">
+<span class="sig-name descname"><span class="pre">PublishRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.PublishRecording" title="Permalink to this definition"></a></dt>
+<dd><p>Sends the recording to Meshcat as an animation. The published
+animation only includes transforms and properties; the objects that
+they modify must be sent to the visualizer separately (e.g. by calling
+Publish()).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.ResetRenderMode">
 <span class="sig-name descname"><span class="pre">ResetRenderMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.ResetRenderMode" title="Permalink to this definition"></a></dt>
 <dd><p>Resets the default camera, background, grid lines, and axes to their
@@ -3753,6 +3787,9 @@ properties to false.</p>
 <dd><p>Sets the MeshcatAnimation, which creates a slider interface element to
 play/pause/rewind through a series of animation frames in the
 visualizer.</p>
+<p>See also StartRecording(), which records supported calls to <code class="docutils literal notranslate"><span class="pre">this</span></code>
+into a MeshcatAnimation, and PublishRecording(), which calls
+SetAnimation() with the recording.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3889,7 +3926,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">SetProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetProperty" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: bool) -&gt; None</p></li>
+<li><p>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: bool, time_in_recording: Optional[float] = None) -&gt; None</p></li>
 </ol>
 <p>Sets a single named property of the object at the given path. For
 example,</p>
@@ -3906,9 +3943,14 @@ meshcat_path for the semantics.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>the new value.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_in_recording</span></code>:</dt><dd><p>(optional). If recording (see StartRecording()), then in addition
+to publishing the property to any meshcat browsers immediately,
+this transform is saved to the current animation at
+<code class="docutils literal notranslate"><span class="pre">time_in_recording</span></code>.</p>
+</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: float) -&gt; None</p></li>
+<li><p>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: float, time_in_recording: Optional[float] = None) -&gt; None</p></li>
 </ol>
 <p>Sets a single named property of the object at the given path. For
 example,</p>
@@ -3925,9 +3967,13 @@ meshcat_path for the semantics.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>the new value.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_in_recording</span></code>:</dt><dd><p>(optional) the time at which this property should be applied, if
+Meshcat is current recording (see StartRecording()). If Meshcat is
+not currently recording, then this value is simply ignored.</p>
+</dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: List[float]) -&gt; None</p></li>
+<li><p>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: List[float], time_in_recording: Optional[float] = None) -&gt; None</p></li>
 </ol>
 <p>Sets a single named property of the object at the given path. For
 example,</p>
@@ -3943,6 +3989,10 @@ meshcat_path for the semantics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">property</span></code>:</dt><dd><p>the string name of the property to set</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>the new value.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_in_recording</span></code>:</dt><dd><p>(optional) the time at which this property should be applied, if
+Meshcat is current recording (see StartRecording()). If Meshcat is
+not currently recording, then this value is simply ignored.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3985,7 +4035,7 @@ in all connected meshcat browsers.</p>
 <span class="sig-name descname"><span class="pre">SetTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetTransform" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>SetTransform(self: pydrake.geometry.Meshcat, path: str, X_ParentPath: pydrake.math.RigidTransform) -&gt; None</p></li>
+<li><p>SetTransform(self: pydrake.geometry.Meshcat, path: str, X_ParentPath: pydrake.math.RigidTransform, time_in_recording: Optional[float] = None) -&gt; None</p></li>
 </ol>
 <p>Set the RigidTransform for a given path in the scene tree relative to
 its parent path. An object’s pose is the concatenation of all of the
@@ -3996,6 +4046,11 @@ move the objects at “/foo/box1” and “/foo/robots/HAL9000”.</p>
 meshcat_path “Meshcat paths” for the semantics.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_ParentPath</span></code>:</dt><dd><p>the relative transform from the path to its immediate parent.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_in_recording</span></code>:</dt><dd><p>(optional). If recording (see StartRecording()), then in addition
+to publishing the transform to any meshcat browsers immediately,
+this transform is saved to the current animation at
+<code class="docutils literal notranslate"><span class="pre">time_in_recording</span></code>.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -4015,6 +4070,8 @@ meshcat_path “Meshcat paths” for the semantics.</p>
 <p>Note: Prefer to use the overload which takes a RigidTransformd unless
 you need the fully parameterized homogeneous transform (which
 additionally allows scale and sheer).</p>
+<p>Note: Meshcat does not properly support non-uniform scaling. See Drake
+issue #18095.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4111,6 +4168,26 @@ value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.StartRecording">
+<span class="sig-name descname"><span class="pre">StartRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frames_per_second</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">32.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_visualizations_while_recording</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.StartRecording" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a flag indicating that subsequent calls to SetTransform and
+SetProperty should also be “recorded” into a MeshcatAnimation when
+their optional time_in_recording argument is supplied. The data in
+these events will be combined with any frames previously added to the
+animation; if the same transform/property is set at the same time,
+then it will overwrite the existing frame in the animation.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">set_visualizations_while_recording</span></code>:</dt><dd><p>if true, then each method will send the visualization immediately
+to Meshcat <em>and</em> record the visualization in the animation. Set to
+false to avoid updating the visualization during recording. One
+exception is calls to SetObject, which will always be sent to the
+visualizer immediately (because meshcat animations do not support
+SetObject).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.StaticHtml">
 <span class="sig-name descname"><span class="pre">StaticHtml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.StaticHtml" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an HTML string that can be saved to a file for a snapshot of
@@ -4120,6 +4197,13 @@ a great way to save and share your 3D content.</p>
 <p>Note that controls (e.g. sliders and buttons) are not included in the
 HTML output, because their usefulness relies on a connection to the
 server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.StopRecording">
+<span class="sig-name descname"><span class="pre">StopRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.StopRecording" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a flag to pause/stop recording. When stopped, publish events will
+not add frames to the animation.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4757,6 +4841,11 @@ supporting visualizers (e.g. MeshcatPointCloudVisualizer and
 MeshcatContactVisualizer) so that they record into the same animation.</p>
 <p>The MeshcatAnimation object will only remain valid for the lifetime of
 <code class="docutils literal notranslate"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if meshcat does not have a recording.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4916,6 +5005,11 @@ supporting visualizers (e.g. MeshcatPointCloudVisualizer and
 MeshcatContactVisualizer) so that they record into the same animation.</p>
 <p>The MeshcatAnimation object will only remain valid for the lifetime of
 <code class="docutils literal notranslate"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if meshcat does not have a recording.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

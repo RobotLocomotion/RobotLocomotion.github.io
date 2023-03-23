@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/visualization/visualization_config_functions.h File Reference</title>
+<title>Drake: Environment Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('visualization__config__functions_8h.html','');});
+$(document).ready(function(){initNavTree('group__environment__variables.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -158,53 +158,32 @@ $(document).ready(function(){initNavTree('visualization__config__functions_8h.ht
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">visualization_config_functions.h File Reference</div>  </div>
+<div class="title">Environment Variables<div class="ingroups"><a class="el" href="group__technical__notes.html">Technical Notes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__visualizer__params_8h.html">drake/geometry/drake_visualizer_params.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="meshcat_8h.html">drake/geometry/meshcat.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="meshcat__visualizer__params_8h.html">drake/geometry/meshcat_visualizer_params.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="contact__visualizer__params_8h.html">drake/multibody/meshcat/contact_visualizer_params.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="lcm__buses_8h.html">drake/systems/lcm/lcm_buses.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="visualization__config_8h.html">drake/visualization/visualization_config.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for visualization_config_functions.h:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="visualization__config__functions_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1visualization"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html">drake::visualization</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a5edb34c75a79eac5f068c664d89dd952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a5edb34c75a79eac5f068c664d89dd952">ApplyVisualizationConfig</a> (const VisualizationConfig &amp;config, systems::DiagramBuilder&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const systems::lcm::LcmBuses *lcm_buses=nullptr, const multibody::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, const geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, std::shared_ptr&lt; geometry::Meshcat &gt; meshcat=nullptr, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
-<tr class="memdesc:a5edb34c75a79eac5f068c664d89dd952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.  <a href="namespacedrake_1_1visualization.html#a5edb34c75a79eac5f068c664d89dd952">More...</a><br /></td></tr>
-<tr class="separator:a5edb34c75a79eac5f068c664d89dd952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02befd8c90155c339a042f2af39d4c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a02befd8c90155c339a042f2af39d4c12">AddDefaultVisualization</a> (systems::DiagramBuilder&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, std::shared_ptr&lt; geometry::Meshcat &gt; meshcat=nullptr)</td></tr>
-<tr class="memdesc:a02befd8c90155c339a042f2af39d4c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to Meshcat, drake_visualizer and/or meldis, using all of the default configuration settings.  <a href="namespacedrake_1_1visualization.html#a02befd8c90155c339a042f2af39d4c12">More...</a><br /></td></tr>
-<tr class="separator:a02befd8c90155c339a042f2af39d4c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p>This section provides an inventory of environment variables relevant to Drake. </p>
+<ul>
+<li><b><a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb">DRAKE_RESOURCE_ROOT</a></b></li>
+<li><b><a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html">GRB_LICENSE_FILE</a></b> (see also <a href="https://support.gurobi.com/hc/en-us/articles/360013417211-Where-do-I-place-the-Gurobi-license-file-gurobi-lic-">upstream documentation</a>)</li>
+<li><b><a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html">GUROBI_NUM_THREADS</a></b></li>
+<li><b>HOME</b></li>
+<li><b><a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html">MOSEKLM_LICENSE_FILE</a></b> (see also <a href="https://docs.mosek.com/latest/licensing/client-setup.html">upstream documentation</a>)</li>
+<li><b>OMP_NUM_THREADS</b> (see <a href="https://www.openmp.org/spec-html/5.0/openmpse50.html">upstream documentation</a>)</li>
+<li><b><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a82b086143ce943e2318a7b2added1313">ROS_PACKAGE_PATH</a></b> (see also <a href="http://wiki.ros.org/ROS/EnvironmentVariables">upstream documentation)</a></li>
+<li><b>RUNFILES_DIR</b> (see <a href="https://github.com/bazelbuild/bazel/blob/6.1.1/tools/python/runfiles/runfiles.py#L77">upstream documentation)</a></li>
+<li><b>RUNFILES_MANIFEST_FILE</b> (see <a href="https://github.com/bazelbuild/bazel/blob/6.1.1/tools/python/runfiles/runfiles.py#L77">upstream documentation)</a></li>
+<li><b>TEST_SRCDIR</b> (see <a href="https://bazel.build/reference/test-encyclopedia#initial-conditions">upstream documentation</a>)</li>
+<li><b><a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2">TEST_TMPDIR</a></b> (see also <a href="https://bazel.build/reference/test-encyclopedia#initial-conditions">upstream documentation</a>)</li>
+<li><b><a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2">TMPDIR</a></b></li>
+<li><b>USER</b></li>
+<li><b>XDG_CACHE_HOME</b> (see <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">upstream documentation</a>) </li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_646ca0e8f46938429d8373c5298698fa.html">visualization</a></li><li class="navelem"><a class="el" href="visualization__config__functions_8h.html">visualization_config_functions.h</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

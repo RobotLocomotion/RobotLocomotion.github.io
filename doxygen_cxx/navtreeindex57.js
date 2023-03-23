@@ -1,5 +1,8 @@
 var NAVTREEINDEX57 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,2,11],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,12],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,13],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,2,14],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,2,15],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,2,16],
@@ -246,8 +249,5 @@ var NAVTREEINDEX57 =
 "variables_8h.html#a062f8182804bd14f76a6f2ac17718a80":[4,0,0,1,3,0,12,9],
 "variables_8h.html#a3d93012a42e93f92eb3b7fab8bd60733":[4,0,0,1,3,0,12,8],
 "variables_8h.html#a3ee8a097ba9d2c5d5ee4643471c945ce":[4,0,0,1,3,0,12,7],
-"variables_8h.html#a497331a32f5911a18cef34b07df6c04a":[4,0,0,1,3,0,12,4],
-"variables_8h.html#a50ee50ee4e70ef4393128598d143a2a6":[4,0,0,1,3,0,12,11],
-"variables_8h.html#a668d0a0cca975453784c6cd77d638c56":[4,0,0,1,3,0,12,10],
-"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2]
+"variables_8h.html#a497331a32f5911a18cef34b07df6c04a":[4,0,0,1,3,0,12,4]
 };

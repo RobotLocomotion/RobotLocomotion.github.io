@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ac37f7346acd4e42cac1845e1872f5f97":[3,0,0,3,1,2,2],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#acdd28ee42910e57f87e1ca4f49642436":[3,0,0,3,1,2,1],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#acf286c3d47becb9cb03092b0ef6517c8":[3,0,0,3,1,2,4],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#ad396aec45bf850813ade147181f01aae":[3,0,0,3,1,2,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a4b66e0d45620d50449fd43991e731bc8":[3,0,0,3,11,7,1],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a79e9a441a7e61b004ba1cca5ac7db434":[3,0,0,3,11,7,3],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#aa67b4c0cd1beed3e9e171c313ca19935":[3,0,0,3,11,7,4],
-"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html":[3,0,0,3,12,0],
-"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html#a3223a0862c11f9920fa637b27a3d2270":[3,0,0,3,12,0,4]
+"classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html":[3,0,0,3,12,0]
 };

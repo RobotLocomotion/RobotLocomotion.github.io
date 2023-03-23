@@ -4117,8 +4117,12 @@ process when we know the body is free in space.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetJointActuatorByName">
-<span class="sig-name descname"><span class="pre">GetJointActuatorByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetJointActuatorByName" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a constant reference to an actuator that is identified by the
+<span class="sig-name descname"><span class="pre">GetJointActuatorByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetJointActuatorByName" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointActuatorByName(self: pydrake.multibody.plant.MultibodyPlant, name: str) -&gt; pydrake.multibody.tree.JointActuator</p></li>
+</ol>
+<p>Returns a constant reference to an actuator that is identified by the
 string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -4126,6 +4130,25 @@ string <code class="docutils literal notranslate"><span class="pre">name</span><
 <li><p><strong>RuntimeError if there is no actuator with the requested name.</strong> – </p></li>
 <li><p><strong>RuntimeError if the actuator name occurs in multiple model</strong> – </p></li>
 <li><p><strong>instances.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>HasJointActuatorNamed() to query if there exists an actuator in
+<code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>GetJointActuatorByName(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.JointActuator</p></li>
+</ol>
+<p>Returns a constant reference to the actuator that is uniquely
+identified by the string <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there is no actuator with the requested name.</strong> – </p></li>
+<li><p><strong>RuntimeError if model_instance is not valid for this model.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -8255,8 +8278,12 @@ process when we know the body is free in space.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointActuatorByName">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetJointActuatorByName"></span><span class="sig-name descname"><span class="pre">GetJointActuatorByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointActuatorByName" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a constant reference to an actuator that is identified by the
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetJointActuatorByName"></span><span class="sig-name descname"><span class="pre">GetJointActuatorByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointActuatorByName" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointActuatorByName(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str) -&gt; pydrake.multibody.tree.JointActuator_[AutoDiffXd]</p></li>
+</ol>
+<p>Returns a constant reference to an actuator that is identified by the
 string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -8264,6 +8291,25 @@ string <code class="docutils literal notranslate"><span class="pre">name</span><
 <li><p><strong>RuntimeError if there is no actuator with the requested name.</strong> – </p></li>
 <li><p><strong>RuntimeError if the actuator name occurs in multiple model</strong> – </p></li>
 <li><p><strong>instances.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>HasJointActuatorNamed() to query if there exists an actuator in
+<code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>GetJointActuatorByName(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.JointActuator_[AutoDiffXd]</p></li>
+</ol>
+<p>Returns a constant reference to the actuator that is uniquely
+identified by the string <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there is no actuator with the requested name.</strong> – </p></li>
+<li><p><strong>RuntimeError if model_instance is not valid for this model.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12387,8 +12433,12 @@ process when we know the body is free in space.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointActuatorByName">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetJointActuatorByName"></span><span class="sig-name descname"><span class="pre">GetJointActuatorByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointActuatorByName" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a constant reference to an actuator that is identified by the
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetJointActuatorByName"></span><span class="sig-name descname"><span class="pre">GetJointActuatorByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointActuatorByName" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointActuatorByName(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str) -&gt; pydrake.multibody.tree.JointActuator_[Expression]</p></li>
+</ol>
+<p>Returns a constant reference to an actuator that is identified by the
 string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -12396,6 +12446,25 @@ string <code class="docutils literal notranslate"><span class="pre">name</span><
 <li><p><strong>RuntimeError if there is no actuator with the requested name.</strong> – </p></li>
 <li><p><strong>RuntimeError if the actuator name occurs in multiple model</strong> – </p></li>
 <li><p><strong>instances.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>HasJointActuatorNamed() to query if there exists an actuator in
+<code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>GetJointActuatorByName(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.JointActuator_[Expression]</p></li>
+</ol>
+<p>Returns a constant reference to the actuator that is uniquely
+identified by the string <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there is no actuator with the requested name.</strong> – </p></li>
+<li><p><strong>RuntimeError if model_instance is not valid for this model.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
