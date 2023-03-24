@@ -1956,6 +1956,35 @@ must use a discrete MultibodyPlant model.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddBallConstraint">
+<span class="sig-name descname"><span class="pre">AddBallConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddBallConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a constraint such that point P affixed to body A is coincident
+at all times with point Q affixed to body B, effectively modeling a
+ball-and-socket joint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which point P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt><dd><p>Position of point P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which point Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>Position of point Q in body B’s frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the index to the newly added constraint.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddCouplerConstraint">
 <span class="sig-name descname"><span class="pre">AddCouplerConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">gear_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddCouplerConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Defines a holonomic constraint between two single-dof joints
@@ -1981,6 +2010,70 @@ combination therein.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddDistanceConstraint">
+<span class="sig-name descname"><span class="pre">AddDistanceConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddDistanceConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a distance constraint between a point P on a body A and a
+point Q on a body B.</p>
+<p>This constraint can be compliant, modeling a spring with free length
+<code class="docutils literal notranslate"><span class="pre">distance</span></code> and given <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and <code class="docutils literal notranslate"><span class="pre">damping</span></code> parameters
+between points P and Q. For d = ‖p_PQ‖, then a compliant distance
+constraint models a spring with force along p_PQ given by:</p>
+<p>f = −stiffness ⋅ d − damping ⋅ ḋ</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which point P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt><dd><p>Position of point P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which point Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>Position of point Q in body B’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance</span></code>:</dt><dd><p>Fixed length of the distance constraint, in meters. It must be
+strictly positive.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>For modeling a spring with free length equal to <code class="docutils literal notranslate"><span class="pre">distance</span></code>, the
+stiffness parameter in N/m. Optional, with its default value being
+infinite to model a rigid massless rod of length <code class="docutils literal notranslate"><span class="pre">distance</span></code>
+connecting points A and B.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>For modeling a spring with free length equal to <code class="docutils literal notranslate"><span class="pre">distance</span></code>,
+damping parameter in N⋅s/m. Optional, with its default value being
+zero for a non-dissipative constraint.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the index to the newly added constraint.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, it is the user’s responsibility to initialize the
+model’s context in a configuration compatible with the newly added
+constraint.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A distance constraint is the wrong modeling choice if the distance
+needs to go through zero. To constrain two points to be coincident
+we need a 3-dof ball constraint, the 1-dof distance constraint is
+singular in this case. Therefore we require the distance parameter
+to be strictly positive.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 </ul>
 </dd>
@@ -6117,6 +6210,35 @@ must use a discrete MultibodyPlant model.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddBallConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddBallConstraint"></span><span class="sig-name descname"><span class="pre">AddBallConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddBallConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a constraint such that point P affixed to body A is coincident
+at all times with point Q affixed to body B, effectively modeling a
+ball-and-socket joint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which point P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt><dd><p>Position of point P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which point Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>Position of point Q in body B’s frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the index to the newly added constraint.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddCouplerConstraint">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddCouplerConstraint"></span><span class="sig-name descname"><span class="pre">AddCouplerConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gear_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddCouplerConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Defines a holonomic constraint between two single-dof joints
@@ -6142,6 +6264,70 @@ combination therein.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddDistanceConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddDistanceConstraint"></span><span class="sig-name descname"><span class="pre">AddDistanceConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddDistanceConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a distance constraint between a point P on a body A and a
+point Q on a body B.</p>
+<p>This constraint can be compliant, modeling a spring with free length
+<code class="docutils literal notranslate"><span class="pre">distance</span></code> and given <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and <code class="docutils literal notranslate"><span class="pre">damping</span></code> parameters
+between points P and Q. For d = ‖p_PQ‖, then a compliant distance
+constraint models a spring with force along p_PQ given by:</p>
+<p>f = −stiffness ⋅ d − damping ⋅ ḋ</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which point P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt><dd><p>Position of point P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which point Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>Position of point Q in body B’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance</span></code>:</dt><dd><p>Fixed length of the distance constraint, in meters. It must be
+strictly positive.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>For modeling a spring with free length equal to <code class="docutils literal notranslate"><span class="pre">distance</span></code>, the
+stiffness parameter in N/m. Optional, with its default value being
+infinite to model a rigid massless rod of length <code class="docutils literal notranslate"><span class="pre">distance</span></code>
+connecting points A and B.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>For modeling a spring with free length equal to <code class="docutils literal notranslate"><span class="pre">distance</span></code>,
+damping parameter in N⋅s/m. Optional, with its default value being
+zero for a non-dissipative constraint.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the index to the newly added constraint.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, it is the user’s responsibility to initialize the
+model’s context in a configuration compatible with the newly added
+constraint.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A distance constraint is the wrong modeling choice if the distance
+needs to go through zero. To constrain two points to be coincident
+we need a 3-dof ball constraint, the 1-dof distance constraint is
+singular in this case. Therefore we require the distance parameter
+to be strictly positive.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 </ul>
 </dd>
@@ -10272,6 +10458,35 @@ must use a discrete MultibodyPlant model.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddBallConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddBallConstraint"></span><span class="sig-name descname"><span class="pre">AddBallConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddBallConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a constraint such that point P affixed to body A is coincident
+at all times with point Q affixed to body B, effectively modeling a
+ball-and-socket joint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which point P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt><dd><p>Position of point P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which point Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>Position of point Q in body B’s frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the index to the newly added constraint.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddCouplerConstraint">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddCouplerConstraint"></span><span class="sig-name descname"><span class="pre">AddCouplerConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gear_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddCouplerConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Defines a holonomic constraint between two single-dof joints
@@ -10297,6 +10512,70 @@ combination therein.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddDistanceConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddDistanceConstraint"></span><span class="sig-name descname"><span class="pre">AddDistanceConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ConstraintIndex" title="pydrake.multibody.tree.ConstraintIndex"><span class="pre">pydrake.multibody.tree.ConstraintIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddDistanceConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a distance constraint between a point P on a body A and a
+point Q on a body B.</p>
+<p>This constraint can be compliant, modeling a spring with free length
+<code class="docutils literal notranslate"><span class="pre">distance</span></code> and given <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and <code class="docutils literal notranslate"><span class="pre">damping</span></code> parameters
+between points P and Q. For d = ‖p_PQ‖, then a compliant distance
+constraint models a spring with force along p_PQ given by:</p>
+<p>f = −stiffness ⋅ d − damping ⋅ ḋ</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which point P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt><dd><p>Position of point P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which point Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>Position of point Q in body B’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance</span></code>:</dt><dd><p>Fixed length of the distance constraint, in meters. It must be
+strictly positive.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>For modeling a spring with free length equal to <code class="docutils literal notranslate"><span class="pre">distance</span></code>, the
+stiffness parameter in N/m. Optional, with its default value being
+infinite to model a rigid massless rod of length <code class="docutils literal notranslate"><span class="pre">distance</span></code>
+connecting points A and B.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>For modeling a spring with free length equal to <code class="docutils literal notranslate"><span class="pre">distance</span></code>,
+damping parameter in N⋅s/m. Optional, with its default value being
+zero for a non-dissipative constraint.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the index to the newly added constraint.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, it is the user’s responsibility to initialize the
+model’s context in a configuration compatible with the newly added
+constraint.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A distance constraint is the wrong modeling choice if the distance
+needs to go through zero. To constrain two points to be coincident
+we need a 3-dof ball constraint, the 1-dof distance constraint is
+singular in this case. Therefore we require the distance parameter
+to be strictly positive.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 </ul>
 </dd>

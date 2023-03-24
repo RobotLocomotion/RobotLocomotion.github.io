@@ -6,7 +6,7 @@ var group__technical__notes =
     [ "Code Generation", "group__codegen.html", "group__codegen" ],
     [ "YAML Serialization", "group__yaml__serialization.html", null ],
     [ "Template MetaProgramming", "group__templates.html", null ],
-    [ "Environment Variables", "group__environment__variables.html", null ],
+    [ "Environment Variables", "group__environment__variables.html", "group__environment__variables" ],
     [ "System Cache Design and Implementation Notes", "group__cache__design__notes.html", null ],
     [ "Event Callbacks", "group__event__callbacks.html", null ],
     [ "System Compatibility", "group__system__compatibility.html", null ],

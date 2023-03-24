@@ -430,7 +430,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds an entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> for the given <code>package_name</code>, which will be downloaded from the internet (with local caching). </p>
-<p>The data will not be downloaded until necessary, i.e., when <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a92aba2d00ca04be3c0d858b2c4d862b5" title="Obtains the path associated with package package_name.">GetPath()</a> is first called for the <code>package_name</code>. Throws if the <code>package_name</code> or <code>params</code> are invalid. Downloading requires a valid <code>/usr/bin/python3</code> interpreter, which will be invoked as a subprocess. </p>
+<p>The data will not be downloaded until necessary, i.e., when <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a92aba2d00ca04be3c0d858b2c4d862b5" title="Obtains the path associated with package package_name.">GetPath()</a> is first called for the <code>package_name</code>. Throws if the <code>package_name</code> or <code>params</code> are invalid. Downloading requires a valid <code>/usr/bin/python3</code> interpreter, which will be invoked as a subprocess.</p>
+<p>See <a class="el" href="group__allow__network.html">DRAKE_ALLOW_NETWORK</a> for an environment variable option to disable network fetching. AddRemote may still be used even with network fetching disabled &ndash; in that case, the urls must contain a "file://" URL or the download cache must already contain a previously-downloaded copy of the package (with the same sha256 checksum). </p>
 
 </div>
 </div>

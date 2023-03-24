@@ -191,8 +191,12 @@ Controls" in the top right corner.</p>
 Recommended workflow</h1>
 <p>For convenience, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> fosters a work flow in which all user-created objects created in Drake are contained in the "/drake" folder. Objects added with a relative path are placed in the "/drake" folder for you. The benefits are:</p><ul>
 <li>It's simple to distinguish between user objects and "infrastructure" objects in the visualizer.</li>
-<li>All user objects can easily be cleared by a single, parameter-free call to Delete(). You are welcome to use absolute paths to organize your data, but the burden on tracking and cleaning them up lie on you. </li>
+<li>All user objects can easily be cleared by a single, parameter-free call to Delete(). You are welcome to use absolute paths to organize your data, but the burden on tracking and cleaning them up lie on you.</li>
 </ul>
+<h1><a class="anchor" id="network_access"></a>
+Network access</h1>
+<p>See <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html" title="The set of parameters for configuring Meshcat.">MeshcatParams</a> for options to control the hostname and port to bind to.</p>
+<p>See <a class="el" href="group__allow__network.html">DRAKE_ALLOW_NETWORK</a> for an environment variable option to deny Meshcat entirely. </p>
 </div>
 <p><code>#include &lt;drake/geometry/meshcat.h&gt;</code></p>
 <table class="memberdecls">

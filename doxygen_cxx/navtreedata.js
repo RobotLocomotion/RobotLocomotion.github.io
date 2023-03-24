@@ -111,18 +111,18 @@ var NAVTREEINDEX =
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a04a6eca450c24af0269212fb90c57d9f",
 "first__order__low__pass__filter_8h.html",
 "functions_s.html",
-"group__multibody__spatial__algebra.html",
-"joint_8h.html",
-"multibody_2inverse__kinematics_2differential__inverse__kinematics_8h.html#gafd57fd1045276e8221f6f0a4fac36c82",
-"namespacemembers_func_r.html",
-"proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009",
-"serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f",
-"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31",
-"structdrake_1_1math_1_1_mat_grad_mult.html#aace3454f69205e3b95dfe4e1176647ac",
-"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a58556183e6b44a317abcf3d0a8e0e2b4",
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea",
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html",
-"variables_8h.html#a50ee50ee4e70ef4393128598d143a2a6"
+"group__multibody__quantities__units.html",
+"jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f",
+"multibody_2inverse__kinematics_2differential__inverse__kinematics_8h.html#gac36361db531cfc7f707ef52db81375e9",
+"namespacemembers_func_q.html",
+"proximity__utilities_8h.html#a8f106b9c67eabf12f6e34a632561cd26",
+"serialize__pybind_8h.html",
+"structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9",
+"structdrake_1_1math_1_1_gray_codes_matrix.html",
+"structdrake_1_1ostream__formatter.html",
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a7e7b9b98008f565a28fa06c3e4d04b6e",
+"structstd_1_1hash_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html",
+"variables_8h.html#a3d93012a42e93f92eb3b7fab8bd60733"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

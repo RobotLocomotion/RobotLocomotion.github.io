@@ -381,7 +381,9 @@ CURL_GLOBAL_ACK_EINTR)</cite>][libcurl_init], the implication for
 consuming applications being:</p>
 </div>
 <p>Note:
-1. If you intend to have your rendering take place in a threaded context,
+1. See allow_network “DRAKE_ALLOW_NETWORK” for an environment variable
+option to deny remote rendering entirely.
+2. If you intend to have your rendering take place in a threaded context,
 you <strong>must</strong> instantiate this RenderEngine via MakeRenderEngineGltfClient
 from the main thread <strong>before</strong> spawning your threaded workers.  As soon
 as one of these RenderEngine instances has been constructed, libcurl will
@@ -396,7 +398,7 @@ have been initialized.</p>
 <span class="o">//</span> <span class="n">initialized</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">may</span> <span class="n">now</span> <span class="n">create</span> <span class="n">threads</span> <span class="k">if</span> <span class="n">desired</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>2. If you need to use a different initialization strategy for libcurl in your
+<p>3. If you need to use a different initialization strategy for libcurl in your
 application, you should first create the RenderEngine using
 MakeRenderEngineGltfClient, then manually call
 [<cite>curl_global_cleanup()</cite>][libcurl_cleanup], followed by manually calling
