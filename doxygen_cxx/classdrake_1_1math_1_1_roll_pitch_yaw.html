@@ -269,9 +269,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ad4c305a20bcd72fe81699869055af6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a4ad4c305a20bcd72fe81699869055af6">CalcRpyDtFromAngularVelocityInParent</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;w_AD_A) const</td></tr>
 <tr class="memdesc:a4ad4c305a20bcd72fe81699869055af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses angular velocity to compute the 1ˢᵗ time-derivative of <code>this</code> RollPitchYaw whose angles <code>[r; p; y]</code> orient two generic frames A and D.  <a href="#a4ad4c305a20bcd72fe81699869055af6">More...</a><br /></td></tr>
 <tr class="separator:a4ad4c305a20bcd72fe81699869055af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6002620cfd6839681352ac9b57e0606"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#aa6002620cfd6839681352ac9b57e0606">CalcRpyDtFromAngularVelocityInChild</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;w_AD_D) const</td></tr>
+<tr class="memdesc:aa6002620cfd6839681352ac9b57e0606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses angular velocity to compute the 1ˢᵗ time-derivative of <code>this</code> RollPitchYaw whose angles <code>[r; p; y]</code> orient two generic frames A and D.  <a href="#aa6002620cfd6839681352ac9b57e0606">More...</a><br /></td></tr>
+<tr class="separator:aa6002620cfd6839681352ac9b57e0606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aed89bb07dd455aabe953361562507c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a2aed89bb07dd455aabe953361562507c">CalcMatrixRelatingRpyDtToAngularVelocityInParent</a> () const</td></tr>
-<tr class="memdesc:a2aed89bb07dd455aabe953361562507c"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> RollPitchYaw with roll-pitch-yaw angles <code>[r; p; y]</code> which relate the orientation of two generic frames A and D, returns the 3x3 matrix M that contains the partial derivatives of [ṙ, ṗ, ẏ] with respect to <code>[wx; wy; wz]ₐ</code> (which is w_AD_A expressed in A).  <a href="#a2aed89bb07dd455aabe953361562507c">More...</a><br /></td></tr>
+<tr class="memdesc:a2aed89bb07dd455aabe953361562507c"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generic frames A and D, returns the 3x3 matrix Np relating ṙ, ṗ, ẏ to ωx, ωy, ωz, where frame D's angular velocity in A, expressed in "parent" A is <code>w_AD_A = ωx Ax + ωy Ay + ωz Az</code>.  <a href="#a2aed89bb07dd455aabe953361562507c">More...</a><br /></td></tr>
 <tr class="separator:a2aed89bb07dd455aabe953361562507c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459ec135d33ffe8af29e4de8411b038f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a459ec135d33ffe8af29e4de8411b038f">CalcMatrixRelatingRpyDtToAngularVelocityInChild</a> () const</td></tr>
+<tr class="memdesc:a459ec135d33ffe8af29e4de8411b038f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <code>this</code> RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generic frames A and D, returns the 3x3 matrix Nc relating ṙ, ṗ, ẏ to ω0, ω1, ω2, where frame D's angular velocity in A, expressed in "child" D is <code>w_AD_D = ω0 Dx + ω1 Dy + ω2 Dz</code>.  <a href="#a459ec135d33ffe8af29e4de8411b038f">More...</a><br /></td></tr>
+<tr class="separator:a459ec135d33ffe8af29e4de8411b038f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a004c7da954357916497d26a6592f7660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a004c7da954357916497d26a6592f7660">CalcRpyDDtFromRpyDtAndAngularAccelInParent</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;rpyDt, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;alpha_AD_A) const</td></tr>
 <tr class="memdesc:a004c7da954357916497d26a6592f7660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses angular acceleration to compute the 2ⁿᵈ time-derivative of <code>this</code> RollPitchYaw whose angles <code>[r; p; y]</code> orient two generic frames A and D.  <a href="#a004c7da954357916497d26a6592f7660">More...</a><br /></td></tr>
 <tr class="separator:a004c7da954357916497d26a6592f7660"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -555,7 +561,7 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>w_AD_D, frame D's angular velocity in frame A, expressed in D. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>w_AD_D, frame D's angular velocity in frame A, expressed in "child" frame D. In other words, returns [ω0; ω1; ω2]ᴅ, where <code>w_AD_D = ω0 Dx + ω1 Dy + ω2 Dz</code>, and where [ω0; ω1; ω2]ᴅ is calculated via the 3x3 matrix Nc⁻¹ (the inverse of the matrix Nc documented in <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a459ec135d33ffe8af29e4de8411b038f" title="For this RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generi...">CalcMatrixRelatingRpyDtToAngularVelocityInChild()</a>). <div class="fragment"><div class="line">⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(p)    ⌉</div><div class="line">| ω1 |  = Nc⁻¹ | ṗ |     Nc⁻¹ = | 0   <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)   <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p) |</div><div class="line">⌊ ω2 ⌋ᴅ        ⌊ ẏ ⌋            ⌊ 0  -<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)   <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p) ⌋</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -582,7 +588,40 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>w_AD_A, frame D's angular velocity in frame A, expressed in A. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>w_AD_A, frame D's angular velocity in frame A, expressed in "parent" frame A. In other words, returns [ωx; ωy; ωz]ᴀ, where <code>w_AD_A = ωx Ax + ωy Ay + ωz Az</code>, and where [ωx; ωy; ωz]ᴀ is calculated via the the 3x3 matrix Np⁻¹ (the inverse of the matrix Np documented in <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a2aed89bb07dd455aabe953361562507c" title="For this RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generi...">CalcMatrixRelatingRpyDtToAngularVelocityInParent()</a>). <div class="fragment"><div class="line">⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  -<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)  0 ⌉</div><div class="line">| ωy |  = Np⁻¹ | ṗ |     Np⁻¹ = | <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)   <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)  0 |</div><div class="line">⌊ ωz ⌋ᴀ        ⌊ ẏ ⌋            ⌊   -<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(p)         0     1 ⌋</div></div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a459ec135d33ffe8af29e4de8411b038f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459ec135d33ffe8af29e4de8411b038f">&#9670;&nbsp;</a></span>CalcMatrixRelatingRpyDtToAngularVelocityInChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt;T&gt; CalcMatrixRelatingRpyDtToAngularVelocityInChild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For <code>this</code> RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generic frames A and D, returns the 3x3 matrix Nc relating ṙ, ṗ, ẏ to ω0, ω1, ω2, where frame D's angular velocity in A, expressed in "child" D is <code>w_AD_D = ω0 Dx + ω1 Dy + ω2 Dz</code>. </p>
+<p>Hence, Nc contains partial derivatives of [ṙ, ṗ, ẏ] with respect to [ω0; ω1; ω2]ᴅ. </p><div class="fragment"><div class="line">⌈ ṙ ⌉      ⌈ ω0 ⌉          ⌈ 1  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p) ⌉</div><div class="line">| ṗ | = Nc | ω1 |     Nc = | 0      <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)        −sin(r)    |</div><div class="line">⌊ ẏ ⌋      ⌊ ω2 ⌋ᴅ         ⌊ 0  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p) ⌋</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_name</td><td>name of the calling function/method. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>cos(p) ≈ 0</code> (<code>p</code> is near gimbal-lock). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method has a divide-by-zero error (singularity) when the cosine of the pitch angle <code>p</code> is zero [i.e., <code>cos(p) = 0</code>]. This problem (called "gimbal lock") occurs when <code>p = n π + π / 2</code>, where n is any integer. There are associated precision problems (inaccuracies) in the neighborhood of these pitch angles, i.e., when <code>cos(p) ≈ 0</code>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a2aed89bb07dd455aabe953361562507c" title="For this RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generi...">CalcMatrixRelatingRpyDtToAngularVelocityInParent()</a> </dd></dl>
 
 </div>
 </div>
@@ -601,8 +640,8 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>For <code>this</code> RollPitchYaw with roll-pitch-yaw angles <code>[r; p; y]</code> which relate the orientation of two generic frames A and D, returns the 3x3 matrix M that contains the partial derivatives of [ṙ, ṗ, ẏ] with respect to <code>[wx; wy; wz]ₐ</code> (which is w_AD_A expressed in A). </p>
-<p>In other words, <code>rpyDt = M * w_AD_A</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>For <code>this</code> RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generic frames A and D, returns the 3x3 matrix Np relating ṙ, ṗ, ẏ to ωx, ωy, ωz, where frame D's angular velocity in A, expressed in "parent" A is <code>w_AD_A = ωx Ax + ωy Ay + ωz Az</code>. </p>
+<p>Hence, Np contains partial derivatives of [ṙ, ṗ, ẏ] with respect to [ωx; ωy; ωz]ᴀ. </p><div class="fragment"><div class="line">⌈ ṙ ⌉      ⌈ ωx ⌉          ⌈ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)   0 ⌉</div><div class="line">| ṗ | = Np | ωy |     Np = |   −sin(y)          <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)      0 |</div><div class="line">⌊ ẏ ⌋      ⌊ ωz ⌋ᴀ         ⌊ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)   <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)  1 ⌋</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">function_name</td><td>name of the calling function/method. </td></tr>
   </table>
@@ -615,6 +654,7 @@ Related Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This method has a divide-by-zero error (singularity) when the cosine of the pitch angle <code>p</code> is zero [i.e., <code>cos(p) = 0</code>]. This problem (called "gimbal lock") occurs when <code>p = n π + π / 2</code>, where n is any integer. There are associated precision problems (inaccuracies) in the neighborhood of these pitch angles, i.e., when <code>cos(p) ≈ 0</code>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a459ec135d33ffe8af29e4de8411b038f" title="For this RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generi...">CalcMatrixRelatingRpyDtToAngularVelocityInChild()</a> </dd></dl>
 
 </div>
 </div>
@@ -735,6 +775,41 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa6002620cfd6839681352ac9b57e0606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6002620cfd6839681352ac9b57e0606">&#9670;&nbsp;</a></span>CalcRpyDtFromAngularVelocityInChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcRpyDtFromAngularVelocityInChild </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>w_AD_D</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code>this</code> RollPitchYaw whose angles <code>[r; p; y]</code> orient two generic frames A and D. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">w_AD_D,frame</td><td>D's angular velocity in frame A, expressed in D. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>[ṙ; ṗ; ẏ]</code>, the 1ˢᵗ time-derivative of <code>this</code> RollPitchYaw. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>cos(p) ≈ 0</code> (<code>p</code> is near gimbal-lock). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Enhanced documentation for this method and its gimbal-lock (divide- by-zero error) is in <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a459ec135d33ffe8af29e4de8411b038f" title="For this RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generi...">CalcMatrixRelatingRpyDtToAngularVelocityInChild()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a4ad4c305a20bcd72fe81699869055af6" title="Uses angular velocity to compute the 1ˢᵗ time-derivative of this RollPitchYaw whose angles [r; p; y] ...">CalcRpyDtFromAngularVelocityInParent()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a4ad4c305a20bcd72fe81699869055af6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ad4c305a20bcd72fe81699869055af6">&#9670;&nbsp;</a></span>CalcRpyDtFromAngularVelocityInParent()</h2>
 
@@ -765,7 +840,8 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This method has a divide-by-zero error (singularity) when the cosine of the pitch angle <code>p</code> is zero [i.e., <code>cos(p) = 0</code>]. This problem (called "gimbal lock") occurs when <code>p = n π + π / 2</code>, where n is any integer. There are associated precision problems (inaccuracies) in the neighborhood of these pitch angles, i.e., when <code>cos(p) ≈ 0</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Enhanced documentation for this method and its gimbal-lock (divide- by-zero error) is in <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a2aed89bb07dd455aabe953361562507c" title="For this RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generi...">CalcMatrixRelatingRpyDtToAngularVelocityInParent()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#aa6002620cfd6839681352ac9b57e0606" title="Uses angular velocity to compute the 1ˢᵗ time-derivative of this RollPitchYaw whose angles [r; p; y] ...">CalcRpyDtFromAngularVelocityInChild()</a> </dd></dl>
 
 </div>
 </div>

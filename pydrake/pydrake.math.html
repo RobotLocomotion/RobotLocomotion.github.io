@@ -3840,9 +3840,18 @@ generic frames A and D.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>w_AD_D, frame D’s angular velocity in frame A, expressed in D.</p>
+<dd class="field-odd"><p>w_AD_D, frame D’s angular velocity in frame A, expressed in
+“child” frame D. In other words, returns [ω0; ω1; ω2]ᴅ, where
+<code class="docutils literal notranslate"><span class="pre">w_AD_D</span> <span class="pre">=</span> <span class="pre">ω0</span> <span class="pre">Dx</span> <span class="pre">+</span> <span class="pre">ω1</span> <span class="pre">Dy</span> <span class="pre">+</span> <span class="pre">ω2</span> <span class="pre">Dz</span></code>, and where [ω0; ω1; ω2]ᴅ is
+calculated via the 3x3 matrix Nc⁻¹ (the inverse of the matrix Nc
+documented in CalcMatrixRelatingRpyDtToAngularVelocityInChild()).</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
+| ω1 |  = Nc⁻¹ | ṗ |     Nc⁻¹ = | 0   cos(r)   sin(r)*cos(p) |
+⌊ ω2 ⌋ᴅ        ⌊ ẏ ⌋            ⌊ 0  -sin(r)   cos(r)*cos(p) ⌋
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -3857,9 +3866,19 @@ generic frames A and D.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>w_AD_A, frame D’s angular velocity in frame A, expressed in A.</p>
+<dd class="field-odd"><p>w_AD_A, frame D’s angular velocity in frame A, expressed in
+“parent” frame A. In other words, returns [ωx; ωy; ωz]ᴀ, where
+<code class="docutils literal notranslate"><span class="pre">w_AD_A</span> <span class="pre">=</span> <span class="pre">ωx</span> <span class="pre">Ax</span> <span class="pre">+</span> <span class="pre">ωy</span> <span class="pre">Ay</span> <span class="pre">+</span> <span class="pre">ωz</span> <span class="pre">Az</span></code>, and where [ωx; ωy; ωz]ᴀ is
+calculated via the the 3x3 matrix Np⁻¹ (the inverse of the matrix
+Np documented in
+CalcMatrixRelatingRpyDtToAngularVelocityInParent()).</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
+| ωy |  = Np⁻¹ | ṗ |     Np⁻¹ = | sin(y)*cos(p)   cos(y)  0 |
+⌊ ωz ⌋ᴀ        ⌊ ẏ ⌋            ⌊   -sin(p)         0     1 ⌋
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -3970,12 +3989,13 @@ RollPitchYaw.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method has a divide-by-zero error (singularity) when the
-cosine of the pitch angle <code class="docutils literal notranslate"><span class="pre">p</span></code> is zero [i.e., <code class="docutils literal notranslate"><span class="pre">cos(p)</span> <span class="pre">=</span> <span class="pre">0`].</span>
-<span class="pre">This</span> <span class="pre">problem</span> <span class="pre">(called</span> <span class="pre">&quot;gimbal</span> <span class="pre">lock&quot;)</span> <span class="pre">occurs</span> <span class="pre">when</span> <span class="pre">`p</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">π</span> <span class="pre">+</span> <span class="pre">π</span> <span class="pre">/</span>
-<span class="pre">2</span></code>, where n is any integer. There are associated precision
-problems (inaccuracies) in the neighborhood of these pitch angles,
-i.e., when <code class="docutils literal notranslate"><span class="pre">cos(p)</span> <span class="pre">≈</span> <span class="pre">0</span></code>.</p>
+<p>Enhanced documentation for this method and its gimbal-lock
+(divide- by-zero error) is in
+CalcMatrixRelatingRpyDtToAngularVelocityInParent().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcRpyDtFromAngularVelocityInChild()</p>
 </div>
 </dd></dl>
 
@@ -4168,9 +4188,18 @@ generic frames A and D.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>w_AD_D, frame D’s angular velocity in frame A, expressed in D.</p>
+<dd class="field-odd"><p>w_AD_D, frame D’s angular velocity in frame A, expressed in
+“child” frame D. In other words, returns [ω0; ω1; ω2]ᴅ, where
+<code class="docutils literal notranslate"><span class="pre">w_AD_D</span> <span class="pre">=</span> <span class="pre">ω0</span> <span class="pre">Dx</span> <span class="pre">+</span> <span class="pre">ω1</span> <span class="pre">Dy</span> <span class="pre">+</span> <span class="pre">ω2</span> <span class="pre">Dz</span></code>, and where [ω0; ω1; ω2]ᴅ is
+calculated via the 3x3 matrix Nc⁻¹ (the inverse of the matrix Nc
+documented in CalcMatrixRelatingRpyDtToAngularVelocityInChild()).</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
+| ω1 |  = Nc⁻¹ | ṗ |     Nc⁻¹ = | 0   cos(r)   sin(r)*cos(p) |
+⌊ ω2 ⌋ᴅ        ⌊ ẏ ⌋            ⌊ 0  -sin(r)   cos(r)*cos(p) ⌋
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4185,9 +4214,19 @@ generic frames A and D.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>w_AD_A, frame D’s angular velocity in frame A, expressed in A.</p>
+<dd class="field-odd"><p>w_AD_A, frame D’s angular velocity in frame A, expressed in
+“parent” frame A. In other words, returns [ωx; ωy; ωz]ᴀ, where
+<code class="docutils literal notranslate"><span class="pre">w_AD_A</span> <span class="pre">=</span> <span class="pre">ωx</span> <span class="pre">Ax</span> <span class="pre">+</span> <span class="pre">ωy</span> <span class="pre">Ay</span> <span class="pre">+</span> <span class="pre">ωz</span> <span class="pre">Az</span></code>, and where [ωx; ωy; ωz]ᴀ is
+calculated via the the 3x3 matrix Np⁻¹ (the inverse of the matrix
+Np documented in
+CalcMatrixRelatingRpyDtToAngularVelocityInParent()).</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
+| ωy |  = Np⁻¹ | ṗ |     Np⁻¹ = | sin(y)*cos(p)   cos(y)  0 |
+⌊ ωz ⌋ᴀ        ⌊ ẏ ⌋            ⌊   -sin(p)         0     1 ⌋
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4298,12 +4337,13 @@ RollPitchYaw.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method has a divide-by-zero error (singularity) when the
-cosine of the pitch angle <code class="docutils literal notranslate"><span class="pre">p</span></code> is zero [i.e., <code class="docutils literal notranslate"><span class="pre">cos(p)</span> <span class="pre">=</span> <span class="pre">0`].</span>
-<span class="pre">This</span> <span class="pre">problem</span> <span class="pre">(called</span> <span class="pre">&quot;gimbal</span> <span class="pre">lock&quot;)</span> <span class="pre">occurs</span> <span class="pre">when</span> <span class="pre">`p</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">π</span> <span class="pre">+</span> <span class="pre">π</span> <span class="pre">/</span>
-<span class="pre">2</span></code>, where n is any integer. There are associated precision
-problems (inaccuracies) in the neighborhood of these pitch angles,
-i.e., when <code class="docutils literal notranslate"><span class="pre">cos(p)</span> <span class="pre">≈</span> <span class="pre">0</span></code>.</p>
+<p>Enhanced documentation for this method and its gimbal-lock
+(divide- by-zero error) is in
+CalcMatrixRelatingRpyDtToAngularVelocityInParent().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcRpyDtFromAngularVelocityInChild()</p>
 </div>
 </dd></dl>
 
@@ -4490,9 +4530,18 @@ generic frames A and D.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>w_AD_D, frame D’s angular velocity in frame A, expressed in D.</p>
+<dd class="field-odd"><p>w_AD_D, frame D’s angular velocity in frame A, expressed in
+“child” frame D. In other words, returns [ω0; ω1; ω2]ᴅ, where
+<code class="docutils literal notranslate"><span class="pre">w_AD_D</span> <span class="pre">=</span> <span class="pre">ω0</span> <span class="pre">Dx</span> <span class="pre">+</span> <span class="pre">ω1</span> <span class="pre">Dy</span> <span class="pre">+</span> <span class="pre">ω2</span> <span class="pre">Dz</span></code>, and where [ω0; ω1; ω2]ᴅ is
+calculated via the 3x3 matrix Nc⁻¹ (the inverse of the matrix Nc
+documented in CalcMatrixRelatingRpyDtToAngularVelocityInChild()).</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
+| ω1 |  = Nc⁻¹ | ṗ |     Nc⁻¹ = | 0   cos(r)   sin(r)*cos(p) |
+⌊ ω2 ⌋ᴅ        ⌊ ẏ ⌋            ⌊ 0  -sin(r)   cos(r)*cos(p) ⌋
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4507,9 +4556,19 @@ generic frames A and D.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>w_AD_A, frame D’s angular velocity in frame A, expressed in A.</p>
+<dd class="field-odd"><p>w_AD_A, frame D’s angular velocity in frame A, expressed in
+“parent” frame A. In other words, returns [ωx; ωy; ωz]ᴀ, where
+<code class="docutils literal notranslate"><span class="pre">w_AD_A</span> <span class="pre">=</span> <span class="pre">ωx</span> <span class="pre">Ax</span> <span class="pre">+</span> <span class="pre">ωy</span> <span class="pre">Ay</span> <span class="pre">+</span> <span class="pre">ωz</span> <span class="pre">Az</span></code>, and where [ωx; ωy; ωz]ᴀ is
+calculated via the the 3x3 matrix Np⁻¹ (the inverse of the matrix
+Np documented in
+CalcMatrixRelatingRpyDtToAngularVelocityInParent()).</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
+| ωy |  = Np⁻¹ | ṗ |     Np⁻¹ = | sin(y)*cos(p)   cos(y)  0 |
+⌊ ωz ⌋ᴀ        ⌊ ẏ ⌋            ⌊   -sin(p)         0     1 ⌋
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4620,12 +4679,13 @@ RollPitchYaw.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method has a divide-by-zero error (singularity) when the
-cosine of the pitch angle <code class="docutils literal notranslate"><span class="pre">p</span></code> is zero [i.e., <code class="docutils literal notranslate"><span class="pre">cos(p)</span> <span class="pre">=</span> <span class="pre">0`].</span>
-<span class="pre">This</span> <span class="pre">problem</span> <span class="pre">(called</span> <span class="pre">&quot;gimbal</span> <span class="pre">lock&quot;)</span> <span class="pre">occurs</span> <span class="pre">when</span> <span class="pre">`p</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">π</span> <span class="pre">+</span> <span class="pre">π</span> <span class="pre">/</span>
-<span class="pre">2</span></code>, where n is any integer. There are associated precision
-problems (inaccuracies) in the neighborhood of these pitch angles,
-i.e., when <code class="docutils literal notranslate"><span class="pre">cos(p)</span> <span class="pre">≈</span> <span class="pre">0</span></code>.</p>
+<p>Enhanced documentation for this method and its gimbal-lock
+(divide- by-zero error) is in
+CalcMatrixRelatingRpyDtToAngularVelocityInParent().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcRpyDtFromAngularVelocityInChild()</p>
 </div>
 </dd></dl>
 
@@ -4792,6 +4852,8 @@ Body-fixed (intrinsic) Z-Y-X rotation by “yaw-pitch-roll” angles <code class
 with “roll-pitch-yaw” angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> or equivalently a Body-
 fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 <code class="docutils literal notranslate"><span class="pre">[y,</span> <span class="pre">p,</span> <span class="pre">r]</span></code>.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AD</span></code>:</dt><dd><p>, rotation matrix relating frame A to frame D.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -5496,6 +5558,8 @@ with “roll-pitch-yaw” angles <code class="docutils literal notranslate"><spa
 fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 <code class="docutils literal notranslate"><span class="pre">[y,</span> <span class="pre">p,</span> <span class="pre">r]</span></code>.</p>
 </dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AD</span></code>:</dt><dd><p>, rotation matrix relating frame A to frame D.</p>
+</dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6144,6 +6208,8 @@ Body-fixed (intrinsic) Z-Y-X rotation by “yaw-pitch-roll” angles <code class
 with “roll-pitch-yaw” angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> or equivalently a Body-
 fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 <code class="docutils literal notranslate"><span class="pre">[y,</span> <span class="pre">p,</span> <span class="pre">r]</span></code>.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AD</span></code>:</dt><dd><p>, rotation matrix relating frame A to frame D.</p>
 </dd>
 </dl>
 <div class="admonition note">

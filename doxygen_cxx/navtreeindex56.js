@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4c74c519e42f88117207f1fffef290c7":[3,0,0,16,2,1,2],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a6734a991d96eb572b943a06ce7f5188c":[3,0,0,16,2,1,8],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a7e7b9b98008f565a28fa06c3e4d04b6e":[3,0,0,16,2,1,4],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a92fc34e0decbd0e19c08c8aa004c98a4":[3,0,0,16,2,1,6],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html":[3,0,0,16,2,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "structstd_1_1hash_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,2,6],
 "structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,9],
 "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,2,22],
-"structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,2,4],
-"structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html#a8b7b545509f23efa1833182cf286125d":[3,0,2,4,0],
-"structstd_1_1hash_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[3,0,2,5]
+"structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,2,4]
 };

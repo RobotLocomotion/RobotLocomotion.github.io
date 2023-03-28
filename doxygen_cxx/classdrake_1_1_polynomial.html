@@ -236,10 +236,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d1a539c279243b61fdc12c6cfeaed57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#a5d1a539c279243b61fdc12c6cfeaed57">Polynomial</a> (const T &amp;coeff, const <a class="el" href="classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a">VarType</a> &amp;v)</td></tr>
 <tr class="memdesc:a5d1a539c279243b61fdc12c6cfeaed57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a single <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html" title="An additive atom of a Polynomial: The product of any number of Terms and a coefficient.">Monomial</a> of the given coefficient and variable.  <a href="#a5d1a539c279243b61fdc12c6cfeaed57">More...</a><br /></td></tr>
 <tr class="separator:a5d1a539c279243b61fdc12c6cfeaed57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adadeb111fed29f32b77bc86e66356b7c"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:adadeb111fed29f32b77bc86e66356b7c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#adadeb111fed29f32b77bc86e66356b7c">Polynomial</a> (Eigen::MatrixBase&lt; Derived &gt; const &amp;coefficients)</td></tr>
-<tr class="memdesc:adadeb111fed29f32b77bc86e66356b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A legacy constructor for univariate polynomials: Takes a vector of coefficients for the constant, x, x**2, x**3...  <a href="#adadeb111fed29f32b77bc86e66356b7c">More...</a><br /></td></tr>
-<tr class="separator:adadeb111fed29f32b77bc86e66356b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8ad3a8b81ea18e3f8f5faba26495de"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a3e8ad3a8b81ea18e3f8f5faba26495de"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#a3e8ad3a8b81ea18e3f8f5faba26495de">Polynomial</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;coefficients)</td></tr>
+<tr class="memdesc:a3e8ad3a8b81ea18e3f8f5faba26495de"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor for univariate polynomials: takes a vector of coefficients for the x**0, x**1, x**2, x**3...  <a href="#a3e8ad3a8b81ea18e3f8f5faba26495de">More...</a><br /></td></tr>
+<tr class="separator:a3e8ad3a8b81ea18e3f8f5faba26495de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d04328e0ea4df22f47e1651c706082d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#a3d04328e0ea4df22f47e1651c706082d">GetNumberOfCoefficients</a> () const</td></tr>
 <tr class="memdesc:a3d04328e0ea4df22f47e1651c706082d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of unique Monomials (and thus the number of coefficients) in this <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <a href="#a3d04328e0ea4df22f47e1651c706082d">More...</a><br /></td></tr>
 <tr class="separator:a3d04328e0ea4df22f47e1651c706082d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,8 +254,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa3b70bcbd72aedf09e5dad6e5e5d8b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cb360c5667c073fe8f1b8a1271e56ba"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#a3cb360c5667c073fe8f1b8a1271e56ba">GetMonomials</a> () const</td></tr>
 <tr class="separator:a3cb360c5667c073fe8f1b8a1271e56ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6473058f53a0de07ff25ee02988aefea"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; T, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#a6473058f53a0de07ff25ee02988aefea">GetCoefficients</a> () const</td></tr>
-<tr class="separator:a6473058f53a0de07ff25ee02988aefea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af304ab17a1173c29f1f0c59c74432cf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#af304ab17a1173c29f1f0c59c74432cf1">GetCoefficients</a> () const</td></tr>
+<tr class="separator:af304ab17a1173c29f1f0c59c74432cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8f06a2189317404f196cec68b81fac4"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a">VarType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4">GetVariables</a> () const</td></tr>
 <tr class="memdesc:ac8f06a2189317404f196cec68b81fac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a set of all of the variables present in this <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <a href="#ac8f06a2189317404f196cec68b81fac4">More...</a><br /></td></tr>
 <tr class="separator:ac8f06a2189317404f196cec68b81fac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -682,8 +682,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adadeb111fed29f32b77bc86e66356b7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adadeb111fed29f32b77bc86e66356b7c">&#9670;&nbsp;</a></span>Polynomial() <span class="overload">[10/10]</span></h2>
+<a id="a3e8ad3a8b81ea18e3f8f5faba26495de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8ad3a8b81ea18e3f8f5faba26495de">&#9670;&nbsp;</a></span>Polynomial() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -694,7 +694,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a> </td>
           <td>(</td>
-          <td class="paramtype">Eigen::MatrixBase&lt; Derived &gt; const &amp;&#160;</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>coefficients</em></td><td>)</td>
           <td></td>
         </tr>
@@ -706,8 +706,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A legacy constructor for univariate polynomials: Takes a vector of coefficients for the constant, x, x**2, x**3... </p>
-<p>Monomials. </p>
+<p>A constructor for univariate polynomials: takes a vector of coefficients for the x**0, x**1, x**2, x**3... </p>
+<p>Monomials. All terms are always added, even if a coefficient is zero. </p>
 
 </div>
 </div>
@@ -901,14 +901,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a6473058f53a0de07ff25ee02988aefea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6473058f53a0de07ff25ee02988aefea">&#9670;&nbsp;</a></span>GetCoefficients()</h2>
+<a id="af304ab17a1173c29f1f0c59c74432cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af304ab17a1173c29f1f0c59c74432cf1">&#9670;&nbsp;</a></span>GetCoefficients()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Matrix&lt;T, Eigen::Dynamic, 1&gt; GetCoefficients </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; GetCoefficients </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

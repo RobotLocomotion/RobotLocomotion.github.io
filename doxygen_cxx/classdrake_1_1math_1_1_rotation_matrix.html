@@ -577,6 +577,12 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">R_AD,rotation</td><td>matrix relating frame A to frame D. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section note"><dt>Note</dt><dd>Denoting roll <code>r</code>, pitch <code>p</code>, yaw <code>y</code>, this method returns a rotation matrix <code>R_AD</code> equal to the matrix multiplication shown below. <div class="fragment"><div class="line">       ⎡cos(y) -<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)  0⎤   ⎡ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  0  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(p)⎤   ⎡1      0        0 ⎤</div><div class="line">R_AD = ⎢sin(y)  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)  -<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)⎥</div><div class="line">       ⎣    0       0   1⎦   ⎣-<a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(p)  0  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)⎦   ⎣0  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)   <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)⎦</div><div class="line">     =       R_AB          *        R_BC          *        R_CD</div></div><!-- fragment --> </dd>
 <dd>
 In this discussion, A is the Space frame and D is the Body frame. One way to visualize this rotation sequence is by introducing intermediate frames B and C (useful constructs to understand this rotation sequence). Initially, the frames are aligned so <code>Di = Ci = Bi = Ai (i = x, y, z)</code>. Then D is subjected to successive right-handed rotations relative to A. <ul>

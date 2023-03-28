@@ -161,10 +161,11 @@ for the list of instantiations.</p>
 </ol>
 <p>Construct a Polynomial of a single constant. e.g. “5”.</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.polynomial.Polynomial, arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.polynomial.Polynomial, coefficients: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
-<p>A legacy constructor for univariate polynomials: Takes a vector of
-coefficients for the constant, x, x**2, x**3… Monomials.</p>
+<p>A constructor for univariate polynomials: takes a vector of
+coefficients for the x**0, x**1, x**2, x**3… Monomials. All terms
+are always added, even if a coefficient is zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -281,10 +282,11 @@ division.</p>
 </ol>
 <p>Construct a Polynomial of a single constant. e.g. “5”.</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.polynomial.Polynomial_[AutoDiffXd], arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.polynomial.Polynomial_[AutoDiffXd], coefficients: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
-<p>A legacy constructor for univariate polynomials: Takes a vector of
-coefficients for the constant, x, x**2, x**3… Monomials.</p>
+<p>A constructor for univariate polynomials: takes a vector of
+coefficients for the x**0, x**1, x**2, x**3… Monomials. All terms
+are always added, even if a coefficient is zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -395,10 +397,11 @@ division.</p>
 </ol>
 <p>Construct a Polynomial of a single constant. e.g. “5”.</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.polynomial.Polynomial_[Expression], arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.polynomial.Polynomial_[Expression], coefficients: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
-<p>A legacy constructor for univariate polynomials: Takes a vector of
-coefficients for the constant, x, x**2, x**3… Monomials.</p>
+<p>A constructor for univariate polynomials: takes a vector of
+coefficients for the x**0, x**1, x**2, x**3… Monomials. All terms
+are always added, even if a coefficient is zero.</p>
 </dd></dl>
 
 <dl class="py method">

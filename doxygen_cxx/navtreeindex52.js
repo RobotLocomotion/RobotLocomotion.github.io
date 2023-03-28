@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,43,1],
+"semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,21],
 "serialize__pybind_8h.html":[4,0,0,0,0,0,8],
 "serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,0,8,0],
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,0,8,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,48,1],
 "structdrake_1_1_sorted_pair.html":[3,0,0,51],
 "structdrake_1_1_sorted_pair.html#a033c34221f2b1b73e55b19cdef241054":[3,0,0,51,5],
-"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,51,4],
-"structdrake_1_1_sorted_pair.html#a0e69b204bc59433d6a3374ab602b7dcb":[3,0,0,51,9],
-"structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1":[3,0,0,51,6]
+"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,51,4]
 };
