@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1multibody_1_1_distance_constraint.html#aa2ac8bf926f4c4b19a02873f753c344c":[1,1,0,3,3],
 "classdrake_1_1multibody_1_1_distance_constraint.html#aad75abb4221bf6e44091ed60c7721241":[1,1,0,3,2],
 "classdrake_1_1multibody_1_1_distance_constraint.html#ad04269b2bfa6bfa65dc5af30515d41a8":[1,1,0,3,4],
 "classdrake_1_1multibody_1_1_door_hinge.html":[3,0,0,9,30],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb":[3,0,0,9,46,8],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a7f583cc35433f57b5096490cbc45f55a":[3,0,0,9,46,10],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a933d2740c848bc263cbf64089066b275":[3,0,0,9,46,6],
-"classdrake_1_1multibody_1_1_joint_actuator.html#ab38cff77a3b73d5982cd54dae58eb10f":[3,0,0,9,46,22],
-"classdrake_1_1multibody_1_1_joint_actuator.html#ab3f0ccdbb102d410f4423b6d66f93fb3":[3,0,0,9,46,24]
+"classdrake_1_1multibody_1_1_joint_actuator.html#ab38cff77a3b73d5982cd54dae58eb10f":[3,0,0,9,46,22]
 };

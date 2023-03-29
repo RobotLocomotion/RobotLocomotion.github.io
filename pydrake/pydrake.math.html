@@ -3969,6 +3969,37 @@ i.e., when <code class="docutils literal notranslate"><span class="pre">cos(p)</
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.math.RollPitchYaw.CalcRpyDtFromAngularVelocityInChild">
+<span class="sig-name descname"><span class="pre">CalcRpyDtFromAngularVelocityInChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RollPitchYaw" title="pydrake.math.RollPitchYaw"><span class="pre">pydrake.math.RollPitchYaw</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_AD_D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RollPitchYaw.CalcRpyDtFromAngularVelocityInChild" title="Permalink to this definition"></a></dt>
+<dd><p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
+RollPitchYaw whose angles <code class="docutils literal notranslate"><span class="pre">[r;</span> <span class="pre">p;</span> <span class="pre">y]</span></code> orient two generic frames A
+and D.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AD_D</span></code>:</dt><dd><p>, frame D’s angular velocity in frame A, expressed in D.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">[ṙ;</span> <span class="pre">ṗ;</span> <span class="pre">ẏ]</span></code>, the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
+RollPitchYaw.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if cos</strong><strong>(</strong><strong>p</strong><strong>) </strong><strong>≈ 0</strong><strong> (</strong><strong>p is near gimbal-lock</strong><strong>)</strong><strong></strong> – </p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enhanced documentation for this method and its gimbal-lock
+(divide- by-zero error) is in
+CalcMatrixRelatingRpyDtToAngularVelocityInChild().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcRpyDtFromAngularVelocityInParent()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw.CalcRpyDtFromAngularVelocityInParent">
 <span class="sig-name descname"><span class="pre">CalcRpyDtFromAngularVelocityInParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RollPitchYaw" title="pydrake.math.RollPitchYaw"><span class="pre">pydrake.math.RollPitchYaw</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_AD_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RollPitchYaw.CalcRpyDtFromAngularVelocityInParent" title="Permalink to this definition"></a></dt>
 <dd><p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
@@ -4317,6 +4348,37 @@ i.e., when <code class="docutils literal notranslate"><span class="pre">cos(p)</
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.math.RollPitchYaw_-AutoDiffXd-.CalcRpyDtFromAngularVelocityInChild">
+<span id="pydrake.math.RollPitchYaw_[AutoDiffXd].CalcRpyDtFromAngularVelocityInChild"></span><span class="sig-name descname"><span class="pre">CalcRpyDtFromAngularVelocityInChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RollPitchYaw_" title="pydrake.math.RollPitchYaw_"><span class="pre">pydrake.math.RollPitchYaw_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_AD_D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RollPitchYaw_-AutoDiffXd-.CalcRpyDtFromAngularVelocityInChild" title="Permalink to this definition"></a></dt>
+<dd><p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
+RollPitchYaw whose angles <code class="docutils literal notranslate"><span class="pre">[r;</span> <span class="pre">p;</span> <span class="pre">y]</span></code> orient two generic frames A
+and D.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AD_D</span></code>:</dt><dd><p>, frame D’s angular velocity in frame A, expressed in D.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">[ṙ;</span> <span class="pre">ṗ;</span> <span class="pre">ẏ]</span></code>, the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
+RollPitchYaw.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if cos</strong><strong>(</strong><strong>p</strong><strong>) </strong><strong>≈ 0</strong><strong> (</strong><strong>p is near gimbal-lock</strong><strong>)</strong><strong></strong> – </p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enhanced documentation for this method and its gimbal-lock
+(divide- by-zero error) is in
+CalcMatrixRelatingRpyDtToAngularVelocityInChild().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcRpyDtFromAngularVelocityInParent()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw_-AutoDiffXd-.CalcRpyDtFromAngularVelocityInParent">
 <span id="pydrake.math.RollPitchYaw_[AutoDiffXd].CalcRpyDtFromAngularVelocityInParent"></span><span class="sig-name descname"><span class="pre">CalcRpyDtFromAngularVelocityInParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RollPitchYaw_" title="pydrake.math.RollPitchYaw_"><span class="pre">pydrake.math.RollPitchYaw_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_AD_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RollPitchYaw_-AutoDiffXd-.CalcRpyDtFromAngularVelocityInParent" title="Permalink to this definition"></a></dt>
 <dd><p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
@@ -4655,6 +4717,37 @@ cosine of the pitch angle <code class="docutils literal notranslate"><span class
 <span class="pre">2</span></code>, where n is any integer. There are associated precision
 problems (inaccuracies) in the neighborhood of these pitch angles,
 i.e., when <code class="docutils literal notranslate"><span class="pre">cos(p)</span> <span class="pre">≈</span> <span class="pre">0</span></code>.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.math.RollPitchYaw_-Expression-.CalcRpyDtFromAngularVelocityInChild">
+<span id="pydrake.math.RollPitchYaw_[Expression].CalcRpyDtFromAngularVelocityInChild"></span><span class="sig-name descname"><span class="pre">CalcRpyDtFromAngularVelocityInChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RollPitchYaw_" title="pydrake.math.RollPitchYaw_"><span class="pre">pydrake.math.RollPitchYaw_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_AD_D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RollPitchYaw_-Expression-.CalcRpyDtFromAngularVelocityInChild" title="Permalink to this definition"></a></dt>
+<dd><p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
+RollPitchYaw whose angles <code class="docutils literal notranslate"><span class="pre">[r;</span> <span class="pre">p;</span> <span class="pre">y]</span></code> orient two generic frames A
+and D.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AD_D</span></code>:</dt><dd><p>, frame D’s angular velocity in frame A, expressed in D.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">[ṙ;</span> <span class="pre">ṗ;</span> <span class="pre">ẏ]</span></code>, the 1ˢᵗ time-derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code>
+RollPitchYaw.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if cos</strong><strong>(</strong><strong>p</strong><strong>) </strong><strong>≈ 0</strong><strong> (</strong><strong>p is near gimbal-lock</strong><strong>)</strong><strong></strong> – </p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enhanced documentation for this method and its gimbal-lock
+(divide- by-zero error) is in
+CalcMatrixRelatingRpyDtToAngularVelocityInChild().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcRpyDtFromAngularVelocityInParent()</p>
 </div>
 </dd></dl>
 

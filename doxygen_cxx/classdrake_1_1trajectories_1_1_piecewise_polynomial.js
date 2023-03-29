@@ -53,6 +53,7 @@ var classdrake_1_1trajectories_1_1_piecewise_polynomial =
     [ "rows", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9", null ],
     [ "scalarValue", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a16274d0c316c76ded4b85111b38ece15", null ],
     [ "ScaleTime", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1", null ],
+    [ "Serialize", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "setPolynomialMatrixBlock", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add", null ],
     [ "shiftRight", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a728995759fa06a8d1a2b967d313b6d6b", null ],
     [ "slice", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a28dc60d1015ae4d2e946898a2eec5692", null ],

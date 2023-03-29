@@ -238,6 +238,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c607a69c3cfbf0a75e4745a908d6b1c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a5c607a69c3cfbf0a75e4745a908d6b1c">AllocateDiscreteVariables</a> () const final</td></tr>
 <tr class="memdesc:a5c607a69c3cfbf0a75e4745a908d6b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a> of the same dimensions as the discrete_state allocated in CreateDefaultContext.  <a href="#a5c607a69c3cfbf0a75e4745a908d6b1c">More...</a><br /></td></tr>
 <tr class="separator:a5c607a69c3cfbf0a75e4745a908d6b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f1da9ca2c03b9fea79bb06c27504c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a32f1da9ca2c03b9fea79bb06c27504c2">HasSubsystemNamed</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:a32f1da9ca2c03b9fea79bb06c27504c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this contains a subsystem with the given name.  <a href="#a32f1da9ca2c03b9fea79bb06c27504c2">More...</a><br /></td></tr>
+<tr class="separator:a32f1da9ca2c03b9fea79bb06c27504c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a87442c45f9ee72c4a2c234587f9776"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a2a87442c45f9ee72c4a2c234587f9776">GetSubsystemByName</a> (std::string_view name) const</td></tr>
 <tr class="memdesc:a2a87442c45f9ee72c4a2c234587f9776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a const reference to the subsystem with name <code>name</code> returned by <a class="el" href="classdrake_1_1systems_1_1_system_base.html#aea1591b1773209f55ccc85356efb639a" title="Returns the name last supplied to set_name(), if any.">get_name()</a>.  <a href="#a2a87442c45f9ee72c4a2c234587f9776">More...</a><br /></td></tr>
 <tr class="separator:a2a87442c45f9ee72c4a2c234587f9776"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2513,6 +2516,27 @@ Additional Inherited Members</h2></td></tr>
 <p>(Internal use only) Returns the message to use for a std::exception in the case of unsupported scalar type conversions. </p>
 
 <p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a777cf2547a697f92ae1f556b0b637150">SystemBase</a>.</p>
+
+</div>
+</div>
+<a id="a32f1da9ca2c03b9fea79bb06c27504c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f1da9ca2c03b9fea79bb06c27504c2">&#9670;&nbsp;</a></span>HasSubsystemNamed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasSubsystemNamed </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff this contains a subsystem with the given name. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a2a87442c45f9ee72c4a2c234587f9776" title="Retrieves a const reference to the subsystem with name name returned by get_name().">GetSubsystemByName()</a> </dd></dl>
 
 </div>
 </div>

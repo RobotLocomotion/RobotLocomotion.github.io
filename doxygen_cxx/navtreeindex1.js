@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classdrake_1_1_polynomial.html#a9756e806e687de4b2e572193034a9fc1":[3,0,0,44,34],
 "classdrake_1_1_polynomial.html#a981a524ccda4902bff9380c48fd2714a":[3,0,0,44,21],
 "classdrake_1_1_polynomial.html#a9b60c8127846337517b619abdbebb9ab":[3,0,0,44,39],
 "classdrake_1_1_polynomial.html#a9e0839a4ea39ab4780de70e5913107d6":[3,0,0,44,54],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#afd656277b69f2ee7686f75e6b7ff6d56":[3,0,0,3,1,1,2],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html":[3,0,0,3,1,2],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#a08b78ae645a11052e1b7b7fa2fd35745":[3,0,0,3,1,2,3],
-"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#a42587c9a553b0e2e0b6dbf3f4b372433":[3,0,0,3,1,2,0],
-"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#a71ec23b5b9d1a45e490c54d445c78d94":[3,0,0,3,1,2,5]
+"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html#a42587c9a553b0e2e0b6dbf3f4b372433":[3,0,0,3,1,2,0]
 };

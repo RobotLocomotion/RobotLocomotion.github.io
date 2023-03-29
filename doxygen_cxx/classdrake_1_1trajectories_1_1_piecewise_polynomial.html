@@ -304,6 +304,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a28dc60d1015ae4d2e946898a2eec5692"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a28dc60d1015ae4d2e946898a2eec5692">slice</a> (<a class="el" href="classint.html">int</a> start_segment_index, <a class="el" href="classint.html">int</a> num_segments) const</td></tr>
 <tr class="memdesc:a28dc60d1015ae4d2e946898a2eec5692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the PiecewisePolynomial comprising the <code>num_segments</code> segments starting at the specified <code>start_segment_index</code>.  <a href="#a28dc60d1015ae4d2e946898a2eec5692">More...</a><br /></td></tr>
 <tr class="separator:a28dc60d1015ae4d2e946898a2eec5692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:acd5823d88e611200dc63daaf05eeb9d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9">PiecewisePolynomial</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a> &amp;)=default</td></tr>
 <tr class="separator:acd5823d88e611200dc63daaf05eeb9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2151,6 +2155,27 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Scales the time of the trajectory by non-negative <code>scale</code> (use <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99" title="Modifies the trajectory so that pp_after(t) = pp_before(-t).">ReverseTime()</a> if you want to also negate time). </p>
 <p>The resulting polynomial evaluates to pp_after(t) = pp_before(t/scale).</p>
 <p>As an example, <code>scale</code>=2 will result in a trajectory that is twice as long (<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0">start_time()</a> and <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507">end_time()</a> have both doubled). </p>
+
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. This method is only available when T = double. </p>
 
 </div>
 </div>

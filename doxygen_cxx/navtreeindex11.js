@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#adba084715ab226cf720bf91c93cb7664":[1,1,0,1,6],
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ae3852336466ee945d4185ebeb8180d7b":[1,1,0,1,5],
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#aee65c9787c0060ee07bd31b9e1200d16":[1,1,0,1,3],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,9,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_distance_constraint.html#a02f2f96d46ee05971fdadd0224eee0b4":[1,1,0,3,5],
 "classdrake_1_1multibody_1_1_distance_constraint.html#a08a272efacc4d277535104d1ad96db6a":[1,1,0,3,1],
 "classdrake_1_1multibody_1_1_distance_constraint.html#a15690a925923c183e5657ab400b4c8d5":[1,1,0,3,0],
-"classdrake_1_1multibody_1_1_distance_constraint.html#a6c6edcb36ead3f998b5f2ee32c5fbd66":[1,1,0,3,6],
-"classdrake_1_1multibody_1_1_distance_constraint.html#aa2ac8bf926f4c4b19a02873f753c344c":[1,1,0,3,3]
+"classdrake_1_1multibody_1_1_distance_constraint.html#a6c6edcb36ead3f998b5f2ee32c5fbd66":[1,1,0,3,6]
 };

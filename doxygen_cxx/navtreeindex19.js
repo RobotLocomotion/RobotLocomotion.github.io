@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#af0929f1ccc56315dac6591869fb9ea24":[3,0,0,10,0,1,5],
 "classdrake_1_1planning_1_1_body_shape_description.html":[1,4,2,2,0],
 "classdrake_1_1planning_1_1_body_shape_description.html#a247f19b75733aea2973f1b54f269b5cf":[1,4,2,2,0,5],
 "classdrake_1_1planning_1_1_body_shape_description.html#a2fc0796487ccc0c7d24e9aa289e4be14":[1,4,2,2,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a52a66f722f28cf5671c9b9e7479fc56b":[1,4,2,1,3,8],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a547060be7141e61d9ce65e75ae93f00d":[1,4,2,1,3,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a572b1c13ee61f1f9f2231d29f58f59fd":[1,4,2,1,3,9],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a65363bc4338584a02f119b225ae1cc98":[1,4,2,1,3,3],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a762563a2efd7d83a85bae4df50c66fa8":[1,4,2,1,3,16]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a65363bc4338584a02f119b225ae1cc98":[1,4,2,1,3,3]
 };

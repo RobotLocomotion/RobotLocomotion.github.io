@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pydrake.multibody.mesh_to_model &mdash; pydrake  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.multibody.meshcat" href="pydrake.multibody.meshcat.html" />
+    <link rel="prev" title="pydrake.multibody.math" href="pydrake.multibody.math.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pydrake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.fem.html">pydrake.multibody.fem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.mesh_to_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.meshcat.html">pydrake.multibody.meshcat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.optimization.html">pydrake.multibody.optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.plant.html">pydrake.multibody.plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rational.html">pydrake.multibody.rational</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.tree.html">pydrake.multibody.tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+      <li>pydrake.multibody.mesh_to_model</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pydrake.multibody.mesh_to_model">
+<span id="pydrake-multibody-mesh-to-model"></span><h1>pydrake.multibody.mesh_to_model<a class="headerlink" href="#module-pydrake.multibody.mesh_to_model" title="Permalink to this headline"></a></h1>
+<p>Utility for converting a mesh file into an SDFormat file containing a single
+model.</p>
+<p>Currently only meshes in Wavefront OBJ files are supported. Other geometry
+formats will be supported in the future.</p>
+<p>Preconditions on the OBJ:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The mesh is “watertight” (no cracks, no openings).</p></li>
+<li><p>The mesh is closed (i.e., no sheets of triangles).</p></li>
+</ul>
+</div></blockquote>
+<p>Properties of the resulting SDFormat file:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The model contains a single body.</p></li>
+<li><p>The body and model will share a common name.</p></li>
+<li><p>The mass properties are computed based on the volume enclosed by the mesh.
+(If the preconditions are not met, mass properties will nevertheless be
+computed, but they are not guaranteed to be correct).</p></li>
+<li><p>The mesh will be used as both &lt;collision&gt; and &lt;visual&gt; geometries.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Running</strong>:</p>
+<blockquote>
+<div><p>From a Drake source build, run this as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">mesh_to_model</span> <span class="o">--</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>From a Drake binary release (including pip releases), run this as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">mesh_to_model</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Model scale</strong>:</p>
+<blockquote>
+<div><p>Drake uses meters as the unit of length. Modelling packages may frequently
+use other units (e.g. centimeters). This program will <em>assume</em> the units
+are meters. If they are not, provide the scale conversion factor to go from
+mesh units to meters. For example, if your mesh is in centimeters, use 0.01
+for the scale.</p>
+</div></blockquote>
+<p><strong>Configuring mass</strong>:</p>
+<blockquote>
+<div><p>The body’s mass can be configured through one of two ways: specifying the
+_density_ of a homogeneous material which completely fills the enclosed
+volume of the mesh, or specifying the total _mass_ of the body. If neither
+is specified, it is assumed to have the density of water (~1000kg/m³). Only
+one of density and mass can be specified.</p>
+</div></blockquote>
+<p><strong>Geometry frame vs body frame</strong>:</p>
+<blockquote>
+<div><p>The mesh’s vertices are measured and expressed in an arbitrary geometry
+frame G. By default, the body frame B is coincident with G (i.e.,
+X_BG = I). The two frames will always be aligned (R_BG = R_GB = I), but the
+relative positions of the origins (p_GoBo) can be modified. You can either
+request that the body origin be coincident with the computed center of mass
+or specify an arbitrary value for p_GoBo (the body’s origin position
+relative to the mesh’s origin).</p>
+</div></blockquote>
+<p><strong>Packages</strong>:</p>
+<blockquote>
+<div><p>If the mesh is used in a &lt;visual&gt; or &lt;collision&gt; element (see above) the
+mesh must be referenced via some url. The default mesh url is a simple
+relative path assuming the SDFormat file and mesh files are in the same
+directory. There are two alternatives: create/use a package at the mesh
+file location or specify a package.</p>
+<blockquote>
+<div><p>Default behavior:</p>
+<blockquote>
+<div><p>When calling:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_to_model</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
+</pre></div>
+</div>
+<p>the resulting mesh’s &lt;uri&gt; element will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span><span class="o">&lt;/</span><span class="n">uri</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This uri resolution is not SDFormat standard but is acceptable as a
+Drake parser extension. It is your responsibility to place the mesh
+in the same folder as the sdf.</p>
+</div></blockquote>
+<p>Specify package:</p>
+<blockquote>
+<div><p>When calling:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_to_model</span> <span class="o">--</span><span class="n">package</span><span class="o">=</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">package</span><span class="o">.</span><span class="n">xml</span> \
+    <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
+</pre></div>
+</div>
+<p>the resulting mesh’s &lt;uri&gt; element will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span><span class="n">package</span><span class="p">:</span><span class="o">//</span><span class="n">my_package</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span><span class="o">&lt;/</span><span class="n">uri</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This example assumes that the &lt;name&gt; field in the indicated
+package.xml is “my_package”. Errors in reading the file (or the
+package name from the manifest) will cause the program to fail. The
+mesh file must live somewhere underneath the package.xml directory.</p>
+</div></blockquote>
+<p>Create/use package at mesh file location:</p>
+<blockquote>
+<div><p>When calling:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_to_model</span> <span class="o">--</span><span class="n">package</span><span class="o">=</span><span class="n">auto</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
+</pre></div>
+</div>
+<p>the program will look for the existence of
+path/to/my_models/package.xml. If it doesn’t exist, it will be
+created. The resulting mesh’s &lt;uri&gt; element will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span><span class="n">package</span><span class="p">:</span><span class="o">//</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span><span class="o">&lt;/</span><span class="n">uri</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The package.xml file will be minimally compliant but may contain
+meaningless values (see
+<a class="reference external" href="http://wiki.ros.org/Manifest#catkin.2Fpackage.xml.Required_Tags">http://wiki.ros.org/Manifest#catkin.2Fpackage.xml.Required_Tags</a>).
+Any error in reading or writing the file will cause the program to
+fail.</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pydrake.multibody.math.html" class="btn btn-neutral float-left" title="pydrake.multibody.math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.multibody.meshcat.html" class="btn btn-neutral float-right" title="pydrake.multibody.meshcat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

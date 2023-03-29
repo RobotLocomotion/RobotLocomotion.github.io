@@ -31,6 +31,7 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "GetMutableSystems", "classdrake_1_1systems_1_1_diagram_builder.html#a7d78e9d85a3593c7656aeddbf90d4766", null ],
     [ "GetSubsystemByName", "classdrake_1_1systems_1_1_diagram_builder.html#a2a87442c45f9ee72c4a2c234587f9776", null ],
     [ "GetSystems", "classdrake_1_1systems_1_1_diagram_builder.html#a3ed5126a47b838a40adfce66bc85e841", null ],
+    [ "HasSubsystemNamed", "classdrake_1_1systems_1_1_diagram_builder.html#a32f1da9ca2c03b9fea79bb06c27504c2", null ],
     [ "IsConnectedOrExported", "classdrake_1_1systems_1_1_diagram_builder.html#acd8bf3d351848a5e2344865a6e4b932e", null ],
     [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a1c4553ec1b3caebff0d951e5795fd617", null ],
     [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ]

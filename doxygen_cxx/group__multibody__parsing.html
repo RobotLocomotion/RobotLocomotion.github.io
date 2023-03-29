@@ -453,12 +453,12 @@ Semantics</h3>
 drake:diffuse_map</h2>
 <ul>
 <li>SDFormat path: <code>//model/link/visual/material/drake:diffuse_map</code></li>
-<li>URDF path: N/A</li>
+<li>URDF path: N/A (see a note below).</li>
 <li>Syntax: URI.</li>
 </ul>
 <h3><a class="anchor" id="tag_drake_diffuse_map_semantics"></a>
 Semantics</h3>
-<p>If present, this element indicates (by filename or <code>package:</code> URI) a PNG file to use as a diffuse texture map. The resolved path name is stored in a PerceptionProperties object under <code>(phong, diffuse_map)</code>.</p>
+<p>If present, this element indicates (by filename or <code>package:</code> URI) a PNG file to use as a diffuse texture map. The resolved path name is stored in a PerceptionProperties object under <code>(phong, diffuse_map)</code>. URDF provides a built-in tag, i.e., <code>//robot/material/texture</code> or <code>//robot/link/visual/material/texture</code>, to specify a diffuse texture map for a link.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html" title="The set of properties for geometry used in a &quot;perception&quot; role.">drake::geometry::PerceptionProperties</a>, <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">drake::multibody::PackageMap</a>, <a class="el" href="namespacedrake_1_1geometry.html#render_engine_vtk_properties">Geometry perception properties</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_ellipsoid"></a>
 drake:ellipsoid</h2>

@@ -1570,12 +1570,16 @@ for the lifetime of this object.</p>
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, scene_graph: pydrake.geometry.SceneGraph, lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False, use_role_channel_suffix=False)) -&gt; pydrake.geometry.DrakeVisualizer</p></li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given SceneGraph’s
-QueryObject-valued output port.</p>
+QueryObject-valued output port. The DrakeVisualizer’s name (see
+systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, query_object_port: pydrake.systems.framework.OutputPort, lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False, use_role_channel_suffix=False)) -&gt; pydrake.geometry.DrakeVisualizer</p></li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given
-QueryObject-valued output port.</p>
+QueryObject-valued output port. The DrakeVisualizer’s name (see
+systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1726,12 +1730,16 @@ for the lifetime of this object.</p>
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False, use_role_channel_suffix=False)) -&gt; pydrake.geometry.DrakeVisualizer_[AutoDiffXd]</p></li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given SceneGraph’s
-QueryObject-valued output port.</p>
+QueryObject-valued output port. The DrakeVisualizer’s name (see
+systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False, use_role_channel_suffix=False)) -&gt; pydrake.geometry.DrakeVisualizer_[AutoDiffXd]</p></li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given
-QueryObject-valued output port.</p>
+QueryObject-valued output port. The DrakeVisualizer’s name (see
+systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4803,14 +4811,18 @@ the lifetime of the object.</p>
 <p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details.</p>
+MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
+(see systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, query_object_port: pydrake.systems.framework.OutputPort, meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, visible_by_default=True)) -&gt; pydrake.geometry.MeshcatVisualizer</p></li>
 </ol>
 <p>Adds a MeshcatVisualizer and connects it to the given
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details.</p>
+MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
+(see systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4967,14 +4979,18 @@ the lifetime of the object.</p>
 <p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details.</p>
+MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
+(see systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, visible_by_default=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</p></li>
 </ol>
 <p>Adds a MeshcatVisualizer and connects it to the given
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details.</p>
+MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
+(see systems::SystemBase::set_name) will be set to a sensible default
+value, unless the default name was already in use by another system.</p>
 </dd></dl>
 
 <dl class="py method">

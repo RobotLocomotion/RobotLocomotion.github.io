@@ -44,6 +44,7 @@ var classdrake_1_1systems_1_1_diagram =
     [ "GetSystemIndexOrAbort", "classdrake_1_1systems_1_1_diagram.html#a2a799bbe7a83d3ed9f08feea0143f79e", null ],
     [ "GetSystems", "classdrake_1_1systems_1_1_diagram.html#a30e039e90d2f3028dc704661cd7b8f32", null ],
     [ "GetUnsupportedScalarConversionMessage", "classdrake_1_1systems_1_1_diagram.html#a0bde657bcb9f86ef4396dc5e0c537f42", null ],
+    [ "HasSubsystemNamed", "classdrake_1_1systems_1_1_diagram.html#a32f1da9ca2c03b9fea79bb06c27504c2", null ],
     [ "operator=", "classdrake_1_1systems_1_1_diagram.html#a4b83dd5f96c886cc1b1a63583b943c39", null ],
     [ "operator=", "classdrake_1_1systems_1_1_diagram.html#a268013bacd119a14d00b1b14028cbd5c", null ],
     [ "SetDefaultParameters", "classdrake_1_1systems_1_1_diagram.html#a032a4baedb53bf9cf8579913217fe335", null ],
