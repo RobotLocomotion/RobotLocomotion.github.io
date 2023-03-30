@@ -170,10 +170,10 @@ $(document).ready(function(){initNavTree('group__render__engines.html','');});
 <p>Perception simulation is supported via the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> API. It provides the interface through which the geometries in the simulation can be rendered to three types of images: color, depth, and label. (For more details about the API, refer to the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> documentation.)</p>
 <p>Drake includes <em>two</em> implementations of that API:</p>
 <ul>
-<li><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a> - A GPU-based rasterization renderer using the VTK library.</li>
+<li>RenderEngineVtk - A GPU-based rasterization renderer using the VTK library.</li>
 <li>RenderEngineGl - A GPU-based rasterization renderer using direct calls to the OpenGL API.</li>
 </ul>
-<p>These implementations differ in many ways largely differ in performance and flexibility potential. <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a> is slower but has the possibility of leveraging the full VTK API to provide <em>post hoc</em> customizations. RenderEngineGl is faster, but gains that performance boost by implementing a barebones rendering pipeline.</p>
+<p>These implementations differ in many ways largely differ in performance and flexibility potential. RenderEngineVtk is slower but has the possibility of leveraging the full VTK API to provide <em>post hoc</em> customizations. RenderEngineGl is faster, but gains that performance boost by implementing a barebones rendering pipeline.</p>
 <p>Picking the right renderer for your simulated sensors will be based on considering those differences and picking the trade-off that best suits your application.</p>
 <p>The current API is simple and precludes sophisticated definitions of lights and materials. As the API matures, these additional features will be added.</p>
 <h2>Performance</h2>

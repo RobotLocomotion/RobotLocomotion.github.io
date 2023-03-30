@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1render.h
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry::render Namespace Reference</div>  </div>
@@ -171,8 +171,6 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1render.h
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake_1_1geometry_1_1render_1_1shaders"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1shaders.html">shaders</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1geometry_1_1render_1_1vtk__util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html">vtk_util</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -195,224 +193,33 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The engine for performing rasterization operations on geometry.  <a href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html">RenderEngineGlParams</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction parameters for RenderEngineGl.  <a href="structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html">RenderEngineVtk</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See documentation of <a class="el" href="namespacedrake_1_1geometry.html#a18b9a919046a97500f422a85a4a8ce30" title="Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer.">MakeRenderEngineVtk()</a>.  <a href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class representing object "labels" for rendering.  <a href="classdrake_1_1geometry_1_1render_1_1_render_label.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aff58ede2e6498518901d8a297a3bd07b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#aff58ede2e6498518901d8a297a3bd07b">MakeRenderEngineGl</a> (<a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html">RenderEngineGlParams</a> params={})</td></tr>
-<tr class="memdesc:aff58ede2e6498518901d8a297a3bd07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation which uses a purely OpenGL renderer.  <a href="#aff58ede2e6498518901d8a297a3bd07b">More...</a><br /></td></tr>
-<tr class="separator:aff58ede2e6498518901d8a297a3bd07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ef9d8f77462f2ea81d463c3b119d18e"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPolyDataAlgorithm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a0ef9d8f77462f2ea81d463c3b119d18e">CreateVtkCapsule</a> (const <a class="el" href="classdrake_1_1geometry_1_1_capsule.html">Capsule</a> &amp;capsule)</td></tr>
-<tr class="separator:a0ef9d8f77462f2ea81d463c3b119d18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77576ec311ba594b4e3a3cf15f0b11f1"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPolyDataAlgorithm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a77576ec311ba594b4e3a3cf15f0b11f1">CreateVtkBox</a> (const <a class="el" href="classdrake_1_1geometry_1_1_box.html">Box</a> &amp;box, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
-<tr class="separator:a77576ec311ba594b4e3a3cf15f0b11f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a137ec50cf7fb7c288f1d15ee415592a7"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPolyDataAlgorithm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a137ec50cf7fb7c288f1d15ee415592a7">CreateVtkEllipsoid</a> (const <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a> &amp;ellipsoid)</td></tr>
-<tr class="separator:a137ec50cf7fb7c288f1d15ee415592a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c12b91e0fd027a4d4ea1e2b8bcef65a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a7c12b91e0fd027a4d4ea1e2b8bcef65a">SetSphereOptions</a> (vtkTexturedSphereSource *vtk_sphere, <a class="el" href="classdouble.html">double</a> radius)</td></tr>
-<tr class="separator:a7c12b91e0fd027a4d4ea1e2b8bcef65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e584cc1e211ddaf85d2e3be432085fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a4e584cc1e211ddaf85d2e3be432085fb">SetCylinderOptions</a> (vtkCylinderSource *vtk_cylinder, <a class="el" href="classdouble.html">double</a> height, <a class="el" href="classdouble.html">double</a> radius)</td></tr>
-<tr class="separator:a4e584cc1e211ddaf85d2e3be432085fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2737524b6193ba17538d7fd5ba934c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a8d2737524b6193ba17538d7fd5ba934c">TransformToDrakeCylinder</a> (vtkTransform *transform, vtkTransformPolyDataFilter *transform_filter, vtkCylinderSource *vtk_cylinder)</td></tr>
-<tr class="separator:a8d2737524b6193ba17538d7fd5ba934c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab09d4fd17cb25efe903b9cc7440bfd29"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#ab09d4fd17cb25efe903b9cc7440bfd29">RenderEngineGlParams</a> = <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">geometry::RenderEngineGlParams</a></td></tr>
+<tr class="separator:ab09d4fd17cb25efe903b9cc7440bfd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a6a949953d76af52d6dd1b13417cb556a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a">kHasRenderEngineGl</a></td></tr>
-<tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineGl implementation.  <a href="#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
+<tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
 <tr class="separator:a6a949953d76af52d6dd1b13417cb556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4adf317ad66ba21d0ec9b99cd177ad"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#aaa4adf317ad66ba21d0ec9b99cd177ad">MakeRenderEngineGl</a> = &amp;geometry::MakeRenderEngineGl</td></tr>
+<tr class="memdesc:aaa4adf317ad66ba21d0ec9b99cd177ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aaa4adf317ad66ba21d0ec9b99cd177ad">More...</a><br /></td></tr>
+<tr class="separator:aaa4adf317ad66ba21d0ec9b99cd177ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a77576ec311ba594b4e3a3cf15f0b11f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77576ec311ba594b4e3a3cf15f0b11f1">&#9670;&nbsp;</a></span>CreateVtkBox()</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ab09d4fd17cb25efe903b9cc7440bfd29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09d4fd17cb25efe903b9cc7440bfd29">&#9670;&nbsp;</a></span>RenderEngineGlParams</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vtkSmartPointer&lt;vtkPolyDataAlgorithm&gt; drake::geometry::render::CreateVtkBox </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_box.html">Box</a> &amp;&#160;</td>
-          <td class="paramname"><em>box</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;&#160;</td>
-          <td class="paramname"><em>properties</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0ef9d8f77462f2ea81d463c3b119d18e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ef9d8f77462f2ea81d463c3b119d18e">&#9670;&nbsp;</a></span>CreateVtkCapsule()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkSmartPointer&lt;vtkPolyDataAlgorithm&gt; drake::geometry::render::CreateVtkCapsule </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_capsule.html">Capsule</a> &amp;&#160;</td>
-          <td class="paramname"><em>capsule</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a137ec50cf7fb7c288f1d15ee415592a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a137ec50cf7fb7c288f1d15ee415592a7">&#9670;&nbsp;</a></span>CreateVtkEllipsoid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkSmartPointer&lt;vtkPolyDataAlgorithm&gt; drake::geometry::render::CreateVtkEllipsoid </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a> &amp;&#160;</td>
-          <td class="paramname"><em>ellipsoid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aff58ede2e6498518901d8a297a3bd07b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff58ede2e6498518901d8a297a3bd07b">&#9670;&nbsp;</a></span>MakeRenderEngineGl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a>&gt; drake::geometry::render::MakeRenderEngineGl </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html">RenderEngineGlParams</a>&#160;</td>
-          <td class="paramname"><em>params</em> = <code>{}</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation which uses a purely OpenGL renderer. </p>
-<p>The engine only works under Ubuntu. If called on a Mac, it will throw.</p>
-<dl class="section note"><dt>Note</dt><dd>RenderEngineGl behaves a bit differently from other <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations (e.g., <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>) with respect to displayed images. First, RenderEngineGl can only display a <em>single</em> image type at a time. So, if a shown window has been requested for both label and color images, the images will alternate in the same window. Second, the window display draws all images <em>flipped vertically</em>. The image produced will be compatible with the Drake ecosystem, only the visualization will be upside down. This has been documented in <a href="https://github.com/RobotLocomotion/drake/issues/14254">https://github.com/RobotLocomotion/drake/issues/14254</a>.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>RenderEngineGl is not threadsafe. If a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> is instantiated with a RenderEngineGl and there are multiple Context instances for that <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>, rendering in multiple threads may exhibit issues.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if kHasRenderEngineGl is false. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a4e584cc1e211ddaf85d2e3be432085fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e584cc1e211ddaf85d2e3be432085fb">&#9670;&nbsp;</a></span>SetCylinderOptions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::geometry::render::SetCylinderOptions </td>
-          <td>(</td>
-          <td class="paramtype">vtkCylinderSource *&#160;</td>
-          <td class="paramname"><em>vtk_cylinder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7c12b91e0fd027a4d4ea1e2b8bcef65a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c12b91e0fd027a4d4ea1e2b8bcef65a">&#9670;&nbsp;</a></span>SetSphereOptions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::geometry::render::SetSphereOptions </td>
-          <td>(</td>
-          <td class="paramtype">vtkTexturedSphereSource *&#160;</td>
-          <td class="paramname"><em>vtk_sphere</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8d2737524b6193ba17538d7fd5ba934c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d2737524b6193ba17538d7fd5ba934c">&#9670;&nbsp;</a></span>TransformToDrakeCylinder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::geometry::render::TransformToDrakeCylinder </td>
-          <td>(</td>
-          <td class="paramtype">vtkTransform *&#160;</td>
-          <td class="paramname"><em>transform</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkTransformPolyDataFilter *&#160;</td>
-          <td class="paramname"><em>transform_filter</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vtkCylinderSource *&#160;</td>
-          <td class="paramname"><em>vtk_cylinder</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry_1_1render.html#ab09d4fd17cb25efe903b9cc7440bfd29">RenderEngineGlParams</a> =  <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">geometry::RenderEngineGlParams</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -432,7 +239,27 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reports the availability of the RenderEngineGl implementation. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use the geometry namespace instead. <br />
+ This will be removed from Drake on or after 2023-07-01.</dd></dl>
+
+</div>
+</div>
+<a id="aaa4adf317ad66ba21d0ec9b99cd177ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4adf317ad66ba21d0ec9b99cd177ad">&#9670;&nbsp;</a></span>MakeRenderEngineGl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto MakeRenderEngineGl = &amp;geometry::MakeRenderEngineGl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Use the geometry namespace instead. <br />
+ This will be removed from Drake on or after 2023-07-01.</dd></dl>
 
 </div>
 </div>

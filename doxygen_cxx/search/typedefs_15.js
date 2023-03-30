@@ -24,6 +24,5 @@ var searchData=
   ['vectorxindeterminate',['VectorXIndeterminate',['../namespacedrake_1_1solvers.html#a91ed74a4ca04549f64c547dfba0724d5',1,'drake::solvers']]],
   ['vectorxpoly',['VectorXPoly',['../namespacedrake.html#a00cbebcd97766579bb36e35abcf44acf',1,'drake']]],
   ['vertexid',['VertexId',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301',1,'drake::geometry::optimization::GraphOfConvexSets']]],
-  ['volumemeshfieldlinear',['VolumeMeshFieldLinear',['../namespacedrake_1_1geometry.html#a6f0a99208aa3dea5d4a3094f4fdf9274',1,'drake::geometry']]],
-  ['vtkpointerarray',['vtkPointerArray',['../namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c',1,'drake::geometry::render::vtk_util']]]
+  ['volumemeshfieldlinear',['VolumeMeshFieldLinear',['../namespacedrake_1_1geometry.html#a6f0a99208aa3dea5d4a3094f4fdf9274',1,'drake::geometry']]]
 ];

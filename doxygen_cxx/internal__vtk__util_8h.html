@@ -159,9 +159,7 @@ $(document).ready(function(){initNavTree('internal__vtk__util_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">internal_vtk_util.h File Reference</div>  </div>
 </div><!--header-->
@@ -187,30 +185,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1geometry"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1geometry_1_1render"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html">drake::geometry::render</a></td></tr>
+<tr class="memitem:namespacedrake_1_1geometry_1_1render__vtk"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render__vtk.html">drake::geometry::render_vtk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1geometry_1_1render_1_1vtk__util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html">drake::geometry::render::vtk_util</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; </td></tr>
-<tr class="memitem:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c">vtkPointerArray</a> = std::array&lt; vtkSmartPointer&lt; T &gt;, N &gt;</td></tr>
-<tr class="memdesc:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array type for vtkSmartPointer.  <a href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c">More...</a><br /></td></tr>
-<tr class="separator:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a69d2c70a67e99a23688272654071e2b6"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPlaneSource &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a69d2c70a67e99a23688272654071e2b6">CreateSquarePlane</a> (<a class="el" href="classdouble.html">double</a> size)</td></tr>
-<tr class="memdesc:a69d2c70a67e99a23688272654071e2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a square plane of the given size.  <a href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a69d2c70a67e99a23688272654071e2b6">More...</a><br /></td></tr>
-<tr class="separator:a69d2c70a67e99a23688272654071e2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdb94acdad86ca639785432a868abbd0"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkTransform &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#abdb94acdad86ca639785432a868abbd0">ConvertToVtkTransform</a> (const math::RigidTransformd &amp;transform)</td></tr>
-<tr class="memdesc:abdb94acdad86ca639785432a868abbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the provided <code>transform</code> to a vtkTransform.  <a href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#abdb94acdad86ca639785432a868abbd0">More...</a><br /></td></tr>
-<tr class="separator:abdb94acdad86ca639785432a868abbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Ts, size_t N = 1 + sizeof...(Ts)&gt; </td></tr>
-<tr class="memitem:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="memTemplItemLeft" align="right" valign="top">const vtkPointerArray&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#abfb696bdfb8aca5a7cec2ab0e167c889">MakeVtkPointerArray</a> (const vtkNew&lt; T &gt; &amp;element, const vtkNew&lt; Ts &gt; &amp;... elements)</td></tr>
-<tr class="memdesc:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes vtkPointerArray from one or multiple pointer(s) for VTK objects wrapped by vtkNew.  <a href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#abfb696bdfb8aca5a7cec2ab0e167c889">More...</a><br /></td></tr>
-<tr class="separator:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

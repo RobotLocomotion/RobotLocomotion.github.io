@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('group__render__engine__benchmarks.html
 <p>If there are multiple cameras, they are all at the same position, looking in the same direction, with the same intrinsic properties. In other words, each should produce the same output image. This provides a measure of the scalability as a simulation includes an increasing number of cameras.</p>
 <p>The output image can be configured to an arbitrary size; larger images take more rendering time.</p>
 <h2>Warm-starting <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> Implementations</h2>
-<p>Some <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations may defer some of the initialization work until the rendering API is actually invoked (e.g., <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>). In these cases, the first rendering will be misleadingly expensive. The benchmark "warm starts" each render engine under evaluation by performing two renderings outside of the timed loop. This allows the benchmark to better report the expected results in the engine's "steady state".</p>
+<p>Some <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations may defer some of the initialization work until the rendering API is actually invoked (e.g., RenderEngineVtk). In these cases, the first rendering will be misleadingly expensive. The benchmark "warm starts" each render engine under evaluation by performing two renderings outside of the timed loop. This allows the benchmark to better report the expected results in the engine's "steady state".</p>
 <p>When comparing these benchmark results with observed performance in applications, remember that the first and possibly second renderings may deceptively impact any analysis of <em>average</em> render performance.</p>
 <h2>Benchmarks</h2>
 <p>The benchmarks have been configured to examine the following characteristics of the included <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations:</p>
@@ -197,9 +197,9 @@ $(document).ready(function(){initNavTree('group__render__engine__benchmarks.html
 <p>Each line in the table represents a particular configuration of the benchmark parameters of the form:</p>
 <div class="fragment"><div class="line">RenderBenchmark/TestName/sphere_count/camera_count/image_width/image_height</div></div><!-- fragment --><ul>
 <li><b>TestName</b>: One of<ul>
-<li><b>VtkColor</b>: Renders the color image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>.</li>
-<li><b>VtkDepth</b>: Renders the depth image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>.</li>
-<li><b>VtkLabel</b>: Renders the label image from <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>.</li>
+<li><b>VtkColor</b>: Renders the color image from RenderEngineVtk.</li>
+<li><b>VtkDepth</b>: Renders the depth image from RenderEngineVtk.</li>
+<li><b>VtkLabel</b>: Renders the label image from RenderEngineVtk.</li>
 <li><b>GlColor</b>: Renders the color image from RenderEngineGl.</li>
 <li><b>GlDepth</b>: Renders the depth image from RenderEngineGl.</li>
 <li><b>GlLabel</b>: Renders the label image from RenderEngineGl.</li>
@@ -213,10 +213,10 @@ $(document).ready(function(){initNavTree('group__render__engine__benchmarks.html
 <p>Now we can analyze the example output and draw some example inferences (not a complete set of valid inferences):</p>
 <ul>
 <li>Frame cost scales linearly with the number of cameras.<ul>
-<li>For <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a> a 10X increase in number of cameras leads to a 10X increase in time for both color and depth, but a (roughly) 20X increase for label.</li>
+<li>For RenderEngineVtk a 10X increase in number of cameras leads to a 10X increase in time for both color and depth, but a (roughly) 20X increase for label.</li>
 </ul>
 </li>
-<li>RenderEngineGl scales better with respect to scene complexity than <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a>. </li>
+<li>RenderEngineGl scales better with respect to scene complexity than RenderEngineVtk. </li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

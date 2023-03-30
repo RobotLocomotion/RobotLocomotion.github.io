@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: RenderEngineVtk::RenderingPipeline Struct Reference</title>
+<title>Drake: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html','');});
+$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1_render_engine_gl_params.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -158,95 +158,22 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1render_1_1_
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">RenderEngineVtk::RenderingPipeline Struct Reference</div>  </div>
+<div class="title">RenderEngineGlParams Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The rendering pipeline for a single image type (color, depth, or label). </p>
-</div>
-<p><code>#include &lt;drake/geometry/render_vtk/internal_render_engine_vtk.h&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a03efd7c9872deae4825e151ddd94a1f4"><td class="memItemLeft" align="right" valign="top">vtkNew&lt; vtkRenderer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a03efd7c9872deae4825e151ddd94a1f4">renderer</a></td></tr>
-<tr class="separator:a03efd7c9872deae4825e151ddd94a1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d42756fe3095b8eff79aa74b0683a1e"><td class="memItemLeft" align="right" valign="top">vtkNew&lt; vtkRenderWindow &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a7d42756fe3095b8eff79aa74b0683a1e">window</a></td></tr>
-<tr class="separator:a7d42756fe3095b8eff79aa74b0683a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d1c60bda05bb2119210b14babbab0ad"><td class="memItemLeft" align="right" valign="top">vtkNew&lt; vtkWindowToImageFilter &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a9d1c60bda05bb2119210b14babbab0ad">filter</a></td></tr>
-<tr class="separator:a9d1c60bda05bb2119210b14babbab0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dd823d967d7e56c82631751ed8325c9"><td class="memItemLeft" align="right" valign="top">vtkNew&lt; vtkImageExport &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html#a6dd823d967d7e56c82631751ed8325c9">exporter</a></td></tr>
-<tr class="separator:a6dd823d967d7e56c82631751ed8325c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6dd823d967d7e56c82631751ed8325c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dd823d967d7e56c82631751ed8325c9">&#9670;&nbsp;</a></span>exporter</h2>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkNew&lt;vtkImageExport&gt; exporter</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9d1c60bda05bb2119210b14babbab0ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d1c60bda05bb2119210b14babbab0ad">&#9670;&nbsp;</a></span>filter</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkNew&lt;vtkWindowToImageFilter&gt; filter</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a03efd7c9872deae4825e151ddd94a1f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03efd7c9872deae4825e151ddd94a1f4">&#9670;&nbsp;</a></span>renderer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkNew&lt;vtkRenderer&gt; renderer</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7d42756fe3095b8eff79aa74b0683a1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d42756fe3095b8eff79aa74b0683a1e">&#9670;&nbsp;</a></span>window</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkNew&lt;vtkRenderWindow&gt; window</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>drake/geometry/render_vtk/<a class="el" href="internal__render__engine__vtk_8h.html">internal_render_engine_vtk.h</a></li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65">default_clear_color</a></td><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459">default_diffuse</a></td><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#ab9f533950544505312849066a791aa03">default_label</a></td><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a>(Archive *a)</td><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1render.html">render</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html">RenderEngineVtk</a></li><li class="navelem"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html">RenderingPipeline</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">

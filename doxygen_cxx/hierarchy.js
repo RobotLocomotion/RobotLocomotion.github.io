@@ -533,9 +533,7 @@ var hierarchy =
     [ "ModelDirective", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html", null ],
     [ "ModelDirectives", "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html", null ],
     [ "ModelInstanceInfo", "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html", null ],
-    [ "ModuleInitVtkRenderingOpenGL2", null, [
-      [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
-    ] ],
+    [ "ModuleInitVtkRenderingOpenGL2", "class_module_init_vtk_rendering_open_g_l2.html", null ],
     [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
@@ -666,10 +664,9 @@ var hierarchy =
     [ "RegionOfAttractionOptions", "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html", null ],
     [ "PackageMap::RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", null ],
     [ "RenderCameraCore", "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html", null ],
-    [ "RenderEngineGlParams", "structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html", null ],
+    [ "RenderEngineGlParams", "structdrake_1_1geometry_1_1_render_engine_gl_params.html", null ],
     [ "RenderEngineGltfClientParams", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html", null ],
     [ "RenderEngineVtkParams", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html", null ],
-    [ "RenderEngineVtk::RenderingPipeline", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html", null ],
     [ "RenderLabel", "classdrake_1_1geometry_1_1render_1_1_render_label.html", null ],
     [ "reset_after_move< T >", "classdrake_1_1reset__after__move.html", null ],
     [ "reset_after_move< int >", "classdrake_1_1reset__after__move.html", null ],
@@ -748,9 +745,7 @@ var hierarchy =
         [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
         [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
       ] ],
-      [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", [
-        [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
-      ] ],
+      [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", null ],
       [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ]
     ] ],
     [ "ShapeTag< ShapeType >", "structdrake_1_1geometry_1_1_shape_tag.html", null ],

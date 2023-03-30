@@ -167,6 +167,7 @@ $(document).ready(function(){initNavTree('render__gl_2factory_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="render__engine_8h.html">drake/geometry/render/render_engine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="render__engine__gl__params_8h.html">drake/geometry/render_gl/render_engine_gl_params.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -187,15 +188,21 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aff58ede2e6498518901d8a297a3bd07b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; RenderEngine &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#aff58ede2e6498518901d8a297a3bd07b">MakeRenderEngineGl</a> (RenderEngineGlParams params={})</td></tr>
-<tr class="memdesc:aff58ede2e6498518901d8a297a3bd07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation which uses a purely OpenGL renderer.  <a href="namespacedrake_1_1geometry_1_1render.html#aff58ede2e6498518901d8a297a3bd07b">More...</a><br /></td></tr>
-<tr class="separator:aff58ede2e6498518901d8a297a3bd07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822ce4b4810855c6f6fe7a025d8372f7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; render::RenderEngine &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a822ce4b4810855c6f6fe7a025d8372f7">MakeRenderEngineGl</a> (RenderEngineGlParams params={})</td></tr>
+<tr class="memdesc:a822ce4b4810855c6f6fe7a025d8372f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RenderEngine implementation which uses a purely OpenGL renderer.  <a href="namespacedrake_1_1geometry.html#a822ce4b4810855c6f6fe7a025d8372f7">More...</a><br /></td></tr>
+<tr class="separator:a822ce4b4810855c6f6fe7a025d8372f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6a949953d76af52d6dd1b13417cb556a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a">kHasRenderEngineGl</a></td></tr>
-<tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineGl implementation.  <a href="namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
+<tr class="memitem:a6a949953d76af52d6dd1b13417cb556a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a">kHasRenderEngineGl</a></td></tr>
+<tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineGl implementation.  <a href="namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
 <tr class="separator:a6a949953d76af52d6dd1b13417cb556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a949953d76af52d6dd1b13417cb556a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a">kHasRenderEngineGl</a></td></tr>
+<tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
+<tr class="separator:a6a949953d76af52d6dd1b13417cb556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4adf317ad66ba21d0ec9b99cd177ad"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#aaa4adf317ad66ba21d0ec9b99cd177ad">MakeRenderEngineGl</a> = &amp;geometry::MakeRenderEngineGl</td></tr>
+<tr class="memdesc:aaa4adf317ad66ba21d0ec9b99cd177ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1geometry_1_1render.html#aaa4adf317ad66ba21d0ec9b99cd177ad">More...</a><br /></td></tr>
+<tr class="separator:aaa4adf317ad66ba21d0ec9b99cd177ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

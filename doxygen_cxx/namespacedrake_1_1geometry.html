@@ -163,7 +163,8 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry.html','');}
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry Namespace Reference</div>  </div>
 </div><!--header-->
@@ -179,7 +180,11 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1geometry_1_1render"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html">render</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1geometry_1_1render__gl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render__gl.html">render_gl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1geometry_1_1render__gltf__client"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render__gltf__client.html">render_gltf_client</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1geometry_1_1render__vtk"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render__vtk.html">render_vtk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -292,6 +297,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The QueryObject serves as a mechanism to perform geometry queries on the world's geometry.  <a href="classdrake_1_1geometry_1_1_query_object.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction parameters for RenderEngineGl.  <a href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html">RenderEngineGltfClientParams</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction parameters for the <a class="el" href="namespacedrake_1_1geometry.html#a99ba06b63779a45d0b347f3b6321ac43" title="Constructs a RenderEngine implementation which generates glTF  files to upload to a render server,...">MakeRenderEngineGltfClient()</a> to create a client as part of the <a class="el" href="group__render__engine__gltf__client__server__api.html">glTF Render Client-Server API</a>.  <a href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#details">More...</a><br /></td></tr>
@@ -451,6 +459,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a331f457a6ce0d146213faa844725dcda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a331f457a6ce0d146213faa844725dcda">AddCompliantHydroelasticPropertiesForHalfSpace</a> (<a class="el" href="classdouble.html">double</a> slab_thickness, <a class="el" href="classdouble.html">double</a> hydroelastic_modulus, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
 <tr class="memdesc:a331f457a6ce0d146213faa844725dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compliant half spaces are handled as a special case; they do not get tessellated.  <a href="#a331f457a6ce0d146213faa844725dcda">More...</a><br /></td></tr>
 <tr class="separator:a331f457a6ce0d146213faa844725dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822ce4b4810855c6f6fe7a025d8372f7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a822ce4b4810855c6f6fe7a025d8372f7">MakeRenderEngineGl</a> (<a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a> params={})</td></tr>
+<tr class="memdesc:a822ce4b4810855c6f6fe7a025d8372f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RenderEngine implementation which uses a purely OpenGL renderer.  <a href="#a822ce4b4810855c6f6fe7a025d8372f7">More...</a><br /></td></tr>
+<tr class="separator:a822ce4b4810855c6f6fe7a025d8372f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99ba06b63779a45d0b347f3b6321ac43"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a99ba06b63779a45d0b347f3b6321ac43">MakeRenderEngineGltfClient</a> (const <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html">RenderEngineGltfClientParams</a> &amp;params)</td></tr>
 <tr class="memdesc:a99ba06b63779a45d0b347f3b6321ac43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RenderEngine implementation which generates <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html">glTF </a> files to upload to a render server, and retrieves renderings from said server by copying image data back into drake <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html" title="Simple data format for Image.">systems::sensors::Image</a> buffers.  <a href="#a99ba06b63779a45d0b347f3b6321ac43">More...</a><br /></td></tr>
 <tr class="separator:a99ba06b63779a45d0b347f3b6321ac43"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -476,6 +487,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aa70628317c9ed8d19606fee0d13643a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#aa70628317c9ed8d19606fee0d13643a5">MakePhongIllustrationProperties</a> (const <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;diffuse)</td></tr>
 <tr class="memdesc:aa70628317c9ed8d19606fee0d13643a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role.">IllustrationProperties</a> instance compatible with a simple "phong" material using only the given <code>diffuse</code> color.  <a href="#aa70628317c9ed8d19606fee0d13643a5">More...</a><br /></td></tr>
 <tr class="separator:aa70628317c9ed8d19606fee0d13643a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6a949953d76af52d6dd1b13417cb556a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a">kHasRenderEngineGl</a></td></tr>
+<tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineGl implementation.  <a href="#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
+<tr class="separator:a6a949953d76af52d6dd1b13417cb556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="acbab8995daa433cebfc335ffe8ae8fd0"></a>
@@ -1144,6 +1161,35 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a822ce4b4810855c6f6fe7a025d8372f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822ce4b4810855c6f6fe7a025d8372f7">&#9670;&nbsp;</a></span>MakeRenderEngineGl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a>&gt; drake::geometry::MakeRenderEngineGl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a>&#160;</td>
+          <td class="paramname"><em>params</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a RenderEngine implementation which uses a purely OpenGL renderer. </p>
+<p>The engine only works under Ubuntu. If called on a Mac, it will throw.</p>
+<dl class="section note"><dt>Note</dt><dd>RenderEngineGl behaves a bit differently from other RenderEngine implementations (e.g., RenderEngineVtk) with respect to displayed images. First, RenderEngineGl can only display a <em>single</em> image type at a time. So, if a shown window has been requested for both label and color images, the images will alternate in the same window. Second, the window display draws all images <em>flipped vertically</em>. The image produced will be compatible with the Drake ecosystem, only the visualization will be upside down. This has been documented in <a href="https://github.com/RobotLocomotion/drake/issues/14254">https://github.com/RobotLocomotion/drake/issues/14254</a>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>RenderEngineGl is not threadsafe. If a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> is instantiated with a RenderEngineGl and there are multiple Context instances for that <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>, rendering in multiple threads may exhibit issues.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if kHasRenderEngineGl is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a99ba06b63779a45d0b347f3b6321ac43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99ba06b63779a45d0b347f3b6321ac43">&#9670;&nbsp;</a></span>MakeRenderEngineGltfClient()</h2>
 
@@ -1410,6 +1456,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6a949953d76af52d6dd1b13417cb556a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a949953d76af52d6dd1b13417cb556a">&#9670;&nbsp;</a></span>kHasRenderEngineGl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kHasRenderEngineGl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the availability of the RenderEngineGl implementation. </p>
 
 </div>
 </div>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake::geometry::render::vtk_util Namespace Reference</title>
+<title>Drake: RenderEngineGlParams Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1render_1_1vtk__util.html','');});
+$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1_render_engine_gl_params.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -159,147 +159,117 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1render_1
 
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1geometry_1_1_render_engine_gl_params-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">drake::geometry::render::vtk_util Namespace Reference</div>  </div>
+<div class="title">RenderEngineGlParams Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Construction parameters for RenderEngineGl. </p>
+</div>
+<p><code>#include &lt;drake/geometry/render_gl/render_engine_gl_params.h&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; </td></tr>
-<tr class="memitem:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c">vtkPointerArray</a> = std::array&lt; vtkSmartPointer&lt; T &gt;, N &gt;</td></tr>
-<tr class="memdesc:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array type for vtkSmartPointer.  <a href="#a511bb7c86c3d48ddec05b470ba3adb2c">More...</a><br /></td></tr>
-<tr class="separator:a511bb7c86c3d48ddec05b470ba3adb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a69d2c70a67e99a23688272654071e2b6"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkPlaneSource &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a69d2c70a67e99a23688272654071e2b6">CreateSquarePlane</a> (<a class="el" href="classdouble.html">double</a> size)</td></tr>
-<tr class="memdesc:a69d2c70a67e99a23688272654071e2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a square plane of the given size.  <a href="#a69d2c70a67e99a23688272654071e2b6">More...</a><br /></td></tr>
-<tr class="separator:a69d2c70a67e99a23688272654071e2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdb94acdad86ca639785432a868abbd0"><td class="memItemLeft" align="right" valign="top">vtkSmartPointer&lt; vtkTransform &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#abdb94acdad86ca639785432a868abbd0">ConvertToVtkTransform</a> (const math::RigidTransformd &amp;transform)</td></tr>
-<tr class="memdesc:abdb94acdad86ca639785432a868abbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the provided <code>transform</code> to a vtkTransform.  <a href="#abdb94acdad86ca639785432a868abbd0">More...</a><br /></td></tr>
-<tr class="separator:abdb94acdad86ca639785432a868abbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Ts, size_t N = 1 + sizeof...(Ts)&gt; </td></tr>
-<tr class="memitem:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c">vtkPointerArray</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#abfb696bdfb8aca5a7cec2ab0e167c889">MakeVtkPointerArray</a> (const vtkNew&lt; T &gt; &amp;element, const vtkNew&lt; Ts &gt; &amp;... elements)</td></tr>
-<tr class="memdesc:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes vtkPointerArray from one or multiple pointer(s) for VTK objects wrapped by vtkNew.  <a href="#abfb696bdfb8aca5a7cec2ab0e167c889">More...</a><br /></td></tr>
-<tr class="separator:abfb696bdfb8aca5a7cec2ab0e167c889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab9f533950544505312849066a791aa03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">render::RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#ab9f533950544505312849066a791aa03">default_label</a> {<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8">render::RenderLabel::kUnspecified</a>}</td></tr>
+<tr class="memdesc:ab9f533950544505312849066a791aa03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default render label to apply to a geometry when none is otherwise specified.  <a href="#ab9f533950544505312849066a791aa03">More...</a><br /></td></tr>
+<tr class="separator:ab9f533950544505312849066a791aa03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbdc8937e3fab606a545e2a6749ee459"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459">default_diffuse</a> {0.9, 0.7, 0.2, 1.0}</td></tr>
+<tr class="memdesc:abbdc8937e3fab606a545e2a6749ee459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default diffuse color to apply to a geometry when none is otherwise specified in the (phong, diffuse) property.  <a href="#abbdc8937e3fab606a545e2a6749ee459">More...</a><br /></td></tr>
+<tr class="separator:abbdc8937e3fab606a545e2a6749ee459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24b99c9946848c937df22ef2b8745d65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65">default_clear_color</a> {204 / 255., 229 / 255., 255 / 255., 1.0}</td></tr>
+<tr class="memdesc:a24b99c9946848c937df22ef2b8745d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default background color for color images.  <a href="#a24b99c9946848c937df22ef2b8745d65">More...</a><br /></td></tr>
+<tr class="separator:a24b99c9946848c937df22ef2b8745d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a511bb7c86c3d48ddec05b470ba3adb2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a511bb7c86c3d48ddec05b470ba3adb2c">&#9670;&nbsp;</a></span>vtkPointerArray</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c">vtkPointerArray</a> =  std::array&lt;vtkSmartPointer&lt;T&gt;, N&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>An array type for vtkSmartPointer. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The VTK class type stored in vtkSmartPointer. </td></tr>
-    <tr><td class="paramname">N</td><td>The size of array. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="abdb94acdad86ca639785432a868abbd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdb94acdad86ca639785432a868abbd0">&#9670;&nbsp;</a></span>ConvertToVtkTransform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vtkSmartPointer&lt;vtkTransform&gt; drake::geometry::render::vtk_util::ConvertToVtkTransform </td>
+          <td class="memname">void Serialize </td>
           <td>(</td>
-          <td class="paramtype">const math::RigidTransformd &amp;&#160;</td>
-          <td class="paramname"><em>transform</em></td><td>)</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Converts the provided <code>transform</code> to a vtkTransform. </p>
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
 
 </div>
 </div>
-<a id="a69d2c70a67e99a23688272654071e2b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69d2c70a67e99a23688272654071e2b6">&#9670;&nbsp;</a></span>CreateSquarePlane()</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a24b99c9946848c937df22ef2b8745d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b99c9946848c937df22ef2b8745d65">&#9670;&nbsp;</a></span>default_clear_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vtkSmartPointer&lt;vtkPlaneSource&gt; drake::geometry::render::vtk_util::CreateSquarePlane </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> default_clear_color {204 / 255., 229 / 255., 255 / 255., 1.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a square plane of the given size. </p>
-<p>The plane's z axis is its normal and is coincident with the z axis of the world coordinate system. The plane's center is at (0, 0, 0) of both the world coordinate system and plane's coordinate system. The ranges of the plane's x and y are <code>(- size / 2, size / 2)</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>The size of the plane. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>The default background color for color images. </p>
 
 </div>
 </div>
-<a id="abfb696bdfb8aca5a7cec2ab0e167c889"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb696bdfb8aca5a7cec2ab0e167c889">&#9670;&nbsp;</a></span>MakeVtkPointerArray()</h2>
+<a id="abbdc8937e3fab606a545e2a6749ee459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbdc8937e3fab606a545e2a6749ee459">&#9670;&nbsp;</a></span>default_diffuse</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html#a511bb7c86c3d48ddec05b470ba3adb2c">vtkPointerArray</a>&lt;T, N&gt; drake::geometry::render::vtk_util::MakeVtkPointerArray </td>
-          <td>(</td>
-          <td class="paramtype">const vtkNew&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>element</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vtkNew&lt; Ts &gt; &amp;...&#160;</td>
-          <td class="paramname"><em>elements</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> default_diffuse {0.9, 0.7, 0.2, 1.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes vtkPointerArray from one or multiple pointer(s) for VTK objects wrapped by vtkNew. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">transform</td><td>The transform to convert into a <code>vtkTransform</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Default diffuse color to apply to a geometry when none is otherwise specified in the (phong, diffuse) property. </p>
 
 </div>
 </div>
+<a id="ab9f533950544505312849066a791aa03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f533950544505312849066a791aa03">&#9670;&nbsp;</a></span>default_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">render::RenderLabel</a> default_label {<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8">render::RenderLabel::kUnspecified</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default render label to apply to a geometry when none is otherwise specified. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/geometry/render_gl/<a class="el" href="render__engine__gl__params_8h.html">render_engine_gl_params.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div id="nav-path" class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1render.html">render</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1render_1_1vtk__util.html">vtk_util</a></li>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a></li>
   </ul>
 </div>
 <footer class="site-footer padding">
