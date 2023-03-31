@@ -3735,12 +3735,19 @@ implementations, the line width may be 1 regardless of the set
 value.</p>
 </dd>
 </dl>
-<p>Typically, X and Y are obtained via, e.g. &#64;code constexpr int nx = 15,
-ny = 11; X = RowVector&lt;double, nx&gt;::LinSpaced(0, 1).replicate&lt;ny,
-1&gt;(); Y = Vector&lt;double, ny&gt;::LinSpaced(0, 1).replicate&lt;1, nx&gt;();
-&#64;code in C++ or e.g. &#64;code xs = np.linspace(0, 1, 15) ys =
-np.linspace(0, 1, 11) [X, Y] = np.meshgrid(xs, ys) &#64;code in Python,
-and Z is the surface evaluated on each X, Y value.</p>
+<p>Typically, X and Y are obtained via, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">constexpr</span> <span class="nb">int</span> <span class="n">nx</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">ny</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">RowVector</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="n">nx</span><span class="o">&gt;</span><span class="p">::</span><span class="n">LinSpaced</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replicate</span><span class="o">&lt;</span><span class="n">ny</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="n">ny</span><span class="o">&gt;</span><span class="p">::</span><span class="n">LinSpaced</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replicate</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>in C++ or e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>in Python, and Z is the surface evaluated on each X, Y value.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>X, Y, and Z must be the same shape.</p>
 </dd>
