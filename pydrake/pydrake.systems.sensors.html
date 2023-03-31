@@ -1453,6 +1453,158 @@ the color/depth/label constructor is used.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageWriter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageWriter</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>A system for periodically writing images to the file system. The
+system does not have a fixed set of input ports; the system can have
+an arbitrary number of image input ports. Each input port is
+independently configured with respect to:</p>
+<ul class="simple">
+<li><p>publish frequency,</p></li>
+<li><p>write location (directory) and image name,</p></li>
+<li><p>input image format (which, in turn, implies a file-system format),</p></li>
+<li><p>port name (which needs to be unique across all input ports in this system),</p></li>
+</ul>
+<p>and
+- context time at which output starts.</p>
+<p>By design, this system is intended to work with RgbdCamera, but can
+connect to any output port that provides images.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ImageWriter</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>ImageWriter supports three specific types of images:</p>
+<ul class="simple">
+<li><p>ImageRgba8U - typically a color image written to disk as .png images.</p></li>
+<li><p>ImageDepth32F - typically a depth image, written to disk as .tiff images.</p></li>
+<li><p>ImageLabel16I - typically a label image, written to disk as .png images.</p></li>
+<li><p>ImageDepth16U - typically a depth image, written to disk as .png images.</p></li>
+<li><p>ImageGrey8U - typically a grey scale image, written to disk as .png images.</p></li>
+</ul>
+<p>Input ports are added to an ImageWriter via DeclareImageInputPort().
+See that function’s documentation for elaboration on how to configure
+image output. It is important to note, that every declared image input
+port <em>must</em> be connected; otherwise, attempting to write an image from
+that port, will cause an error in the system.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageWriter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageWriter" title="pydrake.systems.sensors.ImageWriter"><span class="pre">pydrake.systems.sensors.ImageWriter</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs default instance with no image ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageWriter.DeclareImageInputPort">
+<span class="sig-name descname"><span class="pre">DeclareImageInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageWriter" title="pydrake.systems.sensors.ImageWriter"><span class="pre">pydrake.systems.sensors.ImageWriter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.PixelType" title="pydrake.systems.sensors.PixelType"><span class="pre">pydrake.systems.sensors.PixelType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter.DeclareImageInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares and configures a new image input port. A port is configured
+by providing:</p>
+<ul class="simple">
+<li><p>a unique port name,</p></li>
+<li><p>an output file format string,</p></li>
+<li><p>a publish period,</p></li>
+<li><p>a start time, and</p></li>
+<li><p>an image type.</p></li>
+</ul>
+<p>Each port is evaluated independently, so that two ports on the same
+ImageWriter can write images to different locations at different
+frequencies, etc. If images are to be kept in sync (e.g., registered
+color and depth images), they should be given the same period and
+start time.</p>
+<p><strong>Specifying the times at which images are written</strong></p>
+<p>Given a <em>positive</em> publish period <code class="docutils literal notranslate"><span class="pre">p</span></code>, images will be written at
+times contained in the list of times: <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1⋅p,</span> <span class="pre">2⋅p,</span> <span class="pre">...]</span></code>. The
+start time parameter determines what the <em>first</em> output time will be.
+Given a “start time” value <code class="docutils literal notranslate"><span class="pre">tₛ</span></code>, the frames will be written at: <code class="docutils literal notranslate"><span class="pre">t</span>
+<span class="pre">=</span> <span class="pre">tₛ</span> <span class="pre">+</span> <span class="pre">[0,</span> <span class="pre">1⋅p,</span> <span class="pre">2⋅p,</span> <span class="pre">...]</span></code>.</p>
+<p><strong>Specifying write location and output file names</strong></p>
+<p>When writing image data to disk, the location and name of the output
+files are controlled by a user-defined format string. The format
+string should be compatible with <code class="docutils literal notranslate"><span class="pre">fmt::format()</span></code>. ImageWriter
+provides several <em>named</em> format arguments that can be referenced in
+the format string:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">port_name</span></code>   - The name of the port (see below).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image_type</span></code>  - One of <code class="docutils literal notranslate"><span class="pre">color</span></code>, <cite>depth</cite>, or <code class="docutils literal notranslate"><span class="pre">label</span></code>, depending on the</p></li>
+</ul>
+<p>image type requested.
+- <code class="docutils literal notranslate"><span class="pre">time_double</span></code> - The time (in seconds) stored in the context at the
+invocation of Publish(), represented as a double.
+- <code class="docutils literal notranslate"><span class="pre">time_usec</span></code>   - The time (in microseconds) stored in the context at the
+invocation of Publish(), represented as a 64-bit integer.
+- <code class="docutils literal notranslate"><span class="pre">time_msec</span></code>   - The time (in milliseconds) stored in the context at the
+invocation of Publish(), represented as an integer.
+- <code class="docutils literal notranslate"><span class="pre">count</span></code>       - The number of images that have been written from this
+port (the first image would get zero, the Nᵗʰ would get
+N - 1). This value increments <em>every</em> time an image gets
+written.</p>
+<p>File names can then be specified as shown in the following examples
+(assuming the port was declared as a color image port, with a name of
+“my_port”, a period of 0.02 s (50 Hz), and a start time of 5 s.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/user/images/{port_name}/{time_usec}</span></code> creates a sequence like:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/user/images/my_port/5000000.png</span></code></p></li>
+<li><p><cite>/home/user/images/my_port/5020000.png</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/user/images/my_port/5040000.png</span></code></p></li>
+<li><p>…</p></li>
+<li><p><cite>/home/user/images/{image_type}/{time_msec:05}</cite> creates a sequence like:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/user/images/color/05000.png</span></code></p></li>
+<li><p><cite>/home/user/images/color/05020.png</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/user/images/color/05040.png</span></code></p></li>
+<li><p>…</p></li>
+<li><p><cite>/home/user/{port_name}/my_image_{count:03}.txt</cite> creates a sequence like:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/user/my_port/my_image_000.txt.png</span></code></p></li>
+<li><p><cite>/home/user/my_port/my_image_001.txt.png</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/user/my_port/my_image_002.txt.png</span></code></p></li>
+<li><p>…</p></li>
+</ul>
+<p>We call attention particularly to the following:</p>
+<ul class="simple">
+<li><p>Note the zero-padding arguments in the second and third examples. Making</p></li>
+</ul>
+<p>use of zero-padding typically facilitates <em>other</em> processes.
+- If the file name format does not end with an appropriate extension (e.g.,
+<code class="docutils literal notranslate"><span class="pre">.png</span></code> or <code class="docutils literal notranslate"><span class="pre">.tiff</span></code>), the extension will be added.
+- The directory specified in the format will be tested for validity
+(does it exist, is it a directory, can the program write to it). The
+full <em>file name</em> will <em>not</em> be validated. If it is invalid (e.g., too
+long, invalid characters, bad format substitution), images will silently
+not be created.
+- The third example uses the count flag – regardless of start time, the
+first file written will always be zero, the second one, etc.
+- The directory can <em>only</em> depend <code class="docutils literal notranslate"><span class="pre">port_name</span></code> and <code class="docutils literal notranslate"><span class="pre">image_type</span></code>. It <em>cannot</em>
+depend on values that change over time (e.g., <code class="docutils literal notranslate"><span class="pre">time_double</span></code>, <cite>count</cite>,
+etc.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">port_name</span></code>:</dt><dd><p>The name of the port (must be unique among all image ports). This
+string is available in the format string as <code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_name_format</span></code>:</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">fmt::format()</span></code>-compatible string which defines the
+context-dependent file name to write the image to.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>The period at which images read from this input port are written
+in calls to Publish().</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">start_time</span></code>:</dt><dd><p>The minimum value for the context’s time at which images will be
+written in calls to Publish().</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">pixel_type</span></code>:</dt><dd><p>The representation of the per-pixel data (see PixelType). Must be
+one of {PixelType::kRgba8U, PixelType::kDepth32F,
+PixelType::kLabel16I, PixelType::kDepth16U, or
+PixelType::kGrey8U}.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if</strong><strong> (</strong><strong>1</strong><strong>) </strong><strong>the directory encoded in the</strong> – </p></li>
+<li><p><strong>file_name_format` is not &quot;valid&quot;</strong><strong> (</strong><strong>see documentation above fo</strong> – </p></li>
+<li><p><strong>definition</strong><strong>)</strong><strong>, </strong><strong>(</strong><strong>2</strong><strong>) </strong><strong>publish_period is not positive</strong><strong>, </strong><strong>(</strong><strong>3</strong><strong>)</strong> – </p></li>
+<li><p><strong>port_name` is used by a previous input port</strong><strong>, or </strong><strong>(</strong><strong>4</strong> – </p></li>
+<li><p><strong>pixel_type` is not supported</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.LcmImageArrayToImages">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">LcmImageArrayToImages</span></span><a class="headerlink" href="#pydrake.systems.sensors.LcmImageArrayToImages" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>

@@ -199,7 +199,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_i
 <li>ImageDepth16U - typically a depth image, written to disk as .png images.</li>
 <li>ImageGrey8U - typically a grey scale image, written to disk as .png images.</li>
 </ul>
-<p>Input ports are added to an ImageWriter via <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a157e8f358edae6333e0fae01e3150f5e" title="Declares and configures a new image input port.">DeclareImageInputPort()</a>. See that function's documentation for elaboration on how to configure image output. It is important to note, that every declared image input port <em>must</em> be connected; otherwise, attempting to write an image from that port, will cause an error in the system. </p>
+<p>Input ports are added to an ImageWriter via <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a41f00733c981de89c3f4c6ceeba6a2aa" title="Declares and configures a new image input port.">DeclareImageInputPort()</a>. See that function's documentation for elaboration on how to configure image output. It is important to note, that every declared image input port <em>must</em> be connected; otherwise, attempting to write an image from that port, will cause an error in the system. </p>
 </div>
 <p><code>#include &lt;drake/systems/sensors/image_writer.h&gt;</code></p>
 <table class="memberdecls">
@@ -208,9 +208,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adafd3b4eec8c37f6da05c4ceecbd7ef5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#adafd3b4eec8c37f6da05c4ceecbd7ef5">ImageWriter</a> ()</td></tr>
 <tr class="memdesc:adafd3b4eec8c37f6da05c4ceecbd7ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs default instance with no image ports.  <a href="#adafd3b4eec8c37f6da05c4ceecbd7ef5">More...</a><br /></td></tr>
 <tr class="separator:adafd3b4eec8c37f6da05c4ceecbd7ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f00733c981de89c3f4c6ceeba6a2aa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a41f00733c981de89c3f4c6ceeba6a2aa">DeclareImageInputPort</a> (<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">PixelType</a> pixel_type, std::string port_name, std::string file_name_format, <a class="el" href="classdouble.html">double</a> publish_period, <a class="el" href="classdouble.html">double</a> start_time)</td></tr>
+<tr class="memdesc:a41f00733c981de89c3f4c6ceeba6a2aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares and configures a new image input port.  <a href="#a41f00733c981de89c3f4c6ceeba6a2aa">More...</a><br /></td></tr>
+<tr class="separator:a41f00733c981de89c3f4c6ceeba6a2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a157e8f358edae6333e0fae01e3150f5e"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
 <tr class="memitem:a157e8f358edae6333e0fae01e3150f5e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a157e8f358edae6333e0fae01e3150f5e">DeclareImageInputPort</a> (std::string port_name, std::string file_name_format, <a class="el" href="classdouble.html">double</a> publish_period, <a class="el" href="classdouble.html">double</a> start_time)</td></tr>
-<tr class="memdesc:a157e8f358edae6333e0fae01e3150f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares and configures a new image input port.  <a href="#a157e8f358edae6333e0fae01e3150f5e">More...</a><br /></td></tr>
+<tr class="memdesc:a157e8f358edae6333e0fae01e3150f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) An overload where PixelType is a template parameter instead of a runtime parameter.  <a href="#a157e8f358edae6333e0fae01e3150f5e">More...</a><br /></td></tr>
 <tr class="separator:a157e8f358edae6333e0fae01e3150f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a6f1f340f60b1623b5f0edd62a43d08b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a6f1f340f60b1623b5f0edd62a43d08b6">ImageWriter</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html">ImageWriter</a> &amp;)=delete</td></tr>
@@ -1309,8 +1312,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a157e8f358edae6333e0fae01e3150f5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a157e8f358edae6333e0fae01e3150f5e">&#9670;&nbsp;</a></span>DeclareImageInputPort()</h2>
+<a id="a41f00733c981de89c3f4c6ceeba6a2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41f00733c981de89c3f4c6ceeba6a2aa">&#9670;&nbsp;</a></span>DeclareImageInputPort() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1318,6 +1321,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; DeclareImageInputPort </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">PixelType</a>&#160;</td>
+          <td class="paramname"><em>pixel_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>port_name</em>, </td>
         </tr>
@@ -1408,21 +1417,58 @@ time" value <code>tₛ</code>, the frames will be written at: <code>t = tₛ + [
     <tr><td class="paramname">file_name_format</td><td>The <code>fmt::format()</code>-compatible string which defines the context-dependent file name to write the image to. </td></tr>
     <tr><td class="paramname">publish_period</td><td>The period at which images read from this input port are written in calls to <a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>. </td></tr>
     <tr><td class="paramname">start_time</td><td>The minimum value for the context's time at which images will be written in calls to <a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">kPixelType</td><td>The representation of the per-pixel data (see PixelType). Must be one of {<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dab2ba7d59e9ac2edec71ea18cc201b478" title="The pixel format used by ImageRgba8U.">PixelType::kRgba8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c" title="The pixel format used by ImageDepth32F.">PixelType::kDepth32F</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec" title="The pixel format used by ImageLabel16I.">PixelType::kLabel16I</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daf85535e7c32140b6d5a5544342787ced" title="The pixel format used by ImageDepth16U.">PixelType::kDepth16U</a>, or <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da3798842b1f11a731f5e11d9744c29774" title="The pixel format used by ImageGrey8U.">PixelType::kGrey8U</a>}. </td></tr>
+    <tr><td class="paramname">pixel_type</td><td>The representation of the per-pixel data (see PixelType). Must be one of {<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dab2ba7d59e9ac2edec71ea18cc201b478" title="The pixel format used by ImageRgba8U.">PixelType::kRgba8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c" title="The pixel format used by ImageDepth32F.">PixelType::kDepth32F</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec" title="The pixel format used by ImageLabel16I.">PixelType::kLabel16I</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daf85535e7c32140b6d5a5544342787ced" title="The pixel format used by ImageDepth16U.">PixelType::kDepth16U</a>, or <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da3798842b1f11a731f5e11d9744c29774" title="The pixel format used by ImageGrey8U.">PixelType::kGrey8U</a>}. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if (1) the directory encoded in the <code>file_name_format</code> is not "valid" (see documentation above for definition), (2) <code>publish_period</code> is not positive, or (3) <code>port_name</code> is used by a previous input port. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if (1) the directory encoded in the <code>file_name_format</code> is not "valid" (see documentation above for definition), (2) <code>publish_period</code> is not positive, (3) <code>port_name</code> is used by a previous input port, or (4) <code>pixel_type</code> is not supported. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a157e8f358edae6333e0fae01e3150f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157e8f358edae6333e0fae01e3150f5e">&#9670;&nbsp;</a></span>DeclareImageInputPort() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; DeclareImageInputPort </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>port_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file_name_format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>publish_period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>start_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) An overload where PixelType is a template parameter instead of a runtime parameter. </p>
 
 </div>
 </div>

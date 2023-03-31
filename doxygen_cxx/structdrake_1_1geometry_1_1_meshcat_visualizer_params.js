@@ -7,5 +7,6 @@ var structdrake_1_1geometry_1_1_meshcat_visualizer_params =
     [ "prefix", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b", null ],
     [ "publish_period", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626", null ],
     [ "role", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb", null ],
+    [ "show_hydroelastic", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14", null ],
     [ "visible_by_default", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a773906248693626d9c3ca17bca32a6e2", null ]
 ];

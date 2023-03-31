@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a":[4,0,0,12,0,24,2],
 "simulator__config__functions_8h.html#ga6875fa2f1e9eb22cee800a29b0ca61b9":[4,0,0,12,0,24,0],
 "simulator__config__functions_8h.html#gad32461bc90073aac39049d636974a04b":[4,0,0,12,0,24,3],
 "simulator__gflags_8h.html":[4,0,0,12,0,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,11,3],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,11,2],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,4,11,1],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8":[3,0,0,4,11,5],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,11,0]
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8":[3,0,0,4,11,5]
 };

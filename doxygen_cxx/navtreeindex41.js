@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a2a8a7c06f6f68cd4e58721aab4eb5885":[3,0,0,18,1,18],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a34cedb829a75120bfb60c98f376c4c19":[3,0,0,18,1,10],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a3d0f848e23c2d6e2ff99c8838ad439f8":[3,0,0,18,1,4],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a576612a037dee8597b5975d3525b3a48":[3,0,0,18,1,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,31],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03fe2fcbb54b17038f831ae97017f9a3":[3,0,2,31,13],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,31,0],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,31,11],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753":[3,0,2,31,15]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,31,11]
 };

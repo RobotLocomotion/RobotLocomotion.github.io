@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,16,7,13],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html":[3,0,0,16,7,3],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[3,0,0,16,7,4],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,16,7,5],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,16,7,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html#a69e9ace88f698342e05dcf0cc1899818":[3,0,2,26,0],
 "structstd_1_1numeric__limits_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,28],
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,29],
-"structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a9b731d88a685b1ec76623274cccf7d33":[3,0,2,29,0],
-"structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,30],
-"subvector_8h.html":[4,0,0,12,3,37]
+"structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a9b731d88a685b1ec76623274cccf7d33":[3,0,2,29,0]
 };

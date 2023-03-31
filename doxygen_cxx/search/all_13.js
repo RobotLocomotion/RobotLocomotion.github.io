@@ -479,7 +479,7 @@ var searchData=
   ['shiftwithzeroangularvelocity',['ShiftWithZeroAngularVelocity',['../classdrake_1_1multibody_1_1_spatial_acceleration.html#adcb3b75410a7352ca292fc5ca2ab5b01',1,'drake::multibody::SpatialAcceleration']]],
   ['should_5ftrigger',['should_trigger',['../classdrake_1_1systems_1_1_witness_function.html#ace44961132e96e032f20ea411cdf6736',1,'drake::systems::WitnessFunction']]],
   ['shoulder_5fjoint_5fname',['shoulder_joint_name',['../classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a283cd03cea6fa0bb6b2b4755a77c86e0',1,'drake::multibody::benchmarks::acrobot::AcrobotParameters']]],
-  ['show_5fhydroelastic',['show_hydroelastic',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::DrakeVisualizerParams']]],
+  ['show_5fhydroelastic',['show_hydroelastic',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::DrakeVisualizerParams::show_hydroelastic()'],['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::MeshcatVisualizerParams::show_hydroelastic()']]],
   ['show_5frgb',['show_rgb',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3',1,'drake::systems::sensors::CameraConfig']]],
   ['show_5fstats_5fplot',['show_stats_plot',['../structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def',1,'drake::geometry::MeshcatParams']]],
   ['show_5fwindow',['show_window',['../classdrake_1_1geometry_1_1render_1_1_color_render_camera.html#ace4c47773d7612ddd9396fb4e958058a',1,'drake::geometry::render::ColorRenderCamera']]],

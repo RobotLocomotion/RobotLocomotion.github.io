@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"group__planning__kinematics.html":[1,4,2,0],
 "group__planning__kinematics.html#ga6e3a66e37411b9d8358efc00ec510a33":[1,4,2,0,4],
 "group__planning__kinematics.html#gac36361db531cfc7f707ef52db81375e9":[1,4,2,0,3],
 "group__planning__kinematics.html#gafd57fd1045276e8221f6f0a4fac36c82":[1,4,2,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "latex_8h.html#aa14d755813030ea14c7207a4e0e71f9f":[4,0,0,1,3,7,3],
 "latex_8h.html#accb78ec8e49199eaff087d9637301041":[4,0,0,1,3,7,1],
 "lcm__buses_8h.html":[4,0,0,12,4,0],
-"lcm__config__functions_8h.html":[4,0,0,12,4,1],
-"lcm__config__functions_8h.html#a727199867bdc2433a7269c76dd7f3973":[4,0,0,12,4,1,0]
+"lcm__config__functions_8h.html":[4,0,0,12,4,1]
 };
