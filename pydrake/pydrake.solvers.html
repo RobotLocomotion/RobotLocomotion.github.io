@@ -2690,7 +2690,7 @@ f)</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">decision_variables</span></code>:</dt><dd><p>The newly added decision_variables.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">decision_variables</span></code> should not intersect with the existing
-variables or indeterminates in the optimization program.</p>
+indeterminates in the optimization program.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>Each entry in <code class="docutils literal notranslate"><span class="pre">decision_variables</span></code> should not be a dummy
 variable.</p>
@@ -2763,15 +2763,25 @@ variables.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddIndeterminate">
-<span class="sig-name descname"><span class="pre">AddIndeterminate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_indeterminate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddIndeterminate" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddIndeterminate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_indeterminate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddIndeterminate" title="Permalink to this definition"></a></dt>
 <dd><p>Adds indeterminate. This method appends an indeterminate to the end of
-the program’s old indeterminates.</p>
+the program’s old indeterminates, if <code class="docutils literal notranslate"><span class="pre">new_indeterminate</span></code> is not
+already in the program’s old indeterminates.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_indeterminate</span></code>:</dt><dd><p>The indeterminate to be appended to the program’s old
 indeterminates.</p>
 </dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_indeterminate</span></code> should not intersect with the program’s old
-indeterminates or decision variables.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>indeterminate_index The index of the added indeterminate in the
+program’s indeterminates. i.e.
+prog.indeterminates()(indeterminate_index) = new_indeterminate.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_indeterminate</span></code> should not intersect with the program’s
+decision variables.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>new_indeterminate should not be dummy.</p>
 </dd>
@@ -2794,7 +2804,7 @@ end of the program’s old indeterminates.</p>
 indeterminates.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code> should not intersect with the program’s old
-indeterminates or decision variables.</p>
+decision variables.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>Each entry in new_indeterminates should not be dummy.</p>
 </dd>
@@ -2811,7 +2821,7 @@ end of the program’s old indeterminates.</p>
 indeterminates.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code> should not intersect with the program’s old
-indeterminates or decision variables.</p>
+decision variables.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>Each entry in new_indeterminates should not be dummy.</p>
 </dd>

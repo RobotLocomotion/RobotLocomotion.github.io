@@ -197,6 +197,29 @@ Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.EvaluateUnivariate">
+<span class="sig-name descname"><span class="pre">EvaluateUnivariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.EvaluateUnivariate" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate a univariate Polynomial at a specific point.</p>
+<p>Evaluates a univariate Polynomial at the given x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if this Polynomial is not univariate.</strong> – </p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> may be of any type supporting the ** and + operations (which can
+be different from both CoefficientsType and RealScalar).</p>
+<p>This method may also be used for efficient evaluation of the
+derivatives of the univariate polynomial, evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.
+<code class="docutils literal notranslate"><span class="pre">derivative_order</span></code> = 0 (the default) returns the polynomial value
+without differentiation. <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code> = 1 returns the first
+derivative, etc.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>derivative_order must be non-negative.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.GetCoefficients">
 <span class="sig-name descname"><span class="pre">GetCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.GetCoefficients" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -318,6 +341,29 @@ Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.EvaluateUnivariate">
+<span id="pydrake.polynomial.Polynomial_[AutoDiffXd].EvaluateUnivariate"></span><span class="sig-name descname"><span class="pre">EvaluateUnivariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial_" title="pydrake.polynomial.Polynomial_"><span class="pre">pydrake.polynomial.Polynomial_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.EvaluateUnivariate" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate a univariate Polynomial at a specific point.</p>
+<p>Evaluates a univariate Polynomial at the given x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if this Polynomial is not univariate.</strong> – </p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> may be of any type supporting the ** and + operations (which can
+be different from both CoefficientsType and RealScalar).</p>
+<p>This method may also be used for efficient evaluation of the
+derivatives of the univariate polynomial, evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.
+<code class="docutils literal notranslate"><span class="pre">derivative_order</span></code> = 0 (the default) returns the polynomial value
+without differentiation. <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code> = 1 returns the first
+derivative, etc.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>derivative_order must be non-negative.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.GetCoefficients">
 <span id="pydrake.polynomial.Polynomial_[AutoDiffXd].GetCoefficients"></span><span class="sig-name descname"><span class="pre">GetCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial_" title="pydrake.polynomial.Polynomial_"><span class="pre">pydrake.polynomial.Polynomial_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.GetCoefficients" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -430,6 +476,29 @@ sole variable.</p>
 </dl>
 <p>If derivative_order is given, takes the nth derivative of this
 Polynomial.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.EvaluateUnivariate">
+<span id="pydrake.polynomial.Polynomial_[Expression].EvaluateUnivariate"></span><span class="sig-name descname"><span class="pre">EvaluateUnivariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial_" title="pydrake.polynomial.Polynomial_"><span class="pre">pydrake.polynomial.Polynomial_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.EvaluateUnivariate" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate a univariate Polynomial at a specific point.</p>
+<p>Evaluates a univariate Polynomial at the given x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if this Polynomial is not univariate.</strong> – </p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> may be of any type supporting the ** and + operations (which can
+be different from both CoefficientsType and RealScalar).</p>
+<p>This method may also be used for efficient evaluation of the
+derivatives of the univariate polynomial, evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.
+<code class="docutils literal notranslate"><span class="pre">derivative_order</span></code> = 0 (the default) returns the polynomial value
+without differentiation. <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code> = 1 returns the first
+derivative, etc.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>derivative_order must be non-negative.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

@@ -281,9 +281,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7e4fa58845ca19073b0c532431ac141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a60e13290a9b854b4fee070764f978d22">MatrixXIndeterminate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad7e4fa58845ca19073b0c532431ac141">NewIndeterminates</a> (<a class="el" href="classint.html">int</a> rows, <a class="el" href="classint.html">int</a> cols, const std::string &amp;name=&quot;X&quot;)</td></tr>
 <tr class="memdesc:ad7e4fa58845ca19073b0c532431ac141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminates to this <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>, with default name "X".  <a href="#ad7e4fa58845ca19073b0c532431ac141">More...</a><br /></td></tr>
 <tr class="separator:ad7e4fa58845ca19073b0c532431ac141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33e477494394065870c27354060c67ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a33e477494394065870c27354060c67ad">AddIndeterminate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;new_indeterminate)</td></tr>
-<tr class="memdesc:a33e477494394065870c27354060c67ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminate.  <a href="#a33e477494394065870c27354060c67ad">More...</a><br /></td></tr>
-<tr class="separator:a33e477494394065870c27354060c67ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100c35ec0287aaded41a390e0fe95e4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a100c35ec0287aaded41a390e0fe95e4b">AddIndeterminate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;new_indeterminate)</td></tr>
+<tr class="memdesc:a100c35ec0287aaded41a390e0fe95e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminate.  <a href="#a100c35ec0287aaded41a390e0fe95e4b">More...</a><br /></td></tr>
+<tr class="separator:a100c35ec0287aaded41a390e0fe95e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d17877e373279d18488f21836285539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a1d17877e373279d18488f21836285539">AddIndeterminates</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#a60e13290a9b854b4fee070764f978d22">MatrixXIndeterminate</a> &gt; &amp;new_indeterminates)</td></tr>
 <tr class="memdesc:a1d17877e373279d18488f21836285539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds indeterminates.  <a href="#a1d17877e373279d18488f21836285539">More...</a><br /></td></tr>
 <tr class="separator:a1d17877e373279d18488f21836285539"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2174,7 +2174,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>decision_variables</code> should not intersect with the existing variables or indeterminates in the optimization program. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd><code>decision_variables</code> should not intersect with the existing indeterminates in the optimization program. </dd>
 <dd>
 Each entry in <code>decision_variables</code> should not be a dummy variable. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -2295,14 +2295,14 @@ Each entry in <code>decision_variables</code> should not be a dummy variable. </
 
 </div>
 </div>
-<a id="a33e477494394065870c27354060c67ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33e477494394065870c27354060c67ad">&#9670;&nbsp;</a></span>AddIndeterminate()</h2>
+<a id="a100c35ec0287aaded41a390e0fe95e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100c35ec0287aaded41a390e0fe95e4b">&#9670;&nbsp;</a></span>AddIndeterminate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddIndeterminate </td>
+          <td class="memname"><a class="el" href="classint.html">int</a> AddIndeterminate </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
           <td class="paramname"><em>new_indeterminate</em></td><td>)</td>
@@ -2312,13 +2312,14 @@ Each entry in <code>decision_variables</code> should not be a dummy variable. </
 </div><div class="memdoc">
 
 <p>Adds indeterminate. </p>
-<p>This method appends an indeterminate to the end of the program's old indeterminates. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method appends an indeterminate to the end of the program's old indeterminates, if <code>new_indeterminate</code> is not already in the program's old indeterminates. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_indeterminate</td><td>The indeterminate to be appended to the program's old indeterminates. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminate</code> should not intersect with the program's old indeterminates or decision variables. </dd>
+<dl class="section return"><dt>Returns</dt><dd>indeterminate_index The index of the added indeterminate in the program's indeterminates. i.e. prog.indeterminates()(indeterminate_index) = new_indeterminate. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminate</code> should not intersect with the program's decision variables. </dd>
 <dd>
 new_indeterminate should not be dummy. </dd>
 <dd>
@@ -2349,7 +2350,7 @@ new_indeterminate should be of CONTINUOUS type. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminates</code> should not intersect with the program's old indeterminates or decision variables. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminates</code> should not intersect with the program's old decision variables. </dd>
 <dd>
 Each entry in new_indeterminates should not be dummy. </dd>
 <dd>
@@ -2380,7 +2381,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminates</code> should not intersect with the program's old indeterminates or decision variables. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd><code>new_indeterminates</code> should not intersect with the program's old decision variables. </dd>
 <dd>
 Each entry in new_indeterminates should not be dummy. </dd>
 <dd>
