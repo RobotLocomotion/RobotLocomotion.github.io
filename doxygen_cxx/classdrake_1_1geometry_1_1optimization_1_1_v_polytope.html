@@ -195,6 +195,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a2847efc4f87e996464d9d71159e27b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a7a2847efc4f87e996464d9d71159e27b">CalcVolume</a> () const</td></tr>
 <tr class="memdesc:a7a2847efc4f87e996464d9d71159e27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the volume of this V-Polytope.  <a href="#a7a2847efc4f87e996464d9d71159e27b">More...</a><br /></td></tr>
 <tr class="separator:a7a2847efc4f87e996464d9d71159e27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8852ee82563dc11b173a57ff08863820"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a8852ee82563dc11b173a57ff08863820">WriteObj</a> (const std::filesystem::path &amp;filename) const</td></tr>
+<tr class="memdesc:a8852ee82563dc11b173a57ff08863820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses qhull to compute the Delaunay triangulation and then writes the vertices and faces to <code>filename</code> in the Wavefront Obj format.  <a href="#a8852ee82563dc11b173a57ff08863820">More...</a><br /></td></tr>
+<tr class="separator:a8852ee82563dc11b173a57ff08863820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, <a class="el" href="classdouble.html">double</a> tol=0) const</td></tr>
 <tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the point is within <code>tol</code> of the set under the L∞-norm.  <a href="#aa7a4d7c125954dfde3c15238c852eeed">More...</a><br /></td></tr>
 <tr class="separator:aa7a4d7c125954dfde3c15238c852eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -671,6 +674,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the vertices in a d-by-n matrix, where d is the ambient dimension, and n is the number of vertices. </p>
+
+</div>
+</div>
+<a id="a8852ee82563dc11b173a57ff08863820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8852ee82563dc11b173a57ff08863820">&#9670;&nbsp;</a></span>WriteObj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WriteObj </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uses qhull to compute the Delaunay triangulation and then writes the vertices and faces to <code>filename</code> in the Wavefront Obj format. </p>
+<p>Note that the extension <code>.obj</code> is not automatically added to the <code>filename</code>. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 3. </dd></dl>
 
 </div>
 </div>

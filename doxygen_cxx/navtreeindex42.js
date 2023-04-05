@@ -1,5 +1,7 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#af752fbd39919690fbbe2110639682be7":[3,0,0,18,9,2],
+"classdrake_1_1trajectories_1_1_trajectory.html#afbddf9c56911aa6014253b5800fbff83":[3,0,0,18,9,7],
 "classes.html":[3,1],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,2,3,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX42 =
 "detail__common_8h.html":[4,0,0,8,9,1],
 "detail__composite__parse_8h.html":[4,0,0,8,9,2],
 "detail__dmd__parser_8h.html":[4,0,0,8,9,3],
-"detail__ignition_8h.html":[4,0,0,8,9,4],
-"detail__make__model__name_8h.html":[4,0,0,8,9,5],
-"detail__mesh__parser_8h.html":[4,0,0,8,9,6]
+"detail__ignition_8h.html":[4,0,0,8,9,4]
 };

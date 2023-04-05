@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a800af438924a7ab6a1eeaf5a58865f28":[3,0,0,9,78,33],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a82936d10a31afe3ae91f3025a39d3224":[3,0,0,9,78,47],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a82a43d32c412efc0f5e1b6ccc1b1cc17":[3,0,0,9,78,40],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a8509d6f7951179378f848f5f4cc37720":[3,0,0,9,78,9],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a87e215bccd4ce720b787f8b5195a7551":[3,0,0,9,78,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_tamsi_solver.html#a2fc28db7866462019de30bcc4b7c2508":[3,0,0,9,92,7],
 "classdrake_1_1multibody_1_1_tamsi_solver.html#a341180b650aeddec340037d98a48e2cf":[3,0,0,9,92,14],
 "classdrake_1_1multibody_1_1_tamsi_solver.html#a3b3d2411402ef5b22576cabf83a2072d":[3,0,0,9,92,1],
-"classdrake_1_1multibody_1_1_tamsi_solver.html#a4be23a2b9c291aeb80deed52cf42ba6d":[3,0,0,9,92,20],
-"classdrake_1_1multibody_1_1_tamsi_solver.html#a72660d4b210220b673a299c606992f00":[3,0,0,9,92,16],
-"classdrake_1_1multibody_1_1_tamsi_solver.html#a8c6125a41db505a5d9caf8b5d93c591e":[3,0,0,9,92,2]
+"classdrake_1_1multibody_1_1_tamsi_solver.html#a4be23a2b9c291aeb80deed52cf42ba6d":[3,0,0,9,92,20]
 };
