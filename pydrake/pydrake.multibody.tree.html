@@ -15865,6 +15865,36 @@ the documentation of this class for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.HollowSphereWithDensity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HollowSphereWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">area_density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.HollowSphereWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density thin hollow sphere B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">area_density</span></code>:</dt><dd><p>mass per unit area (kg/m²).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius in meters (the hollow sphere is regarded as an
+infinitesimally thin shell of uniform density).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B. Since B’s rotational
+inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo
+expressed in frame B is equal to M_BBo expressed in an arbitrary
+frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.IsNaN">
 <span class="sig-name descname"><span class="pre">IsNaN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.IsNaN" title="Permalink to this definition"></a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if any of the elements in this spatial inertia is NaN
@@ -15969,6 +15999,317 @@ expressed in.</p>
 computed about a new point Q.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidBoxWithDensity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidBoxWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidBoxWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid box B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lx</span></code>:</dt><dd><p>length of the box in the Bx direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ly</span></code>:</dt><dd><p>length of the box in the By direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lz</span></code>:</dt><dd><p>length of the box in the Bz direction (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCapsuleWithDensity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCapsuleWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid capsule B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
+of the capsule, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1; see UnitVector::SolidCapsule() for details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCubeWithDensity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCubeWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCubeWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cube B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>The length of each of the cube’s sides (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B. Since B’s rotational
+inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo
+expressed in frame B is equal to M_BBo expressed in an arbitrary
+frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCylinderWithDensity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCylinderWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cylinder B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithDensityAboutEnd() to calculate M_BBp_B, B’s
+spatial inertia about Bp (at the center of one of the cylinder’s
+circular ends).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCylinderWithDensityAboutEnd">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensityAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCylinderWithDensityAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
+an end-point Bp (Bp is at the center of one of the cylinder’s circular
+ends).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithDensity() to calculate M_BBcm_B, B’s spatial
+inertia about Bcm (B’s center of mass).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidEllipsoidWithDensity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidEllipsoidWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidEllipsoidWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid ellipsoid B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bx direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid By direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bz direction.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of a</strong><strong>, </strong><strong>b</strong><strong>, </strong><strong>c are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidSphereWithDensity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidSphereWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidSphereWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning
+B’s has an equal moment of inertia about any line passing through
+Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.ThinRodWithMass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRodWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.ThinRodWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density thin rod B about its
+center of mass Bcm.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the rod (units of kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the rod (units of meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the rod’s axial direction, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBcm_B</span></code>:</dt><dd><p>B’s spatial inertia about Bcm, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bcm is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bcm and is perpendicular to unit_vector. B has no (zero)
+rotational inertia about the line that passes through Bcm and is
+parallel to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ThinRodWithMassAboutEnd() to calculate M_BBp_B, B’s spatial
+inertia about Bp (one of the ends of rod B).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.ThinRodWithMassAboutEnd">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRodWithMassAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.ThinRodWithMassAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density thin rod B about one
+of its ends.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the rod (units of kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the rod (units of meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the rod’s axial direction, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector. B has no (zero)
+rotational inertia about the line that passes through Bp and is
+parallel to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ThinRodWithMass() to calculate M_BBcm_B, B’s spatial inertia about
+Bcm (B’s center of mass).</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -16157,6 +16498,36 @@ the documentation of this class for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.HollowSphereWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].HollowSphereWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HollowSphereWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">area_density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.HollowSphereWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density thin hollow sphere B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">area_density</span></code>:</dt><dd><p>mass per unit area (kg/m²).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius in meters (the hollow sphere is regarded as an
+infinitesimally thin shell of uniform density).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B. Since B’s rotational
+inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo
+expressed in frame B is equal to M_BBo expressed in an arbitrary
+frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.IsNaN">
 <span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].IsNaN"></span><span class="sig-name descname"><span class="pre">IsNaN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.IsNaN" title="Permalink to this definition"></a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if any of the elements in this spatial inertia is NaN
@@ -16261,6 +16632,317 @@ expressed in.</p>
 computed about a new point Q.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidBoxWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidBoxWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidBoxWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidBoxWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid box B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lx</span></code>:</dt><dd><p>length of the box in the Bx direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ly</span></code>:</dt><dd><p>length of the box in the By direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lz</span></code>:</dt><dd><p>length of the box in the Bz direction (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCapsuleWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCapsuleWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCapsuleWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid capsule B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
+of the capsule, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1; see UnitVector::SolidCapsule() for details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCubeWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCubeWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCubeWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCubeWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cube B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>The length of each of the cube’s sides (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B. Since B’s rotational
+inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo
+expressed in frame B is equal to M_BBo expressed in an arbitrary
+frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCylinderWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cylinder B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithDensityAboutEnd() to calculate M_BBp_B, B’s
+spatial inertia about Bp (at the center of one of the cylinder’s
+circular ends).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithDensityAboutEnd">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCylinderWithDensityAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensityAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithDensityAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
+an end-point Bp (Bp is at the center of one of the cylinder’s circular
+ends).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithDensity() to calculate M_BBcm_B, B’s spatial
+inertia about Bcm (B’s center of mass).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidEllipsoidWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidEllipsoidWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidEllipsoidWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidEllipsoidWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid ellipsoid B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bx direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid By direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bz direction.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of a</strong><strong>, </strong><strong>b</strong><strong>, </strong><strong>c are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidSphereWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidSphereWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidSphereWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidSphereWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning
+B’s has an equal moment of inertia about any line passing through
+Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.ThinRodWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].ThinRodWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRodWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.ThinRodWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density thin rod B about its
+center of mass Bcm.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the rod (units of kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the rod (units of meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the rod’s axial direction, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBcm_B</span></code>:</dt><dd><p>B’s spatial inertia about Bcm, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bcm is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bcm and is perpendicular to unit_vector. B has no (zero)
+rotational inertia about the line that passes through Bcm and is
+parallel to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ThinRodWithMassAboutEnd() to calculate M_BBp_B, B’s spatial
+inertia about Bp (one of the ends of rod B).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.ThinRodWithMassAboutEnd">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].ThinRodWithMassAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRodWithMassAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.ThinRodWithMassAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density thin rod B about one
+of its ends.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the rod (units of kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the rod (units of meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the rod’s axial direction, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector. B has no (zero)
+rotational inertia about the line that passes through Bp and is
+parallel to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ThinRodWithMass() to calculate M_BBcm_B, B’s spatial inertia about
+Bcm (B’s center of mass).</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -16443,6 +17125,36 @@ the documentation of this class for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.HollowSphereWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].HollowSphereWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HollowSphereWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">area_density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.HollowSphereWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density thin hollow sphere B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">area_density</span></code>:</dt><dd><p>mass per unit area (kg/m²).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius in meters (the hollow sphere is regarded as an
+infinitesimally thin shell of uniform density).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B. Since B’s rotational
+inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo
+expressed in frame B is equal to M_BBo expressed in an arbitrary
+frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.IsNaN">
 <span id="pydrake.multibody.tree.SpatialInertia_[Expression].IsNaN"></span><span class="sig-name descname"><span class="pre">IsNaN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.IsNaN" title="Permalink to this definition"></a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if any of the elements in this spatial inertia is NaN
@@ -16547,6 +17259,317 @@ expressed in.</p>
 computed about a new point Q.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidBoxWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidBoxWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidBoxWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidBoxWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid box B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lx</span></code>:</dt><dd><p>length of the box in the Bx direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ly</span></code>:</dt><dd><p>length of the box in the By direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lz</span></code>:</dt><dd><p>length of the box in the Bz direction (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCapsuleWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCapsuleWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCapsuleWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid capsule B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
+of the capsule, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1; see UnitVector::SolidCapsule() for details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCubeWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCubeWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCubeWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCubeWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cube B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>The length of each of the cube’s sides (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B. Since B’s rotational
+inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo
+expressed in frame B is equal to M_BBo expressed in an arbitrary
+frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCylinderWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cylinder B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithDensityAboutEnd() to calculate M_BBp_B, B’s
+spatial inertia about Bp (at the center of one of the cylinder’s
+circular ends).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithDensityAboutEnd">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCylinderWithDensityAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensityAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithDensityAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
+an end-point Bp (Bp is at the center of one of the cylinder’s circular
+ends).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithDensity() to calculate M_BBcm_B, B’s spatial
+inertia about Bcm (B’s center of mass).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidEllipsoidWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidEllipsoidWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidEllipsoidWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidEllipsoidWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid ellipsoid B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bx direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid By direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bz direction.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of a</strong><strong>, </strong><strong>b</strong><strong>, </strong><strong>c are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidSphereWithDensity">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidSphereWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidSphereWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidSphereWithDensity" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning
+B’s has an equal moment of inertia about any line passing through
+Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.ThinRodWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].ThinRodWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRodWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.ThinRodWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density thin rod B about its
+center of mass Bcm.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the rod (units of kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the rod (units of meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the rod’s axial direction, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBcm_B</span></code>:</dt><dd><p>B’s spatial inertia about Bcm, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bcm is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bcm and is perpendicular to unit_vector. B has no (zero)
+rotational inertia about the line that passes through Bcm and is
+parallel to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ThinRodWithMassAboutEnd() to calculate M_BBp_B, B’s spatial
+inertia about Bp (one of the ends of rod B).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.ThinRodWithMassAboutEnd">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].ThinRodWithMassAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRodWithMassAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.ThinRodWithMassAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density thin rod B about one
+of its ends.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the rod (units of kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the rod (units of meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the rod’s axial direction, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector. B has no (zero)
+rotational inertia about the line that passes through Bp and is
+parallel to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ThinRodWithMass() to calculate M_BBcm_B, B’s spatial inertia about
+Bcm (B’s center of mass).</p>
+</div>
 </dd></dl>
 
 </dd></dl>

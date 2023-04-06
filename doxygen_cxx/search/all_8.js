@@ -92,7 +92,7 @@ var searchData=
   ['hessiantype',['HessianType',['../classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9',1,'drake::solvers::QuadraticConstraint']]],
   ['high',['high',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060',1,'drake::systems::controllers::DynamicProgrammingOptions::PeriodicBoundaryCondition']]],
   ['hollowsphere',['HollowSphere',['../classdrake_1_1multibody_1_1_unit_inertia.html#a18e7babe23518ac81fc0a3c1c7157496',1,'drake::multibody::UnitInertia']]],
-  ['hollowspherewithdensity',['HollowSphereWithDensity',['../classdrake_1_1multibody_1_1_spatial_inertia.html#a4a7c7720d33cdfddd9ceb505c12bd389',1,'drake::multibody::SpatialInertia']]],
+  ['hollowspherewithdensity',['HollowSphereWithDensity',['../classdrake_1_1multibody_1_1_spatial_inertia.html#a3aed08f3640dbf9cdf37d714d12e8846',1,'drake::multibody::SpatialInertia']]],
   ['hopf_5fcoordinate_2eh',['hopf_coordinate.h',['../hopf__coordinate_8h.html',1,'']]],
   ['hopfcoordinatetoquaternion',['HopfCoordinateToQuaternion',['../namespacedrake_1_1math.html#a82d0a7052d08481add2e9086b98144dd',1,'drake::math']]],
   ['host',['host',['../structdrake_1_1geometry_1_1_meshcat_params.html#a696b1086704b0858059129b61eaa4a9f',1,'drake::geometry::MeshcatParams']]],
