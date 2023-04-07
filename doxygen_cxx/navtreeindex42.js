@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344":[3,0,0,18,9,10],
 "classdrake_1_1trajectories_1_1_trajectory.html#af752fbd39919690fbbe2110639682be7":[3,0,0,18,9,2],
 "classdrake_1_1trajectories_1_1_trajectory.html#afbddf9c56911aa6014253b5800fbff83":[3,0,0,18,9,7],
 "classes.html":[3,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "detail__collision__filter__group__resolver_8h.html":[4,0,0,8,9,0],
 "detail__common_8h.html":[4,0,0,8,9,1],
 "detail__composite__parse_8h.html":[4,0,0,8,9,2],
-"detail__dmd__parser_8h.html":[4,0,0,8,9,3],
-"detail__ignition_8h.html":[4,0,0,8,9,4]
+"detail__dmd__parser_8h.html":[4,0,0,8,9,3]
 };

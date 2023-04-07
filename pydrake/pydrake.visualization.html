@@ -460,14 +460,18 @@ a new instance. Useful in, e.g., Python notebooks.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.AddModels">
-<span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.AddModels" title="Permalink to this definition"></a></dt>
-<dd><p>Adds all models found in an input file.</p>
+<span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.AddModels" title="Permalink to this definition"></a></dt>
+<dd><p>Adds all models found in an input file (or url).</p>
 <p>This can be called multiple times, until the object is finalized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>filename</strong> – the name of a file containing one or more models.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – the name of a file containing one or more models.</p></li>
+<li><p><strong>url</strong> – the package:// URL containing one or more models.</p></li>
+</ul>
 </dd>
 </dl>
+<p>Exactly one of filename or url must be non-None.</p>
 </dd></dl>
 
 <dl class="py method">

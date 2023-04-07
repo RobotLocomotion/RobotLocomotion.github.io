@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"is__less__than__comparable_8h.html":[4,0,0,1,42],
 "is__memcpy__movable_8h.html":[4,0,0,1,4,6],
 "is__memcpy__movable_8h.html#a6f982e28ff81290b698e4d73e2fb6751":[4,0,0,1,4,6,0],
 "isoparametric__element_8h.html":[4,0,0,8,3,17],
@@ -163,6 +164,7 @@ var NAVTREEINDEX48 =
 "mathematical__program__result_8h.html":[4,0,0,11,29],
 "mathematical__program__result_8h.html#a014d2838aa5fae12520da4ebf46005ca":[4,0,0,11,29,1],
 "mathematical__program__result_8h.html#afd8c88bd4238ccc189020ed7d99b1792":[4,0,0,11,29,2],
+"matrix__block_8h.html":[4,0,0,8,2,7],
 "matrix__gain_8h.html":[4,0,0,12,6,13],
 "matrix__util_8h.html":[4,0,0,7,24],
 "matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b":[4,0,0,7,24,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "monostate__pybind_8h.html":[4,0,0,0,0,0,7],
 "monte__carlo_8h.html":[4,0,0,12,0,12],
 "monte__carlo_8h.html#a093baffca68144967ca38da942917459":[4,0,0,12,0,12,2],
-"monte__carlo_8h.html#a2df45efdced327ad20c26403412fb37f":[4,0,0,12,0,12,6],
-"monte__carlo_8h.html#acba2b2630b11f7f987c6924bcdba3c8e":[4,0,0,12,0,12,1],
-"monte__carlo_8h.html#acbf0cc4b5c52b3cb6a6c113450610e3b":[4,0,0,12,0,12,5]
+"monte__carlo_8h.html#a2df45efdced327ad20c26403412fb37f":[4,0,0,12,0,12,6]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"structdrake_1_1is__eigen__vector__of.html":[3,0,0,38],
+"structdrake_1_1lcm_1_1_drake_lcm_params.html":[3,0,0,5,4],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a2afa576ab76689448a15ea95d2d5a531":[3,0,0,5,4,3],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a3088c7d186c65efc9139b0d9d5772c4a":[3,0,0,5,4,2],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,5,4,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,2,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,2,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html":[3,0,0,9,4,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a4e550ebb9a213be8a3939f0c6ad4816b":[3,0,0,9,4,3,2],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,3,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,3,5]
+"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a4e550ebb9a213be8a3939f0c6ad4816b":[3,0,0,9,4,3,2]
 };

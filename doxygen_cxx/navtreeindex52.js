@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"scope__exit_8h.html":[4,0,0,1,53],
+"scoped__name_8h.html":[4,0,0,8,14,43],
 "scoped__names_8h.html":[4,0,0,8,9,24],
 "scoped__names_8h.html#a621e8533a6e2dae1933984297afb01ff":[4,0,0,8,9,24,6],
 "scoped__names_8h.html#a94b7f029e6229b3479146dd8550aacfd":[4,0,0,8,9,24,1],
@@ -122,7 +124,7 @@ var NAVTREEINDEX52 =
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,46],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,14,47],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,54],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,10],
+"sparse__linear__operator_8h.html":[4,0,0,8,2,11],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "stochastic_8h.html#ae3768479f5bd6420a9b9f347c400cf80":[4,0,0,1,2,1,13],
 "stochastic_8h.html#aefc9cc6990399b1828a73e50c2d360ee":[4,0,0,1,2,1,23],
 "stochastic_8h.html#af9a9a11adf4beb57a9f7b959e190ed3d":[4,0,0,1,2,1,16],
-"stochastic__systems_8h.html":[4,0,0,12,11],
-"string__view__map__key_8h.html":[4,0,0,8,14,49],
-"structdrake_1_1_delegating_hasher.html":[3,0,0,23]
+"stochastic__systems_8h.html":[4,0,0,12,11]
 };
