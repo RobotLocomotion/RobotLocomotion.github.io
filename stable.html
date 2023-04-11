@@ -351,6 +351,12 @@ on transitive dependencies to bring them in.</li>
   <li>In C++, do not depend on the exact signature of Drake functions, as we may
 add new, defaulted arguments without prior notice (i.e., do not take the
 address of any Drake function, or assign it to a <code class="language-plaintext highlighter-rouge">std::function</code>).</li>
+  <li>In C++, do not depend on the exact order of <code class="language-plaintext highlighter-rouge">struct</code> fields.
+While the <em>relative</em> order of struct fields is guaranteed, new member fields
+might be inserted between existing fields. Consequently, when using
+<a href="https://en.cppreference.com/w/cpp/language/aggregate_initialization">aggregate initialization</a>
+always use designated initializers (i.e., field names) when referring to
+struct fields.</li>
 </ul>
 
 <h3 id="model-files">Model files</h3>
