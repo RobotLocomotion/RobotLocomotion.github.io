@@ -406,29 +406,28 @@ and Context&lt;AutoDiffXd&gt;, then use this constructor.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsIntegrator</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
-<p>A LeafSystem which uses DoDifferentialInverseKinematics to produce
-joint position commands.</p>
-<p>Rather than calling DoDifferentialInverseKinematics on the current
-measured positions of the robot, this System maintains its own
-internal state and integrates successive velocity commands open loop.
-If DoDifferentialInverseKinematics returns kNoSolution, then the
-integrator will hold the integrated position (with zero velocity); on
-kStuck the integration will continue (though “kStuck” implies that the
-achieved spatial velocity will be much smaller than what was
-commanded).</p>
-<p>The optional boolean (abstract-)valued input port <code class="docutils literal notranslate"><span class="pre">use_robot_state</span></code>
-can be used to reset the integrated state to the value obtained from
-the <code class="docutils literal notranslate"><span class="pre">robot_state</span></code> input (which must also be connected). Note: Using
+<p>A LeafSystem that integrates successive calls to
+DoDifferentialInverseKinematics (which produces joint velocity
+commands) to produce joint position commands.</p>
+<p>In each evaluation, DoDifferentialInverseKinematics uses a
+linearization of the robot kinematics around a nominal position. The
+nominal position is obtained by either: 1) If the optional boolean
+(abstract-)valued input port <code class="docutils literal notranslate"><span class="pre">use_robot_state</span></code> is connected and set
+to <code class="docutils literal notranslate"><span class="pre">True</span></code>, then differential IK is computed using the
+<code class="docutils literal notranslate"><span class="pre">robot_state</span></code> input port (which must also be connected). Note: Using
 measured joint positions in a feedback loop can lead to undamped
 oscillations in the redundant joints; we hope to resolve this and are
-tracking it in #9773.</p>
-<p>Note: It is highly recommended that the user calls <code class="docutils literal notranslate"><span class="pre">SetPosition()</span></code>
-once to initialize the position commands to match the initial
-positions of the robot. Alternatively, one can connect the optional
-<code class="docutils literal notranslate"><span class="pre">robot_state</span></code> input port – which is only used at Initialization,
-and simply sets the positions to the positions on this input port (the
-port accepts the state vector with positions and velocities for easy
-of use with MultibodyPlant, but only the positions are used).</p>
+tracking it in #9773. 2) Otherwise, differential IK is computed using
+this System’s internal state, representing the current joint position
+command. This is equivalent to integrating (open loop) the velocity
+commands obtained from the differential IK solutions.</p>
+<p>It is also important to set the initial state of the integrator: 1) If
+the <code class="docutils literal notranslate"><span class="pre">robot_state</span></code> port is connected, then the initial state of the
+integrator is set to match the positions from this port (the port
+accepts the state vector with positions and velocities for easy of use
+with MultibodyPlant, but only the positions are used). 2) Otherwise,
+it is highly recommended that the user call <code class="docutils literal notranslate"><span class="pre">SetPosition()</span></code> to
+initialize the integrator state.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">X_WE_desired&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">robot_state (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">use_robot_state (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DifferentialInverseKinematicsIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; joint_positions</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_only_when_result_state_changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.__init__" title="Permalink to this definition"></a></dt>

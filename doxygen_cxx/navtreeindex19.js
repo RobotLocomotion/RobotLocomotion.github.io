@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html":[3,0,0,10,0,1],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a21cd0e435664c94c6517641c7a98bc7b":[3,0,0,10,0,1,14],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a25cacfcf39a84de7f086b4c9c14ae1e0":[3,0,0,10,0,1,2],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a34c1c7a2567e575213c31e2ef282fded":[3,0,0,10,0,1,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,21,6],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07":[1,1,0,21,11],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,21,7],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ad27bd6e013f3fee7cbf92d25f00b5bd7":[1,1,0,21,2],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ae3f1c577ee698959014f42a2937d6730":[1,1,0,21,4]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ad27bd6e013f3fee7cbf92d25f00b5bd7":[1,1,0,21,2]
 };

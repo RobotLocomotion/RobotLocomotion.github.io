@@ -16026,6 +16026,30 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidBoxWithMass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidBoxWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidBoxWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid box B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid box (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lx</span></code>:</dt><dd><p>length of the box in the Bx direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ly</span></code>:</dt><dd><p>length of the box in the By direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lz</span></code>:</dt><dd><p>length of the box in the Bz direction (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCapsuleWithDensity">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCapsuleWithDensity" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a spatial inertia for a uniform density solid capsule B about
@@ -16659,6 +16683,30 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidBoxWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidBoxWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidBoxWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidBoxWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid box B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid box (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lx</span></code>:</dt><dd><p>length of the box in the Bx direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ly</span></code>:</dt><dd><p>length of the box in the By direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lz</span></code>:</dt><dd><p>length of the box in the Bz direction (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCapsuleWithDensity">
 <span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCapsuleWithDensity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCapsuleWithDensity" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a spatial inertia for a uniform density solid capsule B about
@@ -17268,6 +17316,30 @@ computed about a new point Q.</p>
 geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lx</span></code>:</dt><dd><p>length of the box in the Bx direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ly</span></code>:</dt><dd><p>length of the box in the By direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lz</span></code>:</dt><dd><p>length of the box in the Bz direction (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidBoxWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidBoxWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidBoxWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidBoxWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid box B about its
+geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid box (kg).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lx</span></code>:</dt><dd><p>length of the box in the Bx direction (meters).</p>
 </dd>

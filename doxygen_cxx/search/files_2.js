@@ -38,6 +38,7 @@ var searchData=
   ['compass_5fgait_2eh',['compass_gait.h',['../compass__gait_8h.html',1,'']]],
   ['compass_5fgait_5fgeometry_2eh',['compass_gait_geometry.h',['../compass__gait__geometry_8h.html',1,'']]],
   ['compliant_5fcontact_5fmanager_2eh',['compliant_contact_manager.h',['../compliant__contact__manager_8h.html',1,'']]],
+  ['composite_5ftrajectory_2eh',['composite_trajectory.h',['../composite__trajectory_8h.html',1,'']]],
   ['compute_5fnumerical_5fgradient_2eh',['compute_numerical_gradient.h',['../compute__numerical__gradient_8h.html',1,'']]],
   ['compute_5ftorque_2eh',['compute_torque.h',['../compute__torque_8h.html',1,'']]],
   ['cond_2eh',['cond.h',['../cond_8h.html',1,'']]],

@@ -1062,6 +1062,7 @@ var hierarchy =
       [ "BsplineTrajectory< T >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ],
       [ "PathParameterizedTrajectory< T >", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html", null ],
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
+        [ "CompositeTrajectory< T >", "classdrake_1_1trajectories_1_1_composite_trajectory.html", null ],
         [ "ExponentialPlusPiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
         [ "PiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html", null ],
         [ "PiecewisePose< T >", "classdrake_1_1trajectories_1_1_piecewise_pose.html", null ],

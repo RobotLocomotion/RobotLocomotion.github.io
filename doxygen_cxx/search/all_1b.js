@@ -23,6 +23,7 @@ var searchData=
   ['_7ecominpolyhedronconstraint',['~ComInPolyhedronConstraint',['../classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a425cea2dae1c28a29b4cfa3836620111',1,'drake::multibody::ComInPolyhedronConstraint']]],
   ['_7ecompassgaitgeometry',['~CompassGaitGeometry',['../classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#a161d9f4393a6ee9861c4a4bb03261ba2',1,'drake::examples::compass_gait::CompassGaitGeometry']]],
   ['_7ecompositeeventcollection',['~CompositeEventCollection',['../classdrake_1_1systems_1_1_composite_event_collection.html#a34392f564c5b95506f6dd4e80185c21b',1,'drake::systems::CompositeEventCollection']]],
+  ['_7ecompositetrajectory',['~CompositeTrajectory',['../classdrake_1_1trajectories_1_1_composite_trajectory.html#a173c46945d90f6749a81f04d1f5f317c',1,'drake::trajectories::CompositeTrajectory']]],
   ['_7ecompositionconstraint',['~ComPositionConstraint',['../classdrake_1_1multibody_1_1_com_position_constraint.html#a5d7ab7aec5f45b419cd36f1f5a9d5b02',1,'drake::multibody::ComPositionConstraint']]],
   ['_7econstantvectorsource',['~ConstantVectorSource',['../classdrake_1_1systems_1_1_constant_vector_source.html#aad22ea8cdea329e73d5405d070f5037f',1,'drake::systems::ConstantVectorSource']]],
   ['_7econtactvisualizer',['~ContactVisualizer',['../classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a466314c408fa5362f2f1cedcb81365eb',1,'drake::multibody::meshcat::ContactVisualizer']]],

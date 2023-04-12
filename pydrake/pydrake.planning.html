@@ -1581,8 +1581,10 @@ disconnected (if they are disconnected in <code class="docutils literal notransl
 set to their current values (if they are connected/fixed in
 <code class="docutils literal notranslate"><span class="pre">context)</span></code>.</p>
 </dd>
+<dt><em>Default:</em> kUseFirstInputIfItExists.</dt><dd><p>$Raises:</p>
+</dd>
 </dl>
-<p><em>Default:</em> kUseFirstInputIfItExists.</p>
+<p>RuntimeError if <code class="docutils literal notranslate"><span class="pre">context.has_only_discrete_state()</span> <span class="pre">==</span> <span class="pre">false</span></code>.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.planning.DirectTranscription, system: pydrake.systems.framework.System, context: pydrake.systems.framework.Context, num_time_samples: int, fixed_timestep: pydrake.planning.DirectTranscription.TimeStep, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;) -&gt; None</p></li>
 </ol>
@@ -1610,8 +1612,10 @@ disconnected (if they are disconnected in <code class="docutils literal notransl
 set to their current values (if they are connected/fixed in
 <code class="docutils literal notranslate"><span class="pre">context)</span></code>.</p>
 </dd>
+<dt><em>Default:</em> kUseFirstInputIfItExists.</dt><dd><p>$Raises:</p>
+</dd>
 </dl>
-<p><em>Default:</em> kUseFirstInputIfItExists.</p>
+<p>RuntimeError if <code class="docutils literal notranslate"><span class="pre">context.has_only_continuous_state()</span> <span class="pre">==</span> <span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="py class">

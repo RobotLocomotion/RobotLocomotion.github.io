@@ -456,7 +456,13 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">context</td><td>Required to describe any parameters of the system. The values of the state in this context do not have any effect. This context will also be "cloned" by the optimization; changes to the context after calling this method will NOT impact the trajectory optimization. </td></tr>
     <tr><td class="paramname">num_time_samples</td><td>The number of breakpoints in the trajectory. </td></tr>
     <tr><td class="paramname">input_port_index</td><td>A valid input port index or valid InputPortSelection for <code>system</code>. All other inputs on the system will be left disconnected (if they are disconnected in <code>context</code>) or will be set to their current values (if they are connected/fixed in <code>context</code>). <br />
- <em>Default:</em> kUseFirstInputIfItExists. </td></tr>
+ <em>Default:</em> kUseFirstInputIfItExists.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>context.has_only_discrete_state() == false</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -509,7 +515,13 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">context</td><td>Required to describe any parameters of the system. The values of the state in this context do not have any effect. This context will also be "cloned" by the optimization; changes to the context after calling this method will NOT impact the trajectory optimization. </td></tr>
     <tr><td class="paramname">num_time_samples</td><td>The number of breakpoints in the trajectory. </td></tr>
     <tr><td class="paramname">input_port_index</td><td>A valid input port index or valid InputPortSelection for <code>system</code>. All other inputs on the system will be left disconnected (if they are disconnected in <code>context</code>) or will be set to their current values (if they are connected/fixed in <code>context</code>). <br />
- <em>Default:</em> kUseFirstInputIfItExists. </td></tr>
+ <em>Default:</em> kUseFirstInputIfItExists.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>context.has_only_discrete_state() == false</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -569,7 +581,13 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">num_time_samples</td><td>The number of breakpoints in the trajectory. </td></tr>
     <tr><td class="paramname">fixed_timestep</td><td>The spacing between sample times. </td></tr>
     <tr><td class="paramname">input_port_index</td><td>A valid input port index or valid InputPortSelection for <code>system</code>. All other inputs on the system will be left disconnected (if they are disconnected in <code>context</code>) or will be set to their current values (if they are connected/fixed in <code>context</code>). <br />
- <em>Default:</em> kUseFirstInputIfItExists. </td></tr>
+ <em>Default:</em> kUseFirstInputIfItExists.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>context.has_only_continuous_state() == false</code>. </td></tr>
   </table>
   </dd>
 </dl>

@@ -184,6 +184,7 @@ var group__systems =
       [ "GetMutableVelocities", "classdrake_1_1multibody_1_1_multibody_plant.html#a7fe7c6fe93604e71b9d277b76fab5932", null ],
       [ "GetMutableVelocities", "classdrake_1_1multibody_1_1_multibody_plant.html#a25c6efdadb0dd091590e9474d9039f64", null ],
       [ "GetPositionLowerLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#ada1473641a4389162ee68d6468a4e664", null ],
+      [ "GetPositionNames", "classdrake_1_1multibody_1_1_multibody_plant.html#af67f820bae879dd7f8710b728a2def2e", null ],
       [ "GetPositions", "classdrake_1_1multibody_1_1_multibody_plant.html#a4b48791a474f442ccb628dc9b76a24b9", null ],
       [ "GetPositions", "classdrake_1_1multibody_1_1_multibody_plant.html#abe2a085e96321a9d821551c479aed347", null ],
       [ "GetPositions", "classdrake_1_1multibody_1_1_multibody_plant.html#a89e6e2bebbf492386bdfabafd7c883cb", null ],
