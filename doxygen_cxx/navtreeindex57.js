@@ -1,5 +1,13 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1visualization_1_1_visualization_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,19,0,0],
+"structdrake_1_1visualization_1_1_visualization_config.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,19,0,3],
+"structdrake_1_1visualization_1_1_visualization_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,19,0,6],
+"structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7":[3,0,0,19,0,2],
+"structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995":[3,0,0,19,0,7],
+"structdrake_1_1yaml_1_1_load_yaml_options.html":[3,0,0,20,0],
+"structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,20,0,3],
+"structdrake_1_1yaml_1_1_load_yaml_options.html#a41075284801afdfd502cd4c5f73f363d":[3,0,0,20,0,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[3,0,0,20,0,1],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,20,0,2],
 "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,37],
@@ -241,13 +249,5 @@ var NAVTREEINDEX57 =
 "type__pack_8h.html":[4,0,0,0,0,0,11],
 "type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76":[4,0,0,0,0,0,11,9],
 "type__pack_8h.html#a23e81e154cbda13ce43322ccfcedb7ed":[4,0,0,0,0,0,11,11],
-"type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,0,11,10],
-"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e":[4,0,0,0,0,0,11,12],
-"type__pack_8h.html#aca2ad496fcfd4aab65f4f9eaf50759cb":[4,0,0,0,0,0,11,8],
-"type__safe__index_8h.html":[4,0,0,1,59],
-"type__safe__index_8h.html#a1bc6fee0f84a9d283d208d778fcefe34":[4,0,0,1,59,6],
-"type__safe__index_8h.html#a2400c6e4da6e035486720985558890cb":[4,0,0,1,59,7],
-"type__safe__index_8h.html#a4a46686cf3db66aa614a6f5abb705765":[4,0,0,1,59,3],
-"type__safe__index_8h.html#a9f40e086a1c732bfe51b4938754c3e36":[4,0,0,1,59,5],
-"type__safe__index_8h.html#ac468f00a772f27cad9dacff36a83e443":[4,0,0,1,59,4]
+"type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,0,11,10]
 };

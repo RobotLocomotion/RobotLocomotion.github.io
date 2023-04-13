@@ -1,5 +1,13 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a643ccb05dea44d65aa2d91b422f20f12":[1,1,0,21,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f":[1,1,0,21,12],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a6ce6c2bf02e868cb54161dd4d8a26e29":[1,1,0,21,1],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a809bcc60ce15f0470a72646d4323643c":[1,1,0,21,5],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,21,6],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07":[1,1,0,21,11],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,21,7],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ad27bd6e013f3fee7cbf92d25f00b5bd7":[1,1,0,21,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ae3f1c577ee698959014f42a2937d6730":[1,1,0,21,4],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html":[1,4,2,1,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a167c6e03556d42ea16011cb93061104e":[1,4,2,1,2,9],
@@ -241,13 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1schema_1_1_transform.html#ad1d6819c47fe05f7712592f02c95ca00":[3,0,0,13,7,8],
 "classdrake_1_1schema_1_1_transform.html#adb5885c69082fc10bacf2919c7f6a8be":[3,0,0,13,7,0],
 "classdrake_1_1schema_1_1_transform.html#ae4b25dc5adde3aa9969caffd3525b661":[3,0,0,13,7,1],
-"classdrake_1_1schema_1_1_uniform.html":[3,0,0,13,8],
-"classdrake_1_1schema_1_1_uniform.html#a0b0ede69e8156eb97acc579b88e883de":[3,0,0,13,8,11],
-"classdrake_1_1schema_1_1_uniform.html#a0b76bedc8aecfd5111207964a8bcf5d4":[3,0,0,13,8,2],
-"classdrake_1_1schema_1_1_uniform.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,13,8,5],
-"classdrake_1_1schema_1_1_uniform.html#a49dae1193d3c056d1b5022e1890e269f":[3,0,0,13,8,0],
-"classdrake_1_1schema_1_1_uniform.html#a4ee1c36b5f116cb4dc51db62f0c7991f":[3,0,0,13,8,7],
-"classdrake_1_1schema_1_1_uniform.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,13,8,8],
-"classdrake_1_1schema_1_1_uniform.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,8,9],
-"classdrake_1_1schema_1_1_uniform.html#aa77a831a9989407ffea0304416c7ae5c":[3,0,0,13,8,10]
+"classdrake_1_1schema_1_1_uniform.html":[3,0,0,13,8]
 };

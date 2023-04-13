@@ -295,6 +295,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c4f444418950720dd9b4eef715e40e0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a2c4f444418950720dd9b4eef715e40e0">SolidCubeWithDensity</a> (const T &amp;density, const T &amp;length)</td></tr>
 <tr class="memdesc:a2c4f444418950720dd9b4eef715e40e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid cube B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#a2c4f444418950720dd9b4eef715e40e0">More...</a><br /></td></tr>
 <tr class="separator:a2c4f444418950720dd9b4eef715e40e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae074df2bf4a9f6f526322361379431f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aae074df2bf4a9f6f526322361379431f">SolidCubeWithMass</a> (const T &amp;mass, const T &amp;length)</td></tr>
+<tr class="memdesc:aae074df2bf4a9f6f526322361379431f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid cube B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#aae074df2bf4a9f6f526322361379431f">More...</a><br /></td></tr>
+<tr class="separator:aae074df2bf4a9f6f526322361379431f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c66cd195387d537311d9c6d444ab62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ac1c66cd195387d537311d9c6d444ab62">SolidCapsuleWithDensity</a> (const T &amp;density, const T &amp;radius, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
 <tr class="memdesc:ac1c66cd195387d537311d9c6d444ab62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid capsule B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#ac1c66cd195387d537311d9c6d444ab62">More...</a><br /></td></tr>
 <tr class="separator:ac1c66cd195387d537311d9c6d444ab62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1413,6 +1416,64 @@ Related Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">density</td><td>mass per volume (kg/m³). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>The length of each of the cube's sides (meters). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BBo_B</td><td>B's spatial inertia about Bo, expressed in B. Since B's rotational inertia is triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in frame B is equal to M_BBo expressed in an arbitrary frame E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is triaxially symmetric, meaning B has an equal moment of inertia about any line passing through Bo. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if length is zero or negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aae074df2bf4a9f6f526322361379431f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae074df2bf4a9f6f526322361379431f">&#9670;&nbsp;</a></span>SolidCubeWithMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; SolidCubeWithMass </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>mass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a spatial inertia for a uniform density solid cube B about its geometric center Bo (which is coincident with B's center of mass Bcm). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>mass of the solid cube (kg). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>The length of each of the cube's sides (meters). </td></tr>
   </table>
   </dd>

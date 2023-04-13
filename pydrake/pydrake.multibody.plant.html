@@ -3939,6 +3939,42 @@ unbounded or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetActuatorNames">
+<span class="sig-name descname"><span class="pre">GetActuatorNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetActuatorNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+actuation vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_actuator_name}</span></code>, but the prefix may
+optionally be withheld using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+actuation vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_actuator_name}</span></code>, but the prefix may
+optionally be withheld using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetBodiesKinematicallyAffectedBy">
 <span class="sig-name descname"><span class="pre">GetBodiesKinematicallyAffectedBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetBodiesKinematicallyAffectedBy" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all bodies whose kinematics are transitively affected by the
@@ -4443,6 +4479,56 @@ limits will be -infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetPositionNames">
+<span class="sig-name descname"><span class="pre">GetPositionNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetPositionNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+position vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+position vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetPositions">
 <span class="sig-name descname"><span class="pre">GetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetPositions" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -4631,6 +4717,44 @@ with a given specified name.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetStateNames">
+<span class="sig-name descname"><span class="pre">GetStateNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetStateNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+multibody state vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix</span> <span class="pre">|</span>
+<span class="pre">joint_velocity_suffix}</span></code>, but the prefix may optionally be withheld
+using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+multibody state vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix</span> <span class="pre">|</span>
+<span class="pre">joint_velocity_suffix}</span></code>, but the prefix may optionally be withheld
+using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetTopologyGraphvizString">
 <span class="sig-name descname"><span class="pre">GetTopologyGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetTopologyGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -4756,6 +4880,56 @@ limits will be -infinity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetVelocityNames">
+<span class="sig-name descname"><span class="pre">GetVelocityNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetVelocityNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+velocity vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_velocity_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+velocity vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_velocity_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -8193,6 +8367,42 @@ unbounded or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetActuatorNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetActuatorNames"></span><span class="sig-name descname"><span class="pre">GetActuatorNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetActuatorNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+actuation vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_actuator_name}</span></code>, but the prefix may
+optionally be withheld using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+actuation vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_actuator_name}</span></code>, but the prefix may
+optionally be withheld using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetBodiesKinematicallyAffectedBy">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetBodiesKinematicallyAffectedBy"></span><span class="sig-name descname"><span class="pre">GetBodiesKinematicallyAffectedBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetBodiesKinematicallyAffectedBy" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all bodies whose kinematics are transitively affected by the
@@ -8697,6 +8907,56 @@ limits will be -infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetPositionNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetPositionNames"></span><span class="sig-name descname"><span class="pre">GetPositionNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetPositionNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+position vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+position vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetPositions">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetPositions"></span><span class="sig-name descname"><span class="pre">GetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetPositions" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -8885,6 +9145,44 @@ with a given specified name.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetStateNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetStateNames"></span><span class="sig-name descname"><span class="pre">GetStateNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetStateNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+multibody state vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix</span> <span class="pre">|</span>
+<span class="pre">joint_velocity_suffix}</span></code>, but the prefix may optionally be withheld
+using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+multibody state vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix</span> <span class="pre">|</span>
+<span class="pre">joint_velocity_suffix}</span></code>, but the prefix may optionally be withheld
+using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetTopologyGraphvizString">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetTopologyGraphvizString"></span><span class="sig-name descname"><span class="pre">GetTopologyGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetTopologyGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -9010,6 +9308,56 @@ limits will be -infinity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetVelocityNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetVelocityNames"></span><span class="sig-name descname"><span class="pre">GetVelocityNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetVelocityNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+velocity vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_velocity_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+velocity vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_velocity_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -12441,6 +12789,42 @@ unbounded or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetActuatorNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetActuatorNames"></span><span class="sig-name descname"><span class="pre">GetActuatorNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetActuatorNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+actuation vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_actuator_name}</span></code>, but the prefix may
+optionally be withheld using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+actuation vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_actuator_name}</span></code>, but the prefix may
+optionally be withheld using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodiesKinematicallyAffectedBy">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetBodiesKinematicallyAffectedBy"></span><span class="sig-name descname"><span class="pre">GetBodiesKinematicallyAffectedBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodiesKinematicallyAffectedBy" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all bodies whose kinematics are transitively affected by the
@@ -12945,6 +13329,56 @@ limits will be -infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetPositionNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetPositionNames"></span><span class="sig-name descname"><span class="pre">GetPositionNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetPositionNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+position vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+position vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetPositions">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetPositions"></span><span class="sig-name descname"><span class="pre">GetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetPositions" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -13133,6 +13567,44 @@ with a given specified name.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetStateNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetStateNames"></span><span class="sig-name descname"><span class="pre">GetStateNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetStateNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+multibody state vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix</span> <span class="pre">|</span>
+<span class="pre">joint_velocity_suffix}</span></code>, but the prefix may optionally be withheld
+using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+multibody state vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_position_suffix</span> <span class="pre">|</span>
+<span class="pre">joint_velocity_suffix}</span></code>, but the prefix may optionally be withheld
+using <code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetTopologyGraphvizString">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetTopologyGraphvizString"></span><span class="sig-name descname"><span class="pre">GetTopologyGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetTopologyGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -13258,6 +13730,56 @@ limits will be -infinity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetVelocityNames">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetVelocityNames"></span><span class="sig-name descname"><span class="pre">GetVelocityNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetVelocityNames" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+velocity vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_velocity_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique if
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+</ol>
+<p>Returns a list of string names corresponding to each element of the
+velocity vector. These strings take the form
+<code class="docutils literal notranslate"><span class="pre">{model_instance_name}_{joint_name}_{joint_velocity_suffix}</span></code>, but
+the prefix and suffix may optionally be withheld using
+<code class="docutils literal notranslate"><span class="pre">add_model_instance_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">always_add_suffix</span></code>:</dt><dd><p>(optional). If true, then the suffix is always added. If false,
+then the suffix is only added for joints that have more than one
+position (in this case, not adding would lead to ambiguity).</p>
+</dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance` is invalid</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

@@ -554,9 +554,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71998d3f5e8bc65b742c03235c805fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a71998d3f5e8bc65b742c03235c805fd9">SetDefaultPositions</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_instance)</td></tr>
 <tr class="memdesc:a71998d3f5e8bc65b742c03235c805fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default positions for the model instance.  <a href="#a71998d3f5e8bc65b742c03235c805fd9">More...</a><br /></td></tr>
 <tr class="separator:a71998d3f5e8bc65b742c03235c805fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af67f820bae879dd7f8710b728a2def2e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af67f820bae879dd7f8710b728a2def2e">GetPositionNames</a> (std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; model_instance=std::nullopt, std::optional&lt; bool &gt; add_model_instance_prefix=std::nullopt, bool always_add_suffix=true) const</td></tr>
-<tr class="memdesc:af67f820bae879dd7f8710b728a2def2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the position vector.  <a href="#af67f820bae879dd7f8710b728a2def2e">More...</a><br /></td></tr>
-<tr class="separator:af67f820bae879dd7f8710b728a2def2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800453060fc1f94455dff6c07dfde2d1"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a800453060fc1f94455dff6c07dfde2d1">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a800453060fc1f94455dff6c07dfde2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const vector reference to the generalized velocities v in a given Context.  <a href="#a800453060fc1f94455dff6c07dfde2d1">More...</a><br /></td></tr>
 <tr class="separator:a800453060fc1f94455dff6c07dfde2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -587,6 +584,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a470c99c41ab31927ae50c9996786bd10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10">SetRandomState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const override</td></tr>
 <tr class="memdesc:a470c99c41ab31927ae50c9996786bd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns random values to all elements of the state, by drawing samples independently for each joint/free body (coming soon: and then solving a mathematical program to "project" these samples onto the registered system constraints).  <a href="#a470c99c41ab31927ae50c9996786bd10">More...</a><br /></td></tr>
 <tr class="separator:a470c99c41ab31927ae50c9996786bd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72094f8e219283c267a584b878718b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af72094f8e219283c267a584b878718b5">GetPositionNames</a> (bool add_model_instance_prefix=true, bool always_add_suffix=true) const</td></tr>
+<tr class="memdesc:af72094f8e219283c267a584b878718b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the position vector.  <a href="#af72094f8e219283c267a584b878718b5">More...</a><br /></td></tr>
+<tr class="separator:af72094f8e219283c267a584b878718b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304b3a433f88b36c178f55b55432b6c7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a304b3a433f88b36c178f55b55432b6c7">GetPositionNames</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, bool add_model_instance_prefix=false, bool always_add_suffix=true) const</td></tr>
+<tr class="memdesc:a304b3a433f88b36c178f55b55432b6c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the position vector.  <a href="#a304b3a433f88b36c178f55b55432b6c7">More...</a><br /></td></tr>
+<tr class="separator:a304b3a433f88b36c178f55b55432b6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ebd809e4e1c844cde445a28ac41878"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ebd809e4e1c844cde445a28ac41878">GetVelocityNames</a> (bool add_model_instance_prefix=true, bool always_add_suffix=true) const</td></tr>
+<tr class="memdesc:a29ebd809e4e1c844cde445a28ac41878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the velocity vector.  <a href="#a29ebd809e4e1c844cde445a28ac41878">More...</a><br /></td></tr>
+<tr class="separator:a29ebd809e4e1c844cde445a28ac41878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675e84377c1bd3a1afa97df0de0a01a5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a675e84377c1bd3a1afa97df0de0a01a5">GetVelocityNames</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, bool add_model_instance_prefix=false, bool always_add_suffix=true) const</td></tr>
+<tr class="memdesc:a675e84377c1bd3a1afa97df0de0a01a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the velocity vector.  <a href="#a675e84377c1bd3a1afa97df0de0a01a5">More...</a><br /></td></tr>
+<tr class="separator:a675e84377c1bd3a1afa97df0de0a01a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a5af92839fb703ff1c299ddbadce04"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a46a5af92839fb703ff1c299ddbadce04">GetStateNames</a> (bool add_model_instance_prefix=true) const</td></tr>
+<tr class="memdesc:a46a5af92839fb703ff1c299ddbadce04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the multibody state vector.  <a href="#a46a5af92839fb703ff1c299ddbadce04">More...</a><br /></td></tr>
+<tr class="separator:a46a5af92839fb703ff1c299ddbadce04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7669fb844c4e7262d7f9c9815c29775"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab7669fb844c4e7262d7f9c9815c29775">GetStateNames</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, bool add_model_instance_prefix=false) const</td></tr>
+<tr class="memdesc:ab7669fb844c4e7262d7f9c9815c29775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the multibody state vector.  <a href="#ab7669fb844c4e7262d7f9c9815c29775">More...</a><br /></td></tr>
+<tr class="separator:ab7669fb844c4e7262d7f9c9815c29775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fff80ec38424b0155e213e48859c6b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a08fff80ec38424b0155e213e48859c6b">GetActuatorNames</a> (bool add_model_instance_prefix=true) const</td></tr>
+<tr class="memdesc:a08fff80ec38424b0155e213e48859c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the actuation vector.  <a href="#a08fff80ec38424b0155e213e48859c6b">More...</a><br /></td></tr>
+<tr class="separator:a08fff80ec38424b0155e213e48859c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb396b6f45d853d41d0e0896dd36c09d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acb396b6f45d853d41d0e0896dd36c09d">GetActuatorNames</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, bool add_model_instance_prefix=false) const</td></tr>
+<tr class="memdesc:acb396b6f45d853d41d0e0896dd36c09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the actuation vector.  <a href="#acb396b6f45d853d41d0e0896dd36c09d">More...</a><br /></td></tr>
+<tr class="separator:acb396b6f45d853d41d0e0896dd36c09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc148ddec26f8c109c233b8b2ec1e2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1fc148ddec26f8c109c233b8b2ec1e2d">GetActuationFromArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u) const</td></tr>
 <tr class="memdesc:a1fc148ddec26f8c109c233b8b2ec1e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of actuation values for <code>model_instance</code> from a vector <code>u</code> of actuation values for the entire model.  <a href="#a1fc148ddec26f8c109c233b8b2ec1e2d">More...</a><br /></td></tr>
 <tr class="separator:a1fc148ddec26f8c109c233b8b2ec1e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1655,7 +1676,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>effort_limit</em> = <code>std::numeric_limits&lt;<a class="el" href="classdouble.html">double</a>&gt;::infinity()</code>&#160;</td>
+          <td class="paramname"><em>effort_limit</em> = <code>std::numeric_limits&lt;&#160;<a class="el" href="classdouble.html">double</a>&#160;&gt;::infinity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4617,6 +4638,72 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a08fff80ec38424b0155e213e48859c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08fff80ec38424b0155e213e48859c6b">&#9670;&nbsp;</a></span>GetActuatorNames() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GetActuatorNames </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>true</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of string names corresponding to each element of the actuation vector. </p>
+<p>These strings take the form <code>{model_instance_name}_{joint_actuator_name}</code>, but the prefix may optionally be withheld using <code>add_model_instance_prefix</code>.</p>
+<p>The returned names are guaranteed to be unique if <code>add_model_instance_prefix</code> is <code>true</code> (the default).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb396b6f45d853d41d0e0896dd36c09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb396b6f45d853d41d0e0896dd36c09d">&#9670;&nbsp;</a></span>GetActuatorNames() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GetActuatorNames </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of string names corresponding to each element of the actuation vector. </p>
+<p>These strings take the form <code>{model_instance_name}_{joint_actuator_name}</code>, but the prefix may optionally be withheld using <code>add_model_instance_prefix</code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized or if the <code>model_instance</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a971b3076dadb2bb0808de3916c6ff75c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a971b3076dadb2bb0808de3916c6ff75c">&#9670;&nbsp;</a></span>GetBodiesKinematicallyAffectedBy()</h2>
 
@@ -5580,8 +5667,8 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
-<a id="af67f820bae879dd7f8710b728a2def2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af67f820bae879dd7f8710b728a2def2e">&#9670;&nbsp;</a></span>GetPositionNames()</h2>
+<a id="af72094f8e219283c267a584b878718b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72094f8e219283c267a584b878718b5">&#9670;&nbsp;</a></span>GetPositionNames() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5589,14 +5676,8 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
         <tr>
           <td class="memname">std::vector&lt;std::string&gt; GetPositionNames </td>
           <td>(</td>
-          <td class="paramtype">std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td>
-          <td class="paramname"><em>model_instance</em> = <code>std::nullopt</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::optional&lt; bool &gt;&#160;</td>
-          <td class="paramname"><em>add_model_instance_prefix</em> = <code>std::nullopt</code>, </td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5616,13 +5697,61 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>These strings take the form <code>{model_instance_name}_{joint_name}_{joint_position_suffix}</code>, but the prefix and suffix may optionally be withheld using <code>add_model_instance_prefix</code> and <code>always_add_suffix</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">model_instance</td><td>(optional) If specified, names are only returned for a particular <code>model_instance</code>. </td></tr>
-    <tr><td class="paramname">add_model_instance_prefix</td><td>(optional) By default, the prefix will be added iff <code>model_instance == std::nullopt</code>. </td></tr>
     <tr><td class="paramname">always_add_suffix</td><td>(optional). If true, then the suffix is always added. If false, then the suffix is only added for joints that have more than one position (in this case, not adding would lead to ambiguity).</td></tr>
   </table>
   </dd>
 </dl>
-<p>The returned names are guaranteed to be unique if the <code>model_instance</code> is provided OR if <code>add_model_instance_prefix</code> is <code>true</code> (the default).</p>
+<p>The returned names are guaranteed to be unique if <code>add_model_instance_prefix</code> is <code>true</code> (the default).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a304b3a433f88b36c178f55b55432b6c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a304b3a433f88b36c178f55b55432b6c7">&#9670;&nbsp;</a></span>GetPositionNames() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GetPositionNames </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>always_add_suffix</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of string names corresponding to each element of the position vector. </p>
+<p>These strings take the form <code>{model_instance_name}_{joint_name}_{joint_position_suffix}</code>, but the prefix and suffix may optionally be withheld using <code>add_model_instance_prefix</code> and <code>always_add_suffix</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">always_add_suffix</td><td>(optional). If true, then the suffix is always added. If false, then the suffix is only added for joints that have more than one position (in this case, not adding would lead to ambiguity).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the plant is not finalized or if the <code>model_instance</code> is invalid. </td></tr>
@@ -6007,6 +6136,72 @@ This function is guaranteed to allocate no heap. </dd></dl>
 
 </div>
 </div>
+<a id="a46a5af92839fb703ff1c299ddbadce04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a5af92839fb703ff1c299ddbadce04">&#9670;&nbsp;</a></span>GetStateNames() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GetStateNames </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>true</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of string names corresponding to each element of the multibody state vector. </p>
+<p>These strings take the form <code>{model_instance_name}_{joint_name}_{joint_position_suffix | joint_velocity_suffix}</code>, but the prefix may optionally be withheld using <code>add_model_instance_prefix</code>.</p>
+<p>The returned names are guaranteed to be unique if <code>add_model_instance_prefix</code> is <code>true</code> (the default).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab7669fb844c4e7262d7f9c9815c29775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7669fb844c4e7262d7f9c9815c29775">&#9670;&nbsp;</a></span>GetStateNames() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GetStateNames </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of string names corresponding to each element of the multibody state vector. </p>
+<p>These strings take the form <code>{model_instance_name}_{joint_name}_{joint_position_suffix | joint_velocity_suffix}</code>, but the prefix may optionally be withheld using <code>add_model_instance_prefix</code>.</p>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized or if the <code>model_instance</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a113f30d2b1b3a8151b638300231975fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a113f30d2b1b3a8151b638300231975fa">&#9670;&nbsp;</a></span>GetTopologyGraphvizString()</h2>
 
@@ -6252,6 +6447,100 @@ This function is guaranteed to allocate no heap. </dd></dl>
 <p>These include joint and free body coordinates. Any unbounded or unspecified limits will be -infinity. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a29ebd809e4e1c844cde445a28ac41878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ebd809e4e1c844cde445a28ac41878">&#9670;&nbsp;</a></span>GetVelocityNames() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GetVelocityNames </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>always_add_suffix</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of string names corresponding to each element of the velocity vector. </p>
+<p>These strings take the form <code>{model_instance_name}_{joint_name}_{joint_velocity_suffix}</code>, but the prefix and suffix may optionally be withheld using <code>add_model_instance_prefix</code> and <code>always_add_suffix</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">always_add_suffix</td><td>(optional). If true, then the suffix is always added. If false, then the suffix is only added for joints that have more than one position (in this case, not adding would lead to ambiguity).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The returned names are guaranteed to be unique if <code>add_model_instance_prefix</code> is <code>true</code> (the default).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a675e84377c1bd3a1afa97df0de0a01a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675e84377c1bd3a1afa97df0de0a01a5">&#9670;&nbsp;</a></span>GetVelocityNames() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GetVelocityNames </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_model_instance_prefix</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>always_add_suffix</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of string names corresponding to each element of the velocity vector. </p>
+<p>These strings take the form <code>{model_instance_name}_{joint_name}_{joint_velocity_suffix}</code>, but the prefix and suffix may optionally be withheld using <code>add_model_instance_prefix</code> and <code>always_add_suffix</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">always_add_suffix</td><td>(optional). If true, then the suffix is always added. If false, then the suffix is only added for joints that have more than one position (in this case, not adding would lead to ambiguity).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The returned names are guaranteed to be unique.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized or if the <code>model_instance</code> is invalid. </td></tr>
   </table>
   </dd>
 </dl>
@@ -7296,8 +7585,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7308,7 +7597,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7322,8 +7611,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7334,7 +7623,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
