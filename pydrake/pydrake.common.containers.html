@@ -152,10 +152,14 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.common.containers.namedview">
-<span class="sig-prename descclassname"><span class="pre">pydrake.common.containers.</span></span><span class="sig-name descname"><span class="pre">namedview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.containers.namedview" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.containers.</span></span><span class="sig-name descname"><span class="pre">namedview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanitize_field_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.containers.namedview" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a class that is a named view with given <code class="docutils literal notranslate"><span class="pre">fields</span></code>. When the class
 is instantiated, it must be given the object that it will be a proxy for.
 Similar to <code class="docutils literal notranslate"><span class="pre">namedtuple</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">sanitize_field_names</span></code> is True (the default), then any characters in
+<code class="docutils literal notranslate"><span class="pre">fields</span></code> which are not valid in Python identifiers will be automatically
+replaced with <cite>_</cite>. Leading numbers will have <cite>_</cite> inserted, and duplicate
+<cite>_</cite> will be replaced by a single <cite>_</cite>.</p>
 <p class="rubric">Example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyView</span> <span class="o">=</span> <span class="n">namedview</span><span class="p">(</span><span class="s2">&quot;MyView&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">))</span>
 
