@@ -117,12 +117,12 @@ var NAVTREEINDEX =
 "namespacedrake_1_1systems_1_1sensors.html",
 "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa9e8364decaab78121a0ceaabb57c72cc",
 "schunk__wsg__constants_8h.html",
-"static__friction__cone__constraint_8h.html",
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75",
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a99fd5bfdf69925c53ed14a93a238065f",
-"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ac6bfe164b01efe1da5cb9104bd8ce708",
-"structdrake_1_1visualization_1_1_visualization_config.html#a8e8824802dedfbc36776227f7482b6bc",
-"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e"
+"static__equilibrium__problem_8h.html",
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd",
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a796122705bf6508783b49e113fb500b1",
+"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a42c9026094f42ad0640cb345ffbe6a34",
+"structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862",
+"type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

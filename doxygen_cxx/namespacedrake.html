@@ -758,6 +758,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a87d5210878ec865ee82bb87786eb996d"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; typename std::decay&lt; T &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a87d5210878ec865ee82bb87786eb996d">MakeSortedPair</a> (T &amp;&amp;x, T &amp;&amp;y)</td></tr>
 <tr class="memdesc:a87d5210878ec865ee82bb87786eb996d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience wrapper for creating a sorted pair from two objects.  <a href="#a87d5210878ec865ee82bb87786eb996d">More...</a><br /></td></tr>
 <tr class="separator:a87d5210878ec865ee82bb87786eb996d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f207e2f4d5cda4d2bc9da7b8a54256"><td class="memTemplParams" colspan="2">template&lt;class C &gt; </td></tr>
+<tr class="memitem:a65f207e2f4d5cda4d2bc9da7b8a54256"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a65f207e2f4d5cda4d2bc9da7b8a54256">ssize</a> (const C &amp;c) -&gt; std::common_type_t&lt; std::ptrdiff_t, std::make_signed_t&lt; decltype(c.size())&gt; &gt;</td></tr>
+<tr class="memdesc:a65f207e2f4d5cda4d2bc9da7b8a54256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements C++20 std::ssize() for earlier compilers.  <a href="#a65f207e2f4d5cda4d2bc9da7b8a54256">More...</a><br /></td></tr>
+<tr class="separator:a65f207e2f4d5cda4d2bc9da7b8a54256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5f6f92343ffa2502b5f2345c3d595f"><td class="memTemplParams" colspan="2">template&lt;class T , std::ptrdiff_t N&gt; </td></tr>
+<tr class="memitem:a7a5f6f92343ffa2502b5f2345c3d595f"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::ptrdiff_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a7a5f6f92343ffa2502b5f2345c3d595f">ssize</a> (const T(&amp;array)[N]) noexcept</td></tr>
+<tr class="memdesc:a7a5f6f92343ffa2502b5f2345c3d595f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signature returns the size of built-in (C style) arrays.  <a href="#a7a5f6f92343ffa2502b5f2345c3d595f">More...</a><br /></td></tr>
+<tr class="separator:a7a5f6f92343ffa2502b5f2345c3d595f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab24b40e467980140b850478ea0b9e766"><td class="memTemplParams" colspan="2">template&lt;typename... Rest&gt; </td></tr>
 <tr class="memitem:ab24b40e467980140b850478ea0b9e766"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ab24b40e467980140b850478ea0b9e766">cond</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f_cond, <a class="el" href="classdouble.html">double</a> v_then, Rest... rest)</td></tr>
 <tr class="memdesc:ab24b40e467980140b850478ea0b9e766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides specialization of <code>cond</code> function defined in <a class="el" href="cond_8h.html">drake/common/cond.h</a> file.  <a href="#ab24b40e467980140b850478ea0b9e766">More...</a><br /></td></tr>
@@ -3694,6 +3702,56 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides power function for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>. </p>
+
+</div>
+</div>
+<a id="a65f207e2f4d5cda4d2bc9da7b8a54256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f207e2f4d5cda4d2bc9da7b8a54256">&#9670;&nbsp;</a></span>ssize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto drake::ssize </td>
+          <td>(</td>
+          <td class="paramtype">const C &amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td> -&gt; std::common_type_t&lt;std::ptrdiff_t,
+                          std::make_signed_t&lt;decltype(c.size())&gt; &gt; </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements C++20 std::ssize() for earlier compilers. </p>
+<p>See <a href="https://en.cppreference.com/w/cpp/iterator/size">https://en.cppreference.com/w/cpp/iterator/size</a> for documentation. Will be removed once all Drake-supported platforms offer std::ssize(). </p>
+
+</div>
+</div>
+<a id="a7a5f6f92343ffa2502b5f2345c3d595f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5f6f92343ffa2502b5f2345c3d595f">&#9670;&nbsp;</a></span>ssize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::ptrdiff_t drake::ssize </td>
+          <td>(</td>
+          <td class="paramtype">const T(&amp;)&#160;</td>
+          <td class="paramname"><em>array</em>[N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This signature returns the size of built-in (C style) arrays. </p>
 
 </div>
 </div>
