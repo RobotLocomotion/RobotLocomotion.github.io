@@ -26,7 +26,6 @@ var classdrake_1_1geometry_1_1_scene_graph_inspector =
     [ "GetParentFrame", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#aca30abcce190c0618f4b6e57f7f56658", null ],
     [ "GetPerceptionProperties", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a50bbeaf688249f73750680af158ab444", null ],
     [ "GetPoseInFrame", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d", null ],
-    [ "GetPoseInParent", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55", null ],
     [ "GetProperties", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ade53caab293c947c586f4ff3ddcf9ca2", null ],
     [ "GetProximityProperties", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a54ca60ee613f990628306a00cf2edf0a", null ],
     [ "GetReferenceMesh", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a1323170e73b8758ec1f22bfa1fd9a4de", null ],

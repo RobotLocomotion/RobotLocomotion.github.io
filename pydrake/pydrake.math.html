@@ -208,6 +208,87 @@ operators, following suit with the <code class="docutils literal notranslate"><s
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.AreQuaternionsEqualForOrientation">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">AreQuaternionsEqualForOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.AreQuaternionsEqualForOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AreQuaternionsEqualForOrientation(quat1: pydrake.common.eigen_geometry.Quaternion, quat2: pydrake.common.eigen_geometry.Quaternion, tolerance: float) -&gt; bool</p></li>
+</ol>
+<p>This function tests whether two quaternions represent the same
+orientation. This function converts each quaternion to its canonical
+form and tests whether the absolute value of the difference in
+corresponding elements of these canonical quaternions is within
+tolerance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat1</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat2</span></code>:</dt><dd><p>Quaternion with a description analogous to quat1.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Nonnegative real scalar defining the allowable difference in the
+orientation described by quat1 and quat2.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if quat1 and quat2 represent the same orientation (to
+within tolerance), otherwise <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>AreQuaternionsEqualForOrientation(quat1: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], quat2: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], tolerance: pydrake.autodiffutils.AutoDiffXd) -&gt; bool</p></li>
+</ol>
+<p>This function tests whether two quaternions represent the same
+orientation. This function converts each quaternion to its canonical
+form and tests whether the absolute value of the difference in
+corresponding elements of these canonical quaternions is within
+tolerance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat1</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat2</span></code>:</dt><dd><p>Quaternion with a description analogous to quat1.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Nonnegative real scalar defining the allowable difference in the
+orientation described by quat1 and quat2.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if quat1 and quat2 represent the same orientation (to
+within tolerance), otherwise <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>AreQuaternionsEqualForOrientation(quat1: pydrake.common.eigen_geometry.Quaternion_[Expression], quat2: pydrake.common.eigen_geometry.Quaternion_[Expression], tolerance: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Formula</p></li>
+</ol>
+<p>This function tests whether two quaternions represent the same
+orientation. This function converts each quaternion to its canonical
+form and tests whether the absolute value of the difference in
+corresponding elements of these canonical quaternions is within
+tolerance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat1</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat2</span></code>:</dt><dd><p>Quaternion with a description analogous to quat1.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Nonnegative real scalar defining the allowable difference in the
+orientation described by quat1 and quat2.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if quat1 and quat2 represent the same orientation (to
+within tolerance), otherwise <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.asin">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">asin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.asin" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -914,6 +995,225 @@ class description).</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.CalculateAngularVelocityExpressedInBFromQuaternionDt">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">CalculateAngularVelocityExpressedInBFromQuaternionDt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.CalculateAngularVelocityExpressedInBFromQuaternionDt" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalculateAngularVelocityExpressedInBFromQuaternionDt(quat_AB: pydrake.common.eigen_geometry.Quaternion, quatDt: numpy.ndarray[numpy.float64[4, 1]]) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
+</ol>
+<p>This function calculates angular velocity from a quaternion and its
+time- derivative. Algorithm from [Kane, 1983] Section 1.13, Pages
+58-59.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note:
+quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>, i.e. [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_AB_B</span></code>:</dt><dd><p>B’s angular velocity in A, expressed in B.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>CalculateAngularVelocityExpressedInBFromQuaternionDt(quat_AB: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], quatDt: numpy.ndarray[object[4, 1]]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>This function calculates angular velocity from a quaternion and its
+time- derivative. Algorithm from [Kane, 1983] Section 1.13, Pages
+58-59.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note:
+quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>, i.e. [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_AB_B</span></code>:</dt><dd><p>B’s angular velocity in A, expressed in B.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>CalculateAngularVelocityExpressedInBFromQuaternionDt(quat_AB: pydrake.common.eigen_geometry.Quaternion_[Expression], quatDt: numpy.ndarray[object[4, 1]]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>This function calculates angular velocity from a quaternion and its
+time- derivative. Algorithm from [Kane, 1983] Section 1.13, Pages
+58-59.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note:
+quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>, i.e. [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_AB_B</span></code>:</dt><dd><p>B’s angular velocity in A, expressed in B.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.CalculateQuaternionDtConstraintViolation">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">CalculateQuaternionDtConstraintViolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.CalculateQuaternionDtConstraintViolation" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalculateQuaternionDtConstraintViolation(quat: pydrake.common.eigen_geometry.Quaternion, quatDt: numpy.ndarray[numpy.float64[4, 1]]) -&gt; float</p></li>
+</ol>
+<p>This function calculates how well a quaternion and its time-derivative
+satisfy the quaternion time-derivative constraint specified in [Kane,
+1983] Section 1.13, equations 12-13, page 59. For a quaternion [w, x,
+y, z], the quaternion must satisfy: w^2 + x^2 + y^2 + z^2 = 1, hence
+its time-derivative must satisfy: 2*(w*ẇ + x*ẋ + y*ẏ + z*ż) = 0.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat</span></code>, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">quaternionDt_constraint_violation</span></code>:</dt><dd><p>The amount the time- derivative of the quaternion constraint has
+been violated, which may be positive or negative (0 means the
+constraint is perfectly satisfied).</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>CalculateQuaternionDtConstraintViolation(quat: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], quatDt: numpy.ndarray[object[4, 1]]) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
+</ol>
+<p>This function calculates how well a quaternion and its time-derivative
+satisfy the quaternion time-derivative constraint specified in [Kane,
+1983] Section 1.13, equations 12-13, page 59. For a quaternion [w, x,
+y, z], the quaternion must satisfy: w^2 + x^2 + y^2 + z^2 = 1, hence
+its time-derivative must satisfy: 2*(w*ẇ + x*ẋ + y*ẏ + z*ż) = 0.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat</span></code>, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">quaternionDt_constraint_violation</span></code>:</dt><dd><p>The amount the time- derivative of the quaternion constraint has
+been violated, which may be positive or negative (0 means the
+constraint is perfectly satisfied).</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>CalculateQuaternionDtConstraintViolation(quat: pydrake.common.eigen_geometry.Quaternion_[Expression], quatDt: numpy.ndarray[object[4, 1]]) -&gt; pydrake.symbolic.Expression</p></li>
+</ol>
+<p>This function calculates how well a quaternion and its time-derivative
+satisfy the quaternion time-derivative constraint specified in [Kane,
+1983] Section 1.13, equations 12-13, page 59. For a quaternion [w, x,
+y, z], the quaternion must satisfy: w^2 + x^2 + y^2 + z^2 = 1, hence
+its time-derivative must satisfy: 2*(w*ẇ + x*ẋ + y*ẏ + z*ż) = 0.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat</span></code>, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">quaternionDt_constraint_violation</span></code>:</dt><dd><p>The amount the time- derivative of the quaternion constraint has
+been violated, which may be positive or negative (0 means the
+constraint is perfectly satisfied).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.CalculateQuaternionDtFromAngularVelocityExpressedInB">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">CalculateQuaternionDtFromAngularVelocityExpressedInB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.CalculateQuaternionDtFromAngularVelocityExpressedInB" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalculateQuaternionDtFromAngularVelocityExpressedInB(quat_AB: pydrake.common.eigen_geometry.Quaternion, w_AB_B: numpy.ndarray[numpy.float64[3, 1]]) -&gt; numpy.ndarray[numpy.float64[4, 1]]</p></li>
+</ol>
+<p>This function calculates a quaternion’s time-derivative from its
+quaternion and angular velocity. Algorithm from [Kane, 1983] Section
+1.13, Pages 58-59.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(With P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note:
+quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AB_B</span></code>:</dt><dd><p>B’s angular velocity in A, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of quat_AB, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>CalculateQuaternionDtFromAngularVelocityExpressedInB(quat_AB: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], w_AB_B: numpy.ndarray[object[3, 1]]) -&gt; numpy.ndarray[object[4, 1]]</p></li>
+</ol>
+<p>This function calculates a quaternion’s time-derivative from its
+quaternion and angular velocity. Algorithm from [Kane, 1983] Section
+1.13, Pages 58-59.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(With P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note:
+quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AB_B</span></code>:</dt><dd><p>B’s angular velocity in A, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of quat_AB, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>CalculateQuaternionDtFromAngularVelocityExpressedInB(quat_AB: pydrake.common.eigen_geometry.Quaternion_[Expression], w_AB_B: numpy.ndarray[object[3, 1]]) -&gt; numpy.ndarray[object[4, 1]]</p></li>
+</ol>
+<p>This function calculates a quaternion’s time-derivative from its
+quaternion and angular velocity. Algorithm from [Kane, 1983] Section
+1.13, Pages 58-59.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(With P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat_AB</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note:
+quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AB_B</span></code>:</dt><dd><p>B’s angular velocity in A, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of quat_AB, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.ceil">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">ceil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.ceil" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -922,6 +1222,30 @@ class description).</p>
 <li><p>ceil(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; float</p></li>
 <li><p>ceil(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</p></li>
 </ol>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.ClosestQuaternion">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">ClosestQuaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.ClosestQuaternion" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>ClosestQuaternion(quat1: pydrake.common.eigen_geometry.Quaternion, quat2: pydrake.common.eigen_geometry.Quaternion) -&gt; pydrake.common.eigen_geometry.Quaternion</p></li>
+</ol>
+<p>Returns a unit quaternion that represents the same orientation as
+<code class="docutils literal notranslate"><span class="pre">quat2</span></code>, and has the “shortest” geodesic distance on the unit sphere
+to <code class="docutils literal notranslate"><span class="pre">quat1</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>ClosestQuaternion(quat1: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], quat2: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]) -&gt; pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]</p></li>
+</ol>
+<p>Returns a unit quaternion that represents the same orientation as
+<code class="docutils literal notranslate"><span class="pre">quat2</span></code>, and has the “shortest” geodesic distance on the unit sphere
+to <code class="docutils literal notranslate"><span class="pre">quat1</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>ClosestQuaternion(quat1: pydrake.common.eigen_geometry.Quaternion_[Expression], quat2: pydrake.common.eigen_geometry.Quaternion_[Expression]) -&gt; pydrake.common.eigen_geometry.Quaternion_[Expression]</p></li>
+</ol>
+<p>Returns a unit quaternion that represents the same orientation as
+<code class="docutils literal notranslate"><span class="pre">quat2</span></code>, and has the “shortest” geodesic distance on the unit sphere
+to <code class="docutils literal notranslate"><span class="pre">quat1</span></code>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1217,6 +1541,171 @@ k=0
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.is_quaternion_in_canonical_form">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">is_quaternion_in_canonical_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.is_quaternion_in_canonical_form" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>is_quaternion_in_canonical_form(quat: pydrake.common.eigen_geometry.Quaternion) -&gt; bool</p></li>
+</ol>
+<p>This function tests whether a quaternion is in “canonical form”
+meaning that it tests whether the quaternion [w, x, y, z] has a
+non-negative w value. Example: [-0.3, +0.4, +0.5, +0.707] is not in
+canonical form. Example: [+0.3, -0.4, -0.5, -0.707] is in canonical
+form.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if quat.w() is nonnegative (in canonical form), else
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>is_quaternion_in_canonical_form(quat: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]) -&gt; bool</p></li>
+</ol>
+<p>This function tests whether a quaternion is in “canonical form”
+meaning that it tests whether the quaternion [w, x, y, z] has a
+non-negative w value. Example: [-0.3, +0.4, +0.5, +0.707] is not in
+canonical form. Example: [+0.3, -0.4, -0.5, -0.707] is in canonical
+form.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if quat.w() is nonnegative (in canonical form), else
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>is_quaternion_in_canonical_form(quat: pydrake.common.eigen_geometry.Quaternion_[Expression]) -&gt; pydrake.symbolic.Formula</p></li>
+</ol>
+<p>This function tests whether a quaternion is in “canonical form”
+meaning that it tests whether the quaternion [w, x, y, z] has a
+non-negative w value. Example: [-0.3, +0.4, +0.5, +0.707] is not in
+canonical form. Example: [+0.3, -0.4, -0.5, -0.707] is in canonical
+form.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if quat.w() is nonnegative (in canonical form), else
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.IsBothQuaternionAndQuaternionDtOK">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">IsBothQuaternionAndQuaternionDtOK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.IsBothQuaternionAndQuaternionDtOK" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>IsBothQuaternionAndQuaternionDtOK(quat: pydrake.common.eigen_geometry.Quaternion, quatDt: numpy.ndarray[numpy.float64[4, 1]], tolerance: float) -&gt; bool</p></li>
+</ol>
+<p>This function tests if a quaternion satisfies the time-derivative
+constraint specified in [Kane, 1983] Section 1.13, equation 13, page
+59. A quaternion [w, x, y, z] must satisfy w^2 + x^2 + y^2 + z^2 = 1,
+hence its time-derivative must satisfy 2*(w*ẇ + x*ẋ + y*ẏ + z*ż) =
+0. Note: To accurately test whether the time-derivative quaternion
+constraint is satisfied, the quaternion constraint is also tested to
+be accurate.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat</span></code>, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Tolerance for quaternion constraints.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if both of the two previous constraints are within
+tolerance.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>IsBothQuaternionAndQuaternionDtOK(quat: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], quatDt: numpy.ndarray[object[4, 1]], tolerance: float) -&gt; bool</p></li>
+</ol>
+<p>This function tests if a quaternion satisfies the time-derivative
+constraint specified in [Kane, 1983] Section 1.13, equation 13, page
+59. A quaternion [w, x, y, z] must satisfy w^2 + x^2 + y^2 + z^2 = 1,
+hence its time-derivative must satisfy 2*(w*ẇ + x*ẋ + y*ẏ + z*ż) =
+0. Note: To accurately test whether the time-derivative quaternion
+constraint is satisfied, the quaternion constraint is also tested to
+be accurate.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat</span></code>, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Tolerance for quaternion constraints.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if both of the two previous constraints are within
+tolerance.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>IsBothQuaternionAndQuaternionDtOK(quat: pydrake.common.eigen_geometry.Quaternion_[Expression], quatDt: numpy.ndarray[object[4, 1]], tolerance: float) -&gt; pydrake.symbolic.Formula</p></li>
+</ol>
+<p>This function tests if a quaternion satisfies the time-derivative
+constraint specified in [Kane, 1983] Section 1.13, equation 13, page
+59. A quaternion [w, x, y, z] must satisfy w^2 + x^2 + y^2 + z^2 = 1,
+hence its time-derivative must satisfy 2*(w*ẇ + x*ẋ + y*ẏ + z*ż) =
+0. Note: To accurately test whether the time-derivative quaternion
+constraint is satisfied, the quaternion constraint is also tested to
+be accurate.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quatDt</span></code>:</dt><dd><p>Time-derivative of <code class="docutils literal notranslate"><span class="pre">quat</span></code>, i.e., [ẇ, ẋ, ẏ, ż].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Tolerance for quaternion constraints.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if both of the two previous constraints are within
+tolerance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.isnan">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">isnan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.isnan" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -1242,6 +1731,93 @@ to all of the pitfalls of floating point).</p>
 <p>To consider the numerical robustness of the eigenvalue estimation, we
 specifically check that min_eigenvalue &gt;= eigenvalue_tolerance *
 max(1, max_abs_eigenvalue).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.IsQuaternionValid">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">IsQuaternionValid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.IsQuaternionValid" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>IsQuaternionValid(quat: pydrake.common.eigen_geometry.Quaternion, tolerance: float) -&gt; bool</p></li>
+</ol>
+<p>This function tests if a quaternion satisfies the quaternion
+constraint specified in [Kane, 1983] Section 1.3, equation 4, page 12,
+i.e., a quaternion [w, x, y, z] must satisfy: w^2 + x^2 + y^2 + z^2 =
+1.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Tolerance for quaternion constraint, i.e., how much is w^2 + x^2 +
+y^2 + z^2 allowed to differ from 1.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the quaternion constraint is satisfied within
+tolerance.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>IsQuaternionValid(quat: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd], tolerance: float) -&gt; bool</p></li>
+</ol>
+<p>This function tests if a quaternion satisfies the quaternion
+constraint specified in [Kane, 1983] Section 1.3, equation 4, page 12,
+i.e., a quaternion [w, x, y, z] must satisfy: w^2 + x^2 + y^2 + z^2 =
+1.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Tolerance for quaternion constraint, i.e., how much is w^2 + x^2 +
+y^2 + z^2 allowed to differ from 1.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the quaternion constraint is satisfied within
+tolerance.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>IsQuaternionValid(quat: pydrake.common.eigen_geometry.Quaternion_[Expression], tolerance: float) -&gt; pydrake.symbolic.Formula</p></li>
+</ol>
+<p>This function tests if a quaternion satisfies the quaternion
+constraint specified in [Kane, 1983] Section 1.3, equation 4, page 12,
+i.e., a quaternion [w, x, y, z] must satisfy: w^2 + x^2 + y^2 + z^2 =
+1.</p>
+<ul class="simple">
+<li><p>[Kane, 1983] “Spacecraft Dynamics,” McGraw-Hill Book Co., New York, 1983.
+(with P. W. Likins and D. A. Levinson).  Available for free .pdf download:
+<a class="reference external" href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a></p></li>
+</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: A
+quaternion like quat_AB is analogous to the rotation matrix R_AB.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>Tolerance for quaternion constraint, i.e., how much is w^2 + x^2 +
+y^2 + z^2 allowed to differ from 1.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the quaternion constraint is satisfied within
+tolerance.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -1412,6 +1988,78 @@ functions (with magnitude around 1), the accuracy is usually about
 <li><p>pow(arg0: pydrake.symbolic.Expression, arg1: float) -&gt; pydrake.symbolic.Expression</p></li>
 <li><p>pow(arg0: pydrake.symbolic.Expression, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</p></li>
 </ol>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.QuaternionToCanonicalForm">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">QuaternionToCanonicalForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.QuaternionToCanonicalForm" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>QuaternionToCanonicalForm(quat: pydrake.common.eigen_geometry.Quaternion) -&gt; pydrake.common.eigen_geometry.Quaternion</p></li>
+</ol>
+<p>This function returns a quaternion in its “canonical form” meaning
+that it returns a quaternion [w, x, y, z] with a non-negative w. For
+example, if passed a quaternion [-0.3, +0.4, +0.5, +0.707], the
+function returns the quaternion’s canonical form [+0.3, -0.4, -0.5,
+-0.707].</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Canonical form of quat, which means that either the original quat
+is returned or a quaternion representing the same orientation but
+with negated [w, x, y, z], to ensure a positive w in returned
+quaternion.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>QuaternionToCanonicalForm(quat: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]) -&gt; pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]</p></li>
+</ol>
+<p>This function returns a quaternion in its “canonical form” meaning
+that it returns a quaternion [w, x, y, z] with a non-negative w. For
+example, if passed a quaternion [-0.3, +0.4, +0.5, +0.707], the
+function returns the quaternion’s canonical form [+0.3, -0.4, -0.5,
+-0.707].</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Canonical form of quat, which means that either the original quat
+is returned or a quaternion representing the same orientation but
+with negated [w, x, y, z], to ensure a positive w in returned
+quaternion.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>QuaternionToCanonicalForm(quat: pydrake.common.eigen_geometry.Quaternion_[Expression]) -&gt; pydrake.common.eigen_geometry.Quaternion_[Expression]</p></li>
+</ol>
+<p>This function returns a quaternion in its “canonical form” meaning
+that it returns a quaternion [w, x, y, z] with a non-negative w. For
+example, if passed a quaternion [-0.3, +0.4, +0.5, +0.707], the
+function returns the quaternion’s canonical form [+0.3, -0.4, -0.5,
+-0.707].</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">quat</span></code>:</dt><dd><p>Quaternion [w, x, y, z] that relates two right-handed orthogonal
+unitary bases e.g., Ax, Ay, Az (A) to Bx, By, Bz (B). Note: quat
+is analogous to the rotation matrix R_AB.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Canonical form of quat, which means that either the original quat
+is returned or a quaternion representing the same orientation but
+with negated [w, x, y, z], to ensure a positive w in returned
+quaternion.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

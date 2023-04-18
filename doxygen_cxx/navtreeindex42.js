@@ -1,10 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"classdrake_1_1trajectories_1_1_stacked_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,18,9,10],
-"classdrake_1_1trajectories_1_1_stacked_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,18,9,12],
-"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[3,0,0,18,9,1],
-"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aef16c3e234e70a22d89678041a6bda57":[3,0,0,18,9,5],
-"classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,18,10],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5":[3,0,0,18,10,16],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2":[3,0,0,18,10,12],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[3,0,0,18,10,3],
@@ -180,6 +175,7 @@ var NAVTREEINDEX42 =
 "convex__set_8h.html":[4,0,0,4,1,3],
 "convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,3,0],
 "convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,3,1],
+"convex__set_8h.html#ac9a3a5006f20615946f5b466fe9446b6":[4,0,0,4,1,3,2],
 "copyable__unique__ptr_8h.html":[4,0,0,1,13],
 "copyable__unique__ptr_8h.html#a34d4179bf2a7749593bac748a705744c":[4,0,0,1,13,1],
 "corotated__model_8h.html":[4,0,0,8,3,3],
@@ -249,5 +245,9 @@ var NAVTREEINDEX42 =
 "deformable__driver_8h.html":[4,0,0,8,10,11],
 "deformable__mesh__intersection_8h.html":[4,0,0,4,2,11],
 "deformable__model_8h.html":[4,0,0,8,10,12],
-"deformable__model_8h.html#ad6f28f9f3c7b71cc803442f421b26352":[4,0,0,8,10,12,2]
+"deformable__model_8h.html#ad6f28f9f3c7b71cc803442f421b26352":[4,0,0,8,10,12,2],
+"deformable__model_8h.html#ae810ad4b839c5925c285d08b4d269a56":[4,0,0,8,10,12,1],
+"deformable__volume__mesh_8h.html":[4,0,0,4,2,12],
+"deformation__gradient__data_8h.html":[4,0,0,8,3,7],
+"demultiplexer_8h.html":[4,0,0,12,6,5]
 };

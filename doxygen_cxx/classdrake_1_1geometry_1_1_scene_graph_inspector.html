@@ -303,11 +303,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a15446aba86e9d94dced6ef95e718e17c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a15446aba86e9d94dced6ef95e718e17c">GetShape</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a15446aba86e9d94dced6ef95e718e17c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shape specified for the geometry with the given <code>geometry_id</code>.  <a href="#a15446aba86e9d94dced6ef95e718e17c">More...</a><br /></td></tr>
 <tr class="separator:a15446aba86e9d94dced6ef95e718e17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a4eab8cdd87647bbae03cca106fe55"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55">GetPoseInParent</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
-<tr class="memdesc:a33a4eab8cdd87647bbae03cca106fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the pose of the geometry G with the given <code>geometry_id</code> in its registered <em>topological parent</em> P, <code>X_PG</code>.  <a href="#a33a4eab8cdd87647bbae03cca106fe55">More...</a><br /></td></tr>
-<tr class="separator:a33a4eab8cdd87647bbae03cca106fe55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d31605981da8ffc831d41009cc22a3d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d">GetPoseInFrame</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
-<tr class="memdesc:a3d31605981da8ffc831d41009cc22a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the pose of the geometry G with the given <code>geometry_id</code> in its registered frame F (regardless of whether its <em>topological parent</em> is another geometry P or not).  <a href="#a3d31605981da8ffc831d41009cc22a3d">More...</a><br /></td></tr>
+<tr class="memdesc:a3d31605981da8ffc831d41009cc22a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the pose of the geometry G with the given <code>geometry_id</code> in its registered frame F.  <a href="#a3d31605981da8ffc831d41009cc22a3d">More...</a><br /></td></tr>
 <tr class="separator:a3d31605981da8ffc831d41009cc22a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92d19b4df9597abbaaefef9ebecfef7a"><td class="memItemLeft" align="right" valign="top">std::variant&lt; std::monostate, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *, const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a92d19b4df9597abbaaefef9ebecfef7a">maybe_get_hydroelastic_mesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a92d19b4df9597abbaaefef9ebecfef7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <em>mesh</em> used to represent this geometry in hydroelastic contact calculations, if it exists.  <a href="#a92d19b4df9597abbaaefef9ebecfef7a">More...</a><br /></td></tr>
@@ -1109,9 +1106,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reports the pose of the geometry G with the given <code>geometry_id</code> in its registered frame F (regardless of whether its <em>topological parent</em> is another geometry P or not). </p>
-<p>If the geometry was registered directly to the frame F, then <code>X_PG = X_FG</code>.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55" title="Reports the pose of the geometry G with the given geometry_id in its registered topological parent P,...">GetPoseInParent()</a> </dd></dl>
+<p>Reports the pose of the geometry G with the given <code>geometry_id</code> in its registered frame F. </p>
 <dl class="section note"><dt>Note</dt><dd>For deformable geometries, this returns the pose of the reference mesh. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -1119,36 +1114,6 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a33a4eab8cdd87647bbae03cca106fe55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33a4eab8cdd87647bbae03cca106fe55">&#9670;&nbsp;</a></span>GetPoseInParent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; GetPoseInParent </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>geometry_id</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reports the pose of the geometry G with the given <code>geometry_id</code> in its registered <em>topological parent</em> P, <code>X_PG</code>. </p>
-<p>That topological parent may be a frame F or another geometry. If the geometry was registered directly to F, then <code>X_PG = X_FG</code>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d" title="Reports the pose of the geometry G with the given geometry_id in its registered frame F (regardless o...">GetPoseInFrame()</a> </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>For deformable geometries, this returns the pose of the reference mesh. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Geometries are no longer posed with respect to other  geometries -- only frames; use GetPoseInFrame(). <br />
- This will be removed from Drake on or after 2023-04-01.</dd></dl>
 
 </div>
 </div>
@@ -1253,7 +1218,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the reference mesh of the geometry if the geometry is deformable, or <code>nullptr</code> if the geometry is rigid. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d" title="Reports the pose of the geometry G with the given geometry_id in its registered frame F (regardless o...">GetPoseInFrame()</a> provides the transform necessary to measure and express the reference mesh's vertex positions in the geometry's registered frame F. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d" title="Reports the pose of the geometry G with the given geometry_id in its registered frame F.">GetPoseInFrame()</a> provides the transform necessary to measure and express the reference mesh's vertex positions in the geometry's registered frame F. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>

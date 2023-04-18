@@ -353,7 +353,7 @@ var searchData=
   ['areconnected',['AreConnected',['../classdrake_1_1systems_1_1_diagram.html#a7da097f3199cf623a099953ac11bc025',1,'drake::systems::Diagram']]],
   ['arelcmmessagesequal',['AreLcmMessagesEqual',['../namespacedrake_1_1lcm.html#ac73c46ff1f2d1fe789314be3fe200e64',1,'drake::lcm']]],
   ['areprogramattributessatisfied',['AreProgramAttributesSatisfied',['../classdrake_1_1solvers_1_1_solver_base.html#a0ef97dfe948b1e50246018c3cfe8a62e',1,'drake::solvers::SolverBase::AreProgramAttributesSatisfied()'],['../classdrake_1_1solvers_1_1_solver_interface.html#a7a9200fb686048e552f8b009386963b0',1,'drake::solvers::SolverInterface::AreProgramAttributesSatisfied()']]],
-  ['arequaternionsequalfororientation',['AreQuaternionsEqualForOrientation',['../namespacedrake_1_1math.html#adc96357c54438cadae5c8aefbd16713d',1,'drake::math']]],
+  ['arequaternionsequalfororientation',['AreQuaternionsEqualForOrientation',['../namespacedrake_1_1math.html#a89206220569d0454a3c5aefe7562df7b',1,'drake::math']]],
   ['arerequiredattributessupported',['AreRequiredAttributesSupported',['../namespacedrake_1_1solvers.html#a9345a87a13b6c67ee3f98a0910b133c9',1,'drake::solvers']]],
   ['articulated_5fbody_5fforce_5fcache_2eh',['articulated_body_force_cache.h',['../articulated__body__force__cache_8h.html',1,'']]],
   ['articulated_5fbody_5finertia_2eh',['articulated_body_inertia.h',['../articulated__body__inertia_8h.html',1,'']]],

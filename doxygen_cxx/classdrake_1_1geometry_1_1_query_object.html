@@ -650,15 +650,16 @@ Friends</h2></td></tr>
 
 <p>A variant of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52" title="Computes the signed distance together with the nearest points across all pairs of geometries in the w...">ComputeSignedDistancePairwiseClosestPoints()</a> which computes the signed distance (and witnesses) between a specific pair of geometries indicated by id. </p>
 <p>This function has the same restrictions on scalar report as <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52" title="Computes the signed distance together with the nearest points across all pairs of geometries in the w...">ComputeSignedDistancePairwiseClosestPoints()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>This query is unique among the distance queries in that it doesn't respect collision filters. As long as the geometry ids refer to geometries with proximity roles, signed distance can be computed (subject to supported scalar tables above).</dd></dl>
 <h3>Characterizing the returned values</h3>
 <p>This method merely exercises the same mechanisms as <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52" title="Computes the signed distance together with the nearest points across all pairs of geometries in the w...">ComputeSignedDistancePairwiseClosestPoints()</a> for evaluating signed distance. Refer to <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#query_object_compute_pairwise_distance_table">the table for ComputeSignedDistancePairwiseClosestPoints()</a> for details.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if either geometry id is invalid (e.g., doesn't refer to an existing geometry, lacking proximity role, etc.), the pair (A, B) has been marked as filtered, or otherwise unsupported as indicated by the the scalar support table. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if either geometry id is invalid (e.g., doesn't refer to an existing geometry, lacking proximity role, etc.), the pair is unsupported as indicated by the scalar support table. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>For <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shapes, their convex hulls are used in this query. It is not* computationally efficient or particularly accurate. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>For <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shapes, their convex hulls are used in this query. It is <em>not</em> computationally efficient or particularly accurate. </dd></dl>
 
 </div>
 </div>
@@ -917,9 +918,7 @@ For a convex object, outside the object at positive distance from the boundary, 
 </div><div class="memdoc">
 
 <p>Reports the position of the frame indicated by <code>frame_id</code> relative to its parent frame. </p>
-<p>If the frame was registered with the world frame as its parent frame, this value will be identical to that returned by <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99" title="Reports the position of the frame indicated by frame_id relative to the world frame.">GetPoseInWorld()</a>.</p>
-<dl class="section note"><dt>Note</dt><dd>This is analogous to but distinct from <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55" title="Reports the pose of the geometry G with the given geometry_id in its registered topological parent P,...">SceneGraphInspector::GetPoseInParent()</a>. In this case, the pose will <em>always</em> be relative to another frame. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
+<p>If the frame was registered with the world frame as its parent frame, this value will be identical to that returned by <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99" title="Reports the position of the frame indicated by frame_id relative to the world frame.">GetPoseInWorld()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the frame <code>frame_id</code> is not valid. </td></tr>
   </table>
@@ -971,7 +970,7 @@ For a convex object, outside the object at positive distance from the boundary, 
 </div><div class="memdoc">
 
 <p>Reports the position of the frame of the rigid geometry indicated by <code>geometry_id</code> relative to the world frame (X_WG). </p>
-<dl class="section note"><dt>Note</dt><dd>This query is meaningless for deformable geometries. Their current state cannot be represented by a single rigid transformation. Instead, one should use <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76" title="Reports the configuration of the deformable geometry indicated by geometry_id relative to the world f...">GetConfigurationsInWorld()</a> to get the current vertex positions of the deformable geometry in the world frame. On the other hand, it <em>is</em> meaningful to query the <em>fixed</em> pose of the <em>reference</em> geometry in its parent frame (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d" title="Reports the pose of the geometry G with the given geometry_id in its registered frame F (regardless o...">SceneGraphInspector::GetPoseInFrame()</a>). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This query is meaningless for deformable geometries. Their current state cannot be represented by a single rigid transformation. Instead, one should use <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76" title="Reports the configuration of the deformable geometry indicated by geometry_id relative to the world f...">GetConfigurationsInWorld()</a> to get the current vertex positions of the deformable geometry in the world frame. On the other hand, it <em>is</em> meaningful to query the <em>fixed</em> pose of the <em>reference</em> geometry in its parent frame (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d" title="Reports the pose of the geometry G with the given geometry_id in its registered frame F.">SceneGraphInspector::GetPoseInFrame()</a>). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the geometry <code>geometry_id</code> is not valid or if it is deformable. </td></tr>

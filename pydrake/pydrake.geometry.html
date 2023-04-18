@@ -6383,6 +6383,13 @@ not* computationally efficient or particularly accurate.</p>
 computes the signed distance (and witnesses) between a specific pair
 of geometries indicated by id. This function has the same restrictions
 on scalar report as ComputeSignedDistancePairwiseClosestPoints().</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This query is unique among the distance queries in that it doesn’t
+respect collision filters. As long as the geometry ids refer to
+geometries with proximity roles, signed distance can be computed
+(subject to supported scalar tables above).</p>
+</div>
 <p><strong>Characterizing the returned values</strong></p>
 <p>This method merely exercises the same mechanisms as
 ComputeSignedDistancePairwiseClosestPoints() for evaluating signed
@@ -6393,15 +6400,14 @@ table for ComputeSignedDistancePairwiseClosestPoints()” for details.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if either geometry id is invalid</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>doesn't refer</strong> – </p></li>
 <li><p><strong>to an existing geometry</strong><strong>, </strong><strong>lacking proximity role</strong><strong>, </strong><strong>etc.</strong><strong>)</strong><strong>, </strong><strong>the pair</strong> – </p></li>
-<li><p><strong>(</strong><strong>A</strong><strong>, </strong><strong>B</strong><strong>) </strong><strong>has been marked as filtered</strong><strong>, or </strong><strong>otherwise unsupported as</strong> – </p></li>
-<li><p><strong>indicated by the the scalar support table.</strong> – </p></li>
+<li><p><strong>is unsupported as indicated by the scalar support table.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>For Mesh shapes, their convex hulls are used in this query. It is
-not* computationally efficient or particularly accurate.</p>
+<em>not</em> computationally efficient or particularly accurate.</p>
 </div>
 </dd></dl>
 
@@ -6677,12 +6683,6 @@ ids are added/removed).</p>
 to its parent frame. If the frame was registered with the world frame
 as its parent frame, this value will be identical to that returned by
 GetPoseInWorld().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is analogous to but distinct from
-SceneGraphInspector::GetPoseInParent(). In this case, the pose
-will <em>always</em> be relative to another frame.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if the frame frame_id is not valid.</strong> – </p>
@@ -7117,6 +7117,13 @@ not* computationally efficient or particularly accurate.</p>
 computes the signed distance (and witnesses) between a specific pair
 of geometries indicated by id. This function has the same restrictions
 on scalar report as ComputeSignedDistancePairwiseClosestPoints().</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This query is unique among the distance queries in that it doesn’t
+respect collision filters. As long as the geometry ids refer to
+geometries with proximity roles, signed distance can be computed
+(subject to supported scalar tables above).</p>
+</div>
 <p><strong>Characterizing the returned values</strong></p>
 <p>This method merely exercises the same mechanisms as
 ComputeSignedDistancePairwiseClosestPoints() for evaluating signed
@@ -7127,15 +7134,14 @@ table for ComputeSignedDistancePairwiseClosestPoints()” for details.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if either geometry id is invalid</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>doesn't refer</strong> – </p></li>
 <li><p><strong>to an existing geometry</strong><strong>, </strong><strong>lacking proximity role</strong><strong>, </strong><strong>etc.</strong><strong>)</strong><strong>, </strong><strong>the pair</strong> – </p></li>
-<li><p><strong>(</strong><strong>A</strong><strong>, </strong><strong>B</strong><strong>) </strong><strong>has been marked as filtered</strong><strong>, or </strong><strong>otherwise unsupported as</strong> – </p></li>
-<li><p><strong>indicated by the the scalar support table.</strong> – </p></li>
+<li><p><strong>is unsupported as indicated by the scalar support table.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>For Mesh shapes, their convex hulls are used in this query. It is
-not* computationally efficient or particularly accurate.</p>
+<em>not</em> computationally efficient or particularly accurate.</p>
 </div>
 </dd></dl>
 
@@ -7411,12 +7417,6 @@ ids are added/removed).</p>
 to its parent frame. If the frame was registered with the world frame
 as its parent frame, this value will be identical to that returned by
 GetPoseInWorld().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is analogous to but distinct from
-SceneGraphInspector::GetPoseInParent(). In this case, the pose
-will <em>always</em> be relative to another frame.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if the frame frame_id is not valid.</strong> – </p>
@@ -7737,6 +7737,13 @@ not* computationally efficient or particularly accurate.</p>
 computes the signed distance (and witnesses) between a specific pair
 of geometries indicated by id. This function has the same restrictions
 on scalar report as ComputeSignedDistancePairwiseClosestPoints().</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This query is unique among the distance queries in that it doesn’t
+respect collision filters. As long as the geometry ids refer to
+geometries with proximity roles, signed distance can be computed
+(subject to supported scalar tables above).</p>
+</div>
 <p><strong>Characterizing the returned values</strong></p>
 <p>This method merely exercises the same mechanisms as
 ComputeSignedDistancePairwiseClosestPoints() for evaluating signed
@@ -7747,15 +7754,14 @@ table for ComputeSignedDistancePairwiseClosestPoints()” for details.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if either geometry id is invalid</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>doesn't refer</strong> – </p></li>
 <li><p><strong>to an existing geometry</strong><strong>, </strong><strong>lacking proximity role</strong><strong>, </strong><strong>etc.</strong><strong>)</strong><strong>, </strong><strong>the pair</strong> – </p></li>
-<li><p><strong>(</strong><strong>A</strong><strong>, </strong><strong>B</strong><strong>) </strong><strong>has been marked as filtered</strong><strong>, or </strong><strong>otherwise unsupported as</strong> – </p></li>
-<li><p><strong>indicated by the the scalar support table.</strong> – </p></li>
+<li><p><strong>is unsupported as indicated by the scalar support table.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>For Mesh shapes, their convex hulls are used in this query. It is
-not* computationally efficient or particularly accurate.</p>
+<em>not</em> computationally efficient or particularly accurate.</p>
 </div>
 </dd></dl>
 
@@ -8031,12 +8037,6 @@ ids are added/removed).</p>
 to its parent frame. If the frame was registered with the world frame
 as its parent frame, this value will be identical to that returned by
 GetPoseInWorld().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is analogous to but distinct from
-SceneGraphInspector::GetPoseInParent(). In this case, the pose
-will <em>always</em> be relative to another frame.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if the frame frame_id is not valid.</strong> – </p>
@@ -8894,29 +8894,6 @@ scene_graph_versioning).</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph, source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries;
-use RegisterGeometry(frame_id) instead. This will be removed from
-Drake on or after 2023-04-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="3">
-<li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
-</ol>
-<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
-modifying SceneGraph’s model, it modifies the copy of the model stored
-in the provided context.</p>
-<p>/ (Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries –
-only frames. This will be removed from Drake on or after
-2023-04-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
 <li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
@@ -9605,29 +9582,6 @@ scene_graph_versioning).</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries;
-use RegisterGeometry(frame_id) instead. This will be removed from
-Drake on or after 2023-04-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="3">
-<li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
-</ol>
-<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
-modifying SceneGraph’s model, it modifies the copy of the model stored
-in the provided context.</p>
-<p>/ (Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries –
-only frames. This will be removed from Drake on or after
-2023-04-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
 <li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
@@ -10310,29 +10264,6 @@ scene_graph_versioning).</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries;
-use RegisterGeometry(frame_id) instead. This will be removed from
-Drake on or after 2023-04-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="3">
-<li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
-</ol>
-<p>systems::Context-modifying variant of RegisterGeometry(). Rather than
-modifying SceneGraph’s model, it modifies the copy of the model stored
-in the provided context.</p>
-<p>/ (Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries –
-only frames. This will be removed from Drake on or after
-2023-04-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
 <li><p>RegisterGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
 </ol>
 <p>systems::Context-modifying variant of RegisterGeometry(). Rather than
@@ -10898,13 +10829,7 @@ properties).</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetPoseInFrame">
 <span class="sig-name descname"><span class="pre">GetPoseInFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetPoseInFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the pose of the geometry G with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in
-its registered frame F (regardless of whether its <em>topological parent</em>
-is another geometry P or not). If the geometry was registered directly
-to the frame F, then <code class="docutils literal notranslate"><span class="pre">X_PG</span> <span class="pre">=</span> <span class="pre">X_FG</span></code>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>GetPoseInParent()</p>
-</div>
+its registered frame F.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For deformable geometries, this returns the pose of the reference
@@ -10916,18 +10841,6 @@ mesh.</p>
 <li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
 <li><p><strong>geometry.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetPoseInParent">
-<span class="sig-name descname"><span class="pre">GetPoseInParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetPoseInParent" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries –
-only frames; use GetPoseInFrame(). This will be removed from Drake
-on or after 2023-04-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -11533,13 +11446,7 @@ properties).</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetPoseInFrame">
 <span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetPoseInFrame"></span><span class="sig-name descname"><span class="pre">GetPoseInFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetPoseInFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the pose of the geometry G with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in
-its registered frame F (regardless of whether its <em>topological parent</em>
-is another geometry P or not). If the geometry was registered directly
-to the frame F, then <code class="docutils literal notranslate"><span class="pre">X_PG</span> <span class="pre">=</span> <span class="pre">X_FG</span></code>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>GetPoseInParent()</p>
-</div>
+its registered frame F.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For deformable geometries, this returns the pose of the reference
@@ -11551,18 +11458,6 @@ mesh.</p>
 <li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
 <li><p><strong>geometry.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetPoseInParent">
-<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetPoseInParent"></span><span class="sig-name descname"><span class="pre">GetPoseInParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetPoseInParent" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries –
-only frames; use GetPoseInFrame(). This will be removed from Drake
-on or after 2023-04-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -12162,13 +12057,7 @@ properties).</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetPoseInFrame">
 <span id="pydrake.geometry.SceneGraphInspector_[Expression].GetPoseInFrame"></span><span class="sig-name descname"><span class="pre">GetPoseInFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetPoseInFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the pose of the geometry G with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in
-its registered frame F (regardless of whether its <em>topological parent</em>
-is another geometry P or not). If the geometry was registered directly
-to the frame F, then <code class="docutils literal notranslate"><span class="pre">X_PG</span> <span class="pre">=</span> <span class="pre">X_FG</span></code>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>GetPoseInParent()</p>
-</div>
+its registered frame F.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For deformable geometries, this returns the pose of the reference
@@ -12180,18 +12069,6 @@ mesh.</p>
 <li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
 <li><p><strong>geometry.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetPoseInParent">
-<span id="pydrake.geometry.SceneGraphInspector_[Expression].GetPoseInParent"></span><span class="sig-name descname"><span class="pre">GetPoseInParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetPoseInParent" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Geometries are no longer posed with respect to other geometries –
-only frames; use GetPoseInFrame(). This will be removed from Drake
-on or after 2023-04-01.</p>
 </dd>
 </dl>
 </dd></dl>

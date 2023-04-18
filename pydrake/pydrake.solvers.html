@@ -1212,7 +1212,11 @@ obtain the details.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.ClpSolverDetails.status">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#pydrake.solvers.ClpSolverDetails.status" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Refer to ClpModel::status() function for the meaning of the status
+code. - -1: unknown error. - 0: optimal. - 1: primal infeasible - 2:
+dual infeasible - 3: stopped on iterations or time. - 4: stopped due
+to errors - 5: stopped by event handler</p>
+</dd></dl>
 
 </dd></dl>
 

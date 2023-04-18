@@ -173,10 +173,30 @@ $(document).ready(function(){initNavTree('structdrake_1_1solvers_1_1_clp_solver_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a6e27f49150e9a14580fb313cc2777e00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00">status</a></td></tr>
+<tr class="memitem:a56ac23a03ae7df25b7cf800be94fa964"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964">clp_version</a></td></tr>
+<tr class="memdesc:a56ac23a03ae7df25b7cf800be94fa964"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CLP_VERSION from the Clp build.  <a href="#a56ac23a03ae7df25b7cf800be94fa964">More...</a><br /></td></tr>
+<tr class="separator:a56ac23a03ae7df25b7cf800be94fa964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e27f49150e9a14580fb313cc2777e00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00">status</a> {-1}</td></tr>
+<tr class="memdesc:a6e27f49150e9a14580fb313cc2777e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refer to ClpModel::status() function for the meaning of the status code.  <a href="#a6e27f49150e9a14580fb313cc2777e00">More...</a><br /></td></tr>
 <tr class="separator:a6e27f49150e9a14580fb313cc2777e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a56ac23a03ae7df25b7cf800be94fa964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ac23a03ae7df25b7cf800be94fa964">&#9670;&nbsp;</a></span>clp_version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string clp_version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The CLP_VERSION from the Clp build. </p>
+
+</div>
+</div>
 <a id="a6e27f49150e9a14580fb313cc2777e00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e27f49150e9a14580fb313cc2777e00">&#9670;&nbsp;</a></span>status</h2>
 
@@ -184,10 +204,21 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> status</td>
+          <td class="memname"><a class="el" href="classint.html">int</a> status {-1}</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Refer to ClpModel::status() function for the meaning of the status code. </p>
+<ul>
+<li>-1: unknown error.</li>
+<li>0: optimal.</li>
+<li>1: primal infeasible</li>
+<li>2: dual infeasible</li>
+<li>3: stopped on iterations or time.</li>
+<li>4: stopped due to errors</li>
+<li>5: stopped by event handler </li>
+</ul>
 
 </div>
 </div>

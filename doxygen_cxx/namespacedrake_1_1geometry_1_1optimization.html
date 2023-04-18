@@ -252,6 +252,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a648b8ba350611eefa73db9327240049b"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a648b8ba350611eefa73db9327240049b">ConvexSetCloner</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other)</td></tr>
 <tr class="memdesc:a648b8ba350611eefa73db9327240049b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Implementation helper for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">ConvexSet::Clone</a>.  <a href="#a648b8ba350611eefa73db9327240049b">More...</a><br /></td></tr>
 <tr class="separator:a648b8ba350611eefa73db9327240049b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a3a5006f20615946f5b466fe9446b6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ac9a3a5006f20615946f5b466fe9446b6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac9a3a5006f20615946f5b466fe9446b6">MakeConvexSets</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:ac9a3a5006f20615946f5b466fe9446b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function that allows the ConvexSets to be initialized from arguments containing <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> references, or unique_ptr&lt;ConvexSet&gt; instances, or any object that can be assigned to ConvexSets::value_type.  <a href="#ac9a3a5006f20615946f5b466fe9446b6">More...</a><br /></td></tr>
+<tr class="separator:ac9a3a5006f20615946f5b466fe9446b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac52a87949354e558c4a05a11acb655ec"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a>, std::vector&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac52a87949354e558c4a05a11acb655ec">GetCollisionGeometries</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;scene_graph)</td></tr>
 <tr class="memdesc:ac52a87949354e558c4a05a11acb655ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a diagram (which contains the plant and the scene_graph), returns all the collision geometries.  <a href="#ac52a87949354e558c4a05a11acb655ec">More...</a><br /></td></tr>
 <tr class="separator:ac52a87949354e558c4a05a11acb655ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -560,6 +564,26 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac9a3a5006f20615946f5b466fe9446b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a3a5006f20615946f5b466fe9446b6">&#9670;&nbsp;</a></span>MakeConvexSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> drake::geometry::optimization::MakeConvexSets </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function that allows the ConvexSets to be initialized from arguments containing <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> references, or unique_ptr&lt;ConvexSet&gt; instances, or any object that can be assigned to ConvexSets::value_type. </p>
 
 </div>
 </div>
