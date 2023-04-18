@@ -214,7 +214,7 @@ coupling scheme" which solves for the friction forces given the normal forces ar
 </pre><p> Substituting <code>vˢ⁺¹ − vˢ</code> from Eq. (13) into Eq. (12) we arrive to: </p><pre class="fragment">  (14)  fₙ(qˢ, vˢ⁺¹) = fₙ(qˢ,vˢ) + ∇ᵥfₙ(qˢ,vˢ) O₄(δt) + O₅(δt²)
                     = fₙ(qˢ,vˢ) + O₆(δt)
 </pre><p> where <code>O₅(δt²) = O₂(‖vˢ⁺¹ − vˢ‖²) = O₂(‖O₄(δt)‖²)</code>. A similar argument for τˢ⁺¹ shows it also differs in O(δt) from τˢ = τ(tˢ, qˢ, vˢ). We can now use Eq. (14) into Eq. (11) to arrive to: </p><pre class="fragment">  (15)  M(qˢ) vˢ⁺¹ = M(qˢ) vˢ +
-        δt [τˢ + Jₙᵀ(qˢ) (fₙ(qˢ,vˢ) + O₆(δt)] + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)) +
+        δt [τˢ + Jₙᵀ(qˢ) (fₙ(qˢ,vˢ) + O₆(δt)) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)] +
         O₁(δt²)
 </pre><p> which we can rewrite as: </p><pre class="fragment">  (16)  M(qˢ) vˢ⁺¹ = M(qˢ) vˢ +
       δt [τˢ + Jₙᵀ(qˢ) fₙ(qˢ, vˢ) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)] + O₇(δt²)

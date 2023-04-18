@@ -156,11 +156,10 @@ increasing.</p>
   <li>Create a local Drake branch named <code class="language-plaintext highlighter-rouge">release_notes-v1.N.0</code> (so that others
 can easily find and push to it after the PR is opened).</li>
   <li>As the first commit on the branch, mimic the commit
-(<a href="https://github.com/RobotLocomotion/drake/pull/14208/commits/674b84877bc08448b59a2243f3b910a7b6dbab43">link</a>
-from <a href="https://github.com/RobotLocomotion/drake/pull/14208">PR 14208</a>
+<a href="https://github.com/RobotLocomotion/drake/commit/65adb4dd1f89835ad482d6a9a437cb899c05b779"><code class="language-plaintext highlighter-rouge">drake@65adb4dd</code></a>
 in order to disable CI.  A quick way to do this might be:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch upstream pull/14208/head
-git cherry-pick 674b84877bc08448b59a2243f3b910a7b6dbab43
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch upstream 65adb4dd1f89835ad482d6a9a437cb899c05b779
+git cherry-pick FETCH_HEAD
 </code></pre></div>    </div>
   </li>
   <li>Push that branch and then open a new pull request titled:
