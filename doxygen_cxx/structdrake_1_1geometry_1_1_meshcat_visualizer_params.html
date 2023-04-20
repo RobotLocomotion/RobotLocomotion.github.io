@@ -204,6 +204,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ae7f364184aa2780e090858d0b3cfda14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14">show_hydroelastic</a> {false}</td></tr>
 <tr class="memdesc:ae7f364184aa2780e090858d0b3cfda14"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using the hydroelastic contact model, collision geometries that are <em>declared</em> as geometric primitives are frequently represented by some discretely tessellated mesh when computing contact.  <a href="#ae7f364184aa2780e090858d0b3cfda14">More...</a><br /></td></tr>
 <tr class="separator:ae7f364184aa2780e090858d0b3cfda14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27471eb356d2510ae691de4053d7aef7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a27471eb356d2510ae691de4053d7aef7">include_unspecified_accepting</a> {true}</td></tr>
+<tr class="memdesc:a27471eb356d2510ae691de4053d7aef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For a given geometry, if the <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html" title="The base class for defining a set of geometry properties.">GeometryProperties</a> for our <code>role</code> has the property <code>(meshcat, accepting)</code> then the visualizer will show the geometry only if the property's value matches our <code>prefix</code>.  <a href="#a27471eb356d2510ae691de4053d7aef7">More...</a><br /></td></tr>
+<tr class="separator:a27471eb356d2510ae691de4053d7aef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -274,6 +277,23 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Determines whether to enable the alpha slider for geometry display. </p>
+
+</div>
+</div>
+<a id="a27471eb356d2510ae691de4053d7aef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27471eb356d2510ae691de4053d7aef7">&#9670;&nbsp;</a></span>include_unspecified_accepting</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool include_unspecified_accepting {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) For a given geometry, if the <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html" title="The base class for defining a set of geometry properties.">GeometryProperties</a> for our <code>role</code> has the property <code>(meshcat, accepting)</code> then the visualizer will show the geometry only if the property's value matches our <code>prefix</code>. </p>
+<p>If that property is absent then the geometry will be shown only if <code>include_unspecified_accepting</code> is true. </p>
 
 </div>
 </div>

@@ -224,9 +224,10 @@ $(document).ready(function(){initNavTree('group__multibody__quantities.html','')
 <td class="markdownTableBodyNone">Jacobian wrt v  </td><td class="markdownTableBodyCenter">Jv  </td><td class="markdownTableBodyCenter">\(J_{v}^{{}^B\omega^C}\)  </td><td class="markdownTableBodyCenter"><code>Jv_w_BC</code>  </td><td class="markdownTableBodyNone">Frame C's angular velocity Jacobian in frame B wrt v   </td></tr>
 </table>
 <p>ᵃ In code, a vector has an expressed-in-frame which appears after the quantity. <br />
-Example: <code>w_BC_E</code> is C's angular velocity in B, expressed in frame E, typeset as \([^B\omega^C]_E \). <br />
+Example: <code>w_BC_E</code> is C's angular velocity in B, expressed in frame E, typeset as \([^B\omega^C]_E \). If not explicitly present, the expressed-in-frame defaults to the measured-in-frame. Hence, <code>w_BC</code> is C's angular velocity <b>in</b> (measured-in) frame B, expressed in frame B (implied). <br />
 Similarly, an inertia matrix or spatial inertia has an expressed-in-frame. <br />
 Example: <code>I_BBo_E</code> is body B's inertia matrix about Bo, expressed in frame E, typeset as \([I^{B/Bo}]_E\). <br />
+By convention, <code>I_BP</code> is body B's inertia matrix about point P, expressed in B (implied). <br />
 For more information, see <a class="el" href="group__multibody__spatial__inertia.html">Spatial Mass Matrix (Spatial Inertia)</a></p>
 <p>ᵇ In code, spatial velocity (or spatial acceleration) has an expressed-in-frame which appears after the quantity. <br />
 Example: <code>V_BC_E</code> is frame C's spatial velocity in frame B, expressed in frame E and contains both <code>w_BC_E</code> (described aboveᵃ) and v_BC_E (point Co's translational velocity in frame B, expressed in frame E). Reminder, a rigid body D's translational and spatial velocity are for point Do (the origin of D's body frame), not for Dcm (D's center of mass). See <a class="el" href="group__multibody__frames__and__bodies.html">Frames and Bodies</a> for more information.</p>

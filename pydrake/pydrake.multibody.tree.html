@@ -15889,7 +15889,7 @@ has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if area_density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16020,7 +16020,7 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>lx</strong><strong>, </strong><strong>ly</strong><strong>, or </strong><strong>lz is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16044,7 +16044,7 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>lx</strong><strong>, </strong><strong>ly</strong><strong>, or </strong><strong>lz is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16076,7 +16076,10 @@ through Bo and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -16108,7 +16111,7 @@ has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16140,7 +16143,10 @@ through Bo and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -16186,7 +16192,10 @@ through Bp and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -16220,7 +16229,7 @@ mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of a</strong><strong>, </strong><strong>b</strong><strong>, </strong><strong>c are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16249,7 +16258,7 @@ Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16279,7 +16288,7 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
@@ -16322,7 +16331,7 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
@@ -16546,7 +16555,7 @@ has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if area_density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16677,7 +16686,7 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>lx</strong><strong>, </strong><strong>ly</strong><strong>, or </strong><strong>lz is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16701,7 +16710,7 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>lx</strong><strong>, </strong><strong>ly</strong><strong>, or </strong><strong>lz is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16733,7 +16742,10 @@ through Bo and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -16765,7 +16777,7 @@ has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16797,7 +16809,10 @@ through Bo and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -16843,7 +16858,10 @@ through Bp and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -16877,7 +16895,7 @@ mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of a</strong><strong>, </strong><strong>b</strong><strong>, </strong><strong>c are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16906,7 +16924,7 @@ Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16936,7 +16954,7 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
@@ -16979,7 +16997,7 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
@@ -17197,7 +17215,7 @@ has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if area_density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17328,7 +17346,7 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>lx</strong><strong>, </strong><strong>ly</strong><strong>, or </strong><strong>lz is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17352,7 +17370,7 @@ geometric center Bo (which is coincident with B’s center of mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of lx</strong><strong>, </strong><strong>ly</strong><strong>, </strong><strong>lz are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>lx</strong><strong>, </strong><strong>ly</strong><strong>, or </strong><strong>lz is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17384,7 +17402,10 @@ through Bo and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -17416,7 +17437,7 @@ has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17448,7 +17469,10 @@ through Bo and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -17494,7 +17518,10 @@ through Bp and is perpendicular to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -17528,7 +17555,7 @@ mass Bcm).</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if any of a</strong><strong>, </strong><strong>b</strong><strong>, </strong><strong>c are zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17557,7 +17584,7 @@ Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if radius is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17587,7 +17614,7 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
@@ -17630,7 +17657,7 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is zero</strong><strong> or </strong><strong>negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">

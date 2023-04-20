@@ -661,7 +661,7 @@ Related Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is triaxially symmetric, meaning B has an equal moment of inertia about any line passing through Bo. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if radius is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if area_density or radius is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1014,7 +1014,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if mass is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mass is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1227,7 +1227,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if any of lx, ly, lz are zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if density, lx, ly, or lz is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1298,7 +1298,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if any of lx, ly, lz are zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mass, lx, ly, or lz is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1370,7 +1370,7 @@ Related Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bo and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if radius or length is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if density, radius, or length is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1429,7 +1429,7 @@ Related Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is triaxially symmetric, meaning B has an equal moment of inertia about any line passing through Bo. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if length is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if density or length is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1487,7 +1487,7 @@ Related Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is triaxially symmetric, meaning B has an equal moment of inertia about any line passing through Bo. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if length is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mass or length is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1559,7 +1559,7 @@ Related Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bo and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if radius or length is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if density, radius, or length is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1635,7 +1635,7 @@ Related Functions</h2></td></tr>
 B's rotational inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if radius or length is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if density, radius, or length is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1708,7 +1708,7 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if any of a, b, c are zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if density, a, b, or c is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1766,7 +1766,7 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
 <dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bo is triaxially symmetric, meaning B's has an equal moment of inertia about any line passing through Bo. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if radius is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if density or radius is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1843,7 +1843,12 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>In the common case, point A is Eo (the origin of the expressed-in frame E). The example below has point A as Wo (origin of world frame W). </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>density ≥ 0. <div class="fragment"><div class="line"><span class="keywordtype">double</span> density = 1000;</div><div class="line">Vector3&lt;double&gt; p_WoB0_W(1, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB1_W(2, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB2_W(1, 1, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB3_W(1, 0, 1);</div><div class="line">SpatialInertia&lt;double&gt; M_BWo_W =</div><div class="line">    <a class="code" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84">SpatialInertia&lt;double&gt;::SolidTetrahedronAboutPointWithDensity</a>(</div><div class="line">        density, p_WoB0_W, p_WoB1_W, p_WoB2_W, p_WoB3_W);</div></div><!-- fragment --> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if density is not positive and finite. <div class="fragment"><div class="line"><span class="keywordtype">double</span> density = 1000;</div><div class="line">Vector3&lt;double&gt; p_WoB0_W(1, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB1_W(2, 0, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB2_W(1, 1, 0);</div><div class="line">Vector3&lt;double&gt; p_WoB3_W(1, 0, 1);</div><div class="line">SpatialInertia&lt;double&gt; M_BWo_W =</div><div class="line">    <a class="code" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84">SpatialInertia&lt;double&gt;::SolidTetrahedronAboutPointWithDensity</a>(</div><div class="line">        density, p_WoB0_W, p_WoB1_W, p_WoB2_W, p_WoB3_W);</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a8d0407ec30127d1a3d4fcb355453485c" title="(Advanced) Creates a spatial inertia for a uniform density solid tetrahedron B about its vertex B0,...">SolidTetrahedronAboutVertexWithDensity()</a> to efficiently calculate a spatial inertia about a vertex of B. </dd></dl>
 
 </div>
@@ -1910,7 +1915,12 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>density ≥ 0. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if density is not positive and finite. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84" title="Creates a spatial inertia for a uniform density solid tetrahedron B about a point A,...">SolidTetrahedronAboutPointWithDensity()</a> to calculate a spatial inertia about an arbitrary point. </dd></dl>
 
 </div>
@@ -1973,7 +1983,7 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
 <dl class="section note"><dt>Note</dt><dd>B's rotational inertia about Bcm is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bcm and is perpendicular to unit_vector. B has no (zero) rotational inertia about the line that passes through Bcm and is parallel to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if length is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mass or length is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2042,7 +2052,7 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
 B's rotational inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. B has no (zero) rotational inertia about the line that passes through Bp and is parallel to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if mass or length is zero or negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mass or length is not positive and finite. </td></tr>
   </table>
   </dd>
 </dl>
