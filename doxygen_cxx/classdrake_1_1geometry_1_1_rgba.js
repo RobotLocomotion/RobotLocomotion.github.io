@@ -16,5 +16,6 @@ var classdrake_1_1geometry_1_1_rgba =
     [ "rgba", "classdrake_1_1geometry_1_1_rgba.html#a9f1f0b5ee9facd312463597fa8dcc7d1", null ],
     [ "Serialize", "classdrake_1_1geometry_1_1_rgba.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "set", "classdrake_1_1geometry_1_1_rgba.html#a53cd7ac7d4ddc813802aec6d4d19b75b", null ],
-    [ "set", "classdrake_1_1geometry_1_1_rgba.html#ab9d4e5d90891572e8355bf739d5dc242", null ]
+    [ "set", "classdrake_1_1geometry_1_1_rgba.html#ab9d4e5d90891572e8355bf739d5dc242", null ],
+    [ "update", "classdrake_1_1geometry_1_1_rgba.html#a159d0bf2911ffc1c08db924ae3eb90ac", null ]
 ];

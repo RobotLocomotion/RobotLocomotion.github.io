@@ -25,6 +25,8 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "isoparametric_element.h", "isoparametric__element_8h.html", null ],
     [ "linear_constitutive_model.h", "linear__constitutive__model_8h.html", null ],
     [ "linear_constitutive_model_data.h", "linear__constitutive__model__data_8h.html", null ],
+    [ "linear_corotated_model.h", "linear__corotated__model_8h.html", null ],
+    [ "linear_corotated_model_data.h", "linear__corotated__model__data_8h.html", null ],
     [ "linear_simplex_element.h", "linear__simplex__element_8h.html", null ],
     [ "matrix_utilities.h", "matrix__utilities_8h.html", null ],
     [ "newmark_scheme.h", "newmark__scheme_8h.html", null ],

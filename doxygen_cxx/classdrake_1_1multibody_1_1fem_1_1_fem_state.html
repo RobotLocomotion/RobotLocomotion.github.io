@@ -210,16 +210,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a63e93a9f6e91d3fdf899d863f2aac055"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a63e93a9f6e91d3fdf899d863f2aac055">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a63e93a9f6e91d3fdf899d863f2aac055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Getters and setters for the FEM states</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="fem_state_setters_and_getters"></a>The FEM states include positions, velocities, and accelerations. Positions and velocities are actual state variables, while the accelerations are the saved result of previous calculations required by certain integrators such as NewmarkScheme. </p>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="fem_state_setters_and_getters"></a>The FEM states include positions, time step positions (the positions at the previous time step t₀), velocities, and accelerations. Positions and velocities are actual state variables, while the accelerations are the saved result of previous calculations required by certain integrators such as NewmarkScheme. </p>
 </div></td></tr>
 <tr class="memitem:a50b8b2feed94c4edd1174b6b3fd01640"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a50b8b2feed94c4edd1174b6b3fd01640">GetPositions</a> () const</td></tr>
 <tr class="separator:a50b8b2feed94c4edd1174b6b3fd01640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a27497a3759e257849195658725e72"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a44a27497a3759e257849195658725e72">GetPreviousStepPositions</a> () const</td></tr>
+<tr class="separator:a44a27497a3759e257849195658725e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50d66383609bee3d30063751ee6f879"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#aa50d66383609bee3d30063751ee6f879">GetVelocities</a> () const</td></tr>
 <tr class="separator:aa50d66383609bee3d30063751ee6f879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3718f30fa970d62edce3c8ea33d6ee6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ac3718f30fa970d62edce3c8ea33d6ee6">GetAccelerations</a> () const</td></tr>
 <tr class="separator:ac3718f30fa970d62edce3c8ea33d6ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a409432631f5ee81bb95a41911a1a9cfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a409432631f5ee81bb95a41911a1a9cfa">SetPositions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q)</td></tr>
 <tr class="separator:a409432631f5ee81bb95a41911a1a9cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae2063d84685ea5e6b017b6c337e184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a7ae2063d84685ea5e6b017b6c337e184">SetTimeStepPositions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q0)</td></tr>
+<tr class="separator:a7ae2063d84685ea5e6b017b6c337e184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a991317764cf3fe3521c05d031eabe9cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a991317764cf3fe3521c05d031eabe9cd">SetVelocities</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v)</td></tr>
 <tr class="separator:a991317764cf3fe3521c05d031eabe9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41c860965031267c43a2b43597f7c328"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a41c860965031267c43a2b43597f7c328">SetAccelerations</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;a)</td></tr>
@@ -434,6 +438,23 @@ system and context are compatible. </dd></dl>
 
 </div>
 </div>
+<a id="a44a27497a3759e257849195658725e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a27497a3759e257849195658725e72">&#9670;&nbsp;</a></span>GetPreviousStepPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp; GetPreviousStepPositions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa50d66383609bee3d30063751ee6f879"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa50d66383609bee3d30063751ee6f879">&#9670;&nbsp;</a></span>GetVelocities()</h2>
 
@@ -571,6 +592,24 @@ system and context are compatible. </dd></dl>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ae2063d84685ea5e6b017b6c337e184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae2063d84685ea5e6b017b6c337e184">&#9670;&nbsp;</a></span>SetTimeStepPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTimeStepPositions </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>q0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

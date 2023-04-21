@@ -196,6 +196,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab293e1ad65932eebf57568303f28c326"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326">discrete_contact_solver</a> {&quot;tamsi&quot;}</td></tr>
 <tr class="memdesc:ab293e1ad65932eebf57568303f28c326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">MultibodyPlant::set_discrete_contact_solver()</a>.  <a href="#ab293e1ad65932eebf57568303f28c326">More...</a><br /></td></tr>
 <tr class="separator:ab293e1ad65932eebf57568303f28c326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ad2e65450c6bf4784df0da7dc1ac10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10">sap_near_rigid_threshold</a> {1.0}</td></tr>
+<tr class="memdesc:ac7ad2e65450c6bf4784df0da7dc1ac10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-negative dimensionless number typically in the range [0.0, 1.0], though larger values are allowed even if uncommon.  <a href="#ac7ad2e65450c6bf4784df0da7dc1ac10">More...</a><br /></td></tr>
+<tr class="separator:ac7ad2e65450c6bf4784df0da7dc1ac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a662fe783b3fe8423c76e73ea8910a544"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a662fe783b3fe8423c76e73ea8910a544">contact_surface_representation</a> {&quot;polygon&quot;}</td></tr>
 <tr class="memdesc:a662fe783b3fe8423c76e73ea8910a544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad6df8a26aa42b59344e931ac9d6f5357" title="Sets the representation of contact surfaces to be used by this MultibodyPlant.">MultibodyPlant::set_contact_surface_representation()</a>.  <a href="#a662fe783b3fe8423c76e73ea8910a544">More...</a><br /></td></tr>
 <tr class="separator:a662fe783b3fe8423c76e73ea8910a544"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -317,6 +320,26 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">MultibodyPlant::set_penetration_allowance()</a>. </p>
+
+</div>
+</div>
+<a id="ac7ad2e65450c6bf4784df0da7dc1ac10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ad2e65450c6bf4784df0da7dc1ac10">&#9670;&nbsp;</a></span>sap_near_rigid_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> sap_near_rigid_threshold {1.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Non-negative dimensionless number typically in the range [0.0, 1.0], though larger values are allowed even if uncommon. </p>
+<p>This parameter controls the "near rigid" regime of the SAP solver, β in section V.B of [Castro et al., 2021]. It essentially controls a threshold value for the maximum amount of stiffness SAP can handle robustly. Beyond this value, stiffness saturates as explained in [Castro et al., 2021]. A value of 1.0 is a conservative choice to avoid numerical ill-conditioning. However, this might introduce artificial softening of the contact constraints. If this is your case try:</p><ol type="1">
+<li>Set this parameter to zero.</li>
+<li>For difficult problems (hundreds of contacts for instance), you might need to use a low value if the solver fails to converge. For instance, set values in the range (1e-3, 1e-2). </li>
+</ol>
 
 </div>
 </div>

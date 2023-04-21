@@ -1,5 +1,10 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,18,9,10],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,18,9,12],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[3,0,0,18,9,1],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aef16c3e234e70a22d89678041a6bda57":[3,0,0,18,9,5],
+"classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,18,10],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5":[3,0,0,18,10,16],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2":[3,0,0,18,10,12],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[3,0,0,18,10,3],
@@ -237,17 +242,12 @@ var NAVTREEINDEX42 =
 "default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,0,2,4],
 "deformable__body__config_8h.html":[4,0,0,8,3,6],
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,3,6,1],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[4,0,0,8,3,6,1,0],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385":[4,0,0,8,3,6,1,1],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[4,0,0,8,3,6,1,1],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385":[4,0,0,8,3,6,1,2],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee":[4,0,0,8,3,6,1,0],
 "deformable__contact_8h.html":[4,0,0,4,3,1],
 "deformable__contact__geometries_8h.html":[4,0,0,4,2,9],
 "deformable__contact__internal_8h.html":[4,0,0,4,2,10],
 "deformable__driver_8h.html":[4,0,0,8,10,11],
-"deformable__mesh__intersection_8h.html":[4,0,0,4,2,11],
-"deformable__model_8h.html":[4,0,0,8,10,12],
-"deformable__model_8h.html#ad6f28f9f3c7b71cc803442f421b26352":[4,0,0,8,10,12,2],
-"deformable__model_8h.html#ae810ad4b839c5925c285d08b4d269a56":[4,0,0,8,10,12,1],
-"deformable__volume__mesh_8h.html":[4,0,0,4,2,12],
-"deformation__gradient__data_8h.html":[4,0,0,8,3,7],
-"demultiplexer_8h.html":[4,0,0,12,6,5]
+"deformable__mesh__intersection_8h.html":[4,0,0,4,2,11]
 };

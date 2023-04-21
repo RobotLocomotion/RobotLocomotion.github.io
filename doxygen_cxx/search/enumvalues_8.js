@@ -98,6 +98,7 @@ var searchData=
   ['klinear',['kLinear',['../namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385',1,'drake::multibody::fem::kLinear()'],['../namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385',1,'drake::solvers::kLinear()']]],
   ['klinearcomplementarityconstraint',['kLinearComplementarityConstraint',['../namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa8c8fa060b46a40b2fd97509493514f33',1,'drake::solvers']]],
   ['klinearconstraint',['kLinearConstraint',['../namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa42f1335762da576901b57e5b118858e9',1,'drake::solvers']]],
+  ['klinearcorotated',['kLinearCorotated',['../namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee',1,'drake::multibody::fem']]],
   ['klinearcost',['kLinearCost',['../namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa302b09f3d249d023c8aaad1097b50edb',1,'drake::solvers']]],
   ['klinearequalityconstraint',['kLinearEqualityConstraint',['../namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa48d237e8d01c95129ecc34be15f4b789',1,'drake::solvers']]],
   ['klinearsolverfailed',['kLinearSolverFailed',['../namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727',1,'drake::multibody']]],

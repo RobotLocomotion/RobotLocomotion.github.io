@@ -3852,6 +3852,20 @@ force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</spa
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_sap_near_rigid_threshold">
+<span class="sig-name descname"><span class="pre">get_sap_near_rigid_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_sap_near_rigid_threshold" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the SAP near rigid regime threshold.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See set_sap_near_rigid_threshold().</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_source_id">
 <span class="sig-name descname"><span class="pre">get_source_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SourceId" title="pydrake.geometry.SourceId"><span class="pre">pydrake.geometry.SourceId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_source_id" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unique id identifying <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a source for a
@@ -5620,6 +5634,30 @@ further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_sap_near_rigid_threshold">
+<span class="sig-name descname"><span class="pre">set_sap_near_rigid_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">near_rigid_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_sap_near_rigid_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>Non-negative dimensionless number typically in the range [0.0, 1.0],
+though larger values are allowed even if uncommon. This parameter
+controls the “near rigid” regime of the SAP solver, β in section V.B
+of [Castro et al., 2021]. It essentially controls a threshold value
+for the maximum amount of stiffness SAP can handle robustly. Beyond
+this value, stiffness saturates as explained in [Castro et al., 2021].
+A value of 1.0 is a conservative choice to avoid ill-conditioning that
+might lead to softer than expected contact. If this is your case,
+consider turning off this approximation by setting this parameter to
+zero. For difficult cases where ill-conditioning is a problem, a small
+but non-zero number can be used, e.g. 1.0e-3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if near_rigid_threshold is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if called post-finalize.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -8280,6 +8318,20 @@ force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</spa
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_sap_near_rigid_threshold">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_sap_near_rigid_threshold"></span><span class="sig-name descname"><span class="pre">get_sap_near_rigid_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_sap_near_rigid_threshold" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the SAP near rigid regime threshold.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See set_sap_near_rigid_threshold().</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_source_id">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_source_id"></span><span class="sig-name descname"><span class="pre">get_source_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SourceId" title="pydrake.geometry.SourceId"><span class="pre">pydrake.geometry.SourceId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_source_id" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unique id identifying <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a source for a
@@ -10048,6 +10100,30 @@ further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_sap_near_rigid_threshold">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_sap_near_rigid_threshold"></span><span class="sig-name descname"><span class="pre">set_sap_near_rigid_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">near_rigid_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_sap_near_rigid_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>Non-negative dimensionless number typically in the range [0.0, 1.0],
+though larger values are allowed even if uncommon. This parameter
+controls the “near rigid” regime of the SAP solver, β in section V.B
+of [Castro et al., 2021]. It essentially controls a threshold value
+for the maximum amount of stiffness SAP can handle robustly. Beyond
+this value, stiffness saturates as explained in [Castro et al., 2021].
+A value of 1.0 is a conservative choice to avoid ill-conditioning that
+might lead to softer than expected contact. If this is your case,
+consider turning off this approximation by setting this parameter to
+zero. For difficult cases where ill-conditioning is a problem, a small
+but non-zero number can be used, e.g. 1.0e-3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if near_rigid_threshold is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if called post-finalize.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -12702,6 +12778,20 @@ force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</spa
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_sap_near_rigid_threshold">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_sap_near_rigid_threshold"></span><span class="sig-name descname"><span class="pre">get_sap_near_rigid_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_sap_near_rigid_threshold" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the SAP near rigid regime threshold.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See set_sap_near_rigid_threshold().</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_source_id">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_source_id"></span><span class="sig-name descname"><span class="pre">get_source_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SourceId" title="pydrake.geometry.SourceId"><span class="pre">pydrake.geometry.SourceId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_source_id" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unique id identifying <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a source for a
@@ -14475,6 +14565,30 @@ further details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_sap_near_rigid_threshold">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_sap_near_rigid_threshold"></span><span class="sig-name descname"><span class="pre">set_sap_near_rigid_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">near_rigid_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_sap_near_rigid_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>Non-negative dimensionless number typically in the range [0.0, 1.0],
+though larger values are allowed even if uncommon. This parameter
+controls the “near rigid” regime of the SAP solver, β in section V.B
+of [Castro et al., 2021]. It essentially controls a threshold value
+for the maximum amount of stiffness SAP can handle robustly. Beyond
+this value, stiffness saturates as explained in [Castro et al., 2021].
+A value of 1.0 is a conservative choice to avoid ill-conditioning that
+might lead to softer than expected contact. If this is your case,
+consider turning off this approximation by setting this parameter to
+zero. For difficult cases where ill-conditioning is a problem, a small
+but non-zero number can be used, e.g. 1.0e-3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if near_rigid_threshold is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if called post-finalize.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_stiction_tolerance"></span><span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
 <dd><p><a href="#id87"><span class="problematic" id="id88">**</span></a>** Stribeck model of friction</p>
@@ -14877,6 +14991,23 @@ are: - “tamsi” - “sap”</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.penetration_allowance">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penetration_allowance</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.penetration_allowance" title="Permalink to this definition"></a></dt>
 <dd><p>Configures the MultibodyPlant::set_penetration_allowance().</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.sap_near_rigid_threshold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_near_rigid_threshold</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.sap_near_rigid_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>Non-negative dimensionless number typically in the range [0.0, 1.0],
+though larger values are allowed even if uncommon. This parameter
+controls the “near rigid” regime of the SAP solver, β in section V.B
+of [Castro et al., 2021]. It essentially controls a threshold value
+for the maximum amount of stiffness SAP can handle robustly. Beyond
+this value, stiffness saturates as explained in [Castro et al., 2021].
+A value of 1.0 is a conservative choice to avoid numerical
+ill-conditioning. However, this might introduce artificial softening
+of the contact constraints. If this is your case try: 1. Set this
+parameter to zero. 2. For difficult problems (hundreds of contacts for
+instance), you might need to use a low value if the solver fails to
+converge. For instance, set values in the range (1e-3, 1e-2).</p>
 </dd></dl>
 
 <dl class="py property">
