@@ -1189,7 +1189,7 @@ model.</p>
 <span class="sig-name descname"><span class="pre">RegisterRgbdSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.examples.ManipulationStation.RegisterRgbdSensor" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>RegisterRgbdSensor(self: pydrake.examples.ManipulationStation, arg0: str, arg1: pydrake.multibody.tree.Frame, arg2: pydrake.math.RigidTransform, arg3: pydrake.geometry.render.DepthRenderCamera) -&gt; None</p></li>
+<li><p>RegisterRgbdSensor(self: pydrake.examples.ManipulationStation, arg0: str, arg1: pydrake.multibody.tree.Frame, arg2: pydrake.math.RigidTransform, arg3: pydrake.geometry.DepthRenderCamera) -&gt; None</p></li>
 </ol>
 <p>Registers an RGBD sensor. Must be called before Finalize().</p>
 <dl class="simple">
@@ -1209,7 +1209,7 @@ RenderCameraCore and be configured to <em>not</em> show its window.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>RegisterRgbdSensor(self: pydrake.examples.ManipulationStation, arg0: str, arg1: pydrake.multibody.tree.Frame, arg2: pydrake.math.RigidTransform, arg3: pydrake.geometry.render.ColorRenderCamera, arg4: pydrake.geometry.render.DepthRenderCamera) -&gt; None</p></li>
+<li><p>RegisterRgbdSensor(self: pydrake.examples.ManipulationStation, arg0: str, arg1: pydrake.multibody.tree.Frame, arg2: pydrake.math.RigidTransform, arg3: pydrake.geometry.ColorRenderCamera, arg4: pydrake.geometry.DepthRenderCamera) -&gt; None</p></li>
 </ol>
 <p>Registers an RGBD sensor with uniquely characterized color/label and
 depth cameras.</p>

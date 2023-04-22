@@ -10,6 +10,7 @@ var classdrake_1_1trajectories_1_1_bezier_curve =
     [ "cols", "classdrake_1_1trajectories_1_1_bezier_curve.html#adca8eca2ee324f57170dedfb4b06160b", null ],
     [ "control_points", "classdrake_1_1trajectories_1_1_bezier_curve.html#a07c5c6d262d1976bc5f747cbb00e26fb", null ],
     [ "end_time", "classdrake_1_1trajectories_1_1_bezier_curve.html#a641bfb18296d6976a000cf31c213dfdf", null ],
+    [ "GetExpression", "classdrake_1_1trajectories_1_1_bezier_curve.html#a16ae097f54f82e813d19f77126ba21e7", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_bezier_curve.html#ac710ab3203207dbdd70dd26d52234258", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_bezier_curve.html#aabb3eea611e5a4d88dd140ed23b2e3ef", null ],
     [ "order", "classdrake_1_1trajectories_1_1_bezier_curve.html#abcc41a4e499b9ebcdc71c5e213c7c22f", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1type__visit__with__tag.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,60,0],
 "structdrake_1_1uhash.html":[3,0,0,62],
 "structdrake_1_1uhash.html#ac98906b29c4381d0121f715fac155440":[3,0,0,62,1],
 "structdrake_1_1uhash.html#aec09227295d6a2c005ec578d42120039":[3,0,0,62,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "triangle__surface__mesh__field_8h.html":[4,0,0,4,2,54],
 "triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,54,0],
 "trigonometric__polynomial_8h.html":[4,0,0,1,3,17],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,3,17,2],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,3,17,2,2]
+"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,3,17,2]
 };

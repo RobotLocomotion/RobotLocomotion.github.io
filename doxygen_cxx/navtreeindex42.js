@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ab191f8ee68c549c494a6d49b0c381944":[3,0,0,18,9,7],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,18,9,10],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,18,9,12],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[3,0,0,18,9,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "deformable__contact_8h.html":[4,0,0,4,3,1],
 "deformable__contact__geometries_8h.html":[4,0,0,4,2,9],
 "deformable__contact__internal_8h.html":[4,0,0,4,2,10],
-"deformable__driver_8h.html":[4,0,0,8,10,11],
-"deformable__mesh__intersection_8h.html":[4,0,0,4,2,11]
+"deformable__driver_8h.html":[4,0,0,8,10,11]
 };

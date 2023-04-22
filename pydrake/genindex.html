@@ -520,9 +520,13 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.Capsule.__init__">(pydrake.geometry.Capsule method)</a>
 </li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.ClippingRange.__init__">(pydrake.geometry.ClippingRange method)</a>
+</li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterDeclaration.__init__">(pydrake.geometry.CollisionFilterDeclaration method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterManager.__init__">(pydrake.geometry.CollisionFilterManager method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera.__init__">(pydrake.geometry.ColorRenderCamera method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.ContactSurface.__init__">(pydrake.geometry.ContactSurface method)</a>
 </li>
@@ -531,6 +535,10 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.Convex.__init__">(pydrake.geometry.Convex method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.Cylinder.__init__">(pydrake.geometry.Cylinder method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRange.__init__">(pydrake.geometry.DepthRange method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera.__init__">(pydrake.geometry.DepthRenderCamera method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.DrakeVisualizer.__init__">(pydrake.geometry.DrakeVisualizer method)</a>
 </li>
@@ -654,25 +662,17 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject_-Expression-.__init__">(pydrake.geometry.QueryObject_[Expression] method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange.__init__">(pydrake.geometry.render.ClippingRange method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderCameraCore.__init__">(pydrake.geometry.RenderCameraCore method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ColorRenderCamera.__init__">(pydrake.geometry.render.ColorRenderCamera method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.__init__">(pydrake.geometry.RenderEngine method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRange.__init__">(pydrake.geometry.render.DepthRange method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGlParams.__init__">(pydrake.geometry.RenderEngineGlParams method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRenderCamera.__init__">(pydrake.geometry.render.DepthRenderCamera method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.__init__">(pydrake.geometry.RenderEngineGltfClientParams method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderCameraCore.__init__">(pydrake.geometry.render.RenderCameraCore method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineVtkParams.__init__">(pydrake.geometry.RenderEngineVtkParams method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.__init__">(pydrake.geometry.render.RenderEngine method)</a>
-</li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGlParams.__init__">(pydrake.geometry.render.RenderEngineGlParams method)</a>
-</li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGltfClientParams.__init__">(pydrake.geometry.render.RenderEngineGltfClientParams method)</a>
-</li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineVtkParams.__init__">(pydrake.geometry.render.RenderEngineVtkParams method)</a>
-</li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.__init__">(pydrake.geometry.render.RenderLabel method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.__init__">(pydrake.geometry.RenderLabel method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.Rgba.__init__">(pydrake.geometry.Rgba method)</a>
 </li>
@@ -3133,7 +3133,7 @@
 </li>
       <li><a href="pydrake.common.schema.html#pydrake.common.schema.Transform.base_frame">base_frame (pydrake.common.schema.Transform property)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGltfClientParams.base_url">base_url (pydrake.geometry.render.RenderEngineGltfClientParams property)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.base_url">base_url (pydrake.geometry.RenderEngineGltfClientParams property)</a>
 </li>
       <li><a href="pydrake.perception.html#pydrake.perception.BaseField">BaseField (class in pydrake.perception)</a>
 </li>
@@ -4223,7 +4223,7 @@
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.ClassifyContextBodyCollisions">ClassifyContextBodyCollisions() (pydrake.planning.CollisionChecker method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGltfClientParams.cleanup">cleanup (pydrake.geometry.render.RenderEngineGltfClientParams property)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.cleanup">cleanup (pydrake.geometry.RenderEngineGltfClientParams property)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector.clear">clear() (pydrake.geometry.FramePoseVector method)</a>
 
@@ -4255,20 +4255,20 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.ClearVariableScaling">ClearVariableScaling() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderCameraCore.clipping">clipping() (pydrake.geometry.render.RenderCameraCore method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderCameraCore.clipping">clipping() (pydrake.geometry.RenderCameraCore method)</a>
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.CameraConfig.clipping_far">clipping_far (pydrake.systems.sensors.CameraConfig property)</a>
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.CameraConfig.clipping_near">clipping_near (pydrake.systems.sensors.CameraConfig property)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange">ClippingRange (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.ClippingRange">ClippingRange (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.AbstractValue.Clone">Clone() (pydrake.common.value.AbstractValue method)</a>
 
       <ul>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexSet.Clone">(pydrake.geometry.optimization.ConvexSet method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.Clone">(pydrake.geometry.render.RenderEngine method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.Clone">(pydrake.geometry.RenderEngine method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.Shape.Clone">(pydrake.geometry.Shape method)</a>
 </li>
@@ -4441,7 +4441,7 @@
 </li>
       <li><a href="pydrake.visualization.html#pydrake.visualization.ColorizeLabelImage">ColorizeLabelImage (class in pydrake.visualization)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ColorRenderCamera">ColorRenderCamera (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera">ColorRenderCamera (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RotationalInertia.cols">cols() (pydrake.multibody.tree.RotationalInertia method)</a>
 
@@ -4865,10 +4865,10 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.VectorBase_-Expression-.CopyToVector">(pydrake.systems.framework.VectorBase_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ColorRenderCamera.core">core() (pydrake.geometry.render.ColorRenderCamera method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera.core">core() (pydrake.geometry.ColorRenderCamera method)</a>
 
       <ul>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRenderCamera.core">(pydrake.geometry.render.DepthRenderCamera method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera.core">(pydrake.geometry.DepthRenderCamera method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.ExpressionKind.Cos">Cos (pydrake.symbolic.ExpressionKind attribute)</a>
@@ -5315,10 +5315,10 @@
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.DecomposeQuadraticPolynomial">DecomposeQuadraticPolynomial() (in module pydrake.symbolic)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGlParams.default_clear_color">default_clear_color (pydrake.geometry.render.RenderEngineGlParams property)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGlParams.default_clear_color">default_clear_color (pydrake.geometry.RenderEngineGlParams property)</a>
 
       <ul>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineVtkParams.default_clear_color">(pydrake.geometry.render.RenderEngineVtkParams property)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineVtkParams.default_clear_color">(pydrake.geometry.RenderEngineVtkParams property)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.DrakeVisualizerParams.default_color">default_color (pydrake.geometry.DrakeVisualizerParams property)</a>
@@ -5335,10 +5335,10 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_-Expression-.default_com">(pydrake.multibody.tree.RigidBody_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGlParams.default_diffuse">default_diffuse (pydrake.geometry.render.RenderEngineGlParams property)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGlParams.default_diffuse">default_diffuse (pydrake.geometry.RenderEngineGlParams property)</a>
 
       <ul>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineVtkParams.default_diffuse">(pydrake.geometry.render.RenderEngineVtkParams property)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineVtkParams.default_diffuse">(pydrake.geometry.RenderEngineVtkParams property)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.AddModel.default_free_body_pose">default_free_body_pose (pydrake.multibody.parsing.AddModel property)</a>
@@ -5349,12 +5349,12 @@
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.AddModel.default_joint_positions">default_joint_positions (pydrake.multibody.parsing.AddModel property)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGlParams.default_label">default_label (pydrake.geometry.render.RenderEngineGlParams property)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGlParams.default_label">default_label (pydrake.geometry.RenderEngineGlParams property)</a>
 
       <ul>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGltfClientParams.default_label">(pydrake.geometry.render.RenderEngineGltfClientParams property)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.default_label">(pydrake.geometry.RenderEngineGltfClientParams property)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineVtkParams.default_label">(pydrake.geometry.render.RenderEngineVtkParams property)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineVtkParams.default_label">(pydrake.geometry.RenderEngineVtkParams property)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body.default_mass">default_mass() (pydrake.multibody.tree.Body method)</a>
@@ -5383,7 +5383,7 @@
       </ul></li>
       <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.default_proximity_color">default_proximity_color (pydrake.visualization.VisualizationConfig property)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.default_render_label">default_render_label() (pydrake.geometry.render.RenderEngine method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.default_render_label">default_render_label() (pydrake.geometry.RenderEngine method)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody.default_rotational_inertia">default_rotational_inertia() (pydrake.multibody.tree.RigidBody method)</a>
 
@@ -5533,13 +5533,13 @@
       </ul></li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.LcmImageArrayToImages.depth_image_output_port">depth_image_output_port() (pydrake.systems.sensors.LcmImageArrayToImages method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRenderCamera.depth_range">depth_range() (pydrake.geometry.render.DepthRenderCamera method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera.depth_range">depth_range() (pydrake.geometry.DepthRenderCamera method)</a>
 </li>
       <li><a href="pydrake.perception.html#pydrake.perception.DepthImageToPointCloud">DepthImageToPointCloud (class in pydrake.perception)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRange">DepthRange (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRange">DepthRange (class in pydrake.geometry)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRenderCamera">DepthRenderCamera (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera">DepthRenderCamera (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.forwarddiff.html#pydrake.forwarddiff.derivative">derivative() (in module pydrake.forwarddiff)</a>
 </li>
@@ -6427,7 +6427,7 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.far">(pydrake.geometry.Meshcat.PerspectiveCamera property)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange.far">far() (pydrake.geometry.render.ClippingRange method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.ClippingRange.far">far() (pydrake.geometry.ClippingRange method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.GurobiSolver.SolveStatusInfo.feasible_solutions_count">feasible_solutions_count (pydrake.solvers.GurobiSolver.SolveStatusInfo property)</a>
 </li>
@@ -8529,8 +8529,6 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ScrewJoint_-Expression-.get_rotation">(pydrake.multibody.tree.ScrewJoint_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.get_sap_near_rigid_threshold">get_sap_near_rigid_threshold() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -8539,6 +8537,8 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_sap_near_rigid_threshold">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.examples.html#pydrake.examples.ManipulationStation.get_scene_graph">get_scene_graph() (pydrake.examples.ManipulationStation method)</a>
 </li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewiseTrajectory.get_segment_index">get_segment_index() (pydrake.trajectories.PiecewiseTrajectory method)</a>
@@ -9283,9 +9283,9 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetCollisionGeometriesForBody">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.GetColorDFromLabel">GetColorDFromLabel() (pydrake.geometry.render.RenderEngine static method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.GetColorDFromLabel">GetColorDFromLabel() (pydrake.geometry.RenderEngine static method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.GetColorIFromLabel">GetColorIFromLabel() (pydrake.geometry.render.RenderEngine static method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.GetColorIFromLabel">GetColorIFromLabel() (pydrake.geometry.RenderEngine static method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetConstraints">GetConstraints() (pydrake.geometry.optimization.GraphOfConvexSets.Edge method)</a>
 
@@ -9357,6 +9357,14 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetEffortUpperLimits">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetEffortUpperLimits">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
+</li>
+      </ul></li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.BezierCurve.GetExpression">GetExpression() (pydrake.trajectories.BezierCurve method)</a>
+
+      <ul>
+        <li><a href="pydrake.trajectories.html#pydrake.trajectories.BezierCurve_-AutoDiffXd-.GetExpression">(pydrake.trajectories.BezierCurve_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.trajectories.html#pydrake.trajectories.BezierCurve_-Expression-.GetExpression">(pydrake.trajectories.BezierCurve_[Expression] method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.GetFilteredCollisionMatrix">GetFilteredCollisionMatrix() (pydrake.planning.CollisionChecker method)</a>
@@ -9967,7 +9975,7 @@
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetReferencePositions">GetReferencePositions() (pydrake.multibody.plant.DeformableModel method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.GetRenderLabelOrThrow">GetRenderLabelOrThrow() (pydrake.geometry.render.RenderEngine method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.GetRenderLabelOrThrow">GetRenderLabelOrThrow() (pydrake.geometry.RenderEngine method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetRigidBodyByName">GetRigidBodyByName() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
@@ -10303,7 +10311,7 @@
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.Trajectory_-Expression-.has_derivative">(pydrake.trajectories.Trajectory_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.has_geometry">has_geometry() (pydrake.geometry.render.RenderEngine method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.has_geometry">has_geometry() (pydrake.geometry.RenderEngine method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector.has_id">has_id() (pydrake.geometry.FramePoseVector method)</a>
 
@@ -10899,7 +10907,7 @@
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.CameraInfo.intrinsic_matrix">intrinsic_matrix() (pydrake.systems.sensors.CameraInfo method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderCameraCore.intrinsics">intrinsics() (pydrake.geometry.render.RenderCameraCore method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderCameraCore.intrinsics">intrinsics() (pydrake.geometry.RenderCameraCore method)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.inv">inv() (in module pydrake.math)</a>
 
@@ -11035,7 +11043,7 @@
 </li>
       <li><a href="pydrake.math.html#pydrake.math.is_quaternion_in_canonical_form">is_quaternion_in_canonical_form() (in module pydrake.math)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.is_reserved">is_reserved() (pydrake.geometry.render.RenderLabel method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.is_reserved">is_reserved() (pydrake.geometry.RenderLabel method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context.is_stateless">is_stateless() (pydrake.systems.framework.Context method)</a>
 
@@ -11511,9 +11519,9 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.EventStatus.Severity.kDidNothing">kDidNothing (pydrake.systems.framework.EventStatus.Severity attribute)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.kDoNotRender">kDoNotRender (pydrake.geometry.render.RenderLabel attribute)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.kDoNotRender">kDoNotRender (pydrake.geometry.RenderLabel attribute)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.kDontCare">kDontCare (pydrake.geometry.render.RenderLabel attribute)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.kDontCare">kDontCare (pydrake.geometry.RenderLabel attribute)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.SideOfFaceToRender.kDoubleSide">kDoubleSide (pydrake.geometry.Meshcat.SideOfFaceToRender attribute)</a>
 </li>
@@ -11525,7 +11533,7 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.EventStatus.KeepMoreSevere">KeepMoreSevere() (pydrake.systems.framework.EventStatus method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.kEmpty">kEmpty (pydrake.geometry.render.RenderLabel attribute)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.kEmpty">kEmpty (pydrake.geometry.RenderLabel attribute)</a>
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.RobotCollisionType.kEnvironmentAndSelfCollision">kEnvironmentAndSelfCollision (pydrake.planning.RobotCollisionType attribute)</a>
 </li>
@@ -11629,7 +11637,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kLP">kLP (pydrake.solvers.ProgramType attribute)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.kMaxUnreserved">kMaxUnreserved (pydrake.geometry.render.RenderLabel attribute)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.kMaxUnreserved">kMaxUnreserved (pydrake.geometry.RenderLabel attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kMILP">kMILP (pydrake.solvers.ProgramType attribute)</a>
 </li>
@@ -11817,7 +11825,7 @@
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.SolutionResult.kUnknownError">kUnknownError (pydrake.solvers.SolutionResult attribute)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel.kUnspecified">kUnspecified (pydrake.geometry.render.RenderLabel attribute)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.kUnspecified">kUnspecified (pydrake.geometry.RenderLabel attribute)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.InputPortSelection.kUseFirstInputIfItExists">kUseFirstInputIfItExists (pydrake.systems.framework.InputPortSelection attribute)</a>
 </li>
@@ -11853,7 +11861,7 @@
         <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.RgbdSensorDiscrete.label_image_output_port">(pydrake.systems.sensors.RgbdSensorDiscrete method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.LabelFromColor">LabelFromColor() (pydrake.geometry.render.RenderEngine static method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.LabelFromColor">LabelFromColor() (pydrake.geometry.RenderEngine static method)</a>
 </li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial.LagrangeInterpolatingPolynomial">LagrangeInterpolatingPolynomial() (pydrake.trajectories.PiecewisePolynomial static method)</a>
 
@@ -12201,11 +12209,11 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.HalfSpace.MakePose">MakePose() (pydrake.geometry.HalfSpace static method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.MakeRenderEngineGl">MakeRenderEngineGl() (in module pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.MakeRenderEngineGl">MakeRenderEngineGl() (in module pydrake.geometry)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.MakeRenderEngineGltfClient">MakeRenderEngineGltfClient() (in module pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.MakeRenderEngineGltfClient">MakeRenderEngineGltfClient() (in module pydrake.geometry)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.MakeRenderEngineVtk">MakeRenderEngineVtk() (in module pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.MakeRenderEngineVtk">MakeRenderEngineVtk() (in module pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MakeSolver">MakeSolver() (in module pydrake.solvers)</a>
 </li>
@@ -12391,7 +12399,7 @@
         <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.max">(pydrake.symbolic.Variable method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRange.max_depth">max_depth() (pydrake.geometry.render.DepthRange method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRange.max_depth">max_depth() (pydrake.geometry.DepthRange method)</a>
 </li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.CalcGridPointsOptions.max_err">max_err (pydrake.multibody.optimization.CalcGridPointsOptions property)</a>
 </li>
@@ -12541,7 +12549,7 @@
         <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.min">(pydrake.symbolic.Variable method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.DepthRange.min_depth">min_depth() (pydrake.geometry.render.DepthRange method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRange.min_depth">min_depth() (pydrake.geometry.DepthRange method)</a>
 </li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.CalcGridPointsOptions.min_points">min_points (pydrake.multibody.optimization.CalcGridPointsOptions property)</a>
 </li>
@@ -12672,8 +12680,6 @@
         <li><a href="pydrake.geometry.all.html#module-pydrake.geometry.all">pydrake.geometry.all</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#module-pydrake.geometry.optimization">pydrake.geometry.optimization</a>
-</li>
-        <li><a href="pydrake.geometry.render.html#module-pydrake.geometry.render">pydrake.geometry.render</a>
 </li>
         <li><a href="pydrake.lcm.html#module-pydrake.lcm">pydrake.lcm</a>
 </li>
@@ -13076,7 +13082,7 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.near">(pydrake.geometry.Meshcat.PerspectiveCamera property)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange.near">near() (pydrake.geometry.render.ClippingRange method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.ClippingRange.near">near() (pydrake.geometry.ClippingRange method)</a>
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.FormulaKind.Neq">Neq (pydrake.symbolic.FormulaKind attribute)</a>
 </li>
@@ -14515,13 +14521,6 @@
 </li>
       </ul></li>
       <li>
-    pydrake.geometry.render
-
-      <ul>
-        <li><a href="pydrake.geometry.render.html#module-pydrake.geometry.render">module</a>
-</li>
-      </ul></li>
-      <li>
     pydrake.lcm
 
       <ul>
@@ -15055,7 +15054,7 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraph_-Expression-.RegisterSource">(pydrake.geometry.SceneGraph_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.RegisterVisual">RegisterVisual() (pydrake.geometry.render.RenderEngine method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.RegisterVisual">RegisterVisual() (pydrake.geometry.RenderEngine method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.RegisterVisualGeometry">RegisterVisualGeometry() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
@@ -15093,7 +15092,7 @@
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.RemoveFreeVariableMethod">RemoveFreeVariableMethod (class in pydrake.solvers)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.RemoveGeometry">RemoveGeometry() (pydrake.geometry.render.RenderEngine method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.RemoveGeometry">RemoveGeometry() (pydrake.geometry.RenderEngine method)</a>
 
       <ul>
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraph.RemoveGeometry">(pydrake.geometry.SceneGraph method)</a>
@@ -15119,9 +15118,9 @@
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.RemoveVertex">RemoveVertex() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGltfClientParams.render_endpoint">render_endpoint (pydrake.geometry.render.RenderEngineGltfClientParams property)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.render_endpoint">render_endpoint (pydrake.geometry.RenderEngineGltfClientParams property)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderCameraCore">RenderCameraCore (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderCameraCore">RenderCameraCore (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject.RenderColorImage">RenderColorImage() (pydrake.geometry.QueryObject method)</a>
 
@@ -15130,7 +15129,7 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject_-Expression-.RenderColorImage">(pydrake.geometry.QueryObject_[Expression] method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.RenderColorImage">(pydrake.geometry.render.RenderEngine method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.RenderColorImage">(pydrake.geometry.RenderEngine method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject.RenderDepthImage">RenderDepthImage() (pydrake.geometry.QueryObject method)</a>
@@ -15140,22 +15139,22 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject_-Expression-.RenderDepthImage">(pydrake.geometry.QueryObject_[Expression] method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.RenderDepthImage">(pydrake.geometry.render.RenderEngine method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.RenderDepthImage">(pydrake.geometry.RenderEngine method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine">RenderEngine (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine">RenderEngine (class in pydrake.geometry)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGlParams">RenderEngineGlParams (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGlParams">RenderEngineGlParams (class in pydrake.geometry)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGltfClientParams">RenderEngineGltfClientParams (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams">RenderEngineGltfClientParams (class in pydrake.geometry)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineVtkParams">RenderEngineVtkParams (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineVtkParams">RenderEngineVtkParams (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.CameraConfig.renderer_class">renderer_class (pydrake.systems.sensors.CameraConfig property)</a>
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.CameraConfig.renderer_name">renderer_name (pydrake.systems.sensors.CameraConfig property)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderCameraCore.renderer_name">renderer_name() (pydrake.geometry.render.RenderCameraCore method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderCameraCore.renderer_name">renderer_name() (pydrake.geometry.RenderCameraCore method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraph.RendererCount">RendererCount() (pydrake.geometry.SceneGraph method)</a>
 
@@ -15165,7 +15164,7 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraph_-Expression-.RendererCount">(pydrake.geometry.SceneGraph_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderLabel">RenderLabel (class in pydrake.geometry.render)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel">RenderLabel (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject.RenderLabelImage">RenderLabelImage() (pydrake.geometry.QueryObject method)</a>
 
@@ -15174,7 +15173,7 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject_-Expression-.RenderLabelImage">(pydrake.geometry.QueryObject_[Expression] method)</a>
 </li>
-        <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.RenderLabelImage">(pydrake.geometry.render.RenderEngine method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.RenderLabelImage">(pydrake.geometry.RenderEngine method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.Reparse">Reparse() (pydrake.solvers.MathematicalProgram method)</a>
@@ -15717,7 +15716,7 @@
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.RgbdSensorDiscrete.sensor">sensor() (pydrake.systems.sensors.RgbdSensorDiscrete method)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderCameraCore.sensor_pose_in_camera_body">sensor_pose_in_camera_body() (pydrake.geometry.render.RenderCameraCore method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderCameraCore.sensor_pose_in_camera_body">sensor_pose_in_camera_body() (pydrake.geometry.RenderCameraCore method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.PointPairContactInfo.separation_speed">separation_speed() (pydrake.multibody.plant.PointPairContactInfo method)</a>
 
@@ -16899,7 +16898,7 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetDefaultFreeBodyPose">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.SetDefaultLightPosition">SetDefaultLightPosition() (pydrake.geometry.render.RenderEngine method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.SetDefaultLightPosition">SetDefaultLightPosition() (pydrake.geometry.RenderEngine method)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.QuaternionFloatingJoint.SetDefaultPose">SetDefaultPose() (pydrake.multibody.tree.QuaternionFloatingJoint method)</a>
 
@@ -17471,7 +17470,7 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatParams.show_stats_plot">show_stats_plot (pydrake.geometry.MeshcatParams property)</a>
 </li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ColorRenderCamera.show_window">show_window() (pydrake.geometry.render.ColorRenderCamera method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera.show_window">show_window() (pydrake.geometry.ColorRenderCamera method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.SignedDistancePair">SignedDistancePair (class in pydrake.geometry)</a>
 </li>
@@ -18239,7 +18238,7 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.SpatialInertia_-Expression-.ThinRodWithMassAboutEnd">(pydrake.multibody.tree.SpatialInertia_[Expression] static method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.ThrowIfInvalid">ThrowIfInvalid() (pydrake.geometry.render.RenderEngine static method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.ThrowIfInvalid">ThrowIfInvalid() (pydrake.geometry.RenderEngine static method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.PropellerInfo.thrust_ratio">thrust_ratio (pydrake.multibody.plant.PropellerInfo property)</a>
 </li>
@@ -18827,7 +18826,7 @@
         <li><a href="pydrake.solvers.html#pydrake.solvers.PyFunctionConstraint.UpdateUpperBound">(pydrake.solvers.PyFunctionConstraint method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngine.UpdateViewpoint">UpdateViewpoint() (pydrake.geometry.render.RenderEngine method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.UpdateViewpoint">UpdateViewpoint() (pydrake.geometry.RenderEngine method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Constraint.upper_bound">upper_bound() (pydrake.solvers.Constraint method)</a>
 </li>
@@ -19359,7 +19358,7 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_-Expression-.velocity_upper_limits">(pydrake.multibody.tree.Joint_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderEngineGltfClientParams.verbose">verbose (pydrake.geometry.render.RenderEngineGltfClientParams property)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.verbose">verbose (pydrake.geometry.RenderEngineGltfClientParams property)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh.vertex">vertex() (pydrake.geometry.PolygonSurfaceMesh method)</a>
 

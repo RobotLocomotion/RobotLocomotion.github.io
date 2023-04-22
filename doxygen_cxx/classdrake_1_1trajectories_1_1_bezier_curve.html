@@ -205,6 +205,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ffd5b82508f158e6e2d5b85be11bacc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a1ffd5b82508f158e6e2d5b85be11bacc">value</a> (const T &amp;time) const override</td></tr>
 <tr class="memdesc:a1ffd5b82508f158e6e2d5b85be11bacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the curve at the given time.  <a href="#a1ffd5b82508f158e6e2d5b85be11bacc">More...</a><br /></td></tr>
 <tr class="separator:a1ffd5b82508f158e6e2d5b85be11bacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ae097f54f82e813d19f77126ba21e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a16ae097f54f82e813d19f77126ba21e7">GetExpression</a> (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> time=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>(&quot;t&quot;)) const</td></tr>
+<tr class="memdesc:a16ae097f54f82e813d19f77126ba21e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the expanded underlying polynomial expression of this curve in terms of variable <code>time</code>.  <a href="#a16ae097f54f82e813d19f77126ba21e7">More...</a><br /></td></tr>
+<tr class="separator:a16ae097f54f82e813d19f77126ba21e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">rows</a> () const override</td></tr>
 <tr class="separator:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adca8eca2ee324f57170dedfb4b06160b"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#adca8eca2ee324f57170dedfb4b06160b">cols</a> () const override</td></tr>
@@ -524,6 +527,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1b212bc051048c39dc23d9437d7cd188">Trajectory&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a16ae097f54f82e813d19f77126ba21e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ae097f54f82e813d19f77126ba21e7">&#9670;&nbsp;</a></span>GetExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt; GetExpression </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&#160;</td>
+          <td class="paramname"><em>time</em> = <code><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>(&quot;t&quot;)</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extracts the expanded underlying polynomial expression of this curve in terms of variable <code>time</code>. </p>
 
 </div>
 </div>
