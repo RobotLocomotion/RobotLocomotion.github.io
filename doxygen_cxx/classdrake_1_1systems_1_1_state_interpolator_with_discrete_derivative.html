@@ -194,9 +194,9 @@ class drake::systems::StateInterpolatorWithDiscreteDerivative&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7e3a577e10311b419d6d6eca90821a6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a7e3a577e10311b419d6d6eca90821a6b">StateInterpolatorWithDiscreteDerivative</a> (<a class="el" href="classint.html">int</a> num_positions, <a class="el" href="classdouble.html">double</a> time_step, bool <a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ac0f52a430dc68250ab8de72c3df90b01">suppress_initial_transient</a>=false)</td></tr>
-<tr class="memdesc:a7e3a577e10311b419d6d6eca90821a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking <code>num_positions</code>, the size of the position vector to be differentiated, and <code>time_step</code>, the sampling interval.  <a href="#a7e3a577e10311b419d6d6eca90821a6b">More...</a><br /></td></tr>
-<tr class="separator:a7e3a577e10311b419d6d6eca90821a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f4b6c1551fcb659e94ee4aa8190c9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a31f4b6c1551fcb659e94ee4aa8190c9b">StateInterpolatorWithDiscreteDerivative</a> (<a class="el" href="classint.html">int</a> num_positions, <a class="el" href="classdouble.html">double</a> time_step, bool <a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ac0f52a430dc68250ab8de72c3df90b01">suppress_initial_transient</a>=true)</td></tr>
+<tr class="memdesc:a31f4b6c1551fcb659e94ee4aa8190c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking <code>num_positions</code>, the size of the position vector to be differentiated, and <code>time_step</code>, the sampling interval.  <a href="#a31f4b6c1551fcb659e94ee4aa8190c9b">More...</a><br /></td></tr>
+<tr class="separator:a31f4b6c1551fcb659e94ee4aa8190c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0f52a430dc68250ab8de72c3df90b01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ac0f52a430dc68250ab8de72c3df90b01">suppress_initial_transient</a> () const</td></tr>
 <tr class="memdesc:ac0f52a430dc68250ab8de72c3df90b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <code>suppress_initial_transient</code> passed to the constructor.  <a href="#ac0f52a430dc68250ab8de72c3df90b01">More...</a><br /></td></tr>
 <tr class="separator:ac0f52a430dc68250ab8de72c3df90b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1154,8 +1154,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e3a577e10311b419d6d6eca90821a6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e3a577e10311b419d6d6eca90821a6b">&#9670;&nbsp;</a></span>StateInterpolatorWithDiscreteDerivative() <span class="overload">[3/3]</span></h2>
+<a id="a31f4b6c1551fcb659e94ee4aa8190c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f4b6c1551fcb659e94ee4aa8190c9b">&#9670;&nbsp;</a></span>StateInterpolatorWithDiscreteDerivative() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1176,7 +1176,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_initial_transient</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>suppress_initial_transient</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1187,6 +1187,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor taking <code>num_positions</code>, the size of the position vector to be differentiated, and <code>time_step</code>, the sampling interval. </p>
+<p>If <code>suppress_initial_transient</code> is true (the default), then the velocity output will be zero for the first two time steps (see the <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html" title="System that outputs the discrete-time derivative of its input: y(t) = (u[n] - u[n-1])/h,...">DiscreteDerivative</a> class documentation for details and exceptions). </p>
 
 </div>
 </div>

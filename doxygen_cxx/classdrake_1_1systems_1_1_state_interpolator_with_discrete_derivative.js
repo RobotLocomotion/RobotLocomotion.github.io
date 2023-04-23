@@ -2,7 +2,7 @@ var classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative =
 [
     [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#af37b12ca90f8fd9705939855ae554710", null ],
     [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a43992d28865a8a7ffd46830f88dcc568", null ],
-    [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a7e3a577e10311b419d6d6eca90821a6b", null ],
+    [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a31f4b6c1551fcb659e94ee4aa8190c9b", null ],
     [ "operator=", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a9c3937505bdb9d7b7b3ac00cc9fbbb38", null ],
     [ "operator=", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a3b689004040660502e57c9a8f6998ce3", null ],
     [ "set_initial_position", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ab2e72527cc9b40d8b29eaaca0bde3ab2", null ],

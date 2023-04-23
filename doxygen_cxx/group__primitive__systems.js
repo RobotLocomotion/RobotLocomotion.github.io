@@ -96,7 +96,7 @@ var group__primitive__systems =
     [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html", [
       [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#aacb738d28aede718f8d1b86689e831d4", null ],
       [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#aa6b4308bca3ce0b1a016d0eff6f91d5c", null ],
-      [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a744e16c81b5d48f99c670520907a7ead", null ],
+      [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a723381cd404366ac6794e83b8facb8e4", null ],
       [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b", null ],
       [ "operator=", "classdrake_1_1systems_1_1_discrete_derivative.html#a0af346932bf913c979543659c4140abe", null ],
       [ "operator=", "classdrake_1_1systems_1_1_discrete_derivative.html#add4fa4c0f5ed5fad6500ecb351aa07ad", null ],
@@ -109,7 +109,7 @@ var group__primitive__systems =
     [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html", [
       [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#af37b12ca90f8fd9705939855ae554710", null ],
       [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a43992d28865a8a7ffd46830f88dcc568", null ],
-      [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a7e3a577e10311b419d6d6eca90821a6b", null ],
+      [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a31f4b6c1551fcb659e94ee4aa8190c9b", null ],
       [ "operator=", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a9c3937505bdb9d7b7b3ac00cc9fbbb38", null ],
       [ "operator=", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a3b689004040660502e57c9a8f6998ce3", null ],
       [ "set_initial_position", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ab2e72527cc9b40d8b29eaaca0bde3ab2", null ],

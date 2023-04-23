@@ -183,7 +183,9 @@ class drake::systems::DiscreteDerivative&lt; T &gt;</h3>
   y(t) = { 0.0              if x₂ &lt;  2 }
          { (x₀[n]-x₁[n])/h  if x₂ &gt;= 2 }
   x₀[0], x₁[0], x₂[0] are initialized in the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> (default is zeros).
-</pre><dl class="section note"><dt>Note</dt><dd>For dynamical systems, a derivative should not be computed in continuous-time, i.e. <code>y(t) = (u(t) - u[n])/(t-n*h)</code>. This is numerically unstable since the time interval <code>t-n*h</code> could be arbitrarily close to zero. Prefer the discrete-time implementation for robustness.</dd></dl>
+</pre><dl class="section note"><dt>Note</dt><dd>Calling <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#ab49326ecc136341f4277e409a757d03d" title="Sets the input history so that the initial output is fully specified.">set_input_history()</a> effectively disables the transient suppression by setting x_2 = 2.</dd>
+<dd>
+For dynamical systems, a derivative should not be computed in continuous-time, i.e. <code>y(t) = (u(t) - u[n])/(t-n*h)</code>. This is numerically unstable since the time interval <code>t-n*h</code> could be arbitrarily close to zero. Prefer the discrete-time implementation for robustness.</dd></dl>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
@@ -207,9 +209,9 @@ class drake::systems::DiscreteDerivative&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a744e16c81b5d48f99c670520907a7ead"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#a744e16c81b5d48f99c670520907a7ead">DiscreteDerivative</a> (<a class="el" href="classint.html">int</a> num_inputs, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>, bool <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#ac0f52a430dc68250ab8de72c3df90b01">suppress_initial_transient</a>=false)</td></tr>
-<tr class="memdesc:a744e16c81b5d48f99c670520907a7ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking <code>num_inputs</code>, the size of the vector to be differentiated, and <code>time_step</code>, the sampling interval.  <a href="#a744e16c81b5d48f99c670520907a7ead">More...</a><br /></td></tr>
-<tr class="separator:a744e16c81b5d48f99c670520907a7ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723381cd404366ac6794e83b8facb8e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#a723381cd404366ac6794e83b8facb8e4">DiscreteDerivative</a> (<a class="el" href="classint.html">int</a> num_inputs, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>, bool <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#ac0f52a430dc68250ab8de72c3df90b01">suppress_initial_transient</a>=true)</td></tr>
+<tr class="memdesc:a723381cd404366ac6794e83b8facb8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking <code>num_inputs</code>, the size of the vector to be differentiated, and <code>time_step</code>, the sampling interval.  <a href="#a723381cd404366ac6794e83b8facb8e4">More...</a><br /></td></tr>
+<tr class="separator:a723381cd404366ac6794e83b8facb8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a338c661d94c2b17045ea58a6b5a7964b"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a338c661d94c2b17045ea58a6b5a7964b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b">DiscreteDerivative</a> (const <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html">DiscreteDerivative</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a338c661d94c2b17045ea58a6b5a7964b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.  <a href="#a338c661d94c2b17045ea58a6b5a7964b">More...</a><br /></td></tr>
@@ -1343,8 +1345,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a744e16c81b5d48f99c670520907a7ead"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a744e16c81b5d48f99c670520907a7ead">&#9670;&nbsp;</a></span>DiscreteDerivative() <span class="overload">[3/4]</span></h2>
+<a id="a723381cd404366ac6794e83b8facb8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723381cd404366ac6794e83b8facb8e4">&#9670;&nbsp;</a></span>DiscreteDerivative() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1365,7 +1367,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_initial_transient</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>suppress_initial_transient</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1376,6 +1378,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor taking <code>num_inputs</code>, the size of the vector to be differentiated, and <code>time_step</code>, the sampling interval. </p>
+<p>If <code>suppress_initial_transient</code> is true (the default), then the output will be zero for the first two time steps (see the class documentation for details and exceptions). </p>
 
 </div>
 </div>

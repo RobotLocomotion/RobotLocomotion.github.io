@@ -2,7 +2,7 @@ var classdrake_1_1systems_1_1_discrete_derivative =
 [
     [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#aacb738d28aede718f8d1b86689e831d4", null ],
     [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#aa6b4308bca3ce0b1a016d0eff6f91d5c", null ],
-    [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a744e16c81b5d48f99c670520907a7ead", null ],
+    [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a723381cd404366ac6794e83b8facb8e4", null ],
     [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b", null ],
     [ "operator=", "classdrake_1_1systems_1_1_discrete_derivative.html#a0af346932bf913c979543659c4140abe", null ],
     [ "operator=", "classdrake_1_1systems_1_1_discrete_derivative.html#add4fa4c0f5ed5fad6500ecb351aa07ad", null ],
