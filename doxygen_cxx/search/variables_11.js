@@ -25,6 +25,7 @@ var searchData=
   ['rot_5ftol',['rot_tol',['../structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3',1,'drake::multibody::ConstraintRelaxingIk::IkCartesianWaypoint']]],
   ['rotation',['rotation',['../classdrake_1_1schema_1_1_transform.html#a892c274d76368b44189e47bfa5dc8ba3',1,'drake::schema::Transform::rotation()'],['../structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a0b30bc39e0d8a9a3e9c8f305b6c39808',1,'drake::multibody::RationalForwardKinematics::Pose::rotation()']]],
   ['rounding_5fseed',['rounding_seed',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#abb7b16d4d092f7b7572de4c058b30d96',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
+  ['rounding_5fsolver_5foptions',['rounding_solver_options',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a3019fa32c49876dc6f980676632987f5',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
   ['rows',['Rows',['../structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911',1,'drake::solvers::LogarithmicSos2NewBinaryVariables']]],
   ['run_5ftime',['run_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f',1,'drake::solvers::OsqpSolverDetails']]]
 ];

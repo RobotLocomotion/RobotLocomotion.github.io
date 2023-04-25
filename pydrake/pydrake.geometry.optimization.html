@@ -725,7 +725,7 @@ graph.</p>
 <span class="sig-name descname"><span class="pre">SolveShortestPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
+<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -755,7 +755,7 @@ set.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
+<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>
@@ -1028,6 +1028,15 @@ detect.</p>
 <dd><p>Random seed to use for random rounding. If convex_relaxation is false
 or max_rounded_paths is less than or equal to zero, this option is
 ignored.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSetsOptions.rounding_solver_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rounding_solver_options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.rounding_solver_options" title="Permalink to this definition"></a></dt>
+<dd><p>Optional solver options for the rounded problems. If not set,
+solver_options is used. For instance, one might want to set tighter
+(i.e., lower) tolerances for running the relaxed problem and looser
+(i.e., higher) tolerances for final solves during rounding.</p>
 </dd></dl>
 
 <dl class="py property">

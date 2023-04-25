@@ -184,8 +184,11 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_geometry_in
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a61bc3de3116507dd8a7b2be78abb3a21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a61bc3de3116507dd8a7b2be78abb3a21">GeometryInstance</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PG, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;<a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a06e0ea6b1a1277eb62b5fe080ad34c8b">shape</a>, const std::string &amp;<a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>)</td></tr>
+<tr class="memdesc:a61bc3de3116507dd8a7b2be78abb3a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a geometry instance specification.  <a href="#a61bc3de3116507dd8a7b2be78abb3a21">More...</a><br /></td></tr>
+<tr class="separator:a61bc3de3116507dd8a7b2be78abb3a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8bcb636da5fd72bcd77f8fc8197e2b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#ad8bcb636da5fd72bcd77f8fc8197e2b1">GeometryInstance</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PG, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a06e0ea6b1a1277eb62b5fe080ad34c8b">shape</a>, const std::string &amp;<a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>)</td></tr>
-<tr class="memdesc:ad8bcb636da5fd72bcd77f8fc8197e2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a geometry instance specification.  <a href="#ad8bcb636da5fd72bcd77f8fc8197e2b1">More...</a><br /></td></tr>
+<tr class="memdesc:ad8bcb636da5fd72bcd77f8fc8197e2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Overload that transfers ownership of <code>shape</code> (for performance).  <a href="#ad8bcb636da5fd72bcd77f8fc8197e2b1">More...</a><br /></td></tr>
 <tr class="separator:ad8bcb636da5fd72bcd77f8fc8197e2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f10bafcb74c293325935badf8e64c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a54f10bafcb74c293325935badf8e64c8">id</a> () const</td></tr>
 <tr class="memdesc:a54f10bafcb74c293325935badf8e64c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the globally unique id for this geometry specification.  <a href="#a54f10bafcb74c293325935badf8e64c8">More...</a><br /></td></tr>
@@ -200,7 +203,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a06e0ea6b1a1277eb62b5fe080ad34c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying shape specification for this geometry instance.  <a href="#a06e0ea6b1a1277eb62b5fe080ad34c8b">More...</a><br /></td></tr>
 <tr class="separator:a06e0ea6b1a1277eb62b5fe080ad34c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d3df34372c42e692ed7aa180c9a96bd"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a9d3df34372c42e692ed7aa180c9a96bd">release_shape</a> ()</td></tr>
-<tr class="memdesc:a9d3df34372c42e692ed7aa180c9a96bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the shape from the instance.  <a href="#a9d3df34372c42e692ed7aa180c9a96bd">More...</a><br /></td></tr>
+<tr class="memdesc:a9d3df34372c42e692ed7aa180c9a96bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Transfers ownership of this geometry instance's underlying shape specification to the caller.  <a href="#a9d3df34372c42e692ed7aa180c9a96bd">More...</a><br /></td></tr>
 <tr class="separator:a9d3df34372c42e692ed7aa180c9a96bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <em>canonicalized</em> name for the instance.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
@@ -247,7 +250,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a91d56fc6b2b4773061e2528e79c31edc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91d56fc6b2b4773061e2528e79c31edc">&#9670;&nbsp;</a></span>GeometryInstance() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d56fc6b2b4773061e2528e79c31edc">&#9670;&nbsp;</a></span>GeometryInstance() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +276,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a60b08cbd082bdbf17421d376d03d0b24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60b08cbd082bdbf17421d376d03d0b24">&#9670;&nbsp;</a></span>GeometryInstance() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b08cbd082bdbf17421d376d03d0b24">&#9670;&nbsp;</a></span>GeometryInstance() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,8 +301,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8bcb636da5fd72bcd77f8fc8197e2b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8bcb636da5fd72bcd77f8fc8197e2b1">&#9670;&nbsp;</a></span>GeometryInstance() <span class="overload">[3/3]</span></h2>
+<a id="a61bc3de3116507dd8a7b2be78abb3a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61bc3de3116507dd8a7b2be78abb3a21">&#9670;&nbsp;</a></span>GeometryInstance() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +316,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td>
           <td class="paramname"><em>shape</em>, </td>
         </tr>
         <tr>
@@ -345,6 +348,43 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad8bcb636da5fd72bcd77f8fc8197e2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bcb636da5fd72bcd77f8fc8197e2b1">&#9670;&nbsp;</a></span>GeometryInstance() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_PG</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Overload that transfers ownership of <code>shape</code> (for performance). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>shape is non-null. </dd></dl>
 
 </div>
 </div>
@@ -595,7 +635,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Releases the shape from the instance. </p>
+<p>(Advanced) Transfers ownership of this geometry instance's underlying shape specification to the caller. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a9d3df34372c42e692ed7aa180c9a96bd" title="(Advanced) Transfers ownership of this geometry instance&#39;s underlying shape specification to the call...">release_shape()</a> has not been called nor has this been moved-from. </dd></dl>
 
 </div>
 </div>
@@ -716,7 +757,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the underlying shape specification for this geometry instance. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a9d3df34372c42e692ed7aa180c9a96bd" title="Releases the shape from the instance.">release_shape()</a> has not been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#a9d3df34372c42e692ed7aa180c9a96bd" title="(Advanced) Transfers ownership of this geometry instance&#39;s underlying shape specification to the call...">release_shape()</a> has not been called nor has this been moved-from. </dd></dl>
 
 </div>
 </div>

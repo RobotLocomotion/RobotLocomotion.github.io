@@ -2,6 +2,7 @@ var classdrake_1_1geometry_1_1_geometry_instance =
 [
     [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html#a91d56fc6b2b4773061e2528e79c31edc", null ],
     [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html#a60b08cbd082bdbf17421d376d03d0b24", null ],
+    [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html#a61bc3de3116507dd8a7b2be78abb3a21", null ],
     [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html#ad8bcb636da5fd72bcd77f8fc8197e2b1", null ],
     [ "id", "classdrake_1_1geometry_1_1_geometry_instance.html#a54f10bafcb74c293325935badf8e64c8", null ],
     [ "illustration_properties", "classdrake_1_1geometry_1_1_geometry_instance.html#a23160c4c9c6f016d9eda46db5c4aa09f", null ],

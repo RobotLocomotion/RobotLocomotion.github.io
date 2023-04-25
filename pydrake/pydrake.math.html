@@ -1309,9 +1309,25 @@ algebraic Riccati equation:</p>
 \[S A + A' S - S B R^{-1} B' S + Q = 0\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the Hamiltanoian matrix</strong> – </p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈A   BR⁻¹Bᵀ⌉
+⌊Q      −Aᵀ⌋
+</pre></div>
+</div>
+<p>is not invertible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if R is not positive definite.</strong> – </p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the pair (A, B) should be stabilizable, and (Q, A) should be
+detectable. For more information, please refer to page 526-527 of
+Linear Systems by Thomas Kailath.</p>
+</div>
 <p>Based on the Matrix Sign Function method outlined in this paper:
 <a class="reference external" href="http://www.engr.iupui.edu/~skoskie/ECE684/Riccati_algorithms.pdf">http://www.engr.iupui.edu/~skoskie/ECE684/Riccati_algorithms.pdf</a></p>
 </dd></dl>

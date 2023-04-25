@@ -908,6 +908,14 @@ quadratic cost term S. The optimal feedback control is u = -Kx;</p>
 <dd class="field-even"><p><strong>RuntimeError if R is not positive definite.</strong> – </p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The system (A₁, B) should be stabilizable, where A₁=A−BR⁻¹Nᵀ.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The system (Q₁, A₁) should be detectable, where Q₁=Q−NR⁻¹Nᵀ.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>LinearQuadraticRegulator(system: pydrake.systems.primitives.LinearSystem, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], N: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; pydrake.systems.primitives.LinearSystem</p></li>
 </ol>

@@ -222,6 +222,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3719d800b823430686b15c36adee248d"><td class="memTemplItemLeft" align="right" valign="top">S&lt; T &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3719d800b823430686b15c36adee248d">AddNamedSystem</a> (const std::string &amp;name, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a3719d800b823430686b15c36adee248d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new system with the given <code>args</code>, applies <code>name</code> to it, and adds it to the builder, which retains ownership.  <a href="#a3719d800b823430686b15c36adee248d">More...</a><br /></td></tr>
 <tr class="separator:a3719d800b823430686b15c36adee248d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7701a7c380b6015ae152d136fd61e5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#ae7701a7c380b6015ae152d136fd61e5b">RemoveSystem</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system)</td></tr>
+<tr class="memdesc:ae7701a7c380b6015ae152d136fd61e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the given system from this builder and disconnects any connections or exported ports associated with it.  <a href="#ae7701a7c380b6015ae152d136fd61e5b">More...</a><br /></td></tr>
+<tr class="separator:ae7701a7c380b6015ae152d136fd61e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any Systems have been added yet.  <a href="#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1226,8 +1229,34 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
+<a id="a9707232e37c28463f285aaab01f88c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1252,29 +1281,25 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a9707232e37c28463f285aaab01f88c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ae7701a7c380b6015ae152d136fd61e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7701a7c380b6015ae152d136fd61e5b">&#9670;&nbsp;</a></span>RemoveSystem()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
+          <td class="memname">void RemoveSystem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Removes the given system from this builder and disconnects any connections or exported ports associated with it. </p>
+<p>Note that un-exporting this system's ports might have a ripple effect on other exported port index assignments. The relative order will remain intact, but any "holes" created by this removal will be filled in by decrementing the indices of all higher-numbered ports that remain.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Because a <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a> owns the objects it contains, the system will be deleted. </dd></dl>
 
 </div>
 </div>

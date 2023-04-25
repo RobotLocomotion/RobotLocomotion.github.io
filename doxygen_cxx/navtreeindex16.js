@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a6ad677024790190d7f913839cbdf0902":[3,0,0,9,78,20],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a6b63ae12f2b1cc131b2584efe07a2b6b":[3,0,0,9,78,7],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a719e23ae8c26b0c8cf0c7f30dd112559":[3,0,0,9,78,0],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a73703796210df51bb25acbb19168913a":[3,0,0,9,78,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a8dc2f2fd87afb1bdc61c7a7d93b952bd":[1,1,0,20,3],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a924d231c07d032bc1207ced36b12cfb4":[1,1,0,20,6],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#af8c78f1d87a7163440af74966fbabce0":[1,1,0,20,1],
-"classdrake_1_1multibody_1_1_tamsi_solver.html":[3,0,0,9,92],
-"classdrake_1_1multibody_1_1_tamsi_solver.html#a032d564905879232190e6b62afd0b8d0":[3,0,0,9,92,19]
+"classdrake_1_1multibody_1_1_tamsi_solver.html":[3,0,0,9,92]
 };

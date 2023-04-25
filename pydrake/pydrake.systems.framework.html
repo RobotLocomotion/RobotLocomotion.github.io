@@ -3979,6 +3979,23 @@ either connected to another constituent system or exported as a
 diagram input.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder.RemoveSystem">
+<span class="sig-name descname"><span class="pre">RemoveSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system:</span> <span class="pre">drake::systems::System&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.RemoveSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the given system from this builder and disconnects any
+connections or exported ports associated with it.</p>
+<p>Note that un-exporting this system’s ports might have a ripple effect
+on other exported port index assignments. The relative order will
+remain intact, but any “holes” created by this removal will be filled
+in by decrementing the indices of all higher-numbered ports that
+remain.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because a DiagramBuilder owns the objects it contains, the system
+will be deleted.</p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py template">
@@ -4312,6 +4329,23 @@ either connected to another constituent system or exported as a
 diagram input.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.RemoveSystem">
+<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].RemoveSystem"></span><span class="sig-name descname"><span class="pre">RemoveSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder_[AutoDiffXd],</span> <span class="pre">system:</span> <span class="pre">drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.RemoveSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the given system from this builder and disconnects any
+connections or exported ports associated with it.</p>
+<p>Note that un-exporting this system’s ports might have a ripple effect
+on other exported port index assignments. The relative order will
+remain intact, but any “holes” created by this removal will be filled
+in by decrementing the indices of all higher-numbered ports that
+remain.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because a DiagramBuilder owns the objects it contains, the system
+will be deleted.</p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -4637,6 +4671,23 @@ returned by get_name().</p>
 <dd><p>Returns true iff the given input <code class="docutils literal notranslate"><span class="pre">port</span></code> of a constituent system is
 either connected to another constituent system or exported as a
 diagram input.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.RemoveSystem">
+<span id="pydrake.systems.framework.DiagramBuilder_[Expression].RemoveSystem"></span><span class="sig-name descname"><span class="pre">RemoveSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder_[Expression],</span> <span class="pre">system:</span> <span class="pre">drake::systems::System&lt;drake::symbolic::Expression&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.RemoveSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the given system from this builder and disconnects any
+connections or exported ports associated with it.</p>
+<p>Note that un-exporting this system’s ports might have a ripple effect
+on other exported port index assignments. The relative order will
+remain intact, but any “holes” created by this removal will be filled
+in by decrementing the indices of all higher-numbered ports that
+remain.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because a DiagramBuilder owns the objects it contains, the system
+will be deleted.</p>
+</div>
 </dd></dl>
 
 </dd></dl>

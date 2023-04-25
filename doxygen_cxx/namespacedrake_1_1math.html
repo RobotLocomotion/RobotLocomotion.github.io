@@ -1139,10 +1139,15 @@ Functions</h2></td></tr>
 </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if R is not positive definite.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the Hamiltanoian matrix <pre>
+⌈A   BR⁻¹Bᵀ⌉
+⌊Q      −Aᵀ⌋
+</pre> is not invertible. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if R is not positive definite. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>the pair (A, B) should be stabilizable, and (Q, A) should be detectable. For more information, please refer to page 526-527 of Linear Systems by Thomas Kailath.</dd></dl>
 <p>Based on the Matrix Sign Function method outlined in this paper: <a href="http://www.engr.iupui.edu/~skoskie/ECE684/Riccati_algorithms.pdf">http://www.engr.iupui.edu/~skoskie/ECE684/Riccati_algorithms.pdf</a> </p>
 
 </div>

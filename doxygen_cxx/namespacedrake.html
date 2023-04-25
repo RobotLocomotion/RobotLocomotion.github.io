@@ -651,6 +651,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ace5b5f07e7cce19025b862a56d85e6aa"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ace5b5f07e7cce19025b862a56d85e6aa">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
 <tr class="memdesc:ace5b5f07e7cce19025b862a56d85e6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for integral constants.  <a href="#ace5b5f07e7cce19025b862a56d85e6aa">More...</a><br /></td></tr>
 <tr class="separator:ace5b5f07e7cce19025b862a56d85e6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21afb70384c46b571f72e22c6b158c6c"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
+<tr class="memitem:a21afb70384c46b571f72e22c6b158c6c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a21afb70384c46b571f72e22c6b158c6c">hash_append</a> (HashAlgorithm &amp;hasher, const T *item) noexcept</td></tr>
+<tr class="memdesc:a21afb70384c46b571f72e22c6b158c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for bare pointers.  <a href="#a21afb70384c46b571f72e22c6b158c6c">More...</a><br /></td></tr>
+<tr class="separator:a21afb70384c46b571f72e22c6b158c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeacd6804761e9fb9f0fa26a6766f1444"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
 <tr class="memitem:aeacd6804761e9fb9f0fa26a6766f1444"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_enum_v&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aeacd6804761e9fb9f0fa26a6766f1444">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
 <tr class="memdesc:aeacd6804761e9fb9f0fa26a6766f1444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for enumerations.  <a href="#aeacd6804761e9fb9f0fa26a6766f1444">More...</a><br /></td></tr>
@@ -663,26 +667,26 @@ Functions</h2></td></tr>
 <tr class="memitem:a0abcb9a7b5df5dcf6f77d4dd1fa1f05b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b">hash_append</a> (HashAlgorithm &amp;hasher, const std::basic_string&lt; char, Traits, Allocator &gt; &amp;item) noexcept</td></tr>
 <tr class="memdesc:a0abcb9a7b5df5dcf6f77d4dd1fa1f05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::string.  <a href="#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b">More...</a><br /></td></tr>
 <tr class="separator:a0abcb9a7b5df5dcf6f77d4dd1fa1f05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a746d15e267a6399643c2ffe878f4680c"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T1 , class T2 &gt; </td></tr>
-<tr class="memitem:a746d15e267a6399643c2ffe878f4680c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a746d15e267a6399643c2ffe878f4680c">hash_append</a> (HashAlgorithm &amp;hasher, const std::pair&lt; T1, T2 &gt; &amp;item) noexcept</td></tr>
-<tr class="memdesc:a746d15e267a6399643c2ffe878f4680c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::pair.  <a href="#a746d15e267a6399643c2ffe878f4680c">More...</a><br /></td></tr>
-<tr class="separator:a746d15e267a6399643c2ffe878f4680c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a177ccf8b6fcfa21a5430a79410638c8c"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
-<tr class="memitem:a177ccf8b6fcfa21a5430a79410638c8c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a177ccf8b6fcfa21a5430a79410638c8c">hash_append</a> (HashAlgorithm &amp;hasher, const std::optional&lt; T &gt; &amp;item) noexcept</td></tr>
-<tr class="memdesc:a177ccf8b6fcfa21a5430a79410638c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::optional.  <a href="#a177ccf8b6fcfa21a5430a79410638c8c">More...</a><br /></td></tr>
-<tr class="separator:a177ccf8b6fcfa21a5430a79410638c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180f010d174a68db7ca96ebb81c1471f"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T1 , class T2 &gt; </td></tr>
+<tr class="memitem:a180f010d174a68db7ca96ebb81c1471f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a180f010d174a68db7ca96ebb81c1471f">hash_append</a> (HashAlgorithm &amp;hasher, const std::pair&lt; T1, T2 &gt; &amp;item) noexcept</td></tr>
+<tr class="memdesc:a180f010d174a68db7ca96ebb81c1471f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::pair.  <a href="#a180f010d174a68db7ca96ebb81c1471f">More...</a><br /></td></tr>
+<tr class="separator:a180f010d174a68db7ca96ebb81c1471f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98bb4cd952e51e277fc40dc5e7e9b2c8"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
+<tr class="memitem:a98bb4cd952e51e277fc40dc5e7e9b2c8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a98bb4cd952e51e277fc40dc5e7e9b2c8">hash_append</a> (HashAlgorithm &amp;hasher, const std::optional&lt; T &gt; &amp;item) noexcept</td></tr>
+<tr class="memdesc:a98bb4cd952e51e277fc40dc5e7e9b2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::optional.  <a href="#a98bb4cd952e51e277fc40dc5e7e9b2c8">More...</a><br /></td></tr>
+<tr class="separator:a98bb4cd952e51e277fc40dc5e7e9b2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c80c0eacf567c675541a92ff161fd0"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T1 , class T2 , class Compare , class Allocator &gt; </td></tr>
+<tr class="memitem:ad2c80c0eacf567c675541a92ff161fd0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad2c80c0eacf567c675541a92ff161fd0">hash_append</a> (HashAlgorithm &amp;hasher, const std::map&lt; T1, T2, Compare, Allocator &gt; &amp;item) noexcept</td></tr>
+<tr class="memdesc:ad2c80c0eacf567c675541a92ff161fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::map.  <a href="#ad2c80c0eacf567c675541a92ff161fd0">More...</a><br /></td></tr>
+<tr class="separator:ad2c80c0eacf567c675541a92ff161fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db7c5cf9556e82dd4fe8f79321ca8e5"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class Key , class Compare , class Allocator &gt; </td></tr>
+<tr class="memitem:a1db7c5cf9556e82dd4fe8f79321ca8e5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1db7c5cf9556e82dd4fe8f79321ca8e5">hash_append</a> (HashAlgorithm &amp;hasher, const std::set&lt; Key, Compare, Allocator &gt; &amp;item) noexcept</td></tr>
+<tr class="memdesc:a1db7c5cf9556e82dd4fe8f79321ca8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::set.  <a href="#a1db7c5cf9556e82dd4fe8f79321ca8e5">More...</a><br /></td></tr>
+<tr class="separator:a1db7c5cf9556e82dd4fe8f79321ca8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337fbf2124183c6555c2d45989b03b15"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class Iter &gt; </td></tr>
 <tr class="memitem:a337fbf2124183c6555c2d45989b03b15"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a337fbf2124183c6555c2d45989b03b15">hash_append_range</a> (HashAlgorithm &amp;hasher, Iter begin, Iter end) noexcept</td></tr>
 <tr class="memdesc:a337fbf2124183c6555c2d45989b03b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for a range, as given by two iterators.  <a href="#a337fbf2124183c6555c2d45989b03b15">More...</a><br /></td></tr>
 <tr class="separator:a337fbf2124183c6555c2d45989b03b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ec36c65f95147192214391781b75b08"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T1 , class T2 , class Compare , class Allocator &gt; </td></tr>
-<tr class="memitem:a8ec36c65f95147192214391781b75b08"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a8ec36c65f95147192214391781b75b08">hash_append</a> (HashAlgorithm &amp;hasher, const std::map&lt; T1, T2, Compare, Allocator &gt; &amp;item) noexcept</td></tr>
-<tr class="memdesc:a8ec36c65f95147192214391781b75b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::map.  <a href="#a8ec36c65f95147192214391781b75b08">More...</a><br /></td></tr>
-<tr class="separator:a8ec36c65f95147192214391781b75b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d528c457d14bb52a9b3e53e8cb9999"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class Key , class Compare , class Allocator &gt; </td></tr>
-<tr class="memitem:a33d528c457d14bb52a9b3e53e8cb9999"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a33d528c457d14bb52a9b3e53e8cb9999">hash_append</a> (HashAlgorithm &amp;hasher, const std::set&lt; Key, Compare, Allocator &gt; &amp;item) noexcept</td></tr>
-<tr class="memdesc:a33d528c457d14bb52a9b3e53e8cb9999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::set.  <a href="#a33d528c457d14bb52a9b3e53e8cb9999">More...</a><br /></td></tr>
-<tr class="separator:a33d528c457d14bb52a9b3e53e8cb9999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75fb496e078e67e4dcafd6ae9e624f30"><td class="memTemplParams" colspan="2">template&lt;typename Tag &gt; </td></tr>
 <tr class="memitem:a75fb496e078e67e4dcafd6ae9e624f30"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a75fb496e078e67e4dcafd6ae9e624f30">to_string</a> (const <a class="el" href="classdrake_1_1_identifier.html">drake::Identifier</a>&lt; Tag &gt; &amp;id)</td></tr>
 <tr class="memdesc:a75fb496e078e67e4dcafd6ae9e624f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables use of identifiers with to_string.  <a href="#a75fb496e078e67e4dcafd6ae9e624f30">More...</a><br /></td></tr>
@@ -2427,7 +2431,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="ace5b5f07e7cce19025b862a56d85e6aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace5b5f07e7cce19025b862a56d85e6aa">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[1/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5b5f07e7cce19025b862a56d85e6aa">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[1/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2464,8 +2468,46 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a21afb70384c46b571f72e22c6b158c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21afb70384c46b571f72e22c6b158c6c">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[2/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::hash_append </td>
+          <td>(</td>
+          <td class="paramtype">HashAlgorithm &amp;&#160;</td>
+          <td class="paramname"><em>hasher</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>item</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for bare pointers. </p>
+
+</div>
+</div>
 <a id="aeacd6804761e9fb9f0fa26a6766f1444"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeacd6804761e9fb9f0fa26a6766f1444">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[2/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacd6804761e9fb9f0fa26a6766f1444">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2503,7 +2545,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="ae04ca99007a983e597a71955c96c5925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae04ca99007a983e597a71955c96c5925">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[3/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04ca99007a983e597a71955c96c5925">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2541,7 +2583,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="a0abcb9a7b5df5dcf6f77d4dd1fa1f05b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[4/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2579,8 +2621,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a746d15e267a6399643c2ffe878f4680c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a746d15e267a6399643c2ffe878f4680c">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[5/8]</span></h2>
+<a id="a180f010d174a68db7ca96ebb81c1471f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180f010d174a68db7ca96ebb81c1471f">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[6/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2589,7 +2631,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void drake::hash_append </td>
+          <td class="memname">void hash_append </td>
           <td>(</td>
           <td class="paramtype">HashAlgorithm &amp;&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -2617,8 +2659,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a177ccf8b6fcfa21a5430a79410638c8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a177ccf8b6fcfa21a5430a79410638c8c">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[6/8]</span></h2>
+<a id="a98bb4cd952e51e277fc40dc5e7e9b2c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98bb4cd952e51e277fc40dc5e7e9b2c8">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2627,7 +2669,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void drake::hash_append </td>
+          <td class="memname">void hash_append </td>
           <td>(</td>
           <td class="paramtype">HashAlgorithm &amp;&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -2656,8 +2698,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ec36c65f95147192214391781b75b08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ec36c65f95147192214391781b75b08">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[7/8]</span></h2>
+<a id="ad2c80c0eacf567c675541a92ff161fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c80c0eacf567c675541a92ff161fd0">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[8/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2666,7 +2708,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void drake::hash_append </td>
+          <td class="memname">void hash_append </td>
           <td>(</td>
           <td class="paramtype">HashAlgorithm &amp;&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -2691,12 +2733,12 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::map. </p>
-<p>Note that there is no <code>hash_append</code> overload for <code>std::unordered_map</code>, and such an overload must never appear. See n3980.html::unordered for details. </p>
+<p>Note that there is no <code>hash_append</code> overload for <code>std::unordered_map</code>. See <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3980.html#unordered">N3980</a> for details. </p>
 
 </div>
 </div>
-<a id="a33d528c457d14bb52a9b3e53e8cb9999"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33d528c457d14bb52a9b3e53e8cb9999">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[8/8]</span></h2>
+<a id="a1db7c5cf9556e82dd4fe8f79321ca8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db7c5cf9556e82dd4fe8f79321ca8e5">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[9/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2705,7 +2747,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void drake::hash_append </td>
+          <td class="memname">void hash_append </td>
           <td>(</td>
           <td class="paramtype">HashAlgorithm &amp;&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -2730,7 +2772,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::set. </p>
-<p>Note that there is no <code>hash_append</code> overload for <code>std::unordered_set</code>, and such an overload must never appear. See n3980.html::unordered for details. </p>
+<p>Note that there is no <code>hash_append</code> overload for `std::unordered_set. See <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3980.html#unordered">N3980</a> for details. </p>
 
 </div>
 </div>

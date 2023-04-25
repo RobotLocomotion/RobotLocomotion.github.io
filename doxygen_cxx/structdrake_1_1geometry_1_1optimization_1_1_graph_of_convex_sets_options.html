@@ -200,6 +200,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aa705e1cce16e5f276d9f1ff95851698e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa705e1cce16e5f276d9f1ff95851698e">solver_options</a></td></tr>
 <tr class="memdesc:aa705e1cce16e5f276d9f1ff95851698e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options passed to the solver when solving the generated problem.  <a href="#aa705e1cce16e5f276d9f1ff95851698e">More...</a><br /></td></tr>
 <tr class="separator:aa705e1cce16e5f276d9f1ff95851698e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3019fa32c49876dc6f980676632987f5"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a3019fa32c49876dc6f980676632987f5">rounding_solver_options</a> {std::nullopt}</td></tr>
+<tr class="memdesc:a3019fa32c49876dc6f980676632987f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional solver options for the rounded problems.  <a href="#a3019fa32c49876dc6f980676632987f5">More...</a><br /></td></tr>
+<tr class="separator:a3019fa32c49876dc6f980676632987f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a65e0db722c8e6c4cc2fdd74c7f423af5"></a>
@@ -327,6 +330,23 @@ Public Attributes</h2></td></tr>
 
 <p>Random seed to use for random rounding. </p>
 <p>If convex_relaxation is false or max_rounded_paths is less than or equal to zero, this option is ignored. </p>
+
+</div>
+</div>
+<a id="a3019fa32c49876dc6f980676632987f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3019fa32c49876dc6f980676632987f5">&#9670;&nbsp;</a></span>rounding_solver_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&gt; rounding_solver_options {std::nullopt}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optional solver options for the rounded problems. </p>
+<p>If not set, solver_options is used. For instance, one might want to set tighter (i.e., lower) tolerances for running the relaxed problem and looser (i.e., higher) tolerances for final solves during rounding. </p>
 
 </div>
 </div>
