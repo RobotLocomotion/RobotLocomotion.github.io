@@ -161,7 +161,7 @@ var group__systems =
       [ "GetBodyIndices", "classdrake_1_1multibody_1_1_multibody_plant.html#a9e826bbe6f7a8768bea8d2a41be7f0ac", null ],
       [ "GetCollisionGeometriesForBody", "classdrake_1_1multibody_1_1_multibody_plant.html#acb2b21ccb8a93f1929cdec2dc19a6b7f", null ],
       [ "GetDefaultContactSurfaceRepresentation", "classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b", null ],
-      [ "GetDefaultFreeBodyPose", "classdrake_1_1multibody_1_1_multibody_plant.html#a029fdc34c3aea2d69b86715030273d42", null ],
+      [ "GetDefaultFreeBodyPose", "classdrake_1_1multibody_1_1_multibody_plant.html#a337dfd55bba06a92d37269fb8fac0567", null ],
       [ "GetEffortLowerLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#ad6ba00d3cda29df375aefa5a73a6140f", null ],
       [ "GetEffortUpperLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#a94c9ef552f3eb454086bf3bdddff0eb9", null ],
       [ "GetFloatingBaseBodies", "classdrake_1_1multibody_1_1_multibody_plant.html#a6a2813d5472e88bc58bbb9c3129811f5", null ],

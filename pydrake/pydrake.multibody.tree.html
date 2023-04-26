@@ -15755,6 +15755,22 @@ for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
 </div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create a spatial inertia of a mesh, see
+CalcSpatialInertia(const geometry::TriangleSurfaceMesh&lt;double&gt;&amp;
+mesh, double density).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create spatial inertia from most of geometry::Shape, see
+CalcSpatialInertia(const geometry::Shape&amp; shape, double density).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create spatial inertia for a set of bodies, see
+MultibodyPlant::CalcSpatialInertia().</p>
+</div>
 <ul class="simple">
 <li><dl class="simple">
 <dt>[Jain 2010]  Jain, A., 2010. Robot and multibody dynamics: analysis and</dt><dd><p>algorithms. Springer Science &amp; Business Media.</p>
@@ -15890,6 +15906,35 @@ has an equal moment of inertia about any line passing through Bo.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if area_density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.HollowSphereWithMass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HollowSphereWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.HollowSphereWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density hollow sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the hollow sphere (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius in meters (the hollow sphere is regarded as an
+infinitesimally thin shell of uniform density).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16252,13 +16297,40 @@ frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>B’s rotational inertia about Bo is triaxially symmetric, meaning
-B’s has an equal moment of inertia about any line passing through
-Bo.</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidSphereWithMass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidSphereWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidSphereWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid sphere (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16426,6 +16498,22 @@ for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
 </div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create a spatial inertia of a mesh, see
+CalcSpatialInertia(const geometry::TriangleSurfaceMesh&lt;double&gt;&amp;
+mesh, double density).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create spatial inertia from most of geometry::Shape, see
+CalcSpatialInertia(const geometry::Shape&amp; shape, double density).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create spatial inertia for a set of bodies, see
+MultibodyPlant::CalcSpatialInertia().</p>
+</div>
 <ul class="simple">
 <li><dl class="simple">
 <dt>[Jain 2010]  Jain, A., 2010. Robot and multibody dynamics: analysis and</dt><dd><p>algorithms. Springer Science &amp; Business Media.</p>
@@ -16556,6 +16644,35 @@ has an equal moment of inertia about any line passing through Bo.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if area_density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.HollowSphereWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].HollowSphereWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HollowSphereWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.HollowSphereWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density hollow sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the hollow sphere (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius in meters (the hollow sphere is regarded as an
+infinitesimally thin shell of uniform density).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16918,13 +17035,40 @@ frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>B’s rotational inertia about Bo is triaxially symmetric, meaning
-B’s has an equal moment of inertia about any line passing through
-Bo.</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidSphereWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidSphereWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidSphereWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidSphereWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid sphere (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17086,6 +17230,22 @@ for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
 </div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create a spatial inertia of a mesh, see
+CalcSpatialInertia(const geometry::TriangleSurfaceMesh&lt;double&gt;&amp;
+mesh, double density).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create spatial inertia from most of geometry::Shape, see
+CalcSpatialInertia(const geometry::Shape&amp; shape, double density).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To create spatial inertia for a set of bodies, see
+MultibodyPlant::CalcSpatialInertia().</p>
+</div>
 <ul class="simple">
 <li><dl class="simple">
 <dt>[Jain 2010]  Jain, A., 2010. Robot and multibody dynamics: analysis and</dt><dd><p>algorithms. Springer Science &amp; Business Media.</p>
@@ -17216,6 +17376,35 @@ has an equal moment of inertia about any line passing through Bo.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if area_density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.HollowSphereWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].HollowSphereWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HollowSphereWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.HollowSphereWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density hollow sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the hollow sphere (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius in meters (the hollow sphere is regarded as an
+infinitesimally thin shell of uniform density).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17578,13 +17767,40 @@ frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>B’s rotational inertia about Bo is triaxially symmetric, meaning
-B’s has an equal moment of inertia about any line passing through
-Bo.</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if density</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidSphereWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidSphereWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidSphereWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidSphereWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid sphere B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid sphere (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>sphere’s radius (meters).</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo</span></code>:</dt><dd><p>B’s spatial inertia about Bo. Since B’s rotational inertia is
+triaxially symmetric, M_BBo_B = M_BBo_E, i.e., M_BBo expressed in
+frame B is equal to M_BBo expressed in an arbitrary frame E.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is triaxially symmetric, meaning B
+has an equal moment of inertia about any line passing through Bo.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>radius is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>

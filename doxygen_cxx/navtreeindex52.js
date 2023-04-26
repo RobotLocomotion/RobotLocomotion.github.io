@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"scalar__conversion_8h.html#ac7ed4cbbc75e344a25b9a6638ee008ff":[4,0,0,12,3,0,2,2],
+"scalar__conversion__traits_8h.html":[4,0,0,12,3,34],
 "scalar__convertible__component_8h.html":[4,0,0,8,10,31],
 "scalar__dense__output_8h.html":[4,0,0,12,0,18],
 "scalar__initial__value__problem_8h.html":[4,0,0,12,0,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "standard__operations_8h.html#ae9c0dd77c635dceb7612cfeea18f258b":[4,0,0,1,0,0,1,40],
 "standard__operations_8h.html#aeb2505be9197ae5fe3dc22623d663e44":[4,0,0,1,0,0,1,51],
 "standard__operations_8h.html#aeb6bf33add06bc05bd046c803bf6da00":[4,0,0,1,0,0,1,72],
-"standard__operations_8h.html#aee4f16bc60e54f5c9f818f2b3698362b":[4,0,0,1,0,0,1,64],
-"standard__operations_8h.html#af22ca444ff5532fc15e431d516313590":[4,0,0,1,0,0,1,57],
-"standard__operations_8h.html#af2afb4760e5c5ef40db8af9479db1cee":[4,0,0,1,0,0,1,4]
+"standard__operations_8h.html#aee4f16bc60e54f5c9f818f2b3698362b":[4,0,0,1,0,0,1,64]
 };

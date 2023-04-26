@@ -9588,6 +9588,51 @@ prior to allocating the context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.ChangeShape">
+<span class="sig-name descname"><span class="pre">ChangeShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.ChangeShape" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>ChangeShape(self: pydrake.geometry.SceneGraph, source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, shape: pydrake.geometry.Shape, X_FG: Optional[pydrake.math.RigidTransform] = None) -&gt; None</p></li>
+</ol>
+<p>Changes the <code class="docutils literal notranslate"><span class="pre">shape</span></code> of the geometry indicated by the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>.</p>
+<p>The geometry is otherwise unchanged – same geometry_id, same assigned
+roles, same pose with respect to the parent (unless a new value for
+<code class="docutils literal notranslate"><span class="pre">X_FG</span></code> is given).</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt><dd><p>The id for the source modifying the geometry.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id for the geometry whose shape is being modified.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape</span></code>:</dt><dd><p>The new shape to use.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>:</dt><dd><p>The (optional) new pose of the geometry in its frame. If omitted,
+the old pose is used.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the source_id does not map to a</strong> – </p></li>
+<li><p><strong>registered source</strong><strong>, </strong><strong>b</strong><strong>) </strong><strong>the geometry_id does not map to a valid</strong> – </p></li>
+<li><p><strong>geometry</strong><strong>, </strong><strong>c</strong><strong>) </strong><strong>the geometry_id maps to a geometry that does not</strong> – </p></li>
+<li><p><strong>belong to the indicated source</strong><strong>, or </strong><strong>d</strong><strong>) </strong><strong>the geometry is deformable.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>ChangeShape(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, shape: pydrake.geometry.Shape, X_FG: Optional[pydrake.math.RigidTransform] = None) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of ChangeShape(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.collision_filter_manager">
 <span class="sig-name descname"><span class="pre">collision_filter_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.collision_filter_manager" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -10276,6 +10321,51 @@ prior to allocating the context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.ChangeShape">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].ChangeShape"></span><span class="sig-name descname"><span class="pre">ChangeShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.ChangeShape" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>ChangeShape(self: pydrake.geometry.SceneGraph_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, shape: pydrake.geometry.Shape, X_FG: Optional[pydrake.math.RigidTransform] = None) -&gt; None</p></li>
+</ol>
+<p>Changes the <code class="docutils literal notranslate"><span class="pre">shape</span></code> of the geometry indicated by the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>.</p>
+<p>The geometry is otherwise unchanged – same geometry_id, same assigned
+roles, same pose with respect to the parent (unless a new value for
+<code class="docutils literal notranslate"><span class="pre">X_FG</span></code> is given).</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt><dd><p>The id for the source modifying the geometry.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id for the geometry whose shape is being modified.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape</span></code>:</dt><dd><p>The new shape to use.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>:</dt><dd><p>The (optional) new pose of the geometry in its frame. If omitted,
+the old pose is used.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the source_id does not map to a</strong> – </p></li>
+<li><p><strong>registered source</strong><strong>, </strong><strong>b</strong><strong>) </strong><strong>the geometry_id does not map to a valid</strong> – </p></li>
+<li><p><strong>geometry</strong><strong>, </strong><strong>c</strong><strong>) </strong><strong>the geometry_id maps to a geometry that does not</strong> – </p></li>
+<li><p><strong>belong to the indicated source</strong><strong>, or </strong><strong>d</strong><strong>) </strong><strong>the geometry is deformable.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>ChangeShape(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, shape: pydrake.geometry.Shape, X_FG: Optional[pydrake.math.RigidTransform] = None) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of ChangeShape(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.collision_filter_manager">
 <span id="pydrake.geometry.SceneGraph_[AutoDiffXd].collision_filter_manager"></span><span class="sig-name descname"><span class="pre">collision_filter_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.collision_filter_manager" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -10955,6 +11045,51 @@ systems::Context will not have any apparent effect in, at least,
 drake_visualizer. Please change the illustration role in the model
 prior to allocating the context.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.ChangeShape">
+<span id="pydrake.geometry.SceneGraph_[Expression].ChangeShape"></span><span class="sig-name descname"><span class="pre">ChangeShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.ChangeShape" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>ChangeShape(self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, shape: pydrake.geometry.Shape, X_FG: Optional[pydrake.math.RigidTransform] = None) -&gt; None</p></li>
+</ol>
+<p>Changes the <code class="docutils literal notranslate"><span class="pre">shape</span></code> of the geometry indicated by the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>.</p>
+<p>The geometry is otherwise unchanged – same geometry_id, same assigned
+roles, same pose with respect to the parent (unless a new value for
+<code class="docutils literal notranslate"><span class="pre">X_FG</span></code> is given).</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt><dd><p>The id for the source modifying the geometry.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id for the geometry whose shape is being modified.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape</span></code>:</dt><dd><p>The new shape to use.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>:</dt><dd><p>The (optional) new pose of the geometry in its frame. If omitted,
+the old pose is used.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the source_id does not map to a</strong> – </p></li>
+<li><p><strong>registered source</strong><strong>, </strong><strong>b</strong><strong>) </strong><strong>the geometry_id does not map to a valid</strong> – </p></li>
+<li><p><strong>geometry</strong><strong>, </strong><strong>c</strong><strong>) </strong><strong>the geometry_id maps to a geometry that does not</strong> – </p></li>
+<li><p><strong>belong to the indicated source</strong><strong>, or </strong><strong>d</strong><strong>) </strong><strong>the geometry is deformable.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>ChangeShape(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, geometry_id: pydrake.geometry.GeometryId, shape: pydrake.geometry.Shape, X_FG: Optional[pydrake.math.RigidTransform] = None) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of ChangeShape(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">

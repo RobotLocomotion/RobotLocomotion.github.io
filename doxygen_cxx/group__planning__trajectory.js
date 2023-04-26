@@ -71,7 +71,7 @@ var group__planning__trajectory =
     ] ],
     [ "MultipleShooting", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html", [
       [ "CompleteTrajectoryCallback", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac1e9e3e110151e83db01f19f0dd99f46", null ],
-      [ "TrajectoryCallback", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a6e1c492b070442dd36f394d9bf0b15a3", null ],
+      [ "TrajectoryCallback", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5064765fee292f94378bf23096756fc4", null ],
       [ "MultipleShooting", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aff3e6c4f0b60a31114bec85318e0617f", null ],
       [ "MultipleShooting", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a0684a6e53303770ce0e6c192fb0667f9", null ],
       [ "~MultipleShooting", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac5ec168ba2fdfe3900aca37b8580c8ad", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a9830891fd34cc2e0313c865ac201c8fc":[3,0,0,18,9,0],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aa445a1729df406e75359e3c87b757290":[3,0,0,18,9,2],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aaacb08cadfa67d9aabcc07dbf57fce30":[3,0,0,18,9,4],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aac002eea06875b91ada866e249fc7b6f":[3,0,0,18,9,3],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#ab191f8ee68c549c494a6d49b0c381944":[3,0,0,18,9,7],
@@ -126,7 +128,7 @@ var NAVTREEINDEX42 =
 "compute__torque_8h.html#a66eda6d10bb53572748c1f28aaf5d6ab":[4,0,0,12,1,0,0,0],
 "cond_8h.html":[4,0,0,1,11],
 "cond_8h.html#a0b6d557a3ef060688cb028f17975ffca":[4,0,0,1,11,0],
-"cond_8h.html#a1d122c5050b7d174b5a35e39c52bfb09":[4,0,0,1,11,1],
+"cond_8h.html#ac20110c691980f564476914e3fda5991":[4,0,0,1,11,1],
 "constant__value__source_8h.html":[4,0,0,12,6,3],
 "constant__vector__source_8h.html":[4,0,0,12,6,4],
 "constants_8h.html":[4,0,0,1,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX42 =
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,3,6,1],
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[4,0,0,8,3,6,1,1],
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385":[4,0,0,8,3,6,1,2],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee":[4,0,0,8,3,6,1,0],
-"deformable__contact_8h.html":[4,0,0,4,3,1],
-"deformable__contact__geometries_8h.html":[4,0,0,4,2,9]
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee":[4,0,0,8,3,6,1,0]
 };

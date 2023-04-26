@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,57,0],
+"structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,57,2],
+"structdrake_1_1type__tag.html":[3,0,0,58],
+"structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,58,0],
 "structdrake_1_1type__visit__with__default.html":[3,0,0,59],
 "structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,59,0],
 "structdrake_1_1type__visit__with__tag.html":[3,0,0,60],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "trajectory__affine__system_8h.html":[4,0,0,12,6,23],
 "trajectory__linear__system_8h.html":[4,0,0,12,6,24],
 "trajectory__source_8h.html":[4,0,0,12,6,25],
-"transform_8h.html":[4,0,0,1,2,2],
-"triangle__quadrature_8h.html":[4,0,0,8,15,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,15,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,53],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,54]
+"transform_8h.html":[4,0,0,1,2,2]
 };

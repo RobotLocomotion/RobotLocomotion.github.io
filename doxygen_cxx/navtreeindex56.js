@@ -1,5 +1,9 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2],
+"structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[1,4,0,2,1],
+"structdrake_1_1systems_1_1_initialize_params.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,0,2,0],
+"structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[3,0,0,16,75],
 "structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,16,75,0],
 "structdrake_1_1systems_1_1_simulator_config.html":[3,0,0,16,92],
 "structdrake_1_1systems_1_1_simulator_config.html#a18b1f02b49adcc233f5e23845b8c90fe":[3,0,0,16,92,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1type__check__different__from.html":[3,0,0,56],
 "structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,56,0],
 "structdrake_1_1type__pack.html":[3,0,0,57],
-"structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,57,1],
-"structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,57,0],
-"structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,57,2],
-"structdrake_1_1type__tag.html":[3,0,0,58],
-"structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,58,0]
+"structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,57,1]
 };

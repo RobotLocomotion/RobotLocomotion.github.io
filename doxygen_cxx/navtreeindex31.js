@@ -1,5 +1,7 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1systems_1_1_dense_output.html#a84e2a0ad8be6719d4650925e571751ab":[3,0,0,16,26,12],
+"classdrake_1_1systems_1_1_dense_output.html#a8b5f6ff41cc69dbdd3944562ca845b18":[3,0,0,16,26,1],
 "classdrake_1_1systems_1_1_dense_output.html#a9adc4d4e993405007389731b8f57cc5b":[3,0,0,16,26,15],
 "classdrake_1_1systems_1_1_dense_output.html#a9f6499438f58544e28b72308fad2c775":[3,0,0,16,26,8],
 "classdrake_1_1systems_1_1_dense_output.html#ab3710dec9cbcff741d635420e32ef300":[3,0,0,16,26,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_discrete_time_delay.html#aa852395cf6dfab5140de1bdecf00e888":[1,2,1,8,8],
 "classdrake_1_1systems_1_1_discrete_time_delay.html#ab8e0e7b1f969abf1b35f6eca6184594f":[1,2,1,8,7],
 "classdrake_1_1systems_1_1_discrete_time_delay.html#abbb54a672ca2b13adaa1abd58f9be6f2":[1,2,1,8,4],
-"classdrake_1_1systems_1_1_discrete_time_delay.html#ad76d8c0407a349406ddfcf1e8fb101cd":[1,2,1,8,9],
-"classdrake_1_1systems_1_1_discrete_time_delay.html#af1c297796070cf2cf5426b1b6a362ff8":[1,2,1,8,5],
-"classdrake_1_1systems_1_1_discrete_time_delay.html#afb9e56447e8d22ed8c480eec03a46060":[1,2,1,8,1]
+"classdrake_1_1systems_1_1_discrete_time_delay.html#ad76d8c0407a349406ddfcf1e8fb101cd":[1,2,1,8,9]
 };
