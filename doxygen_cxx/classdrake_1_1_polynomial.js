@@ -32,6 +32,7 @@ var classdrake_1_1_polynomial =
     [ "GetVariables", "classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4", null ],
     [ "IdToVariableName", "classdrake_1_1_polynomial.html#a96a10bc725a30f1296033f5d26188af1", null ],
     [ "Integral", "classdrake_1_1_polynomial.html#a03a34972aa2903d7210d0bda55e5c157", null ],
+    [ "is_univariate", "classdrake_1_1_polynomial.html#a50429ee79a9044de390501c26d0f0e23", null ],
     [ "IsAffine", "classdrake_1_1_polynomial.html#a0a83f7960aa020c56d20f435dba4d3cd", null ],
     [ "IsValidVariableName", "classdrake_1_1_polynomial.html#ada60946d276f79e555d32badc0d8a91f", null ],
     [ "operator *", "classdrake_1_1_polynomial.html#a9756e806e687de4b2e572193034a9fc1", null ],

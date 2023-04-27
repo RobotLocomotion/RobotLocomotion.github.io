@@ -368,13 +368,13 @@ get translated in non-trivial ways to the underlying program.</p>
 <span class="sig-name descname"><span class="pre">AddEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddEdge" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, v_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, name: str = ‘’) -&gt; drake::geometry::optimization::GraphOfConvexSets::Edge</p></li>
+<li><p>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, v_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, name: str = ‘’) -&gt; pydrake.geometry.optimization.GraphOfConvexSets.Edge</p></li>
 </ol>
 <p>Adds an edge to the graph from VertexId <code class="docutils literal notranslate"><span class="pre">u_id</span></code> to VertexId <code class="docutils literal notranslate"><span class="pre">v_id</span></code>.
 The ids must refer to valid vertices in this graph. If <code class="docutils literal notranslate"><span class="pre">name</span></code> is
 empty then a default name will be provided.</p>
 <ol class="arabic simple" start="2">
-<li><p>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u: drake::geometry::optimization::GraphOfConvexSets::Vertex, v: drake::geometry::optimization::GraphOfConvexSets::Vertex, name: str = ‘’) -&gt; drake::geometry::optimization::GraphOfConvexSets::Edge</p></li>
+<li><p>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, v: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, name: str = ‘’) -&gt; pydrake.geometry.optimization.GraphOfConvexSets.Edge</p></li>
 </ol>
 <p>Adds an edge to the graph from Vertex <code class="docutils literal notranslate"><span class="pre">u</span></code> to Vertex <code class="docutils literal notranslate"><span class="pre">v</span></code>. The
 vertex references must refer to valid vertices in this graph. If
@@ -383,7 +383,7 @@ vertex references must refer to valid vertices in this graph. If
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.AddVertex">
-<span class="sig-name descname"><span class="pre">AddVertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::optimization::GraphOfConvexSets::Vertex</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddVertex" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddVertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddVertex" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a vertex to the graph. A copy of <code class="docutils literal notranslate"><span class="pre">set</span></code> is cloned and stored
 inside the graph. If <code class="docutils literal notranslate"><span class="pre">name</span></code> is empty then a default name will be
 provided.</p>
@@ -677,7 +677,7 @@ fixed (if false).</p>
 <span class="sig-name descname"><span class="pre">RemoveEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.RemoveEdge" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge_id: drake::Identifier&lt;drake::geometry::optimization::EdgeTag&gt;) -&gt; None</p></li>
+<li><p>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge_id: pydrake.geometry.optimization.GraphOfConvexSets.EdgeId) -&gt; None</p></li>
 </ol>
 <p>Removes edge <code class="docutils literal notranslate"><span class="pre">edge_id</span></code> from the graph.</p>
 <dl class="simple">
@@ -685,7 +685,7 @@ fixed (if false).</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge: drake::geometry::optimization::GraphOfConvexSets::Edge) -&gt; None</p></li>
+<li><p>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge: pydrake.geometry.optimization.GraphOfConvexSets.Edge) -&gt; None</p></li>
 </ol>
 <p>Removes edge <code class="docutils literal notranslate"><span class="pre">edge</span></code> from the graph.</p>
 <dl class="simple">
@@ -699,7 +699,7 @@ fixed (if false).</p>
 <span class="sig-name descname"><span class="pre">RemoveVertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.RemoveVertex" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;) -&gt; None</p></li>
+<li><p>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId) -&gt; None</p></li>
 </ol>
 <p>Removes vertex <code class="docutils literal notranslate"><span class="pre">vertex_id</span></code> from the graph as well as any edges from
 or to the vertex. Runtime is O(nₑ) where nₑ is the number of edges in
@@ -709,7 +709,7 @@ the graph.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex: drake::geometry::optimization::GraphOfConvexSets::Vertex) -&gt; None</p></li>
+<li><p>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex: pydrake.geometry.optimization.GraphOfConvexSets.Vertex) -&gt; None</p></li>
 </ol>
 <p>Removes vertex <code class="docutils literal notranslate"><span class="pre">vertex</span></code> from the graph as well as any edges from or
 to the vertex. Runtime is O(nₑ) where nₑ is the number of edges in the
@@ -725,7 +725,7 @@ graph.</p>
 <span class="sig-name descname"><span class="pre">SolveShortestPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
+<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, target_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -755,7 +755,7 @@ set.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
+<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, target: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>

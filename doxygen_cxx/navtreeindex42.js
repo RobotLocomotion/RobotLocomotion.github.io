@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a67132081ac654cacdf3adefd7e95a2f7":[3,0,0,18,9,11],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a6f3379a2754487a0ec8bf752912a41bf":[3,0,0,18,9,6],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a74dc3c05dd9c37aa42ee21a90b7822f7":[3,0,0,18,9,8],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#a9830891fd34cc2e0313c865ac201c8fc":[3,0,0,18,9,0],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aa445a1729df406e75359e3c87b757290":[3,0,0,18,9,2],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aaacb08cadfa67d9aabcc07dbf57fce30":[3,0,0,18,9,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1],
 "default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,0,2,4],
 "deformable__body__config_8h.html":[4,0,0,8,3,6],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,3,6,1],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[4,0,0,8,3,6,1,1],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385":[4,0,0,8,3,6,1,2],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee":[4,0,0,8,3,6,1,0]
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,3,6,1]
 };

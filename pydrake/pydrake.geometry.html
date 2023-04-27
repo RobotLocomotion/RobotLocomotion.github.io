@@ -6702,7 +6702,7 @@ throwsᵉ | throwsᵉ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░ | ░░░░░ | | Cylinder | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ |
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵉ | throwsᵉ |
 throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░ |
+throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵃ | ░░░░░ |
 ░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
 throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ᵇ |
 throwsᵉ | <strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
@@ -6867,11 +6867,11 @@ throwsᵇ | throwsᵇ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵇ | throwsᵇ |
 throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
 throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | ᵃ | ᶜ | ░░░░░ | | Sphere | 2e-15
-| throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 | <strong>*Table
-5*</strong>: Worst observed error (in m) for 2mm penetration/separation
-between geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::AutoDiffXd “AutoDiffXd”.</p>
+░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
+2e-15 | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 |
+<strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
+penetration/separation between geometries approximately 20cm in size
+for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd “AutoDiffXd”.</p>
 <div class="line-block">
 <div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
 </div>
@@ -6883,9 +6883,9 @@ throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
 throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᵇ |
+throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
+░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
+throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᶜ |
 throwsᵈ | <strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
 drake::symbolic::Expression.</p>
 <ul class="simple">
@@ -7436,7 +7436,7 @@ throwsᵉ | throwsᵉ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░ | ░░░░░ | | Cylinder | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ |
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵉ | throwsᵉ |
 throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░ |
+throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵃ | ░░░░░ |
 ░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
 throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ᵇ |
 throwsᵉ | <strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
@@ -7601,11 +7601,11 @@ throwsᵇ | throwsᵇ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵇ | throwsᵇ |
 throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
 throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | ᵃ | ᶜ | ░░░░░ | | Sphere | 2e-15
-| throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 | <strong>*Table
-5*</strong>: Worst observed error (in m) for 2mm penetration/separation
-between geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::AutoDiffXd “AutoDiffXd”.</p>
+░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
+2e-15 | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 |
+<strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
+penetration/separation between geometries approximately 20cm in size
+for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd “AutoDiffXd”.</p>
 <div class="line-block">
 <div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
 </div>
@@ -7617,9 +7617,9 @@ throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
 throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᵇ |
+throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
+░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
+throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᶜ |
 throwsᵈ | <strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
 drake::symbolic::Expression.</p>
 <ul class="simple">
@@ -8056,7 +8056,7 @@ throwsᵉ | throwsᵉ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░ | ░░░░░ | | Cylinder | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ |
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵉ | throwsᵉ |
 throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░ |
+throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵃ | ░░░░░ |
 ░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
 throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ᵇ |
 throwsᵉ | <strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
@@ -8221,11 +8221,11 @@ throwsᵇ | throwsᵇ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵇ | throwsᵇ |
 throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
 throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | ᵃ | ᶜ | ░░░░░ | | Sphere | 2e-15
-| throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 | <strong>*Table
-5*</strong>: Worst observed error (in m) for 2mm penetration/separation
-between geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::AutoDiffXd “AutoDiffXd”.</p>
+░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
+2e-15 | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 |
+<strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
+penetration/separation between geometries approximately 20cm in size
+for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd “AutoDiffXd”.</p>
 <div class="line-block">
 <div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
 </div>
@@ -8237,9 +8237,9 @@ throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░�
 ░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
 ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
 throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᵇ |
+throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
+░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
+throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᶜ |
 throwsᵈ | <strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
 drake::symbolic::Expression.</p>
 <ul class="simple">

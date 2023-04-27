@@ -1,5 +1,8 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a6a8a8e63ea2983821e3762d423f46b1a":[3,0,0,10,3,0],
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a88f7988b26cd2ca1943376053309e2ce":[3,0,0,10,3,5],
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a95f9d564671ec58a65c3dcb51be44f5b":[3,0,0,10,3,2],
 "classdrake_1_1perception_1_1_point_cloud_to_lcm.html#af93b4c87b94fc5b66d94411cc065c7da":[3,0,0,10,3,3],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html":[3,0,0,10,0,0],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#a02b2175ab5902fc277d6cce3dee4abb7":[3,0,0,10,0,0,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a4e0d5526b3c774c0c2d0b743e896078e":[1,4,2,1,1,6],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[1,4,2,1,1,1],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[1,4,2,1,1,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[1,4,2,1,1,3],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[1,4,2,1,1,0],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[1,1,0,21],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[1,1,0,21,9]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[1,4,2,1,1,3]
 };
