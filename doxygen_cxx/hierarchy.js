@@ -186,6 +186,7 @@ var hierarchy =
     [ "DynamicProgrammingOptions", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html", null ],
     [ "GraphOfConvexSets::Edge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html", null ],
     [ "EdgeMeasure", "classdrake_1_1planning_1_1_edge_measure.html", null ],
+    [ "GcsTrajectoryOptimization::EdgesBetweenSubgraphs", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html", null ],
     [ "EigenPtr< PlainObjectType >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const MatrixX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const VectorX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
@@ -402,6 +403,7 @@ var hierarchy =
     [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html", null ],
     [ "FromDoubleTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html", null ],
     [ "Meshcat::Gamepad", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html", null ],
+    [ "GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html", null ],
     [ "GenericPolynomial< BasisElement >", "classdrake_1_1symbolic_1_1_generic_polynomial.html", null ],
     [ "GeometryFrame", "classdrake_1_1geometry_1_1_geometry_frame.html", null ],
     [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html", null ],
@@ -814,6 +816,7 @@ var hierarchy =
       [ "SchunkWsgPlainController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html", null ]
     ] ],
     [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html", null ],
+    [ "GcsTrajectoryOptimization::Subgraph", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html", null ],
     [ "Subscriber< Message >", "classdrake_1_1lcm_1_1_subscriber.html", null ],
     [ "Polynomial::SubstituteAndExpandCacheData", "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html", null ],
     [ "SurfacePolygon", "classdrake_1_1geometry_1_1_surface_polygon.html", null ],
@@ -1081,6 +1084,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "Trajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_trajectory.html", [
+      [ "BezierCurve< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
       [ "BsplineTrajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ]
     ] ],
     [ "Transform", "classdrake_1_1schema_1_1_transform.html", null ],

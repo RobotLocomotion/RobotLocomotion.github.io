@@ -98,6 +98,7 @@ var searchData=
   ['stepwisedenseoutput',['StepwiseDenseOutput',['../classdrake_1_1systems_1_1_stepwise_dense_output.html',1,'drake::systems']]],
   ['stiffdoublemassspringsystem',['StiffDoubleMassSpringSystem',['../classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html',1,'drake::systems::analysis::test']]],
   ['stiffdoublemassspringsystem_3c_20double_20_3e',['StiffDoubleMassSpringSystem&lt; double &gt;',['../classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html',1,'drake::systems::analysis::test']]],
+  ['subgraph',['Subgraph',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html',1,'drake::planning::trajectory_optimization::GcsTrajectoryOptimization']]],
   ['subscriber',['Subscriber',['../classdrake_1_1lcm_1_1_subscriber.html',1,'drake::lcm']]],
   ['substituteandexpandcachedata',['SubstituteAndExpandCacheData',['../structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html',1,'drake::symbolic::Polynomial']]],
   ['subvector',['Subvector',['../classdrake_1_1systems_1_1_subvector.html',1,'drake::systems']]],

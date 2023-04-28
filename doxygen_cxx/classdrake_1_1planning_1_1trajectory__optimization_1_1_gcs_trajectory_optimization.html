@@ -1,0 +1,761 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: GcsTrajectoryOptimization Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">GcsTrajectoryOptimization Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html" title="GcsTrajectoryOptimization implements a simplified motion planning optimization problem introduced in ...">GcsTrajectoryOptimization</a> implements a simplified motion planning optimization problem introduced in the paper "Motion Planning around Obstacles with Convex Optimization. </p>
+<p>"</p>
+<p>"Motion Planning around Obstacles with Convex Optimization" by Tobia Marcucci, Mark Petersen, David von Wrangel, Russ Tedrake. <a href="https://arxiv.org/abs/2205.04422">https://arxiv.org/abs/2205.04422</a></p>
+<p>Instead of using the full time-scaling curve, this problem uses a single time-scaling variable for each region. This formulation yields continuous trajectories, which are not differentiable at the transition times between the regions since non-convex continuity constraints are not supported yet. However, it supports continuity on the path for arbitrary degree. The resulting trajectories can be post-processed with e.g. Toppra in order to smooth out the timing rescaling.</p>
+<p>The ith piece of the composite trajectory is defined as q(t) = r((t - tᵢ) / hᵢ). r : [0, 1] → ℝⁿ is a the path, parametrized as a Bézier curve with order n. tᵢ and hᵢ are the initial time and duration of the ith sub-trajectory.</p>
+<p>This class supports the notion of a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> of regions. This has proven useful to facilitate multi-modal motion planning such as: <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> A: find a collision-free trajectory for the robot to a grasping posture, <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> B: find a collision-free trajectory for the robot with the object in its hand to a placing posture, etc. </p>
+</div>
+<p><code>#include &lt;drake/planning/trajectory_optimization/gcs_trajectory_optimization.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html" title="EdgesBetweenSubgraphs are defined as the connecting edges between two given subgraphs.">EdgesBetweenSubgraphs</a> are defined as the connecting edges between two given subgraphs.  <a href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> is a subset of the larger graph.  <a href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3118b81d1fa0c9a6bf1ed09efbaadd40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3118b81d1fa0c9a6bf1ed09efbaadd40">GcsTrajectoryOptimization</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553">num_positions</a>)</td></tr>
+<tr class="memdesc:a3118b81d1fa0c9a6bf1ed09efbaadd40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the motion planning problem.  <a href="#a3118b81d1fa0c9a6bf1ed09efbaadd40">More...</a><br /></td></tr>
+<tr class="separator:a3118b81d1fa0c9a6bf1ed09efbaadd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c41ee6c46e4e39173da8e589408b9ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9c41ee6c46e4e39173da8e589408b9ef">~GcsTrajectoryOptimization</a> ()</td></tr>
+<tr class="separator:a9c41ee6c46e4e39173da8e589408b9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553">num_positions</a> () const</td></tr>
+<tr class="memdesc:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of position variables.  <a href="#aba2887f0ca1fbbdfb49cf6b0ee21e553">More...</a><br /></td></tr>
+<tr class="separator:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae696ea90dcbf1b197d5a4a30f895421d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ae696ea90dcbf1b197d5a4a30f895421d">GetGraphvizString</a> (const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;result=std::nullopt, bool show_slack=true, <a class="el" href="classint.html">int</a> precision=3, bool scientific=false) const</td></tr>
+<tr class="memdesc:ae696ea90dcbf1b197d5a4a30f895421d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <a href="#ae696ea90dcbf1b197d5a4a30f895421d">More...</a><br /></td></tr>
+<tr class="separator:ae696ea90dcbf1b197d5a4a30f895421d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e564e0e9e83762d5205af3bd7556529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a7e564e0e9e83762d5205af3bd7556529">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;edges_between_regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=1e-6, double h_max=20, std::string name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a7e564e0e9e83762d5205af3bd7556529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions and indices.  <a href="#a7e564e0e9e83762d5205af3bd7556529">More...</a><br /></td></tr>
+<tr class="separator:a7e564e0e9e83762d5205af3bd7556529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c0185ae66f1593e99a8ee7cc5bae37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a45c0185ae66f1593e99a8ee7cc5bae37">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=1e-6, double h_max=20, std::string name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a45c0185ae66f1593e99a8ee7cc5bae37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions.  <a href="#a45c0185ae66f1593e99a8ee7cc5bae37">More...</a><br /></td></tr>
+<tr class="separator:a45c0185ae66f1593e99a8ee7cc5bae37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bebbda88b8d0ae4fadc88777404491e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8bebbda88b8d0ae4fadc88777404491e">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace=nullptr)</td></tr>
+<tr class="memdesc:a8bebbda88b8d0ae4fadc88777404491e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects two subgraphs with directed edges.  <a href="#a8bebbda88b8d0ae4fadc88777404491e">More...</a><br /></td></tr>
+<tr class="separator:a8bebbda88b8d0ae4fadc88777404491e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5120b456754eef916922cd73d2ec846a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a5120b456754eef916922cd73d2ec846a">AddPathLengthCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
+<tr class="memdesc:a5120b456754eef916922cd73d2ec846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <a href="#a5120b456754eef916922cd73d2ec846a">More...</a><br /></td></tr>
+<tr class="separator:a5120b456754eef916922cd73d2ec846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memdesc:a34f92ff4feccc5aa2e289b9a514486ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <a href="#a34f92ff4feccc5aa2e289b9a514486ac">More...</a><br /></td></tr>
+<tr class="separator:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ddb1df26a2324afc83f84c90281c249"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249">SolvePath</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;source, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a8ddb1df26a2324afc83f84c90281c249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole graph.  <a href="#a8ddb1df26a2324afc83f84c90281c249">More...</a><br /></td></tr>
+<tr class="separator:a8ddb1df26a2324afc83f84c90281c249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a168105bb5c3b8e774024bc13eeef01de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a168105bb5c3b8e774024bc13eeef01de">GcsTrajectoryOptimization</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;)=delete</td></tr>
+<tr class="separator:a168105bb5c3b8e774024bc13eeef01de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6cfa802822c84540b5145bec87c49e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af6cfa802822c84540b5145bec87c49e5">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;)=delete</td></tr>
+<tr class="separator:af6cfa802822c84540b5145bec87c49e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74601e7a7d4fab817e64e564b96e98bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a74601e7a7d4fab817e64e564b96e98bd">GcsTrajectoryOptimization</a> (<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a74601e7a7d4fab817e64e564b96e98bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0056534457223e2eb27065147b9232"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0e0056534457223e2eb27065147b9232">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a0e0056534457223e2eb27065147b9232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a168105bb5c3b8e774024bc13eeef01de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a168105bb5c3b8e774024bc13eeef01de">&#9670;&nbsp;</a></span>GcsTrajectoryOptimization() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74601e7a7d4fab817e64e564b96e98bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74601e7a7d4fab817e64e564b96e98bd">&#9670;&nbsp;</a></span>GcsTrajectoryOptimization() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3118b81d1fa0c9a6bf1ed09efbaadd40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3118b81d1fa0c9a6bf1ed09efbaadd40">&#9670;&nbsp;</a></span>GcsTrajectoryOptimization() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>num_positions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the motion planning problem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_positions</td><td>is the dimension of the configuration space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c41ee6c46e4e39173da8e589408b9ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c41ee6c46e4e39173da8e589408b9ef">&#9670;&nbsp;</a></span>~GcsTrajectoryOptimization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8bebbda88b8d0ae4fadc88777404491e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bebbda88b8d0ae4fadc88777404491e">&#9670;&nbsp;</a></span>AddEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a>&amp; AddEdges </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td>
+          <td class="paramname"><em>from_subgraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td>
+          <td class="paramname"><em>to_subgraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *&#160;</td>
+          <td class="paramname"><em>subspace</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connects two subgraphs with directed edges. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from_subgraph</td><td>is the subgraph to connect from. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a7e564e0e9e83762d5205af3bd7556529" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
+    <tr><td class="paramname">to_subgraph</td><td>is the subgraph to connect to. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a7e564e0e9e83762d5205af3bd7556529" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
+    <tr><td class="paramname">subspace</td><td>is the subspace that the connecting control points must be in. Subspace is optional. Only edges that connect through the subspace will be added, and the subspace is added as a constraint on the connecting control points. Subspaces of type point or HPolyhedron are supported since other sets require constraints that are not yet supported by the GraphOfConvexSets::Edge constraint, e.g., set containment of a HyperEllipsoid is formulated via LorentzCone constraints. Workaround: Create a subgraph of zero order with the subspace as the region and connect it between the two subgraphs. This works because GraphOfConvexSet::Vertex , supports arbitrary instances of ConvexSets. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5120b456754eef916922cd73d2ec846a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5120b456754eef916922cd73d2ec846a">&#9670;&nbsp;</a></span>AddPathLengthCost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPathLengthCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>weight_matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds multiple L2Norm Costs on the upper bound of the path length. </p>
+<p>Since we cannot directly compute the path length of a Bézier curve, we minimize the upper bound of the path integral by minimizing the sum of distances between control points. For Bézier curves, this is equivalent to the sum of the L2Norm of the derivative control points of the curve divided by the order.</p>
+<p>This cost will be added to the entire graph. Since the path length is only defined for Bézier curves that have two or more control points, this cost will only added to all subgraphs with order greater than zero. Note that this cost will be applied even to subgraphs added in the future.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight_matrix</td><td>is the relative weight of each component for the cost. The diagonal of the matrix is the weight for each dimension. The off-diagonal elements are the weight for the cross terms, which can be used to penalize diagonal movement. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>weight_matrix must be of size <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of position variables.">num_positions()</a> x <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of position variables.">num_positions()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a34f92ff4feccc5aa2e289b9a514486ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f92ff4feccc5aa2e289b9a514486ac">&#9670;&nbsp;</a></span>AddPathLengthCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPathLengthCost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds multiple L2Norm Costs on the upper bound of the path length. </p>
+<p>Since we cannot directly compute the path length of a Bézier curve, we minimize the upper bound of the path integral by minimizing the sum of distances between control points. For Bézier curves, this is equivalent to the sum of the L2Norm of the derivative control points of the curve divided by the order.</p>
+<p>This cost will be added to the entire graph. Since the path length is only defined for Bézier curves that have two or more control points, this cost will only added to all subgraphs with order greater than zero. Note that this cost will be applied even to subgraphs added in the future.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight</td><td>is the relative weight of the cost. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7e564e0e9e83762d5205af3bd7556529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e564e0e9e83762d5205af3bd7556529">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a>&amp; AddRegions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>regions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>edges_between_regions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>h_min</em> = <code>1e-6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>h_max</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions and indices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">regions</td><td>represent the valid set a control point can be in. We retain a copy of the regions since other functions may access them. </td></tr>
+    <tr><td class="paramname">edges_between_regions</td><td>is a list of pairs of indices into the regions vector. For each pair representing an edge between two regions, an edge is added within the subgraph. Note that the edges are directed so (i,j) will only add an edge from region i to region j. </td></tr>
+    <tr><td class="paramname">order</td><td>is the order of the Bézier curve. </td></tr>
+    <tr><td class="paramname">h_max</td><td>is the maximum duration to spend in a region (seconds). Some solvers struggle numerically with large values. </td></tr>
+    <tr><td class="paramname">h_min</td><td>is the minimum duration to spend in a region (seconds) if that region is visited on the optimal path. Some cost and constraints are only convex for h &gt; 0. For example the perspective quadratic cost of the path energy ||ṙ(s)||² / h becomes non-convex for h = 0. Otherwise h_min can be set to 0. </td></tr>
+    <tr><td class="paramname">name</td><td>is the name of the subgraph. A default name will be provided. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45c0185ae66f1593e99a8ee7cc5bae37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c0185ae66f1593e99a8ee7cc5bae37">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a>&amp; AddRegions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>regions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>h_min</em> = <code>1e-6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>h_max</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions. </p>
+<p>This function will compute the edges between the regions based on the set intersections. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">regions</td><td>represent the valid set a control point can be in. We retain a copy of the regions since other functions may access them. </td></tr>
+    <tr><td class="paramname">order</td><td>is the order of the Bézier curve. </td></tr>
+    <tr><td class="paramname">h_max</td><td>is the maximum duration to spend in a region (seconds). Some solvers struggle numerically with large values. </td></tr>
+    <tr><td class="paramname">h_min</td><td>is the minimum duration to spend in a region (seconds) if that region is visited on the optimal path. Some cost and constraints are only convex for h &gt; 0. For example the perspective quadratic cost of the path energy ||ṙ(s)||² / h becomes non-convex for h = 0. Otherwise h_min can be set to 0. </td></tr>
+    <tr><td class="paramname">name</td><td>is the name of the subgraph. A default name will be provided. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae696ea90dcbf1b197d5a4a30f895421d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae696ea90dcbf1b197d5a4a30f895421d">&#9670;&nbsp;</a></span>GetGraphvizString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetGraphvizString </td>
+          <td>(</td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>show_slack</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>precision</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scientific</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Graphviz string describing the graph vertices and edges. </p>
+<p>If <code>results</code> is supplied, then the graph will be annotated with the solution values. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">show_slacks</td><td>determines whether the values of the intermediate (slack) variables are also displayed in the graph. </td></tr>
+    <tr><td class="paramname">precision</td><td>sets the floating point precision (how many digits are generated) of the annotations. </td></tr>
+    <tr><td class="paramname">scientific</td><td>sets the floating point formatting to scientific (if true) or fixed (if false). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aba2887f0ca1fbbdfb49cf6b0ee21e553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2887f0ca1fbbdfb49cf6b0ee21e553">&#9670;&nbsp;</a></span>num_positions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_positions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of position variables. </p>
+
+</div>
+</div>
+<a id="a0e0056534457223e2eb27065147b9232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0056534457223e2eb27065147b9232">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6cfa802822c84540b5145bec87c49e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6cfa802822c84540b5145bec87c49e5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ddb1df26a2324afc83f84c90281c249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ddb1df26a2324afc83f84c90281c249">&#9670;&nbsp;</a></span>SolvePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&gt; SolvePath </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole graph. </p>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a943e17664f99f42099ecacca17676aee" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph,...">geometry::optimization::GraphOfConvexSets::SolveShortestPath()</a></code> for further details.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>specifies the source subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a7e564e0e9e83762d5205af3bd7556529" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the source is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to start in. To start in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
+    <tr><td class="paramname">target</td><td>specifies the target subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a7e564e0e9e83762d5205af3bd7556529" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the target is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to end in. To end in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
+    <tr><td class="paramname">options</td><td>include all settings for solving the shortest path problem. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a></code> for further details. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/planning/trajectory_optimization/<a class="el" href="gcs__trajectory__optimization_8h.html">gcs_trajectory_optimization.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning_1_1trajectory__optimization.html">trajectory_optimization</a></li><li class="navelem"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a></li>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

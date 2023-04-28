@@ -13,6 +13,7 @@ var group__estimator__systems =
       [ "operator=", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a192f47dbd206ccbc9593332a30dbf4f7", null ],
       [ "operator=", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a4b2fdb835b8e4f54c55aba0bf765d57f", null ]
     ] ],
+    [ "IsDetectable", "group__estimator__systems.html#gafef1c264968026046996e35551b7155e", null ],
     [ "IsObservable", "group__estimator__systems.html#ga9bb685faf49982e65d0e4bbf2c1d460b", null ],
     [ "ObservabilityMatrix", "group__estimator__systems.html#gaa15831763ec42b356a75c6bb616a6531", null ],
     [ "SteadyStateKalmanFilter", "group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16", null ],

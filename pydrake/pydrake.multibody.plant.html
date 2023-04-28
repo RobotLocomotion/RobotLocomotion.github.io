@@ -1185,6 +1185,42 @@ primitive shape.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.SetWallBoundaryCondition">
+<span class="sig-name descname"><span class="pre">SetWallBoundaryCondition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.plant.DeformableModel,</span> <span class="pre">id:</span> <span class="pre">drake::Identifier&lt;drake::multibody::DeformableBodyTag&gt;,</span> <span class="pre">p_WQ:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">n_W:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.SetWallBoundaryCondition" title="Permalink to this definition"></a></dt>
+<dd><p>Sets wall boundary conditions for the body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. All
+vertices of the mesh of the deformable body whose reference positions
+are inside the prescribed open half space are put under zero
+displacement boundary conditions. The open half space is defined by a
+plane with outward normal n_W. A vertex V is considered to be subject
+to the boundary condition if n̂ ⋅ p_QV &lt; 0 where Q is a point on the
+plane and n̂ is normalized n_W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt><dd><p>The body to be put under boundary condition.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>:</dt><dd><p>The position of a point Q on the plane in the world frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">n_W</span></code>:</dt><dd><p>Outward normal to the half space expressed in the world frame.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>n_W.norm() &gt; 1e-10.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be aware of round-off errors in floating computations when placing
+a vertex very close to the plane defining the half space.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
+<li><p><strong>owning this deformable model</strong><strong> or </strong><strong>if no deformable body with the</strong> – </p></li>
+<li><p><strong>given id has been registered in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.vertex_positions_port">
 <span class="sig-name descname"><span class="pre">vertex_positions_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.vertex_positions_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of the vertex positions for all registered

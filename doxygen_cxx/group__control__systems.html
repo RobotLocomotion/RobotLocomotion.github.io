@@ -213,6 +213,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga8bc6169b50b1b127ed5f1b70afcb64ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#ga8bc6169b50b1b127ed5f1b70afcb64ca">IsControllable</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sys, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; threshold=std::nullopt)</td></tr>
 <tr class="memdesc:ga8bc6169b50b1b127ed5f1b70afcb64ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the controllability matrix is full row rank.  <a href="group__control__systems.html#ga8bc6169b50b1b127ed5f1b70afcb64ca">More...</a><br /></td></tr>
 <tr class="separator:ga8bc6169b50b1b127ed5f1b70afcb64ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9c9e47b54eef5d69f3575c9054547af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control__systems.html#gae9c9e47b54eef5d69f3575c9054547af">IsStabilizable</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sys, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; threshold=std::nullopt)</td></tr>
+<tr class="memdesc:gae9c9e47b54eef5d69f3575c9054547af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the system is stabilizable.  <a href="group__control__systems.html#gae9c9e47b54eef5d69f3575c9054547af">More...</a><br /></td></tr>
+<tr class="separator:gae9c9e47b54eef5d69f3575c9054547af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gaedff9f0a8ddce5d29888ed611ce8bee2"></a>
@@ -262,6 +265,36 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true iff the controllability matrix is full row rank. </p>
+
+</div>
+</div>
+<a id="gae9c9e47b54eef5d69f3575c9054547af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9c9e47b54eef5d69f3575c9054547af">&#9670;&nbsp;</a></span>IsStabilizable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool drake::systems::IsStabilizable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>threshold</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff the system is stabilizable. </p>
 
 </div>
 </div>

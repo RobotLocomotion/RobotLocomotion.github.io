@@ -3,6 +3,7 @@ var searchData=
   ['gain_2eh',['gain.h',['../gain_8h.html',1,'']]],
   ['gaussian_5ftriangle_5fquadrature_5frule_2eh',['gaussian_triangle_quadrature_rule.h',['../gaussian__triangle__quadrature__rule_8h.html',1,'']]],
   ['gaze_5ftarget_5fconstraint_2eh',['gaze_target_constraint.h',['../gaze__target__constraint_8h.html',1,'']]],
+  ['gcs_5ftrajectory_5foptimization_2eh',['gcs_trajectory_optimization.h',['../gcs__trajectory__optimization_8h.html',1,'']]],
   ['generic_5fintegrator_5ftest_2eh',['generic_integrator_test.h',['../generic__integrator__test_8h.html',1,'']]],
   ['generic_5fpolynomial_2eh',['generic_polynomial.h',['../generic__polynomial_8h.html',1,'']]],
   ['geometry_5fdoxygen_2eh',['geometry_doxygen.h',['../geometry__doxygen_8h.html',1,'']]],
