@@ -258,38 +258,63 @@ unprovisioned experimental builds, e.g.:</p>
 add <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> for review and request that the provisioned instances be
 updated. She will then respond on when it is appropriate to merge the PR.</p>
 
-<h2 id="building-binary-packages-on-demand">Building Binary Packages on Demand</h2>
+<h2 id="building-packages-on-demand">Building Packages on Demand</h2>
 
-<p>To schedule an “experimental” build of the <a href="/from_binary.html">binary packages</a>,
-comment on an open pull request as follows:</p>
+<h3 id="binary-or-debian">Binary or Debian</h3>
+
+<p>To schedule an “experimental” build of a <a href="/from_binary.html">binary package</a>
+or <a href="/apt.html">debian package</a>, comment on an open pull request using one or
+more of these commands:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-snopt-packaging please</code></li>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-x86-monterey-unprovisioned-clang-bazel-experimental-snopt-packaging please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-packaging please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-jammy-unprovisioned-gcc-bazel-experimental-packaging please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-monterey-unprovisioned-clang-bazel-experimental-packaging please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-x86-monterey-unprovisioned-clang-bazel-experimental-packaging please</code></li>
 </ul>
 
 <p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
-to schedule a build of one of the following jobs from the Jenkins user
-interface:</p>
+to schedule a build of one of the <a href="https://drake-jenkins.csail.mit.edu/view/Packaging/">Packaging</a>
+jobs with <strong>experimental</strong> in its name.</p>
 
-<ul>
-  <li>linux-focal-unprovisioned-gcc-bazel-experimental-snopt-packaging</li>
-  <li>mac-x86-monterey-unprovisioned-clang-bazel-experimental-snopt-packaging</li>
-</ul>
+<p>To download the built package, open the Jenkins console log for the completed
+build (click on “Console Output” then “Full Log”) and search for the text
+“Upload complete” to find the download URL.  For example:</p>
 
-<p>The URL from which to download the built package will be indicated in the
-Jenkins console log for the completed build, for example:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-- Uploading package archive 1 of 1 to AWS S3...
-
-upload: drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz to s3://drake-packages/drake/experimental/drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz
--- Package URL 1 of 1: https://drake-packages.csail.mit.edu/drake/experimental/drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz
--- Uploading package archive checksum 1 of 1 to AWS S3...
-
-upload: drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz.sha512 to s3://drake-packages/drake/experimental/drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz.sha512
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+[9:49:51 AM]  -- Upload complete: https://drake-packages.csail.mit.edu/drake/experimental/drake-20230427164706-0b666a17ba2ce3ca7505655dc724960d88a34645-jammy.tar.gz
+...
+[9:49:53 AM]  -- Upload complete: https://drake-packages.csail.mit.edu/drake/experimental/drake-dev_0.0.20230427164706-0b666a17ba2ce3ca7505655dc724960d88a34645-1_amd64-jammy.deb
+...
 </code></pre></div></div>
 
-<p>where <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> is <code class="language-plaintext highlighter-rouge">focal</code>, or <code class="language-plaintext highlighter-rouge">mac</code>.</p>
+<h3 id="wheel">Wheel</h3>
+
+<p>To schedule an “experimental” build of a <a href="/pip.html">wheel package</a>,
+comment on an open pull request using one or more of these commands:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-focal-unprovisioned-gcc-wheel-experimental-release</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-monterey-unprovisioned-clang-wheel-experimental-release</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-x86-monterey-unprovisioned-clang-wheel-experimental-release</code></li>
+</ul>
+
+<p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
+to schedule a build of one of the <a href="https://drake-jenkins.csail.mit.edu/view/Wheel/">Wheel</a>
+jobs with <strong>experimental</strong> in its name.</p>
+
+<p>To download the built wheel, open the Jenkins console log for the completed
+build (click on “Console Output” then “Full Log”) and search for the text
+“Upload complete” to find the download URL.  For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+[12:42:41 PM]  -- Upload complete: https://drake-packages.csail.mit.edu/drake/experimental/drake-0.0.2023.4.24.18.52.8%2Bgit51c87b29-cp310-cp310-manylinux_2_31_x86_64.whl
+...
+</code></pre></div></div>
+
+<p>Note that there might be multiple wheel files uploaded for different versions
+of Python. Be sure to match the Python <code class="language-plaintext highlighter-rouge">M.NN</code> version you will be using to
+the <code class="language-plaintext highlighter-rouge">-cpMNN-</code> substring in the URL.</p>
 
       </article>
     </div>
