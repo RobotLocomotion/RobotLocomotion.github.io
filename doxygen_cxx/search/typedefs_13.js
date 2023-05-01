@@ -1,7 +1,6 @@
 var searchData=
 [
   ['t',['T',['../classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82',1,'drake::perception::PointCloud::T()'],['../classdrake_1_1systems_1_1sensors_1_1_image.html#a8d35b0ffaf9e8758fd249ed726e4f7d8',1,'drake::systems::sensors::Image::T()']]],
-  ['timestep',['TimeStep',['../namespacedrake_1_1systems_1_1trajectory__optimization.html#a21ec3332c42316d47f65b952a9753fd9',1,'drake::systems::trajectory_optimization']]],
   ['traits',['Traits',['../classdrake_1_1systems_1_1sensors_1_1_image.html#af8c2043b57116aae86b87835b0b01653',1,'drake::systems::sensors::Image']]],
   ['trajectorycallback',['TrajectoryCallback',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5064765fee292f94378bf23096756fc4',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
   ['translation3',['Translation3',['../namespacedrake.html#a50f8d19f395776637448f26e734228f6',1,'drake']]],

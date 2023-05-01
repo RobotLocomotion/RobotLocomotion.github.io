@@ -159,7 +159,6 @@ var NAVTREEINDEX43 =
 "dir_8ce7b658333a2b1019abe8473e52e1ec.html":[4,0,0,4,5],
 "dir_8d45261e6a2fc0f4521d25819d2b8e68.html":[4,0,0,6,2],
 "dir_8f847be5c0c53e92edc6178d5e17891e.html":[4,0,0,3,18],
-"dir_90a47678bc0a869c6c11f834a8ae1688.html":[4,0,0,12,9],
 "dir_93440ff1fccc190180d80144c14e3a50.html":[4,0,0,0,0,4],
 "dir_970ffa4dc1494551190363316edbd789.html":[4,0,0,3,9],
 "dir_9acdd6771460017440c69ee654743722.html":[4,0,0,3,11],
@@ -169,7 +168,6 @@ var NAVTREEINDEX43 =
 "dir_a36da230f0956f48b11c85f7d599788f.html":[4,0,0,1],
 "dir_a475b9d7562d90f72dfa4821e049558f.html":[4,0,0,1,6],
 "dir_a8013f4957f3230075674e48512c1ba8.html":[4,0,0,0],
-"dir_af8ef3a05745bcad3befc5f44a74bc6b.html":[4,0,0,12,9,0],
 "dir_b001a274ea8b6b5c370fedfcc7a1b81c.html":[4,0,0,12,4],
 "dir_b54e51ce690a91bb5edb8aefc17ffc16.html":[4,0,0,8,0,2],
 "dir_b7a0e33b407baa23d8a077e33033c988.html":[4,0,0,12],
@@ -205,6 +203,9 @@ var NAVTREEINDEX43 =
 "dir_fc0178d6978c9fa2cad6ef3e048a60a7.html":[4,0,0,7],
 "dir_fd5a8b80375bde94b1137be9b3ceb9fd.html":[4,0,0,0,0,6],
 "dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
+"direct__collocation_8h.html":[4,0,0,10,1,0],
+"direct__collocation_8h.html#a5a33c78a3166fd84c3b1d5818c6e8275":[4,0,0,10,1,0,0],
+"direct__transcription_8h.html":[4,0,0,10,1,1],
 "dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8],
 "dirichlet__boundary__condition_8h.html#ae2a9fef64ae955d7fad6cbef266f2d68":[4,0,0,8,3,8,0],
 "discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
@@ -215,7 +216,7 @@ var NAVTREEINDEX43 =
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,12],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,12,0],
-"discrete__systems_8h.html":[4,0,0,12,10],
+"discrete__systems_8h.html":[4,0,0,12,9],
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "drake__bool_8h.html#ae4171afca9615cfca42e59dd116d0bfb":[4,0,0,1,20,6],
 "drake__copyable_8h.html":[4,0,0,1,21],
 "drake__copyable_8h.html#a3ee22789c29a46dddd6a7fd2b982731c":[4,0,0,1,21,1],
-"drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e":[4,0,0,1,21,0],
-"drake__deprecated_8h.html":[4,0,0,1,22]
+"drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e":[4,0,0,1,21,0]
 };

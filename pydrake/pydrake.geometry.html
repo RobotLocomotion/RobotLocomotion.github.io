@@ -1468,12 +1468,8 @@ parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Convex.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Convex.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.geometry.Convex, filename: str, scale: float = 1.0) -&gt; None</p></li>
-</ol>
-<p>Constructs a convex shape specification from the file located at the
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a convex shape specification from the file located at the
 given file path. Optionally uniformly scaled by the given scale
 factor.</p>
 <p>We only support an .obj file with only one polyhedron. We assume that
@@ -1500,10 +1496,6 @@ relative to the current working directory.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.geometry.Convex, absolute_filename: str, scale: float = 1.0) -&gt; None</p></li>
-</ol>
-<p>Convex(absolute_filename=…) is deprecated, and will be removed on or around 2023-05-01.  Please use Convex(filename=…) instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3613,12 +3605,8 @@ parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.geometry.Mesh, filename: str, scale: float = 1.0) -&gt; None</p></li>
-</ol>
-<p>Constructs a mesh specification from the mesh file located at the
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a mesh specification from the mesh file located at the
 given file path; if the path is not absolute, it will be interpreted
 relative to the current working directory. Optionally uniformly scaled
 by the given scale factor.</p>
@@ -3633,10 +3621,6 @@ by the given scale factor.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.geometry.Mesh, absolute_filename: str, scale: float = 1.0) -&gt; None</p></li>
-</ol>
-<p>Mesh(absolute_filename=…) is deprecated, and will be removed on or around 2023-05-01.  Please use Mesh(filename=…) instead.</p>
 </dd></dl>
 
 <dl class="py method">

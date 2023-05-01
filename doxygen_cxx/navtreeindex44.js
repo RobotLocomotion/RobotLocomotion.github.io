@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"drake__deprecated_8h.html":[4,0,0,1,22],
 "drake__deprecated_8h.html#a847d827d084f28e4ae1788a0ae75be96":[4,0,0,1,22,0],
 "drake__export_8h.html":[4,0,0,1,23],
 "drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc":[4,0,0,1,23,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "expression_8h.html":[4,0,0,1,3,5],
 "expression__cell_8h.html":[4,0,0,1,3,0,4],
 "expression__cell_8h.html#a0169dcd3572d7e3c626f154d1db8b7a3":[4,0,0,1,3,0,4,50],
-"expression__cell_8h.html#a0373300d4207624b99351d0f7c347b85":[4,0,0,1,3,0,4,54],
-"expression__cell_8h.html#a1633315c1c26cbd8411a7ea0d860a9c2":[4,0,0,1,3,0,4,42]
+"expression__cell_8h.html#a0373300d4207624b99351d0f7c347b85":[4,0,0,1,3,0,4,54]
 };

@@ -1,9 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a34bbac4b028a742de1b931cc2694dcea":[4,0,0,11,41,1,0],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a56192ce118646021d72474e9520a804a":[4,0,0,11,41,1,5],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a6973c9c90ce92aa52ce62a6e0fc4664d":[4,0,0,11,41,1,3],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43":[4,0,0,11,41,1,6],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f":[4,0,0,11,41,1,10],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8":[4,0,0,11,41,1,7],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74adb2b51a6cdf2edf29dc2bfdcefef6ce0":[4,0,0,11,41,1,4],
@@ -96,6 +92,7 @@ var NAVTREEINDEX52 =
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,11,43,0,1],
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,43,1],
 "semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,21],
+"sequential__expression__manager_8h.html":[4,0,0,10,1,6],
 "serialize__pybind_8h.html":[4,0,0,0,0,0,8],
 "serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,0,8,0],
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,0,8,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX52 =
 "standard__operations_8h.html#a72ad9a819f04c405db5c46af865bc922":[4,0,0,1,0,0,1,37],
 "standard__operations_8h.html#a75b6b479755021d36308792d100b03ca":[4,0,0,1,0,0,1,71],
 "standard__operations_8h.html#a7632df8e55319e7b981090fb426dcbed":[4,0,0,1,0,0,1,1],
-"standard__operations_8h.html#a792771a6da56e0b5531b542430883d34":[4,0,0,1,0,0,1,32]
+"standard__operations_8h.html#a792771a6da56e0b5531b542430883d34":[4,0,0,1,0,0,1,32],
+"standard__operations_8h.html#a7c4a6b846b5ab34ddd934132ba0f3d0f":[4,0,0,1,0,0,1,34],
+"standard__operations_8h.html#a7e70d47e31742653879a0a6895e5a0b7":[4,0,0,1,0,0,1,52],
+"standard__operations_8h.html#a816394bf5c538b6334bb74b6888bdd75":[4,0,0,1,0,0,1,9]
 };

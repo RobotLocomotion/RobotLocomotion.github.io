@@ -9,7 +9,6 @@ var dir_b7a0e33b407baa23d8a077e33033c988 =
     [ "primitives", "dir_55f8630d5466d97e74952e939680a0a0.html", "dir_55f8630d5466d97e74952e939680a0a0" ],
     [ "rendering", "dir_69fa97bb6e53092a4b06d6253fe335a2.html", "dir_69fa97bb6e53092a4b06d6253fe335a2" ],
     [ "sensors", "dir_892460009e18f4b08a77d36884a88a01.html", "dir_892460009e18f4b08a77d36884a88a01" ],
-    [ "trajectory_optimization", "dir_90a47678bc0a869c6c11f834a8ae1688.html", "dir_90a47678bc0a869c6c11f834a8ae1688" ],
     [ "discrete_systems.h", "discrete__systems_8h.html", null ],
     [ "stochastic_systems.h", "stochastic__systems_8h.html", null ],
     [ "systems.h", "systems_8h.html", null ]

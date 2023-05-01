@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"implicit__integrator__test_8h.html#aa9eb7d5ae29692cddbbf450dd78807f4":[4,0,0,12,0,0,5,11],
 "implicit__integrator__test_8h.html#ab6fe9bae0a04120809f27f6f2b0a36e0":[4,0,0,12,0,0,5,15],
 "implicit__integrator__test_8h.html#ab7cdc0e4d39ad9447e4ed4c06af5f3fe":[4,0,0,12,0,0,5,7],
 "implicit__integrator__test_8h.html#aba77d383684cc91cebc93a1088a62fc5":[4,0,0,12,0,0,5,8],
@@ -30,6 +31,7 @@ var NAVTREEINDEX48 =
 "integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,11,24,3],
 "integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,11,24,1],
 "integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,11,24,2],
+"integration__constraint_8h.html":[4,0,0,10,1,3],
 "integrator_8h.html":[4,0,0,12,6,10],
 "integrator__base_8h.html":[4,0,0,12,0,10],
 "internal__buffer__dim_8h.html":[4,0,0,4,5,1],
@@ -97,6 +99,7 @@ var NAVTREEINDEX48 =
 "kalman__filter_8h.html#ga483f8a39c210ad058dfc19ae26d93e16":[4,0,0,12,2,0,0],
 "kalman__filter_8h.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,12,2,0,2],
 "kinematic__evaluator__utilities_8h.html":[4,0,0,8,5,12],
+"kinematic__trajectory__optimization_8h.html":[4,0,0,10,1,4],
 "kinematics__vector_8h.html":[4,0,0,4,25],
 "kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,25,1],
 "kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,25,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "matrix__util_8h.html#a5390bb2dadbe96cd6dfbe26c6891f100":[4,0,0,7,24,5],
 "matrix__util_8h.html#a6d81fb8e0b28f46bad7838ed39bffbce":[4,0,0,7,24,6],
 "matrix__util_8h.html#a84760cbea23b50efdbe9a85f3967f098":[4,0,0,7,24,2],
-"matrix__util_8h.html#a8a6d10bc0b3dfc5902d0a06f186dba8f":[4,0,0,7,24,1],
-"matrix__util_8h.html#aea43911b265b0798f5023e520c4ee005":[4,0,0,7,24,4],
-"matrix__util_8h.html#aedd054648f2874f8e5a37769758a132b":[4,0,0,7,24,0],
-"matrix__utilities_8h.html":[4,0,0,8,3,23]
+"matrix__util_8h.html#a8a6d10bc0b3dfc5902d0a06f186dba8f":[4,0,0,7,24,1]
 };
