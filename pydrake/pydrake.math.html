@@ -1906,6 +1906,56 @@ knots have multiplicity equal to the order of the spline.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.matmul">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">matmul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.matmul" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>matmul(arg0: numpy.ndarray[numpy.float64[m, n]], arg1: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=float &#64; dtype=float -&gt; dtype=float. The numpy matmul <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&#64;</span> <span class="pre">B</span></code> is typically slow when multiplying user-defined dtypes such as AutoDiffXd or Expression. Use this function for better performance, e.g., <code class="docutils literal notranslate"><span class="pre">matmul(A,</span> <span class="pre">B)</span></code>. For a dtype=float &#64; dtype=float, this might be a little slower than numpy, but is provided here for convenience so that the user doesn’t need to be overly careful about the dtype of arguments.</p>
+<ol class="arabic simple" start="2">
+<li><p>matmul(arg0: numpy.ndarray[numpy.float64[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=float &#64; dtype=AutoDiffXd -&gt; dtype=AutoDiffXd.</p>
+<ol class="arabic simple" start="3">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=AutoDiffXd &#64; dtype=float -&gt; dtype=AutoDiffXd.</p>
+<ol class="arabic simple" start="4">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=AutoDiffXd &#64; dtype=AutoDiffXd -&gt; dtype=AutoDiffXd.</p>
+<ol class="arabic simple" start="5">
+<li><p>matmul(arg0: numpy.ndarray[numpy.float64[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=float &#64; dtype=Variable -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="6">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Variable &#64; dtype=float -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="7">
+<li><p>matmul(arg0: numpy.ndarray[numpy.float64[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=float &#64; dtype=Expression -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="8">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Expression &#64; dtype=float -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="9">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Variable &#64; dtype=Expression -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="10">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Expression &#64; dtype=Variable -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="11">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Expression &#64; dtype=Expression -&gt; dtype=Expression.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.max">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.max" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>

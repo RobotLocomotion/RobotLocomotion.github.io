@@ -310,7 +310,6 @@ var searchData=
   ['alpha_5for',['alpha_or',['../classdrake_1_1planning_1_1_edge_measure.html#ad38190af9206e3dc431eaa864f11371f',1,'drake::planning::EdgeMeasure']]],
   ['already_5fbuilt',['already_built',['../classdrake_1_1systems_1_1_diagram_builder.html#a01a021249674e12dae740a05cd4a0b12',1,'drake::systems::DiagramBuilder']]],
   ['ambient_5fdimension',['ambient_dimension',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e',1,'drake::geometry::optimization::ConvexSet::ambient_dimension()'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a79ab6fe34900a8391301b23abd29e10e',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::ambient_dimension()']]],
-  ['ambient_5fdimension_5f',['ambient_dimension_',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a',1,'drake::geometry::optimization::ConvexSet']]],
   ['amplitude',['amplitude',['../classdrake_1_1systems_1_1_sine.html#a70cd1043e7ba541bf72935d64785fdc3',1,'drake::systems::Sine']]],
   ['amplitude_5fvector',['amplitude_vector',['../classdrake_1_1systems_1_1_sine.html#a4e32d1fde8e877a598314ed7ba1aef71',1,'drake::systems::Sine']]],
   ['analysis',['Analysis',['../group__analysis.html',1,'']]],

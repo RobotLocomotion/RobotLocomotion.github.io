@@ -14,7 +14,6 @@ var searchData=
   ['adjacent_5fbodies_5fcollision_5ffilters',['adjacent_bodies_collision_filters',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a80e753afd58d6c37211d1e1caed32b24',1,'drake::multibody::MultibodyPlantConfig']]],
   ['allow_5fcpp_5fwith_5fno_5fyaml',['allow_cpp_with_no_yaml',['../structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275',1,'drake::yaml::LoadYamlOptions']]],
   ['allow_5fyaml_5fwith_5fno_5fcpp',['allow_yaml_with_no_cpp',['../structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938',1,'drake::yaml::LoadYamlOptions']]],
-  ['ambient_5fdimension_5f',['ambient_dimension_',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a',1,'drake::geometry::optimization::ConvexSet']]],
   ['angle_5fdeg',['angle_deg',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8',1,'drake::schema::Rotation::AngleAxis']]],
   ['approach',['approach',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a070d67fe6a2aec68937b130e4e36afbf',1,'drake::multibody::GlobalInverseKinematics::Options']]],
   ['archive_5ftype',['archive_type',['../structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a81066da499282f418a381f8a164a10af',1,'drake::multibody::PackageMap::RemoteParams']]],

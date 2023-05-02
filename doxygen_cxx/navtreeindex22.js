@@ -1,9 +1,5 @@
 var NAVTREEINDEX22 =
 {
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ab693a7669cf23e60b7ee4ae9678c6510":[1,1,0,36,10],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#abef24e9a5f88d1bf2cac8a829f0e1062":[1,1,0,36,3],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ad895dd4ffcf4c774b7586beb1cbdda69":[1,1,0,36,9],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ada8fc4ff50c67b2b2c41b39d1a4f2b45":[1,1,0,36,2],
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#af595bfd9e53d96bd88850eba12fa82a7":[1,1,0,36,11],
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#afc4fd02c78b0475748c1f1c4aaabc6eb":[1,1,0,36,1],
 "classdrake_1_1solvers_1_1_expression_constraint.html":[1,1,0,35],
@@ -249,5 +245,9 @@ var NAVTREEINDEX22 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#a2f25e54555621691b390c1658e21872f":[1,1,2,130],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a30759ec657805673fd0ce5e9edc166a2":[1,1,2,160],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a30ace5ac7ffabb8af91d49f41bc09ab1":[1,1,2,127],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a353e8201ad1f01a69441e00fce617857":[1,1,2,9]
+"classdrake_1_1solvers_1_1_mathematical_program.html#a353e8201ad1f01a69441e00fce617857":[1,1,2,9],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a3787e8a9fcc4e09304d6e1fa697d2d7f":[1,1,2,167],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a3aafa15b34bc04d8a3449f39787bc76e":[1,1,2,202],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a3b1e942fc28f03d2b987fc0ea880e831":[1,1,2,184],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a3b568d2ab99871d864e445960ac8dc18":[1,1,2,168]
 };

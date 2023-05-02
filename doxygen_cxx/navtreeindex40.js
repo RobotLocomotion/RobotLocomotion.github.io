@@ -1,9 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ad99fec330effea7b0b0952ec31cd5f82":[1,2,3,0,4],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ae52a989887be360ba54d28e89362caad":[1,2,3,0,7],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aebe74a87d7957f9ab354177ba42f5a78":[1,2,3,0,6],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aec8654f6fef2f02fae53910ff4319980":[1,2,3,0,2],
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html":[3,0,0,16,4,0],
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8":[3,0,0,16,4,0,4],
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a2dbb0d27091e5a82a0eb4c0f9c953051":[3,0,0,16,4,0,3],
@@ -249,5 +245,9 @@ var NAVTREEINDEX40 =
 "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html#adee312123808eabfed231f1edcaf2ac1":[3,0,0,16,8,20,0],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html":[3,0,0,16,8,38],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a02e276bf589c28c9b65253f4287feafe":[3,0,0,16,8,38,4],
-"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a12b90bd6576f6e72a799a6a1c6949910":[3,0,0,16,8,38,2]
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a12b90bd6576f6e72a799a6a1c6949910":[3,0,0,16,8,38,2],
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a20b3c738f7ef7ab9c723535d27999011":[3,0,0,16,8,38,0],
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a7a889f43e88e25251192aac8cf48ff4e":[3,0,0,16,8,38,1],
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a91776575e2de77fce01c5bc4a3edab09":[3,0,0,16,8,38,6],
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#aa517ec718cb4a5f3edc247227e7b1f09":[3,0,0,16,8,38,3]
 };

@@ -31,6 +31,7 @@ var eigen__types_8h =
     [ "RowVector6", "eigen__types_8h.html#a3ad88c2d704ccb2899d475d3ae05de14", null ],
     [ "RowVectorX", "eigen__types_8h.html#a218f39990d2d9090c7a25c9c18cbf832", null ],
     [ "SquareTwistMatrix", "eigen__types_8h.html#ad2a5a909210d71526c490997aa8c9309", null ],
+    [ "StrideX", "eigen__types_8h.html#ad5de4c858064cf0a457d6a18381e837b", null ],
     [ "Translation3", "eigen__types_8h.html#a50f8d19f395776637448f26e734228f6", null ],
     [ "TwistMatrix", "eigen__types_8h.html#a24677f48c6e4381a7ef6a9034af32803", null ],
     [ "TwistVector", "eigen__types_8h.html#a1523106d56bf869ad35e8d5b51180371", null ],

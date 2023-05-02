@@ -12,6 +12,7 @@ var searchData=
   ['env_5fpadding',['env_padding',['../structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#ad97eac1aabdf303df62851accf84d131',1,'drake::planning::test::CollisionCheckerConstructionParams']]],
   ['error',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
   ['error_5fcode',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
+  ['error_5frecords_5f',['error_records_',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ad51b5b573600baeee3cfc55edb39482e',1,'drake::test::DiagnosticPolicyTestBase']]],
   ['explored_5fnode_5fcount',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
   ['expressed_5fbody',['expressed_body',['../structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa',1,'drake::geometry::optimization::CIrisSeparatingPlane']]],
   ['ext_5fjoint_5ffilter_5ftau',['ext_joint_filter_tau',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],

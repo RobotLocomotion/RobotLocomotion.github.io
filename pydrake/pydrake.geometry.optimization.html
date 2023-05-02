@@ -289,11 +289,11 @@ non-empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.IsBounded">
 <span class="sig-name descname"><span class="pre">IsBounded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.IsBounded" title="Permalink to this definition"></a></dt>
-<dd><p>Returns true iff the set is bounded, e.g. there exists an element-wise
-finite lower and upper bound for the set. Note: for some derived
-classes, this check is trivial, but for others it can require solving
-an (typically small) optimization problem. Check the derived class
-documentation for any notes.</p>
+<dd><p>Returns true iff the set is bounded, e.g., there exists an
+element-wise finite lower and upper bound for the set. Note: for some
+derived classes, this check is trivial, but for others it can require
+solving an (typically small) optimization problem. Check the derived
+class documentation for any notes.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1279,8 +1279,8 @@ remote a constraint.</p>
 </ol>
 <p>Draw an (approximately) uniform sample from the set using the hit and
 run Markov-chain Monte-Carlo strategy described at
-<a class="reference external" href="https://mathoverflow.net/a/162327">https://mathoverflow.net/a/162327</a> and the cited paper.</p>
-<p>To generate many samples, pass the output of one iteration in as the
+<a class="reference external" href="https://mathoverflow.net/a/162327">https://mathoverflow.net/a/162327</a> and the cited paper. To generate
+many samples, pass the output of one iteration in as the
 <code class="docutils literal notranslate"><span class="pre">previous_sample</span></code> to the next; in this case the distribution of
 samples will converge to the true uniform distribution in total
 variation at a geometric rate. If <code class="docutils literal notranslate"><span class="pre">previous_sample</span></code> is not set, then
@@ -1739,7 +1739,7 @@ in the world frame.</p>
 <span class="sig-name descname"><span class="pre">set_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Point" title="pydrake.geometry.optimization.Point"><span class="pre">pydrake.geometry.optimization.Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Point.set_x" title="Permalink to this definition"></a></dt>
 <dd><p>Changes the element <code class="docutils literal notranslate"><span class="pre">x</span></code> describing the set.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x</span></code> must be of size ambient_dimension().</p>
+<dt>Precondition:</dt><dd><p>x must be of size ambient_dimension().</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1806,11 +1806,11 @@ convex hull).</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.GetMinimalRepresentation">
 <span class="sig-name descname"><span class="pre">GetMinimalRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.GetMinimalRepresentation" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a new VPolytope whose vertices are guaranteed to be minimal,
-i.e. if we remove any point from its vertices, then the convex hull of
-the remaining vertices is a strict subset of the polytope. In the 2D
-case the vertices of the new VPolytope are ordered counter-clockwise
-from the negative X axis. For all other cases an order is not
-guaranteed.</p>
+i.e., if we remove any point from its vertices, then the convex hull
+of the remaining vertices is a strict subset of the polytope. In the
+2D case the vertices of the new VPolytope are ordered
+counter-clockwise from the negative X axis. For all other cases an
+order is not guaranteed.</p>
 </dd></dl>
 
 <dl class="py method">

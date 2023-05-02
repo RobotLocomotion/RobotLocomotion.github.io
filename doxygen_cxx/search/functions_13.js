@@ -1,6 +1,9 @@
 var searchData=
 [
   ['t0',['t0',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#a426b2611dccf0f1b97705d150e586570',1,'drake::systems::WitnessTriggeredEventData']]],
+  ['take',['Take',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a5123b99c59e30f73d1ba8703f7fc41cd',1,'drake::test::DiagnosticPolicyTestBase']]],
+  ['takeerror',['TakeError',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a8e0eaf10a27f6f7668315339c9e82c88',1,'drake::test::DiagnosticPolicyTestBase']]],
+  ['takewarning',['TakeWarning',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ac882842c393ce6a9766754f4bb519685',1,'drake::test::DiagnosticPolicyTestBase']]],
   ['tamsisolver',['TamsiSolver',['../classdrake_1_1multibody_1_1_tamsi_solver.html#ad5d558d0bc7ccbe0202ccd40e1929815',1,'drake::multibody::TamsiSolver::TamsiSolver(const TamsiSolver &amp;)=delete'],['../classdrake_1_1multibody_1_1_tamsi_solver.html#a3b3d2411402ef5b22576cabf83a2072d',1,'drake::multibody::TamsiSolver::TamsiSolver(TamsiSolver &amp;&amp;)=delete'],['../classdrake_1_1multibody_1_1_tamsi_solver.html#a8c6125a41db505a5d9caf8b5d93c591e',1,'drake::multibody::TamsiSolver::TamsiSolver(int nv)']]],
   ['tan',['tan',['../namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408',1,'drake::ad::tan()'],['../namespacedrake_1_1symbolic.html#ab9900f71e1c1ceb9d59553adfa2db2b5',1,'drake::symbolic::tan()']]],
   ['tanh',['tanh',['../namespacedrake_1_1ad.html#a31d584bed99ab67ec074687a94eb7c00',1,'drake::ad::tanh()'],['../namespacedrake_1_1symbolic.html#acbb3ea44b1cf2fd877d782b8486d5aeb',1,'drake::symbolic::tanh()']]],
@@ -17,6 +20,7 @@ var searchData=
   ['thinrodwithmassaboutend',['ThinRodWithMassAboutEnd',['../classdrake_1_1multibody_1_1_spatial_inertia.html#a97f17f72011d5c06da34f69245ac69bf',1,'drake::multibody::SpatialInertia']]],
   ['throwbadcast',['ThrowBadCast',['../classdrake_1_1systems_1_1_port_base.html#ad8de5a4140c75fa7092841909d238a54',1,'drake::systems::PortBase::ThrowBadCast(const AbstractValue &amp;abstract) const'],['../classdrake_1_1systems_1_1_port_base.html#aa35290bab28bbf233bb728e19417e833',1,'drake::systems::PortBase::ThrowBadCast(const BasicVector&lt; T &gt; &amp;basic) const'],['../classdrake_1_1systems_1_1_port_base.html#a6fc5e41cf7712c218f806f44aa0cf727',1,'drake::systems::PortBase::ThrowBadCast(const std::string &amp;value_typename, const std::string &amp;eval_typename) const']]],
   ['throwcantevaluateinputport',['ThrowCantEvaluateInputPort',['../classdrake_1_1systems_1_1_system_base.html#a49bc2d35e014b293b9564cb9e85e5390',1,'drake::systems::SystemBase']]],
+  ['throwerrors',['ThrowErrors',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#af7e6479c38091d0a35be77114e0c2269',1,'drake::test::DiagnosticPolicyTestBase']]],
   ['throwifbadcacheentryvalue',['ThrowIfBadCacheEntryValue',['../classdrake_1_1systems_1_1_cache_entry_value.html#ab5508eba32d5d670dc79329a86999e23',1,'drake::systems::CacheEntryValue']]],
   ['throwifbaddependencytracker',['ThrowIfBadDependencyTracker',['../classdrake_1_1systems_1_1_dependency_tracker.html#a7d0b9fb8012fb26b22ad7a16dd1d0d2b',1,'drake::systems::DependencyTracker']]],
   ['throwifbuilt',['ThrowIfBuilt',['../classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#ac084c19afe22872512964fcde2b0698f',1,'drake::multibody::fem::FemModel::Builder']]],
@@ -121,7 +125,7 @@ var searchData=
   ['translational_5facceleration',['translational_acceleration',['../classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a48c6257e6d4c4d2955b5788872dc9c1c',1,'drake::multibody::test_utilities::SpatialKinematicsPVA']]],
   ['translational_5fdamping',['translational_damping',['../classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a',1,'drake::multibody::QuaternionFloatingJoint']]],
   ['translational_5fvelocity',['translational_velocity',['../classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a6b11517643a27a1b5633e5c017881f3f',1,'drake::multibody::test_utilities::SpatialKinematicsPVA']]],
-  ['transpose',['Transpose',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f',1,'drake::trajectories::PiecewisePolynomial::Transpose()'],['../classdrake_1_1math_1_1_rotation_matrix.html#a12ff00690cd0b5145222c506a39946aa',1,'drake::math::RotationMatrix::transpose()']]],
+  ['transpose',['transpose',['../classdrake_1_1math_1_1_rotation_matrix.html#a12ff00690cd0b5145222c506a39946aa',1,'drake::math::RotationMatrix::transpose()'],['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f',1,'drake::trajectories::PiecewisePolynomial::Transpose()']]],
   ['transposegrad',['transposeGrad',['../namespacedrake_1_1math.html#a20c21cde851510ab3ae5a7527ed62d22',1,'drake::math']]],
   ['tree',['tree',['../classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#acabb927a720a280e0de5d5a7ffc586cb',1,'drake::multibody::benchmarks::kuka_iiwa_robot::DrakeKukaIIwaRobot']]],
   ['tri_5fe_5fmn',['tri_e_MN',['../classdrake_1_1geometry_1_1_contact_surface.html#a7737bf2804d3747dc021a1ea3c4c509e',1,'drake::geometry::ContactSurface']]],

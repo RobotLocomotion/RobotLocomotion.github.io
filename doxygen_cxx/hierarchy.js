@@ -1048,7 +1048,8 @@ var hierarchy =
       [ "ExplicitErrorControlledIntegratorTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html", null ],
       [ "GenericIntegratorTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html", null ],
       [ "ImplicitIntegratorTest< IntegratorType >", "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html", null ],
-      [ "PleidesTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html", null ]
+      [ "PleidesTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html", null ],
+      [ "DiagnosticPolicyTestBase", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html", null ]
     ] ],
     [ "TestWithParam", null, [
       [ "CollisionCheckerAbstractTestSuite", "classdrake_1_1planning_1_1test_1_1_collision_checker_abstract_test_suite.html", null ]

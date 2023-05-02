@@ -14,6 +14,7 @@ var searchData=
   ['descriptortype',['DescriptorType',['../classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html',1,'drake::perception::pc_flags']]],
   ['deterministic',['Deterministic',['../classdrake_1_1schema_1_1_deterministic.html',1,'drake::schema']]],
   ['deterministicvector',['DeterministicVector',['../classdrake_1_1schema_1_1_deterministic_vector.html',1,'drake::schema']]],
+  ['diagnosticpolicytestbase',['DiagnosticPolicyTestBase',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html',1,'drake::test']]],
   ['diagram',['Diagram',['../classdrake_1_1systems_1_1_diagram.html',1,'drake::systems']]],
   ['diagram_3c_20double_20_3e',['Diagram&lt; double &gt;',['../classdrake_1_1systems_1_1_diagram.html',1,'drake::systems']]],
   ['diagrambuilder',['DiagramBuilder',['../classdrake_1_1systems_1_1_diagram_builder.html',1,'drake::systems']]],

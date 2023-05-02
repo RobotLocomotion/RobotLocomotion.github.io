@@ -14,7 +14,6 @@ var searchData=
   ['cleanup',['cleanup',['../structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6d9b7b7aeb7996e8469a93c3dd4ee5ef',1,'drake::geometry::RenderEngineGltfClientParams']]],
   ['clipping_5ffar',['clipping_far',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a356749be16e1e3f6d437f215ff3c44e6',1,'drake::systems::sensors::CameraConfig']]],
   ['clipping_5fnear',['clipping_near',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a7d53e0f5780cb66697932deba3266df8',1,'drake::systems::sensors::CameraConfig']]],
-  ['cloner_5f',['cloner_',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0382c0146a79fe4657004654da0489cc',1,'drake::geometry::optimization::ConvexSet']]],
   ['clp_5fversion',['clp_version',['../structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964',1,'drake::solvers::ClpSolverDetails']]],
   ['coefficient',['coefficient',['../classdrake_1_1_polynomial_1_1_monomial.html#accdf0d016bac585ac8deb1ad2dcad4b1',1,'drake::Polynomial::Monomial']]],
   ['color',['color',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a99fd5bfdf69925c53ed14a93a238065f',1,'drake::multibody::meshcat::ContactVisualizerParams']]],

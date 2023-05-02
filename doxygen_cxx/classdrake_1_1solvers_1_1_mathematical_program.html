@@ -661,7 +661,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af5e169f4d4bb63dd56bcd7cc89a561a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for l2norm costs.  <a href="#af5e169f4d4bb63dd56bcd7cc89a561a1">More...</a><br /></td></tr>
 <tr class="separator:af5e169f4d4bb63dd56bcd7cc89a561a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5febe285490e9ce74e824de29f2ecd9f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5febe285490e9ce74e824de29f2ecd9f">linear_constraints</a> () const</td></tr>
-<tr class="memdesc:a5febe285490e9ce74e824de29f2ecd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for linear constraints.  <a href="#a5febe285490e9ce74e824de29f2ecd9f">More...</a><br /></td></tr>
+<tr class="memdesc:a5febe285490e9ce74e824de29f2ecd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for linear <em>inequality</em> constraints.  <a href="#a5febe285490e9ce74e824de29f2ecd9f">More...</a><br /></td></tr>
 <tr class="separator:a5febe285490e9ce74e824de29f2ecd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac605b661de3fc03efcdfb8405e29f1c4"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac605b661de3fc03efcdfb8405e29f1c4">quadratic_constraints</a> () const</td></tr>
 <tr class="memdesc:ac605b661de3fc03efcdfb8405e29f1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for quadratic constraints.  <a href="#ac605b661de3fc03efcdfb8405e29f1c4">More...</a><br /></td></tr>
@@ -5816,7 +5816,7 @@ x+y &gt;= 0
 </div><div class="memdoc">
 
 <p>Getter returning all linear constraints (both linear equality and inequality constraints). </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of all linear constraint bindings. </dd></dl>
+<p>Note that this does <em>not</em> include bounding box constraints, which are technically also linear. </p><dl class="section return"><dt>Returns</dt><dd>Vector of all linear constraint bindings. </dd></dl>
 
 </div>
 </div>
@@ -6116,7 +6116,8 @@ x+y &gt;= 0
       </table>
 </div><div class="memdoc">
 
-<p>Getter for linear constraints. </p>
+<p>Getter for linear <em>inequality</em> constraints. </p>
+<p>Note that this does not include <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aac264e3eaafb940135dfa11d3ba84c67" title="Getter for linear equality constraints.">linear_equality_constraints()</a> nor <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af39c3045633d664d62c161a5ef4f3c4c" title="Getter for all bounding box constraints.">bounding_box_constraints()</a>. See also <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a17fe85b6ddbc665b74e8cf9c6bf02d3e" title="Getter returning all linear constraints (both linear equality and inequality constraints).">GetAllLinearConstraints()</a>. </p>
 
 </div>
 </div>
@@ -6155,6 +6156,7 @@ x+y &gt;= 0
 </div><div class="memdoc">
 
 <p>Getter for linear equality constraints. </p>
+<p>Note that this only includes constraints that were added explicitly as <a class="el" href="classdrake_1_1solvers_1_1_linear_equality_constraint.html" title="Implements a constraint of the form .">LinearEqualityConstraint</a> or which were added symbolically (and their equality constraint nature was uncovered). There may be <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af39c3045633d664d62c161a5ef4f3c4c" title="Getter for all bounding box constraints.">bounding_box_constraints()</a> and <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5febe285490e9ce74e824de29f2ecd9f" title="Getter for linear inequality constraints.">linear_constraints()</a> whose lower bounds also equal their upper bounds. </p>
 
 </div>
 </div>
