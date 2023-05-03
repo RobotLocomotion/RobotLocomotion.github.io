@@ -11,9 +11,10 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a34f92ff4feccc5aa2e289b9a514486ac", null ],
     [ "AddRegions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a7e564e0e9e83762d5205af3bd7556529", null ],
     [ "AddRegions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a45c0185ae66f1593e99a8ee7cc5bae37", null ],
+    [ "AddTimeCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a515805314ae145e3be6b636d0986bb09", null ],
     [ "GetGraphvizString", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ae696ea90dcbf1b197d5a4a30f895421d", null ],
     [ "num_positions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553", null ],
-    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0e0056534457223e2eb27065147b9232", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af6cfa802822c84540b5145bec87c49e5", null ],
+    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0e0056534457223e2eb27065147b9232", null ],
     [ "SolvePath", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249", null ]
 ];

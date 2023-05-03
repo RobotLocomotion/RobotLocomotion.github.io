@@ -1907,6 +1907,19 @@ cost of the path energy ||ṙ(s)||² / h becomes non-convex for h =
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddTimeCost">
+<span class="sig-name descname"><span class="pre">AddTimeCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddTimeCost" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a minimum time cost to all regions in the whole graph. The cost
+is the sum of the time scaling variables.</p>
+<p>This cost will be added to the entire graph. Note that this cost will
+be applied even to subgraphs added in the future.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight</span></code>:</dt><dd><p>is the relative weight of the cost.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgesBetweenSubgraphs</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="Permalink to this definition"></a></dt>
@@ -2031,6 +2044,17 @@ upper bound the trajectory length by the sum of the distances between
 control points. For Bézier curves, this is equivalent to the sum of
 the L2Norm of the derivative control points of the curve divided by
 the order.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight</span></code>:</dt><dd><p>is the relative weight of the cost.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddTimeCost">
+<span class="sig-name descname"><span class="pre">AddTimeCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddTimeCost" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a minimum time cost to all regions in the subgraph. The cost is
+the sum of the time scaling variables.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight</span></code>:</dt><dd><p>is the relative weight of the cost.</p>
 </dd>

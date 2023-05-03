@@ -188,6 +188,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4db23fd6f462324bf53109c1522f59ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a4db23fd6f462324bf53109c1522f59ca">regions</a> () const</td></tr>
 <tr class="memdesc:a4db23fd6f462324bf53109c1522f59ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the regions associated with this subgraph before the CartesianProduct.  <a href="#a4db23fd6f462324bf53109c1522f59ca">More...</a><br /></td></tr>
 <tr class="separator:a4db23fd6f462324bf53109c1522f59ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a515805314ae145e3be6b636d0986bb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a515805314ae145e3be6b636d0986bb09">AddTimeCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memdesc:a515805314ae145e3be6b636d0986bb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a minimum time cost to all regions in the subgraph.  <a href="#a515805314ae145e3be6b636d0986bb09">More...</a><br /></td></tr>
+<tr class="separator:a515805314ae145e3be6b636d0986bb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5120b456754eef916922cd73d2ec846a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5120b456754eef916922cd73d2ec846a">AddPathLengthCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
 <tr class="memdesc:a5120b456754eef916922cd73d2ec846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <a href="#a5120b456754eef916922cd73d2ec846a">More...</a><br /></td></tr>
 <tr class="separator:a5120b456754eef916922cd73d2ec846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,6 +330,32 @@ Friends</h2></td></tr>
 <p>Adds multiple L2Norm Costs on the upper bound of the path length. </p>
 <p>We upper bound the trajectory length by the sum of the distances between control points. For Bézier curves, this is equivalent to the sum of the L2Norm of the derivative control points of the curve divided by the order.</p>
 <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight</td><td>is the relative weight of the cost. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a515805314ae145e3be6b636d0986bb09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a515805314ae145e3be6b636d0986bb09">&#9670;&nbsp;</a></span>AddTimeCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddTimeCost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a minimum time cost to all regions in the subgraph. </p>
+<p>The cost is the sum of the time scaling variables. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">weight</td><td>is the relative weight of the cost. </td></tr>
   </table>

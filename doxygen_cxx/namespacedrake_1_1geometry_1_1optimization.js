@@ -14,5 +14,6 @@ var namespacedrake_1_1geometry_1_1optimization =
     [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum" ],
     [ "PlaneSeparatesGeometries", "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html", "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries" ],
     [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", "classdrake_1_1geometry_1_1optimization_1_1_point" ],
+    [ "Spectrahedron", "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html", "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron" ],
     [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope" ]
 ];

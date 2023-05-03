@@ -1753,6 +1753,37 @@ in the world frame.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Spectrahedron">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">Spectrahedron</span></span><a class="headerlink" href="#pydrake.geometry.optimization.Spectrahedron" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>Implements a spectrahedron (the feasible set of a semidefinite
+program). The ambient dimension of the set is N(N+1)/2; the number of
+variables required to describe the N-by-N semidefinite matrix.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Spectrahedron.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Spectrahedron.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.Spectrahedron) -&gt; None</p></li>
+</ol>
+<p>Default constructor (which constructs the empty set).</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.optimization.Spectrahedron, prog: pydrake.solvers.MathematicalProgram) -&gt; None</p></li>
+</ol>
+<p>Constructs the spectrahedron from a MathematicalProgram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if prog.required_capabilities</strong><strong>(</strong><strong>) </strong><strong>is not a subset</strong> – </p></li>
+<li><p><strong>of supported_attributes</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">VPolytope</span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>

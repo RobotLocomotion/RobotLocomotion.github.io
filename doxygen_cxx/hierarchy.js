@@ -747,6 +747,7 @@ var hierarchy =
         [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html", null ],
         [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
         [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
+        [ "Spectrahedron", "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html", null ],
         [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
       ] ],
       [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", null ],
@@ -1140,6 +1141,7 @@ var hierarchy =
       [ "copyable_unique_ptr< drake::AbstractValue >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::render::RenderEngine >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::Shape >", "classdrake_1_1copyable__unique__ptr.html", null ],
+      [ "copyable_unique_ptr< drake::solvers::MathematicalProgram >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::CacheEntryValue >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Context< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::FixedInputPortValue >", "classdrake_1_1copyable__unique__ptr.html", null ],

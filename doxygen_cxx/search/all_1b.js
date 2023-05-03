@@ -203,6 +203,7 @@ var searchData=
   ['_7esolverinterface',['~SolverInterface',['../classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906',1,'drake::solvers::SolverInterface']]],
   ['_7esolvertypeconverter',['~SolverTypeConverter',['../classdrake_1_1solvers_1_1_solver_type_converter.html#a8cfb5efc2e1a6588ac3d83e16610b0d8',1,'drake::solvers::SolverTypeConverter']]],
   ['_7espatialvelocityconstraint',['~SpatialVelocityConstraint',['../classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#abc3a5832c60c022fe7df7ce732b1dc17',1,'drake::multibody::SpatialVelocityConstraint']]],
+  ['_7espectrahedron',['~Spectrahedron',['../classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a512dd87ba076d58143a01deb27246a05',1,'drake::geometry::optimization::Spectrahedron']]],
   ['_7espringmassstatevector',['~SpringMassStateVector',['../classdrake_1_1systems_1_1_spring_mass_state_vector.html#a6d780c3e99c158d83e79ceb0c0e24e81',1,'drake::systems::SpringMassStateVector']]],
   ['_7estackedtrajectory',['~StackedTrajectory',['../classdrake_1_1trajectories_1_1_stacked_trajectory.html#aac002eea06875b91ada866e249fc7b6f',1,'drake::trajectories::StackedTrajectory']]],
   ['_7estate',['~State',['../classdrake_1_1systems_1_1_state.html#a9014e03010baa760d959cd4938da85f2',1,'drake::systems::State']]],
