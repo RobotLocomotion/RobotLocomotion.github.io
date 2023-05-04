@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html":[3,0,0,9,78],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a0393e660bf996a3937e40ef2dc3e6757":[3,0,0,9,78,19],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b":[3,0,0,9,78,11],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a0546b3ac658fccec61a5156a926765dd":[3,0,0,9,78,15],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a08eb5284c5ec57a645aee167798a1f2c":[3,0,0,9,78,32],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#aa13072338e36fdded332af90b57bd477":[1,1,0,19,0],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#aea81017fa3b083e60873ff55c361e181":[1,1,0,19,5],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#afd28cdc8a2b7097828f54b10cc668141":[1,1,0,19,6],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html":[1,4,2,4],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a2006baace224820a4278cf419319359a":[1,4,2,4,7],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a26f429aa613c9a34137b6519a45a105e":[1,4,2,4,3]
+"classdrake_1_1multibody_1_1_static_equilibrium_problem.html":[1,4,2,4]
 };

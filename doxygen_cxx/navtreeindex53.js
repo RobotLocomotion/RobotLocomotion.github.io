@@ -1,5 +1,8 @@
 var NAVTREEINDEX53 =
 {
+"spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
+"spring__mass__system_8h.html":[4,0,0,12,0,0,15],
+"ssize_8h.html":[4,0,0,1,56],
 "ssize_8h.html#a65f207e2f4d5cda4d2bc9da7b8a54256":[4,0,0,1,56,0],
 "ssize_8h.html#a7a5f6f92343ffa2502b5f2345c3d595f":[4,0,0,1,56,1],
 "stacked__trajectory_8h.html":[4,0,0,1,5,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,51,1],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,4,51,3],
 "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html":[3,0,0,4,1,2],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,1,2,12],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a1762c600d095ebf4fc9c1dc730d2f186":[3,0,0,4,1,2,10],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[3,0,0,4,1,2,7],
-"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a1a6c7a3105d8009b1e4c09aa3d059cba":[3,0,0,4,1,2,0]
+"structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,1,2,12]
 };

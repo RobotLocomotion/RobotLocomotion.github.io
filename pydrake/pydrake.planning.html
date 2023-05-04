@@ -1920,6 +1920,29 @@ be applied even to subgraphs added in the future.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddVelocityBounds">
+<span class="sig-name descname"><span class="pre">AddVelocityBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddVelocityBounds" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a linear velocity constraint to the entire graph <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤ q̇(t) ≤
+<code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lb</span></code>:</dt><dd><p>is the lower bound of the velocity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>is the upper bound of the velocity.</p>
+</dd>
+</dl>
+<p>This constraint will be added to the entire graph. Since the velocity
+requires forming the derivative of the Bézier curve, this constraint
+will only added to all subgraphs with order greater than zero. Note
+that this constraint will be applied even to subgraphs added in the
+future.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgesBetweenSubgraphs</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="Permalink to this definition"></a></dt>
@@ -2057,6 +2080,28 @@ the order.</p>
 the sum of the time scaling variables.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight</span></code>:</dt><dd><p>is the relative weight of the cost.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddVelocityBounds">
+<span class="sig-name descname"><span class="pre">AddVelocityBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddVelocityBounds" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a linear velocity constraint to the subgraph <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤ q̇(t) ≤
+<code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lb</span></code>:</dt><dd><p>is the lower bound of the velocity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>is the upper bound of the velocity.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if subgraph order is zero</strong><strong>, </strong><strong>since the velocity is</strong> – </p></li>
+<li><p><strong>defined as the derivative of the Bézier curve.</strong> – </p></li>
+<li><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

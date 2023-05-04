@@ -6,6 +6,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5120b456754eef916922cd73d2ec846a", null ],
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a34f92ff4feccc5aa2e289b9a514486ac", null ],
     [ "AddTimeCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a515805314ae145e3be6b636d0986bb09", null ],
+    [ "AddVelocityBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af27492cb5b0dbf8cd8ce10e792486052", null ],
     [ "name", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ae3e2b9dbe73e9cdbf9dd401e928dd78f", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a2e49985f0ac6bbd712d7d97c2bf4c662", null ],

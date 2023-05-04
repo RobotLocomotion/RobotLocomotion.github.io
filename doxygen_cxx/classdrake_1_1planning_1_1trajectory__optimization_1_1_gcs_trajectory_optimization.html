@@ -216,6 +216,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
 <tr class="memdesc:a34f92ff4feccc5aa2e289b9a514486ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <a href="#a34f92ff4feccc5aa2e289b9a514486ac">More...</a><br /></td></tr>
 <tr class="separator:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint to the entire graph <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>.  <a href="#af27492cb5b0dbf8cd8ce10e792486052">More...</a><br /></td></tr>
+<tr class="separator:af27492cb5b0dbf8cd8ce10e792486052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ddb1df26a2324afc83f84c90281c249"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249">SolvePath</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;source, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a8ddb1df26a2324afc83f84c90281c249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole graph.  <a href="#a8ddb1df26a2324afc83f84c90281c249">More...</a><br /></td></tr>
 <tr class="separator:a8ddb1df26a2324afc83f84c90281c249"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -580,6 +583,50 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">weight</td><td>is the relative weight of the cost. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af27492cb5b0dbf8cd8ce10e792486052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27492cb5b0dbf8cd8ce10e792486052">&#9670;&nbsp;</a></span>AddVelocityBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddVelocityBounds </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a linear velocity constraint to the entire graph <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lb</td><td>is the lower bound of the velocity. </td></tr>
+    <tr><td class="paramname">ub</td><td>is the upper bound of the velocity.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This constraint will be added to the entire graph. Since the velocity requires forming the derivative of the Bézier curve, this constraint will only added to all subgraphs with order greater than zero. Note that this constraint will be applied even to subgraphs added in the future.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if lb or ub are not of size <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of position variables.">num_positions()</a>. </td></tr>
   </table>
   </dd>
 </dl>

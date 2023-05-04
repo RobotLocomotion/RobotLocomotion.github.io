@@ -197,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
 <tr class="memdesc:a34f92ff4feccc5aa2e289b9a514486ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <a href="#a34f92ff4feccc5aa2e289b9a514486ac">More...</a><br /></td></tr>
 <tr class="separator:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint to the subgraph <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>.  <a href="#af27492cb5b0dbf8cd8ce10e792486052">More...</a><br /></td></tr>
+<tr class="separator:af27492cb5b0dbf8cd8ce10e792486052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af9772f89f467b3eb25e91de87a3d4ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9772f89f467b3eb25e91de87a3d4ee8">Subgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;)=delete</td></tr>
 <tr class="separator:af9772f89f467b3eb25e91de87a3d4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,6 +361,50 @@ Friends</h2></td></tr>
 <p>The cost is the sum of the time scaling variables. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">weight</td><td>is the relative weight of the cost. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af27492cb5b0dbf8cd8ce10e792486052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27492cb5b0dbf8cd8ce10e792486052">&#9670;&nbsp;</a></span>AddVelocityBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddVelocityBounds </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a linear velocity constraint to the subgraph <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lb</td><td>is the lower bound of the velocity. </td></tr>
+    <tr><td class="paramname">ub</td><td>is the upper bound of the velocity.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if subgraph order is zero, since the velocity is defined as the derivative of the Bézier curve. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if lb or ub are not of size num_positions(). </td></tr>
   </table>
   </dd>
 </dl>

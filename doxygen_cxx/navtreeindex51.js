@@ -1,5 +1,8 @@
 var NAVTREEINDEX51 =
 {
+"planar__manipuland__lcm_8h.html":[4,0,0,3,13,5],
+"planar__manipuland__lcm_8h.html#a909c985f8e6897a3936dda06c9648da4":[4,0,0,3,13,5,2],
+"planar__mobilizer_8h.html":[4,0,0,8,14,31],
 "plane_8h.html":[4,0,0,4,2,45],
 "planner_2stub_2robot__plan__interpolator_8h.html":[4,0,0,6,2,0,3],
 "planner_2stub_2robot__plan__interpolator_8h.html#a8916baae73f1e9c24490b1a23868254c":[4,0,0,6,2,0,3,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX51 =
 "replace__bilinear__terms_8h.html#a04799bc5337c8999ef3f10e82dd979cd":[4,0,0,1,3,15,0],
 "reset__after__move_8h.html":[4,0,0,1,51],
 "reset__on__copy_8h.html":[4,0,0,1,52],
-"revolute__joint_8h.html":[4,0,0,8,14,38],
-"revolute__mobilizer_8h.html":[4,0,0,8,14,39],
-"revolute__spring_8h.html":[4,0,0,8,14,40],
-"rgba_8h.html":[4,0,0,4,37]
+"revolute__joint_8h.html":[4,0,0,8,14,38]
 };

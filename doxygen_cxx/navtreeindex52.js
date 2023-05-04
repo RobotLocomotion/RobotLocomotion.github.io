@@ -1,5 +1,8 @@
 var NAVTREEINDEX52 =
 {
+"revolute__mobilizer_8h.html":[4,0,0,8,14,39],
+"revolute__spring_8h.html":[4,0,0,8,14,40],
+"rgba_8h.html":[4,0,0,4,37],
 "rgbd__sensor_8h.html":[4,0,0,12,8,15],
 "rigid__body_8h.html":[4,0,0,8,14,41],
 "rigid__body__on__compliant__ground_8h.html":[4,0,0,8,10,0,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX52 =
 "spatial__velocity_8h.html":[4,0,0,8,6,5],
 "spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
 "spectrahedron_8h.html":[4,0,0,4,1,12],
-"spong__controller_8h.html":[4,0,0,3,0,3],
-"spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
-"spring__mass__system_8h.html":[4,0,0,12,0,0,15],
-"ssize_8h.html":[4,0,0,1,56]
+"spong__controller_8h.html":[4,0,0,3,0,3]
 };
