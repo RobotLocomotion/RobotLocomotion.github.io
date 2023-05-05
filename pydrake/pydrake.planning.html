@@ -1856,7 +1856,7 @@ the future.</p>
 <span class="sig-name descname"><span class="pre">AddRegions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddRegions" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRegions(self: pydrake.planning.GcsTrajectoryOptimization, regions: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], edges_between_regions: List[Tuple[int, int]], order: int, h_min: float = 1e-06, h_max: float = 20, name: str = ‘’) -&gt; pydrake.planning.GcsTrajectoryOptimization.Subgraph</p></li>
+<li><p>AddRegions(self: pydrake.planning.GcsTrajectoryOptimization, regions: List[pydrake.geometry.optimization.ConvexSet], edges_between_regions: List[Tuple[int, int]], order: int, h_min: float = 1e-06, h_max: float = 20, name: str = ‘’) -&gt; pydrake.planning.GcsTrajectoryOptimization.Subgraph</p></li>
 </ol>
 <p>Creates a Subgraph with the given regions and indices.</p>
 <dl class="simple">
@@ -1883,7 +1883,7 @@ cost of the path energy ||ṙ(s)||² / h becomes non-convex for h =
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRegions(self: pydrake.planning.GcsTrajectoryOptimization, regions: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], order: int, h_min: float = 1e-06, h_max: float = 20, name: str = ‘’) -&gt; pydrake.planning.GcsTrajectoryOptimization.Subgraph</p></li>
+<li><p>AddRegions(self: pydrake.planning.GcsTrajectoryOptimization, regions: List[pydrake.geometry.optimization.ConvexSet], order: int, h_min: float = 1e-06, h_max: float = 20, name: str = ‘’) -&gt; pydrake.planning.GcsTrajectoryOptimization.Subgraph</p></li>
 </ol>
 <p>Creates a Subgraph with the given regions. This function will compute
 the edges between the regions based on the set intersections.</p>

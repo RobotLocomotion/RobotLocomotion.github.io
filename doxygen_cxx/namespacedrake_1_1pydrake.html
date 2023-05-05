@@ -335,6 +335,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af1dd02f74528f84556c55239d82ab9b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#af1dd02f74528f84556c55239d82ab9b3">DefineGeometryVisualizers</a> (py::module m)</td></tr>
 <tr class="memdesc:af1dd02f74528f84556c55239d82ab9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the visualizers in <a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a>.  <a href="#af1dd02f74528f84556c55239d82ab9b3">More...</a><br /></td></tr>
 <tr class="separator:af1dd02f74528f84556c55239d82ab9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d712eb0a12e5f78078993172f842dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a3d712eb0a12e5f78078993172f842dfe">CloneConvexSets</a> (const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> * &gt; &amp;sets_in)</td></tr>
+<tr class="memdesc:a3d712eb0a12e5f78078993172f842dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep-copies the ConvexSet pointers in the given list into the C++-compatible object ConvexSets (which uses <a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a> ownership).  <a href="#a3d712eb0a12e5f78078993172f842dfe">More...</a><br /></td></tr>
+<tr class="separator:a3d712eb0a12e5f78078993172f842dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14724461c57557eb0646af0081b97ef2"><td class="memItemLeft" align="right" valign="top">py::object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a14724461c57557eb0646af0081b97ef2">py_keep_alive</a> (py::object nurse, py::object patient)</td></tr>
 <tr class="memdesc:a14724461c57557eb0646af0081b97ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this when you must do manual casting - e.g.  <a href="#a14724461c57557eb0646af0081b97ef2">More...</a><br /></td></tr>
 <tr class="separator:a14724461c57557eb0646af0081b97ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -736,6 +739,27 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Binds a <a class="el" href="classdrake_1_1_type_safe_index.html" title="A type-safe non-negative index class.">TypeSafeIndex</a> instantiation along with its <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>[Class] type-erasure wrapper. </p>
+
+</div>
+</div>
+<a id="a3d712eb0a12e5f78078993172f842dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d712eb0a12e5f78078993172f842dfe">&#9670;&nbsp;</a></span>CloneConvexSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> drake::pydrake::CloneConvexSets </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sets_in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deep-copies the ConvexSet pointers in the given list into the C++-compatible object ConvexSets (which uses <a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a> ownership). </p>
+<p>This is useful to accept Python-natural function arguments (list of pointers) and then call the C++ API that requires a more complicated type. </p>
 
 </div>
 </div>

@@ -1,5 +1,11 @@
 var NAVTREEINDEX52 =
 {
+"render__vtk_2factory_8h.html#a18b9a919046a97500f422a85a4a8ce30":[4,0,0,4,7,0,0],
+"replace__bilinear__terms_8h.html":[4,0,0,1,3,15],
+"replace__bilinear__terms_8h.html#a04799bc5337c8999ef3f10e82dd979cd":[4,0,0,1,3,15,0],
+"reset__after__move_8h.html":[4,0,0,1,51],
+"reset__on__copy_8h.html":[4,0,0,1,52],
+"revolute__joint_8h.html":[4,0,0,8,14,38],
 "revolute__mobilizer_8h.html":[4,0,0,8,14,39],
 "revolute__spring_8h.html":[4,0,0,8,14,40],
 "rgba_8h.html":[4,0,0,4,37],
@@ -243,11 +249,5 @@ var NAVTREEINDEX52 =
 "spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,12,2,0],
 "spatial__force_8h.html":[4,0,0,8,6,2],
 "spatial__inertia_8h.html":[4,0,0,8,14,48],
-"spatial__kinematics_8h.html":[4,0,0,8,12,3],
-"spatial__momentum_8h.html":[4,0,0,8,6,3],
-"spatial__vector_8h.html":[4,0,0,8,6,4],
-"spatial__velocity_8h.html":[4,0,0,8,6,5],
-"spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
-"spectrahedron_8h.html":[4,0,0,4,1,12],
-"spong__controller_8h.html":[4,0,0,3,0,3]
+"spatial__kinematics_8h.html":[4,0,0,8,12,3]
 };

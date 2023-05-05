@@ -7,6 +7,7 @@ var searchData=
   ['diagramsystembaseattorney',['DiagramSystemBaseAttorney',['../classdrake_1_1systems_1_1_system_base.html#a86007c147035e0b8e231296c4aedbfba',1,'drake::systems::SystemBase']]],
   ['encodeddata',['EncodedData',['../classdrake_1_1geometry_1_1_geometry_id.html#a9a52ef3fed9a29f5f2212c0602080034',1,'drake::geometry::GeometryId']]],
   ['frameworkfactory',['FrameworkFactory',['../classdrake_1_1systems_1_1_diagram_output_port.html#aec09700393c1247c681b270e72729bce',1,'drake::systems::DiagramOutputPort::FrameworkFactory()'],['../classdrake_1_1systems_1_1_input_port.html#aec09700393c1247c681b270e72729bce',1,'drake::systems::InputPort::FrameworkFactory()'],['../classdrake_1_1systems_1_1_leaf_output_port.html#aec09700393c1247c681b270e72729bce',1,'drake::systems::LeafOutputPort::FrameworkFactory()']]],
+  ['gemm',['Gemm',['../classdrake_1_1symbolic_1_1_expression.html#a77b58481bb407d315b4c8e5571acee10',1,'drake::symbolic::Expression']]],
   ['if_5fthen_5felse',['if_then_else',['../classdrake_1_1symbolic_1_1_expression.html#adb59d484cb2b6737923c9b53e0ec432c',1,'drake::symbolic::Expression']]],
   ['intersect',['intersect',['../classdrake_1_1symbolic_1_1_variables.html#adbfb5367e72dfbaf7a778e6896113f64',1,'drake::symbolic::Variables']]],
   ['inversedynamics',['InverseDynamics',['../classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a8a90c5e3ef0bcec77643392f99e44824',1,'drake::systems::controllers::InverseDynamics']]],

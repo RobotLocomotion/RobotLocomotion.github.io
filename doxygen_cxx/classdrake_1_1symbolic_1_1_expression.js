@@ -48,6 +48,7 @@ var classdrake_1_1symbolic_1_1_expression =
     [ "get_constant_value", "classdrake_1_1symbolic_1_1_expression.html#a5165b4cdadcd273d3faad9dffd2bcc7e", null ],
     [ "hash_append", "classdrake_1_1symbolic_1_1_expression.html#a30f9401137684ac91426224f76629336", null ],
     [ "if_then_else", "classdrake_1_1symbolic_1_1_expression.html#adb59d484cb2b6737923c9b53e0ec432c", null ],
+    [ "internal::Gemm", "classdrake_1_1symbolic_1_1_expression.html#a77b58481bb407d315b4c8e5571acee10", null ],
     [ "is_abs", "classdrake_1_1symbolic_1_1_expression.html#ab6046c9bad9a1c5a1ba51ec6157376c3", null ],
     [ "is_acos", "classdrake_1_1symbolic_1_1_expression.html#a40a4e8165bee3d62bd4df8a68226098c", null ],
     [ "is_addition", "classdrake_1_1symbolic_1_1_expression.html#a5b8a1e5e59b460cac7c2d8b5cb1e172c", null ],
