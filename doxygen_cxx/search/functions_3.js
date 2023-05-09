@@ -73,6 +73,7 @@ var searchData=
   ['default_5frotor_5finertia',['default_rotor_inertia',['../classdrake_1_1multibody_1_1_joint_actuator.html#af38616e070c9835a7a902c7d87c4a7b5',1,'drake::multibody::JointActuator']]],
   ['default_5fspatial_5finertia',['default_spatial_inertia',['../classdrake_1_1multibody_1_1_rigid_body.html#ae5899956a3322afd82ae792d6deeb8cb',1,'drake::multibody::RigidBody']]],
   ['default_5funit_5finertia',['default_unit_inertia',['../classdrake_1_1multibody_1_1_rigid_body.html#a2974f916c9cac2e4a8b6700829c86148',1,'drake::multibody::RigidBody']]],
+  ['defaultimplementgeometry',['DefaultImplementGeometry',['../classdrake_1_1geometry_1_1_shape_reifier.html#a0e6b2bb959894e5de3e0a10b9dac5663',1,'drake::geometry::ShapeReifier']]],
   ['defcast',['DefCast',['../namespacedrake_1_1pydrake.html#a6294e82ee237c93a7e6cbc2fb4d924b2',1,'drake::pydrake']]],
   ['defclone',['DefClone',['../namespacedrake_1_1pydrake.html#ad48601ea388e9d2a662aff6f8b42dca4',1,'drake::pydrake']]],
   ['defcopyanddeepcopy',['DefCopyAndDeepCopy',['../namespacedrake_1_1pydrake.html#a4937c776ae795edfe27824821a0d14a5',1,'drake::pydrake']]],

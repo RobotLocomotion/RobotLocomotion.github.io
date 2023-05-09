@@ -4,6 +4,7 @@ var classdrake_1_1geometry_1_1_shape_reifier =
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html#a95564d6c00e8f315b4337e80b033a299", null ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html#aef1531bb8dd9ba1f3f408f7c220ae380", null ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01", null ],
+    [ "DefaultImplementGeometry", "classdrake_1_1geometry_1_1_shape_reifier.html#a0e6b2bb959894e5de3e0a10b9dac5663", null ],
     [ "ImplementGeometry", "classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4", null ],
     [ "ImplementGeometry", "classdrake_1_1geometry_1_1_shape_reifier.html#a55821ccfb027151e1e5b8aba5e89d876", null ],
     [ "ImplementGeometry", "classdrake_1_1geometry_1_1_shape_reifier.html#a5f19e61b141f9a59b12d686271a57116", null ],

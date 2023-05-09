@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_color.html#adab634951eeadcd5a7c8840eefbf780f":[3,0,0,16,8,4,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits.html":[3,0,0,16,8,9],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html":[3,0,0,16,8,10],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,10,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "symbolic__test__util_8h.html#a97bec4ad79d4ed1a5017738221a61a7e":[4,0,0,1,4,11,20],
 "symbolic__test__util_8h.html#a9f9f40ffa7e74c90169e1269d087ff7f":[4,0,0,1,4,11,22],
 "symbolic__test__util_8h.html#ab8b985282beb0cb444b7e03d9fc1bf30":[4,0,0,1,4,11,6],
-"symbolic__test__util_8h.html#abca93568505710bf72e917c5c73d4b9c":[4,0,0,1,4,11,9],
-"symbolic__test__util_8h.html#ac651807ee0ec1298966869ae92a500e7":[4,0,0,1,4,11,3]
+"symbolic__test__util_8h.html#abca93568505710bf72e917c5c73d4b9c":[4,0,0,1,4,11,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"iiwa__driver__functions_8h.html":[4,0,0,6,1,5],
 "iiwa__driver__functions_8h.html#aae79a0d5bcf9c61542749924152a9dd7":[4,0,0,6,1,5,0],
 "iiwa__lcm_8h.html":[4,0,0,3,8,1],
 "iiwa__status__receiver_8h.html":[4,0,0,6,1,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "manipulation_2planner_2stub_2differential__inverse__kinematics_8h.html":[4,0,0,6,2,0,1],
 "manipulation_2planner_2stub_2differential__inverse__kinematics_8h.html#a0d2fbab13ff77174624efa22d0b979d0":[4,0,0,6,2,0,1,1],
 "manipulation_2planner_2stub_2differential__inverse__kinematics_8h.html#a1373f363d993c88b44d11952867d5566":[4,0,0,6,2,0,1,0],
-"manipulation_2planner_2stub_2differential__inverse__kinematics_8h.html#a5cc8ec7dc37317e4854002048f6a708b":[4,0,0,6,2,0,1,2],
-"manipulation_2planner_2stub_2differential__inverse__kinematics__integrator_8h.html":[4,0,0,6,2,0,2]
+"manipulation_2planner_2stub_2differential__inverse__kinematics_8h.html#a5cc8ec7dc37317e4854002048f6a708b":[4,0,0,6,2,0,1,2]
 };
