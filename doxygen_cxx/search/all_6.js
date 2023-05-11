@@ -78,6 +78,7 @@ var searchData=
   ['findrunfile',['FindRunfile',['../namespacedrake.html#ae65839d11c343c02ff41aec068e4ff28',1,'drake']]],
   ['findseparationcertificategivenpolytope',['FindSeparationCertificateGivenPolytope',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a6ef170719d3fadd87796728deb31d571',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['findseparationcertificategivenpolytopeoptions',['FindSeparationCertificateGivenPolytopeOptions',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
+  ['findseparationcertificateoptions',['FindSeparationCertificateOptions',['../structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html',1,'drake::geometry::optimization']]],
   ['finduniqueperiodicdiscreteupdatesorthrow',['FindUniquePeriodicDiscreteUpdatesOrThrow',['../classdrake_1_1systems_1_1_system.html#a0c2bcc8b809ca6ccb30cdc6d65e0fef3',1,'drake::systems::System']]],
   ['finger',['Finger',['../namespacedrake_1_1examples_1_1planar__gripper.html#a06cd88b8d529d838dc5184712e08137c',1,'drake::examples::planar_gripper']]],
   ['finger_5fbase_5fposition_5findex',['finger_base_position_index',['../classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ad7d18471338aeb466dd91b3bdddd0b9d',1,'drake::examples::planar_gripper::GripperBrickHelper']]],

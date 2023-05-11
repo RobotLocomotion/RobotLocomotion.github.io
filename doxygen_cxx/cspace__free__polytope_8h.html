@@ -175,8 +175,10 @@ $(document).ready(function(){initNavTree('cspace__free__polytope_8h.html','');})
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;fmt/format.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="c__iris__collision__geometry_8h.html">drake/geometry/optimization/c_iris_collision_geometry.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="c__iris__separating__plane_8h.html">drake/geometry/optimization/c_iris_separating_plane.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cspace__free__structs_8h.html">drake/geometry/optimization/cspace_free_structs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="hpolyhedron_8h.html">drake/geometry/optimization/hpolyhedron.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rational__forward__kinematics_8h.html">drake/multibody/rational/rational_forward_kinematics.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mathematical__program_8h.html">drake/solvers/mathematical_program.h</a>&quot;</code><br />
@@ -191,9 +193,6 @@ Include dependency graph for cspace_free_polytope.h:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html">PlaneSeparatesGeometries</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the information to enforce a pair of geometries are separated by a plane.  <a href="structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class tries to find large convex polytopes in the tangential-configuration space, such that all configurations in the convex polytopes is collision free.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,7 +233,7 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac52a87949354e558c4a05a11acb655ec"><td class="memItemLeft" align="right" valign="top">std::map&lt; multibody::BodyIndex, std::vector&lt; std::unique_ptr&lt; CIrisCollisionGeometry &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac52a87949354e558c4a05a11acb655ec">GetCollisionGeometries</a> (const multibody::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;scene_graph)</td></tr>
-<tr class="memdesc:ac52a87949354e558c4a05a11acb655ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a diagram (which contains the plant and the scene_graph), returns all the collision geometries.  <a href="namespacedrake_1_1geometry_1_1optimization.html#ac52a87949354e558c4a05a11acb655ec">More...</a><br /></td></tr>
+<tr class="memdesc:ac52a87949354e558c4a05a11acb655ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1geometry_1_1optimization.html#ac52a87949354e558c4a05a11acb655ec">More...</a><br /></td></tr>
 <tr class="separator:ac52a87949354e558c4a05a11acb655ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

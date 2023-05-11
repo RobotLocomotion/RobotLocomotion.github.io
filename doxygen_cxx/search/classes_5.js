@@ -8,6 +8,7 @@ var searchData=
   ['findpolytopegivenlagrangianoptions',['FindPolytopeGivenLagrangianOptions',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['findresourceresult',['FindResourceResult',['../classdrake_1_1_find_resource_result.html',1,'drake']]],
   ['findseparationcertificategivenpolytopeoptions',['FindSeparationCertificateGivenPolytopeOptions',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
+  ['findseparationcertificateoptions',['FindSeparationCertificateOptions',['../structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html',1,'drake::geometry::optimization']]],
   ['finitehorizonlinearquadraticregulatoroptions',['FiniteHorizonLinearQuadraticRegulatorOptions',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html',1,'drake::systems::controllers']]],
   ['finitehorizonlinearquadraticregulatorresult',['FiniteHorizonLinearQuadraticRegulatorResult',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html',1,'drake::systems::controllers']]],
   ['firstorderlowpassfilter',['FirstOrderLowPassFilter',['../classdrake_1_1systems_1_1_first_order_low_pass_filter.html',1,'drake::systems']]],

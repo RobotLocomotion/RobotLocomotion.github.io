@@ -1,11 +1,16 @@
 var NAVTREEINDEX53 =
 {
+"spatial__derivative_8h.html":[4,0,0,8,12,2],
+"spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,12,2,1],
+"spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,12,2,0],
+"spatial__force_8h.html":[4,0,0,8,6,2],
+"spatial__inertia_8h.html":[4,0,0,8,14,48],
 "spatial__kinematics_8h.html":[4,0,0,8,12,3],
 "spatial__momentum_8h.html":[4,0,0,8,6,3],
 "spatial__vector_8h.html":[4,0,0,8,6,4],
 "spatial__velocity_8h.html":[4,0,0,8,6,5],
 "spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
-"spectrahedron_8h.html":[4,0,0,4,1,12],
+"spectrahedron_8h.html":[4,0,0,4,1,15],
 "spong__controller_8h.html":[4,0,0,3,0,3],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
 "spring__mass__system_8h.html":[4,0,0,12,0,0,15],
@@ -244,10 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ac7b001303ef94448442c885d0854f99e":[3,0,0,4,50,2],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,4,50,3],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,4,50,12],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,4,51],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,4,51,9],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,51,6],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a626901b6c287f89574769a9297dcee45":[3,0,0,4,51,4],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[3,0,0,4,51,7],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a7fa789c84df3efe720c9070acd56c1ce":[3,0,0,4,51,5]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,4,51]
 };

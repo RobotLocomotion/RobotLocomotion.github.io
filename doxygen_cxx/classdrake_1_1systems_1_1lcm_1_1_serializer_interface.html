@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1lcm_1_1_seria
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>SerializerInterface translates between LCM message bytes and <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">drake::AbstractValue</a> objects that contain LCM messages, e.g., a Value&lt;lcmt_drake_signal&gt;. </p>
-<p>See <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer.html" title="Serializer is specific to a single LcmMessage type, and translates between LCM message bytes and drak...">Serializer</a> for a message-specific concrete subclass. </p>
+<p>All <code>const</code> methods are threadsafe. See <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer.html" title="Serializer is specific to a single LcmMessage type, and translates between LCM message bytes and drak...">Serializer</a> for a message-specific concrete subclass. </p>
 </div>
 <p><code>#include &lt;drake/systems/lcm/serializer.h&gt;</code></p>
 <table class="memberdecls">
@@ -177,7 +177,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fccdf5e8b33a94fdaf1a9b8826aa684"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a2fccdf5e8b33a94fdaf1a9b8826aa684">~SerializerInterface</a> ()</td></tr>
 <tr class="separator:a2fccdf5e8b33a94fdaf1a9b8826aa684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbee7f3497ff5244da916e6997c54872"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872">Clone</a> () const =0</td></tr>
-<tr class="memdesc:acbee7f3497ff5244da916e6997c54872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of this.  <a href="#acbee7f3497ff5244da916e6997c54872">More...</a><br /></td></tr>
+<tr class="memdesc:acbee7f3497ff5244da916e6997c54872"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#acbee7f3497ff5244da916e6997c54872">More...</a><br /></td></tr>
 <tr class="separator:acbee7f3497ff5244da916e6997c54872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bfe2467e0ea22bbb13e0c4b9afa98a4"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a5bfe2467e0ea22bbb13e0c4b9afa98a4">CreateDefaultValue</a> () const =0</td></tr>
 <tr class="memdesc:a5bfe2467e0ea22bbb13e0c4b9afa98a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a value-initialized (zeroed) instance of the message object.  <a href="#a5bfe2467e0ea22bbb13e0c4b9afa98a4">More...</a><br /></td></tr>
@@ -330,7 +330,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a deep copy of this. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
+ This will be removed from Drake on or after 2023-09-01.</dd></dl>
 
 <p>Implemented in <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer.html#a4497ca6ec8ea51e6a64f26985d7e41c0">Serializer&lt; LcmMessage &gt;</a>.</p>
 

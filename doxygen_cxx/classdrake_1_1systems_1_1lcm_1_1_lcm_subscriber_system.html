@@ -186,9 +186,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1lcm_1_1_lcm_s
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a01937e2f1423421e07d53fb322998b82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a01937e2f1423421e07d53fb322998b82">LcmSubscriberSystem</a> (const std::string &amp;channel, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a> &gt; serializer, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm)</td></tr>
-<tr class="memdesc:a01937e2f1423421e07d53fb322998b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that returns a subscriber <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that provides message objects on its sole abstract-valued output port.  <a href="#a01937e2f1423421e07d53fb322998b82">More...</a><br /></td></tr>
-<tr class="separator:a01937e2f1423421e07d53fb322998b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afcddecc9180e2f221328b21238590d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a2afcddecc9180e2f221328b21238590d">LcmSubscriberSystem</a> (const std::string &amp;channel, std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a> &gt; serializer, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm)</td></tr>
+<tr class="memdesc:a2afcddecc9180e2f221328b21238590d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that returns a subscriber <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that provides message objects on its sole abstract-valued output port.  <a href="#a2afcddecc9180e2f221328b21238590d">More...</a><br /></td></tr>
+<tr class="separator:a2afcddecc9180e2f221328b21238590d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb9c08263f083e5f40e4572127e5ab0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#aafb9c08263f083e5f40e4572127e5ab0">~LcmSubscriberSystem</a> () override</td></tr>
 <tr class="separator:aafb9c08263f083e5f40e4572127e5ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce5a8cbdacaeee5d22e1bd156557b44"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a8ce5a8cbdacaeee5d22e1bd156557b44">get_channel_name</a> () const</td></tr>
@@ -1289,8 +1289,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a01937e2f1423421e07d53fb322998b82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01937e2f1423421e07d53fb322998b82">&#9670;&nbsp;</a></span>LcmSubscriberSystem() <span class="overload">[3/3]</span></h2>
+<a id="a2afcddecc9180e2f221328b21238590d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2afcddecc9180e2f221328b21238590d">&#9670;&nbsp;</a></span>LcmSubscriberSystem() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1304,7 +1304,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a> &gt;&#160;</td>
           <td class="paramname"><em>serializer</em>, </td>
         </tr>
         <tr>

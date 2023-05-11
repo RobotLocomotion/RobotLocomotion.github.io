@@ -95,6 +95,8 @@ var searchData=
   ['csdpsolver',['CsdpSolver',['../classdrake_1_1solvers_1_1_csdp_solver.html',1,'drake::solvers']]],
   ['csdpsolverdetails',['CsdpSolverDetails',['../structdrake_1_1solvers_1_1_csdp_solver_details.html',1,'drake::solvers']]],
   ['cspacefreepolytope',['CspaceFreePolytope',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html',1,'drake::geometry::optimization']]],
+  ['cspaceseparatingplane',['CSpaceSeparatingPlane',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html',1,'drake::geometry::optimization']]],
+  ['cspaceseparatingplane_3c_20drake_3a_3asymbolic_3a_3avariable_20_3e',['CSpaceSeparatingPlane&lt; drake::symbolic::Variable &gt;',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html',1,'drake::geometry::optimization']]],
   ['cubicscalarsystem',['CubicScalarSystem',['../classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html',1,'drake::systems::analysis_test']]],
   ['cylinder',['Cylinder',['../classdrake_1_1geometry_1_1_cylinder.html',1,'drake::geometry']]]
 ];

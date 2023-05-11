@@ -1,5 +1,7 @@
 var NAVTREEINDEX29 =
 {
+"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ab886ec02ff9fb8fa63751b76b0aa6166":[3,0,0,15,59,1],
+"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#abe0290e1ea8dbdcbd77db7c9074aabd9":[3,0,0,15,59,12],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ac2d58ad161597c14ea8cbd1ba03f448c":[3,0,0,15,59,9],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aca292ec8785171cf537afdb339a26113":[3,0,0,15,59,14],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#acaa87c27bae38b0daed338c482de9a0e":[3,0,0,15,59,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX29 =
 "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#af8c3c7dda43b54d419bb9190de4eb2c7":[1,4,0,0,0,1],
 "classdrake_1_1systems_1_1_cache.html":[3,0,0,16,16],
 "classdrake_1_1systems_1_1_cache.html#a1670c61c0b4e42e75c0ce36ffcdc1f2e":[3,0,0,16,16,3],
-"classdrake_1_1systems_1_1_cache.html#a37e381833649e68b36c7c146d7984f8f":[3,0,0,16,16,17],
-"classdrake_1_1systems_1_1_cache.html#a39bc516683cda18867e677094b095f57":[3,0,0,16,16,7],
-"classdrake_1_1systems_1_1_cache.html#a3fa1145d2324e66289c9a188dec46887":[3,0,0,16,16,13]
+"classdrake_1_1systems_1_1_cache.html#a37e381833649e68b36c7c146d7984f8f":[3,0,0,16,16,17]
 };

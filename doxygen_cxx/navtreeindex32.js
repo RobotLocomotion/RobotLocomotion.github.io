@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"classdrake_1_1systems_1_1_diagram_discrete_values.html#a6df62467cafe26e431818f5c236b8e7e":[3,0,0,16,34,2],
+"classdrake_1_1systems_1_1_diagram_discrete_values.html#a8b6c4422885f32ab2c23d90752f3d9bf":[3,0,0,16,34,6],
 "classdrake_1_1systems_1_1_diagram_discrete_values.html#ab8b2c65e7f44a1d77e7c65f27db91a5f":[3,0,0,16,34,4],
 "classdrake_1_1systems_1_1_diagram_discrete_values.html#abc16a446db987798a37288c790c87541":[3,0,0,16,34,5],
 "classdrake_1_1systems_1_1_diagram_discrete_values.html#ac003ec4a2c93b2dc6201b3a1ff4af014":[3,0,0,16,34,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24":[1,4,0,0,2,4],
 "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a4f261ecb03c3b1d75465e7b8b18338f3":[1,4,0,0,2,5],
 "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a7b08a0806cd1a62ce33eef7ef482f5e5":[1,4,0,0,2,7],
-"classdrake_1_1systems_1_1_implicit_euler_integrator.html#a8c246f8ad3134078e2fbeb811a4fcf25":[1,4,0,0,2,8],
-"classdrake_1_1systems_1_1_implicit_euler_integrator.html#aa577e3beda4e1a9615b81c38a8f91a69":[1,4,0,0,2,3],
-"classdrake_1_1systems_1_1_implicit_euler_integrator.html#ab16786c9c3b3e71bf2c2765bf28fecd0":[1,4,0,0,2,6]
+"classdrake_1_1systems_1_1_implicit_euler_integrator.html#a8c246f8ad3134078e2fbeb811a4fcf25":[1,4,0,0,2,8]
 };

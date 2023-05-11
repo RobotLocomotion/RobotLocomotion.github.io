@@ -186,7 +186,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19a46c344566fb11866cbc35541e9495"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer.html#a19a46c344566fb11866cbc35541e9495">~Serializer</a> () override=default</td></tr>
 <tr class="separator:a19a46c344566fb11866cbc35541e9495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4497ca6ec8ea51e6a64f26985d7e41c0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer.html#a4497ca6ec8ea51e6a64f26985d7e41c0">Clone</a> () const override</td></tr>
-<tr class="memdesc:a4497ca6ec8ea51e6a64f26985d7e41c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of this.  <a href="#a4497ca6ec8ea51e6a64f26985d7e41c0">More...</a><br /></td></tr>
+<tr class="memdesc:a4497ca6ec8ea51e6a64f26985d7e41c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a4497ca6ec8ea51e6a64f26985d7e41c0">More...</a><br /></td></tr>
 <tr class="separator:a4497ca6ec8ea51e6a64f26985d7e41c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3b343e6b2a9f07d94959abd15644a45"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer.html#aa3b343e6b2a9f07d94959abd15644a45">CreateDefaultValue</a> () const override</td></tr>
 <tr class="memdesc:aa3b343e6b2a9f07d94959abd15644a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a value-initialized (zeroed) instance of the message object.  <a href="#aa3b343e6b2a9f07d94959abd15644a45">More...</a><br /></td></tr>
@@ -351,7 +351,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a deep copy of this. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
+ This will be removed from Drake on or after 2023-09-01.</dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872">SerializerInterface</a>.</p>
 

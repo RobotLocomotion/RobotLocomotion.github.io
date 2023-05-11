@@ -226,6 +226,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a419cd0b396fa1fbf23bc9163ce856fa3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a419cd0b396fa1fbf23bc9163ce856fa3">solver_id</a> () const</td></tr>
 <tr class="memdesc:a419cd0b396fa1fbf23bc9163ce856fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for solver id.  <a href="#a419cd0b396fa1fbf23bc9163ce856fa3">More...</a><br /></td></tr>
 <tr class="separator:a419cd0b396fa1fbf23bc9163ce856fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ebc7204b28952e65dc2202615a3415"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a06ebc7204b28952e65dc2202615a3415">is_explored</a> () const</td></tr>
+<tr class="memdesc:a06ebc7204b28952e65dc2202615a3415"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the mathematical program in this node has been solved and the result is stored inside this node, then we say this node has been explored.  <a href="#a06ebc7204b28952e65dc2202615a3415">More...</a><br /></td></tr>
+<tr class="separator:a06ebc7204b28952e65dc2202615a3415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894999429806cfff000484df501d4470"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a894999429806cfff000484df501d4470">NumExploredNodesInSubtree</a> () const</td></tr>
+<tr class="memdesc:a894999429806cfff000484df501d4470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of explored nodes in the subtree (including this node if it has been explored).  <a href="#a894999429806cfff000484df501d4470">More...</a><br /></td></tr>
+<tr class="separator:a894999429806cfff000484df501d4470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:add8bf2d0a9d1c79a8bca77e6709a9b61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#add8bf2d0a9d1c79a8bca77e6709a9b61">MixedIntegerBranchAndBoundNode</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html">MixedIntegerBranchAndBoundNode</a> &amp;)=delete</td></tr>
 <tr class="separator:add8bf2d0a9d1c79a8bca77e6709a9b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -427,6 +433,25 @@ solver_id can be either Gurobi or Scs. </dd></dl>
 
 </div>
 </div>
+<a id="a06ebc7204b28952e65dc2202615a3415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ebc7204b28952e65dc2202615a3415">&#9670;&nbsp;</a></span>is_explored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_explored </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the mathematical program in this node has been solved and the result is stored inside this node, then we say this node has been explored. </p>
+
+</div>
+</div>
 <a id="aa0f4813924e6cdee43b45050bb947abe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0f4813924e6cdee43b45050bb947abe">&#9670;&nbsp;</a></span>IsLeaf()</h2>
 
@@ -540,6 +565,25 @@ solver_id can be either Gurobi or Scs. </dd></dl>
 </div><div class="memdoc">
 
 <p>Getter for the mutable right child. </p>
+
+</div>
+</div>
+<a id="a894999429806cfff000484df501d4470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894999429806cfff000484df501d4470">&#9670;&nbsp;</a></span>NumExploredNodesInSubtree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> NumExploredNodesInSubtree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of explored nodes in the subtree (including this node if it has been explored). </p>
 
 </div>
 </div>

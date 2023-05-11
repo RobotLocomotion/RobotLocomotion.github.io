@@ -1,5 +1,6 @@
 var classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound =
 [
+    [ "Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options" ],
     [ "NodeCallbackFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ada47cae16d222dda3fda918db0d4863d", null ],
     [ "NodeSelectFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afeaa0dd6491a96790fe00243942b7daf", null ],
     [ "VariableSelectFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a726cca20e3cf59eed49574ee8abd61d3", null ],
@@ -13,7 +14,7 @@ var classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound =
       [ "kLeastAmbivalent", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afa218114576445568fafd96dce0f2916a4901e5e33eea2be80ad9fce4d1ce62e6", null ],
       [ "kMostAmbivalent", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afa218114576445568fafd96dce0f2916a83cba8a7db0027273c0524156282de9e", null ]
     ] ],
-    [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a8fb43bf4aad3cc83a2eae32d96fab6b3", null ],
+    [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ac9f2c2b29033e97f3453a604b1d0d470", null ],
     [ "absolute_gap_tol", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ac182ef89ebdff90a7ab89a3cf220f742", null ],
     [ "best_lower_bound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0725fe3bca9f45b63acf89684785f742", null ],
     [ "best_upper_bound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ace6f433c7211d34645537b436f8ce2ef", null ],

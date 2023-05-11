@@ -68,8 +68,6 @@ var hierarchy =
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
     [ "ChebyshevPolynomial", "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html", null ],
     [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", null ],
-    [ "CIrisSeparatingPlane< T >", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html", null ],
-    [ "CIrisSeparatingPlane< drake::symbolic::Variable >", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html", null ],
     [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", null ],
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
@@ -131,6 +129,12 @@ var hierarchy =
     [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", null ],
     [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html", null ],
+    [ "CSpaceSeparatingPlane< T >", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html", [
+      [ "CIrisSeparatingPlane< T >", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html", null ]
+    ] ],
+    [ "CSpaceSeparatingPlane< drake::symbolic::Variable >", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html", [
+      [ "CIrisSeparatingPlane< drake::symbolic::Variable >", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html", null ]
+    ] ],
     [ "DampingModel< T >", "classdrake_1_1multibody_1_1fem_1_1_damping_model.html", null ],
     [ "DeformableBodyConfig< T >", "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html", null ],
     [ "DelegatingHasher", "structdrake_1_1_delegating_hasher.html", null ],
@@ -330,7 +334,9 @@ var hierarchy =
     [ "Fields", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html", null ],
     [ "CspaceFreePolytope::FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html", null ],
     [ "FindResourceResult", "classdrake_1_1_find_resource_result.html", null ],
-    [ "CspaceFreePolytope::FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html", null ],
+    [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html", [
+      [ "CspaceFreePolytope::FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html", null ]
+    ] ],
     [ "FiniteHorizonLinearQuadraticRegulatorOptions", "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html", null ],
     [ "FiniteHorizonLinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html", null ],
     [ "FixedInputPortValue", "classdrake_1_1systems_1_1_fixed_input_port_value.html", null ],
@@ -614,6 +620,7 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
+    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "CspaceFreePolytope::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
@@ -723,8 +730,12 @@ var hierarchy =
     [ "CspaceFreePolytope::SearchResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
-    [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ],
-    [ "CspaceFreePolytope::SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html", null ],
+    [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
+      [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]
+    ] ],
+    [ "SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html", [
+      [ "CspaceFreePolytope::SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html", null ]
+    ] ],
     [ "SerializerInterface", "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html", [
       [ "Serializer< LcmMessage >", "classdrake_1_1systems_1_1lcm_1_1_serializer.html", null ]
     ] ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,12,3,7,1],
+"context__base_8h.html":[4,0,0,12,3,8],
 "continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,6],
 "continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,6,1],
 "continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,6,0],
@@ -39,8 +41,11 @@ var NAVTREEINDEX43 =
 "csdp__solver_8h.html":[4,0,0,11,13],
 "csdp__solver__error__handling_8h.html":[4,0,0,11,14],
 "csdp__solver__internal_8h.html":[4,0,0,11,15],
-"cspace__free__polytope_8h.html":[4,0,0,4,1,4],
-"cspace__free__polytope_8h.html#ac52a87949354e558c4a05a11acb655ec":[4,0,0,4,1,4,12],
+"cspace__free__internal_8h.html":[4,0,0,4,1,4],
+"cspace__free__polytope_8h.html":[4,0,0,4,1,5],
+"cspace__free__polytope_8h.html#ac52a87949354e558c4a05a11acb655ec":[4,0,0,4,1,5,11],
+"cspace__free__structs_8h.html":[4,0,0,4,1,6],
+"cspace__separating__plane_8h.html":[4,0,0,4,1,7],
 "cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
 "damping__model_8h.html":[4,0,0,8,3,5],
 "damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX43 =
 "dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
 "direct__collocation_8h.html":[4,0,0,10,1,0],
 "direct__collocation_8h.html#a5a33c78a3166fd84c3b1d5818c6e8275":[4,0,0,10,1,0,0],
-"direct__transcription_8h.html":[4,0,0,10,1,1],
-"dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8],
-"dirichlet__boundary__condition_8h.html#ae2a9fef64ae955d7fad6cbef266f2d68":[4,0,0,8,3,8,0],
-"discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
-"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
-"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0]
+"direct__transcription_8h.html":[4,0,0,10,1,1]
 };

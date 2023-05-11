@@ -515,8 +515,9 @@ with <cite>LcmPublisherSystem</cite> and <cite>LcmSubscriberSystem</cite> when t
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.Clone">
-<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Clone" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Clone" title="Permalink to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.CreateDefaultValue">
@@ -550,7 +551,8 @@ The result can be used as the output object filled in by Deserialize.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.Clone">
 <span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.Clone" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>PySerializer objects are immutable, there is no need to copy nor clone them. The deprecated code will be removed from Drake on or after 2023-09-01.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.CreateDefaultValue">

@@ -16,6 +16,7 @@ var searchData=
   ['residue_5finfeasibility',['residue_infeasibility',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a50ed0b0f95656409f8d69b68cae7a3f6',1,'drake::solvers::ScsSolverDetails']]],
   ['residue_5funbounded_5fa',['residue_unbounded_a',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a2f2f3ad142051a0c2f94d66d7430c67b',1,'drake::solvers::ScsSolverDetails']]],
   ['residue_5funbounded_5fp',['residue_unbounded_p',['../structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a',1,'drake::solvers::ScsSolverDetails']]],
+  ['result',['result',['../structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab3f1efd3efefa056724514d6d247de2f',1,'drake::geometry::optimization::SeparationCertificateResultBase']]],
   ['retain_5fmap_5fdefaults',['retain_map_defaults',['../structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d',1,'drake::yaml::LoadYamlOptions']]],
   ['return_5fcode',['return_code',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb',1,'drake::solvers::CsdpSolverDetails']]],
   ['rgb',['rgb',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a51a5f94eea0e5ea757caaddb41c3eb79',1,'drake::systems::sensors::CameraConfig']]],

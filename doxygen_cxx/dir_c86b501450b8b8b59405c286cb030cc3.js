@@ -9,7 +9,8 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "binding.h", "binding_8h.html", "binding_8h" ],
     [ "branch_and_bound.h", "branch__and__bound_8h.html", [
       [ "MixedIntegerBranchAndBoundNode", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node" ],
-      [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound" ]
+      [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound" ],
+      [ "Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options" ]
     ] ],
     [ "choose_best_solver.h", "choose__best__solver_8h.html", "choose__best__solver_8h" ],
     [ "clp_solver.h", "clp__solver_8h.html", [
