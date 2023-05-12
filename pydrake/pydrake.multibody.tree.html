@@ -13237,6 +13237,19 @@ for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that RotationalInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
+</div>
 <p>Various methods in this class require numerical (not symbolic) data
 types.</p>
 <div class="admonition note">
@@ -13775,6 +13788,19 @@ for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that RotationalInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
+</div>
 <p>Various methods in this class require numerical (not symbolic) data
 types.</p>
 <dl class="py method">
@@ -14301,6 +14327,19 @@ debug builds. In addition, these validity tests are only performed
 for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that RotationalInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
 </div>
 <p>Various methods in this class require numerical (not symbolic) data
 types.</p>
@@ -15755,6 +15794,19 @@ for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that SpatialInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>To create a spatial inertia of a mesh, see
@@ -16498,6 +16550,19 @@ for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that SpatialInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>To create a spatial inertia of a mesh, see
@@ -17229,6 +17294,19 @@ debug builds. In addition, these validity tests are only performed
 for scalar types for which drake::scalar_predicate&lt;T&gt;::is_bool is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance, validity checks are not performed when T
 is symbolic::Expression.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that SpatialInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -18168,6 +18246,19 @@ user’s intention.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that UnitInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitInertia_</span></code></a>
 for the list of instantiations.</p>
 </div>
@@ -18579,6 +18670,19 @@ notice that once a unit inertia is created, it <em>is</em> the unit
 inertia of <em>some</em> body, perhaps with scaled geometry from the
 user’s intention.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that UnitInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -18988,6 +19092,19 @@ operations are disallowed to ensure the unit-mass invariant. Also
 notice that once a unit inertia is created, it <em>is</em> the unit
 inertia of <em>some</em> body, perhaps with scaled geometry from the
 user’s intention.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The methods of this class satisfy the “basic exception guarantee”:
+if an exception is thrown, the program will still be in a valid
+state. Specifically, no resources are leaked, and all objects’
+invariants are intact. Be aware that UnitInertia objects may
+contain invalid inertia data in cases where input checking is
+skipped.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/exceptions">https://en.cppreference.com/w/cpp/language/exceptions</a></p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.__init__">
