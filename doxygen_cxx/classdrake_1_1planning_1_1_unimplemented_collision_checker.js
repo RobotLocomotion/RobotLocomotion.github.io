@@ -10,8 +10,9 @@ var classdrake_1_1planning_1_1_unimplemented_collision_checker =
     [ "DoClassifyContextBodyCollisions", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ab8d9753491d6c358074117984a7a01b3", null ],
     [ "DoClone", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a9bef4e4b9ca5ec3100ca88157a945b3d", null ],
     [ "DoMaxContextNumDistances", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a0d31a213a240c881150cd1a6980cfef9", null ],
-    [ "DoRemoveAddedGeometries", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a75b824a2b91a8afbaea561529c286a44", null ],
     [ "DoUpdateContextPositions", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a5785657320b67a48e969d427e1ff9995", null ],
     [ "operator=", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#aaae199346d6aac6d2c6ad2621e0e49ec", null ],
-    [ "operator=", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ac20b221930b8cf266cc3cfe261af1a72", null ]
+    [ "operator=", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ac20b221930b8cf266cc3cfe261af1a72", null ],
+    [ "RemoveAddedGeometries", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ad0c2822fb46c799d890a5d57de2a3115", null ],
+    [ "UpdateCollisionFilters", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a202d29fe281f901ce6a8f278dc61764c", null ]
 ];

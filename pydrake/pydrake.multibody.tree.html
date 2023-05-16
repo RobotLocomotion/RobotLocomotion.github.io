@@ -13327,29 +13327,29 @@ inertia about-point P for any expressed-in frame E.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia.CalcPrincipalMomentsOfInertia">
 <span class="sig-name descname"><span class="pre">CalcPrincipalMomentsOfInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia.CalcPrincipalMomentsOfInertia" title="Permalink to this definition"></a></dt>
-<dd><p>This method takes <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia about-point P,
-expressed-in frame E, and computes its principal moments of inertia
-about-point P, but expressed-in a frame aligned with the principal
-axes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>: This method only works for a rotational inertia with scalar type
-T that can be converted to a double (discarding any supplemental
-scalar data such as derivatives of an AutoDiffXd).</p>
-</div>
+<dd><p>Forms the 3 principal moments of inertia for <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational
+inertia.</p>
 <dl class="simple">
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">principal_moments</span></code>:</dt><dd><p>The vector of principal moments of inertia <code class="docutils literal notranslate"><span class="pre">[Ixx</span> <span class="pre">Iyy</span> <span class="pre">Izz]</span></code>
-sorted in ascending order.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">The</span></code>:</dt><dd><p>3 principal moments of inertia [Imin Imed Imax], sorted in
+ascending order (Imin ≤ Imed ≤ Imax).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if eigenvalue solver fails</strong><strong> or </strong><strong>if scalar type T cannot</strong> – </p></li>
-<li><p><strong>be converted to a double.</strong> – </p></li>
+<li><p><strong>RuntimeError if the elements of this rotational inertia cannot</strong> – </p></li>
+<li><p><strong>be converted to a real finite double. For example</strong><strong>, </strong><strong>an exception is</strong> – </p></li>
+<li><p><strong>thrown if this contains an erroneous NaN</strong><strong> or </strong><strong>if scalar type T</strong> – </p></li>
+<li><p><strong>is symbolic.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcPrincipalMomentsAndAxesOfInertia() to also calculate principal
+moment of inertia directions associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational
+inertia.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -13873,29 +13873,29 @@ inertia about-point P for any expressed-in frame E.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.CalcPrincipalMomentsOfInertia">
 <span id="pydrake.multibody.tree.RotationalInertia_[AutoDiffXd].CalcPrincipalMomentsOfInertia"></span><span class="sig-name descname"><span class="pre">CalcPrincipalMomentsOfInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.CalcPrincipalMomentsOfInertia" title="Permalink to this definition"></a></dt>
-<dd><p>This method takes <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia about-point P,
-expressed-in frame E, and computes its principal moments of inertia
-about-point P, but expressed-in a frame aligned with the principal
-axes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>: This method only works for a rotational inertia with scalar type
-T that can be converted to a double (discarding any supplemental
-scalar data such as derivatives of an AutoDiffXd).</p>
-</div>
+<dd><p>Forms the 3 principal moments of inertia for <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational
+inertia.</p>
 <dl class="simple">
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">principal_moments</span></code>:</dt><dd><p>The vector of principal moments of inertia <code class="docutils literal notranslate"><span class="pre">[Ixx</span> <span class="pre">Iyy</span> <span class="pre">Izz]</span></code>
-sorted in ascending order.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">The</span></code>:</dt><dd><p>3 principal moments of inertia [Imin Imed Imax], sorted in
+ascending order (Imin ≤ Imed ≤ Imax).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if eigenvalue solver fails</strong><strong> or </strong><strong>if scalar type T cannot</strong> – </p></li>
-<li><p><strong>be converted to a double.</strong> – </p></li>
+<li><p><strong>RuntimeError if the elements of this rotational inertia cannot</strong> – </p></li>
+<li><p><strong>be converted to a real finite double. For example</strong><strong>, </strong><strong>an exception is</strong> – </p></li>
+<li><p><strong>thrown if this contains an erroneous NaN</strong><strong> or </strong><strong>if scalar type T</strong> – </p></li>
+<li><p><strong>is symbolic.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcPrincipalMomentsAndAxesOfInertia() to also calculate principal
+moment of inertia directions associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational
+inertia.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -14413,29 +14413,29 @@ inertia about-point P for any expressed-in frame E.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-Expression-.CalcPrincipalMomentsOfInertia">
 <span id="pydrake.multibody.tree.RotationalInertia_[Expression].CalcPrincipalMomentsOfInertia"></span><span class="sig-name descname"><span class="pre">CalcPrincipalMomentsOfInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-Expression-.CalcPrincipalMomentsOfInertia" title="Permalink to this definition"></a></dt>
-<dd><p>This method takes <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia about-point P,
-expressed-in frame E, and computes its principal moments of inertia
-about-point P, but expressed-in a frame aligned with the principal
-axes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>: This method only works for a rotational inertia with scalar type
-T that can be converted to a double (discarding any supplemental
-scalar data such as derivatives of an AutoDiffXd).</p>
-</div>
+<dd><p>Forms the 3 principal moments of inertia for <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational
+inertia.</p>
 <dl class="simple">
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">principal_moments</span></code>:</dt><dd><p>The vector of principal moments of inertia <code class="docutils literal notranslate"><span class="pre">[Ixx</span> <span class="pre">Iyy</span> <span class="pre">Izz]</span></code>
-sorted in ascending order.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">The</span></code>:</dt><dd><p>3 principal moments of inertia [Imin Imed Imax], sorted in
+ascending order (Imin ≤ Imed ≤ Imax).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if eigenvalue solver fails</strong><strong> or </strong><strong>if scalar type T cannot</strong> – </p></li>
-<li><p><strong>be converted to a double.</strong> – </p></li>
+<li><p><strong>RuntimeError if the elements of this rotational inertia cannot</strong> – </p></li>
+<li><p><strong>be converted to a real finite double. For example</strong><strong>, </strong><strong>an exception is</strong> – </p></li>
+<li><p><strong>thrown if this contains an erroneous NaN</strong><strong> or </strong><strong>if scalar type T</strong> – </p></li>
+<li><p><strong>is symbolic.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcPrincipalMomentsAndAxesOfInertia() to also calculate principal
+moment of inertia directions associated with <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational
+inertia.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">

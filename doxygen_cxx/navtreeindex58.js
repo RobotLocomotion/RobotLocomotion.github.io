@@ -1,5 +1,9 @@
 var NAVTREEINDEX58 =
 {
+"symbolic_2polynomial_8h.html#ae9423440606bd13d4767c72dd97ec6a2":[4,0,0,1,3,11,39],
+"symbolic_2polynomial_8h.html#aece6b8e4e48de49ed447c6d62b81ce88":[4,0,0,1,3,11,17],
+"symbolic_2polynomial_8h.html#af04dff9a90e39ac9985d520d3e66f5c3":[4,0,0,1,3,11,21],
+"symbolic_2polynomial_8h.html#af38134e3394d8c40a7a91490154de2b3":[4,0,0,1,3,11,10],
 "symbolic_2polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0":[4,0,0,1,3,11,18],
 "symbolic__py__unapply_8h.html":[4,0,0,0,0,14],
 "symbolic__test__util_8h.html":[4,0,0,1,4,11],

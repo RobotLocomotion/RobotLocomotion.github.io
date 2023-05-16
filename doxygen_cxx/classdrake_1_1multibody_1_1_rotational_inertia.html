@@ -321,8 +321,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa1e01c37486db2e78263fb70eaff550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new RotationalInertia object templated on <code>Scalar</code> initialized from the values of <code>this</code> rotational inertia's entries.  <a href="#afa1e01c37486db2e78263fb70eaff550">More...</a><br /></td></tr>
 <tr class="separator:afa1e01c37486db2e78263fb70eaff550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b63ae12f2b1cc131b2584efe07a2b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a6b63ae12f2b1cc131b2584efe07a2b6b">CalcPrincipalMomentsOfInertia</a> () const</td></tr>
-<tr class="memdesc:a6b63ae12f2b1cc131b2584efe07a2b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method takes <code>this</code> rotational inertia about-point P, expressed-in frame E, and computes its principal moments of inertia about-point P, but expressed-in a frame aligned with the principal axes.  <a href="#a6b63ae12f2b1cc131b2584efe07a2b6b">More...</a><br /></td></tr>
+<tr class="memdesc:a6b63ae12f2b1cc131b2584efe07a2b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forms the 3 principal moments of inertia for <code>this</code> rotational inertia.  <a href="#a6b63ae12f2b1cc131b2584efe07a2b6b">More...</a><br /></td></tr>
 <tr class="separator:a6b63ae12f2b1cc131b2584efe07a2b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e13800a4b7f21903141dbe4c0102720"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a0e13800a4b7f21903141dbe4c0102720">CalcPrincipalMomentsAndAxesOfInertia</a> () const</td></tr>
+<tr class="memdesc:a0e13800a4b7f21903141dbe4c0102720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forms the 3 principal moments of inertia and their 3 associated principal directions for <code>this</code> rotational inertia.  <a href="#a0e13800a4b7f21903141dbe4c0102720">More...</a><br /></td></tr>
+<tr class="separator:a0e13800a4b7f21903141dbe4c0102720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b">CouldBePhysicallyValid</a> () const</td></tr>
 <tr class="memdesc:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several necessary checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including:  <a href="#a03e71eb4bd2a7648a411e1cbaf94812b">More...</a><br /></td></tr>
 <tr class="separator:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -653,6 +656,33 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0e13800a4b7f21903141dbe4c0102720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e13800a4b7f21903141dbe4c0102720">&#9670;&nbsp;</a></span>CalcPrincipalMomentsAndAxesOfInertia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; CalcPrincipalMomentsAndAxesOfInertia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forms the 3 principal moments of inertia and their 3 associated principal directions for <code>this</code> rotational inertia. </p>
+<dl class="section return"><dt>Returns</dt><dd>3 principal moments of inertia [Ixx Iyy Izz], sorted in ascending order (Ixx ≤ Iyy ≤ Izz) and a rotation matrix R_EP whose columns are the 3 associated principal directions that relate the expressed-in frame E to a frame P, where frame E is the expressed-in frame for <code>this</code> rotational inertia I_BPo_E (body B's rotational inertia about-point Po) and frame P contains right-handed orthonormal vectors Px, Py, Pz. The 1ˢᵗ column of R_EP is Px_E (Px expressed in frame E) which is parallel to the principal axis associated with Ixx (the smallest principal moment of inertia). Similarly, the 2ⁿᵈ and 3ʳᵈ columns of R_EP are Py_E and Pz_E, which are parallel to principal axes associated with Iyy and Izz (the intermediate and largest principal moments of inertia). If all principal moments of inertia are equal (i.e., Ixx = Iyy = Izz), R_EP is the identity matrix. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the elements of <code>this</code> rotational inertia cannot be converted to a real finite double. For example, an exception is thrown if <code>this</code> contains an erroneous NaN or if scalar type T is symbolic. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a6b63ae12f2b1cc131b2584efe07a2b6b" title="Forms the 3 principal moments of inertia for this rotational inertia.">CalcPrincipalMomentsOfInertia()</a> to calculate the principal moments of inertia [Ixx Iyy Izz], without calculating the principal directions. </dd></dl>
+
+</div>
+</div>
 <a id="a6b63ae12f2b1cc131b2584efe07a2b6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b63ae12f2b1cc131b2584efe07a2b6b">&#9670;&nbsp;</a></span>CalcPrincipalMomentsOfInertia()</h2>
 
@@ -668,20 +698,20 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method takes <code>this</code> rotational inertia about-point P, expressed-in frame E, and computes its principal moments of inertia about-point P, but expressed-in a frame aligned with the principal axes. </p>
-<dl class="section note"><dt>Note</dt><dd>: This method only works for a rotational inertia with scalar type T that can be converted to a double (discarding any supplemental scalar data such as derivatives of an AutoDiffXd).</dd></dl>
+<p>Forms the 3 principal moments of inertia for <code>this</code> rotational inertia. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">principal_moments</td><td>The vector of principal moments of inertia <code>[Ixx Iyy Izz]</code> sorted in ascending order. </td></tr>
+    <tr><td class="paramname">The</td><td>3 principal moments of inertia [Imin Imed Imax], sorted in ascending order (Imin ≤ Imed ≤ Imax). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if eigenvalue solver fails or if scalar type T cannot be converted to a double. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the elements of <code>this</code> rotational inertia cannot be converted to a real finite double. For example, an exception is thrown if <code>this</code> contains an erroneous NaN or if scalar type T is symbolic. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a0e13800a4b7f21903141dbe4c0102720" title="Forms the 3 principal moments of inertia and their 3 associated principal directions for this rotatio...">CalcPrincipalMomentsAndAxesOfInertia()</a> to also calculate principal moment of inertia directions associated with <code>this</code> rotational inertia. </dd></dl>
 
 </div>
 </div>

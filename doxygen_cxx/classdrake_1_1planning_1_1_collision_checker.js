@@ -33,7 +33,6 @@ var classdrake_1_1planning_1_1_collision_checker =
     [ "DoClassifyContextBodyCollisions", "classdrake_1_1planning_1_1_collision_checker.html#a737510aa5fca00749a068c6e4a621feb", null ],
     [ "DoClone", "classdrake_1_1planning_1_1_collision_checker.html#af43a938ad38ceb4d96258db6bbe668e5", null ],
     [ "DoMaxContextNumDistances", "classdrake_1_1planning_1_1_collision_checker.html#a145c8a89488c119f22a13557dd2376b9", null ],
-    [ "DoRemoveAddedGeometries", "classdrake_1_1planning_1_1_collision_checker.html#a4551a7c0c234457a4c6457b84b05a2ef", null ],
     [ "DoUpdateContextPositions", "classdrake_1_1planning_1_1_collision_checker.html#af4a3f7ae74cf3f31e5f3a3b840d111a5", null ],
     [ "edge_step_size", "classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8", null ],
     [ "get_body", "classdrake_1_1planning_1_1_collision_checker.html#a0ebf64a0503672b17907178242458218", null ],
@@ -73,6 +72,7 @@ var classdrake_1_1planning_1_1_collision_checker =
     [ "PerformOperationAgainstAllModelContexts", "classdrake_1_1planning_1_1_collision_checker.html#a07edeec959f087dcc1812af16b19b02c", null ],
     [ "plant", "classdrake_1_1planning_1_1_collision_checker.html#a7426149695dc6d09303cb351b3d84201", null ],
     [ "plant_context", "classdrake_1_1planning_1_1_collision_checker.html#a1e7d2a81568c26350b120a592e55e174", null ],
+    [ "RemoveAddedGeometries", "classdrake_1_1planning_1_1_collision_checker.html#ad9de25681f79223e3157ee5835ff85da", null ],
     [ "RemoveAllAddedCollisionShapes", "classdrake_1_1planning_1_1_collision_checker.html#a5c936a3e9f8ae2750cb5ce8c18985d0a", null ],
     [ "RemoveAllAddedCollisionShapes", "classdrake_1_1planning_1_1_collision_checker.html#af1190d81eb661b4151d32b844e86fc5a", null ],
     [ "robot_model_instances", "classdrake_1_1planning_1_1_collision_checker.html#a9938c30a0a5d9a51996a163b111c883a", null ],
@@ -80,6 +80,7 @@ var classdrake_1_1planning_1_1_collision_checker =
     [ "SetCollisionFilteredBetween", "classdrake_1_1planning_1_1_collision_checker.html#a87a9e6f72e628e92db913a5f9aa64d3c", null ],
     [ "SetCollisionFilteredBetween", "classdrake_1_1planning_1_1_collision_checker.html#a21f74df49477ffe7943e9dab284d1bb0", null ],
     [ "SetCollisionFilteredWithAllBodies", "classdrake_1_1planning_1_1_collision_checker.html#adbc935f824f1b4601d04346c0cebac63", null ],
+    [ "SetCollisionFilteredWithAllBodies", "classdrake_1_1planning_1_1_collision_checker.html#a2ab877a9a54d4f939d19ac93ec496d3f", null ],
     [ "SetCollisionFilterMatrix", "classdrake_1_1planning_1_1_collision_checker.html#a5741d217236e45f7aed61d7a28c23d39", null ],
     [ "SetConfigurationDistanceFunction", "classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903", null ],
     [ "SetConfigurationInterpolationFunction", "classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382", null ],
@@ -90,6 +91,7 @@ var classdrake_1_1planning_1_1_collision_checker =
     [ "SetPaddingMatrix", "classdrake_1_1planning_1_1_collision_checker.html#ae5073981822b962bcc7ca569b399b3db", null ],
     [ "SetPaddingOneRobotBodyAllEnvironmentPairs", "classdrake_1_1planning_1_1_collision_checker.html#a963ab30a4085cd7704496f7c5289c7df", null ],
     [ "SupportsParallelChecking", "classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26", null ],
+    [ "UpdateCollisionFilters", "classdrake_1_1planning_1_1_collision_checker.html#a798297e12a4bdd3f95081215966ed07d", null ],
     [ "UpdateContextPositions", "classdrake_1_1planning_1_1_collision_checker.html#a8138de22d2de848cc6603ab263bc09b7", null ],
     [ "UpdatePositions", "classdrake_1_1planning_1_1_collision_checker.html#a81c230b8ef6206e88617656df3cc7d30", null ]
 ];

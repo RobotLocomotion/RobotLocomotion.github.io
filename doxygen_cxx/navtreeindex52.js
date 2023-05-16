@@ -1,5 +1,9 @@
 var NAVTREEINDEX52 =
 {
+"render__gl_2factory_8h.html#a6a949953d76af52d6dd1b13417cb556a":[4,0,0,4,5,0,2],
+"render__gl_2factory_8h.html#a822ce4b4810855c6f6fe7a025d8372f7":[4,0,0,4,5,0,0],
+"render__gl_2factory_8h.html#aaa4adf317ad66ba21d0ec9b99cd177ad":[4,0,0,4,5,0,3],
+"render__gltf__client_2factory_8h.html":[4,0,0,4,6,0],
 "render__gltf__client_2factory_8h.html#a99ba06b63779a45d0b347f3b6321ac43":[4,0,0,4,6,0,0],
 "render__gltf__client__doxygen_8h.html":[4,0,0,4,6,6],
 "render__label_8h.html":[4,0,0,4,4,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX52 =
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,53,0],
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,46],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,14,47],
-"sparse__and__dense__matrix_8h.html":[4,0,0,11,54],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,11],
-"spatial__acceleration_8h.html":[4,0,0,8,6,0],
-"spatial__algebra_8h.html":[4,0,0,8,6,1],
-"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0]
+"sparse__and__dense__matrix_8h.html":[4,0,0,11,54]
 };

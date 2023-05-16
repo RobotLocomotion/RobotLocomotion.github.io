@@ -7,6 +7,7 @@ var classdrake_1_1multibody_1_1_rotational_inertia =
     [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a319d6a0feeb306267605332cdd1906d6", null ],
     [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a73ee8d395f9f46a1086071be0faa8e37", null ],
     [ "CalcMaximumPossibleMomentOfInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a3751c9eaa974909523b6d8d3fd0833a8", null ],
+    [ "CalcPrincipalMomentsAndAxesOfInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a0e13800a4b7f21903141dbe4c0102720", null ],
     [ "CalcPrincipalMomentsOfInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a6b63ae12f2b1cc131b2584efe07a2b6b", null ],
     [ "cast", "classdrake_1_1multibody_1_1_rotational_inertia.html#afa1e01c37486db2e78263fb70eaff550", null ],
     [ "cols", "classdrake_1_1multibody_1_1_rotational_inertia.html#a8509d6f7951179378f848f5f4cc37720", null ],

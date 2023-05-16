@@ -439,7 +439,6 @@ var searchData=
   ['dopropagatetimechange',['DoPropagateTimeChange',['../classdrake_1_1systems_1_1_context.html#aee17830b884bef7b5b182cbf7e9602fb',1,'drake::systems::Context']]],
   ['dopublish',['DoPublish',['../classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2',1,'drake::systems::LeafSystem']]],
   ['doregistervisual',['DoRegisterVisual',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a82d0e6767d25d9f985c731fcf8b134cb',1,'drake::geometry::render::RenderEngine']]],
-  ['doremoveaddedgeometries',['DoRemoveAddedGeometries',['../classdrake_1_1planning_1_1_collision_checker.html#a4551a7c0c234457a4c6457b84b05a2ef',1,'drake::planning::CollisionChecker::DoRemoveAddedGeometries()'],['../classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a75b824a2b91a8afbaea561529c286a44',1,'drake::planning::UnimplementedCollisionChecker::DoRemoveAddedGeometries()']]],
   ['doremovegeometry',['DoRemoveGeometry',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#ade97bf7ef53a4bdd2cdcb52eac2bfdc6',1,'drake::geometry::render::RenderEngine']]],
   ['dorendercolorimage',['DoRenderColorImage',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3a05e57a0c1352d5b7bf21ec5b040848',1,'drake::geometry::render::RenderEngine']]],
   ['dorenderdepthimage',['DoRenderDepthImage',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#ac033875c5794ef9811501fbebf0f40a7',1,'drake::geometry::render::RenderEngine']]],
