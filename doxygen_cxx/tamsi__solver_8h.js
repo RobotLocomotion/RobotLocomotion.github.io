@@ -6,6 +6,7 @@ var tamsi__solver_8h =
     [ "TamsiSolverResult", "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2", [
       [ "kSuccess", "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782", null ],
       [ "kMaxIterationsReached", "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a", null ],
-      [ "kLinearSolverFailed", "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727", null ]
+      [ "kLinearSolverFailed", "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727", null ],
+      [ "kAlphaSolverFailed", "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85", null ]
     ] ]
 ];

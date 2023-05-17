@@ -2671,9 +2671,14 @@ f)</p>
 </ol>
 <p>Adds a cost function.</p>
 <ol class="arabic simple" start="2">
-<li><p>AddCost(self: pydrake.solvers.MathematicalProgram, arg0: pydrake.symbolic.Expression) -&gt; pydrake.solvers.Binding[Cost]</p></li>
+<li><p>AddCost(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
-<p>Adds a cost expression.</p>
+<p>Adds a cost in the symbolic form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The newly created cost, together with the bound variables.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li><p>AddCost(self: pydrake.solvers.MathematicalProgram, obj: pydrake.solvers.Cost, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
@@ -3463,9 +3468,7 @@ a quadratic expression.</p>
 <ol class="arabic simple">
 <li><p>AddQuadraticCost(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, is_convex: Optional[bool] = None) -&gt; pydrake.solvers.Binding[QuadraticCost]</p></li>
 </ol>
-<p>Add a quadratic cost term of the form 0.5*x’<a href="#id29"><span class="problematic" id="id30">*</span></a>Q*x + b’<a href="#id31"><span class="problematic" id="id32">*</span></a>x + c. Notice
-that in the optimization program, the constant term <code class="docutils literal notranslate"><span class="pre">c</span></code> in the cost
-is ignored.</p>
+<p>Add a quadratic cost term of the form 0.5*x’<a href="#id29"><span class="problematic" id="id30">*</span></a>Q*x + b’<a href="#id31"><span class="problematic" id="id32">*</span></a>x + c.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>A quadratic symbolic expression.</p>
 </dd>
@@ -5225,7 +5228,7 @@ branch-and-bound process, since we need to replace the binary
 variables with continuous variables.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerBranchAndBound.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id:</span> <span class="pre">pydrake.solvers.SolverId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7fce5d8c00b0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id:</span> <span class="pre">pydrake.solvers.SolverId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f5343e5b7b0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct a branch-and-bound tree from a mixed-integer optimization
 program.</p>
 <dl class="simple">

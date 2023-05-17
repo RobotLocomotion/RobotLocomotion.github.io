@@ -2140,13 +2140,6 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div><div class="memdoc">
 
 <p>Adds a cost in the symbolic form. </p>
-<p>Note that the constant part of the cost is ignored. So if you set <code>e = x + 2</code>, then only the cost on <code>x</code> is added, the constant term 2 is ignored. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">e</td><td>The linear or quadratic expression of the cost. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>e</code> is linear or <code>e</code> is quadratic. Otherwise throws a runtime error. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The newly created cost, together with the bound variables. </dd></dl>
 
 </div>
@@ -4378,7 +4371,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div><div class="memdoc">
 
 <p>Add a quadratic cost term of the form 0.5*x'*Q*x + b'*x + c. </p>
-<p>Notice that in the optimization program, the constant term <code>c</code> in the cost is ignored. </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>A quadratic symbolic expression. </td></tr>
     <tr><td class="paramname">is_convex</td><td>Whether the cost is already known to be convex. If is_convex=nullopt (the default), then Drake will determine if <code>e</code> is a convex quadratic cost or not. To improve the computation speed, the user can set is_convex if the user knows whether the cost is convex or not. </td></tr>

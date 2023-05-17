@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k',['K',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()'],['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()']]],
+  ['k',['k',['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()'],['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()']]],
   ['k0',['k0',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult']]],
   ['kabsolute',['kAbsolute',['../namespacedrake.html#af8777bc10296f9d39d52753861110e26abab0767e88027de9944aa55c24c8387a',1,'drake']]],
   ['kabsolutecoordinates',['kAbsoluteCoordinates',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663aabbd617cceac411f1249b5e0b75dfff2',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
@@ -8,6 +8,7 @@ var searchData=
   ['kaffine',['kAffine',['../namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927',1,'drake::geometry::optimization']]],
   ['kallegronumjoints',['kAllegroNumJoints',['../namespacedrake_1_1examples_1_1allegro__hand.html#a183f825ede63af058a9915f0df9b0769',1,'drake::examples::allegro_hand']]],
   ['kalman_5ffilter_2eh',['kalman_filter.h',['../kalman__filter_8h.html',1,'']]],
+  ['kalphasolverfailed',['kAlphaSolverFailed',['../namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85',1,'drake::multibody']]],
   ['kangle',['kAngle',['../namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb',1,'drake::symbolic']]],
   ['kautomatic',['kAutomatic',['../classdrake_1_1systems_1_1_implicit_integrator.html#a2b4a6fa64aa084c108eb7b54df744990a0edd03ba1f5a73f26d1fd764255ddaa1',1,'drake::systems::ImplicitIntegrator']]],
   ['kbackside',['kBackSide',['../classdrake_1_1geometry_1_1_meshcat.html#a65f24ad86a12c2ff6382e9d1976c6840ac5c9b374117785bde475e2afd062a53b',1,'drake::geometry::Meshcat']]],

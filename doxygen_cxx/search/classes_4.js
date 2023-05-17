@@ -57,6 +57,7 @@ var searchData=
   ['expressionconstraint',['ExpressionConstraint',['../classdrake_1_1solvers_1_1_expression_constraint.html',1,'drake::solvers']]],
   ['expressioncos',['ExpressionCos',['../classdrake_1_1symbolic_1_1_expression_cos.html',1,'drake::symbolic']]],
   ['expressioncosh',['ExpressionCosh',['../classdrake_1_1symbolic_1_1_expression_cosh.html',1,'drake::symbolic']]],
+  ['expressioncost',['ExpressionCost',['../classdrake_1_1solvers_1_1_expression_cost.html',1,'drake::solvers']]],
   ['expressiondiv',['ExpressionDiv',['../classdrake_1_1symbolic_1_1_expression_div.html',1,'drake::symbolic']]],
   ['expressionexp',['ExpressionExp',['../classdrake_1_1symbolic_1_1_expression_exp.html',1,'drake::symbolic']]],
   ['expressionfloor',['ExpressionFloor',['../classdrake_1_1symbolic_1_1_expression_floor.html',1,'drake::symbolic']]],

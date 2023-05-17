@@ -18,6 +18,7 @@ var namespacedrake_1_1solvers =
     [ "EvaluatorCost", "classdrake_1_1solvers_1_1_evaluator_cost.html", "classdrake_1_1solvers_1_1_evaluator_cost" ],
     [ "ExponentialConeConstraint", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html", "classdrake_1_1solvers_1_1_exponential_cone_constraint" ],
     [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html", "classdrake_1_1solvers_1_1_expression_constraint" ],
+    [ "ExpressionCost", "classdrake_1_1solvers_1_1_expression_cost.html", "classdrake_1_1solvers_1_1_expression_cost" ],
     [ "FunctionEvaluator", "classdrake_1_1solvers_1_1_function_evaluator.html", "classdrake_1_1solvers_1_1_function_evaluator" ],
     [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", "classdrake_1_1solvers_1_1_gurobi_solver" ],
     [ "GurobiSolverDetails", "structdrake_1_1solvers_1_1_gurobi_solver_details.html", "structdrake_1_1solvers_1_1_gurobi_solver_details" ],

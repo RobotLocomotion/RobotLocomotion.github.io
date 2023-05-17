@@ -1,5 +1,17 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,18,5,53],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[3,0,0,18,5,5],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[3,0,0,18,5,52],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a97030415f23deb1b1244d33b95c1b0fb":[3,0,0,18,5,45],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add":[3,0,0,18,5,54],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,18,5,50],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9bd57b84091cef3694aee370fa189735":[3,0,0,18,5,42],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797":[3,0,0,18,5,0],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9fc93abbb14c2b7d6702fadcc72baff6":[3,0,0,18,5,44],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa360cbd2285db12eb014dc6e34868814":[3,0,0,18,5,16],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d":[3,0,0,18,5,28],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa77d19bf3de0a1c93d54679d0ba86bef":[3,0,0,18,5,15],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[3,0,0,18,5,41],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac5d300d23d5911b73ccdf36ef9168e5b":[3,0,0,18,5,26],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac93013774f250920857c17c083350b57":[3,0,0,18,5,8],
@@ -237,17 +249,5 @@ var NAVTREEINDEX42 =
 "contact__properties_8h.html":[4,0,0,8,10,7],
 "contact__results_8h.html":[4,0,0,8,10,8],
 "contact__results__to__lcm_8h.html":[4,0,0,8,10,9],
-"contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,9,0],
-"contact__results__to__lcm_8h.html#ga732349f929601b37e30b15ad557057e7":[4,0,0,8,10,9,1],
-"contact__solver_8h.html":[4,0,0,8,2,3],
-"contact__solver__results_8h.html":[4,0,0,8,2,4],
-"contact__solver__utils_8h.html":[4,0,0,8,2,5],
-"contact__surface_8h.html":[4,0,0,4,3,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
-"contact__surface__doxygen_8h.html":[4,0,0,4,2,7],
-"contact__surface__utility_8h.html":[4,0,0,4,2,8],
-"contact__visualizer_8h.html":[4,0,0,8,7,0],
-"contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,1]
+"contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,9,0]
 };

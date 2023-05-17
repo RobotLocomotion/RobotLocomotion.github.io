@@ -179,6 +179,8 @@ $(document).ready(function(){initNavTree('group__render__engine__gltf__client__s
 <li><a href="#notes-on-communicating-errors">Notes on Communicating Errors</a></li>
 </ul>
 </li>
+<li><a href="#notes-on-rendering-label-images">Notes on Rendering Label Images</a></li>
+<li><a href="#existing-server-implementations">Existing Server Implementations</a></li>
 <li><a href="#developing-your-own-server">Developing your own Server</a></li>
 </ul>
 <h2 id="server-api">Server API</h2>
@@ -242,8 +244,9 @@ $(document).ready(function(){initNavTree('group__render__engine__gltf__client__s
 </ul>
 </li>
 <li>When <code>image_type="label"</code>, the server may return:<ul>
-<li>An RGB (3 channel) unsigned char PNG image. The client will interpret this rendering as a colored label image and convert to the final label image.</li>
-<li>An RGBA (4 channel) unsigned char PNG image. The client will interpret this rendering as a colored label image and convert to the final label image.</li>
+<li>An RGB (3 channel) unsigned char PNG image.</li>
+<li>An RGBA (4 channel) unsigned char PNG image.</li>
+<li>Note: The client will interpret this rendering as a colored label image and convert to the final label image. See <a href="#notes-on-rendering-label-images">this section</a> for other requirements for returning a label image.</li>
 </ul>
 </li>
 </ul>
@@ -302,6 +305,24 @@ $(document).ready(function(){initNavTree('group__render__engine__gltf__client__s
 <hr/>
 <p>When errors occur on the server side, the server should explicitly return an HTTP response code indicating a failed transaction.</p>
 <p>Additionally, the server should clearly communicate <em>why</em> there was an upload or render failure as plain text in the file response. Though this is not strictly required, the user of the server will have no hints as to what is going wrong with the client-server communication. When the file response is provided, this information will be included in the exception message produced by the client.</p>
+<h2 id="notes-on-rendering-label-images">Notes on Rendering Label Images</h2>
+<hr/>
+<p>Renderers typically can't render objects with "labels". Drake encodes the labels associated with geometries as unique colors and provides those colors to the server as attributes on the meshes. Thus, the label output from any server will be an RGB or RGBA PNG.</p>
+<p><b>All renderable artifacts that exist <em>only</em> in the server &ndash; that are not part of the Drake-provided glTF &ndash; must be colored white (RGB=(255, 255, 255))</b>. These server-only renderable artifacts include:</p>
+<ul>
+<li>The background color.</li>
+<li>Any geometries that the server loads (e.g., walls in a room, environment images, etc.).</li>
+</ul>
+<p>When producing the final label output, the client will interpret this particular RGB value as <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a26f7ca5617c42578143d63b1e065e9be" title="See Reserved labels.">render::RenderLabel::kDontCare</a>. This means that a remote server will never report a pixel with the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a52e35c3e406b848a0b2f35560d66f450" title="See Reserved labels.">render::RenderLabel::kEmpty</a> value.</p>
+<p>For an image to be a proper color-encoded label image, the only pixel values in the image must be one of the recognized label encodings. This may require special render configurations. Any configurations that can introduce color variation must be disabled. That includes (but is not limited to) the following render features:</p>
+<ul>
+<li>Anti-aliasing (multi-sampling)</li>
+<li>Lighting</li>
+<li>Color transformations on the rendered image</li>
+</ul>
+<h2 id="existing-server-implementations">Existing Server Implementations</h2>
+<hr/>
+<p><a href="https://github.com/RobotLocomotion/drake-blender">drake-blender</a> is a glTF render server using <a href="https://www.blender.org">Blender</a> as the backend.</p>
 <h2 id="developing-your-own-server">Developing your own Server</h2>
 <hr/>
 <p>To test the basic client-server communication and rendering, Drake provides a simple server implementation as a reference. For more information about developing your own server or running the prototype, refer to the <a href="https://github.com/RobotLocomotion/drake/blob/master/geometry/render_gltf_client/test">README</a> under <code>//geometry/render_gltf_client/test</code>. </p>
