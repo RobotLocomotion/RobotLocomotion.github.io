@@ -174,11 +174,11 @@ $(document).ready(function(){initNavTree('group__hash__append.html','');});
 <p>Types that implement this pattern may be used in unordered collections: </p><div class="fragment"><div class="line">std::unordered_set&lt;MyValue, drake::DefaultHash&gt; foo;</div></div><!-- fragment --><p>Some Drake types may also choose to specialize <code>std::hash&lt;MyValue&gt;</code> to use <code>DefaultHash</code>, so that the second template argument to <code>std::unordered_set</code> can be omitted. For example, Drake's <code>symbolic::Expression</code> header says: </p><div class="fragment"><div class="line"><span class="keyword">namespace </span>std {</div><div class="line"><span class="keyword">struct </span>hash&lt;<a class="code" href="namespacedrake.html">drake</a>::symbolic::Expression&gt; : <span class="keyword">public</span> <a class="code" href="structdrake_1_1uhash.html">drake::DefaultHash</a> {};</div><div class="line">}  <span class="comment">// namespace std</span></div></div><!-- fragment --><p> so that users are able to simply write: </p><div class="fragment"><div class="line">std::unordered_set&lt;drake::symbolic::Expression&gt; foo;</div></div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
-<div id="nav-path" class="navpath">
+<div class="navpath">
   <ul>
   </ul>
 </div>
-<footer class="site-footer padding">
+<footer id="nav-path", class="site-footer padding">
   <div class="contain">
     <a href="/" class="drake-logo">
       <img src="/images/drake-logo.svg"/>

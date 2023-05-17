@@ -235,11 +235,11 @@ $(document).ready(function(){initNavTree('group__yaml__serialization.html','');}
 <div class="fragment"><div class="line"># For the first type declared in the variant&lt;&gt;, the tag is optional.</div><div class="line">bar:</div><div class="line">  value: hello</div><div class="line"></div><div class="line"># YAML has built-in tags for string, float, int.</div><div class="line">bar2:</div><div class="line">  value: !!str hello</div><div class="line"></div><div class="line"># For any other type within the variant&lt;&gt;, the tag is required.</div><div class="line">bar3:</div><div class="line">  value: !!float 1.0</div><div class="line"></div><div class="line"># User-defined types use a single exclamation point.</div><div class="line">bar4:</div><div class="line">  value: !Foo</div><div class="line">    data: hello</div></div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
-<div id="nav-path" class="navpath">
+<div class="navpath">
   <ul>
   </ul>
 </div>
-<footer class="site-footer padding">
+<footer id="nav-path", class="site-footer padding">
   <div class="contain">
     <a href="/" class="drake-logo">
       <img src="/images/drake-logo.svg"/>
