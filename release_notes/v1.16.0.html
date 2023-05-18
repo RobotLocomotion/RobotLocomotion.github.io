@@ -144,7 +144,21 @@ analysis.
         <h1 id="announcements">Announcements</h1>
 
 <ul>
-  <li>None</li>
+  <li>The powerful Graph of Convex Sets (“GCS”) Trajectory Optimization class makes
+its first appearance in this release. The initial release only offers a few
+costs and constraints. Future releases will grow the feature set.
+    <ul>
+      <li>See <a href="https://arxiv.org/abs/2205.04422">“Motion Planning around Obstacles with Convex Optimization”</a>
+by Tobia Marcucci, Mark Petersen, David von Wrangel, Russ Tedrake.</li>
+    </ul>
+  </li>
+  <li>The new rendering server
+<a href="https://github.com/RobotLocomotion/drake-blender">drake-blender</a>
+can be used with Drake’s <code class="language-plaintext highlighter-rouge">RenderEngineGltfClient</code>.</li>
+  <li>Symbolic matrix multiplication in pydrake runs faster now if you call the
+<code class="language-plaintext highlighter-rouge">pydrake.math.matmul</code> function instead of the <code class="language-plaintext highlighter-rouge">@</code> operator.</li>
+  <li>We continue to work on improving mesh geometry support for the illustration
+and perception roles. Future releases will contain even more updates.</li>
 </ul>
 
 <h1 id="breaking-changes-since-v1150">Breaking changes since v1.15.0</h1>
@@ -202,12 +216,14 @@ on API changes.</p>
   <li>Add GetExpression to BezierCurve (<a href="https://github.com/RobotLocomotion/drake/pull/19205">#19205</a>)</li>
   <li>Support IRIS initial ellipse (<a href="https://github.com/RobotLocomotion/drake/pull/19257">#19257</a>)</li>
   <li>Add max_explored_nodes for branch_and_bound (<a href="https://github.com/RobotLocomotion/drake/pull/19366">#19366</a>)</li>
-  <li>Implements ExpressionCost (<a href="https://github.com/RobotLocomotion/drake/pull/19405">#19405</a>)</li>
+  <li>Add ExpressionCost (<a href="https://github.com/RobotLocomotion/drake/pull/19405">#19405</a>)</li>
+  <li>Add Spectrahedron isa ConvexSet (<a href="https://github.com/RobotLocomotion/drake/pull/19316">#19316</a>)</li>
 </ul>
 
 <p>Fixes</p>
 
 <ul>
+  <li>Speed up symbolic matmul (<a href="https://github.com/RobotLocomotion/drake/pull/19304">#19304</a>, <a href="https://github.com/RobotLocomotion/drake/pull/19345">#19345</a>)</li>
   <li>Fix a bug when calling ConstructMonomialBasis with a constant polynomial (<a href="https://github.com/RobotLocomotion/drake/pull/19233">#19233</a>)</li>
   <li>Make GraphOfConvexSets preprocessing respect solver options (<a href="https://github.com/RobotLocomotion/drake/pull/19312">#19312</a>)</li>
 </ul>
@@ -223,9 +239,10 @@ on API changes.</p>
   <li>Exposes SAP near rigid threshold (<a href="https://github.com/RobotLocomotion/drake/pull/19218">#19218</a>)</li>
   <li>Add GeometryInstance overload without unique_ptr (<a href="https://github.com/RobotLocomotion/drake/pull/19251">#19251</a>)</li>
   <li>Add SpatialInertia::SolidSphereWithMass() and HollowSphereWithMass() (<a href="https://github.com/RobotLocomotion/drake/pull/19268">#19268</a>)</li>
-  <li>Add Spectrahedron isa ConvexSet (<a href="https://github.com/RobotLocomotion/drake/pull/19316">#19316</a>)</li>
   <li>ShapeReifier can configure default behavior (<a href="https://github.com/RobotLocomotion/drake/pull/19367">#19367</a>)</li>
   <li>Calculate principal moments of inertia and their axes (<a href="https://github.com/RobotLocomotion/drake/pull/19281">#19281</a>)</li>
+  <li>Ability for MeshcatVisualizer to filter geometry via property (<a href="https://github.com/RobotLocomotion/drake/pull/19220">#19220</a>)</li>
+  <li>Enable alpha adjustment of invisible geometry (<a href="https://github.com/RobotLocomotion/drake/pull/19287">#19287</a>)</li>
 </ul>
 
 <p>Fixes</p>
@@ -274,17 +291,11 @@ on API changes.</p>
 <!-- <relnotes for common,math,lcm,lcmtypes,manipulation,perception,visualization go here> -->
 
 <ul>
-  <li>Ability for MeshcatVisualizer to filter geometry via property (<a href="https://github.com/RobotLocomotion/drake/pull/19220">#19220</a>)</li>
-  <li>Enable alpha adjustment of invisible geometry (<a href="https://github.com/RobotLocomotion/drake/pull/19287">#19287</a>)</li>
-  <li>Fix FindResource vs non-source Bazel builds (<a href="https://github.com/RobotLocomotion/drake/pull/19206">#19206</a>)</li>
+  <li>Add render camera preview (<a href="https://github.com/RobotLocomotion/drake/pull/19158">#19158</a>)</li>
   <li>Add hash_append support for bare pointers (<a href="https://github.com/RobotLocomotion/drake/pull/19248">#19248</a>)</li>
-  <li>Add pydrake.math.matmul (<a href="https://github.com/RobotLocomotion/drake/pull/19298">#19298</a>)</li>
-  <li>Speed up symbolic matmul (<a href="https://github.com/RobotLocomotion/drake/pull/19304">#19304</a>)</li>
-  <li>Speed up matmul for double vs Variable (<a href="https://github.com/RobotLocomotion/drake/pull/19345">#19345</a>)</li>
   <li>Update models of the IIWA 14 with estimated reflected inertia (<a href="https://github.com/RobotLocomotion/drake/pull/19344">#19344</a>)</li>
   <li>Use shared_ptr for LCM serializers (<a href="https://github.com/RobotLocomotion/drake/pull/19369">#19369</a>)</li>
   <li>Improve math::AreAutoDiffVecXdEqual (<a href="https://github.com/RobotLocomotion/drake/pull/19393">#19393</a>)</li>
-  <li>Add render camera preview (<a href="https://github.com/RobotLocomotion/drake/pull/19158">#19158</a>)</li>
 </ul>
 
 <h2 id="pydrake-bindings">pydrake bindings</h2>
@@ -294,7 +305,7 @@ on API changes.</p>
 <p>New features</p>
 
 <ul>
-  <li>None</li>
+  <li>Add pydrake.math.matmul (<a href="https://github.com/RobotLocomotion/drake/pull/19298">#19298</a>)</li>
 </ul>
 
 <p>Fixes</p>
@@ -308,10 +319,10 @@ on API changes.</p>
 <p>Newly bound</p>
 
 <ul>
-  <li>pydrake.multibody.tree.SpatialInertia.SolidSphereWithMass() and HollowSphereWithMass() (<a href="https://github.com/RobotLocomotion/drake/pull/19268">#19268</a>)</li>
   <li>pydrake.geometry.SceneGraph.ChangeShape() (<a href="https://github.com/RobotLocomotion/drake/pull/19278">#19278</a>)</li>
-  <li>pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.allow_quaternion_negation() (<a href="https://github.com/RobotLocomotion/drake/pull/19288">#19288</a>)</li>
   <li>pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.ComposeVariable() (<a href="https://github.com/RobotLocomotion/drake/pull/19288">#19288</a>)</li>
+  <li>pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.allow_quaternion_negation() (<a href="https://github.com/RobotLocomotion/drake/pull/19288">#19288</a>)</li>
+  <li>pydrake.multibody.tree.SpatialInertia.SolidSphereWithMass() and HollowSphereWithMass() (<a href="https://github.com/RobotLocomotion/drake/pull/19268">#19268</a>)</li>
 </ul>
 
 <h2 id="build-system">Build system</h2>
@@ -320,7 +331,7 @@ on API changes.</p>
 
 <ul>
   <li>Add missing runfiles to bazel drake_shared_library (<a href="https://github.com/RobotLocomotion/drake/pull/19294">#19294</a>)</li>
-  <li>Upgrade rules_python to latest release 0.21.0 (<a href="https://github.com/RobotLocomotion/drake/pull/19332">#19332</a>)</li>
+  <li>Fix FindResource vs non-source Bazel builds (<a href="https://github.com/RobotLocomotion/drake/pull/19206">#19206</a>)</li>
 </ul>
 
 <h2 id="build-dependencies">Build dependencies</h2>
@@ -336,6 +347,7 @@ on API changes.</p>
   <li>Upgrade lcm to latest release v1.5.0 (<a href="https://github.com/RobotLocomotion/drake/pull/19332">#19332</a>)</li>
   <li>Upgrade optitrack_driver to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/19324">#19324</a>)</li>
   <li>Upgrade petsc to latest release v3.19.1 (<a href="https://github.com/RobotLocomotion/drake/pull/19332">#19332</a>)</li>
+  <li>Upgrade rules_python to latest release 0.21.0 (<a href="https://github.com/RobotLocomotion/drake/pull/19332">#19332</a>)</li>
   <li>Upgrade stable_baselines3_internal to latest release v1.8.0 (<a href="https://github.com/RobotLocomotion/drake/pull/19187">#19187</a>)</li>
   <li>Upgrade styleguide to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/19277">#19277</a>)</li>
 </ul>
