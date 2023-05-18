@@ -171,7 +171,6 @@ var searchData=
   ['addmipsolcallback',['AddMipSolCallback',['../classdrake_1_1solvers_1_1_gurobi_solver.html#abf6160a85e2371861c1736ab163a9b8f',1,'drake::solvers::GurobiSolver']]],
   ['addmodel',['AddModel',['../structdrake_1_1multibody_1_1parsing_1_1_add_model.html',1,'drake::multibody::parsing']]],
   ['addmodelfromfile',['AddModelFromFile',['../classdrake_1_1multibody_1_1_parser.html#a2bc82a9937f1710e5da413dcad7a3ded',1,'drake::multibody::Parser']]],
-  ['addmodelfromstring',['AddModelFromString',['../classdrake_1_1multibody_1_1_parser.html#a818199bfa51f6b3d5e9a8660bc4e486c',1,'drake::multibody::Parser']]],
   ['addmodelinstance',['AddModelInstance',['../structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html',1,'AddModelInstance'],['../classdrake_1_1multibody_1_1_multibody_plant.html#a4edf1daa65069a26255c903b02bce4c6',1,'drake::multibody::MultibodyPlant::AddModelInstance()']]],
   ['addmodels',['AddModels',['../classdrake_1_1multibody_1_1_parser.html#ad3bec3a31ebbe841c05773d4f5cb1791',1,'drake::multibody::Parser']]],
   ['addmodelsfromstring',['AddModelsFromString',['../classdrake_1_1multibody_1_1_parser.html#a0f86ad0f6f34758be876e93e46ec2e79',1,'drake::multibody::Parser']]],

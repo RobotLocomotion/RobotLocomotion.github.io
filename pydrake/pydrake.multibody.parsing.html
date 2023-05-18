@@ -834,37 +834,6 @@ on nesting in SDFormat.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModelFromString">
-<span class="sig-name descname"><span class="pre">AddModelFromString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_contents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelFromString" title="Permalink to this definition"></a></dt>
-<dd><p>Provides same functionality as AddModelFromFile, but instead parses
-the model description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with format
-dictated by <code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_contents</span></code>:</dt><dd><p>The model data to be parsed.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_type</span></code>:</dt><dd><p>The data format; must be one of the filename suffixes listed
-above, <em>without</em> the leading dot (.) .</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_name</span></code>:</dt><dd><p>The name given to the newly created instance of this model. If
-empty, the model name provided by the input text will be used.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The instance index for the newly added model.</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use AddModelsFromString() instead. This will be removed from Drake
-on or after 2023-04-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModels">
 <span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModels" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>

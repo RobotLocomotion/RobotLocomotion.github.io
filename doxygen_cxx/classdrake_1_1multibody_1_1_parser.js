@@ -7,7 +7,6 @@ var classdrake_1_1multibody_1_1_parser =
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a1b8bf396f9f7a335098ea5eb96e525d1", null ],
     [ "AddAllModelsFromFile", "classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2", null ],
     [ "AddModelFromFile", "classdrake_1_1multibody_1_1_parser.html#a2bc82a9937f1710e5da413dcad7a3ded", null ],
-    [ "AddModelFromString", "classdrake_1_1multibody_1_1_parser.html#a818199bfa51f6b3d5e9a8660bc4e486c", null ],
     [ "AddModels", "classdrake_1_1multibody_1_1_parser.html#ad3bec3a31ebbe841c05773d4f5cb1791", null ],
     [ "AddModelsFromString", "classdrake_1_1multibody_1_1_parser.html#a0f86ad0f6f34758be876e93e46ec2e79", null ],
     [ "AddModelsFromUrl", "classdrake_1_1multibody_1_1_parser.html#a42ecd936860fa30a7c3d248fb75353c0", null ],
