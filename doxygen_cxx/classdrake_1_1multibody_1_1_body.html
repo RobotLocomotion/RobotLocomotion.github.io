@@ -1273,9 +1273,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For a floating body, lock its inboard joint. </p>
-<p>Its generalized velocities will be 0 until it is unlocked. Locking is not yet supported for continuous-mode systems. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Its generalized velocities will be 0 until it is unlocked. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if this body is not a floating body, or if the parent model uses continuous state. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this body is not a floating body. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1409,9 +1409,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For a floating body, unlock its inboard joint. </p>
-<p>Unlocking is not yet supported for continuous-mode systems. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if this body is not a floating body, or if the parent model uses continuous state. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this body is not a floating body. </td></tr>
   </table>
   </dd>
 </dl>

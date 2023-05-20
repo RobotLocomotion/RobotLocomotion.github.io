@@ -427,11 +427,14 @@ disruptive changes).</li>
       <li>Edit the first line to refer to the YYYYMMDD for this release.
         <ol>
           <li>For reference, the typical content is thus:
-            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:jammy-20220929
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:jammy-20230518
 
 RUN apt-get -q update &amp;&amp; apt-get -q install -y --no-install-recommends nginx-light xvfb &amp;&amp; apt-get -q clean
 
 ENV DISPLAY=:1
+
+ENV PATH="/opt/drake/bin:${PATH}" \
+  PYTHONPATH="/opt/drake/lib/python3.10/site-packages:${PYTHONPATH}"
 </code></pre></div>            </div>
           </li>
           <li>If the current content differs by more than just the date from the
@@ -504,7 +507,9 @@ appears in two places – in “NOTEBOOKS” near the top and in “FILES”
 near the bottom. The “NOTBOOKS” is the old copy; the “FILES” is the new
 copy. Our goal is to replace the old copy with the new.</li>
           <li>Scroll down to the “FILES” and choose the top-most name. Right click on
-it and select “Move to notebooks”.</li>
+it and select “Move to notebooks”.
+Be patient because the web interface could be slow, and there might be
+delay between copying and deleting the file.</li>
           <li>Because a notebook of that name already existed in “NOTEBOOKS” (the old
 copy), the moved notebook will be renamed with a <code class="language-plaintext highlighter-rouge">-2</code> suffix.</li>
           <li>Scroll up to “NOTEBOOKS”. Right click on the old copy (without <code class="language-plaintext highlighter-rouge">-2`)

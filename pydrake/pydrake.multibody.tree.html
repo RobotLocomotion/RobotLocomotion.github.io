@@ -1009,14 +1009,10 @@ Joint::is_locked() is preferable otherwise.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body.Lock">
 <span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.Lock" title="Permalink to this definition"></a></dt>
 <dd><p>For a floating body, lock its inboard joint. Its generalized
-velocities will be 0 until it is unlocked. Locking is not yet
-supported for continuous-mode systems.</p>
+velocities will be 0 until it is unlocked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this body is not a floating body</strong><strong>, or </strong><strong>if the parent</strong> – </p></li>
-<li><p><strong>model uses continuous state.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1043,14 +1039,10 @@ name will be empty (the scope name and the element name).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body.Unlock">
 <span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
-supported for continuous-mode systems.</p>
+<dd><p>For a floating body, unlock its inboard joint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this body is not a floating body</strong><strong>, or </strong><strong>if the parent</strong> – </p></li>
-<li><p><strong>model uses continuous state.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1383,14 +1375,10 @@ Joint::is_locked() is preferable otherwise.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.Lock">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].Lock"></span><span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.Lock" title="Permalink to this definition"></a></dt>
 <dd><p>For a floating body, lock its inboard joint. Its generalized
-velocities will be 0 until it is unlocked. Locking is not yet
-supported for continuous-mode systems.</p>
+velocities will be 0 until it is unlocked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this body is not a floating body</strong><strong>, or </strong><strong>if the parent</strong> – </p></li>
-<li><p><strong>model uses continuous state.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1417,14 +1405,10 @@ name will be empty (the scope name and the element name).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.Unlock">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
-supported for continuous-mode systems.</p>
+<dd><p>For a floating body, unlock its inboard joint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this body is not a floating body</strong><strong>, or </strong><strong>if the parent</strong> – </p></li>
-<li><p><strong>model uses continuous state.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1751,14 +1735,10 @@ Joint::is_locked() is preferable otherwise.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.Lock">
 <span id="pydrake.multibody.tree.Body_[Expression].Lock"></span><span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.Lock" title="Permalink to this definition"></a></dt>
 <dd><p>For a floating body, lock its inboard joint. Its generalized
-velocities will be 0 until it is unlocked. Locking is not yet
-supported for continuous-mode systems.</p>
+velocities will be 0 until it is unlocked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this body is not a floating body</strong><strong>, or </strong><strong>if the parent</strong> – </p></li>
-<li><p><strong>model uses continuous state.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1785,14 +1765,10 @@ name will be empty (the scope name and the element name).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.Unlock">
 <span id="pydrake.multibody.tree.Body_[Expression].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating body, unlock its inboard joint. Unlocking is not yet
-supported for continuous-mode systems.</p>
+<dd><p>For a floating body, unlock its inboard joint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this body is not a floating body</strong><strong>, or </strong><strong>if the parent</strong> – </p></li>
-<li><p><strong>model uses continuous state.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -5034,12 +5010,7 @@ freedom.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.Lock">
 <span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.Lock" title="Permalink to this definition"></a></dt>
 <dd><p>Lock the joint. Its generalized velocities will be 0 until it is
-unlocked. Locking is not yet supported for continuous-mode systems.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if the parent model uses continuous state.</strong> – </p>
-</dd>
-</dl>
+unlocked.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5192,13 +5163,7 @@ within <code class="docutils literal notranslate"><span class="pre">position_low
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.Unlock">
 <span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>Unlock the joint. Unlocking is not yet supported for continuous-mode
-systems.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if the parent model uses continuous state.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Unlock the joint.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5432,12 +5397,7 @@ freedom.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.Lock">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].Lock"></span><span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.Lock" title="Permalink to this definition"></a></dt>
 <dd><p>Lock the joint. Its generalized velocities will be 0 until it is
-unlocked. Locking is not yet supported for continuous-mode systems.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if the parent model uses continuous state.</strong> – </p>
-</dd>
-</dl>
+unlocked.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5590,13 +5550,7 @@ within <code class="docutils literal notranslate"><span class="pre">position_low
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.Unlock">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>Unlock the joint. Unlocking is not yet supported for continuous-mode
-systems.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if the parent model uses continuous state.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Unlock the joint.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5824,12 +5778,7 @@ freedom.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.Lock">
 <span id="pydrake.multibody.tree.Joint_[Expression].Lock"></span><span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.Lock" title="Permalink to this definition"></a></dt>
 <dd><p>Lock the joint. Its generalized velocities will be 0 until it is
-unlocked. Locking is not yet supported for continuous-mode systems.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if the parent model uses continuous state.</strong> – </p>
-</dd>
-</dl>
+unlocked.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5982,13 +5931,7 @@ within <code class="docutils literal notranslate"><span class="pre">position_low
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.Unlock">
 <span id="pydrake.multibody.tree.Joint_[Expression].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>Unlock the joint. Unlocking is not yet supported for continuous-mode
-systems.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if the parent model uses continuous state.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Unlock the joint.</p>
 </dd></dl>
 
 <dl class="py method">
