@@ -176,6 +176,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1trajectory__
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8c6ac3db7c5565d4742881f0f6e0c32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ad8c6ac3db7c5565d4742881f0f6e0c32">~EdgesBetweenSubgraphs</a> ()</td></tr>
 <tr class="separator:ad8c6ac3db7c5565d4742881f0f6e0c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint to the control point connecting the subgraphs <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>.  <a href="#af27492cb5b0dbf8cd8ce10e792486052">More...</a><br /></td></tr>
+<tr class="separator:af27492cb5b0dbf8cd8ce10e792486052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ae7ba9e174af2c666240c009b99d5dfa1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ae7ba9e174af2c666240c009b99d5dfa1">EdgesBetweenSubgraphs</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;)=delete</td></tr>
 <tr class="separator:ae7ba9e174af2c666240c009b99d5dfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,6 +265,50 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af27492cb5b0dbf8cd8ce10e792486052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27492cb5b0dbf8cd8ce10e792486052">&#9670;&nbsp;</a></span>AddVelocityBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddVelocityBounds </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a linear velocity constraint to the control point connecting the subgraphs <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lb</td><td>is the lower bound of the velocity. </td></tr>
+    <tr><td class="paramname">ub</td><td>is the upper bound of the velocity.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if both subgraphs order is zero, since the velocity is defined as the derivative of the Bézier curve. At least one of the subgraphs must have an order of at least 1. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if lb or ub are not of size num_positions(). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abf75b0f596cc9aa68c9819a4674f0269"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf75b0f596cc9aa68c9819a4674f0269">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 

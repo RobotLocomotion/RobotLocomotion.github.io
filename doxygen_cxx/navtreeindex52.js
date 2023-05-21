@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"region__of__attraction_8h.html":[4,0,0,12,0,14],
 "region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,12,0,14,1],
 "render__benchmark__doxygen_8h.html":[4,0,0,4,0,0],
 "render__camera_8h.html":[4,0,0,4,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,55,10],
 "sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,55,5],
 "sorted__pair_8h.html#a6d76c69274d87b34a742dae799e2177f":[4,0,0,1,55,8],
-"sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,55,4],
-"sorted__pair_8h.html#a98c59bc997ae44eeb4d45bc371b26f0a":[4,0,0,1,55,12]
+"sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,55,4]
 };
