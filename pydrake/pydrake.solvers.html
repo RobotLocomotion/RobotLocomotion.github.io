@@ -5238,7 +5238,7 @@ branch-and-bound process, since we need to replace the binary
 variables with continuous variables.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerBranchAndBound.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id:</span> <span class="pre">pydrake.solvers.SolverId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f497767efb0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id:</span> <span class="pre">pydrake.solvers.SolverId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7fc8a7cbf330&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct a branch-and-bound tree from a mixed-integer optimization
 program.</p>
 <dl class="simple">
@@ -6720,10 +6720,22 @@ Gill to interpret the INFO field.</p>
 <p>kInvalidInput : Invalid input.</p>
 <p>kInfeasibleConstraints : The primal is infeasible.</p>
 <p>kUnbounded : The primal is unbounded.</p>
-<p>kUnknownError : Unknown error.</p>
-<p>kInfeasibleOrUnbounded :</p>
+<p>kSolverSpecificError : Solver-specific error. (Try</p>
+</div></blockquote>
+<p>MathematicalProgramResult::get_solver_details() or enabling verbose
+solver output.)</p>
+<blockquote>
+<div><p>kInfeasibleOrUnbounded : The primal is either infeasible or unbounded.</p>
 <p>kIterationLimit : Reaches the iteration limits.</p>
-<p>kDualInfeasible : Dual problem is infeasible. In this case we cannot</p>
+<p>kDualInfeasible : Dual problem is infeasible. In this case we cannot infer the status of</p>
+</div></blockquote>
+<p>the primal problem.</p>
+<blockquote>
+<div><p>kSolutionResultNotSet : The initial (invalid) solution result. This value should be</p>
+</div></blockquote>
+<p>overwritten by the solver during Solve().</p>
+<blockquote>
+<div><p>kUnknownError : Deprecated. This has been renamed to kSolverSpecificError; for details, see <a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/19450">https://github.com/RobotLocomotion/drake/pull/19450</a>. The deprecated code will be removed from Drake on or after 2023-09-01.</p>
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.__init__">
@@ -6761,13 +6773,23 @@ Gill to interpret the INFO field.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.kSolutionResultNotSet">
+<span class="sig-name descname"><span class="pre">kSolutionResultNotSet</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolutionResult.kSolutionResultNotSet:</span> <span class="pre">-8&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolutionResult.kSolutionResultNotSet" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.kSolverSpecificError">
+<span class="sig-name descname"><span class="pre">kSolverSpecificError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolutionResult.kSolverSpecificError:</span> <span class="pre">-4&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolutionResult.kSolverSpecificError" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.kUnbounded">
 <span class="sig-name descname"><span class="pre">kUnbounded</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolutionResult.kUnbounded:</span> <span class="pre">-3&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolutionResult.kUnbounded" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.kUnknownError">
-<span class="sig-name descname"><span class="pre">kUnknownError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolutionResult.kUnknownError:</span> <span class="pre">-4&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolutionResult.kUnknownError" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kUnknownError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolutionResult.kSolverSpecificError:</span> <span class="pre">-4&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolutionResult.kUnknownError" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">

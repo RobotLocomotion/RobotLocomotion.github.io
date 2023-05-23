@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 737;
+var viewWidth = 890;
 var viewHeight = 474;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/multibody/contact_solvers/sap/sap_constraint.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-470 732.5,-470 732.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-470 885.5,-470 885.5,4 -4,4"/>
 <!-- Node73 -->
 <g id="node1" class="node">
 <title>Node73</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="253.5,-435.5 253.5,-465.5 414.5,-465.5 414.5,-435.5 253.5,-435.5"/>
-<text text-anchor="start" x="261.5" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
-<text text-anchor="middle" x="334" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_constraint.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="335.5,-435.5 335.5,-465.5 496.5,-465.5 496.5,-435.5 335.5,-435.5"/>
+<text text-anchor="start" x="343.5" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="middle" x="416" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/sap_constraint.h</text>
 </a>
 </g>
 </g>
@@ -79,8 +79,8 @@ var sectionId = 'dynsection-1';
 <!-- Node73&#45;&gt;Node74 -->
 <g id="edge1" class="edge">
 <title>Node73&#45;&gt;Node74</title>
-<path fill="none" stroke="midnightblue" d="M243.3,-440.05C186.2,-432.26 119.55,-419.16 99,-399 78.17,-378.56 74.73,-343.08 74.85,-320.89"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="243.1,-443.56 253.47,-441.4 244.01,-436.62 243.1,-443.56"/>
+<path fill="none" stroke="midnightblue" d="M325.12,-446.07C243.28,-441.07 131.07,-428.83 99,-399 77.5,-379.01 74.31,-343.05 74.66,-320.69"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="325.01,-449.57 335.19,-446.66 325.41,-442.58 325.01,-449.57"/>
 </g>
 <!-- Node79 -->
 <g id="node7" class="node">
@@ -96,8 +96,8 @@ var sectionId = 'dynsection-1';
 <!-- Node73&#45;&gt;Node79 -->
 <g id="edge6" class="edge">
 <title>Node73&#45;&gt;Node79</title>
-<path fill="none" stroke="midnightblue" d="M293.65,-431.26C271.45,-421.23 243.89,-408.78 221.25,-398.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="292.25,-434.47 302.81,-435.4 295.13,-428.1 292.25,-434.47"/>
+<path fill="none" stroke="midnightblue" d="M358.77,-432.55C324.25,-422.32 280.15,-409.26 244.14,-398.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="358.11,-436 368.69,-435.49 360.1,-429.29 358.11,-436"/>
 </g>
 <!-- Node80 -->
 <g id="node8" class="node">
@@ -113,8 +113,8 @@ var sectionId = 'dynsection-1';
 <!-- Node73&#45;&gt;Node80 -->
 <g id="edge10" class="edge">
 <title>Node73&#45;&gt;Node80</title>
-<path fill="none" stroke="midnightblue" d="M334,-424.98C334,-416.35 334,-406.76 334,-398.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="330.5,-425.23 334,-435.23 337.5,-425.23 330.5,-425.23"/>
+<path fill="none" stroke="midnightblue" d="M391.76,-428.66C380.69,-419.15 367.66,-407.94 356.78,-398.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="389.54,-431.37 399.41,-435.23 394.11,-426.06 389.54,-431.37"/>
 </g>
 <!-- Node81 -->
 <g id="node9" class="node">
@@ -130,8 +130,8 @@ var sectionId = 'dynsection-1';
 <!-- Node73&#45;&gt;Node81 -->
 <g id="edge11" class="edge">
 <title>Node73&#45;&gt;Node81</title>
-<path fill="none" stroke="midnightblue" d="M376.11,-431.4C399.5,-421.34 428.62,-408.83 452.53,-398.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="374.6,-428.24 366.79,-435.4 377.36,-434.67 374.6,-428.24"/>
+<path fill="none" stroke="midnightblue" d="M440.24,-428.66C451.31,-419.15 464.34,-407.94 475.22,-398.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="437.89,-426.06 432.59,-435.23 442.46,-431.37 437.89,-426.06"/>
 </g>
 <!-- Node82 -->
 <g id="node10" class="node">
@@ -147,8 +147,25 @@ var sectionId = 'dynsection-1';
 <!-- Node73&#45;&gt;Node82 -->
 <g id="edge12" class="edge">
 <title>Node73&#45;&gt;Node82</title>
-<path fill="none" stroke="midnightblue" d="M418.72,-433.58C467.25,-424.17 529.2,-411.64 584,-399 587.1,-398.29 590.26,-397.54 593.45,-396.77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="418.05,-430.15 408.89,-435.48 419.37,-437.02 418.05,-430.15"/>
+<path fill="none" stroke="midnightblue" d="M474.49,-432.67C510.23,-422.38 556.08,-409.19 593.38,-398.46"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="473.34,-429.36 464.7,-435.49 475.27,-436.09 473.34,-429.36"/>
+</g>
+<!-- Node83 -->
+<g id="node11" class="node">
+<title>Node83</title>
+<g id="a_node11"><a xlink:href="validate__constraint__gradients_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="746.5,-357.5 746.5,-398.5 881.5,-398.5 881.5,-357.5 746.5,-357.5"/>
+<text text-anchor="start" x="754.5" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/contact</text>
+<text text-anchor="start" x="754.5" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">_solvers/sap/validate</text>
+<text text-anchor="middle" x="814" y="-364.5" font-family="Helvetica,sans-Serif" font-size="10.00">_constraint_gradients.h</text>
+</a>
+</g>
+</g>
+<!-- Node73&#45;&gt;Node83 -->
+<g id="edge13" class="edge">
+<title>Node73&#45;&gt;Node83</title>
+<path fill="none" stroke="midnightblue" d="M506.98,-437.75C571.72,-428.78 660.59,-415.21 738,-399 740.67,-398.44 743.39,-397.85 746.13,-397.23"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="506.23,-434.32 496.8,-439.15 507.19,-441.25 506.23,-434.32"/>
 </g>
 <!-- Node75 -->
 <g id="node3" class="node">

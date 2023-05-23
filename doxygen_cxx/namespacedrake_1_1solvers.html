@@ -530,10 +530,13 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9">kInfeasibleConstraints</a> = -2, 
 <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8">kUnbounded</a> = -3, 
 <br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f">kUnknownError</a> = -4, 
-<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520">kInfeasibleOrUnbounded</a>, 
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa84d10e8dce3328bfb1f6761d194857f2">kSolverSpecificError</a> = -4, 
+<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520">kInfeasibleOrUnbounded</a> = -5, 
 <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef">kIterationLimit</a> = -6, 
-<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b">kDualInfeasible</a> = -7
+<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b">kDualInfeasible</a> = -7, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55">kSolutionResultNotSet</a> = -8, 
+<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f">kUnknownError</a> = kSolverSpecificError
 <br />
  }</td></tr>
 <tr class="separator:a331f41a3139a87d16e1422bc818c136f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1263,7 +1266,8 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 </td></tr>
 <tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8"></a>kUnbounded&#160;</td><td class="fielddoc"><p>The primal is unbounded. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f"></a>kUnknownError&#160;</td><td class="fielddoc"><p>Unknown error. </p>
+<tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fa84d10e8dce3328bfb1f6761d194857f2"></a>kSolverSpecificError&#160;</td><td class="fielddoc"><p>Solver-specific error. </p>
+<p>(Try <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html#a5b8dd00dcf89c4a841c058b6b4427c12" title="Gets the solver details for the Solver that solved the program.">MathematicalProgramResult::get_solver_details()</a> or enabling verbose solver output.) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520"></a>kInfeasibleOrUnbounded&#160;</td><td class="fielddoc"><p>The primal is either infeasible or unbounded. </p>
 </td></tr>
@@ -1272,6 +1276,10 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 <tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b"></a>kDualInfeasible&#160;</td><td class="fielddoc"><p>Dual problem is infeasible. </p>
 <p>In this case we cannot infer the status of the primal problem. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55"></a>kSolutionResultNotSet&#160;</td><td class="fielddoc"><p>The initial (invalid) solution result. </p>
+<p>This value should be overwritten by the solver during <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f"></a>kUnknownError&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -2955,36 +2963,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="a269b7066a168f80390ed6c496829ffcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a269b7066a168f80390ed6c496829ffcd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td>
-          <td class="paramname"><em>solution_result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aed794af38e7da9270528fd2185861862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed794af38e7da9270528fd2185861862">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed794af38e7da9270528fd2185861862">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/12]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3000,6 +2980,34 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td></td>
           <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a>&#160;</td>
           <td class="paramname"><em>common_solver_option</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a269b7066a168f80390ed6c496829ffcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269b7066a168f80390ed6c496829ffcd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td>
+          <td class="paramname"><em>solution_result</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

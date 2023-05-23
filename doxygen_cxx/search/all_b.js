@@ -281,6 +281,8 @@ var searchData=
   ['ksnopt',['kSnopt',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4',1,'drake::solvers']]],
   ['ksocp',['kSOCP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a7cd173b34793fe6598118c124401da00',1,'drake::solvers']]],
   ['ksolutionfound',['kSolutionFound',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45',1,'drake::solvers::kSolutionFound()'],['../namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9',1,'drake::multibody::kSolutionFound()']]],
+  ['ksolutionresultnotset',['kSolutionResultNotSet',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55',1,'drake::solvers']]],
+  ['ksolverspecificerror',['kSolverSpecificError',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa84d10e8dce3328bfb1f6761d194857f2',1,'drake::solvers']]],
   ['ksos',['kSos',['../classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076',1,'drake::solvers::MathematicalProgram']]],
   ['kspacedimension',['kSpaceDimension',['../namespacedrake.html#af869092c52ed7cc9d2db40ce56050c7c',1,'drake']]],
   ['kspatialvectorsize',['kSpatialVectorSize',['../classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a38ca6e91f04c4a5339893a4461e2985a',1,'drake::multibody::SpatialVector']]],
