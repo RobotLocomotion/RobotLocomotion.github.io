@@ -642,6 +642,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
 <tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>.  <a href="#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
 <tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6258405e5b172f610aed5709af48bd3a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6258405e5b172f610aed5709af48bd3a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6258405e5b172f610aed5709af48bd3a">fmt_floating_point</a> (T x)</td></tr>
+<tr class="memdesc:a6258405e5b172f610aed5709af48bd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>fmt::to_string(x)</code> but always with at least one digit after the decimal point.  <a href="#a6258405e5b172f610aed5709af48bd3a">More...</a><br /></td></tr>
+<tr class="separator:a6258405e5b172f610aed5709af48bd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fb0d186143cc761895c310885f3ebe9"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a0fb0d186143cc761895c310885f3ebe9"><td class="memTemplItemLeft" align="right" valign="top">internal::fmt_eigen_ref&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a0fb0d186143cc761895c310885f3ebe9">fmt_eigen</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:a0fb0d186143cc761895c310885f3ebe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types.  <a href="#a0fb0d186143cc761895c310885f3ebe9">More...</a><br /></td></tr>
@@ -2403,6 +2407,27 @@ Variables</h2></td></tr>
 <p>Within Drake, when formatting an Eigen matrix into a string you must wrap the Eigen object as <code>fmt_eigen(M)</code>. This holds true whether it be for logging, error messages, debugging, or etc.</p>
 <p>For example: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!CheckValid(M)) {</div><div class="line">  <span class="keywordflow">throw</span> std::logic_error(fmt::format(<span class="stringliteral">&quot;Invalid M = {}&quot;</span>, <a class="code" href="namespacedrake.html#a0fb0d186143cc761895c310885f3ebe9">fmt_eigen</a>(M)));</div><div class="line">}</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The return value of this function should only ever be used as a temporary object, i.e., in a fmt argument list or a logging statement argument list. Never store it as a local variable, member field, etc.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>To ensure floating-point data is formatted without losing any digits, Drake's code is compiled using -DEIGEN_NO_IO, which enforces that nothing within Drake is allowed to use Eigen's <code>operator&lt;&lt;</code>. Downstream code that calls into Drake is not required to use that option; it is only enforced by Drake's build system, not by Drake's headers. </dd></dl>
+
+</div>
+</div>
+<a id="a6258405e5b172f610aed5709af48bd3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6258405e5b172f610aed5709af48bd3a">&#9670;&nbsp;</a></span>fmt_floating_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::fmt_floating_point </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>fmt::to_string(x)</code> but always with at least one digit after the decimal point. </p>
+<p>Different versions of fmt disagree on whether to omit the trailing ".0" when formatting integer-valued floating-point numbers. </p>
 
 </div>
 </div>

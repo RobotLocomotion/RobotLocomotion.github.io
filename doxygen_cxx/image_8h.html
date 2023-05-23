@@ -161,7 +161,8 @@ $(document).ready(function(){initNavTree('image_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">image.h File Reference</div>  </div>
 </div><!--header-->
@@ -171,6 +172,7 @@ $(document).ready(function(){initNavTree('image_8h.html','');});
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__throw_8h.html">drake/common/drake_throw.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="reset__after__move_8h.html">drake/common/reset_after_move.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pixel__types_8h.html">drake/systems/sensors/pixel_types.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -233,6 +235,15 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a6393b712a3bad92da3403b2fe09c4dad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a6393b712a3bad92da3403b2fe09c4dad">ImageExpr</a> = Image&lt; PixelType::kExpr &gt;</td></tr>
 <tr class="memdesc:a6393b712a3bad92da3403b2fe09c4dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for symbolic image where the channel has the type of <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.  <a href="namespacedrake_1_1systems_1_1sensors.html#a6393b712a3bad92da3403b2fe09c4dad">More...</a><br /></td></tr>
 <tr class="separator:a6393b712a3bad92da3403b2fe09c4dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a71c33fb4c6262be6e517c58e19eb7abb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a71c33fb4c6262be6e517c58e19eb7abb">ConvertDepth32FTo16U</a> (const ImageDepth32F &amp;input, ImageDepth16U *output)</td></tr>
+<tr class="memdesc:a71c33fb4c6262be6e517c58e19eb7abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a single channel 32-bit float depth image with depths in meters to a single channel 16-bit unsigned int depth image with depths in millimeters.  <a href="namespacedrake_1_1systems_1_1sensors.html#a71c33fb4c6262be6e517c58e19eb7abb">More...</a><br /></td></tr>
+<tr class="separator:a71c33fb4c6262be6e517c58e19eb7abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1067f28975226f673193243893def2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aee1067f28975226f673193243893def2">ConvertDepth16UTo32F</a> (const ImageDepth16U &amp;input, ImageDepth32F *output)</td></tr>
+<tr class="memdesc:aee1067f28975226f673193243893def2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a single channel 16-bit unsigned int depth image with depths in millimeters to a single channel 32-bit float depth image with depths in meters.  <a href="namespacedrake_1_1systems_1_1sensors.html#aee1067f28975226f673193243893def2">More...</a><br /></td></tr>
+<tr class="separator:aee1067f28975226f673193243893def2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

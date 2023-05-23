@@ -13,10 +13,11 @@ var classdrake_1_1trajectories_1_1_trajectory =
     [ "EvalDerivative", "classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344", null ],
     [ "has_derivative", "classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba", null ],
     [ "MakeDerivative", "classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_trajectory.html#a51223614aa5ad65e500cce2625aaf328", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_trajectory.html#a6a03dfabaf0999ebcae4cbf8cde49083", null ],
+    [ "operator=", "classdrake_1_1trajectories_1_1_trajectory.html#a51223614aa5ad65e500cce2625aaf328", null ],
     [ "rows", "classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e", null ],
     [ "start_time", "classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5", null ],
     [ "value", "classdrake_1_1trajectories_1_1_trajectory.html#a50929a6273d23c3db2a0ba8d431fa9d9", null ],
-    [ "vector_values", "classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71", null ]
+    [ "vector_values", "classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71", null ],
+    [ "vector_values", "classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0", null ]
 ];

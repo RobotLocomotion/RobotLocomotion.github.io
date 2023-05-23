@@ -166,12 +166,13 @@ $(document).ready(function(){initNavTree('fmt_8h.html','');});
 <div class="title">fmt.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string_view&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;fmt/format.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fmt.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="fmt_8h__incl.svg" width="238" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="fmt_8h__incl.svg" width="322" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -200,6 +201,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
 <tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>.  <a href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
 <tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6258405e5b172f610aed5709af48bd3a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6258405e5b172f610aed5709af48bd3a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6258405e5b172f610aed5709af48bd3a">fmt_floating_point</a> (T x)</td></tr>
+<tr class="memdesc:a6258405e5b172f610aed5709af48bd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>fmt::to_string(x)</code> but always with at least one digit after the decimal point.  <a href="namespacedrake.html#a6258405e5b172f610aed5709af48bd3a">More...</a><br /></td></tr>
+<tr class="separator:a6258405e5b172f610aed5709af48bd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a80dfcf0f454f77a9fb769f3fbeb09e5b"></a>

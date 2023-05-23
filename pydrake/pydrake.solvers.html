@@ -2073,6 +2073,16 @@ slack values at a given solution x, use Eval(x).</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.LinearComplementarityConstraint.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.LinearComplementarityConstraint.M">
+<span class="sig-name descname"><span class="pre">M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearComplementarityConstraint" title="pydrake.solvers.LinearComplementarityConstraint"><span class="pre">pydrake.solvers.LinearComplementarityConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.LinearComplementarityConstraint.M" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.LinearComplementarityConstraint.q">
+<span class="sig-name descname"><span class="pre">q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearComplementarityConstraint" title="pydrake.solvers.LinearComplementarityConstraint"><span class="pre">pydrake.solvers.LinearComplementarityConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.LinearComplementarityConstraint.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -2872,7 +2882,7 @@ constraint s≥|Ax+b|₂</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddLinearComplementarityConstraint">
-<span class="sig-name descname"><span class="pre">AddLinearComplementarityConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearComplementarityConstraint" title="pydrake.solvers.LinearComplementarityConstraint"><span class="pre">LinearComplementarityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddLinearComplementarityConstraint" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddLinearComplementarityConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearComplementarityConstraint" title="pydrake.solvers.LinearComplementarityConstraint"><span class="pre">LinearComplementarityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddLinearComplementarityConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a linear complementarity constraints referencing a subset of the
 decision variables.</p>
 </dd></dl>
@@ -5228,7 +5238,7 @@ branch-and-bound process, since we need to replace the binary
 variables with continuous variables.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerBranchAndBound.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id:</span> <span class="pre">pydrake.solvers.SolverId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7ee6c314f0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id:</span> <span class="pre">pydrake.solvers.SolverId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f497767efb0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct a branch-and-bound tree from a mixed-integer optimization
 program.</p>
 <dl class="simple">
@@ -5548,6 +5558,69 @@ consecutive. Mathematically</p>
 </dd></dl>
 
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.MobyLCPSolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MobyLCPSolver</span></span><a class="headerlink" href="#pydrake.solvers.MobyLCPSolver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<p>A class for solving Linear Complementarity Problems (LCPs). Solving a
+LCP requires finding a solution to the problem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mz + q = w
+z ≥ 0
+w ≥ 0
+zᵀw = 0
+</pre></div>
+</div>
+<p>(where M ∈ ℝⁿˣⁿ and q ∈ ℝⁿ are problem inputs and z ∈ ℝⁿ and w ∈ ℝⁿ
+are unknown vectors) or correctly reporting that such a solution does
+not exist. In spite of their linear structure, solving LCPs is NP-Hard
+[Cottle 1992]. However, some LCPs are significantly easier to solve.
+For instance, it can be seen that the LCP is solvable in worst-case
+polynomial time for the case of symmetric positive-semi-definite M by
+formulating it as the following convex quadratic program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>minimize:   f(z) = zᵀw = zᵀ(Mz + q)
+subject to: z ≥ 0
+            Mz + q ≥ 0
+</pre></div>
+</div>
+<p>Note that this quadratic program’s (QP) objective function at the
+minimum z cannot be less than zero, and the LCP is only solved if the
+objective function at the minimum is equal to zero. Since the seminal
+result of Karmarkar, it has been known that convex QPs are solvable in
+polynomial time [Karmarkar 1984].</p>
+<p>The difficulty of solving an LCP is characterized by the properties of
+its particular matrix, namely the class of matrices it belongs to.
+Classes include, for example, Q, Q₀, P, P₀, copositive, and Z
+matrices. [Cottle 1992] and [Murty 1998] (see pp. 224-230 in the
+latter) describe relevant matrix classes in more detail.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>[Cottle 1992]     R. Cottle, J.-S. Pang, and R. Stone. The Linear</dt><dd><p>Complementarity Problem. Academic Press, 1992.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Karmarkar 1984]  N. Karmarkar. A New Polynomial-Time Algorithm for</dt><dd><p>Linear Programming. Combinatorica, 4(4), pp. 373-395.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Murty 1988]      K. Murty. Linear Complementarity, Linear and Nonlinear</dt><dd><p>Programming. Heldermann Verlag, 1988.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MobyLCPSolver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MobyLCPSolver" title="pydrake.solvers.MobyLCPSolver"><span class="pre">pydrake.solvers.MobyLCPSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MobyLCPSolver.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MobyLCPSolver.id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></span><a class="headerlink" href="#pydrake.solvers.MobyLCPSolver.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -6979,6 +7052,7 @@ used in new code.</p>
 <p>kOsqp :</p>
 <p>kScs :</p>
 <p>kSnopt :</p>
+<p>kUnrevisedLemke :</p>
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SolverType.__init__">
@@ -7045,6 +7119,11 @@ used in new code.</p>
 <span class="sig-name descname"><span class="pre">kSnopt</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolverType.kSnopt:</span> <span class="pre">10&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolverType.kSnopt" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.SolverType.kUnrevisedLemke">
+<span class="sig-name descname"><span class="pre">kUnrevisedLemke</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolverType.kUnrevisedLemke:</span> <span class="pre">12&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolverType.kUnrevisedLemke" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.SolverType.name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.solvers.SolverType.name" title="Permalink to this definition"></a></dt>
@@ -7053,6 +7132,29 @@ used in new code.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.SolverType.value">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.solvers.SolverType.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.UnrevisedLemkeSolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">UnrevisedLemkeSolver</span></span><a class="headerlink" href="#pydrake.solvers.UnrevisedLemkeSolver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<p>A class for the Unrevised Implementation of Lemke Algorithm’s for
+solving Linear Complementarity Problems (LCPs). See MobyLcpSolver for
+a description of LCPs. This code makes extensive use of the following
+document: [Dai 2018] Dai, H. and Drumwright, E. Computing the
+Principal Pivoting Transform for Solving Linear Complementarity
+Problems with Lemke’s Algorithm. (2018, located in
+doc/pivot_column.pdf).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.UnrevisedLemkeSolver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.UnrevisedLemkeSolver" title="pydrake.solvers.UnrevisedLemkeSolver"><span class="pre">pydrake.solvers.UnrevisedLemkeSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.UnrevisedLemkeSolver.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.UnrevisedLemkeSolver.id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></span><a class="headerlink" href="#pydrake.solvers.UnrevisedLemkeSolver.id" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

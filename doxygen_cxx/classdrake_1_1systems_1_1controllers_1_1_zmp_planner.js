@@ -26,5 +26,5 @@ var classdrake_1_1systems_1_1controllers_1_1_zmp_planner =
     [ "has_planned", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a5961273e32d12f566ce8e6129efe7641", null ],
     [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a1ad44e1ac60f99a1d234a03529b9f49d", null ],
     [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#ad6e9fb473689bcf0409c7dc1ca7952c2", null ],
-    [ "Plan", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#ae24da0d2f02398a5736a6d30e7fc7816", null ]
+    [ "Plan", "classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad", null ]
 ];

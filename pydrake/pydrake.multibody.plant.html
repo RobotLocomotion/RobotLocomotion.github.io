@@ -3993,7 +3993,7 @@ unbounded or unspecified limits will be +infinity.</p>
 <span class="sig-name descname"><span class="pre">GetActuatorNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetActuatorNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 actuation vector. These strings take the form
@@ -4007,7 +4007,7 @@ optionally be withheld using <code class="docutils literal notranslate"><span cl
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 actuation vector. These strings take the form
@@ -4534,7 +4534,7 @@ limits will be -infinity.</p>
 <span class="sig-name descname"><span class="pre">GetPositionNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetPositionNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = True, always_add_suffix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 position vector. These strings take the form
@@ -4772,7 +4772,7 @@ with a given specified name.</p>
 <span class="sig-name descname"><span class="pre">GetStateNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetStateNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 multibody state vector. These strings take the form
@@ -4940,7 +4940,7 @@ limits will be -infinity.</p>
 <span class="sig-name descname"><span class="pre">GetVelocityNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetVelocityNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant, add_model_instance_prefix: bool = True, always_add_suffix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 velocity vector. These strings take the form
@@ -8461,7 +8461,7 @@ unbounded or unspecified limits will be +infinity.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetActuatorNames"></span><span class="sig-name descname"><span class="pre">GetActuatorNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetActuatorNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 actuation vector. These strings take the form
@@ -8475,7 +8475,7 @@ optionally be withheld using <code class="docutils literal notranslate"><span cl
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 actuation vector. These strings take the form
@@ -9002,7 +9002,7 @@ limits will be -infinity.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetPositionNames"></span><span class="sig-name descname"><span class="pre">GetPositionNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetPositionNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = True, always_add_suffix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 position vector. These strings take the form
@@ -9240,7 +9240,7 @@ with a given specified name.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetStateNames"></span><span class="sig-name descname"><span class="pre">GetStateNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetStateNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 multibody state vector. These strings take the form
@@ -9408,7 +9408,7 @@ limits will be -infinity.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetVelocityNames"></span><span class="sig-name descname"><span class="pre">GetVelocityNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetVelocityNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], add_model_instance_prefix: bool = True, always_add_suffix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 velocity vector. These strings take the form
@@ -12923,7 +12923,7 @@ unbounded or unspecified limits will be +infinity.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetActuatorNames"></span><span class="sig-name descname"><span class="pre">GetActuatorNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetActuatorNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 actuation vector. These strings take the form
@@ -12937,7 +12937,7 @@ optionally be withheld using <code class="docutils literal notranslate"><span cl
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool) -&gt; List[str]</p></li>
+<li><p>GetActuatorNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 actuation vector. These strings take the form
@@ -13464,7 +13464,7 @@ limits will be -infinity.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetPositionNames"></span><span class="sig-name descname"><span class="pre">GetPositionNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetPositionNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+<li><p>GetPositionNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = True, always_add_suffix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 position vector. These strings take the form
@@ -13702,7 +13702,7 @@ with a given specified name.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetStateNames"></span><span class="sig-name descname"><span class="pre">GetStateNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetStateNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = False) -&gt; List[str]</p></li>
+<li><p>GetStateNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 multibody state vector. These strings take the form
@@ -13870,7 +13870,7 @@ limits will be -infinity.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetVelocityNames"></span><span class="sig-name descname"><span class="pre">GetVelocityNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetVelocityNames" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = False, always_add_suffix: bool = True) -&gt; List[str]</p></li>
+<li><p>GetVelocityNames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], add_model_instance_prefix: bool = True, always_add_suffix: bool = True) -&gt; List[str]</p></li>
 </ol>
 <p>Returns a list of string names corresponding to each element of the
 velocity vector. These strings take the form

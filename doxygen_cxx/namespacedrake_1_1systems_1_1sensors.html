@@ -351,6 +351,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a30f975f4523ec7683dd1e04a2291095b">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt; T &gt; &amp;color)</td></tr>
 <tr class="separator:a30f975f4523ec7683dd1e04a2291095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c33fb4c6262be6e517c58e19eb7abb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a71c33fb4c6262be6e517c58e19eb7abb">ConvertDepth32FTo16U</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a> &amp;input, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a> *output)</td></tr>
+<tr class="memdesc:a71c33fb4c6262be6e517c58e19eb7abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a single channel 32-bit float depth image with depths in meters to a single channel 16-bit unsigned int depth image with depths in millimeters.  <a href="#a71c33fb4c6262be6e517c58e19eb7abb">More...</a><br /></td></tr>
+<tr class="separator:a71c33fb4c6262be6e517c58e19eb7abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1067f28975226f673193243893def2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aee1067f28975226f673193243893def2">ConvertDepth16UTo32F</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a> &amp;input, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a> *output)</td></tr>
+<tr class="memdesc:aee1067f28975226f673193243893def2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a single channel 16-bit unsigned int depth image with depths in millimeters to a single channel 32-bit float depth image with depths in meters.  <a href="#aee1067f28975226f673193243893def2">More...</a><br /></td></tr>
+<tr class="separator:aee1067f28975226f673193243893def2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Utility functions for writing common image types to disk.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Given a fully-specified path to the file to write and corresponding image data, these functions will <em>attempt</em> to write the image data to the file.</p>
 <p>The functions assume that the path is valid and writable. These functions will attempt to write the image to the given file path. The file format will be that indicated by the function name, but the extension will be whatever is provided as input.</p>
@@ -719,6 +725,67 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 
 </div>
 </div>
+<a id="aee1067f28975226f673193243893def2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1067f28975226f673193243893def2">&#9670;&nbsp;</a></span>ConvertDepth16UTo32F()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::systems::sensors::ConvertDepth16UTo32F </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a> *&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a single channel 16-bit unsigned int depth image with depths in millimeters to a single channel 32-bit float depth image with depths in meters. </p>
+
+</div>
+</div>
+<a id="a71c33fb4c6262be6e517c58e19eb7abb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c33fb4c6262be6e517c58e19eb7abb">&#9670;&nbsp;</a></span>ConvertDepth32FTo16U()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::systems::sensors::ConvertDepth32FTo16U </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a> *&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a single channel 32-bit float depth image with depths in meters to a single channel 16-bit unsigned int depth image with depths in millimeters. </p>
+<p>Note that pixels that are not kTooFar in the input image may saturate to be kTooFar in the output image due to the smaller representable range. </p>
+
+</div>
+</div>
 <a id="a30f975f4523ec7683dd1e04a2291095b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f975f4523ec7683dd1e04a2291095b">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 
@@ -775,8 +842,9 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 
 <p>Writes the color (8-bit, RGBA) image data to disk. </p>
 <p>Writes the grey scale (8-bit) image data to disk.</p>
-<p>Writes the depth (16-bit) image data to disk.</p>
 <p>Writes the label (16-bit) image data to disk.</p>
+<p>Writes the depth (16-bit) image data to disk.</p>
+<p>See <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aee1067f28975226f673193243893def2" title="Converts a single channel 16-bit unsigned int depth image with depths in millimeters to a single chan...">ConvertDepth16UTo32F()</a> for converting 16-bit to 32-bit to enable saving as TIFF. </p>
 
 </div>
 </div>
@@ -807,7 +875,7 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 </div><div class="memdoc">
 
 <p>Writes the depth (32-bit) image data to disk. </p>
-<p>Png files do not support channels larger than 16-bits and its support for floating point values is also limited at best. So, depth images can only be written as tiffs. </p>
+<p>A 32-bit depth image can only be saved as TIFF (not PNG) because PNG files do not support channels larger than 16-bits and its support for floating point values is also limited at best. See <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a71c33fb4c6262be6e517c58e19eb7abb" title="Converts a single channel 32-bit float depth image with depths in meters to a single channel 16-bit u...">ConvertDepth32FTo16U()</a> for converting 32-bit to 16-bit to enable saving as PNG. </p>
 
 </div>
 </div>

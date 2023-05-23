@@ -1,5 +1,8 @@
 var NAVTREEINDEX55 =
 {
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a070d67fe6a2aec68937b130e4e36afbf":[1,4,2,0,1,0,1],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a0d6fc2daabf951fe18a222fab56c2ba6":[1,4,2,0,1,0,4],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a12c9ae23f7c0c50dc5417ea2d15dd48b":[1,4,2,0,1,0,3],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[1,4,2,0,1,0,0],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a70e95748d802a0f66bba15e61dc5fb0e":[1,4,2,0,1,0,2],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html":[1,4,2,0,1,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,13,6,0,7],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a4932525a5cc773e1fc8e9364a1b6775b":[3,0,0,13,6,0,4],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,13,6,0,6],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,13,6,0,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,6,0,5],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,13,6,1],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[3,0,0,13,6,1,2]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,13,6,0,0]
 };

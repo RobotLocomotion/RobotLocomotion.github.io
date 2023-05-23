@@ -823,6 +823,16 @@ must lie in the range 0 &lt; center_y &lt; height.</p>
 
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ConvertDepth16UTo32F">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ConvertDepth16UTo32F</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kDepth16U" title="pydrake.systems.sensors.PixelType.kDepth16U"><span class="pre">PixelType.kDepth16U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kDepth32F" title="pydrake.systems.sensors.PixelType.kDepth32F"><span class="pre">PixelType.kDepth32F</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ConvertDepth16UTo32F" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ConvertDepth32FTo16U">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ConvertDepth32FTo16U</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kDepth32F" title="pydrake.systems.sensors.PixelType.kDepth32F"><span class="pre">PixelType.kDepth32F</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kDepth16U" title="pydrake.systems.sensors.PixelType.kDepth16U"><span class="pre">PixelType.kDepth16U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ConvertDepth32FTo16U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image">
 <em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">Image</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image" title="Permalink to this definition"></a></dt>
@@ -844,27 +854,15 @@ must lie in the range 0 &lt; center_y &lt; height.</p>
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kDepth16U], width: int, height: int) -&gt; None</p></li>
 </ol>
 <p>Image size only constructor. Specifies a width and height for the
-image. All the channel values in all the pixels are initialized with
-zero.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero</p>
-</dd>
-</dl>
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kDepth16U], width: int, height: int, initial_value: int) -&gt; None</p></li>
 </ol>
 <p>Image size and initial value constructor. Specifies a width, height
-and an initial value for all the channels in all the pixels.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt><dd><p>A value set to all the channels in all the pixels</p>
-</dd>
-</dl>
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -898,9 +896,8 @@ uint8_t alpha = image.at(x, y)[3];</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kDepth16U-.resize">
 <span id="pydrake.systems.sensors.Image[PixelType.kDepth16U].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kDepth16U" title="pydrake.systems.sensors.PixelType.kDepth16U"><span class="pre">PixelType.kDepth16U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kDepth16U-.resize" title="Permalink to this definition"></a></dt>
-<dd><p>Changes the sizes of the width and height for the image. The values
-for them should be greater than zero. (To resize to zero, assign a
-default- constructed Image into this; do not use this method.) All the
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
 values in the pixels become zero after resize.</p>
 </dd></dl>
 
@@ -945,27 +942,15 @@ channels in a pixel</p>
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kDepth32F], width: int, height: int) -&gt; None</p></li>
 </ol>
 <p>Image size only constructor. Specifies a width and height for the
-image. All the channel values in all the pixels are initialized with
-zero.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero</p>
-</dd>
-</dl>
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kDepth32F], width: int, height: int, initial_value: float) -&gt; None</p></li>
 </ol>
 <p>Image size and initial value constructor. Specifies a width, height
-and an initial value for all the channels in all the pixels.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt><dd><p>A value set to all the channels in all the pixels</p>
-</dd>
-</dl>
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -999,9 +984,8 @@ uint8_t alpha = image.at(x, y)[3];</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kDepth32F-.resize">
 <span id="pydrake.systems.sensors.Image[PixelType.kDepth32F].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kDepth32F" title="pydrake.systems.sensors.PixelType.kDepth32F"><span class="pre">PixelType.kDepth32F</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kDepth32F-.resize" title="Permalink to this definition"></a></dt>
-<dd><p>Changes the sizes of the width and height for the image. The values
-for them should be greater than zero. (To resize to zero, assign a
-default- constructed Image into this; do not use this method.) All the
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
 values in the pixels become zero after resize.</p>
 </dd></dl>
 
@@ -1046,27 +1030,15 @@ channels in a pixel</p>
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kLabel16I], width: int, height: int) -&gt; None</p></li>
 </ol>
 <p>Image size only constructor. Specifies a width and height for the
-image. All the channel values in all the pixels are initialized with
-zero.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero</p>
-</dd>
-</dl>
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kLabel16I], width: int, height: int, initial_value: int) -&gt; None</p></li>
 </ol>
 <p>Image size and initial value constructor. Specifies a width, height
-and an initial value for all the channels in all the pixels.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt><dd><p>A value set to all the channels in all the pixels</p>
-</dd>
-</dl>
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1100,9 +1072,8 @@ uint8_t alpha = image.at(x, y)[3];</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kLabel16I-.resize">
 <span id="pydrake.systems.sensors.Image[PixelType.kLabel16I].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kLabel16I" title="pydrake.systems.sensors.PixelType.kLabel16I"><span class="pre">PixelType.kLabel16I</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kLabel16I-.resize" title="Permalink to this definition"></a></dt>
-<dd><p>Changes the sizes of the width and height for the image. The values
-for them should be greater than zero. (To resize to zero, assign a
-default- constructed Image into this; do not use this method.) All the
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
 values in the pixels become zero after resize.</p>
 </dd></dl>
 
@@ -1147,27 +1118,15 @@ channels in a pixel</p>
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kRgba8U], width: int, height: int) -&gt; None</p></li>
 </ol>
 <p>Image size only constructor. Specifies a width and height for the
-image. All the channel values in all the pixels are initialized with
-zero.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero</p>
-</dd>
-</dl>
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kRgba8U], width: int, height: int, initial_value: int) -&gt; None</p></li>
 </ol>
 <p>Image size and initial value constructor. Specifies a width, height
-and an initial value for all the channels in all the pixels.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt><dd><p>Size of width for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt><dd><p>Size of height for image which should be greater than zero.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt><dd><p>A value set to all the channels in all the pixels</p>
-</dd>
-</dl>
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1201,9 +1160,8 @@ uint8_t alpha = image.at(x, y)[3];</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgba8U-.resize">
 <span id="pydrake.systems.sensors.Image[PixelType.kRgba8U].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kRgba8U" title="pydrake.systems.sensors.PixelType.kRgba8U"><span class="pre">PixelType.kRgba8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgba8U-.resize" title="Permalink to this definition"></a></dt>
-<dd><p>Changes the sizes of the width and height for the image. The values
-for them should be greater than zero. (To resize to zero, assign a
-default- constructed Image into this; do not use this method.) All the
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
 values in the pixels become zero after resize.</p>
 </dd></dl>
 

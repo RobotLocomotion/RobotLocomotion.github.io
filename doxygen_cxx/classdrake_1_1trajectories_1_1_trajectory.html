@@ -192,6 +192,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7607cc5c56514557ed9441479ae70e71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">vector_values</a> (const std::vector&lt; T &gt; &amp;t) const</td></tr>
 <tr class="memdesc:a7607cc5c56514557ed9441479ae70e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="#a7607cc5c56514557ed9441479ae70e71">More...</a><br /></td></tr>
 <tr class="separator:a7607cc5c56514557ed9441479ae70e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c4e76b745f136bea7dc723d62650c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0">vector_values</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;t) const</td></tr>
+<tr class="memdesc:a25c4e76b745f136bea7dc723d62650c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="#a25c4e76b745f136bea7dc723d62650c0">More...</a><br /></td></tr>
+<tr class="separator:a25c4e76b745f136bea7dc723d62650c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9507f1cc6b538dc632d20e3d681bbaba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba">has_derivative</a> () const</td></tr>
 <tr class="memdesc:a9507f1cc6b538dc632d20e3d681bbaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> provides and implementation for <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a> and <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2" title="Takes the derivative of this Trajectory.">MakeDerivative()</a>.  <a href="#a9507f1cc6b538dc632d20e3d681bbaba">More...</a><br /></td></tr>
 <tr class="separator:a9507f1cc6b538dc632d20e3d681bbaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -583,8 +586,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a51223614aa5ad65e500cce2625aaf328"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51223614aa5ad65e500cce2625aaf328">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a6a03dfabaf0999ebcae4cbf8cde49083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a03dfabaf0999ebcae4cbf8cde49083">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -595,7 +598,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -609,8 +612,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a03dfabaf0999ebcae4cbf8cde49083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a03dfabaf0999ebcae4cbf8cde49083">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a51223614aa5ad65e500cce2625aaf328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51223614aa5ad65e500cce2625aaf328">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -621,7 +624,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -728,7 +731,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a7607cc5c56514557ed9441479ae70e71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7607cc5c56514557ed9441479ae70e71">&#9670;&nbsp;</a></span>vector_values()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7607cc5c56514557ed9441479ae70e71">&#9670;&nbsp;</a></span>vector_values() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -737,6 +740,32 @@ Protected Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; vector_values </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time. </p>
+<p>Otherwise, if <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e">rows()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith row corresponding to the ith time. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if both cols and rows are not equal to 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25c4e76b745f136bea7dc723d62650c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c4e76b745f136bea7dc723d62650c0">&#9670;&nbsp;</a></span>vector_values() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; vector_values </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>t</em></td><td>)</td>
           <td> const</td>
         </tr>
