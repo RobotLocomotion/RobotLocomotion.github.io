@@ -215,7 +215,16 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000008"></a>Use fmt or spdlog for logging, not operator&lt;&lt;.  Add an #include &lt;fmt/ranges.h&gt; to format SortedPair as a range. See https://github.com/RobotLocomotion/drake/issues/17742 for background. <br />
  This will be removed from Drake on or after 2023-06-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1visualization.html#a91350b14472fa922d11a6ced06e72bc8">drake::visualization::ApplyVisualizationConfig</a>  (const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html" title="Settings for what MultibodyPlant and SceneGraph should send to meldis and/or drake_visualizer.">VisualizationConfig</a> &amp;config, systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">systems::lcm::LcmBuses</a> *lcm_buses, const multibody::MultibodyPlant&lt; double &gt; *plant, const geometry::SceneGraph&lt; double &gt; *scene_graph, std::shared_ptr&lt; geometry::Meshcat &gt; meshcat=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000027"></a>Pass a non-const SceneGraph pointer <br />
+<dd><a class="anchor" id="_deprecated000030"></a>Pass a non-const SceneGraph pointer <br />
+ This will be removed from Drake on or after 2023-09-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6">MultipleShooting::fixed_timestep</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000026"></a>Use fixed_time_step() instead. <br />
+ This will be removed from Drake on or after 2023-09-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab0a28fec382d5b41c8193e698d9d3d99">MultipleShooting::timestep</a>  (int index) const</dt>
+<dd><a class="anchor" id="_deprecated000025"></a>Use time_step() instead. <br />
+ This will be removed from Drake on or after 2023-09-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b">MultipleShooting::timesteps_are_decision_variables</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000027"></a>Use time_steps_are_decision_variables() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#a8ece7200f1a08cda985cc4ab68b0ce33">RobotDiagramBuilder&lt; T &gt;::BuildDiagram</a>  ()</dt>
 <dd><a class="anchor" id="_deprecated000018"></a>Use Build() instead of BuildDiagram(). <br />
@@ -239,10 +248,10 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000022"></a>Use scene_graph() instead of mutable_scene_graph(). <br />
  This will be removed from Drake on or after 2023-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872">SerializerInterface::Clone</a>  () const =0</dt>
-<dd><a class="anchor" id="_deprecated000026"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
+<dd><a class="anchor" id="_deprecated000029"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a5cecac943ec4d83ec7df369db0c9a47b">SolverBase::SolverBase</a>  (std::function&lt; SolverId()&gt; id, std::function&lt; bool()&gt; available, std::function&lt; bool()&gt; enabled, std::function&lt; bool(const MathematicalProgram &amp;)&gt; are_satisfied, std::function&lt; std::string(const MathematicalProgram &amp;)&gt; explain_unsatisfied=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000025"></a>Pass SolverId directly as the first argument <br />
+<dd><a class="anchor" id="_deprecated000028"></a>Pass SolverId directly as the first argument <br />
  This will be removed from Drake on or after 2023-06-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

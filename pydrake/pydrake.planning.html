@@ -127,8 +127,18 @@
 and/or trajectories of dynamical systems.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.planning.AddDirectCollocationConstraint">
-<span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">AddDirectCollocationConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.DirectCollocationConstraint" title="pydrake.planning.DirectCollocationConstraint"><span class="pre">pydrake.planning.DirectCollocationConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.AddDirectCollocationConstraint" title="Permalink to this definition"></a></dt>
-<dd><p>Helper method to add a DirectCollocationConstraint to the <code class="docutils literal notranslate"><span class="pre">prog</span></code>,
+<span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">AddDirectCollocationConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.AddDirectCollocationConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddDirectCollocationConstraint(constraint: pydrake.planning.DirectCollocationConstraint, time_step: numpy.ndarray[object[m, 1]], state: numpy.ndarray[object[m, 1]], next_state: numpy.ndarray[object[m, 1]], input: numpy.ndarray[object[m, 1]], next_input: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; pydrake.solvers.Binding[Constraint]</p></li>
+</ol>
+<p>Helper method to add a DirectCollocationConstraint to the <code class="docutils literal notranslate"><span class="pre">prog</span></code>,
+ensuring that the order of variables in the binding matches the order
+expected by the constraint.</p>
+<ol class="arabic simple" start="2">
+<li><p>AddDirectCollocationConstraint(constraint: pydrake.planning.DirectCollocationConstraint, timestep: numpy.ndarray[object[m, 1]], state: numpy.ndarray[object[m, 1]], next_state: numpy.ndarray[object[m, 1]], input: numpy.ndarray[object[m, 1]], next_input: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; pydrake.solvers.Binding[Constraint]</p></li>
+</ol>
+<p>Helper method to add a DirectCollocationConstraint to the <code class="docutils literal notranslate"><span class="pre">prog</span></code>,
 ensuring that the order of variables in the binding matches the order
 expected by the constraint.</p>
 </dd></dl>
@@ -1465,8 +1475,12 @@ integration accuracy.</p>
 system.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.DirectCollocation.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.planning.DirectCollocation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system:</span> <span class="pre">pydrake.systems.framework.System</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_time_samples:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum_timestep:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_timestep:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_port_index:</span> <span class="pre">Union[pydrake.systems.framework.InputPortSelection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pydrake.systems.framework.InputPortIndex]</span> <span class="pre">=</span> <span class="pre">&lt;InputPortSelection.kUseFirstInputIfItExists:</span> <span class="pre">-2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assume_non_continuous_states_are_fixed:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.DirectCollocation.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the MathematicalProgram% and adds the collocation
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.DirectCollocation.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.planning.DirectCollocation, system: pydrake.systems.framework.System, context: pydrake.systems.framework.Context, num_time_samples: int, minimum_time_step: float, maximum_time_step: float, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, assume_non_continuous_states_are_fixed: bool = False, prog: pydrake.solvers.MathematicalProgram = None) -&gt; None</p></li>
+</ol>
+<p>Constructs the MathematicalProgram% and adds the collocation
 constraints.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A dynamical system to be used in the dynamic constraints. This
@@ -1481,9 +1495,62 @@ optimization.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_samples</span></code>:</dt><dd><p>The number of breakpoints in the trajectory.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_timestep</span></code>:</dt><dd><p>Minimum spacing between sample times.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_time_step</span></code>:</dt><dd><p>Minimum spacing between sample times.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">maximum_timestep</span></code>:</dt><dd><p>Maximum spacing between sample times.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">maximum_time_step</span></code>:</dt><dd><p>Maximum spacing between sample times.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>A valid input port index for <code class="docutils literal notranslate"><span class="pre">system</span></code> or InputPortSelection. All
+other inputs on the system will be left disconnected (if they are
+disconnected in <code class="docutils literal notranslate"><span class="pre">context)</span></code> or will be fixed to their current
+values (if they are connected/fixed in <code class="docutils literal notranslate"><span class="pre">context)</span></code>.</p>
+</dd>
+<dt><em>Default:</em> kUseFirstInputIfItExists.</dt><dd><p>$Parameter <code class="docutils literal notranslate"><span class="pre">assume_non_continuous_states_are_fixed</span></code>:</p>
+</dd>
+</dl>
+<p>Boolean which, if true, allows this algorithm to optimize without
+considering the dynamics of any non-continuous states. This is helpful
+for optimizing systems that might have some additional book-keeping
+variables in their state. Only use this if you are sure that the
+dynamics of the additional state variables cannot impact the dynamics
+of the continuous states. $*Default:* false.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt><dd><p>(optional). If non-null, then additional decision variables,
+costs, and constraints will be added into the existing
+MathematicalProgram. This can be useful for, e.g., combining
+multiple trajectory optimizations into a single program, coupled
+by a few constraints. If nullptr, then a new MathematicalProgram
+will be allocated.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if system is not supported by this direct</strong> – </p></li>
+<li><p><strong>collocation method.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.planning.DirectCollocation, system: pydrake.systems.framework.System, context: pydrake.systems.framework.Context, num_time_samples: int, minimum_timestep: float, maximum_timestep: float, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, assume_non_continuous_states_are_fixed: bool = False, prog: pydrake.solvers.MathematicalProgram = None) -&gt; None</p></li>
+</ol>
+<p>Constructs the MathematicalProgram% and adds the collocation
+constraints.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A dynamical system to be used in the dynamic constraints. This
+system must support System::ToAutoDiffXd. Note that this is
+aliased for the lifetime of this object.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Required to describe any parameters of the system. The values of
+the state in this context do not have any effect. This context
+will also be “cloned” by the optimization; changes to the context
+after calling this method will NOT impact the trajectory
+optimization.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_samples</span></code>:</dt><dd><p>The number of breakpoints in the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_time_step</span></code>:</dt><dd><p>Minimum spacing between sample times.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">maximum_time_step</span></code>:</dt><dd><p>Maximum spacing between sample times.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>A valid input port index for <code class="docutils literal notranslate"><span class="pre">system</span></code> or InputPortSelection. All
 other inputs on the system will be left disconnected (if they are
@@ -1567,9 +1634,9 @@ constraints between those decision variables.</p>
 </ol>
 <p>Constructs the MathematicalProgram and adds the dynamic constraints.
 This version of the constructor is only for simple discrete-time
-systems (with a single periodic timestep update). Continuous-time
+systems (with a single periodic time step update). Continuous-time
 systems must call one of the constructors that takes bounds on the
-timestep as an argument.</p>
+time step as an argument.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A dynamical system to be used in the dynamic constraints. This
 system must support System::ToAutoDiffXd. Note that this is
@@ -1612,7 +1679,38 @@ optimization.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_samples</span></code>:</dt><dd><p>The number of breakpoints in the trajectory.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fixed_timestep</span></code>:</dt><dd><p>The spacing between sample times.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fixed_time_step</span></code>:</dt><dd><p>The spacing between sample times.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>A valid input port index or valid InputPortSelection for
+<code class="docutils literal notranslate"><span class="pre">system</span></code>. All other inputs on the system will be left
+disconnected (if they are disconnected in <code class="docutils literal notranslate"><span class="pre">context)</span></code> or will be
+set to their current values (if they are connected/fixed in
+<code class="docutils literal notranslate"><span class="pre">context)</span></code>.</p>
+</dd>
+<dt><em>Default:</em> kUseFirstInputIfItExists.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if <code class="docutils literal notranslate"><span class="pre">context.has_only_continuous_state()</span> <span class="pre">==</span> <span class="pre">false</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.planning.DirectTranscription, system: pydrake.systems.framework.System, context: pydrake.systems.framework.Context, num_time_samples: int, fixed_time_step: pydrake.planning.DirectTranscription.TimeStep, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;) -&gt; None</p></li>
+</ol>
+<p>Constructs the MathematicalProgram and adds the dynamic constraints.
+This version of the constructor is only for continuous-time systems;
+the dynamics constraints use explicit forward Euler integration.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A dynamical system to be used in the dynamic constraints. This
+system must support System::ToAutoDiffXd. Note that this is
+aliased for the lifetime of this object.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Required to describe any parameters of the system. The values of
+the state in this context do not have any effect. This context
+will also be “cloned” by the optimization; changes to the context
+after calling this method will NOT impact the trajectory
+optimization.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_samples</span></code>:</dt><dd><p>The number of breakpoints in the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fixed_time_step</span></code>:</dt><dd><p>The spacing between sample times.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>A valid input port index or valid InputPortSelection for
 <code class="docutils literal notranslate"><span class="pre">system</span></code>. All other inputs on the system will be left
@@ -2439,8 +2537,8 @@ the correct interpolation schemes for the specific transcription
 method, and should add the constraints to impose the System% dynamics
 in their constructor.</p>
 <p>This class assumes that there are a fixed number (N) time
-steps/samples, and that the trajectory is discretized into timesteps h
-(N-1 of these), state x (N of these), and control input u (N of
+steps/samples, and that the trajectory is discretized into time steps
+h (N-1 of these), state x (N of these), and control input u (N of
 these).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.__init__">
@@ -2557,7 +2655,7 @@ are substituted with the relevant variables for each time index.</p>
 <dd class="field-odd"><p>The constraint enforcing the duration bounds.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError if timesteps are not declared as decision variables.</strong> – </p>
+<dd class="field-even"><p><strong>RuntimeError if time steps are not declared as decision variables.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2565,13 +2663,13 @@ are substituted with the relevant variables for each time index.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.AddEqualTimeIntervalsConstraints">
 <span class="sig-name descname"><span class="pre">AddEqualTimeIntervalsConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><span class="pre">pydrake.planning.MultipleShooting</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">LinearConstraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting.AddEqualTimeIntervalsConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>Adds constraints to enforce that all timesteps have equal duration.</p>
+<dd><p>Adds constraints to enforce that all time steps have equal duration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A vector of constraints enforcing all time intervals are equal.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError if timesteps are not declared as decision variables.</strong> – </p>
+<dd class="field-even"><p><strong>RuntimeError if time steps are not declared as decision variables.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2689,7 +2787,7 @@ programming solver as the default solver.</p>
 <dd class="field-odd"><p>The bounding box constraint enforcing time interval bounds.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError if timesteps are not declared as decision variables.</strong> – </p>
+<dd class="field-even"><p><strong>RuntimeError if time steps are not declared as decision variables.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2702,9 +2800,20 @@ final time index.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.fixed_time_step">
+<span class="sig-name descname"><span class="pre">fixed_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><span class="pre">pydrake.planning.MultipleShooting</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting.fixed_time_step" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.fixed_timestep">
 <span class="sig-name descname"><span class="pre">fixed_timestep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><span class="pre">pydrake.planning.MultipleShooting</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting.fixed_timestep" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use fixed_time_step() instead. This will be removed from Drake on
+or after 2023-09-01.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.GetInputSamples">
@@ -2849,13 +2958,24 @@ will result in an error.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.timestep">
-<span class="sig-name descname"><span class="pre">timestep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><span class="pre">pydrake.planning.MultipleShooting</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting.timestep" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the decision variable associated with the timestep, h, at time
-index <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+<dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.time_step">
+<span class="sig-name descname"><span class="pre">time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><span class="pre">pydrake.planning.MultipleShooting</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting.time_step" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the decision variable associated with the time step, h, at
+time index <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if timesteps are not declared as decision variables.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if time steps are not declared as decision variables.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MultipleShooting.timestep">
+<span class="sig-name descname"><span class="pre">timestep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><span class="pre">pydrake.planning.MultipleShooting</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting.timestep" title="Permalink to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use time_step() instead. This will be removed from Drake on or
+after 2023-09-01.</p>
 </dd>
 </dl>
 </dd></dl>

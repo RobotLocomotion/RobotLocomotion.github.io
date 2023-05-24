@@ -97,7 +97,7 @@ var searchData=
   ['adddata',['AddData',['../classdrake_1_1systems_1_1_vector_log.html#a0533954b4eb29aa69d4078b0512e518f',1,'drake::systems::VectorLog']]],
   ['adddecisionvariables',['AddDecisionVariables',['../classdrake_1_1solvers_1_1_mathematical_program.html#af436a548cfc2a209dc21427b328232b2',1,'drake::solvers::MathematicalProgram']]],
   ['adddefaultvisualization',['AddDefaultVisualization',['../namespacedrake_1_1visualization.html#a02befd8c90155c339a042f2af39d4c12',1,'drake::visualization']]],
-  ['adddirectcollocationconstraint',['AddDirectCollocationConstraint',['../namespacedrake_1_1planning_1_1trajectory__optimization.html#a5a33c78a3166fd84c3b1d5818c6e8275',1,'drake::planning::trajectory_optimization']]],
+  ['adddirectcollocationconstraint',['AddDirectCollocationConstraint',['../namespacedrake_1_1planning_1_1trajectory__optimization.html#adbb6bc996413925c93dca6d2f5e2bb3d',1,'drake::planning::trajectory_optimization']]],
   ['adddirectives',['AddDirectives',['../structdrake_1_1multibody_1_1parsing_1_1_add_directives.html',1,'drake::multibody::parsing']]],
   ['adddiscretestategroup',['AddDiscreteStateGroup',['../classdrake_1_1systems_1_1_system_base.html#ab4e83668b3fecff021600eff4390cc2a',1,'drake::systems::SystemBase']]],
   ['adddiscretestateticket',['AddDiscreteStateTicket',['../classdrake_1_1systems_1_1_context_base.html#a8a25146140091f2a36e5a308e62219b1',1,'drake::systems::ContextBase']]],

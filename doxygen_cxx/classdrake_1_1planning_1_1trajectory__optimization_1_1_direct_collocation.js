@@ -2,7 +2,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation =
 [
     [ "DirectCollocation", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859", null ],
     [ "DirectCollocation", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2", null ],
-    [ "DirectCollocation", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a0e5031033f1248fda09fefb02de276ab", null ],
+    [ "DirectCollocation", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a6b91e418f6215db5d8ea7fc3b831c7ac", null ],
     [ "~DirectCollocation", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a4af045674d7737ba9da18fbe2b604743", null ],

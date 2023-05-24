@@ -171,7 +171,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1trajectory__
 <div class="textblock"><p><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> is an abstract class for trajectory optimization that creates decision variables for inputs, states, and (optionally) sample times along the trajectory, then provides a number of methods for working with those decision variables. </p>
 <p><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> classes add decision variables, costs, and constraints to a MathematicalProgram. You can retrieve that program using <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa" title="Returns a reference to the MathematicalProgram associated with the trajectory optimization problem.">prog()</a>, and add additional variables, costs, and constraints using the MathematicalProgram interface directly.</p>
 <p>Subclasses must implement the abstract methods: DoAddRunningCost() <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a29b37adec3b8d25a6e720748ffbff990" title="Get the input trajectory at the solution as a PiecewisePolynomial.">ReconstructInputTrajectory()</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a27c828bd4c3a4d0d842354d6cb356f0a" title="Get the state trajectory at the solution as a PiecewisePolynomial.">ReconstructStateTrajectory()</a> using all of the correct interpolation schemes for the specific transcription method, and should add the constraints to impose the System% dynamics in their constructor.</p>
-<p>This class assumes that there are a fixed number (N) time steps/samples, and that the trajectory is discretized into timesteps h (N-1 of these), state x (N of these), and control input u (N of these). </p>
+<p>This class assumes that there are a fixed number (N) time steps/samples, and that the trajectory is discretized into time steps h (N-1 of these), state x (N of these), and control input u (N of these). </p>
 </div>
 <p><code>#include &lt;drake/planning/trajectory_optimization/multiple_shooting.h&gt;</code></p>
 <table class="memberdecls">
@@ -192,8 +192,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afcc8c6b2091ff4447ee2951bb7907de8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#afcc8c6b2091ff4447ee2951bb7907de8">prog</a> () const</td></tr>
 <tr class="memdesc:afcc8c6b2091ff4447ee2951bb7907de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the MathematicalProgram associated with the trajectory optimization problem.  <a href="#afcc8c6b2091ff4447ee2951bb7907de8">More...</a><br /></td></tr>
 <tr class="separator:afcc8c6b2091ff4447ee2951bb7907de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d167cc27136f423047426ba50a01f0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">solvers::VectorDecisionVariable</a>&lt; 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a48d167cc27136f423047426ba50a01f0">time_step</a> (<a class="el" href="classint.html">int</a> index) const</td></tr>
+<tr class="memdesc:a48d167cc27136f423047426ba50a01f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the decision variable associated with the time step, h, at time index <code>index</code>.  <a href="#a48d167cc27136f423047426ba50a01f0">More...</a><br /></td></tr>
+<tr class="separator:a48d167cc27136f423047426ba50a01f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0a28fec382d5b41c8193e698d9d3d99"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">solvers::VectorDecisionVariable</a>&lt; 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab0a28fec382d5b41c8193e698d9d3d99">timestep</a> (<a class="el" href="classint.html">int</a> index) const</td></tr>
-<tr class="memdesc:ab0a28fec382d5b41c8193e698d9d3d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the decision variable associated with the timestep, h, at time index <code>index</code>.  <a href="#ab0a28fec382d5b41c8193e698d9d3d99">More...</a><br /></td></tr>
+<tr class="memdesc:ab0a28fec382d5b41c8193e698d9d3d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab0a28fec382d5b41c8193e698d9d3d99">More...</a><br /></td></tr>
 <tr class="separator:ab0a28fec382d5b41c8193e698d9d3d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48f817634e4b7a64663f19d1d635a7d6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">solvers::VectorDecisionVariable</a>&lt; 1 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a48f817634e4b7a64663f19d1d635a7d6">time</a> () const</td></tr>
 <tr class="memdesc:a48f817634e4b7a64663f19d1d635a7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a placeholder decision variable (not actually declared as a decision variable in the MathematicalProgram) associated with the time, t.  <a href="#a48f817634e4b7a64663f19d1d635a7d6">More...</a><br /></td></tr>
@@ -246,7 +249,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5495e0b649d3c61e05c6d3e2082bbe46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds bounds on all time intervals.  <a href="#a5495e0b649d3c61e05c6d3e2082bbe46">More...</a><br /></td></tr>
 <tr class="separator:a5495e0b649d3c61e05c6d3e2082bbe46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d2298dd22d4c03fea1f270e2136ad81"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a7d2298dd22d4c03fea1f270e2136ad81">AddEqualTimeIntervalsConstraints</a> ()</td></tr>
-<tr class="memdesc:a7d2298dd22d4c03fea1f270e2136ad81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints to enforce that all timesteps have equal duration.  <a href="#a7d2298dd22d4c03fea1f270e2136ad81">More...</a><br /></td></tr>
+<tr class="memdesc:a7d2298dd22d4c03fea1f270e2136ad81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints to enforce that all time steps have equal duration.  <a href="#a7d2298dd22d4c03fea1f270e2136ad81">More...</a><br /></td></tr>
 <tr class="separator:a7d2298dd22d4c03fea1f270e2136ad81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a520ff45c86c405ef666ce0e7fcdc3b05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a520ff45c86c405ef666ce0e7fcdc3b05">AddDurationBounds</a> (<a class="el" href="classdouble.html">double</a> lower_bound, <a class="el" href="classdouble.html">double</a> upper_bound)</td></tr>
 <tr class="memdesc:a520ff45c86c405ef666ce0e7fcdc3b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint on the total duration of the trajectory.  <a href="#a520ff45c86c405ef666ce0e7fcdc3b05">More...</a><br /></td></tr>
@@ -293,7 +296,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a27c828bd4c3a4d0d842354d6cb356f0a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a27c828bd4c3a4d0d842354d6cb356f0a">ReconstructStateTrajectory</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;) const =0</td></tr>
 <tr class="memdesc:a27c828bd4c3a4d0d842354d6cb356f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the state trajectory at the solution as a PiecewisePolynomial.  <a href="#a27c828bd4c3a4d0d842354d6cb356f0a">More...</a><br /></td></tr>
 <tr class="separator:a27c828bd4c3a4d0d842354d6cb356f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a72307ec708171880ffe207bd89ba2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac0a72307ec708171880ffe207bd89ba2">fixed_time_step</a> () const</td></tr>
+<tr class="separator:ac0a72307ec708171880ffe207bd89ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb23e0ee6a1a0fa9904a0b3247baacb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6">fixed_timestep</a> () const</td></tr>
+<tr class="memdesc:adb23e0ee6a1a0fa9904a0b3247baacb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#adb23e0ee6a1a0fa9904a0b3247baacb6">More...</a><br /></td></tr>
 <tr class="separator:adb23e0ee6a1a0fa9904a0b3247baacb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aff3e6c4f0b60a31114bec85318e0617f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aff3e6c4f0b60a31114bec85318e0617f">MultipleShooting</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html">MultipleShooting</a> &amp;)=delete</td></tr>
@@ -307,18 +313,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a822f744712103b38fbd14886d1fdb354"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a822f744712103b38fbd14886d1fdb354">MultipleShooting</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a3cbd3e24f7648ab7712c803ca8a63f3e">num_states</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6">fixed_timestep</a>, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
-<tr class="memdesc:a822f744712103b38fbd14886d1fdb354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with fixed sample times.  <a href="#a822f744712103b38fbd14886d1fdb354">More...</a><br /></td></tr>
-<tr class="separator:a822f744712103b38fbd14886d1fdb354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a222b9ba705548824034ede2fd45ca65f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a222b9ba705548824034ede2fd45ca65f">MultipleShooting</a> (const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5c9f601051a299b35d7c47d3e921ec5e">input</a>, const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a7a85c23236d85e9f314e3c5287e54271">state</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6">fixed_timestep</a>, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
-<tr class="memdesc:a222b9ba705548824034ede2fd45ca65f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with fixed sample times.  <a href="#a222b9ba705548824034ede2fd45ca65f">More...</a><br /></td></tr>
-<tr class="separator:a222b9ba705548824034ede2fd45ca65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69f7eda243820324ee3f3c39acc99fe6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a69f7eda243820324ee3f3c39acc99fe6">MultipleShooting</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a3cbd3e24f7648ab7712c803ca8a63f3e">num_states</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> minimum_timestep, <a class="el" href="classdouble.html">double</a> maximum_timestep, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
-<tr class="memdesc:a69f7eda243820324ee3f3c39acc99fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with sample times as decision variables.  <a href="#a69f7eda243820324ee3f3c39acc99fe6">More...</a><br /></td></tr>
-<tr class="separator:a69f7eda243820324ee3f3c39acc99fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e3f9587f74f33b23aedaff3e57ee301"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a8e3f9587f74f33b23aedaff3e57ee301">MultipleShooting</a> (const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5c9f601051a299b35d7c47d3e921ec5e">input</a>, const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a7a85c23236d85e9f314e3c5287e54271">state</a>, const <a class="el" href="namespacedrake_1_1solvers.html#aa708f80d971209e3d46c1e41f05c1393">solvers::DecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a48f817634e4b7a64663f19d1d635a7d6">time</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> minimum_timestep, <a class="el" href="classdouble.html">double</a> maximum_timestep, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
-<tr class="memdesc:a8e3f9587f74f33b23aedaff3e57ee301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with sample times as decision variables.  <a href="#a8e3f9587f74f33b23aedaff3e57ee301">More...</a><br /></td></tr>
-<tr class="separator:a8e3f9587f74f33b23aedaff3e57ee301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a737a04575b64f5fbe9e92c2af450a563"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a737a04575b64f5fbe9e92c2af450a563">MultipleShooting</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a3cbd3e24f7648ab7712c803ca8a63f3e">num_states</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac0a72307ec708171880ffe207bd89ba2">fixed_time_step</a>, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
+<tr class="memdesc:a737a04575b64f5fbe9e92c2af450a563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with fixed sample times.  <a href="#a737a04575b64f5fbe9e92c2af450a563">More...</a><br /></td></tr>
+<tr class="separator:a737a04575b64f5fbe9e92c2af450a563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5343205c8aa1f984787466a5d8a3fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aee5343205c8aa1f984787466a5d8a3fd">MultipleShooting</a> (const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5c9f601051a299b35d7c47d3e921ec5e">input</a>, const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a7a85c23236d85e9f314e3c5287e54271">state</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac0a72307ec708171880ffe207bd89ba2">fixed_time_step</a>, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
+<tr class="memdesc:aee5343205c8aa1f984787466a5d8a3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with fixed sample times.  <a href="#aee5343205c8aa1f984787466a5d8a3fd">More...</a><br /></td></tr>
+<tr class="separator:aee5343205c8aa1f984787466a5d8a3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d778342b751e967ccb34542f7cf6dff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a2d778342b751e967ccb34542f7cf6dff">MultipleShooting</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a3cbd3e24f7648ab7712c803ca8a63f3e">num_states</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> minimum_time_step, <a class="el" href="classdouble.html">double</a> maximum_time_step, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
+<tr class="memdesc:a2d778342b751e967ccb34542f7cf6dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with sample times as decision variables.  <a href="#a2d778342b751e967ccb34542f7cf6dff">More...</a><br /></td></tr>
+<tr class="separator:a2d778342b751e967ccb34542f7cf6dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b73929e2258248d267377423618543"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a07b73929e2258248d267377423618543">MultipleShooting</a> (const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5c9f601051a299b35d7c47d3e921ec5e">input</a>, const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a7a85c23236d85e9f314e3c5287e54271">state</a>, const <a class="el" href="namespacedrake_1_1solvers.html#aa708f80d971209e3d46c1e41f05c1393">solvers::DecisionVariable</a> &amp;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a48f817634e4b7a64663f19d1d635a7d6">time</a>, <a class="el" href="classint.html">int</a> num_time_samples, <a class="el" href="classdouble.html">double</a> minimum_time_step, <a class="el" href="classdouble.html">double</a> maximum_time_step, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa">prog</a>=nullptr)</td></tr>
+<tr class="memdesc:a07b73929e2258248d267377423618543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html" title="MultipleShooting is an abstract class for trajectory optimization that creates decision variables for...">MultipleShooting</a> instance with sample times as decision variables.  <a href="#a07b73929e2258248d267377423618543">More...</a><br /></td></tr>
+<tr class="separator:a07b73929e2258248d267377423618543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8a8a3244e3e70007474108a9b024d50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8a8a3244e3e70007474108a9b024d50">SubstitutePlaceholderVariables</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, <a class="el" href="classint.html">int</a> interval_index) const</td></tr>
 <tr class="memdesc:ae8a8a3244e3e70007474108a9b024d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces e.g.  <a href="#ae8a8a3244e3e70007474108a9b024d50">More...</a><br /></td></tr>
 <tr class="separator:ae8a8a3244e3e70007474108a9b024d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,7 +337,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a3cbd3e24f7648ab7712c803ca8a63f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d57e7972ccf310e19d3b73cac1c2a8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a3d57e7972ccf310e19d3b73cac1c2a8c">N</a> () const</td></tr>
 <tr class="separator:a3d57e7972ccf310e19d3b73cac1c2a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a075c4b2d53d71727ebf6ab412fc171e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a075c4b2d53d71727ebf6ab412fc171e9">time_steps_are_decision_variables</a> () const</td></tr>
+<tr class="separator:a075c4b2d53d71727ebf6ab412fc171e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f30b165f1275d62dea7f27b441a41b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b">timesteps_are_decision_variables</a> () const</td></tr>
+<tr class="memdesc:ae6f30b165f1275d62dea7f27b441a41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ae6f30b165f1275d62dea7f27b441a41b">More...</a><br /></td></tr>
 <tr class="separator:ae6f30b165f1275d62dea7f27b441a41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63b08c13c0f9c0398a7a37d6770110bb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a63b08c13c0f9c0398a7a37d6770110bb">h_vars</a> () const</td></tr>
 <tr class="separator:a63b08c13c0f9c0398a7a37d6770110bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -450,8 +459,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a822f744712103b38fbd14886d1fdb354"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a822f744712103b38fbd14886d1fdb354">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[3/6]</span></h2>
+<a id="a737a04575b64f5fbe9e92c2af450a563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737a04575b64f5fbe9e92c2af450a563">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -481,7 +490,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>fixed_timestep</em>, </td>
+          <td class="paramname"><em>fixed_time_step</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -509,7 +518,7 @@ Protected Member Functions</h2></td></tr>
     <tr><td class="paramname">num_inputs</td><td>Number of inputs at each sample point. </td></tr>
     <tr><td class="paramname">num_states</td><td>Number of states at each sample point. </td></tr>
     <tr><td class="paramname">num_time_samples</td><td>Number of time samples. </td></tr>
-    <tr><td class="paramname">fixed_timestep</td><td>The spacing between sample times. </td></tr>
+    <tr><td class="paramname">fixed_time_step</td><td>The spacing between sample times. </td></tr>
     <tr><td class="paramname">prog</td><td>(optional). If non-null, then additional decision variables, costs, and constraints will be added into the existing MathematicalProgram. This can be useful for, e.g., combining multiple trajectory optimizations into a single program, coupled by a few constraints. If nullptr, then a new MathematicalProgram will be allocated. </td></tr>
   </table>
   </dd>
@@ -517,8 +526,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a222b9ba705548824034ede2fd45ca65f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a222b9ba705548824034ede2fd45ca65f">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[4/6]</span></h2>
+<a id="aee5343205c8aa1f984787466a5d8a3fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5343205c8aa1f984787466a5d8a3fd">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -548,7 +557,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>fixed_timestep</em>, </td>
+          <td class="paramname"><em>fixed_time_step</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -576,7 +585,7 @@ Protected Member Functions</h2></td></tr>
     <tr><td class="paramname">input</td><td>Placeholder variables for input. </td></tr>
     <tr><td class="paramname">state</td><td>Placeholder variables for state. </td></tr>
     <tr><td class="paramname">num_time_samples</td><td>Number of time samples. </td></tr>
-    <tr><td class="paramname">fixed_timestep</td><td>The spacing between sample times. </td></tr>
+    <tr><td class="paramname">fixed_time_step</td><td>The spacing between sample times. </td></tr>
     <tr><td class="paramname">prog</td><td>(optional). If non-null, then additional decision variables, costs, and constraints will be added into the existing MathematicalProgram. This can be useful for, e.g., combining multiple trajectory optimizations into a single program, coupled by a few constraints. If nullptr, then a new MathematicalProgram will be allocated. </td></tr>
   </table>
   </dd>
@@ -584,8 +593,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a69f7eda243820324ee3f3c39acc99fe6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69f7eda243820324ee3f3c39acc99fe6">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[5/6]</span></h2>
+<a id="a2d778342b751e967ccb34542f7cf6dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d778342b751e967ccb34542f7cf6dff">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -615,13 +624,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>minimum_timestep</em>, </td>
+          <td class="paramname"><em>minimum_time_step</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>maximum_timestep</em>, </td>
+          <td class="paramname"><em>maximum_time_step</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -649,8 +658,8 @@ Protected Member Functions</h2></td></tr>
     <tr><td class="paramname">num_inputs</td><td>Number of inputs at each sample point. </td></tr>
     <tr><td class="paramname">num_states</td><td>Number of states at each sample point. </td></tr>
     <tr><td class="paramname">num_time_samples</td><td>Number of time samples. </td></tr>
-    <tr><td class="paramname">minimum_timestep</td><td>Minimum spacing between sample times. </td></tr>
-    <tr><td class="paramname">maximum_timestep</td><td>Maximum spacing between sample times. </td></tr>
+    <tr><td class="paramname">minimum_time_step</td><td>Minimum spacing between sample times. </td></tr>
+    <tr><td class="paramname">maximum_time_step</td><td>Maximum spacing between sample times. </td></tr>
     <tr><td class="paramname">prog</td><td>(optional). If non-null, then additional decision variables, costs, and constraints will be added into the existing MathematicalProgram. This can be useful for, e.g., combining multiple trajectory optimizations into a single program, coupled by a few constraints. If nullptr, then a new MathematicalProgram will be allocated. </td></tr>
   </table>
   </dd>
@@ -658,8 +667,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e3f9587f74f33b23aedaff3e57ee301"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e3f9587f74f33b23aedaff3e57ee301">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[6/6]</span></h2>
+<a id="a07b73929e2258248d267377423618543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b73929e2258248d267377423618543">&#9670;&nbsp;</a></span>MultipleShooting() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -695,13 +704,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>minimum_timestep</em>, </td>
+          <td class="paramname"><em>minimum_time_step</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>maximum_timestep</em>, </td>
+          <td class="paramname"><em>maximum_time_step</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -730,8 +739,8 @@ Protected Member Functions</h2></td></tr>
     <tr><td class="paramname">state</td><td>Placeholder variables for state. </td></tr>
     <tr><td class="paramname">time</td><td>Placeholder variable for time. </td></tr>
     <tr><td class="paramname">num_time_samples</td><td>Number of time samples. </td></tr>
-    <tr><td class="paramname">minimum_timestep</td><td>Minimum spacing between sample times. </td></tr>
-    <tr><td class="paramname">maximum_timestep</td><td>Maximum spacing between sample times. </td></tr>
+    <tr><td class="paramname">minimum_time_step</td><td>Minimum spacing between sample times. </td></tr>
+    <tr><td class="paramname">maximum_time_step</td><td>Maximum spacing between sample times. </td></tr>
     <tr><td class="paramname">prog</td><td>(optional). If non-null, then additional decision variables, costs, and constraints will be added into the existing MathematicalProgram. This can be useful for, e.g., combining multiple trajectory optimizations into a single program, coupled by a few constraints. If nullptr, then a new MathematicalProgram will be allocated. </td></tr>
   </table>
   </dd>
@@ -881,7 +890,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The constraint enforcing the duration bounds. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if time steps are not declared as decision variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -903,11 +912,11 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds constraints to enforce that all timesteps have equal duration. </p>
+<p>Adds constraints to enforce that all time steps have equal duration. </p>
 <dl class="section return"><dt>Returns</dt><dd>A vector of constraints enforcing all time intervals are equal. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if time steps are not declared as decision variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1085,7 +1094,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The bounding box constraint enforcing time interval bounds. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if time steps are not declared as decision variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1111,6 +1120,23 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac0a72307ec708171880ffe207bd89ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a72307ec708171880ffe207bd89ba2">&#9670;&nbsp;</a></span>fixed_time_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> fixed_time_step </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adb23e0ee6a1a0fa9904a0b3247baacb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb23e0ee6a1a0fa9904a0b3247baacb6">&#9670;&nbsp;</a></span>fixed_timestep()</h2>
 
@@ -1125,6 +1151,10 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Use fixed_time_step() instead. <br />
+ This will be removed from Drake on or after 2023-09-01.</dd></dl>
 
 </div>
 </div>
@@ -1826,6 +1856,57 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a48d167cc27136f423047426ba50a01f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d167cc27136f423047426ba50a01f0">&#9670;&nbsp;</a></span>time_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">solvers::VectorDecisionVariable</a>&lt;1&gt; time_step </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the decision variable associated with the time step, h, at time index <code>index</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if time steps are not declared as decision variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a075c4b2d53d71727ebf6ab412fc171e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075c4b2d53d71727ebf6ab412fc171e9">&#9670;&nbsp;</a></span>time_steps_are_decision_variables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool time_steps_are_decision_variables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab0a28fec382d5b41c8193e698d9d3d99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0a28fec382d5b41c8193e698d9d3d99">&#9670;&nbsp;</a></span>timestep()</h2>
 
@@ -1842,13 +1923,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the decision variable associated with the timestep, h, at time index <code>index</code>. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use time_step() instead. <br />
+ This will be removed from Drake on or after 2023-09-01.</dd></dl>
 
 </div>
 </div>
@@ -1874,6 +1951,10 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Use time_steps_are_decision_variables() instead. <br />
+ This will be removed from Drake on or after 2023-09-01.</dd></dl>
 
 </div>
 </div>
