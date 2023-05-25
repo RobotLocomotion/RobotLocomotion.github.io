@@ -178,7 +178,7 @@ ẏ = f_y(t,q,y),                               (2)
 yⁿ⁺¹ = yⁿ + h f_y(tⁿ⁺¹,qⁿ⁺¹,yⁿ⁺¹).            (4)
 </pre><p>To solve the nonlinear system for <code>(qⁿ⁺¹,yⁿ⁺¹)</code>, the velocity-implicit Euler integrator iterates with a modified Newton's method: At iteration <code>k</code>, it finds a <code>(qₖ₊₁,yₖ₊₁)</code> that attempts to satisfy </p><pre class="fragment">qₖ₊₁ = qⁿ + h N(qₖ) vₖ₊₁.                     (5)
 yₖ₊₁ = yⁿ + h f_y(tⁿ⁺¹,qₖ₊₁,yₖ₊₁);            (6)
-</pre><p>In this notation, the <code>n</code>'s index timesteps, while the <code>k</code>'s index the specific Newton-Raphson iterations within each time step.</p>
+</pre><p>In this notation, the <code>n</code>'s index time steps, while the <code>k</code>'s index the specific Newton-Raphson iterations within each time step.</p>
 <p>Notice that we've intentionally lagged N(qₖ) one iteration behind in Eq (5). This allows it to substitute (5) into (6) to obtain a non-linear system in <code>y</code> only. Contrast this strategy with the one implemented by <a class="el" href="classdrake_1_1systems_1_1_implicit_euler_integrator.html" title="A first-order, fully implicit integrator with second order error estimation.">ImplicitEulerIntegrator</a>, which solves a larger non-linear system in the full state x.</p>
 <p>To find a <code>(qₖ₊₁,yₖ₊₁)</code> that approximately satisfies (5-6), we linearize the system (5-6) to compute a Newton step. Define </p><pre class="fragment">ℓ(y) = f_y(tⁿ⁺¹,qⁿ + h N(qₖ) v,y),            (7)
 Jₗ(y) = ∂ℓ(y) / ∂y.                           (8)

@@ -184,7 +184,7 @@ class drake::examples::mass_spring_cloth::ClothSpringModel&lt; T &gt;</h3>
 <p>When the system is integrated discretely, the elastic force and gravity are integrated explicitly while the damping force is integrated implicitly. In particular, the discretization reads: </p><pre class="fragment">  Mv̂ = Mvⁿ + dt*fe(qⁿ),
   Mvⁿ⁺¹ = Mv̂ + dt*fd(qⁿ, vⁿ⁺¹),
   qⁿ⁺¹ = qⁿ + dt*vⁿ⁺¹.
-</pre><p>which is first order accurate, but similar in spirit to the scheme in [Bridson, 2005]. One should be careful not to take too large a timestep when using the discrete system because it is conditionally stable, and large time steps can lead to an unstable numerical solution.</p>
+</pre><p>which is first order accurate, but similar in spirit to the scheme in [Bridson, 2005]. One should be careful not to take too large a time step when using the discrete system because it is conditionally stable, and large time steps can lead to an unstable numerical solution.</p>
 <p>Note that the spring energy is finite and thus the particles can overlap in certain scenarios. For both the discrete and the continuous system, when two particles overlap, the state is invalid and the system will throw a <code>std::runtime_error</code> and cause the program to crash.</p>
 <p>The system has a single output port that provides the positions of the particles. The 3*i-th, 3*i+1-th, and 3*i+2-th entry describe the position of the i-th particle.</p>
 <p>Beware that this class is not thread-safe as it contains mutable data storing the state of the discrete solver. This mutable data has no effect on the simulation results and therefore it is not part of the system's states.</p>

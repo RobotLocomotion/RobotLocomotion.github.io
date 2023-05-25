@@ -217,6 +217,8 @@ with other versions of Python or Java. However, these are not supported so if it
 doesn’t work for you then please file a pull request with the fix, not a bug
 report.</p>
 
+<p>All else being equal, we would recommend developers use Ubuntu 22.04 (Jammy).</p>
+
 <p>⁽¹⁾ Drake features that perform image rendering (e.g., camera simulation)
 require a working display server. Most personal computers will have this
 already built in, but some cloud or docker environments may require extra
@@ -228,14 +230,9 @@ setup steps.</p>
 
 <h1 id="getting-drake">Getting Drake</h1>
 
-<p>We recommend that you <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">setup SSH access to GitHub.com</a>
-to avoid needing to type your password each time you access it. The following
-instructions assume you have uploaded your public SSH key to your GitHub
-account.</p>
+<p>Run:</p>
 
-<p>Now run:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:RobotLocomotion/drake.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --filter=blob:none https://github.com/RobotLocomotion/drake.git
 </code></pre></div></div>
 
 <p>Note: we suggest you keep the default clone directory name (<code class="language-plaintext highlighter-rouge">drake</code>) and not
@@ -246,30 +243,43 @@ checkout directory is not named <code class="language-plaintext highlighter-roug
 like parentheses in the absolute path to the drake directory
 (see <a href="https://github.com/RobotLocomotion/drake/issues/394">#394</a>).</p>
 
+<h2 id="using-a-fork-of-drake">Using a fork of Drake</h2>
+
 <p>The above <code class="language-plaintext highlighter-rouge">git clone</code> command will configure Drake’s primary repository as a
-remote called <code class="language-plaintext highlighter-rouge">origin</code>. We recommend that you configure your fork of Drake’s
-primary repository as the <code class="language-plaintext highlighter-rouge">origin</code> remote and Drake’s primary repository as
-the <code class="language-plaintext highlighter-rouge">upstream</code> remote. This can be done by executing the following commands:</p>
+remote called <code class="language-plaintext highlighter-rouge">origin</code>. If you plan to fork Drake for development, we
+recommend that you configure your fork of Drake’s primary repository as the
+<code class="language-plaintext highlighter-rouge">origin</code> remote and Drake’s primary repository as the <code class="language-plaintext highlighter-rouge">upstream</code>
+remote. This can be done by executing the following commands:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd drake
 git remote set-url origin git@github.com:[your github user name]/drake.git
-git remote add upstream git@github.com:RobotLocomotion/drake.git
+git remote add upstream https://github.com/RobotLocomotion/drake.git
 git remote set-url --push upstream no_push
 </code></pre></div></div>
+
+<p>We recommend that you
+<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">setup SSH access to github.com</a>
+to avoid needing to type your password each time you access it.</p>
 
 <h1 id="mandatory-platform-specific-instructions">Mandatory platform-specific instructions</h1>
 
 <p>Before running the build, you must follow some one-time platform-specific
-setup steps:</p>
+setup steps.</p>
 
-<ul>
-  <li><a href="/mac.html">macOS</a></li>
-  <li><a href="/ubuntu.html">Ubuntu</a></li>
-</ul>
+<p><em>Ubuntu:</em></p>
 
-<p>See <a href="#supported-configurations">above</a>
-for the configurations and platforms that Drake officially supports.
-All else being equal, we would recommend developers use Ubuntu Focal.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./setup/ubuntu/install_prereqs.sh
+</code></pre></div></div>
+
+<p><em>macOS:</em></p>
+
+<p>We assume that you have already installed Xcode
+(<a href="https://itunes.apple.com/us/app/xcode/id497799835">from the Mac App Store</a>).</p>
+
+<p>After that, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./setup/mac/install_prereqs.sh
+</code></pre></div></div>
 
 <h1 id="build-with-bazel">Build with Bazel</h1>
 
@@ -298,6 +308,15 @@ effect on the Drake build. You might need to add a bazel configuration dotfile
 to your home directory if your build is running out of memory. See the
 <a href="/troubleshooting.html#build-oom">troubleshooting</a> page for details.</p>
 
+<p>Be aware that repeatedly running <code class="language-plaintext highlighter-rouge">make</code> will install the recompiled version of
+Drake <em>on top of</em> the prior version. This will lead to disaster unless the set
+of installed filenames is exactly the same (because old files will be hanging
+around polluting your PYTHONPATH). It is safe if you are merely tweaking a
+source code file and repeatedly installing, without any changes to the build
+system. For any kind of larger change (e.g., upgrading to a newer Drake), we
+strongly advise that you delete the prior tree (within the <code class="language-plaintext highlighter-rouge">install</code>
+sub-directory) before running <code class="language-plaintext highlighter-rouge">make</code>.</p>
+
 <p>Please note the additional CMake options which affect the Python bindings:</p>
 
 <ul>
@@ -320,6 +339,13 @@ MOSEK<a href="/tm.html">™</a>, without building tests:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
 <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.8/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
 </code></pre></div></div>
+
+<p><em>Ubuntu 22.04 (Jammy):</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.10/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div></div>
+
 <p><em>macOS:</em></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build

@@ -109,7 +109,7 @@ var group__control__systems =
     [ "ControllabilityMatrix", "group__control__systems.html#gaedff9f0a8ddce5d29888ed611ce8bee2", null ],
     [ "IsControllable", "group__control__systems.html#ga8bc6169b50b1b127ed5f1b70afcb64ca", null ],
     [ "IsStabilizable", "group__control__systems.html#gae9c9e47b54eef5d69f3575c9054547af", null ],
-    [ "LinearProgrammingApproximateDynamicProgramming", "group__control__systems.html#gae068476fdb8f21578acb538f70ec3e14", null ],
+    [ "LinearProgrammingApproximateDynamicProgramming", "group__control__systems.html#ga27f5edfa9bfb2544718b08584a514905", null ],
     [ "LinearQuadraticRegulator", "group__control__systems.html#gaeaf380f9c445eee90a846b57f8b70ba7", null ],
     [ "LinearQuadraticRegulator", "group__control__systems.html#ga048915783bddb58606c84332b91dad6c", null ],
     [ "MakeFiniteHorizonLinearQuadraticRegulator", "group__control__systems.html#ga2ebe52e849a0597ad54f37ab6e35df8a", null ]

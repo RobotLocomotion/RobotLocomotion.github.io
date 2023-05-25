@@ -474,19 +474,19 @@ factor in <code class="docutils literal notranslate"><span class="pre">options</
 <a class="reference external" href="http://underactuated.csail.mit.edu/underactuated.html?chapter=dp">http://underactuated.csail.mit.edu/underactuated.html?chapter=dp</a> . It
 currently requires that the system to be optimized has only continuous
 state and it is assumed to be time invariant. This code makes a
-discrete-time approximation (using <code class="docutils literal notranslate"><span class="pre">timestep)</span></code> for the value
+discrete-time approximation (using <code class="docutils literal notranslate"><span class="pre">time_step)</span></code> for the value
 iteration update.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt><dd><p>contains the reference to the System being optimized and to a
 Context for that system, which may contain non-default Parameters,
-etc. The <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is run for <code class="docutils literal notranslate"><span class="pre">timestep</span></code> seconds from every
+etc. The <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is run for <code class="docutils literal notranslate"><span class="pre">time_step</span></code> seconds from every
 point on the mesh in order to approximate the dynamics; all of the
 simulation parameters (integrator, etc) are relevant during that
 evaluation.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost_function</span></code>:</dt><dd><p>is the continuous-time instantaneous cost. This implementation of
 the discrete-time formulation above uses the approximation g(x,u)
-= timestep*cost_function(x,u).</p>
+= time_step*cost_function(x,u).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_grid</span></code>:</dt><dd><p>defines the mesh on the state space used to represent the
 cost-to-go function and the resulting policy.</p>
@@ -494,7 +494,7 @@ cost-to-go function and the resulting policy.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_grid</span></code>:</dt><dd><p>defines the discrete action space used in the value iteration
 update.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">timestep</span></code>:</dt><dd><p>a time in seconds used for the discrete-time approximation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>a time in seconds used for the discrete-time approximation.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>optional DynamicProgrammingOptions structure.</p>
 </dd>
@@ -826,19 +826,19 @@ factor in <code class="docutils literal notranslate"><span class="pre">options</
 <a class="reference external" href="http://underactuated.csail.mit.edu/underactuated.html?chapter=dp">http://underactuated.csail.mit.edu/underactuated.html?chapter=dp</a> . It
 currently requires that the system to be optimized has only continuous
 state and it is assumed to be time invariant. This code makes a
-discrete-time approximation (using <code class="docutils literal notranslate"><span class="pre">timestep)</span></code> for the value
+discrete-time approximation (using <code class="docutils literal notranslate"><span class="pre">time_step)</span></code> for the value
 iteration update.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt><dd><p>contains the reference to the System being optimized and to a
 Context for that system, which may contain non-default Parameters,
-etc. The <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is run for <code class="docutils literal notranslate"><span class="pre">timestep</span></code> seconds from every
+etc. The <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is run for <code class="docutils literal notranslate"><span class="pre">time_step</span></code> seconds from every
 pair of input/state sample points in order to approximate the
 dynamics; all of the simulation parameters (integrator, etc) are
 relevant during that evaluation.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost_function</span></code>:</dt><dd><p>is the continuous-time instantaneous cost. This implementation of
 the discrete-time formulation above uses the approximation g(x,u)
-= timestep*cost_function(x,u).</p>
+= time_step*cost_function(x,u).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">linearly_parameterized_cost_to_go_function</span></code>:</dt><dd><p>must define a function to approximate the cost-to-go, which takes
 the state vector as the first input and the parameter vector as
@@ -852,7 +852,7 @@ optimization constraints and the objective.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_samples</span></code>:</dt><dd><p>is a list of inputs (one per column) which are evaluated <em>at every
 sample point</em>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">timestep</span></code>:</dt><dd><p>a time in seconds used for the discrete-time approximation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>a time in seconds used for the discrete-time approximation.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>optional DynamicProgrammingOptions structure.</p>
 </dd>

@@ -1285,17 +1285,29 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeDelay.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay, update_sec: float, delay_time_steps: int, vector_size: int) -&gt; None</p></li>
+</ol>
+<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
+and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
+<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay, update_sec: float, delay_time_steps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+</ol>
+<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
+and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
+for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay, update_sec: float, delay_timesteps: int, vector_size: int) -&gt; None</p></li>
 </ol>
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
-<code class="docutils literal notranslate"><span class="pre">delay_timesteps</span></code> number of updates.</p>
-<ol class="arabic simple" start="2">
+<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay, update_sec: float, delay_timesteps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
 </ol>
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
-for <code class="docutils literal notranslate"><span class="pre">delay_timesteps</span></code> number of updates.</p>
+for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1340,17 +1352,29 @@ system does not interpolate.</p>
 <span id="pydrake.systems.primitives.DiscreteTimeDelay_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeDelay_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[AutoDiffXd], update_sec: float, delay_time_steps: int, vector_size: int) -&gt; None</p></li>
+</ol>
+<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
+and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
+<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[AutoDiffXd], update_sec: float, delay_time_steps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+</ol>
+<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
+and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
+for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[AutoDiffXd], update_sec: float, delay_timesteps: int, vector_size: int) -&gt; None</p></li>
 </ol>
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
-<code class="docutils literal notranslate"><span class="pre">delay_timesteps</span></code> number of updates.</p>
-<ol class="arabic simple" start="2">
+<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[AutoDiffXd], update_sec: float, delay_timesteps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
 </ol>
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
-for <code class="docutils literal notranslate"><span class="pre">delay_timesteps</span></code> number of updates.</p>
+for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1389,17 +1413,29 @@ system does not interpolate.</p>
 <span id="pydrake.systems.primitives.DiscreteTimeDelay_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeDelay_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[Expression], update_sec: float, delay_time_steps: int, vector_size: int) -&gt; None</p></li>
+</ol>
+<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
+and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
+<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[Expression], update_sec: float, delay_time_steps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+</ol>
+<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
+and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
+for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[Expression], update_sec: float, delay_timesteps: int, vector_size: int) -&gt; None</p></li>
 </ol>
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
-<code class="docutils literal notranslate"><span class="pre">delay_timesteps</span></code> number of updates.</p>
-<ol class="arabic simple" start="2">
+<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[Expression], update_sec: float, delay_timesteps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
 </ol>
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
-for <code class="docutils literal notranslate"><span class="pre">delay_timesteps</span></code> number of updates.</p>
+for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
 </dd></dl>
 
 </dd></dl>
