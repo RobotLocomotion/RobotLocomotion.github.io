@@ -6532,7 +6532,18 @@ implementation. That has several implications, as described below:</p>
 </div>
 <p>Sphere | yes | yes | | Cylinder | yes | yes | | Box | yes | yes | |
 Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
-yes | | Mesh | no | yes | | Convex | yes | yes |</p>
+yes | | Mesh | yesᵃ | yesᵇ | | Convex | yesᶜ | yesᶜ |</p>
+<ul class="simple">
+<li><p>ᵃ For compliant Mesh, please specify a tetrahedral mesh</p></li>
+</ul>
+<p>in a VTK file in Mesh(filename). This external working
+&lt;a href=”<a class="reference external" href="https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing">https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing</a>”&gt;
+document&lt;/a&gt; provides guidance how to generate a tetrahedral mesh
+in a VTK file from a surface mesh in an OBJ file.
+- ᵇ For rigid Mesh, please specify a surface mesh
+in an OBJ file in Mesh(filename).
+- ᶜ For both compliant Convex and rigid Convex, please specify a surface
+mesh in an OBJ file in Convex(filename).</p>
 <ul class="simple">
 <li><p>We do not support contact between two rigid geometries. One geometry</p></li>
 </ul>
@@ -7266,7 +7277,18 @@ implementation. That has several implications, as described below:</p>
 </div>
 <p>Sphere | yes | yes | | Cylinder | yes | yes | | Box | yes | yes | |
 Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
-yes | | Mesh | no | yes | | Convex | yes | yes |</p>
+yes | | Mesh | yesᵃ | yesᵇ | | Convex | yesᶜ | yesᶜ |</p>
+<ul class="simple">
+<li><p>ᵃ For compliant Mesh, please specify a tetrahedral mesh</p></li>
+</ul>
+<p>in a VTK file in Mesh(filename). This external working
+&lt;a href=”<a class="reference external" href="https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing">https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing</a>”&gt;
+document&lt;/a&gt; provides guidance how to generate a tetrahedral mesh
+in a VTK file from a surface mesh in an OBJ file.
+- ᵇ For rigid Mesh, please specify a surface mesh
+in an OBJ file in Mesh(filename).
+- ᶜ For both compliant Convex and rigid Convex, please specify a surface
+mesh in an OBJ file in Convex(filename).</p>
 <ul class="simple">
 <li><p>We do not support contact between two rigid geometries. One geometry</p></li>
 </ul>

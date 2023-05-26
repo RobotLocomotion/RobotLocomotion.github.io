@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"solver__type__converter_8h.html":[4,0,0,11,52],
 "solvers__py_8h.html":[4,0,0,0,0,6,0],
 "solvers__pybind_8h.html":[4,0,0,0,0,6,1],
 "solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,6,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[3,0,0,4,41],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[3,0,0,4,41,0],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,41,5],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0":[3,0,0,4,41,2],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6d9b7b7aeb7996e8469a93c3dd4ee5ef":[3,0,0,4,41,3]
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0":[3,0,0,4,41,2]
 };
