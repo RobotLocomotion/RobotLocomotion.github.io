@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"make__ball__plate__plant_8h.html":[4,0,0,3,7,0,0],
 "make__ball__plate__plant_8h.html#a0061409fa0e55bf3724f4267240ef6ec":[4,0,0,3,7,0,0,0],
 "make__box__field_8h.html":[4,0,0,4,2,19],
 "make__box__mesh_8h.html":[4,0,0,4,2,20],
@@ -60,7 +61,7 @@ var NAVTREEINDEX49 =
 "mathematical__program__result_8h.html":[4,0,0,11,29],
 "mathematical__program__result_8h.html#a014d2838aa5fae12520da4ebf46005ca":[4,0,0,11,29,1],
 "mathematical__program__result_8h.html#afd8c88bd4238ccc189020ed7d99b1792":[4,0,0,11,29,2],
-"matrix__block_8h.html":[4,0,0,8,2,7],
+"matrix__block_8h.html":[4,0,0,8,2,8],
 "matrix__gain_8h.html":[4,0,0,12,6,13],
 "matrix__util_8h.html":[4,0,0,7,24],
 "matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b":[4,0,0,7,24,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "namespacedrake_1_1examples_1_1kuka__iiwa__arm.html":[3,0,0,3,6],
 "namespacedrake_1_1examples_1_1kuka__iiwa__arm.html":[2,0,0,3,7],
 "namespacedrake_1_1examples_1_1manipulation__station.html":[2,0,0,3,8],
-"namespacedrake_1_1examples_1_1manipulation__station.html":[3,0,0,3,7],
-"namespacedrake_1_1examples_1_1mass__spring__cloth.html":[3,0,0,3,8]
+"namespacedrake_1_1examples_1_1manipulation__station.html":[3,0,0,3,7]
 };

@@ -2,6 +2,7 @@ var dir_30e7b54ca9ab48df25430eaeedb2e703 =
 [
     [ "sap", "dir_563cbebf3859612cccbc3edeae15a602.html", "dir_563cbebf3859612cccbc3edeae15a602" ],
     [ "block_3x3_sparse_matrix.h", "block__3x3__sparse__matrix_8h.html", null ],
+    [ "block_sparse_lower_triangular_or_symmetric_matrix.h", "block__sparse__lower__triangular__or__symmetric__matrix_8h.html", null ],
     [ "block_sparse_matrix.h", "block__sparse__matrix_8h.html", null ],
     [ "contact_solver.h", "contact__solver_8h.html", null ],
     [ "contact_solver_results.h", "contact__solver__results_8h.html", null ],

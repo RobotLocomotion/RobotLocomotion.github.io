@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a2474a5474cbff19523a51eb1de01cda4":[3,0,0,16,8,2,24],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a338e8e961277d5a62829534f12bc69f2":[3,0,0,16,8,2,5],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a341dc613bcd25a969c8f8a285e3affcd":[3,0,0,16,8,2,29],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a356749be16e1e3f6d437f215ff3c44e6":[3,0,0,16,8,2,11],
@@ -235,7 +236,7 @@ var NAVTREEINDEX57 =
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a9b731d88a685b1ec76623274cccf7d33":[3,0,2,29,0],
 "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,30],
 "subvector_8h.html":[4,0,0,12,3,37],
-"supernodal__solver_8h.html":[4,0,0,8,2,12],
+"supernodal__solver_8h.html":[4,0,0,8,2,13],
 "supervector_8h.html":[4,0,0,12,3,38],
 "symbolic_2polynomial_8h.html":[4,0,0,1,3,11],
 "symbolic_2polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd":[4,0,0,1,3,11,41],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "symbolic_2polynomial_8h.html#a289b47480364e01b67e3c86aa33a0fe4":[4,0,0,1,3,11,26],
 "symbolic_2polynomial_8h.html#a2f5e34034488d988d8349100bbdc359c":[4,0,0,1,3,11,31],
 "symbolic_2polynomial_8h.html#a30f8eee8c5c646b5f3fc43baf3ce5854":[4,0,0,1,3,11,42],
-"symbolic_2polynomial_8h.html#a369ea32ea396cc86951892020d5c4a4b":[4,0,0,1,3,11,38],
-"symbolic_2polynomial_8h.html#a42522d07a4a9c32a89e8b4eea9a00a60":[4,0,0,1,3,11,28]
+"symbolic_2polynomial_8h.html#a369ea32ea396cc86951892020d5c4a4b":[4,0,0,1,3,11,38]
 };

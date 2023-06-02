@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[4,0,0,11,51,0,5],
 "solver__type__converter_8h.html":[4,0,0,11,52],
 "solvers__py_8h.html":[4,0,0,0,0,6,0],
 "solvers__pybind_8h.html":[4,0,0,0,0,6,1],
@@ -21,7 +22,7 @@ var NAVTREEINDEX53 =
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,46],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,14,47],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,54],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,11],
+"sparse__linear__operator_8h.html":[4,0,0,8,2,12],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459":[3,0,0,4,40,2],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[3,0,0,4,41],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[3,0,0,4,41,0],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,41,5],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0":[3,0,0,4,41,2]
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,41,5]
 };

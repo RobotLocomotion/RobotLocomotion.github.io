@@ -1,12 +1,13 @@
 var NAVTREEINDEX43 =
 {
+"contact__properties_8h.html":[4,0,0,8,10,7],
 "contact__results_8h.html":[4,0,0,8,10,8],
 "contact__results__to__lcm_8h.html":[4,0,0,8,10,9],
 "contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,9,0],
 "contact__results__to__lcm_8h.html#ga732349f929601b37e30b15ad557057e7":[4,0,0,8,10,9,1],
-"contact__solver_8h.html":[4,0,0,8,2,3],
-"contact__solver__results_8h.html":[4,0,0,8,2,4],
-"contact__solver__utils_8h.html":[4,0,0,8,2,5],
+"contact__solver_8h.html":[4,0,0,8,2,4],
+"contact__solver__results_8h.html":[4,0,0,8,2,5],
+"contact__solver__utils_8h.html":[4,0,0,8,2,6],
 "contact__surface_8h.html":[4,0,0,4,3,0],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "dir_cf88c7d0113e9d5800c784430b052e12.html":[4,0,0,12,2],
 "dir_d0c2711c15d533aced036c93ce3e3d75.html":[4,0,0,2,0],
 "dir_d0d5bed5913df116d7ad8f512e215287.html":[4,0,0,2],
-"dir_d3878caba3bf16757758386412eac594.html":[4,0,0,3,7,0],
-"dir_d3895d447a0b4ed0132fd543feb284e9.html":[4,0,0,12,3,0]
+"dir_d3878caba3bf16757758386412eac594.html":[4,0,0,3,7,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"hydroelastic__quadrature__point__data_8h.html":[4,0,0,8,10,18],
 "hydroelastic__quadrature__point__data_8h.html#a0833cf112bc08569736e6aca2251ebaf":[4,0,0,8,10,18,1],
 "hydroelastic__traction__calculator_8h.html":[4,0,0,8,10,19],
 "hydroelastic__user__guide__doxygen_8h.html":[4,0,0,8,4,1],
@@ -214,7 +215,7 @@ var NAVTREEINDEX48 =
 "linear__corotated__model_8h.html":[4,0,0,8,3,20],
 "linear__corotated__model__data_8h.html":[4,0,0,8,3,21],
 "linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
-"linear__operator_8h.html":[4,0,0,8,2,6],
+"linear__operator_8h.html":[4,0,0,8,2,7],
 "linear__quadratic__regulator_8h.html":[4,0,0,12,1,7],
 "linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,12,1,7,4],
 "linear__quadratic__regulator_8h.html#ga6506532189adf1c7a42662b597135f70":[4,0,0,12,1,7,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "lyapunov_8h.html#ga2ccd9a43fd950b9e3490dd8c98534c3e":[4,0,0,12,0,11,0],
 "make__acrobot__plant_8h.html":[4,0,0,8,0,0,1],
 "make__acrobot__plant_8h.html#a71f510705bd91a2b7a0440a62dc4df47":[4,0,0,8,0,0,1,1],
-"make__arm__controller__model_8h.html":[4,0,0,6,4,1],
-"make__ball__plate__plant_8h.html":[4,0,0,3,7,0,0]
+"make__arm__controller__model_8h.html":[4,0,0,6,4,1]
 };

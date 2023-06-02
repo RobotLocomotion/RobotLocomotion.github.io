@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1solvers_1_1_minimum_value_constraint.html#ace12e4c5a5ed81510ce93b17cbc332f7":[3,0,0,14,37,0],
 "classdrake_1_1solvers_1_1_minimum_value_constraint.html#af608569c22efc4a0c30ab19f3e58e2dc":[3,0,0,14,37,2],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html":[3,0,0,14,38],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0598b6d13789654fff177485ec10e4c3":[3,0,0,14,38,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#adf1f1058a8a0186583d99300edb9910b":[1,1,0,26,7],
 "classdrake_1_1solvers_1_1_scs_solver.html":[3,0,0,14,61],
 "classdrake_1_1solvers_1_1_scs_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,14,61,11],
-"classdrake_1_1solvers_1_1_scs_solver.html#a04f2c256c317ac6c69ef7c1010b3edfd":[3,0,0,14,61,4],
-"classdrake_1_1solvers_1_1_scs_solver.html#a0c6025924cb0f9fe373a3f24856e083b":[3,0,0,14,61,3]
+"classdrake_1_1solvers_1_1_scs_solver.html#a04f2c256c317ac6c69ef7c1010b3edfd":[3,0,0,14,61,4]
 };

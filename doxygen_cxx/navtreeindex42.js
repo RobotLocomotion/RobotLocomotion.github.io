@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f":[3,0,0,18,5,47],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c09a6d35797ae0eed1de62a97433b9e":[3,0,0,18,5,20],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c9575eec7fd062e42ed17407a337abc":[3,0,0,18,5,3],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,18,5,53],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "contact__jacobians_8h.html":[4,0,0,8,10,4],
 "contact__model__doxygen_8h.html":[4,0,0,8,10,5],
 "contact__pair__kinematics_8h.html":[4,0,0,8,10,6],
-"contact__problem__graph_8h.html":[4,0,0,8,2,0,0],
-"contact__properties_8h.html":[4,0,0,8,10,7]
+"contact__problem__graph_8h.html":[4,0,0,8,2,0,0]
 };

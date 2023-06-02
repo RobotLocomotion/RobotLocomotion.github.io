@@ -11,6 +11,7 @@ var searchData=
   ['binomial_5fcoefficient_2eh',['binomial_coefficient.h',['../binomial__coefficient_8h.html',1,'']]],
   ['bit_5fcast_2eh',['bit_cast.h',['../bit__cast_8h.html',1,'']]],
   ['block_5f3x3_5fsparse_5fmatrix_2eh',['block_3x3_sparse_matrix.h',['../block__3x3__sparse__matrix_8h.html',1,'']]],
+  ['block_5fsparse_5flower_5ftriangular_5for_5fsymmetric_5fmatrix_2eh',['block_sparse_lower_triangular_or_symmetric_matrix.h',['../block__sparse__lower__triangular__or__symmetric__matrix_8h.html',1,'']]],
   ['block_5fsparse_5fmatrix_2eh',['block_sparse_matrix.h',['../block__sparse__matrix_8h.html',1,'']]],
   ['body_2eh',['body.h',['../body_8h.html',1,'']]],
   ['body_5fnode_2eh',['body_node.h',['../body__node_8h.html',1,'']]],

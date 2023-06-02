@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82":[3,0,0,10,2,2],
 "classdrake_1_1perception_1_1_point_cloud.html#ac10ac8214a457e1c92341f8ca631a7d0":[3,0,0,10,2,17],
 "classdrake_1_1perception_1_1_point_cloud.html#ac88cb4e1172a056b6529b6f5a8b084ed":[3,0,0,10,2,15],
 "classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03":[3,0,0,10,2,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a29028c3dc973289f85e358b6f12879ea":[3,0,0,11,11,3],
 "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a5785657320b67a48e969d427e1ff9995":[3,0,0,11,11,10],
 "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a749f14f28d5f317e2bbcf99590ae78d4":[3,0,0,11,11,5],
-"classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a901932565723e65013ddeaa939320979":[3,0,0,11,11,4],
-"classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a9b16fd2e763f0314ad31c6920c49ddc3":[3,0,0,11,11,0]
+"classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a901932565723e65013ddeaa939320979":[3,0,0,11,11,4]
 };

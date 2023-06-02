@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"geometry__properties_8h.html":[4,0,0,4,18],
 "geometry__py_8h.html":[4,0,0,0,0,2,0],
 "geometry__py_8h.html#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de":[4,0,0,0,0,2,0,2],
 "geometry__py_8h.html#a1e766f9fb38d0bcd69a4d11f7fc2efb3":[4,0,0,0,0,2,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "hydroelastic__contact__info_8h.html":[4,0,0,8,10,17],
 "hydroelastic__contact__visualizer_8h.html":[4,0,0,8,7,2],
 "hydroelastic__engine_8h.html":[4,0,0,8,4,0],
-"hydroelastic__internal_8h.html":[4,0,0,4,2,18],
-"hydroelastic__quadrature__point__data_8h.html":[4,0,0,8,10,18]
+"hydroelastic__internal_8h.html":[4,0,0,4,2,18]
 };
