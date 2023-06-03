@@ -15,5 +15,5 @@ var dir_2f3b38a11a8c8b47ab034de75b118c79 =
     [ "state_feedback_controller_interface.h", "state__feedback__controller__interface_8h.html", [
       [ "StateFeedbackControllerInterface", "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html", "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface" ]
     ] ],
-    [ "zmp_planner.h", "zmp__planner_8h.html", "zmp__planner_8h" ]
+    [ "zmp_planner.h", "zmp__planner_8h.html", null ]
 ];

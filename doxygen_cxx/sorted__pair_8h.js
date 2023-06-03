@@ -7,7 +7,6 @@ var sorted__pair_8h =
     [ "MakeSortedPair", "sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d", null ],
     [ "operator!=", "sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890", null ],
     [ "operator<", "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3", null ],
-    [ "operator<<", "sorted__pair_8h.html#a9ab1dd8eeeb9910b3755b238fc8907e9", null ],
     [ "operator<=", "sorted__pair_8h.html#a6d76c69274d87b34a742dae799e2177f", null ],
     [ "operator==", "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c", null ],
     [ "operator>", "sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d", null ],

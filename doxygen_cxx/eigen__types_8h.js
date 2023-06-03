@@ -1,8 +1,5 @@
 var eigen__types_8h =
 [
-    [ "EigenSizeMinPreferDynamic", "structdrake_1_1_eigen_size_min_prefer_dynamic.html", "structdrake_1_1_eigen_size_min_prefer_dynamic" ],
-    [ "EigenSizeMinPreferFixed", "structdrake_1_1_eigen_size_min_prefer_fixed.html", "structdrake_1_1_eigen_size_min_prefer_fixed" ],
-    [ "MultiplyEigenSizes", "structdrake_1_1_multiply_eigen_sizes.html", "structdrake_1_1_multiply_eigen_sizes" ],
     [ "is_eigen_type", "structdrake_1_1is__eigen__type.html", null ],
     [ "is_eigen_scalar_same", "structdrake_1_1is__eigen__scalar__same.html", null ],
     [ "is_eigen_vector", "structdrake_1_1is__eigen__vector.html", null ],
@@ -30,11 +27,7 @@ var eigen__types_8h =
     [ "RowVector4", "eigen__types_8h.html#aa9b373b2971391d9054b431d8a3e4b33", null ],
     [ "RowVector6", "eigen__types_8h.html#a3ad88c2d704ccb2899d475d3ae05de14", null ],
     [ "RowVectorX", "eigen__types_8h.html#a218f39990d2d9090c7a25c9c18cbf832", null ],
-    [ "SquareTwistMatrix", "eigen__types_8h.html#ad2a5a909210d71526c490997aa8c9309", null ],
     [ "StrideX", "eigen__types_8h.html#ad5de4c858064cf0a457d6a18381e837b", null ],
-    [ "Translation3", "eigen__types_8h.html#a50f8d19f395776637448f26e734228f6", null ],
-    [ "TwistMatrix", "eigen__types_8h.html#a24677f48c6e4381a7ef6a9034af32803", null ],
-    [ "TwistVector", "eigen__types_8h.html#a1523106d56bf869ad35e8d5b51180371", null ],
     [ "Vector", "eigen__types_8h.html#a01ae662d5635b7c9efe03d15d976f7a8", null ],
     [ "Vector0", "eigen__types_8h.html#acda0b15d77e4c1701d160b17a2cb2ea8", null ],
     [ "Vector1", "eigen__types_8h.html#af359dfdb84d6c13b606bb3ed7b821e23", null ],
@@ -45,6 +38,5 @@ var eigen__types_8h =
     [ "Vector6", "eigen__types_8h.html#a14aa433aedda321a15238f2d4074d4c3", null ],
     [ "Vector6d", "eigen__types_8h.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28", null ],
     [ "VectorUpTo6", "eigen__types_8h.html#adfbacdba0566fe8958cfafd659b4373f", null ],
-    [ "VectorX", "eigen__types_8h.html#a77dd228fb4dd66a2c17dd3f7f38ffd85", null ],
-    [ "WrenchVector", "eigen__types_8h.html#af98fed5f98c376f4d45fff56bb96c8e1", null ]
+    [ "VectorX", "eigen__types_8h.html#a77dd228fb4dd66a2c17dd3f7f38ffd85", null ]
 ];

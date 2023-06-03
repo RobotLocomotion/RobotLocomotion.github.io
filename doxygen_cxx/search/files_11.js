@@ -39,7 +39,7 @@ var searchData=
   ['robot_5fcollision_5ftype_2eh',['robot_collision_type.h',['../robot__collision__type_8h.html',1,'']]],
   ['robot_5fdiagram_2eh',['robot_diagram.h',['../robot__diagram_8h.html',1,'']]],
   ['robot_5fdiagram_5fbuilder_2eh',['robot_diagram_builder.h',['../robot__diagram__builder_8h.html',1,'']]],
-  ['robot_5fplan_5finterpolator_2eh',['robot_plan_interpolator.h',['../planner_2stub_2robot__plan__interpolator_8h.html',1,'(Global Namespace)'],['../util_2robot__plan__interpolator_8h.html',1,'(Global Namespace)']]],
+  ['robot_5fplan_5finterpolator_2eh',['robot_plan_interpolator.h',['../robot__plan__interpolator_8h.html',1,'']]],
   ['robot_5fplan_5futils_2eh',['robot_plan_utils.h',['../robot__plan__utils_8h.html',1,'']]],
   ['rod2d_2eh',['rod2d.h',['../rod2d_8h.html',1,'']]],
   ['rod2d_5fgeometry_2eh',['rod2d_geometry.h',['../rod2d__geometry_8h.html',1,'']]],

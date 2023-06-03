@@ -6,11 +6,11 @@ var dir_da11cd43e7bab310171e778f62212487 =
       [ "ComInPolyhedronConstraint", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint" ]
     ] ],
     [ "com_position_constraint.h", "com__position__constraint_8h.html", null ],
-    [ "constraint_relaxing_ik.h", "multibody_2inverse__kinematics_2constraint__relaxing__ik_8h.html", [
+    [ "constraint_relaxing_ik.h", "constraint__relaxing__ik_8h.html", [
       [ "IkCartesianWaypoint", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint" ]
     ] ],
-    [ "differential_inverse_kinematics.h", "multibody_2inverse__kinematics_2differential__inverse__kinematics_8h.html", "multibody_2inverse__kinematics_2differential__inverse__kinematics_8h" ],
-    [ "differential_inverse_kinematics_integrator.h", "multibody_2inverse__kinematics_2differential__inverse__kinematics__integrator_8h.html", null ],
+    [ "differential_inverse_kinematics.h", "differential__inverse__kinematics_8h.html", "differential__inverse__kinematics_8h" ],
+    [ "differential_inverse_kinematics_integrator.h", "differential__inverse__kinematics__integrator_8h.html", null ],
     [ "distance_constraint.h", "distance__constraint_8h.html", null ],
     [ "distance_constraint_utilities.h", "distance__constraint__utilities_8h.html", null ],
     [ "gaze_target_constraint.h", "gaze__target__constraint_8h.html", null ],

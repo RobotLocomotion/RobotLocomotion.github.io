@@ -6,8 +6,6 @@ var searchData=
   ['eigenptr',['EigenPtr',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],
   ['eigenptr_3c_20const_20matrixx_3c_20t_20_3e_20_3e',['EigenPtr&lt; const MatrixX&lt; T &gt; &gt;',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],
   ['eigenptr_3c_20const_20vectorx_3c_20t_20_3e_20_3e',['EigenPtr&lt; const VectorX&lt; T &gt; &gt;',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],
-  ['eigensizeminpreferdynamic',['EigenSizeMinPreferDynamic',['../structdrake_1_1_eigen_size_min_prefer_dynamic.html',1,'drake']]],
-  ['eigensizeminpreferfixed',['EigenSizeMinPreferFixed',['../structdrake_1_1_eigen_size_min_prefer_fixed.html',1,'drake']]],
   ['ellipsoid',['Ellipsoid',['../classdrake_1_1geometry_1_1_ellipsoid.html',1,'drake::geometry']]],
   ['encodeddata',['EncodedData',['../classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html',1,'drake::geometry::DRAKE_NO_EXPORT']]],
   ['environment',['Environment',['../classdrake_1_1symbolic_1_1_environment.html',1,'drake::symbolic']]],

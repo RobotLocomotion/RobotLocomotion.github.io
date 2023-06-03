@@ -49,7 +49,7 @@ var searchData=
   ['constraint_2eh',['constraint.h',['../constraint_8h.html',1,'']]],
   ['constraint_5fdoxygen_2eh',['constraint_doxygen.h',['../constraint__doxygen_8h.html',1,'']]],
   ['constraint_5fproblem_5fdata_2eh',['constraint_problem_data.h',['../constraint__problem__data_8h.html',1,'']]],
-  ['constraint_5frelaxing_5fik_2eh',['constraint_relaxing_ik.h',['../manipulation_2planner_2stub_2constraint__relaxing__ik_8h.html',1,'(Global Namespace)'],['../multibody_2inverse__kinematics_2constraint__relaxing__ik_8h.html',1,'(Global Namespace)']]],
+  ['constraint_5frelaxing_5fik_2eh',['constraint_relaxing_ik.h',['../constraint__relaxing__ik_8h.html',1,'']]],
   ['constraint_5fsolver_2eh',['constraint_solver.h',['../constraint__solver_8h.html',1,'']]],
   ['constraint_5fspecs_2eh',['constraint_specs.h',['../constraint__specs_8h.html',1,'']]],
   ['contact_5fjacobians_2eh',['contact_jacobians.h',['../contact__jacobians_8h.html',1,'']]],

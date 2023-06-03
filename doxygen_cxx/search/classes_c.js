@@ -50,7 +50,6 @@ var searchData=
   ['multilayerperceptron',['MultilayerPerceptron',['../classdrake_1_1systems_1_1_multilayer_perceptron.html',1,'drake::systems']]],
   ['multipleshooting',['MultipleShooting',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html',1,'drake::planning::trajectory_optimization']]],
   ['multiplexer',['Multiplexer',['../classdrake_1_1systems_1_1_multiplexer.html',1,'drake::systems']]],
-  ['multiplyeigensizes',['MultiplyEigenSizes',['../structdrake_1_1_multiply_eigen_sizes.html',1,'drake']]],
   ['myspringmasssystem',['MySpringMassSystem',['../classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html',1,'drake::systems::analysis_test']]],
   ['myspringmasssystem_3c_20double_20_3e',['MySpringMassSystem&lt; double &gt;',['../classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html',1,'drake::systems::analysis_test']]],
   ['myvector',['MyVector',['../classdrake_1_1systems_1_1_my_vector.html',1,'drake::systems']]]

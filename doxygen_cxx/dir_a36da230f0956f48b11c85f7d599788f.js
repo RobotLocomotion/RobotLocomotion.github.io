@@ -15,7 +15,9 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "bit_cast.h", "bit__cast_8h.html", null ],
     [ "cond.h", "cond_8h.html", "cond_8h" ],
     [ "constants.h", "constants_8h.html", "constants_8h" ],
-    [ "copyable_unique_ptr.h", "copyable__unique__ptr_8h.html", "copyable__unique__ptr_8h" ],
+    [ "copyable_unique_ptr.h", "copyable__unique__ptr_8h.html", [
+      [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html", "classdrake_1_1copyable__unique__ptr" ]
+    ] ],
     [ "default_scalars.h", "default__scalars_8h.html", "default__scalars_8h" ],
     [ "diagnostic_policy.h", "diagnostic__policy_8h.html", null ],
     [ "double_overloads.h", "double__overloads_8h.html", "double__overloads_8h" ],

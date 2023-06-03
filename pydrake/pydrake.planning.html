@@ -3513,17 +3513,6 @@ unless it’s already been finalized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder.BuildDiagram">
-<span class="sig-name descname"><span class="pre">BuildDiagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder" title="pydrake.planning.RobotDiagramBuilder"><span class="pre">pydrake.planning.RobotDiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.RobotDiagram" title="pydrake.planning.RobotDiagram"><span class="pre">pydrake.planning.RobotDiagram</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder.BuildDiagram" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use Build() instead of BuildDiagram(). This will be removed from
-Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder.builder">
 <span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder" title="pydrake.planning.RobotDiagramBuilder"><span class="pre">pydrake.planning.RobotDiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder.builder" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
@@ -3536,31 +3525,9 @@ the return value; instead, call Build() on this.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder.FinalizePlant">
-<span class="sig-name descname"><span class="pre">FinalizePlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder" title="pydrake.planning.RobotDiagramBuilder"><span class="pre">pydrake.planning.RobotDiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder.FinalizePlant" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use plant().Finalize() instead of FinalizePlant(). This will be
-removed from Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder.IsDiagramBuilt">
 <span class="sig-name descname"><span class="pre">IsDiagramBuilt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder" title="pydrake.planning.RobotDiagramBuilder"><span class="pre">pydrake.planning.RobotDiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder.IsDiagramBuilt" title="Permalink to this definition"></a></dt>
 <dd><p>Checks if the diagram has already been built.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder.IsPlantFinalized">
-<span class="sig-name descname"><span class="pre">IsPlantFinalized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder" title="pydrake.planning.RobotDiagramBuilder"><span class="pre">pydrake.planning.RobotDiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder.IsPlantFinalized" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use plant().is_finalized() instead of IsPlantFinalized(). This
-will be removed from Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -3632,17 +3599,6 @@ unless it’s already been finalized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.BuildDiagram">
-<span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].BuildDiagram"></span><span class="sig-name descname"><span class="pre">BuildDiagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.RobotDiagram_" title="pydrake.planning.RobotDiagram_"><span class="pre">pydrake.planning.RobotDiagram_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.BuildDiagram" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use Build() instead of BuildDiagram(). This will be removed from
-Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.builder">
 <span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].builder"></span><span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.builder" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
@@ -3655,31 +3611,9 @@ the return value; instead, call Build() on this.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.FinalizePlant">
-<span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].FinalizePlant"></span><span class="sig-name descname"><span class="pre">FinalizePlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.FinalizePlant" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use plant().Finalize() instead of FinalizePlant(). This will be
-removed from Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.IsDiagramBuilt">
 <span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].IsDiagramBuilt"></span><span class="sig-name descname"><span class="pre">IsDiagramBuilt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.IsDiagramBuilt" title="Permalink to this definition"></a></dt>
 <dd><p>Checks if the diagram has already been built.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.IsPlantFinalized">
-<span id="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd].IsPlantFinalized"></span><span class="sig-name descname"><span class="pre">IsPlantFinalized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd-.IsPlantFinalized" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use plant().is_finalized() instead of IsPlantFinalized(). This
-will be removed from Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -3734,17 +3668,6 @@ unless it’s already been finalized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.BuildDiagram">
-<span id="pydrake.planning.RobotDiagramBuilder_[Expression].BuildDiagram"></span><span class="sig-name descname"><span class="pre">BuildDiagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.RobotDiagram_" title="pydrake.planning.RobotDiagram_"><span class="pre">pydrake.planning.RobotDiagram_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.BuildDiagram" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use Build() instead of BuildDiagram(). This will be removed from
-Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.builder">
 <span id="pydrake.planning.RobotDiagramBuilder_[Expression].builder"></span><span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.builder" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the contained DiagramBuilder (mutable). Do not call Build() on
@@ -3757,31 +3680,9 @@ the return value; instead, call Build() on this.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.FinalizePlant">
-<span id="pydrake.planning.RobotDiagramBuilder_[Expression].FinalizePlant"></span><span class="sig-name descname"><span class="pre">FinalizePlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.FinalizePlant" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use plant().Finalize() instead of FinalizePlant(). This will be
-removed from Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.IsDiagramBuilt">
 <span id="pydrake.planning.RobotDiagramBuilder_[Expression].IsDiagramBuilt"></span><span class="sig-name descname"><span class="pre">IsDiagramBuilt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.IsDiagramBuilt" title="Permalink to this definition"></a></dt>
 <dd><p>Checks if the diagram has already been built.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression-.IsPlantFinalized">
-<span id="pydrake.planning.RobotDiagramBuilder_[Expression].IsPlantFinalized"></span><span class="sig-name descname"><span class="pre">IsPlantFinalized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_" title="pydrake.planning.RobotDiagramBuilder_"><span class="pre">pydrake.planning.RobotDiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression-.IsPlantFinalized" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use plant().is_finalized() instead of IsPlantFinalized(). This
-will be removed from Drake on or after 2023-06-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

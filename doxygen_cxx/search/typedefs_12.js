@@ -13,7 +13,6 @@ var searchData=
   ['solvertype',['SolverType',['../classdrake_1_1math_1_1_linear_solver.html#a9a813708b474b1a7b658a1373cd0c3a2',1,'drake::math::LinearSolver']]],
   ['sourceid',['SourceId',['../namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf',1,'drake::geometry']]],
   ['spatialquantity',['SpatialQuantity',['../classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c',1,'drake::multibody::SpatialVector']]],
-  ['squaretwistmatrix',['SquareTwistMatrix',['../namespacedrake.html#ad2a5a909210d71526c490997aa8c9309',1,'drake']]],
   ['stridex',['StrideX',['../namespacedrake.html#ad5de4c858064cf0a457d6a18381e837b',1,'drake']]],
   ['substitution',['Substitution',['../namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7',1,'drake::symbolic']]],
   ['subsystemindex',['SubsystemIndex',['../namespacedrake_1_1systems.html#a72b9d4d169dbb0f1f740e1b25697e65e',1,'drake::systems']]],
