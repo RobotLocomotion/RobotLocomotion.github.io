@@ -1,5 +1,11 @@
 var structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options =
 [
+    [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#aa3f477fcaa93d20401b8984bf79120b4", null ],
+    [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a04ad562ce5e7bc2487b5ec98cf38b0fe", null ],
+    [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a277d81c8e1df90b999ae693f460ab7f7", null ],
+    [ "~FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#abedcc218b1bc6c9ac6384a50d835733a", null ],
+    [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a32442a6353b886748a5053c445412660", null ],
+    [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a94b2fa6bd78e869a41f1b92030a2e777", null ],
     [ "num_threads", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a08963f7335eef295237ab460863bc3d5", null ],
     [ "solver_id", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ab33e404245eaa2fad3341ef9018bb54e", null ],
     [ "solver_options", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a6c4438afbf2190941ebeae2f8e16dd11", null ],

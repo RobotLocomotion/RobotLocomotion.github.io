@@ -165,7 +165,9 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimizatio
 <div class="title">CspaceFreePolytope::FindPolytopeGivenLagrangianOptions Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html" title="Optional argument for constructing CspaceFreePolytope.">Options</a> for finding polytope with given Lagrangians. </p>
+</div>
 <p><code>#include &lt;drake/geometry/optimization/cspace_free_polytope.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -173,16 +175,22 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a00b3b24514bf89edc6ca5e662eba136d"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a00b3b24514bf89edc6ca5e662eba136d">backoff_scale</a> {std::nullopt}</td></tr>
 <tr class="separator:a00b3b24514bf89edc6ca5e662eba136d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfbc0ec5326fc2132aa538699f74281a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adfbc0ec5326fc2132aa538699f74281a">ellipsoid_margin_epsilon</a> {1E-5}</td></tr>
+<tr class="memdesc:adfbc0ec5326fc2132aa538699f74281a"><td class="mdescLeft">&#160;</td><td class="mdescRight">We will maximize the cost ∏ᵢ (δᵢ + ε) where δᵢ is the margin from each face of the polytope {s | Cs&lt;=d} to the inscribed ellipsoid, ε is ellipsoid_margin_epsilon, a small positive constant to make sure δᵢ + ε being strictly positive.  <a href="#adfbc0ec5326fc2132aa538699f74281a">More...</a><br /></td></tr>
 <tr class="separator:adfbc0ec5326fc2132aa538699f74281a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab33e404245eaa2fad3341ef9018bb54e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">solvers::SolverId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab33e404245eaa2fad3341ef9018bb54e">solver_id</a> {<a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html#a4dc451b7db72a168d9f0da1746011b45">solvers::MosekSolver::id</a>()}</td></tr>
+<tr class="memdesc:ab33e404245eaa2fad3341ef9018bb54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID for the solver.  <a href="#ab33e404245eaa2fad3341ef9018bb54e">More...</a><br /></td></tr>
 <tr class="separator:ab33e404245eaa2fad3341ef9018bb54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c4438afbf2190941ebeae2f8e16dd11"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a6c4438afbf2190941ebeae2f8e16dd11">solver_options</a> {std::nullopt}</td></tr>
+<tr class="memdesc:a6c4438afbf2190941ebeae2f8e16dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">options for solving the MathematicalProgram  <a href="#a6c4438afbf2190941ebeae2f8e16dd11">More...</a><br /></td></tr>
 <tr class="separator:a6c4438afbf2190941ebeae2f8e16dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f5e525b55e7919db6fd454ca67c1566"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a3f5e525b55e7919db6fd454ca67c1566">s_inner_pts</a></td></tr>
+<tr class="memdesc:a3f5e525b55e7919db6fd454ca67c1566"><td class="mdescLeft">&#160;</td><td class="mdescRight">We can constrain the C-space polytope {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper} to contain some sampled s.  <a href="#a3f5e525b55e7919db6fd454ca67c1566">More...</a><br /></td></tr>
 <tr class="separator:a3f5e525b55e7919db6fd454ca67c1566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1295fafef4c110ac834bc4efda3dfd1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a1295fafef4c110ac834bc4efda3dfd1e">search_s_bounds_lagrangians</a> {true}</td></tr>
+<tr class="memdesc:a1295fafef4c110ac834bc4efda3dfd1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true, then we will also search for the Lagrangian multipliers for the constraint s_lower &lt;= s &lt;= s_upper; otherwise we fix the Lagrangian multiplier to the solution found when we fix the C-space polytope {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper}.  <a href="#a1295fafef4c110ac834bc4efda3dfd1e">More...</a><br /></td></tr>
 <tr class="separator:a1295fafef4c110ac834bc4efda3dfd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0845096282a9a709315f3fe6cdb0fdfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fe">EllipsoidMarginCost</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a0845096282a9a709315f3fe6cdb0fdfc">ellipsoid_margin_cost</a></td></tr>
+<tr class="memdesc:a0845096282a9a709315f3fe6cdb0fdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of cost on the ellipsoid margin.  <a href="#a0845096282a9a709315f3fe6cdb0fdfc">More...</a><br /></td></tr>
 <tr class="separator:a0845096282a9a709315f3fe6cdb0fdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -212,6 +220,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        EllipsoidMarginCost::kGeometricMean}</div></div><!-- fragment -->
+<p>Type of cost on the ellipsoid margin. </p>
+
 </div>
 </div>
 <a id="adfbc0ec5326fc2132aa538699f74281a"></a>
@@ -225,6 +235,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>We will maximize the cost ∏ᵢ (δᵢ + ε) where δᵢ is the margin from each face of the polytope {s | Cs&lt;=d} to the inscribed ellipsoid, ε is ellipsoid_margin_epsilon, a small positive constant to make sure δᵢ + ε being strictly positive. </p>
 
 </div>
 </div>
@@ -240,6 +252,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>We can constrain the C-space polytope {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper} to contain some sampled s. </p>
+<p>Each column of s_inner_pts is a sample of s. </p>
+
 </div>
 </div>
 <a id="a1295fafef4c110ac834bc4efda3dfd1e"></a>
@@ -253,6 +268,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>If set to true, then we will also search for the Lagrangian multipliers for the constraint s_lower &lt;= s &lt;= s_upper; otherwise we fix the Lagrangian multiplier to the solution found when we fix the C-space polytope {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper}. </p>
 
 </div>
 </div>
@@ -268,6 +285,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>ID for the solver. </p>
+
 </div>
 </div>
 <a id="a6c4438afbf2190941ebeae2f8e16dd11"></a>
@@ -281,6 +300,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>options for solving the MathematicalProgram </p>
 
 </div>
 </div>

@@ -1,5 +1,10 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1math_1_1_rotation_matrix.html#a6baddfa26e9183d21c69cc1f55a17521":[3,0,0,8,13,41],
+"classdrake_1_1math_1_1_rotation_matrix.html#a6ca9317cbeb6cef80d12e0dee4fd179d":[3,0,0,8,13,12],
+"classdrake_1_1math_1_1_rotation_matrix.html#a6e459fd356a7fcb1bc27257a8f9df1fa":[3,0,0,8,13,16],
+"classdrake_1_1math_1_1_rotation_matrix.html#a78cc72469524b8fe0750e667ab9adc6b":[3,0,0,8,13,8],
+"classdrake_1_1math_1_1_rotation_matrix.html#a7a5e8235ea5f9bb34bfa71b745546864":[3,0,0,8,13,20],
 "classdrake_1_1math_1_1_rotation_matrix.html#a7af450eebe5d5ac5cf5ee49aab783609":[3,0,0,8,13,9],
 "classdrake_1_1math_1_1_rotation_matrix.html#a7d51dc7c0ba0f0cf4747d47e9203255f":[3,0,0,8,13,38],
 "classdrake_1_1math_1_1_rotation_matrix.html#a7f6eb5993bd83412f92e82aa49873ae6":[3,0,0,8,13,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a40f26f7d3890b9dd6f90aae8b8e7ec6f":[1,2,5,11,1],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a6329f7d7632378d3468c21998625d154":[1,2,5,11,0],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a7e19cbe0d0e26536ec4e025d06e7337a":[1,2,5,11,8],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a84ba40d686f61340829ffab0302c60d2":[1,2,5,11,5],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a91ec04b8090fb67a27ba4fd3599bcd2e":[1,2,5,11,4],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#ab66dc0d76abdb6ec9cda835734399dc9":[1,2,5,11,2],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#acd4ab9a551b8b7a9fc891ec7aa9c6324":[1,2,5,11,6],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#adb9c056fd315645e92def45ae627b797":[1,2,5,11,3],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#aeb6a061fd038bef7ddf9ebb7883da7e3":[1,2,5,11,7]
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a84ba40d686f61340829ffab0302c60d2":[1,2,5,11,5]
 };

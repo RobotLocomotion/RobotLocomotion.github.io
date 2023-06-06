@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: CspaceFreePolytope::SearchResult Struct Reference</title>
+<title>Drake: CspaceFreePolytope::SearchResult Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html','');});
+$(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -160,160 +160,184 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimizatio
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result-members.html">List of all members</a>  </div>
+<a href="#friends">Friends</a> &#124;
+<a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">CspaceFreePolytope::SearchResult Struct Reference</div>  </div>
+<div class="title">CspaceFreePolytope::SearchResult Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Result on searching the C-space polytope and separating planes. </p>
+</div>
 <p><code>#include &lt;drake/geometry/optimization/cspace_free_polytope.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a257e6d0f2734351b1d08c0f47fcda82e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a257e6d0f2734351b1d08c0f47fcda82e">SetSeparatingPlanes</a> (const std::vector&lt; std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html">SeparationCertificateResult</a> &gt;&gt; &amp;certificates_result)</td></tr>
-<tr class="separator:a257e6d0f2734351b1d08c0f47fcda82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20aa7878bc1c643f7da72085893a175a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a20aa7878bc1c643f7da72085893a175a">UpdateSeparatingPlanes</a> (const std::vector&lt; std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html">SeparationCertificateResult</a> &gt;&gt; &amp;certificates_results)</td></tr>
-<tr class="separator:a20aa7878bc1c643f7da72085893a175a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9686719de56f00b1f5ca3d32e1b95897"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a9686719de56f00b1f5ca3d32e1b95897">SearchResult</a> ()</td></tr>
+<tr class="separator:a9686719de56f00b1f5ca3d32e1b95897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2171860e0992b61fb3736b2bb754a39b"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a2171860e0992b61fb3736b2bb754a39b">C</a> () const</td></tr>
+<tr class="separator:a2171860e0992b61fb3736b2bb754a39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262ad57c0633c028129895b23e06521a"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a262ad57c0633c028129895b23e06521a">d</a> () const</td></tr>
+<tr class="separator:a262ad57c0633c028129895b23e06521a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf72db10ca637c259f8bf4acc146058"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a5cf72db10ca637c259f8bf4acc146058">certified_polytope</a> () const</td></tr>
+<tr class="separator:a5cf72db10ca637c259f8bf4acc146058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fddf487c9fdb71315aa70341741a028"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a9fddf487c9fdb71315aa70341741a028">a</a> () const</td></tr>
+<tr class="separator:a9fddf487c9fdb71315aa70341741a028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be2f06df5e98ac0bc54931d845ecf39"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a7be2f06df5e98ac0bc54931d845ecf39">b</a> () const</td></tr>
+<tr class="separator:a7be2f06df5e98ac0bc54931d845ecf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d09fa690560b896ca06348cdd18af60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a1d09fa690560b896ca06348cdd18af60">num_iter</a> () const</td></tr>
+<tr class="separator:a1d09fa690560b896ca06348cdd18af60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a92a207b76b9d9f2185204cce6ebfd0f2"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a92a207b76b9d9f2185204cce6ebfd0f2">C</a></td></tr>
-<tr class="separator:a92a207b76b9d9f2185204cce6ebfd0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82be842e7968e104331d7514c2b8b412"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a82be842e7968e104331d7514c2b8b412">d</a></td></tr>
-<tr class="separator:a82be842e7968e104331d7514c2b8b412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58cb3555468b2f1ae8c9e3ac2ee12fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a58cb3555468b2f1ae8c9e3ac2ee12fb5">certified_polytope</a></td></tr>
-<tr class="separator:a58cb3555468b2f1ae8c9e3ac2ee12fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a018b3227397ab70c950800716e9c9e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a7a018b3227397ab70c950800716e9c9e">a</a></td></tr>
-<tr class="separator:a7a018b3227397ab70c950800716e9c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f1180f1b6bec6d8ae7d5359c2c3570d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a2f1180f1b6bec6d8ae7d5359c2c3570d">b</a></td></tr>
-<tr class="separator:a2f1180f1b6bec6d8ae7d5359c2c3570d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec2269ddcef2faf5f35a7257ba3b8f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#aec2269ddcef2faf5f35a7257ba3b8f0b">num_iter</a></td></tr>
-<tr class="separator:aec2269ddcef2faf5f35a7257ba3b8f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:acce586461fb915663896b9d3272ee6eb"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#acce586461fb915663896b9d3272ee6eb">CspaceFreePolytope</a></td></tr>
+<tr class="separator:acce586461fb915663896b9d3272ee6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9686719de56f00b1f5ca3d32e1b95897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9686719de56f00b1f5ca3d32e1b95897">&#9670;&nbsp;</a></span>SearchResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html">SearchResult</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a257e6d0f2734351b1d08c0f47fcda82e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a257e6d0f2734351b1d08c0f47fcda82e">&#9670;&nbsp;</a></span>SetSeparatingPlanes()</h2>
+<a id="a9fddf487c9fdb71315aa70341741a028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fddf487c9fdb71315aa70341741a028">&#9670;&nbsp;</a></span>a()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetSeparatingPlanes </td>
+          <td class="memname">const std::unordered_map&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt; &gt;&amp; a </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html">SeparationCertificateResult</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>certificates_result</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a20aa7878bc1c643f7da72085893a175a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20aa7878bc1c643f7da72085893a175a">&#9670;&nbsp;</a></span>UpdateSeparatingPlanes()</h2>
+<a id="a7be2f06df5e98ac0bc54931d845ecf39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be2f06df5e98ac0bc54931d845ecf39">&#9670;&nbsp;</a></span>b()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void UpdateSeparatingPlanes </td>
+          <td class="memname">const std::unordered_map&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt;&amp; b </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html">SeparationCertificateResult</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>certificates_results</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a7a018b3227397ab70c950800716e9c9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a018b3227397ab70c950800716e9c9e">&#9670;&nbsp;</a></span>a</h2>
+<a id="a2171860e0992b61fb3736b2bb754a39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2171860e0992b61fb3736b2bb754a39b">&#9670;&nbsp;</a></span>C()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt; &gt; a</td>
+          <td class="memname">const Eigen::MatrixXd&amp; C </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a2f1180f1b6bec6d8ae7d5359c2c3570d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f1180f1b6bec6d8ae7d5359c2c3570d">&#9670;&nbsp;</a></span>b</h2>
+<a id="a5cf72db10ca637c259f8bf4acc146058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf72db10ca637c259f8bf4acc146058">&#9670;&nbsp;</a></span>certified_polytope()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&gt; b</td>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&amp; certified_polytope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a92a207b76b9d9f2185204cce6ebfd0f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92a207b76b9d9f2185204cce6ebfd0f2">&#9670;&nbsp;</a></span>C</h2>
+<a id="a262ad57c0633c028129895b23e06521a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262ad57c0633c028129895b23e06521a">&#9670;&nbsp;</a></span>d()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::MatrixXd C</td>
+          <td class="memname">const Eigen::VectorXd&amp; d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a58cb3555468b2f1ae8c9e3ac2ee12fb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58cb3555468b2f1ae8c9e3ac2ee12fb5">&#9670;&nbsp;</a></span>certified_polytope</h2>
+<a id="a1d09fa690560b896ca06348cdd18af60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d09fa690560b896ca06348cdd18af60">&#9670;&nbsp;</a></span>num_iter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> certified_polytope</td>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_iter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a82be842e7968e104331d7514c2b8b412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82be842e7968e104331d7514c2b8b412">&#9670;&nbsp;</a></span>d</h2>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="acce586461fb915663896b9d3272ee6eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce586461fb915663896b9d3272ee6eb">&#9670;&nbsp;</a></span>CspaceFreePolytope</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd d</td>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aec2269ddcef2faf5f35a7257ba3b8f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec2269ddcef2faf5f35a7257ba3b8f0b">&#9670;&nbsp;</a></span>num_iter</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> num_iter</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>drake/geometry/optimization/<a class="el" href="cspace__free__polytope_8h.html">cspace_free_polytope.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -321,7 +345,7 @@ Public Attributes</h2></td></tr>
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a></li><li class="navelem"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html">SearchResult</a></li>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html">SearchResult</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

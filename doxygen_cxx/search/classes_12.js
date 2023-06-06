@@ -28,7 +28,7 @@ var searchData=
   ['screwjoint',['ScrewJoint',['../classdrake_1_1multibody_1_1_screw_joint.html',1,'drake::multibody']]],
   ['scssolver',['ScsSolver',['../classdrake_1_1solvers_1_1_scs_solver.html',1,'drake::solvers']]],
   ['scssolverdetails',['ScsSolverDetails',['../structdrake_1_1solvers_1_1_scs_solver_details.html',1,'drake::solvers']]],
-  ['searchresult',['SearchResult',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
+  ['searchresult',['SearchResult',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['semiexpliciteulerintegrator',['SemiExplicitEulerIntegrator',['../classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html',1,'drake::systems']]],
   ['separatingplanelagrangians',['SeparatingPlaneLagrangians',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['separationcertificate',['SeparationCertificate',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],

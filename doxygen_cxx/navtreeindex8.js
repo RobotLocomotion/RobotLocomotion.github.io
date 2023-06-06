@@ -1,5 +1,10 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a33511869af259d5a743e9cb70f0f711d":[1,1,1,3,22],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a33511869af259d5a743e9cb70f0f711d":[1,5,4,3,22],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a41dbe3e953c0721ed00d5e74e0280b31":[1,1,1,3,10],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a41dbe3e953c0721ed00d5e74e0280b31":[1,5,4,3,10],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a437b46a004ab322e1e2d23b90e8e9239":[1,1,1,3,2],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a437b46a004ab322e1e2d23b90e8e9239":[1,5,4,3,2],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a49baca0390a3ae23b173c34429982fcc":[1,1,1,3,1],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a49baca0390a3ae23b173c34429982fcc":[1,5,4,3,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a705b66eae3ecd3c09aeb4d902e4202a9":[3,0,0,4,2,5,26],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a82d0e6767d25d9f985c731fcf8b134cb":[3,0,0,4,2,5,7],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a850b373dc1690b399188c34205487876":[3,0,0,4,2,5,20],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a88a7096a316e3d2340941ddcc0a89832":[3,0,0,4,2,5,5],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a8b0f9484caa7253881345e230309e586":[3,0,0,4,2,5,16],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a9cb220048250527c21a2c28cf082225d":[3,0,0,4,2,5,22],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a9db015dacce22c75992bd3c0a0b39af7":[3,0,0,4,2,5,6],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#aa06319c11fbba76d4ebaa142bd37df99":[3,0,0,4,2,5,13],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#ab4eef0722f7588b5eb35efe4600731ab":[3,0,0,4,2,5,18]
+"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a88a7096a316e3d2340941ddcc0a89832":[3,0,0,4,2,5,5]
 };

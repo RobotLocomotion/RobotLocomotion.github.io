@@ -22,7 +22,6 @@ var searchData=
   ['num_5fgeneralized_5fpositions',['num_generalized_positions',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a8266cf4ca7f9a99bcdd4f5b9a63d7588',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fgeneralized_5fvelocities',['num_generalized_velocities',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ac6bfe164b01efe1da5cb9104bd8ce708',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fintervals_5fper_5fhalf_5faxis',['num_intervals_per_half_axis',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a0d6fc2daabf951fe18a222fab56c2ba6',1,'drake::multibody::GlobalInverseKinematics::Options']]],
-  ['num_5fiter',['num_iter',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#aec2269ddcef2faf5f35a7257ba3b8f0b',1,'drake::geometry::optimization::CspaceFreePolytope::SearchResult']]],
   ['num_5fiterations',['num_iterations',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71',1,'drake::multibody::TamsiSolverIterationStats']]],
   ['num_5fmisc_5fcontinuous_5fstates',['num_misc_continuous_states',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a24d2b7b9127e9eb52958e80f9c5792a6',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fnumeric_5fparameter_5fgroups',['num_numeric_parameter_groups',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9',1,'drake::systems::SystemBase::ContextSizes']]],

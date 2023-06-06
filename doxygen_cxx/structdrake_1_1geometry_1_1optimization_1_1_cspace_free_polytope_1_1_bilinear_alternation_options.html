@@ -165,14 +165,18 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimizatio
 <div class="title">CspaceFreePolytope::BilinearAlternationOptions Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html" title="Optional argument for constructing CspaceFreePolytope.">Options</a> for bilinear alternation. </p>
+</div>
 <p><code>#include &lt;drake/geometry/optimization/cspace_free_polytope.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a53380b3b14c20bdfcb3bc9970c421231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#a53380b3b14c20bdfcb3bc9970c421231">max_iter</a> {10}</td></tr>
+<tr class="memdesc:a53380b3b14c20bdfcb3bc9970c421231"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of bilinear alternation iterations.  <a href="#a53380b3b14c20bdfcb3bc9970c421231">More...</a><br /></td></tr>
 <tr class="separator:a53380b3b14c20bdfcb3bc9970c421231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05ba1c548fa1a71138dcdac91ddeaf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6">convergence_tol</a> {1E-3}</td></tr>
+<tr class="memdesc:ab05ba1c548fa1a71138dcdac91ddeaf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the change of the cost function between two consecutive iterations in bilinear alternation is no larger than this number, stop the bilinear alternation.  <a href="#ab05ba1c548fa1a71138dcdac91ddeaf6">More...</a><br /></td></tr>
 <tr class="separator:ab05ba1c548fa1a71138dcdac91ddeaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8078807eb7935ac54cdeb5787d5a7a1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html">FindPolytopeGivenLagrangianOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#a8078807eb7935ac54cdeb5787d5a7a1c">find_polytope_options</a></td></tr>
 <tr class="separator:a8078807eb7935ac54cdeb5787d5a7a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,6 +199,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>When the change of the cost function between two consecutive iterations in bilinear alternation is no larger than this number, stop the bilinear alternation. </p>
+<p>Must be non-negative. </p>
+
 </div>
 </div>
 <a id="ab7670e23bbf2fbf300a5f0a40a9c6f53"></a>
@@ -210,7 +217,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>After finding the maximal inscribed ellipsoid in C-space polytope {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper}, we scale this ellipsoid by ellipsoid_scaling, and require the new C-space polytope to contain this scaled ellipsoid. </p>
-<p>ellipsoid_scaling=1 corresponds to no scaling. </p>
+<p>ellipsoid_scaling=1 corresponds to no scaling. Must be strictly positive and no greater than 1. </p>
 
 </div>
 </div>
@@ -253,6 +260,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The maximum number of bilinear alternation iterations. </p>
+<p>Must be non-negative. </p>
 
 </div>
 </div>

@@ -165,18 +165,24 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimizatio
 <div class="title">CspaceFreePolytope::BinarySearchOptions Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html" title="Optional argument for constructing CspaceFreePolytope.">Options</a> for binary search. </p>
+</div>
 <p><code>#include &lt;drake/geometry/optimization/cspace_free_polytope.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a94c843cae6ebb4ff68f89f77a70fbcab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#a94c843cae6ebb4ff68f89f77a70fbcab">scale_max</a> {1}</td></tr>
+<tr class="memdesc:a94c843cae6ebb4ff68f89f77a70fbcab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximal value of the scaling factor.  <a href="#a94c843cae6ebb4ff68f89f77a70fbcab">More...</a><br /></td></tr>
 <tr class="separator:a94c843cae6ebb4ff68f89f77a70fbcab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b44c3109bef4f0e17329fd44b7a006"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab1b44c3109bef4f0e17329fd44b7a006">scale_min</a> {0.01}</td></tr>
+<tr class="memdesc:ab1b44c3109bef4f0e17329fd44b7a006"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimal value of the scaling factor.  <a href="#ab1b44c3109bef4f0e17329fd44b7a006">More...</a><br /></td></tr>
 <tr class="separator:ab1b44c3109bef4f0e17329fd44b7a006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53380b3b14c20bdfcb3bc9970c421231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#a53380b3b14c20bdfcb3bc9970c421231">max_iter</a> {10}</td></tr>
+<tr class="memdesc:a53380b3b14c20bdfcb3bc9970c421231"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximal number of iterations in binary search.  <a href="#a53380b3b14c20bdfcb3bc9970c421231">More...</a><br /></td></tr>
 <tr class="separator:a53380b3b14c20bdfcb3bc9970c421231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05ba1c548fa1a71138dcdac91ddeaf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6">convergence_tol</a> {1E-3}</td></tr>
+<tr class="memdesc:ab05ba1c548fa1a71138dcdac91ddeaf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the gap between the upper bound and the lower bound of the scaling factor is below this <code>convergence_tol</code>, stops the binary search.  <a href="#ab05ba1c548fa1a71138dcdac91ddeaf6">More...</a><br /></td></tr>
 <tr class="separator:ab05ba1c548fa1a71138dcdac91ddeaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae90ffbfbdade0558e319428b1d25e0f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html">FindSeparationCertificateGivenPolytopeOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ae90ffbfbdade0558e319428b1d25e0f1">find_lagrangian_options</a></td></tr>
 <tr class="separator:ae90ffbfbdade0558e319428b1d25e0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +199,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>When the gap between the upper bound and the lower bound of the scaling factor is below this <code>convergence_tol</code>, stops the binary search. </p>
+<p>Must be strictly positive. </p>
 
 </div>
 </div>
@@ -222,6 +231,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The maximal number of iterations in binary search. </p>
+<p>Must be non-negative. </p>
+
 </div>
 </div>
 <a id="a94c843cae6ebb4ff68f89f77a70fbcab"></a>
@@ -236,6 +248,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The maximal value of the scaling factor. </p>
+<p>Must be finite and no less than scale_min. </p>
+
 </div>
 </div>
 <a id="ab1b44c3109bef4f0e17329fd44b7a006"></a>
@@ -249,6 +264,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The minimal value of the scaling factor. </p>
+<p>Must be non-negative. </p>
 
 </div>
 </div>
