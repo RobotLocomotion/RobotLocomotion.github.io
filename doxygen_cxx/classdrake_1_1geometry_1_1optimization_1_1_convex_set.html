@@ -424,7 +424,12 @@ Protected Member Functions</h2></td></tr>
 <p>When S is bounded, this method adds the convex constraints to imply </p><pre class="fragment">x ∈ t S,
 t ≥ 0,
 </pre><p> where x is a point in ℜⁿ (with n the ambient_dimension) and t is a scalar.</p>
-<p>When S is unbounded, then the behavior is almost identical, except when t=0. In this case, the constraints imply t ≥ 0, x ∈ t S ⊕ rec(S), where rec(S) is the recession cone of S (the asymptotic directions in which S is not bounded) and ⊕ is the Minkowski sum. For t &gt; 0, this is equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S). </p>
+<p>When S is unbounded, then the behavior is almost identical, except when t=0. In this case, the constraints imply t ≥ 0, x ∈ t S ⊕ rec(S), where rec(S) is the recession cone of S (the asymptotic directions in which S is not bounded) and ⊕ is the Minkowski sum. For t &gt; 0, this is equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S). </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -486,11 +491,16 @@ t ≥ 0,
 
 <p>Let S be this convex set. </p>
 <p>When S is bounded, this method adds the convex constraints to imply </p><pre class="fragment">A * x + b ∈ (c' * t + d) S,
-c * t + d ≥ 0,
+c' * t + d ≥ 0,
 </pre><p> where A is an n-by-m matrix (with n the ambient_dimension), b is a vector of size n, c is a vector of size p, x is a point in ℜᵐ, and t is a point in ℜᵖ.</p>
 <p>When S is unbounded, then the behavior is almost identical, except when c' * t+d=0. In this case, the constraints imply </p><pre class="fragment">A * x + b ∈ (c' * t + d) S ⊕ rec(S),
 c' * t + d ≥ 0,
-</pre><p> where rec(S) is the recession cone of S (the asymptotic directions in which S is not bounded) and ⊕ is the Minkowski sum. For c' * t + d &gt; 0, this is equivalent to A * x + b ∈ (c' * t + d) S, but for c' * t + d = 0, we have only A * x + b ∈ rec(S). </p>
+</pre><p> where rec(S) is the recession cone of S (the asymptotic directions in which S is not bounded) and ⊕ is the Minkowski sum. For c' * t + d &gt; 0, this is equivalent to A * x + b ∈ (c' * t + d) S, but for c' * t + d = 0, we have only A * x + b ∈ rec(S). </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -521,6 +531,12 @@ c' * t + d ≥ 0,
 </div><div class="memdoc">
 
 <p>Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -604,7 +620,9 @@ c' * t + d ≥ 0,
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035" title="Let S be this convex set.">AddPointInNonnegativeScalingConstraints()</a>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>x.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>x.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
 
 </div>
 </div>
@@ -673,7 +691,9 @@ c' * t + d ≥ 0,
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035" title="Let S be this convex set.">AddPointInNonnegativeScalingConstraints()</a>. </p>
-<p>Subclasses must override to add the constraints needed to keep the point A * x + b in the non-negative scaling of the set. Note that subclasses do not need to add the constraint c * t + d ≥ 0 as it is already added. </p><dl class="section pre"><dt>Precondition</dt><dd>A.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
+<p>Subclasses must override to add the constraints needed to keep the point A * x + b in the non-negative scaling of the set. Note that subclasses do not need to add the constraint c * t + d ≥ 0 as it is already added. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd>
+<dd>
+A.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
 <dd>
 A.rows() == b.rows() </dd>
 <dd>
@@ -718,7 +738,9 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#accc952b29c3cc22980f9a3fffe0d23ff" title="Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is insi...">AddPointInSetConstraints()</a>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>vars.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>vars.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
 
 </div>
 </div>
@@ -773,6 +795,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65" title="Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound ...">IsBounded()</a>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
 
 </div>
 </div>
@@ -811,7 +834,9 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>x.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>x.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
 
 </div>
 </div>
@@ -885,7 +910,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set. </p>
-<p>Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. </p>
+<p>Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. When ambient_dimension is zero, always returns true. </p>
 
 </div>
 </div>
@@ -968,6 +993,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns true iff the point x is contained in the set. </p>
+<p>When ambient_dimension is zero, returns false. </p>
 
 </div>
 </div>

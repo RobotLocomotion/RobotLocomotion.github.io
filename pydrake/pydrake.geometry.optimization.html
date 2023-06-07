@@ -145,20 +145,24 @@ transform of a CartesianProduct.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional) set.</p>
+<ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.ConvexSet]) -&gt; None</p></li>
 </ol>
 <p>Constructs the product from a vector of convex sets.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct, setA: pydrake.geometry.optimization.ConvexSet, setB: pydrake.geometry.optimization.ConvexSet) -&gt; None</p></li>
 </ol>
 <p>Constructs the product from a pair of convex sets.</p>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.ConvexSet], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs the product of convex sets in the transformed coordinates:
 {x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}. <code class="docutils literal notranslate"><span class="pre">A</span></code> must be full column
 rank.</p>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</p></li>
 </ol>
 <p>Constructs a CartesianProduct from a SceneGraph geometry and pose in
@@ -222,13 +226,18 @@ when t=0. In this case, the constraints imply t ≥ 0, x ∈ t S ⊕ rec(S),
 where rec(S) is the recession cone of S (the asymptotic directions in
 which S is not bounded) and ⊕ is the Minkowski sum. For t &gt; 0, this is
 equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0</strong> – </p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>AddPointInNonnegativeScalingConstraints(self: pydrake.geometry.optimization.ConvexSet, prog: pydrake.solvers.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: numpy.ndarray[numpy.float64[m, 1]], d: float, x: numpy.ndarray[object[m, 1]], t: numpy.ndarray[object[m, 1]]) -&gt; List[pydrake.solvers.Binding[Constraint]]</p></li>
 </ol>
 <p>Let S be this convex set. When S is bounded, this method adds the
 convex constraints to imply</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A * x + b ∈ (c&#39; * t + d) S,
-c * t + d ≥ 0,
+c&#39; * t + d ≥ 0,
 </pre></div>
 </div>
 <p>where A is an n-by-m matrix (with n the ambient_dimension), b is a
@@ -244,6 +253,11 @@ c&#39; * t + d ≥ 0,
 which S is not bounded) and ⊕ is the Minkowski sum. For c’ * t + d &gt;
 0, this is equivalent to A * x + b ∈ (c’ * t + d) S, but for c’ * t +
 d = 0, we have only A * x + b ∈ rec(S).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -251,6 +265,11 @@ d = 0, we have only A * x + b ∈ rec(S).</p>
 <span class="sig-name descname"><span class="pre">AddPointInSetConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a constraint to an existing MathematicalProgram enforcing that
 the point defined by vars is inside the set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -293,13 +312,15 @@ non-empty.</p>
 element-wise finite lower and upper bound for the set. Note: for some
 derived classes, this check is trivial, but for others it can require
 solving an (typically small) optimization problem. Check the derived
-class documentation for any notes.</p>
+class documentation for any notes. When ambient_dimension is zero,
+always returns true.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.PointInSet">
 <span class="sig-name descname"><span class="pre">PointInSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.PointInSet" title="Permalink to this definition"></a></dt>
-<dd><p>Returns true iff the point x is contained in the set.</p>
+<dd><p>Returns true iff the point x is contained in the set. When
+ambient_dimension is zero, returns false.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -410,6 +431,8 @@ containing <em>only</em> elements of xu() and xv() as variables.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if f.GetFreeVariables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of xu</strong><strong>(</strong><strong>) </strong><strong>∪</strong> – </p></li>
 <li><p><strong>xv</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if xu</strong><strong>(</strong><strong>) </strong><strong>∪ xv</strong><strong>(</strong><strong>) </strong><strong>is empty</strong><strong>, </strong><strong>i.e.</strong><strong>, </strong><strong>when both vertices</strong> – </p></li>
+<li><p><strong>have an ambient dimension of zero.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -772,7 +795,10 @@ std::string name.</p>
 <code class="docutils literal notranslate"><span class="pre">f</span></code> containing <em>only</em> elements of x() as variables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if f.GetFreeVariables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of x</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if f.GetFreeVariables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of x</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -1057,6 +1083,10 @@ representation: <code class="docutils literal notranslate"><span class="pre">{x|
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional) polyhedron.</p>
+<ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs the polyhedron.</p>
@@ -1064,7 +1094,7 @@ representation: <code class="docutils literal notranslate"><span class="pre">{x|
 <dt>Precondition:</dt><dd><p>A.rows() == b.size().</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</p></li>
 </ol>
 <p>Constructs a new HPolyhedron from a SceneGraph geometry and pose in
@@ -1076,7 +1106,7 @@ in the world frame.</p>
 <dd class="field-odd"><p><strong>RuntimeError the geometry is not a convex polytope.</strong> – </p>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, vpoly: drake::geometry::optimization::VPolytope) -&gt; None</p></li>
 </ol>
 <p>Constructs a new HPolyedron from a VPolytope object. This function
@@ -1310,6 +1340,10 @@ dimensions.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.Hyperellipsoid) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional) set.</p>
+<ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.Hyperellipsoid, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], center: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs the ellipsoid.</p>
@@ -1317,7 +1351,7 @@ dimensions.</p>
 <dt>Precondition:</dt><dd><p>A.cols() == center.size().</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.Hyperellipsoid, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</p></li>
 </ol>
 <p>Constructs a Hyperellipsoid from a SceneGraph geometry and pose in the
@@ -1382,6 +1416,9 @@ center (up to precision).</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>the minimal scaling and the witness point, x, on other.</p>
 </dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0</strong> – </p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1404,10 +1441,14 @@ center (up to precision).</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Intersection.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.Intersection) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional) set.</p>
+<ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.Intersection, sets: List[pydrake.geometry.optimization.ConvexSet]) -&gt; None</p></li>
 </ol>
 <p>Constructs the intersection from a vector of convex sets.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.Intersection, setA: pydrake.geometry.optimization.ConvexSet, setB: pydrake.geometry.optimization.ConvexSet) -&gt; None</p></li>
 </ol>
 <p>Constructs the intersection from a pair of convex sets.</p>
@@ -1652,14 +1693,18 @@ Xₙ}</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.MinkowskiSum.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.MinkowskiSum) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional) set.</p>
+<ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.MinkowskiSum, sets: List[pydrake.geometry.optimization.ConvexSet]) -&gt; None</p></li>
 </ol>
 <p>Constructs the sum from a vector of convex sets.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.MinkowskiSum, setA: pydrake.geometry.optimization.ConvexSet, setB: pydrake.geometry.optimization.ConvexSet) -&gt; None</p></li>
 </ol>
 <p>Constructs the sum from a pair of convex sets.</p>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.geometry.optimization.MinkowskiSum, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</p></li>
 </ol>
 <p>Constructs a MinkowskiSum from a SceneGraph geometry and pose in the
@@ -1704,10 +1749,14 @@ singleton or unit set.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Point.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.Point) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional) set.</p>
+<ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.Point, x: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a Point.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.Point, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None, maximum_allowable_radius: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a Point from a SceneGraph geometry and pose in the
@@ -1789,13 +1838,17 @@ polyhedron).</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.VPolytope) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional) set.</p>
+<ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.VPolytope, vertices: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; None</p></li>
 </ol>
 <p>Constructs the polytope from a d-by-n matrix, where d is the ambient
 dimension, and n is the number of vertices. The vertices do not have
 to be ordered, nor minimal (they can contain points inside their
 convex hull).</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.VPolytope, H: pydrake.geometry.optimization.HPolyhedron) -&gt; None</p></li>
 </ol>
 <p>Constructs the polytope from a bounded polyhedron (using Qhull).</p>
@@ -1807,7 +1860,7 @@ convex hull).</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.geometry.optimization.VPolytope, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</p></li>
 </ol>
 <p>Constructs the polytope from a SceneGraph geometry.</p>

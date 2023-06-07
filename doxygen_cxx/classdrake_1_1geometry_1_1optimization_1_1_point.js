@@ -2,6 +2,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_point =
 [
     [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#af95f28bbee2634f1891a382a0839f874", null ],
     [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#ab6d8843112be555009c92fa609554255", null ],
+    [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#ae08c5f0c5b4c75a3e0f33dada5f2fcba", null ],
     [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#a99517cf9329eaf4327b3c7b090a058d3", null ],
     [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7", null ],
     [ "~Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#a2c488b3f2c926826a61b925810cee8ae", null ],

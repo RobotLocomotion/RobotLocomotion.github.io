@@ -2,6 +2,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_cartesian_product =
 [
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a3e4b08dc563560e2186dc7c35b92fff3", null ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2c90e1984608b11e2445e216c3617723", null ],
+    [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa265781415ff88df19224c143628305d", null ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aecd6b9669e7f9270c679c9354f2381f6", null ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#afcef64d3a17bf3547696e5fbb31612e5", null ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b", null ],

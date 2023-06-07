@@ -11,6 +11,7 @@ var classdrake_1_1geometry_1_1_scene_graph_inspector =
     [ "GetAllDeformableGeometryIds", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a79c271209096449409598e1da69c1413", null ],
     [ "GetAllFrameIds", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a68887a7088c2c3ff20e3c5c780e9807f", null ],
     [ "GetAllGeometryIds", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a4178e43f19b891fde901b16d3e617c8d", null ],
+    [ "GetAllSourceIds", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#aecdd5562bb8a24d5b0faa9523a0fa201", null ],
     [ "GetCollisionCandidates", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a79b84ada25718e2a38fd2d13adb4d839", null ],
     [ "GetFrameGroup", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ae8d8b283a6b3658b20db27e88d407f19", null ],
     [ "GetFrameId", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a1599d1c0d6a7a7d78491b5b1df7513f3", null ],

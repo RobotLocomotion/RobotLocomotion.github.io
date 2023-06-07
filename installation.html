@@ -199,12 +199,10 @@ require a working display server.  Most personal computers will have this
 already built in, but some cloud or docker environments may require extra
 setup steps.</p>
 
-<p>⁽²⁾ CPython is the only Python implementation supported. Drake does not support
-the Python environment supplied by Anaconda. Before installing or using Drake,
-please <code class="language-plaintext highlighter-rouge">conda deactivate</code> (repeatedly, until even the conda base environment has
-been deactivated) such that none of the paths reported <code class="language-plaintext highlighter-rouge">which -a python python3</code>
-refer to conda. Note that Miniconda seems to work fine; it’s only Anaconda that
-has caused problems for some users.</p>
+<p>⁽²⁾ CPython is the only Python implementation supported.
+Drake is not tested regularly with Anaconda, so if you are using Anaconda you
+may experience compatibility hiccups; when asking for help, be sure to mention
+that Conda is involved.</p>
 
 <p>⁽³⁾ The Python version shown in the table is supported for all installation
 channels. Additionally, on Ubuntu when installing via <code class="language-plaintext highlighter-rouge">pip</code> Python versions

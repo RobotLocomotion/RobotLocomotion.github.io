@@ -9342,16 +9342,14 @@ registered, a producer may also have to <em>update kinematics</em>. Producers
 themselves must be registered with SceneGraph as producers (a.k.a.
 <em>geometry sources</em>). They do this by acquiring a SourceId (via
 SceneGraph::RegisterSource()). The SourceId serves as a unique handle
-through which the producer’s identity is validated and its ownership
-of its registered geometry is maintained.</p>
+through which the producer’s identity is validated.</p>
 <p><em>Registering Geometry</em></p>
 <p>SceneGraph cannot know what geometry <em>should</em> be part of the shared
 world. Other systems are responsible for introducing geometry into the
 world. This process (defining geometry and informing SceneGraph) is
-called <em>registering</em> the geometry. The source that registers the
-geometry “owns” the geometry; the source’s unique SourceId is required
-to perform any operations on the geometry registered with that
-SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
+called <em>registering</em> the geometry. Geometry can be registered as
+<em>anchored</em> or <em>dynamic</em>, and is always registered to (associated with)
+a SourceId.</p>
 <p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
 pose) depends on a system’s Context. Particularly, a non-deformable
 dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values
@@ -10080,16 +10078,14 @@ registered, a producer may also have to <em>update kinematics</em>. Producers
 themselves must be registered with SceneGraph as producers (a.k.a.
 <em>geometry sources</em>). They do this by acquiring a SourceId (via
 SceneGraph::RegisterSource()). The SourceId serves as a unique handle
-through which the producer’s identity is validated and its ownership
-of its registered geometry is maintained.</p>
+through which the producer’s identity is validated.</p>
 <p><em>Registering Geometry</em></p>
 <p>SceneGraph cannot know what geometry <em>should</em> be part of the shared
 world. Other systems are responsible for introducing geometry into the
 world. This process (defining geometry and informing SceneGraph) is
-called <em>registering</em> the geometry. The source that registers the
-geometry “owns” the geometry; the source’s unique SourceId is required
-to perform any operations on the geometry registered with that
-SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
+called <em>registering</em> the geometry. Geometry can be registered as
+<em>anchored</em> or <em>dynamic</em>, and is always registered to (associated with)
+a SourceId.</p>
 <p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
 pose) depends on a system’s Context. Particularly, a non-deformable
 dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values
@@ -10807,16 +10803,14 @@ registered, a producer may also have to <em>update kinematics</em>. Producers
 themselves must be registered with SceneGraph as producers (a.k.a.
 <em>geometry sources</em>). They do this by acquiring a SourceId (via
 SceneGraph::RegisterSource()). The SourceId serves as a unique handle
-through which the producer’s identity is validated and its ownership
-of its registered geometry is maintained.</p>
+through which the producer’s identity is validated.</p>
 <p><em>Registering Geometry</em></p>
 <p>SceneGraph cannot know what geometry <em>should</em> be part of the shared
 world. Other systems are responsible for introducing geometry into the
 world. This process (defining geometry and informing SceneGraph) is
-called <em>registering</em> the geometry. The source that registers the
-geometry “owns” the geometry; the source’s unique SourceId is required
-to perform any operations on the geometry registered with that
-SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
+called <em>registering</em> the geometry. Geometry can be registered as
+<em>anchored</em> or <em>dynamic</em>, and is always registered to (associated with)
+a SourceId.</p>
 <p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
 pose) depends on a system’s Context. Particularly, a non-deformable
 dynamic geometry is <em>fixed</em> to a <em>frame</em> whose kinematics values
@@ -11621,6 +11615,14 @@ guaranteed to be stable and consistent.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetAllSourceIds">
+<span class="sig-name descname"><span class="pre">GetAllSourceIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.SourceId" title="pydrake.geometry.SourceId"><span class="pre">pydrake.geometry.SourceId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetAllSourceIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all of the source ids in the scene graph. The order is
+guaranteed to be stable and consistent. The first element is the
+SceneGraph-internal source.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetCollisionCandidates">
 <span class="sig-name descname"><span class="pre">GetCollisionCandidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetCollisionCandidates" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all pairs of geometries that are candidates for collision (in
@@ -12238,6 +12240,14 @@ guaranteed to be stable and consistent.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllSourceIds">
+<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllSourceIds"></span><span class="sig-name descname"><span class="pre">GetAllSourceIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.SourceId" title="pydrake.geometry.SourceId"><span class="pre">pydrake.geometry.SourceId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllSourceIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all of the source ids in the scene graph. The order is
+guaranteed to be stable and consistent. The first element is the
+SceneGraph-internal source.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetCollisionCandidates">
 <span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetCollisionCandidates"></span><span class="sig-name descname"><span class="pre">GetCollisionCandidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetCollisionCandidates" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all pairs of geometries that are candidates for collision (in
@@ -12846,6 +12856,14 @@ frame’s id.</p>
 <span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
 guaranteed to be stable and consistent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetAllSourceIds">
+<span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllSourceIds"></span><span class="sig-name descname"><span class="pre">GetAllSourceIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.SourceId" title="pydrake.geometry.SourceId"><span class="pre">pydrake.geometry.SourceId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllSourceIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all of the source ids in the scene graph. The order is
+guaranteed to be stable and consistent. The first element is the
+SceneGraph-internal source.</p>
 </dd></dl>
 
 <dl class="py method">

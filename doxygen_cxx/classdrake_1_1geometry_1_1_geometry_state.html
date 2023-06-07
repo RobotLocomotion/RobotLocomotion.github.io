@@ -248,6 +248,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4511806a62573c4a6050af3a3f0b3d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of SceneGraphInspector::GetGeometryVersion().  <a href="#a4511806a62573c4a6050af3a3f0b3d38">More...</a><br /></td></tr>
 <tr class="separator:a4511806a62573c4a6050af3a3f0b3d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Sources and source-related data</div></td></tr>
+<tr class="memitem:aecdd5562bb8a24d5b0faa9523a0fa201"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#aecdd5562bb8a24d5b0faa9523a0fa201">GetAllSourceIds</a> () const</td></tr>
+<tr class="memdesc:aecdd5562bb8a24d5b0faa9523a0fa201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all of the source ids in the scene graph.  <a href="#aecdd5562bb8a24d5b0faa9523a0fa201">More...</a><br /></td></tr>
+<tr class="separator:aecdd5562bb8a24d5b0faa9523a0fa201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7bb60e8005dd347c7df107f334b166b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ab7bb60e8005dd347c7df107f334b166b">SourceIsRegistered</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id) const</td></tr>
 <tr class="memdesc:ab7bb60e8005dd347c7df107f334b166b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7bb60e8005dd347c7df107f334b166b" title="Reports true if the given source_id maps to a registered source.">SceneGraphInspector::SourceIsRegistered()</a>.  <a href="#ab7bb60e8005dd347c7df107f334b166b">More...</a><br /></td></tr>
 <tr class="separator:ab7bb60e8005dd347c7df107f334b166b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1308,6 +1311,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="aecdd5562bb8a24d5b0faa9523a0fa201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecdd5562bb8a24d5b0faa9523a0fa201">&#9670;&nbsp;</a></span>GetAllSourceIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a>&gt; GetAllSourceIds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all of the source ids in the scene graph. </p>
+<p>The order is guaranteed to be stable and consistent. The first element is the SceneGraph-internal source. </p>
+
+</div>
+</div>
 <a id="a79b84ada25718e2a38fd2d13adb4d839"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79b84ada25718e2a38fd2d13adb4d839">&#9670;&nbsp;</a></span>GetCollisionCandidates()</h2>
 
@@ -2056,8 +2079,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="afc70b9a47428813b1018a4ff76555084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc70b9a47428813b1018a4ff76555084">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+<a id="a3af54c2100301e5b886af152392063f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af54c2100301e5b886af152392063f5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2068,7 +2091,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2082,8 +2105,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a3af54c2100301e5b886af152392063f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3af54c2100301e5b886af152392063f5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+<a id="afc70b9a47428813b1018a4ff76555084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc70b9a47428813b1018a4ff76555084">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2094,7 +2117,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

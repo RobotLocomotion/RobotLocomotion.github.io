@@ -2,6 +2,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_intersection =
 [
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#aecaa71c6fa73805192424c08eed6db2b", null ],
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a4bb118650a6b2616e008bdc642d043d8", null ],
+    [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#ae8bc77e85ab6570502b0596aac795e84", null ],
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a975d99900951b2a2cfee5777e32e329c", null ],
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a", null ],
     [ "~Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#ae68336f6101d2c47cee1a1eb7dc926f6", null ],
