@@ -942,7 +942,9 @@ var hierarchy =
               [ "RotaryEncoders< T >", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", null ]
             ] ],
             [ "WrapToSystem< T >", "classdrake_1_1systems_1_1_wrap_to_system.html", null ],
-            [ "ZeroOrderHold< T >", "classdrake_1_1systems_1_1_zero_order_hold.html", null ]
+            [ "ZeroOrderHold< T >", "classdrake_1_1systems_1_1_zero_order_hold.html", null ],
+            [ "InertiaVisualizer< T >", "classdrake_1_1visualization_1_1_inertia_visualizer.html", null ],
+            [ "MeshcatPoseSliders< T >", "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html", null ]
           ] ]
         ] ],
         [ "System< AutoDiffXd >", "classdrake_1_1systems_1_1_system.html", [

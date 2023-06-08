@@ -222,6 +222,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ddb1df26a2324afc83f84c90281c249"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249">SolvePath</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;source, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a8ddb1df26a2324afc83f84c90281c249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole graph.  <a href="#a8ddb1df26a2324afc83f84c90281c249">More...</a><br /></td></tr>
 <tr class="separator:a8ddb1df26a2324afc83f84c90281c249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3026f3dacc50a81434a05e8c9348eebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3026f3dacc50a81434a05e8c9348eebf">EstimateComplexity</a> () const</td></tr>
+<tr class="memdesc:a3026f3dacc50a81434a05e8c9348eebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a heuristic estimate of the complexity of the underlying GCS mathematical program, for regression testing purposes.  <a href="#a3026f3dacc50a81434a05e8c9348eebf">More...</a><br /></td></tr>
+<tr class="separator:a3026f3dacc50a81434a05e8c9348eebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a168105bb5c3b8e774024bc13eeef01de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a168105bb5c3b8e774024bc13eeef01de">GcsTrajectoryOptimization</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;)=delete</td></tr>
 <tr class="separator:a168105bb5c3b8e774024bc13eeef01de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -633,6 +636,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a3026f3dacc50a81434a05e8c9348eebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3026f3dacc50a81434a05e8c9348eebf">&#9670;&nbsp;</a></span>EstimateComplexity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> EstimateComplexity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provide a heuristic estimate of the complexity of the underlying GCS mathematical program, for regression testing purposes. </p>
+<p>Here we sum the total number of variable appearances in our costs and constraints as a rough approximation of the complexity of the subproblems. </p>
+
+</div>
+</div>
 <a id="ae696ea90dcbf1b197d5a4a30f895421d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae696ea90dcbf1b197d5a4a30f895421d">&#9670;&nbsp;</a></span>GetGraphvizString()</h2>
 
@@ -702,8 +725,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af6cfa802822c84540b5145bec87c49e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6cfa802822c84540b5145bec87c49e5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0e0056534457223e2eb27065147b9232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0056534457223e2eb27065147b9232">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -714,7 +737,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -728,8 +751,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e0056534457223e2eb27065147b9232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e0056534457223e2eb27065147b9232">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af6cfa802822c84540b5145bec87c49e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6cfa802822c84540b5145bec87c49e5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -740,7 +763,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ac65edc397e5ac441462d19a1873c8a07":[1,2,4,2,7],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ac951e9461fe35f8b40719a8ba37acea6":[1,2,4,2,6],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ad43a45a9bfeee26aafe9eef51139485a":[1,2,4,2,5],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ad75f0fc988a8d82c3b45614c4e296ab2":[1,2,4,2,10],
 "classdrake_1_1systems_1_1sensors_1_1_image.html":[3,0,0,16,8,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5412c17187dde2f8984dcfb3eb67ca1d":[3,0,0,18,5,14],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a547e26c83862bad737713ca1be3d3d84":[3,0,0,18,5,34],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a54d2cefdc8e6443b9710b195b914b680":[3,0,0,18,5,43],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f":[3,0,0,18,5,57],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,18,5,31],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5dc4d107b331f4e33f2893826c44be27":[3,0,0,18,5,7]
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f":[3,0,0,18,5,57]
 };

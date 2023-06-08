@@ -31,6 +31,7 @@ var searchData=
   ['impliciteulerintegrator',['ImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_implicit_euler_integrator.html',1,'drake::systems']]],
   ['implicitintegrator',['ImplicitIntegrator',['../classdrake_1_1systems_1_1_implicit_integrator.html',1,'drake::systems']]],
   ['implicitintegratortest',['ImplicitIntegratorTest',['../classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html',1,'drake::systems::analysis_test']]],
+  ['inertiavisualizer',['InertiaVisualizer',['../classdrake_1_1visualization_1_1_inertia_visualizer.html',1,'drake::visualization']]],
   ['initializeparams',['InitializeParams',['../structdrake_1_1systems_1_1_initialize_params.html',1,'drake::systems']]],
   ['initialvalueproblem',['InitialValueProblem',['../classdrake_1_1systems_1_1_initial_value_problem.html',1,'drake::systems']]],
   ['inputport',['InputPort',['../classdrake_1_1systems_1_1_input_port.html',1,'drake::systems']]],

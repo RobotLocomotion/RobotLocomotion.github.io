@@ -446,6 +446,301 @@ connections.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">MeshcatPoseSliders</span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>MeshcatPoseSliders adds slider bars to the MeshCat control panel for
+the roll, pitch, yaw, x, y, z control of a pose. These might be useful
+for interactive or teleoperation demos. The abstract-value pose is
+available on the <code class="docutils literal notranslate"><span class="pre">pose</span></code> output port of this system.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">pose (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPoseSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; pose</td></tr></table></td></tr></table><p>The optional <code class="docutils literal notranslate"><span class="pre">pose</span></code> input port is used ONLY at initialization; it
+can be used to set the pose during an Initialization event. If
+connected, it will take precedence over any <code class="docutils literal notranslate"><span class="pre">initial_pose</span></code> specified
+in the constructor.</p>
+<p>Beware that the output port of this system always provides the
+sliders’ current values, even if evaluated by multiple different
+downstream input ports during a single computation. If you need to
+have a synchronized view of the slider data, place a
+systems::ZeroOrderHold system between the sliders and downstream
+calculations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>__init__(self: pydrake.visualization.MeshcatPoseSliders, meshcat: pydrake.geometry.Meshcat, initial_pose: pydrake.math.RigidTransform = RigidTransform(</dt><dd><dl class="simple">
+<dt>R=RotationMatrix([</dt><dd><p>[1.0, 0.0, 0.0],
+[0.0, 1.0, 0.0],
+[0.0, 0.0, 1.0],</p>
+</dd>
+</dl>
+<p>]),
+p=[0.0, 0.0, 0.0],</p>
+</dd>
+<dt>), lower_limit: numpy.ndarray[numpy.float64[6, 1]] = array([-3.14159265, -3.14159265, -3.14159265, -1.        , -1.        ,</dt><dd><p>-1.        ]), upper_limit: numpy.ndarray[numpy.float64[6, 1]] = array([3.14159265, 3.14159265, 3.14159265, 1.        , 1.        ,
+1.        ]), step: numpy.ndarray[numpy.float64[6, 1]] = array([0.01, 0.01, 0.01, 0.01, 0.01, 0.01]), decrement_keycodes: List[str] = [‘KeyQ’, ‘KeyS’, ‘KeyA’, ‘KeyJ’, ‘KeyK’, ‘KeyU’], increment_keycodes: List[str] = [‘KeyE’, ‘KeyW’, ‘KeyD’, ‘KeyL’, ‘KeyI’, ‘KeyO’], prefix: str = ‘’, visible: numpy.ndarray[bool[6, 1]] = array([ True,  True,  True,  True,  True,  True])) -&gt; None</p>
+</dd>
+</dl>
+<p>Creates MeshCat sliders for a roll-pitch-yaw-x-y-z parameterization of
+a pose (aka RigidTransform).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt><dd><p>The MeshCat instance where the sliders will be added.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_pose</span></code>:</dt><dd><p>(Optional) If provided, the sliders’ initial values will be as
+given.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>(Optional) The lower limit of the sliders for roll, pitch, yaw, x,
+y, z.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>(Optional) The upper limit of the sliders for roll, pitch, yaw, x,
+y, z.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">step</span></code>:</dt><dd><p>(Optional) The step argument of the slider, which is the smallest
+increment by which the slider can change values (and therefore
+update our output port’s value). May be a single value or else a
+vector of length 6.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
+decrement the value of each slider (roll, pitch, yaw, x, y, z).
+See Meshcat::AddSlider for more details.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
+increment the value of each slider (roll, pitch, yaw, x, y, z).
+See Meshcat::AddSlider for more details.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prefix</span></code>:</dt><dd><p>(Optional) By default, the sliders will be named “roll, pitch,
+yaw, x, y, z”. If prefix is non-empty, the the sliders will be
+named “{prefix}_roll, {prefix}_pitch”, etc.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">visible</span></code>:</dt><dd><p>(Optional) If provided, determines which of the sliders (roll,
+pitch, yaw, x, y, z) are visible in the Meshcat window. This can
+be useful, for instance, if one only wants to control the pose in
+2D (and therefore only show the sliders for e.g. yaw, x, and y).</p>
+</dd>
+</dl>
+<p>The default keycodes provide the following keyboard mapping:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
+│   Q   ││   W   ││   E   │        │   U   ││   I   ││   O   │
+│ roll- ││ pitch+││ roll+ │        │   z-  ││   y+  ││   z+  │
+├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
+├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
+│   A   ││   S   ││   D   │        │   J   ││   K   ││   L   │
+│  yaw- ││ pitch-││  yaw+ │        │   x-  ││   y-  ││   x+  │
+└───────┴┴───────┴┴───────┘        └───────┴┴───────┴┴───────┘
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.Delete">
+<span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.Delete" title="Permalink to this definition"></a></dt>
+<dd><p>Removes our sliders from the associated meshcat instance.</p>
+<p>From this point on, our output port produces the initial_value from
+the constructor, not any slider values.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is not safe to call this when a CalcOutput might be happening
+on this instance concurrently on another thread.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.Run">
+<span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.Run" title="Permalink to this definition"></a></dt>
+<dd><p>Publishes the given systems::System (typically, a Diagram including
+visualizers, to cause it to be visualized) whenever our sliders’
+values change. Blocks until the user clicks a “Stop” button in the
+MeshCat control panel, or if the timeout limit is reached.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The systems::Context for the systems::Diagram.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">timeout</span></code>:</dt><dd><p>(Optional) In the absence of a button click, the duration (in
+seconds) to wait before returning. If the button is clicked, this
+function will return promptly, without waiting for the timeout.
+When no timeout is given, this function will block indefinitely.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stop_button_keycode</span></code>:</dt><dd><p>a keycode that will be assigned to the “Stop” button. Setting this
+to the empty string means no keycode. See Meshcat::AddButton for
+details. $*Default:* “Escape”.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the most recently output pose.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">system</span></code> must be this MeshcatPoseSliders system or be a
+top-level (i.e., “root”) diagram that contains this
+MeshcatPoseSliders system.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.SetPose">
+<span class="sig-name descname"><span class="pre">SetPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.SetPose" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the pose to <code class="docutils literal notranslate"><span class="pre">X</span></code>. The MeshCat sliders will have their value
+updated. Additionally, the “initial pose” tracked by this instance
+will be updated to <code class="docutils literal notranslate"><span class="pre">X</span></code>. This “initial pose” update will persist even
+if sliders are removed (e.g., via Delete).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">MeshcatPoseSliders_</span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_[float]</span></code>, <a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd" title="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_[AutoDiffXd]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd">
+<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">MeshcatPoseSliders_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>MeshcatPoseSliders adds slider bars to the MeshCat control panel for
+the roll, pitch, yaw, x, y, z control of a pose. These might be useful
+for interactive or teleoperation demos. The abstract-value pose is
+available on the <code class="docutils literal notranslate"><span class="pre">pose</span></code> output port of this system.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">pose (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPoseSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; pose</td></tr></table></td></tr></table><p>The optional <code class="docutils literal notranslate"><span class="pre">pose</span></code> input port is used ONLY at initialization; it
+can be used to set the pose during an Initialization event. If
+connected, it will take precedence over any <code class="docutils literal notranslate"><span class="pre">initial_pose</span></code> specified
+in the constructor.</p>
+<p>Beware that the output port of this system always provides the
+sliders’ current values, even if evaluated by multiple different
+downstream input ports during a single computation. If you need to
+have a synchronized view of the slider data, place a
+systems::ZeroOrderHold system between the sliders and downstream
+calculations.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.__init__">
+<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>__init__(self: pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, initial_pose: pydrake.math.RigidTransform = RigidTransform(</dt><dd><dl class="simple">
+<dt>R=RotationMatrix([</dt><dd><p>[1.0, 0.0, 0.0],
+[0.0, 1.0, 0.0],
+[0.0, 0.0, 1.0],</p>
+</dd>
+</dl>
+<p>]),
+p=[0.0, 0.0, 0.0],</p>
+</dd>
+<dt>), lower_limit: numpy.ndarray[numpy.float64[6, 1]] = array([-3.14159265, -3.14159265, -3.14159265, -1.        , -1.        ,</dt><dd><p>-1.        ]), upper_limit: numpy.ndarray[numpy.float64[6, 1]] = array([3.14159265, 3.14159265, 3.14159265, 1.        , 1.        ,
+1.        ]), step: numpy.ndarray[numpy.float64[6, 1]] = array([0.01, 0.01, 0.01, 0.01, 0.01, 0.01]), decrement_keycodes: List[str] = [‘KeyQ’, ‘KeyS’, ‘KeyA’, ‘KeyJ’, ‘KeyK’, ‘KeyU’], increment_keycodes: List[str] = [‘KeyE’, ‘KeyW’, ‘KeyD’, ‘KeyL’, ‘KeyI’, ‘KeyO’], prefix: str = ‘’, visible: numpy.ndarray[bool[6, 1]] = array([ True,  True,  True,  True,  True,  True])) -&gt; None</p>
+</dd>
+</dl>
+<p>Creates MeshCat sliders for a roll-pitch-yaw-x-y-z parameterization of
+a pose (aka RigidTransform).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt><dd><p>The MeshCat instance where the sliders will be added.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_pose</span></code>:</dt><dd><p>(Optional) If provided, the sliders’ initial values will be as
+given.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>(Optional) The lower limit of the sliders for roll, pitch, yaw, x,
+y, z.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>(Optional) The upper limit of the sliders for roll, pitch, yaw, x,
+y, z.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">step</span></code>:</dt><dd><p>(Optional) The step argument of the slider, which is the smallest
+increment by which the slider can change values (and therefore
+update our output port’s value). May be a single value or else a
+vector of length 6.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
+decrement the value of each slider (roll, pitch, yaw, x, y, z).
+See Meshcat::AddSlider for more details.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
+increment the value of each slider (roll, pitch, yaw, x, y, z).
+See Meshcat::AddSlider for more details.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prefix</span></code>:</dt><dd><p>(Optional) By default, the sliders will be named “roll, pitch,
+yaw, x, y, z”. If prefix is non-empty, the the sliders will be
+named “{prefix}_roll, {prefix}_pitch”, etc.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">visible</span></code>:</dt><dd><p>(Optional) If provided, determines which of the sliders (roll,
+pitch, yaw, x, y, z) are visible in the Meshcat window. This can
+be useful, for instance, if one only wants to control the pose in
+2D (and therefore only show the sliders for e.g. yaw, x, and y).</p>
+</dd>
+</dl>
+<p>The default keycodes provide the following keyboard mapping:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
+│   Q   ││   W   ││   E   │        │   U   ││   I   ││   O   │
+│ roll- ││ pitch+││ roll+ │        │   z-  ││   y+  ││   z+  │
+├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
+├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
+│   A   ││   S   ││   D   │        │   J   ││   K   ││   L   │
+│  yaw- ││ pitch-││  yaw+ │        │   x-  ││   y-  ││   x+  │
+└───────┴┴───────┴┴───────┘        └───────┴┴───────┴┴───────┘
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Delete">
+<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].Delete"></span><span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Delete" title="Permalink to this definition"></a></dt>
+<dd><p>Removes our sliders from the associated meshcat instance.</p>
+<p>From this point on, our output port produces the initial_value from
+the constructor, not any slider values.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is not safe to call this when a CalcOutput might be happening
+on this instance concurrently on another thread.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Run">
+<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].Run"></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Run" title="Permalink to this definition"></a></dt>
+<dd><p>Publishes the given systems::System (typically, a Diagram including
+visualizers, to cause it to be visualized) whenever our sliders’
+values change. Blocks until the user clicks a “Stop” button in the
+MeshCat control panel, or if the timeout limit is reached.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The systems::Context for the systems::Diagram.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">timeout</span></code>:</dt><dd><p>(Optional) In the absence of a button click, the duration (in
+seconds) to wait before returning. If the button is clicked, this
+function will return promptly, without waiting for the timeout.
+When no timeout is given, this function will block indefinitely.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stop_button_keycode</span></code>:</dt><dd><p>a keycode that will be assigned to the “Stop” button. Setting this
+to the empty string means no keycode. See Meshcat::AddButton for
+details. $*Default:* “Escape”.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the most recently output pose.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">system</span></code> must be this MeshcatPoseSliders system or be a
+top-level (i.e., “root”) diagram that contains this
+MeshcatPoseSliders system.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.SetPose">
+<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].SetPose"></span><span class="sig-name descname"><span class="pre">SetPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.SetPose" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the pose to <code class="docutils literal notranslate"><span class="pre">X</span></code>. The MeshCat sliders will have their value
+updated. Additionally, the “initial pose” tracked by this instance
+will be updated to <code class="docutils literal notranslate"><span class="pre">X</span></code>. This “initial pose” update will persist even
+if sliders are removed (e.g., via Delete).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ModelVisualizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visualize_frames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_contacts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_rgbd_sensor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">browser_new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pyplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -740,8 +1035,8 @@ overwrite the prior video with a new one.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">VisualizationConfig</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig" title="Permalink to this definition"></a></dt>
-<dd><p>Settings for what MultibodyPlant and SceneGraph should send to meldis
-and/or drake_visualizer.</p>
+<dd><p>Settings for what MultibodyPlant and SceneGraph should send to meldis,
+Meshcat, and/or drake_visualizer.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This feature is considered to be <strong>experimental</strong> and may change
@@ -810,6 +1105,12 @@ visualizations, e.g., from a previous simulation, to .</p>
 <dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_illustration">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_illustration</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_illustration" title="Permalink to this definition"></a></dt>
 <dd><p>Whether to show illustration geometry.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_inertia">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_inertia</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_inertia" title="Permalink to this definition"></a></dt>
+<dd><p>Whether to show body inertia.</p>
 </dd></dl>
 
 <dl class="py property">

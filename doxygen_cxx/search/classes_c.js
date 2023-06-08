@@ -15,6 +15,7 @@ var searchData=
   ['meshcatcone',['MeshcatCone',['../classdrake_1_1geometry_1_1_meshcat_cone.html',1,'drake::geometry']]],
   ['meshcatparams',['MeshcatParams',['../structdrake_1_1geometry_1_1_meshcat_params.html',1,'drake::geometry']]],
   ['meshcatpointcloudvisualizer',['MeshcatPointCloudVisualizer',['../classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html',1,'drake::geometry']]],
+  ['meshcatposesliders',['MeshcatPoseSliders',['../classdrake_1_1visualization_1_1_meshcat_pose_sliders.html',1,'drake::visualization']]],
   ['meshcatvisualizer',['MeshcatVisualizer',['../classdrake_1_1geometry_1_1_meshcat_visualizer.html',1,'drake::geometry']]],
   ['meshcatvisualizerparams',['MeshcatVisualizerParams',['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html',1,'drake::geometry']]],
   ['meshfieldlinear',['MeshFieldLinear',['../classdrake_1_1geometry_1_1_mesh_field_linear.html',1,'drake::geometry']]],

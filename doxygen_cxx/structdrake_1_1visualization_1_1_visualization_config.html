@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1visualization_1_1_visua
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Settings for what MultibodyPlant and SceneGraph should send to meldis and/or drake_visualizer. </p>
+<div class="textblock"><p>Settings for what MultibodyPlant and SceneGraph should send to meldis, Meshcat, and/or drake_visualizer. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. The exact configuration details (names and types) are subject to change as we polish this new feature.</dd></dl>
 <p>See <a class="el" href="namespacedrake_1_1visualization.html#acfe50d1cfd6c229aab5986a0a3c97494" title="Adds LCM visualization publishers to communicate to drake_visualizer and/or meldis.">ApplyVisualizationConfig()</a> for how to enact this configuration. </p>
 </div>
@@ -190,7 +190,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8de496c6a641ed6fd4fa5d78bfcb73a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a8de496c6a641ed6fd4fa5d78bfcb73a9">publish_illustration</a> {true}</td></tr>
 <tr class="memdesc:a8de496c6a641ed6fd4fa5d78bfcb73a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show illustration geometry.  <a href="#a8de496c6a641ed6fd4fa5d78bfcb73a9">More...</a><br /></td></tr>
 <tr class="separator:a8de496c6a641ed6fd4fa5d78bfcb73a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c5955d58750f444fbad0c39fb6f7672"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a7c5955d58750f444fbad0c39fb6f7672">default_illustration_color</a> {0.9, 0.9, 0.9}</td></tr>
+<tr class="memitem:a7c5955d58750f444fbad0c39fb6f7672"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a7c5955d58750f444fbad0c39fb6f7672">default_illustration_color</a> {0.9, 0.9, 0.9, 1.0}</td></tr>
 <tr class="memdesc:a7c5955d58750f444fbad0c39fb6f7672"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color to apply to any illustration geometry that hasn't defined one.  <a href="#a7c5955d58750f444fbad0c39fb6f7672">More...</a><br /></td></tr>
 <tr class="separator:a7c5955d58750f444fbad0c39fb6f7672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c434dc8a30fc66fa14527eca76f38b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a2c434dc8a30fc66fa14527eca76f38b5">publish_proximity</a> {true}</td></tr>
@@ -199,6 +199,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:adfdda5f3f8c943cb23d22e9bf52afbe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7">default_proximity_color</a> {1, 0, 0, 0.5}</td></tr>
 <tr class="memdesc:adfdda5f3f8c943cb23d22e9bf52afbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color to apply to any proximity geometry that hasn't defined one.  <a href="#adfdda5f3f8c943cb23d22e9bf52afbe7">More...</a><br /></td></tr>
 <tr class="separator:adfdda5f3f8c943cb23d22e9bf52afbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeafcd0d4f3194281faba6686f1589b00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#aeafcd0d4f3194281faba6686f1589b00">publish_inertia</a> {false}</td></tr>
+<tr class="memdesc:aeafcd0d4f3194281faba6686f1589b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show body inertia.  <a href="#aeafcd0d4f3194281faba6686f1589b00">More...</a><br /></td></tr>
+<tr class="separator:aeafcd0d4f3194281faba6686f1589b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5544a2db38abe64cf9742dea94b1995"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995">publish_contacts</a> {true}</td></tr>
 <tr class="memdesc:ae5544a2db38abe64cf9742dea94b1995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show contact forces.  <a href="#ae5544a2db38abe64cf9742dea94b1995">More...</a><br /></td></tr>
 <tr class="separator:ae5544a2db38abe64cf9742dea94b1995"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,7 +242,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a> default_illustration_color {0.9, 0.9, 0.9}</td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a> default_illustration_color {0.9, 0.9, 0.9, 1.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -360,6 +363,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Whether to show illustration geometry. </p>
+
+</div>
+</div>
+<a id="aeafcd0d4f3194281faba6686f1589b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeafcd0d4f3194281faba6686f1589b00">&#9670;&nbsp;</a></span>publish_inertia</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool publish_inertia {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to show body inertia. </p>
 
 </div>
 </div>
