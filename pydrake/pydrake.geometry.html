@@ -3446,12 +3446,21 @@ ecosystem, only the visualization will be upside down. This has
 been documented in
 <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/14254">https://github.com/RobotLocomotion/drake/issues/14254</a>.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>RenderEngineGl is not threadsafe. If a SceneGraph is instantiated
-with a RenderEngineGl and there are multiple Context instances for
-that SceneGraph, rendering in multiple threads may exhibit issues.</p>
-</div>
+<p>** Using RenderEngineGl in multiple threads **</p>
+<p>Most importantly, a single RenderEngineGl should <em>not</em> be exercised in
+multiple threads. One thread, one RenderEngineGl instance.</p>
+<p>A RenderEngineGl instance and its <em>clones</em> can be used in different
+threads simultaneously, but <em>only</em> the rendering APIs are threadsafe.
+Do not mutate the contents of the engine (e.g., adding/removing
+geometries, etc.) in parallel.</p>
+<p>Two independently constructed RenderEngineGl instances can be freely
+used in different threads – all APIs are available.</p>
+<p>The expected workflow is to add a RenderEngineGl instance a SceneGraph
+instance (see SceneGraph::AddRenderer()) and then to populate
+SceneGraph with the desired geometry. Each systems::Context allocated
+for that SceneGraph will receive a clone of the original
+RenderEngineGl. One systems::Context can be used per thread to create
+rendered images in parallel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if kHasRenderEngineGl is false.</strong> – </p>

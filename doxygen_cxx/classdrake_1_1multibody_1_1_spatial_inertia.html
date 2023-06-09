@@ -283,6 +283,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a423681189f9dd1726b750876f67dafe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d612851b1578071428ec79f7da1047a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a2d612851b1578071428ec79f7da1047a">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a2d612851b1578071428ec79f7da1047a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Spatial inertia equivalent shapes</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="spatial_inertia_equivalent_shapes"></a> Calculates principal semi-diameters (half-lengths), principal axes orientations, and the position of a uniform-density object whose spatial inertia is equal to <code>this</code> spatial inertia. These functions are useful for visualization or physical interpretation of the geometric extents of <code>this</code> spatial inertia for a given shape. These functions return 3 principal semi-diameters (half-lengths) [a b c] sorted in descending order (a ≥ b ≥ c) which are measured from Scm (the center of mass of <code>this</code> spatial inertia). They also return the pose of the uniform density object that represents <code>this</code> spatial inertia.</p>
+<p>Example: Consider an oddly-shaped rigid body B with a known spatial inertia M_BBo_B about B's origin Bo, expressed in frame B. These functions return an easily visualized simple shape whose spatial inertial is equal to M_BBo_B. The simple shape is defined by a frame A with origin Ao at Bcm (B's center of mass), has principal dimensions [a b c], and has unit vectors Ax, Ay, Az parallel to the simple shape's principal directions. When the simple shape is a uniform-density solid ellipsoid, proceed as follows to form [a b c], the rotation matrix R_BA describing Ax, Ay, Az, and the position vector p_BoAo_B from Bo to Ao (ellipsoid center of mass). </p><div class="fragment"><div class="line"><span class="keyword">const</span> SpatialInertia&lt;double&gt;&amp; M_BBo_B = B.default_spatial_inertia();</div><div class="line"><span class="keyword">auto</span> [abc, X_BA] =</div><div class="line">  M_BBo_B.CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid();</div></div><!-- fragment --> <dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the elements of <code>this</code> spatial inertia cannot be converted to a real finite double. For example, an exception is thrown if <code>this</code> contains an erroneous NaN or if scalar type T is symbolic. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a0e13800a4b7f21903141dbe4c0102720" title="Forms the 3 principal moments of inertia and their 3 associated principal directions for this rotatio...">RotationalInertia::CalcPrincipalMomentsAndAxesOfInertia()</a> to form principal moments of inertia and their associated principal directions. </dd></dl>
+</div></td></tr>
+<tr class="memitem:aba6d2ff81ae140bb2c4249933a51597c"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aba6d2ff81ae140bb2c4249933a51597c">CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</a> () const</td></tr>
+<tr class="memdesc:aba6d2ff81ae140bb2c4249933a51597c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns semi-diameters, orientation, and position of a solid ellipsoid whose spatial inertia is equal to <code>this</code> spatial inertia.  <a href="#aba6d2ff81ae140bb2c4249933a51597c">More...</a><br /></td></tr>
+<tr class="separator:aba6d2ff81ae140bb2c4249933a51597c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe13c3fa1bec5373af28bc723de8bd6"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aefe13c3fa1bec5373af28bc723de8bd6">CalcPrincipalHalfLengthsAndPoseForSolidBox</a> () const</td></tr>
+<tr class="memdesc:aefe13c3fa1bec5373af28bc723de8bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns half-lengths, orientation, and position of a solid box whose spatial inertia is equal to <code>this</code> spatial inertia.  <a href="#aefe13c3fa1bec5373af28bc723de8bd6">More...</a><br /></td></tr>
+<tr class="separator:aefe13c3fa1bec5373af28bc723de8bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -498,6 +514,46 @@ Related Functions</h2></td></tr>
 
 <p>Computes the center of mass moment vector <code>mass * p_PScm_E</code> given the position vector <code>p_PScm_E</code> from the <em>about point</em> P to the center of mass <code>Scm</code> of the body or composite body S, expressed in frame E. </p>
 <p>See the documentation of this class for details. </p>
+
+</div>
+</div>
+<a id="aefe13c3fa1bec5373af28bc723de8bd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe13c3fa1bec5373af28bc723de8bd6">&#9670;&nbsp;</a></span>CalcPrincipalHalfLengthsAndPoseForSolidBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; CalcPrincipalHalfLengthsAndPoseForSolidBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns half-lengths, orientation, and position of a solid box whose spatial inertia is equal to <code>this</code> spatial inertia. </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#spatial_inertia_equivalent_shapes">Spatial inertia equivalent shapes</a> for more details. </p>
+
+</div>
+</div>
+<a id="aba6d2ff81ae140bb2c4249933a51597c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6d2ff81ae140bb2c4249933a51597c">&#9670;&nbsp;</a></span>CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns semi-diameters, orientation, and position of a solid ellipsoid whose spatial inertia is equal to <code>this</code> spatial inertia. </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#spatial_inertia_equivalent_shapes">Spatial inertia equivalent shapes</a> for more details. </p>
 
 </div>
 </div>

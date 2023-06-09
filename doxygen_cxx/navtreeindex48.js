@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"group__systems.html#ga3e4e6a211dd145828511de57c117c5aa":[1,2,15],
+"group__technical__notes.html":[1,6],
 "group__templates.html":[1,6,5],
 "group__terminology__and__notation.html":[1,0],
 "group__visualization.html":[1,2,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "linear__constitutive__model__data_8h.html":[4,0,0,8,3,19],
 "linear__corotated__model_8h.html":[4,0,0,8,3,20],
 "linear__corotated__model__data_8h.html":[4,0,0,8,3,21],
-"linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
-"linear__operator_8h.html":[4,0,0,8,2,7],
-"linear__quadratic__regulator_8h.html":[4,0,0,12,1,7]
+"linear__model__predictive__controller_8h.html":[4,0,0,12,1,6]
 };

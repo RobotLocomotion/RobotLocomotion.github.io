@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"linear__operator_8h.html":[4,0,0,8,2,7],
+"linear__quadratic__regulator_8h.html":[4,0,0,12,1,7],
 "linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,12,1,7,4],
 "linear__quadratic__regulator_8h.html#ga6506532189adf1c7a42662b597135f70":[4,0,0,12,1,7,2],
 "linear__quadratic__regulator_8h.html#gae7d3c5debca2daa6de88dbc014263f5c":[4,0,0,12,1,7,1],
@@ -241,13 +243,11 @@ var NAVTREEINDEX49 =
 "namespacedrake.html":[3,0,0],
 "namespacedrake_1_1ad.html":[3,0,0,0],
 "namespacedrake_1_1ad.html":[2,0,0,0],
-"namespacedrake_1_1assert.html":[3,0,0,1],
 "namespacedrake_1_1assert.html":[2,0,0,1],
+"namespacedrake_1_1assert.html":[3,0,0,1],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common.html":[3,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
-"namespacedrake_1_1examples.html":[2,0,0,3],
 "namespacedrake_1_1examples.html":[3,0,0,3],
-"namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
-"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0]
+"namespacedrake_1_1examples.html":[2,0,0,3]
 };

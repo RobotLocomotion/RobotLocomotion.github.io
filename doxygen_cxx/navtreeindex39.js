@@ -1,5 +1,7 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a2edea43a5cc1cf93774961dedc8b0d2f":[1,4,0,0,9,5],
+"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24":[1,4,0,0,9,4],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a44af8b347885ee19f87997984afee868":[1,4,0,0,9,6],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a51cd4d7a95294abf5d4730227f4a7daf":[1,4,0,0,9,3],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a6cfdb1188fe401e8397af9ed6e80b309":[1,4,0,0,9,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a18737529bba0537a9fa06a649378b1a8":[1,2,2,6,6],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a2cdc3bbfd20618923a844cb668660b52":[1,2,2,6,14],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a45ab2364a45cc9e4c285375ffa87d97c":[1,2,2,6,13],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a531cfe18df6e555f9f9e952469177f7f":[1,2,2,6,18],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a772f46182ab4267add47604fe18eb143":[1,2,2,6,10],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a7774ce445791101414fcae49b9cf29d7":[1,2,2,6,20]
+"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a531cfe18df6e555f9f9e952469177f7f":[1,2,2,6,18]
 };

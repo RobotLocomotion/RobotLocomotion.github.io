@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"structdrake_1_1multibody_1_1_calc_grid_points_options.html":[3,0,0,9,14],
+"structdrake_1_1multibody_1_1_calc_grid_points_options.html#a3f20636148fdd94d52564127774875d7":[3,0,0,9,14,4],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a4895028b237386dd36645a9b8f0f30f4":[3,0,0,9,14,1],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a53380b3b14c20bdfcb3bc9970c421231":[3,0,0,9,14,2],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,14,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f":[1,4,2,2,3,3],
 "structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32":[1,4,2,2,3,0],
 "structdrake_1_1planning_1_1_collision_checker_params.html#a3a158076de3363e9927786d4732f3197":[1,4,2,2,3,5],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884":[1,4,2,2,3,1],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a":[1,4,2,2,3,4],
-"structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,2]
+"structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884":[1,4,2,2,3,1]
 };

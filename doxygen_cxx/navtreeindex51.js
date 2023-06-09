@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"pendulum__geometry_8h.html":[4,0,0,3,12,0],
+"pendulum__plant_8h.html":[4,0,0,3,12,1],
 "penetration__as__point__pair_8h.html":[4,0,0,4,3,2],
 "penetration__as__point__pair__callback_8h.html":[4,0,0,4,2,43],
 "penetration__doxygen_8h.html":[4,0,0,4,2,44],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "rational__function_8h.html#a22f74050260696325581c3087d07fab7":[4,0,0,1,3,14,21],
 "rational__function_8h.html#a267c5d854d55ce16b1e58490ff426661":[4,0,0,1,3,14,9],
 "rational__function_8h.html#a27ad135e8775cf9d721b1223218fff2d":[4,0,0,1,3,14,26],
-"rational__function_8h.html#a347249d56768661c610bf3bafb5ff167":[4,0,0,1,3,14,6],
-"rational__function_8h.html#a3c8b6db1763f8f7a5d98de636b9cd7c9":[4,0,0,1,3,14,24],
-"rational__function_8h.html#a43d86ae3f21714ef199febddf60550fe":[4,0,0,1,3,14,31]
+"rational__function_8h.html#a347249d56768661c610bf3bafb5ff167":[4,0,0,1,3,14,6]
 };
