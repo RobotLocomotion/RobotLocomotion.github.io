@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a5e4cd1c12daac7a48d8f20ed22f7c430":[3,0,0,9,87,1],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a6e448f12a07992d19939e1682ccadd3f":[3,0,0,9,87,2],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#aad53178ea1a07e1fe55be519b063bb85":[3,0,0,9,87,6],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#ac08f056c7abfa18f866f1a05f6bfad56":[3,0,0,9,87,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a5d49035285a5d232617b92f664da8dd0":[3,0,0,9,0,0,0,7],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a63265e53d7043519b6cf828438f9ea35":[3,0,0,9,0,0,0,16],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a6fc196fb717a285d1a801d72a2c96caa":[3,0,0,9,0,0,0,10],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a7048331b4393fc204bb7ab529bb379b0":[3,0,0,9,0,0,0,17],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a88cc2ca56d54ffc2408e2466901c3d35":[3,0,0,9,0,0,0,8]
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a7048331b4393fc204bb7ab529bb379b0":[3,0,0,9,0,0,0,17]
 };

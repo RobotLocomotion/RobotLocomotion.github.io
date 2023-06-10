@@ -5162,6 +5162,16 @@ Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.IsVelocityEqualToQDot">
+<span class="sig-name descname"><span class="pre">IsVelocityEqualToQDot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.IsVelocityEqualToQDot" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the generalized velocity v is exactly the time
+derivative q̇ of the generalized coordinates q. In this case
+MapQDotToVelocity() and MapVelocityToQDot() implement the identity
+map. This method is, in the worst case, O(n), where n is the number of
+joints.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MakeActuationMatrix">
 <span class="sig-name descname"><span class="pre">MakeActuationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeActuationMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>This method creates an actuation matrix B mapping a vector of
@@ -9622,6 +9632,16 @@ Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.IsVelocityEqualToQDot">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].IsVelocityEqualToQDot"></span><span class="sig-name descname"><span class="pre">IsVelocityEqualToQDot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.IsVelocityEqualToQDot" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the generalized velocity v is exactly the time
+derivative q̇ of the generalized coordinates q. In this case
+MapQDotToVelocity() and MapVelocityToQDot() implement the identity
+map. This method is, in the worst case, O(n), where n is the number of
+joints.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeActuationMatrix">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].MakeActuationMatrix"></span><span class="sig-name descname"><span class="pre">MakeActuationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeActuationMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>This method creates an actuation matrix B mapping a vector of
@@ -14073,6 +14093,16 @@ Finalize().</p>
 <p class="admonition-title">See also</p>
 <p>Finalize().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.IsVelocityEqualToQDot">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].IsVelocityEqualToQDot"></span><span class="sig-name descname"><span class="pre">IsVelocityEqualToQDot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.IsVelocityEqualToQDot" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the generalized velocity v is exactly the time
+derivative q̇ of the generalized coordinates q. In this case
+MapQDotToVelocity() and MapVelocityToQDot() implement the identity
+map. This method is, in the worst case, O(n), where n is the number of
+joints.</p>
 </dd></dl>
 
 <dl class="py method">

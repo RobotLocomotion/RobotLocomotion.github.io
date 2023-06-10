@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"compass__gait__geometry_8h.html":[4,0,0,3,4,1],
 "compliant__contact__manager_8h.html":[4,0,0,8,10,2],
 "compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577":[4,0,0,8,10,2,0],
 "composite__trajectory_8h.html":[4,0,0,1,5,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "dir_6902f0bfef501365a3845194d27e0ad3.html":[4,0,0,10,0],
 "dir_69fa97bb6e53092a4b06d6253fe335a2.html":[4,0,0,12,7],
 "dir_6b4eff1308767c1c4adf75190a464e09.html":[4,0,0,1,0,0],
-"dir_6c83ef925edcdfdf0a2f376978e93167.html":[4,0,0,6,2],
-"dir_747259117fa90714ed7dadfdb71f4370.html":[4,0,0,0,0,0]
+"dir_6c83ef925edcdfdf0a2f376978e93167.html":[4,0,0,6,2]
 };

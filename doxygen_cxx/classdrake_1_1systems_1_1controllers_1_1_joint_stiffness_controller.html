@@ -177,7 +177,7 @@ class drake::systems::controllers::JointStiffnessController&lt; T &gt;</h3>
 <p>The goal of this controller is to produce a closed-loop dynamics that resembles a spring-damper dynamics at the joints around the setpoint: </p><pre>
   M(q)v̇ + C(q,v)v + kp⊙(q - q_d) + kd⊙(v - v_d) = τ_ext,
 </pre><p> where <code>M(q)v̇ + C(q,v)v</code> are the original multibody mass and Coriolis terms, and <code>τ_ext</code> are any external generalized forces that can arise, e.g. from contact forces.</p>
-<p>The controller currently requires that plant.num_positions() == plant.num_velocities() == plant.num_actuated_dofs().</p>
+<p>The controller currently requires that plant.num_positions() == plant.num_velocities() == plant.num_actuated_dofs() and that plant.IsVelocityEqualToQDot() is true.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
@@ -1392,7 +1392,9 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>The plant must be finalized (i.e., plant.is_finalized() must return <code>true</code>). </dd>
 <dd>
-plant.num_positions() == plant.num_velocities() == plant.num_actuated_dofs() == kp.size() == kd.size() </dd></dl>
+plant.num_positions() == plant.num_velocities() == plant.num_actuated_dofs() == kp.size() == kd.size() </dd>
+<dd>
+plant.IsVelocityEqualToQDot() is true. </dd></dl>
 
 </div>
 </div>
@@ -1439,7 +1441,9 @@ plant.num_positions() == plant.num_velocities() == plant.num_actuated_dofs() == 
 <p>Constructs the <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html" title="Implements a joint-space stiffness controller of the form.">JointStiffnessController</a> system and takes the ownership of the input <code>plant</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>The plant must be finalized (i.e., plant.is_finalized() must return <code>true</code>). </dd>
 <dd>
-plant.num_positions() == plant.num_velocities() == plant.num_actuated_dofs() == kp.size() == kd.size() </dd></dl>
+plant.num_positions() == plant.num_velocities() == plant.num_actuated_dofs() == kp.size() == kd.size() </dd>
+<dd>
+plant.IsVelocityEqualToQDot() is true. </dd></dl>
 
 </div>
 </div>

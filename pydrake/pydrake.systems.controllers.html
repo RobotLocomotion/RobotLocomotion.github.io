@@ -763,7 +763,8 @@ resembles a spring-damper dynamics at the joints around the setpoint:</p>
 Coriolis terms, and <code class="docutils literal notranslate"><span class="pre">τ_ext</span></code> are any external generalized forces that
 can arise, e.g. from contact forces.</p>
 <p>The controller currently requires that plant.num_positions() ==
-plant.num_velocities() == plant.num_actuated_dofs().</p>
+plant.num_velocities() == plant.num_actuated_dofs() and that
+plant.IsVelocityEqualToQDot() is true.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointStiffnessController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr></table></td></tr></table><p>Note that the joint impedance control as implemented on Kuka’s iiwa
 and Franka’ Panda is best modeled as a stiffness controller (unless
 one were to model the actual elastic joints and rotor-inertia
@@ -782,6 +783,8 @@ return <code class="docutils literal notranslate"><span class="pre">True</span><
 </dd>
 <dt>Precondition:</dt><dd><p>plant.num_positions() == plant.num_velocities() ==
 plant.num_actuated_dofs() == kp.size() == kd.size()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>plant.IsVelocityEqualToQDot() is true.</p>
 </dd>
 </dl>
 </dd></dl>

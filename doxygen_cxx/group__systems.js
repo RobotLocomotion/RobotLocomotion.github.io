@@ -225,6 +225,7 @@ var group__systems =
       [ "HasUniqueFreeBaseBody", "classdrake_1_1multibody_1_1_multibody_plant.html#afc9ce98e9025085b7511227e5d12ebf1", null ],
       [ "is_finalized", "classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840", null ],
       [ "IsAnchored", "classdrake_1_1multibody_1_1_multibody_plant.html#a4f05c3d8f8284a9d9056a4ae47cc0e18", null ],
+      [ "IsVelocityEqualToQDot", "classdrake_1_1multibody_1_1_multibody_plant.html#aa20199c5afe02d72dab2e59f1523fcae", null ],
       [ "MakeActuationMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b", null ],
       [ "MakeActuatorSelectorMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a0d7f5496735d233ea0b984c5a290671f", null ],
       [ "MakeActuatorSelectorMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a029244fdbe2f10a7bfaf5c21175d834c", null ],

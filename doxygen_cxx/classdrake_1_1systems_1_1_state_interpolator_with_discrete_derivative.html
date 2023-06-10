@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_state_interp
 class drake::systems::StateInterpolatorWithDiscreteDerivative&lt; T &gt;</h3>
 
 <p>Supports the common pattern of combining a (feed-through) position with a velocity estimated with the <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html" title="System that outputs the discrete-time derivative of its input: y(t) = (u[n] - u[n-1])/h,...">DiscreteDerivative</a> into a single output vector with positions and velocities stacked. </p>
-<p>This assumes that the number of positions == the number of velocities.</p>
+<p>This assumes that the velocities are equal to the time derivative of the positions.</p>
 <div class="fragment"><div class="line">                                 ┌─────┐</div><div class="line">position ───┬───────────────────&gt;│     │</div><div class="line">            │                    │ Mux ├──&gt; state</div><div class="line">            │   ┌────────────┐   │     │</div><div class="line">            └──&gt;│  Discrete  ├──&gt;│     │</div><div class="line">                │ Derivative │   └─────┘</div><div class="line">                └────────────┘</div></div><!-- fragment --><table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
