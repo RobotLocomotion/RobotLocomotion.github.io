@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"pass__through_8h.html":[4,0,0,12,6,17],
 "path__parameterized__trajectory_8h.html":[4,0,0,1,5,5],
 "pendulum__geometry_8h.html":[4,0,0,3,12,0],
 "pendulum__plant_8h.html":[4,0,0,3,12,1],
@@ -57,7 +58,7 @@ var NAVTREEINDEX51 =
 "planning__py_8h.html":[4,0,0,0,0,5,0],
 "pleides__system_8h.html":[4,0,0,12,0,0,9],
 "pleides__system_8h.html#a322dbcada3667894a629fe3f1a476f2a":[4,0,0,12,0,0,9,1],
-"point_8h.html":[4,0,0,4,1,14],
+"point_8h.html":[4,0,0,4,1,15],
 "point__cloud_8h.html":[4,0,0,9,1],
 "point__cloud_8h.html#ac258a3ce2b4f47d9191b4de110f7b6d4":[4,0,0,9,1,1],
 "point__cloud__flags_8h.html":[4,0,0,9,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "rational__function_8h.html#a185c9ab6bca14a042a837aadf2064546":[4,0,0,1,3,14,12],
 "rational__function_8h.html#a1c5c62b680b89f6fe992e5bc6b01e6c7":[4,0,0,1,3,14,4],
 "rational__function_8h.html#a22f74050260696325581c3087d07fab7":[4,0,0,1,3,14,21],
-"rational__function_8h.html#a267c5d854d55ce16b1e58490ff426661":[4,0,0,1,3,14,9],
-"rational__function_8h.html#a27ad135e8775cf9d721b1223218fff2d":[4,0,0,1,3,14,26]
+"rational__function_8h.html#a267c5d854d55ce16b1e58490ff426661":[4,0,0,1,3,14,9]
 };

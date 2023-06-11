@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,11,48,6],
 "solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,11,48,5],
 "solver__interface_8h.html":[4,0,0,11,49],
 "solver__options_8h.html":[4,0,0,11,50],
@@ -54,7 +55,7 @@ var NAVTREEINDEX53 =
 "spatial__vector_8h.html":[4,0,0,8,6,4],
 "spatial__velocity_8h.html":[4,0,0,8,6,5],
 "spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
-"spectrahedron_8h.html":[4,0,0,4,1,15],
+"spectrahedron_8h.html":[4,0,0,4,1,16],
 "spong__controller_8h.html":[4,0,0,3,0,3],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
 "spring__mass__system_8h.html":[4,0,0,12,0,0,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,4,32,8],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[3,0,0,4,34],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[3,0,0,4,34,6],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,34,0],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a403021311aaf56bf9bec819dbbc08932":[3,0,0,4,34,2]
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,34,0]
 };

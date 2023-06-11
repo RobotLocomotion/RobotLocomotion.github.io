@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"linear__corotated__model__data_8h.html":[4,0,0,8,3,21],
 "linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
 "linear__operator_8h.html":[4,0,0,8,2,7],
 "linear__quadratic__regulator_8h.html":[4,0,0,12,1,7],
@@ -130,7 +131,7 @@ var NAVTREEINDEX49 =
 "minimum__value__constraint_8h.html#a0d06c693e90f6849f70d4b549f015e1e":[4,0,0,11,30,2],
 "minimum__value__constraint_8h.html#a5c445985c8e0f84a2f88f2e70c8f9983":[4,0,0,11,30,3],
 "minimum__value__constraint_8h.html#adc2a57e87ae4e4088e12967a25a7c229":[4,0,0,11,30,1],
-"minkowski__sum_8h.html":[4,0,0,4,1,13],
+"minkowski__sum_8h.html":[4,0,0,4,1,14],
 "mixed__integer__optimization__util_8h.html":[4,0,0,11,31],
 "mixed__integer__optimization__util_8h.html#a1c2dee1da65ed555024f9d2f7ba82141":[4,0,0,11,31,3],
 "mixed__integer__optimization__util_8h.html#a2f7d6f23d494612f72e8efc99b87143c":[4,0,0,11,31,9],
@@ -240,14 +241,13 @@ var NAVTREEINDEX49 =
 "name__value_8h.html":[4,0,0,1,43],
 "name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944":[4,0,0,1,43,1],
 "name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,43,2],
-"namespacedrake.html":[3,0,0],
 "namespacedrake.html":[2,0,0],
-"namespacedrake_1_1ad.html":[2,0,0,0],
+"namespacedrake.html":[3,0,0],
 "namespacedrake_1_1ad.html":[3,0,0,0],
-"namespacedrake_1_1assert.html":[2,0,0,1],
+"namespacedrake_1_1ad.html":[2,0,0,0],
 "namespacedrake_1_1assert.html":[3,0,0,1],
-"namespacedrake_1_1common.html":[3,0,0,2],
+"namespacedrake_1_1assert.html":[2,0,0,1],
 "namespacedrake_1_1common.html":[2,0,0,2],
-"namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
-"namespacedrake_1_1examples.html":[3,0,0,3]
+"namespacedrake_1_1common.html":[3,0,0,2],
+"namespacedrake_1_1common_1_1test.html":[2,0,0,2,0]
 };

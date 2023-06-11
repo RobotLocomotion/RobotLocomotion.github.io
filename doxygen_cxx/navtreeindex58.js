@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,13],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,2,14],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,2,15],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,2,16],
@@ -141,7 +142,7 @@ var NAVTREEINDEX58 =
 "temp__directory_8h.html":[4,0,0,1,57],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,57,0],
 "tessellation__strategy_8h.html":[4,0,0,4,2,52],
-"test__utilities_8h.html":[4,0,0,4,1,16],
+"test__utilities_8h.html":[4,0,0,4,1,17],
 "text__logging_8h.html":[4,0,0,1,58],
 "text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,58,6],
 "text__logging_8h.html#a60321c9dbf7c1ebe763371ab00262d68":[4,0,0,1,58,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "vector__base_8h.html":[4,0,0,12,3,53],
 "vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,12,3,53,2],
 "vector__log_8h.html":[4,0,0,12,6,27],
-"vector__log__sink_8h.html":[4,0,0,12,6,28],
-"vector__log__sink_8h.html#a91a3fea6ce8db9489e5329587daa11b3":[4,0,0,12,6,28,1]
+"vector__log__sink_8h.html":[4,0,0,12,6,28]
 };
