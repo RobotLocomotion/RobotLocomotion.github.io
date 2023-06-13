@@ -187,6 +187,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f010e733bd63adb8352995624362b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
 <tr class="memdesc:a2f010e733bd63adb8352995624362b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set.  <a href="#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
 <tr class="separator:a2f010e733bd63adb8352995624362b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8afc65a3f5ac1df8167abbbd13d218"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218">MaybeGetPoint</a> () const</td></tr>
+<tr class="memdesc:a0c8afc65a3f5ac1df8167abbbd13d218"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this set trivially contains exactly one point, returns the value of that point.  <a href="#a0c8afc65a3f5ac1df8167abbbd13d218">More...</a><br /></td></tr>
+<tr class="separator:a0c8afc65a3f5ac1df8167abbbd13d218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, <a class="el" href="classdouble.html">double</a> tol=0) const</td></tr>
 <tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the point x is contained in the set.  <a href="#aa7a4d7c125954dfde3c15238c852eeed">More...</a><br /></td></tr>
 <tr class="separator:aa7a4d7c125954dfde3c15238c852eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,6 +242,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8dab5a4504816ff943e184bdc8f2cb5f">DoIsBounded</a> () const =0</td></tr>
 <tr class="memdesc:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65" title="Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound ...">IsBounded()</a>.  <a href="#a8dab5a4504816ff943e184bdc8f2cb5f">More...</a><br /></td></tr>
 <tr class="separator:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d6f25d563615123ccee12d0a41e81d"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a54d6f25d563615123ccee12d0a41e81d">DoMaybeGetPoint</a> () const</td></tr>
+<tr class="memdesc:a54d6f25d563615123ccee12d0a41e81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218" title="If this set trivially contains exactly one point, returns the value of that point.">MaybeGetPoint()</a>.  <a href="#a54d6f25d563615123ccee12d0a41e81d">More...</a><br /></td></tr>
+<tr class="separator:a54d6f25d563615123ccee12d0a41e81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ade78c2696e0f7afdf38c59bf7b12ada5">DoPointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, <a class="el" href="classdouble.html">double</a> tol) const =0</td></tr>
 <tr class="memdesc:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a>.  <a href="#ade78c2696e0f7afdf38c59bf7b12ada5">More...</a><br /></td></tr>
 <tr class="separator:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -799,6 +805,34 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
+<a id="a54d6f25d563615123ccee12d0a41e81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d6f25d563615123ccee12d0a41e81d">&#9670;&nbsp;</a></span>DoMaybeGetPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt;Eigen::VectorXd&gt; DoMaybeGetPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218" title="If this set trivially contains exactly one point, returns the value of that point.">MaybeGetPoint()</a>. </p>
+<p>The default implementation returns nullopt. Sets that can model a single point should override with a custom implementation. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
+
+</div>
+</div>
 <a id="ade78c2696e0f7afdf38c59bf7b12ada5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade78c2696e0f7afdf38c59bf7b12ada5">&#9670;&nbsp;</a></span>DoPointInSet()</h2>
 
@@ -911,6 +945,26 @@ c.rows() == t.size() </dd></dl>
 
 <p>Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set. </p>
 <p>Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. When ambient_dimension is zero, always returns true. </p>
+
+</div>
+</div>
+<a id="a0c8afc65a3f5ac1df8167abbbd13d218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8afc65a3f5ac1df8167abbbd13d218">&#9670;&nbsp;</a></span>MaybeGetPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;Eigen::VectorXd&gt; MaybeGetPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If this set trivially contains exactly one point, returns the value of that point. </p>
+<p>Otherwise, returns nullopt. When ambient_dimension is zero, returns nullopt. By "trivially", we mean that representation of the set structurally maps to a single point; if checking for point-ness would require solving an optimization program, returns nullopt. In other words, this is a relatively cheap function to call. </p>
 
 </div>
 </div>

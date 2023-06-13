@@ -1,6 +1,7 @@
 var pydrake__pybind_8h =
 [
     [ "overload_cast_impl", "structdrake_1_1pydrake_1_1overload__cast__impl.html", "structdrake_1_1pydrake_1_1overload__cast__impl" ],
+    [ "DRAKE_PYBIND11_NUMPY_OBJECT_DTYPE", "pydrake__pybind_8h.html#a770b1f61c8d50f505dd2502203abeeed", null ],
     [ "PYDRAKE_PREVENT_PYTHON3_MODULE_REIMPORT", "pydrake__pybind_8h.html#abae292352a6ccb4d07b1aa13d4c7f143", null ],
     [ "py_rvp", "pydrake__pybind_8h.html#a6e587c4c8d044dd6eee74dad65c203ed", null ],
     [ "DefClone", "pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4", null ],

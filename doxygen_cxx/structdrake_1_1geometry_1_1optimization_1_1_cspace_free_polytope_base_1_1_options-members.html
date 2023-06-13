@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: CspaceFreePolytope::Options Struct Reference</title>
+<title>Drake: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html','');});
+$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -158,87 +158,20 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1optimizatio
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">CspaceFreePolytope::Options Struct Reference</div>  </div>
+<div class="title">CspaceFreePolytopeBase::Options Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Optional argument for constructing <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html" title="This class tries to find large convex polytopes in the tangential-configuration space,...">CspaceFreePolytope</a>. </p>
-</div>
-<p><code>#include &lt;drake/geometry/optimization/cspace_free_polytope.h&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a28d39a844c3a37ab61d32ab7c6352f09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09">Options</a> ()</td></tr>
-<tr class="separator:a28d39a844c3a37ab61d32ab7c6352f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:afb686f56113478fa59b75fe3fe36e326"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html#afb686f56113478fa59b75fe3fe36e326">with_cross_y</a> {false}</td></tr>
-<tr class="memdesc:afb686f56113478fa59b75fe3fe36e326"><td class="mdescLeft">&#160;</td><td class="mdescRight">For non-polytopic collision geometries, we will impose a matrix-sos constraint X(s) being psd, with a slack indeterminates y, such that the polynomial.  <a href="#afb686f56113478fa59b75fe3fe36e326">More...</a><br /></td></tr>
-<tr class="separator:afb686f56113478fa59b75fe3fe36e326"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a28d39a844c3a37ab61d32ab7c6352f09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28d39a844c3a37ab61d32ab7c6352f09">&#9670;&nbsp;</a></span>Options()</h2>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html">Options</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="afb686f56113478fa59b75fe3fe36e326"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb686f56113478fa59b75fe3fe36e326">&#9670;&nbsp;</a></span>with_cross_y</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool with_cross_y {false}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>For non-polytopic collision geometries, we will impose a matrix-sos constraint X(s) being psd, with a slack indeterminates y, such that the polynomial. </p>
-<pre>
-p(s, y) = ⌈ 1 ⌉ᵀ * X(s) * ⌈ 1 ⌉
-          ⌊ y ⌋           ⌊ y ⌋
-</pre><p> is positive. This p(s, y) polynomial doesn't contain the cross term of y (namely it doesn't have y(i)*y(j), i≠j). When we select the monomial basis for this polynomial, we can also exclude the cross term of y in the monomial basis.</p>
-<p>To illustrate the idea, let's consider the following toy example: if we want to certify that a(0) + a(1)*y₀ + a(2)*y₁ + a(3)*y₀² + a(4)*y₁² is positive (this polynomial doesn't have the cross term y₀*y₁), we can write it as </p><pre>
-⌈ 1⌉ᵀ * A₀ * ⌈ 1⌉ + ⌈ 1⌉ᵀ * A₁ * ⌈ 1⌉
-⌊y₀⌋         ⌊y₀⌋   ⌊y₁⌋         ⌊y₁⌋
-</pre><p> with two small psd matrices A₀, A₁ Instead of </p><pre>
-⌈ 1⌉ᵀ * A * ⌈ 1⌉
-|y₀|        |y₀|
-⌊y₁⌋        ⌊y₁⌋
-</pre><p> with one large psd matrix A. The first parameterization won't have the cross term y₀*y₁ by construction, while the second parameterization requires imposing extra constraints on certain off-diagonal terms in A so that the cross term vanishes.</p>
-<p>If we set with_cross_y = false, then we will use the monomial basis that doesn't generate cross terms of y, leading to smaller size sos problems. If we set with_cross_y = true, then we will use the monomial basis that will generate cross terms of y, causing larger size sos problems, but possibly able to certify a larger C-space polytope. </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>drake/geometry/optimization/<a class="el" href="cspace__free__polytope_8h.html">cspace_free_polytope.h</a></li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">CspaceFreePolytopeBase::Options</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09">Options</a>()</td><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">CspaceFreePolytopeBase::Options</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#afb686f56113478fa59b75fe3fe36e326">with_cross_y</a></td><td class="entry"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">CspaceFreePolytopeBase::Options</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a></li><li class="navelem"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html">Options</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

@@ -128,7 +128,10 @@ var hierarchy =
     [ "ContinuousState< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", null ],
-    [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html", null ],
+    [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html", [
+      [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html", null ],
+      [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html", null ]
+    ] ],
     [ "CSpaceSeparatingPlane< T >", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html", [
       [ "CIrisSeparatingPlane< T >", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html", null ]
     ] ],
@@ -618,9 +621,9 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
+    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
-    [ "CspaceFreePolytope::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
     [ "overload_cast_impl< Return, Args >", "structdrake_1_1pydrake_1_1overload__cast__impl.html", null ],
@@ -727,6 +730,7 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
       [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]

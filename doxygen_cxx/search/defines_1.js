@@ -20,6 +20,7 @@ var searchData=
   ['drake_5fno_5fcopy_5fno_5fmove_5fno_5fassign',['DRAKE_NO_COPY_NO_MOVE_NO_ASSIGN',['../drake__copyable_8h.html#a3ee22789c29a46dddd6a7fd2b982731c',1,'drake_copyable.h']]],
   ['drake_5fno_5fexport',['DRAKE_NO_EXPORT',['../drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc',1,'drake_export.h']]],
   ['drake_5fnvp',['DRAKE_NVP',['../name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944',1,'name_value.h']]],
+  ['drake_5fpybind11_5fnumpy_5fobject_5fdtype',['DRAKE_PYBIND11_NUMPY_OBJECT_DTYPE',['../pydrake__pybind_8h.html#a770b1f61c8d50f505dd2502203abeeed',1,'pydrake_pybind.h']]],
   ['drake_5fspatial_5falgebra_5fheader',['DRAKE_SPATIAL_ALGEBRA_HEADER',['../spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538',1,'spatial_algebra.h']]],
   ['drake_5fthrow_5funless',['DRAKE_THROW_UNLESS',['../drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca',1,'drake_throw.h']]],
   ['drake_5funreachable',['DRAKE_UNREACHABLE',['../drake__assert_8h.html#aaf9506c208e2a7d09f67d1a9ab84992a',1,'drake_assert.h']]]

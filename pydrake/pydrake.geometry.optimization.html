@@ -160,8 +160,12 @@ transform of a CartesianProduct.</p>
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.ConvexSet], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs the product of convex sets in the transformed coordinates:
-{x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}. <code class="docutils literal notranslate"><span class="pre">A</span></code> must be full column
-rank.</p>
+{x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError when A is not full column rank.</strong> – </p>
+</dd>
+</dl>
 <ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</p></li>
 </ol>
@@ -314,6 +318,17 @@ derived classes, this check is trivial, but for others it can require
 solving an (typically small) optimization problem. Check the derived
 class documentation for any notes. When ambient_dimension is zero,
 always returns true.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.MaybeGetPoint">
+<span class="sig-name descname"><span class="pre">MaybeGetPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.MaybeGetPoint" title="Permalink to this definition"></a></dt>
+<dd><p>If this set trivially contains exactly one point, returns the value of
+that point. Otherwise, returns nullopt. When ambient_dimension is
+zero, returns nullopt. By “trivially”, we mean that representation of
+the set structurally maps to a single point; if checking for
+point-ness would require solving an optimization program, returns
+nullopt. In other words, this is a relatively cheap function to call.</p>
 </dd></dl>
 
 <dl class="py method">

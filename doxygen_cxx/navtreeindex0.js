@@ -56,7 +56,6 @@ var NAVTREEINDEX0 =
 "autodiff__overloads_8h.html#af8c0e9e4214ab7f97568cc8792859e32":[4,0,0,1,8,0],
 "autodiff__overloads_8h.html#aff59561e63256fd202070185754cdb4c":[4,0,0,1,8,2],
 "autodiff__types__pybind_8h.html":[4,0,0,0,0,9],
-"autodiff__types__pybind_8h.html#a37d1df365240af0e1d20d1a5668eed71":[4,0,0,0,0,9,0],
 "autodiffxd_8h.html":[4,0,0,1,9],
 "ball__rpy__joint_8h.html":[4,0,0,8,14,4],
 "barycentric_8h.html":[4,0,0,7,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#a7f7703398f420e19d121b92c13e2b416":[3,0,0,41,51],
 "classdrake_1_1_polynomial.html#a81b4c054beeae81d6d01bfd5412a89cd":[3,0,0,41,6],
 "classdrake_1_1_polynomial.html#a8d2a0b0dd246af6385d78567af484840":[3,0,0,41,25],
-"classdrake_1_1_polynomial.html#a925044e356137ea2d1ee6af62fea4156":[3,0,0,41,10]
+"classdrake_1_1_polynomial.html#a925044e356137ea2d1ee6af62fea4156":[3,0,0,41,10],
+"classdrake_1_1_polynomial.html#a93f813cb8ff8e450366e4e2f353bd7e6":[3,0,0,41,42]
 };

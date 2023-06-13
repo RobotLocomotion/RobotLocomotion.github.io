@@ -1352,6 +1352,9 @@ problem.</p>
 <dd><p>Solves an inverse kinematics (IK) problem on a MultibodyPlant, to find
 the postures of the robot satisfying certain constraints. The decision
 variables include the generalized position of the robot.</p>
+<p>To perform IK on a subset of the plant, use the constructor overload
+that takes a <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> and use <code class="docutils literal notranslate"><span class="pre">Joint::Lock</span></code> on the joints
+in that Context that should be fixed during IK.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.__init__" title="Permalink to this definition"></a></dt>
@@ -1393,26 +1396,35 @@ constructor.</p>
 This plant should have been connected to a SceneGraph within a
 Diagram</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context for the plant. This context should be a part of the
-Diagram context. To construct a plant connected to a SceneGraph,
-with the corresponding plant_context, the steps are // 1. Add a
-diagram containing the MultibodyPlant and SceneGraph
-systems::DiagramBuilder&lt;double&gt; builder; auto items =
-AddMultibodyPlantSceneGraph(&amp;builder, 0.0); // 2. Add collision
-geometries to the plant
-Parser(&amp;(items.plant)).AddModels(“model.sdf”); // 3. Construct the
-diagram auto diagram = builder.Build(); // 4. Create diagram
-context. auto diagram_context= diagram-&gt;CreateDefaultContext(); //
-5. Get the context for the plant. auto plant_context =
-&amp;(diagram-&gt;GetMutableSubsystemContext(items.plant,
-diagram_context.get())); This context will be modified during
-calling ik.prog.Solve(…). When Solve() returns <code class="docutils literal notranslate"><span class="pre">result</span></code>,
-context will store the optimized posture, namely
-plant.GetPositions(<a href="#id1"><span class="problematic" id="id2">*</span></a>context) will be the same as in
-result.GetSolution(ik.q()). The user could then use this context
-to perform kinematic computation (like computing the position of
-the end-effector etc.).</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>The context for the plant. This context should be a part of the
+Diagram context. Any locked joints in the <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> will
+remain fixed at their locked value. (This provides a convenient
+way to perform IK on a subset of the plant.) To construct a plant
+connected to a SceneGraph, with the corresponding plant_context,
+the steps are:</p>
 </dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="mf">1.</span> <span class="n">Add</span> <span class="n">a</span> <span class="n">diagram</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">MultibodyPlant</span> <span class="ow">and</span> <span class="n">SceneGraph</span>
+<span class="n">systems</span><span class="p">::</span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
+<span class="n">auto</span> <span class="n">items</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+<span class="o">//</span> <span class="mf">2.</span> <span class="n">Add</span> <span class="n">collision</span> <span class="n">geometries</span> <span class="n">to</span> <span class="n">the</span> <span class="n">plant</span>
+<span class="n">Parser</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">items</span><span class="o">.</span><span class="n">plant</span><span class="p">))</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="s2">&quot;model.sdf&quot;</span><span class="p">);</span>
+<span class="o">//</span> <span class="mf">3.</span> <span class="n">Construct</span> <span class="n">the</span> <span class="n">diagram</span>
+<span class="n">auto</span> <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">();</span>
+<span class="o">//</span> <span class="mf">4.</span> <span class="n">Create</span> <span class="n">diagram</span> <span class="n">context</span><span class="o">.</span>
+<span class="n">auto</span> <span class="n">diagram_context</span><span class="o">=</span> <span class="n">diagram</span><span class="o">-&gt;</span><span class="n">CreateDefaultContext</span><span class="p">();</span>
+<span class="o">//</span> <span class="mf">5.</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">context</span> <span class="k">for</span> <span class="n">the</span> <span class="n">plant</span><span class="o">.</span>
+<span class="n">auto</span> <span class="n">plant_context</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">diagram</span><span class="o">-&gt;</span><span class="n">GetMutableSubsystemContext</span><span class="p">(</span><span class="n">items</span><span class="o">.</span><span class="n">plant</span><span class="p">,</span>
+<span class="n">diagram_context</span><span class="o">.</span><span class="n">get</span><span class="p">()));</span>
+</pre></div>
+</div>
+<p>This context will be modified during calling ik.prog.Solve(…). When
+Solve() returns <code class="docutils literal notranslate"><span class="pre">result</span></code>, context will store the optimized posture,
+namely plant.GetPositions(<a href="#id1"><span class="problematic" id="id2">*</span></a>context) will be the same as in
+result.GetSolution(ik.q()). The user could then use this context to
+perform kinematic computation (like computing the position of the
+end-effector etc.).</p>
+<dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_joint_limits</span></code>:</dt><dd><p>If set to true, then the constructor imposes the joint limit
 (obtained from plant.GetPositionLowerLimits() and
 plant.GetPositionUpperLimits(). If set to false, then the

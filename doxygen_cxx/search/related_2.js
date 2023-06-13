@@ -16,6 +16,8 @@ var searchData=
   ['copyable_5funique_5fptr_3c_20fixedinputportvalue_20_3e',['copyable_unique_ptr&lt; FixedInputPortValue &gt;',['../classdrake_1_1systems_1_1_fixed_input_port_value.html#a9e24d4c4c6dcaa145e2421e0ba44007c',1,'drake::systems::FixedInputPortValue']]],
   ['cos',['cos',['../classdrake_1_1symbolic_1_1_expression.html#a8d78919127ccba2ba24cdb1b0c57613d',1,'drake::symbolic::Expression']]],
   ['cosh',['cosh',['../classdrake_1_1symbolic_1_1_expression.html#a27a345a84e6b273a71aa02ee312f9c51',1,'drake::symbolic::Expression']]],
+  ['cspacefreeboxtester',['CspaceFreeBoxTester',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8c0df9e04099fbec99bbbe06554deb9c',1,'drake::geometry::optimization::CspaceFreeBox']]],
   ['cspacefreepolytope',['CspaceFreePolytope',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#acce586461fb915663896b9d3272ee6eb',1,'drake::geometry::optimization::CspaceFreePolytope::SearchResult']]],
+  ['cspacefreepolytopebasetester',['CspaceFreePolytopeBaseTester',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af4e1918cec99d405674aa4e1524ceee9',1,'drake::geometry::optimization::CspaceFreePolytopeBase']]],
   ['cspacefreepolytopetester',['CspaceFreePolytopeTester',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#aa65d053d1747dc4762143c36bc00f93e',1,'drake::geometry::optimization::CspaceFreePolytope']]]
 ];
