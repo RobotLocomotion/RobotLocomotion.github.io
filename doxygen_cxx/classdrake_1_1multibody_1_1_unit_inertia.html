@@ -211,12 +211,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac728662c9f74b89201beb8f9a693c66a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac728662c9f74b89201beb8f9a693c66a">ReExpress</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE) const</td></tr>
 <tr class="memdesc:ac728662c9f74b89201beb8f9a693c66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> unit inertia <code>G_BP_E</code> of a body B about a point P and expressed in frame E, this method computes the same unit inertia re-expressed in another frame A as <code>G_BP_A = R_AE * G_BP_E * (R_AE)ᵀ</code>.  <a href="#ac728662c9f74b89201beb8f9a693c66a">More...</a><br /></td></tr>
 <tr class="separator:ac728662c9f74b89201beb8f9a693c66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b718707c9e2b7fe417950a8ba4c57e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a44b718707c9e2b7fe417950a8ba4c57e">ShiftFromCenterOfMassInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BcQ_E)</td></tr>
-<tr class="memdesc:a44b718707c9e2b7fe417950a8ba4c57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a central unit inertia <code>G_Bcm_E</code> computed about a body's center of mass (or centroid) <code>Bcm</code> and expressed in a frame E, this method shifts this inertia using the parallel axis theorem to be computed about a point Q.  <a href="#a44b718707c9e2b7fe417950a8ba4c57e">More...</a><br /></td></tr>
-<tr class="separator:a44b718707c9e2b7fe417950a8ba4c57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d7a991d6fb01efebd0654f57018b7d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a9d7a991d6fb01efebd0654f57018b7d4">ShiftFromCenterOfMass</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BcQ_E) const __attribute__((warn_unused_result))</td></tr>
-<tr class="memdesc:a9d7a991d6fb01efebd0654f57018b7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts this central unit inertia to a different point, and returns the result.  <a href="#a9d7a991d6fb01efebd0654f57018b7d4">More...</a><br /></td></tr>
-<tr class="separator:a9d7a991d6fb01efebd0654f57018b7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac40dcf829e62039827808fa2f695d4b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac40dcf829e62039827808fa2f695d4b2">ShiftFromCenterOfMassInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BcmQ_E)</td></tr>
+<tr class="memdesc:ac40dcf829e62039827808fa2f695d4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a central unit inertia <code>G_Bcm_E</code> computed about a body's center of mass (or centroid) <code>Bcm</code> and expressed in a frame E, this method shifts this inertia using the parallel axis theorem to be computed about a point Q.  <a href="#ac40dcf829e62039827808fa2f695d4b2">More...</a><br /></td></tr>
+<tr class="separator:ac40dcf829e62039827808fa2f695d4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fdaae70e7c476c9fd0bb66dc37dbbb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a4fdaae70e7c476c9fd0bb66dc37dbbb6">ShiftFromCenterOfMass</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BcmQ_E) const __attribute__((warn_unused_result))</td></tr>
+<tr class="memdesc:a4fdaae70e7c476c9fd0bb66dc37dbbb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts this central unit inertia to a different point, and returns the result.  <a href="#a4fdaae70e7c476c9fd0bb66dc37dbbb6">More...</a><br /></td></tr>
+<tr class="separator:a4fdaae70e7c476c9fd0bb66dc37dbbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63b39c6656200a848579b87b986f6965"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a63b39c6656200a848579b87b986f6965">ShiftToCenterOfMassInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QBcm_E)</td></tr>
 <tr class="memdesc:a63b39c6656200a848579b87b986f6965"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the unit inertia <code>G_BQ_E</code> of a body or composite body B computed about a point Q and expressed in a frame E, this method shifts this inertia using the parallel axis theorem to be computed about the center of mass <code>Bcm</code> of B.  <a href="#a63b39c6656200a848579b87b986f6965">More...</a><br /></td></tr>
 <tr class="separator:a63b39c6656200a848579b87b986f6965"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,7 +373,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Unit inertia for common 3D objects</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>The following methods assist in the construction of UnitInertia instances for common 3D objects such as boxes, spheres, rods and others.</p>
-<p>This method computes a UnitInertia for body with unit mass, typically around its centroid, and in a frame aligned with its principal axes. To construct general UnitInertia objects use these methods along with <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a44b718707c9e2b7fe417950a8ba4c57e" title="For a central unit inertia G_Bcm_E computed about a body&#39;s center of mass (or centroid) Bcm and expre...">ShiftFromCenterOfMassInPlace()</a> to move the point about which the inertia is computed and use <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac728662c9f74b89201beb8f9a693c66a" title="Given this unit inertia G_BP_E of a body B about a point P and expressed in frame E,...">ReExpress()</a> to express in a different frame. A non-unit <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> is obtained by multiplying the generated UnitInertia by a non-unit mass value. </p>
+<p>This method computes a UnitInertia for body with unit mass, typically around its centroid, and in a frame aligned with its principal axes. To construct general UnitInertia objects use these methods along with <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac40dcf829e62039827808fa2f695d4b2" title="For a central unit inertia G_Bcm_E computed about a body&#39;s center of mass (or centroid) Bcm and expre...">ShiftFromCenterOfMassInPlace()</a> to move the point about which the inertia is computed and use <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac728662c9f74b89201beb8f9a693c66a" title="Given this unit inertia G_BP_E of a body B about a point P and expressed in frame E,...">ReExpress()</a> to express in a different frame. A non-unit <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> is obtained by multiplying the generated UnitInertia by a non-unit mass value. </p>
 </div></td></tr>
 <tr class="memitem:ae6f93bf07bd55dd7ab860b0c321713c0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ae6f93bf07bd55dd7ab860b0c321713c0">PointMass</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FQ)</td></tr>
 <tr class="memdesc:ae6f93bf07bd55dd7ab860b0c321713c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a unit inertia for a point mass of unit mass located at point Q, whose location in a frame F is given by the position vector <code>p_FQ</code> (that is, p_FoQ_F).  <a href="#ae6f93bf07bd55dd7ab860b0c321713c0">More...</a><br /></td></tr>
@@ -1037,8 +1037,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d7a991d6fb01efebd0654f57018b7d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d7a991d6fb01efebd0654f57018b7d4">&#9670;&nbsp;</a></span>ShiftFromCenterOfMass()</h2>
+<a id="a4fdaae70e7c476c9fd0bb66dc37dbbb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fdaae70e7c476c9fd0bb66dc37dbbb6">&#9670;&nbsp;</a></span>ShiftFromCenterOfMass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1047,14 +1047,14 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; ShiftFromCenterOfMass </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BcQ_E</em></td><td>)</td>
+          <td class="paramname"><em>p_BcmQ_E</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Shifts this central unit inertia to a different point, and returns the result. </p>
-<p>See <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a44b718707c9e2b7fe417950a8ba4c57e" title="For a central unit inertia G_Bcm_E computed about a body&#39;s center of mass (or centroid) Bcm and expre...">ShiftFromCenterOfMassInPlace()</a> for details. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ac40dcf829e62039827808fa2f695d4b2" title="For a central unit inertia G_Bcm_E computed about a body&#39;s center of mass (or centroid) Bcm and expre...">ShiftFromCenterOfMassInPlace()</a> for details. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BcmQ_E</td><td>A vector from the body's centroid <code>Bcm</code> to point Q expressed in the same frame E in which <code>this</code> inertia is expressed. </td></tr>
   </table>
@@ -1069,8 +1069,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a44b718707c9e2b7fe417950a8ba4c57e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44b718707c9e2b7fe417950a8ba4c57e">&#9670;&nbsp;</a></span>ShiftFromCenterOfMassInPlace()</h2>
+<a id="ac40dcf829e62039827808fa2f695d4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40dcf829e62039827808fa2f695d4b2">&#9670;&nbsp;</a></span>ShiftFromCenterOfMassInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1079,7 +1079,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt;&amp; ShiftFromCenterOfMassInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BcQ_E</em></td><td>)</td>
+          <td class="paramname"><em>p_BcmQ_E</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
