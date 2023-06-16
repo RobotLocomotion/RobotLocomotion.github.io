@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#ac6d99026f137504bc679b191d2d8fa61":[3,0,0,14,56,4],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,14,56,1],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html":[1,1,0,33],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a2ef19e543f4121af42e8d3f5e66ce4fa":[1,1,0,33,8],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,33,6],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a606f4db084fea67dad1e32fd17d580e1":[1,1,0,33,3],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a6ea802357065d9fea923476dfa0ec159":[1,1,0,33,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_code_gen_visitor.html#a6afbb1bd6592ef400177d0f81f275a49":[3,0,0,15,4,7],
 "classdrake_1_1symbolic_1_1_code_gen_visitor.html#a7b55a258854d77cb53a4bac286b1a8e7":[3,0,0,15,4,4],
 "classdrake_1_1symbolic_1_1_code_gen_visitor.html#a97b40bd8e6cf22eed9c60f693f23b773":[3,0,0,15,4,1],
-"classdrake_1_1symbolic_1_1_code_gen_visitor.html#aa651496edf995fb5df1e62292bf75db6":[3,0,0,15,4,6],
-"classdrake_1_1symbolic_1_1_code_gen_visitor.html#aefd9307a0167a25f7d8f1cc91abab550":[3,0,0,15,4,3],
-"classdrake_1_1symbolic_1_1_environment.html":[3,0,0,15,5],
-"classdrake_1_1symbolic_1_1_environment.html#a153880e8b1e045676f1b093093fec91c":[3,0,0,15,5,22],
-"classdrake_1_1symbolic_1_1_environment.html#a228ca65a053b15ce17ff50ccbcc1f878":[3,0,0,15,5,27]
+"classdrake_1_1symbolic_1_1_code_gen_visitor.html#aa651496edf995fb5df1e62292bf75db6":[3,0,0,15,4,6]
 };

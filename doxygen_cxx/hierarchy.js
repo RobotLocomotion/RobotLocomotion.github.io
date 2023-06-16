@@ -1024,6 +1024,7 @@ var hierarchy =
             [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", null ],
             [ "OptitrackReceiver", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html", null ],
             [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", null ],
+            [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", null ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "SpringMassSystem< double >", "classdrake_1_1systems_1_1_spring_mass_system.html", [
               [ "MySpringMassSystem< double >", "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html", null ],

@@ -1709,7 +1709,12 @@ in different messages will not produce useful results).</p>
 <p>A meta-sensor that houses RGB, depth, and label cameras, producing
 their corresponding images based on the contents of the
 geometry::SceneGraph.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensor</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>The following text uses terminology and conventions from CameraInfo.
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensor</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>This system models a continuous sensor, where the output ports reflect
+the instantaneous images observed by the sensor. In contrast, a
+discrete (sample and hold) sensor model might be a more suitable match
+for a real-world camera; for that case, see RgbdSensorDiscrete or
+RgbdSensorAsync.</p>
+<p>The following text uses terminology and conventions from CameraInfo.
 Please review its documentation.</p>
 <p>This class uses the following frames:</p>
 <ul class="simple">
@@ -1835,7 +1840,7 @@ ImageLabel16I.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.parent_frame_id">
 <span class="sig-name descname"><span class="pre">parent_frame_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.parent_frame_id" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the id of the frame to which the base is affixed.</p>
+<dd><p>Returns the id of the frame to which the body is affixed.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1859,12 +1864,216 @@ ImageLabel16I.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">RgbdSensorAsync</span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>A sensor similar to RgbdSensorDiscrete but the rendering occurs on a
+background thread to offer improved performance.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This system is intended for use only with the out-of-process glTF
+rendering engine (MakeRenderEngineGltfClient()). Other render
+engines (e.g., MakeRenderEngineVtk() or MakeRenderEngineGl()) are
+either not thread-safe or perform poorly when used here. We hope
+to add async support for those engines down the road (see #19437
+for details).</p>
+</div>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorAsync</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>This sensor works by capturing the i’th state of the world at time
+<code class="docutils literal notranslate"><span class="pre">t_capture</span> <span class="pre">=</span> <span class="pre">capture_offset</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">/</span> <span class="pre">fps</span></code> and outputting the
+corresponding rendered image at time <code class="docutils literal notranslate"><span class="pre">t_output</span> <span class="pre">=</span> <span class="pre">t_capture</span> <span class="pre">+</span>
+<span class="pre">output_delay</span></code>, i.e., <code class="docutils literal notranslate"><span class="pre">t_output</span> <span class="pre">=</span> <span class="pre">capture_offset</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">/</span> <span class="pre">fps</span> <span class="pre">+</span>
+<span class="pre">output_delay</span></code>.</p>
+<p>For example, with the following constructor settings: - capture_offset
+= 0 ms - output_delay = 50 ms - fps = 5 Hz (i.e., 200 ms)</p>
+<p>We have the following timing schedule:</p>
+<div class="line-block">
+<div class="line">Time | Event | Current output images | | :—-: | :—–: |</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">———————-</dt>
+<dd class="field-odd"><div class="line-block">
+<div class="line">| 0 ms | capture | empty (i.e., zero-sized)</div>
+</div>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line">| 50 ms | output | the scene as of 0 ms | | 200 ms | capture | ^ | |</div>
+</div>
+<p>250 ms | output | the scene as of 200 ms | | 400 ms | capture | ^ | |
+… | … | … |</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">capture_offset</span></code> is typically zero, but can be useful to stagger
+multiple cameras in the same scene to trigger at different times if
+desired (e.g., to space out rendering events for better performance).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">output_delay</span></code> can be used to model delays of a physical camera
+(e.g., for firmware processing on the device or transmitting the image
+over a USB or network connection, etc.).</p>
+<p>The image rendering between the capture event and the output event
+happens on a background thread, allowing simulation time to continue
+to advance during the rendering’s <code class="docutils literal notranslate"><span class="pre">output_delay</span></code>. This helps smooth
+over the runtime latency associated with rendering.</p>
+<p>See also RgbdSensorDiscrete for a simpler (unthreaded) discrete sensor
+model, or RgbdSensor for a continuous model.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As the moment, this implementation cannnot respond to changes to
+geometry shapes, textures, etc. after a simulation has started.
+The only thing it responds to are changes to geometry poses. If
+you change anything beyond poses, you must manually call
+Simulator::Initialize() to reset things before resuming the
+simulation, or else you’ll get an exception. This holds true for
+changes to both SceneGraph’s model geometry and the copy of the
+geometry in a scene graph Context.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scene_graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capture_offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera" title="pydrake.geometry.ColorRenderCamera"><span class="pre">pydrake.geometry.ColorRenderCamera</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth_camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera" title="pydrake.geometry.DepthRenderCamera"><span class="pre">pydrake.geometry.DepthRenderCamera</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_label_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a sensor with the given parameters. Refer to the class
+overview documentation for additional exposition and examples of the
+parameters.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt><dd><p>The SceneGraph to use for image rendering. This pointer is
+retained by the constructor so must remain valid for the lifetime
+of this object. After construction, this system’s
+<code class="docutils literal notranslate"><span class="pre">geometry_query</span></code> input port must be connected to the relevant
+output port of the given <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parent_id</span></code>:</dt><dd><p>The frame “P” to which the sensor body is affixed. See RgbdSensor
+for details.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>:</dt><dd><p>The transform relating parent and sensor body. See RgbdSensor for
+details.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fps</span></code>:</dt><dd><p>How often (frames per second) to sample the <code class="docutils literal notranslate"><span class="pre">geometry_query</span></code>
+input and render the associated images. Must be strictly positive
+and finite.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">capture_offset</span></code>:</dt><dd><p>The time of the first sample of <code class="docutils literal notranslate"><span class="pre">geometry_query</span></code> input.
+Typically zero. Must be finite.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">output_delay</span></code>:</dt><dd><p>How long after the <code class="docutils literal notranslate"><span class="pre">geometry_query</span></code> input sample the output
+ports should change to reflect the new rendered image(s). Must be
+strictly positive and strictly less than 1/fps.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">color_camera</span></code>:</dt><dd><p>The properties for the <code class="docutils literal notranslate"><span class="pre">color_image</span></code> output port. When nullopt,
+there will be no <code class="docutils literal notranslate"><span class="pre">color_image</span></code> output port. At least one of
+<code class="docutils literal notranslate"><span class="pre">color_camera</span></code> or <code class="docutils literal notranslate"><span class="pre">depth_camera</span></code> must be provided.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">depth_camera</span></code>:</dt><dd><p>The properties for the <code class="docutils literal notranslate"><span class="pre">depth_image_32f</span></code> and <code class="docutils literal notranslate"><span class="pre">depth_image_16u</span></code>
+output ports. When nullopt, there will be no such output ports. At
+least one of <code class="docutils literal notranslate"><span class="pre">color_camera</span></code> or <code class="docutils literal notranslate"><span class="pre">depth_camera</span></code> must be
+provided.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">render_label_image</span></code>:</dt><dd><p>Whether to provide the <code class="docutils literal notranslate"><span class="pre">label_image</span></code> output port. May be set to
+true only when a <code class="docutils literal notranslate"><span class="pre">color_camera</span></code> has also been provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.body_pose_in_world_output_port">
+<span class="sig-name descname"><span class="pre">body_pose_in_world_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.body_pose_in_world_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the abstract-valued output port (containing a RigidTransform)
+which reports the pose of the body in the world frame (X_WB).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.capture_offset">
+<span class="sig-name descname"><span class="pre">capture_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.capture_offset" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">capture_offset</span></code> passed to the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.color_camera">
+<span class="sig-name descname"><span class="pre">color_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera" title="pydrake.geometry.ColorRenderCamera"><span class="pre">pydrake.geometry.ColorRenderCamera</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.color_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">color_camera</span></code> passed to the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.color_image_output_port">
+<span class="sig-name descname"><span class="pre">color_image_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.color_image_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the abstract-valued output port that contains an ImageRgba8U
+if such a port was requested in the constructor, otherwise null.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.depth_camera">
+<span class="sig-name descname"><span class="pre">depth_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera" title="pydrake.geometry.DepthRenderCamera"><span class="pre">pydrake.geometry.DepthRenderCamera</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.depth_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">depth_camera</span></code> passed to the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.depth_image_16U_output_port">
+<span class="sig-name descname"><span class="pre">depth_image_16U_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.depth_image_16U_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the abstract-valued output port that contains an ImageDepth16U
+if such a port was requested in the constructor, otherwise null.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.depth_image_32F_output_port">
+<span class="sig-name descname"><span class="pre">depth_image_32F_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.depth_image_32F_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the abstract-valued output port that contains an ImageDepth32F
+if such a port was requested in the constructor, otherwise null.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.fps">
+<span class="sig-name descname"><span class="pre">fps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.fps" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">fps</span></code> passed to the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.label_image_output_port">
+<span class="sig-name descname"><span class="pre">label_image_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.label_image_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the abstract-valued output port that contains an ImageLabel16I
+if such a port was requested in the constructor, otherwise null.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.output_delay">
+<span class="sig-name descname"><span class="pre">output_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.output_delay" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">output_delay</span></code> passed to the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.parent_id">
+<span class="sig-name descname"><span class="pre">parent_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.parent_id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">parent_id</span></code> passed to the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.X_PB">
+<span class="sig-name descname"><span class="pre">X_PB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.X_PB" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">X_PB</span></code> passed to the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorDiscrete">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">RgbdSensorDiscrete</span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
 <p>Wraps a continuous RgbdSensor with a zero-order hold to create a
 discrete sensor.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorDiscrete</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><dl class="py method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorDiscrete</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>See also RgbdSensorAsync for a slightly different discrete sensor
+model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be mindful that the discrete dynamics of a zero-order hold mean
+that all three image types (color, depth, label) are rendered at
+the given <code class="docutils literal notranslate"><span class="pre">period</span></code>, even if nothing ends up using the images on
+the output ports; this might be computationally wasteful. If you
+only need color and depth, be sure to pass <code class="docutils literal notranslate"><span class="pre">render_label_image</span> <span class="pre">=</span>
+<span class="pre">false</span></code> to the constructor. If you only need one image type,
+eschew this system in favor of adding your own zero-order hold on
+just the one RgbdSensor output port that you need.</p>
+</div>
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorDiscrete.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.03333333333333333</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_label_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a diagram containing a (non-registered) RgbdSensor that

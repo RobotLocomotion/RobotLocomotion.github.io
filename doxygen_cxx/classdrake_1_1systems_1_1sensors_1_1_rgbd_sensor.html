@@ -187,6 +187,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_r
 </table>
 </td></tr>
 </table>
+<p>This system models a continuous sensor, where the output ports reflect the instantaneous images observed by the sensor. In contrast, a discrete (sample and hold) sensor model might be a more suitable match for a real-world camera; for that case, see <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html" title="Wraps a continuous RgbdSensor with a zero-order hold to create a discrete sensor.">RgbdSensorDiscrete</a> or <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html" title="A sensor similar to RgbdSensorDiscrete but the rendering occurs on a background thread to offer impro...">RgbdSensorAsync</a>.</p>
 <p>The following text uses terminology and conventions from <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html" title="Simple class for characterizing the Drake camera model.">CameraInfo</a>. Please review its documentation.</p>
 <p>This class uses the following frames:</p>
 <ul>
@@ -236,7 +237,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad83228b39a7566b1cf862392f1e5e19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>X_BD</code>.  <a href="#ad83228b39a7566b1cf862392f1e5e19a">More...</a><br /></td></tr>
 <tr class="separator:ad83228b39a7566b1cf862392f1e5e19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ff82441df0b9b743906c4304135783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a22ff82441df0b9b743906c4304135783">parent_frame_id</a> () const</td></tr>
-<tr class="memdesc:a22ff82441df0b9b743906c4304135783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the frame to which the base is affixed.  <a href="#a22ff82441df0b9b743906c4304135783">More...</a><br /></td></tr>
+<tr class="memdesc:a22ff82441df0b9b743906c4304135783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the frame to which the body is affixed.  <a href="#a22ff82441df0b9b743906c4304135783">More...</a><br /></td></tr>
 <tr class="separator:a22ff82441df0b9b743906c4304135783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4572bb00056a157be83e44f7f41523"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#adf4572bb00056a157be83e44f7f41523">query_object_input_port</a> () const</td></tr>
 <tr class="memdesc:adf4572bb00056a157be83e44f7f41523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry::QueryObject&lt;double&gt;-valued input port.  <a href="#adf4572bb00056a157be83e44f7f41523">More...</a><br /></td></tr>
@@ -1682,7 +1683,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the id of the frame to which the base is affixed. </p>
+<p>Returns the id of the frame to which the body is affixed. </p>
 
 </div>
 </div>

@@ -49,8 +49,9 @@ var dir_892460009e18f4b08a77d36884a88a01 =
       [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender" ]
     ] ],
     [ "pixel_types.h", "pixel__types_8h.html", "pixel__types_8h" ],
-    [ "rgbd_sensor.h", "rgbd__sensor_8h.html", [
-      [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete" ]
+    [ "rgbd_sensor.h", "rgbd__sensor_8h.html", null ],
+    [ "rgbd_sensor_async.h", "rgbd__sensor__async_8h.html", [
+      [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async" ]
     ] ],
     [ "rotary_encoders.h", "rotary__encoders_8h.html", null ],
     [ "sim_rgbd_sensor.h", "sim__rgbd__sensor_8h.html", null ]

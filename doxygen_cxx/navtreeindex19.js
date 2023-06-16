@@ -1,5 +1,9 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#abf1e3c89af40ff48fe33cbffe3f3c025":[3,0,0,9,6,0,8],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae8047523b382903ae29b5187e30cab7b":[3,0,0,9,6,0,1],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae855057ba808cde3b3615c5e1c4938be":[3,0,0,9,6,0,0],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af0ac2e6d285796a38d337ebfe9372ef2":[3,0,0,9,6,0,10],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af7cb053bcbc42d09974cebcd7a1f4c48":[3,0,0,9,6,0,3],
 "classdrake_1_1never__destroyed.html":[3,0,0,38],
 "classdrake_1_1never__destroyed.html#a1928fdb6c0c2253e0aa891b213721673":[3,0,0,38,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1planning_1_1_robot_clearance.html":[1,4,2,2,5],
 "classdrake_1_1planning_1_1_robot_clearance.html#a06281900a335995918a2f8da41e8b3d5":[1,4,2,2,5,2],
 "classdrake_1_1planning_1_1_robot_clearance.html#a0cff3fa19ca93e4b0eee8b906fc5a3c8":[1,4,2,2,5,14],
-"classdrake_1_1planning_1_1_robot_clearance.html#a13139e0691600bda976989de532df649":[1,4,2,2,5,11],
-"classdrake_1_1planning_1_1_robot_clearance.html#a401263b97aa91720fbc1869951c62ddc":[1,4,2,2,5,0],
-"classdrake_1_1planning_1_1_robot_clearance.html#a409bdc1b0019f9ee9073ef5478c116c0":[1,4,2,2,5,13],
-"classdrake_1_1planning_1_1_robot_clearance.html#a729e9cd587db14316836a7480f6a3ef9":[1,4,2,2,5,3],
-"classdrake_1_1planning_1_1_robot_clearance.html#a86cbbd162c113f46a8f319d57626c6e6":[1,4,2,2,5,12]
+"classdrake_1_1planning_1_1_robot_clearance.html#a13139e0691600bda976989de532df649":[1,4,2,2,5,11]
 };

@@ -41,6 +41,7 @@ var namespacedrake_1_1systems_1_1sensors =
     [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender" ],
     [ "OptitrackReceiver", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver" ],
     [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor" ],
+    [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async" ],
     [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete" ],
     [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders" ]
 ];

@@ -29,6 +29,7 @@ var searchData=
   ['rewritingrule',['RewritingRule',['../classdrake_1_1symbolic_1_1_rewriting_rule.html',1,'drake::symbolic']]],
   ['rgba',['Rgba',['../classdrake_1_1geometry_1_1_rgba.html',1,'drake::geometry']]],
   ['rgbdsensor',['RgbdSensor',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html',1,'drake::systems::sensors']]],
+  ['rgbdsensorasync',['RgbdSensorAsync',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html',1,'drake::systems::sensors']]],
   ['rgbdsensordiscrete',['RgbdSensorDiscrete',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html',1,'drake::systems::sensors']]],
   ['rigidbody',['RigidBody',['../classdrake_1_1multibody_1_1_rigid_body.html',1,'drake::multibody']]],
   ['rigidtransform',['RigidTransform',['../classdrake_1_1math_1_1_rigid_transform.html',1,'drake::math']]],
