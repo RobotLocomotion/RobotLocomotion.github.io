@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"serializer_8h.html":[4,0,0,12,4,7],
 "shape__specification_8h.html":[4,0,0,4,40],
 "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,40,14],
 "shape__to__string_8h.html":[4,0,0,4,41],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,48,2],
 "structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,48,7],
 "structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731":[3,0,0,48,8],
-"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,48,10],
-"structdrake_1_1_sorted_pair.html#ace5b7f162bab05d193bcdd27ddee7b3b":[3,0,0,48,3]
+"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,48,10]
 };

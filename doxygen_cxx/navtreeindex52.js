@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"quadratic__scalar__system_8h.html":[4,0,0,12,0,0,10],
 "quadrature_8h.html":[4,0,0,8,3,26],
 "quadrotor__geometry_8h.html":[4,0,0,3,14,0],
 "quadrotor__plant_8h.html":[4,0,0,3,14,1],
@@ -89,8 +90,8 @@ var NAVTREEINDEX52 =
 "render__engine__gltf__client__params_8h.html":[4,0,0,4,6,5],
 "render__engine__vtk__params_8h.html":[4,0,0,4,7,4],
 "render__gl_2factory_8h.html":[4,0,0,4,5,0],
-"render__gl_2factory_8h.html#a6a949953d76af52d6dd1b13417cb556a":[4,0,0,4,5,0,1],
 "render__gl_2factory_8h.html#a6a949953d76af52d6dd1b13417cb556a":[4,0,0,4,5,0,2],
+"render__gl_2factory_8h.html#a6a949953d76af52d6dd1b13417cb556a":[4,0,0,4,5,0,1],
 "render__gl_2factory_8h.html#a822ce4b4810855c6f6fe7a025d8372f7":[4,0,0,4,5,0,0],
 "render__gl_2factory_8h.html#aaa4adf317ad66ba21d0ec9b99cd177ad":[4,0,0,4,5,0,3],
 "render__gltf__client_2factory_8h.html":[4,0,0,4,6,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "serialize__pybind_8h.html":[4,0,0,0,0,0,8],
 "serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,0,8,0],
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,0,8,1],
-"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,0,8,2],
-"serializer_8h.html":[4,0,0,12,4,7]
+"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,0,8,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"namespacemembers_func_x.html":[2,1,1,23],
 "namespacemembers_g.html":[2,1,0,6],
 "namespacemembers_h.html":[2,1,0,7],
 "namespacemembers_i.html":[2,1,0,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "quadratic__form_8h.html":[4,0,0,7,26],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,26,2],
-"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
-"quadratic__scalar__system_8h.html":[4,0,0,12,0,0,10]
+"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0]
 };
