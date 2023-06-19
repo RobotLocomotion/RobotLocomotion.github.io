@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"namespacemembers_func_w.html":[2,1,1,22],
 "namespacemembers_func_x.html":[2,1,1,23],
 "namespacemembers_g.html":[2,1,0,6],
 "namespacemembers_h.html":[2,1,0,7],
@@ -59,7 +60,7 @@ var NAVTREEINDEX51 =
 "parser_8h.html":[4,0,0,8,9,21],
 "parsing__doxygen_8h.html":[4,0,0,8,9,22],
 "partial__permutation_8h.html":[4,0,0,8,2,0,1],
-"partials_8h.html":[4,0,0,1,0,0,0],
+"partials_8h.html":[4,0,0,1,0,0,1],
 "pass__through_8h.html":[4,0,0,12,6,17],
 "path__parameterized__trajectory_8h.html":[4,0,0,1,5,5],
 "pendulum__geometry_8h.html":[4,0,0,3,12,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,13,7],
 "quadratic__form_8h.html":[4,0,0,7,26],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
-"quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,26,2],
-"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0]
+"quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,26,2]
 };

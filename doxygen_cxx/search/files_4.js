@@ -7,6 +7,7 @@ var searchData=
   ['eigen_5fprinter_2eh',['eigen_printer.h',['../eigen__printer_8h.html',1,'']]],
   ['eigen_5fpybind_2eh',['eigen_pybind.h',['../eigen__pybind_8h.html',1,'']]],
   ['eigen_5fsparse_5ftriplet_2eh',['eigen_sparse_triplet.h',['../eigen__sparse__triplet_8h.html',1,'']]],
+  ['eigen_5fspecializations_2eh',['eigen_specializations.h',['../eigen__specializations_8h.html',1,'']]],
   ['eigen_5ftypes_2eh',['eigen_types.h',['../eigen__types_8h.html',1,'']]],
   ['environment_2eh',['environment.h',['../environment_8h.html',1,'']]],
   ['equality_5fconstrained_5fqp_5fsolver_2eh',['equality_constrained_qp_solver.h',['../equality__constrained__qp__solver_8h.html',1,'']]],

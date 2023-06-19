@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1yaml_1_1_load_yaml_options.html":[3,0,0,20,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,20,0,3],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a41075284801afdfd502cd4c5f73f363d":[3,0,0,20,0,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[3,0,0,20,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "type__safe__index__pybind_8h.html#a236143263d0a18d6ec439f707140d7e1":[4,0,0,0,0,0,12,0],
 "uniform__gravity__field__element_8h.html":[4,0,0,8,14,50],
 "unimplemented__collision__checker_8h.html":[4,0,0,10,14],
-"unit__inertia_8h.html":[4,0,0,8,14,51],
-"unit__quaternion__constraint_8h.html":[4,0,0,8,5,21]
+"unit__inertia_8h.html":[4,0,0,8,14,51]
 };

@@ -210,6 +210,7 @@ var NAVTREEINDEX44 =
 "eigen__sparse__triplet_8h.html":[4,0,0,7,13],
 "eigen__sparse__triplet_8h.html#a731362436a359883cbac2c59abf95168":[4,0,0,7,13,1],
 "eigen__sparse__triplet_8h.html#a9681555f84d48a48d09601d913246934":[4,0,0,7,13,0],
+"eigen__specializations_8h.html":[4,0,0,1,0,0,0],
 "eigen__types_8h.html":[4,0,0,1,29],
 "eigen__types_8h.html#a01ae662d5635b7c9efe03d15d976f7a8":[4,0,0,1,29,28],
 "eigen__types_8h.html#a06406a5da633da84f911e2979aa48549":[4,0,0,1,29,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "environment_8h.html#af50e3bc4e34ea64ae4d7065ad1fc72ac":[4,0,0,1,3,0,2,1],
 "equality__constrained__qp__solver_8h.html":[4,0,0,11,17],
 "evaluator__base_8h.html":[4,0,0,11,18],
-"evaluator__base_8h.html#a82dddde3ce550bdc321a2240ab12cec0":[4,0,0,11,18,5],
-"evenly__distributed__pts__on__sphere_8h.html":[4,0,0,7,14]
+"evaluator__base_8h.html#a82dddde3ce550bdc321a2240ab12cec0":[4,0,0,11,18,5]
 };

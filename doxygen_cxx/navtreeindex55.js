@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab3f1efd3efefa056724514d6d247de2f":[3,0,0,4,1,19,10],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab44bb940daf4a1747f92bae32d54c67a":[3,0,0,4,1,19,8],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ac57821371edcae4eaee405d04a76ae66":[3,0,0,4,1,19,4],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#aeff55dd0e18e3aeb13a86310e6ed35e5":[3,0,0,4,1,19,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,9,4,0,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,9,4,0,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,4,0,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,0,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,4,0,0]
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,4,0,4]
 };

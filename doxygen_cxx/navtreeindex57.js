@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1systems_1_1_use_default_name.html":[3,0,0,16,121],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html":[3,0,0,16,0,1],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a338f8f52a23e583f8ec10aa553b1fdfc":[3,0,0,16,0,1,0],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317":[3,0,0,16,0,1,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1visualization_1_1_visualization_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,19,2,6],
 "structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7":[3,0,0,19,2,2],
 "structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995":[3,0,0,19,2,7],
-"structdrake_1_1visualization_1_1_visualization_config.html#aeafcd0d4f3194281faba6686f1589b00":[3,0,0,19,2,9],
-"structdrake_1_1yaml_1_1_load_yaml_options.html":[3,0,0,20,0]
+"structdrake_1_1visualization_1_1_visualization_config.html#aeafcd0d4f3194281faba6686f1589b00":[3,0,0,19,2,9]
 };
