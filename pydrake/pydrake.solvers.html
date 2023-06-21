@@ -2605,9 +2605,9 @@ expression.</p>
 </dd>
 </dl>
 <p>The resulting constraint may be a BoundingBoxConstraint,
-LinearConstraint, LinearEqualityConstraint, or ExpressionConstraint,
-depending on the arguments. Constraints of the form x == 1 (which
-could be created as a BoundingBoxConstraint or
+LinearConstraint, LinearEqualityConstraint, QuadraticConstraint, or
+ExpressionConstraint, depending on the arguments. Constraints of the
+form x == 1 (which could be created as a BoundingBoxConstraint or
 LinearEqualityConstraint) will be constructed as a
 LinearEqualityConstraint.</p>
 <ol class="arabic simple" start="3">
@@ -5238,7 +5238,7 @@ branch-and-bound process, since we need to replace the binary
 variables with continuous variables.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerBranchAndBound.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog:</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id:</span> <span class="pre">pydrake.solvers.SolverId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.solvers.MixedIntegerBranchAndBound.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f28202945f0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MixedIntegerBranchAndBound" title="pydrake.solvers.MixedIntegerBranchAndBound"><span class="pre">pydrake.solvers.MixedIntegerBranchAndBound</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MixedIntegerBranchAndBound.Options" title="pydrake.solvers.MixedIntegerBranchAndBound.Options"><span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Options(max_explored_nodes=-</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct a branch-and-bound tree from a mixed-integer optimization
 program.</p>
 <dl class="simple">
@@ -5346,15 +5346,20 @@ order. The sub-optimal costs do not include the optimal cost.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerBranchAndBound.Options">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Options</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.Options" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p>Configuration settings for the MixedIntegerBranchAndBound constructor.</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerBranchAndBound.Options.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MixedIntegerBranchAndBound.Options" title="pydrake.solvers.MixedIntegerBranchAndBound.Options"><span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.Options.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MixedIntegerBranchAndBound.Options" title="pydrake.solvers.MixedIntegerBranchAndBound.Options"><span class="pre">pydrake.solvers.MixedIntegerBranchAndBound.Options</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.Options.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerBranchAndBound.Options.max_explored_nodes">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_explored_nodes</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerBranchAndBound.Options.max_explored_nodes" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The maximal number of explored nodes in the tree. The branch and bound
+process will terminate if the tree has explored this number of nodes.
+max_explored_nodes &lt;= 0 means that we don’t put an upper bound on the
+number of explored nodes.</p>
+</dd></dl>
 
 </dd></dl>
 

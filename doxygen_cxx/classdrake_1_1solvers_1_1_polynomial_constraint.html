@@ -167,7 +167,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_polynomial_c
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A constraint on the values of multivariate polynomials. </p>
-<p>lb[i] &lt;= P<a href="x, y...">i</a> &lt;= ub[i], where each P[i] is a multivariate polynomial in x, y...</p>
+<pre class="fragment">* lb[i] ≤ P[i](x, y...) ≤ ub[i],
+* </pre><p> where each P[i] is a multivariate polynomial in x, y...</p>
 <p>The <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> class uses a different variable naming scheme; thus the caller must provide a list of <a class="el" href="classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a">Polynomial::VarType</a> variables that correspond to the members of the MathematicalProgram::Binding (the individual scalar elements of the given VariableList). </p>
 </div>
 <p><code>#include &lt;drake/solvers/constraint.h&gt;</code></p>

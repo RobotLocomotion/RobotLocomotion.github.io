@@ -166,17 +166,24 @@ $(document).ready(function(){initNavTree('structdrake_1_1solvers_1_1_mixed_integ
 <div class="title">MixedIntegerBranchAndBound::Options Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Configuration settings for the <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html" title="Given a mixed-integer optimization problem (MIP) (or more accurately, mixed binary problem),...">MixedIntegerBranchAndBound</a> constructor. </p>
+</div>
 <p><code>#include &lt;drake/solvers/branch_and_bound.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a28d39a844c3a37ab61d32ab7c6352f09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09">Options</a> ()</td></tr>
 <tr class="separator:a28d39a844c3a37ab61d32ab7c6352f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7d164a4c018dfca9cd2bc71c083c8054"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a7d164a4c018dfca9cd2bc71c083c8054">max_explored_nodes</a> {-1}</td></tr>
+<tr class="memdesc:a7d164a4c018dfca9cd2bc71c083c8054"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximal number of explored nodes in the tree.  <a href="#a7d164a4c018dfca9cd2bc71c083c8054">More...</a><br /></td></tr>
 <tr class="separator:a7d164a4c018dfca9cd2bc71c083c8054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -197,6 +204,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a7d164a4c018dfca9cd2bc71c083c8054"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d164a4c018dfca9cd2bc71c083c8054">&#9670;&nbsp;</a></span>max_explored_nodes</h2>
@@ -209,6 +238,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The maximal number of explored nodes in the tree. </p>
+<p>The branch and bound process will terminate if the tree has explored this number of nodes. max_explored_nodes &lt;= 0 means that we don't put an upper bound on the number of explored nodes. </p>
 
 </div>
 </div>

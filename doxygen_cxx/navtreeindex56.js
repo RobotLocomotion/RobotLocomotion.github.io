@@ -166,7 +166,8 @@ var NAVTREEINDEX56 =
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,14,33,1],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html":[3,0,0,14,38,0],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[3,0,0,14,38,0,0],
-"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a7d164a4c018dfca9cd2bc71c083c8054":[3,0,0,14,38,0,1],
+"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a7d164a4c018dfca9cd2bc71c083c8054":[3,0,0,14,38,0,2],
+"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,14,38,0,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,14,40,0],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,14,40,0,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,14,40,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ac6bfe164b01efe1da5cb9104bd8ce708":[3,0,0,16,105,0,5],
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ad15f084d2247e61bc20310ab56e457a6":[3,0,0,16,105,0,1],
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9":[3,0,0,16,105,0,7],
-"structdrake_1_1systems_1_1_system_type_tag.html":[3,0,0,16,113],
-"structdrake_1_1systems_1_1_system_type_tag.html#a379e6a18189f3ab144292c07cd2cd1d9":[3,0,0,16,113,0]
+"structdrake_1_1systems_1_1_system_type_tag.html":[3,0,0,16,113]
 };
