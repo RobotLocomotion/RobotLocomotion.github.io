@@ -509,6 +509,22 @@ Functions</h2></td></tr>
 <tr class="memitem:ab095ea87a1517bb9bae78d221f5d34da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab095ea87a1517bb9bae78d221f5d34da">ProjectMatToRotMatWithAxis</a> (const Eigen::Matrix3d &amp;M, const Eigen::Vector3d &amp;axis, <a class="el" href="classdouble.html">double</a> angle_lb, <a class="el" href="classdouble.html">double</a> angle_ub)</td></tr>
 <tr class="memdesc:ab095ea87a1517bb9bae78d221f5d34da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects an approximate 3 x 3 rotation matrix M onto an orthonormal matrix R so that R is a rotation matrix associated with a angle-axis rotation by an angle θ about a vector direction <code>axis</code>, with <code>angle_lb &lt;= θ &lt;= angle_ub</code>.  <a href="#ab095ea87a1517bb9bae78d221f5d34da">More...</a><br /></td></tr>
 <tr class="separator:ab095ea87a1517bb9bae78d221f5d34da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5dcb8264087a5079e8103b7241ce77d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad5dcb8264087a5079e8103b7241ce77d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ad5dcb8264087a5079e8103b7241ce77d">SoftOverMax</a> (const std::vector&lt; T &gt; &amp;x, <a class="el" href="classdouble.html">double</a> alpha=1.0)</td></tr>
+<tr class="memdesc:ad5dcb8264087a5079e8103b7241ce77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a smooth over approximation of max function, namely SoftOverMax(x) &gt;= max(x).  <a href="#ad5dcb8264087a5079e8103b7241ce77d">More...</a><br /></td></tr>
+<tr class="separator:ad5dcb8264087a5079e8103b7241ce77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c6c47a926e29b798e1901f0b4a1913"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a01c6c47a926e29b798e1901f0b4a1913"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a01c6c47a926e29b798e1901f0b4a1913">SoftUnderMax</a> (const std::vector&lt; T &gt; &amp;x, <a class="el" href="classdouble.html">double</a> alpha=1.0)</td></tr>
+<tr class="memdesc:a01c6c47a926e29b798e1901f0b4a1913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a smooth under approximation of max function, namely SoftUnderMax(x) &lt;= max(x).  <a href="#a01c6c47a926e29b798e1901f0b4a1913">More...</a><br /></td></tr>
+<tr class="separator:a01c6c47a926e29b798e1901f0b4a1913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb9f9a7a842e3d0be47d3c7b7f23f11"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2fb9f9a7a842e3d0be47d3c7b7f23f11"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fb9f9a7a842e3d0be47d3c7b7f23f11">SoftOverMin</a> (const std::vector&lt; T &gt; &amp;x, <a class="el" href="classdouble.html">double</a> alpha=1.0)</td></tr>
+<tr class="memdesc:a2fb9f9a7a842e3d0be47d3c7b7f23f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a smooth over approximation of min function, namely SoftOverMin(x) &gt;= min(x).  <a href="#a2fb9f9a7a842e3d0be47d3c7b7f23f11">More...</a><br /></td></tr>
+<tr class="separator:a2fb9f9a7a842e3d0be47d3c7b7f23f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0fa6ae7f85a3641b2688a7a929a601d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af0fa6ae7f85a3641b2688a7a929a601d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af0fa6ae7f85a3641b2688a7a929a601d">SoftUnderMin</a> (const std::vector&lt; T &gt; &amp;x, <a class="el" href="classdouble.html">double</a> alpha=1.0)</td></tr>
+<tr class="memdesc:af0fa6ae7f85a3641b2688a7a929a601d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a smooth under approximation of min function, namely SoftUnderMin(x) &lt;= min(x).  <a href="#af0fa6ae7f85a3641b2688a7a929a601d">More...</a><br /></td></tr>
+<tr class="separator:af0fa6ae7f85a3641b2688a7a929a601d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64bd1ea33cbb7fd030ff6bf3061eb3fe"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
 <tr class="memitem:a64bd1ea33cbb7fd030ff6bf3061eb3fe"><td class="memTemplItemLeft" align="right" valign="top">T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a64bd1ea33cbb7fd030ff6bf3061eb3fe">wrap_to</a> (const T1 &amp;value, const T2 &amp;low, const T2 &amp;high)</td></tr>
 <tr class="memdesc:a64bd1ea33cbb7fd030ff6bf3061eb3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">For variables that are meant to be periodic, (e.g.  <a href="#a64bd1ea33cbb7fd030ff6bf3061eb3fe">More...</a><br /></td></tr>
@@ -3390,6 +3406,210 @@ else
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5dcb8264087a5079e8103b7241ce77d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5dcb8264087a5079e8103b7241ce77d">&#9670;&nbsp;</a></span>SoftOverMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T drake::math::SoftOverMax </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a smooth over approximation of max function, namely SoftOverMax(x) &gt;= max(x). </p>
+<p>Mathematically we compute this as (log (∑ᵢ exp(αxᵢ))) / α. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The vector for which we want to compute its soft max. </td></tr>
+    <tr><td class="paramname">alpha</td><td>α in the documentation above. Larger α makes the soft max more similar to max, with a sharper corner. Must be strictly positive and finite. <br />
+ <em>Default:</em> is 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if α &lt;= 0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if α is non-finite. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2fb9f9a7a842e3d0be47d3c7b7f23f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb9f9a7a842e3d0be47d3c7b7f23f11">&#9670;&nbsp;</a></span>SoftOverMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T drake::math::SoftOverMin </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a smooth over approximation of min function, namely SoftOverMin(x) &gt;= min(x). </p>
+<p>Mathematically we compute this as ∑ᵢ exp(-αxᵢ)*xᵢ / d, where d = ∑ⱼ exp(-αxⱼ) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The vector for which we want to compute its soft min. </td></tr>
+    <tr><td class="paramname">alpha</td><td>α in the documentation above. Larger α makes the soft min more similar to min, with a sharper corner. Must be strictly positive and finite. <br />
+ <em>Default:</em> is 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if α &lt;= 0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if α is non-finite. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a01c6c47a926e29b798e1901f0b4a1913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01c6c47a926e29b798e1901f0b4a1913">&#9670;&nbsp;</a></span>SoftUnderMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T drake::math::SoftUnderMax </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a smooth under approximation of max function, namely SoftUnderMax(x) &lt;= max(x). </p>
+<p>Mathematically we compute this as ∑ᵢ exp(αxᵢ)*xᵢ / d, where d = ∑ⱼ exp(αxⱼ) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The vector for which we want to compute its soft max. </td></tr>
+    <tr><td class="paramname">alpha</td><td>α in the documentation above. Larger α makes the soft max more similar to max, with a sharper corner. Must be strictly positive and finite. <br />
+ <em>Default:</em> is 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if α &lt;= 0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if α is non-finite. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0fa6ae7f85a3641b2688a7a929a601d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0fa6ae7f85a3641b2688a7a929a601d">&#9670;&nbsp;</a></span>SoftUnderMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T drake::math::SoftUnderMin </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a smooth under approximation of min function, namely SoftUnderMin(x) &lt;= min(x). </p>
+<p>Mathematically we compute this as -(log (∑ᵢ exp(-αxᵢ))) / α </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The vector for which we want to compute its soft min. </td></tr>
+    <tr><td class="paramname">alpha</td><td>α in the documentation above. Larger α makes the soft min more similar to min, with a sharper corner. Must be strictly positive and finite. <br />
+ <em>Default:</em> is 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if α &lt;= 0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if α is non-finite. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

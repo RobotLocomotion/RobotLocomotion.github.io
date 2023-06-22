@@ -1,5 +1,11 @@
 var NAVTREEINDEX43 =
 {
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,27,10],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,27,8],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a4c7cb2cda263a8eaace8b17ec56f7f29":[3,0,2,27,15],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a654ad3ffbfa836060c9b33e158b825b9":[3,0,2,27,7],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a712a1f7906452472e1632ce23eb9b0fc":[3,0,2,27,11],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a98e915e5de715722814bc0902b76edd4":[3,0,2,27,12],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,2,27,9],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aafee06a6c686706c82602adea8bd5343":[3,0,2,27,5],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,2,27,1],
@@ -85,6 +91,7 @@ var NAVTREEINDEX43 =
 "constraint__relaxing__ik_8h.html":[4,0,0,8,5,4],
 "constraint__solver_8h.html":[4,0,0,8,1,2],
 "constraint__specs_8h.html":[4,0,0,8,10,3],
+"contact__configuration_8h.html":[4,0,0,8,2,4],
 "contact__jacobians_8h.html":[4,0,0,8,10,4],
 "contact__model__doxygen_8h.html":[4,0,0,8,10,5],
 "contact__pair__kinematics_8h.html":[4,0,0,8,10,6],
@@ -94,9 +101,9 @@ var NAVTREEINDEX43 =
 "contact__results__to__lcm_8h.html":[4,0,0,8,10,9],
 "contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,9,0],
 "contact__results__to__lcm_8h.html#ga732349f929601b37e30b15ad557057e7":[4,0,0,8,10,9,1],
-"contact__solver_8h.html":[4,0,0,8,2,4],
-"contact__solver__results_8h.html":[4,0,0,8,2,5],
-"contact__solver__utils_8h.html":[4,0,0,8,2,6],
+"contact__solver_8h.html":[4,0,0,8,2,5],
+"contact__solver__results_8h.html":[4,0,0,8,2,6],
+"contact__solver__utils_8h.html":[4,0,0,8,2,7],
 "contact__surface_8h.html":[4,0,0,4,3,0],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX43 =
 "diagram__continuous__state_8h.html":[4,0,0,12,3,14],
 "diagram__discrete__values_8h.html":[4,0,0,12,3,15],
 "diagram__output__port_8h.html":[4,0,0,12,3,16],
-"diagram__state_8h.html":[4,0,0,12,3,17],
-"differentiable__norm_8h.html":[4,0,0,7,10],
-"differentiable__norm_8h.html#ae918eb0a5749b337a92058e92bd039c9":[4,0,0,7,10,0],
-"differential__inverse__kinematics_8h.html":[4,0,0,8,5,5],
-"differential__inverse__kinematics_8h.html#a090e11af1b52e90710e1b651d489311e":[4,0,0,8,5,5,8],
-"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdc":[4,0,0,8,5,5,3],
-"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3":[4,0,0,8,5,5,3,2],
-"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdca7dbb41ec30548b5703863365ae83a5dc":[4,0,0,8,5,5,3,1]
+"diagram__state_8h.html":[4,0,0,12,3,17]
 };

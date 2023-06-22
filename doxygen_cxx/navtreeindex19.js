@@ -1,5 +1,10 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a5648d641e62c97c3d8bb555a49443839":[3,0,0,9,6,0,7],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a59afbd430a82f1add5f0cd09bf34f444":[3,0,0,9,6,0,5],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a6b11517643a27a1b5633e5c017881f3f":[3,0,0,9,6,0,14],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a96c7c25771960765e62faa13efcce1bc":[3,0,0,9,6,0,9],
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#aa31802748296a2a9f3c8ab04a3ab58b0":[3,0,0,9,6,0,4],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#abf1e3c89af40ff48fe33cbffe3f3c025":[3,0,0,9,6,0,8],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae8047523b382903ae29b5187e30cab7b":[3,0,0,9,6,0,1],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae855057ba808cde3b3615c5e1c4938be":[3,0,0,9,6,0,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1planning_1_1_edge_measure.html#ad38190af9206e3dc431eaa864f11371f":[1,4,2,2,4,4],
 "classdrake_1_1planning_1_1_edge_measure.html#adc39daaf3948c8b33887e7ce25b8e5fd":[1,4,2,2,4,8],
 "classdrake_1_1planning_1_1_edge_measure.html#ae191e468aa6f0164788423837a3cf1c4":[1,4,2,2,4,7],
-"classdrake_1_1planning_1_1_edge_measure.html#aed1f69595a29dbd7c9bec63186a898dc":[1,4,2,2,4,3],
-"classdrake_1_1planning_1_1_edge_measure.html#af2a7f93a2f9ab704e82849ba600da879":[1,4,2,2,4,9],
-"classdrake_1_1planning_1_1_robot_clearance.html":[1,4,2,2,5],
-"classdrake_1_1planning_1_1_robot_clearance.html#a06281900a335995918a2f8da41e8b3d5":[1,4,2,2,5,2],
-"classdrake_1_1planning_1_1_robot_clearance.html#a0cff3fa19ca93e4b0eee8b906fc5a3c8":[1,4,2,2,5,14],
-"classdrake_1_1planning_1_1_robot_clearance.html#a13139e0691600bda976989de532df649":[1,4,2,2,5,11]
+"classdrake_1_1planning_1_1_edge_measure.html#aed1f69595a29dbd7c9bec63186a898dc":[1,4,2,2,4,3]
 };

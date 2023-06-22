@@ -208,6 +208,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16ae097f54f82e813d19f77126ba21e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a16ae097f54f82e813d19f77126ba21e7">GetExpression</a> (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> time=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>(&quot;t&quot;)) const</td></tr>
 <tr class="memdesc:a16ae097f54f82e813d19f77126ba21e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the expanded underlying polynomial expression of this curve in terms of variable <code>time</code>.  <a href="#a16ae097f54f82e813d19f77126ba21e7">More...</a><br /></td></tr>
 <tr class="separator:a16ae097f54f82e813d19f77126ba21e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1140b71651392be777ab280996db81de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a1140b71651392be777ab280996db81de">ElevateOrder</a> ()</td></tr>
+<tr class="memdesc:a1140b71651392be777ab280996db81de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases the order of the curve by 1.  <a href="#a1140b71651392be777ab280996db81de">More...</a><br /></td></tr>
+<tr class="separator:a1140b71651392be777ab280996db81de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">rows</a> () const override</td></tr>
 <tr class="separator:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adca8eca2ee324f57170dedfb4b06160b"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#adca8eca2ee324f57170dedfb4b06160b">cols</a> () const override</td></tr>
@@ -503,6 +506,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reference to the control points which define the curve. </p>
+
+</div>
+</div>
+<a id="a1140b71651392be777ab280996db81de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1140b71651392be777ab280996db81de">&#9670;&nbsp;</a></span>ElevateOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ElevateOrder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increases the order of the curve by 1. </p>
+<p>A Bézier curve of order n can be converted into a Bézier curve of order n + 1 with the same shape. The control points of <code>this</code> are modified to obtain the equivalent curve. </p>
 
 </div>
 </div>

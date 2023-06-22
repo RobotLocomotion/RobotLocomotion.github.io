@@ -193,9 +193,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, <a class="el" href="classdouble.html">double</a> tol=0) const</td></tr>
 <tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the point x is contained in the set.  <a href="#aa7a4d7c125954dfde3c15238c852eeed">More...</a><br /></td></tr>
 <tr class="separator:aa7a4d7c125954dfde3c15238c852eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accc952b29c3cc22980f9a3fffe0d23ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#accc952b29c3cc22980f9a3fffe0d23ff">AddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const</td></tr>
-<tr class="memdesc:accc952b29c3cc22980f9a3fffe0d23ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set.  <a href="#accc952b29c3cc22980f9a3fffe0d23ff">More...</a><br /></td></tr>
-<tr class="separator:accc952b29c3cc22980f9a3fffe0d23ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeadb1b53981b5d37418f3386300e7497"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aeadb1b53981b5d37418f3386300e7497">AddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const</td></tr>
+<tr class="memdesc:aeadb1b53981b5d37418f3386300e7497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set.  <a href="#aeadb1b53981b5d37418f3386300e7497">More...</a><br /></td></tr>
+<tr class="separator:aeadb1b53981b5d37418f3386300e7497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035">AddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const</td></tr>
 <tr class="memdesc:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let S be this convex set.  <a href="#a1fb1329a9d7f2b0adf69ae203a9be035">More...</a><br /></td></tr>
 <tr class="separator:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,9 +248,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ade78c2696e0f7afdf38c59bf7b12ada5">DoPointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, <a class="el" href="classdouble.html">double</a> tol) const =0</td></tr>
 <tr class="memdesc:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a>.  <a href="#ade78c2696e0f7afdf38c59bf7b12ada5">More...</a><br /></td></tr>
 <tr class="separator:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cb1e034a963f31045c5667256013afb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cb1e034a963f31045c5667256013afb">DoAddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const =0</td></tr>
-<tr class="memdesc:a1cb1e034a963f31045c5667256013afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#accc952b29c3cc22980f9a3fffe0d23ff" title="Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is insi...">AddPointInSetConstraints()</a>.  <a href="#a1cb1e034a963f31045c5667256013afb">More...</a><br /></td></tr>
-<tr class="separator:a1cb1e034a963f31045c5667256013afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e36bd79c9772253165b5d5a308c8f09"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4e36bd79c9772253165b5d5a308c8f09">DoAddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const =0</td></tr>
+<tr class="memdesc:a4e36bd79c9772253165b5d5a308c8f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aeadb1b53981b5d37418f3386300e7497" title="Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is insi...">AddPointInSetConstraints()</a>.  <a href="#a4e36bd79c9772253165b5d5a308c8f09">More...</a><br /></td></tr>
+<tr class="separator:a4e36bd79c9772253165b5d5a308c8f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae37ae169eed6681dbf5d82ddc4137420"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae37ae169eed6681dbf5d82ddc4137420">DoAddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const =0</td></tr>
 <tr class="memdesc:ae37ae169eed6681dbf5d82ddc4137420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035" title="Let S be this convex set.">AddPointInNonnegativeScalingConstraints()</a>.  <a href="#ae37ae169eed6681dbf5d82ddc4137420">More...</a><br /></td></tr>
 <tr class="separator:ae37ae169eed6681dbf5d82ddc4137420"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -510,14 +510,14 @@ c' * t + d ≥ 0,
 
 </div>
 </div>
-<a id="accc952b29c3cc22980f9a3fffe0d23ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accc952b29c3cc22980f9a3fffe0d23ff">&#9670;&nbsp;</a></span>AddPointInSetConstraints()</h2>
+<a id="aeadb1b53981b5d37418f3386300e7497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeadb1b53981b5d37418f3386300e7497">&#9670;&nbsp;</a></span>AddPointInSetConstraints()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPointInSetConstraints </td>
+          <td class="memname">std::pair&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; &gt; &gt; AddPointInSetConstraints </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
           <td class="paramname"><em>prog</em>, </td>
@@ -537,6 +537,7 @@ c' * t + d ≥ 0,
 </div><div class="memdoc">
 
 <p>Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set. </p>
+<dl class="section return"><dt>Returns</dt><dd>(new_vars, new_constraints) Some of the derived class will add new decision variables to enforce this constraint, we return all the newly added decision variables as new_vars. The meaning of these new decision variables differs in each subclass. If no new variables are added, then we return an empty Eigen vector. Also we return all the newly added constraints to <code>prog</code> through this function. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0 </td></tr>
@@ -709,8 +710,8 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
-<a id="a1cb1e034a963f31045c5667256013afb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cb1e034a963f31045c5667256013afb">&#9670;&nbsp;</a></span>DoAddPointInSetConstraints()</h2>
+<a id="a4e36bd79c9772253165b5d5a308c8f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e36bd79c9772253165b5d5a308c8f09">&#9670;&nbsp;</a></span>DoAddPointInSetConstraints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -719,7 +720,7 @@ c.rows() == t.size() </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void DoAddPointInSetConstraints </td>
+          <td class="memname">virtual std::pair&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; &gt; &gt; DoAddPointInSetConstraints </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
           <td class="paramname"><em>prog</em>, </td>
@@ -743,7 +744,7 @@ c.rows() == t.size() </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#accc952b29c3cc22980f9a3fffe0d23ff" title="Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is insi...">AddPointInSetConstraints()</a>. </p>
+<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aeadb1b53981b5d37418f3386300e7497" title="Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is insi...">AddPointInSetConstraints()</a>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>vars.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
 <dd>
 <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>

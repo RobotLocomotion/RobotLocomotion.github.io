@@ -1,5 +1,10 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e":[1,1,1,2,1,10],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e":[1,5,4,2,1,10],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a94669eb1f0e3c1db0bdc6f2db0f48e55":[1,1,1,2,1,1],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a94669eb1f0e3c1db0bdc6f2db0f48e55":[1,5,4,2,1,1],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab70a73def5d48495fc70c4cb4f8ba218":[1,1,1,2,1,8],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab70a73def5d48495fc70c4cb4f8ba218":[1,5,4,2,1,8],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,1,1,2,1,15],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,5,4,2,1,15],
@@ -244,10 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1geometry_1_1render_1_1_clipping_range.html":[3,0,0,4,2,0],
 "classdrake_1_1geometry_1_1render_1_1_clipping_range.html#a5e283c97ae8a21c32e01441a9831be55":[3,0,0,4,2,0,1],
 "classdrake_1_1geometry_1_1render_1_1_clipping_range.html#a67ee8e331eb0c36ca8a39ac32e5496e0":[3,0,0,4,2,0,5],
-"classdrake_1_1geometry_1_1render_1_1_clipping_range.html#aad88a23c8b262253260da9692fdab0f2":[3,0,0,4,2,0,4],
-"classdrake_1_1geometry_1_1render_1_1_clipping_range.html#ab8ef9be71527f8bff8455d89d4e50988":[3,0,0,4,2,0,2],
-"classdrake_1_1geometry_1_1render_1_1_clipping_range.html#acaa633fd386540510a2abff9e8dac86c":[3,0,0,4,2,0,6],
-"classdrake_1_1geometry_1_1render_1_1_clipping_range.html#adb90e4abb8e1501f1acc7e663d886948":[3,0,0,4,2,0,3],
-"classdrake_1_1geometry_1_1render_1_1_clipping_range.html#af0cf43aa7202f245bff2dba909bf8f8c":[3,0,0,4,2,0,0],
-"classdrake_1_1geometry_1_1render_1_1_color_render_camera.html":[3,0,0,4,2,1]
+"classdrake_1_1geometry_1_1render_1_1_clipping_range.html#aad88a23c8b262253260da9692fdab0f2":[3,0,0,4,2,0,4]
 };

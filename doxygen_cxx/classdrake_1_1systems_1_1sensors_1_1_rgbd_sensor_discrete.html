@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_r
 <p>See also <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html" title="A sensor similar to RgbdSensorDiscrete but the rendering occurs on a background thread to offer impro...">RgbdSensorAsync</a> for a slightly different discrete sensor model.</p>
 <dl class="section note"><dt>Note</dt><dd>Be mindful that the discrete dynamics of a zero-order hold mean that all three image types (color, depth, label) are rendered at the given <code>period</code>, even if nothing ends up using the images on the output ports; this might be computationally wasteful. If you only need color and depth, be sure to pass <code>render_label_image = false</code> to the constructor. If you only need one image type, eschew this system in favor of adding your own zero-order hold on just the one <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> output port that you need. </dd></dl>
 </div>
-<p><code>#include &lt;drake/systems/sensors/rgbd_sensor.h&gt;</code></p>
+<p><code>#include &lt;drake/systems/sensors/rgbd_sensor_discrete.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -1418,7 +1418,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/systems/sensors/<a class="el" href="rgbd__sensor_8h.html">rgbd_sensor.h</a></li>
+<li>drake/systems/sensors/<a class="el" href="rgbd__sensor__discrete_8h.html">rgbd_sensor_discrete.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

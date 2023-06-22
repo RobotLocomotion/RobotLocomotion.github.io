@@ -62,6 +62,7 @@ var searchData=
   ['slicing_5fand_5findexing_2eh',['slicing_and_indexing.h',['../slicing__and__indexing_8h.html',1,'']]],
   ['sliding_5ffriction_5fcomplementarity_5fconstraint_2eh',['sliding_friction_complementarity_constraint.h',['../sliding__friction__complementarity__constraint_8h.html',1,'']]],
   ['snopt_5fsolver_2eh',['snopt_solver.h',['../snopt__solver_8h.html',1,'']]],
+  ['soft_5fmin_5fmax_2eh',['soft_min_max.h',['../soft__min__max_8h.html',1,'']]],
   ['solar_5fsystem_2eh',['solar_system.h',['../solar__system_8h.html',1,'']]],
   ['solution_5fresult_2eh',['solution_result.h',['../solution__result_8h.html',1,'']]],
   ['solve_2eh',['solve.h',['../solve_8h.html',1,'']]],

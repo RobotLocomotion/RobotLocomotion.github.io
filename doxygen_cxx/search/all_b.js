@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['k',['k',['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()'],['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()']]],
+  ['k',['K',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()'],['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()']]],
   ['k0',['k0',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult']]],
   ['kabsolute',['kAbsolute',['../namespacedrake.html#af8777bc10296f9d39d52753861110e26abab0767e88027de9944aa55c24c8387a',1,'drake']]],
   ['kabsolutecoordinates',['kAbsoluteCoordinates',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663aabbd617cceac411f1249b5e0b75dfff2',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
   ['kabstractvalued',['kAbstractValued',['../namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbeaf2203e0344f142b8e294a1bf4546a94e',1,'drake::systems']]],
   ['kaffine',['kAffine',['../namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927',1,'drake::geometry::optimization']]],
+  ['kall',['kAll',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249a34bdbffdb1c0e1b603f58fc0d49548b6',1,'drake::geometry::optimization::CspaceFreePolytopeBase']]],
   ['kallegronumjoints',['kAllegroNumJoints',['../namespacedrake_1_1examples_1_1allegro__hand.html#a183f825ede63af058a9915f0df9b0769',1,'drake::examples::allegro_hand']]],
   ['kalman_5ffilter_2eh',['kalman_filter.h',['../kalman__filter_8h.html',1,'']]],
   ['kalphasolverfailed',['kAlphaSolverFailed',['../namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85',1,'drake::multibody']]],
@@ -204,6 +205,7 @@ var searchData=
   ['knumfingers',['kNumFingers',['../namespacedrake_1_1examples_1_1planar__gripper.html#a14d8479e15e8d08eeeceffe752cd5523',1,'drake::examples::planar_gripper']]],
   ['knumjoints',['kNumJoints',['../namespacedrake_1_1examples_1_1planar__gripper.html#a223b63cac3d9190ff927cb6cae984654',1,'drake::examples::planar_gripper']]],
   ['knumparticles',['kNumParticles',['../classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#abc9adc65ab2d34a653b5ed6a9d6b915c',1,'drake::systems::analysis::test::PleidesSystem']]],
+  ['konchain',['kOnChain',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249aada63c4cf7bfd356753ac3d18f168886',1,'drake::geometry::optimization::CspaceFreePolytopeBase']]],
   ['kosqp',['kOsqp',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca6e645ae8d30d672d9800a422f4be4c9d',1,'drake::solvers']]],
   ['kperception',['kPerception',['../namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951ac1f9a0ba01987bd1d23d1c4ea605df2b',1,'drake::geometry']]],
   ['kperiod',['kPeriod',['../classdrake_1_1examples_1_1fibonacci_1_1_fibonacci_difference_equation.html#ad1cb8167f82ff91a28f440ec40cda1db',1,'drake::examples::fibonacci::FibonacciDifferenceEquation']]],

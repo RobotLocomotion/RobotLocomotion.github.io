@@ -801,6 +801,7 @@ var searchData=
   ['getsequentialvariable',['GetSequentialVariable',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a60218cf6a183ddb4eb8b6e1f966113a3',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
   ['getsequentialvariableatindex',['GetSequentialVariableAtIndex',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a94b577cb171362cc5d6756797c7897d1',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
   ['getsequentialvariablesamples',['GetSequentialVariableSamples',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae67390ae3d55a7e0e060b4def47e53ee',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
+  ['getsforplane',['GetSForPlane',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a5c5286e186ccdca6b57fd0e14c16c0e1',1,'drake::geometry::optimization::CspaceFreePolytopeBase']]],
   ['getshape',['GetShape',['../classdrake_1_1geometry_1_1_geometry_state.html#ad9547320de75a6ac00225c08b9638104',1,'drake::geometry::GeometryState::GetShape()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a15446aba86e9d94dced6ef95e718e17c',1,'drake::geometry::SceneGraphInspector::GetShape()']]],
   ['getsimplevariable',['GetSimpleVariable',['../classdrake_1_1_polynomial.html#aa3b70bcbd72aedf09e5dad6e5e5d8b9f',1,'drake::Polynomial']]],
   ['getslidernames',['GetSliderNames',['../classdrake_1_1geometry_1_1_meshcat.html#a9467e50cd74bd9b61b47d1b4d329f4df',1,'drake::geometry::Meshcat']]],

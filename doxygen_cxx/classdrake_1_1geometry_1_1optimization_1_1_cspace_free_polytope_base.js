@@ -2,13 +2,19 @@ var classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base =
 [
     [ "Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options" ],
     [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a409fd33166e0e4d6bf8967bac91676df", null ],
+    [ "SForPlane", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249", [
+      [ "kAll", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249a34bdbffdb1c0e1b603f58fc0d49548b6", null ],
+      [ "kOnChain", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249aada63c4cf7bfd356753ac3d18f168886", null ]
+    ] ],
     [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a5d925de566d364a877fbbc1f3ee5649c", null ],
     [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a536c80a6cd8787bb00a1a809ac439947", null ],
     [ "~CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a3a359fad0b1271df5b9bff4ae64ae160", null ],
-    [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a5fad9c24078b202ecb95c0d5fab06e55", null ],
+    [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#aad583220075aa91abce716ffb986a3ae", null ],
     [ "CalcSBoundsPolynomial", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a28900ab8316eb6b15f1f3ddb29c6ec6e", null ],
     [ "get_s_set", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a7f6672428b4160b7b71964b0b651a98e", null ],
+    [ "GetSForPlane", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a5c5286e186ccdca6b57fd0e14c16c0e1", null ],
     [ "link_geometries", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#adaceec00c594f9bace48728a5975b911", null ],
+    [ "map_body_pair_to_s_on_chain", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a4ff71b58d1214d5ddb80241ede9bf107", null ],
     [ "map_body_to_monomial_basis_array", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#ace45f4b41358b572f3507d548f7b0d25", null ],
     [ "map_geometries_to_separating_planes", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#ab4147c044ab36e48cd0befa888aee0d5", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a3c00d5ee37731d4ec972ac14a8cd1da7", null ],
